@@ -131,11 +131,15 @@ class QRAlgorithm(QCAlgorithm):
             dq = self._qr_dv.get(f.symbol)
             if dq is None:
                 dq = self._qr_dv[f.symbol] = deque(maxlen=adv_days)
-            dq.append(float(f.dollar_volume))
+            dv = float(f.dollar_volume)
+            if dv == dv:                     # skip missing (NaN) volumes; NaN would pass "< min"
+                dq.append(dv)
             if f.market_cap < min_cap or f.price < min_price:
                 continue
+            if len(dq) < adv_days:
+                continue
             adv = sum(dq) / len(dq)
-            if len(dq) < adv_days or adv < min_adv:
+            if not adv >= min_adv:
                 continue
             elig.append(f)
             info[f.symbol] = (float(f.market_cap), adv)

@@ -1,0 +1,33 @@
+{
+ "experiment_id": "E953-01",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X953",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X953_size_proxy_eval",
+ "split": "IS",
+ "start": "2009-09-01",
+ "end": "2014-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission": "IB fixed via LEAN InteractiveBrokersFeeModel: $0.005/share, $1 min, 1% max"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02
+ },
+ "params": {
+  "eval_from": "2010-01-01",
+  "forward_returns_until": "2014-12-31"
+ },
+ "description": "Size proxy vs MarketCap>=$2B reference, PRIMARY window 2010-2014 (new Morningstar dataset); forward returns within IS only.",
+ "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)",
+ "lean_version_id": 18131
+}
