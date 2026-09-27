@@ -129,3 +129,19 @@ In addition, 14 unregistered infrastructure development runs: 11 API/data probes
 **Proposed for approval:** tradability filters, base slippage, portfolio constraints and gates (D023–D026); data remedy (D027).
 
 **Status:** STOPPED at CP2. No research campaign started. Waiting for the owner.
+
+---
+
+## 2026-09-27 — Session 3: CP2 approved; size-proxy addendum started
+
+**Owner decisions:**
+
+- CP2 infrastructure is approved.
+- Do not contact QuantConnect support.
+- Build and evaluate a survivorship-free size proxy from price and volume only, compared against MarketCap ≥ $2B in at least 2010–2014.
+- Compare several variants; do not over-optimise.
+- Stop after the evaluation.
+
+**Checklist:** credentials present (values not displayed); QuantConnect reachable.
+
+**Done before any result:** evaluation plan, variants and decision thresholds pre-registered in `docs/data/size_proxy_plan.md`.
