@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local data and caches: raw market data never goes in Git
+data/
+cache/
+*.parquet
+scratch/
+
+# Secrets
+.env
+*.secret
+lean.json
+credentials*
+
+# OS / editor
+.DS_Store
+.idea/
+.vscode/
