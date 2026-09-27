@@ -1,0 +1,103 @@
+# CLAUDE.md — Operating instructions for this repository
+
+This repo is a **private quantitative research workspace**. Claude Code works in it as an autonomous quant research engineer. The owner makes product decisions, approves stage transitions and reads reports. The owner does not review code.
+
+Read this file first in every session, then read `RESEARCH_PLAN.md`, the latest entries of `RESEARCH_LOG.md`, and `DECISIONS.md`.
+
+## Mission (Phase 1 — Research only)
+
+Try to find **one** simple, explainable, robust **long-only swing-trading strategy for US equities** that survives rigorous validation. **"No Production Candidate Found" is an acceptable, honest outcome. Never force a positive result.**
+
+## Hard scope limits
+
+- Research only.
+- **Do not build any of the following:**
+  - Real-money trading or a broker integration.
+  - A server, backend, REST API, web UI or dashboard.
+  - A daemon or scheduler, a message queue, or authentication.
+  - A database server, Kubernetes, microservices or any multi-user feature.
+- Only write code that is needed for deterministic calculations, data processing, backtesting, validation, testing, experiment tracking, reproducibility or reporting.
+- Universe rules:
+  - US common stocks, long-only, no options, no leverage, no intraday trading.
+  - One decision per trading day. Holding period of several days to several weeks.
+  - **Point-in-time market cap ≥ $2B.**
+  - Technical price, volume and market-behaviour information only. No news for selection.
+- Budget: about $100/month target, $200/month hard ceiling. **Never purchase or commit to paid services without owner approval.**
+
+## Current state
+
+See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`. As of 2026-09-27: **Checkpoint 1 was submitted and is awaiting approval.** Do not start significant implementation until CP1 is approved.
+
+## Checkpoint discipline
+
+The checkpoints are CP1 Architecture → CP2 Infrastructure → CP3 First research cycle → CP4 Advanced validation → CP5 Final holdout → Final report.
+
+At each checkpoint:
+
+1. **STOP.**
+2. Write the report to `docs/checkpoints/CP#_*.md`.
+3. Update the log and decisions.
+4. Run the tests.
+5. Commit and push.
+6. **Wait for owner approval.**
+
+Never roll on to the next stage automatically. Minor implementation decisions need no approval: decide, record the decision in `DECISIONS.md`, and continue.
+
+## Research protocol (non-negotiable)
+
+- IDs:
+  - Hypotheses are `H###`.
+  - Strategies are `S###`, with versions `vMAJOR.MINOR`.
+  - Experiments are `E###-##`, where the first number is the strategy and the second is the run number.
+  - Research cycles are `C##`.
+- Every strategy starts from a written, explainable hypothesis in `research/hypotheses/H###.md`. **No blind parameter searches.** Use about 3–10 meaningful variations per hypothesis.
+- **Log every experiment**, including failed, rejected and bugged runs, in `experiments/INDEX.csv`. Never delete one. Reports must state the total number of hypotheses, strategies and experiments tested.
+- Signals must be **deterministic code**. LLM judgment may propose and analyse hypotheses but is never part of a signal.
+- Data split (pending CP1 approval; see `RESEARCH_PLAN.md`):
+  - IS: 1999-01-04 → 2014-12-31.
+  - VAL: 2015-01-01 → 2021-12-31.
+  - **HOLDOUT: 2022-01-01 → 2026-08-31, which is locked.**
+- **Never touch the holdout** before written owner approval at CP5, recorded in `HOLDOUT_UNLOCK.md`. Never tune anything on validation or holdout results. After seeing holdout results, never modify the strategy.
+- Hypotheses must not be motivated by knowledge of market events after 2014, such as the 2020 crash, 2022 or the 2023–24 AI rally. Hindsight counts as data snooping.
+
+## Engineering rules
+
+- Engine and data: QuantConnect Cloud (LEAN), driven through the REST API. Credentials come only from the env vars `QC_USER_ID` and `QC_API_TOKEN`. Never commit secrets, and never ask the owner to paste them into chat.
+- **Never export raw QuantConnect data** (licence). Store only derived results: metrics, equity curves and trade lists.
+- **Execution realism:**
+  - A signal on bar T executes at the T+1 open or later, **never at T's close**.
+  - Model commissions and slippage.
+  - Use raw prices for fills and adjusted prices for signals.
+  - Model delistings.
+- Official experiments run only from a **clean, committed git tree**. Record for each:
+  - commit hash, parameters, dates and split label;
+  - QC backtest ID and LEAN version;
+  - run date;
+  - hashes of the trade list and equity curve.
+- Compute metrics locally, with one shared module, from the equity curve and trades.
+- **A task is not done until its tests pass.** Tests must cover:
+  - look-ahead (the truncation test);
+  - execution timing;
+  - metrics;
+  - portfolio accounting;
+  - data integrity;
+  - reproducibility;
+  - the holdout lock.
+- Keep things simple. Files (CSV, JSON, Markdown) are enough, with no database. Add a dependency or a tool only with a real, documented justification.
+- Large data never goes in Git. Document how to re-acquire it.
+
+## Persistence rule
+
+Important information must never live only in chat, temp files or an uncommitted tree. Commit at milestones and push at checkpoints. Before claiming a stage is complete, verify with `git status` and confirm the push.
+
+## Git
+
+- Develop on the session's designated branch.
+- Checkpoint approval happens by the owner merging into `main` through a PR, if the owner adopts the proposal in CP1.
+- Use clear commit messages, e.g. `E003-02: …` for experiment runs.
+
+## Communication
+
+- Reports for the owner must be understandable without reading code.
+- For technical issues, give: what the issue is → why it matters → the options → a recommendation.
+- Ask the owner only about spending, scope changes, significant trade-offs, missing essential information, or checkpoints.
