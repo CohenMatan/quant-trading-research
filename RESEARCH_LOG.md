@@ -26,3 +26,30 @@ Totals so far: hypotheses **0** · strategies **0** · experiments **0**
 **No experiments run. No money spent.**
 
 **Next:** wait for owner approval of CP1 and the decisions in its §8.
+
+---
+
+## 2026-09-27 — CP1 approved; CP2 blocked on environment access
+
+**Owner approvals:**
+
+- CP1 approved.
+- QuantConnect Cloud approved as the data source and engine.
+- Split approved: IS 1999-01-04 → 2014-12-31; VAL 2015-01-01 → 2021-12-31; HOLDOUT 2022-01-01 → 2026-08-31.
+- Market-cap threshold approved: $2B nominal.
+- Simulated account size approved: $100,000.
+- Checkpoints are approved by PR merge into `main`.
+
+**Subscription:** QuantConnect Researcher seat ($10/month) plus B2-8 backtest node ($14/month), $24/month total.
+
+**Owner's precondition for CP2:** verify QC API authentication and dataset access before implementing anything.
+
+**Check result in the current session (the session that wrote CP1):**
+
+- `QC_USER_ID` and `QC_API_TOKEN` are **not present** in this session's environment.
+- `www.quantconnect.com` is **still denied** by the egress proxy (403 on CONNECT).
+- Likely cause: environment settings only apply to newly started sessions.
+
+**Consequence:** CP2 implementation has **not** started, per the owner's precondition.
+
+**Next:** in a new session, run the session-start checklist in CLAUDE.md, then verify authentication and data access, then build CP2.

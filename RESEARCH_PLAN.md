@@ -1,6 +1,6 @@
 # RESEARCH_PLAN.md
 
-**Status: DRAFT, pending Checkpoint 1 approval.** Sections marked *(TBD at CP2)* will be completed before the first research campaign and require owner approval.
+**Status: data split, universe threshold and account size APPROVED at CP1 (2026-09-27).** Sections marked *(TBD at CP2)* will be completed before the first research campaign and require owner approval.
 
 ## 1. Objective
 
@@ -38,7 +38,7 @@ The **holdout lock** works as follows:
   - Base slippage of X bps per side *(TBD at CP2)*.
   - Stress runs at 2×, 4× and 6× the base slippage.
 - Corporate actions: fills use raw prices, dividends are credited as cash, signals use adjusted history. Delistings liquidate at the last price, which is noted as a limitation.
-- Assumed account size: $100,000 *(pending owner confirmation)*.
+- Assumed account size: $100,000 (approved at CP1).
 
 ## 5. Research loop
 

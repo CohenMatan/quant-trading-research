@@ -16,7 +16,8 @@ Claude Code operates the research, using QuantConnect Cloud (LEAN) as its backte
 
 ## Status
 
-**Checkpoint 1 (Architecture & Data Plan): submitted and awaiting approval.** See `docs/checkpoints/CP1_architecture_and_data_plan.md`.
+- **Checkpoint 1 (Architecture & Data Plan):** approved 2026-09-27.
+- **Checkpoint 2 (Research Infrastructure):** in progress.
 
 ## Restore and reproduce
 
