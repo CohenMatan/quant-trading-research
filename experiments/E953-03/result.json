@@ -1,0 +1,27 @@
+{
+ "error": "QCError: backtests/read/log failed: ['You have exceeded your daily backtest logs allocation. Please upgrade your plan to continue.']",
+ "experiment_id": "E953-03",
+ "log_tail": [],
+ "provenance": {
+  "code_sha256": "547e9f3100b24b37cfa01d4a7c78c98bc3ad555b9b7b0457c8342917c983a59b",
+  "config_sha256": "21de80e6a0100bb1f630ccfb3cab12a4eec2db608ceb8d3eb6da5e83d9b98b06",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py"
+  ],
+  "git_commit": "5bfee9d748d428d005784139128d9a682f004585",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "run_utc": "2026-09-27T22:22:03Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}
