@@ -73,7 +73,7 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
         out["logs"] = client.read_logs(handle)
         return out
     out["orders"] = client.read_orders(handle)
-    out["logs"] = client.read_logs(handle)
+    out["logs"] = client.read_logs(handle, must_contain="QRSUMMARY|")
     s = datetime.fromisoformat(cfg["start"]).replace(tzinfo=timezone.utc)
     e = datetime.fromisoformat(cfg["end"]).replace(tzinfo=timezone.utc)
     _, summary, _ = results.parse_logs(out["logs"])

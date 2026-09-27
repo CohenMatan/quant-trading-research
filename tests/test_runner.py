@@ -109,3 +109,12 @@ def test_files_are_read_from_the_commit(tmp_path):
     head = gitutil.head_commit(r)
     (r / "f.txt").write_text("changed")
     assert gitutil.show_file(head, "f.txt", r) == "1"
+
+
+def test_incomplete_order_detection():
+    from qresearch.qc_client import incomplete_order
+    filled_ev = {"status": "filled", "fillQuantity": 1}
+    assert incomplete_order({"status": 3, "events": []})
+    assert incomplete_order({"status": 3})
+    assert not incomplete_order({"status": 3, "events": [{"status": "submitted"}, filled_ev]})
+    assert not incomplete_order({"status": 5, "events": []})      # cancelled: no fill expected

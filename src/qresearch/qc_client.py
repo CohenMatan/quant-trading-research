@@ -22,6 +22,16 @@ class QCError(RuntimeError):
     pass
 
 
+FILLED_STATUSES = (2, 3)   # LEAN OrderStatus: 2 = partially filled, 3 = filled
+
+
+def incomplete_order(order: dict) -> bool:
+    """True if the order is (partially) filled but its fill events have not been delivered yet."""
+    if order.get("status") not in FILLED_STATUSES:
+        return False
+    return not any(ev.get("status") in ("filled", "partiallyFilled") for ev in order.get("events") or [])
+
+
 class MissingCredentialsError(QCError):
     pass
 
@@ -158,7 +168,20 @@ class QCClient:
             time.sleep(poll_s)
 
     # ------------------------------------------------------------------ results
-    def read_orders(self, h: BacktestHandle) -> list[dict]:
+    def read_orders(self, h: BacktestHandle, timeout_s: float = 1800) -> list[dict]:
+        """All orders with their events. QC fills in order events asynchronously after the
+        backtest completes, so this re-reads until every filled order carries a fill event."""
+        t0 = time.time()
+        while True:
+            out = self._read_orders_once(h)
+            missing = sum(1 for o in out if incomplete_order(o))
+            if missing == 0:
+                return out
+            if time.time() - t0 > timeout_s:
+                raise QCError(f"{missing} of {len(out)} orders still lack fill events after {timeout_s:.0f}s")
+            time.sleep(15)
+
+    def _read_orders_once(self, h: BacktestHandle) -> list[dict]:
         out: list[dict] = []
         start = 0
         while True:
@@ -171,7 +194,18 @@ class QCClient:
             if not page or start >= total:
                 return out
 
-    def read_logs(self, h: BacktestHandle) -> list[str]:
+    def read_logs(self, h: BacktestHandle, must_contain: str = "", timeout_s: float = 600) -> list[str]:
+        """All log lines; if `must_contain` is given, re-read until some line contains it."""
+        t0 = time.time()
+        while True:
+            out = self._read_logs_once(h)
+            if not must_contain or any(must_contain in ln for ln in out):
+                return out
+            if time.time() - t0 > timeout_s:
+                return out   # the caller's integrity checks will flag the missing line
+            time.sleep(10)
+
+    def _read_logs_once(self, h: BacktestHandle) -> list[str]:
         out: list[str] = []
         start = 0
         while True:
