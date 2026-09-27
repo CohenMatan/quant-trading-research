@@ -27,5 +27,6 @@
   "weight": 0.24
  },
  "description": "Execution-timing canary: verifies T+1 open fills, raw prices, slippage, on 8 large caps.",
- "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)"
+ "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)",
+ "lean_version_id": 18131
 }

@@ -1,13 +1,13 @@
 {
- "experiment_id": "E952-01",
+ "experiment_id": "E951-02",
  "kind": "infrastructure",
  "hypothesis_id": null,
- "strategy_id": "X952",
+ "strategy_id": "X951",
  "strategy_version": "v1.0",
- "strategy_dir": "strategies/X952_corporate_actions",
- "split": "IS",
- "start": "2001-01-02",
- "end": "2014-12-31",
+ "strategy_dir": "strategies/X951_data_audit",
+ "split": "FULL",
+ "start": "1999-01-04",
+ "end": "2021-12-31",
  "cash": 100000,
  "universe": {
   "min_market_cap": 2000000000.0,
@@ -24,7 +24,7 @@
   "cash_buffer": 0.02
  },
  "params": {},
- "description": "Corporate actions and delistings: AAPL splits, KO/XOM dividends, ENE/WCOM/BSC/LEH delistings.",
+ "description": "Data audit on the NEW Morningstar dataset (LEAN 18131, branch morningstar-edf-new-data-points); E951-01 measured the old dataset on master (18130).",
  "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)",
  "lean_version_id": 18131
 }

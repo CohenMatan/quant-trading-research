@@ -56,6 +56,7 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     """Upload, compile, backtest, download. Returns raw payloads plus timings."""
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
     client.sync_files(project, files)
+    client.pin_lean_version(project, cfg["lean_version_id"])
     compile_id = client.compile(project)
     t0 = time.time()
     handle = client.start_backtest(project, compile_id, f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}")
@@ -63,6 +64,10 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     runtime = time.time() - t0
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
                lean_version=client.lean_version(bt))
+    if not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
+        out["error"] = f"backtest ran on LEAN {out['lean_version']}, expected build {cfg['lean_version_id']}"
+        out["logs"] = []
+        return out
     if bt.get("error") or bt.get("stacktrace") or not bt.get("completed"):
         out["error"] = (bt.get("error") or "") + "\n" + (bt.get("stacktrace") or "")
         out["logs"] = client.read_logs(handle)
@@ -201,6 +206,8 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
             raise SystemExit(f"{exp_id} already has an original run; use --reproduce or a new ID.")
         if reproduce and not prior:
             raise SystemExit(f"{exp_id} has no original run to reproduce.")
+    if not cfg.get("lean_version_id"):
+        raise SystemExit("config needs lean_version_id: every run is pinned to an explicit LEAN build (D021)")
     unlocked = holdout.holdout_unlocked()
     files = assemble_files(cfg, commit, unlocked)
     prov = dict(git_commit=head if commit else f"{head}+uncommitted", run_utc=run_utc,

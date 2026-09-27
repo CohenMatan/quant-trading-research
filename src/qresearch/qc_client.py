@@ -116,6 +116,13 @@ class QCClient:
         for name in existing - set(files):
             self.call("files/delete", projectId=project_id, name=name)
 
+    def pin_lean_version(self, project_id: int, version_id: int) -> None:
+        """Pin the project to an explicit LEAN build (API field `versionId`) and verify it stuck."""
+        self.call("projects/update", projectId=project_id, versionId=int(version_id))
+        got = self.call("projects/read", projectId=project_id)["projects"][0].get("leanVersionId")
+        if int(got) != int(version_id):
+            raise QCError(f"LEAN version pin failed: project reports {got}, wanted {version_id}")
+
     # ------------------------------------------------------------------ compile & backtest
     def compile(self, project_id: int, timeout_s: float = 600) -> str:
         cid = self.call("compile/create", projectId=project_id)["compileId"]
