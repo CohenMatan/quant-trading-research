@@ -1,0 +1,68 @@
+{
+ "experiment_id": "E900-01",
+ "harness_messages": [],
+ "harness_summary": {
+  "buys_scaled": 3,
+  "days": 5788,
+  "elig_days": 0,
+  "elig_max": 0,
+  "elig_mean": 0,
+  "elig_min": null,
+  "elig_sum": 0,
+  "experiment_id": "E900-01",
+  "fills": 206,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 400,
+  "max_fill_dev": 2.729208065967196e-16,
+  "max_gross": 0.9829572476619781,
+  "max_subscribed": 1,
+  "min_cash_frac": 0.017042752338022018,
+  "negative_qty": 0,
+  "open_positions_at_end": 1,
+  "orders": 206,
+  "timing_violations": 0
+ },
+ "hashes": {
+  "equity_sha256": "c08e4e3e54a2c715d78e0899b2b4235bc87bef97937fe9808da9e5e4717649d9",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "0 rows",
+   "level": "fail",
+   "ok": false
+  }
+ ],
+ "metrics": {},
+ "provenance": {
+  "code_sha256": "de2e4eafb309050bc3bf8e98bbc11ef06fd583e3b476b73ff727112c3627eb84",
+  "config_sha256": "653f3c40801f2c6cb6ec93131021a242b07e2a77328c0d374a98f42355e616bd",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py"
+  ],
+  "git_commit": "cf78b395a12cda0a7fb2187a419d0ec049ad3e12",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "7a68f26f55ff7f068c8dc8bb68e1aee4",
+  "qc_project_id": 37054933,
+  "run_utc": "2026-09-27T21:14:06Z",
+  "runtime_s": 15.070532321929932
+ },
+ "qc_statistics": {},
+ "relative": {},
+ "segments": {},
+ "status": "integrity_failed",
+ "trade_distribution": {}
+}
