@@ -4,7 +4,7 @@ import pandas as pd
 import pytest
 
 from qresearch import integrity, results
-from conftest import ROOT, experiment_result
+from conftest import ROOT, latest_completed
 
 # order payload in the format returned by backtests/orders/read (trimmed)
 ORDER = {"id": 7, "symbol": {"value": "SPY", "id": "SPY R735QTJ8XC9X"}, "tag": "e|sig=1999-01-04",
@@ -68,8 +68,8 @@ def test_committed_results_are_self_consistent():
     for rp in ROOT.glob("experiments/E*/result.json"):
         import json
         r = json.loads(rp.read_text())
-        if r["status"] == "failed":
-            continue
+        if not r["status"].startswith("completed"):
+            continue   # failed runs stay on record; they are not used
         found += 1
         for k in ("equity", "fills", "trades"):
             text = gzip.decompress((rp.parent / f"{k}.csv.gz").read_bytes()).decode()
@@ -80,7 +80,7 @@ def test_committed_results_are_self_consistent():
 
 
 def test_canary_fees_match_engine():
-    r = experiment_result("E950-01")
-    f = results.read_csv_gz(ROOT / "experiments/E950-01/fills.csv.gz")
+    eid, r = latest_completed("X950")
+    f = results.read_csv_gz(ROOT / "experiments" / eid / "fills.csv.gz")
     qc_fees = float(r["qc_statistics"]["Total Fees"].replace("$", "").replace(",", ""))
     assert f["fee"].sum() == pytest.approx(qc_fees, abs=0.01)

@@ -1,0 +1,30 @@
+{
+ "experiment_id": "E952-02",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X952",
+ "strategy_version": "v1.1",
+ "strategy_dir": "strategies/X952_corporate_actions",
+ "split": "IS",
+ "start": "2001-01-02",
+ "end": "2014-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission": "IB fixed via LEAN InteractiveBrokersFeeModel: $0.005/share, $1 min, 1% max"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02
+ },
+ "params": {},
+ "description": "Corporate actions and delistings: AAPL splits, KO/XOM dividends, ENE/WCOM/BSC/LEH delistings. v1.1: dividend check sums all dividends arriving in the same slice (v1.0 flagged 10 same-day pairs).",
+ "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)",
+ "lean_version_id": 18131
+}

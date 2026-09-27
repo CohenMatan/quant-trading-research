@@ -3,7 +3,7 @@ import re
 import pandas as pd
 
 from qresearch import integrity
-from conftest import ROOT, experiment_result
+from conftest import ROOT, latest_completed
 
 ORDER_APIS = ("market_order(", "limit_order(", "stop_market_order(", "set_holdings(", "liquidate(",
               "market_on_close_order(", "stop_limit_order(", "limit_if_touched_order(")
@@ -54,7 +54,7 @@ def test_strategies_never_place_orders_directly():
 
 
 def test_canary_run_has_no_timing_violations():
-    r = experiment_result("E950-01")
+    _, r = latest_completed("X950")
     assert r["status"] == "completed"
     s = r["harness_summary"]
     assert s["timing_violations"] == 0 and s["fills"] > 1000 and s["max_fill_dev"] < 1e-9

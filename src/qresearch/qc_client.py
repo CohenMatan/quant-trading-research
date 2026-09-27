@@ -185,19 +185,23 @@ class QCClient:
                 return out
 
     def read_chart(self, h: BacktestHandle, chart: str, start_ts: int, end_ts: int,
-                   count: int = 100_000, timeout_s: float = 300) -> dict[str, list]:
-        """Series name -> list of [unix_ts, value, ...] for a custom chart."""
+                   count: int = 100_000, min_points: int = 1, timeout_s: float = 900) -> dict[str, list]:
+        """Series name -> list of [unix_ts, value, ...] for a custom chart.
+
+        The server builds chart data asynchronously and can first answer with an empty or partial
+        chart, so this polls until the longest series has at least `min_points` points."""
         t0 = time.time()
         while True:
             r = self.call("backtests/chart/read", projectId=h.project_id, backtestId=h.backtest_id,
                           name=chart, count=count, start=start_ts, end=end_ts)
-            ch = r.get("chart")
-            if ch:
-                return {k: s.get("values", []) for k, s in (ch.get("series") or {}).items()}
-            # the server may still be preparing the chart
+            ch = r.get("chart") or {}
+            series = {k: s.get("values", []) for k, s in (ch.get("series") or {}).items()}
+            if series and max(len(v) for v in series.values()) >= min_points:
+                return series
             if time.time() - t0 > timeout_s:
-                raise QCError(f"Chart {chart} not available")
-            time.sleep(3)
+                raise QCError(f"Chart {chart} incomplete after {timeout_s:.0f}s "
+                              f"({max((len(v) for v in series.values()), default=0)} of {min_points} points)")
+            time.sleep(5)
 
     def lean_version(self, bt: dict) -> str:
         return (bt.get("serverStatistics") or {}).get("LEAN Version", "unknown")

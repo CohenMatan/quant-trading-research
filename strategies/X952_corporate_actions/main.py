@@ -1,4 +1,4 @@
-# X952 — corporate-action and delisting check (infrastructure, not research).
+# X952 v1.1 — corporate-action and delisting check (infrastructure, not research).
 # Buys small positions in names with known events and verifies LEAN's handling:
 #   splits:     AAPL 2:1 2005-02-28, AAPL 7:1 2014-06-09 → quantity × 1/factor, equity continuous
 #   dividends:  KO, XOM quarterly → cash rises by quantity × distribution on the event
@@ -30,15 +30,14 @@ class CorporateActions(QRAlgorithm):
                     self.checks["splits"].append(dict(sym=sym.value, day=f"{self.time:%Y-%m-%d}",
                         factor=float(sp.split_factor), qty_before=qty0[sym], qty_after=q1,
                         value_before=val0, value_after=float(self.portfolio.total_portfolio_value)))
-            for sym, dv in data.dividends.items():
-                q = qty0.get(sym, 0)
-                if q:
-                    expected = q * float(dv.distribution)
-                    got = float(self.portfolio.cash) - cash0
-                    ok = abs(got - expected) <= 0.01 + 1e-6 * abs(expected)
-                    self.checks["dividends_ok" if ok else "dividends_bad"] += 1
-                    if not ok:
-                        self._qr_log(f"QRCA_DIV_BAD|{sym.value}|{self.time:%Y-%m-%d}|exp={expected:.4f}|got={got:.4f}")
+            # several dividends can arrive in the same slice: compare their total with the cash change
+            expected = sum(qty0.get(sym, 0) * float(dv.distribution) for sym, dv in data.dividends.items())
+            if expected:
+                got = float(self.portfolio.cash) - cash0
+                ok = abs(got - expected) <= 0.01 + 1e-6 * abs(expected)
+                self.checks["dividends_ok" if ok else "dividends_bad"] += 1
+                if not ok:
+                    self._qr_log(f"QRCA_DIV_BAD|{self.time:%Y-%m-%d}|exp={expected:.4f}|got={got:.4f}")
         super().on_data(data)
 
     def qr_on_close(self, data):

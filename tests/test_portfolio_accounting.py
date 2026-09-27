@@ -2,7 +2,7 @@ import pandas as pd
 import pytest
 
 from qresearch.trades import FILL_COLUMNS, LongOnlyViolation, build_trades
-from conftest import experiment_result
+from conftest import latest_completed
 
 
 def fills(rows):
@@ -60,7 +60,7 @@ def test_sell_without_position_raises():
 
 def test_canary_local_accounting_matches_engine():
     """Cross-check on a real run: local net profit and fees equal QuantConnect's own figures."""
-    r = experiment_result("E950-01")
+    _, r = latest_completed("X950")
     qc = r["qc_statistics"]
     m = r["metrics"]
     net = float(qc["Net Profit"].rstrip("%")) / 100

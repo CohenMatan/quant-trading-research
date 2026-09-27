@@ -76,7 +76,9 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     out["logs"] = client.read_logs(handle)
     s = datetime.fromisoformat(cfg["start"]).replace(tzinfo=timezone.utc)
     e = datetime.fromisoformat(cfg["end"]).replace(tzinfo=timezone.utc)
-    out["chart"] = client.read_chart(handle, "QR", int(s.timestamp()) - 86400, int(e.timestamp()) + 3 * 86400)
+    _, summary, _ = results.parse_logs(out["logs"])
+    out["chart"] = client.read_chart(handle, "QR", int(s.timestamp()) - 86400, int(e.timestamp()) + 3 * 86400,
+                                     min_points=int(summary.get("days") or 1))
     out["extra_charts"] = {name: client.read_chart(handle, name, int(s.timestamp()) - 86400,
                                                    int(e.timestamp()) + 3 * 86400)
                            for name in cfg.get("extra_charts", [])}
