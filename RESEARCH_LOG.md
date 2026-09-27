@@ -53,3 +53,33 @@ Totals so far: hypotheses **0** · strategies **0** · experiments **0**
 **Consequence:** CP2 implementation has **not** started, per the owner's precondition.
 
 **Next:** in a new session, run the session-start checklist in CLAUDE.md, then verify authentication and data access, then build CP2.
+
+---
+
+## 2026-09-27 — Session 2: CP2 precondition verified (QC API + dataset access)
+
+**Session-start checklist:** `QC_USER_ID` and `QC_API_TOKEN` are present (values not displayed). `www.quantconnect.com` is reachable (HTTP 200).
+
+**Authentication:** QuantConnect REST API v2 with hashed-timestamp auth → `authenticate` returned success. The organization reads back as tier `researcher`, billing `paid`, with a Researcher Seat ($10) and one B2-8 backtest node ($14) as the only paid subscriptions.
+
+**Dataset access, via five tiny throwaway cloud backtests (scratch code, not part of the repo):**
+
+| Dataset | Check | Result |
+|---|---|---|
+| US Equities daily, incl. delisted | Enron (ENE) daily closes 2001-11-20 → 12-10 ($6.90 → $0.26 → $0.81) | ✅ |
+| Morningstar fundamentals / MarketCap | 2001-11-20: 7,017 securities, 408 with MarketCap ≥ $2B; top 3 = GE $361B, MSFT $313B, XOM $270B | ✅ (see finding 1) |
+| US Equity Security Master | AAPL 2:1 split on 2005-02-28 (warning the day before, then "split occurred"); SPY dividend $0.47 on 2005-03-18 | ✅ |
+| SPY | Daily bars 1999-01-04 → 2021-12-31 (5,788 trading days) | ✅ |
+| Execution | Market-on-open order placed at the T close filled on T+1 at a price different from the T close; IB fees applied | ✅ (full canary to follow) |
+
+**Findings that affect the design:**
+
+1. **Enron's MarketCap reads $0** in Nov 2001 while the stock still traded, so MarketCap has gaps. The data audit must measure how often this happens.
+2. **ObjectStore export is blocked** for non-Institutional accounts (data licensing), so it cannot carry results out of QC.
+3. **Logs are capped** at 100 KB per backtest and about 3 MB/day, so they are only suitable for small summaries.
+4. **The orders API** returns every order with fill events, fees and times. **Custom chart series** return full daily resolution (5,788 points, no downsampling). These become the result channels.
+5. The B2-8 node reports an "assets: 500" figure, but a 900-security universe ran without error. Full-scale memory and runtime will be measured.
+6. The LEAN version is available per backtest in `serverStatistics` (currently v2.5.0.0.18130).
+7. The product list shows a "Tradier" module line at $1 that does not appear among the active subscriptions. Flagged for the owner to check.
+
+**Conclusion:** the owner's precondition is **met**, and CP2 implementation starts now.
