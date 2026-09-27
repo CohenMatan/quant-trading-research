@@ -22,6 +22,17 @@ COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 
 
+def is_us_common(f):
+    """Common stock, not a depositary receipt, and either Morningstar's primary share or a
+    US-domiciled company. The new dataset flags many US companies' only listed share as
+    non-primary (GE, BAC, V, DELL, YHOO, … in 2012), so `is_primary_share` alone wrongly drops
+    them; foreign companies' secondary US listings (e.g. Canadian banks) stay excluded (D030)."""
+    sr = f.security_reference
+    if sr.security_type != COMMON_STOCK or sr.is_depositary_receipt:
+        return False
+    return bool(sr.is_primary_share) or str(f.company_reference.country_id) == "USA"
+
+
 class QRAlgorithm(QCAlgorithm):
     # ---- strategy-level settings (override in subclasses) ----
     USES_UNIVERSE = False      # subscribe to the >= $2B universe
@@ -124,7 +135,7 @@ class QRAlgorithm(QCAlgorithm):
             if not f.has_fundamental_data:
                 continue
             sr = f.security_reference
-            if sr.security_type != COMMON_STOCK or not sr.is_primary_share or sr.is_depositary_receipt:
+            if not is_us_common(f):
                 continue
             if sr.exchange_id not in EXCHANGES:
                 continue

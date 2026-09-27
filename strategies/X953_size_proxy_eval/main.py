@@ -1,4 +1,5 @@
-# X953 — size-proxy evaluation (infrastructure, not research). Places no orders.
+# X953 v1.1 — size-proxy evaluation (infrastructure, not research). Places no orders.
+# v1.1: share-class rule from the harness (is_us_common, D030) for the reference and exclusion E1.
 #
 # Compares survivorship-free, price/volume-only universe rules ("proxies") with the reference
 # universe (harness eligible set: common primary share, major exchange, MarketCap >= $2B,
@@ -14,7 +15,7 @@
 #   QRPX_T|json                   tracked failed/acquired companies: months in reference / pool / proxies
 #   QRPX_CHK|json                 reference set vs harness eligible set (must agree)
 from AlgorithmImports import *
-from qr_harness import QRAlgorithm, COMMON_STOCK, EXCHANGES
+from qr_harness import QRAlgorithm, COMMON_STOCK, EXCHANGES, is_us_common
 from collections import deque
 import json
 import math
@@ -104,8 +105,7 @@ class SizeProxyEval(QRAlgorithm):
             mcap, exch, sector = 0.0, "", None
             if fund:
                 sr = f.security_reference
-                common = (sr.security_type == COMMON_STOCK and bool(sr.is_primary_share)
-                          and not bool(sr.is_depositary_receipt))
+                common = is_us_common(f)
                 exch = str(sr.exchange_id)
                 major = exch in EXCHANGES
                 mcap = float(f.market_cap)
