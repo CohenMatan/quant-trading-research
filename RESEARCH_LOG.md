@@ -2,7 +2,7 @@
 
 Append-only chronological diary. The newest entry is at the bottom. Never delete entries.
 
-Totals so far: hypotheses **0** · strategies **0** · experiments **0**
+Totals so far: hypotheses **0** · research strategies **0** · research experiments **0** (plus 14 registered infrastructure, benchmark and demo runs)
 
 ---
 
@@ -83,3 +83,49 @@ Totals so far: hypotheses **0** · strategies **0** · experiments **0**
 7. The product list shows a "Tradier" module line at $1 that does not appear among the active subscriptions. Flagged for the owner to check.
 
 **Conclusion:** the owner's precondition is **met**, and CP2 implementation starts now.
+
+---
+
+## 2026-09-27 — Session 2 (continued): CP2 built. STOP for owner approval.
+
+**Built:**
+
+- QuantConnect API client.
+- Shared LEAN harness: universe, market-on-open execution, cash planning, fill self-check, holdout lock, equity export.
+- Experiment runner: clean-tree check, holdout lock, LEAN build pinning, provenance, reproduce mode.
+- Append-only registry.
+- Metrics module; PSR/DSR/PBO statistics; split-aware trade builder; integrity checks; truncation look-ahead checker.
+- Data-audit algorithm and renderer; execution-timing canary; corporate-action and delisting check.
+- SPY and equal-weight ≥ $2B benchmarks; the S000 pipeline demo.
+- 81 tests, all passing.
+
+**Runs (registered):**
+
+| Experiments | Result |
+|---|---|
+| E951-01/02/03 | Audit |
+| E950-01 | Canary: integrity-failed, chart read race |
+| E950-02 | Canary: ✅ 4,628 fills, 0 timing violations |
+| E952-01 | Corporate actions: check bug |
+| E952-02 | Corporate actions: ✅ |
+| E900-01 | SPY: integrity-failed, chart read race |
+| E900-02 | SPY: ✅ |
+| E901-01 | Equal-weight benchmark, 2010–2021 |
+| E000-01 | Demo, 2010–2014 |
+| Reproductions | E950-02 identical; E000-01 one failed read race, then identical |
+
+In addition, 14 unregistered infrastructure development runs: 11 API/data probes and 3 harness scratch runs. None were research.
+
+**Key finding: universe data blocker.**
+
+- Old Morningstar dataset: MarketCap from 1999, but never for companies that later failed or were acquired (Enron, WorldCom, Lehman, Bear, Merrill, Countrywide, Lucent, …). That is survivorship bias.
+- New dataset (the only one after 2026-10-31): almost no MarketCap before 2009 (4–27 names ≥ $2B per year); good from 2010; 9 of 12 companies that disappeared later in 2013–2020 are present.
+- Options and recommendation are in CP2 §7.
+
+**Throughput:** about 20 s for small backtests; 3–7 min for full-universe backtests; one at a time. That is about 150–300 universe backtests per day.
+
+**Cost:** $24/month, unchanged.
+
+**Proposed for approval:** tradability filters, base slippage, portfolio constraints and gates (D023–D026); data remedy (D027).
+
+**Status:** STOPPED at CP2. No research campaign started. Waiting for the owner.

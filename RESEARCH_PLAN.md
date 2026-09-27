@@ -1,6 +1,8 @@
 # RESEARCH_PLAN.md
 
-**Status: data split, universe threshold and account size APPROVED at CP1 (2026-09-27).** Sections marked *(TBD at CP2)* will be completed before the first research campaign and require owner approval.
+**Status: data split, universe threshold and account size APPROVED at CP1 (2026-09-27).** Items marked *(TBD at CP2)* now have **proposals** in `docs/checkpoints/CP2_research_infrastructure.md` §6, awaiting owner approval.
+
+> ⚠️ **Data blocker found at CP2 (§4 of the CP2 report):** QuantConnect's MarketCap cannot currently support an unbiased point-in-time ≥ $2B universe before 2010. The old dataset omits every company that later failed or was acquired, and the new dataset has almost no MarketCap before 2009. The universe definition and/or the split may need to change; this is pending an owner decision (CP2 report §7). No research runs until it is resolved.
 
 ## 1. Objective
 

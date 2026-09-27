@@ -28,10 +28,17 @@ Try to find **one** simple, explainable, robust **long-only swing-trading strate
 
 See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
 
-- **CP1 was APPROVED by the owner on 2026-09-27.** CP2 (Research Infrastructure Ready) is authorized.
-- QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**.
-- **Owner's precondition for CP2:** before any implementation, verify that QuantConnect API authentication works and that the required datasets are accessible.
-- CP2 ends with a STOP and the CP2 report. No research campaign starts before CP2 is approved.
+- **CP1 was APPROVED by the owner on 2026-09-27.**
+- **CP2 (Research Infrastructure) report delivered on 2026-09-27: STOPPED, awaiting owner approval.** See `docs/checkpoints/CP2_research_infrastructure.md`.
+- QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**. API authentication and dataset access were verified on 2026-09-27.
+- **Open blocker: universe data.** QuantConnect's MarketCap cannot support an unbiased point-in-time ≥ $2B universe before 2010 (CP2 report §4). The owner must choose a remedy (CP2 §7) and approve the standard settings (CP2 §6) before any research campaign.
+- Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
+- Known QuantConnect quirks, all handled in code:
+  - Results (charts, order events) arrive asynchronously; the runner waits for them.
+  - At most 10 custom chart series per algorithm.
+  - Only one backtest at a time on our node.
+  - ObjectStore export is blocked.
+  - Fundamentals' shares-outstanding fields are split-adjusted to today; never use price × shares naively.
 
 ## Session-start checklist
 
