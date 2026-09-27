@@ -1,0 +1,309 @@
+{
+ "experiment_id": "E900-02",
+ "harness_messages": [],
+ "harness_summary": {
+  "buys_scaled": 3,
+  "days": 5788,
+  "elig_days": 0,
+  "elig_max": 0,
+  "elig_mean": 0,
+  "elig_min": null,
+  "elig_sum": 0,
+  "experiment_id": "E900-02",
+  "fills": 206,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 400,
+  "max_fill_dev": 2.729208065967196e-16,
+  "max_gross": 0.9829572476619781,
+  "max_subscribed": 1,
+  "min_cash_frac": 0.017042752338022018,
+  "negative_qty": 0,
+  "open_positions_at_end": 1,
+  "orders": 206,
+  "timing_violations": 0
+ },
+ "hashes": {
+  "equity_sha256": "2bb70ad513323503714f250043daa45763b7682c3b8541ded85e6c87fe6e6011",
+  "fills_sha256": "746b0d9327956571dd3d36de782de7452534a5bcc9677b262a470806cda5d2ca",
+  "trades_sha256": "984c49829be77892db7b5a87a298f4e194f8acd6844b6d23738640385e240fb6"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "5788 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "1999-01-04..2021-12-31",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 65781.63",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 5788 vs algorithm days 5788",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 0.0170",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "cash_never_negative",
+   "detail": "min cash/equity 0.0170",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=2.729208065967196e-16",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.09336095461622981,
+  "ann_volatility": 0.18834204620464623,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.31422865754267115,
+  "cagr": 0.07842706680368128,
+  "calmar": 0.14421859300087536,
+  "end": "2021-12-31",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.9998272287491361,
+  "exposure_mean": 0.9786413609386396,
+  "final_equity": 567350.27,
+  "kurtosis": 12.35172342474321,
+  "max_drawdown": -0.5438069056963082,
+  "max_drawdown_duration_days": 1656,
+  "min_cash_frac": 0.017042749801009283,
+  "n_days": 5788,
+  "n_open_trades": 1,
+  "n_trades": 0,
+  "pct_positive_years": 0.782608695652174,
+  "profit_factor": NaN,
+  "sharpe": 0.49569895038087725,
+  "skew": -0.1487238586509803,
+  "sortino": 0.6996001377442872,
+  "start": "1999-01-04",
+  "total_return": 4.6735027,
+  "turnover": 0.023192029508656783,
+  "win_rate": NaN,
+  "worst_month": -0.16308875581074367,
+  "worst_year": -0.3617787137408054,
+  "yearly_returns": {
+   "1999": 0.2017369,
+   "2000": -0.0882094907795542,
+   "2001": -0.11766925187840127,
+   "2002": -0.21596666026409017,
+   "2003": 0.2744554401630286,
+   "2004": 0.10715872087684986,
+   "2005": 0.04638760162478106,
+   "2006": 0.15359902099209255,
+   "2007": 0.052483514161578704,
+   "2008": -0.3617787137408054,
+   "2009": 0.256632828259417,
+   "2010": 0.14789060209588634,
+   "2011": 0.01855531802487498,
+   "2012": 0.15722754880746925,
+   "2013": 0.31422865754267115,
+   "2014": 0.1318781570921148,
+   "2015": 0.013007537770345579,
+   "2016": 0.11732767344381734,
+   "2017": 0.212032362704353,
+   "2018": -0.044339515041560085,
+   "2019": 0.30521512191868383,
+   "2020": 0.18031934698801644,
+   "2021": 0.28066832367559913
+  }
+ },
+ "provenance": {
+  "code_sha256": "7bab1ef17b36b23c898ee114f00b7cde8275461f1235deef6820c5cb62eff3b1",
+  "config_sha256": "ec6f1ab81cb61c38e066c6f13f58aa69c5607ffff84a98a9ed1f7780400d7922",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py"
+  ],
+  "git_commit": "ee2d4ac5ad8b2a0da1b53214abc8b251ed16771a",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "b6970d3e4387e85c41851897a4671b4d",
+  "qc_project_id": 37054933,
+  "run_utc": "2026-09-27T21:26:24Z",
+  "runtime_s": 20.5599262714386
+ },
+ "qc_statistics": {
+  "Alpha": "-0.001",
+  "Annual Standard Deviation": "0.156",
+  "Annual Variance": "0.024",
+  "Average Loss": "-0.02%",
+  "Average Win": "0.11%",
+  "Beta": "0.978",
+  "Compounding Annual Return": "7.836%",
+  "Drawdown": "54.400%",
+  "Drawdown Recovery": "2404",
+  "End Equity": "567350.27",
+  "Estimated Strategy Capacity": "$1200000000.00",
+  "Expectancy": "3.504",
+  "Information Ratio": "-0.47",
+  "Loss Rate": "24%",
+  "Lowest Capacity Asset": "SPY R735QTJ8XC9X",
+  "Net Profit": "467.350%",
+  "Portfolio Turnover": "0.02%",
+  "Probabilistic Sharpe Ratio": "0.002%",
+  "Profit-Loss Ratio": "4.92",
+  "Sharpe Ratio": "0.298",
+  "Sortino Ratio": "0.315",
+  "Start Equity": "100000",
+  "Total Fees": "$208.98",
+  "Total Orders": "206",
+  "Tracking Error": "0.004",
+  "Treynor Ratio": "0.048",
+  "Win Rate": "76%"
+ },
+ "relative": {},
+ "segments": {
+  "IS": {
+   "ann_return": 0.06816089692439241,
+   "ann_volatility": 0.19477563281186303,
+   "best_year": 0.31422865754267115,
+   "cagr": 0.050351648655236,
+   "calmar": 0.0925910431217568,
+   "end": "2014-12-31",
+   "exposure_days_frac": 0.999751552795031,
+   "exposure_mean": 0.9784928228276799,
+   "final_equity": 219342.05,
+   "kurtosis": 10.118685978859286,
+   "max_drawdown": -0.5438069056963082,
+   "max_drawdown_duration_days": 1656,
+   "min_cash_frac": 0.017648252850160806,
+   "n_days": 4025,
+   "pct_positive_years": 0.75,
+   "sharpe": 0.3499457090211594,
+   "skew": 0.03474736027720027,
+   "sortino": 0.49715192750195497,
+   "start": "1999-01-04",
+   "total_return": 1.1934204999999998,
+   "worst_month": -0.16308875581074367,
+   "worst_year": -0.3617787137408054,
+   "yearly_returns": {
+    "1999": 0.2017369,
+    "2000": -0.0882094907795542,
+    "2001": -0.11766925187840127,
+    "2002": -0.21596666026409017,
+    "2003": 0.2744554401630286,
+    "2004": 0.10715872087684986,
+    "2005": 0.04638760162478106,
+    "2006": 0.15359902099209255,
+    "2007": 0.052483514161578704,
+    "2008": -0.3617787137408054,
+    "2009": 0.256632828259417,
+    "2010": 0.14789060209588634,
+    "2011": 0.01855531802487498,
+    "2012": 0.15722754880746925,
+    "2013": 0.31422865754267115,
+    "2014": 0.1318781570921148
+   }
+  },
+  "VAL": {
+   "ann_return": 0.1510125053175926,
+   "ann_volatility": 0.17280946408765613,
+   "best_year": 0.30521512191868383,
+   "cagr": 0.14557184707878057,
+   "calmar": 0.44051224132344036,
+   "end": "2021-12-31",
+   "exposure_days_frac": 1.0,
+   "exposure_mean": 0.9789804794279262,
+   "final_equity": 567350.27,
+   "kurtosis": 20.075243153648557,
+   "max_drawdown": -0.3304603900255665,
+   "max_drawdown_duration_days": 187,
+   "min_cash_frac": 0.017042749801009283,
+   "n_days": 1763,
+   "pct_positive_years": 0.8571428571428571,
+   "sharpe": 0.8738671004788997,
+   "skew": -0.7299039210828147,
+   "sortino": 1.2105750112955689,
+   "start": "2015-01-02",
+   "total_return": 1.5874593450746057,
+   "worst_month": -0.12256659445660789,
+   "worst_year": -0.044339515041560085,
+   "yearly_returns": {
+    "2015": 0.013343868326270103,
+    "2016": 0.11732767344381734,
+    "2017": 0.212032362704353,
+    "2018": -0.044339515041560085,
+    "2019": 0.30521512191868383,
+    "2020": 0.18031934698801644,
+    "2021": 0.28066832367559913
+   }
+  }
+ },
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": 0.9910210213229527
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "error": "analysis failed:\nTraceback (most recent call last):\n  File \"/home/user/quant-trading-research/src/qresearch/run.py\", line 234, in run\n    an = analyse(cfg, raw)\n         ^^^^^^^^^^^^^^^^^\n  File \"/home/user/quant-trading-research/src/qresearch/run.py\", line 103, in analyse\n    trades = build_trades(fills, splits)\n             ^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/user/quant-trading-research/src/qresearch/trades.py\", line 64, in build_trades\n    raise LongOnlyViolation(f\"sell of {sid} on {day} without an open position\")\nqresearch.trades.LongOnlyViolation: sell of APA R735QTJ8XC9X on 2014-12-12 without an open position\n",
+ "experiment_id": "E000-01",
+ "log_tail": [
+  "2010-01-04 00:00:00 Launching analysis for 332bc70b29bc103136134a7ea4dc2a15 with LEAN Engine v2.5.0.0.18131",
+  "2012-01-26 00:00:00 QRSPLIT|COG R735QTJ8XC9X|2012-01-26|0.5000000000",
+  "2012-07-10 00:00:00 QRSPLIT|UARM TDRYVSXV1X0L|2012-07-10|0.5000000000",
+  "2013-02-25 00:00:00 QRSPLIT|TDSC R735QTJ8XC9X|2013-02-25|0.6666670000",
+  "2015-01-01 00:00:00 QRSUMMARY|{\"buys_scaled\": 121, \"days\": 1258, \"elig_days\": 1258, \"elig_max\": 1069, \"elig_mean\": 827.9030206677265, \"elig_min\": 0, \"elig_sum\": 1041502, \"experiment_id\": \"E000-01\", \"fills\": 4950, \"forced_fills\": 1, \"held_delistings\": 0, \"held_splits\": 3, \"invalid\": 0, \"log_budget_left\": 397, \"max_fill_dev\": 3.2692361674484425e-16, \"max_gross\": 0.9968306101187183, \"max_subscribed\": 1070, \"min_cash_frac\": 0.0031693898812816665, \"negative_qty\": 0, \"open_positions_at_end\": 10, \"orders\": 4949, \"timing_violations\": 0}",
+  "2015-01-01 00:00:00 Algorithm Id:(332bc70b29bc103136134a7ea4dc2a15) completed in 132.52 seconds at 73k data points per second. Processing total of 9,684,870 data points."
+ ],
+ "provenance": {
+  "code_sha256": "276c0f06f349f6b30acb66d2341b5005b33d3e8def7a90f6e36149bb4568413b",
+  "config_sha256": "3a56b9f3ca6759c1fd32b93ad21d79aa3abd03af6fed4511c1fc8bb7937ecfd7",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "6de8b33989e6cf28ae49446bde39491a644c7124",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "332bc70b29bc103136134a7ea4dc2a15",
+  "qc_project_id": 37055249,
+  "run_utc": "2026-09-27T21:27:48Z",
+  "runtime_s": 142.51376152038574
+ },
+ "status": "failed"
+}

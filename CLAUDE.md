@@ -26,7 +26,25 @@ Try to find **one** simple, explainable, robust **long-only swing-trading strate
 
 ## Current state
 
-See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`. As of 2026-09-27: **Checkpoint 1 was submitted and is awaiting approval.** Do not start significant implementation until CP1 is approved.
+See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
+
+- **CP1 was APPROVED by the owner on 2026-09-27.**
+- **CP2 (Research Infrastructure) report delivered on 2026-09-27: STOPPED, awaiting owner approval.** See `docs/checkpoints/CP2_research_infrastructure.md`.
+- QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**. API authentication and dataset access were verified on 2026-09-27.
+- **Open blocker: universe data.** QuantConnect's MarketCap cannot support an unbiased point-in-time ≥ $2B universe before 2010 (CP2 report §4). The owner must choose a remedy (CP2 §7) and approve the standard settings (CP2 §6) before any research campaign.
+- Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
+- Known QuantConnect quirks, all handled in code:
+  - Results (charts, order events) arrive asynchronously; the runner waits for them.
+  - At most 10 custom chart series per algorithm.
+  - Only one backtest at a time on our node.
+  - ObjectStore export is blocked.
+  - Fundamentals' shares-outstanding fields are split-adjusted to today; never use price × shares naively.
+
+## Session-start checklist
+
+1. Check that `QC_USER_ID` and `QC_API_TOKEN` exist, e.g. `[ -n "$QC_USER_ID" ]`. **Never print, log, echo or commit their values**, and never include them in URLs, error messages or experiment records.
+2. Check that `www.quantconnect.com` is reachable through the proxy.
+3. If either check fails, stop and tell the owner. Environment settings (variables and the network allowlist) only take effect in a **new** session.
 
 ## Checkpoint discipline
 
@@ -53,7 +71,7 @@ Never roll on to the next stage automatically. Minor implementation decisions ne
 - Every strategy starts from a written, explainable hypothesis in `research/hypotheses/H###.md`. **No blind parameter searches.** Use about 3–10 meaningful variations per hypothesis.
 - **Log every experiment**, including failed, rejected and bugged runs, in `experiments/INDEX.csv`. Never delete one. Reports must state the total number of hypotheses, strategies and experiments tested.
 - Signals must be **deterministic code**. LLM judgment may propose and analyse hypotheses but is never part of a signal.
-- Data split (pending CP1 approval; see `RESEARCH_PLAN.md`):
+- Data split (**approved at CP1**; see `RESEARCH_PLAN.md`):
   - IS: 1999-01-04 → 2014-12-31.
   - VAL: 2015-01-01 → 2021-12-31.
   - **HOLDOUT: 2022-01-01 → 2026-08-31, which is locked.**
@@ -62,7 +80,7 @@ Never roll on to the next stage automatically. Minor implementation decisions ne
 
 ## Engineering rules
 
-- Engine and data: QuantConnect Cloud (LEAN), driven through the REST API. Credentials come only from the env vars `QC_USER_ID` and `QC_API_TOKEN`. Never commit secrets, and never ask the owner to paste them into chat.
+- Engine and data: QuantConnect Cloud (LEAN), driven through the REST API. Credentials come only from the env vars `QC_USER_ID` and `QC_API_TOKEN`. **Never print, log, commit or otherwise expose them**, and never ask the owner to paste them into chat.
 - **Never export raw QuantConnect data** (licence). Store only derived results: metrics, equity curves and trade lists.
 - **Execution realism:**
   - A signal on bar T executes at the T+1 open or later, **never at T's close**.
@@ -93,7 +111,7 @@ Important information must never live only in chat, temp files or an uncommitted
 ## Git
 
 - Develop on the session's designated branch.
-- Checkpoint approval happens by the owner merging into `main` through a PR, if the owner adopts the proposal in CP1.
+- Checkpoint approval happens by the owner merging into `main` through a PR, which the owner approved at CP1.
 - Use clear commit messages, e.g. `E003-02: …` for experiment runs.
 
 ## Communication
