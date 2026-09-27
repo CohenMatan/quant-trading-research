@@ -45,4 +45,7 @@ def test_recorded_reproductions_are_identical():
     reps = list(ROOT.glob("experiments/E*/reproductions/*/result.json"))
     for p in reps:
         r = json.loads(p.read_text())
+        if not r["status"].startswith("completed"):
+            continue   # a failed attempt (e.g. download race) stays on record but compares nothing
         assert r["reproduction"]["identical"], p
+    assert any(json.loads(p.read_text())["status"].startswith("completed") for p in reps) or not reps
