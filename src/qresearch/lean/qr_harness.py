@@ -19,7 +19,7 @@ from qr_params import EXPERIMENT
 
 LAST_UNLOCKED = datetime(2021, 12, 31)
 COMMON_STOCK = "ST00000001"
-EXCHANGES = ("NYS", "NAS", "ASE")
+EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 
 
 class QRAlgorithm(QCAlgorithm):
