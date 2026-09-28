@@ -128,3 +128,52 @@ def test_trade_pnl_is_net_of_both_commissions():
     t = build_trades(f).iloc[0]
     assert t.fees == 14.0 and t.pnl == pytest.approx(5100 - 5000 - 14)
     assert metrics.trade_stats(build_trades(f))["expectancy"] == pytest.approx(86 / 5000)
+
+
+# ---------------------------------------------------------------- D049: forced (delisting) liquidations
+def test_forced_liquidation_fee_debit_is_mirrored_locally():
+    from qresearch import results
+    f = pd.DataFrame([(1, "A", "A", "2011-01-03", 10, 50.0, 7.0, "e|sig=2011-01-02"),
+                      (2, "A", "A", "2011-02-01", -10, 40.0, 0.0, "Liquidate from delisting")], columns=FILL_COLUMNS)
+    g, n = results.apply_forced_fees(f, ["QRFORCEDFEE|2|7.00", "QRCANARY|{}"])
+    assert n == 1 and list(g["fee"]) == [7.0, 7.0]
+    c = {x["check"]: x for x in integrity.check_all(_eq(), g, S, "2011-01-01", "2011-12-31", 7.0)}
+    assert c["commission_fixed_per_order"]["ok"]
+    # without the debit the forced order would show $0 and the commission check must fail
+    c2 = {x["check"]: x for x in integrity.check_all(_eq(), f, S, "2011-01-01", "2011-12-31", 7.0)}
+    assert not c2["commission_fixed_per_order"]["ok"]
+
+
+def test_harness_debits_forced_fills_once():
+    src = (ROOT / "src/qresearch/lean/qr_harness.py").read_text()
+    assert 'self.portfolio.cash_book["USD"].add_amount(-self._qr_forced_fee)' in src
+    assert "ev.order_id not in self._qr_forced_debited" in src
+
+
+# ---------------------------------------------------------------- completeness (E901-02 incident)
+def test_empty_download_is_never_clean():
+    from qresearch import results
+    empty = results.parse_fills([])
+    s = dict(S, fills=22037)
+    c = {x["check"]: x for x in integrity.check_all(_eq(), empty, s, "2011-01-01", "2011-12-31", 7.0,
+                                                    expected_orders=22052, downloaded_orders=0)}
+    assert not c["orders_download_complete"]["ok"]
+    assert not c["fills_match_harness_count"]["ok"]
+    assert not c["commission_fixed_per_order"]["ok"]
+
+
+def test_order_reader_waits_for_expected_count(monkeypatch):
+    from qresearch.qc_client import QCClient
+
+    class Stub(QCClient):
+        def __init__(self):
+            self.calls = 0
+
+        def _read_orders_once(self, h):
+            self.calls += 1
+            return [] if self.calls < 3 else [{"id": 1, "status": 3, "events": [{"status": "filled"}]}]
+
+    import qresearch.qc_client as q
+    monkeypatch.setattr(q.time, "sleep", lambda s: None)
+    c = Stub()
+    assert len(c.read_orders(None, expected=1)) == 1 and c.calls == 3

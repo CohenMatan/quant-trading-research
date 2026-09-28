@@ -97,6 +97,27 @@ def parse_logs(lines: list[str]) -> tuple[pd.DataFrame, dict, list[str]]:
     return pd.DataFrame(splits, columns=SPLIT_COLUMNS), summary, other
 
 
+def apply_forced_fees(fills: pd.DataFrame, qr_lines: list[str]) -> tuple[pd.DataFrame, int]:
+    """Mirror the harness's cash debits for LEAN-generated orders (delisting liquidations), which the
+    Orders API reports with a $0 fee (D049). Each QRFORCEDFEE|order_id|amount line sets the fee of that
+    order's first fill row. Returns (fills, number of debits applied)."""
+    debits = {}
+    for ln in qr_lines:
+        if ln.startswith("QRFORCEDFEE|"):
+            _, oid, amt = ln.split("|")
+            debits[int(oid)] = float(amt)
+    if not debits or fills.empty:
+        return fills, 0
+    fills = fills.copy()
+    applied = 0
+    for oid, amt in debits.items():
+        idx = fills.index[fills["order_id"] == oid]
+        if len(idx) and float(fills.loc[idx, "fee"].sum()) == 0.0:
+            fills.loc[idx[0], "fee"] = amt
+            applied += 1
+    return fills, applied
+
+
 def lines_from_statistics(st: dict) -> list[str]:
     """Rebuild the harness's result lines from summary statistics (D046): the qr_summary JSON as a
     QRSUMMARY line, followed by the message chunks qr_msgs_00.. in order."""

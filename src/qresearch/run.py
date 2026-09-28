@@ -73,9 +73,11 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
         out["error"] = (bt.get("error") or "") + "\n" + (bt.get("stacktrace") or "")
         out["logs"] = []            # the error and stack trace come from backtests/read, not logs
         return out
-    out["orders"] = client.read_orders(handle)
     stats_ = client.read_statistics(handle, must_have="qr_summary")
     out["backtest"]["statistics"] = stats_
+    # QuantConnect's own order count makes the orders download verifiably complete (E901-02 incident).
+    out["expected_orders"] = qc_total_orders(stats_)
+    out["orders"] = client.read_orders(handle, expected=out["expected_orders"])
     if "qr_summary" in stats_:
         out["logs"] = results.lines_from_statistics(stats_)      # D046: no QuantConnect logs needed
         out["result_channel"] = "summary_statistics"
@@ -93,6 +95,12 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     return out
 
 
+def qc_total_orders(stats_: dict) -> int | None:
+    """QuantConnect's "Total Orders" summary statistic as an int (None if absent)."""
+    v = str(stats_.get("Total Orders", "")).replace(",", "").strip()
+    return int(v) if v.isdigit() else None
+
+
 def load_benchmarks(cfg: dict) -> dict[str, pd.Series]:
     out = {}
     for eid in cfg.get("benchmarks", []):
@@ -108,10 +116,13 @@ def analyse(cfg: dict, raw: dict) -> dict:
     equity = results.parse_equity(raw["chart"])
     fills = results.parse_fills(raw["orders"])
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
+    fills, _ = results.apply_forced_fees(fills, qr_lines)          # D049: mirror harness fee debits
     trades = build_trades(fills, splits)
     checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
                                  commission_per_order=cfg["costs"].get("commission_per_order"),
-                                 tradeable_dates=raw["backtest"].get("tradeableDates"))
+                                 tradeable_dates=raw["backtest"].get("tradeableDates"),
+                                 expected_orders=raw.get("expected_orders"),
+                                 downloaded_orders=len({o.get("id") for o in raw["orders"]}))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),

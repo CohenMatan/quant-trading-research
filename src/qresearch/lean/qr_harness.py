@@ -162,9 +162,12 @@ class QRAlgorithm(QCAlgorithm):
         if per_order is None:
             self._qr_fee_model = InteractiveBrokersFeeModel()
             self._qr_fee_est = lambda q: max(1.0, 0.005 * q)
+            self._qr_forced_fee = 0.0          # legacy configs: behaviour unchanged
         else:
             self._qr_fee_model = FixedPerOrderFeeModel(per_order)
             self._qr_fee_est = lambda q, c=float(per_order): c
+            self._qr_forced_fee = float(per_order)
+        self._qr_forced_debited = set()
         self.set_security_initializer(self._qr_init_security)
         self.universe_settings.resolution = Resolution.DAILY
         self.universe_settings.data_normalization_mode = DataNormalizationMode.RAW
@@ -429,6 +432,15 @@ class QRAlgorithm(QCAlgorithm):
         sig = self._qr_sig.get(ev.order_id)
         if sig is None:
             s["forced_fills"] += 1   # e.g. LEAN's delisting liquidation
+            # LEAN executes delisting liquidations with a zero fee, bypassing the fee model. Under the
+            # fixed per-order model every executed order costs the commission (D039/D049), so debit it
+            # here, once per order, and record it so the local accounting can mirror the debit.
+            if self._qr_forced_fee and float(ev.order_fee.value.amount) == 0 \
+                    and ev.order_id not in self._qr_forced_debited:
+                self._qr_forced_debited.add(ev.order_id)
+                self.portfolio.cash_book["USD"].add_amount(-self._qr_forced_fee)
+                s["forced_fee_debits"] = s.get("forced_fee_debits", 0) + 1
+                self._qr_log(f"QRFORCEDFEE|{ev.order_id}|{self._qr_forced_fee:.2f}")
         else:
             fill_day = self.time.strftime("%Y-%m-%d")
             if fill_day <= sig:

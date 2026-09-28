@@ -168,17 +168,21 @@ class QCClient:
             time.sleep(poll_s)
 
     # ------------------------------------------------------------------ results
-    def read_orders(self, h: BacktestHandle, timeout_s: float = 1800) -> list[dict]:
-        """All orders with their events. QC fills in order events asynchronously after the
-        backtest completes, so this re-reads until every filled order carries a fill event."""
+    def read_orders(self, h: BacktestHandle, expected: int | None = None, timeout_s: float = 1800) -> list[dict]:
+        """All orders with their events. QC publishes orders and their events asynchronously after
+        the backtest completes, so this re-reads until (a) the number of distinct orders equals
+        `expected` (QuantConnect's own "Total Orders" statistic) and (b) every filled order carries a
+        fill event. An empty or short download is never accepted as complete (E901-02 incident)."""
         t0 = time.time()
         while True:
             out = self._read_orders_once(h)
+            n = len({o.get("id") for o in out})
             missing = sum(1 for o in out if incomplete_order(o))
-            if missing == 0:
+            if missing == 0 and (expected is None or n == expected):
                 return out
             if time.time() - t0 > timeout_s:
-                raise QCError(f"{missing} of {len(out)} orders still lack fill events after {timeout_s:.0f}s")
+                raise QCError(f"orders incomplete after {timeout_s:.0f}s: downloaded {n} of {expected} orders, "
+                              f"{missing} lack fill events")
             time.sleep(15)
 
     def _read_orders_once(self, h: BacktestHandle) -> list[dict]:

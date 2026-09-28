@@ -189,3 +189,30 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 **Queued:** QuantConnect verification runs E950-03, E900-03 and E901-02. They wait for the daily log allowance, which was still exhausted at 05:23 UTC.
 
 **No strategy research started.** Report: `docs/checkpoints/CP2_amendment_2010_split.md`.
+
+---
+
+## 2026-09-28 — D039 commission verification: first attempt FAILED; fixed; re-verifying
+
+**Owner instructions applied:**
+
+- D046: no dependency on QuantConnect logs. Results travel as summary statistics, plus the Orders API and charts.
+- D048: Claude merges its own work into `main` (PR #6 merged).
+
+**Container restart.** It interrupted the queue during E901-02. That QuantConnect backtest (created 2026-09-28 10:38:49) finished but was never downloaded or registered. It was replaced by a fresh E901-02 run.
+
+**Verification results:**
+
+- E950-03 (canary): ✅ 2,412 executed orders, all $7.
+- E900-03 (SPY): ✅ 100 orders, all $7.
+- **E901-02 (equal-weight benchmark): ✗ FAIL.**
+  - Diagnosis (read-only re-download of the same backtest):
+    - The runner's first orders read returned **0 orders** (a timing race), so the commission check was silently skipped.
+    - The re-download showed 21,572 harness orders at exactly $7, but **465 LEAN delisting liquidations at $0**.
+    - 15 orders never executed ($0, correct).
+  - Fixes:
+    - D049: $7 is debited on forced liquidations.
+    - D050: downloads must match QuantConnect's order count; two new integrity checks; the commission check can no longer be skipped.
+  - Proven on QuantConnect by a scratch X952 run (Enron, WorldCom, Bear Stearns, Lehman: 4 of 4 debited; 11 of 11 orders at $7).
+
+**Research Cycle 1 NOT started.** All three verification runs are repeated on the final harness (E950-04, E900-04, E901-03). C01 starts only if all pass.
