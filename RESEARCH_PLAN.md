@@ -2,13 +2,14 @@
 
 **Status.**
 
-- Approved at CP1: universe threshold and account size.
-- CP2 infrastructure approved on 2026-09-27.
-- On 2026-09-28 the owner decided the official research period is **2010 onward**, with the original MarketCap universe (D033).
-- **Pending owner approval:**
-  - the exact 2010+ split below (D034);
-  - the standard settings and adjusted gates in `docs/checkpoints/CP2_amendment_2010_split.md`.
-- **No research campaign has started.**
+- CP1 approved (2026-09-27); CP2 approved (2026-09-27).
+- **CP2 amendment approved (2026-09-28):**
+  - 2010+ split (D034);
+  - adjusted gates (D036);
+  - standard settings (D023–D025, D041);
+  - $7/order commission (D039);
+  - owner requirements D042–D045 (validation freeze, survivorship quantification, account-size re-tests, commission verification first).
+- Research Cycle 1 may start once the D039 verification runs pass (D045).
 
 ## 1. Objective
 
@@ -54,12 +55,12 @@ Rules:
 
 - The signal uses day T's completed daily bar. The order is **market-on-open on T+1**.
 - Long-only. No leverage, enforced by the harness's cash planning (D015).
-- Position sizing is defined per strategy, within fixed portfolio constraints (D025, proposed):
-  - at most 10% per position at entry;
-  - at most 20 positions;
-  - 2% cash buffer;
-  - minimum position $2,000.
-  - Proposed change D041: minimum $5,000 and at most 15 positions.
+- Position sizing is defined per strategy, within fixed portfolio constraints (D025/D041/D044, approved):
+  - at most 10% of equity per position at entry;
+  - **minimum position $5,000**;
+  - **at most 15 concurrent positions** (fewer if equity is small: ⌊equity × 0.98 / $5,000⌋);
+  - 2% cash buffer.
+- Primary research account: **$100,000.** Finalists are re-tested at other account sizes (D044).
 - **Costs (D039).** Every reported metric is net of both commission and slippage.
   - **Commission: $7 per executed order, buy or sell** ($14 per normal round trip).
     - An order filled in pieces is charged once.
@@ -75,7 +76,8 @@ Rules:
 Hypothesis (H###) → Strategy (S###) → Exploration on IS 2010–2017 (3–10 variations)
   → Analysis → Reject / Continue
   → Robustness on IS (parameter plateau, sub-periods, regimes, costs, trade distribution)
-  → Validation (VAL 2018–2021, frozen) → Walk-forward (2010–2021, pre-declared selection rule)
+  → PROMOTE (freeze code + parameters; promotion record, D042)
+  → Validation (VAL 2018–2021, one run, accept/reject only) → Walk-forward (2010–2021, pre-declared selection rule)
   → Realistic LEAN checks → CP4 → Freeze
   → [optional STRESS 1999–2009, report only] → CP5 approval → HOLDOUT once
   → Production Candidate / Reject
@@ -141,3 +143,16 @@ Benchmarks, both over 2010-01-04 → 2021-12-31 and reported per segment:
   - The S000 demo on 2010–2014 (short-term reversal).
   - Universe-level forward returns for 2010–2014 (size-proxy evaluation).
   - Universe membership statistics for 2015–2021.
+
+## 11. Validation discipline (D042)
+
+- Promotion from IS to VAL writes `research/promotions/S###_vX.Y.json`. It holds hashes of the strategy files and the harness, plus the exact parameters, universe, costs and portfolio settings.
+- The runner refuses any VAL or WF run whose files or settings differ from the promotion record.
+- **One VAL run per strategy lineage.** A strategy with a VAL result, and any strategy declaring it as `derived_from`, cannot be run on VAL again.
+- VAL results are used only to accept or reject.
+- Any change made after seeing VAL results creates a new strategy. That strategy can only be evaluated as a post-VAL idea, and its report must say so. It never counts as out-of-sample on 2018–2021.
+
+## 12. Disclosure required in every research report
+
+- **The post-2010 survivorship gap:** later-ended securities lack fundamentals. The measured size by year and the bias direction are in `docs/data/survivorship_gap_2010.md` (D043).
+- The trial count: hypotheses, strategies and experiments to date.
