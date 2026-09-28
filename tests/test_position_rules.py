@@ -79,3 +79,19 @@ def test_legacy_configs_without_new_rules_behave_as_before(plan):
     legacy = {"max_position_weight": 0.25, "cash_buffer": 0.02}
     out = plan(entries(8, w=0.24, price=100.0), 100_000, 100_000, legacy, 0.0, FEE)
     assert out["skipped_cap"] == 0 and out["skipped_min"] == 0 and out["scaled"]   # 8 x 24% needs scaling
+
+
+@pytest.fixture
+def harness(monkeypatch):
+    return _load_harness(monkeypatch)
+
+
+def test_slot_weight_at_100k_and_small_accounts(harness):
+    sw = harness.slot_weight
+    assert sw(15, 100_000, PF) == pytest.approx(0.98 / 15)            # ~$6,533 per position
+    assert sw(15, 60_000, PF) == pytest.approx(5050 / 60_000)          # minimum binds -> fewer positions
+    assert sw(5, 100_000, PF) == 0.10                                  # capped at 10%
+    plan = harness.plan_orders
+    w = sw(15, 60_000, PF)
+    out = plan(entries(15, w=w), 60_000, 60_000, PF, 0.0, FEE)
+    assert len(out["buys"]) == 11 and all(q * 50.0 >= 5000 for _, q in out["buys"])

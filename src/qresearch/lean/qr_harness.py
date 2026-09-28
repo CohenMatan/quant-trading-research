@@ -22,6 +22,19 @@ COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 
 
+def slot_weight(n_slots, pv, pf):
+    """Weight per position for a strategy with n_slots equal slots: equal weight of the investable
+    equity, but never below the minimum position (+1% margin) and never above the weight cap. With
+    small equity this raises the weight, and plan_orders' size-aware cap reduces the position count."""
+    buffer = float(pf.get("cash_buffer", 0.02))
+    max_w = float(pf.get("max_position_weight", 1.0))
+    min_pos = float(pf.get("min_position_usd", 0.0))
+    w = (1.0 - buffer) / max(int(n_slots), 1)
+    if min_pos > 0 and pv > 0:
+        w = max(w, 1.01 * min_pos / pv)
+    return min(w, max_w)
+
+
 def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0):
     """Pure order planning (no LEAN types; unit-tested offline).
 
@@ -391,6 +404,9 @@ class QRAlgorithm(QCAlgorithm):
         for sym, q in plan["sells"] + plan["buys"]:
             n += self._qr_submit(sym, q, f"{tag}|sig={sig}")
         return n
+
+    def qr_slot_weight(self, n_slots):
+        return slot_weight(n_slots, float(self.portfolio.total_portfolio_value), self._qr_pf)
 
     def _qr_submit(self, sym, qty, tag):
         t = self.market_on_open_order(sym, qty, tag=tag)

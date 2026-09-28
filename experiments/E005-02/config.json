@@ -1,0 +1,44 @@
+{
+ "experiment_id": "E005-02",
+ "kind": "research",
+ "hypothesis_id": "H005",
+ "strategy_id": "S005",
+ "strategy_version": "v1.1",
+ "strategy_dir": "strategies/S005_low_vol",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2010-01-04",
+ "end": "2017-12-29",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15
+ },
+ "params": {
+  "vol_days": 252,
+  "slots": 15,
+  "band": 0.25,
+  "require_positive_mom": false
+ },
+ "lean_version_id": 18131,
+ "cycle": "C01",
+ "benchmarks": [
+  "E900-03",
+  "E901-02"
+ ],
+ "description": "C01 H005 S005 v1.1 (pre-declared variation) on IS 2010-2017"
+}
