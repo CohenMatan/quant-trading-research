@@ -9,8 +9,8 @@ venv/
 .ruff_cache/
 
 # Local data and caches: raw market data never goes in Git
-data/
-cache/
+/data/
+/cache/
 *.parquet
 scratch/
 
