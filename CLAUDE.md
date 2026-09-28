@@ -29,9 +29,13 @@ Try to find **one** simple, explainable, robust **long-only swing-trading strate
 See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
-- **CP2 (Research Infrastructure) report delivered on 2026-09-27: STOPPED, awaiting owner approval.** See `docs/checkpoints/CP2_research_infrastructure.md`.
-- QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**. API authentication and dataset access were verified on 2026-09-27.
-- **Open blocker: universe data.** QuantConnect's MarketCap cannot support an unbiased point-in-time ≥ $2B universe before 2010 (CP2 report §4). The owner must choose a remedy (CP2 §7) and approve the standard settings (CP2 §6) before any research campaign.
+- **CP2 was APPROVED by the owner on 2026-09-27.**
+- **Owner decision 2026-09-28 (D033):**
+  - Official research uses the new Morningstar dataset **from 2010 only**, with MarketCap ≥ $2B.
+  - The size proxy is rejected.
+  - 1999–2009 is an optional finalist stress test only (D035).
+- **CP2 amendment** (`docs/checkpoints/CP2_amendment_2010_split.md`, which covers the 2010 split, adjusted gates and the fixed $7/order commission): **STOPPED, awaiting owner approval.** No research campaign until approved.
+- QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**.
 - Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
 - Known QuantConnect quirks, all handled in code:
   - Results (charts, order events) arrive asynchronously; the runner waits for them.
@@ -71,12 +75,14 @@ Never roll on to the next stage automatically. Minor implementation decisions ne
 - Every strategy starts from a written, explainable hypothesis in `research/hypotheses/H###.md`. **No blind parameter searches.** Use about 3–10 meaningful variations per hypothesis.
 - **Log every experiment**, including failed, rejected and bugged runs, in `experiments/INDEX.csv`. Never delete one. Reports must state the total number of hypotheses, strategies and experiments tested.
 - Signals must be **deterministic code**. LLM judgment may propose and analyse hypotheses but is never part of a signal.
-- Data split (**approved at CP1**; see `RESEARCH_PLAN.md`):
-  - IS: 1999-01-04 → 2014-12-31.
-  - VAL: 2015-01-01 → 2021-12-31.
+- Data split (**2010 scheme, D034: proposed at the CP2 amendment, pending owner approval**; see `RESEARCH_PLAN.md`):
+  - IS: 2010-01-04 → 2017-12-31.
+  - VAL: 2018-01-01 → 2021-12-31.
+  - Walk-forward: expanding window from 2010, annual test folds 2014–2021.
   - **HOLDOUT: 2022-01-01 → 2026-08-31, which is locked.**
+  - 1999–2009: optional STRESS test of finalists only. **Never** used for optimisation, selection or promotion.
 - **Never touch the holdout** before written owner approval at CP5, recorded in `HOLDOUT_UNLOCK.md`. Never tune anything on validation or holdout results. After seeing holdout results, never modify the strategy.
-- Hypotheses must not be motivated by knowledge of market events after 2014, such as the 2020 crash, 2022 or the 2023–24 AI rally. Hindsight counts as data snooping.
+- Hypotheses must not be motivated by knowledge of market events after 2017 (the end of IS), such as the 2018 Q4 sell-off, the 2020 crash, 2022 or the 2023–24 AI rally. Hindsight counts as data snooping.
 
 ## Engineering rules
 

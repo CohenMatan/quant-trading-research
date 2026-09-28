@@ -1,8 +1,15 @@
 # RESEARCH_PLAN.md
 
-**Status: data split, universe threshold and account size APPROVED at CP1 (2026-09-27).** Items marked *(TBD at CP2)* now have **proposals** in `docs/checkpoints/CP2_research_infrastructure.md` §6, awaiting owner approval.
+**Status.**
 
-> ⚠️ **Data blocker found at CP2 (§4 of the CP2 report):** QuantConnect's MarketCap cannot currently support an unbiased point-in-time ≥ $2B universe before 2010. The old dataset omits every company that later failed or was acquired, and the new dataset has almost no MarketCap before 2009. The universe definition and/or the split may need to change; this is pending an owner decision (CP2 report §7). No research runs until it is resolved.
+- CP1 approved (2026-09-27); CP2 approved (2026-09-27).
+- **CP2 amendment approved (2026-09-28):**
+  - 2010+ split (D034);
+  - adjusted gates (D036);
+  - standard settings (D023–D025, D041);
+  - $7/order commission (D039);
+  - owner requirements D042–D045 (validation freeze, survivorship quantification, account-size re-tests, commission verification first).
+- Research Cycle 1 may start once the D039 verification runs pass (D045).
 
 ## 1. Objective
 
@@ -10,46 +17,69 @@ Identify at most one simple, explainable, robust long-only swing-trading strateg
 
 ## 2. Universe (fixed across all strategies)
 
-- US-listed common stocks with Morningstar fundamentals on QuantConnect. This excludes ETFs, ADRs and OTC stocks.
-- Eligible on day T if the point-in-time `MarketCap` on day T is **≥ $2B nominal**. An inflation-adjusted threshold will be used only as a robustness check.
-- Tradability filters: a minimum price and a minimum dollar volume. *(Exact values TBD at CP2. They are fixed once and never tuned per strategy.)*
-- The universe is rebuilt daily from securities that existed on that day, including ones that later delisted.
+- **Data:** the new QuantConnect/Morningstar dataset only (LEAN build pinned per experiment), from 2010 onward.
+- **US common stock:**
+  - Morningstar common stock, not a depositary receipt;
+  - primary share **or** a US-domiciled company (D030);
+  - listed on NYSE, Nasdaq or AMEX.
+  - ETFs, ADRs and OTC stocks are excluded.
+- **Size:** eligible on day T if the point-in-time `MarketCap` (as of the T−1 close) is **≥ $2B nominal**. An inflation-adjusted threshold is used only as a robustness check.
+- **Tradability:** raw price ≥ $5, and 20-day average daily dollar volume ≥ $5M (D023, proposed). These are fixed once and never tuned per strategy.
+- **Daily rebuild:** the universe is rebuilt daily from the securities that existed on that day.
+- **Size proxy:** **not used.** It was rejected for the primary universe (D033). Its evaluation is kept as research history in `docs/data/size_proxy_evaluation.md`.
+- **Known residual limitation:** even from 2010, securities that later ended have no Morningstar fundamentals, so some large companies are missing from the universe while they traded. The CP2 size-proxy work estimated this at roughly 10% of true ≥ $2B names in 2010–14, and less later. It cannot be fixed without buying data, which is out of scope. Strategy reports state this.
 
-## 3. Data split
+## 3. Data split (proposed, D034)
 
-| Segment | Dates | Use |
-|---|---|---|
-| IS (Research/Training) | 1999-01-04 → 2014-12-31 | Exploration; choosing among a few pre-declared variations |
-| VAL (Validation) | 2015-01-01 → 2021-12-31 | One frozen-parameter pass per promoted candidate; walk-forward evaluation |
-| **HOLDOUT** | **2022-01-01 → 2026-08-31** | Once, after CP5 approval, frozen strategies only |
+| Segment | Dates | Years | Use |
+|---|---|---|---|
+| **IS** (research/training) | 2010-01-04 → 2017-12-31 | 8.0 | Exploration; choosing among a few pre-declared variations; robustness battery |
+| **VAL** (validation, out-of-sample) | 2018-01-01 → 2021-12-31 | 4.0 | One frozen-parameter pass per promoted candidate |
+| **Walk-forward (WF)** | 2010-01-04 → 2021-12-31 | 12.0 | Expanding training window from 2010. Annual test folds 2014, 2015, …, 2021 (8 folds, ≥ 4 training years each). Parameters are chosen in each training window by a rule declared in advance. It reuses IS and VAL years for *evaluation only*; every fold counts as a trial. |
+| **HOLDOUT** | **2022-01-01 → 2026-08-31** | 4.7 | Unchanged from CP1. Used once, after CP5 approval, on frozen strategies only. |
+| **STRESS** (optional) | 1999-01-04 → 2009-12-31 | 11.0 | Only for **finalists**, on an imperfect alternative universe (e.g. the size proxy). **Never** used for optimisation, parameter selection or promotion (D035). |
 
-Indicator warm-up uses data before each segment's start. Warm-up bars never generate trades.
+Rules:
 
-The **holdout lock** works as follows:
-
-- The runner rejects any end date after 2021-12-31 unless `HOLDOUT_UNLOCK.md` exists.
-- That file is created only after owner approval at CP5, and records the frozen commits.
+- **Warm-up.** Indicators use price data before each segment's start, including before 2010. Warm-up bars never generate trades. Universe membership is reliable from October 2009 (data audit E951-03), so it is available on 2010-01-04.
+- **Holdout lock (unchanged).**
+  - The runner and the LEAN harness reject any end date after 2021-12-31 unless `HOLDOUT_UNLOCK.md` exists.
+  - That file is created only after owner approval at CP5, and records the frozen commits.
+- **Date rules enforced in code** (`config.py`, `experiment.py`):
+  - Research and benchmark runs cannot start before 2010-01-04.
+  - Research runs must use IS, VAL, WF or HOLDOUT.
+  - The 1999–2009 window is reserved for kind `stress`, which must name a finalist and is excluded from the trial count.
+  - New runs must use split scheme `2010`; CP1-scheme configs remain as history.
 
 ## 4. Execution model
 
 - The signal uses day T's completed daily bar. The order is **market-on-open on T+1**.
-- Long-only, cash account, no leverage.
-- Position sizing is defined per strategy, within fixed portfolio constraints *(TBD at CP2)*.
-- Costs:
-  - Interactive Brokers–style per-share commissions.
-  - Base slippage of X bps per side *(TBD at CP2)*.
-  - Stress runs at 2×, 4× and 6× the base slippage.
-- Corporate actions: fills use raw prices, dividends are credited as cash, signals use adjusted history. Delistings liquidate at the last price, which is noted as a limitation.
+- Long-only. No leverage, enforced by the harness's cash planning (D015).
+- Position sizing is defined per strategy, within fixed portfolio constraints (D025/D041/D044, approved):
+  - at most 10% of equity per position at entry;
+  - **minimum position $5,000**;
+  - **at most 15 concurrent positions** (fewer if equity is small: ⌊equity × 0.98 / $5,000⌋);
+  - 2% cash buffer.
+- Primary research account: **$100,000.** Finalists are re-tested at other account sizes (D044).
+- **Costs (D039).** Every reported metric is net of both commission and slippage.
+  - **Commission: $7 per executed order, buy or sell** ($14 per normal round trip).
+    - An order filled in pieces is charged once.
+    - Entering or exiting with several separate orders is charged per order.
+  - **Slippage (separate):** 10 bps per side (D024, proposed). Stress runs at 2×, 4× and 6×.
+  - Commission sensitivity: a stress run at $10 per order is also reported for finalists.
+- Corporate actions: fills use raw prices, dividends are credited as cash, signals use point-in-time adjusted history. Delistings liquidate at the last price.
 - Assumed account size: $100,000 (approved at CP1).
 
 ## 5. Research loop
 
 ```
-Hypothesis (H###) → Strategy (S###) → Exploration on IS (3–10 variations)
+Hypothesis (H###) → Strategy (S###) → Exploration on IS 2010–2017 (3–10 variations)
   → Analysis → Reject / Continue
   → Robustness on IS (parameter plateau, sub-periods, regimes, costs, trade distribution)
-  → Validation (VAL, frozen) → Walk-forward (1999–2021, pre-declared selection rule)
-  → Realistic LEAN checks → CP4 → Freeze → CP5 approval → HOLDOUT once
+  → PROMOTE (freeze code + parameters; promotion record, D042)
+  → Validation (VAL 2018–2021, one run, accept/reject only) → Walk-forward (2010–2021, pre-declared selection rule)
+  → Realistic LEAN checks → CP4 → Freeze
+  → [optional STRESS 1999–2009, report only] → CP5 approval → HOLDOUT once
   → Production Candidate / Reject
 ```
 
@@ -67,19 +97,25 @@ Hypothesis (H###) → Strategy (S###) → Exploration on IS (3–10 variations)
   - **Probability of Backtest Overfitting**, using CSCV across a hypothesis's variations.
   - IS→VAL degradation.
 
-Benchmarks:
+Benchmarks, both over 2010-01-04 → 2021-12-31 and reported per segment:
 
-- SPY buy-and-hold, total return.
-- Equal-weight buy-and-hold of the ≥$2B universe.
+- **B900** SPY buy-and-hold, total return, on a $100K account with the same costs as strategies (E900-03).
+- **B901** equal-weight ≥ $2B universe, monthly rebalance (E901-02). It replaces E901-01, which used the pre-D030 universe rule.
+  - Same cost model, but on a **$10M notional** account.
+  - Holding about 1,000 names on $100K with a $7 fixed fee per order is not a meaningful portfolio (commissions alone would be several percent a year).
+  - B901 therefore measures the universe's own return, with costs immaterial.
 
 ## 7. Robustness battery
 
 - **Parameter stability:** ±20–50% perturbations around the chosen parameters. We need a plateau, not a single peak.
-- **Time stability:** sub-period and per-year results.
+- **Time stability:** sub-period (thirds of IS) and per-year results.
 - **Regimes:**
   - Bull and bear markets, defined by SPY relative to its 200-day moving average and by drawdown periods.
   - High and low volatility, defined by realized-volatility terciles.
-  - Named episodes: 2000–02, 2008–09, 2011, 2015–16, 2018 Q4, 2020, and 2022 (holdout only).
+  - Named episodes:
+    - IS: 2010 May–Jun (flash crash), 2011 Jul–Oct (US downgrade), 2015 Aug–2016 Feb (China and oil).
+    - VAL: 2018 Q4, 2020 Feb–Mar (COVID).
+    - HOLDOUT only: 2022.
 - **Costs:** slippage stress at 2×, 4× and 6× the base; also a higher commission assumption.
 - **Trade distribution:**
   - Share of profit from the top 1%, 5% and 10% of trades.
@@ -88,13 +124,35 @@ Benchmarks:
 
 ## 8. Promotion gates
 
-Exact numerical thresholds are **deliberately not yet defined**, per the owner's instruction. Before the first campaign, Claude will propose screening criteria at CP2, and the owner will approve them. Gates will then be fixed *before* the data they apply to is examined.
+- The proposed values are in `docs/checkpoints/CP2_amendment_2010_split.md` §5, adjusted for the shorter history. They await owner approval.
+- Gates are fixed *before* the data they apply to is examined.
+- STRESS results never enter any gate.
 
 ## 9. Research budget (first campaign)
 
-- Tens of hypotheses, 3–10 variations each, and at most a few hundred experiments.
-- Any substantial expansion must be justified to the owner first.
+- Tens of hypotheses, 3–10 variations each, and **at most about 200 experiments** before a checkpoint review.
+- The limit is tighter than at CP1 because the shorter history makes multiple testing more costly.
+- Any expansion must be justified to the owner first.
 
 ## 10. Hindsight control
 
-Every hypothesis must cite a rationale that does not depend on knowledge of post-2014 market events. Validation-era and holdout-era events may not motivate new hypotheses.
+- Every hypothesis must cite a rationale that does not depend on knowledge of market events **after 2017**, the end of IS.
+- Validation-era (2018–2021) and holdout-era (2022+) events may not motivate hypotheses, e.g. the 2018 Q4 sell-off, the 2020 crash, the 2021 mania, 2022, or the 2023–24 AI rally.
+- **Disclosed prior exposure** (from CP2 infrastructure runs; no strategy results):
+  - SPY and equal-weight benchmark returns for 2010–2021.
+  - The S000 demo on 2010–2014 (short-term reversal).
+  - Universe-level forward returns for 2010–2014 (size-proxy evaluation).
+  - Universe membership statistics for 2015–2021.
+
+## 11. Validation discipline (D042)
+
+- Promotion from IS to VAL writes `research/promotions/S###_vX.Y.json`. It holds hashes of the strategy files and the harness, plus the exact parameters, universe, costs and portfolio settings.
+- The runner refuses any VAL or WF run whose files or settings differ from the promotion record.
+- **One VAL run per strategy lineage.** A strategy with a VAL result, and any strategy declaring it as `derived_from`, cannot be run on VAL again.
+- VAL results are used only to accept or reject.
+- Any change made after seeing VAL results creates a new strategy. That strategy can only be evaluated as a post-VAL idea, and its report must say so. It never counts as out-of-sample on 2018–2021.
+
+## 12. Disclosure required in every research report
+
+- **The post-2010 survivorship gap:** later-ended securities lack fundamentals. The measured size by year and the bias direction are in `docs/data/survivorship_gap_2010.md` (D043).
+- The trial count: hypotheses, strategies and experiments to date.

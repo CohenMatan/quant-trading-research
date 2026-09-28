@@ -14,7 +14,8 @@ CASH_FAIL = -0.01    # cash below −1% of equity at a daily close counts as lev
 CASH_WARN = 0.0
 
 
-def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str) -> list[dict]:
+def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
+              commission_per_order: float | None = None) -> list[dict]:
     out: list[dict] = []
 
     def add(name, ok, detail, level="fail"):
@@ -52,6 +53,11 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     add("harness_no_short", summary.get("negative_qty", -1) == 0, f"negative_qty={summary.get('negative_qty')}")
     add("no_invalid_orders", summary.get("invalid", 0) == 0, f"invalid={summary.get('invalid')}", level="warn")
     add("summary_present", bool(summary), "QRSUMMARY log line parsed")
+    if commission_per_order is not None and len(fills):
+        per_order = fills.groupby("order_id")["fee"].sum()
+        wrong = per_order[(per_order - commission_per_order).abs() > 1e-9]
+        add("commission_fixed_per_order", wrong.empty,
+            f"{len(per_order)} executed orders; {len(wrong)} not charged exactly ${commission_per_order:g}")
     return out
 
 

@@ -31,6 +31,12 @@ def test_repo_holdout_is_locked():
 def test_config_split_boundaries():
     assert config.LAST_UNLOCKED_DATE == date(2021, 12, 31)
     assert config.SPLITS["HOLDOUT"] == (date(2022, 1, 1), date(2026, 8, 31))
+    assert config.CURRENT_SCHEME == "2010" and config.OFFICIAL_START == date(2010, 1, 4)
+    assert config.SPLITS["IS"] == (date(2010, 1, 4), date(2017, 12, 31))
+    assert config.SPLITS["VAL"] == (date(2018, 1, 1), date(2021, 12, 31))
+    for scheme in config.SCHEMES.values():            # the holdout never moves
+        assert scheme["HOLDOUT"] == (date(2022, 1, 1), date(2026, 8, 31))
+        assert all(end <= date(2021, 12, 31) for k, (_, end) in scheme.items() if k != "HOLDOUT")
 
 
 def _cfg(**kw):

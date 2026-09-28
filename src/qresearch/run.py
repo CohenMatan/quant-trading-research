@@ -25,6 +25,8 @@ from . import config, experiment, gitutil, holdout, integrity, metrics, registry
 from .qc_client import QCClient
 from .trades import build_trades
 
+MIN_LOG_ALLOWANCE = 300_000   # bytes of QC daily log allowance required before starting a run
+
 
 def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, str]:
     """Project files for QC: the strategy's .py files, the shared harness, generated params."""
@@ -101,7 +103,8 @@ def analyse(cfg: dict, raw: dict) -> dict:
     fills = results.parse_fills(raw["orders"])
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
     trades = build_trades(fills, splits)
-    checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"])
+    checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
+                                 commission_per_order=cfg["costs"].get("commission_per_order"))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),
@@ -206,12 +209,17 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         prior = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
         if prior and not reproduce:
             raise SystemExit(f"{exp_id} already has an original run; use --reproduce or a new ID.")
+        if not reproduce and cfg.get("split_scheme", "cp1") != config.CURRENT_SCHEME:
+            raise SystemExit(f"{exp_id} uses split scheme {cfg.get('split_scheme', 'cp1')}; new runs must use "
+                             f"{config.CURRENT_SCHEME} (D034). Old configs are history (reproduce only).")
         if reproduce and not prior:
             raise SystemExit(f"{exp_id} has no original run to reproduce.")
     if not cfg.get("lean_version_id"):
         raise SystemExit("config needs lean_version_id: every run is pinned to an explicit LEAN build (D021)")
     unlocked = holdout.holdout_unlocked()
     files = assemble_files(cfg, commit, unlocked)
+    if not scratch and not reproduce:
+        _check_freeze(cfg, commit, files)
     prov = dict(git_commit=head if commit else f"{head}+uncommitted", run_utc=run_utc,
                 config_sha256=results.sha256_text(cfg_text), code_sha256=code_hash(files),
                 files=sorted(files), holdout_unlocked=unlocked,
@@ -222,6 +230,10 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         return prov
 
     client = QCClient()
+    remaining = int((client.organization().get("logs") or {}).get("dailyRemaining", 0))
+    if remaining < MIN_LOG_ALLOWANCE:
+        raise SystemExit(f"QuantConnect daily log allowance too low ({remaining} bytes < {MIN_LOG_ALLOWANCE}); "
+                         "not starting, so the run is not lost (see E953-03). Try again later.")
     try:
         raw = execute(cfg, files, client)
     except Exception as exc:  # the run still gets registered as failed
@@ -255,6 +267,30 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         from .report import write_report
         write_report(outdir, cfg, result)
     return result
+
+
+def _check_freeze(cfg: dict, commit: str, files: dict[str, str]) -> None:
+    """D042: VAL/WF/HOLDOUT research runs must match their promotion record exactly."""
+    from . import freeze
+    rec = None
+    try:
+        rec = json.loads(gitutil.show_file(commit, freeze.record_path(cfg["strategy_id"], cfg["strategy_version"])))
+    except Exception:
+        rec = None
+    strategy_files = {k: v for k, v in files.items() if k not in ("qr_harness.py", "qr_params.py")}
+    rows = registry.read()
+    lineages = {}
+    for r in rows:
+        if r["split"] == "VAL" and r["kind"] == "research":
+            try:
+                c = json.loads(gitutil.show_file(commit, f"experiments/{r['experiment_id']}/config.json"))
+                lineages[r["experiment_id"]] = freeze.lineage(c)
+            except Exception:
+                lineages[r["experiment_id"]] = {r["strategy_id"]}
+    try:
+        freeze.check(cfg, rec, strategy_files, files["qr_harness.py"], rows, lineages)
+    except freeze.FreezeError as exc:
+        raise SystemExit(f"Refused (D042): {exc}")
 
 
 def main(argv=None) -> int:

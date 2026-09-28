@@ -1,61 +1,228 @@
 # Manual type classification of tickers seen in the X953 false-positive samples (no fundamentals).
 # EVALUATION ONLY: used to estimate the composition of proxy false positives; never used by any universe rule or signal.
 ticker,class
+ABB,ADR
+ABEV,ADR
+ADAP,ADR
+ALU,ADR
+AMAP,ADR
+AMRN,ADR
+ARMH,ADR
+ATHM,ADR
+AU,ADR
+AUO,ADR
+AZUL,ADR
+BBD,ADR
+BEKE,ADR
+BHP,ADR
+BITA,ADR
+BMA,ADR
+BSBR,ADR
+CAN,ADR
+CEO,ADR
+CHL,ADR
+CIG,ADR
+CS,ADR
+CX,ADR
+DADA,ADR
+DANG,ADR
+DQ,ADR
+EC,ADR
+EH,ADR
+ELN,ADR
+ERJ,ADR
+ESV,ADR
+FMCN,ADR
+FMX,ADR
+GFA,ADR
+GFI,ADR
+GGAL,ADR
+GOLD,ADR
+GSK,ADR
+HDB,ADR
+HIMX,ADR
+HMC,ADR
+HMIN,ADR
+HMY,ADR
+HTHT,ADR
+HUYA,ADR
+IBN,ADR
+IMAB,ADR
+INFY,ADR
+IQ,ADR
+JASO,ADR
+JKS,ADR
+JMIA,ADR
+LDK,ADR
+LFT,ADR
+LIZI,ADR
+LU,ADR
+MBT,ADR
+MFGP,ADR
+MLCO,ADR
+MOMO,ADR
+MPEL,ADR
+MR,ADR
+MZOR,ADR
+NCTY,ADR
+NGG,ADR
+NIU,ADR
+NQ,ADR
+NVO,ADR
+PBR,ADR
+PDD,ADR
+PHG,ADR
+QIHU,ADR
+RDS.A,ADR
+RDS.B,ADR
+SBGL,ADR
+SBS,ADR
+SE,ADR
+SHPG,ADR
+SI,ADR
+SID,ADR
+SIMO,ADR
+SNP,ADR
+SQM,ADR
+SYT,ADR
+TOT,ADR
+TSL,ADR
+TTM,ADR
+VOD,ADR
+AAXJ,ETF/ETN
 AGG,ETF/ETN
+AMJ,ETF/ETN
 AMLP,ETF/ETN
+ANGL,ETF/ETN
+ARKQ,ETF/ETN
+ASHR,ETF/ETN
 BGU,ETF/ETN
+BIL,ETF/ETN
 BIV,ETF/ETN
 BKLN,ETF/ETN
+BLOK,ETF/ETN
 BND,ETF/ETN
+BNDX,ETF/ETN
+BNO,ETF/ETN
+BOND,ETF/ETN
+BRZU,ETF/ETN
 BSV,ETF/ETN
+BWX,ETF/ETN
 CIU,ETF/ETN
+COMT,ETF/ETN
 CSJ,ETF/ETN
+CWB,ETF/ETN
 DBA,ETF/ETN
 DEM,ETF/ETN
 DRN,ETF/ETN
 DXJ,ETF/ETN
 EDC,ETF/ETN
 EEMV,ETF/ETN
+EFAV,ETF/ETN
+EIDO,ETF/ETN
 EMB,ETF/ETN
+EMLC,ETF/ETN
 EPP,ETF/ETN
 ERY,ETF/ETN
+EUFN,ETF/ETN
+EWA,ETF/ETN
 EWC,ETF/ETN
 EWG,ETF/ETN
 EWH,ETF/ETN
 EWI,ETF/ETN
 EWJ,ETF/ETN
+EWL,ETF/ETN
 EWP,ETF/ETN
 EWS,ETF/ETN
 EWT,ETF/ETN
+EWU,ETF/ETN
 EWW,ETF/ETN
 EWY,ETF/ETN
 EWZ,ETF/ETN
+EZA,ETF/ETN
+FALN,ETF/ETN
 FDN,ETF/ETN
+FIXD,ETF/ETN
+FLOT,ETF/ETN
+FLRN,ETF/ETN
+FNGU,ETF/ETN
+FTSL,ETF/ETN
+FTSM,ETF/ETN
+FV,ETF/ETN
+FVD,ETF/ETN
 FXA,ETF/ETN
+FXE,ETF/ETN
 GDX,ETF/ETN
+GUNR,ETF/ETN
+GUSH,ETF/ETN
 HDV,ETF/ETN
 HYG,ETF/ETN
+HYLB,ETF/ETN
+HYLS,ETF/ETN
 HYS,ETF/ETN
 IBB,ETF/ETN
+IBUY,ETF/ETN
+IDV,ETF/ETN
 IEI,ETF/ETN
+IHF,ETF/ETN
+IHI,ETF/ETN
+ISTB,ETF/ETN
+ITB,ETF/ETN
 IYT,ETF/ETN
+JEPI,ETF/ETN
+JETS,ETF/ETN
 JNK,ETF/ETN
+JNUG,ETF/ETN
+JPST,ETF/ETN
+KOMP,ETF/ETN
+KWEB,ETF/ETN
+LABU,ETF/ETN
+LMBS,ETF/ETN
 LQD,ETF/ETN
+MBB,ETF/ETN
 MINT,ETF/ETN
+MJ,ETF/ETN
 MOO,ETF/ETN
+MOON,ETF/ETN
+MSOS,ETF/ETN
 MUB,ETF/ETN
+NEAR,ETF/ETN
 OIH,ETF/ETN
 PALL,ETF/ETN
+PCI,ETF/ETN
+PCY,ETF/ETN
 PFF,ETF/ETN
+PGX,ETF/ETN
+PHYS,ETF/ETN
+PICK,ETF/ETN
+PZA,ETF/ETN
+QLD,ETF/ETN
+QLTA,ETF/ETN
+REM,ETF/ETN
+RPV,ETF/ETN
 RSX,ETF/ETN
 RTH,ETF/ETN
+RUSL,ETF/ETN
+RWX,ETF/ETN
+SCHO,ETF/ETN
+SCHZ,ETF/ETN
+SCPB,ETF/ETN
+SCZ,ETF/ETN
+SHM,ETF/ETN
 SHY,ETF/ETN
+SHYG,ETF/ETN
 SMH,ETF/ETN
+SPIB,ETF/ETN
 SPLV,ETF/ETN
+SPSB,ETF/ETN
+SPYD,ETF/ETN
+SUB,ETF/ETN
 TBT,ETF/ETN
 TIP,ETF/ETN
 TNA,ETF/ETN
+UCO,ETF/ETN
 UNG,ETF/ETN
+UVXY,ETF/ETN
 VOO,ETF/ETN
 VXX,ETF/ETN
 XHB,ETF/ETN
@@ -66,71 +233,36 @@ XLV,ETF/ETN
 XLY,ETF/ETN
 XME,ETF/ETN
 XRT,ETF/ETN
-ABEV,ADR
-ALU,ADR
-AMAP,ADR
-AMRN,ADR
-ARMH,ADR
-AU,ADR
-AUO,ADR
-BBD,ADR
-BHP,ADR
-BSBR,ADR
-CEO,ADR
-CHL,ADR
-CIG,ADR
-CS,ADR
-DANG,ADR
-ELN,ADR
-ERJ,ADR
-ESV,ADR
-FMCN,ADR
-FMX,ADR
-GFA,ADR
-GFI,ADR
-GOLD,ADR
-GSK,ADR
-HDB,ADR
-HMC,ADR
-HMIN,ADR
-HMY,ADR
-IBN,ADR
-JASO,ADR
-JKS,ADR
-LDK,ADR
-LFT,ADR
-MBT,ADR
-MR,ADR
-NQ,ADR
-PHG,ADR
-QIHU,ADR
-RDS.B,ADR
-SBS,ADR
-SHPG,ADR
-SI,ADR
-SID,ADR
-SNP,ADR
-SQM,ADR
-SYT,ADR
-TOT,ADR
-TTM,ADR
-VOD,ADR
 ACL,Foreign ordinary share
 CBE,Foreign ordinary share
 CLB,Foreign ordinary share
 CNH,Foreign ordinary share
+DLPH,Foreign ordinary share
+ECA,Foreign ordinary share
 EXXI,Foreign ordinary share
 FWLT,Foreign ordinary share
+I,Foreign ordinary share
 LGF,Foreign ordinary share
+MBLY,Foreign ordinary share
 MDR,Foreign ordinary share
+MNK,Foreign ordinary share
 NXY,Foreign ordinary share
 PRE,Foreign ordinary share
+SDRL,Foreign ordinary share
 WFT,Foreign ordinary share
+BPY,MLP/LLC
 EMES,MLP/LLC
 ETP,MLP/LLC
+FUN,MLP/LLC
+HCLP,MLP/LLC
 KMP,MLP/LLC
 LINE,MLP/LLC
 AA,US common stock
+ADXS,US common stock
+AF,US common stock
+AKRX,US common stock
+ALLY,US common stock
+AMRS,US common stock
 ANR,US common stock
 ANV,US common stock
 APOL,US common stock
@@ -138,28 +270,35 @@ ARO,US common stock
 ARRS,US common stock
 ASNA,US common stock
 ATU,US common stock
+AVYA,US common stock
 BAS,US common stock
 BBBB,US common stock
 BBBY,US common stock
 BBG,US common stock
 BBT,US common stock
 BEXP,US common stock
+BGCP,US common stock
 BRE,US common stock
+BRS,US common stock
 BRY,US common stock
+BTU,US common stock
 BYI,US common stock
 CAGC,US common stock
 CAM,US common stock
 CB,US common stock
 CBS,US common stock
 CCE,US common stock
+CEMP,US common stock
 CEPH,US common stock
 CHK,US common stock
 CHTR,US common stock
 CIE,US common stock
 CJES,US common stock
 CLD,US common stock
+CLVS,US common stock
 CLWR,US common stock
 CNW,US common stock
+CRC,US common stock
 CREE,US common stock
 CRR,US common stock
 CSC,US common stock
@@ -172,27 +311,35 @@ DD,US common stock
 DNDN,US common stock
 DNR,US common stock
 DTG,US common stock
+DVMT,US common stock
 ENDP,US common stock
 ESI,US common stock
 FDO,US common stock
 FII,US common stock
 FLIR,US common stock
 FST,US common stock
+FTR,US common stock
 GAS,US common stock
 GDP,US common stock
 GENZ,US common stock
 GGP,US common stock
+GNC,US common stock
 GPOR,US common stock
 GTI,US common stock
 HGSI,US common stock
+HHC,US common stock
 HK,US common stock
 HMA,US common stock
 HNZ,US common stock
 HOS,US common stock
 HPT,US common stock
 HSC,US common stock
+HTZ,US common stock
+HWM,US common stock
+IAC,US common stock
 IACI,US common stock
 IHS,US common stock
+IIVI,US common stock
 INSY,US common stock
 INT,US common stock
 IO,US common stock
@@ -209,36 +356,56 @@ MEE,US common stock
 MI,US common stock
 MIL,US common stock
 MRX,US common stock
+MSG,US common stock
+MSGS,US common stock
 MW,US common stock
 MYL,US common stock
+NBEV,US common stock
 NCT,US common stock
 NSM,US common stock
 NTY,US common stock
 NVE,US common stock
+NWE,US common stock
 NWSA,US common stock
 NYB,US common stock
 NYCB,US common stock
+NYLD.A,US common stock
 OAS,US common stock
 OCR,US common stock
+OZK,US common stock
+OZRK,US common stock
+PAH,US common stock
 PCP,US common stock
 PCX,US common stock
 PCYC,US common stock
 PFCB,US common stock
 PGN,US common stock
 PIR,US common stock
+PRSP,US common stock
+PRTY,US common stock
+QRTEA,US common stock
+QVCA,US common stock
 RAH,US common stock
 RAX,US common stock
 RBN,US common stock
 RKT,US common stock
+SBGI,US common stock
 SD,US common stock
 SFY,US common stock
 SHLD,US common stock
+SIAL,US common stock
 SLE,US common stock
 SLXP,US common stock
 SNDK,US common stock
 SOHU,US common stock
+SPN,US common stock
+SRNE,US common stock
+SSS,US common stock
+STAY,US common stock
 TCB,US common stock
+TKAT,US common stock
 TWX,US common stock
+UNIT,US common stock
 VCI,US common stock
 VHC,US common stock
 WAC,US common stock

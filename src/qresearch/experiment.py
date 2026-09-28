@@ -51,14 +51,51 @@ def validate(cfg: dict, unlock_file=None) -> None:
         raise ConfigError("experiment_id E###-## must use the strategy's number")
     start, end = date.fromisoformat(cfg["start"]), date.fromisoformat(cfg["end"])
     check_dates(start, end, unlock_file=unlock_file)
+    scheme = cfg.get("split_scheme", "cp1")
+    splits = config.SCHEMES.get(scheme)
+    if splits is None:
+        raise ConfigError(f"unknown split_scheme {scheme!r}")
     split = cfg["split"]
-    bounds = config.SPLITS.get(split) or config.COMPOSITE_SPLITS.get(split)
+    bounds = splits.get(split)
     if bounds is None:
-        raise ConfigError(f"unknown split label {split!r}")
+        raise ConfigError(f"unknown split label {split!r} for scheme {scheme}")
     if not (bounds[0] <= start and end <= bounds[1]):
         raise ConfigError(f"dates {start}..{end} are outside split {split} {bounds[0]}..{bounds[1]}")
-    if split == "FULL" and cfg["kind"] == "research":
-        raise ConfigError("research experiments must run on a single split segment, not FULL")
+    kind = cfg["kind"]
+    if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT"):
+        raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF or HOLDOUT)")
+    if scheme == config.CURRENT_SCHEME:
+        if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
+            raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
+        if split == "AUDIT" and kind != "infrastructure":
+            raise ConfigError("the AUDIT window is for data audits (kind 'infrastructure') only")
+        if split == "STRESS" and kind != "stress":
+            raise ConfigError("the STRESS window (1999-2009) is reserved for kind 'stress' (D035)")
+        if kind == "stress":
+            if split != "STRESS":
+                raise ConfigError("stress experiments must use split STRESS")
+            if not str(cfg.get("finalist_of") or "").startswith("S"):
+                raise ConfigError("stress experiments must name the finalist strategy in 'finalist_of' (D035)")
+    if scheme == config.CURRENT_SCHEME:
+        c = cfg["costs"]
+        if (c.get("commission_model") != config.COMMISSION_MODEL
+                or float(c.get("commission_per_order", -1)) != config.COMMISSION_PER_ORDER):
+            raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
+        if "slippage_bps" not in c:
+            raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
+        if kind in ("research", "sizing", "stress"):
+            if cfg["portfolio"] != config.RESEARCH_PORTFOLIO:
+                raise ConfigError(f"portfolio must be the approved rules {config.RESEARCH_PORTFOLIO} (D041/D044)")
+            if float(c["slippage_bps"]) != 10:
+                raise ConfigError("base slippage is 10 bps per side (D024); stress multiples are separate experiments "
+                                  "declared with costs.slippage_stress_multiple")
+        if kind == "research" and float(cfg["cash"]) != config.RESEARCH_CASH:
+            raise ConfigError("research experiments use the $100,000 primary account (D044); use kind 'sizing'")
+        if kind == "sizing":
+            if not str(cfg.get("account_size_test_of") or "").startswith("E"):
+                raise ConfigError("sizing experiments must name the tested experiment in 'account_size_test_of' (D044)")
+            if split not in ("IS", "VAL", "WF"):
+                raise ConfigError("sizing experiments use IS, VAL or WF")
     if float(cfg["universe"].get("min_market_cap", 0)) < config.MIN_MARKET_CAP:
         raise ConfigError("universe min_market_cap is below the approved $2B")
 
