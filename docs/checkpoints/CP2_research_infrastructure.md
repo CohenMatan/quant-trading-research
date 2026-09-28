@@ -1,5 +1,7 @@
 # CHECKPOINT 2 — Research Infrastructure
 
+> **Amended 2026-09-28.** The owner approved CP2. The data-remedy options in §7 were resolved by D033: 2010+ only, MarketCap ≥ $2B, size proxy rejected. The split, the gates in §6 and the commission model are replaced by `CP2_amendment_2010_split.md`.
+
 | Field | Value |
 |---|---|
 | Project | Phase 1: autonomous swing-trading research on US equities |

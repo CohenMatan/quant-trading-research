@@ -206,6 +206,9 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         prior = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
         if prior and not reproduce:
             raise SystemExit(f"{exp_id} already has an original run; use --reproduce or a new ID.")
+        if not reproduce and cfg.get("split_scheme", "cp1") != config.CURRENT_SCHEME:
+            raise SystemExit(f"{exp_id} uses split scheme {cfg.get('split_scheme', 'cp1')}; new runs must use "
+                             f"{config.CURRENT_SCHEME} (D034). Old configs are history (reproduce only).")
         if reproduce and not prior:
             raise SystemExit(f"{exp_id} has no original run to reproduce.")
     if not cfg.get("lean_version_id"):

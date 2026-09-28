@@ -51,14 +51,29 @@ def validate(cfg: dict, unlock_file=None) -> None:
         raise ConfigError("experiment_id E###-## must use the strategy's number")
     start, end = date.fromisoformat(cfg["start"]), date.fromisoformat(cfg["end"])
     check_dates(start, end, unlock_file=unlock_file)
+    scheme = cfg.get("split_scheme", "cp1")
+    splits = config.SCHEMES.get(scheme)
+    if splits is None:
+        raise ConfigError(f"unknown split_scheme {scheme!r}")
     split = cfg["split"]
-    bounds = config.SPLITS.get(split) or config.COMPOSITE_SPLITS.get(split)
+    bounds = splits.get(split)
     if bounds is None:
-        raise ConfigError(f"unknown split label {split!r}")
+        raise ConfigError(f"unknown split label {split!r} for scheme {scheme}")
     if not (bounds[0] <= start and end <= bounds[1]):
         raise ConfigError(f"dates {start}..{end} are outside split {split} {bounds[0]}..{bounds[1]}")
-    if split == "FULL" and cfg["kind"] == "research":
-        raise ConfigError("research experiments must run on a single split segment, not FULL")
+    kind = cfg["kind"]
+    if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT"):
+        raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF or HOLDOUT)")
+    if scheme == config.CURRENT_SCHEME:
+        if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
+            raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
+        if split == "STRESS" and kind != "stress":
+            raise ConfigError("the STRESS window (1999-2009) is reserved for kind 'stress' (D035)")
+        if kind == "stress":
+            if split != "STRESS":
+                raise ConfigError("stress experiments must use split STRESS")
+            if not str(cfg.get("finalist_of") or "").startswith("S"):
+                raise ConfigError("stress experiments must name the finalist strategy in 'finalist_of' (D035)")
     if float(cfg["universe"].get("min_market_cap", 0)) < config.MIN_MARKET_CAP:
         raise ConfigError("universe min_market_cap is below the approved $2B")
 

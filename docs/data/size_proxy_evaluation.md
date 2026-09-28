@@ -2,7 +2,8 @@
 
 | Field | Value |
 |---|---|
-| Status | **PROVISIONAL.** Based on runs E953-01 (2010–14) and E953-02 (2015–21), X953 v1.0. |
+| Decision | **REJECTED for the primary research universe** by the owner on 2026-09-28 (D033). Kept as research history. It may only be used as the imperfect universe for an optional 1999–2009 stress test of finalists (D035). The pending v1.1 re-runs were cancelled (D038), so the numbers below remain provisional. |
+| Status | **PROVISIONAL (final runs cancelled).** Based on runs E953-01 (2010–14) and E953-02 (2015–21), X953 v1.0. |
 | Still pending | (1) v1.1 re-runs E953-04/05 with the corrected US-common-stock rule (D030). (2) The 1999–2009 check on the old dataset (E953-06/07); the first attempt, E953-03, failed because QuantConnect's daily log allowance ran out. |
 | Why pending | The daily log allowance (about 3 MB) did not reset at 00:00 UTC as assumed; it was still 0 at 05:00 UTC on 2026-09-28. The runs start automatically when it returns. |
 | Plan | Written before any result, in `size_proxy_plan.md`, including the deviations recorded before the official runs. **Caveat:** because of the `.gitignore` bug (D032), the plan file was not actually committed until 2026-09-28, after the results. Git history therefore cannot prove its timing. The commit messages `fe72067` and `2881f25` announced it before the runs, but the file itself was missing from them. |

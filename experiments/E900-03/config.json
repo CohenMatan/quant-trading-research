@@ -1,12 +1,12 @@
 {
- "experiment_id": "E953-05",
- "kind": "infrastructure",
+ "experiment_id": "E900-03",
+ "kind": "benchmark",
  "hypothesis_id": null,
- "strategy_id": "X953",
- "strategy_version": "v1.1",
- "strategy_dir": "strategies/X953_size_proxy_eval",
+ "strategy_id": "B900",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/B900_spy_buyhold",
  "split": "FULL",
- "start": "2014-09-02",
+ "start": "2010-01-04",
  "end": "2021-12-31",
  "cash": 100000,
  "universe": {
@@ -20,14 +20,14 @@
   "commission": "IB fixed via LEAN InteractiveBrokersFeeModel: $0.005/share, $1 min, 1% max"
  },
  "portfolio": {
-  "max_position_weight": 0.1,
+  "max_position_weight": 1.0,
   "cash_buffer": 0.02
  },
  "params": {
-  "eval_from": "2015-01-01",
-  "forward_returns_until": ""
+  "weight": 0.98
  },
- "description": "v1.1. Out-of-period membership check 2015-2021 (new dataset). No forward returns (validation years).",
+ "description": "Benchmark: SPY buy-and-hold, dividends reinvested monthly. Official 2010 scheme (D034): IS+VAL 2010-01-04..2021-12-31.",
  "standards_status": "PROVISIONAL (CP2 proposal, pending owner approval)",
- "lean_version_id": 18131
+ "lean_version_id": 18131,
+ "split_scheme": "2010"
 }

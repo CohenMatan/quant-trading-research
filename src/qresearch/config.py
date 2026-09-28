@@ -11,21 +11,40 @@ INDEX_CSV = EXPERIMENTS_DIR / "INDEX.csv"
 HOLDOUT_UNLOCK_FILE = REPO_ROOT / "HOLDOUT_UNLOCK.md"
 LEAN_HARNESS = Path(__file__).resolve().parent / "lean" / "qr_harness.py"
 
-# Data split (D004, approved at CP1).
-SPLITS: dict[str, tuple[date, date]] = {
-    "IS": (date(1999, 1, 4), date(2014, 12, 31)),
-    "VAL": (date(2015, 1, 1), date(2021, 12, 31)),
-    "HOLDOUT": (date(2022, 1, 1), date(2026, 8, 31)),
+# Data split schemes. Every experiment config names its scheme ("split_scheme"); configs without
+# one belong to the CP1 scheme and remain valid only as history (and for --reproduce).
+#
+# "2010" (D034, proposed at the CP2 amendment; owner decision D033 to use MarketCap >= $2B from
+# 2010 only): the official research period starts 2010-01-04. The holdout is unchanged.
+CURRENT_SCHEME = "2010"
+OFFICIAL_START = date(2010, 1, 4)
+SCHEMES: dict[str, dict[str, tuple[date, date]]] = {
+    "cp1": {  # D004, approved at CP1, superseded by D033/D034
+        "IS": (date(1999, 1, 4), date(2014, 12, 31)),
+        "VAL": (date(2015, 1, 1), date(2021, 12, 31)),
+        "HOLDOUT": (date(2022, 1, 1), date(2026, 8, 31)),
+        "FULL": (date(1999, 1, 4), date(2021, 12, 31)),
+    },
+    "2010": {
+        "IS": (date(2010, 1, 4), date(2017, 12, 31)),
+        "VAL": (date(2018, 1, 1), date(2021, 12, 31)),
+        "HOLDOUT": (date(2022, 1, 1), date(2026, 8, 31)),
+        # composite labels
+        "FULL": (date(2010, 1, 4), date(2021, 12, 31)),     # benchmarks / infrastructure only
+        "WF": (date(2010, 1, 4), date(2021, 12, 31)),       # walk-forward (research), see RESEARCH_PLAN §3
+        "STRESS": (date(1999, 1, 4), date(2009, 12, 31)),   # optional finalist stress test, never selection
+    },
 }
-LAST_UNLOCKED_DATE = SPLITS["VAL"][1]
-# Split labels that are not a single segment. "FULL" = IS+VAL; used only for benchmarks and infrastructure runs.
-COMPOSITE_SPLITS: dict[str, tuple[date, date]] = {
-    "FULL": (SPLITS["IS"][0], SPLITS["VAL"][1]),
-}
+SPLITS = {k: v for k, v in SCHEMES[CURRENT_SCHEME].items() if k in ("IS", "VAL", "HOLDOUT")}
+COMPOSITE_SPLITS = {k: v for k, v in SCHEMES[CURRENT_SCHEME].items() if k not in SPLITS}
+# The holdout lock is identical in both schemes.
+LAST_UNLOCKED_DATE = date(2021, 12, 31)
 
 # Universe (D003, D010, approved at CP1).
 MIN_MARKET_CAP = 2_000_000_000.0
 DEFAULT_CASH = 100_000.0
 
 # Experiment kinds recorded in the registry.
-EXPERIMENT_KINDS = ("research", "benchmark", "infrastructure", "demo")
+# "stress" = optional 1999-2009 stress test of a finalist on an imperfect universe (D035): never counted
+# as a trial, never used for optimisation, parameter selection or promotion.
+EXPERIMENT_KINDS = ("research", "benchmark", "infrastructure", "demo", "stress")
