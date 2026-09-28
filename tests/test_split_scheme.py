@@ -80,3 +80,11 @@ def test_sizing_kind_for_account_size_retests():
     experiment.validate(research(kind="sizing", cash=50_000, account_size_test_of="E001-01"))
     with pytest.raises(experiment.ConfigError, match="account_size_test_of"):
         experiment.validate(research(kind="sizing", cash=50_000))
+
+
+def test_audit_window_only_for_infrastructure():
+    base = dict(kind="infrastructure", strategy_id="X954", experiment_id="E954-09", split_scheme="2010", split="AUDIT",
+                start="2009-09-01", end="2021-12-31", strategy_dir="strategies/X954_survivorship_gap", costs=FIXED)
+    experiment.validate(_cfg(**base))
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(research(split="AUDIT", start="2009-09-01", end="2017-12-29"))

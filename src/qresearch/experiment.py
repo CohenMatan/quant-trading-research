@@ -67,6 +67,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
     if scheme == config.CURRENT_SCHEME:
         if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
             raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
+        if split == "AUDIT" and kind != "infrastructure":
+            raise ConfigError("the AUDIT window is for data audits (kind 'infrastructure') only")
         if split == "STRESS" and kind != "stress":
             raise ConfigError("the STRESS window (1999-2009) is reserved for kind 'stress' (D035)")
         if kind == "stress":

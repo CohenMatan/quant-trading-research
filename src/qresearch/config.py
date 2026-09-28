@@ -33,6 +33,7 @@ SCHEMES: dict[str, dict[str, tuple[date, date]]] = {
         "FULL": (date(2010, 1, 4), date(2021, 12, 31)),     # benchmarks / infrastructure only
         "WF": (date(2010, 1, 4), date(2021, 12, 31)),       # walk-forward (research), see RESEARCH_PLAN §3
         "STRESS": (date(1999, 1, 4), date(2009, 12, 31)),   # optional finalist stress test, never selection
+        "AUDIT": (date(1999, 1, 4), date(2021, 12, 31)),    # data audits (kind infrastructure) incl. warm-up
     },
 }
 SPLITS = {k: v for k, v in SCHEMES[CURRENT_SCHEME].items() if k in ("IS", "VAL", "HOLDOUT")}
