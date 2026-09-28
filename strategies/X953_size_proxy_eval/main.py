@@ -391,5 +391,5 @@ class SizeProxyEval(QRAlgorithm):
             self._qr_log(f"QRPX_C|{year}|{p}|" + json.dumps(out, sort_keys=True, separators=(",", ":")))
         for year, d in sorted(self.sector.items()):
             self._qr_log(f"QRPX_S|{year}|" + json.dumps(d, sort_keys=True, separators=(",", ":")))
-        self.log("QRPX_T|" + json.dumps(self.track, sort_keys=True, separators=(",", ":")))
-        self.log("QRPX_CHK|" + json.dumps(self.chk, sort_keys=True))
+        self._qr_log("QRPX_T|" + json.dumps(self.track, sort_keys=True, separators=(",", ":")))
+        self._qr_log("QRPX_CHK|" + json.dumps(self.chk, sort_keys=True))

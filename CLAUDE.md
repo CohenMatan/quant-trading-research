@@ -42,6 +42,7 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - At most 10 custom chart series per algorithm.
   - Only one backtest at a time on our node.
   - ObjectStore export is blocked.
+  - **Do not use QuantConnect logs (daily quota).** Results travel as summary statistics, plus the Orders API and charts (D046).
   - Fundamentals' shares-outstanding fields are split-adjusted to today; never use price × shares naively.
 
 ## Session-start checklist
@@ -117,7 +118,7 @@ Important information must never live only in chat, temp files or an uncommitted
 ## Git
 
 - Develop on the session's designated branch.
-- Checkpoint approval happens by the owner merging into `main` through a PR, which the owner approved at CP1.
+- **Claude merges its own pushed work into `main` through a PR (D048).** Checkpoint STOPs and owner approvals still apply.
 - Use clear commit messages, e.g. `E003-02: …` for experiment runs.
 
 ## Communication

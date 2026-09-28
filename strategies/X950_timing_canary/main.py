@@ -42,4 +42,4 @@ class TimingCanary(QRAlgorithm):
             self._qr_log(f"QRCANARY_LATE|{ev.symbol.value}|sig={sig}|last_close={self.last_close_day}|fill={fill_day}")
 
     def qr_on_end(self):
-        self.log("QRCANARY|" + json.dumps(self.cstats, sort_keys=True))
+        self._qr_log("QRCANARY|" + json.dumps(self.cstats, sort_keys=True))

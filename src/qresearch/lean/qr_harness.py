@@ -190,7 +190,10 @@ class QRAlgorithm(QCAlgorithm):
             "elig_sum": 0, "elig_days": 0, "max_subscribed": 0, "held_splits": 0,
             "held_delistings": 0, "negative_qty": 0,
         }
-        self._qr_log_budget = 400        # hard cap on QR* log lines (QC log limit is 100 KB)
+        # QR* result lines are NOT written to QuantConnect logs (daily quota). They are collected here
+        # and published at the end as summary statistics, read back via the backtests/read API (D046).
+        self._qr_msgs = []
+        self._qr_log_budget = 20000      # hard cap on result lines kept
 
         chart = Chart("QR")
         for name in ("equity", "cash", "npos", "nelig"):
@@ -445,7 +448,7 @@ class QRAlgorithm(QCAlgorithm):
     def _qr_log(self, line):
         if self._qr_log_budget > 0:
             self._qr_log_budget -= 1
-            self.log(line)
+            self._qr_msgs.append(str(line))
 
     def on_end_of_algorithm(self):
         self.qr_on_end()
@@ -454,4 +457,14 @@ class QRAlgorithm(QCAlgorithm):
         s["open_positions_at_end"] = sum(1 for kv in self.portfolio if kv.value.invested)
         s["log_budget_left"] = self._qr_log_budget
         s["experiment_id"] = self.qr.get("experiment_id")
-        self.log("QRSUMMARY|" + json.dumps(s, sort_keys=True))
+        self._qr_publish(json.dumps(s, sort_keys=True))
+
+    def _qr_publish(self, summary_json):
+        """Publish results as summary statistics (keys qr_summary, qr_msgs_n, qr_msgs_00...), each value
+        at most 150,000 characters (QC returns 200,000-character values intact)."""
+        self.set_summary_statistic("qr_summary", summary_json)
+        text = "\n".join(self._qr_msgs)
+        chunks = [text[i:i + 150000] for i in range(0, len(text), 150000)] if text else []
+        self.set_summary_statistic("qr_msgs_n", str(len(chunks)))
+        for i, c in enumerate(chunks):
+            self.set_summary_statistic(f"qr_msgs_{i:02d}", c)

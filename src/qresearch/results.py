@@ -97,6 +97,18 @@ def parse_logs(lines: list[str]) -> tuple[pd.DataFrame, dict, list[str]]:
     return pd.DataFrame(splits, columns=SPLIT_COLUMNS), summary, other
 
 
+def lines_from_statistics(st: dict) -> list[str]:
+    """Rebuild the harness's result lines from summary statistics (D046): the qr_summary JSON as a
+    QRSUMMARY line, followed by the message chunks qr_msgs_00.. in order."""
+    lines = ["QRSUMMARY|" + st["qr_summary"]]
+    n = int(st.get("qr_msgs_n", "0") or 0)
+    text = "".join(st.get(f"qr_msgs_{i:02d}", "") for i in range(n))
+    if n and any(f"qr_msgs_{i:02d}" not in st for i in range(n)):
+        raise ValueError("incomplete qr_msgs chunks in summary statistics")
+    lines += [ln for ln in text.split("\n") if ln]
+    return lines
+
+
 # ---------------------------------------------------------------- canonical text + hashes
 _FMT = {"equity": "{:.2f}", "cash": "{:.2f}", "price": "{:.6f}", "fee": "{:.4f}", "quantity": "{:.4f}",
         "factor": "{:.10f}", "cost": "{:.4f}", "proceeds": "{:.4f}", "fees": "{:.4f}",

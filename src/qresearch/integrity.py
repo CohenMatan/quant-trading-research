@@ -15,7 +15,7 @@ CASH_WARN = 0.0
 
 
 def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
-              commission_per_order: float | None = None) -> list[dict]:
+              commission_per_order: float | None = None, tradeable_dates: int | None = None) -> list[dict]:
     out: list[dict] = []
 
     def add(name, ok, detail, level="fail"):
@@ -31,6 +31,9 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     add("equity_positive", bool((equity["equity"] > 0).all()), f"min {equity['equity'].min():.2f}")
     days = summary.get("days")
     add("equity_complete", days == len(equity), f"chart rows {len(equity)} vs algorithm days {days}")
+    if tradeable_dates is not None:
+        add("equity_matches_qc_tradeable_dates", int(tradeable_dates) == len(equity),
+            f"chart rows {len(equity)} vs QuantConnect tradeableDates {tradeable_dates}")
     cash_frac = (equity["cash"] / equity["equity"]).min()
     add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.4f}")
     add("cash_never_negative", cash_frac >= CASH_WARN, f"min cash/equity {cash_frac:.4f}", level="warn")

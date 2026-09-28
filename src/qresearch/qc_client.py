@@ -194,6 +194,16 @@ class QCClient:
             if not page or start >= total:
                 return out
 
+    def read_statistics(self, h: BacktestHandle, must_have: str = "", timeout_s: float = 300) -> dict:
+        """Backtest summary statistics (includes the harness's qr_* keys, D046). Re-reads until
+        `must_have` is present or the timeout passes (the server may finalise them after completion)."""
+        t0 = time.time()
+        while True:
+            st = self.read_backtest(h).get("statistics") or {}
+            if not must_have or must_have in st or time.time() - t0 > timeout_s:
+                return st
+            time.sleep(10)
+
     def read_logs(self, h: BacktestHandle, must_contain: str = "", timeout_s: float = 600) -> list[str]:
         """All log lines; if `must_contain` is given, re-read until some line contains it."""
         t0 = time.time()

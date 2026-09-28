@@ -126,4 +126,4 @@ class DataAudit(QRAlgorithm):
             self._qr_log(f"QRAUDIT_EX|{day}|zero_cap_common={','.join(top_zero)}|no_fundamentals={','.join(top_nofund)}")
 
     def qr_on_end(self):
-        self.log("QRAUDIT_TRACK|" + json.dumps(self.track, sort_keys=True))
+        self._qr_log("QRAUDIT_TRACK|" + json.dumps(self.track, sort_keys=True))

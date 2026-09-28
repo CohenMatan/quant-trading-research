@@ -60,4 +60,4 @@ class CorporateActions(QRAlgorithm):
                 qty=float(ev.fill_quantity), price=float(ev.fill_price)))
 
     def qr_on_end(self):
-        self.log("QRCA|" + json.dumps(self.checks, sort_keys=True))
+        self._qr_log("QRCA|" + json.dumps(self.checks, sort_keys=True))
