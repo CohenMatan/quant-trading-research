@@ -10,8 +10,7 @@ import re
 import pandas as pd
 
 SIG = re.compile(r"\|sig=(\d{4}-\d{2}-\d{2})$")
-CASH_FAIL = -0.01    # cash below −1% of equity at a daily close counts as leverage
-CASH_WARN = 0.0
+CASH_FAIL = -1e-9    # D051: ANY negative cash at a daily close is borrowing and fails the run
 
 
 def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
@@ -36,8 +35,8 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
         add("equity_matches_qc_tradeable_dates", int(tradeable_dates) == len(equity),
             f"chart rows {len(equity)} vs QuantConnect tradeableDates {tradeable_dates}")
     cash_frac = (equity["cash"] / equity["equity"]).min()
-    add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.4f}")
-    add("cash_never_negative", cash_frac >= CASH_WARN, f"min cash/equity {cash_frac:.4f}", level="warn")
+    neg_days = int((equity["cash"] < -1e-6).sum())
+    add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.6f}; {neg_days} closes with negative cash")
 
     # execution timing: every harness order fills strictly after its signal date
     bad = 0

@@ -84,8 +84,12 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
         if kind in ("research", "sizing", "stress"):
-            if cfg["portfolio"] != config.RESEARCH_PORTFOLIO:
-                raise ConfigError(f"portfolio must be the approved rules {config.RESEARCH_PORTFOLIO} (D041/D044)")
+            model = cfg.get("execution_model", "d044")
+            if model not in config.RESEARCH_PORTFOLIOS:
+                raise ConfigError(f"unknown execution_model {model!r}")
+            if cfg["portfolio"] != config.RESEARCH_PORTFOLIOS[model]:
+                raise ConfigError(f"portfolio must be the approved rules for {model}: "
+                                  f"{config.RESEARCH_PORTFOLIOS[model]} (D041/D044/D051)")
             if float(c["slippage_bps"]) != 10:
                 raise ConfigError("base slippage is 10 bps per side (D024); stress multiples are separate experiments "
                                   "declared with costs.slippage_stress_multiple")

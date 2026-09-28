@@ -4,13 +4,14 @@ from qresearch import experiment
 from test_holdout_lock import _cfg
 
 FIXED = {"slippage_bps": 10, "commission_model": "fixed_per_order", "commission_per_order": 7.0}
-PORTF = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15}
+PORTF = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15,
+         "buy_funding": "settled_cash_only", "gap_reserve": 0.15}
 
 
 def research(**kw):
     c = dict(kind="research", strategy_id="S001", experiment_id="E001-01", hypothesis_id="H001",
              strategy_dir="strategies/S000_pipeline_demo", split_scheme="2010", split="IS",
-             start="2010-01-04", end="2017-12-29", costs=FIXED, portfolio=PORTF)
+             start="2010-01-04", end="2017-12-29", costs=FIXED, portfolio=PORTF, execution_model="d051")
     c.update(kw)
     return _cfg(**c)
 
@@ -43,7 +44,7 @@ def test_benchmark_cannot_start_before_2010():
 def test_stress_window_is_reserved_and_needs_a_finalist():
     base = dict(kind="stress", strategy_id="S001", experiment_id="E001-09", split_scheme="2010", split="STRESS",
                 start="1999-01-04", end="2009-12-31", strategy_dir="strategies/S000_pipeline_demo", costs=FIXED,
-                portfolio=PORTF)
+                portfolio=PORTF, execution_model="d051")
     with pytest.raises(experiment.ConfigError, match="finalist"):
         experiment.validate(_cfg(**base))
     experiment.validate(_cfg(**base, finalist_of="S001"))
@@ -88,3 +89,17 @@ def test_audit_window_only_for_infrastructure():
     experiment.validate(_cfg(**base))
     with pytest.raises(experiment.ConfigError):
         experiment.validate(research(split="AUDIT", start="2009-09-01", end="2017-12-29"))
+
+
+def test_execution_model_versioning():
+    old_pf = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15}
+    experiment.validate(research(portfolio=old_pf, execution_model="d044"))   # history stays valid
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(research(portfolio=old_pf, execution_model="d051"))
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(research(execution_model="d044"))                 # d051 rules under d044 label
+
+
+def test_runner_requires_current_execution_model(root):
+    src = (root / "src/qresearch/run.py").read_text()
+    assert 'cfg.get("execution_model", "d044") != config.CURRENT_EXECUTION_MODEL' in src

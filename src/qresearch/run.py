@@ -22,7 +22,7 @@ from pathlib import Path
 import pandas as pd
 
 from . import config, experiment, gitutil, holdout, integrity, metrics, registry, results, stats
-from .qc_client import QCClient
+from .qc_client import QCClient, QCError
 from .trades import build_trades
 
 
@@ -60,7 +60,14 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     client.pin_lean_version(project, cfg["lean_version_id"])
     compile_id = client.compile(project)
     t0 = time.time()
-    handle = client.start_backtest(project, compile_id, f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}")
+    name = f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
+    try:
+        handle = client.start_backtest(project, compile_id, name)
+    except QCError as exc:          # E003-03: QC transiently rejected a fresh compile id; recompile once
+        if "Compile id not found" not in str(exc):
+            raise
+        compile_id = client.compile(project)
+        handle = client.start_backtest(project, compile_id, name)
     bt = client.wait_backtest(handle)
     runtime = time.time() - t0
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
@@ -230,6 +237,10 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         if not reproduce and cfg.get("split_scheme", "cp1") != config.CURRENT_SCHEME:
             raise SystemExit(f"{exp_id} uses split scheme {cfg.get('split_scheme', 'cp1')}; new runs must use "
                              f"{config.CURRENT_SCHEME} (D034). Old configs are history (reproduce only).")
+        if (not reproduce and cfg["kind"] in ("research", "sizing", "stress")
+                and cfg.get("execution_model", "d044") != config.CURRENT_EXECUTION_MODEL):
+            raise SystemExit(f"{exp_id}: new research runs must use execution_model "
+                             f"{config.CURRENT_EXECUTION_MODEL} (D051); older configs are history.")
         if reproduce and not prior:
             raise SystemExit(f"{exp_id} has no original run to reproduce.")
     if not cfg.get("lean_version_id"):

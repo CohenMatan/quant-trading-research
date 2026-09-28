@@ -168,7 +168,7 @@ class QCClient:
             time.sleep(poll_s)
 
     # ------------------------------------------------------------------ results
-    def read_orders(self, h: BacktestHandle, expected: int | None = None, timeout_s: float = 1800) -> list[dict]:
+    def read_orders(self, h: BacktestHandle, expected: int | None = None, timeout_s: float = 7200) -> list[dict]:
         """All orders with their events. QC publishes orders and their events asynchronously after
         the backtest completes, so this re-reads until (a) the number of distinct orders equals
         `expected` (QuantConnect's own "Total Orders" statistic) and (b) every filled order carries a

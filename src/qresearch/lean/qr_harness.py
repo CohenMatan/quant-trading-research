@@ -50,6 +50,10 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
     buffer = float(pf.get("cash_buffer", 0.02))
     min_pos = float(pf.get("min_position_usd", 0.0))
     cap = int(pf.get("max_positions", 0)) or None
+    # D051: "settled_cash_only" = buys are funded only by cash already held; proceeds of sells in the
+    # same batch (and the slots they free) become usable only after those sells have executed.
+    settled_only = pf.get("buy_funding") == "settled_cash_only"
+    gap = float(pf.get("gap_reserve", 0.0))
     if min_pos > 0:
         by_size = int(pv * (1.0 - buffer) // min_pos)
         cap = by_size if cap is None else min(cap, by_size)
@@ -64,7 +68,8 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
         if w == 0:
             if have > 0:
                 sells.append((key, -int(have), price))
-                positions -= 1
+                if not settled_only:
+                    positions -= 1
             continue
         if price <= 0:
             continue
@@ -89,8 +94,12 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
             continue
         buys.append((key, target, price, True))
         positions += 1
-    cash_plan = cash + sum(-q * p * (1 - slip) - fee_est(-q) for _, q, p in sells) - buffer * pv
-    need = sum(q * p * (1 + slip) + fee_est(q) for _, q, p, _ in buys)
+    if settled_only:
+        # sells still pay their own fees out of cash; their proceeds are not counted
+        cash_plan = cash - sum(fee_est(-q) for _, q, _ in sells) - buffer * pv
+    else:
+        cash_plan = cash + sum(-q * p * (1 - slip) - fee_est(-q) for _, q, p in sells) - buffer * pv
+    need = sum(q * p * (1 + slip) * (1 + gap) + fee_est(q) for _, q, p, _ in buys)
     scale, scaled = 1.0, False
     if need > 0 and cash_plan < need:
         scale, scaled = max(0.0, cash_plan / need), True
@@ -168,6 +177,7 @@ class QRAlgorithm(QCAlgorithm):
             self._qr_fee_est = lambda q, c=float(per_order): c
             self._qr_forced_fee = float(per_order)
         self._qr_forced_debited = set()
+        self._qr_resubmit = {}             # symbol -> quantity of a harness sell cancelled on a ticker change
         self.set_security_initializer(self._qr_init_security)
         self.universe_settings.resolution = Resolution.DAILY
         self.universe_settings.data_normalization_mode = DataNormalizationMode.RAW
@@ -351,6 +361,7 @@ class QRAlgorithm(QCAlgorithm):
             return
         self._qr_in_close = True
         try:
+            self._qr_resubmit_cancelled()
             self.qr_on_close(data)
         finally:
             self._qr_in_close = False
@@ -411,6 +422,19 @@ class QRAlgorithm(QCAlgorithm):
             n += self._qr_submit(sym, q, f"{tag}|sig={sig}")
         return n
 
+    def _qr_resubmit_cancelled(self):
+        """Re-issue harness sells that LEAN cancelled on a ticker change (D051), capped at the held
+        quantity, as market-on-open orders from this close."""
+        sig = f"{self.time:%Y-%m-%d}"
+        for sym, q in list(self._qr_resubmit.items()):
+            del self._qr_resubmit[sym]
+            held = float(self.portfolio[sym].quantity)
+            pending = sum(float(t.quantity) for t in self.transactions.get_open_order_tickets(sym))
+            qty = -int(min(held + min(pending, 0.0), -q))
+            if qty < 0:
+                self._qr_submit(sym, qty, f"resub|sig={sig}")
+                self._qr_stats["resubmitted_sells"] = self._qr_stats.get("resubmitted_sells", 0) + 1
+
     def qr_slot_weight(self, n_slots):
         return slot_weight(n_slots, float(self.portfolio.total_portfolio_value), self._qr_pf)
 
@@ -422,6 +446,13 @@ class QRAlgorithm(QCAlgorithm):
 
     def on_order_event(self, ev):
         s = self._qr_stats
+        if ev.status == OrderStatus.CANCELED and "symbol changed" in str(ev.message or "").lower() \
+                and self._qr_sig.get(ev.order_id) is not None and float(ev.quantity) < 0:
+            # D051: LEAN cancels open orders on ticker changes; re-issue the exit at the next close
+            self._qr_resubmit[ev.symbol] = float(ev.quantity)
+            s["cancelled_on_symbol_change"] = s.get("cancelled_on_symbol_change", 0) + 1
+            self._qr_log(f"QRRESUB|{ev.symbol.value}|{self.time:%Y-%m-%d}|{ev.quantity}")
+            return
         if ev.status == OrderStatus.INVALID:
             s["invalid"] += 1
             self._qr_log(f"QRINVALID|{ev.symbol.value}|{self.time:%Y-%m-%d}|{ev.message}")

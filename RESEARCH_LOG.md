@@ -216,3 +216,41 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
   - Proven on QuantConnect by a scratch X952 run (Enron, WorldCom, Bear Stearns, Lehman: 4 of 4 debited; 11 of 11 orders at $7).
 
 **Research Cycle 1 NOT started.** All three verification runs are repeated on the final harness (E950-04, E900-04, E901-03). C01 starts only if all pass.
+
+---
+
+## 2026-09-28 — C01 first pass: incidents diagnosed; corrected re-runs prepared
+
+**First pass (19 IS runs, E001-01 … E005-03):**
+
+- 13 completed, one of them bugged (E004-04: zero trades).
+- 2 failed on the QuantConnect side (E002-03, E003-03).
+- 3 failed the no-leverage check (E004-01, E004-02, E005-02).
+
+**Diagnosis** (confirmed from order records; `research/cycles/C01_incidents.md`):
+
+- **Leverage cause A:** LEAN cancelled sells on ticker changes (MATX, MDLZ) while the buys they funded executed.
+- **Leverage cause B:** opening gaps of +5.5% to +12.9% on OPEC day (2016-11-30).
+- **E002-03:** a QuantConnect event-publication delay; the events later arrived complete.
+- **E003-03:** QuantConnect transient "Compile id not found".
+- **E004-04:** S004 kept too little history for the 200-day filter.
+
+**Fixes:**
+
+- D051: no-borrowing execution model (global).
+- D052: runner resilience; S004 window fix.
+- Tests: 173 pass.
+
+**Registry:** annotation rows mark each original as superseded, invalid, bugged or failed. No original row is changed.
+
+**Re-runs:**
+
+- Verification under D051: E950-05, E900-05, E901-04, fail-fast per run.
+- 19 corrected C01 variations (map in `research/cycles/C01_rerun_map.json`).
+
+**X954 (survivorship gap) analysis completed** (`docs/data/survivorship_gap_2010.md`):
+
+- Missing share 14% (2010) → 5% (2017) → 1% (2021).
+- Bias optimistic: about +1.4 points per year on the IS universe; dip-buyers most exposed.
+
+**Not started:** gates and robustness (they wait for the corrected runs), Checkpoint 3, and any VAL, WF or HOLDOUT run.

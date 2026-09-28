@@ -95,3 +95,48 @@ def test_slot_weight_at_100k_and_small_accounts(harness):
     w = sw(15, 60_000, PF)
     out = plan(entries(15, w=w), 60_000, 60_000, PF, 0.0, FEE)
     assert len(out["buys"]) == 11 and all(q * 50.0 >= 5000 for _, q in out["buys"])
+
+
+# ---------------------------------------------------------------- D051 no-borrowing execution model
+NB = dict(PF, buy_funding="settled_cash_only", gap_reserve=0.15)
+
+
+def test_same_batch_sell_proceeds_do_not_fund_buys(plan):
+    # E005-02 pattern: 15 held, 3 exits planned + 4 entries, only ~$3.5K cash on hand
+    items = [(f"X{i}", 0.0, 30.0, 300.0, 0.0, False) for i in range(3)] + entries(4, w=0.065)
+    out = plan(items, 142_000, 3_463, NB, 0.001, FEE, n_open_positions=15)
+    assert len(out["sells"]) == 3 and out["buys"] == []          # buys wait for the sells to execute
+    old = plan(items, 142_000, 3_463, dict(PF), 0.001, FEE, n_open_positions=15)
+    assert len(old["buys"]) == 3                                  # the old rule funded them from proceeds
+
+
+def test_exiting_position_keeps_its_slot_until_sold(plan):
+    items = [("OLD", 0.0, 20.0, 300.0, 0.0, False)] + entries(2, w=0.065)
+    out = plan(items, 100_000, 60_000, NB, 0.0, FEE, n_open_positions=15)
+    assert out["buys"] == [] and out["skipped_cap"] == 2
+
+
+def test_gap_reserve_covers_observed_opening_gaps(plan):
+    # E004-02 pattern (2016-11-30): cash ~$29.3K, equity ~$83.8K, 7 wanted entries of ~$5.6K
+    out = plan(entries(7, w=0.067, price=40.0), 83_768, 29_252, NB, 0.001, FEE, n_open_positions=8)
+    cost_at_close = sum(q * 40.0 for _, q in out["buys"])
+    fees = 7.0 * len(out["buys"])
+    worst_gap = 0.129                                            # largest measured gap that day (EGN)
+    assert 29_252 - cost_at_close * (1 + worst_gap) * 1.001 - fees >= 0
+    assert 29_252 - cost_at_close * 1.15 * 1.001 - fees >= 0.02 * 83_768 - 1e-6
+
+
+def test_incident_replay_never_negative(plan):
+    """Replay all three diagnosed incidents under D051: cash after the open stays >= 0 even if every
+    same-batch sell is cancelled and buys gap up by the largest measured gap."""
+    cases = [  # (cash, equity, n_open, exits, entries)
+        (1_793, 91_129, 15, 2, 2),       # E004-01 2012-06-29 (MATX sell cancelled)
+        (29_252, 83_768, 10, 2, 7),      # E004-02 2016-11-29 (OPEC gap)
+        (3_463, 142_555, 15, 4, 4),      # E005-02 2012-10-01 (MDLZ sell cancelled)
+    ]
+    for cash, pv, n_open, n_exit, n_entry in cases:
+        items = [(f"X{i}", 0.0, 50.0, 100.0, 0.0, False) for i in range(n_exit)] + entries(n_entry, w=0.065)
+        out = plan(items, pv, cash, NB, 0.001, FEE, n_open_positions=n_open)
+        spent = sum(q * 50.0 * 1.129 * 1.001 + 7.0 for _, q in out["buys"]) + 7.0 * len(out["sells"])
+        assert cash - spent >= 0, (cash, pv, out)
+        assert n_open + len(out["buys"]) <= 15
