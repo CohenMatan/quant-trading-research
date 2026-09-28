@@ -1,0 +1,30 @@
+{
+ "error": "QCError: orders incomplete after 1800s: downloaded 1076 of 1076 orders, 1020 lack fill events",
+ "experiment_id": "E002-03",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "dd829bfadab4588ce1457258d59af953cf2fada4",
+  "code_sha256": "b351c938fe1f790d4fc4469f07e7f30907715513a9906fe6369d8b4d4eaedd06",
+  "config_sha256": "1210e795553141ff38d7c9da61130a13ae097fb3b828b5fe3c38cb8785aa3be7",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "dd829bfadab4588ce1457258d59af953cf2fada4",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T12:22:45Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}
