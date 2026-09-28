@@ -1,0 +1,30 @@
+{
+ "error": "QCError: backtests/create failed: ['There are no spare nodes available in your cluster. To launch a new backtest please stop an existing running backtest or add more compute nodes to your organization.']",
+ "experiment_id": "E004-05",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "e65a558fbd40a8b4135256b0fe53b9a7b7dada23",
+  "code_sha256": "1748a2c7ce412fb4ab98703e3cc7e5f3cb62040505e4b73875431c16df37a9e6",
+  "config_sha256": "6a0c92bf759ffc4dae5770418ee6d8dc175c08ed37030d17161752289df1ea78",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "e65a558fbd40a8b4135256b0fe53b9a7b7dada23",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T23:06:11Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}
