@@ -74,6 +74,13 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 raise ConfigError("stress experiments must use split STRESS")
             if not str(cfg.get("finalist_of") or "").startswith("S"):
                 raise ConfigError("stress experiments must name the finalist strategy in 'finalist_of' (D035)")
+    if scheme == config.CURRENT_SCHEME:
+        c = cfg["costs"]
+        if (c.get("commission_model") != config.COMMISSION_MODEL
+                or float(c.get("commission_per_order", -1)) != config.COMMISSION_PER_ORDER):
+            raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
+        if "slippage_bps" not in c:
+            raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
     if float(cfg["universe"].get("min_market_cap", 0)) < config.MIN_MARKET_CAP:
         raise ConfigError("universe min_market_cap is below the approved $2B")
 

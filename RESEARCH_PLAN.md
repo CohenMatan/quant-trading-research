@@ -59,10 +59,13 @@ Rules:
   - at most 20 positions;
   - 2% cash buffer;
   - minimum position $2,000.
-- Costs:
-  - IB fixed per-share commissions.
-  - Base slippage of **10 bps per side** (D024, proposed).
-  - Stress runs at 2×, 4× and 6× the base slippage.
+  - Proposed change D041: minimum $5,000 and at most 15 positions.
+- **Costs (D039).** Every reported metric is net of both commission and slippage.
+  - **Commission: $7 per executed order, buy or sell** ($14 per normal round trip).
+    - An order filled in pieces is charged once.
+    - Entering or exiting with several separate orders is charged per order.
+  - **Slippage (separate):** 10 bps per side (D024, proposed). Stress runs at 2×, 4× and 6×.
+  - Commission sensitivity: a stress run at $10 per order is also reported for finalists.
 - Corporate actions: fills use raw prices, dividends are credited as cash, signals use point-in-time adjusted history. Delistings liquidate at the last price.
 - Assumed account size: $100,000 (approved at CP1).
 
@@ -94,8 +97,11 @@ Hypothesis (H###) → Strategy (S###) → Exploration on IS 2010–2017 (3–10 
 
 Benchmarks, both over 2010-01-04 → 2021-12-31 and reported per segment:
 
-- **B900** SPY buy-and-hold, total return (E900-03).
+- **B900** SPY buy-and-hold, total return, on a $100K account with the same costs as strategies (E900-03).
 - **B901** equal-weight ≥ $2B universe, monthly rebalance (E901-02). It replaces E901-01, which used the pre-D030 universe rule.
+  - Same cost model, but on a **$10M notional** account.
+  - Holding about 1,000 names on $100K with a $7 fixed fee per order is not a meaningful portfolio (commissions alone would be several percent a year).
+  - B901 therefore measures the universe's own return, with costs immaterial.
 
 ## 7. Robustness battery
 

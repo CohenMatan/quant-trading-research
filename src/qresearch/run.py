@@ -25,6 +25,8 @@ from . import config, experiment, gitutil, holdout, integrity, metrics, registry
 from .qc_client import QCClient
 from .trades import build_trades
 
+MIN_LOG_ALLOWANCE = 300_000   # bytes of QC daily log allowance required before starting a run
+
 
 def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, str]:
     """Project files for QC: the strategy's .py files, the shared harness, generated params."""
@@ -101,7 +103,8 @@ def analyse(cfg: dict, raw: dict) -> dict:
     fills = results.parse_fills(raw["orders"])
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
     trades = build_trades(fills, splits)
-    checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"])
+    checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
+                                 commission_per_order=cfg["costs"].get("commission_per_order"))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),
@@ -225,6 +228,10 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         return prov
 
     client = QCClient()
+    remaining = int((client.organization().get("logs") or {}).get("dailyRemaining", 0))
+    if remaining < MIN_LOG_ALLOWANCE:
+        raise SystemExit(f"QuantConnect daily log allowance too low ({remaining} bytes < {MIN_LOG_ALLOWANCE}); "
+                         "not starting, so the run is not lost (see E953-03). Try again later.")
     try:
         raw = execute(cfg, files, client)
     except Exception as exc:  # the run still gets registered as failed

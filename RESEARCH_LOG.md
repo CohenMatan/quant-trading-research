@@ -165,3 +165,27 @@ In addition, 14 unregistered infrastructure development runs: 11 API/data probes
 **Operational issue:** the log allowance did not reset at 00:00 UTC (still 0 at 05:00 UTC). The v1.1 runs start automatically when it returns.
 
 Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
+
+---
+
+## 2026-09-28 — CP2 amendment: 2010 scheme and $7/order commissions
+
+**Owner decisions:**
+
+- D033: research from 2010 only, MarketCap ≥ $2B; size proxy rejected.
+- D035: 1999–2009 is an optional finalist stress test only.
+- D039: commission of $7 per executed order.
+
+**Implemented:**
+
+- Split scheme `2010`: IS 2010–17, VAL 2018–21, WF 2014–21 folds; holdout unchanged. Date rules for research, benchmark and stress runs.
+- Fixed per-order fee model and its integrity check.
+- Runner log-allowance pre-flight (D040).
+- New benchmark configs E900-03 and E901-02, and canary config E950-03.
+- Tests: 102 of 102 pass.
+
+**Proposed:** the split (D034), adjusted gates (D036), and a minimum position of $5,000 with ≤ 15 positions (D041).
+
+**Queued:** QuantConnect verification runs E950-03, E900-03 and E901-02. They wait for the daily log allowance, which was still exhausted at 05:23 UTC.
+
+**No strategy research started.** Report: `docs/checkpoints/CP2_amendment_2010_split.md`.

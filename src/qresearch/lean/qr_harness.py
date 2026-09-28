@@ -22,6 +22,24 @@ COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 
 
+class FixedPerOrderFeeModel(FeeModel):
+    """Owner's actual brokerage cost (D039): a flat fee per EXECUTED order, buy or sell.
+    LEAN asks for a fee on every fill event; an order that fills in several pieces is still one
+    order, so only its first fill is charged. Orders that never fill are never charged."""
+
+    def __init__(self, per_order):
+        super().__init__()
+        self.per_order = float(per_order)
+        self._charged = set()
+
+    def get_order_fee(self, parameters):
+        oid = parameters.order.id
+        if oid in self._charged:
+            return OrderFee(CashAmount(0.0, "USD"))
+        self._charged.add(oid)
+        return OrderFee(CashAmount(self.per_order, "USD"))
+
+
 def is_us_common(f):
     """Common stock, not a depositary receipt, and either Morningstar's primary share or a
     US-domiciled company. The new dataset flags many US companies' only listed share as
@@ -52,6 +70,15 @@ class QRAlgorithm(QCAlgorithm):
         self.set_cash(float(e["cash"]))
         self.set_brokerage_model(BrokerageName.INTERACTIVE_BROKERS_BROKERAGE, AccountType.MARGIN)
         self._qr_slip = float(e["costs"]["slippage_bps"]) / 1e4
+        # Commission model (D039). Configs without "commission_per_order" are pre-D039 history and
+        # keep LEAN's IB per-share model so they remain reproducible.
+        per_order = e["costs"].get("commission_per_order")
+        if per_order is None:
+            self._qr_fee_model = InteractiveBrokersFeeModel()
+            self._qr_fee_est = lambda q: max(1.0, 0.005 * q)
+        else:
+            self._qr_fee_model = FixedPerOrderFeeModel(per_order)
+            self._qr_fee_est = lambda q, c=float(per_order): c
         self.set_security_initializer(self._qr_init_security)
         self.universe_settings.resolution = Resolution.DAILY
         self.universe_settings.data_normalization_mode = DataNormalizationMode.RAW
@@ -96,7 +123,7 @@ class QRAlgorithm(QCAlgorithm):
         self.qr_initialize()
 
     def _qr_init_security(self, security):
-        security.set_fee_model(InteractiveBrokersFeeModel())
+        security.set_fee_model(self._qr_fee_model)
         security.set_slippage_model(ConstantSlippageModel(self._qr_slip))
         # Buying power is not checked by LEAN: MOO sells and buys fill together at the next open,
         # and LEAN would otherwise reject buys funded by same-batch sells. The harness plans cash
@@ -292,9 +319,10 @@ class QRAlgorithm(QCAlgorithm):
                 sells.append((sym, delta, price))
             elif delta > 0 and sym not in self._qr_delist_warned:
                 buys.append((sym, delta, price))
-        cash_plan = float(self.portfolio.cash) + sum(-q * p * (1 - self._qr_slip) for _, q, p in sells)
+        cash_plan = float(self.portfolio.cash) + sum(-q * p * (1 - self._qr_slip) - self._qr_fee_est(-q)
+                                                     for _, q, p in sells)
         cash_plan -= buffer * pv
-        need = sum(q * p * (1 + self._qr_slip) + max(1.0, 0.005 * q) for _, q, p in buys)
+        need = sum(q * p * (1 + self._qr_slip) + self._qr_fee_est(q) for _, q, p in buys)
         scale = 1.0
         if need > 0 and cash_plan < need:
             scale = max(0.0, cash_plan / need)

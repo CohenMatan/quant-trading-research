@@ -44,6 +44,10 @@ LAST_UNLOCKED_DATE = date(2021, 12, 31)
 MIN_MARKET_CAP = 2_000_000_000.0
 DEFAULT_CASH = 100_000.0
 
+# Costs (D039, owner's actual brokerage): $7 per executed order, buy or sell; slippage is separate.
+COMMISSION_MODEL = "fixed_per_order"
+COMMISSION_PER_ORDER = 7.0
+
 # Experiment kinds recorded in the registry.
 # "stress" = optional 1999-2009 stress test of a finalist on an imperfect universe (D035): never counted
 # as a trial, never used for optimisation, parameter selection or promotion.

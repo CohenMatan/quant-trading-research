@@ -5,7 +5,8 @@
 | Date | 2026-09-28 |
 | Status | **Awaiting owner approval. STOPPED.** No strategy research has started. |
 | Owner decision implemented | D033: MarketCap ≥ $2B universe on the new dataset, from 2010 only; the size proxy is rejected; 1999–2009 is only an optional stress test for finalists (D035); no data purchase |
-| Proposed for approval | D034 (the split), D036 (the adjusted gates), plus D023–D025 (standard settings), which are still open from CP2 |
+| Also implemented | **D039: fixed commission of $7 per executed order** (owner instruction), see §6a |
+| Proposed for approval | D034 (the split), D036 (the adjusted gates), D041 (minimum position size), plus D023–D025 (standard settings), which are still open from CP2 |
 
 ## 1. Proposed split
 
@@ -93,6 +94,68 @@
   - Research runs log only a few KB each (the harness summary and held-position splits), so about 300 or more per day fit easily.
   - I will keep diagnostic logging small. The runner will check the remaining allowance before starting a run, so a run is not lost the way E953-03 was.
 
+## 6a. Commission model: $7 per executed order (D039, implemented)
+
+**What changed:**
+
+- The IB per-share commission model is replaced everywhere with **$7 per executed order**, buy or sell ($14 per normal round trip).
+  - An order that fills in several pieces is charged once.
+  - Several separate orders are each charged.
+  - Orders that never fill cost nothing.
+- **Slippage stays separate** at 10 bps per side.
+- Everything we report is computed from the equity curve and trade PnL **after** both costs: returns, CAGR, Sharpe, profit factor, expectancy and the rest.
+- Benchmarks E900-03 and E901-02 and all future experiments must use this model; the config validation refuses anything else under the 2010 scheme.
+- The harness's cash planning includes the fee on both buys and sells.
+- Old experiments keep their original IB model, so they stay reproducible as history.
+
+**How it is verified:**
+
+- **Offline tests (10 new, 102 of 102 pass):**
+  - the fee class itself charges $7 on the first fill of each order, $0 on further fills of the same order, and $7 on every other order;
+  - configs without the $7 model are rejected;
+  - the per-run integrity check `commission_fixed_per_order` accepts exactly $7 per executed order and rejects $1, $14 or $0;
+  - trade PnL and expectancy are net of both $7 legs.
+- **On QuantConnect: queued, not yet run.**
+  - Canary E950-03 (2010–2021, about 2,300 orders) plus both benchmarks E900-03 and E901-02.
+  - Every executed order must show exactly $7, checked by the integrity check.
+  - They start automatically when QuantConnect's daily log allowance returns. The runner now refuses to start while it is low (D040), so no run is lost.
+  - I will append the results here.
+
+**Cost impact by position size** (round trip = 2 × $7 commission + 2 × 10 bps slippage):
+
+| Position | Commission per round trip | + Slippage | Total cost per round trip |
+|---|---|---|---|
+| $1,000 | 1.40% | 0.20% | 1.60% |
+| **$2,000** (current minimum) | **0.70%** | 0.20% | **0.90%** |
+| $3,000 | 0.47% | 0.20% | 0.67% |
+| **$5,000** | **0.28%** | 0.20% | **0.48%** |
+| $7,500 | 0.19% | 0.20% | 0.39% |
+| $10,000 | 0.14% | 0.20% | 0.34% |
+| $20,000 | 0.07% | 0.20% | 0.27% |
+
+**Annual commission drag on $100K** (commission only):
+
+| Trading pattern | Round trips per year | Commission per year | Drag |
+|---|---|---|---|
+| 10 positions, 5-day holds | 504 | $7,056 | **7.1%** |
+| 10 positions, 10-day holds | 252 | $3,528 | 3.5% |
+| 10 positions, 20-day holds | 126 | $1,764 | 1.8% |
+| 5 positions, 20-day holds | 63 | $882 | 0.9% |
+
+**A concrete example (arithmetic on existing results, no new run).**
+
+- The CP2 demo S000 (5-day reversal, 2010–14) placed 4,950 orders.
+- Under the IB model its commissions were $10,129. Under $7 per order they would be **$34,650**: about 4.9% a year more drag.
+- Its average trade expectancy would fall from +0.11% to +0.03%.
+- Very short holding periods are close to uneconomic at this commission level.
+
+**Minimum position size: recommendation (not applied, D041).**
+
+- At $2,000, one round trip costs about **0.90%**. That is more than the typical per-trade edge of a swing strategy (often 0.3–1%).
+- I recommend raising the **minimum position to $5,000** (0.48% per round trip).
+- Reduce the **maximum number of positions from 20 to 15**, so that a typical full position is about $6,500 (about 0.42% per round trip). Twenty equal positions at $100K would be $4,900 each, just under the minimum.
+- Research implication: hypotheses with holding periods of about 10 trading days or longer are favoured. The cost-stress runs (2×/4×/6× slippage) remain on top of the $14.
+
 ## 7. Housekeeping done in this amendment
 
 - **Code:**
@@ -117,5 +180,6 @@
 |---|---|---|
 | 1 | Approve the split in §1 (D034) | **Approve** |
 | 2 | Approve the adjusted gates in §5 (D036) | **Approve**, or amend |
-| 3 | Approve the standard settings still open from CP2 (D023–D025): price ≥ $5, 20-day ADV ≥ $5M, 10 bps slippage per side, ≤ 10% per position, ≤ 20 positions | **Approve** |
-| 4 | Then authorise the first research cycle (CP3), starting with the two benchmark runs | Your call |
+| 3 | Approve the standard settings still open from CP2 (D023–D025): price ≥ $5, 20-day ADV ≥ $5M, 10 bps slippage per side, ≤ 10% per position | **Approve** |
+| 3a | Minimum position size and position count (D041): $5,000 minimum, ≤ 15 positions, instead of $2,000 and ≤ 20 | **Approve** |
+| 4 | Then authorise the first research cycle (CP3), once the queued D039 verification runs (E950-03, E900-03, E901-02) have passed | Your call |

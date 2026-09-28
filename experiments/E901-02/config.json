@@ -17,7 +17,9 @@
  },
  "costs": {
   "slippage_bps": 10,
-  "commission": "IB fixed via LEAN InteractiveBrokersFeeModel: $0.005/share, $1 min, 1% max"
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order (owner's broker); slippage separate"
  },
  "portfolio": {
   "max_position_weight": 1.0,
