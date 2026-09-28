@@ -25,7 +25,6 @@ from . import config, experiment, gitutil, holdout, integrity, metrics, registry
 from .qc_client import QCClient
 from .trades import build_trades
 
-MIN_LOG_ALLOWANCE = 300_000   # bytes of QC daily log allowance required before starting a run
 
 
 def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, str]:
@@ -72,10 +71,17 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
         return out
     if bt.get("error") or bt.get("stacktrace") or not bt.get("completed"):
         out["error"] = (bt.get("error") or "") + "\n" + (bt.get("stacktrace") or "")
-        out["logs"] = client.read_logs(handle)
+        out["logs"] = []            # the error and stack trace come from backtests/read, not logs
         return out
     out["orders"] = client.read_orders(handle)
-    out["logs"] = client.read_logs(handle, must_contain="QRSUMMARY|")
+    stats_ = client.read_statistics(handle, must_have="qr_summary")
+    out["backtest"]["statistics"] = stats_
+    if "qr_summary" in stats_:
+        out["logs"] = results.lines_from_statistics(stats_)      # D046: no QuantConnect logs needed
+        out["result_channel"] = "summary_statistics"
+    else:                            # harness older than D046 (reproductions of old runs only)
+        out["logs"] = client.read_logs(handle, must_contain="QRSUMMARY|")
+        out["result_channel"] = "logs (legacy harness)"
     s = datetime.fromisoformat(cfg["start"]).replace(tzinfo=timezone.utc)
     e = datetime.fromisoformat(cfg["end"]).replace(tzinfo=timezone.utc)
     _, summary, _ = results.parse_logs(out["logs"])
@@ -104,7 +110,8 @@ def analyse(cfg: dict, raw: dict) -> dict:
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
     trades = build_trades(fills, splits)
     checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
-                                 commission_per_order=cfg["costs"].get("commission_per_order"))
+                                 commission_per_order=cfg["costs"].get("commission_per_order"),
+                                 tradeable_dates=raw["backtest"].get("tradeableDates"))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),
@@ -217,7 +224,13 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
     if not cfg.get("lean_version_id"):
         raise SystemExit("config needs lean_version_id: every run is pinned to an explicit LEAN build (D021)")
     unlocked = holdout.holdout_unlocked()
-    files = assemble_files(cfg, commit, unlocked)
+    build_commit = commit
+    if reproduce:
+        orig = json.loads((config.EXPERIMENTS_DIR / cfg["experiment_id"] / "result.json").read_text())
+        build_commit = orig["provenance"]["git_commit"]
+        if "+uncommitted" in build_commit:
+            raise SystemExit("cannot reproduce an uncommitted run")
+    files = assemble_files(cfg, build_commit, unlocked)
     if not scratch and not reproduce:
         _check_freeze(cfg, commit, files)
     prov = dict(git_commit=head if commit else f"{head}+uncommitted", run_utc=run_utc,
@@ -230,14 +243,12 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         return prov
 
     client = QCClient()
-    remaining = int((client.organization().get("logs") or {}).get("dailyRemaining", 0))
-    if remaining < MIN_LOG_ALLOWANCE:
-        raise SystemExit(f"QuantConnect daily log allowance too low ({remaining} bytes < {MIN_LOG_ALLOWANCE}); "
-                         "not starting, so the run is not lost (see E953-03). Try again later.")
     try:
         raw = execute(cfg, files, client)
     except Exception as exc:  # the run still gets registered as failed
         raw = dict(error=f"{type(exc).__name__}: {exc}", logs=[])
+    prov["result_channel"] = raw.get("result_channel", "")
+    prov["build_commit"] = build_commit if not scratch else prov["git_commit"]
     prov.update(qc_project_id=raw.get("project_id", ""), qc_backtest_id=raw.get("backtest_id", ""),
                 lean_version=raw.get("lean_version", ""), runtime_s=raw.get("runtime_s", 0.0))
     an = None
