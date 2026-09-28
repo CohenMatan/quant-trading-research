@@ -145,3 +145,23 @@ In addition, 14 unregistered infrastructure development runs: 11 API/data probes
 **Checklist:** credentials present (values not displayed); QuantConnect reachable.
 
 **Done before any result:** evaluation plan, variants and decision thresholds pre-registered in `docs/data/size_proxy_plan.md`.
+
+---
+
+## 2026-09-28 — Size proxy: provisional report written
+
+**Runs:**
+
+- E953-01 (2010–14) and E953-02 (2015–21) completed, X953 v1.0.
+- E953-03 (1999–2009, old dataset) **failed**: QuantConnect's daily log allowance of about 3 MB ran out.
+
+**Findings:**
+
+- **The reference is survivorship-biased even in 2010–14.** Later-ended companies (Alcoa, Time Warner, DuPont, SanDisk, …) have no fundamentals in either dataset.
+- **Wrong primary-share flags.** The new dataset flags many US companies (GE, BAC, V, …) as non-primary. Fixed in D030; the fix requires v1.1 re-runs E953-04..07.
+- **Provisional result, C20 + E5 proxy:** F1 0.75 measured; about 0.80 estimated against a complete reference; 0.85 on known-type names; 2015–21 F1 0.80. The universe return gap is −0.2%/year, not significant.
+- **Provisional verdict:** APPROVE WITH LIMITATIONS.
+
+**Operational issue:** the log allowance did not reset at 00:00 UTC (still 0 at 05:00 UTC). The v1.1 runs start automatically when it returns.
+
+Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
