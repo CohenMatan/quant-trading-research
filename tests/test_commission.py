@@ -63,7 +63,8 @@ def test_harness_uses_the_configured_fee_model():
     src = (ROOT / "src/qresearch/lean/qr_harness.py").read_text()
     assert "security.set_fee_model(self._qr_fee_model)" in src
     assert "FixedPerOrderFeeModel(per_order)" in src
-    assert "self._qr_fee_est(q)" in src and "self._qr_fee_est(-q)" in src   # cash planning includes fees
+    assert "self._qr_fee_est, band, n_open)" in src                           # plan_orders gets the fee
+    assert "fee_est(-q)" in src and "fee_est(q)" in src                        # on sells and on buys
 
 
 # ---------------------------------------------------------------- configuration rules

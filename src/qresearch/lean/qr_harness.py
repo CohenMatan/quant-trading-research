@@ -22,6 +22,78 @@ COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 
 
+def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0):
+    """Pure order planning (no LEAN types; unit-tested offline).
+
+    items: [(key, target_weight, last_price, held_qty, pending_qty, delisting_warned)], in priority
+           order for new entries. Weight 0 = exit fully.
+    pf:    portfolio settings: max_position_weight, cash_buffer, min_position_usd, max_positions.
+    Rules: long-only; weights capped at max_position_weight; a NEW position must be worth at least
+    min_position_usd (also after any cash scaling); the number of open positions never exceeds
+    min(max_positions, floor(pv * (1 - cash_buffer) / min_position_usd)); buys are scaled down so
+    that planned cash after sells, fees and slippage stays >= cash_buffer * pv.
+    Returns dict(sells=[(key, qty<0)], buys=[(key, qty>0)], skipped_min, skipped_cap, scaled)."""
+    max_w = float(pf.get("max_position_weight", 1.0))
+    buffer = float(pf.get("cash_buffer", 0.02))
+    min_pos = float(pf.get("min_position_usd", 0.0))
+    cap = int(pf.get("max_positions", 0)) or None
+    if min_pos > 0:
+        by_size = int(pv * (1.0 - buffer) // min_pos)
+        cap = by_size if cap is None else min(cap, by_size)
+    positions = int(n_open_positions)
+    sells, buys = [], []
+    skipped_min = skipped_cap = 0
+    exits_first = [it for it in items if it[1] == 0] + [it for it in items if it[1] != 0]
+    for key, w, price, held, pend, warned in exits_first:
+        if w < 0:
+            raise ValueError("long-only: negative target weight")
+        have = held + pend
+        if w == 0:
+            if have > 0:
+                sells.append((key, -int(have), price))
+                positions -= 1
+            continue
+        if price <= 0:
+            continue
+        w = min(w, max_w)
+        target = int(w * pv / price)
+        if have > 0:
+            delta = target - int(have)
+            if band > 0 and abs(delta) * price < band * w * pv:
+                continue
+            if delta < 0:
+                sells.append((key, delta, price))
+            elif delta > 0 and not warned:
+                buys.append((key, delta, price, False))
+            continue
+        if warned:
+            continue
+        if target * price < min_pos:
+            skipped_min += 1
+            continue
+        if cap is not None and positions >= cap:
+            skipped_cap += 1
+            continue
+        buys.append((key, target, price, True))
+        positions += 1
+    cash_plan = cash + sum(-q * p * (1 - slip) - fee_est(-q) for _, q, p in sells) - buffer * pv
+    need = sum(q * p * (1 + slip) + fee_est(q) for _, q, p, _ in buys)
+    scale, scaled = 1.0, False
+    if need > 0 and cash_plan < need:
+        scale, scaled = max(0.0, cash_plan / need), True
+    out_buys = []
+    for key, q, p, is_new in buys:
+        q = int(q * scale)
+        if q <= 0:
+            continue
+        if is_new and q * p < min_pos:
+            skipped_min += 1
+            continue
+        out_buys.append((key, q))
+    return dict(sells=[(k, q) for k, q, _ in sells], buys=out_buys, skipped_min=skipped_min,
+                skipped_cap=skipped_cap, scaled=scaled)
+
+
 class FixedPerOrderFeeModel(FeeModel):
     """Owner's actual brokerage cost (D039): a flat fee per EXECUTED order, buy or sell.
     LEAN asks for a fee on every fill event; an order that fills in several pieces is still one
@@ -69,7 +141,8 @@ class QRAlgorithm(QCAlgorithm):
         self.set_end_date(end.year, end.month, end.day)
         self.set_cash(float(e["cash"]))
         self.set_brokerage_model(BrokerageName.INTERACTIVE_BROKERS_BROKERAGE, AccountType.MARGIN)
-        self._qr_slip = float(e["costs"]["slippage_bps"]) / 1e4
+        # base slippage x optional stress multiple (2x/4x/6x robustness runs); commission is separate
+        self._qr_slip = float(e["costs"]["slippage_bps"]) * float(e["costs"].get("slippage_stress_multiple", 1)) / 1e4
         # Commission model (D039). Configs without "commission_per_order" are pre-D039 history and
         # keep LEAN's IB per-share model so they remain reproducible.
         per_order = e["costs"].get("commission_per_order")
@@ -286,54 +359,37 @@ class QRAlgorithm(QCAlgorithm):
     # ================================================================ orders
     def qr_rebalance(self, targets, tag="rebal", liquidate_others=False, band=0.0):
         """Queue market-on-open orders so tomorrow's holdings approach `targets` (symbol -> weight
-        of current equity). Sized with today's close; buys are scaled down so that planned cash
-        stays >= cash_buffer × equity after the sells. `band` skips resizing an existing position
-        when the change is smaller than band × target value. Returns number of orders placed."""
+        of current equity; insertion order = priority for new entries). Sizing and all portfolio
+        rules live in the pure function plan_orders() below. Returns number of orders placed."""
         if not self._qr_in_close:
             raise Exception("QR timing guard: orders may only be placed from qr_on_close")
-        max_w = float(self._qr_pf.get("max_position_weight", 1.0))
-        buffer = float(self._qr_pf.get("cash_buffer", 0.02))
         targets = dict(targets)
         if liquidate_others:
             for kv in self.portfolio:
                 if kv.value.invested and kv.key not in targets:
                     targets[kv.key] = 0.0
-        pv = float(self.portfolio.total_portfolio_value)
-        sig = f"{self.time:%Y-%m-%d}"
-        sells, buys = [], []
+        items = []
         for sym, w in targets.items():
-            if w < 0:
-                raise Exception("QR long-only guard: negative target weight")
-            w = min(float(w), max_w)
             sec = self.securities[sym] if self.securities.contains_key(sym) else None
             price = float(sec.price) if sec is not None else 0.0
-            if price <= 0:
-                continue
             cur = float(self.portfolio[sym].quantity)
             open_q = sum(float(t.quantity) for t in self.transactions.get_open_order_tickets(sym))
-            delta = int(w * pv / price) - (cur + open_q) if w > 0 else -(cur + open_q)
-            delta = int(delta)
-            if band > 0 and w > 0 and cur > 0 and abs(delta) * price < band * w * pv:
-                continue
-            if delta < 0:
-                sells.append((sym, delta, price))
-            elif delta > 0 and sym not in self._qr_delist_warned:
-                buys.append((sym, delta, price))
-        cash_plan = float(self.portfolio.cash) + sum(-q * p * (1 - self._qr_slip) - self._qr_fee_est(-q)
-                                                     for _, q, p in sells)
-        cash_plan -= buffer * pv
-        need = sum(q * p * (1 + self._qr_slip) + self._qr_fee_est(q) for _, q, p in buys)
-        scale = 1.0
-        if need > 0 and cash_plan < need:
-            scale = max(0.0, cash_plan / need)
-            self._qr_stats["buys_scaled"] += 1
+            items.append((sym, float(w), price, cur, open_q, sym in self._qr_delist_warned))
+        pending = {}
+        for t in self.transactions.get_open_order_tickets():
+            pending[t.symbol] = pending.get(t.symbol, 0.0) + float(t.quantity)
+        n_open = sum(1 for kv in self.portfolio if kv.value.quantity + pending.get(kv.key, 0.0) > 0)
+        n_open += sum(1 for sym, q in pending.items() if q > 0 and not self.portfolio[sym].invested)
+        plan = plan_orders(items, float(self.portfolio.total_portfolio_value), float(self.portfolio.cash),
+                           self._qr_pf, self._qr_slip, self._qr_fee_est, band, n_open)
+        st = self._qr_stats
+        st["buys_scaled"] += int(plan["scaled"])
+        st["skipped_min_position"] = st.get("skipped_min_position", 0) + plan["skipped_min"]
+        st["skipped_max_positions"] = st.get("skipped_max_positions", 0) + plan["skipped_cap"]
+        sig = f"{self.time:%Y-%m-%d}"
         n = 0
-        for sym, q, _ in sells:
+        for sym, q in plan["sells"] + plan["buys"]:
             n += self._qr_submit(sym, q, f"{tag}|sig={sig}")
-        for sym, q, _ in buys:
-            q = int(q * scale)
-            if q > 0:
-                n += self._qr_submit(sym, q, f"{tag}|sig={sig}")
         return n
 
     def _qr_submit(self, sym, qty, tag):

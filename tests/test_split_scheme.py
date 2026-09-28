@@ -4,12 +4,13 @@ from qresearch import experiment
 from test_holdout_lock import _cfg
 
 FIXED = {"slippage_bps": 10, "commission_model": "fixed_per_order", "commission_per_order": 7.0}
+PORTF = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15}
 
 
 def research(**kw):
     c = dict(kind="research", strategy_id="S001", experiment_id="E001-01", hypothesis_id="H001",
              strategy_dir="strategies/S000_pipeline_demo", split_scheme="2010", split="IS",
-             start="2010-01-04", end="2017-12-29", costs=FIXED)
+             start="2010-01-04", end="2017-12-29", costs=FIXED, portfolio=PORTF)
     c.update(kw)
     return _cfg(**c)
 
@@ -41,7 +42,8 @@ def test_benchmark_cannot_start_before_2010():
 
 def test_stress_window_is_reserved_and_needs_a_finalist():
     base = dict(kind="stress", strategy_id="S001", experiment_id="E001-09", split_scheme="2010", split="STRESS",
-                start="1999-01-04", end="2009-12-31", strategy_dir="strategies/S000_pipeline_demo", costs=FIXED)
+                start="1999-01-04", end="2009-12-31", strategy_dir="strategies/S000_pipeline_demo", costs=FIXED,
+                portfolio=PORTF)
     with pytest.raises(experiment.ConfigError, match="finalist"):
         experiment.validate(_cfg(**base))
     experiment.validate(_cfg(**base, finalist_of="S001"))
@@ -56,3 +58,25 @@ def test_stress_runs_are_not_trials(tmp_path):
     registry.append(dict(experiment_id="E001-01", run_type="original", kind="research"), p)
     registry.append(dict(experiment_id="E001-09", run_type="original", kind="stress"), p)
     assert registry.trial_count(p) == 1
+
+
+@pytest.mark.parametrize("change", [
+    dict(portfolio=dict(PORTF, min_position_usd=2000)),
+    dict(portfolio=dict(PORTF, max_positions=20)),
+    dict(portfolio=dict(PORTF, max_position_weight=0.2)),
+    dict(cash=50_000),
+    dict(costs=dict(FIXED, slippage_bps=5)),
+])
+def test_research_uses_approved_rules(change):
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(research(**change))
+
+
+def test_slippage_stress_multiple_is_allowed():
+    experiment.validate(research(costs=dict(FIXED, slippage_stress_multiple=4)))
+
+
+def test_sizing_kind_for_account_size_retests():
+    experiment.validate(research(kind="sizing", cash=50_000, account_size_test_of="E001-01"))
+    with pytest.raises(experiment.ConfigError, match="account_size_test_of"):
+        experiment.validate(research(kind="sizing", cash=50_000))

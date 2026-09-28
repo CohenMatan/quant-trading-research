@@ -81,6 +81,19 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
+        if kind in ("research", "sizing", "stress"):
+            if cfg["portfolio"] != config.RESEARCH_PORTFOLIO:
+                raise ConfigError(f"portfolio must be the approved rules {config.RESEARCH_PORTFOLIO} (D041/D044)")
+            if float(c["slippage_bps"]) != 10:
+                raise ConfigError("base slippage is 10 bps per side (D024); stress multiples are separate experiments "
+                                  "declared with costs.slippage_stress_multiple")
+        if kind == "research" and float(cfg["cash"]) != config.RESEARCH_CASH:
+            raise ConfigError("research experiments use the $100,000 primary account (D044); use kind 'sizing'")
+        if kind == "sizing":
+            if not str(cfg.get("account_size_test_of") or "").startswith("E"):
+                raise ConfigError("sizing experiments must name the tested experiment in 'account_size_test_of' (D044)")
+            if split not in ("IS", "VAL", "WF"):
+                raise ConfigError("sizing experiments use IS, VAL or WF")
     if float(cfg["universe"].get("min_market_cap", 0)) < config.MIN_MARKET_CAP:
         raise ConfigError("universe min_market_cap is below the approved $2B")
 

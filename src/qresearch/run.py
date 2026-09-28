@@ -218,6 +218,8 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         raise SystemExit("config needs lean_version_id: every run is pinned to an explicit LEAN build (D021)")
     unlocked = holdout.holdout_unlocked()
     files = assemble_files(cfg, commit, unlocked)
+    if not scratch and not reproduce:
+        _check_freeze(cfg, commit, files)
     prov = dict(git_commit=head if commit else f"{head}+uncommitted", run_utc=run_utc,
                 config_sha256=results.sha256_text(cfg_text), code_sha256=code_hash(files),
                 files=sorted(files), holdout_unlocked=unlocked,
@@ -265,6 +267,30 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         from .report import write_report
         write_report(outdir, cfg, result)
     return result
+
+
+def _check_freeze(cfg: dict, commit: str, files: dict[str, str]) -> None:
+    """D042: VAL/WF/HOLDOUT research runs must match their promotion record exactly."""
+    from . import freeze
+    rec = None
+    try:
+        rec = json.loads(gitutil.show_file(commit, freeze.record_path(cfg["strategy_id"], cfg["strategy_version"])))
+    except Exception:
+        rec = None
+    strategy_files = {k: v for k, v in files.items() if k not in ("qr_harness.py", "qr_params.py")}
+    rows = registry.read()
+    lineages = {}
+    for r in rows:
+        if r["split"] == "VAL" and r["kind"] == "research":
+            try:
+                c = json.loads(gitutil.show_file(commit, f"experiments/{r['experiment_id']}/config.json"))
+                lineages[r["experiment_id"]] = freeze.lineage(c)
+            except Exception:
+                lineages[r["experiment_id"]] = {r["strategy_id"]}
+    try:
+        freeze.check(cfg, rec, strategy_files, files["qr_harness.py"], rows, lineages)
+    except freeze.FreezeError as exc:
+        raise SystemExit(f"Refused (D042): {exc}")
 
 
 def main(argv=None) -> int:

@@ -51,4 +51,10 @@ COMMISSION_PER_ORDER = 7.0
 # Experiment kinds recorded in the registry.
 # "stress" = optional 1999-2009 stress test of a finalist on an imperfect universe (D035): never counted
 # as a trial, never used for optimisation, parameter selection or promotion.
-EXPERIMENT_KINDS = ("research", "benchmark", "infrastructure", "demo", "stress")
+# "sizing" = account-size re-test of a finalist (D044): same logic and settings, different cash; not a trial.
+EXPERIMENT_KINDS = ("research", "benchmark", "infrastructure", "demo", "stress", "sizing")
+
+# Approved portfolio rules for research (D025/D041/D044).
+RESEARCH_PORTFOLIO = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000,
+                      "max_positions": 15}
+RESEARCH_CASH = 100_000.0
