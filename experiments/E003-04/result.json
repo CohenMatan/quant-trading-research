@@ -1,0 +1,30 @@
+{
+ "error": "QCError: backtests/orders/read failed: ['Error retrieving orders result, please try again later']",
+ "experiment_id": "E003-04",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "ef1c066198982eed5b81a6f132866366e0963b51",
+  "code_sha256": "e18fe59c8f1e01a7ee648c66f2333f655ee27b4991efcd26647fa4019c5fad19",
+  "config_sha256": "5c52298fab6f791fff88a1722fe479b44e7a54d73b493d5b062f8f475102ab6d",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "ef1c066198982eed5b81a6f132866366e0963b51",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T16:00:56Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}
