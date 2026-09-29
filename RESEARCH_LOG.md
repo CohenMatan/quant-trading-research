@@ -296,3 +296,37 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **STOP.** No VAL, WF or HOLDOUT run.
 
+## 2026-09-29: Validation of S005 v1.2 (H005); Checkpoint 4 part 1 STOP
+
+**Setup.**
+
+- The owner approved S005 v1.2 for Validation only.
+- It was frozen by `research/promotions/S005_v1.2.json`.
+- The gate and the exposure-aware evaluation were committed before the run (D056).
+
+**E005-28** (2018–2021, one run) passed all integrity checks.
+
+- Results: CAGR 4.4%, Sharpe 0.89, max drawdown −6.5%, 174 trades.
+- Benchmarks: equal-weight 12.3% / 0.65 / −37.8%; SPY 17.0% / 0.87 / −33.1%.
+
+**Validation gate:**
+
+- The 6 performance checks pass.
+- **Deflated Sharpe 0.68 (< 0.90) fails.**
+- The known PBO 0.71 fails.
+- **Formal FAIL.**
+
+**Exposure-aware comparison.**
+
+- The low drawdown survives exposure matching (−6.5% vs −20.8% for EW and −18.1% for SPY at the same cash).
+- The Sharpe edge does not hold against SPY (1.02 exposure-matched).
+- Alpha vs EW: +2.4% a year, t = 1.2 (IS: +4.4%, t = 3.2).
+
+**Where the return came from.** The trades lost money on price. Distributions made about 4.7% of equity a year.
+
+**New finding D057.** Closed-end funds and partnership units pass the common-stock filter: 23% of S005's VAL capital (6% in IS). All affected runs are flagged; nothing is fixed yet.
+
+**Recommendation.** "No Production Candidate Found" for C01. Fix the universe before any new research.
+
+**STOP.** No Walk-Forward or Holdout.
+
