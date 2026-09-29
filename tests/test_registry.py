@@ -98,3 +98,36 @@ def test_trial_accounting_separates_technical_repeats(tmp_path):
     a = registry.trial_accounting(p, exp)
     assert a["genuine_trials"] == 3 and a["technical_repeats"] == 2 and a["verification_and_benchmark_runs"] == 1
     assert a["all_started_research_runs"] == 5
+
+
+def test_d069_dsr_trial_categories(tmp_path):
+    """D069 (frozen before any C02 result): N for DSR = distinct IS selection candidates only."""
+    import json
+    exp = tmp_path / "experiments"
+    base = dict(hypothesis_id="H001", strategy_id="S001", strategy_version="v1.0", params={"a": 1}, split="IS",
+                start="2010-01-04", end="2017-12-29", costs={"slippage_bps": 10})
+    cfgs = {"E001-01": base,
+            "E001-02": dict(base, strategy_version="v1.1", params={"a": 2}),
+            "E001-03": dict(base, costs={"slippage_bps": 10, "slippage_stress_multiple": 2}, robustness_of="E001-01"),
+            "E001-04": dict(base, params={"a": 1.2}, robustness_of="E001-01"),              # plateau perturbation
+            "E001-05": dict(base, split="VAL", start="2018-01-01", end="2021-12-31"),       # validation
+            "E001-06": base,                                                                # technical repeat
+            "E001-07": base}                                                                # repeat, retired
+    p = tmp_path / "INDEX.csv"
+    for eid, c in cfgs.items():
+        (exp / eid).mkdir(parents=True)
+        (exp / eid / "config.json").write_text(json.dumps(c))
+        registry.append(dict(experiment_id=eid, run_type="original", kind="research", status="completed"), p)
+    registry.append(dict(experiment_id="E959-01", run_type="original", kind="infrastructure"), p)
+    a = registry.trial_accounting(p, exp, retired={"E001-07"})
+    assert (a["selection_trials"], a["robustness_runs"], a["validation_runs"], a["technical_repeats"]) == (2, 2, 1, 2)
+    assert a["selection_latest"] == {"E001-01": "E001-06", "E001-02": "E001-02"}   # latest valid run per candidate
+    assert registry.dsr_trial_count(p, exp) == dict(official=2, conservative=5)
+
+
+def test_d069_counts_on_the_real_registry():
+    """Pins the frozen counts at the C02 prerequisite checkpoint (before any C02 strategy run)."""
+    from qresearch import config
+    a = registry.trial_accounting(config.INDEX_CSV, config.EXPERIMENTS_DIR)
+    assert (a["selection_trials"], a["robustness_runs"], a["validation_runs"]) == (19, 15, 1)
+    assert registry.dsr_trial_count() == dict(official=19, conservative=35)

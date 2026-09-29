@@ -118,7 +118,7 @@ def evaluate(val_id: str, is_id: str, ew_id: str, spy_id: str, pbo: float) -> di
     srs = [float(x["sharpe"]) / math.sqrt(252) for x in registry.read()
            if x["run_type"] == "original" and x["experiment_id"] in final and x["sharpe"]]
     var_sr = float(np.var(srs, ddof=1)) if len(srs) > 1 else 0.0
-    n_trials = registry.trial_count()
+    n_trials = registry.trial_count()   # C01 Validation (E005-28) as reported; D069 applies from C02 on
     both = np.concatenate([r_is.to_numpy(), r_val.to_numpy()])
     gate = val_gate(veq, vtr, is_sharpe, ew, both, n_trials, var_sr, pbo)
     matched_ew = exposure_matched(ew, expo)

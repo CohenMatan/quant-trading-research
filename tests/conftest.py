@@ -1,10 +1,13 @@
 import importlib.util
 import json
+import sys
 from pathlib import Path
 
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
+# LEAN-side pure modules (qr_indicators) are imported by the harness and strategy signal files
+sys.path.insert(0, str(ROOT / "src" / "qresearch" / "lean"))
 
 
 def load_module(path: Path, name: str):

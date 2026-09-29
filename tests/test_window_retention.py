@@ -18,6 +18,7 @@ def algo(monkeypatch):
     a = object.__new__(h.QRAlgorithm)
     a.WINDOW_BARS = 3
     a.qr_close, a.qr_volume, a._qr_last_bar = {}, {}, {}
+    a.qr_open, a.qr_high, a.qr_low, a.qr_month_close, a._qr_month_last = {}, {}, {}, {}, {}
     a.portfolio = Portfolio(1000.0)
     a.open_orders = {}
     a.transactions = types.SimpleNamespace(get_open_order_tickets=lambda s: a.open_orders.get(s, []))

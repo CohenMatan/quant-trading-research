@@ -38,6 +38,20 @@ def retired_ids() -> dict[str, str]:
             if r["run_type"] == "annotation" and r["status"] in RETIRED}
 
 
+def dsr_inputs() -> dict:
+    """D069 inputs for the Deflated Sharpe Ratio, frozen before any C02 result.
+    n_trials = cumulative distinct selection candidates (registry.dsr_trial_count "official");
+    var_sr   = variance of the per-day Sharpe across the latest valid (not retired) run of every
+               selection candidate counted in n_trials;
+    n_conservative = selection + robustness + validation configurations, reported separately."""
+    acc = registry.trial_accounting(retired=set(retired_ids()))
+    sharpe = {r["experiment_id"]: r["sharpe"] for r in registry.read() if r["run_type"] == "original"}
+    srs = [float(sharpe[e]) / math.sqrt(252) for e in acc["selection_latest"].values() if e and sharpe.get(e)]
+    return dict(n_trials=acc["selection_trials"],
+                n_conservative=acc["selection_trials"] + acc["robustness_runs"] + acc["validation_runs"],
+                var_sr=float(np.var(srs, ddof=1)) if len(srs) > 1 else 0.0, n_sharpes=len(srs))
+
+
 def cycle_experiments(cycle: str, final_only: bool = True) -> list[str]:
     """The cycle's research experiments. With final_only, only the comparable set: runs under the
     current execution model that no annotation has retired (superseded, invalid, bugged, failed)."""
@@ -58,14 +72,9 @@ def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") ->
     _, _, beq, _, _ = _load(bench_id)
     _, _, seq, _, _ = _load(spy_id)
     rows, rets, checks_all = [], {}, {}
-    reg = registry.read()
-    n_trials = registry.trial_count()
-    research_sr = []
+    d = dsr_inputs()   # D069: official N = cumulative selection candidates; conservative N reported beside it
+    n_trials, n_cons, var_sr = d["n_trials"], d["n_conservative"], d["var_sr"]
     final = cycle_experiments(cycle)
-    for r in reg:   # cross-sectional Sharpe variance over the comparable (final) runs only
-        if r["run_type"] == "original" and r["experiment_id"] in final and r["sharpe"]:
-            research_sr.append(float(r["sharpe"]) / math.sqrt(252))
-    var_sr = float(np.var(research_sr, ddof=1)) if len(research_sr) > 1 else 0.0
     for eid in final:
         cfg, res, eq, tr, fi = _load(eid)
         row = dict(experiment=eid, hypothesis=cfg["hypothesis_id"], strategy=cfg["strategy_id"],
@@ -95,6 +104,7 @@ def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") ->
                    / float(e.mean()) / years,
                    turnover_pa=float((fi["quantity"].abs() * fi["price"]).sum()) / float(e.mean()) / years,
                    dsr=stats.deflated_sharpe(r_daily.to_numpy(), max(n_trials, 1), var_sr),
+                   dsr_conservative=stats.deflated_sharpe(r_daily.to_numpy(), max(n_cons, 1), var_sr),
                    thirds=[round(x, 2) for x in gates.thirds_positive(eq)],
                    is_screen="PASS" if gates.passed(chk) else "fail",
                    failed_gates="; ".join(c["gate"] for c in chk if not c["ok"]))
@@ -112,7 +122,7 @@ def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") ->
         bm = metrics.compute_metrics(sl)
         bench[name] = dict(cagr=bm["cagr"], sharpe=bm["sharpe"], max_dd=bm["max_drawdown"])
     return dict(table=table, checks=checks_all, pbo=pbo, bench=bench, n_trials=n_trials,
-                counts=registry.counts(), var_sr=var_sr)
+                n_trials_conservative=n_cons, counts=registry.counts(), var_sr=var_sr)
 
 
 def main(argv=None) -> int:

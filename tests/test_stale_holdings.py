@@ -68,6 +68,7 @@ def algo(monkeypatch):
     a._qr_session, a._qr_session_day = 0, None
     a._qr_real_session, a._qr_real_close, a._qr_real_date = {}, {}, {}
     a._qr_terminated = set()
+    a._qr_entry = {}
     a.h = h
     return a
 

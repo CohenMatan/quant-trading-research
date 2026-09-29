@@ -16,6 +16,7 @@ from datetime import datetime
 import json
 import re
 
+from qr_indicators import plan_event_targets
 from qr_params import EXPERIMENT
 
 LAST_UNLOCKED = datetime(2021, 12, 31)
@@ -221,6 +222,8 @@ class QRAlgorithm(QCAlgorithm):
     USES_UNIVERSE = False      # subscribe to the >= $2B universe
     WINDOW_BARS = 0            # adjusted close/volume bars kept per subscribed symbol (0 = none)
     FIXED_TICKERS = ()         # extra tickers to subscribe (SPY is always subscribed)
+    USES_OHLC = False          # C02: also keep adjusted open/high/low windows (qr_open/qr_high/qr_low)
+    MONTHLY_BARS = 0           # C02: adjusted month-end closes kept per symbol (qr_month_close)
 
     # ================================================================ setup
     def initialize(self):
@@ -264,6 +267,10 @@ class QRAlgorithm(QCAlgorithm):
         self.qr_eligible_info = {}       # symbol -> (market_cap, avg dollar volume)
         self.qr_close = {}               # symbol -> deque of adjusted closes (oldest first)
         self.qr_volume = {}              # symbol -> deque of adjusted volumes
+        self.qr_open, self.qr_high, self.qr_low = {}, {}, {}   # USES_OHLC: adjusted, same length as qr_close
+        self.qr_month_close = {}         # MONTHLY_BARS: symbol -> deque of [yyyymm, adjusted month-end close]
+        self._qr_month_last = {}         # symbol -> [yyyymm, last adjusted close seen in that month]
+        self._qr_entry = {}              # symbol -> dict(session, date, price, max_close) of the open position
         self._qr_last_bar = {}           # symbol -> date of last bar appended
         self._qr_delist_warned = set()
         # D059: last real (not filled-forward) bar per symbol, counted in trading sessions (SPY bars)
@@ -382,20 +389,28 @@ class QRAlgorithm(QCAlgorithm):
     def on_securities_changed(self, changes):
         s = self._qr_stats
         s["max_subscribed"] = max(s["max_subscribed"], len(self.securities))
-        if self.WINDOW_BARS <= 0:
+        if self.WINDOW_BARS <= 0 and self.MONTHLY_BARS <= 0:
             return
-        added = [sec.symbol for sec in changes.added_securities if sec.symbol not in self.qr_close]
-        self._qr_load_windows(added)
+        if self.WINDOW_BARS > 0:
+            self._qr_load_windows([sec.symbol for sec in changes.added_securities
+                                   if sec.symbol not in self.qr_close])
+        if self.MONTHLY_BARS > 0:
+            self._qr_load_monthly([sec.symbol for sec in changes.added_securities
+                                   if sec.symbol not in self.qr_month_close])
         for sec in changes.removed_securities:
             # D063: keep the window while an order is pending — a buy that fills at the next open
             # would otherwise become a holding with no price history, which no exit rule can see.
             if not self.portfolio[sec.symbol].invested and not self._qr_has_open_orders(sec.symbol):
-                self.qr_close.pop(sec.symbol, None)
-                self.qr_volume.pop(sec.symbol, None)
-                self._qr_last_bar.pop(sec.symbol, None)
+                for store in (self.qr_close, self.qr_volume, self.qr_open, self.qr_high, self.qr_low,
+                              self._qr_last_bar, self.qr_month_close, self._qr_month_last):
+                    store.pop(sec.symbol, None)
 
     def _qr_has_open_orders(self, sym):
         return any(True for _ in self.transactions.get_open_order_tickets(sym))
+
+    def _qr_price_windows(self):
+        """Price-like windows that splits and dividends rescale (volume is handled separately)."""
+        return [self.qr_close] + ([self.qr_open, self.qr_high, self.qr_low] if self.USES_OHLC else [])
 
     def _qr_load_windows(self, symbols):
         """Point-in-time adjusted history (SCALED_RAW adjusts only for actions up to now)."""
@@ -403,16 +418,53 @@ class QRAlgorithm(QCAlgorithm):
             return
         hist = self.history(symbols, self.WINDOW_BARS, Resolution.DAILY,
                             data_normalization_mode=DataNormalizationMode.SCALED_RAW)
+        cols = ["close", "volume"] + (["open", "high", "low"] if self.USES_OHLC else [])
         for sym in symbols:
             self.qr_close[sym] = deque(maxlen=self.WINDOW_BARS)
             self.qr_volume[sym] = deque(maxlen=self.WINDOW_BARS)
+            if self.USES_OHLC:
+                self.qr_open[sym] = deque(maxlen=self.WINDOW_BARS)
+                self.qr_high[sym] = deque(maxlen=self.WINDOW_BARS)
+                self.qr_low[sym] = deque(maxlen=self.WINDOW_BARS)
         if hist is None or hist.empty:
             return
-        for (sym, t), row in hist[["close", "volume"]].iterrows():
+        for (sym, t), row in hist[cols].iterrows():
             if sym in self.qr_close:
                 self.qr_close[sym].append(float(row["close"]))
                 self.qr_volume[sym].append(float(row["volume"]))
+                if self.USES_OHLC:
+                    self.qr_open[sym].append(float(row["open"]))
+                    self.qr_high[sym].append(float(row["high"]))
+                    self.qr_low[sym].append(float(row["low"]))
                 self._qr_last_bar[sym] = t.date()
+
+    def _qr_load_monthly(self, symbols, batch=50):
+        """Adjusted month-end closes of COMPLETED months before today, point in time (history
+        ends at the previous close). The current month is carried in _qr_month_last until it ends."""
+        if not symbols:
+            return
+        cur = self.time.year * 100 + self.time.month
+        bars = self.MONTHLY_BARS * 23 + 30
+        for i in range(0, len(symbols), batch):
+            part = symbols[i:i + batch]
+            hist = self.history(part, bars, Resolution.DAILY,
+                                data_normalization_mode=DataNormalizationMode.SCALED_RAW)
+            for sym in part:
+                self.qr_month_close[sym] = deque(maxlen=self.MONTHLY_BARS)
+            if hist is None or hist.empty:
+                continue
+            last = {}
+            for (sym, t), c in hist["close"].items():
+                ym = t.year * 100 + t.month
+                prev = last.get(sym)
+                if prev is not None and prev[0] != ym:
+                    self.qr_month_close[sym].append(list(prev))
+                last[sym] = [ym, float(c)]
+            for sym, (ym, c) in last.items():
+                if ym == cur:
+                    self._qr_month_last[sym] = [ym, c]
+                elif sym in self.qr_month_close:
+                    self.qr_month_close[sym].append([ym, c])   # last month in history is complete
 
     def _qr_check_windows(self):
         """D063 safety net: a holding must always have its price window (exit rules read it)."""
@@ -431,17 +483,14 @@ class QRAlgorithm(QCAlgorithm):
             if sp.type != SplitType.SPLIT_OCCURRED:
                 continue
             f = float(sp.split_factor)
-            if sym in self.qr_close:
-                self.qr_close[sym] = deque((c * f for c in self.qr_close[sym]), maxlen=self.WINDOW_BARS)
-                self.qr_volume[sym] = deque((v / f for v in self.qr_volume[sym]), maxlen=self.WINDOW_BARS)
+            self._qr_rescale(sym, f, volume_factor=1.0 / f)
             if self.portfolio[sym].invested:
                 self._qr_stats["held_splits"] += 1
                 self._qr_log(f"QRSPLIT|{sym.id}|{self.time:%Y-%m-%d}|{f:.10f}")
         for sym, dv in data.dividends.items():
             ref = float(dv.reference_price)
-            if sym in self.qr_close and ref > 0:
-                k = 1.0 - float(dv.distribution) / ref
-                self.qr_close[sym] = deque((c * k for c in self.qr_close[sym]), maxlen=self.WINDOW_BARS)
+            if ref > 0:
+                self._qr_rescale(sym, 1.0 - float(dv.distribution) / ref, volume_factor=None)
         for sym, dl in data.delistings.items():
             if dl.type == DelistingType.WARNING:
                 self._qr_delist_warned.add(sym)
@@ -460,7 +509,16 @@ class QRAlgorithm(QCAlgorithm):
                     continue
                 dq.append(float(bar.close))
                 self.qr_volume[sym].append(float(bar.volume))
+                if self.USES_OHLC and sym in self.qr_open:
+                    self.qr_open[sym].append(float(bar.open))
+                    self.qr_high[sym].append(float(bar.high))
+                    self.qr_low[sym].append(float(bar.low))
                 self._qr_last_bar[sym] = today
+        if self.MONTHLY_BARS > 0:
+            ym = today.year * 100 + today.month
+            for sym, bar in data.bars.items():
+                if sym in self.qr_month_close:
+                    self._qr_month_step(sym, ym, float(bar.close))
         if self._qr_last_plot == today:
             return
         self._qr_in_close = True
@@ -510,6 +568,7 @@ class QRAlgorithm(QCAlgorithm):
             self._qr_log(f"QRSTALE_UNRESOLVED|{sym.id}|{sym.value}|{today:%Y-%m-%d}|{qty}")
             return
         self._qr_terminated.add(sym)
+        self._qr_entry.pop(sym, None)
         self._qr_resubmit.pop(sym, None)
         self.transactions.cancel_open_orders(sym)
         fee = float(self._qr_forced_fee or 0.0)
@@ -652,7 +711,69 @@ class QRAlgorithm(QCAlgorithm):
                 if dev > 1e-6:
                     s["timing_violations"] += 1
                     self._qr_log(f"QRFILLPX|{ev.symbol.value}|{fill_day}|fill={ev.fill_price}|exp={expect:.6f}")
+        self._qr_update_entry(ev)
         self.qr_on_fill(ev)
+
+    # ================================================================ C02 position bookkeeping
+    def _qr_update_entry(self, ev):
+        """Remember when a position was opened (trading session and date); forget it when closed."""
+        sym = ev.symbol
+        q = float(self.portfolio[sym].quantity)
+        if q > 0 and sym not in self._qr_entry:
+            # The fill-day session, whether LEAN delivers the open fill before or after the day's
+            # bar is counted in _qr_track_real_bars: "held 0" is always the entry day itself.
+            today = self.time.date()
+            session = self._qr_session if self._qr_session_day == today else self._qr_session + 1
+            self._qr_entry[sym] = dict(session=session, date=today.strftime("%Y-%m-%d"),
+                                       price=float(ev.fill_price))
+        elif q <= 0:
+            self._qr_entry.pop(sym, None)
+
+    def qr_event_step(self, exits, ranked_candidates, n_slots, tag):
+        """C02 event-driven step at the close: sell `exits` (held symbols whose exit rule fired) and
+        fill free slots from `ranked_candidates` (best first). Orders go out as next-open orders via
+        qr_rebalance, so nothing can execute before T+1. Returns the targets placed."""
+        tickets = list(self.transactions.get_open_order_tickets())
+        pending_buys = {t.symbol for t in tickets if float(t.quantity) > 0}
+        pending_sells = {t.symbol for t in tickets if float(t.quantity) < 0}
+        held = [kv.key for kv in self.portfolio if kv.value.invested]
+        exits = {s for s in exits if s not in pending_sells}
+        targets = plan_event_targets(held, exits, pending_buys, ranked_candidates, n_slots,
+                                     self.qr_slot_weight(n_slots))
+        if targets:
+            self.qr_rebalance(targets, tag=tag)
+        return targets
+
+    def qr_is_last_session_of_month(self):
+        """True if the next market open falls in another calendar month (LEAN exchange calendar)."""
+        nxt = self.securities[self.spy].exchange.hours.get_next_market_open(self.time, False)
+        return nxt.month != self.time.month
+
+    def qr_sessions_held(self, sym):
+        """Trading sessions since the position was opened (0 on the entry day), or None if not held."""
+        e = self._qr_entry.get(sym)
+        return None if e is None else self._qr_session - e["session"]
+
+    def _qr_rescale(self, sym, price_factor, volume_factor=None):
+        """Apply a split or dividend factor to every kept series of `sym` (point-in-time adjustment)."""
+        for store in self._qr_price_windows():
+            if sym in store:
+                store[sym] = deque((x * price_factor for x in store[sym]), maxlen=store[sym].maxlen)
+        if volume_factor is not None and sym in self.qr_volume:
+            self.qr_volume[sym] = deque((v * volume_factor for v in self.qr_volume[sym]),
+                                        maxlen=self.qr_volume[sym].maxlen)
+        if sym in self.qr_month_close:
+            self.qr_month_close[sym] = deque(([ym, c * price_factor] for ym, c in self.qr_month_close[sym]),
+                                             maxlen=self.qr_month_close[sym].maxlen)
+        if sym in self._qr_month_last:
+            self._qr_month_last[sym][1] *= price_factor
+
+    def _qr_month_step(self, sym, ym, close):
+        """Daily: when a new month starts, the previous month's last close becomes a month-end close."""
+        last = self._qr_month_last.get(sym)
+        if last is not None and last[0] != ym:
+            self.qr_month_close[sym].append(list(last))
+        self._qr_month_last[sym] = [ym, close]
 
     # ================================================================ end
     def _qr_log(self, line):
