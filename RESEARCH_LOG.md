@@ -454,3 +454,16 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 - **The 18 C02 configs** (E006-01 … E011-03) validate and dry-run. **None has been run.**
 
 **STOP.** Waiting for owner approval to run the 18 selection trials.
+
+## 2026-09-29: owner's two final checks; H008 defect found; CP5pre addendum STOP
+
+The owner approved the prerequisite checkpoint except for two checks. Report: `docs/checkpoints/CP5pre_addendum_signal_equivalence_PBO.md`.
+
+**1. Signal equivalence (E961-01, verification canary, no orders).** The harness's dividend factor differs from QuantConnect's by ≤ 0.1% per event.
+
+- For H006, H007, H009, H010 and H011 this changes nothing material: 21 borderline flips in about 2.9 million decisions (11 one way, 10 the other) and no change to any top-10 selection.
+- **It exposed a real H008 defect** (D074): the score sums least-squares residuals over the regression's own window, which is always zero, so the ranking is random. Options A/B/C are proposed; A is recommended.
+
+**2. PBO** (D073, proposed). With 3 variations, PBO measures sibling dominance, not overfitting (null 2/3, very noisy). Proposed: a cycle-level PBO ≤ 0.30 gate over the 18 candidates, with the threshold unchanged.
+
+**STOP.** Owner decisions needed on D073 and D074. The 18 C02 runs have not been started.
