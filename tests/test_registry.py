@@ -126,8 +126,17 @@ def test_d069_dsr_trial_categories(tmp_path):
 
 
 def test_d069_counts_on_the_real_registry():
-    """Pins the frozen counts at the C02 prerequisite checkpoint (before any C02 strategy run)."""
+    """Pins the frozen pre-C02 counts (the C02 prerequisite checkpoint): 19 selection candidates,
+    15 robustness runs, 1 Validation run from C01 and before; C02 adds its own on top."""
+    import json
     from qresearch import config
     a = registry.trial_accounting(config.INDEX_CSV, config.EXPERIMENTS_DIR)
-    assert (a["selection_trials"], a["robustness_runs"], a["validation_runs"]) == (19, 15, 1)
-    assert registry.dsr_trial_count() == dict(official=19, conservative=35)
+
+    def pre_c02(ids):
+        return [e for e in ids if not str(json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
+                                          .get("cycle", "")).startswith("C02")]
+    cats = a["by_category"]
+    assert (len(pre_c02(cats["selection"])), len(pre_c02(cats["robustness"])), len(pre_c02(cats["validation"]))) \
+        == (19, 15, 1)
+    c02 = len(cats["selection"]) - 19
+    assert 0 <= c02 <= 18                                    # C02 adds at most its 18 selection candidates
