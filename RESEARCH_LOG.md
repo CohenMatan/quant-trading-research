@@ -254,3 +254,45 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 - Bias optimistic: about +1.4 points per year on the IS universe; dip-buyers most exposed.
 
 **Not started:** gates and robustness (they wait for the corrected runs), Checkpoint 3, and any VAL, WF or HOLDOUT run.
+
+## 2026-09-29: C01 completed in-sample; Checkpoint 3 STOP
+
+**Operational failures (2026-09-28, 16:01–17:12 UTC).** E003-04 and E003-05 were hit by QuantConnect orders-API errors. E003-06 stalled at 97% for 6 hours, which blocked 7 runs from starting.
+
+- The owner approved deleting E003-06; its metadata was preserved first.
+- Diagnosis: a platform outage plus a runner that did not retry. It was not S003-specific.
+- Fixed by D053 (retries, stall detection, node pre-flight, failure metadata). `not_started` runs are excluded from the trial count (owner).
+
+**Retries** E003-07..09, E004-09..12 and E005-07..09 were all integrity-clean.
+
+**D054.** The order audit showed the D051 sell re-issue never fired: LEAN rewrites the order tag and leaves the message empty. E004-09 and E005-08 are bugged.
+
+- Fixed.
+- Verification re-run as E950-06, E900-06 and E901-05, all passing.
+- All 19 variations re-run as E001-11..E005-12. 16 reproduced the previous runs exactly; the differences are explained (fixed exits; QuantConnect dividend revisions).
+
+**IS screen (final, comparable):**
+
+- H005 v1.0, v1.1 and v1.2 PASS, including 2× slippage.
+- All 16 H001–H004 variations fail.
+
+**Robustness of E005-12, pre-declared as E005-13..27:**
+
+- Sharpe 1.12 at 4× slippage;
+- plateau 10 of 10;
+- all IS thirds positive.
+
+**Multiple testing:**
+
+- PBO for H005 is 0.71, which fails the ≤ 0.30 Validation-gate item as defined.
+- DSR on IS alone is 0.80, with 76 trials.
+
+**Other findings:**
+
+- The no-borrowing rule leaves the monthly strategies about 30–50% in cash.
+- A spin-off distorts trade-level statistics (convention D018).
+
+**Checkpoint 3 written.** It recommends freezing S005 v1.2 as the only candidate, with owner decisions on PBO and cash drag.
+
+**STOP.** No VAL, WF or HOLDOUT run.
+

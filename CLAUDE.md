@@ -34,13 +34,19 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - Official research uses the new Morningstar dataset **from 2010 only**, with MarketCap ≥ $2B.
   - The size proxy is rejected.
   - 1999–2009 is an optional finalist stress test only (D035).
-- **CP2 amendment** (`docs/checkpoints/CP2_amendment_2010_split.md`, which covers the 2010 split, adjusted gates and the fixed $7/order commission): **STOPPED, awaiting owner approval.** No research campaign until approved.
+- **CP2 amendment** (2010 split, adjusted gates, $7/order): APPROVED by the owner on 2026-09-28. Research Cycle 1 was authorised.
+- **CP3** (`docs/checkpoints/CP3_first_research_cycle.md`, C01 in-sample results): **STOPPED, awaiting owner approval.**
+  - No Validation, Walk-Forward or Holdout run until approved.
+  - Open owner decisions: the PBO gate for H005, and the cash-drag execution option.
 - QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**.
 - Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
 - Known QuantConnect quirks, all handled in code:
   - Results (charts, order events) arrive asynchronously; the runner waits for them.
   - At most 10 custom chart series per algorithm.
-  - Only one backtest at a time on our node.
+  - Only one backtest at a time on our node. The runner refuses to start while any backtest runs, and detects stalls (D053). Never delete a stalled backtest without owner approval.
+  - The orders endpoint first answers `loading`, and has transient outages; the runner retries within its window (D053).
+  - LEAN cancels open orders on ticker changes and delistings, rewriting the order tag; the harness re-issues cancelled sells (D054).
+  - QuantConnect may revise dividend data between days; exact reproduction holds within one data snapshot.
   - ObjectStore export is blocked.
   - **Do not use QuantConnect logs (daily quota).** Results travel as summary statistics, plus the Orders API and charts (D046).
   - Fundamentals' shares-outstanding fields are split-adjusted to today; never use price × shares naively.

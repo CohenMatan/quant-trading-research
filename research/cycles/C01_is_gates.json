@@ -1,0 +1,1408 @@
+{
+ "E001-11": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1638,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.194,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.721,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.311,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.132,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.27,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.257,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 0.808,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00405,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "6/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.958,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00568,
+   "required": "> 0"
+  }
+ ],
+ "E001-12": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1371,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.191,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.724,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.309,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.126,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": false,
+   "value": -0.291,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.165,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 0.758,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00531,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "6/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 1.115,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00715,
+   "required": "> 0"
+  }
+ ],
+ "E001-13": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1640,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.357,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.558,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.292,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.121,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.231,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.286,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 1.024,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00214,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.806,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00576,
+   "required": "> 0"
+  }
+ ],
+ "E001-14": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 2248,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": -0.448,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -1.363,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.367,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.141,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.111,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.208,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 0.733,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.0041,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": false,
+   "value": "3/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": NaN,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00572,
+   "required": "> 0"
+  }
+ ],
+ "E001-15": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 316,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 0.69,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.225,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.304,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.112,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.268,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.29,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.89,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.00122,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "6/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.383,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00225,
+   "required": "> 0"
+  }
+ ],
+ "E002-09": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 349,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.447,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.468,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.372,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": false,
+   "value": -0.248,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.22,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.372,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.303,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.00759,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "6/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.393,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.0107,
+   "required": "> 0"
+  }
+ ],
+ "E002-10": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 458,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.437,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.478,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.311,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.177,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.195,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.247,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.227,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.0025,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.7,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00677,
+   "required": "> 0"
+  }
+ ],
+ "E002-11": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 342,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 0.556,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.359,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.308,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.194,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.169,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.135,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.466,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.0132,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "7/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.274,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00224,
+   "required": "> 0"
+  }
+ ],
+ "E002-12": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 225,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.38,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.535,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.378,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.161,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.209,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.371,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.216,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00452,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": false,
+   "value": "4/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.517,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.02341,
+   "required": "> 0"
+  }
+ ],
+ "E003-10": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 659,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 0.734,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.181,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.125,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.07,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.125,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.084,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.374,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.00294,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "7/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.301,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00088,
+   "required": "> 0"
+  }
+ ],
+ "E003-11": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1370,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.144,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.771,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.17,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.082,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.092,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.134,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 0.968,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00331,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "6/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 1.082,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00715,
+   "required": "> 0"
+  }
+ ],
+ "E003-12": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 658,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 0.735,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.18,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.125,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.07,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.125,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.066,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 1.415,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.00372,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "7/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.304,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00068,
+   "required": "> 0"
+  }
+ ],
+ "E004-13": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 2581,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.315,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.6,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.524,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.165,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.223,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.309,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 1.04,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00112,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.965,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00918,
+   "required": "> 0"
+  }
+ ],
+ "E004-14": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1988,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.032,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.883,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.533,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.165,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": false,
+   "value": -0.303,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.323,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 0.953,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00481,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": NaN,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.0124,
+   "required": "> 0"
+  }
+ ],
+ "E004-15": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 1395,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.46,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.455,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.441,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.176,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.233,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": false,
+   "value": -0.33,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 1.141,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.00081,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.445,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00916,
+   "required": "> 0"
+  }
+ ],
+ "E004-16": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 2296,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": false,
+   "value": 0.25,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": false,
+   "value": -0.665,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": false,
+   "value": -0.39,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.165,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.179,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.105,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": false,
+   "value": 1.039,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": false,
+   "value": -0.00149,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "5/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": false,
+   "value": 0.991,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": false,
+   "value": -0.00929,
+   "required": "> 0"
+  }
+ ],
+ "E005-10": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 396,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 1.371,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": true,
+   "value": 0.456,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.053,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.047,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.053,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.037,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 2.137,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.01233,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "8/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.257,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": true,
+   "value": 0.01015,
+   "required": "> 0"
+  }
+ ],
+ "E005-11": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 164,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 1.234,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": true,
+   "value": 0.319,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.094,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.049,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.085,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.086,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 2.918,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.03204,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "8/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.198,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": true,
+   "value": 0.02953,
+   "required": "> 0"
+  }
+ ],
+ "E005-12": [
+  {
+   "gate": "closed trades",
+   "ok": true,
+   "value": 408,
+   "required": ">= 100"
+  },
+  {
+   "gate": "Sharpe",
+   "ok": true,
+   "value": 1.438,
+   "required": ">= 0.50"
+  },
+  {
+   "gate": "Sharpe vs EW + 0.1",
+   "ok": true,
+   "value": 0.523,
+   "required": ">= +0.10 (EW 0.91)"
+  },
+  {
+   "gate": "max drawdown",
+   "ok": true,
+   "value": -0.053,
+   "required": ">= -0.35 and >= EW -0.221"
+  },
+  {
+   "gate": "episode 2010 May-Jun (flash crash)",
+   "ok": true,
+   "value": -0.047,
+   "required": ">= EW -0.153 - 0.05"
+  },
+  {
+   "gate": "episode 2011 Jul-Oct (US downgrade)",
+   "ok": true,
+   "value": -0.053,
+   "required": ">= EW -0.220 - 0.05"
+  },
+  {
+   "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+   "ok": true,
+   "value": -0.04,
+   "required": ">= EW -0.184 - 0.05"
+  },
+  {
+   "gate": "profit factor",
+   "ok": true,
+   "value": 2.332,
+   "required": ">= 1.20"
+  },
+  {
+   "gate": "expectancy 95% CI lower bound",
+   "ok": true,
+   "value": 0.01356,
+   "required": "> 0"
+  },
+  {
+   "gate": "positive years",
+   "ok": true,
+   "value": "8/8",
+   "required": ">= 5 of 8"
+  },
+  {
+   "gate": "largest year share of profit",
+   "ok": true,
+   "value": 0.236,
+   "required": "<= 0.40"
+  },
+  {
+   "gate": "expectancy without best 5%",
+   "ok": true,
+   "value": 0.01048,
+   "required": "> 0"
+  }
+ ]
+}
