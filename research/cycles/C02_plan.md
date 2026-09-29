@@ -2,7 +2,7 @@
 
 | Field | Value |
 |---|---|
-| Status | **PROPOSED. Awaiting owner approval.** No C02 strategy backtest has been run or will be run before approval. |
+| Status | **APPROVED in principle by the owner on 2026-09-29, with three clarifications (trial accounting, takeover handling, H010 timing), incorporated below and marked "Amended 2026-09-29".** No C02 strategy backtest may run before the prerequisite checkpoint (`docs/checkpoints/CP5pre_C02_prerequisites.md`) is approved. |
 | Written | 2026-09-29, after C01 closed (No Production Candidate Found) and before any C02 data was examined |
 | Period | IS only: 2010-01-04 → 2017-12-29. Validation (2018–2021) and Holdout (2022-01-01 → 2026-08-31, locked) are not used. |
 | Hypotheses | 6 (H006–H011), in 6 distinct families; details in `research/hypotheses/H006.md` … `H011.md` |
@@ -20,17 +20,17 @@
 - **Fixed in advance.**
   - Every rule, parameter and variation, and every robustness perturbation.
   - The trial count used for Deflated Sharpe, and how PBO is computed.
-- **No gate or threshold changes.** C01's screening and robustness rules apply unchanged. I propose only extra *diagnostics* (§7), and one clarification of the trial-count definition for Deflated Sharpe (§6), which needs your approval.
+- **No gate or threshold changes.** C01's screening and robustness rules apply unchanged. Only extra *diagnostics* are added (§7), plus the frozen trial-count definition for Deflated Sharpe (§6, D069).
 
 ## 1. The six hypotheses at a glance
 
 | ID | Family | Entry | Exit | Expected hold | Selection | Slots | Rebalance | Est. cost per year |
 |---|---|---|---|---|---|---|---|---|
-| **H006** | Breakout / price expansion | Close above the prior 55-day high, volume ≥ 1.5× average, above SMA200, not a takeover-style jump | Trailing stop: highest close − 3 × ATR20; time stop 60 | 20–50 days | Breakout size in ATR units | 10 | Daily scan | 2.1–2.8% |
+| **H006** | Breakout / price expansion | Close above the prior 55-day high, volume ≥ 1.5× average, above SMA200 | Trailing stop: highest close − 3 × ATR20; time stop 60 | 20–50 days | Breakout size in ATR units | 10 | Daily scan | 2.1–2.8% |
 | **H007** | Volatility contraction → expansion | Bandwidth in the lowest 10% of the last 250 days, then close above the upper band with range ≥ 1.5 × ATR and volume ≥ 1.2× | Close below SMA20 (after 5 days); time stop 40 | 10–30 days | Tightest prior contraction | 10 | Daily scan | 2.8–4.2% |
 | **H008** | Relative strength (residual) | Monthly: top 10 by 12-1 month *market-residual* return ÷ residual volatility | Leaves the top 20 at the monthly re-rank | 2–6 months | Residual score | 10 | Monthly + daily refill | 1.4–1.7% |
 | **H009** | Volume anomaly | Volume ≥ 2.5 × 50-day median with a price move ≤ 1 ATR | Time: 20 days | 20 days | Volume ratio | 10 | Daily scan | ~4.2% (2.1% at 40 days) |
-| **H010** | Gap / price structure | Overnight gap ≥ max(2%, 1.5 × ATR%) and ≤ 15%, closes at or above the open, volume ≥ 2× | Close below the gap day's low; time stop 40 | ≤ 40 days | Gap size in ATR units | 10 | Daily scan | ~2% |
+| **H010** | Gap / price structure | Overnight gap ≥ max(2%, 1.5 × ATR%), closes at or above the open, volume ≥ 2×; signal after the T close, buy at the T+1 open | Close below the gap day's low; time stop 40 | ≤ 40 days | Gap size in ATR units | 10 | Daily scan | ~2% |
 | **H011** | Seasonality | Monthly: top 10 by average return in the coming calendar month over the past 5 years | Monthly re-rank | ~1 month | Seasonal score | 10 | Monthly + daily refill | 3.4–4.0% |
 
 **Pre-declared variations.** Three per hypothesis, each changing one substantive thing:
@@ -81,7 +81,11 @@ The **overlap** of H006/H007/H010 trades (shared names and days) and the correla
   - C01 showed trading costs decide short-horizon ideas.
 - **Daily slot refill.** Event-driven ideas scan every day. The monthly ideas (H008, H011) refill any slot freed between rebalances from the current ranking the next day. This removes the idle-cash drag C01's monthly strategies suffered under the no-borrowing rule; it is strategy logic, not an execution change.
 - **Deterministic ranking.** Ties go by security identifier. Signals are code only.
-- **Takeover-target defences.** Pinned acquisition targets contaminated C01's low-volatility results. Each event rule excludes price jumps typical of takeover bids (H006 jump cap, H010 15% gap cap) or requires a real range expansion (H007, H009). The share of trades that end in a takeover cash-out is reported for every run.
+- **Takeovers: no strategy-specific rules** *(amended 2026-09-29, owner clarification 2)*.
+  - The draft's H006 jump exclusion and H010 15% gap cap were motivated by the H005 Validation findings, so they are **removed**. No C02 rule uses anything learned from 2018–2021.
+  - Takeovers and delistings are handled only by the general data-integrity rules, applied identically to every strategy and using only information available on the decision date: LEAN's delisting liquidation, the re-issue of LEAN-cancelled sells (D054) and the dead-position fallback (D062).
+  - H007's range/volume expansion and H009's price-move cap stay: they define the event each hypothesis is about (as in the cited literature), not a takeover filter.
+  - The share of trades ending in a takeover cash-out is still **reported** for every run, as a diagnostic only.
 
 ## 4. Infrastructure needed before any C02 strategy run
 
@@ -110,22 +114,32 @@ The engine stays pinned to LEAN build 18131. QuantConnect moves master to the ne
 
 ## 6. Trial accounting and statistics (fixed before any C02 result)
 
-**Categories.** These follow the D066 definitions, with robustness now separated out:
+*(Amended 2026-09-29, owner clarification 1. Frozen as **D069** before any C02 result; implemented in `registry.trial_accounting`, `registry.dsr_trial_count` and `cycle.dsr_inputs`, and pinned by tests.)*
 
-1. **Strategy-selection trials:** each distinct pre-declared variation run on IS (C01: 19; C02: 18).
-2. **Robustness checks:** cost-stress and plateau runs of an already-chosen variation (C01: 15). Never used to select.
-3. **Technical retries:** re-runs of an identical configuration after infrastructure fixes, operational failures or reproductions (C01: 46, including the 5 H001 remedial runs).
-4. **Verification / canary / benchmark / probe runs:** infrastructure, never trials (37 so far).
+**Categories.** Every run in `experiments/INDEX.csv` falls into exactly one. A "configuration" is the D066 key: hypothesis, strategy, version, parameters, split, dates and cost-stress multiple.
+
+| # | Category | Definition | Count before C02 |
+|---|---|---|---|
+| S | **Selection candidates** | Distinct IS configurations at base costs: the pre-declared variations from which a candidate could be chosen | **19** (C01) |
+| R | Robustness perturbations | Cost-stress (2×/4×/6× slippage) and plateau runs of an already-chosen variation; they can only reject it, never choose | 15 |
+| V | Validation runs | Out-of-sample evaluations of a frozen candidate (accept/reject only) | 1 (E005-28) |
+| T | Technical repeats | Further runs of an identical configuration: re-runs after infrastructure fixes, operational retries, reproductions, the H001 remedial re-test | 46 |
+| X | Verification / canary / benchmark / probe | Infrastructure runs; not strategies | 37 |
+| – | Not started | Annotated `not_started`: no backtest ran | 7 |
 
 **Deflated Sharpe (Validation gate, DSR ≥ 0.90 on IS + VAL).**
 
-- **N = all genuine trials across the project** = selection trials + robustness checks + Validation runs (D066's `genuine_trials`), counted at the time of evaluation.
-  - Today N = 35.
-  - After C02's selection trials it will be at least 53.
-- *Why count robustness runs:* a plateau perturbation is still a configuration someone looked at. Counting it is conservative, and it is the definition C01 already reported under D066.
-- **This changes the number used at C01's Validation (E005-28).** That evaluation used every started research run, 77 including technical repeats. Technical retries re-run the *same* configuration, so they add no selection opportunity. Counting them inflated N without statistical basis.
-- **I propose the D066 count as the official N from C02 on. It needs your approval.** Both numbers will be reported side by side, so the change is always visible.
-- **Sharpe dispersion** (the variance input to DSR) = variance of daily Sharpe across the latest valid run of every selection trial counted in N.
+- **Official N = S, cumulative over all cycles** (19 today; 37 after the 18 C02 selection trials).
+- *Why S and only S.* DSR asks: "how high would the best Sharpe be by luck, if we compared N candidates with no real skill?" The selection candidates are exactly the set compared to choose a winner.
+  - Robustness perturbations are run only on a variation that has already been chosen; they can reject it but never pick a different one. Counting them would also add near-duplicates of the chosen strategy.
+  - A Validation run tests one frozen candidate; it selects nothing.
+  - Technical repeats re-run the same configuration, so they add no new candidate.
+  - Verification and canary runs are not strategies.
+- *Why cumulative.* C02's design uses what C01's IS results taught (10 slots, multi-week holds, daily refill), so C01's candidates are part of the same search.
+- *Direction of error.* The 3 variations of a hypothesis are correlated, so S overstates the number of *independent* tries. That makes N conservative; no correction for correlation is applied.
+- **Conservative count = S + R + V** (35 today). It is reported beside every DSR, with a DSR computed on it, but it is **never mixed** into the official figure and never decides a gate.
+- **Change from C01, disclosed.** The C01 Validation (E005-28) used every started research run as N (77). That report stays as published. D069 applies from C02 on.
+- **Sharpe dispersion** (the variance input to DSR) = the variance of the daily Sharpe across the latest valid (not retired) run of every selection candidate counted in N.
 
 **PBO (Validation gate, PBO ≤ 0.30).**
 
@@ -174,10 +188,21 @@ The engine stays pinned to LEAN build 18131. QuantConnect moves master to the ne
   - daily refill, because of the cash drag.
 - That is legitimate in-sample learning, but it means C02 is not independent of C01. This is why the trial count for DSR is cumulative across cycles.
 
-## 10. Decisions needed from you
+## 10. Owner decisions (2026-09-29)
 
-1. Approve the six hypotheses and their 18 pre-declared variations as written.
-2. Approve **10 slots** as the C02 standard (within the approved ≤ 15), and the **daily refill** logic for the monthly strategies.
-3. Approve the **Deflated Sharpe trial count** from C02 on: N = all genuine trials (selection + robustness + Validation), with technical retries and verification excluded (§6).
-4. Confirm that **H011 v1.1** may read 2000–2009 prices as signal look-back only (no selection), or choose the fallback L = 3.
-5. Approve the experiment budget (**at most 56 C02 strategy backtests**; robustness for at most 2 hypotheses) and the §4 infrastructure work.
+**Approved:**
+
+1. H006–H011 and their 18 pre-declared variations.
+2. **10 slots** as the C02 standard and **daily slot refill**.
+3. $100K, long-only, no leverage, with the existing cost and universe rules.
+4. The budget of **at most 56 C02 strategy backtests**.
+5. The §4 infrastructure work and canary tests.
+6. **H011 v1.1:** the 10-year look-back reading 2000–2009 prices is approved **only as signal warm-up/history**. It may not be used for parameter selection, hypothesis selection or tuning. Universe eligibility and the IS evaluation still begin in 2010.
+
+**Clarifications required before any strategy backtest** (all incorporated above):
+
+1. Trial accounting for DSR: categories separated, N defined and frozen before any C02 result (§6, D069).
+2. Takeovers: no alpha filter derived from the H005 Validation outcome; only general data-integrity rules, applied to all strategies with information available on the decision date (§3).
+3. H010 timing: the signal needs the close of gap day T, so it is known only after T completes, and execution is no earlier than the T+1 open (H010.md "Timing"; tests in `tests/test_c02_signals.py`).
+
+**Order of work:** infrastructure, tests and canaries first → prerequisite checkpoint with the finalized trial accounting → owner approval → only then the 18 selection trials.

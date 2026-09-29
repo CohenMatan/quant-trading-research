@@ -108,18 +108,40 @@ def trial_count(path: Path | None = None) -> int:
                if r["run_type"] == "original" and r["kind"] in ("research", "demo") and r["experiment_id"] not in skip)
 
 
-def trial_accounting(path: Path | None = None, experiments_dir: Path | None = None) -> dict:
+SELECTION, ROBUSTNESS, VALIDATION = "selection", "robustness", "validation"
+
+
+def trial_category(cfg: dict) -> str:
+    """D069 category of a research configuration (frozen 2026-09-29, before any C02 result).
+    selection  = an IS candidate at base costs that could be chosen (a pre-declared variation);
+    robustness = cost-stress or plateau run of an already-chosen variation (never selects);
+    validation = any out-of-sample evaluation of a frozen candidate."""
+    if cfg.get("robustness_of") or cfg.get("costs", {}).get("slippage_stress_multiple", 1) != 1:
+        return ROBUSTNESS
+    if cfg["split"] != "IS":
+        return VALIDATION
+    return SELECTION
+
+
+def trial_accounting(path: Path | None = None, experiments_dir: Path | None = None,
+                     retired: set[str] | None = None) -> dict:
     """D066: separate genuine strategy trials from technical repeats. A genuine trial is a distinct
     research configuration — (hypothesis, strategy, version, parameters, split, dates, cost-stress
     multiple) — whose backtest started. Further runs of an identical configuration (re-runs after
     infrastructure fixes, operational retries, remedial re-tests) are technical. Infrastructure,
-    benchmark and demo runs (verification, canaries, probes) are never trials."""
+    benchmark and demo runs (verification, canaries, probes) are never trials.
+
+    D069 splits the genuine configurations by `trial_category`. `selection_latest` maps each
+    selection configuration to its latest started run not in `retired` (None if every run is)."""
     import json as _json
     exp_dir = experiments_dir or config.EXPERIMENTS_DIR
+    retired = retired or set()
     rows = read(path)
     skip = {r["experiment_id"] for r in rows if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
     seen: dict[str, str] = {}
     genuine, technical, not_started, verification = [], [], [], []
+    category: dict[str, str] = {}
+    latest: dict[str, str | None] = {}
     for r in rows:
         if r["run_type"] != "original":
             continue
@@ -138,6 +160,27 @@ def trial_accounting(path: Path | None = None, experiments_dir: Path | None = No
         else:
             seen[key] = r["experiment_id"]
             genuine.append(r["experiment_id"])
+            category[r["experiment_id"]] = trial_category(cfg)
+            latest[seen[key]] = None
+        if r["experiment_id"] not in retired:
+            latest[seen[key]] = r["experiment_id"]
+    by_cat = {c: [e for e in genuine if category[e] == c] for c in (SELECTION, ROBUSTNESS, VALIDATION)}
     return dict(genuine_trials=len(genuine), technical_repeats=len(technical), not_started=len(not_started),
                 verification_and_benchmark_runs=len(verification), all_started_research_runs=len(genuine) + len(technical),
-                genuine=genuine, technical=technical)
+                selection_trials=len(by_cat[SELECTION]), robustness_runs=len(by_cat[ROBUSTNESS]),
+                validation_runs=len(by_cat[VALIDATION]),
+                genuine=genuine, technical=technical, by_category=by_cat,
+                selection_latest={e: latest[e] for e in by_cat[SELECTION]})
+
+
+def dsr_trial_count(path: Path | None = None, experiments_dir: Path | None = None) -> dict:
+    """D069 (owner clarification 1, 2026-09-29), frozen before any C02 result.
+    official     = N for the Deflated Sharpe Ratio: cumulative distinct selection candidates
+                   (all cycles). DSR corrects for picking the best of the candidates that were
+                   compared; only selection configurations are compared.
+    conservative = selection + robustness + validation configurations; reported beside the
+                   official DSR, never mixed into it.
+    Technical repeats, not-started runs and verification/canary/benchmark runs are in neither."""
+    a = trial_accounting(path, experiments_dir)
+    return dict(official=a["selection_trials"],
+                conservative=a["selection_trials"] + a["robustness_runs"] + a["validation_runs"])

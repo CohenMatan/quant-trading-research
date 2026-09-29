@@ -36,10 +36,17 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for p in paths:
             files[Path(p).name] = gitutil.show_file(commit, p)
         files["qr_harness.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_harness.py")
+        try:   # shared pure indicators (C02); absent in commits before it existed
+            files["qr_indicators.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_indicators.py")
+        except Exception:
+            pass
     else:
         for p in sorted((config.REPO_ROOT / sdir).glob("*.py")):
             files[p.name] = p.read_text(encoding="utf-8")
         files["qr_harness.py"] = config.LEAN_HARNESS.read_text(encoding="utf-8")
+        ind = config.LEAN_HARNESS.parent / "qr_indicators.py"
+        if ind.exists():
+            files["qr_indicators.py"] = ind.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)

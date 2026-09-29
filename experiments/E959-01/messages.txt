@@ -1,0 +1,21 @@
+QRC59|window_mismatch|2014-03-04|AAPL|volume|14861978.0|14950940.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|11757937.0|11828318.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|11082743.0|11149083.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|9073451.0|9127763.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|12527141.0|12602127.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|9107594.0|9162111.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|11359046.0|11427040.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|9755613.0|9814009.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|7727382.0|7773637.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|19211943.0|19326943.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|11057441.0|11123629.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|13862042.0|13945018.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|16862588.0|16963525.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|5819031.0|5853863.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|7143023.0|7185780.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|7907277.0|7954609.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|8699433.0|8751506.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|7737963.0|7784281.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|7947737.0|7995311.0
+QRC59|window_mismatch|2014-03-04|AAPL|volume|13567943.0|13649159.0
+QRC59|summary|{"aapl_split_seen": 1, "entries_checked": 203, "gap_low_checks": 812, "gap_low_mismatches": 0, "gap_signals": 635, "held0_on_fill_day": 203, "held_not0_on_fill_day": 0, "last_bar_checks": 1512, "last_bar_mismatches": 0, "month_ends_seen": 11, "month_flag_errors": 0, "month_flags": 12, "window_alignment": {"includes_today": 180}, "window_bars_compared": 53990, "window_checks": 180, "window_max_rel_dev": 0.2866238842674783, "window_mismatches": 7478}

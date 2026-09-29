@@ -435,3 +435,22 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **No C02 strategy backtest has been run.** Waiting for the owner's approval.
 
+
+## 2026-09-29: C02 approved in principle; prerequisites complete; CP5pre STOP
+
+**Owner decision.** The C02 plan is approved in principle (D070): H006–H011, 18 variations, 10 slots, daily refill, the 56-backtest cap. H011's pre-2010 look-back is allowed as warm-up only. Three clarifications were required before any strategy backtest.
+
+**Done** (report: `docs/checkpoints/CP5pre_C02_prerequisites.md`):
+
+- **Trial accounting frozen (D069).**
+  - Official DSR N = cumulative distinct IS selection candidates: 19 now, 37 after C02.
+  - Conservative S + R + V = 35, reported separately and never mixed into the official figure.
+- **Takeovers.** The H006 jump exclusion and the H010 15% gap cap were removed; only the general data-integrity rules apply.
+- **H010 timing.** Stated in the spec and verified by tests and on QuantConnect.
+- **Infrastructure built; 305 tests pass.** S008 v1.1 scoring bug fixed before any run (D071).
+- **Canaries** (infrastructure, not trials):
+  - E960-01 (month-end store) passes.
+  - E959-01/02 found a volume-scaling inconsistency after dividends and spin-offs (D072). It is fixed, and E959-03 passes (all OHLCV within 0.013% of fresh history; 0 timing violations).
+- **The 18 C02 configs** (E006-01 … E011-03) validate and dry-run. **None has been run.**
+
+**STOP.** Waiting for owner approval to run the 18 selection trials.
