@@ -417,3 +417,21 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **STOP.** Waiting for the owner. C02 is not designed.
 
+## 2026-09-29: owner approves CP4c; C02 plan proposed; STOP
+
+**Owner decision.** CP4c is approved. C01 is closed: No Production Candidate Found.
+
+**C02 plan written** (`research/cycles/C02_plan.md`):
+
+- Six hypotheses in six distinct families:
+  - H006 breakout with volume;
+  - H007 volatility squeeze;
+  - H008 residual relative strength;
+  - H009 high-volume return premium;
+  - H010 gap-and-hold;
+  - H011 calendar-month seasonality.
+- 3 pre-declared variations each: 18 selection trials, with a cap of 56 strategy backtests.
+- Unchanged gates, with new diagnostics. The trial-count definition is fixed before any result.
+
+**No C02 strategy backtest has been run.** Waiting for the owner's approval.
+
