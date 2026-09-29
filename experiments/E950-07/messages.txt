@@ -1,0 +1,1 @@
+QRCANARY|{"fills": 2412, "not_next_session": 0, "rebalances": 303, "same_day": 0}
