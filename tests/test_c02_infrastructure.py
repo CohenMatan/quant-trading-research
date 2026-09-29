@@ -75,9 +75,9 @@ def test_split_and_dividend_rescale_every_kept_series(algo):
     assert list(algo.qr_volume[s]) == pytest.approx([7e6, 14e6])
     assert [c for _, c in algo.qr_month_close[s]] == pytest.approx([590 / 7, 90.0])
     assert algo._qr_month_last[s][1] == pytest.approx(645 / 7)
-    algo._qr_rescale(s, 0.99, volume_factor=None)                     # dividend: prices only
+    algo._qr_rescale(s, 0.99, volume_factor=1 / 0.99)                 # dividend (D072: QC volume convention)
     assert list(algo.qr_high[s])[1] == pytest.approx(709 / 7 * 0.99)
-    assert list(algo.qr_volume[s]) == pytest.approx([7e6, 14e6])
+    assert list(algo.qr_volume[s]) == pytest.approx([7e6 / 0.99, 14e6 / 0.99])
     assert algo.qr_close[s].maxlen == 5 and algo.qr_month_close[s].maxlen == 24
 
 
@@ -133,3 +133,11 @@ def test_runner_ships_the_indicator_module(root):
                                     end="2017-12-29", cash=100000, universe={}, costs={}, portfolio={}, params={}),
                                None, False)
     assert "qr_indicators.py" in files and "signals.py" in files and "main.py" in files
+
+
+def test_dividend_volume_follows_quantconnect_history_convention(root):
+    """D072 (E959-02): QC's SCALED_RAW history divides volume by every price factor, dividends
+    included; the harness must do the same so live-appended and loaded bars share one convention."""
+    src = (root / "src/qresearch/lean/qr_harness.py").read_text()
+    assert "self._qr_rescale(sym, f, volume_factor=1.0 / f)" in src
+    assert "volume_factor=None)" not in src.split("def on_data", 1)[1].split("def ", 1)[0]

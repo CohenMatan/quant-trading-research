@@ -490,7 +490,10 @@ class QRAlgorithm(QCAlgorithm):
         for sym, dv in data.dividends.items():
             ref = float(dv.reference_price)
             if ref > 0:
-                self._qr_rescale(sym, 1.0 - float(dv.distribution) / ref, volume_factor=None)
+                # D072: volume follows QuantConnect's SCALED_RAW convention (divided by every price
+                # factor, dividends and spin-offs included), so live bars match loaded history
+                f = 1.0 - float(dv.distribution) / ref
+                self._qr_rescale(sym, f, volume_factor=1.0 / f)
         for sym, dl in data.delistings.items():
             if dl.type == DelistingType.WARNING:
                 self._qr_delist_warned.add(sym)
