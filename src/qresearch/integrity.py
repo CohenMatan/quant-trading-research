@@ -77,6 +77,9 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     if "stale_unresolved" in summary:
         add("no_unresolved_stale_holdings", summary["stale_unresolved"] == 0,
             f"held positions without a real price bar that the fallback could not close: {summary['stale_unresolved']}")
+    if "windows_restored" in summary:   # D063: should never be needed once windows are kept for pending orders
+        add("windows_restored", summary["windows_restored"] == 0,
+            f"{summary['windows_restored']} holdings found without a price window and restored", level="warn")
     if "stale_exits" in summary:
         add("stale_exits", summary["stale_exits"] == 0,
             f"{summary['stale_exits']} holdings taken out at their last real close after "

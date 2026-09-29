@@ -275,6 +275,7 @@ class QRAlgorithm(QCAlgorithm):
             "cancelled_harness_sells": 0, "cancelled_harness_buys": 0, "cancelled_on_symbol_change": 0,
             "cancelled_sells_delisting": 0, "resubmitted_sells": 0,
             "stale_exits": 0, "stale_unresolved": 0, "stale_open_orders": 0, "cancelled_stale": 0,
+            "windows_restored": 0,
         }
         # QR* result lines are NOT written to QuantConnect logs (daily quota). They are collected here
         # and published at the end as summary statistics, read back via the backtests/read API (D046).
@@ -375,12 +376,25 @@ class QRAlgorithm(QCAlgorithm):
         if self.WINDOW_BARS <= 0:
             return
         added = [sec.symbol for sec in changes.added_securities if sec.symbol not in self.qr_close]
-        if not added:
+        self._qr_load_windows(added)
+        for sec in changes.removed_securities:
+            # D063: keep the window while an order is pending — a buy that fills at the next open
+            # would otherwise become a holding with no price history, which no exit rule can see.
+            if not self.portfolio[sec.symbol].invested and not self._qr_has_open_orders(sec.symbol):
+                self.qr_close.pop(sec.symbol, None)
+                self.qr_volume.pop(sec.symbol, None)
+                self._qr_last_bar.pop(sec.symbol, None)
+
+    def _qr_has_open_orders(self, sym):
+        return any(True for _ in self.transactions.get_open_order_tickets(sym))
+
+    def _qr_load_windows(self, symbols):
+        """Point-in-time adjusted history (SCALED_RAW adjusts only for actions up to now)."""
+        if not symbols:
             return
-        # Point-in-time adjusted history (SCALED_RAW adjusts only for actions up to now).
-        hist = self.history(added, self.WINDOW_BARS, Resolution.DAILY,
+        hist = self.history(symbols, self.WINDOW_BARS, Resolution.DAILY,
                             data_normalization_mode=DataNormalizationMode.SCALED_RAW)
-        for sym in added:
+        for sym in symbols:
             self.qr_close[sym] = deque(maxlen=self.WINDOW_BARS)
             self.qr_volume[sym] = deque(maxlen=self.WINDOW_BARS)
         if hist is None or hist.empty:
@@ -390,11 +404,17 @@ class QRAlgorithm(QCAlgorithm):
                 self.qr_close[sym].append(float(row["close"]))
                 self.qr_volume[sym].append(float(row["volume"]))
                 self._qr_last_bar[sym] = t.date()
-        for sec in changes.removed_securities:
-            if not self.portfolio[sec.symbol].invested:
-                self.qr_close.pop(sec.symbol, None)
-                self.qr_volume.pop(sec.symbol, None)
-                self._qr_last_bar.pop(sec.symbol, None)
+
+    def _qr_check_windows(self):
+        """D063 safety net: a holding must always have its price window (exit rules read it)."""
+        if self.WINDOW_BARS <= 0:
+            return
+        missing = [kv.key for kv in self.portfolio if kv.value.invested and kv.key not in self.qr_close]
+        if missing:
+            self._qr_stats["windows_restored"] += len(missing)
+            for sym in missing:
+                self._qr_log(f"QRWINDOW|{sym.id}|{self.time:%Y-%m-%d}")
+            self._qr_load_windows(missing)
 
     # ================================================================ data flow
     def on_data(self, data):
@@ -437,6 +457,7 @@ class QRAlgorithm(QCAlgorithm):
         self._qr_in_close = True
         try:
             self._qr_check_stale(today)
+            self._qr_check_windows()
             self._qr_resubmit_cancelled()
             self.qr_on_close(data)
         finally:

@@ -173,5 +173,5 @@ def test_orders_that_can_never_fill_fail_the_run():
 def test_harness_wiring():
     from conftest import ROOT
     src = (ROOT / "src/qresearch/lean/qr_harness.py").read_text()
-    assert "self._qr_check_stale(today)\n            self._qr_resubmit_cancelled()" in src
+    assert "self._qr_check_stale(today)\n            self._qr_check_windows()\n            self._qr_resubmit_cancelled()" in src
     assert "STALE_SESSIONS = 10" in src and "ev.symbol in self._qr_terminated" in src
