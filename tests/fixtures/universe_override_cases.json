@@ -1,0 +1,95 @@
+{
+ "source": "E956-01 (Morningstar fields via QuantConnect)",
+ "cases": [
+  {
+   "ticker": "KKR",
+   "sid": "KKR UO9UUQST4HUT",
+   "legal_name": "KKR & Co Inc",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "N",
+   "sic": 6282,
+   "share_class_description": "KKR & Co Inc Ordinary Share"
+  },
+  {
+   "ticker": "APO",
+   "sid": "APO UVBW6V6CV59H",
+   "legal_name": "Apollo Global Management Inc",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "N",
+   "sic": 6282,
+   "share_class_description": "Apollo Global Management Inc"
+  },
+  {
+   "ticker": "ARES",
+   "sid": "ARES VQ7JWF5X8XGL",
+   "legal_name": "Ares Management Corp",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "N",
+   "sic": 6282,
+   "share_class_description": "Ares Management Corp Ordinary Shares Class A"
+  },
+  {
+   "ticker": "BX",
+   "sid": "BX TTO1M4GXI99H",
+   "legal_name": "Blackstone Inc",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "V",
+   "sic": 6282,
+   "share_class_description": "Blackstone Inc"
+  },
+  {
+   "ticker": "CG",
+   "sid": "CG V69R09HVGXGL",
+   "legal_name": "The Carlyle Group Inc",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "V",
+   "sic": 6282,
+   "share_class_description": "The Carlyle Group Inc"
+  },
+  {
+   "ticker": "TPL",
+   "sid": "TPL R735QTJ8XC9X",
+   "legal_name": "Texas Pacific Land Corp",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "N",
+   "sic": 1311,
+   "share_class_description": "Texas Pacific Land Corp Shs"
+  },
+  {
+   "ticker": "AABA",
+   "sid": "YHOO R735QTJ8XC9X",
+   "legal_name": "Altaba Inc",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": false,
+   "industry_template_code": "V",
+   "sic": 6799,
+   "share_class_description": "Altaba Inc Regs Shs"
+  },
+  {
+   "ticker": "KFN",
+   "sid": "KFN T9R86261T0F9",
+   "legal_name": "KKR Financial Holdings LLC",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": true,
+   "industry_template_code": "B",
+   "sic": 6719,
+   "share_class_description": "KKR Financial Corporation"
+  },
+  {
+   "ticker": "MIC",
+   "sid": "MIC T4K58ANZ9NXH",
+   "legal_name": "AMF Hawaii Investments LLC",
+   "is_limited_partnership": false,
+   "is_limited_liability_company": true,
+   "industry_template_code": "N",
+   "sic": 4925,
+   "share_class_description": "Macquarie Infrastructure Holdings LLC Units"
+  }
+ ]
+}
