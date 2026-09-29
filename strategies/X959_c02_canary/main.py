@@ -1,4 +1,5 @@
-# X959 v1.0 — C02 infrastructure canary (infrastructure, not research; not a trial).
+# X959 v1.1 — C02 infrastructure canary (infrastructure, not research; not a trial). v1.1 adds per-column
+# mismatch diagnostics (E959-01 found window differences; see its report).
 # Checks, on QuantConnect itself, the harness features C02 relies on:
 #  A. OHLC + volume windows equal a fresh point-in-time (SCALED_RAW) history, including across the
 #     AAPL 7:1 split (2014-06-09) and dividends; the last window bar is the raw bar of day T.
@@ -30,7 +31,8 @@ class C02Canary(QRAlgorithm):
                   "window_mismatches": 0, "window_alignment": {}, "last_bar_checks": 0, "last_bar_mismatches": 0,
                   "gap_signals": 0, "entries_checked": 0, "held0_on_fill_day": 0, "held_not0_on_fill_day": 0,
                   "gap_low_checks": 0, "gap_low_mismatches": 0, "month_flags": 0, "month_flag_errors": 0,
-                  "month_ends_seen": 0, "aapl_split_seen": 0}
+                  "month_ends_seen": 0, "aapl_split_seen": 0, "by_col": {}, "shift_logs": 0,
+                  "fill_forward_bars_appended": 0}
 
     def on_data(self, data):
         # the recorded signal-day low is kept on the same point-in-time basis as the windows
@@ -74,20 +76,44 @@ class C02Canary(QRAlgorithm):
             key = "includes_today" if last_date == today else "ends_before_today"
             self.c["window_alignment"][key] = self.c["window_alignment"].get(key, 0) + 1
             self.c["window_checks"] += 1
+            if len(h["dates"]) != len(self.qr_close[sym]):
+                self.c["length_differs"] = self.c.get("length_differs", 0) + 1
             for col, store in stores:
                 w = list(store[sym])
                 if key == "ends_before_today":
                     w = w[:-1]
                 ref = h[col]
                 k = min(len(w), len(ref))
-                for a, b in zip(w[-k:], ref[-k:]):
+                st = self.c["by_col"].setdefault(col, {"n": 0, "small": 0, "large": 0, "max": 0.0, "worst": None,
+                                                        "shift_better": 0})
+                big_here = 0
+                for j, (a, b) in enumerate(zip(w[-k:], ref[-k:])):
                     dev = abs(a - b) / max(abs(b), 1e-9)
+                    st["n"] += 1
                     self.c["window_bars_compared"] += 1
                     self.c["window_max_rel_dev"] = max(self.c["window_max_rel_dev"], dev)
                     if dev > 1e-6:
                         self.c["window_mismatches"] += 1
-                        if self.c["window_mismatches"] <= 20:
-                            self._qr_log(f"QRC59|window_mismatch|{today}|{sym.value}|{col}|{a}|{b}")
+                        if dev < 0.02:
+                            st["small"] += 1          # size of a dividend-type adjustment
+                        else:
+                            st["large"] += 1
+                            big_here += 1
+                    if dev > st["max"]:
+                        i = len(ref) - k + j
+                        st["max"] = dev
+                        st["worst"] = [sym.value, str(today), str(h["dates"][i]), k - j - 1, a, b,
+                                       ref[i - 1] if i > 0 else None, ref[i + 1] if i + 1 < len(ref) else None]
+                # misalignment test: does the window match history shifted by one bar better?
+                if big_here and col == "close" and k > 2:
+                    d0 = sum(abs(a - b) for a, b in zip(w[-k:], ref[-k:]))
+                    d1 = sum(abs(a - b) for a, b in zip(w[-k + 1:], ref[-k:-1]))
+                    d2 = sum(abs(a - b) for a, b in zip(w[-k:-1], ref[-k + 1:]))
+                    st["shift_better"] += int(min(d1, d2) < d0)
+                    if self.c["shift_logs"] < 10:
+                        self.c["shift_logs"] += 1
+                        self._qr_log(f"QRC59|close_large|{today}|{sym.value}|k={k}|wlen={len(w)}|hlen={len(ref)}"
+                                     f"|d0={d0:.4f}|d1={d1:.4f}|d2={d2:.4f}|first={h['dates'][0]}")
 
     def qr_on_close(self, data):
         self.n += 1
@@ -104,6 +130,8 @@ class C02Canary(QRAlgorithm):
         self.prev_day, self.prev_flag = today, flag
 
         # A: last window bar is the raw bar of T (no adjustment has happened after T yet)
+        self.c["fill_forward_bars_appended"] += sum(
+            1 for s, b in data.bars.items() if b.is_fill_forward and s in self.qr_close)
         for sym in [self.qr_fixed[t] for t in FIXED]:
             if data.bars.contains_key(sym) and sym in self.qr_close and not data.bars[sym].is_fill_forward:
                 b = data.bars[sym]
