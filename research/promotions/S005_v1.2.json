@@ -1,0 +1,141 @@
+{
+ "strategy_id": "S005",
+ "strategy_version": "v1.2",
+ "hypothesis_id": "H005",
+ "derived_from": [],
+ "is_experiment": "E005-12",
+ "strategy_files_sha256": "eac4bf129c6587b8e8313f54cde2e16efdc1acef33f2259ee8ef1f057bf4a540",
+ "harness_sha256": "839403563c7c50f7b89cb7252539e9a6da70f79a92a9eb496fae42a25fd54e66",
+ "frozen": {
+  "params": {
+   "vol_days": 63,
+   "slots": 15,
+   "band": 0.25,
+   "require_positive_mom": true
+  },
+  "universe": {
+   "min_market_cap": 2000000000.0,
+   "min_price": 5.0,
+   "min_avg_dollar_volume": 5000000.0,
+   "adv_days": 20
+  },
+  "costs": {
+   "slippage_bps": 10,
+   "commission_model": "fixed_per_order",
+   "commission_per_order": 7.0,
+   "note": "D039: $7 per executed buy or sell order; slippage separate"
+  },
+  "portfolio": {
+   "max_position_weight": 0.1,
+   "cash_buffer": 0.02,
+   "min_position_usd": 5000,
+   "max_positions": 15,
+   "buy_funding": "settled_cash_only",
+   "gap_reserve": 0.15
+  }
+ },
+ "gates": {
+  "is_screen": [
+   {
+    "gate": "closed trades",
+    "ok": true,
+    "value": 408,
+    "required": ">= 100"
+   },
+   {
+    "gate": "Sharpe",
+    "ok": true,
+    "value": 1.438,
+    "required": ">= 0.50"
+   },
+   {
+    "gate": "Sharpe vs EW + 0.1",
+    "ok": true,
+    "value": 0.523,
+    "required": ">= +0.10 (EW 0.91)"
+   },
+   {
+    "gate": "max drawdown",
+    "ok": true,
+    "value": -0.053,
+    "required": ">= -0.35 and >= EW -0.221"
+   },
+   {
+    "gate": "episode 2010 May-Jun (flash crash)",
+    "ok": true,
+    "value": -0.047,
+    "required": ">= EW -0.153 - 0.05"
+   },
+   {
+    "gate": "episode 2011 Jul-Oct (US downgrade)",
+    "ok": true,
+    "value": -0.053,
+    "required": ">= EW -0.220 - 0.05"
+   },
+   {
+    "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+    "ok": true,
+    "value": -0.04,
+    "required": ">= EW -0.184 - 0.05"
+   },
+   {
+    "gate": "profit factor",
+    "ok": true,
+    "value": 2.332,
+    "required": ">= 1.20"
+   },
+   {
+    "gate": "expectancy 95% CI lower bound",
+    "ok": true,
+    "value": 0.01356,
+    "required": "> 0"
+   },
+   {
+    "gate": "positive years",
+    "ok": true,
+    "value": "8/8",
+    "required": ">= 5 of 8"
+   },
+   {
+    "gate": "largest year share of profit",
+    "ok": true,
+    "value": 0.236,
+    "required": "<= 0.40"
+   },
+   {
+    "gate": "expectancy without best 5%",
+    "ok": true,
+    "value": 0.01048,
+    "required": "> 0"
+   }
+  ],
+  "is_screen_2x_slippage": {
+   "experiment": "E005-15",
+   "sharpe": 1.334,
+   "required": ">= 0.40",
+   "ok": true
+  },
+  "robustness": {
+   "slippage_4x": {
+    "experiment": "E005-16",
+    "sharpe": 1.121,
+    "ok": true
+   },
+   "plateau": "10/10 >= 1.007 (E005-18..27)",
+   "thirds": [
+    1.44,
+    1.79,
+    1.21
+   ]
+  },
+  "pbo_h005": {
+   "value": 0.7067599067599067,
+   "required": "<= 0.30",
+   "ok": false,
+   "note": "Validation-gate item; known failure carried unchanged (owner 2026-09-29)"
+  }
+ },
+ "promoted_utc": "2026-09-29T12:27:19Z",
+ "owner_approval": "2026-09-29: 'Approve H005 v1.2 for Validation only. Freeze H005 v1.2 exactly as tested in C01.'",
+ "frozen_at_commit": "423420d8b63804c836741d66678def592e204b9a"
+}
