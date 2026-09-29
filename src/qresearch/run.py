@@ -53,12 +53,20 @@ def code_hash(files: dict[str, str]) -> str:
     return h.hexdigest()
 
 
-def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
-    """Upload, compile, backtest, download. Returns raw payloads plus timings."""
+def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | None = None) -> dict:
+    """Upload, compile, backtest, download. Returns raw payloads plus timings.
+
+    `state` is filled in as the run progresses (project, backtest id, stage), so a run that fails
+    part-way still records which QuantConnect backtest it was (E003-06 incident)."""
+    state = {} if state is None else state
+    state["stage"] = "upload"
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
+    state["project_id"] = project
     client.sync_files(project, files)
     client.pin_lean_version(project, cfg["lean_version_id"])
+    state["stage"] = "compile"
     compile_id = client.compile(project)
+    state["stage"] = "start_backtest"
     t0 = time.time()
     name = f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
     try:
@@ -68,8 +76,11 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
             raise
         compile_id = client.compile(project)
         handle = client.start_backtest(project, compile_id, name)
+    state.update(backtest_id=handle.backtest_id, backtest_name=name, stage="backtest",
+                 backtest_started_utc=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
     bt = client.wait_backtest(handle)
     runtime = time.time() - t0
+    state.update(stage="download_results", runtime_s=runtime)
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
                lean_version=client.lean_version(bt))
     if not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
@@ -265,10 +276,18 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         return prov
 
     client = QCClient()
+    busy = client.running_backtests()
+    if busy:   # precondition, like the clean-tree check: nothing is started, nothing is registered
+        raise SystemExit(f"backtest node busy ({busy}); {cfg['experiment_id']} not started")
+    state: dict = {}
     try:
-        raw = execute(cfg, files, client)
-    except Exception as exc:  # the run still gets registered as failed
-        raw = dict(error=f"{type(exc).__name__}: {exc}", logs=[])
+        raw = execute(cfg, files, client, state)
+    except Exception as exc:  # the run still gets registered as failed, with how far it got
+        raw = dict(project_id=state.get("project_id", ""), backtest_id=state.get("backtest_id", ""),
+                   runtime_s=state.get("runtime_s", 0.0), logs=[],
+                   error=f"{type(exc).__name__}: {exc} [stage: {state.get('stage', 'setup')}]")
+    prov["failure_stage"] = state.get("stage", "") if "error" in raw else ""
+    prov["backtest_started_utc"] = state.get("backtest_started_utc", "")
     prov["result_channel"] = raw.get("result_channel", "")
     prov["build_commit"] = build_commit if not scratch else prov["git_commit"]
     prov.update(qc_project_id=raw.get("project_id", ""), qc_backtest_id=raw.get("backtest_id", ""),

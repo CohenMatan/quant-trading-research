@@ -16,6 +16,7 @@ import requests
 BASE_URL = "https://www.quantconnect.com/api/v2"
 LOG_PAGE = 200      # server maximum lines per backtests/read/log call
 ORDER_PAGE = 100    # server maximum orders per backtests/orders/read call
+STALL_S = 45 * 60   # no progress for this long = stalled backtest (normal IS runs take 5-10 min)
 
 
 class QCError(RuntimeError):
@@ -155,17 +156,40 @@ class QCClient:
     def read_backtest(self, h: BacktestHandle) -> dict:
         return self.call("backtests/read", projectId=h.project_id, backtestId=h.backtest_id)["backtest"]
 
-    def wait_backtest(self, h: BacktestHandle, timeout_s: float = 6 * 3600, poll_s: float = 5) -> dict:
-        t0 = time.time()
+    def wait_backtest(self, h: BacktestHandle, timeout_s: float = 6 * 3600, poll_s: float = 5,
+                      stall_s: float = STALL_S, clock: Callable[[], float] = time.time,
+                      sleep: Callable[[float], None] = time.sleep) -> dict:
+        """Wait for completion. A backtest whose progress has not moved for `stall_s` is declared
+        stalled (E003-06: stuck at 97% for 6 h while occupying the only node) instead of being
+        waited on until the 6 h ceiling."""
+        t0 = clock()
+        last_progress, last_change = None, t0
         while True:
             bt = self.read_backtest(h)
             if bt.get("error") or bt.get("stacktrace"):
                 return bt
             if bt.get("completed"):
                 return bt
-            if time.time() - t0 > timeout_s:
+            now = clock()
+            prog = bt.get("progress")
+            if prog != last_progress:
+                last_progress, last_change = prog, now
+            elif now - last_change > stall_s:
+                raise QCError(f"Backtest {h.backtest_id} stalled: progress {prog} unchanged for "
+                              f"{(now - last_change) / 60:.0f} min (status {bt.get('status')!r})")
+            if now - t0 > timeout_s:
                 raise QCError(f"Backtest {h.backtest_id} timed out")
-            time.sleep(poll_s)
+            sleep(poll_s)
+
+    def running_backtests(self) -> list[tuple[str, str]]:
+        """(project name, backtest name) of every backtest in the account that has not completed.
+        The organisation has one backtest node, so any entry here makes a new backtest impossible."""
+        out = []
+        for p in self.call("projects/read").get("projects", []):
+            for b in self.call("backtests/list", projectId=p["projectId"]).get("backtests", []):
+                if not b.get("completed"):
+                    out.append((p.get("name", ""), b.get("name", "")))
+        return out
 
     # ------------------------------------------------------------------ results
     def read_orders(self, h: BacktestHandle, expected: int | None = None, timeout_s: float = 7200) -> list[dict]:
@@ -174,15 +198,21 @@ class QCClient:
         `expected` (QuantConnect's own "Total Orders" statistic) and (b) every filled order carries a
         fill event. An empty or short download is never accepted as complete (E901-02 incident)."""
         t0 = time.time()
+        n, missing, last_err = 0, 0, ""
         while True:
-            out = self._read_orders_once(h)
-            n = len({o.get("id") for o in out})
-            missing = sum(1 for o in out if incomplete_order(o))
-            if missing == 0 and (expected is None or n == expected):
-                return out
+            try:
+                out = self._read_orders_once(h)
+            except QCError as exc:      # E003-04/05: transient "try again later" / HTTP 500 from the
+                last_err = str(exc)     # orders endpoint; keep polling inside the window, never accept
+                out = None              # a partial download
+            if out is not None:
+                n = len({o.get("id") for o in out})
+                missing = sum(1 for o in out if incomplete_order(o))
+                if missing == 0 and (expected is None or n == expected):
+                    return out
             if time.time() - t0 > timeout_s:
                 raise QCError(f"orders incomplete after {timeout_s:.0f}s: downloaded {n} of {expected} orders, "
-                              f"{missing} lack fill events")
+                              f"{missing} lack fill events" + (f"; last API error: {last_err}" if last_err else ""))
             time.sleep(15)
 
     def _read_orders_once(self, h: BacktestHandle) -> list[dict]:
@@ -191,6 +221,8 @@ class QCClient:
         while True:
             r = self.call("backtests/orders/read", projectId=h.project_id, backtestId=h.backtest_id,
                           start=start, end=start + ORDER_PAGE)
+            if r.get("status") == "loading":   # the server is still building the order cache
+                raise QCError("orders endpoint still loading")
             page = r.get("orders", [])
             out.extend(page)
             total = int(r.get("length", len(out)))

@@ -71,3 +71,59 @@ The buys were sized on the 11-29 close. They cost about 9% more at the open, whi
 
 - **End-of-period orders:** orders submitted on the last IS day (2017-12-29) stay "submitted", because there is no next open inside the period. They have no fill and no fee.
 - **Cancelled buys:** a buy cancelled on a ticker change (E004-01: WCN, 2016-06-01) had no fill and no fee. The strategy re-selects on later days.
+
+## 6. Corrected-run queue, 2026-09-28: operational failures (E003-04/05/06; E004-05..08, E005-04..06)
+
+**What happened.**
+
+| Run | QuantConnect state | Runner outcome |
+|---|---|---|
+| E003-04 (S003 v1.0) | Backtest **completed** (1,329 orders) | Orders endpoint answered "Error retrieving orders result, please try again later". The runner treated this as fatal and stopped. |
+| E003-05 (S003 v1.1) | Backtest **completed** (2,749 orders) | Orders endpoint returned HTTP 500 beyond the client's ~1-minute retry budget; runner stopped. |
+| E003-06 (S003 v1.2) | Backtest **stalled at 97%**. QuantConnect's server clock froze at 6 min 31 s uptime (about 17:12 UTC). No summary statistics; every chart empty. | The runner waited its full 6-hour ceiling, then failed. The backtest kept the organisation's only node busy. |
+| E004-05..08, E005-04..06 | Nothing ran | `backtests/create` refused: "no spare nodes available". **Not started. Not trials.** |
+
+**Investigation: why all three H003 attempts failed.**
+
+- **Not order or fill volume.** Order counts: H003 1,329 / 2,749 / ≈1,246 (stalled). Completed runs of other strategies: 508 to 4,509 (E001-09), and the original S003 run E003-02 had 5,168.
+- **Not result payload size.** The harness's summary statistics are 1.3 KB for H003 versus 0.8–2.5 KB elsewhere. RAM was 2.6 GB, within the other runs' 1.0–3.0 GB.
+- **Not S003's rebalance behaviour.** S003 is a 36-line monthly or 10-day rebalance with no loops that could hang. v1.2 differs from v1.0 only by a momentum filter, and v1.0 finished its backtest normally in 7 minutes.
+- **It was a time window, not a strategy.** Every failure fell between 16:01 and 17:12 UTC. H003 was simply what the queue was running then. E002-08 finished at 16:00 without trouble.
+- **The orders API itself is healthy.** On 2026-09-29, with no code change:
+  - the first request for *any* backtest's orders (also E001-10 and E002-08) returns `status: loading`, and the full data follows about 50 seconds later;
+  - E003-04 and E003-05 now download **completely**: 1,329 of 1,329 and 2,749 of 2,749 orders, every filled order with its fill event.
+- **Our share of the blame (runner bugs):**
+  1. A transient error on the orders endpoint aborted the run instead of being retried inside the existing 2-hour completeness window.
+  2. A `loading` reply was read as an empty page. The count check stopped it being accepted, but only when QuantConnect's order count was known.
+  3. A backtest that stopped progressing was waited on for 6 hours.
+  4. The failure record omitted the QuantConnect backtest ID and how far the run had got.
+  5. Runs were attempted while the node was still busy.
+
+**Conclusion.** A transient QuantConnect-side outage (orders endpoint errors, plus one engine stall), made worse by the runner not retrying. H003 is **not** blocked: nothing is wrong with the strategy code.
+
+**Fixes (D053).**
+
+- The orders download retries transient errors and `loading` replies within its 2-hour window. It still accepts only a download whose distinct-order count equals QuantConnect's "Total Orders" and in which every filled order has its fill event.
+- A backtest whose progress has not moved for 45 minutes is declared **stalled**. Normal IS runs take 5–10 minutes.
+- A failed run records its QuantConnect project and backtest ID, the backtest start time and the failure stage.
+- **Pre-flight:** if any backtest is still running, the runner refuses to start. Like the clean-tree check, it registers nothing, so no attempt is wasted.
+- Stalled backtests are **not** deleted automatically; deletion needs the owner.
+- Regression tests cover every fix.
+
+**Records.**
+
+- E003-06's QuantConnect metadata was preserved in `research/cycles/incidents/E003-06_qc_backtest_metadata.json`. The stalled backtest was then deleted, with owner approval, on 2026-09-29.
+- All ten attempts stay in `experiments/INDEX.csv`, with annotation rows:
+  - `failed` for E003-04/05/06;
+  - `not_started` for the seven that never started, which `registry.trial_count` excludes.
+- **No result is taken from the E003-04/05 backtests** even though their data is now complete. They are re-run cleanly, so every accepted result comes from one uninterrupted, fully checked run.
+
+**Retries under fresh IDs** (`C01_retry_map.json`):
+
+| Failed attempt | Retry |
+|---|---|
+| E003-04 | E003-07 |
+| E003-05 | E003-08 |
+| E003-06 | E003-09 |
+| E004-05..08 | E004-09..12 |
+| E005-04..06 | E005-07..09 |

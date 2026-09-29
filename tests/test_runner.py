@@ -118,3 +118,83 @@ def test_incomplete_order_detection():
     assert incomplete_order({"status": 3})
     assert not incomplete_order({"status": 3, "events": [{"status": "submitted"}, filled_ev]})
     assert not incomplete_order({"status": 5, "events": []})      # cancelled: no fill expected
+
+
+# ---- E003-04/05/06 incidents (D053): transient orders API errors, stalled backtests, failure metadata
+
+class _ScriptedClient(QCClient):
+    """QCClient whose `call` replays scripted responses per endpoint (an Exception is raised)."""
+    def __init__(self, script):
+        super().__init__(user_id="u", token="t", session=object(), max_retries=0)
+        self.script = {k: list(v) for k, v in script.items()}
+
+    def call(self, endpoint, **payload):
+        seq = self.script[endpoint]
+        r = seq.pop(0) if len(seq) > 1 else seq[0]
+        if isinstance(r, Exception):
+            raise r
+        return r
+
+
+def _filled(i):
+    return {"id": i, "status": 3, "events": [{"status": "filled"}]}
+
+
+def test_orders_read_retries_transient_errors_and_loading(monkeypatch):
+    from qresearch.qc_client import BacktestHandle
+    monkeypatch.setattr("qresearch.qc_client.time.sleep", lambda s: None)
+    c = _ScriptedClient({"backtests/orders/read": [
+        QCError("backtests/orders/read failed: ['Error retrieving orders result, please try again later']"),
+        {"success": True, "status": "loading", "progress": 0.0},
+        QCError("backtests/orders/read: giving up after retries (HTTP 500)"),
+        {"success": True, "orders": [_filled(1), _filled(2)], "length": 2},
+    ]})
+    out = c.read_orders(BacktestHandle(1, "b", "c"), expected=2)
+    assert [o["id"] for o in out] == [1, 2]
+
+
+def test_orders_loading_is_never_accepted_as_empty(monkeypatch):
+    from qresearch.qc_client import BacktestHandle
+    monkeypatch.setattr("qresearch.qc_client.time.sleep", lambda s: None)
+    c = _ScriptedClient({"backtests/orders/read": [{"success": True, "status": "loading", "progress": 0.0}]})
+    with pytest.raises(QCError, match="still loading"):
+        c.read_orders(BacktestHandle(1, "b", "c"), expected=None, timeout_s=0)
+
+
+def test_stalled_backtest_is_detected():
+    from qresearch.qc_client import BacktestHandle
+    t = [0.0]
+    c = _ScriptedClient({"backtests/read": [
+        {"success": True, "backtest": {"completed": False, "progress": 0.5}},
+        {"success": True, "backtest": {"completed": False, "progress": 0.97, "status": "In Progress..."}}]})
+
+    def sleep(s):
+        t[0] += s
+    with pytest.raises(QCError, match="stalled: progress 0.97"):
+        c.wait_backtest(BacktestHandle(1, "b", "c"), poll_s=60, stall_s=45 * 60, clock=lambda: t[0], sleep=sleep)
+    assert 45 * 60 < t[0] < 6 * 3600
+
+
+def test_running_backtests_lists_incomplete_only():
+    c = _ScriptedClient({"projects/read": [{"success": True, "projects": [{"projectId": 7, "name": "qr-S003"}]}],
+                         "backtests/list": [{"success": True, "backtests": [
+                             {"name": "E003-06", "completed": False}, {"name": "E003-05", "completed": True}]}]})
+    assert c.running_backtests() == [("qr-S003", "E003-06")]
+
+
+def test_failed_run_keeps_backtest_id_and_stage():
+    from qresearch import run as runmod
+    from qresearch.qc_client import BacktestHandle
+
+    class C:
+        def find_or_create_project(self, name): return 7
+        def sync_files(self, p, f): pass
+        def pin_lean_version(self, p, v): pass
+        def compile(self, p): return "cid"
+        def start_backtest(self, p, cid, name): return BacktestHandle(p, "bt123", cid)
+        def wait_backtest(self, h): raise QCError("Backtest bt123 stalled")
+    state = {}
+    with pytest.raises(QCError):
+        runmod.execute({"experiment_id": "E003-09", "strategy_id": "S003", "lean_version_id": 1}, {}, C(), state)
+    assert state["backtest_id"] == "bt123" and state["project_id"] == 7 and state["stage"] == "backtest"
+    assert state["backtest_started_utc"]

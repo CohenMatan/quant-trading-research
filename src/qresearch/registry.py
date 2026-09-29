@@ -89,8 +89,20 @@ def counts(path: Path | None = None) -> dict:
     return out
 
 
+NOT_STARTED = "not_started"
+
+
+def not_started_ids(path: Path | None = None) -> set[str]:
+    """Runs annotated as operational failures in which no backtest ever ran (e.g. "no spare nodes",
+    compile rejected): no strategy result existed, so they are not trials (owner, 2026-09-29)."""
+    return {r["experiment_id"] for r in read(path) if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
+
+
 def trial_count(path: Path | None = None) -> int:
     """Number of trials for the Deflated Sharpe Ratio: every original run of a research or demo
-    strategy, whatever its outcome (failed runs count: they were attempts)."""
-    return sum(1 for r in read(path)
-               if r["run_type"] == "original" and r["kind"] in ("research", "demo"))
+    strategy, whatever its outcome (failed runs count: they were attempts), except runs annotated
+    `not_started`, in which no backtest ran and no strategy result was produced."""
+    rows = read(path)
+    skip = {r["experiment_id"] for r in rows if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
+    return sum(1 for r in rows
+               if r["run_type"] == "original" and r["kind"] in ("research", "demo") and r["experiment_id"] not in skip)

@@ -53,5 +53,5 @@
  "qc_charts_available": "chart names listed (Strategy Equity, Benchmark, Portfolio Margin, Assets Sales Volume, QR, Drawdown, Portfolio Turnover, Exposure, Capacity); every series empty",
  "qc_orders_available": "not fetched: backtest never completed",
  "note": "Runner result.json lacks the QC backtest id because the timeout path did not record the handle (fixed, D053). QC server statistics froze at Up Time 00:06:31 (about 17:12 UTC) with progress 0.97 and 2013 of 2013 tradeable dates; no summary statistics were published. Runtime statistics are QC's live counters at freeze time, not an accepted result.",
- "deleted_on_qc": "pending owner-approved deletion to free the single B2-8 node"
+ "deleted_on_qc": "deleted 2026-09-29 ~06:00 UTC via backtests/delete (owner-approved); afterwards no backtest was running in any project"
 }
