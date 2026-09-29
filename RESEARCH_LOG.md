@@ -392,3 +392,28 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **STOP.** Waiting for the owner before any C02 design. No new hypotheses and no strategy backtests.
 
+## 2026-09-29: D057 finalised; D063 verified end to end; H001 remedial re-test; CP4c STOP
+
+**D057 finalised (D065).** Dated overrides, each verified from filings:
+
+- KKR partnership units until 2018-07-01; Apollo LLC shares until 2019-09-05; Ares partnership units until 2018-11-26.
+- MIC was a corporation from 2015-05-21 (this corrects CP4).
+- KFN excluded; Texas Pacific Land a trust until 2021-01-11.
+- Probe E956-03 confirms each switches on its date.
+
+**D063 canary E958-01.** 23 of 23 cycles passed: removed while the buy was pending, history kept, buy filled, history-based exit after 3 closes. 4 of 4 safety-net restores. Nothing stuck.
+
+**H001 remedial re-test (E001-16..20).**
+
+- All integrity checks pass; no stuck positions.
+- All five fail the original screen at 4/12 gates each:
+  - Sharpe −0.82 to 0.20;
+  - profit factor 0.69–0.99;
+  - costs 7–14% a year.
+- **H001 is rejected on a valid test.**
+- No robustness runs, because none passed.
+
+**Trial accounting.** 35 genuine trials; 46 technical repeats; 7 not started; 37 verification or benchmark runs.
+
+**STOP.** Waiting for the owner. C02 is not designed.
+
