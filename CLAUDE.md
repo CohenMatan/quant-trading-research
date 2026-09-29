@@ -35,9 +35,10 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - The size proxy is rejected.
   - 1999–2009 is an optional finalist stress test only (D035).
 - **CP2 amendment** (2010 split, adjusted gates, $7/order): APPROVED by the owner on 2026-09-28. Research Cycle 1 was authorised.
-- **CP3** (`docs/checkpoints/CP3_first_research_cycle.md`, C01 in-sample results): **STOPPED, awaiting owner approval.**
-  - No Validation, Walk-Forward or Holdout run until approved.
-  - Open owner decisions: the PBO gate for H005, and the cash-drag execution option.
+- **CP3** (C01 in-sample): owner approved S005 v1.2 (H005) **for Validation only** on 2026-09-29 (D056). It is frozen exactly as tested. PBO 0.71 stays a visible, unchanged failing item.
+- **Validation of S005 v1.2** (E005-28) is done. The report is `docs/checkpoints/CP4_validation_S005_v1.2.md`: **formal FAIL** (Deflated Sharpe 0.68, PBO 0.71). **STOPPED, awaiting owner approval.**
+  - No Walk-Forward or Holdout run.
+  - Universe defect D057 (closed-end funds and partnership units pass the common-stock filter) is open. Fix it before any new research, after owner approval.
 - QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**.
 - Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
 - Known QuantConnect quirks, all handled in code:
