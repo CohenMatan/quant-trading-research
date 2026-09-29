@@ -34,8 +34,36 @@ def test_known_securities_are_classified(harness, case):
 
 def test_named_owner_examples_are_excluded(harness):
     by = {c["ticker"]: c for c in CASES if "day" not in c}
-    for t in ("MIC", "NEA", "NVG", "NZF", "DSL", "BCAT", "UTG", "BPL", "OAK"):
+    for t in ("NEA", "NVG", "NZF", "DSL", "BCAT", "UTG", "BPL", "OAK"):
         assert harness.non_common_reason(_fundamental(by[t]), "2020-01-02") is not None, t
+    # MIC: LLC interests until its conversion to a corporation on 2015-05-21 (MIC 8-K)
+    assert harness.non_common_reason(_fundamental(by["MIC"]), "2015-05-20") is not None
+    assert harness.is_us_common(_fundamental(by["MIC"]), "2015-05-21")
+    assert harness.is_us_common(_fundamental(by["MIC"]), "2021-10-08")
+
+
+# D065: every dated override, tested on both sides of its boundary with the real Morningstar fields
+DATED = [  # (sid, ticker, last excluded day or None, first eligible day or None)
+    ("KKR UO9UUQST4HUT", "KKR", "2018-06-30", "2018-07-01"),
+    ("APO UVBW6V6CV59H", "APO", "2019-09-04", "2019-09-05"),
+    ("ARES VQ7JWF5X8XGL", "ARES", "2018-11-25", "2018-11-26"),
+    ("BX TTO1M4GXI99H", "BX", "2019-06-30", "2019-07-01"),
+    ("CG V69R09HVGXGL", "CG", "2019-12-31", "2020-01-01"),
+    ("TPL R735QTJ8XC9X", "TPL", "2021-01-10", "2021-01-11"),
+    ("YHOO R735QTJ8XC9X", "AABA", "2017-06-16", "2017-06-15"),     # eligible BEFORE, fund from 2017-06-16
+    ("KFN T9R86261T0F9", "KFN", "2013-03-01", None),
+]
+
+
+@pytest.mark.parametrize("sid,ticker,excluded_on,eligible_on", DATED, ids=[d[1] for d in DATED])
+def test_dated_overrides(harness, sid, ticker, excluded_on, eligible_on):
+    import json as _json
+    rec = next(c for c in _json.loads((ROOT / "tests/fixtures/universe_override_cases.json").read_text())["cases"]
+               if c["sid"] == sid)
+    f = _fundamental(rec)
+    assert not harness.is_us_common(f, excluded_on), (ticker, excluded_on)
+    if eligible_on:
+        assert harness.is_us_common(f, eligible_on), (ticker, eligible_on)
 
 
 def test_acquired_corporations_flagged_llc_today_stay_eligible(harness):

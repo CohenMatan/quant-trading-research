@@ -626,7 +626,8 @@
    "is_limited_liability_company": false,
    "industry_template_code": "N",
    "sic": 6282,
-   "share_class_description": "KKR & Co Inc Ordinary Share"
+   "share_class_description": "KKR & Co Inc Ordinary Share",
+   "day": "2020-06-01"
   },
   {
    "ticker": "APO",
@@ -637,7 +638,8 @@
    "is_limited_liability_company": false,
    "industry_template_code": "N",
    "sic": 6282,
-   "share_class_description": "Apollo Global Management Inc"
+   "share_class_description": "Apollo Global Management Inc",
+   "day": "2020-06-01"
   },
   {
    "ticker": "BUR",

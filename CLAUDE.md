@@ -37,7 +37,8 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
 - **CP2 amendment** (2010 split, adjusted gates, $7/order): APPROVED by the owner on 2026-09-28. Research Cycle 1 was authorised.
 - **CP3** (C01 in-sample): owner approved S005 v1.2 (H005) **for Validation only** on 2026-09-29 (D056). It is frozen exactly as tested. PBO 0.71 stays a visible, unchanged failing item.
 - **C01 is CLOSED: No Production Candidate Found** (owner, D060). S005 v1.2 failed Validation (E005-28). H005 may never be re-validated on 2018–2021.
-- **Infrastructure fixes after C01:** D057 universe (D061), D059 dead positions (D062), D063 price windows. Report: `docs/checkpoints/CP4b_infrastructure_fixes.md`. **STOPPED, awaiting owner approval before designing C02.** No new hypotheses and no strategy backtests until approved.
+- **Infrastructure fixes after C01:** D057 universe (D061, dated overrides D065), D059 dead positions (D062), D063 price windows (verified end to end, E958-01). Approved in principle by the owner.
+- **H001 remedial re-test:** all five variations fail the C01 screen (D067). H001 is rejected. Report: `docs/checkpoints/CP4c_D057_final_D063_e2e_H001_remedial.md`. **STOPPED, awaiting owner approval.** Do not design or run C02, add new hypotheses or run strategy backtests until approved.
 - QuantConnect subscription: Researcher seat ($10/month) plus one B2-8 backtest node ($14/month), **$24/month total**.
 - Engine: every experiment pins `lean_version_id`. CP2 used build 18131, the branch that carries the new Morningstar dataset. QuantConnect switches master to the new dataset on 2026-10-10 and retires the old one on 2026-10-31.
 - Known QuantConnect quirks, all handled in code:

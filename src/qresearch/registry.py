@@ -106,3 +106,38 @@ def trial_count(path: Path | None = None) -> int:
     skip = {r["experiment_id"] for r in rows if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
     return sum(1 for r in rows
                if r["run_type"] == "original" and r["kind"] in ("research", "demo") and r["experiment_id"] not in skip)
+
+
+def trial_accounting(path: Path | None = None, experiments_dir: Path | None = None) -> dict:
+    """D066: separate genuine strategy trials from technical repeats. A genuine trial is a distinct
+    research configuration — (hypothesis, strategy, version, parameters, split, dates, cost-stress
+    multiple) — whose backtest started. Further runs of an identical configuration (re-runs after
+    infrastructure fixes, operational retries, remedial re-tests) are technical. Infrastructure,
+    benchmark and demo runs (verification, canaries, probes) are never trials."""
+    import json as _json
+    exp_dir = experiments_dir or config.EXPERIMENTS_DIR
+    rows = read(path)
+    skip = {r["experiment_id"] for r in rows if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
+    seen: dict[str, str] = {}
+    genuine, technical, not_started, verification = [], [], [], []
+    for r in rows:
+        if r["run_type"] != "original":
+            continue
+        if r["kind"] != "research":
+            verification.append(r["experiment_id"])
+            continue
+        if r["experiment_id"] in skip:
+            not_started.append(r["experiment_id"])
+            continue
+        cfg = _json.loads((exp_dir / r["experiment_id"] / "config.json").read_text())
+        key = _json.dumps([cfg.get("hypothesis_id"), cfg["strategy_id"], cfg["strategy_version"], cfg["params"],
+                           cfg["split"], cfg["start"], cfg["end"],
+                           cfg["costs"].get("slippage_stress_multiple", 1)], sort_keys=True)
+        if key in seen:
+            technical.append((r["experiment_id"], seen[key]))
+        else:
+            seen[key] = r["experiment_id"]
+            genuine.append(r["experiment_id"])
+    return dict(genuine_trials=len(genuine), technical_repeats=len(technical), not_started=len(not_started),
+                verification_and_benchmark_runs=len(verification), all_started_research_runs=len(genuine) + len(technical),
+                genuine=genuine, technical=technical)

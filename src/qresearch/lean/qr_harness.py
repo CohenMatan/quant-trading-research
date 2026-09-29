@@ -148,10 +148,19 @@ _LLC_CLASS = re.compile(r"\bL\.?L\.?C\b.*\b(Class|Units?|Shs|Shares|Interests?)\
 _LP_CLASS = re.compile(r"\bL\.P\.|\bLimited Partnership\b|\bPartnership Units?\b|\bCommon Units?\b|\bLP Units?\b", re.I)
 # Dated corrections where the current-status fields are wrong for part of history (public facts).
 # sid -> ((from, to_inclusive, verdict), ...): verdict None = ordinary common stock, str = excluded.
-UNIVERSE_OVERRIDES = {
-    "YHOO R735QTJ8XC9X": (("1900-01-01", "2017-06-16", None),),   # Yahoo until it became the fund Altaba
-    "BX TTO1M4GXI99H": (("2019-07-01", "2999-12-31", None),),     # Blackstone: LP units until 2019-07-01
-    "CG V69R09HVGXGL": (("2020-01-01", "2999-12-31", None),),     # Carlyle: LP units until 2020-01-01
+UNIVERSE_OVERRIDES = {   # sources: docs/data/universe_overrides.md (SEC filings / company releases)
+    "YHOO R735QTJ8XC9X": (("1900-01-01", "2017-06-15", None),),   # Yahoo; from 2017-06-16 the fund Altaba
+    "BX TTO1M4GXI99H": (("1900-01-01", "2019-06-30", "partnership units (corporation from 2019-07-01)"),
+                        ("2019-07-01", "2999-12-31", None)),
+    "CG V69R09HVGXGL": (("1900-01-01", "2019-12-31", "partnership units (corporation from 2020-01-01)"),
+                        ("2020-01-01", "2999-12-31", None)),
+    "KKR UO9UUQST4HUT": (("1900-01-01", "2018-06-30", "partnership units (corporation from 2018-07-01)"),),
+    "APO UVBW6V6CV59H": (("1900-01-01", "2019-09-04", "LLC shares (corporation from 2019-09-05)"),),
+    "ARES VQ7JWF5X8XGL": (("1900-01-01", "2018-11-25", "partnership units (corporation from 2018-11-26)"),),
+    "MIC T4K58ANZ9NXH": (("1900-01-01", "2015-05-20", "LLC interests (corporation from 2015-05-21)"),
+                         ("2015-05-21", "2999-12-31", None)),
+    "KFN T9R86261T0F9": (("1900-01-01", "2999-12-31", "LLC shares"),),
+    "TPL R735QTJ8XC9X": (("1900-01-01", "2021-01-10", "trust sub-share certificates (corporation from 2021-01-11)"),),
     "BUR XIT9T96LYYJP": (("1900-01-01", "2999-12-31", None),),    # Burford Capital: operating company
     "ACAS R735QTJ8XC9X": (("1900-01-01", "2999-12-31", "business development company (fund)"),),
 }
