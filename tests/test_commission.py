@@ -182,5 +182,5 @@ def test_order_reader_waits_for_expected_count(monkeypatch):
 def test_d051_harness_hooks_present():
     src = (ROOT / "src/qresearch/lean/qr_harness.py").read_text()
     assert 'settled_only = pf.get("buy_funding") == "settled_cash_only"' in src
-    assert "self._qr_resubmit_cancelled()" in src and '"symbol changed" in str(ev.message' in src
+    assert "self._qr_resubmit_cancelled()" in src and 'self.transactions.get_order_by_id(ev.order_id)' in src   # D054
     assert "WINDOW_BARS = 210" in (ROOT / "strategies/S004_momentum_pullback/main.py").read_text()

@@ -201,7 +201,9 @@ class QRAlgorithm(QCAlgorithm):
             "timing_violations": 0, "max_fill_dev": 0.0, "buys_scaled": 0,
             "min_cash_frac": 1.0, "max_gross": 0.0, "elig_min": None, "elig_max": 0,
             "elig_sum": 0, "elig_days": 0, "max_subscribed": 0, "held_splits": 0,
-            "held_delistings": 0, "negative_qty": 0,
+            "held_delistings": 0, "negative_qty": 0, "forced_fee_debits": 0,
+            "cancelled_harness_sells": 0, "cancelled_harness_buys": 0, "cancelled_on_symbol_change": 0,
+            "cancelled_sells_delisting": 0, "resubmitted_sells": 0,
         }
         # QR* result lines are NOT written to QuantConnect logs (daily quota). They are collected here
         # and published at the end as summary statistics, read back via the backtests/read API (D046).
@@ -433,7 +435,7 @@ class QRAlgorithm(QCAlgorithm):
             qty = -int(min(held + min(pending, 0.0), -q))
             if qty < 0:
                 self._qr_submit(sym, qty, f"resub|sig={sig}")
-                self._qr_stats["resubmitted_sells"] = self._qr_stats.get("resubmitted_sells", 0) + 1
+                self._qr_stats["resubmitted_sells"] += 1
 
     def qr_slot_weight(self, n_slots):
         return slot_weight(n_slots, float(self.portfolio.total_portfolio_value), self._qr_pf)
@@ -446,11 +448,22 @@ class QRAlgorithm(QCAlgorithm):
 
     def on_order_event(self, ev):
         s = self._qr_stats
-        if ev.status == OrderStatus.CANCELED and "symbol changed" in str(ev.message or "").lower() \
-                and self._qr_sig.get(ev.order_id) is not None and float(ev.quantity) < 0:
-            # D051: LEAN cancels open orders on ticker changes; re-issue the exit at the next close
+        if ev.status == OrderStatus.CANCELED and self._qr_sig.get(ev.order_id) is not None:
+            # The harness never cancels its own orders, so every cancellation here is LEAN's: a ticker
+            # change (LEAN rewrites the order tag; the event message is empty, D054) or a delisting.
+            order = self.transactions.get_order_by_id(ev.order_id)
+            reason = str(getattr(order, "tag", "") or "") + " " + str(ev.message or "")
+            if "symbol changed" in reason.lower():
+                s["cancelled_on_symbol_change"] += 1
+            if float(ev.quantity) >= 0:
+                s["cancelled_harness_buys"] += 1      # not re-issued: the strategy re-selects on later days
+                return
+            s["cancelled_harness_sells"] += 1
+            if ev.symbol in self._qr_delist_warned:
+                s["cancelled_sells_delisting"] += 1   # LEAN liquidates delisted holdings itself
+                return
+            # D051/D054: the exit must still happen; re-issue it at the next close
             self._qr_resubmit[ev.symbol] = float(ev.quantity)
-            s["cancelled_on_symbol_change"] = s.get("cancelled_on_symbol_change", 0) + 1
             self._qr_log(f"QRRESUB|{ev.symbol.value}|{self.time:%Y-%m-%d}|{ev.quantity}")
             return
         if ev.status == OrderStatus.INVALID:

@@ -127,3 +127,45 @@ The buys were sized on the 11-29 close. They cost about 9% more at the open, whi
 | E003-06 | E003-09 |
 | E004-05..08 | E004-09..12 |
 | E005-04..06 | E005-07..09 |
+
+## 7. D051 resubmission never fired (found while auditing the retries), and the D054 fix
+
+**Finding.**
+
+- The retry E004-09 held MATX across its 2012-07-02 ticker change, like the invalid E004-01.
+- LEAN again cancelled the exit (order 1535), yet the harness counted **0** symbol-change cancellations and re-issued nothing.
+- **Cause:** QuantConnect's order record shows LEAN **rewrites the order tag** to "Open order cancelled on symbol changed event" and leaves the **event message empty**. The D051 handler looked for "symbol changed" in the message, so it never matched.
+- **No borrowing resulted.** Under settled-cash funding the unsold position kept its slot and no buy used its proceeds, so every integrity check stayed clean.
+- **But an intended exit was not executed** until the strategy re-signalled it.
+
+**Audit of all 19 corrected runs** (full order records from QuantConnect: `incidents/C01_cancelled_orders_audit.txt`):
+
+| Run | Cancelled harness order | Effect |
+|---|---|---|
+| E004-09 | MATX sell, ticker change 2012-07-02 | Exit 1 trading day late (the strategy's own next-day signal) |
+| E005-08 | MDLZ sell, ticker change 2012-10-01 | Monthly strategy: **exit a month late** (sold 2012-11-02) |
+| E001-10 (SII), E003-07/09 (SYA), E003-08 (LZ) | Sells cancelled at the name's delisting (acquisitions) | None: LEAN liquidated the holding itself (forced fills, charged $7) |
+| E002-06 (KITE), E003-08 (PPO), E004-09/12 (WCN) | Buys | None: the entry did not happen and the strategy re-selects later; no fee |
+| The other 12 runs | — | None |
+
+**Fix (D054).**
+
+- The harness never cancels its own orders, so **any** cancellation of a harness order is LEAN's.
+- Cancelled harness **sells** are re-issued at the next close, capped at the quantity held, unless the name has a delisting warning. In that case LEAN liquidates it and a re-issued sell could create a short.
+- Cancelled **buys** are not re-issued.
+- Every case is counted: `cancelled_harness_sells`, `cancelled_harness_buys`, `cancelled_on_symbol_change`, `cancelled_sells_delisting` and `resubmitted_sells`. All counters now start at 0, so a missing counter is itself a failure.
+- Regression tests replay the exact E004-09 event: tag rewritten, empty message.
+
+**Consequence.**
+
+- To keep one harness version in the final comparison, the verification trio and all 19 variations are re-run under new IDs:
+  - E950-06, E900-06, E901-05 (verification);
+  - E001-11..15, E002-09..12, E003-10..12, E004-13..16, E005-10..12 (`C01_d054_map.json`).
+- In the registry, E004-09 and E005-08 are annotated `bugged` and the other 17 `superseded`.
+- Runs with no affected exit should reproduce their equity curves exactly, which gives an extra reproducibility check.
+
+**Also found (a reporting convention, not a bug): spin-offs.**
+
+- On the Kraft spin-off (2012-10-01), LEAN credited the distributed Kraft Foods Group value as a **cash distribution** (+$14.4 per share, confirmed from the cash series), so equity is correct.
+- Trade PnL excludes dividends by the approved convention D018. The MDLZ trade therefore shows −24.6% although the holding gained overall.
+- Portfolio metrics are unaffected. Trade-based gates (profit factor, expectancy) are made slightly **more conservative** for strategies that hold spin-off parents. Disclosed in CP3.

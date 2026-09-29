@@ -140,3 +140,56 @@ def test_incident_replay_never_negative(plan):
         spent = sum(q * 50.0 * 1.129 * 1.001 + 7.0 for _, q in out["buys"]) + 7.0 * len(out["sells"])
         assert cash - spent >= 0, (cash, pv, out)
         assert n_open + len(out["buys"]) <= 15
+
+
+# ---------------------------------------------------------------- D054: LEAN-cancelled harness sells
+def _cancel_harness(monkeypatch, tags):
+    import types
+    from test_commission import _load_harness
+    h = _load_harness(monkeypatch)
+    h.OrderStatus = types.SimpleNamespace(CANCELED="c", INVALID="i", FILLED="f", PARTIALLY_FILLED="p")
+    algo = object.__new__(h.QRAlgorithm)
+    algo._qr_stats = {k: 0 for k in ("cancelled_harness_sells", "cancelled_harness_buys",
+                                     "cancelled_on_symbol_change", "cancelled_sells_delisting", "resubmitted_sells")}
+    algo._qr_sig, algo._qr_resubmit, algo._qr_delist_warned, algo.logged = {}, {}, set(), []
+    algo._qr_log = algo.logged.append
+    algo.time = __import__("datetime").datetime(2012, 6, 29)
+    algo.transactions = types.SimpleNamespace(get_order_by_id=lambda oid: types.SimpleNamespace(tag=tags[oid]))
+    return algo
+
+
+class _Sym:
+    def __init__(self, value):
+        self.value = value
+
+
+def _ev(oid, sym, qty, message=None):
+    import types
+    return types.SimpleNamespace(status="c", order_id=oid, quantity=qty, message=message, symbol=_Sym(sym))
+
+
+def test_cancelled_sell_is_resubmitted_even_with_rewritten_tag_and_empty_message(monkeypatch):
+    # E004-09 order 1535 as QuantConnect recorded it: tag rewritten by LEAN, event message empty
+    algo = _cancel_harness(monkeypatch, {1535: "Open order cancelled on symbol changed event"})
+    algo._qr_sig[1535] = "2012-06-29"
+    ev = _ev(1535, "MATX", -125.0)
+    algo.on_order_event(ev)
+    assert algo._qr_resubmit == {ev.symbol: -125.0}
+    assert algo._qr_stats["cancelled_on_symbol_change"] == 1 and algo._qr_stats["cancelled_harness_sells"] == 1
+
+
+def test_cancelled_buy_and_delisting_sell_are_not_resubmitted(monkeypatch):
+    algo = _cancel_harness(monkeypatch, {4111: "Open order cancelled on symbol changed event", 355: "s001|sig=2010-08-27"})
+    algo._qr_sig.update({4111: "2016-05-31", 355: "2010-08-27"})
+    delisted = _ev(355, "SII", -168.0)
+    algo._qr_delist_warned.add(delisted.symbol)
+    algo.on_order_event(_ev(4111, "WCN", 213.0))
+    algo.on_order_event(delisted)
+    assert algo._qr_resubmit == {}
+    assert algo._qr_stats["cancelled_harness_buys"] == 1 and algo._qr_stats["cancelled_sells_delisting"] == 1
+
+
+def test_non_harness_cancellations_are_ignored(monkeypatch):
+    algo = _cancel_harness(monkeypatch, {9: "x"})
+    algo.on_order_event(_ev(9, "ABC", -10.0))
+    assert algo._qr_resubmit == {} and algo._qr_stats["cancelled_harness_sells"] == 0
