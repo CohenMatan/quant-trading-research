@@ -14,12 +14,15 @@ from AlgorithmImports import *
 from collections import deque
 from datetime import datetime
 import json
+import re
 
 from qr_params import EXPERIMENT
 
 LAST_UNLOCKED = datetime(2021, 12, 31)
 COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
+STALE_SESSIONS = 10      # D059: a holding with no real price bar for this many sessions is terminated
+STALE_ORDER_SESSIONS = 5  # D059: a harness order still open after this many sessions fails the run
 
 
 def slot_weight(n_slots, pv, pf):
@@ -134,15 +137,74 @@ class FixedPerOrderFeeModel(FeeModel):
         return OrderFee(CashAmount(self.per_order, "USD"))
 
 
-def is_us_common(f):
+# D057: instruments Morningstar labels "common stock" that are not operating-company common stock.
+# Morningstar's company flags describe a company's CURRENT status (an acquired corporation that is
+# now an LLC subsidiary is flagged LLC), so the LLC flag only counts when the share class itself
+# is described as LLC units; the partnership flag has no such false positives (E956-01 audit).
+NON_COMMON_SIC = {6726: "closed-end fund / unit investment trust", 6770: "blank-check company",
+                  6792: "oil royalty trust"}
+_LLC_TEXT = re.compile(r"\bL\.?L\.?C\b", re.I)
+_LLC_CLASS = re.compile(r"\bL\.?L\.?C\b.*\b(Class|Units?|Shs|Shares|Interests?)\b", re.I)
+_LP_CLASS = re.compile(r"\bL\.P\.|\bLimited Partnership\b|\bPartnership Units?\b|\bCommon Units?\b|\bLP Units?\b", re.I)
+# Dated corrections where the current-status fields are wrong for part of history (public facts).
+# sid -> ((from, to_inclusive, verdict), ...): verdict None = ordinary common stock, str = excluded.
+UNIVERSE_OVERRIDES = {
+    "YHOO R735QTJ8XC9X": (("1900-01-01", "2017-06-16", None),),   # Yahoo until it became the fund Altaba
+    "BX TTO1M4GXI99H": (("2019-07-01", "2999-12-31", None),),     # Blackstone: LP units until 2019-07-01
+    "CG V69R09HVGXGL": (("2020-01-01", "2999-12-31", None),),     # Carlyle: LP units until 2020-01-01
+    "BUR XIT9T96LYYJP": (("1900-01-01", "2999-12-31", None),),    # Burford Capital: operating company
+    "ACAS R735QTJ8XC9X": (("1900-01-01", "2999-12-31", "business development company (fund)"),),
+}
+
+
+def _attr(obj, name, default=None):
+    try:
+        v = getattr(obj, name)
+    except Exception:
+        return default
+    return default if v is None else v
+
+
+def non_common_reason(f, day=None):
+    """Why a security that Morningstar calls common stock is not an eligible US common stock
+    (D057), or None if it is eligible. `day` (YYYY-MM-DD) applies the dated overrides."""
+    sid = str(f.symbol.id)
+    if day is not None:
+        for a, b, verdict in UNIVERSE_OVERRIDES.get(sid, ()):
+            if a <= day <= b:
+                return verdict
+    cr, sr, ac = f.company_reference, f.security_reference, f.asset_classification
+    sc = str(_attr(sr, "share_class_description", "") or "")
+    if bool(_attr(cr, "is_limited_partnership", False)):
+        return "limited partnership units"
+    if bool(_attr(cr, "is_limited_liability_company", False)) and _LLC_TEXT.search(sc):
+        return "LLC units"
+    if _LLC_CLASS.search(sc):
+        return "LLC units (share class)"
+    if _LP_CLASS.search(sc):
+        return "partnership units (share class)"
+    if str(_attr(cr, "industry_template_code", "")) == "V":
+        return "investment vehicle (closed-end fund / BDC)"
+    try:
+        sic = int(_attr(ac, "sic", 0) or 0)
+    except (TypeError, ValueError):
+        sic = 0
+    return NON_COMMON_SIC.get(sic)
+
+
+def is_us_common(f, day=None):
     """Common stock, not a depositary receipt, and either Morningstar's primary share or a
     US-domiciled company. The new dataset flags many US companies' only listed share as
     non-primary (GE, BAC, V, DELL, YHOO, … in 2012), so `is_primary_share` alone wrongly drops
-    them; foreign companies' secondary US listings (e.g. Canadian banks) stay excluded (D030)."""
+    them; foreign companies' secondary US listings (e.g. Canadian banks) stay excluded (D030).
+    Funds, BDCs, partnership and LLC units, royalty trusts and blank-check companies that
+    Morningstar also labels common stock are excluded (D057, `non_common_reason`)."""
     sr = f.security_reference
     if sr.security_type != COMMON_STOCK or sr.is_depositary_receipt:
         return False
-    return bool(sr.is_primary_share) or str(f.company_reference.country_id) == "USA"
+    if not (bool(sr.is_primary_share) or str(f.company_reference.country_id) == "USA"):
+        return False
+    return non_common_reason(f, day) is None
 
 
 class QRAlgorithm(QCAlgorithm):
@@ -195,6 +257,14 @@ class QRAlgorithm(QCAlgorithm):
         self.qr_volume = {}              # symbol -> deque of adjusted volumes
         self._qr_last_bar = {}           # symbol -> date of last bar appended
         self._qr_delist_warned = set()
+        # D059: last real (not filled-forward) bar per symbol, counted in trading sessions (SPY bars)
+        self._qr_session = 0
+        self._qr_session_day = None
+        self._qr_real_session = {}
+        self._qr_real_close = {}
+        self._qr_real_date = {}
+        self._qr_terminated = set()
+        self._qr_order_session = {}
         self._qr_sig = {}                # order id -> signal date string
         self._qr_stats = {
             "days": 0, "orders": 0, "fills": 0, "forced_fills": 0, "invalid": 0,
@@ -204,6 +274,8 @@ class QRAlgorithm(QCAlgorithm):
             "held_delistings": 0, "negative_qty": 0, "forced_fee_debits": 0,
             "cancelled_harness_sells": 0, "cancelled_harness_buys": 0, "cancelled_on_symbol_change": 0,
             "cancelled_sells_delisting": 0, "resubmitted_sells": 0,
+            "stale_exits": 0, "stale_unresolved": 0, "stale_open_orders": 0, "cancelled_stale": 0,
+            "windows_restored": 0,
         }
         # QR* result lines are NOT written to QuantConnect logs (daily quota). They are collected here
         # and published at the end as summary statistics, read back via the backtests/read API (D046).
@@ -262,11 +334,12 @@ class QRAlgorithm(QCAlgorithm):
         adv_days = int(u.get("adv_days", 20))
         elig = []
         info = {}
+        day = self.time.strftime("%Y-%m-%d")
         for f in fundamental:
             if not f.has_fundamental_data:
                 continue
             sr = f.security_reference
-            if not is_us_common(f):
+            if not is_us_common(f, day):
                 continue
             if sr.exchange_id not in EXCHANGES:
                 continue
@@ -303,12 +376,25 @@ class QRAlgorithm(QCAlgorithm):
         if self.WINDOW_BARS <= 0:
             return
         added = [sec.symbol for sec in changes.added_securities if sec.symbol not in self.qr_close]
-        if not added:
+        self._qr_load_windows(added)
+        for sec in changes.removed_securities:
+            # D063: keep the window while an order is pending — a buy that fills at the next open
+            # would otherwise become a holding with no price history, which no exit rule can see.
+            if not self.portfolio[sec.symbol].invested and not self._qr_has_open_orders(sec.symbol):
+                self.qr_close.pop(sec.symbol, None)
+                self.qr_volume.pop(sec.symbol, None)
+                self._qr_last_bar.pop(sec.symbol, None)
+
+    def _qr_has_open_orders(self, sym):
+        return any(True for _ in self.transactions.get_open_order_tickets(sym))
+
+    def _qr_load_windows(self, symbols):
+        """Point-in-time adjusted history (SCALED_RAW adjusts only for actions up to now)."""
+        if not symbols:
             return
-        # Point-in-time adjusted history (SCALED_RAW adjusts only for actions up to now).
-        hist = self.history(added, self.WINDOW_BARS, Resolution.DAILY,
+        hist = self.history(symbols, self.WINDOW_BARS, Resolution.DAILY,
                             data_normalization_mode=DataNormalizationMode.SCALED_RAW)
-        for sym in added:
+        for sym in symbols:
             self.qr_close[sym] = deque(maxlen=self.WINDOW_BARS)
             self.qr_volume[sym] = deque(maxlen=self.WINDOW_BARS)
         if hist is None or hist.empty:
@@ -318,11 +404,17 @@ class QRAlgorithm(QCAlgorithm):
                 self.qr_close[sym].append(float(row["close"]))
                 self.qr_volume[sym].append(float(row["volume"]))
                 self._qr_last_bar[sym] = t.date()
-        for sec in changes.removed_securities:
-            if not self.portfolio[sec.symbol].invested:
-                self.qr_close.pop(sec.symbol, None)
-                self.qr_volume.pop(sec.symbol, None)
-                self._qr_last_bar.pop(sec.symbol, None)
+
+    def _qr_check_windows(self):
+        """D063 safety net: a holding must always have its price window (exit rules read it)."""
+        if self.WINDOW_BARS <= 0:
+            return
+        missing = [kv.key for kv in self.portfolio if kv.value.invested and kv.key not in self.qr_close]
+        if missing:
+            self._qr_stats["windows_restored"] += len(missing)
+            for sym in missing:
+                self._qr_log(f"QRWINDOW|{sym.id}|{self.time:%Y-%m-%d}")
+            self._qr_load_windows(missing)
 
     # ================================================================ data flow
     def on_data(self, data):
@@ -351,6 +443,7 @@ class QRAlgorithm(QCAlgorithm):
         if data.bars.count == 0 or self.time.hour < 9:
             return  # corporate-action-only slice at midnight
         today = self.time.date()
+        self._qr_track_real_bars(data, today)
         if self.WINDOW_BARS > 0:
             for sym, bar in data.bars.items():
                 dq = self.qr_close.get(sym)
@@ -363,11 +456,59 @@ class QRAlgorithm(QCAlgorithm):
             return
         self._qr_in_close = True
         try:
+            self._qr_check_stale(today)
+            self._qr_check_windows()
             self._qr_resubmit_cancelled()
             self.qr_on_close(data)
         finally:
             self._qr_in_close = False
         self._qr_record(today)
+
+    # ================================================================ D059 stale holdings
+    def _qr_track_real_bars(self, data, today):
+        """Count trading sessions (real SPY bars) and remember each symbol's last real bar."""
+        if self._qr_session_day != today and data.bars.contains_key(self.spy) \
+                and not data.bars[self.spy].is_fill_forward:
+            self._qr_session += 1
+            self._qr_session_day = today
+        for sym, bar in data.bars.items():
+            if not bar.is_fill_forward:
+                self._qr_real_session[sym] = self._qr_session
+                self._qr_real_close[sym] = float(bar.close)
+                self._qr_real_date[sym] = today
+
+    def _qr_check_stale(self, today):
+        """A held security with no real price bar for more than STALE_SESSIONS trading sessions has
+        become untradeable (e.g. acquired without a delisting event in the data). It is taken out of
+        the portfolio at its LAST REAL CLOSE from the data stream, as LEAN does for a delisting, with
+        the fixed commission; open orders for it are cancelled and the event is logged (QRSTALE)."""
+        for kv in list(self.portfolio):
+            sym, h = kv.key, kv.value
+            if not h.invested or sym in self._qr_terminated:
+                continue
+            last = self._qr_real_session.get(sym)
+            if last is None:
+                self._qr_real_session[sym] = self._qr_session   # first sight: start counting now
+                continue
+            if self._qr_session - last > STALE_SESSIONS:
+                self._qr_terminate(sym, today)
+
+    def _qr_terminate(self, sym, today):
+        qty = float(self.portfolio[sym].quantity)
+        price = self._qr_real_close.get(sym)
+        if price is None or qty <= 0:
+            self._qr_stats["stale_unresolved"] += 1
+            self._qr_log(f"QRSTALE_UNRESOLVED|{sym.id}|{sym.value}|{today:%Y-%m-%d}|{qty}")
+            return
+        self._qr_terminated.add(sym)
+        self._qr_resubmit.pop(sym, None)
+        self.transactions.cancel_open_orders(sym)
+        fee = float(self._qr_forced_fee or 0.0)
+        self.portfolio[sym].set_holdings(price, 0)
+        self.portfolio.cash_book["USD"].add_amount(qty * price - fee)
+        self._qr_stats["stale_exits"] += 1
+        self._qr_log(f"QRSTALE|{sym.id}|{sym.value}|{self._qr_real_date[sym]:%Y-%m-%d}|{today:%Y-%m-%d}"
+                     f"|{qty}|{price:.6f}|{fee:.2f}")
 
     def _qr_record(self, today):
         pv = float(self.portfolio.total_portfolio_value)
@@ -443,11 +584,15 @@ class QRAlgorithm(QCAlgorithm):
     def _qr_submit(self, sym, qty, tag):
         t = self.market_on_open_order(sym, qty, tag=tag)
         self._qr_sig[t.order_id] = tag.rsplit("sig=", 1)[-1]
+        self._qr_order_session[t.order_id] = self._qr_session
         self._qr_stats["orders"] += 1
         return 1
 
     def on_order_event(self, ev):
         s = self._qr_stats
+        if ev.status == OrderStatus.CANCELED and ev.symbol in self._qr_terminated:
+            s["cancelled_stale"] += 1              # cancelled by the D059 fallback itself: never re-issued
+            return
         if ev.status == OrderStatus.CANCELED and self._qr_sig.get(ev.order_id) is not None:
             # The harness never cancels its own orders, so every cancellation here is LEAN's: a ticker
             # change (LEAN rewrites the order tag; the event message is empty, D054) or a delisting.
@@ -508,6 +653,14 @@ class QRAlgorithm(QCAlgorithm):
 
     def on_end_of_algorithm(self):
         self.qr_on_end()
+        for t in self.transactions.get_open_order_tickets():
+            if self._qr_session - self._qr_order_session.get(t.order_id, self._qr_session) > STALE_ORDER_SESSIONS:
+                self._qr_stats["stale_open_orders"] += 1
+                self._qr_log(f"QRSTALEORDER|{t.order_id}|{t.symbol.value}|{t.quantity}")
+        for kv in self.portfolio:
+            last = self._qr_real_session.get(kv.key)
+            if kv.value.invested and last is not None and self._qr_session - last > STALE_SESSIONS:
+                self._qr_stats["stale_unresolved"] += 1
         s = dict(self._qr_stats)
         s["elig_mean"] = s["elig_sum"] / s["elig_days"] if s["elig_days"] else 0
         s["open_positions_at_end"] = sum(1 for kv in self.portfolio if kv.value.invested)

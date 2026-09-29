@@ -152,6 +152,8 @@ def _cancel_harness(monkeypatch, tags):
     algo._qr_stats = {k: 0 for k in ("cancelled_harness_sells", "cancelled_harness_buys",
                                      "cancelled_on_symbol_change", "cancelled_sells_delisting", "resubmitted_sells")}
     algo._qr_sig, algo._qr_resubmit, algo._qr_delist_warned, algo.logged = {}, {}, set(), []
+    algo._qr_terminated = set()
+    algo._qr_stats["cancelled_stale"] = 0
     algo._qr_log = algo.logged.append
     algo.time = __import__("datetime").datetime(2012, 6, 29)
     algo.transactions = types.SimpleNamespace(get_order_by_id=lambda oid: types.SimpleNamespace(tag=tags[oid]))

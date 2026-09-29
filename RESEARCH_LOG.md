@@ -357,3 +357,38 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **STOP.**
 
+## 2026-09-29: owner closes C01; D057 / D059 fixed; D063 found and fixed; CP4b STOP
+
+**Owner decision (D060).** The CP4 Validation result is final. C01 outcome: No Production Candidate Found. H005 is not promoted further.
+
+**D057 fix (D061).**
+
+- The universe excludes partnership and LLC units, funds and BDCs, royalty trusts and SPACs.
+- Morningstar's current-status flags are handled so acquired corporations stay eligible.
+- A dated override table corrects known cases.
+- The probe E956-02 shows 90 securities removed and none added.
+
+**D059 fix (D062).**
+
+- A holding with no real price bar for more than 10 sessions is closed at its last real close. The run is marked with a warning.
+- The run fails on a never-filling order or an unresolvable dead holding.
+- The canary E957-01 caught all 9 known dead securities correctly.
+
+**D063 (found in the audit).**
+
+- Price windows were deleted while a buy was pending, so S001's exits never saw those positions. Every H001 run had 7–15 of 15 slots stranded.
+- Fixed and unit-tested.
+- **H001's C01 verdict changes to INCONCLUSIVE.**
+
+**Regression.** E950-07 passes. E900-07 is unchanged. E901-06 passes, with 4 fallback exits as warnings. The EW IS Sharpe moves 0.915 → 0.921.
+
+**C01 audit** (`research/audits/C01_D057_D059_D063_audit.csv`):
+
+- Every run held some D057-excluded securities (1–20% of capital). Conclusions are unchanged for H002–H005.
+- D059 affected no in-sample run.
+- 62 annotations were appended; nothing was deleted.
+
+**D064.** The D063 code was committed under an E956-02 run label (queue auto-commit); this is documented.
+
+**STOP.** Waiting for the owner before any C02 design. No new hypotheses and no strategy backtests.
+

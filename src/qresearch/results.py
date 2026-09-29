@@ -118,6 +118,37 @@ def apply_forced_fees(fills: pd.DataFrame, qr_lines: list[str]) -> tuple[pd.Data
     return fills, applied
 
 
+def apply_stale_exits(fills: pd.DataFrame, qr_lines: list[str]) -> tuple[pd.DataFrame, int]:
+    """Mirror the harness's D059 fallback exits, which bypass LEAN's order system: each
+    QRSTALE|sid|ticker|last_real_date|exit_date|qty|price|fee line becomes a sell fill row at the last
+    real close (tag 'stale_exit|last_real=...', negative order id). Returns (fills, rows added)."""
+    rows = []
+    for ln in qr_lines:
+        if ln.startswith("QRSTALE|"):
+            _, sid, tic, last_real, day, qty, price, fee = ln.split("|")
+            rows.append(dict(order_id=-(len(rows) + 1), symbol_id=sid, symbol=tic, date=day,
+                             quantity=-float(qty), price=float(price), fee=float(fee),
+                             tag=f"stale_exit|last_real={last_real}"))
+    if not rows:
+        return fills, 0
+    add = pd.DataFrame(rows, columns=FILL_COLUMNS)
+    out = pd.concat([fills, add], ignore_index=True) if len(fills) else add
+    return out.sort_values(["date", "order_id"], kind="stable").reset_index(drop=True), len(rows)
+
+
+def late_open_orders(orders: list[dict], end: str, days: int = 10) -> list[tuple]:
+    """Downloaded orders still submitted / partially filled more than `days` calendar days before
+    the backtest end (D059: a sell that can never fill). Orders from the final days are normal."""
+    cutoff = (pd.Timestamp(end) - pd.Timedelta(days=days)).strftime("%Y-%m-%d")
+    out = []
+    for o in orders:
+        if o.get("status") in (1, 2) and str(o.get("time", ""))[:10] < cutoff:
+            sym = o.get("symbol")
+            sym = sym.get("value") if isinstance(sym, dict) else sym
+            out.append((o.get("id"), sym, str(o.get("time", ""))[:10], o.get("quantity")))
+    return out
+
+
 def lines_from_statistics(st: dict) -> list[str]:
     """Rebuild the harness's result lines from summary statistics (D046): the qr_summary JSON as a
     QRSUMMARY line, followed by the message chunks qr_msgs_00.. in order."""

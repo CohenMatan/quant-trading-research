@@ -1,0 +1,37 @@
+{
+ "experiment_id": "E900-07",
+ "kind": "benchmark",
+ "hypothesis_id": null,
+ "strategy_id": "B900",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/B900_spy_buyhold",
+ "split": "FULL",
+ "start": "2010-01-04",
+ "end": "2021-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order (owner's broker); slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 1.0,
+  "cash_buffer": 0.02,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "params": {
+  "weight": 0.98
+ },
+ "description": "Benchmark: SPY buy-and-hold, dividends reinvested monthly. Official 2010 scheme (D034): IS+VAL 2010-01-04..2021-12-31. Re-run of E900-04 under the D051 no-borrowing execution model. | D057/D059 harness re-verification (replaces E900-06)",
+ "lean_version_id": 18131,
+ "split_scheme": "2010",
+ "execution_model": "d051"
+}

@@ -69,7 +69,9 @@ def test_cycle_final_set_excludes_retired_and_robustness_runs(root):
     from qresearch import cycle
     final = cycle.cycle_experiments("C01")
     retired = cycle.retired_ids()
-    assert len(final) == 19 and not (set(final) & set(retired))
+    assert not (set(final) & set(retired))
+    # 19 corrected C01 variations at CP3; D063 (2026-09-29) marks the 5 final H001 runs bugged
+    assert len(final) == 14 and not any(e.startswith("E001") for e in final)
     assert all(json_cfg(root, e).get("execution_model") == "d051" for e in final)
     assert not any(json_cfg(root, e).get("robustness_of") for e in final)
 
