@@ -1,0 +1,52 @@
+QRC58|pick|2012-01-31|FIO
+QRC58|removed_pending_window_kept|2012-02-01|FIO
+QRC58|pick|2012-02-14|GNRC
+QRC58|removed_pending_window_kept|2012-02-15|GNRC
+QRC58|pick|2012-02-29|ZBRA
+QRC58|removed_pending_window_kept|2012-03-01|ZBRA
+QRC58|pick|2012-03-14|WBS
+QRC58|removed_pending_window_kept|2012-03-15|WBS
+QRC58|pick|2012-03-28|CKH
+QRC58|removed_pending_window_kept|2012-03-29|CKH
+QRWINDOW|CKH R735QTJ8XC9X|2012-03-29
+QRC58|pick|2012-04-12|WGL
+QRC58|removed_pending_window_kept|2012-04-13|WGL
+QRC58|pick|2012-04-26|ACTG
+QRC58|removed_pending_window_kept|2012-04-27|ACTG
+QRC58|pick|2012-05-10|WRE
+QRC58|removed_pending_window_kept|2012-05-11|WRE
+QRC58|pick|2012-05-24|RCII
+QRC58|removed_pending_window_kept|2012-05-25|RCII
+QRC58|pick|2012-06-08|LAMR
+QRC58|removed_pending_window_kept|2012-06-09|LAMR
+QRWINDOW|LAMR R735QTJ8XC9X|2012-06-11
+QRC58|pick|2012-06-22|SWX
+QRC58|removed_pending_window_kept|2012-06-23|SWX
+QRC58|pick|2012-07-09|BC
+QRC58|removed_pending_window_kept|2012-07-10|BC
+QRC58|pick|2012-07-23|THOR
+QRC58|removed_pending_window_kept|2012-07-24|THOR
+QRC58|pick|2012-08-06|MCY
+QRC58|removed_pending_window_kept|2012-08-07|MCY
+QRC58|pick|2012-08-20|DAR
+QRC58|removed_pending_window_kept|2012-08-21|DAR
+QRWINDOW|DAR R735QTJ8XC9X|2012-08-21
+QRC58|pick|2012-09-04|DPZ
+QRC58|removed_pending_window_kept|2012-09-05|DPZ
+QRC58|pick|2012-09-18|AWAY
+QRC58|removed_pending_window_kept|2012-09-19|AWAY
+QRC58|pick|2012-10-02|R
+QRC58|removed_pending_window_kept|2012-10-03|R
+QRC58|pick|2012-10-16|XLS
+QRC58|removed_pending_window_kept|2012-10-17|XLS
+QRC58|pick|2012-11-01|CPHD
+QRC58|removed_pending_window_kept|2012-11-02|CPHD
+QRWINDOW|CPHD RVQBJ24BV3VP|2012-11-02
+QRC58|pick|2012-11-15|CRUS
+QRC58|removed_pending_window_kept|2012-11-16|CRUS
+QRC58|pick|2012-11-30|STE
+QRC58|removed_pending_window_kept|2012-12-01|STE
+QRC58|pick|2012-12-14|BKE
+QRC58|removed_pending_window_kept|2012-12-15|BKE
+QRC58|pick|2012-12-31|ASPS
+QRC58|summary|{"exit_ages": [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3], "exits_filled": 23, "exits_submitted": 23, "filled": 23, "held_at_end": [], "no_window_at_close": 0, "picks": 24, "removed_while_pending": 23, "simulated_window_loss": 4, "window_at_fill": 23, "window_kept_on_removal": 23}
