@@ -6,7 +6,7 @@ from signals import leaders, pullback_entries, sma
 
 class MomentumPullback(QRAlgorithm):
     USES_UNIVERSE = True
-    WINDOW_BARS = 140
+    WINDOW_BARS = 210            # >= 201 bars: the SPY 200-day regime filter needs them (E004-04 bug)
 
     def qr_initialize(self):
         self.p = self.qr_params

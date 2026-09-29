@@ -2,8 +2,8 @@
 
 | Field | Value |
 |---|---|
-| Status | Counts and examples: **measured and estimated** (below). Direction of the return bias: **measurement E954-01 pending** (queued on QuantConnect; §5). |
-| Sources | E953-01 and E953-02 (size-proxy runs, which contain the needed counts); a hand classification of 720 sampled securities (`size_proxy/fp_ticker_classification.csv`, evaluation-only); E954-01 (pending) |
+| Status | **Complete.** Counts: E953 estimate (§2) and an independent X954 measurement (§2a). Direction and size of the return bias: measured by E954-01 (§5). |
+| Sources | E953-01/02 (size-proxy runs); a hand classification of 720 sampled securities (`size_proxy/fp_ticker_classification.csv`, evaluation-only); **E954-01** (X954, 2010–2021, LEAN 18131); tables in `survivorship_gap_X954_*.csv` |
 
 ## 1. The limitation in one paragraph
 
@@ -51,6 +51,31 @@ The gap shrinks over time because the missing securities are those that ended be
 - The reference counts come from the E953 runs, which used the pre-D030 share-class rule. The current (D030) universe is larger by roughly 130–240 names per month, so the percentages above are slight **over**-estimates.
 - The type classification is by hand from tickers. It is evaluation-only and never used by any rule.
 
+## 2a. Independent measurement (X954, E954-01), using the current D030 universe rule
+
+**Method.**
+
+- Every month, count the securities with **no** fundamentals that trade actively (price ≥ $5, ADV20 ≥ $5M, 63 days of history) and are not ETF-like return twins, by 63-day dollar-volume bucket.
+- Multiply by the share of **known** US common stocks in the same bucket that are ≥ $2B (measured the same month), then by the hand-classified US-common share.
+- The reference is the harness's eligible universe under the corrected D030 rule, which is larger than E953's. That makes the percentages lower.
+
+| Year | Reference names/month | Liquid no-fundamentals candidates | …likely ≥ $2B | US-common share | **Estimated missing ≥ $2B** | **Missing share** |
+|---|---|---|---|---|---|---|
+| 2010 | 765 | 447 | 229 | 55% | 126 | **14.1%** |
+| 2011 | 866 | 453 | 242 | 47% | 113 | **11.5%** |
+| 2012 | 885 | 393 | 222 | 57% | 126 | **12.4%** |
+| 2013 | 1,021 | 436 | 248 | 48% | 120 | **10.5%** |
+| 2014 | 1,165 | 461 | 263 | 40% | 105 | **8.3%** |
+| 2015 | 1,208 | 406 | 218 | 40% | 87 | **6.7%** |
+| 2016 | 1,168 | 345 | 177 | 30% | 53 | **4.4%** |
+| 2017 | 1,274 | 392 | 216 | 30% | 65 | **4.8%** |
+| 2018 | 1,347 | 401 | 220 | 23% | 51 | **3.7%** |
+| 2019 | 1,326 | 344 | 193 | 32% | 61 | **4.4%** |
+| 2020 | 1,312 | 337 | 168 | 27% | 45 | **3.3%** |
+| 2021 | 1,649 | 438 | 243 | 8% | 20 | **1.2%** |
+
+The two independent estimates (§2 and §2a) agree within about 2 percentage points in every year.
+
 ## 3. Examples (large US companies absent from the universe while they traded)
 
 | Company | Missing while trading (examples of years) | How it ended |
@@ -81,27 +106,58 @@ Fuller lists are in `docs/data/size_proxy/E953-0*_fp_nofund_sample.csv`, with th
 - E952 showed that the engine also handles their delistings. It force-sold Enron, WorldCom, Bear Stearns and Lehman positions at their final prices.
 - The gap is only in **eligibility**, which depends on MarketCap.
 
-## 5. Direction of the bias
+## 5. Direction and size of the bias (measured, E954-01)
 
-**Reasoning (before measurement).** The missing names are a mix of two kinds.
+**Method.**
 
-- **Later acquired or merged** (Time Warner, Heinz, Precision Castparts, SanDisk, DuPont, …).
-  - Before a deal is announced they are ordinary large caps.
-  - At announcement they jump by the takeover premium.
-  - Leaving them out removes these jumps from the universe, a **downward** bias on strategy and benchmark returns.
-- **Later distressed or bankrupt** (Sears, JCPenney, Chesapeake, Weatherford, Frontier, Hertz).
-  - They decline for years before ending.
-  - Leaving them out removes losers, an **upward (optimistic)** bias.
-  - This matters most for strategies that **buy weakness**: reversal and pullback strategies such as H001 and H004. The missing distressed names are exactly the "cheap after a drop" stocks such rules would have bought.
+- Every month from 2010 to 2017 (**IS years only**; no VAL or HOLDOUT returns were computed), form equal-weight groups of the no-fundamentals candidates, split by how each security later ended.
+- A security **ended** if its last price in the data is before 2021-11-01. It is **distress** if that last price was below $5, or at least 50% below its level 126 trading days earlier. Otherwise it is **other** (typically an acquisition, merger or reorganisation).
+- Measure each group's next-month return and compare it with the reference universe.
 
-**Measurement (pending, E954-01).**
+| Group (2010–2017) | Average names | Annualised mean return | Difference vs universe | t-stat |
+|---|---|---|---|---|
+| Reference universe (MarketCap ≥ $2B) | ~1,000 | **+11.3%** | — | — |
+| Later ended in **distress** | 72 | **−28.4%** | **−39.7 points** | **−6.4** |
+| Later ended **otherwise** (mergers etc.) | 121 | +7.5% | −3.8 points | −2.2 |
+| Still trading at the end (not interpretable: mostly ETFs and ADRs) | 224 | +2.8% | −8.4 points | −4.0 |
 
-- Equal-weight forward one-month returns of the missing candidates, split by how they later ended: distress-type vs other.
-- Compared with the reference universe, for **IS years 2010–2017 only**.
-- It runs on QuantConnect when the log allowance returns. This section will be updated with the numbers.
+Annual detail (per cent per year):
 
-**What every report must say until then.** Strategies are measured on a universe that lacks about 10% of eligible companies in IS (about 3% in VAL), mostly companies that later ended.
+| Year | Universe | Later distress | Later other |
+|---|---|---|---|
+| 2010 | 6.2 | −16.4 | 2.8 |
+| 2011 | 11.9 | −15.5 | 5.1 |
+| 2012 | 11.5 | −27.0 | 11.2 |
+| 2013 | 23.9 | 3.0 | 26.7 |
+| 2014 | 11.6 | −41.3 | 3.2 |
+| 2015 | −5.5 | −78.4 | −3.7 |
+| 2016 | 19.0 | −0.1 | 6.6 |
+| 2017 | 11.6 | −51.4 | 8.0 |
 
-- The net effect on returns is likely small at the universe level: in the size-proxy work, proxy-only names returned −0.7%/year versus the reference in 2010–14, not significant.
-- It may be **optimistic for strategies that buy losers**, and **conservative for strategies that hold large stable names**.
-- Gates are relative to an equal-weight benchmark built on the **same** universe, which cancels much of the effect.
+**Conclusion: the bias is OPTIMISTIC (upward).**
+
+- The missing companies underperformed the universe. The takeover premium of the later-acquired ones did not offset the losses of the later-distressed ones.
+- **Implied effect on the equal-weight universe return, IS 2010–2017:** each year's missing share × (universe return − the missing names' ended-group return).
+  - **+0.6 to +2.3 percentage points per year, average +1.4.**
+  - This is the amount by which our universe *overstates* a survivorship-complete ≥ $2B universe.
+  - Per-year detail: `survivorship_gap_X954_implied_bias.csv`.
+- **VAL 2018–2021:** the missing share is 1–4% and the distressed share falls to 0–7%, so the effect should be well under 1 point per year. It was not measured with returns, because VAL is out-of-sample.
+
+**Who is affected most.**
+
+- Strategies that **buy stocks after declines** (short-term reversal H001, pullbacks H004) are the most exposed. The missing distressed companies are exactly the falling stocks such rules would have bought.
+- Strategies that hold strong or stable names (momentum H002, 52-week high H003, low volatility H005) are less exposed.
+- **The gates partly cancel the bias.** Every gate compares a strategy with the equal-weight benchmark built on the same universe, so the benchmark is flattered by roughly the same +1.4 points.
+- The residual risk is that a dip-buying strategy is flattered *more* than the benchmark.
+
+**Caveats.**
+
+- **"Distress" is defined by the final price.** A few collapsed leveraged or volatility ETNs (e.g. XIV, UGAZ) fall into that group despite the twin filter (see `survivorship_gap_X954_examples.txt`). That makes the distress figure somewhat more negative than for companies alone.
+- **The US-common share comes from 60-name samples per year**, about ±6 points.
+- **The "still trading" group mixes ETFs, ADRs and some surviving companies without fundamentals**, and is not used in the bias estimate.
+
+## 6. What every research report must state
+
+- The universe omits about **5–14% of eligible companies in IS** (about 1–4% in VAL), mostly companies that later ended.
+- This flatters universe-level returns by about **+1.4 points per year in IS** (range 0.6–2.3), and **flatters dip-buying rules the most**.
+- Gates are relative to an equal-weight benchmark built on the same universe, which cancels much, but not all, of the effect.

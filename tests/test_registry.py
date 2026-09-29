@@ -52,3 +52,28 @@ def test_repo_registry_is_valid(root):
     rows = registry.read(root / "experiments" / "INDEX.csv")
     for r in rows:
         assert r["experiment_id"] and r["run_type"] in ("original", "reproduce", "annotation")
+
+
+def test_not_started_runs_are_not_trials(tmp_path):
+    p = tmp_path / "INDEX.csv"
+    for eid in ("E004-05", "E004-06"):
+        registry.append(dict(experiment_id=eid, run_type="original", kind="research", status="failed"), p)
+    registry.append(dict(experiment_id="E004-05", run_type="annotation", kind="research",
+                         status=registry.NOT_STARTED, notes="no spare nodes"), p)
+    assert registry.trial_count(p) == 1                 # E004-06 (started, failed) still counts
+    assert registry.not_started_ids(p) == {"E004-05"}
+    assert len(registry.read(p)) == 3                   # nothing deleted
+
+
+def test_cycle_final_set_excludes_retired_and_robustness_runs(root):
+    from qresearch import cycle
+    final = cycle.cycle_experiments("C01")
+    retired = cycle.retired_ids()
+    assert len(final) == 19 and not (set(final) & set(retired))
+    assert all(json_cfg(root, e).get("execution_model") == "d051" for e in final)
+    assert not any(json_cfg(root, e).get("robustness_of") for e in final)
+
+
+def json_cfg(root, eid):
+    import json
+    return json.loads((root / "experiments" / eid / "config.json").read_text())

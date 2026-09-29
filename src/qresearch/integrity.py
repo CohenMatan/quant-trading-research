@@ -10,12 +10,12 @@ import re
 import pandas as pd
 
 SIG = re.compile(r"\|sig=(\d{4}-\d{2}-\d{2})$")
-CASH_FAIL = -0.01    # cash below −1% of equity at a daily close counts as leverage
-CASH_WARN = 0.0
+CASH_FAIL = -1e-9    # D051: ANY negative cash at a daily close is borrowing and fails the run
 
 
 def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
-              commission_per_order: float | None = None, tradeable_dates: int | None = None) -> list[dict]:
+              commission_per_order: float | None = None, tradeable_dates: int | None = None,
+              expected_orders: int | None = None, downloaded_orders: int | None = None) -> list[dict]:
     out: list[dict] = []
 
     def add(name, ok, detail, level="fail"):
@@ -35,8 +35,8 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
         add("equity_matches_qc_tradeable_dates", int(tradeable_dates) == len(equity),
             f"chart rows {len(equity)} vs QuantConnect tradeableDates {tradeable_dates}")
     cash_frac = (equity["cash"] / equity["equity"]).min()
-    add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.4f}")
-    add("cash_never_negative", cash_frac >= CASH_WARN, f"min cash/equity {cash_frac:.4f}", level="warn")
+    neg_days = int((equity["cash"] < -1e-6).sum())
+    add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.6f}; {neg_days} closes with negative cash")
 
     # execution timing: every harness order fills strictly after its signal date
     bad = 0
@@ -56,11 +56,22 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     add("harness_no_short", summary.get("negative_qty", -1) == 0, f"negative_qty={summary.get('negative_qty')}")
     add("no_invalid_orders", summary.get("invalid", 0) == 0, f"invalid={summary.get('invalid')}", level="warn")
     add("summary_present", bool(summary), "QRSUMMARY log line parsed")
-    if commission_per_order is not None and len(fills):
-        per_order = fills.groupby("order_id")["fee"].sum()
-        wrong = per_order[(per_order - commission_per_order).abs() > 1e-9]
-        add("commission_fixed_per_order", wrong.empty,
-            f"{len(per_order)} executed orders; {len(wrong)} not charged exactly ${commission_per_order:g}")
+    # completeness of the downloaded orders/fills (E901-02 incident: an empty download looked "clean")
+    if expected_orders is not None:
+        add("orders_download_complete", downloaded_orders == expected_orders,
+            f"downloaded {downloaded_orders} orders vs QuantConnect Total Orders {expected_orders}")
+    if "fills" in summary:
+        add("fills_match_harness_count", len(fills) == int(summary["fills"]),
+            f"downloaded fill events {len(fills)} vs harness-recorded fills {summary['fills']}")
+    if commission_per_order is not None:
+        if len(fills):
+            per_order = fills.groupby("order_id")["fee"].sum()
+            wrong = per_order[(per_order - commission_per_order).abs() > 1e-9]
+            add("commission_fixed_per_order", wrong.empty,
+                f"{len(per_order)} executed orders; {len(wrong)} not charged exactly ${commission_per_order:g}")
+        else:   # never skip silently: no fills is only acceptable if the algorithm really had none
+            add("commission_fixed_per_order", int(summary.get("fills", 0)) == 0,
+                f"no fills downloaded; harness recorded {summary.get('fills')} fills")
     return out
 
 

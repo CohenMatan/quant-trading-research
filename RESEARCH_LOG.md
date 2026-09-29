@@ -189,3 +189,110 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 **Queued:** QuantConnect verification runs E950-03, E900-03 and E901-02. They wait for the daily log allowance, which was still exhausted at 05:23 UTC.
 
 **No strategy research started.** Report: `docs/checkpoints/CP2_amendment_2010_split.md`.
+
+---
+
+## 2026-09-28 — D039 commission verification: first attempt FAILED; fixed; re-verifying
+
+**Owner instructions applied:**
+
+- D046: no dependency on QuantConnect logs. Results travel as summary statistics, plus the Orders API and charts.
+- D048: Claude merges its own work into `main` (PR #6 merged).
+
+**Container restart.** It interrupted the queue during E901-02. That QuantConnect backtest (created 2026-09-28 10:38:49) finished but was never downloaded or registered. It was replaced by a fresh E901-02 run.
+
+**Verification results:**
+
+- E950-03 (canary): ✅ 2,412 executed orders, all $7.
+- E900-03 (SPY): ✅ 100 orders, all $7.
+- **E901-02 (equal-weight benchmark): ✗ FAIL.**
+  - Diagnosis (read-only re-download of the same backtest):
+    - The runner's first orders read returned **0 orders** (a timing race), so the commission check was silently skipped.
+    - The re-download showed 21,572 harness orders at exactly $7, but **465 LEAN delisting liquidations at $0**.
+    - 15 orders never executed ($0, correct).
+  - Fixes:
+    - D049: $7 is debited on forced liquidations.
+    - D050: downloads must match QuantConnect's order count; two new integrity checks; the commission check can no longer be skipped.
+  - Proven on QuantConnect by a scratch X952 run (Enron, WorldCom, Bear Stearns, Lehman: 4 of 4 debited; 11 of 11 orders at $7).
+
+**Research Cycle 1 NOT started.** All three verification runs are repeated on the final harness (E950-04, E900-04, E901-03). C01 starts only if all pass.
+
+---
+
+## 2026-09-28 — C01 first pass: incidents diagnosed; corrected re-runs prepared
+
+**First pass (19 IS runs, E001-01 … E005-03):**
+
+- 13 completed, one of them bugged (E004-04: zero trades).
+- 2 failed on the QuantConnect side (E002-03, E003-03).
+- 3 failed the no-leverage check (E004-01, E004-02, E005-02).
+
+**Diagnosis** (confirmed from order records; `research/cycles/C01_incidents.md`):
+
+- **Leverage cause A:** LEAN cancelled sells on ticker changes (MATX, MDLZ) while the buys they funded executed.
+- **Leverage cause B:** opening gaps of +5.5% to +12.9% on OPEC day (2016-11-30).
+- **E002-03:** a QuantConnect event-publication delay; the events later arrived complete.
+- **E003-03:** QuantConnect transient "Compile id not found".
+- **E004-04:** S004 kept too little history for the 200-day filter.
+
+**Fixes:**
+
+- D051: no-borrowing execution model (global).
+- D052: runner resilience; S004 window fix.
+- Tests: 173 pass.
+
+**Registry:** annotation rows mark each original as superseded, invalid, bugged or failed. No original row is changed.
+
+**Re-runs:**
+
+- Verification under D051: E950-05, E900-05, E901-04, fail-fast per run.
+- 19 corrected C01 variations (map in `research/cycles/C01_rerun_map.json`).
+
+**X954 (survivorship gap) analysis completed** (`docs/data/survivorship_gap_2010.md`):
+
+- Missing share 14% (2010) → 5% (2017) → 1% (2021).
+- Bias optimistic: about +1.4 points per year on the IS universe; dip-buyers most exposed.
+
+**Not started:** gates and robustness (they wait for the corrected runs), Checkpoint 3, and any VAL, WF or HOLDOUT run.
+
+## 2026-09-29: C01 completed in-sample; Checkpoint 3 STOP
+
+**Operational failures (2026-09-28, 16:01–17:12 UTC).** E003-04 and E003-05 were hit by QuantConnect orders-API errors. E003-06 stalled at 97% for 6 hours, which blocked 7 runs from starting.
+
+- The owner approved deleting E003-06; its metadata was preserved first.
+- Diagnosis: a platform outage plus a runner that did not retry. It was not S003-specific.
+- Fixed by D053 (retries, stall detection, node pre-flight, failure metadata). `not_started` runs are excluded from the trial count (owner).
+
+**Retries** E003-07..09, E004-09..12 and E005-07..09 were all integrity-clean.
+
+**D054.** The order audit showed the D051 sell re-issue never fired: LEAN rewrites the order tag and leaves the message empty. E004-09 and E005-08 are bugged.
+
+- Fixed.
+- Verification re-run as E950-06, E900-06 and E901-05, all passing.
+- All 19 variations re-run as E001-11..E005-12. 16 reproduced the previous runs exactly; the differences are explained (fixed exits; QuantConnect dividend revisions).
+
+**IS screen (final, comparable):**
+
+- H005 v1.0, v1.1 and v1.2 PASS, including 2× slippage.
+- All 16 H001–H004 variations fail.
+
+**Robustness of E005-12, pre-declared as E005-13..27:**
+
+- Sharpe 1.12 at 4× slippage;
+- plateau 10 of 10;
+- all IS thirds positive.
+
+**Multiple testing:**
+
+- PBO for H005 is 0.71, which fails the ≤ 0.30 Validation-gate item as defined.
+- DSR on IS alone is 0.80, with 76 trials.
+
+**Other findings:**
+
+- The no-borrowing rule leaves the monthly strategies about 30–50% in cash.
+- A spin-off distorts trade-level statistics (convention D018).
+
+**Checkpoint 3 written.** It recommends freezing S005 v1.2 as the only candidate, with owner decisions on PBO and cash drag.
+
+**STOP.** No VAL, WF or HOLDOUT run.
+

@@ -95,3 +95,101 @@ def test_slot_weight_at_100k_and_small_accounts(harness):
     w = sw(15, 60_000, PF)
     out = plan(entries(15, w=w), 60_000, 60_000, PF, 0.0, FEE)
     assert len(out["buys"]) == 11 and all(q * 50.0 >= 5000 for _, q in out["buys"])
+
+
+# ---------------------------------------------------------------- D051 no-borrowing execution model
+NB = dict(PF, buy_funding="settled_cash_only", gap_reserve=0.15)
+
+
+def test_same_batch_sell_proceeds_do_not_fund_buys(plan):
+    # E005-02 pattern: 15 held, 3 exits planned + 4 entries, only ~$3.5K cash on hand
+    items = [(f"X{i}", 0.0, 30.0, 300.0, 0.0, False) for i in range(3)] + entries(4, w=0.065)
+    out = plan(items, 142_000, 3_463, NB, 0.001, FEE, n_open_positions=15)
+    assert len(out["sells"]) == 3 and out["buys"] == []          # buys wait for the sells to execute
+    old = plan(items, 142_000, 3_463, dict(PF), 0.001, FEE, n_open_positions=15)
+    assert len(old["buys"]) == 3                                  # the old rule funded them from proceeds
+
+
+def test_exiting_position_keeps_its_slot_until_sold(plan):
+    items = [("OLD", 0.0, 20.0, 300.0, 0.0, False)] + entries(2, w=0.065)
+    out = plan(items, 100_000, 60_000, NB, 0.0, FEE, n_open_positions=15)
+    assert out["buys"] == [] and out["skipped_cap"] == 2
+
+
+def test_gap_reserve_covers_observed_opening_gaps(plan):
+    # E004-02 pattern (2016-11-30): cash ~$29.3K, equity ~$83.8K, 7 wanted entries of ~$5.6K
+    out = plan(entries(7, w=0.067, price=40.0), 83_768, 29_252, NB, 0.001, FEE, n_open_positions=8)
+    cost_at_close = sum(q * 40.0 for _, q in out["buys"])
+    fees = 7.0 * len(out["buys"])
+    worst_gap = 0.129                                            # largest measured gap that day (EGN)
+    assert 29_252 - cost_at_close * (1 + worst_gap) * 1.001 - fees >= 0
+    assert 29_252 - cost_at_close * 1.15 * 1.001 - fees >= 0.02 * 83_768 - 1e-6
+
+
+def test_incident_replay_never_negative(plan):
+    """Replay all three diagnosed incidents under D051: cash after the open stays >= 0 even if every
+    same-batch sell is cancelled and buys gap up by the largest measured gap."""
+    cases = [  # (cash, equity, n_open, exits, entries)
+        (1_793, 91_129, 15, 2, 2),       # E004-01 2012-06-29 (MATX sell cancelled)
+        (29_252, 83_768, 10, 2, 7),      # E004-02 2016-11-29 (OPEC gap)
+        (3_463, 142_555, 15, 4, 4),      # E005-02 2012-10-01 (MDLZ sell cancelled)
+    ]
+    for cash, pv, n_open, n_exit, n_entry in cases:
+        items = [(f"X{i}", 0.0, 50.0, 100.0, 0.0, False) for i in range(n_exit)] + entries(n_entry, w=0.065)
+        out = plan(items, pv, cash, NB, 0.001, FEE, n_open_positions=n_open)
+        spent = sum(q * 50.0 * 1.129 * 1.001 + 7.0 for _, q in out["buys"]) + 7.0 * len(out["sells"])
+        assert cash - spent >= 0, (cash, pv, out)
+        assert n_open + len(out["buys"]) <= 15
+
+
+# ---------------------------------------------------------------- D054: LEAN-cancelled harness sells
+def _cancel_harness(monkeypatch, tags):
+    import types
+    from test_commission import _load_harness
+    h = _load_harness(monkeypatch)
+    h.OrderStatus = types.SimpleNamespace(CANCELED="c", INVALID="i", FILLED="f", PARTIALLY_FILLED="p")
+    algo = object.__new__(h.QRAlgorithm)
+    algo._qr_stats = {k: 0 for k in ("cancelled_harness_sells", "cancelled_harness_buys",
+                                     "cancelled_on_symbol_change", "cancelled_sells_delisting", "resubmitted_sells")}
+    algo._qr_sig, algo._qr_resubmit, algo._qr_delist_warned, algo.logged = {}, {}, set(), []
+    algo._qr_log = algo.logged.append
+    algo.time = __import__("datetime").datetime(2012, 6, 29)
+    algo.transactions = types.SimpleNamespace(get_order_by_id=lambda oid: types.SimpleNamespace(tag=tags[oid]))
+    return algo
+
+
+class _Sym:
+    def __init__(self, value):
+        self.value = value
+
+
+def _ev(oid, sym, qty, message=None):
+    import types
+    return types.SimpleNamespace(status="c", order_id=oid, quantity=qty, message=message, symbol=_Sym(sym))
+
+
+def test_cancelled_sell_is_resubmitted_even_with_rewritten_tag_and_empty_message(monkeypatch):
+    # E004-09 order 1535 as QuantConnect recorded it: tag rewritten by LEAN, event message empty
+    algo = _cancel_harness(monkeypatch, {1535: "Open order cancelled on symbol changed event"})
+    algo._qr_sig[1535] = "2012-06-29"
+    ev = _ev(1535, "MATX", -125.0)
+    algo.on_order_event(ev)
+    assert algo._qr_resubmit == {ev.symbol: -125.0}
+    assert algo._qr_stats["cancelled_on_symbol_change"] == 1 and algo._qr_stats["cancelled_harness_sells"] == 1
+
+
+def test_cancelled_buy_and_delisting_sell_are_not_resubmitted(monkeypatch):
+    algo = _cancel_harness(monkeypatch, {4111: "Open order cancelled on symbol changed event", 355: "s001|sig=2010-08-27"})
+    algo._qr_sig.update({4111: "2016-05-31", 355: "2010-08-27"})
+    delisted = _ev(355, "SII", -168.0)
+    algo._qr_delist_warned.add(delisted.symbol)
+    algo.on_order_event(_ev(4111, "WCN", 213.0))
+    algo.on_order_event(delisted)
+    assert algo._qr_resubmit == {}
+    assert algo._qr_stats["cancelled_harness_buys"] == 1 and algo._qr_stats["cancelled_sells_delisting"] == 1
+
+
+def test_non_harness_cancellations_are_ignored(monkeypatch):
+    algo = _cancel_harness(monkeypatch, {9: "x"})
+    algo.on_order_event(_ev(9, "ABC", -10.0))
+    assert algo._qr_resubmit == {} and algo._qr_stats["cancelled_harness_sells"] == 0

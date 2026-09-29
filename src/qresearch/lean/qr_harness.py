@@ -50,6 +50,10 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
     buffer = float(pf.get("cash_buffer", 0.02))
     min_pos = float(pf.get("min_position_usd", 0.0))
     cap = int(pf.get("max_positions", 0)) or None
+    # D051: "settled_cash_only" = buys are funded only by cash already held; proceeds of sells in the
+    # same batch (and the slots they free) become usable only after those sells have executed.
+    settled_only = pf.get("buy_funding") == "settled_cash_only"
+    gap = float(pf.get("gap_reserve", 0.0))
     if min_pos > 0:
         by_size = int(pv * (1.0 - buffer) // min_pos)
         cap = by_size if cap is None else min(cap, by_size)
@@ -64,7 +68,8 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
         if w == 0:
             if have > 0:
                 sells.append((key, -int(have), price))
-                positions -= 1
+                if not settled_only:
+                    positions -= 1
             continue
         if price <= 0:
             continue
@@ -89,8 +94,12 @@ def plan_orders(items, pv, cash, pf, slip, fee_est, band=0.0, n_open_positions=0
             continue
         buys.append((key, target, price, True))
         positions += 1
-    cash_plan = cash + sum(-q * p * (1 - slip) - fee_est(-q) for _, q, p in sells) - buffer * pv
-    need = sum(q * p * (1 + slip) + fee_est(q) for _, q, p, _ in buys)
+    if settled_only:
+        # sells still pay their own fees out of cash; their proceeds are not counted
+        cash_plan = cash - sum(fee_est(-q) for _, q, _ in sells) - buffer * pv
+    else:
+        cash_plan = cash + sum(-q * p * (1 - slip) - fee_est(-q) for _, q, p in sells) - buffer * pv
+    need = sum(q * p * (1 + slip) * (1 + gap) + fee_est(q) for _, q, p, _ in buys)
     scale, scaled = 1.0, False
     if need > 0 and cash_plan < need:
         scale, scaled = max(0.0, cash_plan / need), True
@@ -162,9 +171,13 @@ class QRAlgorithm(QCAlgorithm):
         if per_order is None:
             self._qr_fee_model = InteractiveBrokersFeeModel()
             self._qr_fee_est = lambda q: max(1.0, 0.005 * q)
+            self._qr_forced_fee = 0.0          # legacy configs: behaviour unchanged
         else:
             self._qr_fee_model = FixedPerOrderFeeModel(per_order)
             self._qr_fee_est = lambda q, c=float(per_order): c
+            self._qr_forced_fee = float(per_order)
+        self._qr_forced_debited = set()
+        self._qr_resubmit = {}             # symbol -> quantity of a harness sell cancelled on a ticker change
         self.set_security_initializer(self._qr_init_security)
         self.universe_settings.resolution = Resolution.DAILY
         self.universe_settings.data_normalization_mode = DataNormalizationMode.RAW
@@ -188,7 +201,9 @@ class QRAlgorithm(QCAlgorithm):
             "timing_violations": 0, "max_fill_dev": 0.0, "buys_scaled": 0,
             "min_cash_frac": 1.0, "max_gross": 0.0, "elig_min": None, "elig_max": 0,
             "elig_sum": 0, "elig_days": 0, "max_subscribed": 0, "held_splits": 0,
-            "held_delistings": 0, "negative_qty": 0,
+            "held_delistings": 0, "negative_qty": 0, "forced_fee_debits": 0,
+            "cancelled_harness_sells": 0, "cancelled_harness_buys": 0, "cancelled_on_symbol_change": 0,
+            "cancelled_sells_delisting": 0, "resubmitted_sells": 0,
         }
         # QR* result lines are NOT written to QuantConnect logs (daily quota). They are collected here
         # and published at the end as summary statistics, read back via the backtests/read API (D046).
@@ -348,6 +363,7 @@ class QRAlgorithm(QCAlgorithm):
             return
         self._qr_in_close = True
         try:
+            self._qr_resubmit_cancelled()
             self.qr_on_close(data)
         finally:
             self._qr_in_close = False
@@ -408,6 +424,19 @@ class QRAlgorithm(QCAlgorithm):
             n += self._qr_submit(sym, q, f"{tag}|sig={sig}")
         return n
 
+    def _qr_resubmit_cancelled(self):
+        """Re-issue harness sells that LEAN cancelled on a ticker change (D051), capped at the held
+        quantity, as market-on-open orders from this close."""
+        sig = f"{self.time:%Y-%m-%d}"
+        for sym, q in list(self._qr_resubmit.items()):
+            del self._qr_resubmit[sym]
+            held = float(self.portfolio[sym].quantity)
+            pending = sum(float(t.quantity) for t in self.transactions.get_open_order_tickets(sym))
+            qty = -int(min(held + min(pending, 0.0), -q))
+            if qty < 0:
+                self._qr_submit(sym, qty, f"resub|sig={sig}")
+                self._qr_stats["resubmitted_sells"] += 1
+
     def qr_slot_weight(self, n_slots):
         return slot_weight(n_slots, float(self.portfolio.total_portfolio_value), self._qr_pf)
 
@@ -419,6 +448,24 @@ class QRAlgorithm(QCAlgorithm):
 
     def on_order_event(self, ev):
         s = self._qr_stats
+        if ev.status == OrderStatus.CANCELED and self._qr_sig.get(ev.order_id) is not None:
+            # The harness never cancels its own orders, so every cancellation here is LEAN's: a ticker
+            # change (LEAN rewrites the order tag; the event message is empty, D054) or a delisting.
+            order = self.transactions.get_order_by_id(ev.order_id)
+            reason = str(getattr(order, "tag", "") or "") + " " + str(ev.message or "")
+            if "symbol changed" in reason.lower():
+                s["cancelled_on_symbol_change"] += 1
+            if float(ev.quantity) >= 0:
+                s["cancelled_harness_buys"] += 1      # not re-issued: the strategy re-selects on later days
+                return
+            s["cancelled_harness_sells"] += 1
+            if ev.symbol in self._qr_delist_warned:
+                s["cancelled_sells_delisting"] += 1   # LEAN liquidates delisted holdings itself
+                return
+            # D051/D054: the exit must still happen; re-issue it at the next close
+            self._qr_resubmit[ev.symbol] = float(ev.quantity)
+            self._qr_log(f"QRRESUB|{ev.symbol.value}|{self.time:%Y-%m-%d}|{ev.quantity}")
+            return
         if ev.status == OrderStatus.INVALID:
             s["invalid"] += 1
             self._qr_log(f"QRINVALID|{ev.symbol.value}|{self.time:%Y-%m-%d}|{ev.message}")
@@ -429,6 +476,15 @@ class QRAlgorithm(QCAlgorithm):
         sig = self._qr_sig.get(ev.order_id)
         if sig is None:
             s["forced_fills"] += 1   # e.g. LEAN's delisting liquidation
+            # LEAN executes delisting liquidations with a zero fee, bypassing the fee model. Under the
+            # fixed per-order model every executed order costs the commission (D039/D049), so debit it
+            # here, once per order, and record it so the local accounting can mirror the debit.
+            if self._qr_forced_fee and float(ev.order_fee.value.amount) == 0 \
+                    and ev.order_id not in self._qr_forced_debited:
+                self._qr_forced_debited.add(ev.order_id)
+                self.portfolio.cash_book["USD"].add_amount(-self._qr_forced_fee)
+                s["forced_fee_debits"] = s.get("forced_fee_debits", 0) + 1
+                self._qr_log(f"QRFORCEDFEE|{ev.order_id}|{self._qr_forced_fee:.2f}")
         else:
             fill_day = self.time.strftime("%Y-%m-%d")
             if fill_day <= sig:

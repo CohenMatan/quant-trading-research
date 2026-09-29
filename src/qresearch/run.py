@@ -22,7 +22,7 @@ from pathlib import Path
 import pandas as pd
 
 from . import config, experiment, gitutil, holdout, integrity, metrics, registry, results, stats
-from .qc_client import QCClient
+from .qc_client import QCClient, QCError
 from .trades import build_trades
 
 
@@ -53,16 +53,34 @@ def code_hash(files: dict[str, str]) -> str:
     return h.hexdigest()
 
 
-def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
-    """Upload, compile, backtest, download. Returns raw payloads plus timings."""
+def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | None = None) -> dict:
+    """Upload, compile, backtest, download. Returns raw payloads plus timings.
+
+    `state` is filled in as the run progresses (project, backtest id, stage), so a run that fails
+    part-way still records which QuantConnect backtest it was (E003-06 incident)."""
+    state = {} if state is None else state
+    state["stage"] = "upload"
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
+    state["project_id"] = project
     client.sync_files(project, files)
     client.pin_lean_version(project, cfg["lean_version_id"])
+    state["stage"] = "compile"
     compile_id = client.compile(project)
+    state["stage"] = "start_backtest"
     t0 = time.time()
-    handle = client.start_backtest(project, compile_id, f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}")
+    name = f"{cfg['experiment_id']} {datetime.now(timezone.utc):%Y%m%dT%H%M%SZ}"
+    try:
+        handle = client.start_backtest(project, compile_id, name)
+    except QCError as exc:          # E003-03: QC transiently rejected a fresh compile id; recompile once
+        if "Compile id not found" not in str(exc):
+            raise
+        compile_id = client.compile(project)
+        handle = client.start_backtest(project, compile_id, name)
+    state.update(backtest_id=handle.backtest_id, backtest_name=name, stage="backtest",
+                 backtest_started_utc=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
     bt = client.wait_backtest(handle)
     runtime = time.time() - t0
+    state.update(stage="download_results", runtime_s=runtime)
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
                lean_version=client.lean_version(bt))
     if not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
@@ -73,9 +91,11 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
         out["error"] = (bt.get("error") or "") + "\n" + (bt.get("stacktrace") or "")
         out["logs"] = []            # the error and stack trace come from backtests/read, not logs
         return out
-    out["orders"] = client.read_orders(handle)
     stats_ = client.read_statistics(handle, must_have="qr_summary")
     out["backtest"]["statistics"] = stats_
+    # QuantConnect's own order count makes the orders download verifiably complete (E901-02 incident).
+    out["expected_orders"] = qc_total_orders(stats_)
+    out["orders"] = client.read_orders(handle, expected=out["expected_orders"])
     if "qr_summary" in stats_:
         out["logs"] = results.lines_from_statistics(stats_)      # D046: no QuantConnect logs needed
         out["result_channel"] = "summary_statistics"
@@ -93,6 +113,12 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient) -> dict:
     return out
 
 
+def qc_total_orders(stats_: dict) -> int | None:
+    """QuantConnect's "Total Orders" summary statistic as an int (None if absent)."""
+    v = str(stats_.get("Total Orders", "")).replace(",", "").strip()
+    return int(v) if v.isdigit() else None
+
+
 def load_benchmarks(cfg: dict) -> dict[str, pd.Series]:
     out = {}
     for eid in cfg.get("benchmarks", []):
@@ -108,10 +134,13 @@ def analyse(cfg: dict, raw: dict) -> dict:
     equity = results.parse_equity(raw["chart"])
     fills = results.parse_fills(raw["orders"])
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
+    fills, _ = results.apply_forced_fees(fills, qr_lines)          # D049: mirror harness fee debits
     trades = build_trades(fills, splits)
     checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
                                  commission_per_order=cfg["costs"].get("commission_per_order"),
-                                 tradeable_dates=raw["backtest"].get("tradeableDates"))
+                                 tradeable_dates=raw["backtest"].get("tradeableDates"),
+                                 expected_orders=raw.get("expected_orders"),
+                                 downloaded_orders=len({o.get("id") for o in raw["orders"]}))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),
@@ -219,6 +248,10 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         if not reproduce and cfg.get("split_scheme", "cp1") != config.CURRENT_SCHEME:
             raise SystemExit(f"{exp_id} uses split scheme {cfg.get('split_scheme', 'cp1')}; new runs must use "
                              f"{config.CURRENT_SCHEME} (D034). Old configs are history (reproduce only).")
+        if (not reproduce and cfg["kind"] in ("research", "sizing", "stress")
+                and cfg.get("execution_model", "d044") != config.CURRENT_EXECUTION_MODEL):
+            raise SystemExit(f"{exp_id}: new research runs must use execution_model "
+                             f"{config.CURRENT_EXECUTION_MODEL} (D051); older configs are history.")
         if reproduce and not prior:
             raise SystemExit(f"{exp_id} has no original run to reproduce.")
     if not cfg.get("lean_version_id"):
@@ -243,10 +276,18 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         return prov
 
     client = QCClient()
+    busy = client.running_backtests()
+    if busy:   # precondition, like the clean-tree check: nothing is started, nothing is registered
+        raise SystemExit(f"backtest node busy ({busy}); {cfg['experiment_id']} not started")
+    state: dict = {}
     try:
-        raw = execute(cfg, files, client)
-    except Exception as exc:  # the run still gets registered as failed
-        raw = dict(error=f"{type(exc).__name__}: {exc}", logs=[])
+        raw = execute(cfg, files, client, state)
+    except Exception as exc:  # the run still gets registered as failed, with how far it got
+        raw = dict(project_id=state.get("project_id", ""), backtest_id=state.get("backtest_id", ""),
+                   runtime_s=state.get("runtime_s", 0.0), logs=[],
+                   error=f"{type(exc).__name__}: {exc} [stage: {state.get('stage', 'setup')}]")
+    prov["failure_stage"] = state.get("stage", "") if "error" in raw else ""
+    prov["backtest_started_utc"] = state.get("backtest_started_utc", "")
     prov["result_channel"] = raw.get("result_channel", "")
     prov["build_commit"] = build_commit if not scratch else prov["git_commit"]
     prov.update(qc_project_id=raw.get("project_id", ""), qc_backtest_id=raw.get("backtest_id", ""),

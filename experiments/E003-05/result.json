@@ -1,0 +1,30 @@
+{
+ "error": "QCError: backtests/orders/read: giving up after retries (HTTP 500)",
+ "experiment_id": "E003-05",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "712dd0573553a4efec518022a55ca636478dac78",
+  "code_sha256": "68aa65f58e1bb3aab340dd19784ad5680a687dc64992ce001c6a936a964ad882",
+  "config_sha256": "2bd23d5539206cb788910ca07f996495dee44714eef505b210ad7f3075486cf8",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "712dd0573553a4efec518022a55ca636478dac78",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T16:46:24Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}

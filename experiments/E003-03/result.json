@@ -1,0 +1,30 @@
+{
+ "error": "QCError: backtests/create failed: ['Compile id not found: \"e21bc1f599178f218db8f17f26dfed35-b9d0a5f612900a3db5aad52b79f505ed\"']",
+ "experiment_id": "E003-03",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "782d3a6413dc2ea0fb319aa1f78d9f50187e177b",
+  "code_sha256": "86f7c95729f3dc384bc1d58f8c8cf2c1b80ad44d7e9f242481acff94c2dc3850",
+  "config_sha256": "55294bff0d057136ea89cb4c3e288d9513fd4712fc76751f3eb6c1b66aaee9cc",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "782d3a6413dc2ea0fb319aa1f78d9f50187e177b",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T13:18:06Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}

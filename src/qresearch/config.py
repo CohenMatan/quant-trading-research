@@ -55,7 +55,14 @@ COMMISSION_PER_ORDER = 7.0
 # "sizing" = account-size re-test of a finalist (D044): same logic and settings, different cash; not a trial.
 EXPERIMENT_KINDS = ("research", "benchmark", "infrastructure", "demo", "stress", "sizing")
 
-# Approved portfolio rules for research (D025/D041/D044).
-RESEARCH_PORTFOLIO = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000,
-                      "max_positions": 15}
+# Approved portfolio rules for research, by execution model. Configs name their model in
+# "execution_model"; configs without one are history under "d044" (valid for reproduction only).
+RESEARCH_PORTFOLIOS = {
+    "d044": {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15},
+    # D051 (no borrowing): buys only from cash already held; 15% reserve for opening gaps
+    "d051": {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15,
+             "buy_funding": "settled_cash_only", "gap_reserve": 0.15},
+}
+CURRENT_EXECUTION_MODEL = "d051"
+RESEARCH_PORTFOLIO = RESEARCH_PORTFOLIOS[CURRENT_EXECUTION_MODEL]
 RESEARCH_CASH = 100_000.0

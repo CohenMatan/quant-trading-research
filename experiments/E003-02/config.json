@@ -38,8 +38,8 @@
  "lean_version_id": 18131,
  "cycle": "C01",
  "benchmarks": [
-  "E900-03",
-  "E901-02"
+  "E900-04",
+  "E901-03"
  ],
  "description": "C01 H003 S003 v1.1 (pre-declared variation) on IS 2010-2017"
 }

@@ -1,0 +1,30 @@
+{
+ "error": "QCError: Backtest 3ec1dd8c0ae39b72ddf9acfa2350cbbd timed out",
+ "experiment_id": "E003-06",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "93b56c46cbe30d98e9b8dc6b37637ea8478065f2",
+  "code_sha256": "877479e1ededa0fb009a02de789da5ded7ba9f392806483103ea3ca41dbfdcdf",
+  "config_sha256": "56fd8640655c3d04242b36115cf00680899ffe936ec443ec5775085c66cc500f",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "93b56c46cbe30d98e9b8dc6b37637ea8478065f2",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "",
+  "qc_project_id": "",
+  "result_channel": "",
+  "run_utc": "2026-09-28T17:05:26Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}
