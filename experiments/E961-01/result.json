@@ -1,0 +1,293 @@
+{
+ "experiment_id": "E961-01",
+ "harness_messages": [
+  "QRC61|summary|{\"ca_events\": 21986, \"ca_factor_diff_max\": 0.0009910459635927849, \"ca_no_prev\": 0, \"event_days_checked\": 201, \"event_stock_days\": 203142, \"event_stock_days_identical_inputs\": 71202, \"month_max_dev_H_vs_R\": 0.0028156951950802597, \"rank_dates_h008\": 96, \"rank_dates_h011\": 96, \"ref_check_bars\": 1520000, \"ref_check_max_dev\": 3.2617326112875524e-07, \"ref_month_checks\": 16944, \"ref_month_max_dev\": 1.6475346682796919e-15, \"sessions\": 2013, \"strategies\": {\"H006 v1.0\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 190, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 2, \"max_rel_score_diff\": 0.7127578947485277, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 2899, \"signals_R\": 2899, \"top10_member_changes\": 0}, \"H006 v1.1\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 184, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 1, \"max_rel_score_diff\": 0.7350030679859092, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 2037, \"signals_R\": 2037, \"top10_member_changes\": 0}, \"H006 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 194, \"evaluations\": 203142, \"examples\": [[\"2013-03-08\", \"CMP\", 0.0023656177259535013, null]], \"max_rank_shift\": 8, \"max_rel_score_diff\": 0.7127578947485277, \"only_H\": 1, \"only_R\": 0, \"signals_H\": 11974, \"signals_R\": 11973, \"top10_member_changes\": 0}, \"H007 v1.0\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 140, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0454545454545455, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 567, \"signals_R\": 567, \"top10_member_changes\": 0}, \"H007 v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 20, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 8.66840027480132e-05, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 31, \"signals_R\": 31, \"top10_member_changes\": 0}, \"H007 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 144, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0454545454545455, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 627, \"signals_R\": 627, \"top10_member_changes\": 0}, \"H008 v1.0\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"JEF\", \"LVS\", \"MWV\", \"EMN\", \"OIS\", \"JAH\", \"ACF\", \"JBL\", \"MET\", \"BRCD\"], [\"ASH\", \"LVS\", \"AMP\", \"EMN\", \"MWV\", \"OIS\", \"JAH\", \"WHR\", \"ACF\", \"MET\"]], [\"2010-03-01\", \"top20\", [\"JEF\", \"LVS\", \"MWV\", \"EMN\", \"OIS\", \"JAH\", \"ACF\", \"JBL\", \"MET\", \"BRCD\", \"AMB\", \"WSM\", \"LTD\", \"CE\", \"HLF\", \"KMX\", \"WDC\", \"AMP\", \"CMA\", \"M\"], [\"ASH\", \"LVS\", \"AMP\", \"EMN\", \"MWV\", \"OIS\", \"JAH\", \"WHR\", \"ACF\", \"MET\", \"BRCD\", \"AMB\", \"WSM\", \"LZ\", \"CE\", \"COF\", \"KMX\", \"WDC\", \"SCCO\", \"CMA\"]], [\"2010-04-01\", \"top10\", [\"ISRG\", \"ACF\", \"ODP\", \"BEAV\", \"DRE\", \"CTV\", \"LEN\", \"HBI\", \"CNK\", \"GNW\"], [\"ACF\", \"AXP\", \"ISRG\", \"ASH\", \"BUCY\", \"GCI\", \"ODP\", \"DOW\", \"VMED\", \"XEC\"]], [\"2010-04-01\", \"top20\", [\"ISRG\", \"ACF\", \"ODP\", \"BEAV\", \"DRE\", \"CTV\", \"LEN\", \"HBI\", \"CNK\", \"GNW\", \"FITB\", \"GCI\", \"OII\", \"CE\", \"WAB\", \"EFX\", \"CNQR\", \"SIRO\", \"CYH\", \"HLF\"], [\"ACF\", \"AXP\", \"ISRG\", \"ASH\", \"BUCY\", \"GCI\", \"ODP\", \"DOW\", \"VMED\", \"XEC\", \"BEAV\", \"HBI\", \"AGO\", \"CTV\", \"UAUA\", \"ATLS\", \"SIRO\", \"JLL\", \"GXP\", \"CVX\"]], [\"2010-05-03\", \"top10\", [\"GRA\", \"LVS\", \"RHI\", \"AMD\", \"PCAR\", \"MCK\", \"MAR\", \"FLR\", \"IPG\", \"ASH\"], [\"GRA\", \"BUCY\", \"SLG\", \"LVS\", \"DDR\", \"TMK\", \"AMD\", \"COF\", \"CXW\", \"LBTYA\"]], [\"2010-05-03\", \"top20\", [\"GRA\", \"LVS\", \"RHI\", \"AMD\", \"PCAR\", \"MCK\", \"MAR\", \"FLR\", \"IPG\", \"ASH\", \"BUCY\", \"WLL\", \"IRM\", \"GCI\", \"IP\", \"EMR\", \"ATI\", \"CECO\", \"UHS\", \"BA\"], [\"GRA\", \"BUCY\", \"SLG\", \"LVS\", \"DDR\", \"TMK\", \"AMD\", \"COF\", \"CXW\", \"LBTYA\", \"OKE\", \"HPQ\", \"DEI\", \"TYC\", \"LPNT\", \"CAH\", \"CMI\", \"BRKB\", \"THG\", \"RGC\"]], [\"2010-06-01\", \"top10\", [\"GPN\", \"OSK\", \"DLB\", \"CLF\", \"MCRS\", \"ISRG\", \"MFE\", \"COST\", \"L\", \"THOR\"], [\"UFS\", \"OSK\", \"MCK\", \"UAUA\", \"KSS\", \"CA\", \"AMT\", \"CCI\", \"MFE\", \"NYX\"]], [\"2010-06-01\", \"top20\", [\"GPN\", \"OSK\", \"DLB\", \"CLF\", \"MCRS\", \"ISRG\", \"MFE\", \"COST\", \"L\", \"THOR\", \"SCCO\", \"TEL\", \"EL\", \"PEG\", \"ADSK\", \"PTEN\", \"AME\", \"CNX\", \"UFS\", \"RDC\"], [\"UFS\", \"OSK\", \"MCK\", \"UAUA\", \"KSS\", \"CA\", \"AMT\", \"CCI\", \"MFE\", \"NYX\", \"VMW\", \"REG\", \"MKL\", \"TPX\", \"ATI\", \"BLK\", \"SM\", \"BK\", \"SNA\", \"VAL\"]], [\"2010-07-01\", \"top10\", [\"LVS\", \"SLG\", \"PDE\", \"RRD\", \"EXPE\", \"MON\", \"WSM\", \"FRO\", \"REG\", \"CLF\"], [\"GCI\", \"LVS\", \"RRD\", \"NYX\", \"HAR\", \"MWV\", \"AFG\", \"TRW\", \"STT\", \"ED\"]], [\"2010-07-01\", \"top20\", [\"LVS\", \"SLG\", \"PDE\", \"RRD\", \"EXPE\", \"MON\", \"WSM\", \"FRO\", \"REG\", \"CLF\", \"MET\", \"DISCK\", \"WCRX\", \"LTD\", \"GD\", \"FRX\", \"L\", \"ACM\", \"MGM\", \"SRCL\"], [\"GCI\", \"LVS\", \"RRD\", \"NYX\", \"HAR\", \"MWV\", \"AFG\", \"TRW\", \"STT\", \"ED\", \"UPS\", \"LMT\", \"DWA\", \"VIAB\", \"NATI\", \"RYN\", \"HUBB\", \"NWL\", \"PPL\", \"CLR\"]], [\"2010-08-02\", \"top10\", [\"CLF\", \"IOC\", \"NOC\", \"OFC\", \"NCR\", \"UAUA\", \"MU\", \"SUN\", \"UTX\", \"PX\"], [\"KG\", \"IOC\", \"UAUA\", \"SRCL\", \"ITC\", \"PWR\", \"GNW\", \"CMI\", \"LPS\", \"AWI\"]], [\"2010-08-02\", \"top20\", [\"CLF\", \"IOC\", \"NOC\", \"OFC\", \"NCR\", \"UAUA\", \"MU\", \"SUN\", \"UTX\", \"PX\", \"APD\", \"CYT\", \"SBAC\", \"R\", \"TWTC\", \"VMED\", \"LPS\", \"ABT\", \"SEE\", \"ANSS\"], [\"KG\", \"IOC\", \"UAUA\", \"SRCL\", \"ITC\", \"PWR\", \"GNW\", \"CMI\", \"LPS\", \"AWI\", \"CBG\", \"TRV\", \"PEG\", \"O\", \"CLF\", \"MMC\", \"TSN\", \"OIS\", \"MFA\", \"BAX\"]], [\"2010-09-01\", \"top10\", [\"UAUA\", \"IOC\", \"PHM\", \"VMW\", \"NRG\", \"NVDA\", \"TIBX\", \"EXC\", \"HUN\", \"ALR\"], [\"UAUA\", \"CLF\", \"BRO\", \"WDC\", \"IOC\", \"FLR\", \"TROW\", \"RRD\", \"AFG\", \"PRGO\"]], [\"2010-09-01\", \"top20\", [\"UAUA\", \"IOC\", \"PHM\", \"VMW\", \"NRG\", \"NVDA\", \"TIBX\", \"EXC\", \"HUN\", \"ALR\", \"PCS\", \"DHI\", \"PAYX\", \"DLM\", \"KBR\", \"AMTD\", \"CNA\", \"NYX\", \"PG\", \"SCG\"], [\"UAUA\", \"CLF\", \"BRO\", \"WDC\", \"IOC\", \"FLR\", \"TROW\", \"RRD\", \"AFG\", \"PRGO\", \"PHM\", \"MHS\", \"RYN\", \"GAS\", \"CPN\", \"JPM\", \"BRKA\", \"ABT\", \"PKI\", \"JWN\"]], [\"2010-10-01\", \"top10\", [\"UAUA\", \"EP\", \"CAH\", \"WTR\", \"WEC\", \"EQR\", \"LMT\", \"ALL\", \"HUN\", \"ALB\"], [\"UAUA\", \"CHRW\", \"CVX\", \"ESRX\", \"RTN\", \"JEC\", \"MUR\", \"AXS\", \"DPS\", \"TFSL\"]]], \"max_rank_shift\": 1232, \"max_rel_score_diff\": 0.10738787035399329, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 94309, \"signals_R\": 94309, \"top10_member_changes\": 804, \"top20_member_changes\": 1640}, \"H008 v1.1\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"IRM\", \"BA\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"ITC\"], [\"IRM\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"CMP\", \"KEY\"]], [\"2010-03-01\", \"top20\", [\"IRM\", \"BA\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"ITC\", \"WDR\", \"BEN\", \"AMT\", \"RE\", \"DKS\", \"NATI\", \"NST\", \"CLI\", \"ILMN\", \"CF\"], [\"IRM\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"CMP\", \"KEY\", \"WDR\", \"BEN\", \"AMT\", \"HOG\", \"RE\", \"DKS\", \"SNI\", \"FAST\", \"NST\", \"CLI\"]], [\"2010-04-01\", \"top10\", [\"HOG\", \"PDE\", \"KMB\", \"MU\", \"DTE\", \"ORI\", \"MWV\", \"BRKA\", \"CMCSA\", \"PG\"], [\"BMRN\", \"CFR\", \"DNB\", \"HP\", \"DGX\", \"HUN\", \"STR\", \"ACN\", \"AGO\", \"KEX\"]], [\"2010-04-01\", \"top20\", [\"HOG\", \"PDE\", \"KMB\", \"MU\", \"DTE\", \"ORI\", \"MWV\", \"BRKA\", \"CMCSA\", \"PG\", \"PLCM\", \"ITW\", \"ETN\", \"ATVI\", \"SPW\", \"MAS\", \"HOLX\", \"LNC\", \"USB\", \"DLM\"], [\"BMRN\", \"CFR\", \"DNB\", \"HP\", \"DGX\", \"HUN\", \"STR\", \"ACN\", \"AGO\", \"KEX\", \"ROVI\", \"NCR\", \"SII\", \"AON\", \"CXW\", \"VLO\", \"AXS\", \"PLL\", \"HD\", \"MCY\"]], [\"2010-05-03\", \"top10\", [\"SEE\", \"AFG\", \"LMT\", \"UTHR\", \"KSU\", \"ABT\", \"HP\", \"SAI\", \"DGX\", \"TEX\"], [\"PCL\", \"SEIC\", \"AGN\", \"TRV\", \"CRL\", \"NBR\", \"MON\", \"UNM\", \"F\", \"AWK\"]], [\"2010-05-03\", \"top20\", [\"SEE\", \"AFG\", \"LMT\", \"UTHR\", \"KSU\", \"ABT\", \"HP\", \"SAI\", \"DGX\", \"TEX\", \"UHS\", \"SMG\", \"GRA\", \"AVGO\", \"VMC\", \"HPQ\", \"ADP\", \"HRB\", \"CTL\", \"X\"], [\"PCL\", \"SEIC\", \"AGN\", \"TRV\", \"CRL\", \"NBR\", \"MON\", \"UNM\", \"F\", \"AWK\", \"VSEA\", \"EIX\", \"DDR\", \"BDX\", \"EWBC\", \"ED\", \"MXIM\", \"BIIB\", \"WM\", \"JPM\"]], [\"2010-06-01\", \"top10\", [\"XOM\", \"MAR\", \"OKE\", \"TE\", \"UAUA\", \"COP\", \"HUM\", \"HD\", \"OC\", \"CF\"], [\"AFL\", \"UAUA\", \"NOV\", \"WHR\", \"BBY\", \"NBL\", \"BEAV\", \"DTV\", \"DLB\", \"HRB\"]], [\"2010-06-01\", \"top20\", [\"XOM\", \"MAR\", \"OKE\", \"TE\", \"UAUA\", \"COP\", \"HUM\", \"HD\", \"OC\", \"CF\", \"SE\", \"MRVL\", \"PLL\", \"NWS\", \"ORLY\", \"WYNN\", \"PXD\", \"GPS\", \"CTXS\", \"OFC\"], [\"AFL\", \"UAUA\", \"NOV\", \"WHR\", \"BBY\", \"NBL\", \"BEAV\", \"DTV\", \"DLB\", \"HRB\", \"TROW\", \"CNP\", \"SVU\", \"RIG\", \"NVDA\", \"DISCK\", \"XEC\", \"BG\", \"BEN\", \"DISCA\"]], [\"2010-07-01\", \"top10\", [\"RIG\", \"COV\", \"MELI\", \"BUCY\", \"EOG\", \"AXP\", \"ICE\", \"DISCK\", \"CBG\", \"CIT\"], [\"TIBX\", \"TROW\", \"GNW\", \"MON\", \"DELL\", \"R\", \"PM\", \"TFX\", \"PCAR\", \"EW\"]], [\"2010-07-01\", \"top20\", [\"RIG\", \"COV\", \"MELI\", \"BUCY\", \"EOG\", \"AXP\", \"ICE\", \"DISCK\", \"CBG\", \"CIT\", \"CCI\", \"CVD\", \"ECL\", \"EIX\", \"USB\", \"COL\", \"BAC\", \"WMB\", \"NUE\", \"AZO\"], [\"TIBX\", \"TROW\", \"GNW\", \"MON\", \"DELL\", \"R\", \"PM\", \"TFX\", \"PCAR\", \"EW\", \"SVU\", \"BAX\", \"BOH\", \"CRM\", \"AAPL\", \"IBM\", \"TRMB\", \"CME\", \"WLL\", \"PCLN\"]], [\"2010-08-02\", \"top10\", [\"NOC\", \"FO\", \"ABC\", \"CXO\", \"FNFG\", \"BRCM\", \"CCI\", \"SWKS\", \"WAT\", \"AEP\"], [\"ARG\", \"LOW\", \"TEL\", \"LO\", \"BMY\", \"OHI\", \"BEC\", \"DNB\", \"WSM\", \"PX\"]], [\"2010-08-02\", \"top20\", [\"NOC\", \"FO\", \"ABC\", \"CXO\", \"FNFG\", \"BRCM\", \"CCI\", \"SWKS\", \"WAT\", \"AEP\", \"MSCI\", \"OMC\", \"NLY\", \"HD\", \"HP\", \"ITT\", \"ASH\", \"BBY\", \"TRH\", \"CNX\"], [\"ARG\", \"LOW\", \"TEL\", \"LO\", \"BMY\", \"OHI\", \"BEC\", \"DNB\", \"WSM\", \"PX\", \"SPR\", \"TSN\", \"JOE\", \"RJF\", \"EIX\", \"CVA\", \"ABC\", \"LRCX\", \"DTV\", \"ITT\"]], [\"2010-09-01\", \"top10\", [\"HD\", \"BIIB\", \"INTU\", \"SBAC\", \"MLM\", \"MCD\", \"LNCR\", \"WHR\", \"SWK\", \"MCHP\"], [\"SEIC\", \"CHKP\", \"CAG\", \"MCO\", \"JPM\", \"SM\", \"BBY\", \"PFE\", \"CPN\", \"GAS\"]], [\"2010-09-01\", \"top20\", [\"HD\", \"BIIB\", \"INTU\", \"SBAC\", \"MLM\", \"MCD\", \"LNCR\", \"WHR\", \"SWK\", \"MCHP\", \"WAB\", \"AGCO\", \"TRV\", \"CVD\", \"EQR\", \"COH\", \"HST\", \"QCOM\", \"CF\", \"TOL\"], [\"SEIC\", \"CHKP\", \"CAG\", \"MCO\", \"JPM\", \"SM\", \"BBY\", \"PFE\", \"CPN\", \"GAS\", \"NUE\", \"KMT\", \"PNC\", \"FCX\", \"LIFE\", \"ABT\", \"PLL\", \"XLNX\", \"EQT\", \"SUN\"]], [\"2010-10-01\", \"top10\", [\"PDCO\", \"L\", \"HRS\", \"MLM\", \"LLY\", \"NFG\", \"ADP\", \"PCAR\", \"CLR\", \"CVD\"], [\"HD\", \"ACM\", \"LM\", \"AMAT\", \"BOH\", \"LZ\", \"AMP\", \"TE\", \"UFS\", \"AAPL\"]]], \"max_rank_shift\": 1259, \"max_rel_score_diff\": 0.025624761269876867, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 95437, \"signals_R\": 95437, \"top10_member_changes\": 884, \"top20_member_changes\": 1748}, \"H008 v1.2\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"LVS\", \"JEF\", \"BRCD\", \"JBL\", \"LNC\", \"ACF\", \"JAH\", \"GCI\", \"MET\", \"WSM\"], [\"LVS\", \"ASH\", \"BRCD\", \"COF\", \"LNC\", \"ACF\", \"JAH\", \"AMP\", \"GCI\", \"MET\"]], [\"2010-03-01\", \"top20\", [\"LVS\", \"JEF\", \"BRCD\", \"JBL\", \"LNC\", \"ACF\", \"JAH\", \"GCI\", \"MET\", \"WSM\", \"AMB\", \"OIS\", \"BKD\", \"MWV\", \"CE\", \"EMN\", \"KMX\", \"LTD\", \"CMA\", \"HLF\"], [\"LVS\", \"ASH\", \"BRCD\", \"COF\", \"LNC\", \"ACF\", \"JAH\", \"AMP\", \"GCI\", \"MET\", \"WHR\", \"WSM\", \"AMB\", \"OIS\", \"BKD\", \"KEY\", \"MWV\", \"CE\", \"EMN\", \"KMX\"]], [\"2010-04-01\", \"top10\", [\"ODP\", \"ISRG\", \"ACF\", \"FITB\", \"BEAV\", \"GNW\", \"DRE\", \"GCI\", \"LEN\", \"CTV\"], [\"GCI\", \"AXP\", \"ODP\", \"ACF\", \"ISRG\", \"ASH\", \"UAUA\", \"BUCY\", \"AGO\", \"DOW\"]], [\"2010-04-01\", \"top20\", [\"ODP\", \"ISRG\", \"ACF\", \"FITB\", \"BEAV\", \"GNW\", \"DRE\", \"GCI\", \"LEN\", \"CTV\", \"HBI\", \"DDR\", \"BKD\", \"CNK\", \"CYH\", \"STI\", \"GMCR\", \"HST\", \"SIRO\", \"CE\"], [\"GCI\", \"AXP\", \"ODP\", \"ACF\", \"ISRG\", \"ASH\", \"UAUA\", \"BUCY\", \"AGO\", \"DOW\", \"BEAV\", \"LVS\", \"CTV\", \"VMED\", \"AKS\", \"HBI\", \"BKD\", \"GNW\", \"LEN\", \"KIM\"]], [\"2010-05-03\", \"top10\", [\"GRA\", \"LVS\", \"AMD\", \"GCI\", \"TIVO\", \"IPG\", \"EWBC\", \"BUCY\", \"RHI\", \"ASH\"], [\"GRA\", \"LVS\", \"BUCY\", \"SLG\", \"DDR\", \"AMD\", \"COF\", \"UAUA\", \"AIG\", \"CXW\"]], [\"2010-05-03\", \"top20\", [\"GRA\", \"LVS\", \"AMD\", \"GCI\", \"TIVO\", \"IPG\", \"EWBC\", \"BUCY\", \"RHI\", \"ASH\", \"USG\", \"MAR\", \"CECO\", \"PCAR\", \"ATI\", \"WLL\", \"MCK\", \"F\", \"FLR\", \"PCS\"], [\"GRA\", \"LVS\", \"BUCY\", \"SLG\", \"DDR\", \"AMD\", \"COF\", \"UAUA\", \"AIG\", \"CXW\", \"EWBC\", \"AWI\", \"JCG\", \"LNC\", \"TMK\", \"LBTYA\", \"ARG\", \"ZION\", \"BEAV\", \"DEI\"]], [\"2010-06-01\", \"top10\", [\"MKL\", \"OSK\", \"CLF\", \"UFS\", \"ISRG\", \"THOR\", \"THC\", \"UAUA\", \"GPN\", \"DLB\"], [\"MKL\", \"UFS\", \"UAUA\", \"OSK\", \"AIG\", \"BKD\", \"TPX\", \"ATI\", \"HIG\", \"ISRG\"]], [\"2010-06-01\", \"top20\", [\"MKL\", \"OSK\", \"CLF\", \"UFS\", \"ISRG\", \"THOR\", \"THC\", \"UAUA\", \"GPN\", \"DLB\", \"DDR\", \"MAC\", \"SII\", \"CNX\", \"SCCO\", \"PTEN\", \"JDSU\", \"MCRS\", \"MFE\", \"ADSK\"], [\"MKL\", \"UFS\", \"UAUA\", \"OSK\", \"AIG\", \"BKD\", \"TPX\", \"ATI\", \"HIG\", \"ISRG\", \"VMW\", \"GCI\", \"REG\", \"SM\", \"MCK\", \"LVS\", \"WFMI\", \"LYV\", \"MFE\", \"CCI\"]], [\"2010-07-01\", \"top10\", [\"LVS\", \"SLG\", \"MGM\", \"WSM\", \"CLF\", \"HAR\", \"WCRX\", \"FRO\", \"PDE\", \"EXPE\"], [\"GCI\", \"LVS\", \"HAR\", \"TRW\", \"OSK\", \"RRD\", \"NYX\", \"PCLN\", \"CLR\", \"DWA\"]], [\"2010-07-01\", \"top20\", [\"LVS\", \"SLG\", \"MGM\", \"WSM\", \"CLF\", \"HAR\", \"WCRX\", \"FRO\", \"PDE\", \"EXPE\", \"PXP\", \"RRD\", \"REG\", \"MON\", \"LTD\", \"TRW\", \"TPX\", \"DAL\", \"AKAM\", \"BAC\"], [\"GCI\", \"LVS\", \"HAR\", \"TRW\", \"OSK\", \"RRD\", \"NYX\", \"PCLN\", \"CLR\", \"DWA\", \"MU\", \"WYNN\", \"MGM\", \"STT\", \"TPX\", \"MCO\", \"M\", \"HBAN\", \"MWV\", \"NFX\"]], [\"2010-08-02\", \"top10\", [\"IOC\", \"CLF\", \"UAUA\", \"MKL\", \"NCR\", \"MU\", \"AIG\", \"SUN\", \"THOR\", \"AMD\"], [\"MKL\", \"UAUA\", \"IOC\", \"KG\", \"GNW\", \"AWI\", \"CLF\", \"PWR\", \"CBG\", \"LVS\"]], [\"2010-08-02\", \"top20\", [\"IOC\", \"CLF\", \"UAUA\", \"MKL\", \"NCR\", \"MU\", \"AIG\", \"SUN\", \"THOR\", \"AMD\", \"OFC\", \"TWTC\", \"GCI\", \"NBR\", \"VMED\", \"SPR\", \"CYT\", \"GNW\", \"R\", \"SLG\"], [\"MKL\", \"UAUA\", \"IOC\", \"KG\", \"GNW\", \"AWI\", \"CLF\", \"PWR\", \"CBG\", \"LVS\", \"CMI\", \"ZION\", \"ME\", \"HAR\", \"FSLR\", \"CNX\", \"LPS\", \"OIS\", \"EWBC\", \"JOYG\"]], [\"2010-09-01\", \"top10\", [\"MKL\", \"UAUA\", \"IOC\", \"PHM\", \"PCS\", \"NVDA\", \"VMW\", \"HUN\", \"DHI\", \"AIG\"], [\"MKL\", \"UAUA\", \"CLF\", \"IOC\", \"WDC\", \"PHM\", \"AMLN\", \"APC\", \"PRGO\", \"FLR\"]], [\"2010-09-01\", \"top20\", [\"MKL\", \"UAUA\", \"IOC\", \"PHM\", \"PCS\", \"NVDA\", \"VMW\", \"HUN\", \"DHI\", \"AIG\", \"ILMN\", \"NRG\", \"ALR\", \"TIBX\", \"KBR\", \"GNW\", \"HNT\", \"PXP\", \"MOT\", \"DLM\"], [\"MKL\", \"UAUA\", \"CLF\", \"IOC\", \"WDC\", \"PHM\", \"AMLN\", \"APC\", \"PRGO\", \"FLR\", \"WFMI\", \"TROW\", \"AMD\", \"TOL\", \"ILMN\", \"BRO\", \"FSLR\", \"CPN\", \"LTD\", \"WHR\"]], [\"2010-10-01\", \"top10\", [\"UAUA\", \"EWBC\", \"AMD\", \"EP\", \"HUN\", \"PCLN\", \"DV\", \"JBL\", \"NEM\", \"MAC\"], [\"UAUA\", \"ESRX\", \"PCLN\", \"JEC\", \"ME\", \"DV\", \"NCR\", \"RDC\", \"IOC\", \"DPS\"]]], \"max_rank_shift\": 1242, \"max_rel_score_diff\": 0.013211653993039363, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 94309, \"signals_R\": 94309, \"top10_member_changes\": 661, \"top20_member_changes\": 1428}, \"H009 v1.0/v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 197, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0005082046192704277, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 3444, \"signals_R\": 3444, \"top10_member_changes\": 0}, \"H009 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 198, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0004898278057245743, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 1783, \"signals_R\": 1783, \"top10_member_changes\": 0}, \"H010 v1.0/v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 130, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0013658486312617707, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 319, \"signals_R\": 319, \"top10_member_changes\": 0}, \"H010 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 161, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0013658486312617707, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 588, \"signals_R\": 588, \"top10_member_changes\": 0}, \"H011 v1.0\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [], \"max_rank_shift\": 8, \"max_rel_score_diff\": 4.19258210310031, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 84976, \"signals_R\": 84976, \"top10_member_changes\": 0}, \"H011 v1.1\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [], \"max_rank_shift\": 4, \"max_rel_score_diff\": 5.84627968429517, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 74491, \"signals_R\": 74491, \"top10_member_changes\": 0}, \"H011 v1.2\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [[\"2014-01-31\", \"PBCT\", null, 0.029124005790251584], [\"2014-09-30\", \"HIW\", 0.014565696631244717, null], [\"2015-02-27\", \"PPL\", null, 0.012463363230014225], [\"2015-04-30\", \"GXP\", null, -0.030946317451804296]], \"max_rank_shift\": 7, \"max_rel_score_diff\": 4.19258210310031, \"only_H\": 1, \"only_R\": 3, \"signals_H\": 61309, \"signals_R\": 61311, \"top10_member_changes\": 0}, \"exit H006 chandelier (held 20)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2013-07-17\", \"MORN\"], [\"2013-12-06\", \"WRI\"], [\"2014-07-29\", \"OGE\"], [\"2017-11-10\", \"PBCT\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 3, \"only_R\": 1, \"signals_H\": 37017, \"signals_R\": 37015, \"top10_member_changes\": 0}, \"exit H007 SMA20 (held 10)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2011-03-11\", \"AEE\"], [\"2011-09-15\", \"NWS\"], [\"2015-05-29\", \"BKH\"], [\"2016-07-08\", \"CDK\"], [\"2017-06-07\", \"CMI\"], [\"2017-08-31\", \"MMM\"], [\"2017-09-15\", \"GPK\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 2, \"only_R\": 5, \"signals_H\": 81222, \"signals_R\": 81225, \"top10_member_changes\": 0}, \"exit H010 gap-low (held 5)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2010-03-02\", \"O\"], [\"2011-01-12\", \"MDT\"], [\"2014-09-24\", \"XRAY\"], [\"2015-06-12\", \"LUK\"], [\"2016-03-15\", \"VLY\"], [\"2017-11-27\", \"KEY\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 5, \"only_R\": 1, \"signals_H\": 64865, \"signals_R\": 64861, \"top10_member_changes\": 0}}, \"window_max_dev_H_vs_R\": 0.001555038156060347}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 2013,
+  "elig_days": 2013,
+  "elig_max": 1297,
+  "elig_mean": 1007.0129160457029,
+  "elig_min": 0,
+  "elig_sum": 2027117,
+  "experiment_id": "E961-01",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 19999,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 1298,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "5fb100b473bb41dd376c69b7e78acd3301b0444de85abf4c26f9023e6c4d5cc5",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "2013 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2010-01-04..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 2013 vs algorithm days 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 2013 vs QuantConnect tradeableDates 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 2013,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2010-01-04",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-09-29T18:27:01Z",
+  "build_commit": "bac8c647a02e0623797672d4db93a0730c719e72",
+  "code_sha256": "209244dd35dc6118425cac87865d81829fcc0fcff170b42f367750f42f7c8913",
+  "config_sha256": "93aa71f0351f032bbfc0a588a7b255bbabda48583cb824e09db16d3bc62a7fa1",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py",
+   "sig006.py",
+   "sig007.py",
+   "sig008.py",
+   "sig009.py",
+   "sig010.py",
+   "sig011.py"
+  ],
+  "git_commit": "bac8c647a02e0623797672d4db93a0730c719e72",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "dd8046225faf854275e9ab877cdef6cb",
+  "qc_project_id": 37144136,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-09-29T18:26:42Z",
+  "runtime_s": 2234.6558849811554
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.822",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.122",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "QRC61|summary|{\"ca_events\": 21986, \"ca_factor_diff_max\": 0.0009910459635927849, \"ca_no_prev\": 0, \"event_days_checked\": 201, \"event_stock_days\": 203142, \"event_stock_days_identical_inputs\": 71202, \"month_max_dev_H_vs_R\": 0.0028156951950802597, \"rank_dates_h008\": 96, \"rank_dates_h011\": 96, \"ref_check_bars\": 1520000, \"ref_check_max_dev\": 3.2617326112875524e-07, \"ref_month_checks\": 16944, \"ref_month_max_dev\": 1.6475346682796919e-15, \"sessions\": 2013, \"strategies\": {\"H006 v1.0\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 190, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 2, \"max_rel_score_diff\": 0.7127578947485277, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 2899, \"signals_R\": 2899, \"top10_member_changes\": 0}, \"H006 v1.1\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 184, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 1, \"max_rel_score_diff\": 0.7350030679859092, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 2037, \"signals_R\": 2037, \"top10_member_changes\": 0}, \"H006 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 1, \"days_with_signal\": 194, \"evaluations\": 203142, \"examples\": [[\"2013-03-08\", \"CMP\", 0.0023656177259535013, null]], \"max_rank_shift\": 8, \"max_rel_score_diff\": 0.7127578947485277, \"only_H\": 1, \"only_R\": 0, \"signals_H\": 11974, \"signals_R\": 11973, \"top10_member_changes\": 0}, \"H007 v1.0\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 140, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0454545454545455, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 567, \"signals_R\": 567, \"top10_member_changes\": 0}, \"H007 v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 20, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 8.66840027480132e-05, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 31, \"signals_R\": 31, \"top10_member_changes\": 0}, \"H007 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 144, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0454545454545455, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 627, \"signals_R\": 627, \"top10_member_changes\": 0}, \"H008 v1.0\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"JEF\", \"LVS\", \"MWV\", \"EMN\", \"OIS\", \"JAH\", \"ACF\", \"JBL\", \"MET\", \"BRCD\"], [\"ASH\", \"LVS\", \"AMP\", \"EMN\", \"MWV\", \"OIS\", \"JAH\", \"WHR\", \"ACF\", \"MET\"]], [\"2010-03-01\", \"top20\", [\"JEF\", \"LVS\", \"MWV\", \"EMN\", \"OIS\", \"JAH\", \"ACF\", \"JBL\", \"MET\", \"BRCD\", \"AMB\", \"WSM\", \"LTD\", \"CE\", \"HLF\", \"KMX\", \"WDC\", \"AMP\", \"CMA\", \"M\"], [\"ASH\", \"LVS\", \"AMP\", \"EMN\", \"MWV\", \"OIS\", \"JAH\", \"WHR\", \"ACF\", \"MET\", \"BRCD\", \"AMB\", \"WSM\", \"LZ\", \"CE\", \"COF\", \"KMX\", \"WDC\", \"SCCO\", \"CMA\"]], [\"2010-04-01\", \"top10\", [\"ISRG\", \"ACF\", \"ODP\", \"BEAV\", \"DRE\", \"CTV\", \"LEN\", \"HBI\", \"CNK\", \"GNW\"], [\"ACF\", \"AXP\", \"ISRG\", \"ASH\", \"BUCY\", \"GCI\", \"ODP\", \"DOW\", \"VMED\", \"XEC\"]], [\"2010-04-01\", \"top20\", [\"ISRG\", \"ACF\", \"ODP\", \"BEAV\", \"DRE\", \"CTV\", \"LEN\", \"HBI\", \"CNK\", \"GNW\", \"FITB\", \"GCI\", \"OII\", \"CE\", \"WAB\", \"EFX\", \"CNQR\", \"SIRO\", \"CYH\", \"HLF\"], [\"ACF\", \"AXP\", \"ISRG\", \"ASH\", \"BUCY\", \"GCI\", \"ODP\", \"DOW\", \"VMED\", \"XEC\", \"BEAV\", \"HBI\", \"AGO\", \"CTV\", \"UAUA\", \"ATLS\", \"SIRO\", \"JLL\", \"GXP\", \"CVX\"]], [\"2010-05-03\", \"top10\", [\"GRA\", \"LVS\", \"RHI\", \"AMD\", \"PCAR\", \"MCK\", \"MAR\", \"FLR\", \"IPG\", \"ASH\"], [\"GRA\", \"BUCY\", \"SLG\", \"LVS\", \"DDR\", \"TMK\", \"AMD\", \"COF\", \"CXW\", \"LBTYA\"]], [\"2010-05-03\", \"top20\", [\"GRA\", \"LVS\", \"RHI\", \"AMD\", \"PCAR\", \"MCK\", \"MAR\", \"FLR\", \"IPG\", \"ASH\", \"BUCY\", \"WLL\", \"IRM\", \"GCI\", \"IP\", \"EMR\", \"ATI\", \"CECO\", \"UHS\", \"BA\"], [\"GRA\", \"BUCY\", \"SLG\", \"LVS\", \"DDR\", \"TMK\", \"AMD\", \"COF\", \"CXW\", \"LBTYA\", \"OKE\", \"HPQ\", \"DEI\", \"TYC\", \"LPNT\", \"CAH\", \"CMI\", \"BRKB\", \"THG\", \"RGC\"]], [\"2010-06-01\", \"top10\", [\"GPN\", \"OSK\", \"DLB\", \"CLF\", \"MCRS\", \"ISRG\", \"MFE\", \"COST\", \"L\", \"THOR\"], [\"UFS\", \"OSK\", \"MCK\", \"UAUA\", \"KSS\", \"CA\", \"AMT\", \"CCI\", \"MFE\", \"NYX\"]], [\"2010-06-01\", \"top20\", [\"GPN\", \"OSK\", \"DLB\", \"CLF\", \"MCRS\", \"ISRG\", \"MFE\", \"COST\", \"L\", \"THOR\", \"SCCO\", \"TEL\", \"EL\", \"PEG\", \"ADSK\", \"PTEN\", \"AME\", \"CNX\", \"UFS\", \"RDC\"], [\"UFS\", \"OSK\", \"MCK\", \"UAUA\", \"KSS\", \"CA\", \"AMT\", \"CCI\", \"MFE\", \"NYX\", \"VMW\", \"REG\", \"MKL\", \"TPX\", \"ATI\", \"BLK\", \"SM\", \"BK\", \"SNA\", \"VAL\"]], [\"2010-07-01\", \"top10\", [\"LVS\", \"SLG\", \"PDE\", \"RRD\", \"EXPE\", \"MON\", \"WSM\", \"FRO\", \"REG\", \"CLF\"], [\"GCI\", \"LVS\", \"RRD\", \"NYX\", \"HAR\", \"MWV\", \"AFG\", \"TRW\", \"STT\", \"ED\"]], [\"2010-07-01\", \"top20\", [\"LVS\", \"SLG\", \"PDE\", \"RRD\", \"EXPE\", \"MON\", \"WSM\", \"FRO\", \"REG\", \"CLF\", \"MET\", \"DISCK\", \"WCRX\", \"LTD\", \"GD\", \"FRX\", \"L\", \"ACM\", \"MGM\", \"SRCL\"], [\"GCI\", \"LVS\", \"RRD\", \"NYX\", \"HAR\", \"MWV\", \"AFG\", \"TRW\", \"STT\", \"ED\", \"UPS\", \"LMT\", \"DWA\", \"VIAB\", \"NATI\", \"RYN\", \"HUBB\", \"NWL\", \"PPL\", \"CLR\"]], [\"2010-08-02\", \"top10\", [\"CLF\", \"IOC\", \"NOC\", \"OFC\", \"NCR\", \"UAUA\", \"MU\", \"SUN\", \"UTX\", \"PX\"], [\"KG\", \"IOC\", \"UAUA\", \"SRCL\", \"ITC\", \"PWR\", \"GNW\", \"CMI\", \"LPS\", \"AWI\"]], [\"2010-08-02\", \"top20\", [\"CLF\", \"IOC\", \"NOC\", \"OFC\", \"NCR\", \"UAUA\", \"MU\", \"SUN\", \"UTX\", \"PX\", \"APD\", \"CYT\", \"SBAC\", \"R\", \"TWTC\", \"VMED\", \"LPS\", \"ABT\", \"SEE\", \"ANSS\"], [\"KG\", \"IOC\", \"UAUA\", \"SRCL\", \"ITC\", \"PWR\", \"GNW\", \"CMI\", \"LPS\", \"AWI\", \"CBG\", \"TRV\", \"PEG\", \"O\", \"CLF\", \"MMC\", \"TSN\", \"OIS\", \"MFA\", \"BAX\"]], [\"2010-09-01\", \"top10\", [\"UAUA\", \"IOC\", \"PHM\", \"VMW\", \"NRG\", \"NVDA\", \"TIBX\", \"EXC\", \"HUN\", \"ALR\"], [\"UAUA\", \"CLF\", \"BRO\", \"WDC\", \"IOC\", \"FLR\", \"TROW\", \"RRD\", \"AFG\", \"PRGO\"]], [\"2010-09-01\", \"top20\", [\"UAUA\", \"IOC\", \"PHM\", \"VMW\", \"NRG\", \"NVDA\", \"TIBX\", \"EXC\", \"HUN\", \"ALR\", \"PCS\", \"DHI\", \"PAYX\", \"DLM\", \"KBR\", \"AMTD\", \"CNA\", \"NYX\", \"PG\", \"SCG\"], [\"UAUA\", \"CLF\", \"BRO\", \"WDC\", \"IOC\", \"FLR\", \"TROW\", \"RRD\", \"AFG\", \"PRGO\", \"PHM\", \"MHS\", \"RYN\", \"GAS\", \"CPN\", \"JPM\", \"BRKA\", \"ABT\", \"PKI\", \"JWN\"]], [\"2010-10-01\", \"top10\", [\"UAUA\", \"EP\", \"CAH\", \"WTR\", \"WEC\", \"EQR\", \"LMT\", \"ALL\", \"HUN\", \"ALB\"], [\"UAUA\", \"CHRW\", \"CVX\", \"ESRX\", \"RTN\", \"JEC\", \"MUR\", \"AXS\", \"DPS\", \"TFSL\"]]], \"max_rank_shift\": 1232, \"max_rel_score_diff\": 0.10738787035399329, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 94309, \"signals_R\": 94309, \"top10_member_changes\": 804, \"top20_member_changes\": 1640}, \"H008 v1.1\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"IRM\", \"BA\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"ITC\"], [\"IRM\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"CMP\", \"KEY\"]], [\"2010-03-01\", \"top20\", [\"IRM\", \"BA\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"ITC\", \"WDR\", \"BEN\", \"AMT\", \"RE\", \"DKS\", \"NATI\", \"NST\", \"CLI\", \"ILMN\", \"CF\"], [\"IRM\", \"RDC\", \"TEX\", \"MMC\", \"PRU\", \"FOSL\", \"FRX\", \"FCX\", \"CMP\", \"KEY\", \"WDR\", \"BEN\", \"AMT\", \"HOG\", \"RE\", \"DKS\", \"SNI\", \"FAST\", \"NST\", \"CLI\"]], [\"2010-04-01\", \"top10\", [\"HOG\", \"PDE\", \"KMB\", \"MU\", \"DTE\", \"ORI\", \"MWV\", \"BRKA\", \"CMCSA\", \"PG\"], [\"BMRN\", \"CFR\", \"DNB\", \"HP\", \"DGX\", \"HUN\", \"STR\", \"ACN\", \"AGO\", \"KEX\"]], [\"2010-04-01\", \"top20\", [\"HOG\", \"PDE\", \"KMB\", \"MU\", \"DTE\", \"ORI\", \"MWV\", \"BRKA\", \"CMCSA\", \"PG\", \"PLCM\", \"ITW\", \"ETN\", \"ATVI\", \"SPW\", \"MAS\", \"HOLX\", \"LNC\", \"USB\", \"DLM\"], [\"BMRN\", \"CFR\", \"DNB\", \"HP\", \"DGX\", \"HUN\", \"STR\", \"ACN\", \"AGO\", \"KEX\", \"ROVI\", \"NCR\", \"SII\", \"AON\", \"CXW\", \"VLO\", \"AXS\", \"PLL\", \"HD\", \"MCY\"]], [\"2010-05-03\", \"top10\", [\"SEE\", \"AFG\", \"LMT\", \"UTHR\", \"KSU\", \"ABT\", \"HP\", \"SAI\", \"DGX\", \"TEX\"], [\"PCL\", \"SEIC\", \"AGN\", \"TRV\", \"CRL\", \"NBR\", \"MON\", \"UNM\", \"F\", \"AWK\"]], [\"2010-05-03\", \"top20\", [\"SEE\", \"AFG\", \"LMT\", \"UTHR\", \"KSU\", \"ABT\", \"HP\", \"SAI\", \"DGX\", \"TEX\", \"UHS\", \"SMG\", \"GRA\", \"AVGO\", \"VMC\", \"HPQ\", \"ADP\", \"HRB\", \"CTL\", \"X\"], [\"PCL\", \"SEIC\", \"AGN\", \"TRV\", \"CRL\", \"NBR\", \"MON\", \"UNM\", \"F\", \"AWK\", \"VSEA\", \"EIX\", \"DDR\", \"BDX\", \"EWBC\", \"ED\", \"MXIM\", \"BIIB\", \"WM\", \"JPM\"]], [\"2010-06-01\", \"top10\", [\"XOM\", \"MAR\", \"OKE\", \"TE\", \"UAUA\", \"COP\", \"HUM\", \"HD\", \"OC\", \"CF\"], [\"AFL\", \"UAUA\", \"NOV\", \"WHR\", \"BBY\", \"NBL\", \"BEAV\", \"DTV\", \"DLB\", \"HRB\"]], [\"2010-06-01\", \"top20\", [\"XOM\", \"MAR\", \"OKE\", \"TE\", \"UAUA\", \"COP\", \"HUM\", \"HD\", \"OC\", \"CF\", \"SE\", \"MRVL\", \"PLL\", \"NWS\", \"ORLY\", \"WYNN\", \"PXD\", \"GPS\", \"CTXS\", \"OFC\"], [\"AFL\", \"UAUA\", \"NOV\", \"WHR\", \"BBY\", \"NBL\", \"BEAV\", \"DTV\", \"DLB\", \"HRB\", \"TROW\", \"CNP\", \"SVU\", \"RIG\", \"NVDA\", \"DISCK\", \"XEC\", \"BG\", \"BEN\", \"DISCA\"]], [\"2010-07-01\", \"top10\", [\"RIG\", \"COV\", \"MELI\", \"BUCY\", \"EOG\", \"AXP\", \"ICE\", \"DISCK\", \"CBG\", \"CIT\"], [\"TIBX\", \"TROW\", \"GNW\", \"MON\", \"DELL\", \"R\", \"PM\", \"TFX\", \"PCAR\", \"EW\"]], [\"2010-07-01\", \"top20\", [\"RIG\", \"COV\", \"MELI\", \"BUCY\", \"EOG\", \"AXP\", \"ICE\", \"DISCK\", \"CBG\", \"CIT\", \"CCI\", \"CVD\", \"ECL\", \"EIX\", \"USB\", \"COL\", \"BAC\", \"WMB\", \"NUE\", \"AZO\"], [\"TIBX\", \"TROW\", \"GNW\", \"MON\", \"DELL\", \"R\", \"PM\", \"TFX\", \"PCAR\", \"EW\", \"SVU\", \"BAX\", \"BOH\", \"CRM\", \"AAPL\", \"IBM\", \"TRMB\", \"CME\", \"WLL\", \"PCLN\"]], [\"2010-08-02\", \"top10\", [\"NOC\", \"FO\", \"ABC\", \"CXO\", \"FNFG\", \"BRCM\", \"CCI\", \"SWKS\", \"WAT\", \"AEP\"], [\"ARG\", \"LOW\", \"TEL\", \"LO\", \"BMY\", \"OHI\", \"BEC\", \"DNB\", \"WSM\", \"PX\"]], [\"2010-08-02\", \"top20\", [\"NOC\", \"FO\", \"ABC\", \"CXO\", \"FNFG\", \"BRCM\", \"CCI\", \"SWKS\", \"WAT\", \"AEP\", \"MSCI\", \"OMC\", \"NLY\", \"HD\", \"HP\", \"ITT\", \"ASH\", \"BBY\", \"TRH\", \"CNX\"], [\"ARG\", \"LOW\", \"TEL\", \"LO\", \"BMY\", \"OHI\", \"BEC\", \"DNB\", \"WSM\", \"PX\", \"SPR\", \"TSN\", \"JOE\", \"RJF\", \"EIX\", \"CVA\", \"ABC\", \"LRCX\", \"DTV\", \"ITT\"]], [\"2010-09-01\", \"top10\", [\"HD\", \"BIIB\", \"INTU\", \"SBAC\", \"MLM\", \"MCD\", \"LNCR\", \"WHR\", \"SWK\", \"MCHP\"], [\"SEIC\", \"CHKP\", \"CAG\", \"MCO\", \"JPM\", \"SM\", \"BBY\", \"PFE\", \"CPN\", \"GAS\"]], [\"2010-09-01\", \"top20\", [\"HD\", \"BIIB\", \"INTU\", \"SBAC\", \"MLM\", \"MCD\", \"LNCR\", \"WHR\", \"SWK\", \"MCHP\", \"WAB\", \"AGCO\", \"TRV\", \"CVD\", \"EQR\", \"COH\", \"HST\", \"QCOM\", \"CF\", \"TOL\"], [\"SEIC\", \"CHKP\", \"CAG\", \"MCO\", \"JPM\", \"SM\", \"BBY\", \"PFE\", \"CPN\", \"GAS\", \"NUE\", \"KMT\", \"PNC\", \"FCX\", \"LIFE\", \"ABT\", \"PLL\", \"XLNX\", \"EQT\", \"SUN\"]], [\"2010-10-01\", \"top10\", [\"PDCO\", \"L\", \"HRS\", \"MLM\", \"LLY\", \"NFG\", \"ADP\", \"PCAR\", \"CLR\", \"CVD\"], [\"HD\", \"ACM\", \"LM\", \"AMAT\", \"BOH\", \"LZ\", \"AMP\", \"TE\", \"UFS\", \"AAPL\"]]], \"max_rank_shift\": 1259, \"max_rel_score_diff\": 0.025624761269876867, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 95437, \"signals_R\": 95437, \"top10_member_changes\": 884, \"top20_member_changes\": 1748}, \"H008 v1.2\": {\"days\": 96, \"days_top10_list_differs\": 94, \"days_top20_list_differs\": 94, \"days_with_signal\": 95, \"evaluations\": 96335, \"examples\": [[\"2010-03-01\", \"top10\", [\"LVS\", \"JEF\", \"BRCD\", \"JBL\", \"LNC\", \"ACF\", \"JAH\", \"GCI\", \"MET\", \"WSM\"], [\"LVS\", \"ASH\", \"BRCD\", \"COF\", \"LNC\", \"ACF\", \"JAH\", \"AMP\", \"GCI\", \"MET\"]], [\"2010-03-01\", \"top20\", [\"LVS\", \"JEF\", \"BRCD\", \"JBL\", \"LNC\", \"ACF\", \"JAH\", \"GCI\", \"MET\", \"WSM\", \"AMB\", \"OIS\", \"BKD\", \"MWV\", \"CE\", \"EMN\", \"KMX\", \"LTD\", \"CMA\", \"HLF\"], [\"LVS\", \"ASH\", \"BRCD\", \"COF\", \"LNC\", \"ACF\", \"JAH\", \"AMP\", \"GCI\", \"MET\", \"WHR\", \"WSM\", \"AMB\", \"OIS\", \"BKD\", \"KEY\", \"MWV\", \"CE\", \"EMN\", \"KMX\"]], [\"2010-04-01\", \"top10\", [\"ODP\", \"ISRG\", \"ACF\", \"FITB\", \"BEAV\", \"GNW\", \"DRE\", \"GCI\", \"LEN\", \"CTV\"], [\"GCI\", \"AXP\", \"ODP\", \"ACF\", \"ISRG\", \"ASH\", \"UAUA\", \"BUCY\", \"AGO\", \"DOW\"]], [\"2010-04-01\", \"top20\", [\"ODP\", \"ISRG\", \"ACF\", \"FITB\", \"BEAV\", \"GNW\", \"DRE\", \"GCI\", \"LEN\", \"CTV\", \"HBI\", \"DDR\", \"BKD\", \"CNK\", \"CYH\", \"STI\", \"GMCR\", \"HST\", \"SIRO\", \"CE\"], [\"GCI\", \"AXP\", \"ODP\", \"ACF\", \"ISRG\", \"ASH\", \"UAUA\", \"BUCY\", \"AGO\", \"DOW\", \"BEAV\", \"LVS\", \"CTV\", \"VMED\", \"AKS\", \"HBI\", \"BKD\", \"GNW\", \"LEN\", \"KIM\"]], [\"2010-05-03\", \"top10\", [\"GRA\", \"LVS\", \"AMD\", \"GCI\", \"TIVO\", \"IPG\", \"EWBC\", \"BUCY\", \"RHI\", \"ASH\"], [\"GRA\", \"LVS\", \"BUCY\", \"SLG\", \"DDR\", \"AMD\", \"COF\", \"UAUA\", \"AIG\", \"CXW\"]], [\"2010-05-03\", \"top20\", [\"GRA\", \"LVS\", \"AMD\", \"GCI\", \"TIVO\", \"IPG\", \"EWBC\", \"BUCY\", \"RHI\", \"ASH\", \"USG\", \"MAR\", \"CECO\", \"PCAR\", \"ATI\", \"WLL\", \"MCK\", \"F\", \"FLR\", \"PCS\"], [\"GRA\", \"LVS\", \"BUCY\", \"SLG\", \"DDR\", \"AMD\", \"COF\", \"UAUA\", \"AIG\", \"CXW\", \"EWBC\", \"AWI\", \"JCG\", \"LNC\", \"TMK\", \"LBTYA\", \"ARG\", \"ZION\", \"BEAV\", \"DEI\"]], [\"2010-06-01\", \"top10\", [\"MKL\", \"OSK\", \"CLF\", \"UFS\", \"ISRG\", \"THOR\", \"THC\", \"UAUA\", \"GPN\", \"DLB\"], [\"MKL\", \"UFS\", \"UAUA\", \"OSK\", \"AIG\", \"BKD\", \"TPX\", \"ATI\", \"HIG\", \"ISRG\"]], [\"2010-06-01\", \"top20\", [\"MKL\", \"OSK\", \"CLF\", \"UFS\", \"ISRG\", \"THOR\", \"THC\", \"UAUA\", \"GPN\", \"DLB\", \"DDR\", \"MAC\", \"SII\", \"CNX\", \"SCCO\", \"PTEN\", \"JDSU\", \"MCRS\", \"MFE\", \"ADSK\"], [\"MKL\", \"UFS\", \"UAUA\", \"OSK\", \"AIG\", \"BKD\", \"TPX\", \"ATI\", \"HIG\", \"ISRG\", \"VMW\", \"GCI\", \"REG\", \"SM\", \"MCK\", \"LVS\", \"WFMI\", \"LYV\", \"MFE\", \"CCI\"]], [\"2010-07-01\", \"top10\", [\"LVS\", \"SLG\", \"MGM\", \"WSM\", \"CLF\", \"HAR\", \"WCRX\", \"FRO\", \"PDE\", \"EXPE\"], [\"GCI\", \"LVS\", \"HAR\", \"TRW\", \"OSK\", \"RRD\", \"NYX\", \"PCLN\", \"CLR\", \"DWA\"]], [\"2010-07-01\", \"top20\", [\"LVS\", \"SLG\", \"MGM\", \"WSM\", \"CLF\", \"HAR\", \"WCRX\", \"FRO\", \"PDE\", \"EXPE\", \"PXP\", \"RRD\", \"REG\", \"MON\", \"LTD\", \"TRW\", \"TPX\", \"DAL\", \"AKAM\", \"BAC\"], [\"GCI\", \"LVS\", \"HAR\", \"TRW\", \"OSK\", \"RRD\", \"NYX\", \"PCLN\", \"CLR\", \"DWA\", \"MU\", \"WYNN\", \"MGM\", \"STT\", \"TPX\", \"MCO\", \"M\", \"HBAN\", \"MWV\", \"NFX\"]], [\"2010-08-02\", \"top10\", [\"IOC\", \"CLF\", \"UAUA\", \"MKL\", \"NCR\", \"MU\", \"AIG\", \"SUN\", \"THOR\", \"AMD\"], [\"MKL\", \"UAUA\", \"IOC\", \"KG\", \"GNW\", \"AWI\", \"CLF\", \"PWR\", \"CBG\", \"LVS\"]], [\"2010-08-02\", \"top20\", [\"IOC\", \"CLF\", \"UAUA\", \"MKL\", \"NCR\", \"MU\", \"AIG\", \"SUN\", \"THOR\", \"AMD\", \"OFC\", \"TWTC\", \"GCI\", \"NBR\", \"VMED\", \"SPR\", \"CYT\", \"GNW\", \"R\", \"SLG\"], [\"MKL\", \"UAUA\", \"IOC\", \"KG\", \"GNW\", \"AWI\", \"CLF\", \"PWR\", \"CBG\", \"LVS\", \"CMI\", \"ZION\", \"ME\", \"HAR\", \"FSLR\", \"CNX\", \"LPS\", \"OIS\", \"EWBC\", \"JOYG\"]], [\"2010-09-01\", \"top10\", [\"MKL\", \"UAUA\", \"IOC\", \"PHM\", \"PCS\", \"NVDA\", \"VMW\", \"HUN\", \"DHI\", \"AIG\"], [\"MKL\", \"UAUA\", \"CLF\", \"IOC\", \"WDC\", \"PHM\", \"AMLN\", \"APC\", \"PRGO\", \"FLR\"]], [\"2010-09-01\", \"top20\", [\"MKL\", \"UAUA\", \"IOC\", \"PHM\", \"PCS\", \"NVDA\", \"VMW\", \"HUN\", \"DHI\", \"AIG\", \"ILMN\", \"NRG\", \"ALR\", \"TIBX\", \"KBR\", \"GNW\", \"HNT\", \"PXP\", \"MOT\", \"DLM\"], [\"MKL\", \"UAUA\", \"CLF\", \"IOC\", \"WDC\", \"PHM\", \"AMLN\", \"APC\", \"PRGO\", \"FLR\", \"WFMI\", \"TROW\", \"AMD\", \"TOL\", \"ILMN\", \"BRO\", \"FSLR\", \"CPN\", \"LTD\", \"WHR\"]], [\"2010-10-01\", \"top10\", [\"UAUA\", \"EWBC\", \"AMD\", \"EP\", \"HUN\", \"PCLN\", \"DV\", \"JBL\", \"NEM\", \"MAC\"], [\"UAUA\", \"ESRX\", \"PCLN\", \"JEC\", \"ME\", \"DV\", \"NCR\", \"RDC\", \"IOC\", \"DPS\"]]], \"max_rank_shift\": 1242, \"max_rel_score_diff\": 0.013211653993039363, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 94309, \"signals_R\": 94309, \"top10_member_changes\": 661, \"top20_member_changes\": 1428}, \"H009 v1.0/v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 197, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0005082046192704277, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 3444, \"signals_R\": 3444, \"top10_member_changes\": 0}, \"H009 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 198, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0004898278057245743, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 1783, \"signals_R\": 1783, \"top10_member_changes\": 0}, \"H010 v1.0/v1.1\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 130, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0013658486312617707, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 319, \"signals_R\": 319, \"top10_member_changes\": 0}, \"H010 v1.2\": {\"days\": 201, \"days_top10_list_differs\": 0, \"days_with_signal\": 161, \"evaluations\": 203142, \"examples\": [], \"max_rank_shift\": 0, \"max_rel_score_diff\": 0.0013658486312617707, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 588, \"signals_R\": 588, \"top10_member_changes\": 0}, \"H011 v1.0\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [], \"max_rank_shift\": 8, \"max_rel_score_diff\": 4.19258210310031, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 84976, \"signals_R\": 84976, \"top10_member_changes\": 0}, \"H011 v1.1\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [], \"max_rank_shift\": 4, \"max_rel_score_diff\": 5.84627968429517, \"only_H\": 0, \"only_R\": 0, \"signals_H\": 74491, \"signals_R\": 74491, \"top10_member_changes\": 0}, \"H011 v1.2\": {\"days\": 96, \"days_top10_list_differs\": 0, \"days_with_signal\": 95, \"evaluations\": 96951, \"examples\": [[\"2014-01-31\", \"PBCT\", null, 0.029124005790251584], [\"2014-09-30\", \"HIW\", 0.014565696631244717, null], [\"2015-02-27\", \"PPL\", null, 0.012463363230014225], [\"2015-04-30\", \"GXP\", null, -0.030946317451804296]], \"max_rank_shift\": 7, \"max_rel_score_diff\": 4.19258210310031, \"only_H\": 1, \"only_R\": 3, \"signals_H\": 61309, \"signals_R\": 61311, \"top10_member_changes\": 0}, \"exit H006 chandelier (held 20)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2013-07-17\", \"MORN\"], [\"2013-12-06\", \"WRI\"], [\"2014-07-29\", \"OGE\"], [\"2017-11-10\", \"PBCT\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 3, \"only_R\": 1, \"signals_H\": 37017, \"signals_R\": 37015, \"top10_member_changes\": 0}, \"exit H007 SMA20 (held 10)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2011-03-11\", \"AEE\"], [\"2011-09-15\", \"NWS\"], [\"2015-05-29\", \"BKH\"], [\"2016-07-08\", \"CDK\"], [\"2017-06-07\", \"CMI\"], [\"2017-08-31\", \"MMM\"], [\"2017-09-15\", \"GPK\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 2, \"only_R\": 5, \"signals_H\": 81222, \"signals_R\": 81225, \"top10_member_changes\": 0}, \"exit H010 gap-low (held 5)\": {\"days\": 0, \"days_top10_list_differs\": 0, \"days_with_signal\": 0, \"evaluations\": 203142, \"examples\": [[\"2010-03-02\", \"O\"], [\"2011-01-12\", \"MDT\"], [\"2014-09-24\", \"XRAY\"], [\"2015-06-12\", \"LUK\"], [\"2016-03-15\", \"VLY\"], [\"2017-11-27\", \"KEY\"]], \"max_rel_score_diff\": 0.0, \"only_H\": 5, \"only_R\": 1, \"signals_H\": 64865, \"signals_R\": 64861, \"top10_member_changes\": 0}}, \"window_max_dev_H_vs_R\": 0.001555038156060347}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 2013, \"elig_days\": 2013, \"elig_max\": 1297, \"elig_mean\": 1007.0129160457029, \"elig_min\": 0, \"elig_sum\": 2027117, \"experiment_id\": \"E961-01\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 19999, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 1298, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {},
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

@@ -141,7 +141,7 @@ The engine stays pinned to LEAN build 18131. QuantConnect moves master to the ne
 - **Change from C01, disclosed.** The C01 Validation (E005-28) used every started research run as N (77). That report stays as published. D069 applies from C02 on.
 - **Sharpe dispersion** (the variance input to DSR) = the variance of the daily Sharpe across the latest valid (not retired) run of every selection candidate counted in N.
 
-**PBO (Validation gate, PBO ≤ 0.30).**
+**PBO (Validation gate, PBO ≤ 0.30).** *(Under review, 2026-09-29: with three variations the per-hypothesis PBO measures sibling dominance, not overfitting. A cycle-level gate is proposed in `C02_pbo_definition.md` (D073), pending owner decision.)*
 
 - **Per hypothesis:** combinatorially symmetric cross-validation (16 blocks) on the IS daily returns of that hypothesis's 3 variations, exactly as in C01 (definition unchanged: at or below the median counts as overfit).
 - *C01 lesson:* with near-identical variations, PBO is uninformative. C02's variations are therefore designed to differ in one *substantive* dimension each. If two variations of a hypothesis still have daily-return correlation above 0.95, this is reported next to the PBO.
