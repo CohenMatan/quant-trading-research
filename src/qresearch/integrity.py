@@ -15,7 +15,8 @@ CASH_FAIL = -1e-9    # D051: ANY negative cash at a daily close is borrowing and
 
 def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
               commission_per_order: float | None = None, tradeable_dates: int | None = None,
-              expected_orders: int | None = None, downloaded_orders: int | None = None) -> list[dict]:
+              expected_orders: int | None = None, downloaded_orders: int | None = None,
+              late_open_orders: list | None = None) -> list[dict]:
     out: list[dict] = []
 
     def add(name, ok, detail, level="fail"):
@@ -60,9 +61,27 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     if expected_orders is not None:
         add("orders_download_complete", downloaded_orders == expected_orders,
             f"downloaded {downloaded_orders} orders vs QuantConnect Total Orders {expected_orders}")
+    # D059 fallback exits are mirrored rows, not LEAN fills: exclude them from the fill-count check
+    stale_rows = fills["tag"].astype(str).str.startswith("stale_exit") if len(fills) else pd.Series(dtype=bool)
+    n_real = int(len(fills) - int(stale_rows.sum())) if len(fills) else 0
     if "fills" in summary:
-        add("fills_match_harness_count", len(fills) == int(summary["fills"]),
-            f"downloaded fill events {len(fills)} vs harness-recorded fills {summary['fills']}")
+        add("fills_match_harness_count", n_real == int(summary["fills"]),
+            f"downloaded fill events {n_real} vs harness-recorded fills {summary['fills']}")
+    # D059: an order that can never fill, or a dead holding left unresolved, fails the run loudly
+    if late_open_orders is not None:
+        add("no_stale_open_orders", len(late_open_orders) == 0,
+            f"{len(late_open_orders)} orders still open more than 10 days before the end: {late_open_orders[:5]}")
+    if "stale_open_orders" in summary:
+        add("harness_no_stale_open_orders", summary["stale_open_orders"] == 0,
+            f"harness orders open > 5 sessions at the end: {summary['stale_open_orders']}")
+    if "stale_unresolved" in summary:
+        add("no_unresolved_stale_holdings", summary["stale_unresolved"] == 0,
+            f"held positions without a real price bar that the fallback could not close: {summary['stale_unresolved']}")
+    if "stale_exits" in summary:
+        add("stale_exits", summary["stale_exits"] == 0,
+            f"{summary['stale_exits']} holdings taken out at their last real close after "
+            f"> 10 sessions without data (D059 fallback): {int(stale_rows.sum()) if len(fills) else 0} mirrored",
+            level="warn")
     if commission_per_order is not None:
         if len(fills):
             per_order = fills.groupby("order_id")["fee"].sum()

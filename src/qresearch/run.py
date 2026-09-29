@@ -135,12 +135,14 @@ def analyse(cfg: dict, raw: dict) -> dict:
     fills = results.parse_fills(raw["orders"])
     splits, summary, qr_lines = results.parse_logs(raw["logs"])
     fills, _ = results.apply_forced_fees(fills, qr_lines)          # D049: mirror harness fee debits
+    fills, _ = results.apply_stale_exits(fills, qr_lines)          # D059: mirror fallback exits
     trades = build_trades(fills, splits)
     checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
                                  commission_per_order=cfg["costs"].get("commission_per_order"),
                                  tradeable_dates=raw["backtest"].get("tradeableDates"),
                                  expected_orders=raw.get("expected_orders"),
-                                 downloaded_orders=len({o.get("id") for o in raw["orders"]}))
+                                 downloaded_orders=len({o.get("id") for o in raw["orders"]}),
+                                 late_open_orders=results.late_open_orders(raw["orders"], cfg["end"]))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),

@@ -1,4 +1,4 @@
-# X956 v1.0 — universe classification probe (infrastructure, not research). Places no orders.
+# X956 v1.1 — universe classification probe (infrastructure, not research). Places no orders.
 # On the first trading day of each month, for every security that passes the CURRENT harness
 # universe rule (is_us_common, listed exchange, MarketCap >= min, price >= min), record the
 # Morningstar classification fields that can separate true common stock from funds, partnership /
@@ -44,7 +44,7 @@ class UniverseClassification(QRAlgorithm):
         self.last_month = day[:7]
         u = self._qr_u
         for f in fundamental:
-            if not f.has_fundamental_data or not is_us_common(f):
+            if not f.has_fundamental_data or not is_us_common(f, day):
                 continue
             if f.security_reference.exchange_id not in EXCHANGES:
                 continue

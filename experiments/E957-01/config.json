@@ -1,0 +1,85 @@
+{
+ "experiment_id": "E957-01",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X957",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X957_stale_holding_canary",
+ "split": "AUDIT",
+ "start": "2013-01-01",
+ "end": "2021-12-31",
+ "cash": 1000000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order (owner's broker); slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "params": {
+  "buys": {
+   "CPNO T3JPOU4QFQZP": {
+    "ticker": "CPNO",
+    "buy_on": "2013-03-01"
+   },
+   "SEP TTSYULARW12D": {
+    "ticker": "SEP",
+    "buy_on": "2018-10-01"
+   },
+   "VLP VMBQF57YDSO5": {
+    "ticker": "VLP",
+    "buy_on": "2018-11-01"
+   },
+   "ELLI UVRNCD1237TX": {
+    "ticker": "ELLI",
+    "buy_on": "2019-03-01"
+   },
+   "APU R735QTJ8XC9X": {
+    "ticker": "APU",
+    "buy_on": "2019-07-01"
+   },
+   "OAK V5P2MATBV339": {
+    "ticker": "OAK",
+    "buy_on": "2019-08-01"
+   },
+   "BPL R735QTJ8XC9X": {
+    "ticker": "BPL",
+    "buy_on": "2019-09-03"
+   },
+   "EQM V7RWLEM5OFAD": {
+    "ticker": "EQM",
+    "buy_on": "2020-05-01"
+   },
+   "HOME WCRVPJY6DCV9": {
+    "ticker": "HOME",
+    "buy_on": "2021-06-01"
+   },
+   "TIF R735QTJ8XC9X": {
+    "ticker": "TIF",
+    "buy_on": "2020-11-02"
+   },
+   "KO R735QTJ8XC9X": {
+    "ticker": "KO",
+    "buy_on": "2013-01-02"
+   }
+  },
+  "oak_sid": "OAK V5P2MATBV339",
+  "oak_sell_on": "2019-10-01"
+ },
+ "description": "D059 canary: holdings whose data stops without a delisting event must be taken out at their last real close; no order may stay open.",
+ "lean_version_id": 18131,
+ "split_scheme": "2010"
+}
