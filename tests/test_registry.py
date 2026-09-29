@@ -79,3 +79,22 @@ def test_cycle_final_set_excludes_retired_and_robustness_runs(root):
 def json_cfg(root, eid):
     import json
     return json.loads((root / "experiments" / eid / "config.json").read_text())
+
+
+def test_trial_accounting_separates_technical_repeats(tmp_path):
+    import json
+    exp = tmp_path / "experiments"
+    base = dict(hypothesis_id="H001", strategy_id="S001", strategy_version="v1.0", params={"a": 1}, split="IS",
+                start="2010-01-04", end="2017-12-29", costs={"slippage_bps": 10})
+    cfgs = {"E001-01": base, "E001-06": base, "E001-16": base,                    # same config: 1 trial + 2 repeats
+            "E001-02": dict(base, strategy_version="v1.1", params={"a": 2}),      # another variation
+            "E001-03": dict(base, costs={"slippage_bps": 10, "slippage_stress_multiple": 2})}   # cost stress: a trial
+    p = tmp_path / "INDEX.csv"
+    for eid, c in cfgs.items():
+        (exp / eid).mkdir(parents=True)
+        (exp / eid / "config.json").write_text(json.dumps(c))
+        registry.append(dict(experiment_id=eid, run_type="original", kind="research", status="completed"), p)
+    registry.append(dict(experiment_id="E958-01", run_type="original", kind="infrastructure"), p)
+    a = registry.trial_accounting(p, exp)
+    assert a["genuine_trials"] == 3 and a["technical_repeats"] == 2 and a["verification_and_benchmark_runs"] == 1
+    assert a["all_started_research_runs"] == 5
