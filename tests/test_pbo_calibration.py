@@ -22,3 +22,22 @@ def test_three_variations_attainable_values():
     m[:, 1] = np.random.default_rng(2).normal(0, 1e-2, 2012)
     m[:, 2] = np.random.default_rng(4).normal(0, 1e-2, 2012)
     assert stats.pbo_cscv(m)["pbo"] == 0.0
+
+
+def test_d073_cycle_pbo_gate_uses_the_full_selection_set():
+    """D073 (frozen): the hard gate is PBO <= 0.30 over ALL the cycle's selection candidates; a
+    candidate without a return series makes the gate fail (incomplete), never silently shrink."""
+    import pandas as pd
+    from qresearch import cycle
+    rng = np.random.default_rng(9)
+    idx = pd.RangeIndex(2012)
+    m = SIM.simulate(rng, [1.5] * 3 + [0.0] * 15, [j // 3 for j in range(18)], 0.8, 0.5)
+    ids = [f"E0{6 + j // 3:02d}-0{1 + j % 3}" for j in range(18)]
+    rets = {i: pd.Series(m[:, k], index=idx) for k, i in enumerate(ids)}
+    out = cycle.cycle_pbo(rets, ids)
+    assert out["n_candidates"] == 18 and out["complete"] and out["threshold"] == 0.30
+    assert out["pbo"] == stats.pbo_cscv(m, n_blocks=16)["pbo"]
+    assert out["gate_ok"] == (out["pbo"] <= 0.30)
+    rets.pop(ids[4])
+    assert cycle.cycle_pbo(rets, ids)["complete"] is False and cycle.cycle_pbo(rets, ids)["gate_ok"] is False
+    assert cycle.PBO_GATE == 0.30

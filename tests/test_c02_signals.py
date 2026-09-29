@@ -60,8 +60,10 @@ def test_signals_have_no_lookahead(name):
 def test_residual_and_seasonal_scores_have_no_lookahead():
     df = _bars(420)
     mkt = _bars(420, seed=11)["close"].to_numpy()
-    fn = lambda w: S008.residual_score(w.close, mkt[: len(w)], 252, 21, True)
+    # short windows so that 420 bars give real scores (the production est = 756 needs 758 bars)
+    fn = lambda w: S008.residual_score(w.close, mkt[: len(w)], 60, 5, True, est=120, min_est=100)
     assert _truncation(fn, df) == []
+    assert _rolling(fn, df).notna().sum() > 250                 # the check is not vacuous
     months = df["close"].groupby(df.index.to_period("M")).last()
     mc = [[p.year * 100 + p.month, float(v)] for p, v in months.items()]
     assert S011.seasonal_score(mc[:13], 2012, 1, 1) == S011.seasonal_score(mc[:13] + [[209901, 1.0]], 2012, 1, 1)
@@ -106,24 +108,61 @@ def test_contraction_is_measured_on_the_day_before_the_trigger():
 
 
 # ---------------------------------------------------------------- H008 reference
-def test_residual_score_matches_least_squares():
-    rng = np.random.default_rng(5)
-    rm = rng.normal(0.0004, 0.01, 253)
-    rs = 0.0002 + 1.3 * rm + rng.normal(0, 0.012, 253)
-    m = 100 * np.cumprod(np.r_[1.0, 1 + rm])
-    s = 50 * np.cumprod(np.r_[1.0, 1 + rs])
-    x, y = rm[:-21], rs[:-21]
-    X = np.c_[np.ones_like(x), x]
-    beta = np.linalg.lstsq(X, y, rcond=None)[0]
-    resid = y - X @ beta
-    assert S008.residual_score(s, m, 252, 21, False) == pytest.approx(resid.sum(), abs=1e-12)
-    assert S008.residual_score(s, m, 252, 21, True) == pytest.approx(resid.sum() / resid.std(ddof=1), rel=1e-9)
-    assert S008.residual_score(s[:100], m[:100], 252, 21) is None
-    # v1.1 (6-1 month: window 126) must be scorable, not silently empty
-    x6, y6 = rm[-126:-21], rs[-126:-21]
-    X6 = np.c_[np.ones_like(x6), x6]
-    r6 = y6 - X6 @ np.linalg.lstsq(X6, y6, rcond=None)[0]
-    assert S008.residual_score(s, m, 126, 21, False) == pytest.approx(r6.sum(), abs=1e-12)
+def _bhm_reference(s, m, window, skip, est, scaled):
+    """Independent numpy reference: alpha/beta on the est returns ending T-1; residuals summed over
+    returns T-window+1 .. T-skip (Blitz, Huij & Martens 2011, one factor)."""
+    rs, rm = np.diff(s) / s[:-1], np.diff(m) / m[:-1]
+    xe, ye = rm[-est - 1:-1], rs[-est - 1:-1]
+    X = np.c_[np.ones_like(xe), xe]
+    a, b = np.linalg.lstsq(X, ye, rcond=None)[0]
+    e = rs[-window:len(rs) - skip] - (a + b * rm[-window:len(rm) - skip])
+    return e.sum() / e.std(ddof=1) if scaled else e.sum()
+
+
+def _market_and_stock(alpha_daily, n=800, seed=5, beta=1.3):
+    rng = np.random.default_rng(seed)
+    rm = rng.normal(0.0004, 0.01, n)
+    rs = alpha_daily + beta * rm + rng.normal(0, 0.012, n)
+    return 50 * np.cumprod(np.r_[1.0, 1 + rs]), 100 * np.cumprod(np.r_[1.0, 1 + rm])
+
+
+def test_residual_score_matches_reference_and_is_not_degenerate():
+    """D074: the first version summed residuals over the regression's own window (always 0). The
+    score must equal an independent reference AND be materially non-zero."""
+    s, m = _market_and_stock(0.0)
+    for window, scaled in ((252, True), (126, True), (252, False)):           # v1.0, v1.1, v1.2
+        ref = _bhm_reference(s, m, window, 21, 756, scaled)
+        got = S008.residual_score(s, m, window, 21, scaled)
+        assert got == pytest.approx(ref, rel=1e-9, abs=1e-12)
+        assert abs(got) > (0.5 if scaled else 1e-3)                            # not ~1e-16
+    assert S008.residual_score(s[:700], m[:700], 252, 21) is None              # < 36 months: unscorable
+
+
+def test_residual_ranking_has_real_dispersion_and_orders_by_alpha():
+    """Cross-section: stocks with higher formation-period residual drift must score higher, with
+    meaningful spread (not floating-point noise)."""
+    scores = []
+    for i, a in enumerate(np.linspace(-0.002, 0.002, 21)):
+        rng = np.random.default_rng(100 + i)
+        rm = np.random.default_rng(7).normal(0.0004, 0.01, 800)
+        drift = np.where(np.arange(800) >= 800 - 252, a, 0.0)                  # drift only in the recent year
+        rs = drift + 1.1 * rm + rng.normal(0, 0.004, 800)
+        s, m = 50 * np.cumprod(np.r_[1.0, 1 + rs]), 100 * np.cumprod(np.r_[1.0, 1 + rm])
+        scores.append(S008.residual_score(s, m, 252, 21, True))
+    sc = np.array(scores)
+    assert sc.std() > 1.0
+    assert pd.Series(sc).corr(pd.Series(np.arange(21)), method="spearman") > 0.9
+
+
+def test_residual_score_uses_nothing_after_T():
+    s, m = _market_and_stock(0.0005)
+    base = S008.residual_score(s[:790], m[:790], 252, 21, True)
+    s2, m2 = s.copy(), m.copy()
+    s2[790:] *= 3.0                                                            # change the future only
+    assert S008.residual_score(s2[:790], m2[:790], 252, 21, True) == base
+    # the day-T return is not in the estimation window and not in the formation window (skip 21)
+    s3 = s[:790].copy(); s3[-1] *= 1.5
+    assert S008.residual_score(s3, m[:790], 252, 21, True) == pytest.approx(base, rel=1e-12)
 
 
 def test_monthly_keep_band():
@@ -197,3 +236,14 @@ def test_seasonal_score_by_hand():
 def test_monthly_returns_skip_gaps():
     r = S011.monthly_returns([[201101, 1.0], [201103, 2.0], [201104, 3.0]])
     assert r == {201104: pytest.approx(0.5)}
+
+
+@pytest.mark.parametrize("sdir", ["S006_breakout", "S007_squeeze", "S008_residual_rs", "S009_volume_shock",
+                                  "S010_gap_hold", "S011_seasonality"])
+def test_all_c02_orders_are_next_open_orders_from_the_close(sdir):
+    """Every C02 strategy decides at the T close and trades only through the harness's event step,
+    which sends market-on-open orders for T+1 (the harness raises if an order is placed elsewhere)."""
+    main = (ROOT / "strategies" / sdir / "main.py").read_text()
+    assert "def qr_on_close" in main and "self.qr_event_step(" in main
+    for forbidden in ("market_order", "set_holdings", "limit_order", "liquidate(", "market_on_close"):
+        assert forbidden not in main

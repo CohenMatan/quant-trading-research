@@ -5,7 +5,7 @@
 | Written | 2026-09-29, at the owner's request, **before any C02 result exists** (no C02 strategy backtest has run) |
 | Evidence | Monte Carlo on synthetic returns only: `research/cycles/C02_pbo_simulation.py` → `C02_pbo_simulation.json` (seed 20260929, 200 repetitions per scenario). The fast implementation is tested to equal the official `stats.pbo_cscv` (`tests/test_pbo_calibration.py`). |
 | Threshold | **PBO ≤ 0.30 is kept unchanged.** Nothing here uses C01 or H005 performance. |
-| Status | **PROPOSED (D073). Needs owner approval before C02 runs.** |
+| Status | **APPROVED and FROZEN (D073, D075, owner 2026-09-29), before any C02 result.** |
 
 ## 1. How PBO is computed today
 

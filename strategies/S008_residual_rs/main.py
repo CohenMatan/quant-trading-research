@@ -1,4 +1,7 @@
-# S008 — residual (idiosyncratic) relative strength (H008). Variations differ only in params.
+# S008 — residual (market-adjusted) relative strength (H008). Variations differ only in params.
+# Score: Blitz-Huij-Martens residuals, alpha/beta on SPY over 36 months (D074 option A); stocks
+# without 36 months of history are unscorable. At the 2010 start the 36-month look-back reads
+# 2007-2009 prices as signal warm-up only (owner approval 2026-09-29). Long-only, not beta-hedged.
 # Monthly ranking at the first close of each month; free slots are refilled daily from the current
 # month's ranking (C02 plan, approved). Orders execute at the next open.
 from AlgorithmImports import *
@@ -8,7 +11,7 @@ from signals import monthly_targets, residual_score
 
 class ResidualRS(QRAlgorithm):
     USES_UNIVERSE = True
-    WINDOW_BARS = 400
+    WINDOW_BARS = 780           # >= 758 closes: 756 estimation returns + the return of T
 
     def qr_initialize(self):
         self.last_month = None
