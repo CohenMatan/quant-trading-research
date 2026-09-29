@@ -330,3 +330,30 @@ Report: `docs/data/size_proxy_evaluation.md`, marked PROVISIONAL.
 
 **STOP.** No Walk-Forward or Holdout.
 
+## 2026-09-29: E005-28 accounting reconciliation (owner request); CP4 report finalised
+
+**Gate statement corrected.** All 8 Validation checks are now shown individually: 6 PASS, 2 FAIL (Deflated Sharpe 0.68, PBO 0.71). Overall FAIL.
+
+**Cash-event audit E955-01** (X955, D058; no orders, not a trial).
+
+- All $20,188.82 of E005-28's non-trade cash was matched to dividend events on held positions. The residual is $0.003; no day is off by more than $0.01.
+- Classification:
+  - ordinary dividends: $8,410.33 (179 events);
+  - special distributions: $6,383.49 (MIC, EQC, NVG);
+  - merger cash consideration: $5,395.00 (DPS/KDP);
+  - spin-off cash: $0. 21st Century Fox/New Fox: no credit; possible under-count.
+- No double counting: raw-price valuation; equity is continuous on each large event.
+- Equity reconciles exactly: $100,000 − $297.80 closed price P&L + $1,610.64 open price P&L − $2,618 commissions + $20,188.82 distributions = $118,883.66.
+- 58% of the gain came from two one-off payouts (KDP, MIC).
+- 47 of 174 trades were takeover cash-outs (+$3,018). Strategy-closed trades lost −$5,836.
+
+**D059 (new).** OAK and BPL were acquired without delisting events. Their sells never filled, and the positions stayed frozen from late 2019 to 2021 (about 11% of equity).
+
+- Economic exposure in March 2020 was about 30%, not 42%.
+- Exposure-matched benchmark crash drawdowns at economic exposure: about −16% (EW) and −15% (SPY), against S005's −6.5%.
+- No IS run is affected; the EW benchmark is affected negligibly.
+
+**Recommendation unchanged:** "No Production Candidate Found" for C01; fix D057 and D059 first.
+
+**STOP.**
+
