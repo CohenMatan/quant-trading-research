@@ -87,7 +87,14 @@ def validate(cfg: dict, unlock_file=None) -> None:
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")
-            if cfg["portfolio"] != config.RESEARCH_PORTFOLIOS[model]:
+            approved = dict(config.RESEARCH_PORTFOLIOS[model])
+            if kind == "sizing" and cfg.get("construction_variant") == "S2":
+                # D083: C03's pre-declared $200K construction variant S2 (owner-approved, CP3e §2) holds
+                # 20 positions; every other portfolio rule stays the approved one
+                if not (int(cfg["portfolio"].get("max_positions", 0)) == int(cfg["params"].get("slots", -1)) == 20):
+                    raise ConfigError("construction variant S2 uses 20 positions (max_positions = slots = 20)")
+                approved["max_positions"] = 20
+            if cfg["portfolio"] != approved:
                 raise ConfigError(f"portfolio must be the approved rules for {model}: "
                                   f"{config.RESEARCH_PORTFOLIOS[model]} (D041/D044/D051)")
             if float(c["slippage_bps"]) != 10:

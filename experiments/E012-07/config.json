@@ -1,0 +1,49 @@
+{
+ "experiment_id": "E012-07",
+ "kind": "benchmark",
+ "hypothesis_id": "H012",
+ "strategy_id": "S012",
+ "strategy_version": "v1.2",
+ "strategy_dir": "strategies/S012_vol_managed",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2010-01-04",
+ "end": "2017-12-29",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "params": {
+  "rv_short": 21,
+  "cadence": "weekly",
+  "band": 0.1,
+  "slots": 15,
+  "mode": "control_b"
+ },
+ "cycle": "C03",
+ "control_of": "E012-03",
+ "description": "C03 H012 Control B for v1.2 (mean of the variation's previous 12 targets). Benchmark, not a trial. Pre-declared in docs/checkpoints/CP3e_C03_final_plan.md \u00a77; methodology research/cycles/C03_statistical_spec.md (D082)."
+}
