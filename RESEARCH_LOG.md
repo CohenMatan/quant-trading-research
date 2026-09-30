@@ -505,3 +505,25 @@ The owner approved the prerequisite checkpoint except for two checks. Report: `d
 **C03 proposal** (`research/cycles/C03_review_and_plan.md`): matched-null and breadth measurements first; then 3 new-family hypotheses; a stopping rule.
 
 **STOP.** Awaiting owner review.
+
+## 2026-09-30: C02 closed by owner; structural review; portfolio diagnostics; revised C03 proposal; CP3d STOP
+
+**Owner decision.** C02 is closed (No Production Candidate Found). C03 preparation is authorised, starting with a structural review and portfolio diagnostics.
+
+**Diagnostics.** 24 pre-registered no-skill random-pick runs (X962, E962-01..24; D079). All completed; they are not trials. Key readings:
+
+- The C02-structure no-skill Sharpe is 0.75, against EW's 0.92.
+- Holding period dominates: at hold 5 costs are 8% a year and Sharpe is −0.13; at hold 60 costs are 1.2% a year and Sharpe is 0.81.
+- A $1M account adds +0.11 Sharpe through lower commissions.
+- 19 slots is infeasible at $100K.
+- The seed alone moves Sharpe by up to ±0.2.
+
+**Conclusion.** C01/C02 failed mainly for lack of edge. The structure imposes a known handicap. Gates are kept unchanged.
+
+**Revised C03 proposal** (report: `docs/checkpoints/CP3d_structural_review_and_C03_proposal.md`):
+
+- H012, volatility-managed exposure;
+- H013, lottery-stock avoidance;
+- the turn-of-month family is not recommended.
+
+**STOP.** Awaiting owner decisions.

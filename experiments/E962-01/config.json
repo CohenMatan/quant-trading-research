@@ -1,0 +1,46 @@
+{
+ "experiment_id": "E962-01",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X962",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X962_random_pick",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2010-01-04",
+ "end": "2017-12-29",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "params": {
+  "slots": 10,
+  "hold": 20,
+  "seed": 1
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "diagnostic_series": "S",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "description": "C03 portfolio-structure diagnostic (no-skill random pick), series S: portfolio size: 10 slots at $100K, hold 20, seed 1. Pre-registered in research/cycles/C03_portfolio_diagnostics_plan.md. Verification; not a trial."
+}
