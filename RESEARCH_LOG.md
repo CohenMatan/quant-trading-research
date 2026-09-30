@@ -677,3 +677,15 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
   - both frozen hashes.
 - **Budget ledger:** 0 of 21 committed research runs used; 4 canary executions.
 - **Canaries:** no strategy or harness code changed, so they were not re-run.
+
+## 2026-09-30: C03 queue stopped: E013-06 stuck "In Queue" on QuantConnect; STOP
+
+**Progress.** E013-01..05 completed.
+
+**E013-06 (H013 v1.1, seed 3).** Its QuantConnect backtest has sat "In Queue…" at 0% since 16:11 UTC, which blocks the only node. The runner recorded it as failed (server-side read timeouts), and the queue stopped as designed.
+
+**E013-03.** QuantConnect later labelled it "Runtime Error", but the message comes from QuantConnect's own infrastructure (websocat). The run itself is complete and valid.
+
+**Incident file:** `research/cycles/incidents/E013-06_incident.md`.
+
+**STOP.** Owner approval is needed to delete the stuck backtest (CLAUDE.md), then re-run it as a technical repeat and resume.

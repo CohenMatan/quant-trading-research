@@ -139,9 +139,12 @@ def test_d069_counts_on_the_real_registry():
 
     def pre_c02(ids):
         return [e for e in ids if not str(json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
-                                          .get("cycle", "")).startswith("C02")]
+                                          .get("cycle", "")).startswith(("C02", "C03"))]   # C02 and later cycles add their own
     cats = a["by_category"]
     assert (len(pre_c02(cats["selection"])), len(pre_c02(cats["robustness"])), len(pre_c02(cats["validation"]))) \
         == (19, 15, 1)
-    c02 = len(cats["selection"]) - 19
-    assert 0 <= c02 <= 18                                    # C02 adds at most its 18 selection candidates
+    def cycle(ids, c):
+        return [e for e in ids if str(json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
+                                      .get("cycle", "")).startswith(c)]
+    assert 0 <= len(cycle(cats["selection"], "C02")) <= 18   # C02 adds at most its 18 selection candidates
+    assert 0 <= len(cycle(cats["selection"], "C03")) <= 3    # C03 (D087): at most the 3 H013 variations
