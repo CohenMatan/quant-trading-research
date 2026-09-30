@@ -653,3 +653,27 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Recommendation.** Remove H012 from C03 as "not evaluable with available data", and run H013 only. Keep the DSR official N at a floor of 43.
 
 **STOP.** Report: `docs/checkpoints/CP3h_H012_power_reassessment.md`. No C03 strategy backtest has run.
+
+## 2026-09-30: owner decisions after CP3h (D087); prerequisites for the C03 runs
+
+**Owner decisions (D087).**
+
+- **H012 removed from C03.** It is "not evaluable with sufficient statistical power using the currently available data", which is not a failed hypothesis. Its configs are withdrawn, and the runner refuses them.
+- **Statistical specification Amendment 1** (the original text is unchanged): official N = 40, with N = 43 reported as a sensitivity only.
+- **H013 is the only active hypothesis.**
+- **Committed research runs: 21.**
+
+**D088.** H013's exclusion perturbation is fixed as the base ± 5 points.
+
+**Prerequisites.**
+
+- **Evaluation code:** updated to H013 only. It checks robustness for every seed and reports the N = 43 sensitivity.
+- **Tests: 381 pass.** They cover:
+  - the H013, sizing and null configs against their specification;
+  - the all-three-seeds rule, missing seeds, no seed averaging, and ties;
+  - robustness for every seed;
+  - N = 40/73 after the committed runs;
+  - the withdrawn configs;
+  - both frozen hashes.
+- **Budget ledger:** 0 of 21 committed research runs used; 4 canary executions.
+- **Canaries:** no strategy or harness code changed, so they were not re-run.

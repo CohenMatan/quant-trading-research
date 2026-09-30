@@ -8,6 +8,7 @@ REPO_ROOT = Path(__file__).resolve().parents[2]
 EXPERIMENTS_DIR = REPO_ROOT / "experiments"
 STRATEGIES_DIR = REPO_ROOT / "strategies"
 INDEX_CSV = EXPERIMENTS_DIR / "INDEX.csv"
+WITHDRAWN_FILE = EXPERIMENTS_DIR / "WITHDRAWN.json"   # configs withdrawn before running (never run; D087)
 HOLDOUT_UNLOCK_FILE = REPO_ROOT / "HOLDOUT_UNLOCK.md"
 LEAN_HARNESS = Path(__file__).resolve().parent / "lean" / "qr_harness.py"
 

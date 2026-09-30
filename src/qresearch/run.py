@@ -300,6 +300,8 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
 def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scratch: str | None = None,
         notes: str = "") -> dict:
     run_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    if exp_id and exp_id in experiment.withdrawn():      # D087: refused before anything else happens
+        raise SystemExit(f"{exp_id} is withdrawn and may never run: {experiment.withdrawn()[exp_id]}")
     if scratch:
         cfg_text = Path(scratch).read_text(encoding="utf-8")
         cfg = experiment.parse(cfg_text)
