@@ -1,0 +1,17 @@
+{
+ "error": "OPERATIONAL FAILURE: the container running the local runner restarted during the orders download; the runner process was lost, so results were never downloaded or checked. The QuantConnect backtest addc0263c82157b2154d09812e3cc4ee completed; QC published fill events for only 50 of 248 orders for over an hour, then for all of them. Recovered from that same backtest per D077 (no re-run).",
+ "experiment_id": "E965-04",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "cd180e1e427b8bc08cc44ac1b0ad280ebf424086",
+  "config_sha256": "43c4b113fcc0c17f1a2524c7126dfbd6cc2d0aae00a6aebbaa66c9bed29cff01",
+  "failure_stage": "download_results (runner lost)",
+  "git_commit": "cd180e1e427b8bc08cc44ac1b0ad280ebf424086",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "addc0263c82157b2154d09812e3cc4ee",
+  "qc_project_id": "37186985",
+  "run_utc": "2026-09-30T20:57:14Z"
+ },
+ "status": "failed"
+}
