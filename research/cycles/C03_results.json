@@ -1,0 +1,688 @@
+{
+ "note": "C03 evaluation (D082/D083); screen and robustness thresholds unchanged; diagnostics never gate",
+ "h012": {
+  "control_a": {
+   "exp": "E012-04",
+   "status": "not run"
+  },
+  "variations": {
+   "v1.0": {
+    "book": {
+     "exp": "E012-01",
+     "status": "not run"
+    },
+    "control_b": {
+     "exp": "E012-05",
+     "status": "not run"
+    },
+    "stages": {
+     "slippage_2x": null,
+     "robustness": null
+    },
+    "base_screen_pass": false,
+    "screen_pass": false
+   },
+   "v1.1": {
+    "book": {
+     "exp": "E012-02",
+     "status": "not run"
+    },
+    "control_b": {
+     "exp": "E012-06",
+     "status": "not run"
+    },
+    "stages": {
+     "slippage_2x": null,
+     "robustness": null
+    },
+    "base_screen_pass": false,
+    "screen_pass": false
+   },
+   "v1.2": {
+    "book": {
+     "exp": "E012-03",
+     "status": "not run"
+    },
+    "control_b": {
+     "exp": "E012-07",
+     "status": "not run"
+    },
+    "stages": {
+     "slippage_2x": null,
+     "robustness": null
+    },
+    "base_screen_pass": false,
+    "screen_pass": false
+   }
+  },
+  "timing_value_refuted": false
+ },
+ "h013": {
+  "nulls": {
+   "1": {
+    "exp": "E962-22",
+    "status": "completed",
+    "sharpe": 0.7203500851976974,
+    "cagr": 0.1052182046899226,
+    "max_dd": -0.2593436661235443,
+    "trades": 480,
+    "avg_pnl_per_trade": 215.47607041666666,
+    "exposure_mean": 0.8494205051458358,
+    "screen": [
+     {
+      "gate": "closed trades",
+      "ok": true,
+      "value": 480,
+      "required": ">= 100"
+     },
+     {
+      "gate": "Sharpe",
+      "ok": true,
+      "value": 0.72,
+      "required": ">= 0.50"
+     },
+     {
+      "gate": "Sharpe vs EW + 0.1",
+      "ok": false,
+      "value": -0.2,
+      "required": ">= +0.10 (EW 0.92)"
+     },
+     {
+      "gate": "max drawdown",
+      "ok": false,
+      "value": -0.259,
+      "required": ">= -0.35 and >= EW -0.223"
+     },
+     {
+      "gate": "episode 2010 May-Jun (flash crash)",
+      "ok": true,
+      "value": -0.127,
+      "required": ">= EW -0.155 - 0.05"
+     },
+     {
+      "gate": "episode 2011 Jul-Oct (US downgrade)",
+      "ok": true,
+      "value": -0.256,
+      "required": ">= EW -0.223 - 0.05"
+     },
+     {
+      "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+      "ok": true,
+      "value": -0.12,
+      "required": ">= EW -0.178 - 0.05"
+     },
+     {
+      "gate": "profit factor",
+      "ok": true,
+      "value": 1.614,
+      "required": ">= 1.20"
+     },
+     {
+      "gate": "expectancy 95% CI lower bound",
+      "ok": true,
+      "value": 0.01453,
+      "required": "> 0"
+     },
+     {
+      "gate": "positive years",
+      "ok": true,
+      "value": "7/8",
+      "required": ">= 5 of 8"
+     },
+     {
+      "gate": "largest year share of profit",
+      "ok": true,
+      "value": 0.29,
+      "required": "<= 0.40"
+     },
+     {
+      "gate": "expectancy without best 5%",
+      "ok": true,
+      "value": 0.01068,
+      "required": "> 0"
+     }
+    ],
+    "screen_pass": false,
+    "failed_items": [
+     "Sharpe vs EW + 0.1",
+     "max drawdown"
+    ],
+    "thirds": [
+     0.3973244245523252,
+     1.3724339961896521,
+     0.7414712047946385
+    ],
+    "skipped_min_position": 0,
+    "ew_sharpe": 0.9199052769290139,
+    "strategy_summary": null
+   },
+   "2": {
+    "exp": "E962-23",
+    "status": "completed",
+    "sharpe": 0.8201435446316898,
+    "cagr": 0.1180459909738878,
+    "max_dd": -0.25761164172162054,
+    "trades": 481,
+    "avg_pnl_per_trade": 236.35211683991685,
+    "exposure_mean": 0.8407995522742431,
+    "screen": [
+     {
+      "gate": "closed trades",
+      "ok": true,
+      "value": 481,
+      "required": ">= 100"
+     },
+     {
+      "gate": "Sharpe",
+      "ok": true,
+      "value": 0.82,
+      "required": ">= 0.50"
+     },
+     {
+      "gate": "Sharpe vs EW + 0.1",
+      "ok": false,
+      "value": -0.1,
+      "required": ">= +0.10 (EW 0.92)"
+     },
+     {
+      "gate": "max drawdown",
+      "ok": false,
+      "value": -0.258,
+      "required": ">= -0.35 and >= EW -0.223"
+     },
+     {
+      "gate": "episode 2010 May-Jun (flash crash)",
+      "ok": true,
+      "value": -0.13,
+      "required": ">= EW -0.155 - 0.05"
+     },
+     {
+      "gate": "episode 2011 Jul-Oct (US downgrade)",
+      "ok": true,
+      "value": -0.258,
+      "required": ">= EW -0.223 - 0.05"
+     },
+     {
+      "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+      "ok": true,
+      "value": -0.198,
+      "required": ">= EW -0.178 - 0.05"
+     },
+     {
+      "gate": "profit factor",
+      "ok": true,
+      "value": 1.624,
+      "required": ">= 1.20"
+     },
+     {
+      "gate": "expectancy 95% CI lower bound",
+      "ok": true,
+      "value": 0.0147,
+      "required": "> 0"
+     },
+     {
+      "gate": "positive years",
+      "ok": true,
+      "value": "7/8",
+      "required": ">= 5 of 8"
+     },
+     {
+      "gate": "largest year share of profit",
+      "ok": true,
+      "value": 0.315,
+      "required": "<= 0.40"
+     },
+     {
+      "gate": "expectancy without best 5%",
+      "ok": true,
+      "value": 0.00966,
+      "required": "> 0"
+     }
+    ],
+    "screen_pass": false,
+    "failed_items": [
+     "Sharpe vs EW + 0.1",
+     "max drawdown"
+    ],
+    "thirds": [
+     0.4522243478714204,
+     1.332646405558028,
+     0.972184437123358
+    ],
+    "skipped_min_position": 0,
+    "ew_sharpe": 0.9199052769290139,
+    "strategy_summary": null
+   },
+   "3": {
+    "exp": "E962-24",
+    "status": "completed",
+    "sharpe": 0.9006427373447525,
+    "cagr": 0.13415768420680108,
+    "max_dd": -0.21689479895779928,
+    "trades": 481,
+    "avg_pnl_per_trade": 313.39849251559247,
+    "exposure_mean": 0.8371375444514458,
+    "screen": [
+     {
+      "gate": "closed trades",
+      "ok": true,
+      "value": 481,
+      "required": ">= 100"
+     },
+     {
+      "gate": "Sharpe",
+      "ok": true,
+      "value": 0.901,
+      "required": ">= 0.50"
+     },
+     {
+      "gate": "Sharpe vs EW + 0.1",
+      "ok": false,
+      "value": -0.019,
+      "required": ">= +0.10 (EW 0.92)"
+     },
+     {
+      "gate": "max drawdown",
+      "ok": true,
+      "value": -0.217,
+      "required": ">= -0.35 and >= EW -0.223"
+     },
+     {
+      "gate": "episode 2010 May-Jun (flash crash)",
+      "ok": true,
+      "value": -0.178,
+      "required": ">= EW -0.155 - 0.05"
+     },
+     {
+      "gate": "episode 2011 Jul-Oct (US downgrade)",
+      "ok": true,
+      "value": -0.206,
+      "required": ">= EW -0.223 - 0.05"
+     },
+     {
+      "gate": "episode 2015 Aug-2016 Feb (China/oil)",
+      "ok": true,
+      "value": -0.144,
+      "required": ">= EW -0.178 - 0.05"
+     },
+     {
+      "gate": "profit factor",
+      "ok": true,
+      "value": 1.812,
+      "required": ">= 1.20"
+     },
+     {
+      "gate": "expectancy 95% CI lower bound",
+      "ok": true,
+      "value": 0.02162,
+      "required": "> 0"
+     },
+     {
+      "gate": "positive years",
+      "ok": true,
+      "value": "7/8",
+      "required": ">= 5 of 8"
+     },
+     {
+      "gate": "largest year share of profit",
+      "ok": true,
+      "value": 0.246,
+      "required": "<= 0.40"
+     },
+     {
+      "gate": "expectancy without best 5%",
+      "ok": true,
+      "value": 0.01647,
+      "required": "> 0"
+     }
+    ],
+    "screen_pass": false,
+    "failed_items": [
+     "Sharpe vs EW + 0.1"
+    ],
+    "thirds": [
+     0.5787185531151681,
+     1.6486821403077894,
+     0.8699901275383476
+    ],
+    "skipped_min_position": 1,
+    "ew_sharpe": 0.9199052769290139,
+    "strategy_summary": null
+   }
+  },
+  "variations": {
+   "v1.0": {
+    "seeds": {
+     "1": {
+      "book": {
+       "exp": "E013-01",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "2": {
+      "book": {
+       "exp": "E013-02",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "3": {
+      "book": {
+       "exp": "E013-03",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     }
+    },
+    "all_seeds_run": false,
+    "base_screen_pass": false,
+    "screen_pass": false,
+    "mean_seed_sharpe": null,
+    "mean_sharpe_diff_vs_null": null,
+    "mean_avg_pnl_diff_vs_null": null
+   },
+   "v1.1": {
+    "seeds": {
+     "1": {
+      "book": {
+       "exp": "E013-04",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "2": {
+      "book": {
+       "exp": "E013-05",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "3": {
+      "book": {
+       "exp": "E013-06",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     }
+    },
+    "all_seeds_run": false,
+    "base_screen_pass": false,
+    "screen_pass": false,
+    "mean_seed_sharpe": null,
+    "mean_sharpe_diff_vs_null": null,
+    "mean_avg_pnl_diff_vs_null": null
+   },
+   "v1.2": {
+    "seeds": {
+     "1": {
+      "book": {
+       "exp": "E013-07",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "2": {
+      "book": {
+       "exp": "E013-08",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     },
+     "3": {
+      "book": {
+       "exp": "E013-09",
+       "status": "not run"
+      },
+      "stages": {
+       "slippage_2x": null,
+       "robustness": null
+      },
+      "base_screen_pass": false,
+      "screen_pass": false
+     }
+    },
+    "all_seeds_run": false,
+    "base_screen_pass": false,
+    "screen_pass": false,
+    "mean_seed_sharpe": null,
+    "mean_sharpe_diff_vs_null": null,
+    "mean_avg_pnl_diff_vs_null": null
+   }
+  },
+  "avoidance_refuted": false
+ },
+ "chosen": {
+  "H012": null,
+  "H013": null
+ },
+ "pbo_diagnostic": {
+  "note": "diagnostic only; see research/cycles/C03_statistical_spec.md \u00a71 and CP3f \u00a73 for its limitations",
+  "candidates": []
+ },
+ "sizing": {
+  "S1": {
+   "H012 v1.0": {
+    "exp": "E012-08",
+    "base": "E012-01",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "Control A": {
+    "exp": "E012-09",
+    "base": "E012-04",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 1": {
+    "exp": "E013-10",
+    "base": "E013-01",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 2": {
+    "exp": "E013-11",
+    "base": "E013-02",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 3": {
+    "exp": "E013-12",
+    "base": "E013-03",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 1": {
+    "exp": "E962-25",
+    "base": "E962-22",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 2": {
+    "exp": "E962-26",
+    "base": "E962-23",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 3": {
+    "exp": "E962-27",
+    "base": "E962-24",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   }
+  },
+  "S2": {
+   "H012 v1.0": {
+    "exp": "E012-10",
+    "base": "E012-01",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "Control A": {
+    "exp": "E012-11",
+    "base": "E012-04",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 1": {
+    "exp": "E013-13",
+    "base": "E013-01",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 2": {
+    "exp": "E013-14",
+    "base": "E013-02",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "H013 v1.0 seed 3": {
+    "exp": "E013-15",
+    "base": "E013-03",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 1": {
+    "exp": "E962-28",
+    "base": "E962-22",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 2": {
+    "exp": "E962-29",
+    "base": "E962-23",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   },
+   "null seed 3": {
+    "exp": "E962-30",
+    "base": "E962-24",
+    "status": "not run",
+    "sharpe": null,
+    "cagr": null,
+    "max_dd": null,
+    "exposure": null,
+    "sharpe_minus_base": null
+   }
+  }
+ },
+ "trial_counts_now": {
+  "official": 37,
+  "conservative": 64,
+  "components": {
+   "selection": 37,
+   "replicate": 0,
+   "robustness": 26,
+   "validation": 1
+  },
+  "excluded": {
+   "technical_repeats": 49,
+   "not_started": 7,
+   "verification_benchmark_sizing_stress": 68
+  },
+  "var_sr": 0.0010013434709235445,
+  "n_sharpes": 37,
+  "registry_sha256": "19e83d8393407d1367bc835920c5679faae0662e01416219894b08532cb2f84d",
+  "registry_rows": 336
+ }
+}

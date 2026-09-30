@@ -1,0 +1,34 @@
+{
+ "error": "2010-11-26 13:00:00 Runtime Error: Trying to perform a summation, subtraction, multiplication or division between &#039;float&#039; and &#039;NoneType&#039; objects throws a TypeError exception. To prevent the exception, ensure that both values share the same type.\n  at _check_rv\n    dev = abs(a / b - 1)\n              ~~^~~\n in main.py: line 82\n  at qr_on_close\n    self._check_rv(today)\n in main.py: line 58\n  at on_data\n    self.qr_on_close(data)\n in qr_harness.py: line 532\n\nTrying to perform a summation, subtraction, multiplication or division between 'float' and 'NoneType' objects throws a TypeError exception. To prevent the exception, ensure that both values share the same type.\n  at _check_rv\n    dev = abs(a / b - 1)\n              ~~^~~\n in main.py: line 82\n  at qr_on_close\n    self._check_rv(today)\n in main.py: line 58\n  at on_data\n    self.qr_on_close(data)\n in qr_harness.py: line 532\n",
+ "experiment_id": "E963-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-09-30T12:31:11Z",
+  "build_commit": "57049085bb8509c6a4c6aeb6c4b1a58ae008b3d5",
+  "code_sha256": "2ae4650663533e07f62dc4ad9dd6c17d0488ebd6b15ba44d120be99744c09967",
+  "config_sha256": "e3c6342e8022923ff35f0cb3712fd221ae9c3f1a986c9f8299b4f25363ab801f",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py",
+   "s012.py",
+   "signals.py"
+  ],
+  "git_commit": "57049085bb8509c6a4c6aeb6c4b1a58ae008b3d5",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "b690fe949694e600ce2ff76b7b31051f",
+  "qc_project_id": 37172674,
+  "result_channel": "",
+  "run_utc": "2026-09-30T12:30:58Z",
+  "runtime_s": 92.14945077896118
+ },
+ "status": "failed"
+}

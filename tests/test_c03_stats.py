@@ -216,13 +216,14 @@ def test_spec_is_frozen():
 
 
 def test_committed_c03_runs_give_43_and_76(tmp_path):
-    """Registering the 34 committed runs (configs written before any C03 result) on top of the pre-C03
+    """Registering the committed runs (configs written before any C03 result) on top of the pre-C03
     registry gives official N = 43 and conservative N = 76; the canaries, controls, nulls and sizing
     runs add nothing."""
     import shutil
     ids = [p.parent.name for p in sorted(config.EXPERIMENTS_DIR.glob("E*/config.json"))
            if json.loads(p.read_text()).get("cycle") == "C03"]
-    assert len(ids) == 34
+    kinds = [json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())["kind"] for e in ids]
+    assert kinds.count("research") == 12 and len(ids) >= 34          # canary re-runs may add verification ids
     p = tmp_path / "INDEX.csv"
     rows = [r for r in registry.read(config.INDEX_CSV) if r["experiment_id"] not in ids]
     shutil.copy(config.INDEX_CSV, p)
@@ -236,4 +237,4 @@ def test_committed_c03_runs_give_43_and_76(tmp_path):
         registry.append(dict(experiment_id=e, run_type="original", kind=c["kind"], status="completed"), p)
     assert registry.dsr_trial_count(p, config.EXPERIMENTS_DIR) == dict(official=43, conservative=76)
     a = registry.trial_accounting(p, config.EXPERIMENTS_DIR)
-    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == 34 - 12
+    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == len(ids) - 12

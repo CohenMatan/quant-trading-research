@@ -1,4 +1,4 @@
-# X963 v1.0 — C03 H012 infrastructure canary (infrastructure, not research; not a trial). Runs the
+# X963 v1.1 — C03 H012 infrastructure canary (infrastructure, not research; not a trial). Runs the
 # unchanged S012 algorithm (s012.py and signals.py are byte copies, tested) with NON-candidate parameters
 # (RV(10), weekly, 2010-2011) and checks on QuantConnect itself:
 #  A. SPY RV(short) and RV(252) from the harness window equal RV from a fresh point-in-time
@@ -9,6 +9,8 @@
 #     no rescale is applied (counted in the S012 summary);
 #  D. the invested fraction after each completed rebalance, against e x (1 - cash buffer);
 #  E. Control B's pre-start targets come only from history before the start date.
+# v1.1 (after E963-01 stopped on the 2010-11-26 half-day): a fresh history shorter than the window, or
+# not ending at today's bar, is counted and skipped instead of compared.
 # Fills at the T+1 open are checked by the harness self-check and the runner (fills_after_signal_date).
 from AlgorithmImports import *
 import json
@@ -74,6 +76,11 @@ class H012Canary(s012.VolManaged):
         if hist is None or hist.empty or len(w) < self.long + 1:
             return
         fresh = [float(x) for x in hist["close"].values]
+        last = hist.index[-1][-1] if isinstance(hist.index[-1], tuple) else hist.index[-1]
+        if len(fresh) < self.long + 1 or last.date() != today:
+            self.c["fresh_skipped"] = self.c.get("fresh_skipped", 0) + 1
+            self._qr_log(f"QRC63|fresh_skipped|{today}|{len(fresh)}|{last}")
+            return
         self.c["rv_checks"] += 1
         if abs(fresh[-1] / w[-1] - 1) > 1e-3:
             self.c["last_close_mismatches"] += 1
