@@ -1,0 +1,180 @@
+{
+ "setup": {
+  "reps": 200,
+  "blocks": 16,
+  "rule": "PBO = share of CSCV splits whose IS-best lands at or below the OOS median; gate <= 0.30"
+ },
+ "part1_six_candidates": {
+  "null: all 6 equal (0.5)": {
+   "mean": 0.515,
+   "p05": 0.096,
+   "p50": 0.543,
+   "p95": 0.907,
+   "share_pass_030": 0.275
+  },
+  "one hypothesis +0.25": {
+   "mean": 0.392,
+   "p05": 0.01,
+   "p50": 0.375,
+   "p95": 0.868,
+   "share_pass_030": 0.445
+  },
+  "one hypothesis +0.5": {
+   "mean": 0.27,
+   "p05": 0.001,
+   "p50": 0.193,
+   "p95": 0.791,
+   "share_pass_030": 0.645
+  },
+  "one hypothesis +1.0": {
+   "mean": 0.057,
+   "p05": 0.0,
+   "p50": 0.004,
+   "p95": 0.25,
+   "share_pass_030": 0.955
+  },
+  "both hypotheses good and similar (1.0, 1.0)": {
+   "mean": 0.534,
+   "p05": 0.065,
+   "p50": 0.522,
+   "p95": 0.933,
+   "share_pass_030": 0.225
+  },
+  "both good, one a bit better (1.2 vs 1.0)": {
+   "mean": 0.479,
+   "p05": 0.015,
+   "p50": 0.523,
+   "p95": 0.909,
+   "share_pass_030": 0.34
+  },
+  "one variation +0.5 inside a group": {
+   "mean": 0.23,
+   "p05": 0.005,
+   "p50": 0.189,
+   "p95": 0.588,
+   "share_pass_030": 0.69
+  }
+ },
+ "part1_pooled_24": {
+  "C03 null (both 0.5)": {
+   "mean": 0.328,
+   "p05": 0.061,
+   "p50": 0.3,
+   "p95": 0.709,
+   "share_pass_030": 0.495
+  },
+  "C03 one hypothesis at 1.0": {
+   "mean": 0.295,
+   "p05": 0.049,
+   "p50": 0.246,
+   "p95": 0.64,
+   "share_pass_030": 0.595
+  },
+  "C03 one hypothesis at 1.5": {
+   "mean": 0.076,
+   "p05": 0.001,
+   "p50": 0.042,
+   "p95": 0.254,
+   "share_pass_030": 0.955
+  },
+  "C03 both at 1.0": {
+   "mean": 0.332,
+   "p05": 0.067,
+   "p50": 0.285,
+   "p95": 0.699,
+   "share_pass_030": 0.53
+  },
+  "C03 both at 1.3": {
+   "mean": 0.138,
+   "p05": 0.006,
+   "p50": 0.086,
+   "p95": 0.391,
+   "share_pass_030": 0.875
+  }
+ },
+ "part2_semi_real": {
+  "real_C02_columns": 18,
+  "days": 2012,
+  "C02_alone_pbo": 0.2682983682983683,
+  "C03 null (both at 0.5)": {
+   "six_only": {
+    "mean": 0.468,
+    "p05": 0.062,
+    "p50": 0.45,
+    "p95": 0.897,
+    "share_pass_030": 0.29
+   },
+   "pooled_24": {
+    "mean": 0.238,
+    "p05": 0.143,
+    "p50": 0.226,
+    "p95": 0.379,
+    "share_pass_030": 0.79
+   }
+  },
+  "C03 both at EW-like 0.9": {
+   "six_only": {
+    "mean": 0.53,
+    "p05": 0.046,
+    "p50": 0.554,
+    "p95": 0.917,
+    "share_pass_030": 0.22
+   },
+   "pooled_24": {
+    "mean": 0.37,
+    "p05": 0.232,
+    "p50": 0.377,
+    "p95": 0.508,
+    "share_pass_030": 0.26
+   }
+  },
+  "C03 one hypothesis at 1.3": {
+   "six_only": {
+    "mean": 0.038,
+    "p05": 0.0,
+    "p50": 0.006,
+    "p95": 0.136,
+    "share_pass_030": 0.96
+   },
+   "pooled_24": {
+    "mean": 0.162,
+    "p05": 0.052,
+    "p50": 0.142,
+    "p95": 0.313,
+    "share_pass_030": 0.94
+   }
+  },
+  "C03 one at 1.6": {
+   "six_only": {
+    "mean": 0.009,
+    "p05": 0.0,
+    "p50": 0.0,
+    "p95": 0.041,
+    "share_pass_030": 0.99
+   },
+   "pooled_24": {
+    "mean": 0.07,
+    "p05": 0.003,
+    "p50": 0.061,
+    "p95": 0.162,
+    "share_pass_030": 0.99
+   }
+  },
+  "C03 both at 1.3": {
+   "six_only": {
+    "mean": 0.528,
+    "p05": 0.019,
+    "p50": 0.57,
+    "p95": 0.896,
+    "share_pass_030": 0.19
+   },
+   "pooled_24": {
+    "mean": 0.163,
+    "p05": 0.023,
+    "p50": 0.14,
+    "p95": 0.418,
+    "share_pass_030": 0.87
+   }
+  }
+ }
+}
