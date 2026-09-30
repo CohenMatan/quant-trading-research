@@ -21,3 +21,12 @@
   - the harness summary is present. That summary is written in `on_end_of_algorithm`, so it only exists if the algorithm ran to its last day.
 - **Conclusion:** the error was attached by QuantConnect's infrastructure after the algorithm had finished. It does not affect the result.
 - **Possible link:** a server-side connection problem like this may be related to the E013-06 incident that followed.
+
+## Status at 17:11 UTC (STOP)
+
+- The backtest was checked every 2 minutes from 16:40 to 17:11 UTC. It was always "In Queue…" at progress 0.
+- After one hour it has not started, and no other backtest can run.
+- **The C03 queue is stopped.**
+- **Completed so far:** E013-01..05 (5 of the 21 committed runs).
+- **Not yet run:** E013-07..15 and E962-25..30.
+- **Decision requested from the owner:** approve deleting QuantConnect backtest `5c1afc8e56c21718609f6f98bd781082`. It never ran, and its metadata and runner output are preserved here. Then re-run the identical configuration as a technical repeat under a new ID and resume the queue.
