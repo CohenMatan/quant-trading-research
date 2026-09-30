@@ -22,7 +22,7 @@ from pathlib import Path
 import pandas as pd
 
 from . import config, experiment, gitutil, holdout, integrity, metrics, registry, results, stats
-from .qc_client import QCClient, QCError
+from .qc_client import BacktestHandle, QCClient, QCError
 from .trades import build_trades
 
 
@@ -88,6 +88,13 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     bt = client.wait_backtest(handle)
     runtime = time.time() - t0
     state.update(stage="download_results", runtime_s=runtime)
+    return download(cfg, client, handle, bt, runtime)
+
+
+def download(cfg: dict, client: QCClient, handle, bt: dict, runtime: float) -> dict:
+    """Everything after the backtest has completed: statistics, orders (verified complete), logs
+    or summary statistics, and charts. Shared by normal runs and by --recover (D077)."""
+    project = handle.project_id
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
                lean_version=client.lean_version(bt))
     if not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
@@ -234,6 +241,62 @@ def registry_row(cfg: dict, prov: dict, result: dict, run_type: str, notes: str 
     )
 
 
+def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
+    """D077: an official run whose local runner was lost (e.g. a container restart) while its
+    QuantConnect backtest went on to complete. Downloads that SAME backtest through the normal
+    download/verify/analyse path. The failed original record is kept untouched; the recovered result
+    goes to experiments/<id>/recovery/<utc>/ with a registry row of run_type "recovery".
+    Refused unless: the original row failed, its result.json names this backtest, the backtest
+    completed on the pinned LEAN build, and the strategy/harness files built from the original
+    commit are byte-identical to those at the current (clean) commit."""
+    run_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+    head = gitutil.require_clean_tree()
+    exp_dir = config.EXPERIMENTS_DIR / exp_id
+    orig = json.loads((exp_dir / "result.json").read_text())
+    rows = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
+    if not rows or rows[-1]["status"] != "failed" or orig.get("status") != "failed":
+        raise SystemExit(f"{exp_id}: recovery only applies to a failed original run")
+    if orig["provenance"].get("qc_backtest_id") != backtest_id:
+        raise SystemExit(f"{exp_id}: backtest {backtest_id} is not the one recorded for this run")
+    build_commit = orig["provenance"]["git_commit"]
+    cfg_text = gitutil.show_file(build_commit, f"experiments/{exp_id}/config.json")
+    cfg = experiment.parse(cfg_text)
+    files = assemble_files(cfg, build_commit, holdout.holdout_unlocked())
+    if code_hash(files) != code_hash(assemble_files(cfg, head, holdout.holdout_unlocked())):
+        raise SystemExit(f"{exp_id}: code changed between {build_commit[:8]} and HEAD; cannot attribute the backtest")
+    client = QCClient()
+    handle = BacktestHandle(int(orig["provenance"]["qc_project_id"]), backtest_id, "")
+    bt = client.read_backtest(handle)
+    if not bt.get("completed") or bt.get("error") or bt.get("stacktrace"):
+        raise SystemExit(f"{exp_id}: backtest {backtest_id} did not complete cleanly on QuantConnect")
+    prov = dict(git_commit=build_commit, run_utc=orig["provenance"].get("run_utc", ""), recovered_utc=run_utc,
+                recovered_at_commit=head, config_sha256=results.sha256_text(cfg_text), code_sha256=code_hash(files),
+                files=sorted(files), holdout_unlocked=holdout.holdout_unlocked(), build_commit=build_commit,
+                datasets=["QC US Equities (AlgoSeek) daily", "QC US Equity Security Master",
+                          "Morningstar US Fundamentals (QC)"])
+    try:
+        raw = download(cfg, client, handle, bt, 0.0)
+    except Exception as exc:
+        raw = dict(project_id=handle.project_id, backtest_id=backtest_id, runtime_s=0.0, logs=[],
+                   error=f"{type(exc).__name__}: {exc} [stage: recovery download]")
+    prov.update(result_channel=raw.get("result_channel", ""), qc_project_id=raw.get("project_id", ""),
+                qc_backtest_id=backtest_id, lean_version=raw.get("lean_version", ""), runtime_s=0.0,
+                failure_stage="" if "error" not in raw else "recovery")
+    an = None
+    if "error" not in raw:
+        try:
+            an = analyse(cfg, raw)
+        except Exception:
+            raw["error"] = "analysis failed:\n" + traceback.format_exc()
+    outdir = exp_dir / "recovery" / run_utc.replace(":", "")
+    result = write_outputs(outdir, cfg, prov, raw, an)
+    registry.append(registry_row(cfg, prov, result, "recovery",
+                                 ((notes + " ") if notes else "") + f"recovered QC backtest {backtest_id} (D077)"))
+    from .report import write_report
+    write_report(outdir, cfg, result)
+    return result
+
+
 def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scratch: str | None = None,
         notes: str = "") -> dict:
     run_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -361,10 +424,14 @@ def main(argv=None) -> int:
     ap.add_argument("--dry-run", action="store_true")
     ap.add_argument("--scratch", metavar="CONFIG_JSON")
     ap.add_argument("--notes", default="")
+    ap.add_argument("--recover", metavar="QC_BACKTEST_ID")
     a = ap.parse_args(argv)
     if not a.scratch and not a.experiment_id:
         ap.error("experiment_id or --scratch is required")
-    res = run(a.experiment_id, reproduce=a.reproduce, dry_run=a.dry_run, scratch=a.scratch, notes=a.notes)
+    if a.recover:
+        res = recover(a.experiment_id, a.recover, notes=a.notes)
+    else:
+        res = run(a.experiment_id, reproduce=a.reproduce, dry_run=a.dry_run, scratch=a.scratch, notes=a.notes)
     if a.dry_run:
         return 0
     m = res.get("metrics", {})

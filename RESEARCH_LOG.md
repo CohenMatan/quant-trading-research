@@ -483,3 +483,25 @@ The owner approved the prerequisite checkpoint except for two checks. Report: `d
 - E007-16 is stuck on QuantConnect; deleting it awaits owner approval. E007-13 and E007-14 have not run; they cannot change the verdict.
 
 **STOP.** No Validation run.
+
+## 2026-09-30: C02 completed; C01–C02 review; C03 proposed; STOP
+
+**C02 completion (owner-approved steps).**
+
+- **E007-16:** stuck "In Queue" on QuantConnect and never ran. Its metadata and runner output were preserved, then it was deleted with owner approval.
+- **E007-12** (time stop 32): its completed QuantConnect backtest was **recovered and verified** with the new `--recover` mode (D077). Sharpe 1.17, all integrity checks pass.
+- **E007-13 and E007-14** (time stops 48 and 60) ran: Sharpe 1.12 and 1.13.
+- **Final robustness for H007 v1.1:** plateau 5 of 8 (at least 7 required), so it **fails**.
+- **C02 closed: No Production Candidate Found** (D078). Final report: `docs/checkpoints/CP3c_C02_final_report.md`.
+
+**C01–C02 review** (IS evidence only; no Validation result used for design):
+
+- Median net IR −0.14 (gross +0.12); the screen needs about 0.5.
+- Costs cost about 0.25 of IR.
+- One common factor explains 61% of all 37 variations' returns.
+- The only high-IR profiles were defensive and low-exposure, and both later failed.
+- Method limitations to measure (not relax): 10–15-stock concentration, and the $5K minimum position at $100K.
+
+**C03 proposal** (`research/cycles/C03_review_and_plan.md`): matched-null and breadth measurements first; then 3 new-family hypotheses; a stopping rule.
+
+**STOP.** Awaiting owner review.
