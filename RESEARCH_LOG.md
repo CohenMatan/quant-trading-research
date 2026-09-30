@@ -737,3 +737,24 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Recommendation.** Close or pause (cancel the QuantConnect node). Continue only with a reconsidered objective: lower turnover or a lower cost basis, as a new pre-registered phase.
 
 **STOP.**
+
+## 2026-09-30: Phase 2 research proposal (P2-CP0); STOP
+
+**Owner request.** A new programme on a low-turnover, technical trend + pullback + recovery strategy, at the design stage only.
+
+**Delivered.**
+
+- Proposal: `docs/checkpoints/P2_CP0_research_proposal.md`.
+- Literature review, which keeps evidence, conventions and our own hypotheses apart.
+- Feasibility analysis: costs against holding period, DSR hurdles, and statistical power.
+- H014 draft.
+
+**H014.** Two candidates, differing only in the exit rule. Three controls isolate whether the entry timing adds value: trend-only, pullback without recovery, and random uptrend stocks (3 seeds).
+
+**Key constraints found before any backtest.**
+
+- **Costs:** the target of 1.0–1.5% a year needs an average hold of at least about 55–60 sessions.
+- **Power:** showing that the pullback entry beats the trend-only control has only about 20–60% power over 8 years.
+- **Trial count:** the choice largely decides feasibility. The Sharpe needed is about 1.2 with a separate P2 registry and about 1.45 if the 40 earlier trials are inherited.
+
+**STOP.** Nothing implemented or run. No Validation, Walk-Forward or Holdout used.

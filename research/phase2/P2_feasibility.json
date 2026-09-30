@@ -1,0 +1,324 @@
+{
+ "assumptions": {
+  "commission_per_order": 7.0,
+  "slippage_per_side": 0.001,
+  "equity": 100000,
+  "invested_share": 0.85,
+  "note": "0.85 = the invested share measured for the hold-60 random null"
+ },
+ "cost_model": {
+  "slots=10,hold=20": {
+   "round_trips": 107.1,
+   "orders": 214.2,
+   "commission": 0.014993999999999999,
+   "slippage": 0.02142,
+   "total": 0.036414
+  },
+  "slots=10,hold=40": {
+   "round_trips": 53.55,
+   "orders": 107.1,
+   "commission": 0.007496999999999999,
+   "slippage": 0.01071,
+   "total": 0.018207
+  },
+  "slots=10,hold=60": {
+   "round_trips": 35.7,
+   "orders": 71.4,
+   "commission": 0.004998000000000001,
+   "slippage": 0.00714,
+   "total": 0.012138
+  },
+  "slots=10,hold=80": {
+   "round_trips": 26.775,
+   "orders": 53.55,
+   "commission": 0.0037484999999999997,
+   "slippage": 0.005355,
+   "total": 0.0091035
+  },
+  "slots=10,hold=120": {
+   "round_trips": 17.85,
+   "orders": 35.7,
+   "commission": 0.0024990000000000004,
+   "slippage": 0.00357,
+   "total": 0.006069
+  },
+  "slots=12,hold=20": {
+   "round_trips": 128.51999999999998,
+   "orders": 257.03999999999996,
+   "commission": 0.017992799999999996,
+   "slippage": 0.02142,
+   "total": 0.0394128
+  },
+  "slots=12,hold=40": {
+   "round_trips": 64.25999999999999,
+   "orders": 128.51999999999998,
+   "commission": 0.008996399999999998,
+   "slippage": 0.01071,
+   "total": 0.0197064
+  },
+  "slots=12,hold=60": {
+   "round_trips": 42.839999999999996,
+   "orders": 85.67999999999999,
+   "commission": 0.0059976,
+   "slippage": 0.00714,
+   "total": 0.0131376
+  },
+  "slots=12,hold=80": {
+   "round_trips": 32.129999999999995,
+   "orders": 64.25999999999999,
+   "commission": 0.004498199999999999,
+   "slippage": 0.005355,
+   "total": 0.0098532
+  },
+  "slots=12,hold=120": {
+   "round_trips": 21.419999999999998,
+   "orders": 42.839999999999996,
+   "commission": 0.0029988,
+   "slippage": 0.00357,
+   "total": 0.0065688
+  },
+  "slots=15,hold=20": {
+   "round_trips": 160.65,
+   "orders": 321.3,
+   "commission": 0.022491,
+   "slippage": 0.02142,
+   "total": 0.043911000000000006
+  },
+  "slots=15,hold=40": {
+   "round_trips": 80.325,
+   "orders": 160.65,
+   "commission": 0.0112455,
+   "slippage": 0.01071,
+   "total": 0.021955500000000003
+  },
+  "slots=15,hold=60": {
+   "round_trips": 53.55,
+   "orders": 107.1,
+   "commission": 0.007496999999999999,
+   "slippage": 0.00714,
+   "total": 0.014636999999999999
+  },
+  "slots=15,hold=80": {
+   "round_trips": 40.1625,
+   "orders": 80.325,
+   "commission": 0.00562275,
+   "slippage": 0.005355,
+   "total": 0.010977750000000001
+  },
+  "slots=15,hold=120": {
+   "round_trips": 26.775,
+   "orders": 53.55,
+   "commission": 0.0037484999999999997,
+   "slippage": 0.00357,
+   "total": 0.0073184999999999995
+  }
+ },
+ "cost_model_200k": {
+  "slots=12,hold=40": {
+   "round_trips": 64.25999999999999,
+   "orders": 128.51999999999998,
+   "commission": 0.004498199999999999,
+   "slippage": 0.01071,
+   "total": 0.0152082
+  },
+  "slots=12,hold=60": {
+   "round_trips": 42.839999999999996,
+   "orders": 85.67999999999999,
+   "commission": 0.0029988,
+   "slippage": 0.00714,
+   "total": 0.0101388
+  },
+  "slots=12,hold=80": {
+   "round_trips": 32.129999999999995,
+   "orders": 64.25999999999999,
+   "commission": 0.0022490999999999995,
+   "slippage": 0.005355,
+   "total": 0.0076041
+  }
+ },
+ "empirical_anchor": {
+  "experiment": "E962-22",
+  "description": "random picks, 15 slots, hold 60, $100K, IS",
+  "harness_orders": 970,
+  "note": "measured drag: see C03_results.json nulls",
+  "measured_commission_drag": 0.005602064778145733,
+  "measured_slippage_drag": 0.0071802849231741095,
+  "model_prediction": {
+   "round_trips": 53.55,
+   "orders": 107.1,
+   "commission": 0.007496999999999999,
+   "slippage": 0.00714,
+   "total": 0.014636999999999999
+  }
+ },
+ "dsr_hurdles": [
+  {
+   "n": 2,
+   "sr_star_annual": 0.2538186819681687,
+   "observed_sharpe_needed_is_val": 0.6241383156443594
+  },
+  {
+   "n": 4,
+   "sr_star_annual": 0.5137964071807357,
+   "observed_sharpe_needed_is_val": 0.8841160408569266
+  },
+  {
+   "n": 8,
+   "sr_star_annual": 0.7124987442348663,
+   "observed_sharpe_needed_is_val": 1.082818377911057
+  },
+  {
+   "n": 14,
+   "sr_star_annual": 0.8489585103391781,
+   "observed_sharpe_needed_is_val": 1.219278144015369
+  },
+  {
+   "n": 20,
+   "sr_star_annual": 0.9281966838512851,
+   "observed_sharpe_needed_is_val": 1.2985163175274759
+  },
+  {
+   "n": 42,
+   "sr_star_annual": 1.0785991523561789,
+   "observed_sharpe_needed_is_val": 1.4489187860323696
+  },
+  {
+   "n": 45,
+   "sr_star_annual": 1.0917583619292437,
+   "observed_sharpe_needed_is_val": 1.4620779956054346
+  },
+  {
+   "n": 60,
+   "sr_star_annual": 1.145328336256117,
+   "observed_sharpe_needed_is_val": 1.515647969932308
+  }
+ ],
+ "paired_power": [
+  {
+   "delta": 0.1,
+   "rho": 0.7,
+   "years": 8,
+   "se": 0.2738612787525831,
+   "power": 0.10032440783334262
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.7,
+   "years": 8,
+   "se": 0.2738612787525831,
+   "power": 0.18021215124668866
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.7,
+   "years": 8,
+   "se": 0.2738612787525831,
+   "power": 0.29136256697016294
+  },
+  {
+   "delta": 0.1,
+   "rho": 0.8,
+   "years": 8,
+   "se": 0.22360679774997894,
+   "power": 0.11552859229661872
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.8,
+   "years": 8,
+   "se": 0.22360679774997894,
+   "power": 0.2264989570865622
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.8,
+   "years": 8,
+   "se": 0.22360679774997894,
+   "power": 0.38086383204906415
+  },
+  {
+   "delta": 0.1,
+   "rho": 0.9,
+   "years": 8,
+   "se": 0.15811388300841894,
+   "power": 0.15567387443995795
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.9,
+   "years": 8,
+   "se": 0.15811388300841894,
+   "power": 0.3519940258168497
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.9,
+   "years": 8,
+   "se": 0.15811388300841894,
+   "power": 0.599677704546438
+  },
+  {
+   "delta": 0.1,
+   "rho": 0.7,
+   "years": 12,
+   "se": 0.223606797749979,
+   "power": 0.1155285922966186
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.7,
+   "years": 12,
+   "se": 0.223606797749979,
+   "power": 0.2264989570865621
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.7,
+   "years": 12,
+   "se": 0.223606797749979,
+   "power": 0.38086383204906404
+  },
+  {
+   "delta": 0.1,
+   "rho": 0.8,
+   "years": 12,
+   "se": 0.18257418583505536,
+   "power": 0.1362920500913407
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.8,
+   "years": 12,
+   "se": 0.18257418583505536,
+   "power": 0.29136256697016294
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.8,
+   "years": 12,
+   "se": 0.18257418583505536,
+   "power": 0.49932740181129665
+  },
+  {
+   "delta": 0.1,
+   "rho": 0.9,
+   "years": 12,
+   "se": 0.12909944487358055,
+   "power": 0.19207999768874817
+  },
+  {
+   "delta": 0.2,
+   "rho": 0.9,
+   "years": 12,
+   "se": 0.12909944487358055,
+   "power": 0.4618951907081522
+  },
+  {
+   "delta": 0.3,
+   "rho": 0.9,
+   "years": 12,
+   "se": 0.12909944487358055,
+   "power": 0.7514109135034037
+  }
+ ]
+}
