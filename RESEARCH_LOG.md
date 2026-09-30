@@ -467,3 +467,19 @@ The owner approved the prerequisite checkpoint except for two checks. Report: `d
 **2. PBO** (D073, proposed). With 3 variations, PBO measures sibling dominance, not overfitting (null 2/3, very noisy). Proposed: a cycle-level PBO ≤ 0.30 gate over the 18 candidates, with the threshold unchanged.
 
 **STOP.** Owner decisions needed on D073 and D074. The 18 C02 runs have not been started.
+
+## 2026-09-30: C02 in-sample results; CP3b STOP
+
+**What ran.** All 18 C02 selection trials, once each, plus the pre-declared robustness procedure for the one screen pass. Report: `docs/checkpoints/CP3b_C02_IS_results.md`.
+
+- **17 of 18 fail the IS screen**, every one on Sharpe ≥ EW + 0.10. The equal-weight benchmark's IS Sharpe is 0.92.
+- **E007-02 (H007 v1.1)** passes the screen and 2× slippage, then **fails robustness**: 3 of 8 plateau perturbations fall below 70% of its base Sharpe. It is also only 21% invested on average.
+- Cycle-level PBO is 0.268 (the gate passes); the best IS DSR is 0.54 (N = 37).
+- **Proposed C02 outcome: No Production Candidate Found** (D076).
+
+**Operational.**
+
+- Three container restarts lost the runner mid-backtest. The affected runs are recorded as failed, with identical technical repeats.
+- E007-16 is stuck on QuantConnect; deleting it awaits owner approval. E007-13 and E007-14 have not run; they cannot change the verdict.
+
+**STOP.** No Validation run.

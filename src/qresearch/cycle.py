@@ -68,15 +68,42 @@ def cycle_experiments(cycle: str, final_only: bool = True) -> list[str]:
     return out
 
 
-def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") -> dict:
+PBO_GATE = 0.30   # D073: hard Validation gate on the CYCLE-level PBO (frozen before any C02 result)
+
+
+def cycle_pbo(rets: dict, ids: list[str]) -> dict:
+    """D073 (owner-approved 2026-09-29, frozen): the hard-gate PBO is computed across the cycle's
+    full selection set (every pre-declared IS candidate at base costs), with the unchanged CSCV
+    (16 blocks, at-or-below-median rule). `complete` is False if any candidate has no return
+    series (then the gate cannot pass)."""
+    have = [i for i in ids if i in rets]
+    out = dict(candidates=list(ids), n_candidates=len(ids), n_with_returns=len(have),
+               complete=len(have) == len(ids) and len(ids) >= 2, threshold=PBO_GATE)
+    if len(have) >= 2:
+        mat = pd.concat([rets[i] for i in have], axis=1, join="inner").dropna()
+        out.update(stats.pbo_cscv(mat.to_numpy(), n_blocks=16), n_days=len(mat))
+        out["gate_ok"] = bool(out["complete"] and out["pbo"] <= PBO_GATE)
+    else:
+        out["gate_ok"] = False
+    return out
+
+
+def summarise(cycle: str, bench_id: str | None = None, spy_id: str | None = None) -> dict:
+    final = cycle_experiments(cycle)
+    if bench_id is None or spy_id is None:   # the cycle's own benchmarks (config: [SPY, EW])
+        b = json.loads((config.EXPERIMENTS_DIR / final[0] / "config.json").read_text()).get("benchmarks") \
+            if final else None
+        spy_id, bench_id = (b or ["E900-06", "E901-05"])[:2]
     _, _, beq, _, _ = _load(bench_id)
     _, _, seq, _, _ = _load(spy_id)
     rows, rets, checks_all = [], {}, {}
     d = dsr_inputs()   # D069: official N = cumulative selection candidates; conservative N reported beside it
     n_trials, n_cons, var_sr = d["n_trials"], d["n_conservative"], d["var_sr"]
-    final = cycle_experiments(cycle)
+    selection = []
     for eid in final:
         cfg, res, eq, tr, fi = _load(eid)
+        if registry.trial_category(cfg) == registry.SELECTION:
+            selection.append(eid)
         row = dict(experiment=eid, hypothesis=cfg["hypothesis_id"], strategy=cfg["strategy_id"],
                    version=cfg["strategy_version"], params=json.dumps(cfg["params"], sort_keys=True), status=res["status"])
         if eq is None:
@@ -110,7 +137,7 @@ def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") ->
                    failed_gates="; ".join(c["gate"] for c in chk if not c["ok"]))
         rows.append(row)
     table = pd.DataFrame(rows)
-    pbo = {}
+    pbo = {}   # per hypothesis (3 variations): DIAGNOSTIC only from C02 on (D073)
     for h, g in table.groupby("hypothesis"):
         ids = [i for i in g["experiment"] if i in rets]
         if len(ids) >= 2:
@@ -121,7 +148,8 @@ def summarise(cycle: str, bench_id: str = "E901-05", spy_id: str = "E900-06") ->
         sl = metrics.slice_equity(df, "2010-01-04", "2017-12-29")
         bm = metrics.compute_metrics(sl)
         bench[name] = dict(cagr=bm["cagr"], sharpe=bm["sharpe"], max_dd=bm["max_drawdown"])
-    return dict(table=table, checks=checks_all, pbo=pbo, bench=bench, n_trials=n_trials,
+    return dict(table=table, checks=checks_all, pbo=pbo, pbo_cycle=cycle_pbo(rets, selection),
+                bench=bench, bench_ids=dict(ew=bench_id, spy=spy_id), n_trials=n_trials,
                 n_trials_conservative=n_cons, counts=registry.counts(), var_sr=var_sr)
 
 
@@ -131,7 +159,8 @@ def main(argv=None) -> int:
     out = config.REPO_ROOT / "research" / "cycles"
     s["table"].to_csv(out / f"{cycle}_is_results.csv", index=False)
     (out / f"{cycle}_is_gates.json").write_text(json.dumps(s["checks"], indent=1, default=str))
-    (out / f"{cycle}_pbo.json").write_text(json.dumps(s["pbo"], indent=1))
+    (out / f"{cycle}_pbo.json").write_text(json.dumps(dict(per_hypothesis_diagnostic=s["pbo"],
+                                                           cycle_gate=s["pbo_cycle"]), indent=1))
     print(s["table"].to_string(index=False))
     print(json.dumps(dict(pbo=s["pbo"], bench=s["bench"], n_trials=s["n_trials"], counts=s["counts"]), indent=1, default=str))
     return 0

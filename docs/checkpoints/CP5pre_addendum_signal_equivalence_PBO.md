@@ -86,7 +86,7 @@
 |---|---|---|---|
 | **A (recommended)** | As in Blitz et al.: estimate alpha and beta on SPY over the **756 sessions (36 months) ending T−1**. Score = sum of residuals over T−252 … T−22 (v1.1: T−126 … T−22) ÷ their standard deviation (v1.2: not divided). Needs 36 months of history, with at least 600 valid days. | About 760 daily bars per stock. At the 2010 start this reads 2007–2009 prices as **warm-up only**, the same principle you approved for H011. | Faithful to the paper the hypothesis cites; variations unchanged. Stocks with less than 3 years of history cannot be scored (disclosed bias). |
 | B | Keep only the 12-1 window. Score = sum of the *beta-adjusted* returns (r − β × SPY return, i.e. alpha is kept) ÷ residual standard deviation. | Unchanged (400 bars) | Simpler, no extra history. Closer to Grundy & Martin's "stock-specific return" than to Blitz et al. |
-| C | Drop H008 from C02 | — | C02 becomes 15 selection trials (DSR N 34, cap 47 backtests). Loses the only beta-neutral idea. |
+| C | Drop H008 from C02 | — | C02 becomes 15 selection trials (DSR N 34, cap 47 backtests). Loses the only market-adjusted (residual) ranking idea. *(Terminology corrected 2026-09-29: H008's score is market-adjusted; its long-only portfolio is not market-neutral.)* |
 
 After the chosen fix, and before any run, I would:
 

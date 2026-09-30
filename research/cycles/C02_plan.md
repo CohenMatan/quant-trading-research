@@ -28,7 +28,7 @@
 |---|---|---|---|---|---|---|---|---|
 | **H006** | Breakout / price expansion | Close above the prior 55-day high, volume ≥ 1.5× average, above SMA200 | Trailing stop: highest close − 3 × ATR20; time stop 60 | 20–50 days | Breakout size in ATR units | 10 | Daily scan | 2.1–2.8% |
 | **H007** | Volatility contraction → expansion | Bandwidth in the lowest 10% of the last 250 days, then close above the upper band with range ≥ 1.5 × ATR and volume ≥ 1.2× | Close below SMA20 (after 5 days); time stop 40 | 10–30 days | Tightest prior contraction | 10 | Daily scan | 2.8–4.2% |
-| **H008** | Relative strength (residual) | Monthly: top 10 by 12-1 month *market-residual* return ÷ residual volatility | Leaves the top 20 at the monthly re-rank | 2–6 months | Residual score | 10 | Monthly + daily refill | 1.4–1.7% |
+| **H008** | Relative strength (residual, market-adjusted) | Monthly: top 10 by 12-1 month *market-residual* return ÷ residual volatility (alpha/beta from 36 months; D074) | Leaves the top 20 at the monthly re-rank | 2–6 months | Residual score | 10 | Monthly + daily refill | 1.4–1.7% |
 | **H009** | Volume anomaly | Volume ≥ 2.5 × 50-day median with a price move ≤ 1 ATR | Time: 20 days | 20 days | Volume ratio | 10 | Daily scan | ~4.2% (2.1% at 40 days) |
 | **H010** | Gap / price structure | Overnight gap ≥ max(2%, 1.5 × ATR%), closes at or above the open, volume ≥ 2×; signal after the T close, buy at the T+1 open | Close below the gap day's low; time stop 40 | ≤ 40 days | Gap size in ATR units | 10 | Daily scan | ~2% |
 | **H011** | Seasonality | Monthly: top 10 by average return in the coming calendar month over the past 5 years | Monthly re-rank | ~1 month | Seasonal score | 10 | Monthly + daily refill | 3.4–4.0% |
@@ -51,7 +51,7 @@
 | C01 hypothesis | Nearest C02 idea | Why it is different |
 |---|---|---|
 | H001 short-term reversal (buy oversold, exit in days) | none | No C02 idea buys weakness. All hold for weeks to months. |
-| H002 12-1 total-return momentum | **H008** (closest; acknowledged) | H008 ranks on the *stock-specific* part of returns, beta-neutral and scaled by its own noise, so it picks different, lower-beta names. It tests under-reaction to firm news, not factor trend. |
+| H002 12-1 total-return momentum | **H008** (closest; acknowledged) | H008 ranks on the *stock-specific* (market-adjusted, residual) part of returns, scaled by its own noise; the long-only portfolio is not beta-hedged, so it picks different, lower-beta names. It tests under-reaction to firm news, not factor trend. |
 | H003 proximity to the 52-week high (monthly ranking) | H006 v1.1 | H006 buys only on the *day of a fresh break* with volume, and exits on a trailing stop. It is an event trade, not a monthly ranking of whatever sits near its high. |
 | H004 buying pullbacks in leaders | none | No C02 idea buys dips. |
 | H005 low volatility (monthly ranking) | H007 | H007 buys the *end* of low volatility (the expansion) and exits within weeks. H005 held low-volatility stocks. |
@@ -141,7 +141,7 @@ The engine stays pinned to LEAN build 18131. QuantConnect moves master to the ne
 - **Change from C01, disclosed.** The C01 Validation (E005-28) used every started research run as N (77). That report stays as published. D069 applies from C02 on.
 - **Sharpe dispersion** (the variance input to DSR) = the variance of the daily Sharpe across the latest valid (not retired) run of every selection candidate counted in N.
 
-**PBO (Validation gate, PBO ≤ 0.30).** *(Under review, 2026-09-29: with three variations the per-hypothesis PBO measures sibling dominance, not overfitting. A cycle-level gate is proposed in `C02_pbo_definition.md` (D073), pending owner decision.)*
+**PBO (Validation gate, PBO ≤ 0.30).** *(Frozen 2026-09-29, D073/D075, owner-approved before any C02 result: the hard gate is PBO ≤ 0.30 computed across all 18 C02 selection candidates; the per-hypothesis 3-variation PBO below is a diagnostic only. See `C02_pbo_definition.md`.)*
 
 - **Per hypothesis:** combinatorially symmetric cross-validation (16 blocks) on the IS daily returns of that hypothesis's 3 variations, exactly as in C01 (definition unchanged: at or below the median counts as overfit).
 - *C01 lesson:* with near-identical variations, PBO is uninformative. C02's variations are therefore designed to differ in one *substantive* dimension each. If two variations of a hypothesis still have daily-return correlation above 0.95, this is reported next to the PBO.

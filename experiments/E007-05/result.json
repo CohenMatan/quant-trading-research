@@ -1,0 +1,17 @@
+{
+ "error": "OPERATIONAL FAILURE: the container running the local runner restarted during the backtest; the runner process was lost, so results were never downloaded or checked. The QuantConnect backtest 32b34541c59fc00c5fa2fac77e07e42d was left to complete (not deleted). No result recorded; the identical configuration is re-run as E007-15, a technical repeat (D069).",
+ "experiment_id": "E007-05",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "5354219204d8b8b50b42e4bae4d49e5d63b3c96e",
+  "config_sha256": "ec62eb249b21dca281c7a716f46f479cab70e7c00a1e8c0b175e7064cea1e0ae",
+  "failure_stage": "backtest (runner lost)",
+  "git_commit": "5354219204d8b8b50b42e4bae4d49e5d63b3c96e",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "32b34541c59fc00c5fa2fac77e07e42d",
+  "qc_project_id": "37148938",
+  "run_utc": "2026-09-30T02:21:26Z"
+ },
+ "status": "failed"
+}

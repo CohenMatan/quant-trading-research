@@ -1,0 +1,33 @@
+{
+ "error": "QCError: backtests/read: giving up after retries (ReadTimeout) [stage: backtest]",
+ "experiment_id": "E007-16",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-09-30T06:19:17Z",
+  "build_commit": "568ff471fd7cd1fbe44fbfd6d60431e2f592940a",
+  "code_sha256": "55390da154f52346a3ca3bc7ab6b7f29ce30a5dabdbd09a10826c63b6f5b08e0",
+  "config_sha256": "495072c05fbae40c6e4c8cb3f10cd938058537cf71386c339a8f69bc215697cd",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "backtest",
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "568ff471fd7cd1fbe44fbfd6d60431e2f592940a",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "eddea030ec6e7842417b28de32c1d7fc",
+  "qc_project_id": 37148938,
+  "result_channel": "",
+  "run_utc": "2026-09-30T06:19:09Z",
+  "runtime_s": 0.0
+ },
+ "status": "failed"
+}

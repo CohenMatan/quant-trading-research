@@ -1,4 +1,6 @@
-# X961 v1.0 — C02 signal-equivalence canary (verification, not research; not a trial; no orders).
+# X961 v1.1 — C02 signal-equivalence canary (verification, not research; not a trial; no orders).
+# v1.1: corrected H008 score (D074 option A, 780-bar windows); params {"only": "H008"} runs the
+# H008 check alone, with score-dispersion statistics per ranking date.
 # Owner request 2026-09-29. The harness adjusts past prices for dividends with the standard factor
 # (1 - dividend / reference price), which differs from QuantConnect's own factor in the 5th decimal
 # (<= 0.06% after 5 years, E960-01). Question: do the ACTUAL C02 decisions change?
@@ -32,7 +34,7 @@ def _ranked(d, ascending=False):
 
 class SignalEquivalence(QRAlgorithm):
     USES_UNIVERSE = True
-    WINDOW_BARS = 400            # >= every C02 window (S008 400, S007 280, S006 260)
+    WINDOW_BARS = 780            # >= every C02 window (S008 780, S007 280, S006 260)
     USES_OHLC = True
     MONTHLY_BARS = 12 * 10 + 14  # as S011
     FIXED_TICKERS = FIXED
@@ -182,7 +184,8 @@ class SignalEquivalence(QRAlgorithm):
         if self.n % 21 == 0:
             self._check_reference(today)
             self._max_dev_windows()
-        if self.n % CHECK_EVERY == 0:
+        only = self.qr_params.get("only")
+        if self.n % CHECK_EVERY == 0 and only is None:
             self.c["event_days_checked"] += 1
             self._event_strategies(elig, today)
         m = (today.year, today.month)
@@ -191,7 +194,7 @@ class SignalEquivalence(QRAlgorithm):
             self.c["rank_dates_h008"] += 1
             self._h008(data, today)
             self._check_reference_months(today)
-        if self.qr_is_last_session_of_month():
+        if self.qr_is_last_session_of_month() and only is None:
             self.c["rank_dates_h011"] += 1
             self._h011(data, today)
 
@@ -273,6 +276,29 @@ class SignalEquivalence(QRAlgorithm):
                         res[name][j][str(s.id)] = x
         for name, (sh, sr) in res.items():
             self._compare(name, sh, sr, today, n, top=(10, 20))
+            self._dispersion(name, sh, n)
+
+    def _dispersion(self, name, scores, n_eligible):
+        """H008 non-degeneracy: how many stocks are scorable and how spread their scores are."""
+        v = list(scores.values())
+        d = self.c.setdefault("h008_dispersion", {}).setdefault(name, {
+            "dates": 0, "eligible": 0, "scored": 0, "abs_below_1e-6": 0, "min_sd": None, "sd_sum": 0.0,
+            "min_top_minus_median": None, "first": None})
+        d["dates"] += 1
+        d["eligible"] += n_eligible
+        d["scored"] += len(v)
+        d["abs_below_1e-6"] += sum(1 for x in v if abs(x) < 1e-6)
+        if len(v) > 1:
+            mu = sum(v) / len(v)
+            sd = (sum((x - mu) ** 2 for x in v) / (len(v) - 1)) ** 0.5
+            d["sd_sum"] += sd
+            d["min_sd"] = sd if d["min_sd"] is None else min(d["min_sd"], sd)
+            w = sorted(v)
+            gap = w[-10] - w[len(w) // 2] if len(w) >= 10 else None
+            if gap is not None:
+                d["min_top_minus_median"] = gap if d["min_top_minus_median"] is None else min(d["min_top_minus_median"], gap)
+        if d["first"] is None and v:
+            d["first"] = [str(self.time.date()), len(v)]
 
     def _h011(self, data, today):
         y, mth = sig011.next_month(today.year, today.month)
