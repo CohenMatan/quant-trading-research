@@ -1,0 +1,315 @@
+{
+ "experiment_id": "E962-28",
+ "harness_messages": [
+  "QRFORCEDFEE|21|7.00",
+  "QRFORCEDFEE|143|7.00",
+  "QRFORCEDFEE|543|7.00",
+  "QRFORCEDFEE|821|7.00",
+  "QRFORCEDFEE|885|7.00",
+  "QRFORCEDFEE|1142|7.00",
+  "QRFORCEDFEE|1186|7.00"
+ ],
+ "harness_summary": {
+  "buys_scaled": 33,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 1,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 1,
+  "cancelled_stale": 0,
+  "days": 2013,
+  "elig_days": 2013,
+  "elig_max": 1297,
+  "elig_mean": 1007.0129160457029,
+  "elig_min": 0,
+  "elig_sum": 2027117,
+  "experiment_id": "E962-28",
+  "fills": 1301,
+  "forced_fee_debits": 7,
+  "forced_fills": 7,
+  "held_delistings": 0,
+  "held_splits": 1,
+  "invalid": 0,
+  "log_budget_left": 19992,
+  "max_fill_dev": 3.757220605304979e-16,
+  "max_gross": 0.8977839764079041,
+  "max_subscribed": 1299,
+  "min_cash_frac": 0.10221602359209604,
+  "negative_qty": 0,
+  "open_positions_at_end": 19,
+  "orders": 1296,
+  "resubmitted_sells": 0,
+  "skipped_max_positions": 0,
+  "skipped_min_position": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "2918f7309e6c8da8b548c55965fce492ab1341c1d0034db39c954e00e7cff4fe",
+  "fills_sha256": "0e18057799ce3c96260f0ae67b3382438f75e9f94df1511abd41a0bcdc5265bb",
+  "trades_sha256": "f9bcaf32da8a27d66dc25906ffd6238c830a09b695834b409143763d5e90d3e9"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "2013 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2010-01-04..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 193780.35",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 2013 vs algorithm days 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 2013 vs QuantConnect tradeableDates 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 0.102216; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 7 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=3.757220605304979e-16",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 1303 orders vs QuantConnect Total Orders 1303",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 1301 vs harness-recorded fills 1301",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "1301 executed orders; 0 not charged exactly $7",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.1007844388640334,
+  "ann_volatility": 0.15137260400452437,
+  "avg_holding_days": 88.03432137285492,
+  "avg_loss": -0.09778682446123445,
+  "avg_win": 0.11138075895497938,
+  "best_year": 0.3088406373985133,
+  "cagr": 0.09340801314640501,
+  "calmar": 0.3428552472563442,
+  "end": "2017-12-29",
+  "expectancy": 0.02327584862365686,
+  "exposure_days_frac": 0.9900645802285146,
+  "exposure_mean": 0.8446272362314498,
+  "final_equity": 407991.33,
+  "kurtosis": 7.170328362020154,
+  "max_drawdown": -0.27244154462820924,
+  "max_drawdown_duration_days": 501,
+  "min_cash_frac": 0.10221603205288854,
+  "n_days": 2013,
+  "n_open_trades": 19,
+  "n_trades": 641,
+  "pct_positive_years": 0.75,
+  "profit_factor": 1.5080059842768703,
+  "sharpe": 0.6658036936526577,
+  "skew": -0.3482159140499262,
+  "sortino": 0.9420140849706569,
+  "start": "2010-01-04",
+  "total_return": 1.0399566500000001,
+  "turnover": 3.570806461399661,
+  "win_rate": 0.5787831513260531,
+  "worst_month": -0.11290793591068415,
+  "worst_year": -0.06757049667113024,
+  "yearly_returns": {
+   "2010": 0.21543504999999996,
+   "2011": -0.06757049667113024,
+   "2012": 0.071239932674936,
+   "2013": 0.3088406373985133,
+   "2014": 0.07559044801055914,
+   "2015": -0.04100142124264661,
+   "2016": 0.06978510974161312,
+   "2017": 0.16342449300133954
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-09-30T18:58:05Z",
+  "build_commit": "ecf814d3ad152cb2763964a770950eefba77040b",
+  "code_sha256": "eca07a2aac11bf4da710b84b1a262cf0e597c60dd82ca72ed8d764638490254c",
+  "config_sha256": "389155a62c6ca4a40c47e025ba1a8e7bb5c454b09b34f4a9358700104c42786d",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py",
+   "signals.py"
+  ],
+  "git_commit": "ecf814d3ad152cb2763964a770950eefba77040b",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "39557af7b75c0cc6ac66fae61c8b01f9",
+  "qc_project_id": 37166657,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-09-30T18:57:57Z",
+  "runtime_s": 292.0937728881836
+ },
+ "qc_statistics": {
+  "Alpha": "-0.023",
+  "Annual Standard Deviation": "0.126",
+  "Annual Variance": "0.016",
+  "Average Loss": "-0.45%",
+  "Average Win": "0.50%",
+  "Beta": "0.938",
+  "Compounding Annual Return": "9.331%",
+  "Drawdown": "27.200%",
+  "Drawdown Recovery": "730",
+  "End Equity": "407991.33",
+  "Estimated Strategy Capacity": "$4400000.00",
+  "Expectancy": "0.219",
+  "Information Ratio": "-0.534",
+  "Loss Rate": "42%",
+  "Lowest Capacity Asset": "ROG R735QTJ8XC9X",
+  "Net Profit": "103.996%",
+  "Portfolio Turnover": "1.94%",
+  "Probabilistic Sharpe Ratio": "4.021%",
+  "Profit-Loss Ratio": "1.11",
+  "Sharpe Ratio": "0.502",
+  "Sortino Ratio": "0.564",
+  "Start Equity": "200000",
+  "Total Fees": "$9058.00",
+  "Total Orders": "1303",
+  "Tracking Error": "0.053",
+  "Treynor Ratio": "0.067",
+  "Win Rate": "58%",
+  "qr_msgs_00": "QRFORCEDFEE|21|7.00\nQRFORCEDFEE|143|7.00\nQRSPLIT|CRM SZQUJUA9SVOL|2013-04-18|0.2500000000\nQRFORCEDFEE|543|7.00\nQRFORCEDFEE|821|7.00\nQRFORCEDFEE|885|7.00\nQRFORCEDFEE|1142|7.00\nQRFORCEDFEE|1186|7.00",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 33, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 1, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 1, \"cancelled_stale\": 0, \"days\": 2013, \"elig_days\": 2013, \"elig_max\": 1297, \"elig_mean\": 1007.0129160457029, \"elig_min\": 0, \"elig_sum\": 2027117, \"experiment_id\": \"E962-28\", \"fills\": 1301, \"forced_fee_debits\": 7, \"forced_fills\": 7, \"held_delistings\": 0, \"held_splits\": 1, \"invalid\": 0, \"log_budget_left\": 19992, \"max_fill_dev\": 3.757220605304979e-16, \"max_gross\": 0.8977839764079041, \"max_subscribed\": 1299, \"min_cash_frac\": 0.10221602359209604, \"negative_qty\": 0, \"open_positions_at_end\": 19, \"orders\": 1296, \"resubmitted_sells\": 0, \"skipped_max_positions\": 0, \"skipped_min_position\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.9620299075292285,
+   "correlation": 0.910507131463646,
+   "excess_cagr": -0.04000109021069398
+  },
+  "E901-07": {
+   "beta": 0.9223818720735149,
+   "correlation": 0.9434466181161375,
+   "excess_cagr": -0.04586915350504195
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "expectancy_ci95": [
+   0.012318286555600754,
+   0.03391667097991332
+  ],
+  "expectancy_without_best10": 0.016871705551528053,
+  "psr_0": 0.9688926501536833,
+  "top_10pct_share": 1.311470489304508,
+  "top_1pct_share": 0.2226075929090896,
+  "top_5pct_share": 0.7856374989812648
+ }
+}
