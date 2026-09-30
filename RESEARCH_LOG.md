@@ -527,3 +527,25 @@ The owner approved the prerequisite checkpoint except for two checks. Report: `d
 - the turn-of-month family is not recommended.
 
 **STOP.** Awaiting owner decisions.
+
+## 2026-09-30: C03 final plan (CP3e) proposed; STOP
+
+**Owner clarifications incorporated** into `docs/checkpoints/CP3e_C03_final_plan.md`:
+
+- **Capital:** $100K is primary; $200K is a pre-declared S1/S2 sensitivity check.
+- **H012:** two controls (fully invested, and a causal exposure-matched control).
+- **H013:** paired random selection, per-seed reporting.
+- **SPY:** used as an indicator only.
+- **H014:** deferred.
+
+**PBO analysis (synthetic and semi-real, no C03 data).** The 6-candidate cycle PBO is weak:
+
+- 27–29% false pass under the null;
+- it fails two genuinely good hypotheses about 80% of the time;
+- pooling with C02 is too lenient (79% false pass).
+
+Proposed P1: keep D073 and add a stricter dual-count DSR requirement.
+
+**DSR and budget.** N goes from 37 to 43. Budget: 34 committed runs, cap 82 (owner approval needed).
+
+**STOP.** No C03 strategy backtest has run.
