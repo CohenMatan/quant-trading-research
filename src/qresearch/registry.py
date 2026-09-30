@@ -115,10 +115,11 @@ def trial_category(cfg: dict) -> str:
     """D069 category of a research configuration (frozen 2026-09-29, before any C02 result).
     selection  = an IS candidate at base costs that could be chosen (a pre-declared variation);
     robustness = cost-stress or plateau run of an already-chosen variation (never selects);
-    validation = any out-of-sample evaluation of a frozen candidate."""
+    validation = any out-of-sample evaluation of a frozen candidate.
+    D094 (Phase 2): a DEV (2010-2021 development) candidate is a selection configuration, like IS."""
     if cfg.get("robustness_of") or cfg.get("costs", {}).get("slippage_stress_multiple", 1) != 1:
         return ROBUSTNESS
-    if cfg["split"] != "IS":
+    if cfg["split"] not in ("IS", "DEV"):
         return VALIDATION
     return SELECTION
 

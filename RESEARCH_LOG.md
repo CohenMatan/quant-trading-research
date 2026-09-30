@@ -794,3 +794,19 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 3. **G1.** A combined return-risk rule: Sharpe margin, a CAGR floor, Calmar no worse than EW, and drawdown at most 5 points deeper than EW. It replaces the drawdown veto that rejected genuinely better, slightly riskier strategies.
 
 **STOP.** Nothing implemented or run; the Holdout untouched.
+
+## 2026-09-30: Phase 2 approved; H014 development specification frozen (D094, D095)
+
+**Owner decision.** The Phase 2 methodology is finally approved (with the amendments), and H014 development is authorised.
+
+**Done before any H014 backtest.**
+
+- Froze `research/phase2/P2_spec.md`. The hash is pinned by a test. It includes the exact A/B selection metric, the gates, the conditional robustness trigger and the run IDs.
+- Added the `DEV` split (P2 only), which counts as selection in trial accounting.
+- Updated CLAUDE.md to the weeks-to-months horizon.
+- Built S014, one code path covering H014, C1, C2 and random-uptrend.
+- Built the canary X965.
+- Wrote the configs for E014-01..14 and E965-01..03.
+- Added tests `tests/test_p2_s014.py` and `tests/test_p2_spec.py`. The full suite passes.
+
+**Next:** canaries, `P2_eval.py`, then the committed development runs.

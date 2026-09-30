@@ -68,8 +68,10 @@ def validate(cfg: dict, unlock_file=None) -> None:
     if not (bounds[0] <= start and end <= bounds[1]):
         raise ConfigError(f"dates {start}..{end} are outside split {split} {bounds[0]}..{bounds[1]}")
     kind = cfg["kind"]
-    if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT"):
-        raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF or HOLDOUT)")
+    if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT", "DEV"):
+        raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF, HOLDOUT or DEV)")
+    if split == "DEV" and cfg.get("programme") != "P2":
+        raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094)")
     if scheme == config.CURRENT_SCHEME:
         if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
             raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
@@ -111,8 +113,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if kind == "sizing":
             if not str(cfg.get("account_size_test_of") or "").startswith("E"):
                 raise ConfigError("sizing experiments must name the tested experiment in 'account_size_test_of' (D044)")
-            if split not in ("IS", "VAL", "WF"):
-                raise ConfigError("sizing experiments use IS, VAL or WF")
+            if split not in ("IS", "VAL", "WF", "DEV"):
+                raise ConfigError("sizing experiments use IS, VAL, WF or DEV")
     if float(cfg["universe"].get("min_market_cap", 0)) < config.MIN_MARKET_CAP:
         raise ConfigError("universe min_market_cap is below the approved $2B")
 

@@ -33,6 +33,7 @@ SCHEMES: dict[str, dict[str, tuple[date, date]]] = {
         # composite labels
         "FULL": (date(2010, 1, 4), date(2021, 12, 31)),     # benchmarks / infrastructure only
         "WF": (date(2010, 1, 4), date(2021, 12, 31)),       # walk-forward (research), see RESEARCH_PLAN §3
+        "DEV": (date(2010, 1, 4), date(2021, 12, 31)),      # Phase 2 development period (D094, research/phase2/P2_spec.md)
         "STRESS": (date(1999, 1, 4), date(2009, 12, 31)),   # optional finalist stress test, never selection
         "AUDIT": (date(1999, 1, 4), date(2021, 12, 31)),    # data audits (kind infrastructure) incl. warm-up
     },
