@@ -714,3 +714,26 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Stopping rule.** No further cycle. A programme review is proposed as the next deliverable.
 
 **STOP.**
+
+## 2026-09-30: C03 closed; research-programme review (CP3j); STOP
+
+**Owner decision.** C03 is closed: No Production Candidate Found. The owner approved the programme review.
+
+**Review.** `docs/checkpoints/CP3j_programme_review_C01_C03.md` covers all 40 selection candidates. It uses in-sample data only, with official verdicts unchanged.
+
+**Outcomes.**
+
+- 5 lost money: high-turnover H001/H004, all profitable before costs.
+- 29 were profitable but below equal-weight.
+- 6 had a Sharpe above equal-weight but failed a requirement: H005 failed Validation or was not chosen, H007 v1.1 failed robustness, and H009 missed the bar by 0.01–0.02.
+- H012 was not evaluable.
+
+**Causes.**
+
+- Costs: a $7 fixed commission plus slippage at the swing horizon.
+- Portfolio structure: random no-skill portfolios trail equal-weight.
+- Short data and a DSR hurdle that grows with every candidate.
+
+**Recommendation.** Close or pause (cancel the QuantConnect node). Continue only with a reconsidered objective: lower turnover or a lower cost basis, as a new pre-registered phase.
+
+**STOP.**
