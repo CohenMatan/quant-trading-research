@@ -1,0 +1,183 @@
+{
+ "assumptions": {
+  "rho": 0.76,
+  "dev_years": 12.0,
+  "holdout_years": 4.67,
+  "forward_years": 2.0,
+  "se_dev": 0.2,
+  "se_holdout": 0.3205990110871589,
+  "se_forward": 0.4898979485566356,
+  "reps": 200000,
+  "seed": 20261002,
+  "note": "other development gates not modelled: false acceptance figures are upper bounds"
+ },
+ "single_hypothesis": {
+  "m_dev=0.0,m_hold=0.0": {
+   "delta=0.0": 0.299845,
+   "delta=0.2": 0.66225,
+   "delta=0.3": 0.79614,
+   "delta=0.5": 0.93888
+  },
+  "m_dev=0.0,m_hold=0.1": {
+   "delta=0.0": 0.229045,
+   "delta=0.2": 0.5611,
+   "delta=0.3": 0.706705,
+   "delta=0.5": 0.893115
+  },
+  "m_dev=0.0,m_hold=0.2": {
+   "delta=0.0": 0.1598,
+   "delta=0.2": 0.45071,
+   "delta=0.3": 0.600375,
+   "delta=0.5": 0.823095
+  },
+  "m_dev=0.1,m_hold=0.0": {
+   "delta=0.0": 0.19827,
+   "delta=0.2": 0.572155,
+   "delta=0.3": 0.74388,
+   "delta=0.5": 0.932055
+  },
+  "m_dev=0.1,m_hold=0.1": {
+   "delta=0.0": 0.150295,
+   "delta=0.2": 0.485915,
+   "delta=0.3": 0.662005,
+   "delta=0.5": 0.88547
+  },
+  "m_dev=0.1,m_hold=0.2": {
+   "delta=0.0": 0.105505,
+   "delta=0.2": 0.39215,
+   "delta=0.3": 0.56238,
+   "delta=0.5": 0.81702
+  },
+  "m_dev=0.2,m_hold=0.0": {
+   "delta=0.0": 0.10998,
+   "delta=0.2": 0.443265,
+   "delta=0.3": 0.646345,
+   "delta=0.5": 0.908235
+  },
+  "m_dev=0.2,m_hold=0.1": {
+   "delta=0.0": 0.08271,
+   "delta=0.2": 0.37655,
+   "delta=0.3": 0.57198,
+   "delta=0.5": 0.863165
+  },
+  "m_dev=0.2,m_hold=0.2": {
+   "delta=0.0": 0.05818,
+   "delta=0.2": 0.30232,
+   "delta=0.3": 0.48711,
+   "delta=0.5": 0.7956
+  },
+  "m_dev=0.3,m_hold=0.0": {
+   "delta=0.0": 0.0494,
+   "delta=0.2": 0.292355,
+   "delta=0.3": 0.49804,
+   "delta=0.5": 0.849725
+  },
+  "m_dev=0.3,m_hold=0.1": {
+   "delta=0.0": 0.037175,
+   "delta=0.2": 0.24833,
+   "delta=0.3": 0.442285,
+   "delta=0.5": 0.806705
+  },
+  "m_dev=0.3,m_hold=0.2": {
+   "delta=0.0": 0.026295,
+   "delta=0.2": 0.198855,
+   "delta=0.3": 0.37382,
+   "delta=0.5": 0.744075
+  }
+ },
+ "programme_false_acceptance_all_null": {
+  "K=1": {
+   "m_dev=0.2,m_hold=0.0": 0.10976,
+   "m_dev=0.2,m_hold=0.1": 0.083025,
+   "m_dev=0.3,m_hold=0.1": 0.03753,
+   "m_dev=0.4,m_hold=0.1": 0.013475,
+   "m_dev=0.20,m_hold=0.10,+2y forward": 0.04125
+  },
+  "K=3": {
+   "m_dev=0.2,m_hold=0.0": 0.260325,
+   "m_dev=0.2,m_hold=0.1": 0.197965,
+   "m_dev=0.3,m_hold=0.1": 0.10057,
+   "m_dev=0.4,m_hold=0.1": 0.038805,
+   "m_dev=0.20,m_hold=0.10,+2y forward": 0.0991
+  },
+  "K=5": {
+   "m_dev=0.2,m_hold=0.0": 0.3557,
+   "m_dev=0.2,m_hold=0.1": 0.268705,
+   "m_dev=0.3,m_hold=0.1": 0.152365,
+   "m_dev=0.4,m_hold=0.1": 0.062915,
+   "m_dev=0.20,m_hold=0.10,+2y forward": 0.134285
+  },
+  "K=10": {
+   "m_dev=0.2,m_hold=0.0": 0.45881,
+   "m_dev=0.2,m_hold=0.1": 0.34577,
+   "m_dev=0.3,m_hold=0.1": 0.24431,
+   "m_dev=0.4,m_hold=0.1": 0.114085,
+   "m_dev=0.20,m_hold=0.10,+2y forward": 0.172305
+  },
+  "K=20": {
+   "m_dev=0.2,m_hold=0.0": 0.497255,
+   "m_dev=0.2,m_hold=0.1": 0.375625,
+   "m_dev=0.3,m_hold=0.1": 0.33264,
+   "m_dev=0.4,m_hold=0.1": 0.19423,
+   "m_dev=0.20,m_hold=0.10,+2y forward": 0.187175
+  }
+ },
+ "one_real_edge_among_K": {
+  "delta=0.2,K=1": {
+   "accept_real": 0.37562,
+   "accept_null_instead": 0.0
+  },
+  "delta=0.2,K=5": {
+   "accept_real": 0.280615,
+   "accept_null_instead": 0.151
+  },
+  "delta=0.2,K=10": {
+   "accept_real": 0.211875,
+   "accept_null_instead": 0.233505
+  },
+  "delta=0.3,K=1": {
+   "accept_real": 0.57433,
+   "accept_null_instead": 0.0
+  },
+  "delta=0.3,K=5": {
+   "accept_real": 0.46232,
+   "accept_null_instead": 0.10799
+  },
+  "delta=0.3,K=10": {
+   "accept_real": 0.37996,
+   "accept_null_instead": 0.17238
+  },
+  "delta=0.5,K=1": {
+   "accept_real": 0.862145,
+   "accept_null_instead": 0.0
+  },
+  "delta=0.5,K=5": {
+   "accept_real": 0.797,
+   "accept_null_instead": 0.036065
+  },
+  "delta=0.5,K=10": {
+   "accept_real": 0.73788,
+   "accept_null_instead": 0.064625
+  }
+ },
+ "proposed_hypothesis_budget": {
+  "K=1 (margins [0.2])": {
+   "all_null": 0.082205,
+   "all_null_plus_2y_forward": 0.041935,
+   "real_0_3_first": 0.57293,
+   "real_0_5_first": 0.862755
+  },
+  "K=2 (margins [0.2, 0.3])": {
+   "all_null": 0.11297,
+   "all_null_plus_2y_forward": 0.05588,
+   "real_0_3_first": 0.54619,
+   "real_0_5_first": 0.847775
+  },
+  "K=3 (margins [0.2, 0.3, 0.4])": {
+   "all_null": 0.121425,
+   "all_null_plus_2y_forward": 0.061185,
+   "real_0_3_first": 0.533755,
+   "real_0_5_first": 0.83698
+  }
+ }
+}
