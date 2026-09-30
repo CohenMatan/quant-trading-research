@@ -1,0 +1,8 @@
+QRFORCEDFEE|16|7.00
+QRFORCEDFEE|108|7.00
+QRFORCEDFEE|408|7.00
+QRFORCEDFEE|616|7.00
+QRFORCEDFEE|665|7.00
+QRFORCEDFEE|889|7.00
+QRS013|summary|{"closes": 2013, "excluded_sum": 0, "ranked_sum": 2026832, "windows_sum": 2026911}
+QRC64|summary|{"audits": 201, "count_errors": 0, "excluded_mean": {"max": 252.2537313432836, "max5": 252.2537313432836}, "max_abs_dev": 0.00023372615681083175, "max_checks": 9898, "max_mismatches": 0, "order_errors": 0, "pairing_errors": 0, "short_excluded": 0, "short_windows": 2, "window_not_today": 0}

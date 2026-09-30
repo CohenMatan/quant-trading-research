@@ -678,11 +678,11 @@
   "excluded": {
    "technical_repeats": 49,
    "not_started": 7,
-   "verification_benchmark_sizing_stress": 68
+   "verification_benchmark_sizing_stress": 71
   },
   "var_sr": 0.0010013434709235445,
   "n_sharpes": 37,
-  "registry_sha256": "19e83d8393407d1367bc835920c5679faae0662e01416219894b08532cb2f84d",
-  "registry_rows": 336
+  "registry_sha256": "ef60e964d892c6a86192123244f6a8304a75478d01a36edeb80d139de7d0292f",
+  "registry_rows": 341
  }
 }

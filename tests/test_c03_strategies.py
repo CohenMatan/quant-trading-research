@@ -420,3 +420,36 @@ def test_s012_forms_the_basket_at_the_first_close_with_eligible_names(s012):
     assert log[first]["date"] == warm.date() and log[first]["rebalanced"]
     assert r.algo.s12["closes_without_eligible"] == first
     assert all(x["basket"] == log[first]["basket"] for x in log[first:] if x["date"] < date(2010, 1, 1))
+
+
+def test_x964_reproduces_the_null_exactly():
+    """E964-01 (S013 code, q = 0) must have exactly E962-22's fills and equity: S013's order is the null's."""
+    from conftest import experiment_result
+    from qresearch import results
+    experiment_result("E964-01")
+    cols = ["date", "symbol_id", "quantity", "price", "fee"]
+    a = results.read_csv_gz(ROOT / "experiments/E964-01/fills.csv.gz")[cols].reset_index(drop=True)
+    b = results.read_csv_gz(ROOT / "experiments/E962-22/fills.csv.gz")[cols].reset_index(drop=True)
+    assert len(a) > 900 and a.equals(b)
+    ea = results.read_csv_gz(ROOT / "experiments/E964-01/equity.csv.gz")["equity"]
+    eb = results.read_csv_gz(ROOT / "experiments/E962-22/equity.csv.gz")["equity"]
+    assert ea.equals(eb)
+
+
+@pytest.mark.parametrize("eid,prefix", [("E963-03", "QRC63"), ("E964-01", "QRC64")])
+def test_c03_canaries_passed(eid, prefix):
+    import json as _json
+    from conftest import experiment_result
+    r = experiment_result(eid)
+    assert r["status"].startswith("completed") and r["harness_summary"]["timing_violations"] == 0
+    assert all(c["ok"] for c in r["integrity"] if c["level"] == "fail")
+    lines = (ROOT / "experiments" / eid / "messages.txt").read_text().splitlines()   # result.json keeps 100 lines
+    s = next(_json.loads(m.split("|", 2)[2]) for m in lines if m.startswith(prefix + "|summary|"))
+    if prefix == "QRC63":
+        assert s["rv_checks"] > 100 and s["rv_mismatches"] == 0 and s["last_close_mismatches"] == 0
+        assert s["recon_checks"] == 8 and s["recon_mismatches"] == 0 and s["orders_outside_window"] == 0
+        assert s["history_after_start"] == 0 and s["history_targets"] >= 12
+    else:
+        assert s["audits"] > 150 and s["max_checks"] > 5000
+        assert s["max_mismatches"] == s["count_errors"] == s["order_errors"] == 0
+        assert s["pairing_errors"] == s["short_excluded"] == s["window_not_today"] == 0

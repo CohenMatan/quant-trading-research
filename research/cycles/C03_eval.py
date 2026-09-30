@@ -74,7 +74,8 @@ def bench():
 
 
 def messages(run, prefix):
-    lines = run["res"].get("harness_messages") or []
+    f = EXP / run["cfg"]["experiment_id"] / "messages.txt"     # result.json keeps only the first 100 lines
+    lines = f.read_text().splitlines() if f.exists() else (run["res"].get("harness_messages") or [])
     for ln in lines:
         if ln.startswith(prefix + "|summary|"):
             return json.loads(ln.split("|", 2)[2])
