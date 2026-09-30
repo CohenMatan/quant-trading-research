@@ -37,6 +37,9 @@ VERSIONS = ("v1.0", "v1.1", "v1.2")
 H012 = {"v1.0": "E012-01", "v1.1": "E012-02", "v1.2": "E012-03"}
 CONTROL_A, CONTROL_B = "E012-04", {"v1.0": "E012-05", "v1.1": "E012-06", "v1.2": "E012-07"}
 H013 = {v: {s: f"E013-{3 * i + s:02d}" for s in (1, 2, 3)} for i, v in enumerate(VERSIONS)}
+# E013-06 (v1.1 seed 3) never ran (QC backtest stuck In Queue, deleted with owner approval); its identical
+# configuration ran as the technical repeat E013-16, which is that seed's book (incident file, D069)
+H013["v1.1"][3] = "E013-16"
 NULL = {1: "E962-22", 2: "E962-23", 3: "E962-24"}
 SIZING = {"S1": {**{f"H013 v1.0 seed {s}": (f"E013-{9 + s}", f"E013-0{s}") for s in (1, 2, 3)},
                  **{f"null seed {s}": (f"E962-{24 + s}", NULL[s]) for s in (1, 2, 3)}},
@@ -94,7 +97,15 @@ def book(eid):
     chk = gates.is_screen(eq, tr, b)
     closed = tr[tr["status"] == "closed"] if len(tr) else tr
     expo = validation.exposure(eq)
+    fi = run["fi"]
+    years = (pd.Timestamp(s.index[-1]) - pd.Timestamp(s.index[0])).days / 365.25
+    notional = float((fi["quantity"].abs() * fi["price"]).sum())
+    costs = dict(orders=int(fi["order_id"].nunique()), commissions=float(fi["fee"].sum()),
+                 commission_drag_pa=float(fi["fee"].sum()) / float(s.mean()) / years,
+                 slippage_drag_pa=notional * run["cfg"]["costs"]["slippage_bps"] / 1e4 / float(s.mean()) / years,
+                 turnover_pa=notional / float(s.mean()) / years)
     return dict(exp=eid, status="completed", sharpe=m["sharpe"], cagr=m["cagr"], max_dd=m["max_drawdown"],
+                costs=costs, cash=run["cfg"]["cash"],
                 trades=int(len(closed)), avg_pnl_per_trade=float(closed["pnl"].mean()) if len(closed) else float("nan"),
                 exposure_mean=float(expo.mean()), screen=chk, screen_pass=gates.passed(chk),
                 failed_items=[c["gate"] for c in chk if not c["ok"]], thirds=gates.thirds_positive(eq),
@@ -248,6 +259,36 @@ def sizing_section():
     return out
 
 
+def capital_section():
+    """$200K sensitivity (never used for selection): each H013 v1.0 seed against its paired $200K null."""
+    out = {}
+    for name, off_b, off_n in (("S1 ($200K, 15 positions)", 9, 24), ("S2 ($200K, 20 positions)", 12, 27)):
+        rows = {}
+        for s in (1, 2, 3):
+            b, n = book(f"E013-{off_b + s}"), book(f"E962-{off_n + s}")
+            base, nb = book(f"E013-0{s}"), book(NULL[s])
+            rows[s] = dict(book=b, null=n,
+                           sharpe_diff_vs_null=(b["sharpe"] - n["sharpe"]) if b["status"] == n["status"] == "completed" else None,
+                           sharpe_change_vs_100k=(b["sharpe"] - base["sharpe"]) if b["status"] == base["status"] == "completed" else None,
+                           null_sharpe_change_vs_100k=(n["sharpe"] - nb["sharpe"]) if n["status"] == nb["status"] == "completed" else None)
+        out[name] = rows
+    return out
+
+
+def is_dsr_diagnostic(snap):
+    """IS-only DSR per $100K seed book: a DIAGNOSTIC (the D082 gate is IS + VAL, only after Validation)."""
+    out = {}
+    for v, seeds in H013.items():
+        for s, eid in seeds.items():
+            run = load(eid)
+            if run is None:
+                continue
+            r = c03stats.book_returns(_series(run["eq"]))
+            out[f"{v} seed {s}"] = {f"N={n}": c03stats.dsr_at(r, n, snap["var_sr"])["dsr"]
+                                    for n in (snap["official"], snap["conservative"], c03stats.SENSITIVITY_N_C03)}
+    return out
+
+
 def val_stage(val_map):
     """Only after separate owner approval. val_map: {IS experiment id: VAL experiment id} for every book
     of the chosen variations. Validation gates (unchanged; PBO item dropped for C03 per D082) and the
@@ -281,8 +322,9 @@ def main(argv=None):
                          "configs E012-01..11 withdrawn, never run."),
         h013=h13,
         chosen=dict(H013=choose(h13, lambda r: r["mean_seed_sharpe"])),
-        pbo_diagnostic=pbo_diagnostic(), sizing=sizing_section(),
+        pbo_diagnostic=pbo_diagnostic(), sizing=sizing_section(), capital_sensitivity=capital_section(),
         trial_counts_now=c03stats.snapshot())
+    out["is_only_dsr_diagnostic"] = is_dsr_diagnostic(out["trial_counts_now"])
     if args and args[0] == "--val":
         out["validation"] = val_stage(json.loads(Path(args[1]).read_text()))
     p = ROOT / "research" / "cycles" / "C03_results.json"

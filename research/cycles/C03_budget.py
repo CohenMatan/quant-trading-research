@@ -23,13 +23,18 @@ def ledger():
     gone = experiment.withdrawn()                  # D087: H012's configs, withdrawn before any run
     c03 = {e: c for e, c in cfgs.items() if c.get("cycle") == "C03" and e not in gone}
     runs = [r for r in registry.read() if r["run_type"] == "original" and r["experiment_id"] in c03]
-    research = [r for r in runs if c03[r["experiment_id"]]["strategy_id"] not in CANARIES]
+    def is_research(c):     # canaries and technical repeats (identical config re-run) are operational only
+        return c["strategy_id"] not in CANARIES and not c.get("technical_repeat_of")
+    research = [r for r in runs if is_research(c03[r["experiment_id"]])]
+    rep = [r for r in runs if c03[r["experiment_id"]].get("technical_repeat_of")]
+    can = [r for r in runs if c03[r["experiment_id"]]["strategy_id"] in CANARIES]
+    extra = [r for r in registry.read() if r["run_type"] in ("reproduce", "recovery") and r["experiment_id"] in c03]
     return dict(research_budget_used=len(research), research_budget_cap=CAP,
-                research_configs_written=sum(1 for c in c03.values() if c["strategy_id"] not in CANARIES),
-                operational_executions=len(runs) + sum(1 for r in registry.read()
-                                                       if r["run_type"] == "recovery" and r["experiment_id"] in c03),
-                operational_by_status={s: sum(1 for r in runs if r["status"] == s) for s in sorted({r["status"] for r in runs})},
-                canary_executions=len(runs) - len(research))
+                research_configs_written=sum(1 for c in c03.values() if is_research(c)),
+                operational_executions=len(runs) + len(extra),
+                operational_breakdown=dict(research=len(research), technical_repeats=len(rep), canaries=len(can),
+                                           reproductions_and_recoveries=len(extra)),
+                operational_by_status={s: sum(1 for r in runs if r["status"] == s) for s in sorted({r["status"] for r in runs})})
 
 
 if __name__ == "__main__":
