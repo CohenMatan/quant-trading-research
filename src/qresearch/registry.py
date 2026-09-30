@@ -123,24 +123,46 @@ def trial_category(cfg: dict) -> str:
     return SELECTION
 
 
+REPLICATE = "replicate"
+
+
+def _trial_key(cfg: dict, drop_param: str | None = None) -> str:
+    """Configuration identity (D066/D069): hypothesis, strategy, version, parameters, split, dates and
+    cost-stress multiple. `drop_param` removes one parameter (the replicate seed, D082)."""
+    import json as _json
+    params = {k: v for k, v in cfg["params"].items() if k != drop_param}
+    return _json.dumps([cfg.get("hypothesis_id"), cfg["strategy_id"], cfg["strategy_version"], params,
+                        cfg["split"], cfg["start"], cfg["end"],
+                        cfg["costs"].get("slippage_stress_multiple", 1)], sort_keys=True)
+
+
 def trial_accounting(path: Path | None = None, experiments_dir: Path | None = None,
                      retired: set[str] | None = None) -> dict:
     """D066: separate genuine strategy trials from technical repeats. A genuine trial is a distinct
     research configuration — (hypothesis, strategy, version, parameters, split, dates, cost-stress
     multiple) — whose backtest started. Further runs of an identical configuration (re-runs after
     infrastructure fixes, operational retries, remedial re-tests) are technical. Infrastructure,
-    benchmark and demo runs (verification, canaries, probes) are never trials.
+    benchmark, sizing, stress and demo runs (verification, canaries, probes, controls, nulls, capital
+    sensitivity) are never trials. Recovery and annotation rows are not runs.
 
-    D069 splits the genuine configurations by `trial_category`. `selection_latest` maps each
-    selection configuration to its latest started run not in `retired` (None if every run is)."""
+    D069 splits the genuine configurations by `trial_category`. D082 (C03, frozen 2026-09-30): a
+    SELECTION configuration whose config names `replicate_param` (H013: "seed") is grouped with the
+    other values of that parameter: the first started one is the selection candidate; every further
+    distinct value is a REPLICATE (in the conservative count only). Robustness and Validation
+    configurations are never grouped: each seed counts separately there.
+
+    `selection_latest` maps each selection candidate to its latest started run not in `retired` (None
+    if every run is); `selection_members` maps it to that run for itself and for each replicate."""
     import json as _json
     exp_dir = experiments_dir or config.EXPERIMENTS_DIR
     retired = retired or set()
     rows = read(path)
     skip = {r["experiment_id"] for r in rows if r["run_type"] == "annotation" and r["status"] == NOT_STARTED}
-    seen: dict[str, str] = {}
+    seen: dict[str, str] = {}          # full key -> first experiment id (genuine or replicate)
+    group_head: dict[str, str] = {}    # replicate-group key -> the selection candidate's experiment id
     genuine, technical, not_started, verification = [], [], [], []
     category: dict[str, str] = {}
+    head_of: dict[str, str] = {}       # replicate id -> candidate id
     latest: dict[str, str | None] = {}
     for r in rows:
         if r["run_type"] != "original":
@@ -152,35 +174,50 @@ def trial_accounting(path: Path | None = None, experiments_dir: Path | None = No
             not_started.append(r["experiment_id"])
             continue
         cfg = _json.loads((exp_dir / r["experiment_id"] / "config.json").read_text())
-        key = _json.dumps([cfg.get("hypothesis_id"), cfg["strategy_id"], cfg["strategy_version"], cfg["params"],
-                           cfg["split"], cfg["start"], cfg["end"],
-                           cfg["costs"].get("slippage_stress_multiple", 1)], sort_keys=True)
+        key = _trial_key(cfg)
         if key in seen:
             technical.append((r["experiment_id"], seen[key]))
         else:
             seen[key] = r["experiment_id"]
             genuine.append(r["experiment_id"])
-            category[r["experiment_id"]] = trial_category(cfg)
+            cat = trial_category(cfg)
+            rp = cfg.get("replicate_param")
+            if cat == SELECTION and rp:
+                if rp not in cfg["params"]:
+                    raise RegistryError(f"{r['experiment_id']}: replicate_param {rp!r} is not a parameter")
+                gkey = _trial_key(cfg, drop_param=rp)
+                if gkey in group_head:
+                    cat = REPLICATE
+                    head_of[r["experiment_id"]] = group_head[gkey]
+                else:
+                    group_head[gkey] = r["experiment_id"]
+            category[r["experiment_id"]] = cat
             latest[seen[key]] = None
         if r["experiment_id"] not in retired:
             latest[seen[key]] = r["experiment_id"]
-    by_cat = {c: [e for e in genuine if category[e] == c] for c in (SELECTION, ROBUSTNESS, VALIDATION)}
+    by_cat = {c: [e for e in genuine if category[e] == c] for c in (SELECTION, REPLICATE, ROBUSTNESS, VALIDATION)}
+    members = {e: [latest[e]] for e in by_cat[SELECTION]}
+    for rep in by_cat[REPLICATE]:
+        members[head_of[rep]].append(latest[rep])
     return dict(genuine_trials=len(genuine), technical_repeats=len(technical), not_started=len(not_started),
                 verification_and_benchmark_runs=len(verification), all_started_research_runs=len(genuine) + len(technical),
-                selection_trials=len(by_cat[SELECTION]), robustness_runs=len(by_cat[ROBUSTNESS]),
-                validation_runs=len(by_cat[VALIDATION]),
+                selection_trials=len(by_cat[SELECTION]), replicate_runs=len(by_cat[REPLICATE]),
+                robustness_runs=len(by_cat[ROBUSTNESS]), validation_runs=len(by_cat[VALIDATION]),
                 genuine=genuine, technical=technical, by_category=by_cat,
-                selection_latest={e: latest[e] for e in by_cat[SELECTION]})
+                selection_latest={e: latest[e] for e in by_cat[SELECTION]},
+                selection_members=members, replicate_of=head_of)
 
 
 def dsr_trial_count(path: Path | None = None, experiments_dir: Path | None = None) -> dict:
-    """D069 (owner clarification 1, 2026-09-29), frozen before any C02 result.
+    """D069 (owner clarification 1, 2026-09-29), extended by D082 (C03, frozen 2026-09-30).
     official     = N for the Deflated Sharpe Ratio: cumulative distinct selection candidates
                    (all cycles). DSR corrects for picking the best of the candidates that were
-                   compared; only selection configurations are compared.
-    conservative = selection + robustness + validation configurations; reported beside the
-                   official DSR, never mixed into it.
-    Technical repeats, not-started runs and verification/canary/benchmark runs are in neither."""
+                   compared; only selection candidates are compared (an H013 variation is one
+                   candidate whatever its number of seeds).
+    conservative = selection + replicate + robustness + validation configurations (D082: a
+                   second DSR requirement for C03, frozen in research/cycles/C03_statistical_spec.md).
+    Technical repeats, not-started runs, recovery rows and verification/canary/benchmark/control/
+    null/sizing/stress runs are in neither."""
     a = trial_accounting(path, experiments_dir)
     return dict(official=a["selection_trials"],
-                conservative=a["selection_trials"] + a["robustness_runs"] + a["validation_runs"])
+                conservative=a["selection_trials"] + a["replicate_runs"] + a["robustness_runs"] + a["validation_runs"])

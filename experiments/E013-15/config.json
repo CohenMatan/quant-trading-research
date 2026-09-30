@@ -1,0 +1,52 @@
+{
+ "experiment_id": "E013-15",
+ "kind": "sizing",
+ "hypothesis_id": "H013",
+ "strategy_id": "S013",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S013_lottery_avoid",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2010-01-04",
+ "end": "2017-12-29",
+ "cash": 200000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 20,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "params": {
+  "q": 0.2,
+  "stat": "max",
+  "seed": 3,
+  "slots": 20,
+  "hold": 60
+ },
+ "cycle": "C03",
+ "account_size_test_of": "E013-03",
+ "sensitivity": "S2",
+ "construction_variant": "S2",
+ "paired_null": "E962-30",
+ "description": "C03 S2 ($200K, 20 positions) of E013-03. Diagnostic, not a trial. Pre-declared in docs/checkpoints/CP3e_C03_final_plan.md \u00a77; methodology research/cycles/C03_statistical_spec.md (D082)."
+}

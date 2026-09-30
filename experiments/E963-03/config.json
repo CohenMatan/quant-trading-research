@@ -1,0 +1,48 @@
+{
+ "experiment_id": "E963-03",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X963",
+ "strategy_version": "v1.2",
+ "strategy_dir": "strategies/X963_h012_canary",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2010-01-04",
+ "end": "2011-12-30",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "params": {
+  "rv_short": 10,
+  "cadence": "weekly",
+  "band": 0.1,
+  "slots": 15,
+  "mode": "timing"
+ },
+ "cycle": "C03",
+ "description": "C03 H012 infrastructure canary v1.2 after the S012 fix found by E963-02 (basket formed at the first close with eligible names, D083 addendum): unchanged S012 code with NON-candidate parameters (RV(10), weekly, 2010-2011). Verification; not a trial."
+}
