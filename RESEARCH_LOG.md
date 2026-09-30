@@ -689,3 +689,28 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Incident file:** `research/cycles/incidents/E013-06_incident.md`.
 
 **STOP.** Owner approval is needed to delete the stuck backtest (CLAUDE.md), then re-run it as a technical repeat and resume.
+
+## 2026-09-30: C03 complete: H013 rejected; no qualifying candidate; STOP
+
+**Runs.**
+
+- E013-06's stuck QuantConnect backtest was deleted with owner approval, after its metadata was committed. The identical configuration ran as E013-16 (technical repeat).
+- The queue resumed in the approved order. All 21 committed runs completed: the 9 selection seeds, 6 at $200K, and 6 paired nulls at $200K.
+- E013-03's post-completion QuantConnect "Runtime Error" label was checked by a reproduction run, which gave identical equity, fills and trades. E013-03 is retained.
+
+**Results.**
+
+- All 9 H013 seed books fail the IS screen: best Sharpe 0.944 against the 1.02 required.
+- No conditional run was triggered.
+- Against the paired nulls, the mean Sharpe difference is −0.015 / −0.053 / −0.024, and profit per trade is lower in all 9 books. The pre-declared falsification test refutes the effect.
+- $200K S1: the same relative standing. S2: noisy, driven by one weak null.
+- PBO 0.93 (diagnostic). IS-only DSR 0.08–0.36 (diagnostic).
+- Counts: official 40, conservative 73, sensitivity 43.
+
+**Budget.** Research: 21 of 82. Operational: 27 executions.
+
+**Report:** `docs/checkpoints/CP3i_C03_results.md`.
+
+**Stopping rule.** No further cycle. A programme review is proposed as the next deliverable.
+
+**STOP.**
