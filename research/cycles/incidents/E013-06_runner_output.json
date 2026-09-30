@@ -1,0 +1,15 @@
+{
+ "status": "failed",
+ "error": "QCError: backtests/read: giving up after retries (ReadTimeout) [stage: backtest]",
+ "runtime_s": 0.0,
+ "backtest": "5c1afc8e56c21718609f6f98bd781082",
+ "lean": "",
+ "cagr": null,
+ "sharpe": null,
+ "max_dd": null,
+ "n_trades": null,
+ "hashes": null,
+ "reproduction": null,
+ "failed_checks": [],
+ "harness": null
+}
