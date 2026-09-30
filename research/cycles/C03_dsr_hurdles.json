@@ -1,0 +1,26 @@
+{
+ "official N = 43": {
+  "n": 43,
+  "sr_star_annual": 1.114,
+  "combined_needed_annual": 1.484,
+  "weakest_is_with_val_at_half": 1.782,
+  "weakest_val_that_can_pass": 0.891,
+  "val_only_dsr_would_need": 1.755
+ },
+ "conservative N after committed runs = 76": {
+  "n": 76,
+  "sr_star_annual": 1.222,
+  "combined_needed_annual": 1.592,
+  "weakest_is_with_val_at_half": 1.911,
+  "weakest_val_that_can_pass": 0.956,
+  "val_only_dsr_would_need": 1.863
+ },
+ "conservative N, every conditional run = 120": {
+  "n": 120,
+  "sr_star_annual": 1.303,
+  "combined_needed_annual": 1.673,
+  "weakest_is_with_val_at_half": 2.009,
+  "weakest_val_that_can_pass": 1.004,
+  "val_only_dsr_would_need": 1.944
+ }
+}

@@ -39,17 +39,15 @@ def retired_ids() -> dict[str, str]:
 
 
 def dsr_inputs() -> dict:
-    """D069 inputs for the Deflated Sharpe Ratio, frozen before any C02 result.
+    """D069 inputs for the Deflated Sharpe Ratio, frozen before any C02 result, extended by D082 (C03):
     n_trials = cumulative distinct selection candidates (registry.dsr_trial_count "official");
     var_sr   = variance of the per-day Sharpe across the latest valid (not retired) run of every
-               selection candidate counted in n_trials;
-    n_conservative = selection + robustness + validation configurations, reported separately."""
-    acc = registry.trial_accounting(retired=set(retired_ids()))
-    sharpe = {r["experiment_id"]: r["sharpe"] for r in registry.read() if r["run_type"] == "original"}
-    srs = [float(sharpe[e]) / math.sqrt(252) for e in acc["selection_latest"].values() if e and sharpe.get(e)]
-    return dict(n_trials=acc["selection_trials"],
-                n_conservative=acc["selection_trials"] + acc["robustness_runs"] + acc["validation_runs"],
-                var_sr=float(np.var(srs, ddof=1)) if len(srs) > 1 else 0.0, n_sharpes=len(srs))
+               selection candidate counted in n_trials (an H013 candidate: the mean over its seeds);
+    n_conservative = selection + replicate + robustness + validation configurations."""
+    from .c03stats import snapshot
+    snap = snapshot(retired=set(retired_ids()))
+    return dict(n_trials=snap["official"], n_conservative=snap["conservative"],
+                var_sr=snap["var_sr"], n_sharpes=snap["n_sharpes"])
 
 
 def cycle_experiments(cycle: str, final_only: bool = True) -> list[str]:
