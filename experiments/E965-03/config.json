@@ -3,7 +3,7 @@
  "kind": "infrastructure",
  "hypothesis_id": null,
  "strategy_id": "X965",
- "strategy_version": "v1.0",
+ "strategy_version": "v1.1",
  "strategy_dir": "strategies/X965_h014_canary",
  "split_scheme": "2010",
  "split": "AUDIT",

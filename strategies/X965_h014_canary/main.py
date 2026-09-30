@@ -1,4 +1,4 @@
-# X965 v1.0 — Phase 2 H014 infrastructure canary (infrastructure, not research; not a trial). Runs the
+# X965 v1.1 — Phase 2 H014 infrastructure canary (infrastructure, not research; not a trial). Runs the
 # unchanged S014 algorithm (s014.py, signals.py and nullorder.py are byte copies, tested) with NON-candidate
 # parameters on 2010-2012 and checks on QuantConnect itself:
 #  A. features (close, MA50, MA200, RSI14 at T-8..T, 12-1 momentum, High(T-1)) from the harness windows equal
@@ -10,6 +10,8 @@
 #  F. rolls happen only for names with today's entry signal; G. every ranked name is eligible with PIT
 #     market cap >= $2B and a real bar today. Exits, rolls and entries are logged (QRC65|...) for the
 #     offline check of session counting and next-open fills against the fills table.
+# v1.1 (after E965-01 stopped on 2010-01-04): the ranking audit handles closes without candidates
+# (universe warm-up); the S014 code itself already did.
 from AlgorithmImports import *
 import json
 import numpy as np
@@ -40,7 +42,9 @@ class H014Canary(s014.TrendPullback):
         # C. ranking
         c["rank_checks"] += 1
         sig = [s for s, m in zip(cands, mask) if m]
-        if self.mode == "rand":
+        if not sig:
+            exp = []
+        elif self.mode == "rand":
             exp = pick_order([str(s.id) for s in sig], self.seed, self._qr_session)
         else:
             mom = {str(s.id): float(m) for s, m in zip(cands, f["mom"])}

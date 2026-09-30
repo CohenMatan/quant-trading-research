@@ -230,8 +230,9 @@ def _series_up(seed, n=SIG.MIN_BARS):
     return list(50 * np.exp(np.cumsum(rng.normal(0.002 + 0.0005 * seed, 0.004, n))))
 
 
-def _algo(mod, mode="h014", variant="A", limit=63, seed=None, **rule):
-    a = mod.TrendPullback.__new__(mod.TrendPullback)
+def _algo(mod, mode="h014", variant="A", limit=63, seed=None, cls=None, **rule):
+    cls = cls or mod.TrendPullback
+    a = cls.__new__(cls)
     p = dict(mode=mode, exit=variant, limit=limit, slots=12, rsi_pullback=40, window=5, rsi_recovery=45)
     p.update(rule)
     if seed is not None:
@@ -374,3 +375,29 @@ def test_dev_split_rules():
         experiment.validate(bad)
     with pytest.raises(Exception):
         experiment.validate(dict(c, end="2022-01-03"))
+
+
+def test_x965_canary_logic_on_empty_and_normal_closes(monkeypatch):
+    """E965-01 stopped on the first close (no eligible names during the universe warm-up): the canary's
+    audits must handle empty closes, and agree with S014 on a normal close (no rank or roll errors)."""
+    for m in ("s014", "signals", "nullorder"):
+        monkeypatch.delitem(sys.modules, m, raising=False)
+    mod = _load_main(monkeypatch, sdir="X965_h014_canary", module="x965_main")
+    for mode, seed in (("c1", None), ("rand", 3), ("h014", None)):
+        a = _algo(mod, mode=mode, seed=seed, variant="A", limit=63, cls=mod.H014Canary)
+        a._qr_session = 101                                   # not an audit session (history not faked)
+        from datetime import datetime
+        a.time = datetime(2010, 3, 1, 16)
+        data = _setup(a, [], [])
+        a.qr_eligible_info = {}
+        a.qr_on_close(data)                                   # empty universe: no error
+        syms = [_Sym(f"S{i}") for i in range(5)]
+        data = _setup(a, syms, [_series_up(i) for i in range(5)], held={syms[0]})
+        a.qr_eligible_info = {s: (5e9, 1e7) for s in syms}
+        a._qr_entry = {syms[0]: dict(session=101 - 63)}
+        a.qr_on_close(data)
+        c = a.c
+        assert c["rank_errors"] == 0 and c["ranked_not_eligible"] == 0 and c["ranked_cap_below_2b"] == 0
+        assert c["roll_errors"] == 0 and c["time_exit_errors"] == 0
+        if mode != "h014":
+            assert c["roll_checks"] == 1

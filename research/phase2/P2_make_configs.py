@@ -79,12 +79,13 @@ def canaries():
 
     def x(eid, start, end, params, desc, cash=100000):
         c = dict(experiment_id=eid, kind="infrastructure", hypothesis_id=None, strategy_id="X965",
-                 strategy_version="v1.0", strategy_dir="strategies/X965_h014_canary", **au, start=start, end=end,
+                 strategy_version="v1.1", strategy_dir="strategies/X965_h014_canary", **au, start=start, end=end,
                  **base, params=params, description=desc + " Verification; not a trial.")
         c["cash"] = cash
         return c
+    # E965-01 ran with canary v1.0 and stopped on a canary-audit defect (D096); E965-04 re-runs it with v1.1
     return [
-        x("E965-01", "2010-01-04", "2012-12-31",
+        x("E965-04", "2010-01-04", "2012-12-31",
           dict(mode="h014", exit="A", limit=20, rsi_pullback=30, window=4, rsi_recovery=50, slots=12),
           "P2 H014 canary: unchanged S014 code, H014 entry with NON-candidate thresholds (RSI 30/50, window 4) "
           "and a 20-session horizon with roll, 2010-2012, $100K."),
