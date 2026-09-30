@@ -1,5 +1,7 @@
 # Phase 2: revised evaluation methodology (P2-CP0b)
 
+> **Amended (2026-09-30, proposal):** §3 (the forward period), §5 G1 and §8 (hypothesis budget) are replaced by `P2_CP0c_methodology_amendment.md`: the four data categories with a freeze-timestamp forward clock; a fixed +0.25 margin within a budget of 3 hypotheses; the combined return-risk rule G1.1–G1.4. The rest of this document was approved in principle by the owner on 2026-09-30.
+
 | Field | Value |
 |---|---|
 | Date | 2026-09-30 |
