@@ -224,8 +224,10 @@ def test_committed_c03_runs_give_40_and_73(tmp_path):
     gone = experiment.withdrawn()
     ids = [p.parent.name for p in sorted(config.EXPERIMENTS_DIR.glob("E*/config.json"))
            if json.loads(p.read_text()).get("cycle") == "C03" and p.parent.name not in gone]
-    kinds = [json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())["kind"] for e in ids]
+    cfgs = {e: json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text()) for e in ids}
+    kinds = [c["kind"] for c in cfgs.values() if not c.get("technical_repeat_of")]
     assert kinds.count("research") == 9 and not [e for e in ids if e.startswith("E012")]
+    # technical repeats (e.g. E013-16 of E013-06) are registered too and must not change the counts
     p = tmp_path / "INDEX.csv"
     rows = [r for r in registry.read(config.INDEX_CSV) if r["experiment_id"] not in ids]
     shutil.copy(config.INDEX_CSV, p)
@@ -239,7 +241,8 @@ def test_committed_c03_runs_give_40_and_73(tmp_path):
         registry.append(dict(experiment_id=e, run_type="original", kind=c["kind"], status="completed"), p)
     assert registry.dsr_trial_count(p, config.EXPERIMENTS_DIR) == dict(official=40, conservative=73)
     a = registry.trial_accounting(p, config.EXPERIMENTS_DIR)
-    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == len(ids) - 9
+    n_rep = sum(1 for c in cfgs.values() if c.get("technical_repeat_of"))
+    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == len(ids) - 9 - n_rep
 
 
 # ---------------------------------------------------------------- Amendment 1 (D087)
