@@ -549,3 +549,18 @@ Proposed P1: keep D073 and add a stricter dual-count DSR requirement.
 **DSR and budget.** N goes from 37 to 43. Budget: 34 committed runs, cap 82 (owner approval needed).
 
 **STOP.** No C03 strategy backtest has run.
+
+## 2026-09-30: C03 statistical methodology (CP3f) proposed; STOP
+
+**Owner decisions.** The owner approved H012, H013, the $100K/$200K capital design and the budget of 82 (34 committed + ≤ 48 conditional). They rejected PBO options P1 and P2 and asked for a statistically justified framework.
+
+**Evidence.** A synthetic simulation of the full C03 pipeline (9 scenarios × 1,000 repetitions, IS-calibrated only) found:
+
+- PBO as a gate gives no protection against a spurious edge in one hypothesis: 7.5% false acceptance, the same as without PBO.
+- Its apparent protection elsewhere comes from the two-similar-hypotheses artefact.
+- It strongly cuts power when both ideas are good.
+- A DSR required at both the official and the conservative count lowers false acceptance in those cases (to 3.5%); the worst case is 4.9%.
+
+**Proposed (D082):** PBO diagnostic only; dual-count DSR on each deployable book (H013 per seed); all three seeds must pass every stage; no exceptions; other gates unchanged.
+
+**STOP.** No C03 strategy backtest has run.
