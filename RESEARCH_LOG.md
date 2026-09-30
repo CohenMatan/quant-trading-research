@@ -629,3 +629,27 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Budget ledger (D085).** Research budget used 0 of 82 (32 configs written). Operational executions: 4, all canaries.
 
 **STOP.** Awaiting owner approval of D084. No C03 strategy backtest has run.
+
+## 2026-09-30: H012 power reassessment (D086); STOP
+
+**Owner decision.** The owner did not approve D084, because its power was low even for genuine timing value, and asked for a statistical reassessment. There was no H012 run and no change to H012.
+
+**Study.** `research/cycles/C03_h012_power_study.py/.json` (synthetic regime and GARCH markets, plus a semi-real null, all with the unchanged H012 rule and controls).
+
+**Findings.**
+
+- **The effect is small.** H012's capped rule (no leverage, about 92% invested on average) can only produce a small true Sharpe gain over its exposure-matched control: at most about +0.05 in GARCH-type markets. Larger gains need crash-like turbulent regimes.
+- **The noise is large.** Over 8 years the standard deviation of the estimated gain is about 0.1.
+- **The D084 combination is not the cause.** T3–T5 never reject after T2.
+- **Power stays low whatever the test:**
+  - D084: 14% (moderate effect) and 36% (strong);
+  - T2 at 5%: 25% and 47%;
+  - Ledoit–Wolf: 27% and 56%.
+- **Data needed.** 80% power needs about 50 years of data for a moderate effect and 14 for a strong one.
+- **False acceptance is controlled.** All tests stay near nominal with no edge, with a favourable market, after a lucky crash, and with lower exposure. A drawdown comparison, by contrast, rewards lower exposure 100% of the time.
+
+**Conclusion.** H012 cannot be evaluated with adequate power on our data.
+
+**Recommendation.** Remove H012 from C03 as "not evaluable with available data", and run H013 only. Keep the DSR official N at a floor of 43.
+
+**STOP.** Report: `docs/checkpoints/CP3h_H012_power_reassessment.md`. No C03 strategy backtest has run.
