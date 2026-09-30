@@ -38,7 +38,7 @@ class VolManaged(QRAlgorithm):
         self.prev_month = None
         self.rebal_left = 0
         self.s12 = {"reconstitutions": 0, "rescale_days": 0, "rescales_applied": 0, "rescales_in_band": 0,
-                    "target_missing": 0, "rebalance_closes": 0, "basket_missing_price": 0, "e_sum": 0.0,
+                    "target_missing": 0, "rebalance_closes": 0, "closes_without_eligible": 0, "basket_missing_price": 0, "e_sum": 0.0,
                     "e_days": 0, "e_min": 1.0}
         # the variation's targets on past rescale dates, from point-in-time SPY history before the start
         hist = self.history(self.spy, HIST_BARS, Resolution.DAILY,
@@ -75,11 +75,16 @@ class VolManaged(QRAlgorithm):
     def qr_on_close(self, data):
         today = self.time.date()
         event = False
-        if is_reconstitution(self.prev_month, today.month):
+        if is_reconstitution(self.prev_month, today.month) or not self.basket:
+            # D083 addendum: until the universe has eligible names (the 20-session dollar-volume warm-up)
+            # the basket is formed at the first close that has them, not at the next quarter
             info = {str(s.id): (s, cap) for s, (cap, _) in self.qr_eligible_info.items()}
-            self.basket = [info[k][0] for k in largest({k: v[1] for k, v in info.items()}, self.slots)]
-            self.s12["reconstitutions"] += 1
-            event = True
+            if info:
+                self.basket = [info[k][0] for k in largest({k: v[1] for k, v in info.items()}, self.slots)]
+                self.s12["reconstitutions"] += 1
+                event = True
+            else:
+                self.s12["closes_without_eligible"] += 1
         self.prev_month = today.month
         spy = self.qr_close.get(self.spy) or []
         target = exposure_target(spy, self.short, self.long)

@@ -404,3 +404,19 @@ def test_s013_equals_the_null_when_nothing_is_excluded_and_skips_excluded_names(
     ("X964_h013_canary/nullorder.py", "S013_lottery_avoid/nullorder.py")])
 def test_canary_copies_are_identical(copy, orig):
     assert (ROOT / "strategies" / copy).read_bytes() == (ROOT / "strategies" / orig).read_bytes()
+
+
+def test_s012_forms_the_basket_at_the_first_close_with_eligible_names(s012):
+    """E963-02 finding: the universe has no eligible names during its 20-session warm-up; the basket must
+    then form at the first close that has them, not wait for the next quarter (D083 addendum)."""
+    spy = _closes(900)
+    warm = pd.Timestamp("2009-12-29")
+
+    def caps(t):
+        return {} if t < warm else _caps(t)
+    r = _S012Run(s012, _params(), spy, caps, date(2009, 12, 1))
+    log = r.run()
+    first = next(i for i, x in enumerate(log) if x["basket"])
+    assert log[first]["date"] == warm.date() and log[first]["rebalanced"]
+    assert r.algo.s12["closes_without_eligible"] == first
+    assert all(x["basket"] == log[first]["basket"] for x in log[first:] if x["date"] < date(2010, 1, 1))

@@ -1,4 +1,4 @@
-# X963 v1.1 — C03 H012 infrastructure canary (infrastructure, not research; not a trial). Runs the
+# X963 v1.2 — C03 H012 infrastructure canary (infrastructure, not research; not a trial). Runs the
 # unchanged S012 algorithm (s012.py and signals.py are byte copies, tested) with NON-candidate parameters
 # (RV(10), weekly, 2010-2011) and checks on QuantConnect itself:
 #  A. SPY RV(short) and RV(252) from the harness window equal RV from a fresh point-in-time
@@ -10,7 +10,8 @@
 #  D. the invested fraction after each completed rebalance, against e x (1 - cash buffer);
 #  E. Control B's pre-start targets come only from history before the start date.
 # v1.1 (after E963-01 stopped on the 2010-11-26 half-day): a fresh history shorter than the window, or
-# not ending at today's bar, is counted and skipped instead of compared.
+# not ending at today's bar, is counted and skipped instead of compared. v1.2: S012 forms its basket at the
+# first close with eligible names (D083 addendum); days whose selection is not from today are logged.
 # Fills at the T+1 open are checked by the harness self-check and the runner (fills_after_signal_date).
 from AlgorithmImports import *
 import json
@@ -55,6 +56,7 @@ class H012Canary(s012.VolManaged):
                 c["recon_mismatches"] += 1
             if self.sel_day != today:
                 c["selection_not_today"] += 1
+                self._qr_log(f"QRC63|selection_not_today|{today}|{self.sel_day}")
             c["basket_churn"].append([str(today), len(set(map(str, self.basket)) - set(map(str, prev_basket)))])
         if self.s12["rescale_days"] > before["rescale_days"] or first:
             self._check_rv(today)
