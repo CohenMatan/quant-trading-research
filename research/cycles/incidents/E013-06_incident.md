@@ -30,3 +30,14 @@
 - **Completed so far:** E013-01..05 (5 of the 21 committed runs).
 - **Not yet run:** E013-07..15 and E962-25..30.
 - **Decision requested from the owner:** approve deleting QuantConnect backtest `5c1afc8e56c21718609f6f98bd781082`. It never ran, and its metadata and runner output are preserved here. Then re-run the identical configuration as a technical repeat under a new ID and resume the queue.
+
+## Resolution (owner approval, 2026-09-30)
+
+- **Before deletion:** the backtest's QuantConnect record was captured to `E013-06_qc_backtest_metadata.json` (still "In Queue…", progress 0, no error) and pushed (commit `831c9a1`).
+- **Deleted** with the owner's explicit approval: `backtests/delete` for `5c1afc8e56c21718609f6f98bd781082` returned success. Afterwards no E013-06 entry remains, and `running_backtests()` is empty, so the node is free.
+- **E013-06** keeps its failed original row and its annotation. This follows the owner's instruction and the E007-16 precedent.
+- **E013-16** re-runs the identical configuration as a technical repeat:
+  - only `experiment_id`, `description` and `technical_repeat_of` differ from E013-06;
+  - the registry classifies it as a technical repeat of E013-06. The selection, replicate and all other counts are unchanged.
+- **The queue resumes** in the approved order: E013-16, then E013-07..15, then E962-25..30.
+- **E013-03** will additionally be re-run with `--reproduce` after the queue, as operational verification. The retention decision (owner condition) will rest on exact reproduction of its equity, fills and trades.
