@@ -1,0 +1,609 @@
+{
+ "status": "analysis for the owner; nothing here is in force",
+ "seeds": {
+  "master": 20261001,
+  "bootstrap": 20260930
+ },
+ "assumptions": {
+  "reps": 400,
+  "bootstrap_resamples": 2000,
+  "block": 63,
+  "rule": "H012 v1.0",
+  "costs": "10 bps x |change| + 15 x $7 per applied change on $100K",
+  "market": "regime: calm 12% / turbulent 35% vol, spell 60 d, entry 1/400, t(6); basket = market + 5% idio"
+ },
+ "calibration_true_effects": {
+  "Z0 boundary null": {
+   "mu_turb": 0.3027636659565114,
+   "true_d_b": 0.0019182182851205098,
+   "true_d_a": 0.002366132376559693
+  },
+  "W weak": {
+   "mu_turb": 0.010068908471556948,
+   "true_d_b": 0.052710083542913955,
+   "true_d_a": 0.058698262612784324
+  },
+  "M moderate": {
+   "mu_turb": -0.2826258490133975,
+   "true_d_b": 0.10539468655447481,
+   "true_d_a": 0.11517554597487722
+  },
+  "S strong": {
+   "mu_turb": -0.8680153639833065,
+   "true_d_b": 0.2020174472116436,
+   "true_d_a": 0.22300655139691672
+  }
+ },
+ "scenarios_8y": {
+  "Z0 boundary null": {
+   "n": 400,
+   "true_like_mean_d_b": 0.0009566722768910635,
+   "sd_d_b": 0.08244287731482923,
+   "mean_d_a": -0.0002616475300943638,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0275,
+    "T2q05": 0.05,
+    "T3": 0.2575,
+    "T4": 0.22,
+    "T5": 0.38,
+    "LW": 0.0525,
+    "LW63": 0.05,
+    "ALPHA": 0.0825
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0275,
+    "M1 D084 with T2 at 5%": 0.05,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0275,
+    "M3 core: T1 + T2 at 5% one-sided": 0.05,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.0525,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.05
+   },
+   "drawdown_better_than_A_by_3pts": 0.4775,
+   "mean_exposure": 0.9222849288792806,
+   "overlap": {
+    "pass_indicator_correlation": {
+     "T2-T3": 0.286,
+     "T2-T4": 0.317,
+     "T2-T5": 0.215,
+     "T2-LW": 0.646,
+     "T3-T4": 0.709,
+     "T3-T5": 0.505,
+     "T3-LW": 0.4,
+     "T4-T5": 0.566,
+     "T4-LW": 0.443,
+     "T5-LW": 0.208
+    },
+    "given_T2_passes_share_failing": {
+     "T3": 0.0,
+     "T4": 0.0,
+     "T5": 0.0
+    },
+    "n_T2_pass": 11
+   }
+  },
+  "W weak": {
+   "n": 400,
+   "true_like_mean_d_b": 0.046262065202783316,
+   "sd_d_b": 0.0892386162699064,
+   "mean_d_a": 0.0469624686239342,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.04,
+    "T2q05": 0.1,
+    "T3": 0.4725,
+    "T4": 0.375,
+    "T5": 0.505,
+    "LW": 0.1025,
+    "LW63": 0.12,
+    "ALPHA": 0.175
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.04,
+    "M1 D084 with T2 at 5%": 0.1,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.04,
+    "M3 core: T1 + T2 at 5% one-sided": 0.1,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.1025,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.1
+   },
+   "drawdown_better_than_A_by_3pts": 0.665,
+   "mean_exposure": 0.9216802067024803,
+   "overlap": {
+    "pass_indicator_correlation": {
+     "T2-T3": 0.216,
+     "T2-T4": 0.264,
+     "T2-T5": 0.202,
+     "T2-LW": 0.604,
+     "T3-T4": 0.663,
+     "T3-T5": 0.536,
+     "T3-LW": 0.357,
+     "T4-T5": 0.571,
+     "T4-LW": 0.419,
+     "T5-LW": 0.318
+    },
+    "given_T2_passes_share_failing": {
+     "T3": 0.0,
+     "T4": 0.0,
+     "T5": 0.0
+    },
+    "n_T2_pass": 16
+   }
+  },
+  "M moderate": {
+   "n": 400,
+   "true_like_mean_d_b": 0.0973804213325218,
+   "sd_d_b": 0.1070186901047513,
+   "mean_d_a": 0.10268094583392648,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.14,
+    "T2q05": 0.2475,
+    "T3": 0.695,
+    "T4": 0.5225,
+    "T5": 0.665,
+    "LW": 0.27,
+    "LW63": 0.26,
+    "ALPHA": 0.4075
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.14,
+    "M1 D084 with T2 at 5%": 0.2425,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.14,
+    "M3 core: T1 + T2 at 5% one-sided": 0.2475,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.27,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.2475
+   },
+   "drawdown_better_than_A_by_3pts": 0.785,
+   "mean_exposure": 0.9221288686419657,
+   "overlap": {
+    "pass_indicator_correlation": {
+     "T2-T3": 0.267,
+     "T2-T4": 0.386,
+     "T2-T5": 0.286,
+     "T2-LW": 0.647,
+     "T3-T4": 0.628,
+     "T3-T5": 0.508,
+     "T3-LW": 0.403,
+     "T4-T5": 0.594,
+     "T4-LW": 0.559,
+     "T5-LW": 0.396
+    },
+    "given_T2_passes_share_failing": {
+     "T3": 0.0,
+     "T4": 0.0,
+     "T5": 0.0
+    },
+    "n_T2_pass": 56
+   }
+  },
+  "S strong": {
+   "n": 400,
+   "true_like_mean_d_b": 0.1963509110066448,
+   "sd_d_b": 0.14236603072311757,
+   "mean_d_a": 0.208843782652104,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.355,
+    "T2q05": 0.4725,
+    "T3": 0.8675,
+    "T4": 0.725,
+    "T5": 0.775,
+    "LW": 0.56,
+    "LW63": 0.5175,
+    "ALPHA": 0.7025
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.355,
+    "M1 D084 with T2 at 5%": 0.465,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.355,
+    "M3 core: T1 + T2 at 5% one-sided": 0.4725,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.56,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.4725
+   },
+   "drawdown_better_than_A_by_3pts": 0.86,
+   "mean_exposure": 0.9218952884928281,
+   "overlap": {
+    "pass_indicator_correlation": {
+     "T2-T3": 0.29,
+     "T2-T4": 0.457,
+     "T2-T5": 0.4,
+     "T2-LW": 0.658,
+     "T3-T4": 0.535,
+     "T3-T5": 0.478,
+     "T3-LW": 0.441,
+     "T4-T5": 0.634,
+     "T4-LW": 0.638,
+     "T5-LW": 0.499
+    },
+    "given_T2_passes_share_failing": {
+     "T3": 0.0,
+     "T4": 0.0,
+     "T5": 0.0
+    },
+    "n_T2_pass": 142
+   }
+  },
+  "N1 risk-return (GARCH, mu ~ variance)": {
+   "n": 400,
+   "true_like_mean_d_b": -0.06058642940111083,
+   "sd_d_b": 0.07577322061345411,
+   "mean_d_a": -0.06594885042792692,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0075,
+    "T2q05": 0.01,
+    "T3": 0.04,
+    "T4": 0.0525,
+    "T5": 0.215,
+    "LW": 0.0075,
+    "LW63": 0.01,
+    "ALPHA": 0.0125
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0075,
+    "M1 D084 with T2 at 5%": 0.01,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0075,
+    "M3 core: T1 + T2 at 5% one-sided": 0.01,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.0075,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.01
+   },
+   "drawdown_better_than_A_by_3pts": 0.325,
+   "mean_exposure": 0.9153016035173479
+  },
+  "N2 uninformative timing": {
+   "n": 400,
+   "true_like_mean_d_b": -0.03681591579822027,
+   "sd_d_b": 0.061201457643054194,
+   "mean_d_a": -0.04017263280138583,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0,
+    "T2q05": 0.005,
+    "T3": 0.05,
+    "T4": 0.08,
+    "T5": 0.255,
+    "LW": 0.005,
+    "LW63": 0.005,
+    "ALPHA": 0.005
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0,
+    "M1 D084 with T2 at 5%": 0.005,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0,
+    "M3 core: T1 + T2 at 5% one-sided": 0.005,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.005,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.005
+   },
+   "drawdown_better_than_A_by_3pts": 0.2125,
+   "mean_exposure": 0.9210335587765492
+  },
+  "F1 favourable bull market, no timing": {
+   "n": 400,
+   "true_like_mean_d_b": -0.04109075944737594,
+   "sd_d_b": 0.07081740563637545,
+   "mean_d_a": -0.04437149826378153,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0,
+    "T2q05": 0.0,
+    "T3": 0.0825,
+    "T4": 0.07,
+    "T5": 0.22,
+    "LW": 0.0,
+    "LW63": 0.0025,
+    "ALPHA": 0.02
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0,
+    "M1 D084 with T2 at 5%": 0.0,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0,
+    "M3 core: T1 + T2 at 5% one-sided": 0.0,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.0,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.0
+   },
+   "drawdown_better_than_A_by_3pts": 0.195,
+   "mean_exposure": 0.9221600187868944
+  },
+  "F2 one lucky crash, no timing": {
+   "n": 400,
+   "true_like_mean_d_b": 0.04687874899039483,
+   "sd_d_b": 0.06186620341629407,
+   "mean_d_a": 0.03817785788359127,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0275,
+    "T2q05": 0.055,
+    "T3": 0.3675,
+    "T4": 0.2575,
+    "T5": 0.5125,
+    "LW": 0.0325,
+    "LW63": 0.03,
+    "ALPHA": 0.04
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0275,
+    "M1 D084 with T2 at 5%": 0.055,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0275,
+    "M3 core: T1 + T2 at 5% one-sided": 0.055,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.0325,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.055
+   },
+   "drawdown_better_than_A_by_3pts": 0.5275,
+   "mean_exposure": 0.9205264942541586
+  },
+  "L lower exposure (70%), no timing": {
+   "n": 400,
+   "true_like_mean_d_b": -0.04003551205511785,
+   "sd_d_b": 0.0713671061988929,
+   "mean_d_a": -0.04188154441428258,
+   "items": {
+    "T1": 1.0,
+    "T2": 0.0075,
+    "T2q05": 0.0125,
+    "T3": 0.0775,
+    "T4": 0.1,
+    "T5": 0.245,
+    "LW": 0.0125,
+    "LW63": 0.01,
+    "ALPHA": 0.0175
+   },
+   "methods": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.005,
+    "M1 D084 with T2 at 5%": 0.01,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0075,
+    "M3 core: T1 + T2 at 5% one-sided": 0.0125,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.0125,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.01
+   },
+   "drawdown_better_than_A_by_3pts": 0.9975,
+   "mean_exposure": 0.643655176064048
+  }
+ },
+ "sensitivity_8y": {
+  "normal shocks": {
+   "boundary_true_d_b": 0.0005863404622731272,
+   "moderate_true_d_b": 0.10399342390261446,
+   "size_at_boundary": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.025,
+    "M1 D084 with T2 at 5%": 0.04,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.025,
+    "M3 core: T1 + T2 at 5% one-sided": 0.045,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.045,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.04
+   },
+   "power_moderate": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.14,
+    "M1 D084 with T2 at 5%": 0.27,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.14,
+    "M3 core: T1 + T2 at 5% one-sided": 0.275,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.27,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.275
+   }
+  },
+  "t(3) shocks": {
+   "boundary_true_d_b": 0.001077613614068773,
+   "moderate_true_d_b": 0.1040731847545745,
+   "size_at_boundary": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.015,
+    "M1 D084 with T2 at 5%": 0.035,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.015,
+    "M3 core: T1 + T2 at 5% one-sided": 0.035,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.045,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.035
+   },
+   "power_moderate": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.135,
+    "M1 D084 with T2 at 5%": 0.21,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.135,
+    "M3 core: T1 + T2 at 5% one-sided": 0.21,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.225,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.21
+   }
+  },
+  "short turbulent spells (20 d)": {
+   "boundary_true_d_b": -0.00038868889063281564,
+   "moderate_true_d_b": 0.10007143694955023,
+   "size_at_boundary": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.015,
+    "M1 D084 with T2 at 5%": 0.05,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.015,
+    "M3 core: T1 + T2 at 5% one-sided": 0.05,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.045,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.05
+   },
+   "power_moderate": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.155,
+    "M1 D084 with T2 at 5%": 0.245,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.155,
+    "M3 core: T1 + T2 at 5% one-sided": 0.245,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.265,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.245
+   }
+  },
+  "long turbulent spells (120 d)": {
+   "boundary_true_d_b": 0.0009764452266722845,
+   "moderate_true_d_b": 0.10442739431141801,
+   "size_at_boundary": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.005,
+    "M1 D084 with T2 at 5%": 0.03,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.005,
+    "M3 core: T1 + T2 at 5% one-sided": 0.03,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.03,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.03
+   },
+   "power_moderate": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.145,
+    "M1 D084 with T2 at 5%": 0.185,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.145,
+    "M3 core: T1 + T2 at 5% one-sided": 0.205,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.28,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.205
+   }
+  },
+  "return autocorrelation AR(1) 0.1": {
+   "boundary_true_d_b": 0.0001499314398171192,
+   "moderate_true_d_b": 0.10275873854037809,
+   "size_at_boundary": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.035,
+    "M1 D084 with T2 at 5%": 0.045,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.035,
+    "M3 core: T1 + T2 at 5% one-sided": 0.045,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.06,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.045
+   },
+   "power_moderate": {
+    "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.125,
+    "M1 D084 with T2 at 5%": 0.205,
+    "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.125,
+    "M3 core: T1 + T2 at 5% one-sided": 0.21,
+    "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.235,
+    "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.21
+   }
+  }
+ },
+ "sample_length": {
+  "8y": {
+   "Z0 boundary null": {
+    "sd_d_b": 0.08878394237393276,
+    "M4_LW": 0.06,
+    "M2": 0.045,
+    "M3": 0.055,
+    "M0": 0.045
+   },
+   "W weak": {
+    "sd_d_b": 0.08684716907576515,
+    "M4_LW": 0.09,
+    "M2": 0.045,
+    "M3": 0.085,
+    "M0": 0.045
+   },
+   "M moderate": {
+    "sd_d_b": 0.10803715459561894,
+    "M4_LW": 0.295,
+    "M2": 0.17,
+    "M3": 0.255,
+    "M0": 0.17
+   },
+   "S strong": {
+    "sd_d_b": 0.13121242352112572,
+    "M4_LW": 0.51,
+    "M2": 0.295,
+    "M3": 0.455,
+    "M0": 0.295
+   }
+  },
+  "12y": {
+   "Z0 boundary null": {
+    "sd_d_b": 0.07092984190715894,
+    "M4_LW": 0.045,
+    "M2": 0.02,
+    "M3": 0.05,
+    "M0": 0.02
+   },
+   "W weak": {
+    "sd_d_b": 0.07834622114166553,
+    "M4_LW": 0.175,
+    "M2": 0.11,
+    "M3": 0.16,
+    "M0": 0.11
+   },
+   "M moderate": {
+    "sd_d_b": 0.0898262673267237,
+    "M4_LW": 0.42,
+    "M2": 0.27,
+    "M3": 0.375,
+    "M0": 0.27
+   },
+   "S strong": {
+    "sd_d_b": 0.11443637848842873,
+    "M4_LW": 0.685,
+    "M2": 0.48,
+    "M3": 0.605,
+    "M0": 0.475
+   }
+  },
+  "25y": {
+   "Z0 boundary null": {
+    "sd_d_b": 0.04532123187569295,
+    "M4_LW": 0.03
+   },
+   "W weak": {
+    "sd_d_b": 0.052519170156141944,
+    "M4_LW": 0.34
+   },
+   "M moderate": {
+    "sd_d_b": 0.05257818905748145,
+    "M4_LW": 0.63
+   },
+   "S strong": {
+    "sd_d_b": 0.0757152778359873,
+    "M4_LW": 0.93
+   }
+  },
+  "50y": {
+   "Z0 boundary null": {
+    "sd_d_b": 0.03507927319255497,
+    "M4_LW": 0.05
+   },
+   "W weak": {
+    "sd_d_b": 0.0352768109875412,
+    "M4_LW": 0.38
+   },
+   "M moderate": {
+    "sd_d_b": 0.04231483981624167,
+    "M4_LW": 0.88
+   },
+   "S strong": {
+    "sd_d_b": 0.047440625813313264,
+    "M4_LW": 1.0
+   }
+  }
+ },
+ "years_needed": {
+  "sd_d_b_8y": 0.1070186901047513,
+  "W weak": {
+   "true_d_b": 0.052710083542913955,
+   "years_for_80pct_power_5pct": 203.9,
+   "years_for_80pct_power_2_5pct": 258.8
+  },
+  "M moderate": {
+   "true_d_b": 0.10539468655447481,
+   "years_for_80pct_power_5pct": 51.0,
+   "years_for_80pct_power_2_5pct": 64.7
+  },
+  "S strong": {
+   "true_d_b": 0.2020174472116436,
+   "years_for_80pct_power_5pct": 13.9,
+   "years_for_80pct_power_2_5pct": 17.6
+  }
+ },
+ "semi_real_null_72_paths": {
+  "n": 72,
+  "true_like_mean_d_b": -0.0344858792763464,
+  "sd_d_b": 0.05179630396646078,
+  "mean_d_a": -0.04621539040712073,
+  "items": {
+   "T1": 1.0,
+   "T2": 0.0,
+   "T2q05": 0.013888888888888888,
+   "T3": 0.027777777777777776,
+   "T4": 0.041666666666666664,
+   "T5": 0.19444444444444445,
+   "LW": 0.013888888888888888,
+   "LW63": 0.0,
+   "ALPHA": 0.0
+  },
+  "methods": {
+   "M0 D084 as proposed (T1-T5, T2 at 2.5%)": 0.0,
+   "M1 D084 with T2 at 5%": 0.013888888888888888,
+   "M2 core: T1 + T2 at 2.5% (T3-T5 diagnostic)": 0.0,
+   "M3 core: T1 + T2 at 5% one-sided": 0.013888888888888888,
+   "M4 core: T1 + Ledoit-Wolf HAC test at 5% one-sided": 0.013888888888888888,
+   "M5 T1 + T2 at 5% + T3 (materiality vs A)": 0.013888888888888888
+  },
+  "drawdown_better_than_A_by_3pts": 0.125,
+  "mean_exposure": 0.9188816775476698,
+  "note": "overlapping shifts; paths not independent"
+ },
+ "runtime_s": 680
+}
