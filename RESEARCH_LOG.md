@@ -606,3 +606,26 @@ Proposed P1: keep D073 and add a stricter dual-count DSR requirement.
 3. **Canary re-runs.** There were two more than planned, relevant to the budget cap of 82.
 
 **STOP.** No C03 strategy backtest has run. Report: `docs/checkpoints/CP3g_C03_frozen_methodology_and_infrastructure.md`.
+
+## 2026-09-30: H012 alternative screening proposed (D084); budget accounting (D085); STOP
+
+**Owner decisions.** CP3g approved in principle, with Option 2 for H012: a statistically justified replacement for the trade-level screen items, to be proposed before any C03 run. Canaries and retries are separated from the research budget, with two counts kept.
+
+**Proposal (D084, H012 only, not in force).** The four trade-level IS items are replaced by five timing items, all measured against H012's own controls:
+
+- **T1** at least 8 exposure decisions;
+- **T2** bootstrap lower bound of Sharpe(V) − Sharpe(Control B) > 0;
+- **T3** Sharpe(V) − Sharpe(Control A) > 0.05;
+- **T4** leave-one-year-out;
+- **T5** 2 of 3 thirds.
+
+Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) > Sharpe(B). Everything else is unchanged.
+
+**Calibration (synthetic plus a semi-real null; no C03 or Validation data).**
+
+- False pass 0.3–0.7%; 0 of 72 on the real-return null.
+- Power only 2–4% even with a genuine timing effect. H012's no-leverage rule gains about 0 to +0.04 Sharpe over its control, which is below 8-year noise (0.06–0.11). H012 is expected to be rejected, now for a legitimate statistical reason.
+
+**Budget ledger (D085).** Research budget used 0 of 82 (32 configs written). Operational executions: 4, all canaries.
+
+**STOP.** Awaiting owner approval of D084. No C03 strategy backtest has run.
