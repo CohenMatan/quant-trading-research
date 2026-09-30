@@ -810,3 +810,29 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 - Added tests `tests/test_p2_s014.py` and `tests/test_p2_spec.py`. The full suite passes.
 
 **Next:** canaries, `P2_eval.py`, then the committed development runs.
+
+## 2026-09-30: Phase 2 canaries pass; development runs start (D096–D098)
+
+**Canaries (X965, non-candidate settings, 2010–2012).**
+
+- **E965-01** stopped on its first close because of a defect in the canary's own audit (D096). It was fixed in v1.1.
+- **E965-04, E965-02 and E965-03** passed every check:
+  - look-ahead and indicator history against fresh point-in-time data;
+  - ranking;
+  - the time stop;
+  - MA200 exits;
+  - horizon rolls;
+  - next-open fills;
+  - fees and the $5,000 minimum.
+- **E965-03** reproduced byte-identically.
+
+**Dividend-factor difference (D097).**
+
+- The strict 1e-6 feature comparison flagged 24% of samples.
+- The diagnostic run X966 (E966-02) traced this to a last-digits difference between the harness's dividend factor and QuantConnect's factor file. It amounts to at most 0.07% on bars older than a dividend.
+- There was no bar misalignment and no signal difference.
+- Documented, not hidden.
+
+**Operational.** A container restart interrupted E965-04's download, after QuantConnect had delayed publishing its fill events. It was recovered from the same backtest (D077).
+
+**Next.** `P2_eval.py` is committed. The committed development runs E014-01..14 start.

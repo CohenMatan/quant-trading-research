@@ -401,3 +401,20 @@ def test_x965_canary_logic_on_empty_and_normal_closes(monkeypatch):
         assert c["roll_errors"] == 0 and c["time_exit_errors"] == 0
         if mode != "h014":
             assert c["roll_checks"] == 1
+
+
+def test_p2_canaries_passed():
+    """X965 canaries (E965-04 recovered, E965-02, E965-03) pass every audit and offline check; E965-03 reproduces
+    byte-identically (D096/D097). Reads committed outputs only."""
+    import importlib.util
+    spec = importlib.util.spec_from_file_location("p2chk", ROOT / "research/phase2/P2_canary_check.py")
+    m = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(m)
+    for e in m.CANARIES:
+        r = m.check(e)
+        assert r["ok"], (e, r["problems"])
+    assert m.reproduction("E965-03")["reproduced"] is True
+    r3 = m.check("E965-03")
+    assert r3["rolls"] > 100 and r3["ma200_exits"] > 20
+    r2 = m.check("E965-02")
+    assert r2["min_position_check"]["planned_below_5000"] == 0 and r2["skipped_min_position"] > 0
