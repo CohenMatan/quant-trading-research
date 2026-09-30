@@ -126,7 +126,7 @@ def test_var_sr_uses_the_seed_mean_per_candidate(tmp_path):
     assert snap["var_sr"] == pytest.approx(np.var(vals, ddof=1), rel=1e-12)
     assert snap["official"] == 8 and snap["conservative"] == 23
     with pytest.raises(c03stats.SpecError):
-        c03stats.snapshot(p, exp, retired=set(), expect_official=43)
+        c03stats.snapshot(p, exp, retired=set(), expect_official=40)
 
 
 def test_real_registry_before_c03():
@@ -190,7 +190,7 @@ def test_dsr_falls_as_n_rises_and_both_counts_must_pass():
                                  _eq(np.r_[100, 100 * np.cumprod(1 + target[half:])], "2018-01-02"), snap)
     assert res["official"]["ok"] and not res["conservative"]["ok"] and not res["ok"]
     assert res["combined"]["n_obs"] == len(target)
-    assert set(res["diagnostics_not_gates"]) == {"is_only", "val_only"}
+    assert set(res["diagnostics_not_gates"]) == {"is_only", "val_only", "sensitivity_n43"}
 
 
 def test_threshold_is_inclusive_and_nan_fails(monkeypatch):
@@ -212,18 +212,20 @@ def test_every_seed_must_pass():
 def test_spec_is_frozen():
     """The written specification may not change after approval (D082)."""
     assert c03stats.spec_hash() == c03stats.SPEC_SHA256
-    assert c03stats.THRESHOLD == 0.90 and c03stats.OFFICIAL_N_C03 == 43
+    assert c03stats.THRESHOLD == 0.90
 
 
-def test_committed_c03_runs_give_43_and_76(tmp_path):
-    """Registering the committed runs (configs written before any C03 result) on top of the pre-C03
-    registry gives official N = 43 and conservative N = 76; the canaries, controls, nulls and sizing
-    runs add nothing."""
+def test_committed_c03_runs_give_40_and_73(tmp_path):
+    """Amendment 1 (D087): registering the committed H013 runs (21 research-budget configs, H012's withdrawn
+    configs excluded) on top of the pre-C03 registry gives official N = 40 and conservative N = 73; the
+    canaries, nulls and sizing runs add nothing."""
     import shutil
+    from qresearch import experiment
+    gone = experiment.withdrawn()
     ids = [p.parent.name for p in sorted(config.EXPERIMENTS_DIR.glob("E*/config.json"))
-           if json.loads(p.read_text()).get("cycle") == "C03"]
+           if json.loads(p.read_text()).get("cycle") == "C03" and p.parent.name not in gone]
     kinds = [json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())["kind"] for e in ids]
-    assert kinds.count("research") == 12 and len(ids) >= 34          # canary re-runs may add verification ids
+    assert kinds.count("research") == 9 and not [e for e in ids if e.startswith("E012")]
     p = tmp_path / "INDEX.csv"
     rows = [r for r in registry.read(config.INDEX_CSV) if r["experiment_id"] not in ids]
     shutil.copy(config.INDEX_CSV, p)
@@ -235,6 +237,37 @@ def test_committed_c03_runs_give_43_and_76(tmp_path):
     for e in ids:
         c = json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
         registry.append(dict(experiment_id=e, run_type="original", kind=c["kind"], status="completed"), p)
-    assert registry.dsr_trial_count(p, config.EXPERIMENTS_DIR) == dict(official=43, conservative=76)
+    assert registry.dsr_trial_count(p, config.EXPERIMENTS_DIR) == dict(official=40, conservative=73)
     a = registry.trial_accounting(p, config.EXPERIMENTS_DIR)
-    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == len(ids) - 12
+    assert a["replicate_runs"] == 6 and a["verification_and_benchmark_runs"] - before == len(ids) - 9
+
+
+# ---------------------------------------------------------------- Amendment 1 (D087)
+def test_amendment_1_is_recorded_and_frozen():
+    """H012 removed before any C03 backtest: official N = 40, N = 43 kept as a reported sensitivity.
+    The original frozen specification is unchanged (its own hash test above still holds)."""
+    assert c03stats.OFFICIAL_N_C03 == 40 and c03stats.SENSITIVITY_N_C03 == 43
+    assert c03stats.amendment_hashes() == c03stats.AMENDMENTS
+    text = (config.REPO_ROOT / "research/cycles/C03_statistical_spec_amendment_1.md").read_text()
+    assert "N = 40" in text or "= 40" in text
+
+
+def test_sensitivity_n43_is_reported_but_never_gates():
+    rng = np.random.default_rng(5)
+    r = rng.standard_normal(3020) * 0.01 + 0.0012
+    half = 2012
+    snap = dict(official=40, conservative=73, var_sr=0.001001)
+    res = c03stats.evaluate_book("x", _eq(np.r_[100, 100 * np.cumprod(1 + r[:half])], "2010-01-04"),
+                                 _eq(np.r_[100, 100 * np.cumprod(1 + r[half:])], "2018-01-02"), snap)
+    s43 = res["diagnostics_not_gates"]["sensitivity_n43"]
+    assert s43["n_trials"] == 43 and "sensitivity_n43" not in res and set(res) >= {"official", "conservative", "ok"}
+    assert res["ok"] == (res["official"]["ok"] and res["conservative"]["ok"])
+
+
+def test_withdrawn_h012_configs_can_never_run():
+    from qresearch import experiment, run
+    w = experiment.withdrawn()
+    assert sorted(w) == [f"E012-{i:02d}" for i in range(1, 12)]
+    assert not [r for r in registry.read() if r["experiment_id"] in w]      # none ever ran
+    with pytest.raises(SystemExit, match="withdrawn"):
+        run.run("E012-01")

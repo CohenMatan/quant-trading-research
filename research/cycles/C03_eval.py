@@ -1,4 +1,5 @@
-"""C03 evaluation, written and committed BEFORE any C03 run (CP3e, D082 frozen spec, D083).
+"""C03 evaluation, written and committed BEFORE any C03 run (CP3e, D082 frozen spec, D083; Amendment 1 D087:
+H012 removed before any strategy backtest - its functions below are kept for the record but are not called).
 
 Implements exactly the approved procedure; every decision is mechanical:
   1. IS screen (D036, unchanged) per book; the 2x-slippage item from the run whose config has
@@ -37,11 +38,9 @@ H012 = {"v1.0": "E012-01", "v1.1": "E012-02", "v1.2": "E012-03"}
 CONTROL_A, CONTROL_B = "E012-04", {"v1.0": "E012-05", "v1.1": "E012-06", "v1.2": "E012-07"}
 H013 = {v: {s: f"E013-{3 * i + s:02d}" for s in (1, 2, 3)} for i, v in enumerate(VERSIONS)}
 NULL = {1: "E962-22", 2: "E962-23", 3: "E962-24"}
-SIZING = {"S1": {"H012 v1.0": ("E012-08", "E012-01"), "Control A": ("E012-09", "E012-04"),
-                 **{f"H013 v1.0 seed {s}": (f"E013-{9 + s}", f"E013-0{s}") for s in (1, 2, 3)},
+SIZING = {"S1": {**{f"H013 v1.0 seed {s}": (f"E013-{9 + s}", f"E013-0{s}") for s in (1, 2, 3)},
                  **{f"null seed {s}": (f"E962-{24 + s}", NULL[s]) for s in (1, 2, 3)}},
-          "S2": {"H012 v1.0": ("E012-10", "E012-01"), "Control A": ("E012-11", "E012-04"),
-                 **{f"H013 v1.0 seed {s}": (f"E013-{12 + s}", f"E013-0{s}") for s in (1, 2, 3)},
+          "S2": {**{f"H013 v1.0 seed {s}": (f"E013-{12 + s}", f"E013-0{s}") for s in (1, 2, 3)},
                  **{f"null seed {s}": (f"E962-{27 + s}", NULL[s]) for s in (1, 2, 3)}}}
 PLATEAU_SHARE, PLATEAU_KEEP = 0.80, 0.70
 
@@ -194,6 +193,9 @@ def h013_section(cfgs):
             seeds=rows, all_seeds_run=done,
             base_screen_pass=done and all(r["base_screen_pass"] for r in rows.values()),
             screen_pass=done and all(r["screen_pass"] for r in rows.values()),
+            # every seed must pass the robustness battery (D082); None until the battery exists for all seeds
+            robustness_pass=(all(r["stages"]["robustness"]["ok"] for r in rows.values())
+                             if all(r["stages"]["robustness"] for r in rows.values()) else None),
             mean_seed_sharpe=float(np.mean([r["book"]["sharpe"] for r in rows.values()])) if done else None,
             mean_sharpe_diff_vs_null=float(np.mean(diffs)) if len(diffs) == 3 else None,
             mean_avg_pnl_diff_vs_null=float(np.mean(pnl)) if len(pnl) == 3 else None)
@@ -221,10 +223,6 @@ def returns_of(eid):
 def pbo_diagnostic():
     """Diagnostic only (D082): never passes, fails, ranks or selects."""
     cols = {}
-    for v, eid in H012.items():
-        r = returns_of(eid)
-        if r is not None:
-            cols[f"H012 {v}"] = r
     for v, seeds in H013.items():
         rs = [returns_of(e) for e in seeds.values()]
         if all(r is not None for r in rs):
@@ -234,10 +232,7 @@ def pbo_diagnostic():
     if len(cols) >= 2:
         mat = pd.concat(cols, axis=1, join="inner").dropna()
         out["cycle"] = stats.pbo_cscv(mat.to_numpy(), n_blocks=16)
-        for h in ("H012", "H013"):
-            sub = [c for c in mat.columns if c.startswith(h)]
-            if len(sub) >= 2:
-                out[h] = stats.pbo_cscv(mat[sub].to_numpy(), n_blocks=16)
+        # Amendment 1 (D087): H013 is the only C03 hypothesis, so the cycle-level PBO is H013's
     return out
 
 
@@ -259,7 +254,7 @@ def val_stage(val_map):
     dual-count DSR on IS + VAL per book, with the registry snapshot at this commit."""
     snap = c03stats.snapshot(expect_official=c03stats.OFFICIAL_N_C03)
     ew = _series(bench()["ew"])
-    out = dict(snapshot=snap, spec_sha256=c03stats.spec_hash(), books={})
+    out = dict(snapshot=snap, spec_sha256=c03stats.spec_hash(), amendments=c03stats.amendment_hashes(), books={})
     for is_id, val_id in val_map.items():
         i, v = load(is_id), load(val_id)
         if i is None or v is None:
@@ -278,12 +273,14 @@ def val_stage(val_map):
 def main(argv=None):
     args = argv if argv is not None else sys.argv[1:]
     cfgs = c03_configs()
-    h12, h13 = h012_section(cfgs), h013_section(cfgs)
+    h13 = h013_section(cfgs)
     out = dict(
-        note="C03 evaluation (D082/D083); screen and robustness thresholds unchanged; diagnostics never gate",
-        h012=h12, h013=h13,
-        chosen=dict(H012=choose(h12, lambda r: r["book"]["sharpe"]),
-                    H013=choose(h13, lambda r: r["mean_seed_sharpe"])),
+        note="C03 evaluation (D082/D083, Amendment 1 D087); screen and robustness thresholds unchanged; diagnostics never gate",
+        h012=dict(status="Removed from C03 before any strategy backtest (D087): not evaluable with sufficient "
+                         "statistical power using the currently available data (CP3h). Not a failed hypothesis; "
+                         "configs E012-01..11 withdrawn, never run."),
+        h013=h13,
+        chosen=dict(H013=choose(h13, lambda r: r["mean_seed_sharpe"])),
         pbo_diagnostic=pbo_diagnostic(), sizing=sizing_section(),
         trial_counts_now=c03stats.snapshot())
     if args and args[0] == "--val":

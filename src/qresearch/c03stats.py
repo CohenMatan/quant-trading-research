@@ -32,10 +32,12 @@ import pandas as pd
 from . import config, metrics, registry, stats
 
 THRESHOLD = 0.90
-OFFICIAL_N_C03 = 43          # 37 before C03 + the 6 pre-declared C03 candidates (H012 x 3, H013 x 3)
+OFFICIAL_N_C03 = 40          # Amendment 1 (D087): 37 before C03 + the 3 H013 variations (H012 removed, never run)
+SENSITIVITY_N_C03 = 43       # Amendment 1: the originally planned count, a reported sensitivity, never a gate
 PRE_C03 = dict(official=37, conservative=64)
 SPEC = "research/cycles/C03_statistical_spec.md"
 SPEC_SHA256 = "74ce5351fe3c4915a61b8e63bf0ffea0741ac8bb28d81efeb59dd33fedcea66e"   # D082: the frozen text
+AMENDMENTS = {"research/cycles/C03_statistical_spec_amendment_1.md": "d6634b710cc02e4623d570eec517c752e38bc240144e798b4b0d272ad2528141"}   # D087, owner-approved
 
 
 class SpecError(RuntimeError):
@@ -45,7 +47,7 @@ class SpecError(RuntimeError):
 def snapshot(path: Path | None = None, experiments_dir: Path | None = None,
              retired: set[str] | None = None, expect_official: int | None = None) -> dict:
     """Trial counts and Sharpe dispersion from the registry as it stands (Clarification A).
-    `expect_official` (43 for the C03 evaluation) makes a different official N an error to
+    `expect_official` (40 for the C03 evaluation, Amendment 1) makes a different official N an error to
     investigate, never a silent change."""
     p = path or config.INDEX_CSV
     if retired is None:
@@ -113,13 +115,19 @@ def evaluate_book(name: str, is_equity: pd.Series, val_equity: pd.Series, snap: 
                 val_only=dict(describe(r_val), psr_0=stats.probabilistic_sharpe(r_val, 0.0),
                               dsr_official=dsr_at(r_val, snap["official"], snap["var_sr"])["dsr"],
                               dsr_conservative=dsr_at(r_val, snap["conservative"], snap["var_sr"])["dsr"]))
+    diag["sensitivity_n43"] = dsr_at(r, SENSITIVITY_N_C03, snap["var_sr"])      # Amendment 1: reported only
     return dict(book=name, combined=describe(r), official=off, conservative=con, ok=off["ok"] and con["ok"],
                 diagnostics_not_gates=diag)
 
 
 def hypothesis_passes(books: list[dict]) -> bool:
-    """H012: its one book. H013: every seed's book; a missing or failed seed fails the variation."""
+    """Every seed's book of an H013 variation must pass; a missing or failed seed fails the variation."""
     return bool(books) and all(b["ok"] for b in books)
+
+
+def amendment_hashes() -> dict:
+    import hashlib as _h
+    return {p: _h.sha256((config.REPO_ROOT / p).read_bytes()).hexdigest() for p in AMENDMENTS}
 
 
 def spec_hash() -> str:

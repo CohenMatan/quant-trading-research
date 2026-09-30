@@ -23,6 +23,12 @@ class ConfigError(ValueError):
     pass
 
 
+def withdrawn() -> dict:
+    """Experiment id -> reason, for configs withdrawn by an owner decision before they ever ran."""
+    import json as _json
+    return _json.loads(config.WITHDRAWN_FILE.read_text()) if config.WITHDRAWN_FILE.exists() else {}
+
+
 def parse(text: str, unlock_file=None) -> dict:
     cfg = json.loads(text)
     validate(cfg, unlock_file=unlock_file)
