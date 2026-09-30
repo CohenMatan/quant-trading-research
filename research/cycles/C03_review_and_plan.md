@@ -1,5 +1,7 @@
 # C01–C02 structured review and proposed Research Cycle 3 (C03) plan
 
+> **The C03 proposal part (§3–§9) is superseded by `docs/checkpoints/CP3d_structural_review_and_C03_proposal.md` (2026-09-30), written after the pre-registered portfolio diagnostics (E962-01..24). The review evidence in §1–§2 still stands.**
+
 | Field | Value |
 |---|---|
 | Written | 2026-09-30, after C02 closed (No Production Candidate Found, D076) |
