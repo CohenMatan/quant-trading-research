@@ -1,0 +1,809 @@
+{
+ "assumptions": {
+  "rho_base": 0.76,
+  "dev_years": 12.0,
+  "holdout_years": 4.67,
+  "holdout_margin": 0.1,
+  "reps": 400000,
+  "seed": 20261003,
+  "process": "sequential: first hypothesis to clear its margin consumes the Holdout",
+  "note": "development gates G2-G4 not modelled: false acceptance figures are upper bounds"
+ },
+ "part_a_schedules": {
+  "rho=0.7": {
+   "fixed 0.20": {
+    "margins": [
+     0.2,
+     0.2,
+     0.2
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2532,
+     0.2532,
+     0.2532
+    ],
+    "false_accept_all_null_K1": 0.0983175,
+    "false_accept_all_null_K2": 0.17393,
+    "false_accept_all_null_K3": 0.22754,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5433825,
+     "accept_null_instead": 0.0401625
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.4067375,
+     "accept_null_instead": 0.11628
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.3036225,
+     "accept_null_instead": 0.1718875
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.82431,
+     "accept_null_instead": 0.0089375
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.6154575,
+     "accept_null_instead": 0.10309
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.4606825,
+     "accept_null_instead": 0.1713825
+    }
+   },
+   "0.20/0.25/0.30": {
+    "margins": [
+     0.2,
+     0.25,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2532,
+     0.1854,
+     0.1302
+    ],
+    "false_accept_all_null_K1": 0.098905,
+    "false_accept_all_null_K2": 0.1532775,
+    "false_accept_all_null_K3": 0.18394,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.542885,
+     "accept_null_instead": 0.02726
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.3651425,
+     "accept_null_instead": 0.1107725
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.26037,
+     "accept_null_instead": 0.152885
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.8244275,
+     "accept_null_instead": 0.00566
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.5974125,
+     "accept_null_instead": 0.1014825
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.46482,
+     "accept_null_instead": 0.152755
+    }
+   },
+   "0.20/0.30/0.40": {
+    "margins": [
+     0.2,
+     0.3,
+     0.4
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2532,
+     0.1302,
+     0.0564
+    ],
+    "false_accept_all_null_K1": 0.09732,
+    "false_accept_all_null_K2": 0.1362275,
+    "false_accept_all_null_K3": 0.1510825,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5430575,
+     "accept_null_instead": 0.0169525
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.3193425,
+     "accept_null_instead": 0.1051975
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.1952275,
+     "accept_null_instead": 0.1363425
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.82516,
+     "accept_null_instead": 0.00338
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.57238,
+     "accept_null_instead": 0.10039
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.431645,
+     "accept_null_instead": 0.13616
+    }
+   },
+   "equal error budget (p1/k)": {
+    "margins": [
+     0.2,
+     0.304,
+     0.354
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2532,
+     0.1263,
+     0.0847
+    ],
+    "false_accept_all_null_K1": 0.097805,
+    "false_accept_all_null_K2": 0.136305,
+    "false_accept_all_null_K3": 0.15687,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5449475,
+     "accept_null_instead": 0.01817
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.315675,
+     "accept_null_instead": 0.1080275
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.2352725,
+     "accept_null_instead": 0.1365875
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.824385,
+     "accept_null_instead": 0.0039475
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.5689725,
+     "accept_null_instead": 0.1014125
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.4667525,
+     "accept_null_instead": 0.135365
+    }
+   },
+   "fixed 0.25": {
+    "margins": [
+     0.25,
+     0.25,
+     0.25
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1854,
+     0.1854,
+     0.1854
+    ],
+    "false_accept_all_null_K1": 0.07265,
+    "false_accept_all_null_K2": 0.1308775,
+    "false_accept_all_null_K3": 0.178855,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.489505,
+     "accept_null_instead": 0.040685
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.3987925,
+     "accept_null_instead": 0.0917525
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.32541,
+     "accept_null_instead": 0.1309225
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.7994775,
+     "accept_null_instead": 0.010025
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.6510075,
+     "accept_null_instead": 0.077185
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.530595,
+     "accept_null_instead": 0.1319625
+    }
+   },
+   "fixed 0.30": {
+    "margins": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1302,
+     0.1302,
+     0.1302
+    ],
+    "false_accept_all_null_K1": 0.0510775,
+    "false_accept_all_null_K2": 0.0944025,
+    "false_accept_all_null_K3": 0.13337,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.42957,
+     "accept_null_instead": 0.0372975
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.373855,
+     "accept_null_instead": 0.067595
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.32451,
+     "accept_null_instead": 0.09483
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.764785,
+     "accept_null_instead": 0.01106
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.665135,
+     "accept_null_instead": 0.05651
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.5787175,
+     "accept_null_instead": 0.09463
+    }
+   }
+  },
+  "rho=0.76": {
+   "fixed 0.20": {
+    "margins": [
+     0.2,
+     0.2,
+     0.2
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2197,
+     0.2197,
+     0.2197
+    ],
+    "false_accept_all_null_K1": 0.08268,
+    "false_accept_all_null_K2": 0.1469675,
+    "false_accept_all_null_K3": 0.1975025,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5734425,
+     "accept_null_instead": 0.0324425
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.446875,
+     "accept_null_instead": 0.09707
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.3487775,
+     "accept_null_instead": 0.1477475
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.8626375,
+     "accept_null_instead": 0.005165
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.67275,
+     "accept_null_instead": 0.0853375
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.5243375,
+     "accept_null_instead": 0.1480175
+    }
+   },
+   "0.20/0.25/0.30": {
+    "margins": [
+     0.2,
+     0.25,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2197,
+     0.1513,
+     0.0988
+    ],
+    "false_accept_all_null_K1": 0.08321,
+    "false_accept_all_null_K2": 0.1274125,
+    "false_accept_all_null_K3": 0.153415,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.571285,
+     "accept_null_instead": 0.019725
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.3992825,
+     "accept_null_instead": 0.09161
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.2924625,
+     "accept_null_instead": 0.1282675
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.862505,
+     "accept_null_instead": 0.0030025
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.6563825,
+     "accept_null_instead": 0.085685
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.534535,
+     "accept_null_instead": 0.1276875
+    }
+   },
+   "0.20/0.30/0.40": {
+    "margins": [
+     0.2,
+     0.3,
+     0.4
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2197,
+     0.0988,
+     0.0357
+    ],
+    "false_accept_all_null_K1": 0.083,
+    "false_accept_all_null_K2": 0.11245,
+    "false_accept_all_null_K3": 0.12149,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5730325,
+     "accept_null_instead": 0.0107125
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.3460225,
+     "accept_null_instead": 0.0874075
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.2059525,
+     "accept_null_instead": 0.1108
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.863605,
+     "accept_null_instead": 0.001725
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.62914,
+     "accept_null_instead": 0.08387
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.49171,
+     "accept_null_instead": 0.1122075
+    }
+   },
+   "equal error budget (p1/k)": {
+    "margins": [
+     0.2,
+     0.288,
+     0.332
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.2197,
+     0.1099,
+     0.0731
+    ],
+    "false_accept_all_null_K1": 0.083315,
+    "false_accept_all_null_K2": 0.11612,
+    "false_accept_all_null_K3": 0.13387,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.572465,
+     "accept_null_instead": 0.014495
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.358725,
+     "accept_null_instead": 0.090435
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.2745925,
+     "accept_null_instead": 0.1153725
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.86317,
+     "accept_null_instead": 0.0022975
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.6368575,
+     "accept_null_instead": 0.08512
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.54098,
+     "accept_null_instead": 0.115615
+    }
+   },
+   "fixed 0.25": {
+    "margins": [
+     0.25,
+     0.25,
+     0.25
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1513,
+     0.1513,
+     0.1513
+    ],
+    "false_accept_all_null_K1": 0.056815,
+    "false_accept_all_null_K2": 0.10528,
+    "false_accept_all_null_K3": 0.1471825,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.5131425,
+     "accept_null_instead": 0.0320475
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.4343825,
+     "accept_null_instead": 0.07191
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.3688,
+     "accept_null_instead": 0.1055175
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.8393975,
+     "accept_null_instead": 0.0064
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.711975,
+     "accept_null_instead": 0.060095
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.6050425,
+     "accept_null_instead": 0.105125
+    }
+   },
+   "fixed 0.30": {
+    "margins": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.0988,
+     0.0988,
+     0.0988
+    ],
+    "false_accept_all_null_K1": 0.0369625,
+    "false_accept_all_null_K2": 0.0710775,
+    "false_accept_all_null_K3": 0.10118,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.4417475,
+     "accept_null_instead": 0.028495
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.39771,
+     "accept_null_instead": 0.051265
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.358565,
+     "accept_null_instead": 0.07117
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.8058,
+     "accept_null_instead": 0.0071
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.7277325,
+     "accept_null_instead": 0.040915
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.655555,
+     "accept_null_instead": 0.07111
+    }
+   }
+  },
+  "rho=0.85": {
+   "fixed 0.20": {
+    "margins": [
+     0.2,
+     0.2,
+     0.2
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1477,
+     0.1477,
+     0.1477
+    ],
+    "false_accept_all_null_K1": 0.05112,
+    "false_accept_all_null_K2": 0.0952275,
+    "false_accept_all_null_K3": 0.1317725,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.64401,
+     "accept_null_instead": 0.01696
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.5496725,
+     "accept_null_instead": 0.05911
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.4671175,
+     "accept_null_instead": 0.09499
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.931155,
+     "accept_null_instead": 0.00124
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.7926975,
+     "accept_null_instead": 0.05162
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.6746475,
+     "accept_null_instead": 0.095645
+    }
+   },
+   "0.20/0.25/0.30": {
+    "margins": [
+     0.2,
+     0.25,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1477,
+     0.085,
+     0.0448
+    ],
+    "false_accept_all_null_K1": 0.051235,
+    "false_accept_all_null_K2": 0.0758275,
+    "false_accept_all_null_K3": 0.086945,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.6436775,
+     "accept_null_instead": 0.0077875
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.4830225,
+     "accept_null_instead": 0.0546775
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.3680625,
+     "accept_null_instead": 0.0763225
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.930395,
+     "accept_null_instead": 0.00057
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.7796475,
+     "accept_null_instead": 0.051645
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.69131,
+     "accept_null_instead": 0.076165
+    }
+   },
+   "0.20/0.30/0.40": {
+    "margins": [
+     0.2,
+     0.3,
+     0.4
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1477,
+     0.0448,
+     0.0094
+    ],
+    "false_accept_all_null_K1": 0.050995,
+    "false_accept_all_null_K2": 0.0648525,
+    "false_accept_all_null_K3": 0.06635,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.6436375,
+     "accept_null_instead": 0.0034575
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.4028575,
+     "accept_null_instead": 0.0526125
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.22132,
+     "accept_null_instead": 0.064925
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.9312675,
+     "accept_null_instead": 0.0002675
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.756205,
+     "accept_null_instead": 0.0513975
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.62969,
+     "accept_null_instead": 0.0645275
+    }
+   },
+   "equal error budget (p1/k)": {
+    "margins": [
+     0.2,
+     0.262,
+     0.293
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.1477,
+     0.0735,
+     0.0493
+    ],
+    "false_accept_all_null_K1": 0.0511475,
+    "false_accept_all_null_K2": 0.0730825,
+    "false_accept_all_null_K3": 0.0877975,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.643795,
+     "accept_null_instead": 0.0076575
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.4635925,
+     "accept_null_instead": 0.05587
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.3848075,
+     "accept_null_instead": 0.0729175
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.9300675,
+     "accept_null_instead": 0.00052
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.7761375,
+     "accept_null_instead": 0.0514175
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.7052975,
+     "accept_null_instead": 0.073015
+    }
+   },
+   "fixed 0.25": {
+    "margins": [
+     0.25,
+     0.25,
+     0.25
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.085,
+     0.085,
+     0.085
+    ],
+    "false_accept_all_null_K1": 0.029435,
+    "false_accept_all_null_K2": 0.0563925,
+    "false_accept_all_null_K3": 0.080835,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.565305,
+     "accept_null_instead": 0.0158375
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.516725,
+     "accept_null_instead": 0.0375825
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.4735275,
+     "accept_null_instead": 0.056005
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.915435,
+     "accept_null_instead": 0.0016275
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.8378825,
+     "accept_null_instead": 0.03017
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.76768,
+     "accept_null_instead": 0.0566075
+    }
+   },
+   "fixed 0.30": {
+    "margins": [
+     0.3,
+     0.3,
+     0.3
+    ],
+    "dev_false_pass_per_hypothesis": [
+     0.0448,
+     0.0448,
+     0.0448
+    ],
+    "false_accept_all_null_K1": 0.0156225,
+    "false_accept_all_null_K2": 0.0304725,
+    "false_accept_all_null_K3": 0.0447025,
+    "real_0.3_as_hypothesis_1": {
+     "accept_real": 0.472535,
+     "accept_null_instead": 0.0122575
+    },
+    "real_0.3_as_hypothesis_2": {
+     "accept_real": 0.451755,
+     "accept_null_instead": 0.0214075
+    },
+    "real_0.3_as_hypothesis_3": {
+     "accept_real": 0.4312775,
+     "accept_null_instead": 0.0299175
+    },
+    "real_0.5_as_hypothesis_1": {
+     "accept_real": 0.8865975,
+     "accept_null_instead": 0.0018325
+    },
+    "real_0.5_as_hypothesis_2": {
+     "accept_real": 0.8489275,
+     "accept_null_instead": 0.01637
+    },
+    "real_0.5_as_hypothesis_3": {
+     "accept_real": 0.809545,
+     "accept_null_instead": 0.031055
+    }
+   }
+  }
+ },
+ "part_b_g1": {
+  "market_true_sharpe_annual": 1.0039686497440445,
+  "beta=1.0,delta=0.0": {
+   "sharpe_only": 0.17333333333333334,
+   "old": 0.166,
+   "new": 0.17266666666666666,
+   "dd_worse": 0.20333333333333334,
+   "dd_much_worse": 0.016666666666666666
+  },
+  "beta=1.0,delta=0.2": {
+   "sharpe_only": 0.5126666666666667,
+   "old": 0.4886666666666667,
+   "new": 0.5106666666666667,
+   "dd_worse": 0.12866666666666668,
+   "dd_much_worse": 0.008666666666666666
+  },
+  "beta=1.0,delta=0.3": {
+   "sharpe_only": 0.6926666666666667,
+   "old": 0.6606666666666666,
+   "new": 0.6893333333333334,
+   "dd_worse": 0.096,
+   "dd_much_worse": 0.0006666666666666666
+  },
+  "beta=1.0,delta=0.5": {
+   "sharpe_only": 0.9286666666666666,
+   "old": 0.8733333333333333,
+   "new": 0.9186666666666666,
+   "dd_worse": 0.07533333333333334,
+   "dd_much_worse": 0.002
+  },
+  "beta=0.7,delta=0.0": {
+   "sharpe_only": 0.18866666666666668,
+   "old": 0.16866666666666666,
+   "new": 0.168,
+   "dd_worse": 0.016,
+   "dd_much_worse": 0.0
+  },
+  "beta=0.7,delta=0.2": {
+   "sharpe_only": 0.5173333333333333,
+   "old": 0.4666666666666667,
+   "new": 0.4653333333333333,
+   "dd_worse": 0.008,
+   "dd_much_worse": 0.0
+  },
+  "beta=0.7,delta=0.3": {
+   "sharpe_only": 0.6946666666666667,
+   "old": 0.6286666666666667,
+   "new": 0.6286666666666667,
+   "dd_worse": 0.009333333333333334,
+   "dd_much_worse": 0.0
+  },
+  "beta=0.7,delta=0.5": {
+   "sharpe_only": 0.922,
+   "old": 0.8593333333333333,
+   "new": 0.8606666666666667,
+   "dd_worse": 0.004,
+   "dd_much_worse": 0.0
+  },
+  "beta=1.3,delta=0.0": {
+   "sharpe_only": 0.18133333333333335,
+   "old": 0.1,
+   "new": 0.154,
+   "dd_worse": 0.6746666666666666,
+   "dd_much_worse": 0.138
+  },
+  "beta=1.3,delta=0.2": {
+   "sharpe_only": 0.524,
+   "old": 0.308,
+   "new": 0.4493333333333333,
+   "dd_worse": 0.5566666666666666,
+   "dd_much_worse": 0.07066666666666667
+  },
+  "beta=1.3,delta=0.3": {
+   "sharpe_only": 0.6866666666666666,
+   "old": 0.39466666666666667,
+   "new": 0.5793333333333334,
+   "dd_worse": 0.504,
+   "dd_much_worse": 0.04533333333333334
+  },
+  "beta=1.3,delta=0.5": {
+   "sharpe_only": 0.9053333333333333,
+   "old": 0.5846666666666667,
+   "new": 0.82,
+   "dd_worse": 0.386,
+   "dd_much_worse": 0.016
+  }
+ }
+}

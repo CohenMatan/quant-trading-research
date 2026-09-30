@@ -782,3 +782,15 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 - Proposed fix: at most 3 hypotheses per Holdout, a development margin rising 0.20 → 0.30 → 0.40, and a 2-year forward test. This gives at most about 12% false acceptance (about 6% with the forward test), while a genuine +0.3 edge is still accepted 53–57% of the time.
 
 **STOP.** H014 not implemented; no backtest run; the Holdout untouched.
+
+## 2026-09-30: Phase 2 methodology amendment (P2-CP0c); STOP
+
+**Owner decision.** The Phase 2 evaluation philosophy is approved in principle, with three items left to amend.
+
+**Proposed amendment.**
+
+1. **Data categories.** Four categories are defined, and the forward-test clock starts at the freeze timestamp. Data from 2026-09-01 up to the freeze is historical unseen data: it is locked, opened together with the Holdout, and reported but not gated.
+2. **Hypothesis budget.** At most 3 hypotheses, each with a fixed margin of +0.25 Sharpe over EW. The simulation shows rising margins mainly cut power for later ideas; a fixed margin with the budget treats every idea equally. No-edge acceptance is at most about 15% after 3 hypotheses (an upper bound).
+3. **G1.** A combined return-risk rule: Sharpe margin, a CAGR floor, Calmar no worse than EW, and drawdown at most 5 points deeper than EW. It replaces the drawdown veto that rejected genuinely better, slightly riskier strategies.
+
+**STOP.** Nothing implemented or run; the Holdout untouched.
