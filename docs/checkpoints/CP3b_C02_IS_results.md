@@ -1,5 +1,7 @@
 # Research Cycle 2 (C02): in-sample results checkpoint
 
+> **Superseded by `CP3c_C02_final_report.md` (2026-09-30), which includes the three time-stop runs completed afterwards (E007-12 recovered, E007-13, E007-14). The verdict is unchanged.**
+
 | Field | Value |
 |---|---|
 | Date | 2026-09-30 |
