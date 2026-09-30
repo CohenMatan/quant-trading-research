@@ -1,0 +1,43 @@
+{
+ "experiment_id": "E966-02",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X966",
+ "strategy_version": "v1.1",
+ "strategy_dir": "strategies/X966_window_diag",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2010-01-04",
+ "end": "2011-12-30",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "programme": "P2",
+ "cycle": "P2C1",
+ "params": {},
+ "description": "Window diagnostic after E965-04 feature mismatches: live harness windows vs fresh SCALED_RAW history, bar by bar (dates and price ratios). Places no orders. v1.1 after the E966-01 diagnostic date-offset defect. Verification; not a trial."
+}

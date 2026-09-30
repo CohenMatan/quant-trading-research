@@ -1,4 +1,4 @@
-# X966 v1.0 — window diagnostic after E965-04 (infrastructure, not research; places NO orders). Keeps the
+# X966 v1.1 — window diagnostic after E965-04 (infrastructure, not research; places NO orders). Keeps the
 from qr_harness import QRAlgorithm
 # harness's 259-bar adjusted OHLC windows exactly as S014 does, and additionally records the DATE of every
 # bar in each close window. Every AUDIT_EVERY sessions, for a sample of eligible names, it compares the live
@@ -6,6 +6,8 @@ from qr_harness import QRAlgorithm
 #   date alignment (missing / extra / filled-forward bars) and, on aligned dates, the price ratio live/fresh.
 # Mismatches are logged (QRD66|...) with the pattern, so the cause of the E965-04 feature differences
 # (dividend rescaling vs bar alignment) can be identified.
+# v1.1 (E966-01 diagnostic defect): today's date is recorded at the start of the close hook (v1.0 recorded it
+# after the hook, so every comparison was shifted by one bar); also compares by position.
 from AlgorithmImports import *
 from collections import deque
 import json
@@ -46,21 +48,16 @@ class WindowDiag(QRAlgorithm):
             self.d["div_events"] += 1
         for s in data.splits.keys():
             self.d["split_events"] += 1
-        before = {s: self._qr_last_bar.get(s) for s in self.qr_close}
         super().on_data(data)
-        today = self.time.date()
-        if data.bars.count == 0 or self.time.hour < 9:
-            return
-        for s, bar in data.bars.items():
-            if s in self.dates and self._qr_last_bar.get(s) == today and before.get(s) != today \
-                    and len(self.dates[s]) and self.dates[s][-1] != today:
-                self.dates[s].append(today)
-                self.ff[s].append(bool(bar.is_fill_forward))
 
     def qr_on_close(self, data):
+        today = self.time.date()
+        for s, dq in self.dates.items():
+            if self._qr_last_bar.get(s) == today and (not len(dq) or dq[-1] != today) and s in self.qr_close:
+                dq.append(today)
+                self.ff[s].append(bool(data.bars.contains_key(s) and data.bars[s].is_fill_forward))
         if self._qr_session % AUDIT_EVERY:
             return
-        today = self.time.date()
         cands = [s for s in self.qr_eligible if s in self.qr_close and len(self.qr_close[s]) >= WINDOW
                  and data.bars.contains_key(s) and not data.bars[s].is_fill_forward]
         if not cands:
@@ -91,6 +88,12 @@ class WindowDiag(QRAlgorithm):
                 extra = sorted(set(ld) - set(fd))[:5]
                 self._log(f"QRD66|dates|{today}|{s.id}|len={len(ld)}|ff={nff}|missing={miss}|extra={extra}"
                           f"|first_live={ld[0] if ld else None}|first_fresh={fd[0]}")
+            n = min(len(lc), len(fc))
+            pos_bad = [i for i in range(1, n + 1) if abs(lc[-i] / fc[-i] - 1) > 1e-6]
+            self.d["positional_bad"] = self.d.get("positional_bad", 0) + int(bool(pos_bad))
+            if pos_bad:
+                self._log(f"QRD66|pos|{today}|{s.id}|nbad={len(pos_bad)}|first_back={pos_bad[0]}|last_back={pos_bad[-1]}"
+                          f"|ratio_oldest={lc[-n] / fc[-n]:.6f}|ratio_at_first={lc[-pos_bad[0]] / fc[-pos_bad[0]]:.6f}")
             common = {d: i for i, d in enumerate(fd)}
             ratios = [(d, lc[i] / fc[common[d]]) for i, d in enumerate(ld) if d in common and i < len(lc)]
             bad = [(d, r) for d, r in ratios if abs(r - 1) > 1e-6]
