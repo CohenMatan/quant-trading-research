@@ -564,3 +564,45 @@ Proposed P1: keep D073 and add a stricter dual-count DSR requirement.
 **Proposed (D082):** PBO diagnostic only; dual-count DSR on each deployable book (H013 per seed); all three seeds must pass every stage; no exceptions; other gates unchanged.
 
 **STOP.** No C03 strategy backtest has run.
+
+## 2026-09-30: C03 methodology frozen (D082 final); H012/H013 infrastructure and canaries; CP3g STOP
+
+**Owner decision.** The owner approved the C03 statistical methodology (D082), with two clarifications: a precise conservative trial count (A), and a frozen DSR calculation and Validation procedure (B).
+
+**Done:**
+
+- **Frozen specification** `research/cycles/C03_statistical_spec.md` (hash pinned by a test).
+- **Counts:**
+  - official N = selection candidates;
+  - conservative N = selection + H013 replicate seeds + robustness + Validation.
+  - Now 37/64; 43/76 after the committed runs; at most 43/120. CP3f's "about 104" is corrected to 120.
+- **DSR:**
+  - daily net returns of the IS run then the VAL run, with no bridging return;
+  - DSR ≥ 0.90 at both N, per book (each H013 seed);
+  - IS+VAL is the gate; IS-only and VAL-only are diagnostics.
+- **Code:** `registry.trial_accounting` (replicate groups) and `qresearch.c03stats`.
+- **Strategies:** S012 (H012, with Controls A/B) and S013 (H013, the null's order with excluded names skipped).
+- **Committed-run configurations** (32 C03 runs, not run) and the evaluation script `C03_eval.py`.
+
+**Canaries:**
+
+- **E963-01** stopped on a canary-code bug at the 2010-11-26 half-day (annotated bugged).
+- **E963-02** passed its checks but revealed an S012 defect: an empty basket during the universe's 20-session warm-up. Fixed (D083a) with a regression test; the run is annotated superseded.
+- **E963-03 passed:**
+  - RV matches fresh history (103 checks, 0.02% maximum difference);
+  - basket 8/8;
+  - no orders outside rebalance windows;
+  - zero timing violations.
+- **E964-01 passed:**
+  - S013 with nothing excluded reproduces the null E962-22 exactly (975/975 fills, identical equity);
+  - 201 exclusion audits with zero errors.
+
+**Tests:** 371 pass.
+
+**Issues raised:**
+
+1. **H012 and the trade count.** H012 closes only about 4 trades a year, so it will almost certainly fail the unchanged "≥ 100 closed trades" screen item by construction. Options are given; the recommendation is to run it as approved, as a diagnostic of timing value.
+2. **$5K minimum under exposure scaling.** It skips entries when exposure is low. This is counted and reported.
+3. **Canary re-runs.** There were two more than planned, relevant to the budget cap of 82.
+
+**STOP.** No C03 strategy backtest has run. Report: `docs/checkpoints/CP3g_C03_frozen_methodology_and_infrastructure.md`.
