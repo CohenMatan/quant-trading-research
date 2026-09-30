@@ -1,5 +1,7 @@
 # Phase 2: Technical trend + pullback + recovery. Research proposal (P2-CP0)
 
+> **Superseded in part (2026-09-30):** §11 (statistics), §12 (periods), §13 (multiple testing), §15 (run count) and all references to a separate "Validation" stage are replaced by the proposed revised methodology in `P2_CP0b_revised_evaluation_methodology.md`. The H014 rules, controls, portfolio and cost sections below are unchanged.
+
 | Field | Value |
 |---|---|
 | Date | 2026-09-30 |

@@ -758,3 +758,27 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 - **Trial count:** the choice largely decides feasibility. The Sharpe needed is about 1.2 with a separate P2 registry and about 1.45 if the 40 earlier trials are inherited.
 
 **STOP.** Nothing implemented or run. No Validation, Walk-Forward or Holdout used.
+
+## 2026-09-30: Phase 2 revised evaluation methodology (P2-CP0b); STOP
+
+**Owner request.**
+
+- DSR becomes a diagnostic rather than a gate.
+- 2010–2021 is development data.
+- One frozen candidate goes to the untouched 2022–2026 Holdout.
+- The criteria are practical and multi-dimensional.
+
+**Delivered.** `docs/checkpoints/P2_CP0b_revised_evaluation_methodology.md` and a pipeline simulation.
+
+**Proposed rules.**
+
+- Gates G1–G4: practical superiority over EW and SPY, beating the controls, consistency, and robustness plus costs. Everything else is a diagnostic.
+- Holdout criteria HO1–HO3, including a post-2022 guard.
+
+**Concerns flagged, with numbers.**
+
+- A 4.7-year Holdout lets a no-edge strategy pass about 30% of the time.
+- Without DSR as a gate, false acceptance grows with each hypothesis screened: about 27% after 5 hypotheses and 35% after 10.
+- Proposed fix: at most 3 hypotheses per Holdout, a development margin rising 0.20 → 0.30 → 0.40, and a 2-year forward test. This gives at most about 12% false acceptance (about 6% with the forward test), while a genuine +0.3 edge is still accepted 53–57% of the time.
+
+**STOP.** H014 not implemented; no backtest run; the Holdout untouched.
