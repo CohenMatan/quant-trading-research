@@ -128,3 +128,27 @@ def test_financial_format_classification():
 
 def test_accession_year_parse():
     assert F.accession_year("0000320193-14-000005") == 2014 and F.accession_year("x") is None
+
+
+def test_sec_timing_hold_only_delays():
+    """D111: a hold delays a vendor report to the day after its first public SEC source; never earlier."""
+    from datetime import date
+    st = F.PITStore(holds={"K": {"2016-03-31": "2016-05-07"}})
+    st.observe("K", date(2016, 3, 31), date(2016, 4, 28), {"revenue_ttm": 1.0}, None, date(2016, 4, 29))
+    assert st.record("K", date(2016, 5, 6)) is None and st.record("K", date(2016, 5, 7)) is not None
+    st2 = F.PITStore(holds={"K": {"2016-03-31": "2016-04-01"}})       # hold earlier than vendor date: no effect
+    st2.observe("K", date(2016, 3, 31), date(2016, 4, 28), {"revenue_ttm": 1.0}, None, date(2016, 4, 29))
+    assert st2.record("K", date(2016, 4, 28)) is None and st2.record("K", date(2016, 4, 29)) is not None
+    assert F.PITStore().holds == {}
+
+
+def test_quarantine_release_only_listed_records():
+    """D111: only quarantined reports on the SEC-verified release list leave quarantine."""
+    from datetime import date
+    rel = {"K": [["2009-12-31", "2010-02-20"]]}
+    st = F.PITStore(releases=rel)
+    today = date(2010, 3, 1)
+    st.observe("K", date(2009, 12, 31), date(2010, 2, 20), {"revenue_ttm": 1.0}, 2011, today)   # listed
+    st.observe("J", date(2009, 12, 31), date(2010, 2, 20), {"revenue_ttm": 1.0}, 2011, today)   # not listed
+    assert st.get("K", "revenue_ttm", today) == 1.0 and st.record("J", today) is None
+    assert st.stats["quarantine_released"] == 1 and st.stats["quarantined"] == 1

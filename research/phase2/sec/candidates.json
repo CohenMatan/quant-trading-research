@@ -402,7 +402,6 @@
    ],
    "name": "TWDC Enterprises 18 Corp.",
    "names": [
-    "TWDC Enterprises 18 Corp.",
     "WALT DISNEY CO/"
    ],
    "non_common_name": false,
@@ -673,8 +672,7 @@
    ],
    "name": "DUKE REALTY Ltd PARTNERSHIP/",
    "names": [
-    "DUKE REALTY LIMITED PARTNERSHIP/",
-    "DUKE REALTY Ltd PARTNERSHIP/"
+    "DUKE REALTY LIMITED PARTNERSHIP/"
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -1273,11 +1271,10 @@
    ],
    "name": "Bison Merger Sub I, LLC",
    "names": [
-    "Bison Merger Sub I, LLC",
     "FAIRMOUNT SANTROL HOLDINGS INC.",
     "FMSA HOLDINGS INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 1400
   },
@@ -1472,8 +1469,7 @@
    ],
    "name": "Energy Transfer, LP",
    "names": [
-    "Energy Transfer Partners, L.P.",
-    "Energy Transfer, LP"
+    "Energy Transfer Partners, L.P."
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -2611,10 +2607,9 @@
    ],
    "name": "VASCULAR SOLUTIONS LLC",
    "names": [
-    "VASCULAR SOLUTIONS INC",
-    "VASCULAR SOLUTIONS LLC"
+    "VASCULAR SOLUTIONS INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 3841
   },
@@ -2824,7 +2819,6 @@
    ],
    "name": "GENIE GATEWAY",
    "names": [
-    "GENIE GATEWAY",
     "WWA GROUP INC"
    ],
    "non_common_name": false,
@@ -3489,8 +3483,7 @@
    ],
    "name": "Innovex International, Inc.",
    "names": [
-    "DRIL-QUIP INC",
-    "Innovex International, Inc."
+    "DRIL-QUIP INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -3576,8 +3569,7 @@
    ],
    "name": "SONIDA SENIOR LIVING, INC.",
    "names": [
-    "CAPITAL SENIOR LIVING CORP",
-    "SONIDA SENIOR LIVING, INC."
+    "CAPITAL SENIOR LIVING CORP"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -4877,7 +4869,6 @@
    "names": [
     "Artemis Therapeutics, Inc.",
     "INKSURE TECHNOLOGIES INC.",
-    "Manuka, Inc.",
     "NEW YORK GLOBAL INNOVATIONS INC."
    ],
    "non_common_name": false,
@@ -5247,7 +5238,6 @@
    ],
    "name": "JOHN WILEY & SONS, INC.",
    "names": [
-    "JOHN WILEY & SONS, INC.",
     "WILEY JOHN & SONS, INC."
    ],
    "non_common_name": false,
@@ -5725,7 +5715,6 @@
    ],
    "name": "HOOKER FURNISHINGS Corp",
    "names": [
-    "HOOKER FURNISHINGS Corp",
     "HOOKER FURNITURE CORP"
    ],
    "non_common_name": false,
@@ -5880,7 +5869,6 @@
    ],
    "name": "BOWFLEX INC.",
    "names": [
-    "BOWFLEX INC.",
     "NAUTILUS, INC."
    ],
    "non_common_name": false,
@@ -5925,10 +5913,9 @@
    ],
    "name": "INFORMATICA LLC",
    "names": [
-    "INFORMATICA CORP",
-    "INFORMATICA LLC"
+    "INFORMATICA CORP"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 7372
   },
@@ -7511,10 +7498,9 @@
    "name": "EarthLink Holdings, LLC",
    "names": [
     "EARTHLINK INC",
-    "EarthLink Holdings Corp.",
-    "EarthLink Holdings, LLC"
+    "EarthLink Holdings Corp."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 7370
   },
@@ -7737,8 +7723,7 @@
    ],
    "name": "Sonus, Inc.",
    "names": [
-    "SONUS NETWORKS INC",
-    "Sonus, Inc."
+    "SONUS NETWORKS INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -7806,10 +7791,9 @@
    ],
    "name": "WARNER MEDIA, LLC",
    "names": [
-    "TIME WARNER INC.",
-    "WARNER MEDIA, LLC"
+    "TIME WARNER INC."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 4841
   },
@@ -8363,7 +8347,6 @@
    "name": "GYRE THERAPEUTICS, INC.",
    "names": [
     "CATALYST BIOSCIENCES, INC.",
-    "GYRE THERAPEUTICS, INC.",
     "TARGACEPT INC"
    ],
    "non_common_name": false,
@@ -8569,7 +8552,6 @@
    ],
    "name": "Bio Green Med Solution, Inc.",
    "names": [
-    "Bio Green Med Solution, Inc.",
     "Cyclacel Pharmaceuticals, Inc."
    ],
    "non_common_name": false,
@@ -8688,10 +8670,9 @@
    ],
    "name": "Hercules Sub LLC",
    "names": [
-    "HORNBECK OFFSHORE SERVICES INC /LA",
-    "Hercules Sub LLC"
+    "HORNBECK OFFSHORE SERVICES INC /LA"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 4400
   },
@@ -9789,8 +9770,7 @@
    ],
    "name": "Pluri Inc.",
    "names": [
-    "PLURISTEM THERAPEUTICS INC",
-    "Pluri Inc."
+    "PLURISTEM THERAPEUTICS INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10165,8 +10145,7 @@
    "name": "Allied World Assurance Co Holdings, GmbH",
    "names": [
     "ALLIED WORLD ASSURANCE CO HOLDINGS LTD",
-    "Allied World Assurance Co Holdings, AG",
-    "Allied World Assurance Co Holdings, GmbH"
+    "Allied World Assurance Co Holdings, AG"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10384,8 +10363,7 @@
    ],
    "name": "Old COPPER Company, Inc.",
    "names": [
-    "J C PENNEY CO INC",
-    "Old COPPER Company, Inc."
+    "J C PENNEY CO INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10485,8 +10463,7 @@
    ],
    "name": "B456 SYSTEMS, INC.",
    "names": [
-    "A123 SYSTEMS, INC.",
-    "B456 SYSTEMS, INC."
+    "A123 SYSTEMS, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10536,8 +10513,7 @@
    ],
    "name": "ARO Liquidation, Inc.",
    "names": [
-    "AEROPOSTALE INC",
-    "ARO Liquidation, Inc."
+    "AEROPOSTALE INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10636,8 +10612,7 @@
    ],
    "name": "TruBridge, Inc.",
    "names": [
-    "COMPUTER PROGRAMS & SYSTEMS INC",
-    "TruBridge, Inc."
+    "COMPUTER PROGRAMS & SYSTEMS INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -10903,8 +10878,7 @@
    ],
    "name": "Intercontinental Exchange Holdings, Inc.",
    "names": [
-    "INTERCONTINENTALEXCHANGE INC",
-    "Intercontinental Exchange Holdings, Inc."
+    "INTERCONTINENTALEXCHANGE INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -11838,7 +11812,6 @@
    ],
    "name": "CERES TACTICAL SYSTEMATIC L.P.",
    "names": [
-    "CERES TACTICAL SYSTEMATIC L.P.",
     "TACTICAL DIVERSIFIED FUTURES FUND L.P."
    ],
    "non_common_name": true,
@@ -11871,8 +11844,7 @@
    ],
    "name": "ENLINK MIDSTREAM, INC.",
    "names": [
-    "CROSSTEX ENERGY INC",
-    "ENLINK MIDSTREAM, INC."
+    "CROSSTEX ENERGY INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -11952,7 +11924,6 @@
    ],
    "name": "Big Digital Energy, Inc.",
    "names": [
-    "Big Digital Energy, Inc.",
     "DENALI CONCRETE MANAGEMENT INC",
     "Mawson Infrastructure Group Inc.",
     "OphthaliX, Inc.",
@@ -12628,7 +12599,6 @@
    ],
    "name": "CRESCENT BIOPHARMA, INC.",
    "names": [
-    "CRESCENT BIOPHARMA, INC.",
     "GLYCOMIMETICS INC"
    ],
    "non_common_name": false,
@@ -13114,8 +13084,7 @@
    ],
    "name": "CARDTRONICS PLC",
    "names": [
-    "CARDTRONICS INC",
-    "CARDTRONICS PLC"
+    "CARDTRONICS INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -14178,7 +14147,6 @@
    ],
    "name": "CapForce Inc.",
    "names": [
-    "CapForce Inc.",
     "OPGEN INC"
    ],
    "non_common_name": false,
@@ -14205,7 +14173,6 @@
    ],
    "name": "MAPLEBY HOLDINGS MERGER Corp",
    "names": [
-    "MAPLEBY HOLDINGS MERGER Corp",
     "OFFICEMAX INC"
    ],
    "non_common_name": false,
@@ -14338,8 +14305,7 @@
    ],
    "name": "Achaogen, Inc.",
    "names": [
-    "Achaogen Inc",
-    "Achaogen, Inc."
+    "Achaogen Inc"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -14389,10 +14355,9 @@
    ],
    "name": "ASHLAND LLC",
    "names": [
-    "ASHLAND INC.",
-    "ASHLAND LLC"
+    "ASHLAND INC."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 5160
   },
@@ -14624,8 +14589,7 @@
    ],
    "name": "Klondex Mines Unlimited Liability Co",
    "names": [
-    "KLONDEX MINES LTD",
-    "Klondex Mines Unlimited Liability Co"
+    "KLONDEX MINES LTD"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -14828,7 +14792,6 @@
    "name": "JLL Income Property Trust, Inc.",
    "names": [
     "EXCELSIOR LASALLE PROPERTY FUND INC",
-    "JLL Income Property Trust, Inc.",
     "Jones Lang LaSalle Income Property Trust, Inc."
    ],
    "non_common_name": true,
@@ -15453,10 +15416,9 @@
    ],
    "name": "Maidenform Brands LLC",
    "names": [
-    "Maidenform Brands LLC",
     "Maidenform Brands, Inc."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 2340
   },
@@ -15968,7 +15930,6 @@
    ],
    "name": "ENvue Medical, Inc.",
    "names": [
-    "ENvue Medical, Inc.",
     "NanoVibronix, Inc."
    ],
    "non_common_name": false,
@@ -17605,8 +17566,7 @@
    ],
    "name": "Tvardi Therapeutics, Inc.",
    "names": [
-    "Cara Therapeutics, Inc.",
-    "Tvardi Therapeutics, Inc."
+    "Cara Therapeutics, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -17682,10 +17642,9 @@
    ],
    "name": "SYNERGY PHARMACEUTICALS LLC",
    "names": [
-    "SYNERGY PHARMACEUTICALS LLC",
     "Synergy Pharmaceuticals, Inc."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 2834
   },
@@ -18110,7 +18069,6 @@
    ],
    "name": "Delek US Energy, Inc.",
    "names": [
-    "Delek US Energy, Inc.",
     "Delek US Holdings, Inc."
    ],
    "non_common_name": false,
@@ -18155,8 +18113,7 @@
    ],
    "name": "SOUNDTHINKING, INC.",
    "names": [
-    "SHOTSPOTTER, INC",
-    "SOUNDTHINKING, INC."
+    "SHOTSPOTTER, INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -18665,8 +18622,7 @@
    ],
    "name": "Kartoon Studios, Inc.",
    "names": [
-    "Genius Brands International, Inc.",
-    "Kartoon Studios, Inc."
+    "Genius Brands International, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -19351,7 +19307,6 @@
    ],
    "name": "BlackRock Finance, Inc.",
    "names": [
-    "BlackRock Finance, Inc.",
     "BlackRock Inc."
    ],
    "non_common_name": false,
@@ -19414,10 +19369,9 @@
    ],
    "name": "Primo Water Holdings LLC",
    "names": [
-    "Primo Water Corp",
-    "Primo Water Holdings LLC"
+    "Primo Water Corp"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 5141
   },
@@ -19533,7 +19487,6 @@
    ],
    "name": "YADKIN FINANCIAL Corp",
    "names": [
-    "YADKIN FINANCIAL Corp",
     "YADKIN VALLEY FINANCIAL CORP"
    ],
    "non_common_name": false,
@@ -19716,7 +19669,6 @@
    ],
    "name": "ON Semiconductor Connectivity Solutions, Inc.",
    "names": [
-    "ON Semiconductor Connectivity Solutions, Inc.",
     "QUANTENNA COMMUNICATIONS INC"
    ],
    "non_common_name": false,
@@ -19841,8 +19793,7 @@
    ],
    "name": "Hycroft Mining Corp",
    "names": [
-    "Allied Nevada Gold Corp.",
-    "Hycroft Mining Corp"
+    "Allied Nevada Gold Corp."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -20005,8 +19956,7 @@
    ],
    "name": "WisdomTree Continuous Commodity Index Fund",
    "names": [
-    "GreenHaven Continuous Commodity Index Fund",
-    "WisdomTree Continuous Commodity Index Fund"
+    "GreenHaven Continuous Commodity Index Fund"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -20641,7 +20591,6 @@
    ],
    "name": "Grizzly Energy, LLC",
    "names": [
-    "Grizzly Energy, LLC",
     "Vanguard Natural Resources, Inc.",
     "Vanguard Natural Resources, LLC"
    ],
@@ -20893,7 +20842,6 @@
    ],
    "name": "Edgio, Inc.",
    "names": [
-    "Edgio, Inc.",
     "Limelight Networks, Inc."
    ],
    "non_common_name": false,
@@ -21339,7 +21287,6 @@
    ],
    "name": "FHC Holdings Corp",
    "names": [
-    "FHC Holdings Corp",
     "Francesca's Holdings CORP"
    ],
    "non_common_name": false,
@@ -21503,7 +21450,6 @@
    ],
    "name": "Zymeworks BC Inc.",
    "names": [
-    "Zymeworks BC Inc.",
     "Zymeworks Inc."
    ],
    "non_common_name": false,
@@ -21654,8 +21600,7 @@
    "name": "Neurogene Inc.",
    "names": [
     "AQUINOX PHARMACEUTICALS, INC",
-    "Neoleukin Therapeutics, Inc.",
-    "Neurogene Inc."
+    "Neoleukin Therapeutics, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -22042,7 +21987,6 @@
    ],
    "name": "SmartStop Self Storage, Inc.",
    "names": [
-    "SmartStop Self Storage, Inc.",
     "Strategic Storage Trust, Inc."
    ],
    "non_common_name": true,
@@ -23025,8 +22969,7 @@
    ],
    "name": "Rein Therapeutics, Inc.",
    "names": [
-    "AILERON THERAPEUTICS INC",
-    "Rein Therapeutics, Inc."
+    "AILERON THERAPEUTICS INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -23101,8 +23044,7 @@
    "name": "Rebus Holdings, Inc.",
    "names": [
     "GENSPERA INC",
-    "Inspyr Therapeutics, Inc.",
-    "Rebus Holdings, Inc."
+    "Inspyr Therapeutics, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -23461,7 +23403,6 @@
    "names": [
     "American Mineral Group, Inc.",
     "CaerVision Global, Inc.",
-    "Solidus Communications, Inc.",
     "Sungro Minerals Inc.",
     "TELCO CUBA, INC.."
    ],
@@ -24070,8 +24011,7 @@
    ],
    "name": "Old Digimarc CORP",
    "names": [
-    "Digimarc CORP",
-    "Old Digimarc CORP"
+    "Digimarc CORP"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -24115,8 +24055,7 @@
    ],
    "name": "Marvion Inc.",
    "names": [
-    "Bonanza Goldfield Corp.",
-    "Marvion Inc."
+    "Bonanza Goldfield Corp."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -24280,7 +24219,6 @@
    ],
    "name": "MModal Inc.",
    "names": [
-    "MModal Inc.",
     "MedQuist Holdings Inc."
    ],
    "non_common_name": false,
@@ -24444,7 +24382,6 @@
    ],
    "name": "KINETA, INC./DE",
    "names": [
-    "KINETA, INC./DE",
     "PROTEOSTASIS THERAPEUTICS, INC.",
     "YUMANITY THERAPEUTICS, INC."
    ],
@@ -24658,8 +24595,7 @@
    "name": "abrdn Silver ETF Trust",
    "names": [
     "Aberdeen Standard Silver ETF Trust",
-    "ETFS SILVER TRUST",
-    "abrdn Silver ETF Trust"
+    "ETFS SILVER TRUST"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -24752,8 +24688,7 @@
    "name": "abrdn Gold ETF Trust",
    "names": [
     "Aberdeen Standard Gold ETF Trust",
-    "ETFS Gold Trust",
-    "abrdn Gold ETF Trust"
+    "ETFS Gold Trust"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -25223,8 +25158,7 @@
    "name": "abrdn Palladium ETF Trust",
    "names": [
     "Aberdeen Standard Palladium ETF Trust",
-    "ETFS PALLADIUM TRUST",
-    "abrdn Palladium ETF Trust"
+    "ETFS PALLADIUM TRUST"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -25317,8 +25251,7 @@
    "name": "abrdn Platinum ETF Trust",
    "names": [
     "Aberdeen Standard Platinum ETF Trust",
-    "ETFS Platinum Trust",
-    "abrdn Platinum ETF Trust"
+    "ETFS Platinum Trust"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -25537,7 +25470,6 @@
    ],
    "name": "DC Industrial Liquidating Trust",
    "names": [
-    "DC Industrial Liquidating Trust",
     "Industrial Income Trust Inc."
    ],
    "non_common_name": true,
@@ -25774,7 +25706,6 @@
    ],
    "name": "Colony Capital, Inc.",
    "names": [
-    "Colony Capital, Inc.",
     "Colony Financial, Inc."
    ],
    "non_common_name": false,
@@ -25831,10 +25762,9 @@
    ],
    "name": "Cimarex Resolute LLC",
    "names": [
-    "Cimarex Resolute LLC",
     "Resolute Energy Corp"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 1311
   },
@@ -26113,7 +26043,6 @@
    "name": "R1 RCM Holdco Inc.",
    "names": [
     "Accretive Health, Inc.",
-    "R1 RCM Holdco Inc.",
     "R1 RCM INC."
    ],
    "non_common_name": false,
@@ -26152,8 +26081,7 @@
    ],
    "name": "Stellar Bancorp, Inc.",
    "names": [
-    "CBTX, Inc.",
-    "Stellar Bancorp, Inc."
+    "CBTX, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -26233,8 +26161,7 @@
    ],
    "name": "Scorpius Holdings, Inc.",
    "names": [
-    "HEAT BIOLOGICS, INC.",
-    "Scorpius Holdings, Inc."
+    "HEAT BIOLOGICS, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -26696,8 +26623,7 @@
    "name": "abrdn Precious Metals Basket ETF Trust",
    "names": [
     "Aberdeen Standard Precious Metals Basket ETF Trust",
-    "ETFS Precious Metals Basket Trust",
-    "abrdn Precious Metals Basket ETF Trust"
+    "ETFS Precious Metals Basket Trust"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -26772,7 +26698,6 @@
    ],
    "name": "Carisma Therapeutics Inc.",
    "names": [
-    "Carisma Therapeutics Inc.",
     "Eleven Biotherapeutics, Inc.",
     "Sesen Bio, Inc."
    ],
@@ -26887,8 +26812,7 @@
    "name": "InnoVision Labs, Inc",
    "names": [
     "AUTOVATIVE PRODUCTS INC",
-    "GlassesOff Inc.",
-    "InnoVision Labs, Inc"
+    "GlassesOff Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -26938,8 +26862,7 @@
    ],
    "name": "Spectrum Brands Legacy, Inc.",
    "names": [
-    "Spectrum Brands Holdings, Inc.",
-    "Spectrum Brands Legacy, Inc."
+    "Spectrum Brands Holdings, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -27414,10 +27337,9 @@
    ],
    "name": "COCA-COLA EUROPEAN PARTNERS US, LLC",
    "names": [
-    "COCA-COLA ENTERPRISES, INC.",
-    "COCA-COLA EUROPEAN PARTNERS US, LLC"
+    "COCA-COLA ENTERPRISES, INC."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 2086
   },
@@ -27859,8 +27781,7 @@
    ],
    "name": "Golden Mountain Financial Corp",
    "names": [
-    "First NBC Bank Holding Co",
-    "Golden Mountain Financial Corp"
+    "First NBC Bank Holding Co"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -27980,8 +27901,7 @@
    ],
    "name": "Mahwah Bergen Retail Group, Inc.",
    "names": [
-    "Ascena Retail Group, Inc.",
-    "Mahwah Bergen Retail Group, Inc."
+    "Ascena Retail Group, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -28007,7 +27927,6 @@
    ],
    "name": "CIM INCOME NAV, INC.",
    "names": [
-    "CIM INCOME NAV, INC.",
     "COLE REAL ESTATE INCOME STRATEGY (DAILY NAV), INC."
    ],
    "non_common_name": false,
@@ -28088,7 +28007,6 @@
    ],
    "name": "CIM GROUP, INC.",
    "names": [
-    "CIM GROUP, INC.",
     "CIM REAL ESTATE FINANCE TRUST, INC.",
     "COLE CREDIT PROPERTY TRUST IV, INC."
    ],
@@ -28661,8 +28579,7 @@
    ],
    "name": "C&J Old Co,Inc.",
    "names": [
-    "C&J Energy Services, Inc.",
-    "C&J Old Co,Inc."
+    "C&J Energy Services, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -28706,7 +28623,6 @@
    ],
    "name": "CYPHERPUNK TECHNOLOGIES INC.",
    "names": [
-    "CYPHERPUNK TECHNOLOGIES INC.",
     "LEAP THERAPEUTICS, INC."
    ],
    "non_common_name": false,
@@ -29069,8 +28985,7 @@
    ],
    "name": "TPG Mortgage Investment Trust, Inc.",
    "names": [
-    "AG Mortgage Investment Trust, Inc.",
-    "TPG Mortgage Investment Trust, Inc."
+    "AG Mortgage Investment Trust, Inc."
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -29419,8 +29334,7 @@
    ],
    "name": "Mechanics Bancorp",
    "names": [
-    "HomeStreet, Inc.",
-    "Mechanics Bancorp"
+    "HomeStreet, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -29506,7 +29420,6 @@
    ],
    "name": "BIGtoken, Inc.",
    "names": [
-    "BIGtoken, Inc.",
     "Enhance-Your-Reputation.com, Inc.",
     "Force Protection Video Equipment Corp.",
     "M Street Gallery Inc."
@@ -29644,7 +29557,6 @@
    "name": "Amplify Energy Holdings LLC",
    "names": [
     "Amplify Energy Corp",
-    "Amplify Energy Holdings LLC",
     "Memorial Production Partners LP"
    ],
    "non_common_name": true,
@@ -30294,8 +30206,7 @@
    ],
    "name": "Titan Energy, LLC",
    "names": [
-    "Atlas Resource Partners, L.P.",
-    "Titan Energy, LLC"
+    "Atlas Resource Partners, L.P."
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -30604,8 +30515,7 @@
    "name": "Tempest Therapeutics, Inc.",
    "names": [
     "Millendo Therapeutics, Inc.",
-    "OvaScience, Inc.",
-    "Tempest Therapeutics, Inc."
+    "OvaScience, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -30663,7 +30573,6 @@
    ],
    "name": "Southcross Energy Partners LLC",
    "names": [
-    "Southcross Energy Partners LLC",
     "Southcross Energy Partners, L.P."
    ],
    "non_common_name": true,
@@ -30805,8 +30714,7 @@
    ],
    "name": "XURA, INC.",
    "names": [
-    "Comverse, Inc.",
-    "XURA, INC."
+    "Comverse, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -30969,7 +30877,6 @@
    ],
    "name": "PROJECT SAGE OLDCO, INC.",
    "names": [
-    "PROJECT SAGE OLDCO, INC.",
     "Sientra, Inc."
    ],
    "non_common_name": false,
@@ -31401,8 +31308,7 @@
    "names": [
     "BESPOKE TRICYCLES INC",
     "Biotech Products Services & Research, Inc.",
-    "Organicell Regenerative Medicine, Inc.",
-    "Zeo ScientifiX, Inc."
+    "Organicell Regenerative Medicine, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -31554,8 +31460,7 @@
    "name": "National Healthcare Properties, Inc.",
    "names": [
     "American Realty Capital Healthcare Trust II, Inc.",
-    "Healthcare Trust, Inc.",
-    "National Healthcare Properties, Inc."
+    "Healthcare Trust, Inc."
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -31692,7 +31597,6 @@
    ],
    "name": "AZIO AI HOLDINGS, INC.",
    "names": [
-    "AZIO AI HOLDINGS, INC.",
     "Adomani, Inc.",
     "Envirotech Vehicles, Inc."
    ],
@@ -31746,8 +31650,7 @@
    ],
    "name": "nCino OpCo, Inc.",
    "names": [
-    "NCINO, INC.",
-    "nCino OpCo, Inc."
+    "NCINO, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -31871,7 +31774,6 @@
    ],
    "name": "Keenova Therapeutics plc",
    "names": [
-    "Keenova Therapeutics plc",
     "Mallinckrodt plc"
    ],
    "non_common_name": false,
@@ -32106,7 +32008,6 @@
    ],
    "name": "MobilityPay Holdings, Inc.",
    "names": [
-    "MobilityPay Holdings, Inc.",
     "VESTA INTERNATIONAL, CORP."
    ],
    "non_common_name": false,
@@ -32207,8 +32108,7 @@
    ],
    "name": "GUE Liquidation Companies, Inc.",
    "names": [
-    "FTD Companies, Inc.",
-    "GUE Liquidation Companies, Inc."
+    "FTD Companies, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -32461,7 +32361,6 @@
    "name": "AMERICAN BATTERY TECHNOLOGY Co",
    "names": [
     "AMERICAN BATTERY METALS CORP",
-    "AMERICAN BATTERY TECHNOLOGY Co",
     "Oroplata Resources, Inc."
    ],
    "non_common_name": false,
@@ -32658,7 +32557,6 @@
    ],
    "name": "SmartStop Self Storage REIT, Inc.",
    "names": [
-    "SmartStop Self Storage REIT, Inc.",
     "Strategic Storage Trust II, Inc."
    ],
    "non_common_name": true,
@@ -32807,8 +32705,7 @@
    ],
    "name": "Grayscale Bitcoin Trust ETF",
    "names": [
-    "Grayscale Bitcoin Trust (BTC)",
-    "Grayscale Bitcoin Trust ETF"
+    "Grayscale Bitcoin Trust (BTC)"
    ],
    "non_common_name": true,
    "non_common_sic": true,
@@ -32977,8 +32874,7 @@
    ],
    "name": "Gold.com, Inc.",
    "names": [
-    "A-Mark Precious Metals, Inc.",
-    "Gold.com, Inc."
+    "A-Mark Precious Metals, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -33041,8 +32937,7 @@
    "name": "FG Nexus Inc.",
    "names": [
     "1347 Property Insurance Holdings, Inc.",
-    "FG Financial Group, Inc.",
-    "FG Nexus Inc."
+    "FG Financial Group, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -33707,10 +33602,9 @@
    ],
    "name": "Peakstone Realty Trust",
    "names": [
-    "Griffin Capital Essential Asset REIT II, Inc.",
-    "Peakstone Realty Trust"
+    "Griffin Capital Essential Asset REIT II, Inc."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 6798
   },
@@ -33814,7 +33708,6 @@
    ],
    "name": "V2X, Inc.",
    "names": [
-    "V2X, Inc.",
     "Vectrus, Inc."
    ],
    "non_common_name": false,
@@ -33909,7 +33802,6 @@
    ],
    "name": "VNOM Sub, Inc.",
    "names": [
-    "VNOM Sub, Inc.",
     "Viper Energy Partners LP"
    ],
    "non_common_name": true,
@@ -34261,7 +34153,6 @@
    ],
    "name": "Lifeward Ltd.",
    "names": [
-    "Lifeward Ltd.",
     "ReWalk Robotics Ltd."
    ],
    "non_common_name": false,
@@ -34519,10 +34410,9 @@
    "name": "King Merger Sub II LLC",
    "names": [
     "C&J Energy Services Ltd.",
-    "C&J Energy Services, Inc.",
-    "King Merger Sub II LLC"
+    "C&J Energy Services, Inc."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 1389
   },
@@ -34661,10 +34551,9 @@
    "name": "Uniti Group LLC",
    "names": [
     "COMMUNICATIONS SALES & LEASING, INC.",
-    "Uniti Group Inc.",
-    "Uniti Group LLC"
+    "Uniti Group Inc."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 6798
   },
@@ -34762,7 +34651,6 @@
    ],
    "name": "Mylan II B.V.",
    "names": [
-    "Mylan II B.V.",
     "Mylan N.V."
    ],
    "non_common_name": false,
@@ -34921,7 +34809,6 @@
    ],
    "name": "American Healthcare REIT, Inc.",
    "names": [
-    "American Healthcare REIT, Inc.",
     "Griffin-American Healthcare REIT IV, Inc."
    ],
    "non_common_name": false,
@@ -35016,8 +34903,7 @@
    ],
    "name": "Gannett Media Corp.",
    "names": [
-    "Gannett Co., Inc.",
-    "Gannett Media Corp."
+    "Gannett Co., Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -35043,7 +34929,6 @@
    ],
    "name": "WRKCo Inc.",
    "names": [
-    "WRKCo Inc.",
     "WestRock Co"
    ],
    "non_common_name": false,
@@ -35106,7 +34991,6 @@
    ],
    "name": "Altabancorp",
    "names": [
-    "Altabancorp",
     "People's Utah Bancorp"
    ],
    "non_common_name": false,
@@ -35493,8 +35377,7 @@
    ],
    "name": "Broadcom Pte. Ltd.",
    "names": [
-    "Broadcom Ltd",
-    "Broadcom Pte. Ltd."
+    "Broadcom Ltd"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -35663,7 +35546,6 @@
    ],
    "name": "BeOne Medicines Ltd.",
    "names": [
-    "BeOne Medicines Ltd.",
     "BeiGene, Ltd."
    ],
    "non_common_name": false,
@@ -35800,8 +35682,7 @@
    ],
    "name": "Q32 Bio Inc.",
    "names": [
-    "Homology Medicines, Inc.",
-    "Q32 Bio Inc."
+    "Homology Medicines, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -36054,7 +35935,6 @@
    ],
    "name": "ARS Pharmaceuticals, Inc.",
    "names": [
-    "ARS Pharmaceuticals, Inc.",
     "Silverback Therapeutics, Inc."
    ],
    "non_common_name": false,
@@ -36304,8 +36184,7 @@
    ],
    "name": "Tectonic Therapeutic, Inc.",
    "names": [
-    "AvroBio, Inc.",
-    "Tectonic Therapeutic, Inc."
+    "AvroBio, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -36490,7 +36369,6 @@
    "name": "Safehold Inc. /MD",
    "names": [
     "Safehold Inc.",
-    "Safehold Inc. /MD",
     "Safety, Income & Growth, Inc."
    ],
    "non_common_name": false,
@@ -36898,8 +36776,7 @@
    ],
    "name": "Korro Bio, Inc.",
    "names": [
-    "Frequency Therapeutics, Inc.",
-    "Korro Bio, Inc."
+    "Frequency Therapeutics, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -37007,8 +36884,7 @@
    ],
    "name": "Cibus, Inc.",
    "names": [
-    "Calyxt, Inc.",
-    "Cibus, Inc."
+    "Calyxt, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -37373,7 +37249,6 @@
    ],
    "name": "Bitwise 10 Crypto Index ETF",
    "names": [
-    "Bitwise 10 Crypto Index ETF",
     "Bitwise 10 Crypto Index Fund"
    ],
    "non_common_name": true,
@@ -37420,7 +37295,6 @@
    ],
    "name": "Grayscale Ethereum Staking ETF",
    "names": [
-    "Grayscale Ethereum Staking ETF",
     "Grayscale Ethereum Trust (ETH)"
    ],
    "non_common_name": true,
@@ -37600,7 +37474,6 @@
    ],
    "name": "Arriver Holdco, Inc.",
    "names": [
-    "Arriver Holdco, Inc.",
     "Veoneer, Inc."
    ],
    "non_common_name": false,
@@ -38100,8 +37973,7 @@
    ],
    "name": "Kalaris Therapeutics, Inc.",
    "names": [
-    "Allovir, Inc.",
-    "Kalaris Therapeutics, Inc."
+    "Allovir, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -38160,8 +38032,7 @@
    ],
    "name": "Stark Novus Financial Inc.",
    "names": [
-    "Lordstown Motors Corp.",
-    "Stark Novus Financial Inc."
+    "Lordstown Motors Corp."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -38407,8 +38278,7 @@
    ],
    "name": "Shapeways Holdings, Inc.",
    "names": [
-    "Galileo Acquisition Corp.",
-    "Shapeways Holdings, Inc."
+    "Galileo Acquisition Corp."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -38545,7 +38415,6 @@
    ],
    "name": "Adeia Inc.",
    "names": [
-    "Adeia Inc.",
     "Xperi Holding Corp"
    ],
    "non_common_name": false,
@@ -38658,7 +38527,6 @@
    ],
    "name": "Alight, Inc. / Delaware",
    "names": [
-    "Alight, Inc. / Delaware",
     "Foley Trasimene Acquisition Corp."
    ],
    "non_common_name": false,
@@ -38699,7 +38567,6 @@
    ],
    "name": "POINT Biopharma Global Inc.",
    "names": [
-    "POINT Biopharma Global Inc.",
     "Therapeutics Acquisition Corp."
    ],
    "non_common_name": false,
@@ -38792,8 +38659,7 @@
    ],
    "name": "LENZ Therapeutics, Inc.",
    "names": [
-    "Graphite Bio, Inc.",
-    "LENZ Therapeutics, Inc."
+    "Graphite Bio, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -39047,7 +38913,6 @@
    ],
    "name": "Airspan Networks Holdings Inc.",
    "names": [
-    "Airspan Networks Holdings Inc.",
     "New Beginnings Acquisition Corp."
    ],
    "non_common_name": false,
@@ -39505,7 +39370,6 @@
    ],
    "name": "QualTek Services Inc.",
    "names": [
-    "QualTek Services Inc.",
     "Roth CH Acquisition III Co"
    ],
    "non_common_name": false,
@@ -39526,8 +39390,7 @@
    ],
    "name": "Atai Beckley N.V.",
    "names": [
-    "ATAI Life Sciences N.V.",
-    "Atai Beckley N.V."
+    "ATAI Life Sciences N.V."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -39612,8 +39475,7 @@
    ],
    "name": "Soho House & Co Inc.",
    "names": [
-    "Membership Collective Group Inc.",
-    "Soho House & Co Inc."
+    "Membership Collective Group Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -39792,10 +39654,9 @@
    ],
    "name": "CANTEL MEDICAL LLC",
    "names": [
-    "CANTEL MEDICAL CORP",
-    "CANTEL MEDICAL LLC"
+    "CANTEL MEDICAL CORP"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 3841
   },
@@ -40533,8 +40394,7 @@
    ],
    "name": "Crane NXT, Co.",
    "names": [
-    "CRANE CO /DE/",
-    "Crane NXT, Co."
+    "CRANE CO /DE/"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -41092,8 +40952,7 @@
    ],
    "name": "EIDP, Inc.",
    "names": [
-    "DUPONT E I DE NEMOURS & CO",
-    "EIDP, Inc."
+    "DUPONT E I DE NEMOURS & CO"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -41846,10 +41705,9 @@
    "name": "PIONEER ENERGY SERVICES LLC",
    "names": [
     "PIONEER DRILLING CO",
-    "PIONEER ENERGY SERVICES CORP",
-    "PIONEER ENERGY SERVICES LLC"
+    "PIONEER ENERGY SERVICES CORP"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 1381
   },
@@ -42121,7 +41979,6 @@
    ],
    "name": "PHI Group, Inc./DE",
    "names": [
-    "PHI Group, Inc./DE",
     "PHI INC"
    ],
    "non_common_name": false,
@@ -42779,10 +42636,9 @@
    ],
    "name": "Teledyne FLIR, LLC",
    "names": [
-    "FLIR SYSTEMS INC",
-    "Teledyne FLIR, LLC"
+    "FLIR SYSTEMS INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 3812
   },
@@ -43005,10 +42861,9 @@
    ],
    "name": "Gold Merger Sub, LLC",
    "names": [
-    "Gold Merger Sub, LLC",
     "PINNACLE ENTERTAINMENT INC."
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 7011
   },
@@ -43181,7 +43036,6 @@
    ],
    "name": "Winthrop Realty Liquidating Trust",
    "names": [
-    "Winthrop Realty Liquidating Trust",
     "Winthrop Realty Trust"
    ],
    "non_common_name": true,
@@ -43208,7 +43062,6 @@
    ],
    "name": "Alpha Appalachia Holdings, Inc.",
    "names": [
-    "Alpha Appalachia Holdings, Inc.",
     "MASSEY ENERGY CO"
    ],
    "non_common_name": false,
@@ -43570,10 +43423,9 @@
    ],
    "name": "ENVIRI LLC",
    "names": [
-    "ENVIRI LLC",
     "HARSCO CORP"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 8900
   },
@@ -43695,8 +43547,7 @@
    ],
    "name": "Kraft Heinz Foods Co",
    "names": [
-    "HEINZ H J CO",
-    "Kraft Heinz Foods Co"
+    "HEINZ H J CO"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -43945,7 +43796,6 @@
    ],
    "name": "EVERGY KANSAS CENTRAL, INC.",
    "names": [
-    "EVERGY KANSAS CENTRAL, INC.",
     "WESTAR ENERGY INC /KS"
    ],
    "non_common_name": false,
@@ -44085,8 +43935,7 @@
    ],
    "name": "SPIRE MISSOURI INC",
    "names": [
-    "LACLEDE GAS CO",
-    "SPIRE MISSOURI INC"
+    "LACLEDE GAS CO"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -44384,8 +44233,7 @@
    ],
    "name": "Soluna Holdings, Inc",
    "names": [
-    "MECHANICAL TECHNOLOGY INC",
-    "Soluna Holdings, Inc"
+    "MECHANICAL TECHNOLOGY INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -44529,10 +44377,9 @@
    ],
    "name": "MERCK SHARP & DOHME LLC",
    "names": [
-    "MERCK & CO INC",
-    "MERCK SHARP & DOHME LLC"
+    "MERCK & CO INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 2834
   },
@@ -45179,8 +45026,7 @@
    ],
    "name": "Cigna Holding Co",
    "names": [
-    "CIGNA CORP",
-    "Cigna Holding Co"
+    "CIGNA CORP"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -46006,7 +45852,6 @@
    "name": "Gadsden Properties, Inc.",
    "names": [
     "FC Global Realty Inc",
-    "Gadsden Properties, Inc.",
     "PHOTOMEDEX INC"
    ],
    "non_common_name": false,
@@ -46603,8 +46448,7 @@
     "Allied Ventures Holdings Corp.",
     "Dephasium Corp.",
     "Longwen Group Corp.",
-    "Pay Mobile, Inc",
-    "Wenyuan Group Corp."
+    "Pay Mobile, Inc"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -46828,8 +46672,7 @@
    "name": "Viskase Holdings, Inc.",
    "names": [
     "ENZON PHARMACEUTICALS INC",
-    "ENZON PHARMACEUTICALS, INC.",
-    "Viskase Holdings, Inc."
+    "ENZON PHARMACEUTICALS, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -47643,8 +47486,7 @@
    ],
    "name": "US Ecology Holdings, Inc.",
    "names": [
-    "US ECOLOGY, INC.",
-    "US Ecology Holdings, Inc."
+    "US ECOLOGY, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -47811,7 +47653,6 @@
    "name": "Ernexa Therapeutics Inc.",
    "names": [
     "Brooklyn ImmunoTherapeutics, Inc.",
-    "Ernexa Therapeutics Inc.",
     "NTN BUZZTIME INC"
    ],
    "non_common_name": false,
@@ -48801,7 +48642,6 @@
    ],
    "name": "BAYTEX ENERGY USA, INC.",
    "names": [
-    "BAYTEX ENERGY USA, INC.",
     "PENN VIRGINIA CORP"
    ],
    "non_common_name": false,
@@ -48822,7 +48662,6 @@
    ],
    "name": "DIAL GLOBAL, INC. /DE/",
    "names": [
-    "DIAL GLOBAL, INC. /DE/",
     "WESTWOOD ONE INC /DE/"
    ],
    "non_common_name": false,
@@ -49122,7 +48961,6 @@
    ],
    "name": "Alto Ingredients, Inc.",
    "names": [
-    "Alto Ingredients, Inc.",
     "Pacific Ethanol, Inc."
    ],
    "non_common_name": false,
@@ -49170,10 +49008,9 @@
    ],
    "name": "NATIONWIDE HEALTH PROPERTIES, LLC",
    "names": [
-    "NATIONWIDE HEALTH PROPERTIES INC",
-    "NATIONWIDE HEALTH PROPERTIES, LLC"
+    "NATIONWIDE HEALTH PROPERTIES INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 6798
   },
@@ -49257,8 +49094,7 @@
    ],
    "name": "WORLD KINECT CORP",
    "names": [
-    "WORLD FUEL SERVICES CORP",
-    "WORLD KINECT CORP"
+    "WORLD FUEL SERVICES CORP"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -49518,8 +49354,7 @@
    ],
    "name": "HEALTH MANAGEMENT ASSOCIATES, INC",
    "names": [
-    "HEALTH MANAGEMENT ASSOCIATES INC",
-    "HEALTH MANAGEMENT ASSOCIATES, INC"
+    "HEALTH MANAGEMENT ASSOCIATES INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -50083,8 +49918,7 @@
    ],
    "name": "COCA-COLA REFRESHMENTS USA, INC.",
    "names": [
-    "COCA COLA ENTERPRISES INC",
-    "COCA-COLA REFRESHMENTS USA, INC."
+    "COCA COLA ENTERPRISES INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -50426,8 +50260,7 @@
    ],
    "name": "REPUBLIC AIRWAYS HOLDINGS INC.",
    "names": [
-    "MESA AIR GROUP INC",
-    "REPUBLIC AIRWAYS HOLDINGS INC."
+    "MESA AIR GROUP INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -51179,7 +51012,6 @@
    ],
    "name": "COHERENT CORP.",
    "names": [
-    "COHERENT CORP.",
     "II-VI INC"
    ],
    "non_common_name": false,
@@ -51354,8 +51186,7 @@
    ],
    "name": "MPHASE TECHNOLOGIES, INC.",
    "names": [
-    "MPHASE TECHNOLOGIES INC",
-    "MPHASE TECHNOLOGIES, INC."
+    "MPHASE TECHNOLOGIES INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -52739,8 +52570,7 @@
    "names": [
     "LAPIS TECHNOLOGIES INC",
     "MICRONET ENERTEC TECHNOLOGIES, INC.",
-    "MICT, Inc.",
-    "Tingo Group, Inc."
+    "MICT, Inc."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -53236,8 +53066,7 @@
    ],
    "name": "HORNBECK OFFSHORE SERVICES, INC.",
    "names": [
-    "HELIX ENERGY SOLUTIONS GROUP INC",
-    "HORNBECK OFFSHORE SERVICES, INC."
+    "HELIX ENERGY SOLUTIONS GROUP INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -53555,7 +53384,6 @@
    "name": "Legacy IMBDS, Inc.",
    "names": [
     "EVINE Live Inc.",
-    "Legacy IMBDS, Inc.",
     "VALUEVISION MEDIA INC",
     "iMedia Brands, Inc."
    ],
@@ -53683,8 +53511,7 @@
    ],
    "name": "STERLING INFRASTRUCTURE, INC.",
    "names": [
-    "STERLING CONSTRUCTION CO INC",
-    "STERLING INFRASTRUCTURE, INC."
+    "STERLING CONSTRUCTION CO INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -53850,8 +53677,7 @@
    ],
    "name": "American Bar Association Members/MTC Collective Trust",
    "names": [
-    "AMERICAN BAR ASSOCIATION MEMBERS / NORTHERN TRUST COLLECTIVE TR",
-    "American Bar Association Members/MTC Collective Trust"
+    "AMERICAN BAR ASSOCIATION MEMBERS / NORTHERN TRUST COLLECTIVE TR"
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -53981,8 +53807,7 @@
    ],
    "name": "EDUCATION MANAGEMENT Corp",
    "names": [
-    "EDUCATION MANAGEMENT CORPORATION",
-    "EDUCATION MANAGEMENT Corp"
+    "EDUCATION MANAGEMENT CORPORATION"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -54426,8 +54251,7 @@
    "name": "SOLESENCE, INC.",
    "names": [
     "NANOPHASE TECHNOLOGIES CORPORATION",
-    "NANOPHASE TECHNOLOGIES Corp",
-    "SOLESENCE, INC."
+    "NANOPHASE TECHNOLOGIES Corp"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -54560,10 +54384,9 @@
    ],
    "name": "Allergan Finance LLC",
    "names": [
-    "Allergan Finance LLC",
     "WATSON PHARMACEUTICALS INC"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 2834
   },
@@ -54635,7 +54458,6 @@
    ],
    "name": "LINDE INC",
    "names": [
-    "LINDE INC",
     "PRAXAIR INC"
    ],
    "non_common_name": false,
@@ -54846,7 +54668,6 @@
    ],
    "name": "20230930-DK-Butterfly-1, Inc.",
    "names": [
-    "20230930-DK-Butterfly-1, Inc.",
     "BED BATH & BEYOND INC"
    ],
    "non_common_name": false,
@@ -55483,8 +55304,7 @@
    ],
    "name": "GGP, Inc. (fka General Growth Properties Inc. & predecessor to General Growth Properties, Inc.)",
    "names": [
-    "GENERAL GROWTH PROPERTIES INC",
-    "GGP, Inc. (fka General Growth Properties Inc. & predecessor to General Growth Properties, Inc.)"
+    "GENERAL GROWTH PROPERTIES INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -55566,7 +55386,6 @@
    ],
    "name": "EVERI GAMES HOLDING INC.",
    "names": [
-    "EVERI GAMES HOLDING INC.",
     "MULTIMEDIA GAMES HOLDING COMPANY, INC."
    ],
    "non_common_name": false,
@@ -55822,8 +55641,7 @@
    ],
    "name": "HRTI, LLC",
    "names": [
-    "HEALTHCARE REALTY TRUST INC",
-    "HRTI, LLC"
+    "HEALTHCARE REALTY TRUST INC"
    ],
    "non_common_name": true,
    "non_common_sic": false,
@@ -56129,10 +55947,9 @@
    ],
    "name": "TALOS PETROLEUM LLC",
    "names": [
-    "STONE ENERGY CORP",
-    "TALOS PETROLEUM LLC"
+    "STONE ENERGY CORP"
    ],
-   "non_common_name": true,
+   "non_common_name": false,
    "non_common_sic": false,
    "sic": 1311
   },
@@ -56198,7 +56015,6 @@
    ],
    "name": "AMERICAN NATIONAL INSURANCE CO",
    "names": [
-    "AMERICAN NATIONAL INSURANCE CO",
     "AMERICAN NATIONAL INSURANCE CO /TX/"
    ],
    "non_common_name": false,
@@ -56581,7 +56397,6 @@
    ],
    "name": "FLAGSTAR BANK, NATIONAL ASSOCIATION",
    "names": [
-    "FLAGSTAR BANK, NATIONAL ASSOCIATION",
     "NEW YORK COMMUNITY BANCORP INC"
    ],
    "non_common_name": false,
@@ -57433,8 +57248,7 @@
    ],
    "name": "INTEGRYS HOLDING, INC.",
    "names": [
-    "INTEGRYS ENERGY GROUP, INC.",
-    "INTEGRYS HOLDING, INC."
+    "INTEGRYS ENERGY GROUP, INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -57514,8 +57328,7 @@
    ],
    "name": "MOTORCAR PARTS OF AMERICA INC",
    "names": [
-    "MOTORCAR PARTS AMERICA INC",
-    "MOTORCAR PARTS OF AMERICA INC"
+    "MOTORCAR PARTS AMERICA INC"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -58068,8 +57881,7 @@
    ],
    "name": "STARZ ENTERTAINMENT CORP /CN/",
    "names": [
-    "LIONS GATE ENTERTAINMENT CORP /CN/",
-    "STARZ ENTERTAINMENT CORP /CN/"
+    "LIONS GATE ENTERTAINMENT CORP /CN/"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -58145,7 +57957,6 @@
    ],
    "name": "APOLLO EDUCATION GROUP INC",
    "names": [
-    "APOLLO EDUCATION GROUP INC",
     "APOLLO GROUP INC"
    ],
    "non_common_name": false,
@@ -58220,8 +58031,7 @@
    ],
    "name": "ASPENTECH Corp",
    "names": [
-    "ASPEN TECHNOLOGY INC /DE/",
-    "ASPENTECH Corp"
+    "ASPEN TECHNOLOGY INC /DE/"
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -58634,8 +58444,7 @@
    ],
    "name": "OBH Inc.",
    "names": [
-    "BIGLARI HOLDINGS INC.",
-    "OBH Inc."
+    "BIGLARI HOLDINGS INC."
    ],
    "non_common_name": false,
    "non_common_sic": false,
@@ -59371,7 +59180,6 @@
    ],
    "name": "AMERITRUST GROUP, INC.",
    "names": [
-    "AMERITRUST GROUP, INC.",
     "MEADOWBROOK INSURANCE GROUP INC"
    ],
    "non_common_name": false,
@@ -59620,8 +59428,7 @@
    ],
    "name": "RS Legacy Corp",
    "names": [
-    "RADIOSHACK CORP",
-    "RS Legacy Corp"
+    "RADIOSHACK CORP"
    ],
    "non_common_name": false,
    "non_common_sic": false,

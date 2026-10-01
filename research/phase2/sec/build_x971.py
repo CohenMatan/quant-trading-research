@@ -170,7 +170,7 @@ def candidates(client, t):
                 continue                          # several cover values in one filing: class split, ambiguous
             flo.append([f["end"], float(f["val"]), float(s["val"]), s["end"]])
         end, src = equity_end(rows, facts)
-        names = sorted({name_on(sub, o[0]) for o in flo} | {sub.get("name")})
+        names = sorted({name_on(sub, o[0]) for o in flo} or {sub.get("name")})   # names IN FORCE at the float dates
         nonc = any(NON_COMMON_NAME.search(n or "") for n in names)
         try:
             sic = int(sub.get("sic") or 0)
@@ -215,10 +215,11 @@ def main():
     pr = pairs(cands, t)
     fobs = {cik: c["float_obs"] for cik, c in cands.items() if c["float_obs"]}
     table = {"sample": ref, "float_obs": fobs, "pairs": pr}
-    for p in STRAT.glob("sec_ref*.py"):
-        p.unlink()
-    for name, text in pack(table, "sec_ref").items():
-        (STRAT / name).write_text(text)
+    if "--write-x971" in sys.argv:          # X971's packed inputs are FROZEN as committed for E971-02
+        for p in STRAT.glob("sec_ref*.py"):
+            p.unlink()
+        for name, text in pack(table, "sec_ref").items():
+            (STRAT / name).write_text(text)
     (OUT / "x971_sample.json").write_text(json.dumps(
         {str(c): {"why": v["why"], "name": v.get("name"), "sids": v["sids"], "n_records": len(v["records"])}
          for c, v in ref.items()}, indent=1, sort_keys=True) + "\n")

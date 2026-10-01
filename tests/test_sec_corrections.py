@@ -50,3 +50,18 @@ def test_feed_respects_pit_rules():
     assert st.get("X SID", "revenue_ttm", date(2011, 2, 21)) == 5e9
     s.feed("X SID", date(2011, 5, 6), st)
     assert st.get("X SID", "revenue_ttm", date(2011, 5, 6)) == 5.2e9
+
+
+def test_split_between_cover_and_filing_already_reflected():
+    """FCX-type case: a 2-for-1 split after the cover date but before the filing; the reported count already
+    reflects it (double the previous count), so it must not be doubled again."""
+    t = {"S": {"status": "repaired", "filings": [
+        ["p", "10-Q", "2010-11-05", "2010-09-30", "2010-10-29", 100e6, {}],
+        ["k", "10-K", "2011-02-25", "2010-12-31", "2011-01-31", 200e6, {}]]}}
+    s = C.SECCorrections(t)
+    s.observe_split("S", date(2011, 2, 2), 0.5)
+    assert s.market_cap("S", date(2011, 3, 1), 10.0) == 200e6 * 10
+    t["S"]["filings"][1][5] = 101e6                     # count NOT adjusted: the split must be applied
+    s2 = C.SECCorrections(t)
+    s2.observe_split("S", date(2011, 2, 2), 0.5)
+    assert s2.market_cap("S", date(2011, 3, 1), 10.0) == 202e6 * 10

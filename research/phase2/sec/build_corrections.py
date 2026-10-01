@@ -47,55 +47,104 @@ def load_pairs(exp):
     return out
 
 
+STOP = {"INC", "CORP", "CORPORATION", "CO", "COMPANY", "LTD", "PLC", "THE", "HOLDINGS", "HOLDING", "GROUP", "NV", "SA"}
+
+
+def ticker_in_name(ticker, name):
+    """True if the ticker's letters appear in order in the registrant's name (e.g. PCP ~ PreCision CastParts,
+    RSH ~ RadioSHack). Share-class suffixes after a dot are ignored. A weak signal on its own; used only together
+    with the float, lifetime and uniqueness evidence."""
+    t = "".join(ch for ch in ticker.split(".")[0].upper() if ch.isalpha())
+    words = [w for w in "".join(ch if ch.isalnum() else " " for ch in (name or "").upper()).split() if w not in STOP]
+    n = "".join(words)
+    if not t or not n or t[0] != n[0]:
+        return False                      # the ticker must start with the name's first letter
+    i = 0
+    for ch in n:
+        if i < len(t) and ch == t[i]:
+            i += 1
+    return i == len(t)
+
+
+def ticker_in_name_relaxed(ticker, name):
+    """Tier-2 ticker evidence: all but one letter (not the first) of a ticker of 3+ letters in order in the name
+    (TWX ~ Time Warner, FWLT ~ Foster Wheeler). Used only with a tight Form 25/15 end (see decide)."""
+    if ticker_in_name(ticker, name):
+        return True
+    t = "".join(ch for ch in ticker.split(".")[0].upper() if ch.isalpha())
+    return len(t) >= 3 and any(ticker_in_name(t[:i] + t[i + 1:], name) for i in range(1, len(t)))
+
+
 def decide(cands, pairs, nofund):
-    """Per registrant: the matched security and the evidence, or the reason it stays unresolved."""
-    passing = defaultdict(list)
+    """Per registrant: the matched security and the evidence, or the reason it stays unresolved.
+    Repaired only if exactly ONE security satisfies all of:
+      E1 every evaluated public-float date gives float / (cover shares x raw close) in [0.45, 1.05];
+      E2 the security's trading ended within [-45, +200] days of the registrant's equity end (pair construction);
+      E3 one of the security's tickers is an in-order letter subsequence of a registrant name in force then;
+      E4 at least two float dates evaluated, or one plus a Form 25/15 within 30 days of the last trade;
+    and no other registrant claims that security under the same rule (uniqueness both ways).
+    Tier 2 (only for registrants without a tier-1 candidate): E3 relaxed (one non-initial ticker letter may be
+    absent) but E4 strict: a Form 25/15 within 30 days of the last trade."""
+    ok = defaultdict(list)
+    ok2 = defaultdict(list)
     for cik, sids in pairs.items():
+        c = cands.get(cik)
+        if c is None:
+            continue
+        end = date.fromisoformat(c["end"]) if c["end"] else None
         for sid, st in sids.items():
-            if st["n_eval"] >= 1 and st["n_in"] == st["n_eval"]:
-                passing[cik].append(sid)
+            if not (st["n_eval"] >= 1 and st["n_in"] == st["n_eval"]):
+                continue
+            tick = sorted({t for t, a, b in nofund[sid]["tickers"]} | {sid.split()[0]})
+            tmatch = [t for t in tick if any(ticker_in_name(t, n) for n in c["names"])]
+            ls = nofund[sid]["last_seen"]
+            tight = end is not None and c["end_source"] in ("form25", "form15") and abs((ls - end).days) <= 30
+            if tmatch and (st["n_eval"] >= 2 or tight):
+                ok[cik].append((sid, tmatch, tight))
+            elif tight:
+                rmatch = [t for t in tick if any(ticker_in_name_relaxed(t, n) for n in c["names"])]
+                if rmatch:
+                    ok2[cik].append((sid, rmatch, tight))
+    tier = {}
+    for cik in set(ok) | set(ok2):
+        if ok.get(cik):
+            tier[cik] = 1
+        else:
+            ok[cik] = ok2[cik]
+            tier[cik] = 2
     claimed = defaultdict(list)
-    for cik, sids in passing.items():
-        for sid in sids:
+    for cik, lst in ok.items():
+        for sid, _, _ in lst:
             claimed[sid].append(cik)
     res = {}
     for cik, c in cands.items():
-        sids = passing.get(cik, [])
-        ev = {"pairs_tested": len(pairs.get(cik, {})), "passing": sids}
+        ev = {"pairs_tested": len(pairs.get(cik, {})),
+              "float_pass": sorted(s for s, st in pairs.get(cik, {}).items() if st["n_eval"] >= 1 and st["n_in"] == st["n_eval"]),
+              "all_rules_pass": [x[0] for x in ok.get(cik, [])]}
         if c["non_common_name"] or c["non_common_sic"]:
             res[cik] = ("unresolved", "not an operating-company common stock (name/SIC)", None, ev)
-            continue
-        if not c["float_obs"]:
+        elif not c["end"] or c["end"] >= "2021-10-01":
+            res[cik] = ("unresolved", "equity still listed after 2021 (not the D043 population; native-cover check)", None, ev)
+        elif not c["float_obs"]:
             res[cik] = ("unresolved", "no public-float observation with a single-class cover count", None, ev)
-            continue
-        if not sids:
-            res[cik] = ("unresolved", "no QuantConnect security passes the float test", None, ev)
-            continue
-        if len(sids) > 1:
-            res[cik] = ("unresolved", f"ambiguous: {len(sids)} securities pass", None, ev)
-            continue
-        sid = sids[0]
-        if len(claimed[sid]) > 1:
-            res[cik] = ("unresolved", f"ambiguous: security passes for {len(claimed[sid])} registrants", None, ev)
-            continue
-        st = pairs[cik][sid]
-        ls = nofund[sid]["last_seen"]
-        end = date.fromisoformat(c["end"]) if c["end"] else None
-        tight = end is not None and c["end_source"] in ("form25", "form15") and abs((ls - end).days) <= 30
-        if st["n_eval"] >= 2:
-            conf = "high" if (tight or st["n_eval"] >= 3) else "medium"
-        elif tight:
-            conf = "medium"
+        elif not ok.get(cik):
+            res[cik] = ("unresolved", "no QuantConnect security passes all identity rules", None, ev)
+        elif len(ok[cik]) > 1:
+            res[cik] = ("unresolved", f"ambiguous: {len(ok[cik])} securities pass", None, ev)
         else:
-            res[cik] = ("unresolved", "only one float date and no Form 25/15 within 30 days of the last trade",
-                        sid, ev)
-            continue
-        ev.update(st=st, last_seen=str(ls), equity_end=c["end"], end_source=c["end_source"], end_tight=tight)
-        res[cik] = ("repaired", conf, sid, ev)
+            sid, tmatch, tight = ok[cik][0]
+            if len(claimed[sid]) > 1:
+                res[cik] = ("unresolved", f"ambiguous: security passes for {len(claimed[sid])} registrants", sid, ev)
+                continue
+            st = pairs[cik][sid]
+            conf = ("high" if (st["n_eval"] >= 2 and tight) else "medium") if tier[cik] == 1 else "medium (tier 2)"
+            ev.update(st=st, ticker_evidence=tmatch, last_seen=str(nofund[sid]["last_seen"]), equity_end=c["end"],
+                      end_source=c["end_source"], end_tight=tight)
+            res[cik] = ("repaired", conf, sid, ev)
     return res
 
 
-def main(exp="E971-01"):
+def main(exp="E971-02"):
     t = e970_parse.load()
     cj = json.loads((OUT / "candidates.json").read_text())
     cands = cj["candidates"]
@@ -123,7 +172,10 @@ def main(exp="E971-01"):
                                    "cover_shares": r[5]} for r in rows]}
     for p in LEAN.glob("qr_sec_data*.py"):
         p.unlink()
-    for name, text in pack(table, "qr_sec_data").items():
+    holds = json.loads((OUT / "timing_holds.json").read_text())
+    releases = json.loads((OUT / "quarantine_release.json").read_text())
+    for name, text in pack({"corrections": table, "timing_holds": holds, "quarantine_releases": releases},
+                           "qr_sec_data").items():
         (LEAN / name).write_text(text)
     (OUT / "corrections.json").write_text(json.dumps(audit, indent=1, sort_keys=True) + "\n")
     (OUT / "unresolved.json").write_text(json.dumps(unresolved, indent=1, sort_keys=True) + "\n")

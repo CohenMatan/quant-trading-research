@@ -78,6 +78,7 @@ def main(fetch=True):
     out = Counter()
     dist = defaultdict(Counter)
     examples = defaultdict(list)
+    holds = {}
     for r in t["reports"]:
         cik = r["cik"]
         out["reports"] += 1
@@ -124,6 +125,9 @@ def main(fetch=True):
             if len(examples[f"seen_early|{kind}"]) < 40:
                 examples[f"seen_early|{kind}"].append([r["ticker"], cik, str(pe), str(fd), str(seen), str(pub),
                                                        str(er), first["form"], first["accessionNumber"]])
+        if cls.startswith("EARLY"):
+            src = min(d for d in (er, pub) if d is not None)
+            holds.setdefault(r["sid"], {})[str(pe)] = str(src + timedelta(days=1))
         if cls.startswith("EARLY") and len(examples[f"early|{kind}"]) < 60:
             examples[f"early|{kind}"].append([r["ticker"], cik, str(pe), str(fd), str(expo), str(pub), str(er),
                                               first["form"], first["accessionNumber"]])
@@ -133,6 +137,7 @@ def main(fetch=True):
                 out["estimated_exposed_before_any_public_source"] += 1
     res = dict(counts=dict(out), distributions={k: dict(v) for k, v in dist.items()},
                examples=dict(examples), sec_requests=client.fetched)
+    (Path(__file__).parent / "timing_holds.json").write_text(json.dumps(holds, indent=1, sort_keys=True) + "\n")
     (Path(__file__).parent / "timing_check.json").write_text(json.dumps(res, indent=1, sort_keys=True) + "\n")
     return res
 

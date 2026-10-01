@@ -1,5 +1,9 @@
 """Point-in-time records from SEC XBRL company facts (D111). Pure functions; no network, no QuantConnect.
 
+Field semantics follow the vendor's (verified in E971-02): "*_ttm" on an annual report = the fiscal-year total; on
+an interim report = the latest completed fiscal year's total as filed (NOT a rolling twelve months); "*_q" = the
+quarter; balance-sheet totals at the period end.
+
 One record per periodic filing (10-K, 10-Q and their amendments), built ONLY from facts that were public on that
 filing's date:
   * the filing's own facts (its accession number) for its own reporting period: values AS FIRST FILED;
@@ -125,11 +129,12 @@ def _flow(rows, pe, cls, shift_years=0):
     return None if f is None else f["val"]
 
 
-def _known(facts, tags, filed, cls, end=None, start=None):
+def _known(facts, tags, filed, cls, end=None, start=None, periodic_only=False):
     """Latest value known on `filed` (from any filing made on or before it) for a flow of duration class `cls`
     ending near `end` and/or starting near `start`."""
     for t in tags:
         cand = [f for f in facts.get(t, ()) if f["filed"] <= filed and "start" in f
+                and (not periodic_only or f.get("form") in PERIODIC_FORMS)
                 and dur_class(f["start"], f["end"]) == cls
                 and (end is None or near(f["end"], end)) and (start is None or near(f["start"], start))]
         if cand:
@@ -171,12 +176,11 @@ def record_for(facts: dict, filing: dict) -> dict:
                 nine = _known(facts, (tag,), filed, 3, start=cur_f["start"])
                 q = cur - nine if nine is not None else None
         elif ytd in (1, 2, 3) and cur is not None:
-            prev_ytd = _flow(rows, pe, ytd, shift_years=1)
-            if prev_ytd is None:
-                prev_ytd = _known(facts, (tag,), filed, ytd, end=d(pe) - timedelta(days=365))
-            prev_fy = _known(facts, (tag,), filed, 4, end=d(cur_f["start"]) - timedelta(days=1))
-            if prev_ytd is not None and prev_fy is not None:
-                ttm = cur + prev_fy - prev_ytd
+            # D111: vendor semantics. On an interim report the vendor's "twelve months" value is the LATEST
+            # COMPLETED FISCAL YEAR's total (as filed in the 10-K), not a rolling TTM (SEC verification E971-02:
+            # 93-97% match). SEC-reconstructed records use the same definition so corrected and native companies
+            # are measured alike.
+            ttm = _known(facts, (tag,), filed, 4, end=d(cur_f["start"]) - timedelta(days=1), periodic_only=True)
             if q is None:
                 if ytd == 1:
                     q = cur

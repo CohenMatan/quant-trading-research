@@ -10,10 +10,13 @@
 # Point-in-time rules:
 #   * a filing is usable from the day AFTER its filing date (same rule as the Morningstar PIT layer);
 #   * market cap on day T = cover shares (latest cover date among filings usable on T) x split multiplier for splits
-#     with ex-date after the cover date and on/before T (observed live, never from a later file) x raw close;
+#     with ex-date after the cover date and on/before T (observed live, never from a later file) x raw close; a split
+#     between the cover date and the filing date is applied only if the previous filing's count shows the reported
+#     count does not already reflect it (some registrants report the post-split count);
 #   * a cover count older than MAX_SHARE_AGE_DAYS on T gives NO market cap (unresolved; never extrapolated);
 #   * filings without an unambiguous single-class cover count never give a market cap;
 #   * outside the table's effective range nothing is returned.
+import math
 from datetime import date, timedelta
 
 MAX_SHARE_AGE_DAYS = 135     # quarterly cadence (~91 days) + late-filing allowance; older -> unresolved
@@ -41,7 +44,14 @@ class SECCorrections:
         self.max_age = int(max_share_age_days)
         self.meta = {}
         self.filings = {}
-        for sid, c in (table or {}).items():
+        table = table or {}
+        if "corrections" in table:            # packed D111 table: {"corrections": ..., "timing_holds": ...}
+            self.timing_holds = table.get("timing_holds", {})
+            self.quarantine_releases = table.get("quarantine_releases", {})
+            table = table["corrections"]
+        else:
+            self.timing_holds, self.quarantine_releases = {}, {}
+        for sid, c in table.items():
             if c.get("status") != "repaired":
                 continue                      # unresolved / rejected matches never reach the universe
             self.meta[sid] = {k: v for k, v in c.items() if k != "filings"}
@@ -71,10 +81,20 @@ class SECCorrections:
         f = max(cands, key=lambda x: (x.cover_date, x.filed, x.accn))
         if (today - f.cover_date).days > self.max_age:
             return f, None
+        prev = [x for x in cands if x.cover_date < f.cover_date]
+        prev = max(prev, key=lambda x: (x.cover_date, x.filed)) if prev else None
         mult = 1.0
         for ex, fac in self.splits.get(sid, ()):
-            if f.cover_date < ex <= today and fac > 0:
-                mult /= fac
+            if not (f.cover_date < ex <= today and fac > 0):
+                continue
+            m = 1.0 / fac
+            if ex <= f.filed and prev is not None:
+                # split between the cover date and the filing: some registrants already report the post-split
+                # count (FCX 10-K 2011). Decide from the previous count, which predates the split.
+                r = f.shares / prev.shares
+                if abs(math.log(r) - math.log(m)) < abs(math.log(r)):
+                    continue                     # the count already reflects this split
+            mult *= m
         return f, f.shares * mult
 
     def market_cap(self, sid, today, raw_price):

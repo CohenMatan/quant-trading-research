@@ -14,8 +14,10 @@
 #   * Amendments (same period, later file date) replace the earlier record only from their own visibility date.
 #   * Freshness: a record is usable only while (decision date - period end) <= max_age_days (default 200).
 #   * Missing values (None / NaN / 0) are returned as None, never filled.
+#   * SEC timing holds (D111, optional): for the few vendor reports whose availability would precede every public
+#     SEC source (verified against EDGAR), the report is visible only from the day after that SEC date.
 import math
-from datetime import timedelta
+from datetime import date, timedelta
 
 APPROX_GAP_DAYS = 45
 APPROX_AVAILABLE_AFTER_DAYS = 90
@@ -106,8 +108,12 @@ class PITStore:
     """Per-symbol point-in-time fundamentals. Feed it the vendor's latest report each day (observe); read only via
     get()/record(), which return what was historically available on the given decision date."""
 
-    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS):
+    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS, holds=None, releases=None):
         self.max_age = int(max_age_days)
+        self.holds = holds or {}  # key -> {period end ISO: first visible date ISO} (D111 SEC timing holds)
+        # key -> [[period end ISO, file date ISO], ...]: quarantined reports whose values were verified against the
+        # SEC original filing (D111). Only these leave quarantine; every other anomaly stays hidden.
+        self.releases = {k: {tuple(x) for x in v} for k, v in (releases or {}).items()}
         self.current = {}      # key -> Record exposed (visible) most recently
         self.seen = set()      # (key, period_end, file_date) already observed (each report counted once)
         self.pending = {}      # key -> list of Records seen but not yet visible
@@ -124,12 +130,21 @@ class PITStore:
         self.seen.add(sig)
         rec = Record(period_end, file_date, values, accession_year_)
         self.stats["observed_new"] += 1
+        hold = self.holds.get(key, {}).get(str(period_end)) if period_end is not None else None
+        if hold is not None and rec.available is not None:
+            h = date.fromisoformat(hold)
+            if h > rec.available:
+                rec.available = h
+                self.stats["sec_timing_hold"] = self.stats.get("sec_timing_hold", 0) + 1
         if rec.available is None:
             self.stats["timing_unknown"] += 1
             return
         if accession_year_ is not None and accession_year_ > today.year:
-            self.stats["quarantined"] += 1          # value may come from a later filing: never exposed
-            return
+            if (str(period_end), str(file_date)) in self.releases.get(key, ()):
+                self.stats["quarantine_released"] = self.stats.get("quarantine_released", 0) + 1
+            else:
+                self.stats["quarantined"] += 1      # value may come from a later filing: never exposed
+                return
         if rec.estimated:
             self.stats["estimated"] += 1
         if any(r.period_end == period_end for r in ([cur] if cur else []) + pend):

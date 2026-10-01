@@ -333,6 +333,9 @@ class QRAlgorithm(QCAlgorithm):
             from qr_sec_corrections import SECCorrections
             from qr_sec_data import load_table
             self.qr_sec = SECCorrections(load_table())
+        # D111 SEC timing holds for PITStore(holds=...): empty unless the SEC layer is enabled
+        self.qr_timing_holds = self.qr_sec.timing_holds if self.qr_sec is not None else {}
+        self.qr_quarantine_releases = self.qr_sec.quarantine_releases if self.qr_sec is not None else {}
         if self.USES_UNIVERSE:
             self.add_universe(self._qr_select)
         self.qr_initialize()

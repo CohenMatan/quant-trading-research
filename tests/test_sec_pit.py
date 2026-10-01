@@ -47,14 +47,15 @@ def recs(cf):
 def test_ttm_and_quarters_as_first_filed():
     r = recs(company())
     assert r["K10"][1]["revenue_ttm"] == 400 and r["K10"][1]["revenue_q"] == 100        # FY - 9M (known earlier)
-    assert r["Q111"][1]["revenue_ttm"] == 110 + 400 - 90 and r["Q111"][1]["revenue_q"] == 110
-    assert r["Q211"][1]["revenue_ttm"] == 230 + 400 - 190 and r["Q211"][1]["revenue_q"] == 120
+    # interim "ttm" = latest completed fiscal year as filed (vendor semantics, E971-02)
+    assert r["Q111"][1]["revenue_ttm"] == 400 and r["Q111"][1]["revenue_q"] == 110
+    assert r["Q211"][1]["revenue_ttm"] == 400 and r["Q211"][1]["revenue_q"] == 120
     assert r["Q111"][1]["total_assets"] == 1000 and r["Q111"][1]["total_debt"] is None
 
 
 def test_later_restatement_never_used_before_its_filing():
     r = recs(company(extra_later=True))
-    assert r["Q111"][1]["revenue_ttm"] == 420 and r["Q211"][1]["revenue_ttm"] == 440
+    assert r["Q111"][1]["revenue_ttm"] == 400 and r["Q211"][1]["revenue_ttm"] == 400
 
 
 def test_cover_shares_own_filing_only():

@@ -1,0 +1,4 @@
+# X972: post-remediation PIT canary and coverage/bias re-audit (infrastructure, D111)
+
+- **What it does:** runs the harness universe with the opt-in dated SEC correction layer (`universe.sec_corrections`), feeds vendor and SEC records into the point-in-time layer (with SEC timing holds and the verified quarantine release list), and checks C1–C9 (no SEC filing before its filing date, amendments, quarantine, justified entry of corrected companies, no future share information, split continuity, delistings, Visa, financial-format stability). Reports coverage by year and size, native vs corrected, quarantine coverage loss, and equal-weight month returns of native vs corrected eligible names (the D043 composition-bias measure).
+- **Never:** orders, rankings, factor returns or exported vendor values.
