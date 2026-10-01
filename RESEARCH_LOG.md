@@ -857,3 +857,28 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 **Conclusion.** H014 is not development-qualified. The Holdout is untouched; the hypothesis budget stands at 1 of 3 used.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-01: H014 closed as Rejected; H015 pre-registration proposed (D101, D102); STOP
+
+**Owner decision.** H014 is closed as Rejected and preserved exactly as tested. Its classification: profitable, not benchmark-beating, not control-beating, not development-qualified. The Holdout was not opened. Budget: 1 of 3 hypotheses used.
+
+**H015 proposal** (`docs/checkpoints/P2_CP2_H015_preregistration_proposal.md`).
+
+- **Design:**
+  - 15 equal slots.
+  - A monthly check of Close > SMA200.
+  - Seeded random selection among qualifying stocks.
+  - Exit on trend failure at a monthly review; no time stop.
+- **Expected costs:** about 0.4–0.7% a year.
+- **New controls:**
+  - K1, a random portfolio without the trend filter;
+  - K2, the whole trend-filtered population.
+- **Supporting work:** a literature review and a feasibility study. The feasibility study used only already-observed outputs and ran no backtest.
+
+**Disclosed.**
+
+- H014's random-uptrend controls had already measured something close to H015 on 2010–2021: median Sharpe about +0.03 above EW, against the +0.25 required.
+- So the development test is not independent, and a pass is unlikely.
+- The proposal recommends spending slot 2 on H015 only if the trend-filter question itself is the goal.
+
+**STOP.** Nothing implemented or run; the Holdout untouched.
