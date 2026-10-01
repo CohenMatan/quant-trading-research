@@ -1,0 +1,79 @@
+{
+ "margin": 0.25,
+ "power": 0.8,
+ "seed_sd_12": 0.13118221110720665,
+ "population_se": 0.13918515456681813,
+ "by_positions": {
+  "12": {
+   "population se as observed": {
+    "selection_sd": 0.13118221110720665,
+    "se_total": 0.19126233231550008,
+    "required_true_edge": 0.41097044005940386,
+    "false_pass_no_edge": 0.09558848309621237
+   },
+   "population se halved": {
+    "selection_sd": 0.13118221110720665,
+    "se_total": 0.14849881926777395,
+    "required_true_edge": 0.37497975945626516,
+    "false_pass_no_edge": 0.04613771234179653
+   }
+  },
+  "15": {
+   "population se as observed": {
+    "selection_sd": 0.11733293658977681,
+    "se_total": 0.1820426468181828,
+    "required_true_edge": 0.40321095697799736,
+    "false_pass_no_edge": 0.08482884022953252
+   },
+   "population se halved": {
+    "selection_sd": 0.11733293658977681,
+    "se_total": 0.13641900462079265,
+    "required_true_edge": 0.3648131309517406,
+    "false_pass_no_edge": 0.03343183975356989
+   }
+  },
+  "19": {
+   "population se as observed": {
+    "selection_sd": 0.10425304996969956,
+    "se_total": 0.1738999875784174,
+    "required_true_edge": 0.3963579220640621,
+    "false_pass_no_edge": 0.07527266576657488
+   },
+   "population se halved": {
+    "selection_sd": 0.10425304996969956,
+    "se_total": 0.12534681982775606,
+    "required_true_edge": 0.35549454512787787,
+    "false_pass_no_edge": 0.023050563106865485
+   }
+  },
+  "30": {
+   "population se as observed": {
+    "selection_sd": 0.08296691511916236,
+    "se_total": 0.16203708296615113,
+    "required_true_edge": 0.3863738496505288,
+    "false_pass_no_edge": 0.061432773679945485
+   },
+   "population se halved": {
+    "selection_sd": 0.08296691511916236,
+    "se_total": 0.10828959237774216,
+    "required_true_edge": 0.34113882032006343,
+    "false_pass_no_edge": 0.010482215154651642
+   }
+  },
+  "50": {
+   "population se as observed": {
+    "selection_sd": 0.06426589610854404,
+    "se_total": 0.15330561846985005,
+    "required_true_edge": 0.37902526373025375,
+    "false_pass_no_edge": 0.0514737007736652
+   },
+   "population se halved": {
+    "selection_sd": 0.06426589610854404,
+    "se_total": 0.09472714613869374,
+    "required_true_edge": 0.32972437758608913,
+    "false_pass_no_edge": 0.0041555995371750365
+   }
+  }
+ },
+ "note": "19 positions is the most the $5,000 minimum allows at $100K (98% invested); 30-50 positions need >= $150K-$250K. 'Population se halved' illustrates a strategy that tracks EW more closely than the observed random-uptrend books (e.g. a broad, diversified factor tilt)."
+}

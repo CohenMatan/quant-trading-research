@@ -898,3 +898,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 **Recommendation.** Do not adopt H015; preserve Phase 2 slot 2; propose no replacement now.
 
 **STOP.**
+
+## 2026-10-01: H015 not adopted; Phase 2 opportunity review; STOP (D104, D105)
+
+**Owner decision.** H015 was not adopted before implementation, and no hypothesis slot was used. The averaged-across-seeds result construction is withdrawn. The population diagnostic K2 was not run.
+
+**Phase 2 capacity:** 1 of 3 slots consumed.
+
+**Opportunity review** (`docs/checkpoints/P2_CP3_opportunity_review.md`). It is research only; nothing was defined, implemented or run.
+
+- Technical families are exhausted.
+- The only distinct, well-evidenced families are fundamental:
+  - profitability/quality;
+  - net share issuance;
+  - quality + value.
+- They need a scope change and a point-in-time fundamentals audit first.
+- About +0.35–0.40 true Sharpe edge over EW is needed to pass the +0.25 margin reliably.
+
+**Conclusion.** Either one final, well-founded attempt (profitability/quality), or close Phase 2 with "No Production Candidate Found" and keep the passive alternative.
+
+**STOP:** awaiting the owner.
