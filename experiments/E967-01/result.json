@@ -1,0 +1,33 @@
+{
+ "error": "2016-06-01 00:00:00 Runtime Error: float division by zero\n  at _sample\n    if r is not None and (st is None or st.get(&quot;r&quot;) is None or abs(r / st[&quot;r&quot;] - 1) &gt; 0.02\n                                                                   ~~^~~~~~~~~\n in main.py: line 341\n  at _qr_select\n    self._sample(t, f, today, f.symbol in elig)\n in main.py: line 105\n\nfloat division by zero\n  at _sample\n    if r is not None and (st is None or st.get(\"r\") is None or abs(r / st[\"r\"] - 1) > 0.02\n                                                                   ~~^~~~~~~~~\n in main.py: line 341\n  at _qr_select\n    self._sample(t, f, today, f.symbol in elig)\n in main.py: line 105\n",
+ "experiment_id": "E967-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-10-01T17:25:15Z",
+  "build_commit": "a888d05856c47245bbdda2cf14eed36958eb3ddf",
+  "code_sha256": "dcbf14f9a97fc3ea489f484d7bffa0c443640beade9f630df1b8d3f8f78ed04b",
+  "config_sha256": "8a2420fbf90224f4e56aff573ce0edcf3d99d4f6613cc7557f51a5eb4f85e134",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "audit_lib.py",
+   "main.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py"
+  ],
+  "git_commit": "a888d05856c47245bbdda2cf14eed36958eb3ddf",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "2cb2061341f42ccaf6201747b79c00ac",
+  "qc_project_id": 37224263,
+  "result_channel": "",
+  "run_utc": "2026-10-01T17:25:06Z",
+  "runtime_s": 238.83296370506287
+ },
+ "status": "failed"
+}
