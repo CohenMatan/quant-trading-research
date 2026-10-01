@@ -14,6 +14,7 @@
 #   * Amendments (same period, later file date) replace the earlier record only from their own visibility date.
 #   * Freshness: a record is usable only while (decision date - period end) <= max_age_days (default 200).
 #   * Missing values (None / NaN / 0) are returned as None, never filled.
+#   * SEC restatement guard (D111, optional): reports with a value first filed after the vendor date are blocked.
 #   * SEC timing holds (D111, optional): for the few vendor reports whose availability would precede every public
 #     SEC source (verified against EDGAR), the report is visible only from the day after that SEC date.
 import math
@@ -108,12 +109,15 @@ class PITStore:
     """Per-symbol point-in-time fundamentals. Feed it the vendor's latest report each day (observe); read only via
     get()/record(), which return what was historically available on the given decision date."""
 
-    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS, holds=None, releases=None):
+    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS, holds=None, releases=None, blocked=None):
         self.max_age = int(max_age_days)
         self.holds = holds or {}  # key -> {period end ISO: first visible date ISO} (D111 SEC timing holds)
         # key -> [[period end ISO, file date ISO], ...]: quarantined reports whose values were verified against the
         # SEC original filing (D111). Only these leave quarantine; every other anomaly stays hidden.
         self.releases = {k: {tuple(x) for x in v} for k, v in (releases or {}).items()}
+        # key -> [[period end ISO, file date ISO], ...]: vendor reports carrying a value first filed AFTER the
+        # vendor's file date (restatement look-ahead found by the SEC restatement guard, D111): never exposed.
+        self.blocked = {k: {tuple(x) for x in v} for k, v in (blocked or {}).items()}
         self.current = {}      # key -> Record exposed (visible) most recently
         self.seen = set()      # (key, period_end, file_date) already observed (each report counted once)
         self.pending = {}      # key -> list of Records seen but not yet visible
@@ -139,6 +143,9 @@ class PITStore:
         if rec.available is None:
             self.stats["timing_unknown"] += 1
             return
+        if (str(period_end), str(file_date)) in self.blocked.get(key, ()):
+            self.stats["restatement_blocked"] = self.stats.get("restatement_blocked", 0) + 1
+            return                                  # carries later (restated) information: never exposed
         if accession_year_ is not None and accession_year_ > today.year:
             if (str(period_end), str(file_date)) in self.releases.get(key, ()):
                 self.stats["quarantine_released"] = self.stats.get("quarantine_released", 0) + 1

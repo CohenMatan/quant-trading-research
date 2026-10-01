@@ -152,3 +152,13 @@ def test_quarantine_release_only_listed_records():
     st.observe("J", date(2009, 12, 31), date(2010, 2, 20), {"revenue_ttm": 1.0}, 2011, today)   # not listed
     assert st.get("K", "revenue_ttm", today) == 1.0 and st.record("J", today) is None
     assert st.stats["quarantine_released"] == 1 and st.stats["quarantined"] == 1
+
+
+def test_restatement_block_keeps_previous_record():
+    """D111: a vendor report carrying a later (restated) value is never exposed; the previous record stays."""
+    from datetime import date
+    st = F.PITStore(blocked={"K": [["2012-06-30", "2012-07-25"]]})
+    st.observe("K", date(2012, 3, 31), date(2012, 4, 25), {"revenue_ttm": 1.0}, None, date(2012, 4, 26))
+    st.observe("K", date(2012, 6, 30), date(2012, 7, 25), {"revenue_ttm": 2.0}, None, date(2012, 7, 26))
+    r = st.record("K", date(2012, 8, 1))
+    assert r.period_end == date(2012, 3, 31) and st.stats["restatement_blocked"] == 1
