@@ -125,3 +125,18 @@ def test_technical_repeat_stands_in_for_a_run_that_never_started(fake, monkeypat
     m._CACHE.clear()
     b = m.book("E014-13")
     assert b["status"] == "completed" and "technical repeat E014-24" in b["exp"]
+
+
+def test_committed_p2_results_reproduce(tmp_path):
+    """P2_results.json (the P2-CP1 checkpoint's numbers) is exactly what P2_eval.py computes from the committed runs."""
+    m = _mod()
+    m._CACHE.clear()
+    out = tmp_path / "r.json"
+    m.main(out)
+    new, old = json.loads(out.read_text()), json.loads((ROOT / "research/phase2/P2_results.json").read_text())
+    assert new["selection"] == old["selection"] and new["selection"]["chosen_id"] == "E014-01"
+    assert {v: g["ok"] for v, g in new["gates"].items()} == {"A": False, "B": False}
+    assert new["development_qualified"] is False and new["may_request_holdout"] is False
+    assert new["robustness_trigger"]["triggered"] is False
+    for e in ("E014-01", "E014-02", "E014-03"):
+        assert new["books"][e]["sharpe"] == pytest.approx(old["books"][e]["sharpe"], abs=1e-12)

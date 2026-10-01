@@ -836,3 +836,24 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 **Operational.** A container restart interrupted E965-04's download, after QuantConnect had delayed publishing its fill events. It was recovered from the same backtest (D077).
 
 **Next.** `P2_eval.py` is committed. The committed development runs E014-01..14 start.
+
+## 2026-10-01: P2-CP1 H014 development checkpoint; STOP (D099, D100)
+
+**Runs.** The committed development runs E014-01..12 and the $200K sensitivity runs are complete. E014-13 and E014-14 never started because QuantConnect's node ran out of disk; they were re-run once as E014-24 and E014-25.
+
+**Selection.** Under the frozen rule, Candidate A (63-session exit) was chosen.
+
+**Outcome.** A is profitable (12.1% a year) but fails:
+- G1: Sharpe 0.64 vs EW 0.80;
+- G2: below the median random-uptrend seed;
+- G3: beats EW in 1 of 6 blocks.
+
+The conditional robustness runs were therefore not made (§9), and G4 fails.
+
+**Diagnostics.**
+- DSR is 0.91 at N = 2 and 0.07 at cumulative N = 42.
+- Random selection among uptrend stocks beat both momentum-ranked trend-only and H014.
+
+**Conclusion.** H014 is not development-qualified. The Holdout is untouched; the hypothesis budget stands at 1 of 3 used.
+
+**STOP:** awaiting the owner.
