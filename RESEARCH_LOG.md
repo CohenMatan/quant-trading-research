@@ -961,3 +961,11 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - The D043 survivorship gap needs EDGAR to repair.
 
 **STOP:** awaiting the owner (enable SEC access in a new session).
+
+## 2026-10-01: SEC verification and survivorship remediation approved; blocked by SEC access; STOP (D110)
+
+- The owner approved SEC verification, the accession-anomaly resolution and the D043 repair (H016 still not approved).
+- `data.sec.gov` and `www.sec.gov` are still refused by the environment's network policy in this session.
+- Every item needs SEC data, and approximation is not allowed, so nothing was built or run (`docs/checkpoints/P2_CP6a_sec_access_blocked.md`).
+
+**STOP:** awaiting the owner (allow both SEC hosts, then start a new session).
