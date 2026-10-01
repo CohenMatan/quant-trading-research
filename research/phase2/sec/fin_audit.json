@@ -1,0 +1,249 @@
+{
+ "by_direction": {
+  "rule=fin|template=N": 342,
+  "rule=operating|template=B": 182,
+  "rule=operating|template=I": 106
+ },
+ "by_group": {
+  "equity REIT / real estate": 173,
+  "financial services (asset manager, servicer)": 49,
+  "managed-care insurer": 226,
+  "mortgage REIT": 182
+ },
+ "by_year": {
+  "2010": 69,
+  "2011": 89,
+  "2012": 116,
+  "2013": 67,
+  "2014": 38,
+  "2015": 44,
+  "2016": 48,
+  "2017": 48,
+  "2018": 47,
+  "2019": 36,
+  "2020": 10,
+  "2021": 18
+ },
+ "companies": 13,
+ "company_detail": [
+  {
+   "cik": 1739940,
+   "from": 201002,
+   "group (characterisation only)": "managed-care insurer",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1011": 12
+   },
+   "stock_months": 120,
+   "ticker": "CI",
+   "to": 202002,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 120
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1122304,
+   "from": 201002,
+   "group (characterisation only)": "managed-care insurer",
+   "pit_rule": "operating-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1000": 33,
+    "1010": 3
+   },
+   "stock_months": 106,
+   "ticker": "AET",
+   "to": 201811,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1111": 106
+   },
+   "vendor_template": "I"
+  },
+  {
+   "cik": 1465740,
+   "from": 201203,
+   "group (characterisation only)": "mortgage REIT",
+   "pit_rule": "operating-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "0000": 42
+   },
+   "stock_months": 103,
+   "ticker": "TWO",
+   "to": 202112,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1111": 103
+   },
+   "vendor_template": "B"
+  },
+  {
+   "cik": 1409493,
+   "from": 201505,
+   "group (characterisation only)": "mortgage REIT",
+   "pit_rule": "operating-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "0000": 46
+   },
+   "stock_months": 73,
+   "ticker": "CIM",
+   "to": 202112,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1001": 73
+   },
+   "vendor_template": "B"
+  },
+  {
+   "cik": 1035443,
+   "from": 201002,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "0000": 45
+   },
+   "stock_months": 37,
+   "ticker": "ARE",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 37
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 906345,
+   "from": 201002,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "0000": 34,
+    "1000": 10,
+    "1010": 2
+   },
+   "stock_months": 37,
+   "ticker": "CPT",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 37
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1311370,
+   "from": 201002,
+   "group (characterisation only)": "financial services (asset manager, servicer)",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1001": 46
+   },
+   "stock_months": 37,
+   "ticker": "LAZ",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 37
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 890319,
+   "from": 201003,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1000": 42
+   },
+   "stock_months": 36,
+   "ticker": "TCO",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 36
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1045450,
+   "from": 201009,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1000": 46
+   },
+   "stock_months": 26,
+   "ticker": "EPR",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 26
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1053532,
+   "from": 201102,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1001": 27,
+    "1011": 7
+   },
+   "stock_months": 22,
+   "ticker": "LHO",
+   "to": 201302,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 22
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1360604,
+   "from": 201212,
+   "group (characterisation only)": "equity REIT / real estate",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1000": 12,
+    "1001": 30
+   },
+   "stock_months": 15,
+   "ticker": "HTA",
+   "to": 201402,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 15
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 873860,
+   "from": 201203,
+   "group (characterisation only)": "financial services (asset manager, servicer)",
+   "pit_rule": "financial-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "1000": 20,
+    "1001": 15,
+    "1010": 7
+   },
+   "stock_months": 12,
+   "ticker": "OCN",
+   "to": 201303,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1000": 12
+   },
+   "vendor_template": "N"
+  },
+  {
+   "cik": 1428205,
+   "from": 201211,
+   "group (characterisation only)": "mortgage REIT",
+   "pit_rule": "operating-format",
+   "sec_filing_tags(rev,gp,cor,oi) per filing": {
+    "0000": 41,
+    "1000": 1
+   },
+   "stock_months": 6,
+   "ticker": "ARR",
+   "to": 201305,
+   "vendor_lines_present(rev,gp,cor,oi)": {
+    "1111": 6
+   },
+   "vendor_template": "B"
+  }
+ ],
+ "disagreeing_stock_months": 630,
+ "disagreement_share": 0.003916424739371259,
+ "stock_months_checked": 160861
+}

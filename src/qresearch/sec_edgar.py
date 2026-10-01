@@ -24,7 +24,7 @@ from . import config
 
 USER_AGENT = "QuantTradingResearch PIT-audit private-research-project"
 CACHE_DIR = config.REPO_ROOT / "data" / "sec_cache"
-MIN_INTERVAL_S = 0.2           # <= 5 requests per second (SEC limit: 10)
+MIN_INTERVAL_S = 0.125         # <= 8 requests per second (SEC fair-access limit: 10)
 
 
 class SECError(RuntimeError):

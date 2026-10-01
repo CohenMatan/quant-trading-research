@@ -325,6 +325,14 @@ class QRAlgorithm(QCAlgorithm):
         for t in self.FIXED_TICKERS:
             self.qr_fixed[t] = self.add_equity(t, Resolution.DAILY,
                                                data_normalization_mode=DataNormalizationMode.RAW).symbol
+        # D111: dated SEC correction layer for the D043 survivorship gap. OPT-IN only (universe.sec_corrections);
+        # without it the universe is exactly the pre-D111 one. Corrected securities are listed in qr_corrected.
+        self.qr_sec = None
+        self.qr_corrected = set()
+        if self._qr_u.get("sec_corrections"):
+            from qr_sec_corrections import SECCorrections
+            from qr_sec_data import load_table
+            self.qr_sec = SECCorrections(load_table())
         if self.USES_UNIVERSE:
             self.add_universe(self._qr_select)
         self.qr_initialize()
@@ -366,21 +374,33 @@ class QRAlgorithm(QCAlgorithm):
         elig = []
         info = {}
         day = self.time.strftime("%Y-%m-%d")
+        sec = self.qr_sec
+        corrected = set()
+        sec_syms = []                    # D111: table securities trading today (subscribed for live splits)
+        today = self.time.date()
         for f in fundamental:
+            fix = False
             if not f.has_fundamental_data:
-                continue
-            sr = f.security_reference
-            if not is_us_common(f, day):
-                continue
-            if exchange_of(f, day) not in EXCHANGES:
-                continue
+                sid = str(f.symbol.id)
+                if sec is None or not sec.has(sid):
+                    continue
+                # D111: security without vendor fundamentals, matched to an SEC registrant (status 'repaired');
+                # its US-common/listing checks were made when the table was built; subscribed for live splits
+                fix = True
+                sec_syms.append(f.symbol)
+            else:
+                if not is_us_common(f, day):
+                    continue
+                if exchange_of(f, day) not in EXCHANGES:
+                    continue
             dq = self._qr_dv.get(f.symbol)
             if dq is None:
                 dq = self._qr_dv[f.symbol] = deque(maxlen=adv_days)
             dv = float(f.dollar_volume)
             if dv == dv:                     # skip missing (NaN) volumes; NaN would pass "< min"
                 dq.append(dv)
-            if f.market_cap < min_cap or f.price < min_price:
+            mc = float(f.market_cap) if not fix else (sec.market_cap(sid, today, float(f.price)) or 0.0)
+            if mc < min_cap or f.price < min_price:
                 continue
             if len(dq) < adv_days:
                 continue
@@ -388,9 +408,12 @@ class QRAlgorithm(QCAlgorithm):
             if not adv >= min_adv:
                 continue
             elig.append(f)
-            info[f.symbol] = (float(f.market_cap), adv)
+            info[f.symbol] = (mc, adv)
+            if fix:
+                corrected.add(f.symbol)
         self.qr_eligible = [f.symbol for f in elig]
         self.qr_eligible_info = info
+        self.qr_corrected = corrected
         n = len(elig)
         s = self._qr_stats
         s["elig_min"] = n if s["elig_min"] is None else min(s["elig_min"], n)
@@ -399,7 +422,7 @@ class QRAlgorithm(QCAlgorithm):
         s["elig_days"] += 1
         chosen = list(self.qr_select_universe(elig))
         held = [kv.key for kv in self.portfolio if kv.value.invested]
-        return list(dict.fromkeys(chosen + held))
+        return list(dict.fromkeys(chosen + held + sec_syms))
 
     def on_securities_changed(self, changes):
         s = self._qr_stats
@@ -498,6 +521,8 @@ class QRAlgorithm(QCAlgorithm):
             if sp.type != SplitType.SPLIT_OCCURRED:
                 continue
             f = float(sp.split_factor)
+            if self.qr_sec is not None:          # D111: live split record for SEC cover-share counts
+                self.qr_sec.observe_split(str(sym.id), self.time.date(), f)
             self._qr_rescale(sym, f, volume_factor=1.0 / f)
             if self.portfolio[sym].invested:
                 self._qr_stats["held_splits"] += 1

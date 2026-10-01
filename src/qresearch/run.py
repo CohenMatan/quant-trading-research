@@ -27,6 +27,10 @@ from .trades import build_trades
 
 
 
+def _uses_sec(cfg: dict) -> bool:
+    return bool(cfg.get("universe", {}).get("sec_corrections"))
+
+
 def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, str]:
     """Project files for QC: the strategy's .py files, the shared harness, generated params."""
     sdir = cfg["strategy_dir"].rstrip("/")
@@ -44,14 +48,28 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files["qr_fundamentals.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_fundamentals.py")
         except Exception:
             pass
+        try:   # D111 SEC correction layer (logic); absent in commits before it existed
+            files["qr_sec_corrections.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_sec_corrections.py")
+        except Exception:
+            pass
+        if _uses_sec(cfg):   # the packed SEC correction table, only for opt-in configs
+            data = [p for p in gitutil.list_files(commit, "src/qresearch/lean")
+                    if Path(p).name.startswith("qr_sec_data") and p.endswith(".py")]
+            if not data:
+                raise experiment.ConfigError("universe.sec_corrections needs the packed table src/qresearch/lean/qr_sec_data*.py")
+            for p in data:
+                files[Path(p).name] = gitutil.show_file(commit, p)
     else:
         for p in sorted((config.REPO_ROOT / sdir).glob("*.py")):
             files[p.name] = p.read_text(encoding="utf-8")
         files["qr_harness.py"] = config.LEAN_HARNESS.read_text(encoding="utf-8")
-        for extra in ("qr_indicators.py", "qr_fundamentals.py"):
+        for extra in ("qr_indicators.py", "qr_fundamentals.py", "qr_sec_corrections.py"):
             ind = config.LEAN_HARNESS.parent / extra
             if ind.exists():
                 files[extra] = ind.read_text(encoding="utf-8")
+        if _uses_sec(cfg):
+            for p in sorted(config.LEAN_HARNESS.parent.glob("qr_sec_data*.py")):
+                files[p.name] = p.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
