@@ -167,6 +167,21 @@ UNIVERSE_OVERRIDES = {   # sources: docs/data/universe_overrides.md (SEC filings
 }
 
 
+# D108: dated corrections of the vendor's EXCHANGE label (future research runs only; earlier runs stay as recorded).
+# sid -> ((from, to_inclusive, exchange code),). Sources: docs/data/universe_overrides.md.
+EXCHANGE_OVERRIDES = {
+    "V U12VRGLO8PR9": (("2008-03-19", "2999-12-31", "NYS"),),   # Visa Class A: NYSE-listed since its 2008-03-19 IPO; vendor says OTCM
+}
+
+
+def exchange_of(f, day):
+    """The security's exchange on `day` (YYYY-MM-DD): a dated correction if one applies, else the vendor label."""
+    for a, b, exch in EXCHANGE_OVERRIDES.get(str(f.symbol.id), ()):
+        if a <= day <= b:
+            return exch
+    return f.security_reference.exchange_id
+
+
 def _attr(obj, name, default=None):
     try:
         v = getattr(obj, name)
@@ -357,7 +372,7 @@ class QRAlgorithm(QCAlgorithm):
             sr = f.security_reference
             if not is_us_common(f, day):
                 continue
-            if sr.exchange_id not in EXCHANGES:
+            if exchange_of(f, day) not in EXCHANGES:
                 continue
             dq = self._qr_dv.get(f.symbol)
             if dq is None:

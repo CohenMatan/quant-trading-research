@@ -40,13 +40,18 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files["qr_indicators.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_indicators.py")
         except Exception:
             pass
+        try:   # point-in-time fundamentals layer (D108); absent in commits before it existed
+            files["qr_fundamentals.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_fundamentals.py")
+        except Exception:
+            pass
     else:
         for p in sorted((config.REPO_ROOT / sdir).glob("*.py")):
             files[p.name] = p.read_text(encoding="utf-8")
         files["qr_harness.py"] = config.LEAN_HARNESS.read_text(encoding="utf-8")
-        ind = config.LEAN_HARNESS.parent / "qr_indicators.py"
-        if ind.exists():
-            files["qr_indicators.py"] = ind.read_text(encoding="utf-8")
+        for extra in ("qr_indicators.py", "qr_fundamentals.py"):
+            ind = config.LEAN_HARNESS.parent / extra
+            if ind.exists():
+                files[extra] = ind.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
