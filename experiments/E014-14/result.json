@@ -1,0 +1,17 @@
+{
+ "error": "OPERATIONAL FAILURE (QuantConnect infrastructure): backtest 208f8c46652f6cb855a09a177fb9c69d ended 'Runtime Error' at progress 0 with 0 tradeable dates; node error 'No space left on device : /QuantConnect/backtesting/cache' (as E014-13). The algorithm never ran; no result exists. The local runner was also lost in a container restart. Re-run once as E014-25.",
+ "experiment_id": "E014-14",
+ "log_tail": [],
+ "provenance": {
+  "build_commit": "61f580287a553a482052cb83f4cbc2afb9cbd8dd",
+  "config_sha256": "52e4553e6a99edfab3af8ded3ce563a20ebeed0eeb4ab5c94ef6602299e2fc4f",
+  "failure_stage": "backtest (QC node out of disk)",
+  "git_commit": "61f580287a553a482052cb83f4cbc2afb9cbd8dd",
+  "holdout_unlocked": false,
+  "lean_version": "",
+  "qc_backtest_id": "208f8c46652f6cb855a09a177fb9c69d",
+  "qc_project_id": "37190152",
+  "run_utc": "2026-10-01T03:52:35Z"
+ },
+ "status": "failed"
+}
