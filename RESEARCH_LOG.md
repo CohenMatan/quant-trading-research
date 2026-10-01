@@ -918,3 +918,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 **Conclusion.** Either one final, well-founded attempt (profitability/quality), or close Phase 2 with "No Production Candidate Found" and keep the passive alternative.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-01: Fundamental-data scope expansion; integrity audit; STOP (D106, D107)
+
+**Owner decision.** The owner approved point-in-time fundamental data for stock selection, with profitability/quality first, and authorised an audit only.
+
+**Audit** (`docs/checkpoints/P2_CP4_fundamental_data_audit.md`; runs E967-02 and E968-01; nothing strategy-related was computed).
+
+- **Timing is point-in-time.** Over 3.42 million stock-days there were no early file dates and no silent overwrites. New reports are seen within 1 day of filing.
+- **Coverage** of the core profitability set is 86–89%.
+- **Share counts and per-share values are restated for later splits**, including Holdout-era splits. They are unsafe as levels; market cap is safe.
+- **Open risks:**
+  - possible later-filing values on 0.28% of report-days;
+  - approximated file dates;
+  - current-status metadata;
+  - the D043 survivorship gap.
+- **New finding:** Visa was excluded from all of 2010–2021 by a vendor exchange error.
+- **EDGAR verification** is blocked by the network policy.
+
+**Conclusion.** Feasible, with handling rules.
+
+**STOP:** awaiting the owner.
