@@ -1,4 +1,4 @@
-# X971 v1.0 — SEC verification of QuantConnect fundamentals + identity fingerprints for the D043 repair
+# X971 v1.1 (v1.0 divided by a zero SEC cover count, E971-01) — SEC verification of QuantConnect fundamentals + identity fingerprints for the D043 repair
 # (infrastructure; NO orders, no rankings, no returns; D111). 2010-2021.
 # Inputs: sec_ref (packed SEC tables built offline by research/phase2/sec/build_x971.py; public SEC data).
 #  V  for every vendor report of a SAMPLE company: the SEC original filing for the same period (accession, form,
@@ -194,6 +194,8 @@ class SECVerification(QRAlgorithm):
             if (today - fdate).days > 5:
                 continue                      # warm-up gap: no close at the float date
             _, flt, shares, _sd = self.float_obs[cik][i]
+            if not shares or shares <= 0 or not flt or flt <= 0:
+                continue                      # unusable SEC observation (zero/blank count or float)
             # Q: is the registrant already covered natively (under another CIK)? SEC cover shares x raw close
             # within 3% of a native security's point-in-time market cap
             lo, hi = shares * 0.97, shares * 1.03
