@@ -1,4 +1,4 @@
-# X972 v1.0 — post-remediation PIT canary and coverage/bias re-audit (infrastructure; NO orders, no rankings,
+# X972 v1.1 (v1.0 ran as E972-01 before the SEC restatement guard and the second identity pass) — post-remediation PIT canary and coverage/bias re-audit (infrastructure; NO orders, no rankings,
 # no factor returns; D111). Universe = harness universe WITH the opt-in dated SEC correction layer
 # (universe.sec_corrections). 2010-2021.
 # Checks (counts of violations; all must be 0):
@@ -51,10 +51,12 @@ class RemediationCanary(QRAlgorithm):
         self._qr_log_budget = 400000
         if self.qr_sec is None:
             raise Exception("X972 needs universe.sec_corrections")
-        self.store = PITStore(DEFAULT_MAX_AGE_DAYS, holds=self.qr_timing_holds, releases=self.qr_quarantine_releases)
+        self.store = PITStore(DEFAULT_MAX_AGE_DAYS, holds=self.qr_timing_holds, releases=self.qr_quarantine_releases,
+                              blocked=self.qr_restatement_blocks)
         self.c = {k: 0 for k in ("C1_sec_visible_before_filing", "C2_amendment_early", "C3_quarantine_exposed",
                                  "C3_hold_violated", "C4_unjustified_entry", "C5_future_share_info",
-                                 "C6_split_jumps", "C7_eligible_after_last_trade", "stock_days", "corrected_days")}
+                                 "C6_split_jumps", "C7_eligible_after_last_trade", "C3_restatement_block_exposed",
+                                 "stock_days", "corrected_days")}
         self.c.update(coverage={}, fin_flips={}, visa={}, exchange={}, split_checks=[], ret={}, size={},
                       corrected_first={}, corrected_last={}, quarantine_lost={})
         self.month = None
@@ -147,6 +149,8 @@ class RemediationCanary(QRAlgorithm):
                 if r is not None:
                     if (sid, r.period_end, r.file_date) in self.q_keys:
                         c["C3_quarantine_exposed"] += 1
+                    if (str(r.period_end), str(r.file_date)) in self.store.blocked.get(sid, ()):
+                        c["C3_restatement_block_exposed"] += 1
                     h = self.store.holds.get(sid, {}).get(str(r.period_end))
                     if h is not None and str(today) < h:
                         c["C3_hold_violated"] += 1
