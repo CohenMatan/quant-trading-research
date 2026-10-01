@@ -969,3 +969,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - Every item needs SEC data, and approximation is not allowed, so nothing was built or run (`docs/checkpoints/P2_CP6a_sec_access_blocked.md`).
 
 **STOP:** awaiting the owner (allow both SEC hosts, then start a new session).
+
+## 2026-10-01: SEC verification and survivorship remediation; P2-CP6; STOP (D111)
+
+- **SEC access:** `data.sec.gov` works with the project identifier; `www.sec.gov` refuses requests without a contact email.
+- **Verified against the SEC:**
+  - **Timing:** 99.8% of matched vendor reports become visible only after a public SEC source. 55 early ones are now held to the SEC date. The +90-day rule for estimated dates holds.
+  - **Values:** 91–99% match the as-first-filed SEC values. On interim reports, the vendor's "twelve-month" fields are the last fiscal year's totals.
+  - **Restatements:** 479 vendor reports (0.8%) carried later restated values and are now blocked. 20 quarantined reports were verified and released; the rest stay quarantined.
+- **Survivorship repair:**
+  - 163 securities without vendor fundamentals were linked to SEC registrants. This adds a dated, opt-in correction layer.
+  - The estimated missing share falls from 14.1% to 11.4% (2010), from 11.5% to 5.9% (2011) and from 1.2% to 0.5% (2021).
+  - Recovered names under-performed (8.5% vs 13.8% a year).
+- **Final canary (E972-02):** all point-in-time checks are 0. 466 tests pass.
+- **Verdict: not yet safe to design H016.** Two items remain: the residual survivorship gap in 2010–2014 and the definition of the twelve-month fields.
+
+**STOP:** awaiting the owner. Decisions requested: an SEC contact email, the twelve-month definition and the residual-gap policy.

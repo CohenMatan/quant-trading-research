@@ -372,7 +372,7 @@ D043 measured missing names that later failed at −28% a year. If the remaining
 | No corrected company is eligible after its last trading day | ✔ 0 |
 | Visa correction | ✔ 143/144 months (the first is warm-up) |
 | Financial-format stability | 13 companies with a change (14 changes): known groups (item 13) |
-| Coverage reports reproduce deterministically | ✔ The coverage tables of E972-01 and E972-02 are identical for every company both runs contain. Every table is computed from the committed code and data only. |
+| Coverage reports reproduce deterministically | ✔ E972-02 was re-run from its original commit (reproduction 2026-10-01T23:16Z). The summary is identical: every check, every coverage table and the composition returns. The 4,366 per-company monthly lines are identical as a set; only their print order differs (Python set iteration order). |
 
 **Other runs this phase:**
 
@@ -387,7 +387,7 @@ D043 measured missing names that later failed at −28% a year. If the remaining
 
 ## 15. Automated tests
 
-**All 470 tests pass.** New this phase:
+**All 466 tests pass.** New this phase:
 
 - `test_sec_pit.py`:
   - values as first filed;
@@ -414,7 +414,7 @@ D043 measured missing names that later failed at −28% a year. If the remaining
 ## 16. Remaining risks
 
 1. **Survivorship.** The residual gap is 11% (2010), 6–8% (2011–2013), 2–5% (2014–2020) and 0.5% (2021), concentrated near the $2B line and in pre-XBRL terminations (item 12).
-2. **Identity matching** relies on float, lifetime and ticker-name evidence. Precision looked very high on review of all 163, but no SEC ticker history was available to confirm it. The 53 tier-3 links ("no equity end") are the least certain.
+2. **Identity matching** relies on float, lifetime and ticker-name evidence. On manual review of all 163 matched names, every identity looked correct. But no SEC ticker history was available to confirm them. The 53 tier-3 links ("no equity end") are the least certain.
 3. **Vendor twelve-month semantics** (latest fiscal year, not rolling) affect any profitability definition (item 18).
 4. **About 4.5% of vendor reports cannot be verified** (successor CIKs, foreign filers). Their timing and values are vendor-supported only, and the restatement guard cannot check them.
 5. **Vendor operating income** follows its own standardisation (48% match with the SEC tag).
