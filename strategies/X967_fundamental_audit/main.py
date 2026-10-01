@@ -1,4 +1,5 @@
-# X967 v1.0 — Morningstar fundamental-data point-in-time AUDIT (infrastructure; NO orders; not a strategy, not a
+# X967 v1.1 — (v1.1: E967-01 stopped on a zero market cap in the sample tracker; ratio skipped then)
+# Morningstar fundamental-data point-in-time AUDIT (infrastructure; NO orders; not a strategy, not a
 # trial; owner request "Approve Fundamental-Data Scope Expansion and Run Data Audit Only", 2026-10-01).
 # Data quality and coverage ONLY: it never ranks stocks, forms portfolios or measures any return.
 # Every output is a count, a bucket, a date, an SEC accession year or a ratio - never a raw fundamental value.
@@ -330,7 +331,7 @@ class FundamentalAudit(QRAlgorithm):
         st = self.sample_ratio.get(key)
         try:
             cap, px, so = float(f.market_cap), float(f.price), float(f.company_profile.shares_outstanding)
-            r = cap / (px * so) if px > 0 and so > 0 else None
+            r = cap / (px * so) if px > 0 and so > 0 and cap > 0 else None   # v1.1: zero market cap -> no ratio
         except Exception:
             r, so = None, None
         if st is None or st["pe"] != pe:
@@ -338,7 +339,7 @@ class FundamentalAudit(QRAlgorithm):
             lag, gap = days(today, fd), days(fd, pe)
             self._qr_log(f"QRF67|sample|{t}|seen={today}|pe={pe}|fd={fd}|acc={acc}|acc_year={accession_year(acc)}"
                          f"|lag_days={lag}|gap_days={gap}|eligible={int(eligible)}")
-        if r is not None and (st is None or st.get("r") is None or abs(r / st["r"] - 1) > 0.02
+        if r is not None and (st is None or not st.get("r") or abs(r / st["r"] - 1) > 0.02
                               or (st.get("so") and so and abs(so / st["so"] - 1) > 0.02)):
             so_ratio = None if not (st and st.get("so") and so) else so / st["so"]
             self._qr_log(f"QRF67|shares|{t}|{today}|cap_over_px_x_so={r:.4f}|so_change_ratio="
