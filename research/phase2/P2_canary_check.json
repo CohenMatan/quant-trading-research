@@ -1,0 +1,199 @@
+{
+ "canaries": [
+  {
+   "exp": "E965-04",
+   "status": "completed",
+   "problems": [],
+   "qrc65": {
+    "audits": 74,
+    "feature_checks": 1627,
+    "feature_mismatches": 393,
+    "fresh_short": 43,
+    "ma200_exit_checks": 49,
+    "ma200_exit_errors": 0,
+    "mask_checks": 1627,
+    "mask_mismatches": 0,
+    "max_rel_dev": {
+     "close": 0.0,
+     "high_prev": 0.00018048849687189074,
+     "ma200": 0.0008435012461863017,
+     "ma50": 0.0005422474445699534,
+     "mom": 0.8864864744154283
+    },
+    "max_rsi_abs_dev": 0.14227109230524349,
+    "rank_checks": 754,
+    "rank_errors": 0,
+    "ranked_cap_below_2b": 0,
+    "ranked_no_real_bar": 0,
+    "ranked_not_eligible": 0,
+    "roll_checks": 0,
+    "roll_errors": 0,
+    "signals_logged": 3,
+    "time_exit_checks": 75,
+    "time_exit_errors": 0,
+    "window_not_today": 0
+   },
+   "qrs014": {
+    "candidates_sum": 591737,
+    "closes": 754,
+    "entries_ordered": 179,
+    "exits_ma200": 49,
+    "exits_time": 75,
+    "held_no_entry": 0,
+    "held_short_window": 0,
+    "rolls": 0,
+    "signal_days": 90,
+    "signals_sum": 179
+   },
+   "strict_feature_mismatches_reported": 393,
+   "opening_buys": 124,
+   "min_opening_notional_at_fill": 6654.96832,
+   "time_exits": 75,
+   "rolls": 0,
+   "ma200_exits": 49,
+   "ok": true
+  },
+  {
+   "exp": "E965-02",
+   "status": "completed",
+   "problems": [],
+   "qrc65": {
+    "audits": 49,
+    "feature_checks": 1400,
+    "feature_mismatches": 352,
+    "fresh_short": 30,
+    "ma200_exit_checks": 65,
+    "ma200_exit_errors": 0,
+    "mask_checks": 1400,
+    "mask_mismatches": 0,
+    "max_rel_dev": {
+     "close": 0.0,
+     "high_prev": 0.00018048849687189074,
+     "ma200": 0.0008435012461863017,
+     "ma50": 0.0005422474445699534,
+     "mom": 0.8864864744154283
+    },
+    "max_rsi_abs_dev": 0.14227109230524349,
+    "rank_checks": 504,
+    "rank_errors": 0,
+    "ranked_cap_below_2b": 0,
+    "ranked_no_real_bar": 0,
+    "ranked_not_eligible": 0,
+    "roll_checks": 0,
+    "roll_errors": 0,
+    "signals_logged": 400,
+    "time_exit_checks": 128,
+    "time_exit_errors": 0,
+    "window_not_today": 0
+   },
+   "qrs014": {
+    "candidates_sum": 380980,
+    "closes": 504,
+    "entries_ordered": 244072,
+    "exits_ma200": 65,
+    "exits_time": 128,
+    "held_no_entry": 0,
+    "held_short_window": 0,
+    "rolls": 0,
+    "signal_days": 485,
+    "signals_sum": 244072
+   },
+   "strict_feature_mismatches_reported": 352,
+   "opening_buys": 198,
+   "min_opening_notional_at_fill": 2634.39176,
+   "time_exits": 128,
+   "rolls": 0,
+   "ma200_exits": 65,
+   "skipped_min_position": 845,
+   "max_positions_held": 12,
+   "size_cap_by_equity": 16,
+   "min_position_check": {
+    "opening_buys": 198,
+    "planned_below_5000": 0,
+    "min_planned_value": 5003.1,
+    "fills_below_5000_at_open": 20,
+    "largest_gaps_fill_over_signal_close": [
+     [
+      "2010-10-20",
+      "AMLN",
+      0.48
+     ],
+     [
+      "2010-12-03",
+      "BBWI",
+      0.918
+     ],
+     [
+      "2010-05-20",
+      "SHAW",
+      0.969
+     ]
+    ]
+   },
+   "ok": true
+  },
+  {
+   "exp": "E965-03",
+   "status": "completed",
+   "problems": [],
+   "qrc65": {
+    "audits": 49,
+    "feature_checks": 1497,
+    "feature_mismatches": 249,
+    "fresh_short": 30,
+    "ma200_exit_checks": 61,
+    "ma200_exit_errors": 0,
+    "mask_checks": 1497,
+    "mask_mismatches": 0,
+    "max_rel_dev": {
+     "close": 0.0,
+     "high_prev": 0.00018048849687189074,
+     "ma200": 0.0008435012461863017,
+     "ma50": 0.0005422474445699534,
+     "mom": 0.8864864744154283
+    },
+    "max_rsi_abs_dev": 0.14227109230524349,
+    "rank_checks": 504,
+    "rank_errors": 0,
+    "ranked_cap_below_2b": 0,
+    "ranked_no_real_bar": 0,
+    "ranked_not_eligible": 0,
+    "roll_checks": 246,
+    "roll_errors": 0,
+    "signals_logged": 400,
+    "time_exit_checks": 4,
+    "time_exit_errors": 0,
+    "window_not_today": 0
+   },
+   "qrs014": {
+    "candidates_sum": 380980,
+    "closes": 504,
+    "entries_ordered": 244072,
+    "exits_ma200": 61,
+    "exits_time": 4,
+    "held_no_entry": 0,
+    "held_short_window": 0,
+    "rolls": 246,
+    "signal_days": 485,
+    "signals_sum": 244072
+   },
+   "strict_feature_mismatches_reported": 249,
+   "opening_buys": 79,
+   "min_opening_notional_at_fill": 5242.9376999999995,
+   "time_exits": 4,
+   "rolls": 246,
+   "ma200_exits": 61,
+   "ok": true
+  }
+ ],
+ "reproduction": {
+  "exp": "E965-03",
+  "reproduced": true,
+  "hashes_match": {
+   "equity_sha256": true,
+   "fills_sha256": true,
+   "trades_sha256": true
+  }
+ },
+ "all_ok": true
+}

@@ -1,0 +1,35 @@
+{
+ "error": "2010-01-04 16:00:00 Runtime Error: &#039;NoneType&#039; object is not subscriptable\n  at qr_on_close\n    mom = {str(s.id): float(m) for s, m in zip(cands, f[&quot;mom&quot;])}\n                                                      ~^^^^^^^\n in main.py: line 46\n  at on_data\n    self.qr_on_close(data)\n in qr_harness.py: line 532\n\n'NoneType' object is not subscriptable\n  at qr_on_close\n    mom = {str(s.id): float(m) for s, m in zip(cands, f[\"mom\"])}\n                                                      ~^^^^^^^\n in main.py: line 46\n  at on_data\n    self.qr_on_close(data)\n in qr_harness.py: line 532\n",
+ "experiment_id": "E965-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-09-30T20:52:23Z",
+  "build_commit": "cc995f89d2c3474bc2659384bbdab50e2ea5a95d",
+  "code_sha256": "6f4ebe8139e178317e43bad2c31f4ed9b0ca9c8e79adf6bdbdb64490f3574659",
+  "config_sha256": "1481a12fa938d51b8b21b98bb4f2e2fb0c837b6d69e92cc9d285a67f9b2b9223",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "main.py",
+   "nullorder.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_params.py",
+   "s014.py",
+   "signals.py"
+  ],
+  "git_commit": "cc995f89d2c3474bc2659384bbdab50e2ea5a95d",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "f98b22cefd40a8159a485bbf095d6c8b",
+  "qc_project_id": 37186985,
+  "result_channel": "",
+  "run_utc": "2026-09-30T20:51:55Z",
+  "runtime_s": 171.82582902908325
+ },
+ "status": "failed"
+}

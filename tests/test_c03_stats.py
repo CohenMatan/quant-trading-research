@@ -135,7 +135,7 @@ def test_real_registry_before_c03():
 
     def pre(ids):
         return [e for e in ids if json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
-                .get("cycle") != "C03"]
+                .get("cycle") not in ("C03", "P2C1")]      # C03 and Phase 2 add on top
     cats = a["by_category"]
     assert [len(pre(cats[c])) for c in ("selection", "replicate", "robustness", "validation")] == [37, 0, 26, 1]
     assert c03stats.PRE_C03 == dict(official=37, conservative=64)
@@ -229,7 +229,9 @@ def test_committed_c03_runs_give_40_and_73(tmp_path):
     assert kinds.count("research") == 9 and not [e for e in ids if e.startswith("E012")]
     # technical repeats (e.g. E013-16 of E013-06) are registered too and must not change the counts
     p = tmp_path / "INDEX.csv"
-    rows = [r for r in registry.read(config.INDEX_CSV) if r["experiment_id"] not in ids]
+    p2 = {p.parent.name for p in config.EXPERIMENTS_DIR.glob("E*/config.json")
+          if json.loads(p.read_text()).get("programme") == "P2"}          # Phase 2 counts on top (D094)
+    rows = [r for r in registry.read(config.INDEX_CSV) if r["experiment_id"] not in set(ids) | p2]
     shutil.copy(config.INDEX_CSV, p)
     p.write_text(p.read_text().splitlines()[0] + "\n")
     for r in rows:

@@ -1,0 +1,8 @@
+QRFORCEDFEE|121|7.00
+QRFORCEDFEE|359|7.00
+QRFORCEDFEE|439|7.00
+QRFORCEDFEE|449|7.00
+QRFORCEDFEE|491|7.00
+QRFORCEDFEE|639|7.00
+QRFORCEDFEE|647|7.00
+QRS014|summary|{"candidates_sum": 3322362, "closes": 3021, "entries_ordered": 2095792, "exits_ma200": 342, "exits_time": 1, "held_no_entry": 0, "held_short_window": 0, "rolls": 424, "signal_days": 3002, "signals_sum": 2095792}

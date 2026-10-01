@@ -794,3 +794,66 @@ Validation's trade count is replaced by at least 4 decisions and VAL Sharpe(V) >
 3. **G1.** A combined return-risk rule: Sharpe margin, a CAGR floor, Calmar no worse than EW, and drawdown at most 5 points deeper than EW. It replaces the drawdown veto that rejected genuinely better, slightly riskier strategies.
 
 **STOP.** Nothing implemented or run; the Holdout untouched.
+
+## 2026-09-30: Phase 2 approved; H014 development specification frozen (D094, D095)
+
+**Owner decision.** The Phase 2 methodology is finally approved (with the amendments), and H014 development is authorised.
+
+**Done before any H014 backtest.**
+
+- Froze `research/phase2/P2_spec.md`. The hash is pinned by a test. It includes the exact A/B selection metric, the gates, the conditional robustness trigger and the run IDs.
+- Added the `DEV` split (P2 only), which counts as selection in trial accounting.
+- Updated CLAUDE.md to the weeks-to-months horizon.
+- Built S014, one code path covering H014, C1, C2 and random-uptrend.
+- Built the canary X965.
+- Wrote the configs for E014-01..14 and E965-01..03.
+- Added tests `tests/test_p2_s014.py` and `tests/test_p2_spec.py`. The full suite passes.
+
+**Next:** canaries, `P2_eval.py`, then the committed development runs.
+
+## 2026-09-30: Phase 2 canaries pass; development runs start (D096–D098)
+
+**Canaries (X965, non-candidate settings, 2010–2012).**
+
+- **E965-01** stopped on its first close because of a defect in the canary's own audit (D096). It was fixed in v1.1.
+- **E965-04, E965-02 and E965-03** passed every check:
+  - look-ahead and indicator history against fresh point-in-time data;
+  - ranking;
+  - the time stop;
+  - MA200 exits;
+  - horizon rolls;
+  - next-open fills;
+  - fees and the $5,000 minimum.
+- **E965-03** reproduced byte-identically.
+
+**Dividend-factor difference (D097).**
+
+- The strict 1e-6 feature comparison flagged 24% of samples.
+- The diagnostic run X966 (E966-02) traced this to a last-digits difference between the harness's dividend factor and QuantConnect's factor file. It amounts to at most 0.07% on bars older than a dividend.
+- There was no bar misalignment and no signal difference.
+- Documented, not hidden.
+
+**Operational.** A container restart interrupted E965-04's download, after QuantConnect had delayed publishing its fill events. It was recovered from the same backtest (D077).
+
+**Next.** `P2_eval.py` is committed. The committed development runs E014-01..14 start.
+
+## 2026-10-01: P2-CP1 H014 development checkpoint; STOP (D099, D100)
+
+**Runs.** The committed development runs E014-01..12 and the $200K sensitivity runs are complete. E014-13 and E014-14 never started because QuantConnect's node ran out of disk; they were re-run once as E014-24 and E014-25.
+
+**Selection.** Under the frozen rule, Candidate A (63-session exit) was chosen.
+
+**Outcome.** A is profitable (12.1% a year) but fails:
+- G1: Sharpe 0.64 vs EW 0.80;
+- G2: below the median random-uptrend seed;
+- G3: beats EW in 1 of 6 blocks.
+
+The conditional robustness runs were therefore not made (§9), and G4 fails.
+
+**Diagnostics.**
+- DSR is 0.91 at N = 2 and 0.07 at cumulative N = 42.
+- Random selection among uptrend stocks beat both momentum-ranked trend-only and H014.
+
+**Conclusion.** H014 is not development-qualified. The Holdout is untouched; the hypothesis budget stands at 1 of 3 used.
+
+**STOP:** awaiting the owner.

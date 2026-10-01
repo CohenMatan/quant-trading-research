@@ -1,0 +1,23 @@
+{
+ "opening_buys": 198,
+ "planned_below_5000": 0,
+ "min_planned_value": 5003.1,
+ "fills_below_5000_at_open": 20,
+ "largest_gaps_fill_over_signal_close": [
+  [
+   "2010-10-20",
+   "AMLN",
+   0.48
+  ],
+  [
+   "2010-12-03",
+   "BBWI",
+   0.918
+  ],
+  [
+   "2010-05-20",
+   "SHAW",
+   0.969
+  ]
+ ]
+}
