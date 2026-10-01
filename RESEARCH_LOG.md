@@ -882,3 +882,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - The proposal recommends spending slot 2 on H015 only if the trend-filter question itself is the goal.
 
 **STOP.** Nothing implemented or run; the Holdout untouched.
+
+## 2026-10-01: H015 viability review; STOP (D103)
+
+**Owner decision.** The owner did not approve H015 implementation and asked for a viability review.
+
+**Review** (`docs/checkpoints/P2_CP2b_H015_viability_review.md`). It used only committed results and simulations; nothing was run.
+
+- **Independence:** H015 shares its entire development path with H014's random-uptrend books. Its predicted result is about +0.03 ± 0.16 Sharpe vs EW.
+- **Chance of reaching +0.25:** about 1–10% under any defensible seed rule; about 4% for the recommended rule.
+- **Deterministic selection:** no rule is both trend-relevant and uncontaminated.
+- **Controls:** the 6-month K1 is unfair; a fairer K1′ is defined.
+- **Population question:** K2 answers it without needing a hypothesis slot.
+
+**Recommendation.** Do not adopt H015; preserve Phase 2 slot 2; propose no replacement now.
+
+**STOP.**
