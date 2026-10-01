@@ -161,3 +161,27 @@ Annual detail (per cent per year):
 - The universe omits about **5–14% of eligible companies in IS** (about 1–4% in VAL), mostly companies that later ended.
 - This flatters universe-level returns by about **+1.4 points per year in IS** (range 0.6–2.3), and **flatters dip-buying rules the most**.
 - Gates are relative to an equal-weight benchmark built on the same universe, which cancels much, but not all, of the effect.
+## Update 2026-10-01 (D111): partial repair from SEC data
+
+- A dated, **opt-in** SEC correction layer (`universe.sec_corrections`) repairs 163 securities that QuantConnect prices without fundamentals.
+- It uses SEC cover-page share counts × raw price, with live split handling, and statement totals as first filed.
+- 108 of them are eligible in at least one month.
+- **Estimated missing share, before → after the repair:**
+
+  | Year | Before | After |
+  |---|---|---|
+  | 2010 | 14.1% | 11.4% |
+  | 2011 | 11.5% | 5.9% |
+  | 2012 | 12.4% | 8.0% |
+  | 2013 | 10.5% | 6.8% |
+  | 2014 | 8.3% | 5.1% |
+  | 2015 | 6.7% | 4.2% |
+  | 2016 | 4.4% | 2.7% |
+  | 2017 | 4.8% | 3.3% |
+  | 2018 | 3.7% | 2.2% |
+  | 2019 | 4.4% | 3.3% |
+  | 2020 | 3.3% | 2.4% |
+  | 2021 | 1.2% | 0.5% |
+
+- **Earlier runs are unchanged.** The layer applies only to configs that opt in.
+- **Details:** `docs/checkpoints/P2_CP6_sec_verification_survivorship_remediation.md`.

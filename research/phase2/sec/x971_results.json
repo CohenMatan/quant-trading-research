@@ -1,0 +1,6159 @@
+{
+ "interim_ttm_vs_rolling_ttm_revenue (definition check)": {
+  "close": 2100,
+  "differs": 4117,
+  "far": 1666,
+  "match": 726,
+  "n/a": 2357
+ },
+ "market_cap_method": {
+  "classes": {
+   "computed": 40351,
+   "no SEC count usable (none filed yet, multi-class/ambiguous, or older than 135 days)": 8331
+  },
+  "company_months": 48682,
+  "ratio_quantiles(sec/vendor)": {
+   "p01": 0.9202,
+   "p05": 0.9978,
+   "p25": 1.0,
+   "p50": 1.0,
+   "p75": 1.0,
+   "p95": 1.002,
+   "p99": 1.289
+  },
+  "threshold_agreement_at_2B": {
+   "vendor>=2B:0|sec>=2B:0": 5648,
+   "vendor>=2B:0|sec>=2B:1": 12,
+   "vendor>=2B:1|sec>=2B:0": 72,
+   "vendor>=2B:1|sec>=2B:1": 34619
+  },
+  "within_2pct": 0.962256201828951,
+  "within_5pct": 0.9706326980743971
+ },
+ "match_rates_by_form_vendor_semantics": {
+  "10-K|gross_profit_ttm": {
+   "compared": 1313,
+   "match_0.5pct": 0.9459,
+   "within_2pct": 0.952
+  },
+  "10-K|net_income_q": {
+   "compared": 3392,
+   "match_0.5pct": 0.9463,
+   "within_2pct": 0.9549
+  },
+  "10-K|net_income_ttm": {
+   "compared": 3435,
+   "match_0.5pct": 0.9694,
+   "within_2pct": 0.975
+  },
+  "10-K|operating_cash_flow_ttm": {
+   "compared": 3441,
+   "match_0.5pct": 0.9704,
+   "within_2pct": 0.9788
+  },
+  "10-K|operating_income_ttm": {
+   "compared": 2696,
+   "match_0.5pct": 0.4818,
+   "within_2pct": 0.5553
+  },
+  "10-K|revenue_q": {
+   "compared": 3038,
+   "match_0.5pct": 0.9092,
+   "within_2pct": 0.9236
+  },
+  "10-K|revenue_ttm": {
+   "compared": 3237,
+   "match_0.5pct": 0.9092,
+   "within_2pct": 0.9209
+  },
+  "10-K|stockholders_equity": {
+   "compared": 3445,
+   "match_0.5pct": 0.9646,
+   "within_2pct": 0.9797
+  },
+  "10-K|total_assets": {
+   "compared": 3448,
+   "match_0.5pct": 0.9893,
+   "within_2pct": 0.9896
+  },
+  "10-Q|gross_profit_ttm": {
+   "compared": 3367,
+   "match_0.5pct": 0.9635,
+   "within_2pct": 0.9697
+  },
+  "10-Q|net_income_q": {
+   "compared": 10862,
+   "match_0.5pct": 0.9667,
+   "within_2pct": 0.9743
+  },
+  "10-Q|net_income_ttm": {
+   "compared": 9695,
+   "match_0.5pct": 0.9667,
+   "within_2pct": 0.9725
+  },
+  "10-Q|operating_cash_flow_ttm": {
+   "compared": 9408,
+   "match_0.5pct": 0.9685,
+   "within_2pct": 0.9768
+  },
+  "10-Q|operating_income_ttm": {
+   "compared": 7711,
+   "match_0.5pct": 0.4806,
+   "within_2pct": 0.5548
+  },
+  "10-Q|revenue_q": {
+   "compared": 9942,
+   "match_0.5pct": 0.9354,
+   "within_2pct": 0.9467
+  },
+  "10-Q|revenue_ttm": {
+   "compared": 8480,
+   "match_0.5pct": 0.9308,
+   "within_2pct": 0.9442
+  },
+  "10-Q|stockholders_equity": {
+   "compared": 10875,
+   "match_0.5pct": 0.964,
+   "within_2pct": 0.9762
+  },
+  "10-Q|total_assets": {
+   "compared": 10882,
+   "match_0.5pct": 0.9877,
+   "within_2pct": 0.9882
+  }
+ },
+ "match_rates_non_quarantined": {
+  "gross_profit_ttm": {
+   "compared": 4680,
+   "far_gt_10pct": 0.023931623931623933,
+   "match_0.5pct": 0.9585470085470086,
+   "within_2pct": 0.9647435897435898
+  },
+  "net_income_q": {
+   "compared": 14254,
+   "far_gt_10pct": 0.020976567980917637,
+   "match_0.5pct": 0.9618352743089659,
+   "within_2pct": 0.9696927178335906
+  },
+  "net_income_ttm": {
+   "compared": 13130,
+   "far_gt_10pct": 0.01728865194211729,
+   "match_0.5pct": 0.9674028941355673,
+   "within_2pct": 0.9731150038080731
+  },
+  "operating_cash_flow_ttm": {
+   "compared": 12849,
+   "far_gt_10pct": 0.014553661763561366,
+   "match_0.5pct": 0.9690248268347731,
+   "within_2pct": 0.9773523231379874
+  },
+  "operating_income_ttm": {
+   "compared": 10407,
+   "far_gt_10pct": 0.26760834054002114,
+   "match_0.5pct": 0.4809262996060344,
+   "within_2pct": 0.5549149610838858
+  },
+  "revenue_q": {
+   "compared": 12980,
+   "far_gt_10pct": 0.04052388289676425,
+   "match_0.5pct": 0.9292758089368259,
+   "within_2pct": 0.9412942989214176
+  },
+  "revenue_ttm": {
+   "compared": 11717,
+   "far_gt_10pct": 0.039856618588375865,
+   "match_0.5pct": 0.9248101049756764,
+   "within_2pct": 0.9377827088845268
+  },
+  "stockholders_equity": {
+   "compared": 14320,
+   "far_gt_10pct": 0.018156424581005588,
+   "match_0.5pct": 0.9641759776536313,
+   "within_2pct": 0.9770251396648044
+  },
+  "total_assets": {
+   "compared": 14330,
+   "far_gt_10pct": 0.009281228192602931,
+   "match_0.5pct": 0.9880669923237962,
+   "within_2pct": 0.9885554780181438
+  }
+ },
+ "n_vendor_reports_compared": 16810,
+ "quarantine": {
+  "detail": [
+   {
+    "acc": "0001178913-10-001157",
+    "cik": "1109345",
+    "fd": "2009-05-06",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-03-31",
+    "ratios": {},
+    "sid": "NVMI RTSESF5CFJHH",
+    "ticker": "NVMI",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001178913-10-001990",
+    "cik": "1109345",
+    "fd": "2009-08-04",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-06-30",
+    "ratios": {},
+    "sid": "NVMI RTSESF5CFJHH",
+    "ticker": "NVMI",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001178913-10-002837",
+    "cik": "1109345",
+    "fd": "2009-12-08",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-09-30",
+    "ratios": {},
+    "sid": "NVMI RTSESF5CFJHH",
+    "ticker": "NVMI",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-114364",
+    "cik": "1108827",
+    "fd": "2010-05-06",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-03-31",
+    "ratios": {},
+    "sid": "QEP UNW2LFOG1XLX",
+    "ticker": "QEP",
+    "verdict": "unresolved: too few values to verify",
+    "version_tags": {
+     "net_income_q": "first"
+    }
+   },
+   {
+    "acc": "0001193125-11-199061",
+    "cik": "42888",
+    "fd": "2010-07-21",
+    "orig_accn": "0000950123-10-066905",
+    "orig_filed": "2010-07-21",
+    "orig_form": "10-Q",
+    "pe": "2010-06-25",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9641,
+     "total_assets": 0.9659
+    },
+    "sid": "GGG R735QTJ8XC9X",
+    "ticker": "GGG",
+    "verdict": "unresolved: balance-sheet values match no SEC filing (kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-198942",
+    "cik": "1109357",
+    "fd": "2010-07-22",
+    "orig_accn": "0000950123-10-067250",
+    "orig_filed": "2010-07-22",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 1.0201,
+     "total_assets": 1.0319
+    },
+    "sid": "PE R735QTJ8XC9X",
+    "ticker": "EXC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000029905-11-000010",
+    "cik": "29905",
+    "fd": "2010-07-23",
+    "orig_accn": "0000950123-10-067508",
+    "orig_filed": "2010-07-23",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000122520786945,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000676173696408,
+     "operating_cash_flow_ttm": 0.9925842475625265,
+     "operating_income_ttm": 1.0000524162348672,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999839638872523,
+     "stockholders_equity": 0.993,
+     "total_assets": 0.993
+    },
+    "sid": "DOV R735QTJ8XC9X",
+    "ticker": "DOV",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001140361-11-038328",
+    "cik": "21665",
+    "fd": "2010-07-29",
+    "orig_accn": "0001140361-10-030757",
+    "orig_filed": "2010-07-29",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000147424511545,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999661283282409,
+     "operating_cash_flow_ttm": 1.00001953005798,
+     "operating_income_ttm": 0.9999786721991701,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000246493116722,
+     "stockholders_equity": 0.9859,
+     "total_assets": 1.0224
+    },
+    "sid": "CL R735QTJ8XC9X",
+    "ticker": "CL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001144204-11-042636",
+    "cik": "33185",
+    "fd": "2010-07-29",
+    "orig_accn": "0001144204-10-040132",
+    "orig_filed": "2010-07-29",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9905,
+     "total_assets": 1.0214
+    },
+    "sid": "EFX R735QTJ8XC9X",
+    "ticker": "EFX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000024741-11-000044",
+    "cik": "24741",
+    "fd": "2010-07-30",
+    "orig_accn": "0000024741-10-000047",
+    "orig_filed": "2010-07-30",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999978021978022,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999314741035856,
+     "operating_cash_flow_ttm": 0.9999518536350505,
+     "operating_income_ttm": 1.6341475703324808,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999721223354958,
+     "stockholders_equity": 0.9594,
+     "total_assets": 0.9639
+    },
+    "sid": "GLW R735QTJ8XC9X",
+    "ticker": "GLW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-208082",
+    "cik": "788784",
+    "fd": "2010-07-30",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "PEG R735QTJ8XC9X",
+    "ticker": "PEG",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001193125-11-047330/10-K/2011-02-25,0001193125-11-208082/10-Q/2011-08-03",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000950123-11-072043",
+    "cik": "833444",
+    "fd": "2010-08-03",
+    "orig_accn": "0001047469-10-006744",
+    "orig_filed": "2010-07-29",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.6457,
+     "net_income_ttm": 0.1879908787541713,
+     "operating_cash_flow_ttm": 0.3775653766982297,
+     "operating_income_ttm": -0.22793967720242098,
+     "revenue_q": 1.9981,
+     "revenue_ttm": 1.6532436038753844,
+     "stockholders_equity": 0.666,
+     "total_assets": 0.8848
+    },
+    "sid": "JCI R735QTJ8XC9X",
+    "ticker": "TYC",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001144204-11-043852",
+    "cik": "32604",
+    "fd": "2010-08-04",
+    "orig_accn": "0001144204-10-041096",
+    "orig_filed": "2010-08-04",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999451276102088,
+     "operating_cash_flow_ttm": 0.9999547634478289,
+     "revenue_q": 0.9603,
+     "revenue_ttm": 1.0000127755199617,
+     "stockholders_equity": 0.9922,
+     "total_assets": 0.9461
+    },
+    "sid": "EMR R735QTJ8XC9X",
+    "ticker": "EMR",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001144204-10-063258/10-K/2010-11-23,0001144204-11-043852/10-Q/2011-08-04",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-043748",
+    "cik": "66740",
+    "fd": "2010-08-04",
+    "orig_accn": "0001104659-10-041912",
+    "orig_filed": "2010-08-04",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000012965862825,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.000046821769838,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000033576958007,
+     "stockholders_equity": 0.971,
+     "total_assets": 0.9834
+    },
+    "sid": "MMM R735QTJ8XC9X",
+    "ticker": "MMM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001451505-11-000072",
+    "cik": "1451505",
+    "fd": "2010-08-04",
+    "orig_accn": "0001451505-10-000069",
+    "orig_filed": "2010-08-04",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999842816724299,
+     "operating_cash_flow_ttm": 1.0000041800643087,
+     "operating_income_ttm": 1.0799703409090908,
+     "revenue_q": 0.9896,
+     "revenue_ttm": 0.9999561353409486,
+     "stockholders_equity": 1.0229,
+     "total_assets": 0.981
+    },
+    "sid": "RIG R735QTJ8XC9X",
+    "ticker": "RIG",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001451505-11-000072/10-Q/2011-08-03,0001451505-12-000030/10-K/2012-02-27",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000005513-11-000042",
+    "cik": "5513",
+    "fd": "2010-08-04",
+    "orig_accn": "0001193125-10-176490",
+    "orig_filed": "2010-08-04",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000004691531785,
+     "operating_cash_flow_ttm": 0.9999802344381569,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000340055494996,
+     "stockholders_equity": 0.9897,
+     "total_assets": 0.9684
+    },
+    "sid": "UNM R735QTJ8XC9X",
+    "ticker": "UNM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-206249",
+    "cik": "798354",
+    "fd": "2010-08-05",
+    "orig_accn": "0001193125-10-178791",
+    "orig_filed": "2010-08-05",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999949579831933,
+     "operating_cash_flow_ttm": 0.9929454117647059,
+     "operating_income_ttm": 1.0000389006342494,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000140299239637,
+     "stockholders_equity": 0.999,
+     "total_assets": 1.0155
+    },
+    "sid": "FISV R735QTJ8XC9X",
+    "ticker": "FISV",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-212535",
+    "cik": "921112",
+    "fd": "2010-08-06",
+    "orig_accn": "0000950123-10-073823",
+    "orig_filed": "2010-08-06",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "stockholders_equity": 1.0049,
+     "total_assets": 1.0255
+    },
+    "sid": "LRY R735QTJ8XC9X",
+    "ticker": "LRY",
+    "verdict": "unresolved: balance-sheet values match no SEC filing (kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-211715",
+    "cik": "717423",
+    "fd": "2010-08-06",
+    "orig_accn": "0001193125-10-180877",
+    "orig_filed": "2010-08-06",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999910172977994,
+     "operating_cash_flow_ttm": 1.0000445578298787,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.999993929643361,
+     "stockholders_equity": 0.9852,
+     "total_assets": 0.9721
+    },
+    "sid": "MUR R735QTJ8XC9X",
+    "ticker": "MUR",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001157523-11-004823",
+    "cik": "1043219",
+    "fd": "2010-08-06",
+    "orig_accn": "0001157523-10-004848",
+    "orig_filed": "2010-08-06",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999850194063536,
+     "operating_cash_flow_ttm": 0.9999929627164192,
+     "stockholders_equity": 0.9947,
+     "total_assets": 0.9893
+    },
+    "sid": "NLY R735QTJ8XC9X",
+    "ticker": "NLY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000910606-11-000016",
+    "cik": "910606",
+    "fd": "2010-08-06",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "REG R735QTJ8XC9X",
+    "ticker": "REG",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "none"
+    }
+   },
+   {
+    "acc": "0000092122-11-000103",
+    "cik": "92122",
+    "fd": "2010-08-06",
+    "orig_accn": "0000092122-10-000079",
+    "orig_filed": "2010-08-06",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.031,
+     "net_income_ttm": 1.0395930074254414,
+     "operating_cash_flow_ttm": 0.9999727208090714,
+     "operating_income_ttm": 1.000052335373317,
+     "revenue_q": 1.0001,
+     "revenue_ttm": 1.0000223838213809,
+     "stockholders_equity": 0.9792,
+     "total_assets": 0.9851
+    },
+    "sid": "SO R735QTJ8XC9X",
+    "ticker": "SO",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001047469-11-006968",
+    "cik": "1063761",
+    "fd": "2010-08-06",
+    "orig_accn": "0001047469-10-007096",
+    "orig_filed": "2010-08-06",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 0.9956,
+     "net_income_ttm": 1.0928853517156603,
+     "operating_cash_flow_ttm": 0.9999905286773767,
+     "operating_income_ttm": 1.1402976331705874,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999841623896487,
+     "stockholders_equity": 0.9667,
+     "total_assets": 1.044
+    },
+    "sid": "SPG R735QTJ8XC9X",
+    "ticker": "SPG",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001393311-11-000042",
+    "cik": "1393311",
+    "fd": "2010-08-09",
+    "orig_accn": "0001393311-10-000021",
+    "orig_filed": "2010-08-09",
+    "orig_form": "10-Q",
+    "pe": "2010-06-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000242301595574,
+     "operating_cash_flow_ttm": 1.0000238657797005,
+     "revenue_q": 0.9992,
+     "revenue_ttm": 1.0000096650984025,
+     "stockholders_equity": 1.009,
+     "total_assets": 1.0183
+    },
+    "sid": "PSA R735QTJ8XC9X",
+    "ticker": "PSA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-047129",
+    "cik": "1286225",
+    "fd": "2010-08-12",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-06-30",
+    "ratios": {},
+    "sid": "RP UP1FDD1J9MCL",
+    "ticker": "RP",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-214270",
+    "cik": "1486957",
+    "fd": "2010-08-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "BWC UORKWFDUI2QT",
+    "ticker": "BWC",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first"
+    }
+   },
+   {
+    "acc": "0000950123-11-074862",
+    "cik": "1286225",
+    "fd": "2010-08-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "RP UP1FDD1J9MCL",
+    "ticker": "RP",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000950123-11-077973",
+    "cik": "6281",
+    "fd": "2010-08-17",
+    "orig_accn": "0000950123-10-078540",
+    "orig_filed": "2010-08-17",
+    "orig_form": "10-Q",
+    "pe": "2010-07-31",
+    "ratios": {
+     "gross_profit_ttm": 0.9999287117268604,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999038713010349,
+     "operating_cash_flow_ttm": 0.9999726484907949,
+     "operating_income_ttm": 1.188310824845427,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999777306457664,
+     "stockholders_equity": 0.9525,
+     "total_assets": 0.9571
+    },
+    "sid": "ADI R735QTJ8XC9X",
+    "ticker": "ADI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000060667-11-000161",
+    "cik": "60667",
+    "fd": "2010-08-31",
+    "orig_accn": "0000060667-10-000159",
+    "orig_filed": "2010-08-31",
+    "orig_form": "10-Q",
+    "pe": "2010-07-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9899,
+     "total_assets": 1.0803
+    },
+    "sid": "LOW R735QTJ8XC9X",
+    "ticker": "LOW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001144204-11-045374",
+    "cik": "1221715",
+    "fd": "2010-09-29",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "IOC T1UNZ1G9OZ1H",
+    "ticker": "IOC",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001157523-11-004160",
+    "cik": "1060955",
+    "fd": "2010-09-30",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "ICLRY RAQ4796P3OMD",
+    "ticker": "ICLR",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001445305-11-002854",
+    "cik": "1393612",
+    "fd": "2010-10-06",
+    "orig_accn": "0001193125-10-225003",
+    "orig_filed": "2010-10-06",
+    "orig_form": "10-Q",
+    "pe": "2010-08-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000087912019027,
+     "operating_cash_flow_ttm": 1.000027669257443,
+     "stockholders_equity": 0.988,
+     "total_assets": 1.0349
+    },
+    "sid": "DFS TTXW324M9SV9",
+    "ticker": "DFS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000764478-11-000008",
+    "cik": "764478",
+    "fd": "2010-10-07",
+    "orig_accn": "0001104659-10-051625",
+    "orig_filed": "2010-10-07",
+    "orig_form": "10-Q",
+    "pe": "2010-08-28",
+    "ratios": {
+     "gross_profit_ttm": 1.0000134868421053,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999548215641609,
+     "operating_cash_flow_ttm": 0.9999546690843155,
+     "operating_income_ttm": 1.0232506040268456,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000000207268483,
+     "stockholders_equity": 1.0587,
+     "total_assets": 1.0342
+    },
+    "sid": "BBY R735QTJ8XC9X",
+    "ticker": "BBY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281613",
+    "cik": "12927",
+    "fd": "2010-10-20",
+    "orig_accn": "0001193125-10-232425",
+    "orig_filed": "2010-10-20",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999980836385316,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999013719512195,
+     "operating_cash_flow_ttm": 0.999959878636445,
+     "operating_income_ttm": 1.0113803435114503,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000044551192866,
+     "stockholders_equity": 0.6908,
+     "total_assets": 0.9775
+    },
+    "sid": "BA R735QTJ8XC9X",
+    "ticker": "BA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001178913-11-002836",
+    "cik": "1015922",
+    "fd": "2010-10-20",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "CHKPF R735QTJ8XC9X",
+    "ticker": "CHKP",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-282199",
+    "cik": "42888",
+    "fd": "2010-10-20",
+    "orig_accn": "0000950123-10-094636",
+    "orig_filed": "2010-10-20",
+    "orig_form": "10-Q",
+    "pe": "2010-09-24",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.93,
+     "total_assets": 0.9585
+    },
+    "sid": "GGG R735QTJ8XC9X",
+    "ticker": "GGG",
+    "verdict": "unresolved: balance-sheet values match no SEC filing (kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281246",
+    "cik": "815556",
+    "fd": "2010-10-21",
+    "orig_accn": "0001193125-10-233210",
+    "orig_filed": "2010-10-21",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.999945024531362,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999938288212543,
+     "operating_cash_flow_ttm": 0.9999724102329534,
+     "operating_income_ttm": 1.0029390354065173,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999462617790741,
+     "stockholders_equity": 0.9871,
+     "total_assets": 0.9813
+    },
+    "sid": "FAST R735QTJ8XC9X",
+    "ticker": "FAST",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-093079",
+    "cik": "356028",
+    "fd": "2010-10-22",
+    "orig_accn": "0000950123-10-095299",
+    "orig_filed": "2010-10-22",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000230869001296,
+     "operating_cash_flow_ttm": 0.9999963235294118,
+     "operating_income_ttm": 1.04168404170008,
+     "revenue_q": 0.9802,
+     "revenue_ttm": 0.9999556857339765,
+     "stockholders_equity": 0.9645,
+     "total_assets": 0.9819
+    },
+    "sid": "CA R735QTJ8XC9X",
+    "ticker": "CA",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000950123-11-092486/10-Q/2011-10-27",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000029905-11-000017",
+    "cik": "29905",
+    "fd": "2010-10-22",
+    "orig_accn": "0000950123-10-095072",
+    "orig_filed": "2010-10-22",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.000042983125583,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000533422362377,
+     "operating_cash_flow_ttm": 0.9926072065680872,
+     "operating_income_ttm": 1.0000412927285929,
+     "revenue_q": 0.955,
+     "revenue_ttm": 0.9999813866709235,
+     "stockholders_equity": 0.9272,
+     "total_assets": 0.9609
+    },
+    "sid": "DOV R735QTJ8XC9X",
+    "ticker": "DOV",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000029905-11-000017/10-Q/2011-10-21",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000045012-11-000354",
+    "cik": "45012",
+    "fd": "2010-10-22",
+    "orig_accn": "0000045012-10-000345",
+    "orig_filed": "2010-10-22",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999675982532751,
+     "operating_cash_flow_ttm": 1.0000437240232751,
+     "operating_income_ttm": 1.0000507522567703,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999462078364566,
+     "stockholders_equity": 0.9505,
+     "total_assets": 0.9638
+    },
+    "sid": "HAL R735QTJ8XC9X",
+    "ticker": "HAL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281748",
+    "cik": "1109357",
+    "fd": "2010-10-22",
+    "orig_accn": "0001193125-10-234590",
+    "orig_filed": "2010-10-22",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9639,
+     "total_assets": 0.9959
+    },
+    "sid": "PE R735QTJ8XC9X",
+    "ticker": "EXC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-11-283608",
+    "cik": "14272",
+    "fd": "2010-10-26",
+    "orig_accn": "0001193125-10-236328",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000006407840181,
+     "operating_cash_flow_ttm": 0.9999724477244772,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000156954487451,
+     "stockholders_equity": 0.9811,
+     "total_assets": 0.9738
+    },
+    "sid": "BMY R735QTJ8XC9X",
+    "ticker": "BMY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000930413-11-006949",
+    "cik": "1022079",
+    "fd": "2010-10-26",
+    "orig_accn": "0000930413-10-005253",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000393651995376,
+     "operating_cash_flow_ttm": 1.0000368694970414,
+     "operating_income_ttm": 1.0000282166798737,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000023509897664,
+     "stockholders_equity": 1.0174,
+     "total_assets": 1.0027
+    },
+    "sid": "DGX R735QTJ8XC9X",
+    "ticker": "DGX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001031296-11-000049",
+    "cik": "1031296",
+    "fd": "2010-10-26",
+    "orig_accn": "0000950123-10-096157",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999903578528827,
+     "operating_cash_flow_ttm": 1.0000164705882353,
+     "operating_income_ttm": 1.000021287919106,
+     "stockholders_equity": 1.014,
+     "total_assets": 0.9931
+    },
+    "sid": "FE R735QTJ8XC9X",
+    "ticker": "FE",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-280331",
+    "cik": "927653",
+    "fd": "2010-10-26",
+    "orig_accn": "0000950123-10-096135",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000040169133193,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000140142517815,
+     "operating_cash_flow_ttm": 1.0000029792746115,
+     "operating_income_ttm": 0.9999612051792829,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999917287630402,
+     "stockholders_equity": 1.0094,
+     "total_assets": 1.0227
+    },
+    "sid": "MCK R735QTJ8XC9X",
+    "ticker": "MCK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-297992",
+    "cik": "1065280",
+    "fd": "2010-10-26",
+    "orig_accn": "0001193125-10-235785",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999555839444464,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000604514068703,
+     "operating_cash_flow_ttm": 1.000025959890852,
+     "operating_income_ttm": 0.9999941064609068,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000418929525723,
+     "stockholders_equity": 0.9201,
+     "total_assets": 0.9009
+    },
+    "sid": "NFLX SEWJWLJNHZDX",
+    "ticker": "NFLX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-059208",
+    "cik": "899051",
+    "fd": "2010-10-27",
+    "orig_accn": "0001104659-10-054017",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999882903981264,
+     "operating_cash_flow_ttm": 1.0000285514996512,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000345328460314,
+     "stockholders_equity": 0.9359,
+     "total_assets": 0.987
+    },
+    "sid": "ALL R735QTJ8XC9X",
+    "ticker": "ALL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000908255-11-000064",
+    "cik": "908255",
+    "fd": "2010-10-27",
+    "orig_accn": "0000950123-10-096493",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000432239657633,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000011851851852,
+     "operating_cash_flow_ttm": 1.0000384615384614,
+     "operating_income_ttm": 1.9902799212598425,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999713514059266,
+     "stockholders_equity": 0.8937,
+     "total_assets": 0.8909
+    },
+    "sid": "BWA R735QTJ8XC9X",
+    "ticker": "BWA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001418135-11-000024",
+    "cik": "1418135",
+    "fd": "2010-10-27",
+    "orig_accn": "0000950123-10-096688",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 1.0921,
+     "total_assets": 1.0214
+    },
+    "sid": "DPS U2F4O1IXZOMD",
+    "ticker": "DPS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-091764",
+    "cik": "1532063",
+    "fd": "2010-10-27",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "ESRX R735QTJ8XC9X",
+    "ticker": "ESRX",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000950123-11-092479",
+    "cik": "30625",
+    "fd": "2010-10-27",
+    "orig_accn": "0000950123-10-096659",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000134856717644,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999755063836949,
+     "operating_cash_flow_ttm": 1.0000237888874204,
+     "operating_income_ttm": 0.9748432998632285,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999962722970579,
+     "stockholders_equity": 0.9065,
+     "total_assets": 0.9359
+    },
+    "sid": "FLS R735QTJ8XC9X",
+    "ticker": "FLS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281881",
+    "cik": "63276",
+    "fd": "2010-10-27",
+    "orig_accn": "0001193125-10-237767",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000138615469794,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.999999559678005,
+     "operating_cash_flow_ttm": 0.9999671567688598,
+     "operating_income_ttm": 1.0000149262549785,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000033871334226,
+     "stockholders_equity": 0.8774,
+     "total_assets": 0.7772
+    },
+    "sid": "MAT R735QTJ8XC9X",
+    "ticker": "MAT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281923",
+    "cik": "1707925",
+    "fd": "2010-10-27",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "PX R735QTJ8XC9X",
+    "ticker": "PX",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-287156",
+    "cik": "884887",
+    "fd": "2010-10-27",
+    "orig_accn": "0001193125-10-238042",
+    "orig_filed": "2010-10-27",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 0.9815,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9231,
+     "total_assets": 0.9837
+    },
+    "sid": "RCL R735QTJ8XC9X",
+    "ticker": "RCL",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "later:0001193125-11-203661/10-Q/2011-08-01,0001193125-11-287156/10-Q/2011-10-31",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000008868-11-000016",
+    "cik": "8868",
+    "fd": "2010-10-28",
+    "orig_accn": "0001193125-10-238768",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999681687440076,
+     "operating_cash_flow_ttm": 1.0000397826086957,
+     "operating_income_ttm": 0.9999648006285602,
+     "revenue_q": 0.983,
+     "revenue_ttm": 1.0000304850329391,
+     "stockholders_equity": 0.8397,
+     "total_assets": 0.8614
+    },
+    "sid": "AVP R735QTJ8XC9X",
+    "ticker": "AVP",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001193125-11-044531/10-K/2011-02-24,0000008868-11-000016/10-Q/2011-10-27",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001445305-11-003083",
+    "cik": "21665",
+    "fd": "2010-10-28",
+    "orig_accn": "0001140361-10-042509",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000153863232681,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000467044958534,
+     "operating_cash_flow_ttm": 1.000027464144034,
+     "operating_income_ttm": 1.0000110650069158,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000017028772754,
+     "stockholders_equity": 0.9712,
+     "total_assets": 0.9502
+    },
+    "sid": "CL R735QTJ8XC9X",
+    "ticker": "CL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001144204-11-059789",
+    "cik": "33185",
+    "fd": "2010-10-28",
+    "orig_accn": "0001144204-10-056126",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9628,
+     "total_assets": 1.0311
+    },
+    "sid": "EFX R735QTJ8XC9X",
+    "ticker": "EFX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001130310-11-000061",
+    "cik": "1130310",
+    "fd": "2010-10-28",
+    "orig_accn": "0001130310-10-000048",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999629032258065,
+     "operating_cash_flow_ttm": 0.9999810429114612,
+     "operating_income_ttm": 1.000014768683274,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999515758966309,
+     "stockholders_equity": 0.9783,
+     "total_assets": 1.0063
+    },
+    "sid": "HOU R735QTJ8XC9X",
+    "ticker": "CNP",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-282082",
+    "cik": "1357615",
+    "fd": "2010-10-28",
+    "orig_accn": "0001193125-10-238462",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 1.0004555555555557,
+     "operating_income_ttm": 1.0111986940298507,
+     "revenue_q": 0.9906,
+     "revenue_ttm": 1.0000066997108632,
+     "stockholders_equity": 1.0219,
+     "total_assets": 1.0331
+    },
+    "sid": "KBR TNPE5QQ4TS9X",
+    "ticker": "KBR",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-091876",
+    "cik": "315852",
+    "fd": "2010-10-28",
+    "orig_accn": "0000950123-10-096850",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 0.9999834833312207,
+     "revenue_q": 0.8159,
+     "revenue_ttm": 0.9999567439364032,
+     "stockholders_equity": 0.9812,
+     "total_assets": 0.9873
+    },
+    "sid": "LOM R735QTJ8XC9X",
+    "ticker": "RRC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-092810",
+    "cik": "62996",
+    "fd": "2010-10-28",
+    "orig_accn": "0000950123-10-097280",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000402378592665,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000001092896175,
+     "operating_cash_flow_ttm": 0.9999968794326242,
+     "operating_income_ttm": 5.763556363636364,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000287474332648,
+     "stockholders_equity": 0.9768,
+     "total_assets": 0.9933
+    },
+    "sid": "MAS R735QTJ8XC9X",
+    "ticker": "MAS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001140361-11-049923",
+    "cik": "72207",
+    "fd": "2010-10-28",
+    "orig_accn": "0001140361-10-042488",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0001862595419846,
+     "operating_cash_flow_ttm": 0.9999592838196286,
+     "operating_income_ttm": -9.413844827586207,
+     "revenue_q": 0.955,
+     "revenue_ttm": 1.0000556420233464,
+     "stockholders_equity": 0.9709,
+     "total_assets": 0.9942
+    },
+    "sid": "NBL R735QTJ8XC9X",
+    "ticker": "NBL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-058460",
+    "cik": "812074",
+    "fd": "2010-10-28",
+    "orig_accn": "0001104659-10-054354",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999999865220028,
+     "net_income_q": 1.0022,
+     "net_income_ttm": 0.9999997527812113,
+     "operating_cash_flow_ttm": 1.0000216,
+     "revenue_q": 0.97,
+     "revenue_ttm": 1.0000427439326398,
+     "stockholders_equity": 0.7937,
+     "total_assets": 0.8457
+    },
+    "sid": "OI R735QTJ8XC9X",
+    "ticker": "OI",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001104659-11-058460/10-Q/2011-10-27",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-092856",
+    "cik": "1275283",
+    "fd": "2010-10-28",
+    "orig_accn": "0000950123-10-097147",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000039397089397,
+     "operating_cash_flow_ttm": 0.9999900275103164,
+     "operating_income_ttm": 1.351047323943662,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999601852951657,
+     "stockholders_equity": 0.973,
+     "total_assets": 0.9671
+    },
+    "sid": "RJR RLK18A1JEG6D",
+    "ticker": "RAI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-092333",
+    "cik": "89800",
+    "fd": "2010-10-28",
+    "orig_accn": "0000950123-10-097227",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.999956534889857,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999919249371341,
+     "operating_cash_flow_ttm": 0.9999977501961158,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000268511156007,
+     "stockholders_equity": 0.9319,
+     "total_assets": 0.915
+    },
+    "sid": "SHW R735QTJ8XC9X",
+    "ticker": "SHW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000007332-11-000026",
+    "cik": "7332",
+    "fd": "2010-10-28",
+    "orig_accn": "0000007332-10-000041",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9998204936886396,
+     "operating_cash_flow_ttm": 1.0000022233730772,
+     "operating_income_ttm": -24.96381705656924,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000589098411345,
+     "stockholders_equity": 0.9252,
+     "total_assets": 0.9329
+    },
+    "sid": "SWN R735QTJ8XC9X",
+    "ticker": "SWN",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-092385",
+    "cik": "823768",
+    "fd": "2010-10-28",
+    "orig_accn": "0000950123-10-097313",
+    "orig_filed": "2010-10-28",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000077464788732,
+     "operating_cash_flow_ttm": 1.000035647756139,
+     "operating_income_ttm": 1.070470588235294,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000257823763887,
+     "stockholders_equity": 0.9985,
+     "total_assets": 1.0197
+    },
+    "sid": "UW R735QTJ8XC9X",
+    "ticker": "WM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001308179-11-000115",
+    "cik": "1739940",
+    "fd": "2010-10-29",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "CI R735QTJ8XC9X",
+    "ticker": "CI",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-289957",
+    "cik": "764065",
+    "fd": "2010-10-29",
+    "orig_accn": "0001193125-10-240871",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000479119456134,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.999915553388591,
+     "operating_cash_flow_ttm": 1.0000667205169629,
+     "operating_income_ttm": 0.999979148566464,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999464987190435,
+     "stockholders_equity": 0.8728,
+     "total_assets": 0.7962
+    },
+    "sid": "CLF R735QTJ8XC9X",
+    "ticker": "CLF",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-058807",
+    "cik": "858470",
+    "fd": "2010-10-29",
+    "orig_accn": "0001193125-10-240960",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000004085127037,
+     "operating_cash_flow_ttm": 0.9999576430009185,
+     "operating_income_ttm": 1.1804096301754707,
+     "revenue_q": 1.0225,
+     "revenue_ttm": 0.9999614264463036,
+     "stockholders_equity": 1.0014,
+     "total_assets": 0.9806
+    },
+    "sid": "COG R735QTJ8XC9X",
+    "ticker": "COG",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001104659-11-058807/10-Q/2011-10-28",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-058113",
+    "cik": "26172",
+    "fd": "2010-10-29",
+    "orig_accn": "0001104659-10-054571",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-26",
+    "ratios": {
+     "gross_profit_ttm": 0.9999813278008298,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000514018691589,
+     "operating_cash_flow_ttm": 1.0000116094986808,
+     "operating_income_ttm": 0.5204891495601173,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000005833333334,
+     "stockholders_equity": 0.9247,
+     "total_assets": 0.9329
+    },
+    "sid": "CUM R735QTJ8XC9X",
+    "ticker": "CMI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-285781",
+    "cik": "715957",
+    "fd": "2010-10-29",
+    "orig_accn": "0001193125-10-241221",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000011344211344,
+     "operating_cash_flow_ttm": 1.000012678288431,
+     "operating_income_ttm": 0.9999927729174591,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999698631947659,
+     "stockholders_equity": 1.0042,
+     "total_assets": 0.9896
+    },
+    "sid": "D R735QTJ8XC9X",
+    "ticker": "D",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000936340-11-000005",
+    "cik": "936340",
+    "fd": "2010-10-29",
+    "orig_accn": "0000950123-10-098136",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999639097744359,
+     "operating_cash_flow_ttm": 1.0000380428807039,
+     "operating_income_ttm": 1.000047237790232,
+     "stockholders_equity": 0.9866,
+     "total_assets": 0.9904
+    },
+    "sid": "DTE R735QTJ8XC9X",
+    "ticker": "DTE",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000031277-11-000019",
+    "cik": "1551182",
+    "fd": "2010-10-29",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "ETN R735QTJ8XC9X",
+    "ticker": "ETN",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-299763",
+    "cik": "1276520",
+    "fd": "2010-10-29",
+    "orig_accn": "0001193125-10-241290",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999941304347826,
+     "operating_cash_flow_ttm": 0.999995546349042,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999631050832506,
+     "stockholders_equity": 0.9286,
+     "total_assets": 0.9621
+    },
+    "sid": "GNW SYYAL4ODL011",
+    "ticker": "GNW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-286084",
+    "cik": "59478",
+    "fd": "2010-10-29",
+    "orig_accn": "0000950123-10-097867",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000357373868047,
+     "operating_cash_flow_ttm": 0.9999697981778342,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999521633998901,
+     "stockholders_equity": 0.8256,
+     "total_assets": 0.9271
+    },
+    "sid": "LLY R735QTJ8XC9X",
+    "ticker": "LLY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-091082",
+    "cik": "64040",
+    "fd": "2010-10-29",
+    "orig_accn": "0000950123-10-097799",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0001,
+     "net_income_ttm": 1.000022318077158,
+     "operating_cash_flow_ttm": 0.9999687889495517,
+     "operating_income_ttm": 1.0026674670472138,
+     "revenue_q": 0.9881,
+     "revenue_ttm": 0.9999749154790952,
+     "stockholders_equity": 0.8652,
+     "total_assets": 0.9244
+    },
+    "sid": "MHP R735QTJ8XC9X",
+    "ticker": "MHP",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000950123-11-091082/10-Q/2011-10-21,0001193125-12-043165/10-K/2012-02-07",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000922224-11-000191",
+    "cik": "922224",
+    "fd": "2010-10-29",
+    "orig_accn": "0000922224-10-000124",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000196560196561,
+     "operating_cash_flow_ttm": 1.0000404427645788,
+     "operating_income_ttm": 0.9999296566077003,
+     "stockholders_equity": 0.9535,
+     "total_assets": 0.9695
+    },
+    "sid": "PPL R735QTJ8XC9X",
+    "ticker": "PPL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-285850",
+    "cik": "1014473",
+    "fd": "2010-10-29",
+    "orig_accn": "0001193125-10-240755",
+    "orig_filed": "2010-10-29",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9998040993186809,
+     "operating_cash_flow_ttm": 1.0000108059141024,
+     "operating_income_ttm": 1.05173182544059,
+     "revenue_q": 0.9979,
+     "revenue_ttm": 0.9999773680671519,
+     "stockholders_equity": 0.3403,
+     "total_assets": 0.818
+    },
+    "sid": "VRSN R7UQ9FRZ2GRP",
+    "ticker": "VRSN",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-292797",
+    "cik": "1770450",
+    "fd": "2010-10-29",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "XRX R735QTJ8XC9X",
+    "ticker": "XRX",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-288902",
+    "cik": "773910",
+    "fd": "2010-11-01",
+    "orig_accn": "0001193125-10-242664",
+    "orig_filed": "2010-11-01",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0001066666666667,
+     "operating_cash_flow_ttm": 0.9999914416709119,
+     "operating_income_ttm": 1.304883023872679,
+     "revenue_q": 0.9867,
+     "revenue_ttm": 0.999957,
+     "stockholders_equity": 1.0013,
+     "total_assets": 0.9753
+    },
+    "sid": "APC R735QTJ8XC9X",
+    "ticker": "APC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000024741-11-000055",
+    "cik": "24741",
+    "fd": "2010-11-01",
+    "orig_accn": "0000024741-10-000061",
+    "orig_filed": "2010-11-01",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000129479216435,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000216135458166,
+     "operating_cash_flow_ttm": 0.9999961482908041,
+     "operating_income_ttm": 1.6341565217391305,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999994253938832,
+     "stockholders_equity": 0.8852,
+     "total_assets": 0.8807
+    },
+    "sid": "GLW R735QTJ8XC9X",
+    "ticker": "GLW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-291909",
+    "cik": "1571949",
+    "fd": "2010-11-01",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "ICE TDPZZM7IWEP1",
+    "ticker": "ICE",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000950123-11-093025",
+    "cik": "216228",
+    "fd": "2010-11-01",
+    "orig_accn": "0000950123-10-098824",
+    "orig_filed": "2010-11-01",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999498056000261,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.00003638340842,
+     "operating_cash_flow_ttm": 0.9983959360478853,
+     "operating_income_ttm": 1.0872096327248735,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000370764363335,
+     "stockholders_equity": 0.9291,
+     "total_assets": 0.884
+    },
+    "sid": "IIN R735QTJ8XC9X",
+    "ticker": "ITT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-288535",
+    "cik": "889900",
+    "fd": "2010-11-01",
+    "orig_accn": "0000950123-10-098634",
+    "orig_filed": "2010-11-01",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999504622616872,
+     "operating_cash_flow_ttm": 0.9999573185327887,
+     "operating_income_ttm": 1.0000443543369146,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000588452399528,
+     "stockholders_equity": 0.9879,
+     "total_assets": 0.9341
+    },
+    "sid": "PTEN R735QTJ8XC9X",
+    "ticker": "PTEN",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000914208-11-000478",
+    "cik": "914208",
+    "fd": "2010-11-02",
+    "orig_accn": "0000950123-10-099389",
+    "orig_filed": "2010-11-02",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999527441860465,
+     "operating_cash_flow_ttm": 0.9999775020678247,
+     "operating_income_ttm": 0.9999633698121,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999521942678796,
+     "stockholders_equity": 0.9949,
+     "total_assets": 0.948
+    },
+    "sid": "AVZ R735QTJ8XC9X",
+    "ticker": "IVZ",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000021175-11-000048",
+    "cik": "21175",
+    "fd": "2010-11-02",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "CNA R735QTJ8XC9X",
+    "ticker": "CNA",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-094382",
+    "cik": "874766",
+    "fd": "2010-11-02",
+    "orig_accn": "0000950123-10-099502",
+    "orig_filed": "2010-11-02",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999860202931229,
+     "operating_cash_flow_ttm": 0.9999984532616005,
+     "revenue_q": 0.9894,
+     "revenue_ttm": 1.000000129549411,
+     "stockholders_equity": 0.9035,
+     "total_assets": 1.0007
+    },
+    "sid": "HIG R735QTJ8XC9X",
+    "ticker": "HIG",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000950123-11-094382/10-Q/2011-11-02,0000950123-12-003120/10-K/2012-02-24",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001141391-11-000005",
+    "cik": "1141391",
+    "fd": "2010-11-02",
+    "orig_accn": "0001193125-10-243917",
+    "orig_filed": "2010-11-02",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000298039290765,
+     "operating_cash_flow_ttm": 1.000000274423471,
+     "operating_income_ttm": 1.003032797901693,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000466004953434,
+     "stockholders_equity": 0.8503,
+     "total_assets": 0.9101
+    },
+    "sid": "MA TIX2XDPLFR6T",
+    "ticker": "MA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000097216-11-000273",
+    "cik": "97216",
+    "fd": "2010-11-02",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "TEX R735QTJ8XC9X",
+    "ticker": "TEX",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-293060",
+    "cik": "1267238",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-246237",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999986053500676,
+     "operating_cash_flow_ttm": 1.0000886527739188,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000149124286062,
+     "stockholders_equity": 0.9388,
+     "total_assets": 0.9728
+    },
+    "sid": "AIZ SVXZEUFT60DH",
+    "ticker": "AIZ",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-281687",
+    "cik": "1156039",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-245878",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999851282159338,
+     "operating_cash_flow_ttm": 1.0000080094771133,
+     "revenue_q": 0.9982,
+     "revenue_ttm": 0.99998141664911,
+     "stockholders_equity": 0.9766,
+     "total_assets": 0.9829
+    },
+    "sid": "ATH S9AP9FK1TBHH",
+    "ticker": "WLP",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-297691",
+    "cik": "1058290",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-246295",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999831584614263,
+     "operating_cash_flow_ttm": 1.000013262633399,
+     "operating_income_ttm": 1.0000628032789534,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.999969200250224,
+     "stockholders_equity": 0.9031,
+     "total_assets": 0.8865
+    },
+    "sid": "CTSH RBOKUIZLS38L",
+    "ticker": "CTSH",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-060566",
+    "cik": "64803",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-246290",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000193228655547,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000056818181817,
+     "operating_cash_flow_ttm": 1.000057472118959,
+     "operating_income_ttm": 1.0000076576576578,
+     "revenue_q": 0.9931,
+     "revenue_ttm": 1.000010321182226,
+     "stockholders_equity": 0.9791,
+     "total_assets": 0.9969
+    },
+    "sid": "CVS R735QTJ8XC9X",
+    "ticker": "CVS",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001104659-11-060566/10-Q/2011-11-03,0001104659-12-010850/10-K/2012-02-17",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-11-292720",
+    "cik": "29669",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-246204",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000087912087912,
+     "operating_cash_flow_ttm": 0.9999825220928601,
+     "operating_income_ttm": 2.11158785942492,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999897924401973,
+     "stockholders_equity": 0.9609,
+     "total_assets": 0.9752
+    },
+    "sid": "DNY R735QTJ8XC9X",
+    "ticker": "RRD",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001316631-11-000047",
+    "cik": "1570585",
+    "fd": "2010-11-03",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "LBTYA SZC2UFSQNK9X",
+    "ticker": "LBTYA",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001316631-11-000047",
+    "cik": "1570585",
+    "fd": "2010-11-03",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "LBTYK TBT2P2LPJLGL",
+    "ticker": "LBTYK",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001451505-11-000087",
+    "cik": "1451505",
+    "fd": "2010-11-03",
+    "orig_accn": "0001451505-10-000083",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999909776799748,
+     "operating_cash_flow_ttm": 0.9999727581279029,
+     "operating_income_ttm": 1.0800045,
+     "revenue_q": 0.9879,
+     "revenue_ttm": 0.9999698338525441,
+     "stockholders_equity": 1.0077,
+     "total_assets": 0.9366
+    },
+    "sid": "RIG R735QTJ8XC9X",
+    "ticker": "RIG",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001451505-11-000087/10-Q/2011-11-03,0001451505-12-000030/10-K/2012-02-27",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-290966",
+    "cik": "849399",
+    "fd": "2010-11-03",
+    "orig_accn": "0000950123-10-100162",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-10-01",
+    "ratios": {
+     "gross_profit_ttm": 1.0000441598360656,
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 0.999969521559362,
+     "operating_income_ttm": 1.132931189710611,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.999968187134503,
+     "stockholders_equity": 1.0073,
+     "total_assets": 0.9194
+    },
+    "sid": "SYMC R735QTJ8XC9X",
+    "ticker": "SYMC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000005513-11-000047",
+    "cik": "5513",
+    "fd": "2010-11-03",
+    "orig_accn": "0001193125-10-245531",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999583509265775,
+     "operating_cash_flow_ttm": 1.0000080194017784,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999645208601724,
+     "stockholders_equity": 0.9839,
+     "total_assets": 0.9313
+    },
+    "sid": "UNM R735QTJ8XC9X",
+    "ticker": "UNM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-292603",
+    "cik": "1136869",
+    "fd": "2010-11-03",
+    "orig_accn": "0000950123-10-100041",
+    "orig_filed": "2010-11-03",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000423983766025,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000211318650682,
+     "operating_cash_flow_ttm": 1.000038120805369,
+     "operating_income_ttm": 1.145581448763251,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000310201689702,
+     "stockholders_equity": 0.985,
+     "total_assets": 0.978
+    },
+    "sid": "ZMH S6ZZPKTVDY05",
+    "ticker": "ZMH",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-294645",
+    "cik": "1037868",
+    "fd": "2010-11-04",
+    "orig_accn": "0000950123-10-100608",
+    "orig_filed": "2010-11-04",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000022302084852,
+     "operating_cash_flow_ttm": 1.0000021718206273,
+     "operating_income_ttm": 1.0000029976779128,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999570456857872,
+     "stockholders_equity": 0.9312,
+     "total_assets": 0.9128
+    },
+    "sid": "AME R735QTJ8XC9X",
+    "ticker": "AME",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-061134",
+    "cik": "315293",
+    "fd": "2010-11-04",
+    "orig_accn": "0001104659-10-056151",
+    "orig_filed": "2010-11-04",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000401606425704,
+     "operating_cash_flow_ttm": 1.0000069333333332,
+     "operating_income_ttm": 0.9999657198824682,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999518630678078,
+     "stockholders_equity": 0.9372,
+     "total_assets": 1.0256
+    },
+    "sid": "AOC R735QTJ8XC9X",
+    "ticker": "AON",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-299375",
+    "cik": "906107",
+    "fd": "2010-11-04",
+    "orig_accn": "0000950123-10-100488",
+    "orig_filed": "2010-11-04",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 0.8565,
+     "net_income_ttm": 0.4296411722651149,
+     "operating_cash_flow_ttm": 0.5630099330519791,
+     "operating_income_ttm": 0.456377387181473,
+     "revenue_q": 0.4277,
+     "stockholders_equity": 0.7023,
+     "total_assets": 0.479
+    },
+    "sid": "BYA R735QTJ8XC9X",
+    "ticker": "AVB",
+    "verdict": "unresolved: balance-sheet values match no SEC filing (kept quarantined)",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-059014",
+    "cik": "31462",
+    "fd": "2010-11-04",
+    "orig_accn": "0001104659-10-056085",
+    "orig_filed": "2010-11-04",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.999992523364486,
+     "operating_cash_flow_ttm": 0.9999909784172661,
+     "operating_income_ttm": 1.098522383678262,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999989984069416,
+     "stockholders_equity": 0.9461,
+     "total_assets": 0.9593
+    },
+    "sid": "ECL R735QTJ8XC9X",
+    "ticker": "ECL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-095417",
+    "cik": "1099219",
+    "fd": "2010-11-04",
+    "orig_accn": "0000950123-10-100992",
+    "orig_filed": "2010-11-04",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999410507569012,
+     "operating_cash_flow_ttm": 1.0000558506442283,
+     "revenue_q": 0.9915,
+     "revenue_ttm": 0.9999549466608213,
+     "stockholders_equity": 0.8483,
+     "total_assets": 0.9298
+    },
+    "sid": "MET RTMI3UYBZ0IT",
+    "ticker": "MET",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000950123-11-095417/10-Q/2011-11-04,0001193125-12-085720/10-K/2012-02-28",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-062236",
+    "cik": "718877",
+    "fd": "2010-11-05",
+    "orig_accn": "0001104659-10-056564",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 0.9999692307692307,
+     "operating_income_ttm": -15.614646153846154,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.00000411311054,
+     "stockholders_equity": 1.0104,
+     "total_assets": 0.9859
+    },
+    "sid": "ATVI R735QTJ8XC9X",
+    "ticker": "ATVI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-094428",
+    "cik": "808362",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101816",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999391923990499,
+     "operating_cash_flow_ttm": 1.0000314769975787,
+     "operating_income_ttm": 1.0246331967213114,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000481995033113,
+     "stockholders_equity": 0.9787,
+     "total_assets": 0.9414
+    },
+    "sid": "BHI R735QTJ8XC9X",
+    "ticker": "BHI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000885725-11-000055",
+    "cik": "885725",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101570",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999857448325018,
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 1.0000178443113772,
+     "operating_income_ttm": 0.8925,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000088055691256,
+     "stockholders_equity": 0.9869,
+     "total_assets": 1.0237
+    },
+    "sid": "BSX R735QTJ8XC9X",
+    "ticker": "BSX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001136893-11-000024",
+    "cik": "1136893",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101624",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000535658994736,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9998866855524079,
+     "operating_cash_flow_ttm": 1.0000161041870888,
+     "operating_income_ttm": 1.4926727240014395,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000356386788698,
+     "stockholders_equity": 1.3539,
+     "total_assets": 1.0155
+    },
+    "sid": "CEY S67FQV7Z62CL",
+    "ticker": "FIS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-301773",
+    "cik": "1326160",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249670",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999594418604651,
+     "operating_cash_flow_ttm": 1.0000218307825586,
+     "operating_income_ttm": 1.170709204090707,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000353075170842,
+     "stockholders_equity": 0.9597,
+     "total_assets": 0.9748
+    },
+    "sid": "DUK R735QTJ8XC9X",
+    "ticker": "DUK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000831259-11-000062",
+    "cik": "831259",
+    "fd": "2010-11-05",
+    "orig_accn": "0000831259-10-000070",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0878828650573802,
+     "operating_cash_flow_ttm": 0.9999921537411872,
+     "operating_income_ttm": 1.0118891280947255,
+     "stockholders_equity": 0.9082,
+     "total_assets": 0.9294
+    },
+    "sid": "FCX R735QTJ8XC9X",
+    "ticker": "FCX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-292805",
+    "cik": "798354",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249903",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999756302521008,
+     "operating_cash_flow_ttm": 0.9929182352941176,
+     "operating_income_ttm": 1.000000845665962,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000159676232523,
+     "stockholders_equity": 0.9659,
+     "total_assets": 0.9646
+    },
+    "sid": "FISV R735QTJ8XC9X",
+    "ticker": "FISV",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000101830-11-000045",
+    "cik": "101830",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249235",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999527093596059,
+     "operating_cash_flow_ttm": 1.000016295236148,
+     "operating_income_ttm": 0.6802575107296137,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999541227526348,
+     "stockholders_equity": 1.0563,
+     "total_assets": 1.0182
+    },
+    "sid": "FON R735QTJ8XC9X",
+    "ticker": "S",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001043604-11-000013",
+    "cik": "1043604",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101603",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000422200907275,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000797972632245,
+     "operating_cash_flow_ttm": 0.999988567976013,
+     "operating_income_ttm": 1.0626799658829398,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.999947347698009,
+     "stockholders_equity": 0.977,
+     "total_assets": 0.9814
+    },
+    "sid": "JNPR RLTVP7P85ZS5",
+    "ticker": "JNPR",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000921112-11-000004",
+    "cik": "921112",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101452",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "stockholders_equity": 1.0066,
+     "total_assets": 0.9987
+    },
+    "sid": "LRY R735QTJ8XC9X",
+    "ticker": "LRY",
+    "verdict": "unresolved: balance-sheet values match no SEC filing (kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000096223-11-000037",
+    "cik": "96223",
+    "fd": "2010-11-05",
+    "orig_accn": "0000096223-10-000040",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000010749073199,
+     "operating_cash_flow_ttm": 1.000002593236599,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999563775578597,
+     "stockholders_equity": 0.8309,
+     "total_assets": 0.88
+    },
+    "sid": "LUK R735QTJ8XC9X",
+    "ticker": "LUK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-060552",
+    "cik": "66740",
+    "fd": "2010-11-05",
+    "orig_accn": "0001104659-10-056482",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999961165048543,
+     "operating_cash_flow_ttm": 1.0000235579842138,
+     "operating_income_ttm": 1.0000573535521395,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000013406564892,
+     "stockholders_equity": 0.875,
+     "total_assets": 0.932
+    },
+    "sid": "MMM R735QTJ8XC9X",
+    "ticker": "MMM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-296733",
+    "cik": "717423",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249307",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000422253023742,
+     "operating_cash_flow_ttm": 1.0000674352003853,
+     "revenue_q": 0.8576,
+     "revenue_ttm": 0.9999837904615052,
+     "stockholders_equity": 0.9481,
+     "total_assets": 0.959
+    },
+    "sid": "MUR R735QTJ8XC9X",
+    "ticker": "MUR",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001193125-11-296733/10-Q/2011-11-04",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-097049",
+    "cik": "1163739",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101722",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999999555794543,
+     "operating_cash_flow_ttm": 1.0000242589234694,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9487912348646772,
+     "stockholders_equity": 1.0017,
+     "total_assets": 0.9036
+    },
+    "sid": "NBR R735QTJ8XC9X",
+    "ticker": "NBR",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000930413-11-006991",
+    "cik": "78814",
+    "fd": "2010-11-05",
+    "orig_accn": "0000930413-10-005451",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9517476989883416,
+     "operating_cash_flow_ttm": 1.0000000951377799,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999926804007274,
+     "stockholders_equity": 1.7255,
+     "total_assets": 0.9953
+    },
+    "sid": "PBI R735QTJ8XC9X",
+    "ticker": "PBI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-11-297410",
+    "cik": "1137774",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-250347",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000459026888604,
+     "operating_cash_flow_ttm": 0.9999563698630138,
+     "revenue_q": 0.9955,
+     "revenue_ttm": 0.9999974883749388,
+     "stockholders_equity": 0.8861,
+     "total_assets": 0.9413
+    },
+    "sid": "PRU SAI0XJNH6IJP",
+    "ticker": "PRU",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000085408-11-000018",
+    "cik": "85408",
+    "fd": "2010-11-05",
+    "orig_accn": "0000085408-10-000020",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999752326505291,
+     "operating_cash_flow_ttm": 1.0000232268688867,
+     "operating_income_ttm": 1.0000221279687354,
+     "revenue_q": 0.5447,
+     "revenue_ttm": 1.0000175205911264,
+     "stockholders_equity": 0.8885,
+     "total_assets": 0.7983
+    },
+    "sid": "RDC R735QTJ8XC9X",
+    "ticker": "RDC",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000085408-11-000018/10-Q/2011-11-03",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000910606-11-000022",
+    "cik": "910606",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249565",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "REG R735QTJ8XC9X",
+    "ticker": "REG",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "none"
+    }
+   },
+   {
+    "acc": "0000882835-11-000032",
+    "cik": "882835",
+    "fd": "2010-11-05",
+    "orig_accn": "0000882835-10-000038",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000483767248438,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000385947110626,
+     "operating_cash_flow_ttm": 0.9999903379328925,
+     "operating_income_ttm": 0.9999591619540915,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999735287861254,
+     "stockholders_equity": 0.9511,
+     "total_assets": 0.8677
+    },
+    "sid": "ROP R735QTJ8XC9X",
+    "ticker": "ROP",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000092122-11-000140",
+    "cik": "92122",
+    "fd": "2010-11-05",
+    "orig_accn": "0000092122-10-000126",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0205,
+     "net_income_ttm": 1.039600433292757,
+     "operating_cash_flow_ttm": 1.0000009813668405,
+     "operating_income_ttm": 0.9999997537637698,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000293935082258,
+     "stockholders_equity": 0.9375,
+     "total_assets": 0.9578
+    },
+    "sid": "SO R735QTJ8XC9X",
+    "ticker": "SO",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001047469-11-008987",
+    "cik": "1063761",
+    "fd": "2010-11-05",
+    "orig_accn": "0001047469-10-009266",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0036,
+     "net_income_ttm": 1.0929110230379586,
+     "operating_cash_flow_ttm": 0.999974262432288,
+     "operating_income_ttm": 1.1402479264828407,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000060494551835,
+     "stockholders_equity": 0.9233,
+     "total_assets": 1.0076
+    },
+    "sid": "SPG R735QTJ8XC9X",
+    "ticker": "SPG",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000750556-11-000187",
+    "cik": "750556",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-250319",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 0.9996,
+     "net_income_ttm": 0.9999947898007461,
+     "operating_cash_flow_ttm": 1.0000671658727143,
+     "stockholders_equity": 0.9823,
+     "total_assets": 0.9769
+    },
+    "sid": "STI R735QTJ8XC9X",
+    "ticker": "STI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-297261",
+    "cik": "93751",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-249618",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999602870813397,
+     "operating_cash_flow_ttm": 0.9999934410869056,
+     "revenue_q": 1.0645,
+     "revenue_ttm": 1.0000506944444445,
+     "stockholders_equity": 0.9141,
+     "total_assets": 0.937
+    },
+    "sid": "STT R735QTJ8XC9X",
+    "ticker": "STT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000097745-11-000057",
+    "cik": "97745",
+    "fd": "2010-11-05",
+    "orig_accn": "0000097745-10-000040",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-10-02",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999811595907326,
+     "operating_cash_flow_ttm": 1.0000308823529411,
+     "operating_income_ttm": 1.0580202783868815,
+     "revenue_q": 0.9796,
+     "revenue_ttm": 0.9999707211885615,
+     "stockholders_equity": 0.9967,
+     "total_assets": 0.9881
+    },
+    "sid": "TMO R735QTJ8XC9X",
+    "ticker": "TMO",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0000097745-11-000033/8-K/2011-07-12,0000097745-11-000057/10-Q/2011-11-04",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-297408",
+    "cik": "927066",
+    "fd": "2010-11-05",
+    "orig_accn": "0001193125-10-250263",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999996458347135,
+     "operating_cash_flow_ttm": 0.9999756271842329,
+     "operating_income_ttm": 0.9999652646949656,
+     "stockholders_equity": 0.9913,
+     "total_assets": 0.9935
+    },
+    "sid": "TRL R735QTJ8XC9X",
+    "ticker": "DVA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-095221",
+    "cik": "1000697",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101328",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-10-02",
+    "ratios": {
+     "gross_profit_ttm": 0.999955935818937,
+     "operating_cash_flow_ttm": 0.9999748445356151,
+     "operating_income_ttm": 0.9999587128296359,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000159600987524,
+     "stockholders_equity": 0.8805,
+     "total_assets": 0.9233
+    },
+    "sid": "WAT R735QTJ8XC9X",
+    "ticker": "WAT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-295188",
+    "cik": "1365135",
+    "fd": "2010-11-05",
+    "orig_accn": "0000950123-10-101718",
+    "orig_filed": "2010-11-05",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999606503298775,
+     "operating_cash_flow_ttm": 1.0000213447171824,
+     "operating_income_ttm": 1.0000205659936072,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000036163348808,
+     "stockholders_equity": 0.913,
+     "total_assets": 0.9706
+    },
+    "sid": "WU TMH31J9JDU1X",
+    "ticker": "WU",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-294993",
+    "cik": "896159",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-251774",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999921537857983,
+     "operating_cash_flow_ttm": 0.999952203898051,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000364842454394,
+     "stockholders_equity": 0.9372,
+     "total_assets": 0.973
+    },
+    "sid": "ACL R735QTJ8XC9X",
+    "ticker": "ACE",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-302027",
+    "cik": "1002910",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-252336",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999872549019608,
+     "operating_cash_flow_ttm": 1.0000333839150226,
+     "operating_income_ttm": 0.9999966101694915,
+     "revenue_q": 1.0058,
+     "revenue_ttm": 1.00000293370945,
+     "stockholders_equity": 1.0306,
+     "total_assets": 1.012
+    },
+    "sid": "AEE R735QTJ8XC9X",
+    "ticker": "AEE",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001193125-11-044880/10-K/2011-02-24,0001193125-11-302027/10-Q/2011-11-08",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-296147",
+    "cik": "318154",
+    "fd": "2010-11-08",
+    "orig_accn": "0000950123-10-102391",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999885342019544,
+     "operating_cash_flow_ttm": 0.9999782196969697,
+     "operating_income_ttm": 0.9999854703959317,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000321540773118,
+     "stockholders_equity": 0.9626,
+     "total_assets": 0.9372
+    },
+    "sid": "AMGN R735QTJ8XC9X",
+    "ticker": "AMGN",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-302242",
+    "cik": "1390777",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-252141",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.3315153562653563,
+     "operating_cash_flow_ttm": 0.9999961914837344,
+     "revenue_q": 0.9965,
+     "stockholders_equity": 0.9454,
+     "total_assets": 0.9274
+    },
+    "sid": "BK R735QTJ8XC9X",
+    "ticker": "BK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-304217",
+    "cik": "35527",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-252085",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.99999131614654,
+     "operating_cash_flow_ttm": 0.9999564575645756,
+     "stockholders_equity": 0.9868,
+     "total_assets": 0.9974
+    },
+    "sid": "FITB R735QTJ8XC9X",
+    "ticker": "FITB",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000827054-11-000319",
+    "cik": "827054",
+    "fd": "2010-11-08",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "MCHP R735QTJ8XC9X",
+    "ticker": "MCHP",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000950123-11-096564",
+    "cik": "310158",
+    "fd": "2010-11-08",
+    "orig_accn": "0000950123-10-102135",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0012,
+     "net_income_ttm": 1.0000138125615248,
+     "operating_cash_flow_ttm": 0.9999985082547171,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000068122340794,
+     "stockholders_equity": 0.9935,
+     "total_assets": 0.9845
+    },
+    "sid": "MRK R735QTJ8XC9X",
+    "ticker": "MRK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-302235",
+    "cik": "898173",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-252152",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9532,
+     "total_assets": 0.9787
+    },
+    "sid": "ORLY R735QTJ8XC9X",
+    "ticker": "ORLY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-297431",
+    "cik": "1032033",
+    "fd": "2010-11-08",
+    "orig_accn": "0000950123-10-102526",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0001,
+     "net_income_ttm": 1.0000279418025655,
+     "operating_cash_flow_ttm": 0.9999832065987885,
+     "stockholders_equity": 1.1121,
+     "total_assets": 1.0059
+    },
+    "sid": "SLM R735QTJ8XC9X",
+    "ticker": "SLM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-301448",
+    "cik": "320335",
+    "fd": "2010-11-08",
+    "orig_accn": "0001193125-10-251848",
+    "orig_filed": "2010-11-08",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000188355191837,
+     "operating_cash_flow_ttm": 0.9999420067143866,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000153704214596,
+     "stockholders_equity": 0.9244,
+     "total_assets": 0.9567
+    },
+    "sid": "TMK R735QTJ8XC9X",
+    "ticker": "TMK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-062400",
+    "cik": "1996862",
+    "fd": "2010-11-09",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "BG S6V2H4010679",
+    "ticker": "BG",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000019617-11-000264",
+    "cik": "19617",
+    "fd": "2010-11-09",
+    "orig_accn": "0000950123-10-102689",
+    "orig_filed": "2010-11-09",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000260487721693,
+     "operating_cash_flow_ttm": 0.9999992953066934,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000434912479836,
+     "stockholders_equity": 0.9844,
+     "total_assets": 0.9404
+    },
+    "sid": "CMB R735QTJ8XC9X",
+    "ticker": "JPM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000877890-11-000094",
+    "cik": "877890",
+    "fd": "2010-11-09",
+    "orig_accn": "0001193125-10-253801",
+    "orig_filed": "2010-11-09",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.000036217337245,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000007930707738,
+     "operating_cash_flow_ttm": 0.9999764367507346,
+     "operating_income_ttm": 1.1482021043559048,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000040439306903,
+     "stockholders_equity": 0.9336,
+     "total_assets": 0.949
+    },
+    "sid": "CTXS R735QTJ8XC9X",
+    "ticker": "CTXS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000704051-11-000118",
+    "cik": "704051",
+    "fd": "2010-11-09",
+    "orig_accn": "0000704051-10-000248",
+    "orig_filed": "2010-11-09",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999680559021712,
+     "operating_cash_flow_ttm": 0.9999848871773895,
+     "operating_income_ttm": 1.0000196149858491,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000284551966143,
+     "stockholders_equity": 0.9827,
+     "total_assets": 0.9775
+    },
+    "sid": "LM R735QTJ8XC9X",
+    "ticker": "LM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000062709-11-000034",
+    "cik": "62709",
+    "fd": "2010-11-09",
+    "orig_accn": "0001193125-10-254061",
+    "orig_filed": "2010-11-09",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000011013215859,
+     "operating_cash_flow_ttm": 0.99999375,
+     "operating_income_ttm": 1.618810609037328,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000022024206614,
+     "stockholders_equity": 0.9353,
+     "total_assets": 1.0482
+    },
+    "sid": "MMC R735QTJ8XC9X",
+    "ticker": "MMC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001095073-11-000073",
+    "cik": "1095073",
+    "fd": "2010-11-09",
+    "orig_accn": "0001095073-10-000068",
+    "orig_filed": "2010-11-09",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9608,
+     "total_assets": 0.9815
+    },
+    "sid": "RE R735QTJ8XC9X",
+    "ticker": "RE",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-306951",
+    "cik": "103379",
+    "fd": "2010-11-10",
+    "orig_accn": "0000950123-10-103794",
+    "orig_filed": "2010-11-10",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999791129292758,
+     "operating_cash_flow_ttm": 1.0000118312043842,
+     "operating_income_ttm": 1.1655301800854216,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000322386398544,
+     "stockholders_equity": 0.9265,
+     "total_assets": 0.9464
+    },
+    "sid": "VFC R735QTJ8XC9X",
+    "ticker": "VFC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-057859",
+    "cik": "1274057",
+    "fd": "2010-11-14",
+    "orig_accn": "0001104659-10-053617",
+    "orig_filed": "2010-10-26",
+    "orig_form": "10-Q",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.000047288932904,
+     "operating_cash_flow_ttm": 1.000020023282887,
+     "operating_income_ttm": 1.187337124676874,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999743201092981,
+     "stockholders_equity": 0.9181,
+     "total_assets": 0.8666
+    },
+    "sid": "HSP SYCMR2MNWEHX",
+    "ticker": "HSP",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-294991",
+    "cik": "1443646",
+    "fd": "2010-11-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "BAH UROXQFIWOSX1",
+    "ticker": "BAH",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-294991",
+    "cik": "1443646",
+    "fd": "2010-11-18",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-09-30",
+    "ratios": {},
+    "sid": "BAH UROXQFIWOSX1",
+    "ticker": "BAH",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-303419",
+    "cik": "1467858",
+    "fd": "2010-11-18",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-09-30",
+    "ratios": {},
+    "sid": "GM URPX6IW2RK2T",
+    "ticker": "GM",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000950123-11-077973",
+    "cik": "6281",
+    "fd": "2010-11-22",
+    "orig_accn": "0000950123-10-107816",
+    "orig_filed": "2010-11-22",
+    "orig_form": "10-K",
+    "pe": "2010-10-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0183,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "ADI R735QTJ8XC9X",
+    "ticker": "ADI",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001144204-11-043852",
+    "cik": "32604",
+    "fd": "2010-11-23",
+    "orig_accn": "0001144204-10-063258",
+    "orig_filed": "2010-11-23",
+    "orig_form": "10-K",
+    "pe": "2010-09-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "revenue_q": 0.8976,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "EMR R735QTJ8XC9X",
+    "ticker": "EMR",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "none",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000950123-11-072043",
+    "cik": "833444",
+    "fd": "2010-11-23",
+    "orig_accn": "0001047469-10-009627",
+    "orig_filed": "2010-11-12",
+    "orig_form": "10-K",
+    "pe": "2010-09-30",
+    "ratios": {
+     "net_income_q": 1.688,
+     "net_income_ttm": 1.3171,
+     "operating_cash_flow_ttm": 0.5757,
+     "operating_income_ttm": 1.0507,
+     "revenue_q": 2.012,
+     "revenue_ttm": 2.016,
+     "stockholders_equity": 0.7151,
+     "total_assets": 0.9489
+    },
+    "sid": "JCI R735QTJ8XC9X",
+    "ticker": "TYC",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000950123-11-101489",
+    "cik": "109198",
+    "fd": "2010-11-24",
+    "orig_accn": "0000950123-10-108499",
+    "orig_filed": "2010-11-24",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999573675892325,
+     "operating_cash_flow_ttm": 1.0000212137631244,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000398905997918,
+     "stockholders_equity": 0.9564,
+     "total_assets": 0.9394
+    },
+    "sid": "TJX R735QTJ8XC9X",
+    "ticker": "TJX",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000060667-11-000187",
+    "cik": "60667",
+    "fd": "2010-12-01",
+    "orig_accn": "0000060667-10-000184",
+    "orig_filed": "2010-12-01",
+    "orig_form": "10-Q",
+    "pe": "2010-10-29",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 1.0067,
+     "total_assets": 1.0895
+    },
+    "sid": "LOW R735QTJ8XC9X",
+    "ticker": "LOW",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000354950-11-000005",
+    "cik": "354950",
+    "fd": "2010-12-02",
+    "orig_accn": "0001193125-10-272940",
+    "orig_filed": "2010-12-02",
+    "orig_form": "10-Q",
+    "pe": "2010-10-31",
+    "ratios": {
+     "gross_profit_ttm": 0.9999900142780653,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.999965388951522,
+     "operating_cash_flow_ttm": 1.0000326829268293,
+     "operating_income_ttm": 1.0000088069956277,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000433994197293,
+     "stockholders_equity": 1.0173,
+     "total_assets": 1.019
+    },
+    "sid": "HD R735QTJ8XC9X",
+    "ticker": "HD",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-11-066091",
+    "cik": "27419",
+    "fd": "2010-12-03",
+    "orig_accn": "0001104659-10-061015",
+    "orig_filed": "2010-12-03",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000490353697749,
+     "operating_cash_flow_ttm": 1.000029620812787,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000105267989656,
+     "stockholders_equity": 1.0261,
+     "total_assets": 0.9712
+    },
+    "sid": "DH R735QTJ8XC9X",
+    "ticker": "TGT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001445305-11-003514",
+    "cik": "701985",
+    "fd": "2010-12-03",
+    "orig_accn": "0001193125-10-273759",
+    "orig_filed": "2010-12-03",
+    "orig_form": "10-Q",
+    "pe": "2010-10-29",
+    "ratios": {
+     "gross_profit_ttm": 0.9999843130779392,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.00005,
+     "operating_cash_flow_ttm": 1.0000425894378193,
+     "operating_income_ttm": 1.0035092165898616,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999726598702502,
+     "stockholders_equity": 1.0147,
+     "total_assets": 0.9755
+    },
+    "sid": "LTD R735QTJ8XC9X",
+    "ticker": "LTD",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-329758",
+    "cik": "794367",
+    "fd": "2010-12-06",
+    "orig_accn": "0001193125-10-274286",
+    "orig_filed": "2010-12-06",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000083753678015,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000079999999998,
+     "operating_income_ttm": 1.3677960489181562,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000024053812422,
+     "stockholders_equity": 0.9992,
+     "total_assets": 0.9426
+    },
+    "sid": "FD R735QTJ8XC9X",
+    "ticker": "M",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001045810-11-000056",
+    "cik": "1045810",
+    "fd": "2010-12-07",
+    "orig_accn": "0001045810-10-000045",
+    "orig_filed": "2010-12-07",
+    "orig_form": "10-Q",
+    "pe": "2010-10-31",
+    "ratios": {
+     "gross_profit_ttm": 1.000033354773422,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999000661891243,
+     "operating_cash_flow_ttm": 0.9999999124653808,
+     "operating_income_ttm": 0.9999911122340696,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999957293747529,
+     "stockholders_equity": 0.9526,
+     "total_assets": 0.9529
+    },
+    "sid": "NVDA RHM8UTD8DT2D",
+    "ticker": "NVDA",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001389170-11-000037",
+    "cik": "1389170",
+    "fd": "2010-12-07",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2009-12-31",
+    "ratios": {},
+    "sid": "TRGP US8MOAUA7W4L",
+    "ticker": "TRGP",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-11-333737",
+    "cik": "1326380",
+    "fd": "2010-12-08",
+    "orig_accn": "0000950123-10-112044",
+    "orig_filed": "2010-12-08",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "gross_profit_ttm": 1.0000362221787755,
+     "net_income_q": 0.9999,
+     "net_income_ttm": 0.9999964613733052,
+     "operating_cash_flow_ttm": 0.9999680595119635,
+     "operating_income_ttm": 1.000042269395777,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999908678092756,
+     "stockholders_equity": 0.9539,
+     "total_assets": 0.8366
+    },
+    "sid": "GME SC72NCBXXAHX",
+    "ticker": "GME",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-333590",
+    "cik": "39911",
+    "fd": "2010-12-08",
+    "orig_accn": "0001193125-10-276610",
+    "orig_filed": "2010-12-08",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "gross_profit_ttm": 0.9999774458420685,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000293103448277,
+     "operating_cash_flow_ttm": 1.000028215767635,
+     "operating_income_ttm": 1.0000254545454546,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.00002192012397,
+     "stockholders_equity": 0.9961,
+     "total_assets": 0.9457
+    },
+    "sid": "GPS R735QTJ8XC9X",
+    "ticker": "GPS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-330630",
+    "cik": "12659",
+    "fd": "2010-12-08",
+    "orig_accn": "0000950123-10-111972",
+    "orig_filed": "2010-12-08",
+    "orig_form": "10-Q",
+    "pe": "2010-10-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000278806949308,
+     "operating_cash_flow_ttm": 0.9999312814803845,
+     "operating_income_ttm": 0.9999841338242752,
+     "revenue_q": 0.3379,
+     "revenue_ttm": 1.0000088066536374,
+     "stockholders_equity": 1.1652,
+     "total_assets": 1.027
+    },
+    "sid": "HRB R735QTJ8XC9X",
+    "ticker": "HRB",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-11-328862",
+    "cik": "885639",
+    "fd": "2010-12-09",
+    "orig_accn": "0001193125-10-277331",
+    "orig_filed": "2010-12-09",
+    "orig_form": "10-Q",
+    "pe": "2010-10-30",
+    "ratios": {
+     "gross_profit_ttm": 1.000024622960911,
+     "net_income_q": 1.0798,
+     "net_income_ttm": 0.999978102926337,
+     "operating_cash_flow_ttm": 1.0000229185317815,
+     "operating_income_ttm": 0.9999668224299065,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000196472231924,
+     "stockholders_equity": 0.9778,
+     "total_assets": 0.9302
+    },
+    "sid": "KSS R735QTJ8XC9X",
+    "ticker": "KSS",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "later:0001193125-11-246851/10-K/A/2011-09-13,0001193125-11-328862/10-Q/2011-12-02",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000764478-12-000002",
+    "cik": "764478",
+    "fd": "2011-01-05",
+    "orig_accn": "0001104659-11-000494",
+    "orig_filed": "2011-01-05",
+    "orig_form": "10-Q",
+    "pe": "2010-11-26",
+    "ratios": {
+     "gross_profit_ttm": 1.0000294983552631,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000356871678056,
+     "operating_cash_flow_ttm": 1.0000264732547597,
+     "operating_income_ttm": 1.0232622818791945,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000031452489233,
+     "stockholders_equity": 1.0612,
+     "total_assets": 0.8033
+    },
+    "sid": "BBY R735QTJ8XC9X",
+    "ticker": "BBY",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000940944-12-000002",
+    "cik": "940944",
+    "fd": "2011-01-05",
+    "orig_accn": "0001193125-11-002059",
+    "orig_filed": "2011-01-05",
+    "orig_form": "10-Q",
+    "pe": "2010-11-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000309023485785,
+     "operating_cash_flow_ttm": 0.9984918087226033,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999755113804107,
+     "stockholders_equity": 0.9956,
+     "total_assets": 0.9729
+    },
+    "sid": "DRI R735QTJ8XC9X",
+    "ticker": "DRI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000008858-12-000004",
+    "cik": "8858",
+    "fd": "2011-01-28",
+    "orig_accn": "0000950123-11-006594",
+    "orig_filed": "2011-01-28",
+    "orig_form": "10-Q",
+    "pe": "2011-01-01",
+    "ratios": {
+     "gross_profit_ttm": 1.0000012062009889,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000160674513243,
+     "operating_cash_flow_ttm": 0.999919375308236,
+     "operating_income_ttm": 1.0399421442731278,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999514498356278,
+     "stockholders_equity": 0.9675,
+     "total_assets": 0.9393
+    },
+    "sid": "AVT R735QTJ8XC9X",
+    "ticker": "AVT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000080424-12-000015",
+    "cik": "80424",
+    "fd": "2011-01-28",
+    "orig_accn": "0001193125-11-017328",
+    "orig_filed": "2011-01-28",
+    "orig_form": "10-Q",
+    "pe": "2010-12-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000266331658292,
+     "operating_cash_flow_ttm": 1.0000418118466898,
+     "operating_income_ttm": 0.9999876537045128,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999799336187895,
+     "stockholders_equity": 0.9713,
+     "total_assets": 0.9957
+    },
+    "sid": "PG R735QTJ8XC9X",
+    "ticker": "PG",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-029656",
+    "cik": "927653",
+    "fd": "2011-02-01",
+    "orig_accn": "0000950123-11-007913",
+    "orig_filed": "2011-02-01",
+    "orig_form": "10-Q",
+    "pe": "2010-12-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0000170190274842,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000171021377673,
+     "operating_cash_flow_ttm": 0.9999816062176166,
+     "operating_income_ttm": 0.9999799800796811,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999664054019245,
+     "stockholders_equity": 0.9716,
+     "total_assets": 0.9014
+    },
+    "sid": "MCK R735QTJ8XC9X",
+    "ticker": "MCK",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-12-032307",
+    "cik": "849399",
+    "fd": "2011-02-02",
+    "orig_accn": "0000950123-11-008364",
+    "orig_filed": "2011-02-02",
+    "orig_form": "10-Q",
+    "pe": "2010-12-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0000143852459016,
+     "net_income_q": 1.0,
+     "operating_cash_flow_ttm": 1.0000066154754872,
+     "operating_income_ttm": 1.1328900321543407,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.000016842105263,
+     "stockholders_equity": 1.0186,
+     "total_assets": 0.8934
+    },
+    "sid": "SYMC R735QTJ8XC9X",
+    "ticker": "SYMC",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000704051-12-000016",
+    "cik": "704051",
+    "fd": "2011-02-08",
+    "orig_accn": "0000704051-11-000017",
+    "orig_filed": "2011-02-08",
+    "orig_form": "10-Q",
+    "pe": "2010-12-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000178276251854,
+     "operating_cash_flow_ttm": 1.0000043195902861,
+     "operating_income_ttm": 0.9999843229560718,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999732684498984,
+     "stockholders_equity": 0.9711,
+     "total_assets": 0.9723
+    },
+    "sid": "LM R735QTJ8XC9X",
+    "ticker": "LM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000827054-12-000035",
+    "cik": "827054",
+    "fd": "2011-02-08",
+    "orig_accn": "0000827054-11-000035",
+    "orig_filed": "2011-02-08",
+    "orig_form": "10-Q",
+    "pe": "2010-12-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0000701352570556,
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999710320038708,
+     "operating_cash_flow_ttm": 1.0000015042683614,
+     "operating_income_ttm": 1.0050586641029722,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000550874775385,
+     "stockholders_equity": 0.95,
+     "total_assets": 0.9521
+    },
+    "sid": "MCHP R735QTJ8XC9X",
+    "ticker": "MCHP",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001145443-12-000206",
+    "cik": "900075",
+    "fd": "2011-03-07",
+    "orig_accn": "0001145443-11-000288",
+    "orig_filed": "2011-03-07",
+    "orig_form": "10-Q",
+    "pe": "2011-01-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 1.6513,
+     "total_assets": 1.0183
+    },
+    "sid": "CPRT R735QTJ8XC9X",
+    "ticker": "CPRT",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000897101-12-000370",
+    "cik": "29644",
+    "fd": "2011-03-07",
+    "orig_accn": "0000897101-11-000349",
+    "orig_filed": "2011-03-07",
+    "orig_form": "10-Q",
+    "pe": "2011-01-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9544,
+     "total_assets": 0.9971
+    },
+    "sid": "DCI R735QTJ8XC9X",
+    "ticker": "DCI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-101417",
+    "cik": "12659",
+    "fd": "2011-03-09",
+    "orig_accn": "0000950123-11-023681",
+    "orig_filed": "2011-03-09",
+    "orig_form": "10-Q",
+    "pe": "2011-01-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999827569369963,
+     "operating_cash_flow_ttm": 1.0000626623702695,
+     "operating_income_ttm": 0.9999763310218794,
+     "revenue_q": 0.7332,
+     "revenue_ttm": 0.9999692000840402,
+     "stockholders_equity": 1.2386,
+     "total_assets": 0.7624
+    },
+    "sid": "HRB R735QTJ8XC9X",
+    "ticker": "HRB",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-12-016483",
+    "cik": "1020859",
+    "fd": "2011-03-10",
+    "orig_accn": "0001104659-11-013509",
+    "orig_filed": "2011-03-10",
+    "orig_form": "10-Q",
+    "pe": "2011-01-29",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9686,
+     "total_assets": 0.9993
+    },
+    "sid": "UNFI R735QTJ8XC9X",
+    "ticker": "UNFI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-125489",
+    "cik": "40704",
+    "fd": "2011-03-23",
+    "orig_accn": "0000950123-11-028211",
+    "orig_filed": "2011-03-23",
+    "orig_form": "10-Q",
+    "pe": "2011-02-27",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 0.9999764782750735,
+     "operating_cash_flow_ttm": 0.9999730744544287,
+     "operating_income_ttm": 1.0120608955911132,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000402257290575,
+     "stockholders_equity": 0.9614,
+     "total_assets": 1.0053
+    },
+    "sid": "GIS R735QTJ8XC9X",
+    "ticker": "GIS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001144215-12-000060",
+    "cik": "1144215",
+    "fd": "2011-03-30",
+    "orig_accn": "0000950123-11-030493",
+    "orig_filed": "2011-03-30",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9662,
+     "total_assets": 0.9899
+    },
+    "sid": "AYI S9PGYU1KYMW5",
+    "ticker": "AYI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001123360-12-000023",
+    "cik": "1123360",
+    "fd": "2011-04-01",
+    "orig_accn": "0001193125-11-086772",
+    "orig_filed": "2011-04-01",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "stockholders_equity": 0.9017,
+     "total_assets": 0.6738
+    },
+    "sid": "GPN S1VV43FB2UZP",
+    "ticker": "GPN",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000940944-12-000015",
+    "cik": "940944",
+    "fd": "2011-04-04",
+    "orig_accn": "0001193125-11-088201",
+    "orig_filed": "2011-04-04",
+    "orig_form": "10-Q",
+    "pe": "2011-02-27",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000170086526576,
+     "operating_cash_flow_ttm": 0.9984600398494576,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0000297929172934,
+     "stockholders_equity": 0.9724,
+     "total_assets": 0.9437
+    },
+    "sid": "DRI R735QTJ8XC9X",
+    "ticker": "DRI",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001437749-12-003528",
+    "cik": "1013237",
+    "fd": "2011-04-06",
+    "orig_accn": "0001193125-11-089990",
+    "orig_filed": "2011-04-06",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.972,
+     "total_assets": 0.9654
+    },
+    "sid": "FDS R735QTJ8XC9X",
+    "ticker": "FDS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-12-153669",
+    "cik": "320187",
+    "fd": "2011-04-06",
+    "orig_accn": "0001193125-11-090259",
+    "orig_filed": "2011-04-06",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "gross_profit_ttm": 1.000028189627744,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0000344626842188,
+     "operating_cash_flow_ttm": 0.9999874723468807,
+     "revenue_q": 1.0,
+     "revenue_ttm": 0.9999501682970443,
+     "stockholders_equity": 1.0047,
+     "total_assets": 0.999
+    },
+    "sid": "NKE R735QTJ8XC9X",
+    "ticker": "NKE",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-151412",
+    "cik": "1110783",
+    "fd": "2011-04-07",
+    "orig_accn": "0000950123-11-033772",
+    "orig_filed": "2011-04-07",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "gross_profit_ttm": 0.9999908769170271,
+     "net_income_q": 1.001,
+     "net_income_ttm": 1.0000302975653743,
+     "operating_cash_flow_ttm": 0.9999424892703863,
+     "operating_income_ttm": 1.130667703795893,
+     "revenue_q": 1.0005,
+     "revenue_ttm": 1.0000103980194248,
+     "stockholders_equity": 0.916,
+     "total_assets": 0.9575
+    },
+    "sid": "MON RYZHQ6NEYVZ9",
+    "ticker": "MON",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001144204-12-020149",
+    "cik": "1003078",
+    "fd": "2011-04-07",
+    "orig_accn": "0001144204-11-020695",
+    "orig_filed": "2011-04-07",
+    "orig_form": "10-Q",
+    "pe": "2011-02-26",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9473,
+     "total_assets": 0.9775
+    },
+    "sid": "MSM R735QTJ8XC9X",
+    "ticker": "MSM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-12-151742",
+    "cik": "110621",
+    "fd": "2011-04-07",
+    "orig_accn": "0000950123-11-033748",
+    "orig_filed": "2011-04-07",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9801,
+     "total_assets": 0.9882
+    },
+    "sid": "RPOW R735QTJ8XC9X",
+    "ticker": "RPM",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001104659-12-024280",
+    "cik": "723254",
+    "fd": "2011-04-08",
+    "orig_accn": "0001104659-11-019252",
+    "orig_filed": "2011-04-08",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9685,
+     "total_assets": 0.989
+    },
+    "sid": "CTAS R735QTJ8XC9X",
+    "ticker": "CTAS",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001193125-12-153637",
+    "cik": "898293",
+    "fd": "2011-04-08",
+    "orig_accn": "0000950123-11-034197",
+    "orig_filed": "2011-04-08",
+    "orig_form": "10-Q",
+    "pe": "2011-02-28",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.9438,
+     "total_assets": 0.9655
+    },
+    "sid": "JBIL R735QTJ8XC9X",
+    "ticker": "JBL",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0000764478-12-000002",
+    "cik": "764478",
+    "fd": "2011-04-25",
+    "orig_accn": "0001047469-11-004045",
+    "orig_filed": "2011-04-25",
+    "orig_form": "10-K",
+    "pe": "2011-02-26",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0937,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "BBY R735QTJ8XC9X",
+    "ticker": "BBY",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-029656",
+    "cik": "927653",
+    "fd": "2011-05-05",
+    "orig_accn": "0000950123-11-045634",
+    "orig_filed": "2011-05-05",
+    "orig_form": "10-K",
+    "pe": "2011-03-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.117,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "MCK R735QTJ8XC9X",
+    "ticker": "MCK",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-032307",
+    "cik": "849399",
+    "fd": "2011-05-20",
+    "orig_accn": "0000950123-11-052609",
+    "orig_filed": "2011-05-20",
+    "orig_form": "10-K",
+    "pe": "2011-04-01",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.1375,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "SYMC R735QTJ8XC9X",
+    "ticker": "SYMC",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000704051-12-000016",
+    "cik": "704051",
+    "fd": "2011-05-27",
+    "orig_accn": "0001047469-11-005564",
+    "orig_filed": "2011-05-27",
+    "orig_form": "10-K",
+    "pe": "2011-03-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "LM R735QTJ8XC9X",
+    "ticker": "LM",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000827054-12-000035",
+    "cik": "827054",
+    "fd": "2011-05-31",
+    "orig_accn": "0000827054-11-000157",
+    "orig_filed": "2011-05-31",
+    "orig_form": "10-K",
+    "pe": "2011-03-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_income_ttm": 1.0039,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "MCHP R735QTJ8XC9X",
+    "ticker": "MCHP",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-225921",
+    "cik": "1383729",
+    "fd": "2011-06-09",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-03-31",
+    "ratios": {},
+    "sid": "FIO UX9SXI5CAPNP",
+    "ticker": "FIO",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-12-101417",
+    "cik": "12659",
+    "fd": "2011-06-23",
+    "orig_accn": "0000950123-11-061237",
+    "orig_filed": "2011-06-23",
+    "orig_form": "10-K",
+    "pe": "2011-04-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 0.7984,
+     "revenue_q": 0.9423,
+     "revenue_ttm": 0.9645,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "HRB R735QTJ8XC9X",
+    "ticker": "HRB",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "none",
+     "revenue_ttm": "none",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-125489",
+    "cik": "40704",
+    "fd": "2011-07-08",
+    "orig_accn": "0000950123-11-064606",
+    "orig_filed": "2011-07-08",
+    "orig_form": "10-K",
+    "pe": "2011-05-29",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0016,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "GIS R735QTJ8XC9X",
+    "ticker": "GIS",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0000940944-12-000015",
+    "cik": "940944",
+    "fd": "2011-07-22",
+    "orig_accn": "0001193125-11-194810",
+    "orig_filed": "2011-07-22",
+    "orig_form": "10-K",
+    "pe": "2011-05-29",
+    "ratios": {
+     "net_income_q": 1.0007,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 0.9977,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "DRI R735QTJ8XC9X",
+    "ticker": "DRI",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-153669",
+    "cik": "320187",
+    "fd": "2011-07-22",
+    "orig_accn": "0001193125-11-194791",
+    "orig_filed": "2011-07-22",
+    "orig_form": "10-K",
+    "pe": "2011-05-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "NKE R735QTJ8XC9X",
+    "ticker": "NKE",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001123360-12-000023",
+    "cik": "1123360",
+    "fd": "2011-07-25",
+    "orig_accn": "0001193125-11-196004",
+    "orig_filed": "2011-07-25",
+    "orig_form": "10-K",
+    "pe": "2011-05-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "GPN S1VV43FB2UZP",
+    "ticker": "GPN",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-151742",
+    "cik": "110621",
+    "fd": "2011-07-27",
+    "orig_accn": "0001193125-11-198745",
+    "orig_filed": "2011-07-27",
+    "orig_form": "10-K",
+    "pe": "2011-05-31",
+    "ratios": {
+     "gross_profit_ttm": 1.0,
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "RPOW R735QTJ8XC9X",
+    "ticker": "RPM",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001104659-12-024280",
+    "cik": "723254",
+    "fd": "2011-07-29",
+    "orig_accn": "0001047469-11-006745",
+    "orig_filed": "2011-07-29",
+    "orig_form": "10-K",
+    "pe": "2011-05-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 1.0,
+     "revenue_q": 1.0,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "CTAS R735QTJ8XC9X",
+    "ticker": "CTAS",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-225921",
+    "cik": "1383729",
+    "fd": "2011-09-02",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-06-30",
+    "ratios": {},
+    "sid": "FIO UX9SXI5CAPNP",
+    "ticker": "FIO",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-12-339480",
+    "cik": "1519751",
+    "fd": "2011-08-26",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "FBHS V0H08FY38ZFP",
+    "ticker": "FBHS",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001490281-12-000015",
+    "cik": "1490281",
+    "fd": "2011-10-07",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-06-30",
+    "ratios": {},
+    "sid": "GRPN V1BJ3CABMDET",
+    "ticker": "GRPN",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001490281-12-000015",
+    "cik": "1490281",
+    "fd": "2011-11-07",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2010-09-30",
+    "ratios": {},
+    "sid": "GRPN V1BJ3CABMDET",
+    "ticker": "GRPN",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001490281-12-000037",
+    "cik": "1490281",
+    "fd": "2011-11-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-09-30",
+    "ratios": {},
+    "sid": "GRPN V1BJ3CABMDET",
+    "ticker": "GRPN",
+    "verdict": "restated: vendor value equals a LATER filing's value",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "later:0001490281-13-000008/10-K/2013-02-27"
+    }
+   },
+   {
+    "acc": "0001104659-13-006548",
+    "cik": "1509991",
+    "fd": "2011-11-14",
+    "orig_accn": "0001104659-11-063046",
+    "orig_filed": "2011-11-10",
+    "orig_form": "10-Q",
+    "pe": "2011-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 0.9893,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "KOS UWH8YSJG2U05",
+    "ticker": "KOS",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001524472-12-000009",
+    "cik": "1524472",
+    "fd": "2011-11-14",
+    "orig_accn": "0000950123-11-099774",
+    "orig_filed": "2011-11-21",
+    "orig_form": "10-Q",
+    "pe": "2011-09-30",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "XYL V18KR26TE3XH",
+    "ticker": "XYL",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-12-468394",
+    "cik": "1530721",
+    "fd": "2011-12-15",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-10-01",
+    "ratios": {},
+    "sid": "KORS V2FWF6A8RAZP",
+    "ticker": "KORS",
+    "verdict": "unresolved: too few values to verify",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first"
+    }
+   },
+   {
+    "acc": "0001193125-13-051977",
+    "cik": "1530721",
+    "fd": "2012-02-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-12-31",
+    "ratios": {},
+    "sid": "KORS V2FWF6A8RAZP",
+    "ticker": "KORS",
+    "verdict": "unresolved: too few values to verify",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first"
+    }
+   },
+   {
+    "acc": "0001104659-13-006548",
+    "cik": "1509991",
+    "fd": "2012-03-01",
+    "orig_accn": "0001047469-12-001964",
+    "orig_filed": "2012-03-01",
+    "orig_form": "10-K",
+    "pe": "2011-12-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "revenue_q": 0.9926,
+     "revenue_ttm": 0.9866,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "KOS UWH8YSJG2U05",
+    "ticker": "KOS",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_ttm": "none",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001445305-13-001071",
+    "cik": "1518832",
+    "fd": "2012-05-04",
+    "orig_accn": "0001193125-12-209028",
+    "orig_filed": "2012-05-04",
+    "orig_form": "10-Q",
+    "pe": "2012-03-31",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 0.9846,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "WPX V2YLWY8G7N1H",
+    "ticker": "WPX",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "none",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-13-051977",
+    "cik": "1530721",
+    "fd": "2012-06-12",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-03-31",
+    "ratios": {},
+    "sid": "KORS V2FWF6A8RAZP",
+    "ticker": "KORS",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001327567-13-000016",
+    "cik": "1327567",
+    "fd": "2012-07-20",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-04-30",
+    "ratios": {},
+    "sid": "PANW V8EJVK11FRZ9",
+    "ticker": "PANW",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001445305-13-002597",
+    "cik": "1048286",
+    "fd": "2012-10-04",
+    "orig_accn": "0001445305-12-003055",
+    "orig_filed": "2012-10-04",
+    "orig_form": "10-Q",
+    "pe": "2012-09-07",
+    "ratios": {
+     "net_income_q": 1.0,
+     "revenue_q": 1.0,
+     "stockholders_equity": 0.8673,
+     "total_assets": 1.0242
+    },
+    "sid": "MAR R9GTMYCXKZ8L",
+    "ticker": "MAR",
+    "verdict": "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)",
+    "version_tags": {
+     "net_income_q": "first",
+     "revenue_q": "first",
+     "stockholders_equity": "none",
+     "total_assets": "none"
+    }
+   },
+   {
+    "acc": "0001327567-13-000016",
+    "cik": "1327567",
+    "fd": "2012-10-04",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-07-31",
+    "ratios": {},
+    "sid": "PANW V8EJVK11FRZ9",
+    "ticker": "PANW",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001144204-13-044912",
+    "cik": "1270073",
+    "fd": "2012-10-11",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-12-31",
+    "ratios": {},
+    "sid": "ICPT VAO9ZBE1SEAT",
+    "ticker": "ICPT",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001178913-13-002872",
+    "cik": "1015922",
+    "fd": "2012-10-17",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-09-30",
+    "ratios": {},
+    "sid": "CHKPF R735QTJ8XC9X",
+    "ticker": "CHKP",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001047469-13-011111",
+    "cik": "1513845",
+    "fd": "2012-10-30",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-09-30",
+    "ratios": {},
+    "sid": "YNDX UWU1S0AN2N39",
+    "ticker": "YNDX",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0001193125-13-435707",
+    "cik": "1408356",
+    "fd": "2012-12-13",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2011-09-30",
+    "ratios": {},
+    "sid": "SCTY VCEB57FOLXET",
+    "ticker": "SCTY",
+    "verdict": "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)",
+    "version_tags": {}
+   },
+   {
+    "acc": "0000101830-14-000030",
+    "cik": "101830",
+    "fd": "2013-02-28",
+    "orig_accn": "0000101830-13-000006",
+    "orig_filed": "2013-02-28",
+    "orig_form": "10-K",
+    "pe": "2012-12-31",
+    "ratios": {
+     "net_income_q": 0.0204,
+     "net_income_ttm": 1.0,
+     "operating_cash_flow_ttm": 1.0,
+     "operating_income_ttm": 0.8363,
+     "revenue_q": 0.9731,
+     "revenue_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "FON R735QTJ8XC9X",
+    "ticker": "S",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "none",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "none",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-14-039756",
+    "cik": "1564708",
+    "fd": "2013-02-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-12-31",
+    "ratios": {},
+    "sid": "NWSAV VHJF6S7EZRL1",
+    "ticker": "NWSAV",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "none",
+     "stockholders_equity": "none"
+    }
+   },
+   {
+    "acc": "0001193125-14-039756",
+    "cik": "1564708",
+    "fd": "2013-02-14",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2012-12-31",
+    "ratios": {},
+    "sid": "NWSVV VHJF6S7EZRL1",
+    "ticker": "NWSVV",
+    "verdict": "unresolved: some values match no SEC filing",
+    "version_tags": {
+     "net_income_q": "none",
+     "revenue_q": "none",
+     "stockholders_equity": "none"
+    }
+   },
+   {
+    "acc": "0001193125-14-039756",
+    "cik": "1564708",
+    "fd": "2013-09-20",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2013-06-30",
+    "ratios": {},
+    "sid": "NWSAV VHJF6S7EZRL1",
+    "ticker": "NWSA",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001193125-14-039756",
+    "cik": "1564708",
+    "fd": "2013-09-20",
+    "orig_accn": null,
+    "orig_filed": "None",
+    "orig_form": "None",
+    "pe": "2013-06-30",
+    "ratios": {},
+    "sid": "NWSVV VHJF6S7EZRL1",
+    "ticker": "NWS",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "revenue_q": "first",
+     "revenue_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   },
+   {
+    "acc": "0001379895-15-000005",
+    "cik": "1379895",
+    "fd": "2014-02-27",
+    "orig_accn": "0001379895-14-000004",
+    "orig_filed": "2014-02-27",
+    "orig_form": "10-K",
+    "pe": "2013-12-31",
+    "ratios": {
+     "net_income_ttm": 1.0,
+     "stockholders_equity": 1.0,
+     "total_assets": 1.0
+    },
+    "sid": "DYN RRWGXYWP5HET",
+    "ticker": "DYN",
+    "verdict": "valid: values equal the original filing; only the accession reference is later",
+    "version_tags": {
+     "net_income_q": "first",
+     "net_income_ttm": "first",
+     "operating_cash_flow_ttm": "first",
+     "stockholders_equity": "first",
+     "total_assets": "first"
+    }
+   }
+  ],
+  "records": 230,
+  "verdicts": {
+   "mixed-period: income statement = original filing; balance sheet = an EARLIER period's, public before the vendor date (historically available, inconsistent; kept quarantined)": 135,
+   "restated: vendor value equals a LATER filing's value": 20,
+   "unresolved: balance-sheet values match no SEC filing (kept quarantined)": 5,
+   "unresolved: no SEC filing in XBRL reports this period (pre-XBRL period or CIK mismatch)": 34,
+   "unresolved: some values match no SEC filing": 13,
+   "unresolved: too few values to verify": 3,
+   "valid: values equal the original filing; only the accession reference is later": 20
+  }
+ },
+ "run_counts": {
+  "K": 48682,
+  "P_eval": 205859,
+  "V": 16810,
+  "split_disagree": 155,
+  "split_events": 103
+ },
+ "sample_composition": {
+  "Visa (dated exchange correction)": 1,
+  "acquisition/delisting (DirecTV 2015)": 1,
+  "acquisition/delisting (Monsanto 2018)": 1,
+  "amendment": 2,
+  "bank (JPMorgan)": 1,
+  "delayed filing (Kraft Heinz 2018 10-K)": 1,
+  "estimated_date": 80,
+  "insurer (AIG)": 1,
+  "multi-class (Alphabet)": 1,
+  "multi-class (Berkshire)": 1,
+  "normal (Microsoft)": 1,
+  "quarantined": 167,
+  "random": 150,
+  "split (AAPL 7:1 2014, 4:1 2020)": 1,
+  "split (NVDA 2021 4:1)": 1,
+  "split (TSLA 2020 5:1)": 1
+ },
+ "sample_exposure_vs_sec_filing": {
+  "exposed ON/BEFORE SEC filing date": 60,
+  "exposed after SEC filing date": 14378,
+  "never exposed in sample window (superseded / stale / timing unknown)": 8
+ },
+ "splits": {
+  "canary_split_disagree_raw": 155,
+  "company_months_with_split_adjustment": {
+   "agree": 158,
+   "disagree": 1
+  },
+  "live_split_events_on_sample": 103,
+  "note": "canary count 'split_disagree' used an inverted vendor ratio (canary formula)"
+ },
+ "value_classes_vs_sec_original": {
+  "estimated": {
+   "_no_sec_original": {
+    "n": 135
+   },
+   "gross_profit_ttm": {
+    "differs": 3,
+    "far": 4,
+    "match": 150,
+    "n/a": 335
+   },
+   "net_income_q": {
+    "close": 5,
+    "differs": 3,
+    "far": 12,
+    "match": 455,
+    "n/a": 17
+   },
+   "net_income_ttm": {
+    "close": 4,
+    "differs": 3,
+    "far": 14,
+    "match": 381,
+    "n/a": 90
+   },
+   "operating_cash_flow_ttm": {
+    "close": 1,
+    "differs": 2,
+    "far": 15,
+    "match": 381,
+    "n/a": 93
+   },
+   "operating_income_ttm": {
+    "close": 22,
+    "differs": 67,
+    "far": 87,
+    "match": 160,
+    "n/a": 156
+   },
+   "revenue_q": {
+    "close": 5,
+    "differs": 9,
+    "far": 10,
+    "match": 414,
+    "n/a": 54
+   },
+   "revenue_ttm": {
+    "close": 1,
+    "differs": 8,
+    "far": 14,
+    "match": 344,
+    "n/a": 125
+   },
+   "stockholders_equity": {
+    "close": 4,
+    "differs": 4,
+    "far": 5,
+    "match": 465,
+    "n/a": 14
+   },
+   "total_assets": {
+    "far": 3,
+    "match": 476,
+    "n/a": 13
+   }
+  },
+  "normal": {
+   "_no_sec_original": {
+    "n": 1999
+   },
+   "gross_profit_ttm": {
+    "close": 29,
+    "differs": 50,
+    "far": 108,
+    "match": 4336,
+    "n/a": 9431
+   },
+   "net_income_q": {
+    "close": 107,
+    "differs": 130,
+    "far": 287,
+    "match": 13255,
+    "n/a": 175
+   },
+   "net_income_ttm": {
+    "close": 71,
+    "differs": 123,
+    "far": 213,
+    "match": 12321,
+    "n/a": 1226
+   },
+   "operating_cash_flow_ttm": {
+    "close": 106,
+    "differs": 102,
+    "far": 172,
+    "match": 12070,
+    "n/a": 1504
+   },
+   "operating_income_ttm": {
+    "close": 748,
+    "differs": 1780,
+    "far": 2698,
+    "match": 4845,
+    "n/a": 3883
+   },
+   "revenue_q": {
+    "close": 151,
+    "differs": 227,
+    "far": 516,
+    "match": 11648,
+    "n/a": 1412
+   },
+   "revenue_ttm": {
+    "close": 151,
+    "differs": 254,
+    "far": 453,
+    "match": 10492,
+    "n/a": 2604
+   },
+   "stockholders_equity": {
+    "close": 180,
+    "differs": 65,
+    "far": 255,
+    "match": 13342,
+    "n/a": 112
+   },
+   "total_assets": {
+    "close": 7,
+    "differs": 31,
+    "far": 130,
+    "match": 13683,
+    "n/a": 103
+   }
+  },
+  "quarantined": {
+   "_no_sec_original": {
+    "n": 47
+   },
+   "gross_profit_ttm": {
+    "match": 52,
+    "n/a": 131
+   },
+   "net_income_q": {
+    "close": 1,
+    "differs": 3,
+    "far": 4,
+    "match": 171,
+    "n/a": 4
+   },
+   "net_income_ttm": {
+    "differs": 6,
+    "far": 4,
+    "match": 137,
+    "n/a": 36
+   },
+   "operating_cash_flow_ttm": {
+    "close": 4,
+    "far": 3,
+    "match": 144,
+    "n/a": 32
+   },
+   "operating_income_ttm": {
+    "close": 6,
+    "differs": 16,
+    "far": 34,
+    "match": 55,
+    "n/a": 72
+   },
+   "revenue_q": {
+    "close": 14,
+    "differs": 9,
+    "far": 9,
+    "match": 135,
+    "n/a": 16
+   },
+   "revenue_ttm": {
+    "close": 1,
+    "differs": 2,
+    "far": 2,
+    "match": 136,
+    "n/a": 42
+   },
+   "stockholders_equity": {
+    "close": 37,
+    "differs": 86,
+    "far": 27,
+    "match": 32,
+    "n/a": 1
+   },
+   "total_assets": {
+    "close": 38,
+    "differs": 93,
+    "far": 20,
+    "match": 31,
+    "n/a": 1
+   }
+  }
+ },
+ "vendor_value_source_non_quarantined": {
+  "first": 55692,
+  "later": 112,
+  "none": 2560
+ }
+}

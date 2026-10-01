@@ -1,0 +1,4074 @@
+{
+ "1000697": {
+  "n_records": 53,
+  "name": "Waters Corporation",
+  "sids": [
+   "WAT R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1002910": {
+  "n_records": 51,
+  "name": "AMEREN CORP",
+  "sids": [
+   "AEE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1003078": {
+  "n_records": 45,
+  "name": "MSC INDUSTRIAL DIRECT CO., INC.",
+  "sids": [
+   "MSM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1013237": {
+  "n_records": 45,
+  "name": "FACTSET RESEARCH SYSTEMS INC.",
+  "sids": [
+   "FDS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1013462": {
+  "n_records": 47,
+  "name": "ANSYS, Inc.",
+  "sids": [
+   "ANSS R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1014473": {
+  "n_records": 51,
+  "name": "VERISIGN INC/CA",
+  "sids": [
+   "VRSN R7UQ9FRZ2GRP"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1015922": {
+  "n_records": 0,
+  "name": "CHECK POINT SOFTWARE TECHNOLOGIES LTD.",
+  "sids": [
+   "CHKPF R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1018003": {
+  "n_records": 26,
+  "name": "INGRAM MICRO INC",
+  "sids": [
+   "IM R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "101830": {
+  "n_records": 45,
+  "name": "SPRINT CORP",
+  "sids": [
+   "FON R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1020416": {
+  "n_records": 26,
+  "name": "MONSTER WORLDWIDE, INC.",
+  "sids": [
+   "TMPW R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1020859": {
+  "n_records": 46,
+  "name": "UNITED NATURAL FOODS,\u00a0INC.",
+  "sids": [
+   "UNFI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1021860": {
+  "n_records": 51,
+  "name": "NOV INC.",
+  "sids": [
+   "NOI R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1022079": {
+  "n_records": 51,
+  "name": "Quest Diagnostics Inc",
+  "sids": [
+   "DGX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1023731": {
+  "n_records": 44,
+  "name": "8x8, Inc.",
+  "sids": [
+   "EGHT R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1025378": {
+  "n_records": 49,
+  "name": "W. P. Carey Inc.",
+  "sids": [
+   "CDC R7LV8LHGDOBP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "102741": {
+  "n_records": 28,
+  "name": "VALSPAR CORP",
+  "sids": [
+   "VAL R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1031296": {
+  "n_records": 53,
+  "name": "FIRSTENERGY CORP",
+  "sids": [
+   "FE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1032033": {
+  "n_records": 51,
+  "name": "SLM Corp",
+  "sids": [
+   "SLM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1033012": {
+  "n_records": 43,
+  "name": "FLAGSTAR BANCORP INC",
+  "sids": [
+   "FLGS R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "103379": {
+  "n_records": 49,
+  "name": "V. F. CORPORATION",
+  "sids": [
+   "VFC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1036960": {
+  "n_records": 25,
+  "name": "FAIRCHILD SEMICONDUCTOR INTERNATIONAL INC",
+  "sids": [
+   "FCS RMX9KYBZ8679"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1037760": {
+  "n_records": 26,
+  "name": "CEPHEID",
+  "sids": [
+   "CPHD RVQBJ24BV3VP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1037868": {
+  "n_records": 51,
+  "name": "AMETEK, Inc.",
+  "sids": [
+   "AME R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1037949": {
+  "n_records": 19,
+  "name": "QWEST COMMUNICATIONS INTERNATIONAL INC",
+  "sids": [
+   "QWST R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1043219": {
+  "n_records": 52,
+  "name": "ANNALY CAPITAL MANAGEMENT INC",
+  "sids": [
+   "NLY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1043604": {
+  "n_records": 51,
+  "name": "JUNIPER NETWORKS, INC.",
+  "sids": [
+   "JNPR RLTVP7P85ZS5"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1045810": {
+  "n_records": 50,
+  "name": "NVIDIA CORP",
+  "sids": [
+   "NVDA RHM8UTD8DT2D"
+  ],
+  "why": [
+   "quarantined",
+   "split (NVDA 2021 4:1)"
+  ]
+ },
+ "1046311": {
+  "n_records": 50,
+  "name": "CHOICE HOTELS INTERNATIONAL INC /DE",
+  "sids": [
+   "CHH R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1047862": {
+  "n_records": 50,
+  "name": "CONSOLIDATED EDISON INC",
+  "sids": [
+   "ED R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1048286": {
+  "n_records": 54,
+  "name": "MARRIOTT INTERNATIONAL INC /MD/",
+  "sids": [
+   "MAR R9GTMYCXKZ8L"
+  ],
+  "why": [
+   "amendment",
+   "quarantined"
+  ]
+ },
+ "1048695": {
+  "n_records": 47,
+  "name": "F5, INC.",
+  "sids": [
+   "FFIV RL97B90OK5ET"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1048911": {
+  "n_records": 50,
+  "name": "FEDEX CORP",
+  "sids": [
+   "FDX R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "105016": {
+  "n_records": 47,
+  "name": "WATSCO, INC.",
+  "sids": [
+   "WSO R735QTJ8XC9X",
+   "WSOB R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1054374": {
+  "n_records": 26,
+  "name": "BROADCOM CORP",
+  "sids": [
+   "BRCM R9YJOMXYYK4L"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1058290": {
+  "n_records": 51,
+  "name": "COGNIZANT TECHNOLOGY SOLUTIONS CORPORATION",
+  "sids": [
+   "CTSH RBOKUIZLS38L"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1060391": {
+  "n_records": 51,
+  "name": "REPUBLIC SERVICES, INC.",
+  "sids": [
+   "RSG RC0E7NDMP55X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1060736": {
+  "n_records": 44,
+  "name": "Seagen Inc.",
+  "sids": [
+   "SGEN S2TCB9V1OIG5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1060822": {
+  "n_records": 47,
+  "name": "CARTER\u2019S, INC.",
+  "sids": [
+   "CRI ST3KX4E97JOL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1060955": {
+  "n_records": 0,
+  "name": "ICON plc",
+  "sids": [
+   "ICLRY RAQ4796P3OMD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1061630": {
+  "n_records": 43,
+  "name": "Blackstone Mortgage Trust, Inc.",
+  "sids": [
+   "CT R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1062579": {
+  "n_records": 0,
+  "name": "AMDOCS LIMITED",
+  "sids": [
+   "DOX RBOKUIZLS38L"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1063761": {
+  "n_records": 54,
+  "name": "SIMON PROPERTY GROUP, INC.",
+  "sids": [
+   "SPG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1065280": {
+  "n_records": 53,
+  "name": "NETFLIX INC",
+  "sids": [
+   "NFLX SEWJWLJNHZDX"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1067983": {
+  "n_records": 51,
+  "name": "BERKSHIRE HATHAWAY INC",
+  "sids": [
+   "BRKA R735QTJ8XC9X",
+   "BRKB R735QTJ8XC9X"
+  ],
+  "why": [
+   "multi-class (Berkshire)"
+  ]
+ },
+ "1077428": {
+  "n_records": 44,
+  "name": "TEXAS CAPITAL BANCSHARES INC/TX",
+  "sids": [
+   "TCBI SR4OQE23P84L"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1079023": {
+  "n_records": 5,
+  "name": "VARIAN SEMICONDUCTOR EQUIPMENT ASSOCIATES INC",
+  "sids": [
+   "VSEA RJM4HN2JYVS5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "108312": {
+  "n_records": 47,
+  "name": "WOODWARD, INC.",
+  "sids": [
+   "WGOV R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1087432": {
+  "n_records": 13,
+  "name": "INTERMUNE INC",
+  "sids": [
+   "ITMN RTAOQQKB1YLH"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "109198": {
+  "n_records": 50,
+  "name": "The TJX Companies, Inc.",
+  "sids": [
+   "TJX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1095073": {
+  "n_records": 47,
+  "name": "EVEREST GROUP, LTD.",
+  "sids": [
+   "RE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1099219": {
+  "n_records": 51,
+  "name": "MetLife, Inc.",
+  "sids": [
+   "MET RTMI3UYBZ0IT"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1099800": {
+  "n_records": 47,
+  "name": "Edwards Lifesciences Corporation",
+  "sids": [
+   "EW RTKJ7O7ZTI79"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1100412": {
+  "n_records": 31,
+  "name": "ARRAY BIOPHARMA INC",
+  "sids": [
+   "ARRY RZT14ZMH9ISL"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1102993": {
+  "n_records": 44,
+  "name": "LIVEPERSON, INC.",
+  "sids": [
+   "LPSN RTOH01OO4IUD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1104485": {
+  "n_records": 44,
+  "name": "NORTHERN OIL AND GAS, INC.",
+  "sids": [
+   "NOG U19RW45URZVP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "110471": {
+  "n_records": 46,
+  "name": "WOLVERINE WORLD WIDE, INC.",
+  "sids": [
+   "WWW R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "110621": {
+  "n_records": 49,
+  "name": "RPM INTERNATIONAL INC.",
+  "sids": [
+   "RPOW R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1108827": {
+  "n_records": 40,
+  "name": "QEP RESOURCES, INC.",
+  "sids": [
+   "QEP UNW2LFOG1XLX"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1109345": {
+  "n_records": 0,
+  "name": "NOVA LTD.",
+  "sids": [
+   "NVMI RTSESF5CFJHH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1109357": {
+  "n_records": 51,
+  "name": "EXELON CORPORATION",
+  "sids": [
+   "PE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1110783": {
+  "n_records": 40,
+  "name": "MONSANTO CO /NEW/",
+  "sids": [
+   "MON RYZHQ6NEYVZ9"
+  ],
+  "why": [
+   "acquisition/delisting (Monsanto 2018)",
+   "quarantined"
+  ]
+ },
+ "1115128": {
+  "n_records": 33,
+  "name": "Quotient Technology Inc.",
+  "sids": [
+   "COUP VOOEV6OGYOH1"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1121788": {
+  "n_records": 52,
+  "name": "GARMIN LTD",
+  "sids": [
+   "GRMN S0DPIYB0VD5X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1123360": {
+  "n_records": 48,
+  "name": "GLOBAL PAYMENTS INC.",
+  "sids": [
+   "GPN S1VV43FB2UZP"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1125920": {
+  "n_records": 33,
+  "name": "SHUTTERFLY INC",
+  "sids": [
+   "SFLY TME4P9615KKL"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1130258": {
+  "n_records": 9,
+  "name": "ACME PACKET INC",
+  "sids": [
+   "APKT TMRWYKAE84TH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1130310": {
+  "n_records": 51,
+  "name": "CENTERPOINT ENERGY INC",
+  "sids": [
+   "HOU R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1136869": {
+  "n_records": 51,
+  "name": "ZIMMER BIOMET HOLDINGS, INC.",
+  "sids": [
+   "ZMH S6ZZPKTVDY05"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1136893": {
+  "n_records": 51,
+  "name": "Fidelity National Information Services, Inc.",
+  "sids": [
+   "CEY S67FQV7Z62CL"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1137411": {
+  "n_records": 38,
+  "name": "ROCKWELL COLLINS INC",
+  "sids": [
+   "COL S60JM7NSMS85"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1137774": {
+  "n_records": 51,
+  "name": "PRUDENTIAL FINANCIAL INC",
+  "sids": [
+   "PRU SAI0XJNH6IJP"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1140536": {
+  "n_records": 48,
+  "name": "WILLIS TOWERS WATSON PLC",
+  "sids": [
+   "WLTW W6Z4XQEE5EUD"
+  ],
+  "why": [
+   "amendment"
+  ]
+ },
+ "1141391": {
+  "n_records": 51,
+  "name": "Mastercard Incorporated",
+  "sids": [
+   "MA TIX2XDPLFR6T"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1141719": {
+  "n_records": 12,
+  "name": "ALTERRA CAPITAL HOLDINGS LTD",
+  "sids": [
+   "MXRE S76VU8E1X84L"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1142229": {
+  "n_records": 0,
+  "name": null,
+  "sids": [
+   "PVX S5QP5A03V8MD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1144215": {
+  "n_records": 46,
+  "name": "ACUITY INC.",
+  "sids": [
+   "AYI S9PGYU1KYMW5"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1156039": {
+  "n_records": 51,
+  "name": "ELEVANCE HEALTH, INC.",
+  "sids": [
+   "ATH S9AP9FK1TBHH"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1158172": {
+  "n_records": 40,
+  "name": "COMSCORE, INC.",
+  "sids": [
+   "SCOR TTSYULARW12D"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1163739": {
+  "n_records": 50,
+  "name": "NABORS INDUSTRIES LTD",
+  "sids": [
+   "NBR R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1166003": {
+  "n_records": 43,
+  "name": "XPO, Inc.",
+  "sids": [
+   "SZI SYLHRWX6L6XX"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1167419": {
+  "n_records": 46,
+  "name": "RIOT PLATFORMS, INC.",
+  "sids": [
+   "APPY TVI0KDZ8MT0L"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1168478": {
+  "n_records": 1,
+  "name": "HEWITT ASSOCIATES INC",
+  "sids": [
+   "HEW SFV0JVCK6E05"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1169561": {
+  "n_records": 47,
+  "name": "Commvault Systems, Inc",
+  "sids": [
+   "CVLT TM78KLLUMAG5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1221715": {
+  "n_records": 0,
+  "name": null,
+  "sids": [
+   "IOC T1UNZ1G9OZ1H"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1262823": {
+  "n_records": 43,
+  "name": "Westlake Corporation",
+  "sids": [
+   "WLK T133GF7JJUJP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "12659": {
+  "n_records": 50,
+  "name": "H&R BLOCK INC",
+  "sids": [
+   "HRB R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1267238": {
+  "n_records": 52,
+  "name": "Assurant, Inc.",
+  "sids": [
+   "AIZ SVXZEUFT60DH"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1270073": {
+  "n_records": 38,
+  "name": "Intercept Pharmaceuticals, Inc.",
+  "sids": [
+   "ICPT VAO9ZBE1SEAT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1273813": {
+  "n_records": 50,
+  "name": "ASSURED GUARANTY\u00a0LTD.",
+  "sids": [
+   "AGO SY2SA4YZ4UW5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1274057": {
+  "n_records": 25,
+  "name": "HOSPIRA INC",
+  "sids": [
+   "HSP SYCMR2MNWEHX"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1274913": {
+  "n_records": 2,
+  "name": "INHIBITEX, INC.",
+  "sids": [
+   "INHX SZ8522C2CJMT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1275283": {
+  "n_records": 33,
+  "name": "REYNOLDS AMERICAN INC",
+  "sids": [
+   "RJR RLK18A1JEG6D"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1276520": {
+  "n_records": 52,
+  "name": "GENWORTH FINANCIAL, INC.",
+  "sids": [
+   "GNW SYYAL4ODL011"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1279363": {
+  "n_records": 38,
+  "name": "WELLCARE HEALTH PLANS, INC.",
+  "sids": [
+   "WCG SZYQ4L7MEWYT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1280600": {
+  "n_records": 33,
+  "name": "ACCELERON PHARMA INC.",
+  "sids": [
+   "XLRN VK10VAHRYF6T"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1282637": {
+  "n_records": 47,
+  "name": "NEWMARKET CORPORATION",
+  "sids": [
+   "EY R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1286225": {
+  "n_records": 43,
+  "name": "RealPage, Inc.",
+  "sids": [
+   "RP UP1FDD1J9MCL"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1289236": {
+  "n_records": 23,
+  "name": "BioMed Realty Trust Inc",
+  "sids": [
+   "BMR T0Y67YDP62QT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1289490": {
+  "n_records": 47,
+  "name": "EXTRA SPACE STORAGE INC.",
+  "sids": [
+   "EXR T142WIKPMLPH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "12927": {
+  "n_records": 51,
+  "name": "THE BOEING COMPANY",
+  "sids": [
+   "BA R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1295810": {
+  "n_records": 44,
+  "name": "Sunstone Hotel Investors, Inc.",
+  "sids": [
+   "SHO T310726IZEXX"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1297989": {
+  "n_records": 43,
+  "name": "EXLSERVICE HOLDINGS, INC.",
+  "sids": [
+   "EXLS TMYT37UKREXX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1298675": {
+  "n_records": 43,
+  "name": "CUBESMART",
+  "sids": [
+   "YSI T31ZN5JP263P"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1298946": {
+  "n_records": 47,
+  "name": "DIAMONDROCK HOSPITALITY CO",
+  "sids": [
+   "DRH T8YO7CK5L4RP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1299709": {
+  "n_records": 42,
+  "name": "Axos Financial, Inc.",
+  "sids": [
+   "BOFI T6ZS0M802T7P"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1308161": {
+  "n_records": 38,
+  "name": "TWENTY-FIRST CENTURY FOX, INC.",
+  "sids": [
+   "NWS T3MO1488O0H1"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1318605": {
+  "n_records": 47,
+  "name": "Tesla, Inc.",
+  "sids": [
+   "TSLA UNU3P8Y3WFAD"
+  ],
+  "why": [
+   "estimated_date",
+   "split (TSLA 2020 5:1)"
+  ]
+ },
+ "1322705": {
+  "n_records": 17,
+  "name": "Spansion Inc.",
+  "sids": [
+   "CODE UMOQXBL0OQJP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1324245": {
+  "n_records": 22,
+  "name": "SOLERA HOLDINGS, INC",
+  "sids": [
+   "SLH TSIOU73UAKIT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1324424": {
+  "n_records": 48,
+  "name": "EXPEDIA GROUP, INC.",
+  "sids": [
+   "EXPE TB0IQCZTBPT1"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1326160": {
+  "n_records": 53,
+  "name": "Duke Energy CORP",
+  "sids": [
+   "DUK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1326380": {
+  "n_records": 51,
+  "name": "GameStop Corp.",
+  "sids": [
+   "GME SC72NCBXXAHX"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1327567": {
+  "n_records": 38,
+  "name": "Palo Alto Networks, Inc",
+  "sids": [
+   "PANW V8EJVK11FRZ9"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1328581": {
+  "n_records": 36,
+  "name": "Boise Cascade Company",
+  "sids": [
+   "BCC VDWGQCJYTF8L"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1340041": {
+  "n_records": 6,
+  "name": "COMPLETE PRODUCTION SERVICES, INC.",
+  "sids": [
+   "CPX THZLQ79UU3QD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1357326": {
+  "n_records": 19,
+  "name": "Riverbed Technology, Inc.",
+  "sids": [
+   "RVBD TM694I8OJJAD"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1357615": {
+  "n_records": 55,
+  "name": "KBR, Inc.",
+  "sids": [
+   "KBR TNPE5QQ4TS9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1360604": {
+  "n_records": 44,
+  "name": "Healthcare Realty Trust Inc",
+  "sids": [
+   "HR R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1362004": {
+  "n_records": 44,
+  "name": "ICF International, Inc.",
+  "sids": [
+   "ICFI TMD595SV2TET"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1364250": {
+  "n_records": 47,
+  "name": "Douglas Emmett Inc",
+  "sids": [
+   "DEI TN3QBOOF56QT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1365135": {
+  "n_records": 52,
+  "name": "THE WESTERN UNION COMPANY",
+  "sids": [
+   "WU TMH31J9JDU1X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1366684": {
+  "n_records": 18,
+  "name": "HOMEAWAY INC",
+  "sids": [
+   "AWAY UXTHVDGPTSV9"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1368458": {
+  "n_records": 47,
+  "name": "SALLY BEAUTY HOLDINGS, INC.",
+  "sids": [
+   "SBH TNQDLU3AWJFP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1371285": {
+  "n_records": 31,
+  "name": "TRUPANION, INC.",
+  "sids": [
+   "TRUP VSBDBMBX50TH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1374684": {
+  "n_records": 4,
+  "name": "MULESOFT, INC",
+  "sids": [
+   "MULE WIXFAL95L3Z9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1378789": {
+  "n_records": 0,
+  "name": "AerCap Holdings\u00a0N.V.",
+  "sids": [
+   "AER TNUBE7JZ7K2T"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1379895": {
+  "n_records": 31,
+  "name": "DYNEGY INC.",
+  "sids": [
+   "DYN RRWGXYWP5HET"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1383312": {
+  "n_records": 46,
+  "name": "BROADRIDGE FINANCIAL SOLUTIONS, INC.",
+  "sids": [
+   "BR TRGAEJU9B59H"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1383729": {
+  "n_records": 11,
+  "name": "FUSION-IO, INC.",
+  "sids": [
+   "FIO UX9SXI5CAPNP"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1385867": {
+  "n_records": 21,
+  "name": "Coupa Software Inc",
+  "sids": [
+   "COUP WEHWVFZT6VZ9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1389170": {
+  "n_records": 43,
+  "name": "Targa Resources Corp.",
+  "sids": [
+   "TRGP US8MOAUA7W4L"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1390777": {
+  "n_records": 51,
+  "name": "Bank of New York Mellon Corp",
+  "sids": [
+   "BK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1393311": {
+  "n_records": 51,
+  "name": "Public Storage",
+  "sids": [
+   "PSA R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1393612": {
+  "n_records": 50,
+  "name": "DISCOVER FINANCIAL SERVICES",
+  "sids": [
+   "DFS TTXW324M9SV9"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1402305": {
+  "n_records": 4,
+  "name": "SUCCESSFACTORS, INC.",
+  "sids": [
+   "SFSF TXSQ48PF26HX"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1403161": {
+  "n_records": 51,
+  "name": "VISA INC.",
+  "sids": [
+   "V U12VRGLO8PR9"
+  ],
+  "why": [
+   "Visa (dated exchange correction)"
+  ]
+ },
+ "1408075": {
+  "n_records": 45,
+  "name": "Graphic Packaging Holding Co",
+  "sids": [
+   "GPK SR2PU7BRJPT1"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1408356": {
+  "n_records": 16,
+  "name": "SOLARCITY CORP",
+  "sids": [
+   "SCTY VCEB57FOLXET"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1410997": {
+  "n_records": 7,
+  "name": "AMERICAN REALTY CAPITAL TRUST, INC.",
+  "sids": [
+   "ARCT V4JPUDG8NECL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1418135": {
+  "n_records": 50,
+  "name": "Keurig Dr Pepper Inc.",
+  "sids": [
+   "DPS U2F4O1IXZOMD"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1420800": {
+  "n_records": 43,
+  "name": "Enovis Corp",
+  "sids": [
+   "CFX U2G444W42FS5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "14272": {
+  "n_records": 51,
+  "name": "BRISTOL-MYERS SQUIBB COMPANY",
+  "sids": [
+   "BMY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1434418": {
+  "n_records": 12,
+  "name": "CONSTELLATION PHARMACEUTICALS INC",
+  "sids": [
+   "CNST WWAWWB4P01GL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1434621": {
+  "n_records": 43,
+  "name": "LendingTree,\u00a0Inc.",
+  "sids": [
+   "TREE U5BI1YAU3NMT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1443646": {
+  "n_records": 43,
+  "name": "Booz Allen Hamilton Holding Corporation",
+  "sids": [
+   "BAH UROXQFIWOSX1"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1447669": {
+  "n_records": 24,
+  "name": "TWILIO INC.",
+  "sids": [
+   "TWLO WBMIXML35O4L"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1451505": {
+  "n_records": 51,
+  "name": "Transocean\u00a0Ltd.",
+  "sids": [
+   "RIG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1452575": {
+  "n_records": 25,
+  "name": "Mead Johnson Nutrition Co",
+  "sids": [
+   "MJN UA2TU7Y7EXK5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1465112": {
+  "n_records": 28,
+  "name": "DIRECTV",
+  "sids": [
+   "HS SUQNQQCDSTB9"
+  ],
+  "why": [
+   "acquisition/delisting (DirecTV 2015)"
+  ]
+ },
+ "1466258": {
+  "n_records": 51,
+  "name": "TRANE TECHNOLOGIES PLC",
+  "sids": [
+   "IR R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1467858": {
+  "n_records": 44,
+  "name": "GENERAL MOTORS COMPANY",
+  "sids": [
+   "GM URPX6IW2RK2T"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1474627": {
+  "n_records": 7,
+  "name": "Newegg Commerce, Inc.",
+  "sids": [
+   "DHRM ULZ5AW2MP4DH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1477815": {
+  "n_records": 0,
+  "name": "SWEETGREEN, INC.",
+  "sids": [
+   "SG XTM7E6OA6YXX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1479094": {
+  "n_records": 43,
+  "name": "STAG Industrial,\u00a0Inc.",
+  "sids": [
+   "STIR UVRNCD1237TX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1486957": {
+  "n_records": 44,
+  "name": "BWX TECHNOLOGIES, INC.",
+  "sids": [
+   "BWC UORKWFDUI2QT"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1490281": {
+  "n_records": 42,
+  "name": "Groupon, Inc.",
+  "sids": [
+   "GRPN V1BJ3CABMDET"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1501585": {
+  "n_records": 43,
+  "name": "HUNTINGTON INGALLS INDUSTRIES, INC.",
+  "sids": [
+   "HII UVCVMYJIXWF9"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1504776": {
+  "n_records": 2,
+  "name": "Warby Parker Inc.",
+  "sids": [
+   "WRBY XS8Z1IDUD8X1"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1509991": {
+  "n_records": 45,
+  "name": "Kosmos Energy Ltd.",
+  "sids": [
+   "KOS UWH8YSJG2U05"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1510295": {
+  "n_records": 43,
+  "name": "Marathon Petroleum Corporation",
+  "sids": [
+   "MPC UXVGRK71ZB6T"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1510487": {
+  "n_records": 8,
+  "name": "PRINCIPIA BIOPHARMA INC.",
+  "sids": [
+   "PRNB WXV1DMZBD1LX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1513845": {
+  "n_records": 0,
+  "name": "NEBIUS GROUP\u00a0N.V.",
+  "sids": [
+   "YNDX UWU1S0AN2N39"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1515673": {
+  "n_records": 32,
+  "name": "ULTRAGENYX PHARMACEUTICAL INC.",
+  "sids": [
+   "RARE VNPY7WVKA9UT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1518832": {
+  "n_records": 35,
+  "name": "WPX Energy, Inc.",
+  "sids": [
+   "WPX V2YLWY8G7N1H"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1519751": {
+  "n_records": 42,
+  "name": "Fortune Brands Innovations, Inc.",
+  "sids": [
+   "FBHS V0H08FY38ZFP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1520566": {
+  "n_records": 26,
+  "name": "Nationstar Mortgage Holdings Inc.",
+  "sids": [
+   "NSM V4QLZ10F6OH1"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1524472": {
+  "n_records": 43,
+  "name": "Xylem Inc.",
+  "sids": [
+   "XYL V18KR26TE3XH"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1528930": {
+  "n_records": 43,
+  "name": "Franchise Group, Inc.",
+  "sids": [
+   "TAX V7WTTVG02739"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1530721": {
+  "n_records": 36,
+  "name": "CAPRI HOLDINGS LIMITED",
+  "sids": [
+   "KORS V2FWF6A8RAZP"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1532063": {
+  "n_records": 27,
+  "name": "Express Scripts Holding Co.",
+  "sids": [
+   "ESRX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1538990": {
+  "n_records": 29,
+  "name": "STORE CAPITAL LLC",
+  "sids": [
+   "STOR VVOHB4BOJTK5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1547282": {
+  "n_records": 10,
+  "name": "Burger King Worldwide, Inc.",
+  "sids": [
+   "BKW V7L0GR1Z555X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1551182": {
+  "n_records": 38,
+  "name": "EATON CORPORATION plc",
+  "sids": [
+   "ETN R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1557860": {
+  "n_records": 0,
+  "name": "Globant S.A.",
+  "sids": [
+   "GLOB VSBDBMBX50TH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1559720": {
+  "n_records": 4,
+  "name": "Airbnb, Inc.",
+  "sids": [
+   "ABNB XK8H247DY6W5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1559865": {
+  "n_records": 37,
+  "name": "EVERTEC, Inc.",
+  "sids": [
+   "EVTC VFOGSFBXSGO5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1564708": {
+  "n_records": 34,
+  "name": "NEWS CORPORATION",
+  "sids": [
+   "NWSAV VHJF6S7EZRL1",
+   "NWSVV VHJF6S7EZRL1"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1567683": {
+  "n_records": 36,
+  "name": "Clearway Energy, Inc.",
+  "sids": [
+   "CWEN WXXZPX2TLB39",
+   "CWEN.A WXXZPX2TLB39"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1570585": {
+  "n_records": 38,
+  "name": "Liberty Global Ltd.",
+  "sids": [
+   "LBTYA SZC2UFSQNK9X",
+   "LBTYK TBT2P2LPJLGL"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1571949": {
+  "n_records": 36,
+  "name": "Intercontinental Exchange, Inc.",
+  "sids": [
+   "ICE TDPZZM7IWEP1"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1574135": {
+  "n_records": 7,
+  "name": "Pivotal Software,\u00a0Inc.",
+  "sids": [
+   "PVTL WTUANW7I450L"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1574460": {
+  "n_records": 18,
+  "name": "Straight Path Communications Inc.",
+  "sids": [
+   "STRP VIPRESXOA7HH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1576427": {
+  "n_records": 26,
+  "name": "CRITEO S.A.",
+  "sids": [
+   "CRTO VL6DN7UV63XH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1576789": {
+  "n_records": 0,
+  "name": "Wix.com Ltd.",
+  "sids": [
+   "WIX VLD9RVF1PE1X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1578735": {
+  "n_records": 28,
+  "name": "NATIONAL GENERAL HOLDINGS CORP.",
+  "sids": [
+   "NGHC VO9N5S6XTD2D"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1584509": {
+  "n_records": 33,
+  "name": "Aramark",
+  "sids": [
+   "ARMK VMCPV8L4GJTX"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1590955": {
+  "n_records": 32,
+  "name": "Paycom Software, Inc.",
+  "sids": [
+   "PAYC VPQTATY1Y3QD"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1594109": {
+  "n_records": 29,
+  "name": "GRUBHUB INC.",
+  "sids": [
+   "GRUB VPFZDSX73SYT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1594864": {
+  "n_records": 12,
+  "name": "Juno Therapeutics, Inc.",
+  "sids": [
+   "JUNO VWJ060NWX7J9"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1598110": {
+  "n_records": 0,
+  "name": "CYBERARK SOFTWARE LTD.",
+  "sids": [
+   "CYBR VU6BPZ7ECBQD"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1598428": {
+  "n_records": 31,
+  "name": "METALLUS INC.",
+  "sids": [
+   "TMST VRUMQ141U739"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1600470": {
+  "n_records": 26,
+  "name": "MONTAGE RESOURCES CORP",
+  "sids": [
+   "ECR VRJST036ZWBP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1609550": {
+  "n_records": 16,
+  "name": "Inspire Medical Systems,\u00a0Inc.",
+  "sids": [
+   "INSP WU73H3YP3Y3P"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1609702": {
+  "n_records": 30,
+  "name": "CDK GLOBAL, INC.",
+  "sids": [
+   "CDKVV VU4CTSH26TET"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1622194": {
+  "n_records": 29,
+  "name": "Easterly Government Properties, Inc.",
+  "sids": [
+   "DEA VXV92LL6O6ED"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1629137": {
+  "n_records": 27,
+  "name": "Global Blood Therapeutics, Inc.",
+  "sids": [
+   "GBT W2ZDO2ZQZ9ET"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1637459": {
+  "n_records": 29,
+  "name": "Kraft Heinz Co",
+  "sids": [
+   "KHC W1YY4MGI5CH1"
+  ],
+  "why": [
+   "delayed filing (Kraft Heinz 2018 10-K)"
+  ]
+ },
+ "1639691": {
+  "n_records": 29,
+  "name": "LivaNova PLC",
+  "sids": [
+   "LIVN W4UC2FV86KBP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1643269": {
+  "n_records": 5,
+  "name": "Sumo Logic, Inc.",
+  "sids": [
+   "SUMO XHWS2641G291"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1650132": {
+  "n_records": 26,
+  "name": "Four Corners Property Trust, Inc.",
+  "sids": [
+   "FCPT W5FZWHWXV5UT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1652044": {
+  "n_records": 26,
+  "name": "Alphabet Inc.",
+  "sids": [
+   "GOOCV VP83T1ZUHROL",
+   "GOOG T1AZ164W5VTX"
+  ],
+  "why": [
+   "multi-class (Alphabet)"
+  ]
+ },
+ "1662774": {
+  "n_records": 12,
+  "name": "Quince Therapeutics, Inc.",
+  "sids": [
+   "CRTX X4CEBSOBHUN9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1666291": {
+  "n_records": 2,
+  "name": "Claros Mortgage Trust, Inc.",
+  "sids": [
+   "CMTG XT7FOS6R1NJ9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1670592": {
+  "n_records": 13,
+  "name": "YETI Holdings, Inc.",
+  "sids": [
+   "YETI WYZEPGZ8HZ6T"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1671933": {
+  "n_records": 22,
+  "name": "The Trade Desk, Inc.",
+  "sids": [
+   "TTD WE3561IA1KKL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1674930": {
+  "n_records": 22,
+  "name": "FULGENT GENETICS, INC.",
+  "sids": [
+   "FLGT WEA1AP2GKUP1"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1679788": {
+  "n_records": 4,
+  "name": "Coinbase Global, Inc.",
+  "sids": [
+   "COIN XNNJXSXHIHYD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1680367": {
+  "n_records": 6,
+  "name": "Shattuck Labs, Inc.",
+  "sids": [
+   "STTK XIJFCBIX7EXX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1685040": {
+  "n_records": 19,
+  "name": "Brighthouse Financial, Inc.",
+  "sids": [
+   "BHFWV WM9JTZVQX5K5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1702780": {
+  "n_records": 19,
+  "name": "Optimum Communications, Inc.",
+  "sids": [
+   "ATUS WLKXNNQJ0AJP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1704720": {
+  "n_records": 20,
+  "name": "CANNAE HOLDINGS, INC.",
+  "sids": [
+   "CNNE WPPM5RZ0K7S5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1706431": {
+  "n_records": 10,
+  "name": "Vir Biotechnology, Inc.",
+  "sids": [
+   "VIR X8L0MADHCSIT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1707753": {
+  "n_records": 13,
+  "name": "ELASTIC N.V.",
+  "sids": [
+   "ESTC WYFPRLNUYVZ9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1707925": {
+  "n_records": 16,
+  "name": "Linde plc",
+  "sids": [
+   "PX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1710155": {
+  "n_records": 17,
+  "name": "National Vision Holdings, Inc.",
+  "sids": [
+   "EYE WP0ZZFTSNCRP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1714899": {
+  "n_records": 16,
+  "name": "Denali Therapeutics Inc.",
+  "sids": [
+   "DNLI WQ7C7GK1XSO5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1722482": {
+  "n_records": 11,
+  "name": "Avantor, Inc.",
+  "sids": [
+   "AVTR X4K9WJLO3VXH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1722964": {
+  "n_records": 14,
+  "name": "Y-mAbs Therapeutics,\u00a0Inc.",
+  "sids": [
+   "YMAB WY1XIAJHWBQD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1725255": {
+  "n_records": 17,
+  "name": "AdaptHealth Corp.",
+  "sids": [
+   "AHCO X9FJH6PPQ6HX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1739104": {
+  "n_records": 14,
+  "name": "Elanco Animal Health Incorporated",
+  "sids": [
+   "ELAN WY0Y276BTKKL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1739566": {
+  "n_records": 14,
+  "name": "Utz Brands, Inc.",
+  "sids": [
+   "UTZ XHH0WO9C7ZOL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1739940": {
+  "n_records": 13,
+  "name": "The Cigna Group",
+  "sids": [
+   "CI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1743759": {
+  "n_records": 6,
+  "name": "Corsair Gaming, Inc.",
+  "sids": [
+   "CRSR XI3O6TO7ZCDH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1747009": {
+  "n_records": 14,
+  "name": "Equitrans Midstream Corp",
+  "sids": [
+   "ETRN WZI478XFYB8L"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1748824": {
+  "n_records": 11,
+  "name": "Acadian Asset Management Inc.",
+  "sids": [
+   "OMAM VUL3FDOXHN51"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1756497": {
+  "n_records": 11,
+  "name": "Change Healthcare Inc.",
+  "sids": [
+   "CHNG X5ON8DLL8TID"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1770450": {
+  "n_records": 10,
+  "name": "XEROX HOLDINGS CORPORATION",
+  "sids": [
+   "XRX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1782754": {
+  "n_records": 7,
+  "name": "The AZEK Company Inc.",
+  "sids": [
+   "AZEK XFA956ZU3MUD"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1792789": {
+  "n_records": 5,
+  "name": "DOORDASH, INC.",
+  "sids": [
+   "DASH XK7HM0U7VFQD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1800347": {
+  "n_records": 9,
+  "name": "E2open Parent Holdings, Inc.",
+  "sids": [
+   "PCPL XFD7HH3CBWBP"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1804745": {
+  "n_records": 4,
+  "name": "Driven Brands Holdings Inc.",
+  "sids": [
+   "DRVN XL7X5HDGPCO5"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1812364": {
+  "n_records": 7,
+  "name": "Relay Therapeutics, Inc.",
+  "sids": [
+   "RLAY XG7QCDFKPAAT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "18230": {
+  "n_records": 51,
+  "name": "CATERPILLAR INC",
+  "sids": [
+   "CAT R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1827980": {
+  "n_records": 6,
+  "name": "EMBARK TECHNOLOGY, INC.",
+  "sids": [
+   "NGAB XMK622AQGBJ9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1828318": {
+  "n_records": 3,
+  "name": "Enovix Corporation",
+  "sids": [
+   "RSVA XKX38GCLV1WL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1832466": {
+  "n_records": 4,
+  "name": "ALIGNMENT HEALTHCARE, INC.",
+  "sids": [
+   "ALHC XN4UG0ZA25WL"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1835632": {
+  "n_records": 3,
+  "name": "MARVELL TECHNOLOGY, INC",
+  "sids": [
+   "MRVL RVW87MBCBMUD"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "1845290": {
+  "n_records": 2,
+  "name": "MACQUARIE INFRASTRUCTURE HOLDINGS, LLC",
+  "sids": [
+   "MIC T4K58ANZ9NXH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "19617": {
+  "n_records": 52,
+  "name": "JPMORGAN CHASE & CO",
+  "sids": [
+   "CMB R735QTJ8XC9X"
+  ],
+  "why": [
+   "bank (JPMorgan)",
+   "quarantined"
+  ]
+ },
+ "1996862": {
+  "n_records": 0,
+  "name": "BUNGE GLOBAL SA",
+  "sids": [
+   "BG S6V2H4010679"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "20520": {
+  "n_records": 49,
+  "name": "Frontier Communications Parent, Inc.",
+  "sids": [
+   "FYBR XO78VO8V1L5X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "21175": {
+  "n_records": 43,
+  "name": "CNA FINANCIAL CORPORATION",
+  "sids": [
+   "CNA R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "21344": {
+  "n_records": 51,
+  "name": "COCA COLA CO",
+  "sids": [
+   "KO R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "216228": {
+  "n_records": 51,
+  "name": "ITT INC.",
+  "sids": [
+   "IIN R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "21665": {
+  "n_records": 52,
+  "name": "COLGATE-PALMOLIVE COMPANY",
+  "sids": [
+   "CL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "22444": {
+  "n_records": 46,
+  "name": "COMMERCIAL METALS COMPANY",
+  "sids": [
+   "CMC R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "24741": {
+  "n_records": 51,
+  "name": "CORNING INC /NY",
+  "sids": [
+   "GLW R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "26172": {
+  "n_records": 51,
+  "name": "CUMMINS INC.",
+  "sids": [
+   "CUM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "26780": {
+  "n_records": 44,
+  "name": "Dana Incorporated",
+  "sids": [
+   "DAN TZSLR2EQN97P"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "27419": {
+  "n_records": 51,
+  "name": "Target Corporation",
+  "sids": [
+   "DH R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "275880": {
+  "n_records": 12,
+  "name": "Parsons Corporation",
+  "sids": [
+   "PSN X4BEVPB5F3HH"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "29644": {
+  "n_records": 45,
+  "name": "DONALDSON COMPANY, INC.",
+  "sids": [
+   "DCI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29669": {
+  "n_records": 53,
+  "name": "RR Donnelley & Sons Co",
+  "sids": [
+   "DNY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29905": {
+  "n_records": 52,
+  "name": "DOVER Corp",
+  "sids": [
+   "DOV R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29989": {
+  "n_records": 52,
+  "name": "OMNICOM GROUP INC.",
+  "sids": [
+   "OMC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "30625": {
+  "n_records": 53,
+  "name": "FLOWSERVE CORP",
+  "sids": [
+   "FLS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "310158": {
+  "n_records": 51,
+  "name": "Merck\u00a0& Co., Inc.",
+  "sids": [
+   "MRK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "31462": {
+  "n_records": 51,
+  "name": "ECOLAB INC.",
+  "sids": [
+   "ECL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "315293": {
+  "n_records": 51,
+  "name": "Aon plc",
+  "sids": [
+   "AOC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "315852": {
+  "n_records": 51,
+  "name": "RANGE RESOURCES CORP",
+  "sids": [
+   "LOM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "318154": {
+  "n_records": 51,
+  "name": "Amgen Inc.",
+  "sids": [
+   "AMGN R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "320187": {
+  "n_records": 50,
+  "name": "NIKE, Inc.",
+  "sids": [
+   "NKE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "320193": {
+  "n_records": 52,
+  "name": "Apple Inc.",
+  "sids": [
+   "AAPL R735QTJ8XC9X"
+  ],
+  "why": [
+   "split (AAPL 7:1 2014, 4:1 2020)"
+  ]
+ },
+ "320335": {
+  "n_records": 50,
+  "name": "GLOBE LIFE INC.",
+  "sids": [
+   "TMK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "32604": {
+  "n_records": 51,
+  "name": "EMERSON ELECTRIC CO.",
+  "sids": [
+   "EMR R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "33185": {
+  "n_records": 48,
+  "name": "EQUIFAX INC",
+  "sids": [
+   "EFX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "354950": {
+  "n_records": 50,
+  "name": "The Home Depot, Inc.",
+  "sids": [
+   "HD R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "35527": {
+  "n_records": 51,
+  "name": "FIFTH THIRD BANCORP",
+  "sids": [
+   "FITB R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "356028": {
+  "n_records": 38,
+  "name": "CA, INC.",
+  "sids": [
+   "CA R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "38074": {
+  "n_records": 21,
+  "name": "FOREST LABORATORIES INC",
+  "sids": [
+   "FRX R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "38777": {
+  "n_records": 51,
+  "name": "FRANKLIN RESOURCES INC",
+  "sids": [
+   "BEN R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "39911": {
+  "n_records": 51,
+  "name": "GAP, INC",
+  "sids": [
+   "GPS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "40704": {
+  "n_records": 50,
+  "name": "GENERAL MILLS, INC.",
+  "sids": [
+   "GIS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "40888": {
+  "n_records": 44,
+  "name": "Aerojet Rocketdyne Holdings, Inc.",
+  "sids": [
+   "GY R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "42888": {
+  "n_records": 48,
+  "name": "GRACO INC.",
+  "sids": [
+   "GGG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "45012": {
+  "n_records": 51,
+  "name": "HALLIBURTON COMPANY",
+  "sids": [
+   "HAL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "47518": {
+  "n_records": 47,
+  "name": "HILL-ROM HOLDINGS, INC.",
+  "sids": [
+   "HB R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "50104": {
+  "n_records": 33,
+  "name": "ANDEAVOR",
+  "sids": [
+   "TSO R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "5272": {
+  "n_records": 51,
+  "name": "AMERICAN INTERNATIONAL GROUP, INC.",
+  "sids": [
+   "AIG R735QTJ8XC9X"
+  ],
+  "why": [
+   "insurer (AIG)"
+  ]
+ },
+ "54381": {
+  "n_records": 43,
+  "name": "KAMAN CORPORATION",
+  "sids": [
+   "KAMNA R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "5513": {
+  "n_records": 51,
+  "name": "Unum Group",
+  "sids": [
+   "UNM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "59478": {
+  "n_records": 52,
+  "name": "ELI LILLY AND COMPANY",
+  "sids": [
+   "LLY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "60667": {
+  "n_records": 51,
+  "name": "LOWES COMPANIES INC",
+  "sids": [
+   "LOW R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "62709": {
+  "n_records": 51,
+  "name": "Marsh\u00a0& McLennan Companies, Inc.",
+  "sids": [
+   "MMC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "6281": {
+  "n_records": 50,
+  "name": "ANALOG DEVICES INC",
+  "sids": [
+   "ADI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "62996": {
+  "n_records": 51,
+  "name": "Masco Corporation",
+  "sids": [
+   "MAS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "63276": {
+  "n_records": 53,
+  "name": "MATTEL INC /DE/",
+  "sids": [
+   "MAT R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "63908": {
+  "n_records": 51,
+  "name": "McDONALD\u2019S CORPORATION",
+  "sids": [
+   "MCD R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "64040": {
+  "n_records": 52,
+  "name": "S&P Global Inc.",
+  "sids": [
+   "MHP R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "64803": {
+  "n_records": 51,
+  "name": "CVS HEALTH CORPORATION",
+  "sids": [
+   "CVS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "66740": {
+  "n_records": 51,
+  "name": "3M CO",
+  "sids": [
+   "MMM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "66756": {
+  "n_records": 47,
+  "name": "ALLETE, Inc.",
+  "sids": [
+   "MPL R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "67472": {
+  "n_records": 13,
+  "name": "MOLEX INC",
+  "sids": [
+   "MOLX R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "701985": {
+  "n_records": 50,
+  "name": "BATH & BODY WORKS, INC.",
+  "sids": [
+   "LTD R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "703351": {
+  "n_records": 46,
+  "name": "Brinker International, Inc.",
+  "sids": [
+   "EAT R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "704051": {
+  "n_records": 45,
+  "name": "LEGG MASON, INC.",
+  "sids": [
+   "LM R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "708821": {
+  "n_records": 43,
+  "name": "PAR TECHNOLOGY CORPORATION",
+  "sids": [
+   "PTC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "712534": {
+  "n_records": 44,
+  "name": "FIRST MERCHANTS CORP",
+  "sids": [
+   "FRME R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "715957": {
+  "n_records": 51,
+  "name": "DOMINION ENERGY, INC",
+  "sids": [
+   "D R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "717423": {
+  "n_records": 51,
+  "name": "MURPHY OIL CORPORATION",
+  "sids": [
+   "MUR R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "718877": {
+  "n_records": 52,
+  "name": "ACTIVISION BLIZZARD, INC.",
+  "sids": [
+   "ATVI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "721371": {
+  "n_records": 50,
+  "name": "Cardinal Health, Inc.",
+  "sids": [
+   "CAH R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "72207": {
+  "n_records": 45,
+  "name": "NOBLE ENERGY INC",
+  "sids": [
+   "NBL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "722079": {
+  "n_records": 0,
+  "name": null,
+  "sids": [
+   "TRA R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "723254": {
+  "n_records": 46,
+  "name": "Cintas Corporation",
+  "sids": [
+   "CTAS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "72331": {
+  "n_records": 47,
+  "name": "NORDSON CORPORATION",
+  "sids": [
+   "NDSN R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "73124": {
+  "n_records": 51,
+  "name": "NORTHERN TRUST CORP",
+  "sids": [
+   "NTRS R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "731802": {
+  "n_records": 47,
+  "name": "Atmos Energy Corp",
+  "sids": [
+   "ATO R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "7332": {
+  "n_records": 53,
+  "name": "SOUTHWESTERN ENERGY COMPANY",
+  "sids": [
+   "SWN R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "743988": {
+  "n_records": 46,
+  "name": "XILINX, INC.",
+  "sids": [
+   "XLNX R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "750556": {
+  "n_records": 42,
+  "name": "SunTrust Banks, Inc",
+  "sids": [
+   "STI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "757011": {
+  "n_records": 35,
+  "name": "USG CORP",
+  "sids": [
+   "USG R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "764065": {
+  "n_records": 50,
+  "name": "CLEVELAND-CLIFFS INC.",
+  "sids": [
+   "CLF R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "764478": {
+  "n_records": 50,
+  "name": "Best Buy Co., Inc.",
+  "sids": [
+   "BBY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "765880": {
+  "n_records": 51,
+  "name": "Healthpeak Properties, Inc.",
+  "sids": [
+   "HCP R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "773910": {
+  "n_records": 41,
+  "name": "Anadarko Petroleum Corp",
+  "sids": [
+   "APC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "784977": {
+  "n_records": 47,
+  "name": "PORTLAND GENERAL ELECTRIC COMPANY",
+  "sids": [
+   "POR THORT68ZZSYT"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "78814": {
+  "n_records": 51,
+  "name": "PITNEY BOWES INC",
+  "sids": [
+   "PBI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "788784": {
+  "n_records": 51,
+  "name": "Public Service Enterprise Group Incorporated",
+  "sids": [
+   "PEG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "789019": {
+  "n_records": 50,
+  "name": "MICROSOFT CORPORATION",
+  "sids": [
+   "MSFT R735QTJ8XC9X"
+  ],
+  "why": [
+   "normal (Microsoft)"
+  ]
+ },
+ "790051": {
+  "n_records": 47,
+  "name": "CARLISLE COMPANIES INCORPORATED",
+  "sids": [
+   "CSL R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "790526": {
+  "n_records": 49,
+  "name": "RadNet, Inc.",
+  "sids": [
+   "RDNT TQ60E5NBPOPX"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "790816": {
+  "n_records": 47,
+  "name": "BRANDYWINE REALTY TRUST",
+  "sids": [
+   "BDN R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "794323": {
+  "n_records": 47,
+  "name": "LEVEL 3 PARENT, LLC",
+  "sids": [
+   "LVLT R9ISJ539QHK5"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "794367": {
+  "n_records": 51,
+  "name": "Macy's, Inc.",
+  "sids": [
+   "FD R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "798354": {
+  "n_records": 51,
+  "name": "FISERV, INC.",
+  "sids": [
+   "FISV R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "803649": {
+  "n_records": 48,
+  "name": "EQC LIQUIDATING TRUST",
+  "sids": [
+   "HRP R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "80424": {
+  "n_records": 51,
+  "name": "The Procter & Gamble Company",
+  "sids": [
+   "PG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "808362": {
+  "n_records": 53,
+  "name": "Baker Hughes Holdings LLC",
+  "sids": [
+   "BHI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "808450": {
+  "n_records": 44,
+  "name": "NAVISTAR INTERNATIONAL CORP",
+  "sids": [
+   "NAV R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "812074": {
+  "n_records": 52,
+  "name": "O-I GLASS, INC.",
+  "sids": [
+   "OI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "815556": {
+  "n_records": 52,
+  "name": "FASTENAL CO",
+  "sids": [
+   "FAST R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "816284": {
+  "n_records": 42,
+  "name": "CELGENE CORPORATION",
+  "sids": [
+   "CELG R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "820313": {
+  "n_records": 51,
+  "name": "AMPHENOL CORPORATION",
+  "sids": [
+   "APH R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "821130": {
+  "n_records": 47,
+  "name": "ARRAY DIGITAL INFRASTRUCTURE, INC.",
+  "sids": [
+   "USM R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "823768": {
+  "n_records": 52,
+  "name": "WASTE MANAGEMENT INC",
+  "sids": [
+   "UW R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "824142": {
+  "n_records": 43,
+  "name": "AAON, INC.",
+  "sids": [
+   "AAON R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "827054": {
+  "n_records": 52,
+  "name": "MICROCHIP TECHNOLOGY INCORPORATED",
+  "sids": [
+   "MCHP R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "831259": {
+  "n_records": 53,
+  "name": "Freeport-McMoRan Inc.",
+  "sids": [
+   "FCX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "833081": {
+  "n_records": 8,
+  "name": "PRIDE INTERNATIONAL INC",
+  "sids": [
+   "PDE R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "833444": {
+  "n_records": 51,
+  "name": "JOHNSON CONTROLS INTERNATIONAL PLC",
+  "sids": [
+   "JCI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "849399": {
+  "n_records": 51,
+  "name": "Gen Digital Inc.",
+  "sids": [
+   "SYMC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "851520": {
+  "n_records": 43,
+  "name": "EXPONENT, INC.",
+  "sids": [
+   "FAIL R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "85408": {
+  "n_records": 39,
+  "name": "ROWAN COMPANIES PLC",
+  "sids": [
+   "RDC R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "857005": {
+  "n_records": 47,
+  "name": "PTC Inc.",
+  "sids": [
+   "PMTC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "858470": {
+  "n_records": 52,
+  "name": "COTERRA ENERGY INC.",
+  "sids": [
+   "COG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "858803": {
+  "n_records": 14,
+  "name": "AVANIR PHARMACEUTICALS, INC.",
+  "sids": [
+   "LDAKA R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "859014": {
+  "n_records": 18,
+  "name": "COMPUWARE CORP",
+  "sids": [
+   "CPWR R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "861842": {
+  "n_records": 44,
+  "name": "Cathay General Bancorp",
+  "sids": [
+   "CATY R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "86312": {
+  "n_records": 51,
+  "name": "TRAVELERS COMPANIES, INC.",
+  "sids": [
+   "SPC R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "865754": {
+  "n_records": 8,
+  "name": "SAUER DANFOSS INC",
+  "sids": [
+   "SHS RAN5UZ36VF51"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "866873": {
+  "n_records": 5,
+  "name": "DEL MONTE FOODS CO",
+  "sids": [
+   "DLM RI0144HLGDB9"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "87347": {
+  "n_records": 51,
+  "name": "SLB LIMITED/NV",
+  "sids": [
+   "SLB R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "874016": {
+  "n_records": 18,
+  "name": "JONES GROUP INC",
+  "sids": [
+   "JNY R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "874766": {
+  "n_records": 52,
+  "name": "The Hartford Insurance Group, Inc.",
+  "sids": [
+   "HIG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "877212": {
+  "n_records": 50,
+  "name": "Zebra Technologies Corporation",
+  "sids": [
+   "ZBRA R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "877890": {
+  "n_records": 52,
+  "name": "CITRIX SYSTEMS INC",
+  "sids": [
+   "CTXS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "879101": {
+  "n_records": 54,
+  "name": "KIMCO REALTY CORPORATION",
+  "sids": [
+   "KIM R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "880266": {
+  "n_records": 48,
+  "name": "AGCO CORP /DE",
+  "sids": [
+   "AG R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "882095": {
+  "n_records": 51,
+  "name": "GILEAD SCIENCES, INC.",
+  "sids": [
+   "GILD R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "882235": {
+  "n_records": 9,
+  "name": "LINCARE HOLDINGS INC",
+  "sids": [
+   "LNCR R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "882835": {
+  "n_records": 51,
+  "name": "ROPER TECHNOLOGIES, INC.",
+  "sids": [
+   "ROP R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "883948": {
+  "n_records": 43,
+  "name": "ATLANTIC UNION BANKSHARES CORPORATION",
+  "sids": [
+   "UBSH R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "884887": {
+  "n_records": 48,
+  "name": "ROYAL CARIBBEAN CRUISES LTD",
+  "sids": [
+   "RCL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "885639": {
+  "n_records": 52,
+  "name": "KOHL\u2019S CORP",
+  "sids": [
+   "KSS R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "885725": {
+  "n_records": 52,
+  "name": "BOSTON SCIENTIFIC CORPORATION",
+  "sids": [
+   "BSX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "8858": {
+  "n_records": 49,
+  "name": "AVNET INC",
+  "sids": [
+   "AVT R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "8868": {
+  "n_records": 52,
+  "name": "Avon Products, Inc.",
+  "sids": [
+   "AVP R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "887733": {
+  "n_records": 43,
+  "name": "Central Garden & Pet Company",
+  "sids": [
+   "CENTA TPY4TEPZ3NFP"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "888919": {
+  "n_records": 21,
+  "name": "HCC INSURANCE HOLDINGS INC/DE/",
+  "sids": [
+   "HCC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "889900": {
+  "n_records": 52,
+  "name": "PATTERSON UTI ENERGY INC",
+  "sids": [
+   "PTEN R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "896159": {
+  "n_records": 51,
+  "name": "CHUBB LIMITED",
+  "sids": [
+   "ACL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "896878": {
+  "n_records": 49,
+  "name": "INTUIT INC.",
+  "sids": [
+   "INTU R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "89800": {
+  "n_records": 51,
+  "name": "THE SHERWIN-WILLIAMS COMPANY",
+  "sids": [
+   "SHW R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "898173": {
+  "n_records": 50,
+  "name": "O REILLY AUTOMOTIVE INC",
+  "sids": [
+   "ORLY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "898293": {
+  "n_records": 45,
+  "name": "JABIL INC",
+  "sids": [
+   "JBIL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "899051": {
+  "n_records": 51,
+  "name": "ALLSTATE CORP",
+  "sids": [
+   "ALL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "899460": {
+  "n_records": 44,
+  "name": "MANNKIND CORP",
+  "sids": [
+   "MNKD T0PB7436HAAT"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "899923": {
+  "n_records": 46,
+  "name": "MYRIAD GENETICS, INC.",
+  "sids": [
+   "MYGN R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "900075": {
+  "n_records": 45,
+  "name": "COPART, INC.",
+  "sids": [
+   "CPRT R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "906107": {
+  "n_records": 51,
+  "name": "Vivmark Residential",
+  "sids": [
+   "BYA R735QTJ8XC9X",
+   "EQR R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "908255": {
+  "n_records": 52,
+  "name": "BORGWARNER INC.",
+  "sids": [
+   "BWA R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "90896": {
+  "n_records": 41,
+  "name": "Champion Homes, Inc.",
+  "sids": [
+   "SKY R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "909832": {
+  "n_records": 49,
+  "name": "COSTCO WHOLESALE CORP /NEW",
+  "sids": [
+   "COST R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "910521": {
+  "n_records": 46,
+  "name": "DECKERS OUTDOOR CORP",
+  "sids": [
+   "DECK R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "910606": {
+  "n_records": 48,
+  "name": "REGENCY CENTERS CORPORATION",
+  "sids": [
+   "REG R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "911109": {
+  "n_records": 40,
+  "name": "MOBILE MINI INC",
+  "sids": [
+   "MINI R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "912183": {
+  "n_records": 18,
+  "name": "CUBIST PHARMACEUTICALS INC",
+  "sids": [
+   "CBST R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "914208": {
+  "n_records": 54,
+  "name": "Invesco Ltd.",
+  "sids": [
+   "AVZ R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "91440": {
+  "n_records": 46,
+  "name": "Snap-on Inc",
+  "sids": [
+   "SNA R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "915389": {
+  "n_records": 51,
+  "name": "EASTMAN CHEMICAL CO",
+  "sids": [
+   "EMN R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "918386": {
+  "n_records": 25,
+  "name": "QLOGIC CORP",
+  "sids": [
+   "QLGC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "921112": {
+  "n_records": 38,
+  "name": "LIBERTY PROPERTY TRUST",
+  "sids": [
+   "LRY R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "92122": {
+  "n_records": 51,
+  "name": "SOUTHERN CO",
+  "sids": [
+   "SO R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "922224": {
+  "n_records": 53,
+  "name": "PPL Corp",
+  "sids": [
+   "PPL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "923796": {
+  "n_records": 47,
+  "name": "The GEO Group, Inc.",
+  "sids": [
+   "WHC R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ },
+ "927066": {
+  "n_records": 52,
+  "name": "DAVITA INC.",
+  "sids": [
+   "TRL R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "927653": {
+  "n_records": 51,
+  "name": "McKESSON CORPORATION",
+  "sids": [
+   "MCK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "936340": {
+  "n_records": 51,
+  "name": "DTE ENERGY CO",
+  "sids": [
+   "DTE R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "936468": {
+  "n_records": 52,
+  "name": "LOCKHEED MARTIN CORPORATION",
+  "sids": [
+   "LMT R735QTJ8XC9X"
+  ],
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "93751": {
+  "n_records": 51,
+  "name": "STATE STREET CORP",
+  "sids": [
+   "STT R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "940944": {
+  "n_records": 48,
+  "name": "DARDEN RESTAURANTS, INC.",
+  "sids": [
+   "DRI R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "96223": {
+  "n_records": 53,
+  "name": "Jefferies Financial Group Inc.",
+  "sids": [
+   "LUK R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "97216": {
+  "n_records": 51,
+  "name": "Terex Corporation",
+  "sids": [
+   "TEX R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "97745": {
+  "n_records": 51,
+  "name": "THERMO FISHER SCIENTIFIC INC.",
+  "sids": [
+   "TMO R735QTJ8XC9X"
+  ],
+  "why": [
+   "quarantined"
+  ]
+ },
+ "98362": {
+  "n_records": 47,
+  "name": "TIMKEN CO",
+  "sids": [
+   "TKR R735QTJ8XC9X"
+  ],
+  "why": [
+   "random"
+  ]
+ }
+}
