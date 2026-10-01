@@ -1,0 +1,1401 @@
+{
+ "checks": {
+  "C1_sec_visible_before_filing": 0,
+  "C2_amendment_early": 0,
+  "C3_hold_violated": 0,
+  "C3_quarantine_exposed": 0,
+  "C3_restatement_block_exposed": 0,
+  "C4_unjustified_entry": 0,
+  "C5_future_share_info": 0,
+  "C6_split_jumps": 0,
+  "C7_eligible_after_last_trade": 0
+ },
+ "composition_returns": {
+  "2010": {
+   "corrected": {
+    "mean_month_return_x12": 0.2799,
+    "stock_months": 340
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.33,
+   "native": {
+    "mean_month_return_x12": 0.2038,
+    "stock_months": 7470
+   },
+   "recovered_share": 0.0435
+  },
+  "2011": {
+   "corrected": {
+    "mean_month_return_x12": -0.0008,
+    "stock_months": 686
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.43,
+   "native": {
+    "mean_month_return_x12": 0.0674,
+    "stock_months": 10081
+   },
+   "recovered_share": 0.0637
+  },
+  "2012": {
+   "corrected": {
+    "mean_month_return_x12": 0.0254,
+    "stock_months": 570
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.65,
+   "native": {
+    "mean_month_return_x12": 0.1487,
+    "stock_months": 10238
+   },
+   "recovered_share": 0.0527
+  },
+  "2013": {
+   "corrected": {
+    "mean_month_return_x12": 0.3133,
+    "stock_months": 532
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.01,
+   "native": {
+    "mean_month_return_x12": 0.3115,
+    "stock_months": 11639
+   },
+   "recovered_share": 0.0437
+  },
+  "2014": {
+   "corrected": {
+    "mean_month_return_x12": 0.1326,
+    "stock_months": 521
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.05,
+   "native": {
+    "mean_month_return_x12": 0.1203,
+    "stock_months": 13362
+   },
+   "recovered_share": 0.0375
+  },
+  "2015": {
+   "corrected": {
+    "mean_month_return_x12": -0.0066,
+    "stock_months": 421
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.11,
+   "native": {
+    "mean_month_return_x12": 0.0318,
+    "stock_months": 14017
+   },
+   "recovered_share": 0.0292
+  },
+  "2016": {
+   "corrected": {
+    "mean_month_return_x12": 0.0635,
+    "stock_months": 260
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.07,
+   "native": {
+    "mean_month_return_x12": 0.1023,
+    "stock_months": 13569
+   },
+   "recovered_share": 0.0188
+  },
+  "2017": {
+   "corrected": {
+    "mean_month_return_x12": 0.0487,
+    "stock_months": 258
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.24,
+   "native": {
+    "mean_month_return_x12": 0.1875,
+    "stock_months": 14780
+   },
+   "recovered_share": 0.0172
+  },
+  "2018": {
+   "corrected": {
+    "mean_month_return_x12": -0.1635,
+    "stock_months": 258
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.31,
+   "native": {
+    "mean_month_return_x12": 0.0297,
+    "stock_months": 15666
+   },
+   "recovered_share": 0.0162
+  },
+  "2019": {
+   "corrected": {
+    "mean_month_return_x12": -0.0576,
+    "stock_months": 199
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.24,
+   "native": {
+    "mean_month_return_x12": 0.1297,
+    "stock_months": 15448
+   },
+   "recovered_share": 0.0127
+  },
+  "2020": {
+   "corrected": {
+    "mean_month_return_x12": 0.0643,
+    "stock_months": 150
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.11,
+   "native": {
+    "mean_month_return_x12": 0.1793,
+    "stock_months": 15371
+   },
+   "recovered_share": 0.0097
+  },
+  "2021": {
+   "corrected": {
+    "mean_month_return_x12": 0.2815,
+    "stock_months": 151
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.08,
+   "native": {
+    "mean_month_return_x12": 0.1794,
+    "stock_months": 19266
+   },
+   "recovered_share": 0.0078
+  }
+ },
+ "composition_returns_2010_2021": {
+  "corrected": 0.0851,
+  "native": 0.1382
+ },
+ "coverage_by_year": {
+  "2010": {
+   "D043_estimated_missing_per_month": 126.0,
+   "financial_format_excluded_recovered": 22,
+   "missing_share_after": 0.114,
+   "missing_share_before (D043 published)": 0.141,
+   "native_eligible_per_month": 688.4,
+   "recovered_per_month": 33.1,
+   "remaining_estimated_missing_per_month": 92.9,
+   "share_of_estimated_gap_repaired": 0.263,
+   "usable_record_coverage_native": 0.9906,
+   "usable_record_coverage_recovered": 0.4685
+  },
+  "2011": {
+   "D043_estimated_missing_per_month": 113.0,
+   "financial_format_excluded_recovered": 53,
+   "missing_share_after": 0.059,
+   "missing_share_before (D043 published)": 0.115,
+   "native_eligible_per_month": 842.7,
+   "recovered_per_month": 56.3,
+   "remaining_estimated_missing_per_month": 56.7,
+   "share_of_estimated_gap_repaired": 0.499,
+   "usable_record_coverage_native": 0.9748,
+   "usable_record_coverage_recovered": 0.6598
+  },
+  "2012": {
+   "D043_estimated_missing_per_month": 126.0,
+   "financial_format_excluded_recovered": 37,
+   "missing_share_after": 0.08,
+   "missing_share_before (D043 published)": 0.124,
+   "native_eligible_per_month": 858.9,
+   "recovered_per_month": 47.2,
+   "remaining_estimated_missing_per_month": 78.8,
+   "share_of_estimated_gap_repaired": 0.375,
+   "usable_record_coverage_native": 0.9907,
+   "usable_record_coverage_recovered": 0.7795
+  },
+  "2013": {
+   "D043_estimated_missing_per_month": 120.0,
+   "financial_format_excluded_recovered": 43,
+   "missing_share_after": 0.068,
+   "missing_share_before (D043 published)": 0.105,
+   "native_eligible_per_month": 985.9,
+   "recovered_per_month": 44.8,
+   "remaining_estimated_missing_per_month": 75.2,
+   "share_of_estimated_gap_repaired": 0.373,
+   "usable_record_coverage_native": 0.9896,
+   "usable_record_coverage_recovered": 0.8082
+  },
+  "2014": {
+   "D043_estimated_missing_per_month": 105.0,
+   "financial_format_excluded_recovered": 39,
+   "missing_share_after": 0.051,
+   "missing_share_before (D043 published)": 0.083,
+   "native_eligible_per_month": 1120.9,
+   "recovered_per_month": 43.0,
+   "remaining_estimated_missing_per_month": 62.0,
+   "share_of_estimated_gap_repaired": 0.41,
+   "usable_record_coverage_native": 0.9876,
+   "usable_record_coverage_recovered": 0.7713
+  },
+  "2015": {
+   "D043_estimated_missing_per_month": 87.0,
+   "financial_format_excluded_recovered": 32,
+   "missing_share_after": 0.042,
+   "missing_share_before (D043 published)": 0.067,
+   "native_eligible_per_month": 1169.2,
+   "recovered_per_month": 33.9,
+   "remaining_estimated_missing_per_month": 53.1,
+   "share_of_estimated_gap_repaired": 0.39,
+   "usable_record_coverage_native": 0.9859,
+   "usable_record_coverage_recovered": 0.8206
+  },
+  "2016": {
+   "D043_estimated_missing_per_month": 53.0,
+   "financial_format_excluded_recovered": 19,
+   "missing_share_after": 0.027,
+   "missing_share_before (D043 published)": 0.044,
+   "native_eligible_per_month": 1134.8,
+   "recovered_per_month": 21.2,
+   "remaining_estimated_missing_per_month": 31.8,
+   "share_of_estimated_gap_repaired": 0.399,
+   "usable_record_coverage_native": 0.9888,
+   "usable_record_coverage_recovered": 0.8701
+  },
+  "2017": {
+   "D043_estimated_missing_per_month": 65.0,
+   "financial_format_excluded_recovered": 28,
+   "missing_share_after": 0.033,
+   "missing_share_before (D043 published)": 0.048,
+   "native_eligible_per_month": 1238.3,
+   "recovered_per_month": 21.8,
+   "remaining_estimated_missing_per_month": 43.2,
+   "share_of_estimated_gap_repaired": 0.335,
+   "usable_record_coverage_native": 0.9826,
+   "usable_record_coverage_recovered": 0.8008
+  },
+  "2018": {
+   "D043_estimated_missing_per_month": 51.0,
+   "financial_format_excluded_recovered": 25,
+   "missing_share_after": 0.022,
+   "missing_share_before (D043 published)": 0.037,
+   "native_eligible_per_month": 1306.0,
+   "recovered_per_month": 21.2,
+   "remaining_estimated_missing_per_month": 29.8,
+   "share_of_estimated_gap_repaired": 0.417,
+   "usable_record_coverage_native": 0.9802,
+   "usable_record_coverage_recovered": 0.5882
+  },
+  "2019": {
+   "D043_estimated_missing_per_month": 61.0,
+   "financial_format_excluded_recovered": 43,
+   "missing_share_after": 0.033,
+   "missing_share_before (D043 published)": 0.044,
+   "native_eligible_per_month": 1291.1,
+   "recovered_per_month": 16.4,
+   "remaining_estimated_missing_per_month": 44.6,
+   "share_of_estimated_gap_repaired": 0.269,
+   "usable_record_coverage_native": 0.9845,
+   "usable_record_coverage_recovered": 0.6497
+  },
+  "2020": {
+   "D043_estimated_missing_per_month": 45.0,
+   "financial_format_excluded_recovered": 51,
+   "missing_share_after": 0.024,
+   "missing_share_before (D043 published)": 0.033,
+   "native_eligible_per_month": 1291.1,
+   "recovered_per_month": 12.4,
+   "remaining_estimated_missing_per_month": 32.6,
+   "share_of_estimated_gap_repaired": 0.276,
+   "usable_record_coverage_native": 0.9829,
+   "usable_record_coverage_recovered": 0.8389
+  },
+  "2021": {
+   "D043_estimated_missing_per_month": 20.0,
+   "financial_format_excluded_recovered": 44,
+   "missing_share_after": 0.005,
+   "missing_share_before (D043 published)": 0.012,
+   "native_eligible_per_month": 1624.3,
+   "recovered_per_month": 12.5,
+   "remaining_estimated_missing_per_month": 7.5,
+   "share_of_estimated_gap_repaired": 0.625,
+   "usable_record_coverage_native": 0.9727,
+   "usable_record_coverage_recovered": 0.8
+  }
+ },
+ "ended_in_month_counts": {
+  "corrected|ended_in_month": 52,
+  "corrected|missing_price": 9,
+  "native|ended_in_month": 384,
+  "native|missing_price": 53
+ },
+ "exchange_of_recovered_names (company-months)": {
+  "NASDAQ": 1345,
+  "NYSE": 3021
+ },
+ "fin_flips": {
+  "companies_with_flips": 13,
+  "flips": 14
+ },
+ "quarantine_coverage_loss_stock_months": {
+  "2010": 39,
+  "2011": 195,
+  "2012": 11,
+  "2013": 9,
+  "2014": 0,
+  "2015": 0,
+  "2016": 0,
+  "2017": 0,
+  "2018": 0,
+  "2019": 0,
+  "2020": 0,
+  "2021": 0
+ },
+ "recovered_companies_ever_eligible": 108,
+ "recovered_detail": [
+  [
+   "ANR T687HZZ9XOPX",
+   "Alpha Natural Resources, Inc.",
+   "2010-01-30",
+   "2013-02-21",
+   "2015-07-16",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "AOL R735QTJ8XC9X",
+   "TIME WARNER INC.",
+   "2010-01-30",
+   "2018-06-15",
+   "2018-06-15",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "AYE R735QTJ8XC9X",
+   "ALLEGHENY ENERGY, INC",
+   "2010-01-30",
+   "2011-02-26",
+   "2011-02-26",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "BBBY R735QTJ8XC9X",
+   "BED BATH & BEYOND INC",
+   "2010-01-30",
+   "2021-11-30",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "BMCS R735QTJ8XC9X",
+   "BMC SOFTWARE INC",
+   "2010-01-30",
+   "2013-09-11",
+   "2013-09-11",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "CB R735QTJ8XC9X",
+   "CHUBB CORP",
+   "2010-01-30",
+   "2016-01-15",
+   "2016-01-15",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "CBE R735QTJ8XC9X",
+   "COOPER INDUSTRIES LTD",
+   "2010-01-30",
+   "2012-12-01",
+   "2012-12-01",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "CPL R735QTJ8XC9X",
+   "PROGRESS ENERGY INC",
+   "2010-01-30",
+   "2012-07-03",
+   "2012-07-03",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "CSC R735QTJ8XC9X",
+   "COMPUTER SCIENCES CORP",
+   "2010-01-30",
+   "2017-04-01",
+   "2017-04-01",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "DD R735QTJ8XC9X",
+   "DUPONT E I DE NEMOURS & CO",
+   "2010-01-30",
+   "2017-09-01",
+   "2017-09-01",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "FLIR R735QTJ8XC9X",
+   "FLIR SYSTEMS INC",
+   "2010-01-30",
+   "2021-05-15",
+   "2021-05-15",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "FST R735QTJ8XC9X",
+   "FOREST OIL CORP",
+   "2010-01-30",
+   "2011-09-22",
+   "2014-12-16",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "FWC R735QTJ8XC9X",
+   "FOSTER WHEELER AG",
+   "2010-01-30",
+   "2014-12-04",
+   "2014-12-04",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "GENZ R735QTJ8XC9X",
+   "GENZYME CORP",
+   "2010-01-30",
+   "2011-04-09",
+   "2011-04-09",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "GR R735QTJ8XC9X",
+   "GOODRICH CORP",
+   "2010-01-30",
+   "2012-07-27",
+   "2012-07-27",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "HNZ R735QTJ8XC9X",
+   "HEINZ H J CO",
+   "2010-01-30",
+   "2013-06-08",
+   "2013-06-08",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "JCP R735QTJ8XC9X",
+   "J C PENNEY CO INC",
+   "2010-01-30",
+   "2017-02-28",
+   "2020-05-19",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "MDR R735QTJ8XC9X",
+   "MCDERMOTT INTERNATIONAL INC",
+   "2010-01-30",
+   "2018-10-31",
+   "2020-01-18",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "PCP R735QTJ8XC9X",
+   "PRECISION CASTPARTS CORP",
+   "2010-01-30",
+   "2016-01-30",
+   "2016-01-30",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "QCSB R735QTJ8XC9X",
+   "NEW YORK COMMUNITY BANCORP INC",
+   "2010-01-30",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "RON R735QTJ8XC9X",
+   "CAMERON INTERNATIONAL CORP",
+   "2010-01-30",
+   "2016-04-02",
+   "2016-04-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "SIAL R735QTJ8XC9X",
+   "SIGMA ALDRICH CORP",
+   "2010-01-30",
+   "2015-11-18",
+   "2015-11-18",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "SLE R735QTJ8XC9X",
+   "Hillshire Brands Co",
+   "2010-01-30",
+   "2014-08-29",
+   "2014-08-29",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "UPL S1I2USAY0AQT",
+   "ULTRA PETROLEUM CORP",
+   "2010-01-30",
+   "2015-06-27",
+   "2016-04-30",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "WFR R735QTJ8XC9X",
+   "MEMC ELECTRONIC MATERIALS INC",
+   "2010-01-30",
+   "2015-12-22",
+   "2016-04-22",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "WIN TKE92FGPKHUT",
+   "WINDSTREAM CORP",
+   "2010-01-30",
+   "2015-05-07",
+   "2019-03-06",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "WLT R735QTJ8XC9X",
+   "Walter Energy, Inc.",
+   "2010-01-30",
+   "2013-02-28",
+   "2015-07-08",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "NHP R735QTJ8XC9X",
+   "NATIONWIDE HEALTH PROPERTIES INC",
+   "2010-05-07",
+   "2011-07-02",
+   "2011-07-02",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "CRLBF R735QTJ8XC9X",
+   "CORE LABORATORIES N V",
+   "2010-07-27",
+   "2021-06-22",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CEPH R735QTJ8XC9X",
+   "CEPHALON INC",
+   "2010-07-29",
+   "2011-10-14",
+   "2011-10-14",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "TAN R735QTJ8XC9X",
+   "RADIOSHACK CORP",
+   "2010-07-30",
+   "2011-01-22",
+   "2015-02-03",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "TNB R735QTJ8XC9X",
+   "THOMAS & BETTS CORP",
+   "2010-07-31",
+   "2012-05-17",
+   "2012-05-17",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "WYN TKS1BQL2N23P",
+   "Travel & Leisure Co.",
+   "2010-07-31",
+   "2018-06-01",
+   "2018-06-01",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "DNDN RVLEALAHHC2T",
+   "DENDREON CORP",
+   "2010-08-04",
+   "2012-02-25",
+   "2014-11-19",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "TIMT R735QTJ8XC9X",
+   "TITANIUM METALS CORP",
+   "2010-08-04",
+   "2013-01-08",
+   "2013-01-08",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "NVLS R735QTJ8XC9X",
+   "NOVELLUS SYSTEMS INC",
+   "2010-08-05",
+   "2012-06-05",
+   "2012-06-05",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "KCI SWGOWME0MCF9",
+   "KINETIC CONCEPTS INC",
+   "2010-08-06",
+   "2011-11-05",
+   "2011-11-05",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "OCR R735QTJ8XC9X",
+   "OMNICARE INC",
+   "2010-08-06",
+   "2015-08-18",
+   "2015-08-18",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "RAH R735QTJ8XC9X",
+   "RALCORP HOLDINGS INC /MO",
+   "2010-08-06",
+   "2013-01-30",
+   "2013-01-30",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "SUG R735QTJ8XC9X",
+   "SOUTHERN UNION CO",
+   "2010-08-06",
+   "2012-03-27",
+   "2012-03-27",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "BRE R735QTJ8XC9X",
+   "BRE PROPERTIES INC /MD/",
+   "2010-08-07",
+   "2014-04-02",
+   "2014-04-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "CYN R735QTJ8XC9X",
+   "CITY NATIONAL CORP",
+   "2010-08-07",
+   "2015-10-31",
+   "2015-10-31",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "MRIS R735QTJ8XC9X",
+   "MARSHALL & ILSLEY CORP",
+   "2010-08-10",
+   "2011-07-06",
+   "2011-07-06",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "PRE R735QTJ8XC9X",
+   "PARTNERRE LTD",
+   "2010-08-10",
+   "2016-03-12",
+   "2016-03-12",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "RKT R735QTJ8XC9X",
+   "Rock-Tenn CO",
+   "2010-08-10",
+   "2015-07-02",
+   "2015-07-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "SZA R735QTJ8XC9X",
+   "DEAN FOODS CO",
+   "2010-08-10",
+   "2013-08-08",
+   "2019-11-12",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "TIN R735QTJ8XC9X",
+   "TEMPLE INLAND INC",
+   "2010-08-10",
+   "2012-02-11",
+   "2012-02-11",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "TLAB R735QTJ8XC9X",
+   "TELLABS INC",
+   "2010-08-11",
+   "2011-02-26",
+   "2013-12-04",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "URS R735QTJ8XC9X",
+   "URS CORP /NEW/",
+   "2010-08-11",
+   "2014-10-17",
+   "2014-10-17",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "SNDK R735QTJ8XC9X",
+   "SANDISK CORP",
+   "2010-08-13",
+   "2016-05-12",
+   "2016-05-12",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "SESI R735QTJ8XC9X",
+   "SUPERIOR ENERGY SERVICES INC",
+   "2010-09-16",
+   "2017-04-26",
+   "2020-09-18",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "DBD R735QTJ8XC9X",
+   "DIEBOLD INC",
+   "2010-09-25",
+   "2017-07-04",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "IHS TDL2R5DOIMW5",
+   "IHS Inc.",
+   "2010-09-25",
+   "2016-07-13",
+   "2016-07-13",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "NSM R735QTJ8XC9X",
+   "NATIONAL SEMICONDUCTOR CORP",
+   "2010-09-29",
+   "2011-09-24",
+   "2011-09-24",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "HSC R735QTJ8XC9X",
+   "HARSCO CORP",
+   "2010-10-06",
+   "2019-07-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CREE R735QTJ8XC9X",
+   "CREE INC",
+   "2010-10-22",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "LSI R735QTJ8XC9X",
+   "LSI CORP",
+   "2010-10-29",
+   "2014-05-07",
+   "2014-05-07",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "HMA R735QTJ8XC9X",
+   "HEALTH MANAGEMENT ASSOCIATES INC",
+   "2010-10-30",
+   "2014-01-25",
+   "2014-01-25",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "TC TY1L52ZXQYXX",
+   "Thompson Creek Metals Co Inc.",
+   "2010-11-05",
+   "2011-05-03",
+   "2016-01-15",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "ALLY R735QTJ8XC9X",
+   "BALLY TECHNOLOGIES, INC.",
+   "2010-11-06",
+   "2014-11-22",
+   "2014-11-22",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "WMS R735QTJ8XC9X",
+   "WMS INDUSTRIES INC /DE/",
+   "2010-11-09",
+   "2011-04-12",
+   "2013-10-18",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "IRF R735QTJ8XC9X",
+   "INTERNATIONAL RECTIFIER CORP /DE/",
+   "2010-12-02",
+   "2015-01-14",
+   "2015-01-14",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "FDO R735QTJ8XC9X",
+   "FAMILY DOLLAR STORES INC",
+   "2011-01-06",
+   "2015-07-07",
+   "2015-07-07",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "WOL R735QTJ8XC9X",
+   "FRONTIER OIL CORP /NEW/",
+   "2011-01-28",
+   "2011-07-01",
+   "2011-07-01",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "NWEC T3CTK6KJWGV9",
+   "NORTHWESTERN CORP",
+   "2011-02-12",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "PFT R735QTJ8XC9X",
+   "SAKS INC",
+   "2011-02-12",
+   "2013-11-05",
+   "2013-11-05",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "KEG R735QTJ8XC9X",
+   "KEY ENERGY SERVICES INC",
+   "2011-02-18",
+   "2012-05-03",
+   "2016-07-28",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CNF R735QTJ8XC9X",
+   "Con-way Inc.",
+   "2011-03-17",
+   "2015-10-30",
+   "2015-10-30",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "ARO SEPNRXZGYP9H",
+   "AEROPOSTALE INC",
+   "2011-03-31",
+   "2011-05-05",
+   "2016-04-22",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "RDK R735QTJ8XC9X",
+   "HARRIS TEETER SUPERMARKETS, INC.",
+   "2011-04-27",
+   "2014-01-29",
+   "2014-01-29",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "HGSI R735QTJ8XC9X",
+   "HUMAN GENOME SCIENCES INC",
+   "2011-04-30",
+   "2012-08-03",
+   "2012-08-03",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "DTG R735QTJ8XC9X",
+   "DOLLAR THRIFTY AUTOMOTIVE GROUP INC",
+   "2011-05-06",
+   "2012-11-17",
+   "2012-11-17",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "BBG T4E8JQGYT4YT",
+   "BILL BARRETT CORP",
+   "2011-05-11",
+   "2011-11-16",
+   "2018-03-20",
+   "acquired/other",
+   "medium (tier 2)"
+  ],
+  [
+   "SLXP RZVZH9PZHS9X",
+   "SALIX PHARMACEUTICALS LTD",
+   "2011-05-11",
+   "2015-04-01",
+   "2015-04-01",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "AH UMQPTIBCU8V9",
+   "Accretive Health, Inc.",
+   "2011-08-13",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CYPR R735QTJ8XC9X",
+   "QUESTCOR PHARMACEUTICALS INC",
+   "2011-10-11",
+   "2014-08-15",
+   "2014-08-15",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "RBN R735QTJ8XC9X",
+   "ROBBINS & MYERS, INC.",
+   "2012-01-07",
+   "2013-02-20",
+   "2013-02-20",
+   "acquired/other",
+   "medium"
+  ],
+  [
+   "VPHM R735QTJ8XC9X",
+   "VIROPHARMA INC",
+   "2012-01-14",
+   "2014-01-24",
+   "2014-01-24",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "VVUS R735QTJ8XC9X",
+   "VIVUS INC",
+   "2012-02-28",
+   "2012-10-20",
+   "2020-07-17",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "PIR R735QTJ8XC9X",
+   "PIER 1 IMPORTS INC/DE",
+   "2012-03-23",
+   "2014-03-22",
+   "2020-02-15",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "GNC UVDV31WP0NL1",
+   "GNC HOLDINGS, INC.",
+   "2012-05-03",
+   "2016-04-28",
+   "2020-06-30",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "PCYC R735QTJ8XC9X",
+   "PHARMACYCLICS INC",
+   "2012-05-17",
+   "2015-05-23",
+   "2015-05-23",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "PLT R735QTJ8XC9X",
+   "PLANTRONICS INC /CA/",
+   "2012-05-26",
+   "2019-05-08",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "SMBL TURFHV3OKFOL",
+   "BOULDER BRANDS, INC.",
+   "2012-06-22",
+   "2012-08-02",
+   "2016-01-16",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "KRFT VAFEYH3J3LUT",
+   "Kraft Foods Group, Inc.",
+   "2012-12-08",
+   "2015-07-03",
+   "2015-07-03",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "OLOG R735QTJ8XC9X",
+   "Bristow Group Inc",
+   "2013-01-11",
+   "2015-06-13",
+   "2019-05-11",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "SSS R735QTJ8XC9X",
+   "LIFE STORAGE, INC.",
+   "2013-02-02",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "TXI R735QTJ8XC9X",
+   "TEXAS INDUSTRIES INC",
+   "2013-05-16",
+   "2014-07-02",
+   "2014-07-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "HOS SXB7RIQ8ZQED",
+   "HORNBECK OFFSHORE SERVICES INC /LA",
+   "2013-07-06",
+   "2013-10-31",
+   "2019-12-21",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "MNK VHV8JWLFWTID",
+   "Mallinckrodt plc",
+   "2013-08-13",
+   "2019-03-02",
+   "2020-10-10",
+   "failed (bankruptcy 8-K item 1.03)",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "UMPQ R9JRZ8GFT8PX",
+   "UMPQUA HOLDINGS CORP",
+   "2013-11-26",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "ALLY VPLW2D47KBXH",
+   "Ally Financial Inc.",
+   "2014-05-09",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "WPG VQY4YY1HBASL",
+   "WASHINGTON PRIME GROUP INC.",
+   "2014-06-26",
+   "2017-01-06",
+   "2021-09-30",
+   "failed (bankruptcy 8-K item 1.03)",
+   "high"
+  ],
+  [
+   "CNTL R735QTJ8XC9X",
+   "CANTEL MEDICAL CORP",
+   "2015-03-25",
+   "2021-06-02",
+   "2021-06-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "MYL R735QTJ8XC9X",
+   "Mylan N.V.",
+   "2015-05-09",
+   "2020-11-17",
+   "2020-11-17",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "ANTC R735QTJ8XC9X",
+   "ARRIS International plc",
+   "2016-03-01",
+   "2019-04-04",
+   "2019-04-04",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "OLDB R735QTJ8XC9X",
+   "OLD NATIONAL BANCORP /IN/",
+   "2016-11-10",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "IIVI R735QTJ8XC9X",
+   "II-VI INC",
+   "2016-12-14",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "VSM WEEYJ5WAYMHX",
+   "Versum Materials, Inc.",
+   "2016-12-22",
+   "2019-10-05",
+   "2019-10-05",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "ASFC R735QTJ8XC9X",
+   "ASTORIA FINANCIAL CORP",
+   "2017-03-08",
+   "2017-09-30",
+   "2017-09-30",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "WBT WIMLDK8AQT7P",
+   "Manitowoc Foodservice, Inc.",
+   "2017-04-01",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CJ WIMLDK8AQT7P",
+   "C&J Energy Services Ltd.",
+   "2017-04-05",
+   "2018-05-24",
+   "2019-10-31",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "TCF WKCMJG9XKCBP",
+   "TCF FINANCIAL CORP",
+   "2017-06-06",
+   "2019-08-01",
+   "2019-08-01",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "GTT VHHGALH2U99H",
+   "GTT Communications, Inc.",
+   "2017-12-29",
+   "2019-05-08",
+   "2021-07-02",
+   "acquired/other",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "AVYA WRAQ376SZZ39",
+   "Avaya Holdings Corp.",
+   "2018-03-03",
+   "2021-08-04",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ],
+  [
+   "CFCO WC1AN12MAZJ9",
+   "CF Corp",
+   "2018-03-16",
+   "2020-05-23",
+   "2020-06-02",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "PRSP WUZNFTKLBTR9",
+   "Perspecta Inc.",
+   "2018-08-15",
+   "2021-05-07",
+   "2021-05-07",
+   "acquired/other",
+   "high"
+  ],
+  [
+   "MNRTA R735QTJ8XC9X",
+   "MONMOUTH REAL ESTATE INVESTMENT CORP",
+   "2021-11-06",
+   "2021-12-31",
+   "2021-12-31",
+   "still trading",
+   "medium (no equity end; stable float ratio over >= 6 years)"
+  ]
+ ],
+ "recovered_outcomes": {
+  "acquired/other": 74,
+  "failed (bankruptcy 8-K item 1.03)": 17,
+  "still trading": 17
+ },
+ "recovered_outcomes_by_year (companies eligible that year)": {
+  "2010": {
+   "acquired/other": 46,
+   "failed (bankruptcy 8-K item 1.03)": 10,
+   "still trading": 6
+  },
+  "2011": {
+   "acquired/other": 57,
+   "failed (bankruptcy 8-K item 1.03)": 11,
+   "still trading": 8
+  },
+  "2012": {
+   "acquired/other": 49,
+   "failed (bankruptcy 8-K item 1.03)": 12,
+   "still trading": 9
+  },
+  "2013": {
+   "acquired/other": 40,
+   "failed (bankruptcy 8-K item 1.03)": 12,
+   "still trading": 11
+  },
+  "2014": {
+   "acquired/other": 33,
+   "failed (bankruptcy 8-K item 1.03)": 10,
+   "still trading": 12
+  },
+  "2015": {
+   "acquired/other": 24,
+   "failed (bankruptcy 8-K item 1.03)": 9,
+   "still trading": 12
+  },
+  "2016": {
+   "acquired/other": 16,
+   "failed (bankruptcy 8-K item 1.03)": 5,
+   "still trading": 14
+  },
+  "2017": {
+   "acquired/other": 14,
+   "failed (bankruptcy 8-K item 1.03)": 4,
+   "still trading": 15
+  },
+  "2018": {
+   "acquired/other": 12,
+   "failed (bankruptcy 8-K item 1.03)": 2,
+   "still trading": 15
+  },
+  "2019": {
+   "acquired/other": 9,
+   "failed (bankruptcy 8-K item 1.03)": 1,
+   "still trading": 15
+  },
+  "2020": {
+   "acquired/other": 5,
+   "still trading": 13
+  },
+  "2021": {
+   "acquired/other": 3,
+   "still trading": 14
+  }
+ },
+ "size_terciles_stock_months": {
+  "corrected": {
+   "T1": 1724,
+   "T2": 1788,
+   "T3": 854
+  },
+  "native": {
+   "T1": 53989,
+   "T2": 53869,
+   "T3": 54763
+  }
+ },
+ "store_stats": {
+  "amendments": 48,
+  "delayed_until_available": 1039,
+  "estimated": 1077,
+  "observed_new": 62176,
+  "quarantine_released": 20,
+  "quarantined": 172,
+  "restatement_blocked": 479,
+  "sec_timing_hold": 55,
+  "timing_unknown": 76
+ },
+ "visa_months_eligible": "143/144"
+}
