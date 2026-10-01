@@ -1,0 +1,1155 @@
+{
+ "rule_checks": {
+  "days": 3021,
+  "stock_days": 3423301,
+  "exposed_before_available": 0,
+  "exposed_before_filing": 0,
+  "estimated_exposed_before_pe90": 0,
+  "stale_exposed": 0,
+  "amendment_exposed_early": 0,
+  "vendor_new_reports": 60008,
+  "quarantine_companies": 168
+ },
+ "store_stats": {
+  "amendments": 23,
+  "delayed_until_available": 993,
+  "estimated": 1060,
+  "observed_new": 60008,
+  "quarantined": 213,
+  "timing_unknown": 76
+ },
+ "quarantine_by_year": {
+  "2010": 159,
+  "2011": 39,
+  "2012": 9,
+  "2013": 5,
+  "2014": 1
+ },
+ "field_guard": {
+  "accession_number": "rejected",
+  "basic_eps": "rejected",
+  "foo": "rejected",
+  "morningstar_sector_code": "rejected",
+  "roe": "rejected",
+  "shares_outstanding": "rejected",
+  "whitelist_paths_with_share_or_ratio": []
+ },
+ "classification_changes": {
+  "companies": 2525,
+  "sector": 8
+ },
+ "fin_vs_sector": {
+  "fin_format=False|sector103=False|template=B": 182,
+  "fin_format=False|sector103=False|template=I": 106,
+  "fin_format=False|sector103=False|template=N": 137495,
+  "fin_format=False|sector103=True|template=N": 5212,
+  "fin_format=False|sector103=True|template=V": 141,
+  "fin_format=None|sector103=False|template=N": 805,
+  "fin_format=None|sector103=True|template=B": 6,
+  "fin_format=None|sector103=True|template=N": 3,
+  "fin_format=True|sector103=False|template=B": 797,
+  "fin_format=True|sector103=False|template=I": 411,
+  "fin_format=True|sector103=False|template=N": 293,
+  "fin_format=True|sector103=True|template=B": 9677,
+  "fin_format=True|sector103=True|template=I": 6498,
+  "fin_format=True|sector103=True|template=N": 49
+ },
+ "visa": {
+  "2010-01-04": {
+   "eligible": 0,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-02-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-03-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-06-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-08-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-11-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2010-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-05-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-08-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2011-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-01-04": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-04-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-07-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-10-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2012-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-04-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-07-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-09-04": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2013-12-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-06-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-09-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2014-12-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-02-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-03-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-06-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-11-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2015-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-02-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-05-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-08-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2016-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-01-04": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-05-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-10-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2017-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-01-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-04-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-07-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-10-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2018-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-03-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-04-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-06-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-07-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-09-04": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-11-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2019-12-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-02-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-03-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-06-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-08-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-11-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2020-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-01-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-02-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-03-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-04-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-05-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-06-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-07-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-08-03": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-09-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-10-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-11-02": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  },
+  "2021-12-01": {
+   "eligible": 1,
+   "sid": "V U12VRGLO8PR9",
+   "vendor_exchange": "OTCM"
+  }
+ },
+ "named_eligible_months": {
+  "AAPL|0": 1,
+  "AAPL|1": 143,
+  "AIG|0": 1,
+  "AIG|1": 143,
+  "BAC|0": 1,
+  "BAC|1": 143,
+  "BRK.B|1": 107,
+  "DTV|0": 37,
+  "DTV|1": 66,
+  "GS|0": 1,
+  "GS|1": 143,
+  "JPM|0": 1,
+  "JPM|1": 143,
+  "MA|0": 1,
+  "MA|1": 143,
+  "MON|0": 10,
+  "MON|1": 101,
+  "TWX|0": 102,
+  "V|0": 1,
+  "V|1": 143,
+  "XOM|0": 1,
+  "XOM|1": 143
+ },
+ "deal_check": {
+  "DTV": {
+   "last_eligible": "2015-07-01"
+  },
+  "MON": {
+   "last_eligible": "2018-06-01"
+  },
+  "TWX": {
+   "last_eligible": null
+  }
+ },
+ "coverage_by_year": {
+  "2010": {
+   "eligible_stock_months": 8261,
+   "usable": 8207,
+   "usable_share": 0.9935,
+   "non_financial_usable": 7285,
+   "financial_format_excluded": 922,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 7,
+   "missing_absent_filing_data": 0,
+   "missing_fields_in_filing": 0,
+   "missing_stale": 47
+  },
+  "2011": {
+   "eligible_stock_months": 10112,
+   "usable": 9848,
+   "usable_share": 0.9739,
+   "non_financial_usable": 8799,
+   "financial_format_excluded": 1049,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 19,
+   "missing_absent_filing_data": 0,
+   "missing_fields_in_filing": 4,
+   "missing_stale": 241
+  },
+  "2012": {
+   "eligible_stock_months": 10307,
+   "usable": 10270,
+   "usable_share": 0.9964,
+   "non_financial_usable": 9153,
+   "financial_format_excluded": 1117,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 12,
+   "missing_absent_filing_data": 0,
+   "missing_fields_in_filing": 3,
+   "missing_stale": 22
+  },
+  "2013": {
+   "eligible_stock_months": 11831,
+   "usable": 11773,
+   "usable_share": 0.9951,
+   "non_financial_usable": 10561,
+   "financial_format_excluded": 1212,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 13,
+   "missing_absent_filing_data": 1,
+   "missing_fields_in_filing": 14,
+   "missing_stale": 30
+  },
+  "2014": {
+   "eligible_stock_months": 13451,
+   "usable": 13362,
+   "usable_share": 0.9934,
+   "non_financial_usable": 11953,
+   "financial_format_excluded": 1409,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 4,
+   "missing_absent_filing_data": 3,
+   "missing_fields_in_filing": 40,
+   "missing_stale": 42
+  },
+  "2015": {
+   "eligible_stock_months": 14031,
+   "usable": 13891,
+   "usable_share": 0.99,
+   "non_financial_usable": 12357,
+   "financial_format_excluded": 1534,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 3,
+   "missing_absent_filing_data": 8,
+   "missing_fields_in_filing": 83,
+   "missing_stale": 46
+  },
+  "2016": {
+   "eligible_stock_months": 13618,
+   "usable": 13548,
+   "usable_share": 0.9949,
+   "non_financial_usable": 12037,
+   "financial_format_excluded": 1511,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 0,
+   "missing_absent_filing_data": 0,
+   "missing_fields_in_filing": 26,
+   "missing_stale": 44
+  },
+  "2017": {
+   "eligible_stock_months": 14860,
+   "usable": 14730,
+   "usable_share": 0.9913,
+   "non_financial_usable": 13003,
+   "financial_format_excluded": 1727,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 4,
+   "missing_absent_filing_data": 2,
+   "missing_fields_in_filing": 66,
+   "missing_stale": 58
+  },
+  "2018": {
+   "eligible_stock_months": 15672,
+   "usable": 15527,
+   "usable_share": 0.9907,
+   "non_financial_usable": 13650,
+   "financial_format_excluded": 1877,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 3,
+   "missing_absent_filing_data": 3,
+   "missing_fields_in_filing": 92,
+   "missing_stale": 47
+  },
+  "2019": {
+   "eligible_stock_months": 15493,
+   "usable": 15394,
+   "usable_share": 0.9936,
+   "non_financial_usable": 13558,
+   "financial_format_excluded": 1836,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 1,
+   "missing_absent_filing_data": 1,
+   "missing_fields_in_filing": 69,
+   "missing_stale": 28
+  },
+  "2020": {
+   "eligible_stock_months": 15493,
+   "usable": 15268,
+   "usable_share": 0.9855,
+   "non_financial_usable": 13662,
+   "financial_format_excluded": 1606,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 3,
+   "missing_absent_filing_data": 6,
+   "missing_fields_in_filing": 165,
+   "missing_stale": 51
+  },
+  "2021": {
+   "eligible_stock_months": 19492,
+   "usable": 19014,
+   "usable_share": 0.9755,
+   "non_financial_usable": 17089,
+   "financial_format_excluded": 1925,
+   "unclassifiable": 0,
+   "missing_unsafe_timing": 2,
+   "missing_absent_filing_data": 90,
+   "missing_fields_in_filing": 281,
+   "missing_stale": 105
+  }
+ },
+ "missing_concentration": {
+  "delisted_within_12m=no": {
+   "n": 161969,
+   "usable_share": 0.9896,
+   "missing_fields_in_filing": 771,
+   "no_filing_data": 94,
+   "stale_beyond_policy": 748,
+   "usable": 160286,
+   "withheld_timing_rule": 70
+  },
+  "delisted_within_12m=yes": {
+   "n": 652,
+   "usable_share": 0.8374,
+   "missing_fields_in_filing": 72,
+   "no_filing_data": 20,
+   "stale_beyond_policy": 13,
+   "usable": 546,
+   "withheld_timing_rule": 1
+  },
+  "sector=103": {
+   "n": 21675,
+   "usable_share": 0.9952,
+   "missing_fields_in_filing": 14,
+   "no_filing_data": 2,
+   "stale_beyond_policy": 86,
+   "usable": 21572,
+   "withheld_timing_rule": 1
+  },
+  "sector=other": {
+   "n": 140946,
+   "usable_share": 0.988,
+   "missing_fields_in_filing": 829,
+   "no_filing_data": 112,
+   "stale_beyond_policy": 675,
+   "usable": 139260,
+   "withheld_timing_rule": 70
+  },
+  "size=T1": {
+   "n": 54256,
+   "usable_share": 0.9834,
+   "missing_fields_in_filing": 612,
+   "no_filing_data": 65,
+   "stale_beyond_policy": 183,
+   "usable": 53357,
+   "withheld_timing_rule": 39
+  },
+  "size=T2": {
+   "n": 54211,
+   "usable_share": 0.9902,
+   "missing_fields_in_filing": 220,
+   "no_filing_data": 39,
+   "stale_beyond_policy": 258,
+   "usable": 53678,
+   "withheld_timing_rule": 16
+  },
+  "size=T3": {
+   "n": 54154,
+   "usable_share": 0.9934,
+   "missing_fields_in_filing": 11,
+   "no_filing_data": 10,
+   "stale_beyond_policy": 320,
+   "usable": 53797,
+   "withheld_timing_rule": 16
+  },
+  "year=2010": {
+   "n": 8261,
+   "usable_share": 0.9935,
+   "stale_beyond_policy": 47,
+   "usable": 8207,
+   "withheld_timing_rule": 7
+  },
+  "year=2011": {
+   "n": 10112,
+   "usable_share": 0.9739,
+   "missing_fields_in_filing": 4,
+   "stale_beyond_policy": 241,
+   "usable": 9848,
+   "withheld_timing_rule": 19
+  },
+  "year=2012": {
+   "n": 10307,
+   "usable_share": 0.9964,
+   "missing_fields_in_filing": 3,
+   "stale_beyond_policy": 22,
+   "usable": 10270,
+   "withheld_timing_rule": 12
+  },
+  "year=2013": {
+   "n": 11831,
+   "usable_share": 0.9951,
+   "missing_fields_in_filing": 14,
+   "no_filing_data": 1,
+   "stale_beyond_policy": 30,
+   "usable": 11773,
+   "withheld_timing_rule": 13
+  },
+  "year=2014": {
+   "n": 13451,
+   "usable_share": 0.9934,
+   "missing_fields_in_filing": 40,
+   "no_filing_data": 3,
+   "stale_beyond_policy": 42,
+   "usable": 13362,
+   "withheld_timing_rule": 4
+  },
+  "year=2015": {
+   "n": 14031,
+   "usable_share": 0.99,
+   "missing_fields_in_filing": 83,
+   "no_filing_data": 8,
+   "stale_beyond_policy": 46,
+   "usable": 13891,
+   "withheld_timing_rule": 3
+  },
+  "year=2016": {
+   "n": 13618,
+   "usable_share": 0.9949,
+   "missing_fields_in_filing": 26,
+   "stale_beyond_policy": 44,
+   "usable": 13548
+  },
+  "year=2017": {
+   "n": 14860,
+   "usable_share": 0.9913,
+   "missing_fields_in_filing": 66,
+   "no_filing_data": 2,
+   "stale_beyond_policy": 58,
+   "usable": 14730,
+   "withheld_timing_rule": 4
+  },
+  "year=2018": {
+   "n": 15672,
+   "usable_share": 0.9907,
+   "missing_fields_in_filing": 92,
+   "no_filing_data": 3,
+   "stale_beyond_policy": 47,
+   "usable": 15527,
+   "withheld_timing_rule": 3
+  },
+  "year=2019": {
+   "n": 15493,
+   "usable_share": 0.9936,
+   "missing_fields_in_filing": 69,
+   "no_filing_data": 1,
+   "stale_beyond_policy": 28,
+   "usable": 15394,
+   "withheld_timing_rule": 1
+  },
+  "year=2020": {
+   "n": 15493,
+   "usable_share": 0.9855,
+   "missing_fields_in_filing": 165,
+   "no_filing_data": 6,
+   "stale_beyond_policy": 51,
+   "usable": 15268,
+   "withheld_timing_rule": 3
+  },
+  "year=2021": {
+   "n": 19492,
+   "usable_share": 0.9755,
+   "missing_fields_in_filing": 281,
+   "no_filing_data": 90,
+   "stale_beyond_policy": 105,
+   "usable": 19014,
+   "withheld_timing_rule": 2
+  }
+ },
+ "survivorship_liquid_no_fundamentals_stock_months": {
+  "2010": 7486,
+  "2011": 5155,
+  "2012": 4676,
+  "2013": 5194,
+  "2014": 5641,
+  "2015": 5538,
+  "2016": 4942,
+  "2017": 5262,
+  "2018": 5821,
+  "2019": 5855,
+  "2020": 5964,
+  "2021": 7428
+ },
+ "survivorship_top": [
+  "2010-01-04|SPY,QQQQ,IWM,EEM,GLD,EFA,DIA,FAS,XLF,IYR,FXI,EWZ,SDS,GDX,MDY,XLE,FAZ,SSO,VALE,TLT,UNG,AA,OIH,CHK,SNDK",
+  "2011-01-01|SPY,IWM,QQQQ,EEM,EFA,GLD,TLT,TBT,SLV,OIH,EWZ,DIA,PBR,XLF,USO,VALE,REE,TNA,XLE,VWO,FXI,GDX,AA,FAS,MCP",
+  "2012-01-04|SPY,IWM,EEM,QQQ,GLD,XLE,EFA,TNA,EWZ,VWO,TLT,XLF,FAS,IVV,DIA,SLV,FAZ,GDX,XLU,XLP,XLI,SSO,TZA,FXI,XLK",
+  "2013-01-01|SPY,IWM,QQQ,EEM,GLD,VXX,DIA,XLE,EFA,VWO,XLF,IVV,SSO,SDS,TLT,FAS,TNA,GDX,VTI,XLY,XLU,XLP,NWSA,FXI,XLB",
+  "2014-01-01|SPY,IWM,QQQ,EEM,GLD,EFA,DIA,TLT,VXX,IVV,XLE,GDX,VWO,IWO,VTI,SLV,IYR,MDY,XLF,FXI,XLI,XLV,TNA,SSO,AGG",
+  "2015-01-01|SPY,IWM,QQQ,XLE,EEM,EFA,VXX,GLD,DIA,IVV,IYR,XIV,XLU,MDY,TLT,XLF,VWO,TNA,USO,FXI,GDX,XLV,XLY,IBB,DBC",
+  "2016-01-01|SPY,IWM,QQQ,EFA,EEM,XLE,IVV,DIA,TLT,VXX,UVXY,XLF,MDY,VWO,HYG,XLY,IYR,XIV,FXI,XLU,VOO,XLV,VEA,TQQQ,VTI",
+  "2017-01-04|SPY,IWM,QQQ,EEM,GDX,XLF,EFA,TLT,IVV,XLE,XLI,DIA,HYG,XLY,XLP,VOO,XLU,GDXJ,VXX,XLV,GLD,VNQ,XIV,EWZ,LQD",
+  "2018-01-03|SPY,QQQ,EEM,IWM,IVV,TLT,EFA,AGG,XLF,GLD,DIA,XLE,LQD,GDX,CHTR,VWO,XLK,EWZ,VXX,MDY,XLP,XLI,EMB,VOO,FXI",
+  "2019-01-01|SPY,QQQ,EFA,IWM,EEM,IVV,TLT,IEFA,VEA,VXX,VOO,XLF,VTI,VNQ,DIA,HYG,IEMG,GDX,XLE,XLK,AGG,GLD,IWD,MDY,TQQQ",
+  "2020-01-01|SPY,QQQ,IWM,EEM,EFA,TLT,TQQQ,GDX,IVV,VOO,HYG,GLD,LQD,AGG,XLU,XLE,IYR,FXI,XOP,JNK,XLK,XLI,LK,BND,IEFA",
+  "2021-01-01|SPY,QQQ,IWM,EFA,TQQQ,PDD,EEM,IVV,GLD,TLT,IEFA,HYG,LQD,VOO,DIA,IEMG,XBI,SE,XLF,VTI,ARKG,XLK,XLE,DKNG,ARKK"
+ ]
+}
