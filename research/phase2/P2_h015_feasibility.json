@@ -1,0 +1,235 @@
+{
+ "note": "Already-observed H014 control books (2010-2021, 12 slots, $100K). Disclosure and noise estimates only; not used to choose H015 rules.",
+ "ew_sharpe": 0.8004640928647133,
+ "spy_sharpe": 0.9056477413723396,
+ "books": {
+  "R exit A seed 1": {
+   "exp": "E014-05",
+   "sharpe": 0.6762299799001187,
+   "d_ew": -0.12423411296459463,
+   "d_spy": -0.22941776147222093,
+   "cagr": 0.1039450093050811,
+   "max_dd": -0.2804900646457006,
+   "corr_with_ew": 0.7831464076281809,
+   "cost_pa": 0.006076257342043636,
+   "turnover_pa": 4.30941526920444,
+   "mean_hold_sessions": 99.77167630057804,
+   "trades": 351
+  },
+  "R exit A seed 2": {
+   "exp": "E014-06",
+   "sharpe": 1.0038672921928866,
+   "d_ew": 0.2034031993281733,
+   "d_spy": 0.09821955082054701,
+   "cagr": 0.19687447111854772,
+   "max_dd": -0.29925991295788124,
+   "corr_with_ew": 0.7119565319806305,
+   "cost_pa": 0.004765426099558648,
+   "turnover_pa": 3.46642458069822,
+   "mean_hold_sessions": 109.2547770700637,
+   "trades": 314
+  },
+  "R exit A seed 3": {
+   "exp": "E014-07",
+   "sharpe": 0.7293834932161172,
+   "d_ew": -0.07108059964859614,
+   "d_spy": -0.17626424815622244,
+   "cagr": 0.11834795570861756,
+   "max_dd": -0.32372055863339333,
+   "corr_with_ew": 0.7971328947547974,
+   "cost_pa": 0.006164509645317205,
+   "turnover_pa": 4.230551927843616,
+   "mean_hold_sessions": 99.04885057471265,
+   "trades": 350
+  },
+  "R exit B seed 1": {
+   "exp": "E014-10",
+   "sharpe": 0.8107834659607654,
+   "d_ew": 0.010319373096052131,
+   "d_spy": -0.09486427541157416,
+   "cagr": 0.12430562325760497,
+   "max_dd": -0.2849604938764875,
+   "corr_with_ew": 0.7959394086126472,
+   "cost_pa": 0.008721679231692342,
+   "turnover_pa": 6.316455719462179,
+   "mean_hold_sessions": 71.11680327868852,
+   "trades": 492
+  },
+  "R exit B seed 2": {
+   "exp": "E014-11",
+   "sharpe": 0.839880748753415,
+   "d_ew": 0.03941665588870169,
+   "d_spy": -0.0657669926189246,
+   "cagr": 0.14487013754627664,
+   "max_dd": -0.29950410477512324,
+   "corr_with_ew": 0.7970624675277636,
+   "cost_pa": 0.008658121784887077,
+   "turnover_pa": 5.868871454026662,
+   "mean_hold_sessions": 72.56903765690376,
+   "trades": 479
+  },
+  "R exit B seed 3": {
+   "exp": "E014-12",
+   "sharpe": 0.9246357629994012,
+   "d_ew": 0.12417167013468788,
+   "d_spy": 0.01898802162706159,
+   "cagr": 0.15298402277517908,
+   "max_dd": -0.2548005245313256,
+   "corr_with_ew": 0.7978362180364484,
+   "cost_pa": 0.009102065794840302,
+   "turnover_pa": 6.602265307285506,
+   "mean_hold_sessions": 67.48732943469786,
+   "trades": 518
+  },
+  "C1 exit A (momentum-ranked)": {
+   "exp": "E014-03",
+   "sharpe": 0.5892104688955306,
+   "d_ew": -0.21125362396918268,
+   "d_spy": -0.316437272476809,
+   "cagr": 0.14305298179085124,
+   "max_dd": -0.448283081476887,
+   "corr_with_ew": 0.7198725273019003,
+   "cost_pa": 0.0053589301685221385,
+   "turnover_pa": 3.8385577757169815,
+   "mean_hold_sessions": 98.01977401129943,
+   "trades": 360
+  },
+  "C1 exit B (momentum-ranked)": {
+   "exp": "E014-08",
+   "sharpe": 0.38045866498678294,
+   "d_ew": -0.4200054278779304,
+   "d_spy": -0.5251890763855567,
+   "cagr": 0.07320319581224388,
+   "max_dd": -0.5313649443147828,
+   "corr_with_ew": 0.6856038911462947,
+   "cost_pa": 0.00891568250557634,
+   "turnover_pa": 5.88545592785228,
+   "mean_hold_sessions": 72.32640332640332,
+   "trades": 487
+  }
+ },
+ "seed_noise": {
+  "sd_by_exit_12_slots": {
+   "A": 0.17583745348331525,
+   "B": 0.0591501054475342
+  },
+  "pooled_sd_12_slots": 0.13118221110720665,
+  "approx_sd_15_slots": 0.11733293658977681,
+  "note": "3 seeds per exit: a rough estimate (sd of 3 values is itself very uncertain)"
+ },
+ "tracking": {
+  "mean_corr_random_uptrend_vs_ew": 0.7805123214234113,
+  "se_sharpe_diff_single_12_slot_book": 0.19126233231550008,
+  "se_sharpe_diff_population": 0.13918515456681813,
+  "note": "se of a single book from its tracking correlation already contains seed noise; the population part is what remains after removing the seed variance"
+ },
+ "power_g1_margin_0.25": {
+  "single 15-slot book": {
+   "se_total": 0.1820426468181828,
+   "true_edge_+0.00": 0.08482884022953252,
+   "true_edge_+0.10": 0.20497468091128956,
+   "true_edge_+0.25": 0.5,
+   "true_edge_+0.40": 0.7950253190887104,
+   "true_edge_+0.50": 0.9151711597704675
+  },
+  "mean of 5 seeds": {
+   "se_total": 0.1487478095756209,
+   "true_edge_+0.00": 0.04641089005388099,
+   "true_edge_+0.10": 0.15662686703382311,
+   "true_edge_+0.25": 0.5,
+   "true_edge_+0.40": 0.8433731329661771,
+   "true_edge_+0.50": 0.953589109946119
+  },
+  "full trend population (no seed noise)": {
+   "se_total": 0.13918515456681813,
+   "true_edge_+0.00": 0.0362338558801486,
+   "true_edge_+0.10": 0.14058357438250746,
+   "true_edge_+0.25": 0.5,
+   "true_edge_+0.40": 0.8594164256174925,
+   "true_edge_+0.50": 0.9637661441198514
+  },
+  "decision_rules_5_seeds_simulated": {
+   "true_edge_+0.00": {
+    "composite_mean": 0.04595,
+    "all_5_seeds": 0.006965,
+    "at_least_4_of_5": 0.021905
+   },
+   "true_edge_+0.10": {
+    "composite_mean": 0.15669,
+    "all_5_seeds": 0.03495,
+    "at_least_4_of_5": 0.08773
+   },
+   "true_edge_+0.25": {
+    "composite_mean": 0.501,
+    "all_5_seeds": 0.19633,
+    "at_least_4_of_5": 0.35272
+   },
+   "true_edge_+0.40": {
+    "composite_mean": 0.84306,
+    "all_5_seeds": 0.536085,
+    "at_least_4_of_5": 0.72546
+   },
+   "true_edge_+0.50": {
+    "composite_mean": 0.9535,
+    "all_5_seeds": 0.76261,
+    "at_least_4_of_5": 0.89388
+   }
+  }
+ },
+ "cost_model_15_slots": {
+  "hold_60": {
+   "round_trips": 58.59,
+   "orders": 117.18,
+   "commission": 0.008202599999999999,
+   "slippage": 0.007812,
+   "total": 0.0160146
+  },
+  "hold_100": {
+   "round_trips": 35.154,
+   "orders": 70.308,
+   "commission": 0.004921560000000001,
+   "slippage": 0.0046872,
+   "total": 0.009608760000000001
+  },
+  "hold_150": {
+   "round_trips": 23.436,
+   "orders": 46.872,
+   "commission": 0.00328104,
+   "slippage": 0.0031248,
+   "total": 0.0064058399999999995
+  },
+  "hold_200": {
+   "round_trips": 17.577,
+   "orders": 35.154,
+   "commission": 0.0024607800000000005,
+   "slippage": 0.0023436,
+   "total": 0.0048043800000000005
+  },
+  "hold_250": {
+   "round_trips": 14.0616,
+   "orders": 28.1232,
+   "commission": 0.001968624,
+   "slippage": 0.0018748800000000002,
+   "total": 0.003843504
+  }
+ },
+ "cost_model_check": {
+  "model_12_slots_hold_103": 0.008463285436893203,
+  "measured_R_exit_A_mean": 0.005668731028973163
+ },
+ "decisions": {
+  "hold_100": {
+   "entries_per_year": 35.154,
+   "entries_12y": 421.84800000000007
+  },
+  "hold_150": {
+   "entries_per_year": 23.436,
+   "entries_12y": 281.23199999999997
+  },
+  "hold_200": {
+   "entries_per_year": 17.577,
+   "entries_12y": 210.92400000000004
+  },
+  "monthly_review_dates_12y": 144
+ }
+}
