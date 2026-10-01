@@ -70,9 +70,25 @@ def summary_line(eid, prefix):
 _CACHE = {}
 
 
+def repeat_of(eid):
+    """A technical repeat (identical configuration re-run after an operational failure) stands in for the run it
+    repeats when that run has no completed result (D069/D099)."""
+    for p in sorted(EXP.glob("E*/config.json")):
+        try:
+            c = json.loads(p.read_text())
+        except Exception:
+            continue
+        if c.get("technical_repeat_of") == eid:
+            return c["experiment_id"]
+    return None
+
+
 def run(eid):
     if eid not in _CACHE:
-        _CACHE[eid] = load(eid)
+        r = load(eid)
+        if r is None and repeat_of(eid):
+            r = load(repeat_of(eid))
+        _CACHE[eid] = r
     return _CACHE[eid]
 
 
@@ -91,6 +107,8 @@ def book(eid):
     r = run(eid)
     if r is None:
         return dict(exp=eid, status=status(eid))
+    if r["cfg"]["experiment_id"] != eid:
+        eid = f"{eid} (technical repeat {r['cfg']['experiment_id']})"
     eq = p2spec.equity_series(r["eq"])
     rr = p2spec.returns(eq)
     cfg = r["cfg"]
@@ -118,7 +136,7 @@ def book(eid):
                 trades=ts, holding_sessions=hold_sessions,
                 profit_concentration=stats.profit_concentration(closed["pnl"]) if len(closed) else None,
                 skipped_min_position=r["res"].get("harness_summary", {}).get("skipped_min_position"),
-                strategy_summary=summary_line(eid, "QRS014"))
+                strategy_summary=summary_line(r["cfg"]["experiment_id"], "QRS014"))
 
 
 def yearly(eids):

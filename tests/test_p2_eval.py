@@ -109,3 +109,19 @@ def test_missing_robustness_runs_fail_g4(fake, monkeypatch, tmp_path):
     spy = m.p2spec.equity_series(m.load("E900-07")["eq"])
     g = m.gates_for("A", m.p2spec.returns(ew), m.p2spec.returns(spy), ew, spy, with_robustness=True)
     assert not g["G4"]["ok"] and not g["ok"]
+
+
+def test_technical_repeat_stands_in_for_a_run_that_never_started(fake, monkeypatch):
+    m = _mod()
+    shutil.rmtree(fake / "E014-13")
+    (fake / "E014-13").mkdir()
+    (fake / "E014-13" / "config.json").write_text(json.dumps(dict(experiment_id="E014-13")))
+    (fake / "E014-13" / "result.json").write_text(json.dumps(dict(status="failed")))
+    src = fake / "E014-14"
+    shutil.copytree(src, fake / "E014-24")
+    c = json.loads((src / "config.json").read_text())
+    (fake / "E014-24" / "config.json").write_text(json.dumps(dict(c, experiment_id="E014-24", technical_repeat_of="E014-13")))
+    monkeypatch.setattr(m, "EXP", fake)
+    m._CACHE.clear()
+    b = m.book("E014-13")
+    assert b["status"] == "completed" and "technical repeat E014-24" in b["exp"]
