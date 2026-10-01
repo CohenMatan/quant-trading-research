@@ -939,3 +939,25 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 **Conclusion.** Feasible, with handling rules.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-01: Fundamental infrastructure remediation; readiness checkpoint; STOP (D108, D109)
+
+**Built.**
+
+- A point-in-time fundamentals layer (`qr_fundamentals.py`):
+  - field whitelist with hard failure;
+  - visibility only after filing, with estimated dates waiting until period end + 90 days;
+  - quarantine of accession anomalies;
+  - amendment timing;
+  - a 200-day freshness limit.
+- A dated Visa exchange correction (future runs only).
+- A point-in-time financial-format classification derived from each filing's own statements. Vendor sector metadata was shown to be current-status.
+
+**Verification.** Canary E969-01 found zero rule violations over 3.42 million stock-days. Usable coverage is 97.4–99.6% a year. 449 tests pass.
+
+**Verdict: not yet safe to define H016.**
+
+- SEC verification is blocked by the network policy.
+- The D043 survivorship gap needs EDGAR to repair.
+
+**STOP:** awaiting the owner (enable SEC access in a new session).

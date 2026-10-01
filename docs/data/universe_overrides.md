@@ -26,3 +26,12 @@ Morningstar's company flags and names describe each company's **current** status
 - Everything else found was either correctly excluded already, or an acquired corporation whose current successor is an LLC. Those correctly stay eligible (see D061).
 
 **Correction to earlier reports.** CP4 counted MIC among E005-28's non-common holdings. MIC was a corporation from 2015-05-21, so its 2021 holding in E005-28 was ordinary common stock.
+
+## Exchange-label corrections (D108; future research runs only)
+
+| Security | Correction | Dates | Evidence |
+|---|---|---|---|
+| Visa Inc. Class A (`V U12VRGLO8PR9`) | Exchange **NYS** instead of the vendor's `OTCM` | 2008-03-19 → (open) | Visa's IPO listed its Class A shares on the NYSE on 2008-03-19 (public record; company and NYSE announcements). Audit E968-01 found the vendor label `OTCM` in every month of 2010–2021, which excluded Visa from the ≥ $2B universe. |
+
+- **Scope:** Runs before D108 (C01–C03, H014, all benchmarks to date) are historical records under the infrastructure of their time. They are not rerun or rewritten.
+- **Verification:** canary E969 checks that Visa is eligible on the corrected dates. The correction does not use today's metadata.

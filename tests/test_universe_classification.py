@@ -93,3 +93,16 @@ def test_structural_rules_still_apply(harness):
 def test_universe_selection_passes_the_date():
     src = (ROOT / "src/qresearch/lean/qr_harness.py").read_text()
     assert "if not is_us_common(f, day):" in src
+
+
+def test_visa_exchange_correction_is_dated(harness):
+    """D108: Visa Class A is NYSE from its 2008-03-19 IPO; the vendor's OTCM label is corrected only from then."""
+    import types as _t
+    ns = _t.SimpleNamespace
+    visa = ns(symbol=ns(id="V U12VRGLO8PR9"), security_reference=ns(exchange_id="OTCM"))
+    other = ns(symbol=ns(id="XYZ R735QTJ8XC9X"), security_reference=ns(exchange_id="OTCM"))
+    assert harness.exchange_of(visa, "2008-03-18") == "OTCM"
+    assert harness.exchange_of(visa, "2008-03-19") == "NYS" and harness.exchange_of(visa, "2021-12-31") == "NYS"
+    assert harness.exchange_of(visa, "2008-03-19") in harness.EXCHANGES
+    assert harness.exchange_of(other, "2015-01-02") == "OTCM"        # no other security is affected
+    assert set(harness.EXCHANGE_OVERRIDES) == {"V U12VRGLO8PR9"}
