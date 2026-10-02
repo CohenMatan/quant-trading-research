@@ -1113,3 +1113,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Phase 2:** 2 of 3 slots used.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-02: H016 closed as Rejected; final-slot review and H017 proposal; STOP (D118, D119)
+
+- **Owner:** H016 closed as Rejected and preserved as tested. Phase 2 has used 2 of 3 slots. The objective is made explicit: beat S&P 500 buy-and-hold after costs.
+- **Review (no backtests, no factor returns):**
+  - literature review of the remaining families;
+  - a power analysis from completed control books only;
+  - an alignment review of the gates.
+- **Findings:**
+  - A "beat SPY" hard gate (G1.5 in development, HO4 in the Holdout) is proposed. The development gates already block SPY-trailing passes in practice, but not by rule, and the Holdout criteria allow them.
+  - Any 20-stock book needs about a 7% a year true edge over its universe to pass half the time.
+  - Value (B/M) is the only ready and credible family, but its chance of qualifying is about 1–4%.
+- **Recommendation:** approve Amendment 2 and preserve slot 3. H017 = Value is specified in case the owner chooses to spend it.
+- **Checkpoint:** `docs/checkpoints/P2_CP10_final_hypothesis_opportunity_H017_proposal.md`.
+
+**STOP:** awaiting the owner.
