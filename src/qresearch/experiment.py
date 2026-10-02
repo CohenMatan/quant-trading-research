@@ -92,6 +92,14 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 raise ConfigError("stress experiments must use split STRESS")
             if not str(cfg.get("finalist_of") or "").startswith("S"):
                 raise ConfigError("stress experiments must name the finalist strategy in 'finalist_of' (D035)")
+    if cfg["strategy_id"] == "S016" and cfg.get("params", {}).get("book") in ("gpa", "random"):
+        # D115: every trading H016 book (candidate, random controls, sensitivities) uses the H016 portfolio rules
+        if cfg["portfolio"] != config.H016_PORTFOLIO:
+            raise ConfigError(f"S016 books must use the H016 portfolio rules {config.H016_PORTFOLIO} (D115)")
+        if cfg["kind"] == "research" and cfg.get("hypothesis_id") != "H016":
+            raise ConfigError("S016 research runs belong to hypothesis H016")
+        if float(cfg["costs"].get("slippage_bps", -1)) != 10:
+            raise ConfigError("base slippage is 10 bps per side (D024); stress multiples via slippage_stress_multiple")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
@@ -99,7 +107,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress"):
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] != "S016":
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")
