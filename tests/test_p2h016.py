@@ -48,3 +48,22 @@ def test_dsr_views_use_the_phase2_counts():
 def test_gate_thresholds_are_the_unchanged_phase2_ones():
     assert p2spec.MARGIN_EW == 0.25 and p2spec.MARGIN_SPY == 0.10 and p2spec.G4_MAX_COST == 0.015
     assert p2h016.COMMON_START == "2010-03-01" and len(p2h016.RANDOM) == 5 and len(p2h016.PERTURBATIONS) == 6
+
+
+def test_topup_costs_are_reported_separately_from_initial_buys():
+    eq = _eq("2010-03-01", "2011-03-01", 0.0, 0.0, 5)
+    fills = pd.DataFrame({"order_id": [1, 2, 3, 4, 5], "quantity": [80, 85, 10, 12, -80],
+                          "price": [50.0, 50.0, 50.0, 50.0, 55.0], "fee": [7.0] * 5,
+                          "tag": ["s016_entry|sig=2010-03-01", "s016_entry|sig=2010-03-01", "s016_topup|sig=2010-03-02",
+                                  "s016_topup|sig=2010-03-02", "s016_exit|sig=2010-06-01"]})
+    c = p2h016.topup_costs(fills, eq, 0.001)
+    assert c["initial_buys"] == 2 and c["topup_orders"] == 2
+    assert c["topup_commissions"] == 14.0 and c["topup_notional"] == 1100.0
+    assert c["topup_slippage"] == pytest.approx(1.1) and c["min_topup_fill_usd"] == 500.0
+    years = (pd.Timestamp(eq.index[-1]) - pd.Timestamp(eq.index[0])).days / 365.25
+    assert c["topup_cost_pa"] == pytest.approx(15.1 / 100000 / years)
+
+
+def test_spec_is_frozen_and_hash_pinned():
+    assert p2h016.SPEC_SHA256 != "PENDING"
+    assert p2h016.spec_hash() == p2h016.SPEC_SHA256       # any change to H016_spec.md -> STOP and ask the owner

@@ -1,0 +1,73 @@
+{
+ "experiment": "E980-01",
+ "ok": true,
+ "checks": {
+  "equity_starts_2010_03_01_in_cash": true,
+  "first_fills_2010_03_02": true,
+  "twenty_positions_formed_2010_03_02": true,
+  "never_more_than_20_positions": true,
+  "quarterly_rebalance_dates": true,
+  "exits_only_at_rebalances": true,
+  "no_entry_decision_before_first_rebalance": true,
+  "shadow_gpa_logged_every_rebalance": true,
+  "pit_violations_zero": true,
+  "no_financial_or_reit_in_universe": true,
+  "no_new_purchase_below_4000_at_decision": true,
+  "at_most_one_topup_per_new_position": true,
+  "topup_only_after_initial_fill": true,
+  "no_other_resizing_buys": true,
+  "topups_at_least_250_at_decision": true,
+  "topups_never_above_target": true,
+  "no_negative_cash": true,
+  "commissions_7_per_order": true,
+  "cash_reconciles_with_fills": true,
+  "harness_integrity_ok": true
+ },
+ "info": {
+  "fills": 240,
+  "entry_fills": 88,
+  "topup_fills": 83,
+  "positions_opened": 88,
+  "positions_with_topup": 83,
+  "entry_fill_usd": {
+   "min": 4180.176,
+   "median": 5297.086794999999
+  },
+  "topup_fill_usd": {
+   "min": 313.24293,
+   "median": 643.2426
+  },
+  "entry_fills_below_4000_after_open_gap": 0,
+  "topup_commissions": 581.0,
+  "topup_orders_per_year": 7.012664816099931,
+  "mean_invested_share": 0.964280692196956,
+  "min_invested_share_after_formation": 0.6967306177425168,
+  "days_with_20_positions_share": 0.8735747820254862,
+  "cash_credits_not_from_fills_usd": 57115.35732000001,
+  "rebalances": 48,
+  "universe_size_first_last": [
+   547,
+   1083
+  ],
+  "summary": {
+   "entries_decided": 90,
+   "entry_orders": 88,
+   "ew_rebalances": 0,
+   "exits_decided": 60,
+   "financial_in_universe": 0,
+   "max_holdings": 20,
+   "max_topup_over_target_usd": 0.0,
+   "max_topups_per_position": 1,
+   "min_entry_planned_usd": 4152.96,
+   "min_topup_planned_usd": 308.52,
+   "pending_left_at_rebalance": 2,
+   "pit_violations": 0,
+   "rebalances": 48,
+   "topup_evaluations": 88,
+   "topup_orders": 83,
+   "topups_below_threshold_or_unfunded": 5,
+   "universe_sum": 37949
+  }
+ },
+ "note": "Canary book = random seed 0 (not a control seed). No candidate (GP/A) performance is computed."
+}

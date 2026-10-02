@@ -1060,3 +1060,56 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Not done:** nothing run on QuantConnect; slot 2 unused; Holdout locked.
 
 **STOP:** awaiting the owner's choice of §6.3.
+
+## 2026-10-02: H016 sizing option A approved; one-time top-up built and verified offline; spec frozen (D116)
+
+- **Owner approval:** option A — $4,000 minimum new position, the 15% gap reserve kept, at most one top-up per new position toward its original target, a pre-declared minimum top-up, no other resizing.
+- **Built:**
+  - `qr_h016.plan_topups` with `MIN_TOPUP_USD` = $250 (2 × $7 / 6% ≈ $233, rounded up);
+  - the S016 one-time top-up step plus canary counters;
+  - an offline simulation with the harness's actual order planner (12 tests): at $100K, first fills ~$4,250, top-ups ~$500, ~95% invested; at $200K ~96%; no negative cash; no repeated top-ups.
+- **Spec frozen:** `research/phase2/H016_spec.md` §6.3, hash-pinned.
+- **Configs:** canary E980-01 (X980 = byte copy of S016, random seed 0) and E016-01..08.
+- **Next:** run the canary; run E016-01 (slot 2) onward only if every check passes.
+
+## 2026-10-02: H016 canary E980-01 passes; candidate run authorised
+
+- **Canary E980-01** (X980 = byte copy of S016, random book seed 0, 2010-03-01 → 2021-12-31): all 20 offline checks (`research/phase2/H016_canary_check.json`) and the harness integrity checks pass.
+- **Mechanics:**
+  - equity starts 2010-03-01 in cash; first fills 2010-03-02, with 20 positions that day;
+  - 48 quarterly rebalances;
+  - pit_violations 0; no financial or REIT company in the universe;
+  - minimum planned entry $4,153 (≥ $4,000); minimum entry fill $4,180.
+- **Top-ups:**
+  - 88 positions opened, 83 topped up exactly once, 5 not topped up (below threshold or unfunded);
+  - top-ups: minimum planned $309 (≥ $250), median fill $643, never above target;
+  - 7 top-up orders a year, top-up commissions $581 in total.
+- **Cash and costs:**
+  - no negative cash, maximum gross exposure 98.0%; $7 on every order;
+  - cash reconciles with the fills, and the remaining credits (dividends) are non-negative;
+  - mean invested 96.4%. Below 90% on 0.7% of days: rebalance transitions while D051 waits for sale proceeds to settle.
+- **Two minor issues:**
+  - two entries were never filled before the next rebalance (`pending_left_at_rebalance` 2);
+  - the checker's position reconstruction miscounted across a share split (GIS, 2010). It was fixed to delimit positions at each entry buy; the algorithm's own counter was 1 throughout.
+- **Freeze test:** passes.
+- **No candidate (GP/A) performance was computed.** Every prerequisite holds, so the H016 development runs start (E016-01 consumes Phase 2 slot 2).
+
+## 2026-10-02: H016 development runs complete; H016 NOT development-qualified; STOP (D117)
+
+- **Runs:** E016-01..08 completed on the common window 2010-03-01 → 2021-12-31. Slot 2 is consumed.
+- **Result:**
+
+  | Book | Sharpe |
+  |---|---|
+  | H016 (CAGR 12.8%, MaxDD −40.5%) | 0.69 |
+  | EW-H016 | 0.85 |
+  | SPY | 0.92 |
+  | Random median (range 0.62–0.98) | 0.75 |
+
+  **G1, G2 and G3 fail; G4 fails by rule.** The conditional robustness runs were not run.
+- **Diagnostics:** the survivorship and low-coverage views make it worse (−0.21 / −0.26 vs EW). DSR 0.83 (N 3) / 0.09 (N 43). The ranking adds no measurable value over random selection.
+- **Mechanics:** behaved as designed. Top-ups cost 0.06% a year; about 95% invested; no leverage.
+- **Checkpoint:** `docs/checkpoints/P2_CP9_H016_development_checkpoint.md`. No Holdout request.
+- **Phase 2:** 2 of 3 slots used.
+
+**STOP:** awaiting the owner.

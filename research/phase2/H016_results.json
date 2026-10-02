@@ -1,0 +1,1771 @@
+{
+ "spec": "research/phase2/H016_spec.md",
+ "spec_sha256": "786088354d5efb882014855b78efa00779bbc73b4e7e6c160dcc65eca4c72b08",
+ "spec_hash_ok": true,
+ "window": [
+  "2010-03-01",
+  "2021-12-31"
+ ],
+ "books": {
+  "E016-01": {
+   "exp": "E016-01",
+   "status": "completed",
+   "book": "gpa",
+   "seed": null,
+   "cash": 100000,
+   "sharpe": 0.6922313103432249,
+   "cagr": 0.12770807584116595,
+   "max_dd": -0.4053325751100536,
+   "calmar": 0.3150698554304237,
+   "vol": 0.20385159621895316,
+   "final_equity": 414749.51,
+   "costs": {
+    "commission_pa": 0.0015343537413697384,
+    "slippage_pa": 0.001488688201514839,
+    "total_pa": 0.003023041942884577,
+    "turnover_pa": 1.488688201514839,
+    "orders": 596
+   },
+   "exposure_mean": 0.9527869128322388,
+   "cash_mean": 0.04721308716776118,
+   "cash_min": 0.0193496306336694,
+   "npos_mean": 19.713375796178344,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 197,
+    "n_open_trades": 20,
+    "win_rate": 0.5279187817258884,
+    "avg_win": 0.45857668942307694,
+    "avg_loss": -0.2012405611827957,
+    "expectancy": 0.14708935791878172,
+    "profit_factor": 2.3931101946313316,
+    "avg_holding_days": 350.1421319796954
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.2507542169904263,
+    "top_5pct_share": 0.7973798945963508,
+    "top_10pct_share": 1.2080478093079665
+   },
+   "skipped_min_position": 600,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 224,
+    "entry_orders": 217,
+    "ew_rebalances": 0,
+    "exits_decided": 188,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4129.5,
+    "min_topup_planned_usd": 281.25,
+    "pending_left_at_rebalance": 7,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 217,
+    "topup_orders": 182,
+    "topups_below_threshold_or_unfunded": 35,
+    "universe_sum": 37949
+   },
+   "slot_usage": 0.9856687898089171,
+   "topup_costs": {
+    "initial_buys": 217,
+    "topup_orders": 182,
+    "topup_notional": 264869.77517,
+    "topup_commissions": 1274.0,
+    "topup_slippage": 264.86977516999997,
+    "topup_cost_pa": 0.0005659565189388536,
+    "min_topup_fill_usd": 283.283
+   }
+  },
+  "E016-02": {
+   "exp": "E016-02",
+   "status": "completed_with_warnings",
+   "book": "ew",
+   "seed": null,
+   "cash": 10000000,
+   "sharpe": 0.8492553634211156,
+   "cagr": 0.14418020318861258,
+   "max_dd": -0.3597575690658795,
+   "calmar": 0.4007704509539034,
+   "vol": 0.17727342432136795,
+   "final_equity": 49240699.06,
+   "costs": {
+    "commission_pa": 0.0004376187327600342,
+    "slippage_pa": 0.0007824420710645036,
+    "total_pa": 0.0012200608038245378,
+    "turnover_pa": 0.7824420710645036,
+    "orders": 17419
+   },
+   "exposure_mean": 0.9405412018169904,
+   "cash_mean": 0.05945879818300951,
+   "cash_min": 0.03199359313214154,
+   "npos_mean": 786.1035869929601,
+   "npos_max": 1137,
+   "trades": {
+    "n_trades": 3025,
+    "n_open_trades": 1079,
+    "win_rate": 0.3279338842975207,
+    "avg_win": 0.42693265911290323,
+    "avg_loss": -0.1632073389965568,
+    "expectancy": 0.030319562862809922,
+    "profit_factor": 1.048824165104824,
+    "avg_holding_days": 439.09520661157023
+   },
+   "profit_concentration": {
+    "top_1pct_share": 3.479318476928857,
+    "top_5pct_share": 10.94901839011675,
+    "top_10pct_share": 16.214830604514866
+   },
+   "skipped_min_position": 0,
+   "integrity_ok": false,
+   "strategy_summary": {
+    "entries_decided": 0,
+    "entry_orders": 0,
+    "ew_rebalances": 142,
+    "exits_decided": 0,
+    "financial_in_universe": 0,
+    "max_holdings": 0,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 0,
+    "min_entry_planned_usd": null,
+    "min_topup_planned_usd": null,
+    "pending_left_at_rebalance": 0,
+    "pit_violations": 0,
+    "rebalances": 0,
+    "topup_evaluations": 0,
+    "topup_orders": 0,
+    "topups_below_threshold_or_unfunded": 0,
+    "universe_sum": 111873
+   }
+  },
+  "E016-03": {
+   "exp": "E016-03",
+   "status": "completed",
+   "book": "random",
+   "seed": 1,
+   "cash": 100000,
+   "sharpe": 0.84586517619811,
+   "cagr": 0.15376508770784403,
+   "max_dd": -0.33783283121733265,
+   "calmar": 0.4551514047754724,
+   "vol": 0.1907557596089478,
+   "final_equity": 543506.36,
+   "costs": {
+    "commission_pa": 0.0008565686245571984,
+    "slippage_pa": 0.0007952023525094699,
+    "total_pa": 0.0016517709770666686,
+    "turnover_pa": 0.7952023525094699,
+    "orders": 315
+   },
+   "exposure_mean": 0.9482648432208198,
+   "cash_mean": 0.051735156779180204,
+   "cash_min": 0.0203253424798038,
+   "npos_mean": 19.841099564197116,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 100,
+    "n_open_trades": 20,
+    "win_rate": 0.51,
+    "avg_win": 0.6153982892156863,
+    "avg_loss": -0.21149020612244898,
+    "expectancy": 0.21022292650000002,
+    "profit_factor": 2.881087010510065,
+    "avg_holding_days": 545.38
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.5030674922125968,
+    "top_5pct_share": 0.9279819857498008,
+    "top_10pct_share": 1.1295044461856234
+   },
+   "skipped_min_position": 206,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 122,
+    "entry_orders": 120,
+    "ew_rebalances": 0,
+    "exits_decided": 94,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4177.02,
+    "min_topup_planned_usd": 362.46000000000004,
+    "pending_left_at_rebalance": 2,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 120,
+    "topup_orders": 95,
+    "topups_below_threshold_or_unfunded": 25,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.9920549782098558,
+   "topup_costs": {
+    "initial_buys": 120,
+    "topup_orders": 95,
+    "topup_notional": 218164.91696999996,
+    "topup_commissions": 665.0,
+    "topup_slippage": 218.16491696999998,
+    "topup_cost_pa": 0.0003430799810368096,
+    "min_topup_fill_usd": 373.75338
+   }
+  },
+  "E016-04": {
+   "exp": "E016-04",
+   "status": "completed",
+   "book": "random",
+   "seed": 2,
+   "cash": 100000,
+   "sharpe": 0.6163049716096469,
+   "cagr": 0.10585430716731148,
+   "max_dd": -0.38014870489711994,
+   "calmar": 0.2784549988035838,
+   "vol": 0.19401250580638427,
+   "final_equity": 329000.58,
+   "costs": {
+    "commission_pa": 0.000780371208102237,
+    "slippage_pa": 0.0006222797145742532,
+    "total_pa": 0.0014026509226764902,
+    "turnover_pa": 0.6222797145742531,
+    "orders": 266
+   },
+   "exposure_mean": 0.9466996544817565,
+   "cash_mean": 0.05330034551824348,
+   "cash_min": 0.018396254870669922,
+   "npos_mean": 19.873952396915858,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 81,
+    "n_open_trades": 20,
+    "win_rate": 0.4444444444444444,
+    "avg_win": 0.672510603611111,
+    "avg_loss": -0.20024277888888892,
+    "expectancy": 0.18764761333333332,
+    "profit_factor": 1.9118693692064168,
+    "avg_holding_days": 659.8024691358024
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.3299086495733224,
+    "top_5pct_share": 1.1954695335488053,
+    "top_10pct_share": 1.6972944516762924
+   },
+   "skipped_min_position": 177,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 104,
+    "entry_orders": 101,
+    "ew_rebalances": 0,
+    "exits_decided": 79,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4001.7999999999997,
+    "min_topup_planned_usd": 289.5,
+    "pending_left_at_rebalance": 3,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 101,
+    "topup_orders": 84,
+    "topups_below_threshold_or_unfunded": 17,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.9936976198457929,
+   "topup_costs": {
+    "initial_buys": 101,
+    "topup_orders": 84,
+    "topup_notional": 125776.81116,
+    "topup_commissions": 588.0,
+    "topup_slippage": 125.77681116,
+    "topup_cost_pa": 0.00029914654803452816,
+    "min_topup_fill_usd": 291.04075
+   }
+  },
+  "E016-05": {
+   "exp": "E016-05",
+   "status": "completed",
+   "book": "random",
+   "seed": 3,
+   "cash": 100000,
+   "sharpe": 0.6719340451077239,
+   "cagr": 0.133378460499312,
+   "max_dd": -0.40376013891970186,
+   "calmar": 0.330340832693833,
+   "vol": 0.22397400930243158,
+   "final_equity": 440116.07,
+   "costs": {
+    "commission_pa": 0.0009480827226632926,
+    "slippage_pa": 0.0007419826357748133,
+    "total_pa": 0.0016900653584381057,
+    "turnover_pa": 0.7419826357748133,
+    "orders": 323
+   },
+   "exposure_mean": 0.947317555980735,
+   "cash_mean": 0.05268244401926502,
+   "cash_min": 0.0157492361970392,
+   "npos_mean": 19.79014415018438,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 100,
+    "n_open_trades": 20,
+    "win_rate": 0.47,
+    "avg_win": 0.8072236878723402,
+    "avg_loss": -0.22740028547169808,
+    "expectancy": 0.258872982,
+    "profit_factor": 2.659300212455664,
+    "avg_holding_days": 512.08
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.6014458609897935,
+    "top_5pct_share": 1.0454116555048105,
+    "top_10pct_share": 1.237290671421806
+   },
+   "skipped_min_position": 331,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 124,
+    "entry_orders": 120,
+    "ew_rebalances": 0,
+    "exits_decided": 92,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4114.849999999999,
+    "min_topup_planned_usd": 281.25,
+    "pending_left_at_rebalance": 4,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 120,
+    "topup_orders": 103,
+    "topups_below_threshold_or_unfunded": 17,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.989507207509219,
+   "topup_costs": {
+    "initial_buys": 120,
+    "topup_orders": 103,
+    "topup_notional": 100169.05898999998,
+    "topup_commissions": 721.0,
+    "topup_slippage": 100.16905898999998,
+    "topup_cost_pa": 0.00034433268342065154,
+    "min_topup_fill_usd": 292.7925
+   }
+  },
+  "E016-06": {
+   "exp": "E016-06",
+   "status": "completed",
+   "book": "random",
+   "seed": 4,
+   "cash": 100000,
+   "sharpe": 0.7501826894929565,
+   "cagr": 0.13386328019332328,
+   "max_dd": -0.4059294369079476,
+   "calmar": 0.32976982702459046,
+   "vol": 0.19236846377575625,
+   "final_equity": 442349.51,
+   "costs": {
+    "commission_pa": 0.0006069390072777377,
+    "slippage_pa": 0.00047943237927385214,
+    "total_pa": 0.0010863713865515898,
+    "turnover_pa": 0.4794323792738521,
+    "orders": 242
+   },
+   "exposure_mean": 0.9597449897145239,
+   "cash_mean": 0.04025501028547615,
+   "cash_min": 0.018426887502192065,
+   "npos_mean": 19.882333221589004,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 78,
+    "n_open_trades": 20,
+    "win_rate": 0.5256410256410257,
+    "avg_win": 0.4571610948780489,
+    "avg_loss": -0.17198026108108105,
+    "expectancy": 0.15872224653846154,
+    "profit_factor": 2.7856182717933757,
+    "avg_holding_days": 521.3076923076923
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.5217265056522671,
+    "top_5pct_share": 0.8287007483771658,
+    "top_10pct_share": 1.0186643919202143
+   },
+   "skipped_min_position": 67,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 98,
+    "entry_orders": 98,
+    "ew_rebalances": 0,
+    "exits_decided": 72,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4108.5,
+    "min_topup_planned_usd": 265.9,
+    "pending_left_at_rebalance": 0,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 98,
+    "topup_orders": 66,
+    "topups_below_threshold_or_unfunded": 32,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.9941166610794502,
+   "topup_costs": {
+    "initial_buys": 98,
+    "topup_orders": 66,
+    "topup_notional": 84606.04152,
+    "topup_commissions": 462.0,
+    "topup_slippage": 84.60604152,
+    "topup_cost_pa": 0.00019584210638262255,
+    "min_topup_fill_usd": 262.8626
+   }
+  },
+  "E016-07": {
+   "exp": "E016-07",
+   "status": "completed",
+   "book": "random",
+   "seed": 5,
+   "cash": 100000,
+   "sharpe": 0.9815206185646048,
+   "cagr": 0.1846387426178131,
+   "max_dd": -0.36351151582138386,
+   "calmar": 0.5079309308829099,
+   "vol": 0.19146945332789878,
+   "final_equity": 742921.87,
+   "costs": {
+    "commission_pa": 0.0006972519471648424,
+    "slippage_pa": 0.0005046208868564583,
+    "total_pa": 0.0012018728340213007,
+    "turnover_pa": 0.5046208868564582,
+    "orders": 314
+   },
+   "exposure_mean": 0.9596282011898659,
+   "cash_mean": 0.04037179881013413,
+   "cash_min": 0.018601691617335332,
+   "npos_mean": 19.685551458263493,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 98,
+    "n_open_trades": 20,
+    "win_rate": 0.5102040816326531,
+    "avg_win": 0.403090918,
+    "avg_loss": -0.21548917250000002,
+    "expectancy": 0.1001129144897959,
+    "profit_factor": 1.656648075848927,
+    "avg_holding_days": 468.5408163265306
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.27862113905425767,
+    "top_5pct_share": 0.9488847230357536,
+    "top_10pct_share": 1.4300370682236467
+   },
+   "skipped_min_position": 463,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 125,
+    "entry_orders": 118,
+    "ew_rebalances": 0,
+    "exits_decided": 90,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4003.33,
+    "min_topup_planned_usd": 254.28000000000003,
+    "pending_left_at_rebalance": 7,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 118,
+    "topup_orders": 98,
+    "topups_below_threshold_or_unfunded": 20,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.9842775729131746,
+   "topup_costs": {
+    "initial_buys": 118,
+    "topup_orders": 98,
+    "topup_notional": 96902.77597,
+    "topup_commissions": 686.0,
+    "topup_slippage": 96.90277597000001,
+    "topup_cost_pa": 0.00024835326887435983,
+    "min_topup_fill_usd": 255.91566
+   }
+  },
+  "E016-08": {
+   "exp": "E016-08",
+   "status": "completed",
+   "book": "gpa",
+   "seed": null,
+   "cash": 200000,
+   "sharpe": 0.7130020091452689,
+   "cagr": 0.1328218387957949,
+   "max_dd": -0.4043683001760442,
+   "calmar": 0.3284674855520824,
+   "vol": 0.204427514714659,
+   "final_equity": 875129.18,
+   "costs": {
+    "commission_pa": 0.0007610305145270292,
+    "slippage_pa": 0.0015069004172469371,
+    "total_pa": 0.002267930931773966,
+    "turnover_pa": 1.506900417246937,
+    "orders": 622
+   },
+   "exposure_mean": 0.957054274162556,
+   "cash_mean": 0.042945725837444125,
+   "cash_min": 0.01942985416362472,
+   "npos_mean": 19.868253436138115,
+   "npos_max": 20,
+   "trades": {
+    "n_trades": 201,
+    "n_open_trades": 20,
+    "win_rate": 0.5373134328358209,
+    "avg_win": 0.45396613796296303,
+    "avg_loss": -0.1996675361290322,
+    "expectancy": 0.15153861711442784,
+    "profit_factor": 2.4389602022676105,
+    "avg_holding_days": 346.46268656716416
+   },
+   "profit_concentration": {
+    "top_1pct_share": 0.33964541061382175,
+    "top_5pct_share": 0.823256328202349,
+    "top_10pct_share": 1.1963751989952436
+   },
+   "skipped_min_position": 153,
+   "integrity_ok": true,
+   "strategy_summary": {
+    "entries_decided": 221,
+    "entry_orders": 221,
+    "ew_rebalances": 0,
+    "exits_decided": 192,
+    "financial_in_universe": 0,
+    "max_holdings": 20,
+    "max_topup_over_target_usd": 0.0,
+    "max_topups_per_position": 1,
+    "min_entry_planned_usd": 4609.429999999999,
+    "min_topup_planned_usd": 251.04000000000002,
+    "pending_left_at_rebalance": 0,
+    "pit_violations": 0,
+    "rebalances": 48,
+    "topup_evaluations": 221,
+    "topup_orders": 200,
+    "topups_below_threshold_or_unfunded": 21,
+    "universe_sum": 37920
+   },
+   "slot_usage": 0.9934126718069057,
+   "topup_costs": {
+    "initial_buys": 221,
+    "topup_orders": 200,
+    "topup_notional": 994451.3779199999,
+    "topup_commissions": 1400.0,
+    "topup_slippage": 994.4513779199999,
+    "topup_cost_pa": 0.0004185233266303195,
+    "min_topup_fill_usd": 252.07182
+   }
+  },
+  "E016-09": {
+   "exp": "E016-09",
+   "status": "not run"
+  },
+  "E016-10": {
+   "exp": "E016-10",
+   "status": "not run"
+  },
+  "E016-11": {
+   "exp": "E016-11",
+   "status": "not run"
+  },
+  "E016-12": {
+   "exp": "E016-12",
+   "status": "not run"
+  },
+  "E016-13": {
+   "exp": "E016-13",
+   "status": "not run"
+  },
+  "E016-14": {
+   "exp": "E016-14",
+   "status": "not run"
+  },
+  "E016-15": {
+   "exp": "E016-15",
+   "status": "not run"
+  },
+  "E016-16": {
+   "exp": "E016-16",
+   "status": "not run"
+  },
+  "E016-17": {
+   "exp": "E016-17",
+   "status": "not run"
+  }
+ },
+ "references": {
+  "SPY": {
+   "exp": "E900-07",
+   "sharpe": 0.9199975927419713,
+   "cagr": 0.14881009011690582,
+   "max_dd": -0.3305545466713219,
+   "calmar": 0.45018315922567287
+  },
+  "broad EW (reference)": {
+   "exp": "E901-07",
+   "sharpe": 0.7929619509889849,
+   "cagr": 0.1338226436139538,
+   "max_dd": -0.3772216808101557,
+   "calmar": 0.3547586218441741
+  }
+ },
+ "gates": {
+  "G1": {
+   "items": {
+    "G1.1": {
+     "value": {
+      "d_ew": -0.1570240530778907,
+      "d_spy": -0.2277662823987464
+     },
+     "ok": false
+    },
+    "G1.2": {
+     "value": {
+      "cagr": 0.12770807584116595,
+      "ew": 0.14418020318861258
+     },
+     "ok": true
+    },
+    "G1.3": {
+     "value": {
+      "calmar": 0.3150698554304237,
+      "ew": 0.4007704509539034
+     },
+     "ok": false
+    },
+    "G1.4": {
+     "value": {
+      "max_dd": -0.4053325751100536,
+      "ew": -0.3597575690658795
+     },
+     "ok": true
+    }
+   },
+   "ok": false,
+   "sharpe": 0.6922313103432249,
+   "sharpe_ew": 0.8492553634211156,
+   "sharpe_spy": 0.9199975927419713
+  },
+  "G2": {
+   "random_sharpes": [
+    0.84586517619811,
+    0.6163049716096469,
+    0.6719340451077239,
+    0.7501826894929565,
+    0.9815206185646048
+   ],
+   "median_random": 0.7501826894929565,
+   "dispersion": {
+    "min": 0.6163049716096469,
+    "max": 0.9815206185646048
+   },
+   "ok": false,
+   "random_status": {
+    "E016-03": "completed",
+    "E016-04": "completed",
+    "E016-05": "completed",
+    "E016-06": "completed",
+    "E016-07": "completed"
+   }
+  },
+  "G3": {
+   "blocks": [
+    {
+     "block": "2010-2011",
+     "d_sharpe": 0.2608907614423911,
+     "excess": 0.12118042995258693
+    },
+    {
+     "block": "2012-2013",
+     "d_sharpe": -0.5872772874919605,
+     "excess": -0.0650203855072724
+    },
+    {
+     "block": "2014-2015",
+     "d_sharpe": -0.11615370009375225,
+     "excess": -0.02178847211824264
+    },
+    {
+     "block": "2016-2017",
+     "d_sharpe": -0.7128638451406542,
+     "excess": -0.13941572756303988
+    },
+    {
+     "block": "2018-2019",
+     "d_sharpe": 0.055067965699175936,
+     "excess": 0.05520755424292978
+    },
+    {
+     "block": "2020-2021",
+     "d_sharpe": -0.2245687526809762,
+     "excess": -0.061845793504111124
+    }
+   ],
+   "blocks_beating_ew": 2,
+   "total_excess": -0.11168239449714934,
+   "max_block_share": NaN,
+   "ok": false
+  },
+  "G4": {
+   "items": {
+    "G4a": {
+     "value": null,
+     "ok": false
+    },
+    "G4b": {
+     "value": null,
+     "ok": false
+    },
+    "G4c": {
+     "value": 0.003023041942884577,
+     "ok": true
+    }
+   },
+   "ok": false,
+   "perturbations": {},
+   "note": "G4a/G4b not run: candidate already failed G1, G2 or G3 on its base run (spec \u00a79)"
+  }
+ },
+ "robustness_trigger": false,
+ "classification": {
+  "profitable": true,
+  "benchmark-beating": false,
+  "development-qualified": false,
+  "random-control-beating": false
+ },
+ "development_qualified": false,
+ "may_request_holdout": false,
+ "diagnostics_not_gates": {
+  "trial_counts": {
+   "p2_robustness_h016": 0,
+   "robustness_ids": [],
+   "cumulative_selection": 43
+  },
+  "survivorship_sensitivity": {
+   "base_d_ew": -0.1570240530778907,
+   "s1_penalised_d_ew": -0.21071738677708574,
+   "s1_clears_margin": false,
+   "s1_g3_ok": false,
+   "s2_from": "2012-01-01",
+   "s2_d_ew": -0.260180368845203,
+   "s2_clears_margin": false,
+   "penalty_pp": {
+    "2010": 0.24,
+    "2011": 1.189,
+    "2012": 0.418,
+    "2013": 0.215,
+    "2014": 1.313,
+    "2015": 0.992,
+    "2016": 0.538,
+    "2017": 0.753,
+    "2018": 1.849,
+    "2019": 0.933,
+    "2020": 0.196,
+    "2021": 4.356
+   }
+  },
+  "dsr": {
+   "P2 candidates": {
+    "n": 3,
+    "dsr": 0.8252170585798787,
+    "sr_star_annual": 0.41646077442282387,
+    "warning": true
+   },
+   "P2 broad": {
+    "n": 3,
+    "dsr": 0.8252170585798787,
+    "sr_star_annual": 0.41646077442282387,
+    "warning": true
+   },
+   "cumulative": {
+    "n": 43,
+    "dsr": 0.09244358606533837,
+    "sr_star_annual": 1.0831013454392582,
+    "warning": true
+   }
+  },
+  "psr_0": 0.9905651160587634,
+  "pbo": "not computable: single candidate",
+  "bootstrap_sharpe_diff": {
+   "EW-H016": {
+    "point": -0.1570240530778907,
+    "ci95": [
+     -0.5104033607518782,
+     0.13663551104467853
+    ],
+    "share_le_0": 0.847,
+    "n_boot": 2000
+   },
+   "SPY": {
+    "point": -0.22776628239874638,
+    "ci95": [
+     -0.6804356819716352,
+     0.13496486227354582
+    ],
+    "share_le_0": 0.8925,
+    "n_boot": 2000
+   },
+   "random seed 1": {
+    "point": -0.15363386585488506,
+    "ci95": [
+     -0.4725672455629766,
+     0.1437202081921867
+    ],
+    "share_le_0": 0.839,
+    "n_boot": 2000
+   },
+   "random seed 2": {
+    "point": 0.07592633873357807,
+    "ci95": [
+     -0.28725715887620823,
+     0.3989177462617393
+    ],
+    "share_le_0": 0.343,
+    "n_boot": 2000
+   },
+   "random seed 3": {
+    "point": 0.020297265235501034,
+    "ci95": [
+     -0.31711353216253,
+     0.35283333491539964
+    ],
+    "share_le_0": 0.4575,
+    "n_boot": 2000
+   },
+   "random seed 4": {
+    "point": -0.05795137914973152,
+    "ci95": [
+     -0.4447635226413473,
+     0.26039909375111203
+    ],
+    "share_le_0": 0.6405,
+    "n_boot": 2000
+   },
+   "random seed 5": {
+    "point": -0.2892893082213798,
+    "ci95": [
+     -0.675434062541599,
+     0.011086331365345035
+    ],
+    "share_le_0": 0.967,
+    "n_boot": 2000
+   }
+  },
+  "ranking_adds_value": {
+   "candidate_minus_random_by_block": {
+    "seed 1": [
+     {
+      "block": "2010-2011",
+      "d_sharpe": 0.2373598998591111
+     },
+     {
+      "block": "2012-2013",
+      "d_sharpe": -0.043335793033256964
+     },
+     {
+      "block": "2014-2015",
+      "d_sharpe": 0.13814604769113145
+     },
+     {
+      "block": "2016-2017",
+      "d_sharpe": -0.3131164001295481
+     },
+     {
+      "block": "2018-2019",
+      "d_sharpe": -0.4250882567184735
+     },
+     {
+      "block": "2020-2021",
+      "d_sharpe": -0.49013797212081267
+     }
+    ],
+    "seed 2": [
+     {
+      "block": "2010-2011",
+      "d_sharpe": 0.3553615725508827
+     },
+     {
+      "block": "2012-2013",
+      "d_sharpe": -0.4616102453720319
+     },
+     {
+      "block": "2014-2015",
+      "d_sharpe": 0.013450388369023847
+     },
+     {
+      "block": "2016-2017",
+      "d_sharpe": -0.0826791076718395
+     },
+     {
+      "block": "2018-2019",
+      "d_sharpe": 0.3013929173565558
+     },
+     {
+      "block": "2020-2021",
+      "d_sharpe": 0.10376532855676579
+     }
+    ],
+    "seed 3": [
+     {
+      "block": "2010-2011",
+      "d_sharpe": 0.4282928352878637
+     },
+     {
+      "block": "2012-2013",
+      "d_sharpe": -0.14830696178685954
+     },
+     {
+      "block": "2014-2015",
+      "d_sharpe": 0.42907373251907754
+     },
+     {
+      "block": "2016-2017",
+      "d_sharpe": -0.19973785545977818
+     },
+     {
+      "block": "2018-2019",
+      "d_sharpe": 0.05505479536143354
+     },
+     {
+      "block": "2020-2021",
+      "d_sharpe": -0.32323701256661397
+     }
+    ],
+    "seed 4": [
+     {
+      "block": "2010-2011",
+      "d_sharpe": 0.4188228962426885
+     },
+     {
+      "block": "2012-2013",
+      "d_sharpe": -0.7294544688318192
+     },
+     {
+      "block": "2014-2015",
+      "d_sharpe": -0.6071465782636614
+     },
+     {
+      "block": "2016-2017",
+      "d_sharpe": -0.21263574168915267
+     },
+     {
+      "block": "2018-2019",
+      "d_sharpe": 0.2608023557441316
+     },
+     {
+      "block": "2020-2021",
+      "d_sharpe": 0.03637048352734984
+     }
+    ],
+    "seed 5": [
+     {
+      "block": "2010-2011",
+      "d_sharpe": 0.16112297032956335
+     },
+     {
+      "block": "2012-2013",
+      "d_sharpe": -0.03893686574257593
+     },
+     {
+      "block": "2014-2015",
+      "d_sharpe": -0.29207485130661565
+     },
+     {
+      "block": "2016-2017",
+      "d_sharpe": -0.9155048123713405
+     },
+     {
+      "block": "2018-2019",
+      "d_sharpe": -0.4655629783543609
+     },
+     {
+      "block": "2020-2021",
+      "d_sharpe": -0.40963403329869974
+     }
+    ]
+   },
+   "random_minus_ew_full": {
+    "seed 1": -0.0033901872230056584,
+    "seed 2": -0.2329503918114687,
+    "seed 3": -0.1773213183133917,
+    "seed 4": -0.0990726739281591,
+    "seed 5": 0.1322652551434892
+   },
+   "candidate_minus_median_random": -0.057951379149731586,
+   "seeds_beaten": 2
+  },
+  "blocks_vs_ew": [
+   {
+    "block": "2010-2011",
+    "d_sharpe": 0.2608907614423911,
+    "excess": 0.12118042995258693
+   },
+   {
+    "block": "2012-2013",
+    "d_sharpe": -0.5872772874919605,
+    "excess": -0.0650203855072724
+   },
+   {
+    "block": "2014-2015",
+    "d_sharpe": -0.11615370009375225,
+    "excess": -0.02178847211824264
+   },
+   {
+    "block": "2016-2017",
+    "d_sharpe": -0.7128638451406542,
+    "excess": -0.13941572756303988
+   },
+   {
+    "block": "2018-2019",
+    "d_sharpe": 0.055067965699175936,
+    "excess": 0.05520755424292978
+   },
+   {
+    "block": "2020-2021",
+    "d_sharpe": -0.2245687526809762,
+    "excess": -0.061845793504111124
+   }
+  ],
+  "yearly": {
+   "H016": {
+    "2010": {
+     "ret": 0.15755940000000046,
+     "sharpe": 1.0615040928342827
+    },
+    "2011": {
+     "ret": 0.15848664008084645,
+     "sharpe": 0.6834202175078816
+    },
+    "2012": {
+     "ret": 0.023774640905026123,
+     "sharpe": 0.22389285229347955
+    },
+    "2013": {
+     "ret": 0.45007284947992954,
+     "sharpe": 2.474607410230833
+    },
+    "2014": {
+     "ret": 0.02342309941109444,
+     "sharpe": 0.22903896242276245
+    },
+    "2015": {
+     "ret": 0.021784893435608632,
+     "sharpe": 0.2129405597742514
+    },
+    "2016": {
+     "ret": -0.026431438528236706,
+     "sharpe": -0.08157640363388255
+    },
+    "2017": {
+     "ret": 0.20991150262587288,
+     "sharpe": 1.703488916337132
+    },
+    "2018": {
+     "ret": 0.053725241891899866,
+     "sharpe": 0.3644177535850851
+    },
+    "2019": {
+     "ret": 0.1874611018141159,
+     "sharpe": 1.180866213607479
+    },
+    "2020": {
+     "ret": 0.35034434542788895,
+     "sharpe": 0.9897688577890567
+    },
+    "2021": {
+     "ret": 0.000993440401985568,
+     "sharpe": 0.11342331338982732
+    }
+   },
+   "EW-H016": {
+    "2010": {
+     "ret": 0.18531799700000118,
+     "sharpe": 1.1658901350263022
+    },
+    "2011": {
+     "ret": 0.006581896182918046,
+     "sharpe": 0.14970671015773762
+    },
+    "2012": {
+     "ret": 0.17507020882265345,
+     "sharpe": 1.2403337458572856
+    },
+    "2013": {
+     "ret": 0.36148657219661295,
+     "sharpe": 2.6294385895472177
+    },
+    "2014": {
+     "ret": 0.10475862044530682,
+     "sharpe": 0.8529862647518958
+    },
+    "2015": {
+     "ret": -0.02630780749531525,
+     "sharpe": -0.11189923493491696
+    },
+    "2016": {
+     "ret": 0.13412136385565399,
+     "sharpe": 0.9349801995289035
+    },
+    "2017": {
+     "ret": 0.20115377335789675,
+     "sharpe": 2.237950614755357
+    },
+    "2018": {
+     "ret": -0.06547241159139305,
+     "sharpe": -0.3327847506834745
+    },
+    "2019": {
+     "ret": 0.2782008078666345,
+     "sharpe": 1.8678680921199218
+    },
+    "2020": {
+     "ret": 0.24475079726603677,
+     "sharpe": 0.8197159075727578
+    },
+    "2021": {
+     "ret": 0.18397404582227717,
+     "sharpe": 1.1418805218297474
+    }
+   },
+   "SPY": {
+    "2010": {
+     "ret": 0.1429942772938746,
+     "sharpe": 0.9790017662862117
+    },
+    "2011": {
+     "ret": 0.01792457936754621,
+     "sharpe": 0.19144628707423522
+    },
+    "2012": {
+     "ret": 0.15683499769207354,
+     "sharpe": 1.2216857241411025
+    },
+    "2013": {
+     "ret": 0.31374994338464224,
+     "sharpe": 2.5437625993189013
+    },
+    "2014": {
+     "ret": 0.13152038605339822,
+     "sharpe": 1.174769541694781
+    },
+    "2015": {
+     "ret": 0.012722308089653467,
+     "sharpe": 0.15904064121699799
+    },
+    "2016": {
+     "ret": 0.11707644608288392,
+     "sharpe": 0.9266810028038398
+    },
+    "2017": {
+     "ret": 0.21182274861985517,
+     "sharpe": 2.9577086961067645
+    },
+    "2018": {
+     "ret": -0.044538130983596824,
+     "sharpe": -0.19153044919445977
+    },
+    "2019": {
+     "ret": 0.3048046972511427,
+     "sharpe": 2.235593938792441
+    },
+    "2020": {
+     "ret": 0.17961827170385702,
+     "sharpe": 0.6687397044596078
+    },
+    "2021": {
+     "ret": 0.28045096311560824,
+     "sharpe": 2.0086753871725054
+    }
+   },
+   "random seed 1": {
+    "2010": {
+     "ret": 0.15731210000000018,
+     "sharpe": 1.053711983464724
+    },
+    "2011": {
+     "ret": 0.03809024376397763,
+     "sharpe": 0.27526668334269505
+    },
+    "2012": {
+     "ret": 0.10702122467026687,
+     "sharpe": 0.7472448450800385
+    },
+    "2013": {
+     "ret": 0.276302434394905,
+     "sharpe": 2.1190230067575424
+    },
+    "2014": {
+     "ret": 0.0723695667388593,
+     "sharpe": 0.602986285752532
+    },
+    "2015": {
+     "ret": -0.06417958496631826,
+     "sharpe": -0.3719010425674291
+    },
+    "2016": {
+     "ret": 0.10777852945016297,
+     "sharpe": 0.8600825440251069
+    },
+    "2017": {
+     "ret": 0.10374321966799904,
+     "sharpe": 1.1381838950518868
+    },
+    "2018": {
+     "ret": 0.05418799365305005,
+     "sharpe": 0.38066891647787765
+    },
+    "2019": {
+     "ret": 0.35996815398743087,
+     "sharpe": 2.0468849028149148
+    },
+    "2020": {
+     "ret": 0.4276432328421538,
+     "sharpe": 1.1759479087959805
+    },
+    "2021": {
+     "ret": 0.2749260610181141,
+     "sharpe": 1.1242664934545514
+    }
+   },
+   "random seed 2": {
+    "2010": {
+     "ret": 0.2247165000000011,
+     "sharpe": 1.2621015052340003
+    },
+    "2011": {
+     "ret": -0.05166158862071524,
+     "sharpe": -0.04638566506673146
+    },
+    "2012": {
+     "ret": 0.207895986872223,
+     "sharpe": 1.240676221179169
+    },
+    "2013": {
+     "ret": 0.36440727016842756,
+     "sharpe": 2.4142371144519217
+    },
+    "2014": {
+     "ret": 0.17116257132596768,
+     "sharpe": 1.1808743890831463
+    },
+    "2015": {
+     "ret": -0.11117594600106506,
+     "sharpe": -0.6279335938419187
+    },
+    "2016": {
+     "ret": 0.04361920885915693,
+     "sharpe": 0.34523719055353297
+    },
+    "2017": {
+     "ret": 0.14097629108222942,
+     "sharpe": 1.4750971568326394
+    },
+    "2018": {
+     "ret": -0.06564053689839477,
+     "sharpe": -0.37446421009380454
+    },
+    "2019": {
+     "ret": 0.18264375190613502,
+     "sharpe": 1.29911449879537
+    },
+    "2020": {
+     "ret": 0.07390332612340589,
+     "sharpe": 0.37873455986762433
+    },
+    "2021": {
+     "ret": 0.16852875598577088,
+     "sharpe": 0.95665473000667
+    }
+   },
+   "random seed 3": {
+    "2010": {
+     "ret": 0.30217359999999993,
+     "sharpe": 1.4452884473457408
+    },
+    "2011": {
+     "ret": -0.13297581827799287,
+     "sharpe": -0.310815199820862
+    },
+    "2012": {
+     "ret": 0.18899829586117556,
+     "sharpe": 1.026888261273755
+    },
+    "2013": {
+     "ret": 0.31070782951793485,
+     "sharpe": 2.0481821343222952
+    },
+    "2014": {
+     "ret": -0.05229021540709755,
+     "sharpe": -0.3028764880456282
+    },
+    "2015": {
+     "ret": -0.034812554816754604,
+     "sharpe": -0.12837810976371822
+    },
+    "2016": {
+     "ret": 0.12508701795285093,
+     "sharpe": 0.7052186271493599
+    },
+    "2017": {
+     "ret": 0.13988784143301647,
+     "sharpe": 1.1219127134934321
+    },
+    "2018": {
+     "ret": -0.05684086437763802,
+     "sharpe": -0.1570541373398829
+    },
+    "2019": {
+     "ret": 0.34029847265512525,
+     "sharpe": 1.5769880801439955
+    },
+    "2020": {
+     "ret": 0.5231961233319073,
+     "sharpe": 1.2261676683837541
+    },
+    "2021": {
+     "ret": 0.10739463761273949,
+     "sharpe": 0.608683959922699
+    }
+   },
+   "random seed 4": {
+    "2010": {
+     "ret": 0.12293690000000201,
+     "sharpe": 0.7834165343975826
+    },
+    "2011": {
+     "ret": -0.005944946684003027,
+     "sharpe": 0.0858326210725161
+    },
+    "2012": {
+     "ret": 0.16945139448109536,
+     "sharpe": 1.1989922644866255
+    },
+    "2013": {
+     "ret": 0.4337600105284716,
+     "sharpe": 2.9508246094141994
+    },
+    "2014": {
+     "ret": 0.1916680856470383,
+     "sharpe": 1.2633420233955233
+    },
+    "2015": {
+     "ret": 0.06722414902004559,
+     "sharpe": 0.46143767461029706
+    },
+    "2016": {
+     "ret": 0.0469291484397778,
+     "sharpe": 0.35111772232806504
+    },
+    "2017": {
+     "ret": 0.1924216218237793,
+     "sharpe": 1.8711687125146301
+    },
+    "2018": {
+     "ret": -0.08394349824051339,
+     "sharpe": -0.3590050472517477
+    },
+    "2019": {
+     "ret": 0.24379053940767026,
+     "sharpe": 1.4733911534020525
+    },
+    "2020": {
+     "ret": 0.15682811703965616,
+     "sharpe": 0.5791891202018207
+    },
+    "2021": {
+     "ret": 0.12939195063197362,
+     "sharpe": 0.8066589643024284
+    }
+   },
+   "random seed 5": {
+    "2010": {
+     "ret": 0.14769710000000136,
+     "sharpe": 1.0715386874124702
+    },
+    "2011": {
+     "ret": 0.07539097206048595,
+     "sharpe": 0.4185748250258542
+    },
+    "2012": {
+     "ret": 0.10535015914059653,
+     "sharpe": 0.7609626526940431
+    },
+    "2013": {
+     "ret": 0.26940161277045727,
+     "sharpe": 2.041826745718149
+    },
+    "2014": {
+     "ret": 0.10035498168213697,
+     "sharpe": 0.7662207204734776
+    },
+    "2015": {
+     "ret": 0.025534692414173943,
+     "sharpe": 0.2542460114388031
+    },
+    "2016": {
+     "ret": 0.1356435761105783,
+     "sharpe": 0.9098366581686461
+    },
+    "2017": {
+     "ret": 0.3150806566295521,
+     "sharpe": 2.4887143134529595
+    },
+    "2018": {
+     "ret": 0.030501403666576943,
+     "sharpe": 0.2510277176416282
+    },
+    "2019": {
+     "ret": 0.44027899936264725,
+     "sharpe": 2.36161411375362
+    },
+    "2020": {
+     "ret": 0.3397014149157451,
+     "sharpe": 0.973019018877872
+    },
+    "2021": {
+     "ret": 0.28017607908136544,
+     "sharpe": 1.3387145041457778
+    }
+   }
+  },
+  "sizing_200k": {
+   "exp": "E016-08",
+   "status": "completed",
+   "sharpe": 0.7130020091452689,
+   "cagr": 0.1328218387957949,
+   "d_ew": -0.13625335427584673,
+   "cost_pa": 0.002267930931773966,
+   "note": "sensitivity only: never decides, never rescues"
+  },
+  "cost_stress": {
+   "2": {
+    "exp": "E016-09",
+    "status": "not run",
+    "sharpe": null
+   },
+   "4": {
+    "exp": "E016-10",
+    "status": "not run",
+    "sharpe": null
+   },
+   "6": {
+    "exp": "E016-11",
+    "status": "not run",
+    "sharpe": null
+   }
+  },
+  "universe_per_rebalance": {
+   "2010-03-01": {
+    "eligible": 766,
+    "universe": 547,
+    "exits": 0,
+    "entries": 20
+   },
+   "2010-06-01": {
+    "eligible": 782,
+    "universe": 565,
+    "exits": 2,
+    "entries": 2
+   },
+   "2010-09-01": {
+    "eligible": 780,
+    "universe": 509,
+    "exits": 7,
+    "entries": 7
+   },
+   "2010-12-01": {
+    "eligible": 867,
+    "universe": 536,
+    "exits": 3,
+    "entries": 10
+   },
+   "2011-03-01": {
+    "eligible": 950,
+    "universe": 554,
+    "exits": 5,
+    "entries": 5
+   },
+   "2011-06-01": {
+    "eligible": 983,
+    "universe": 571,
+    "exits": 7,
+    "entries": 8
+   },
+   "2011-09-01": {
+    "eligible": 892,
+    "universe": 506,
+    "exits": 8,
+    "entries": 8
+   },
+   "2011-12-01": {
+    "eligible": 883,
+    "universe": 510,
+    "exits": 4,
+    "entries": 4
+   },
+   "2012-03-01": {
+    "eligible": 944,
+    "universe": 626,
+    "exits": 5,
+    "entries": 5
+   },
+   "2012-06-01": {
+    "eligible": 910,
+    "universe": 609,
+    "exits": 5,
+    "entries": 5
+   },
+   "2012-09-04": {
+    "eligible": 920,
+    "universe": 624,
+    "exits": 4,
+    "entries": 4
+   },
+   "2012-12-03": {
+    "eligible": 941,
+    "universe": 633,
+    "exits": 2,
+    "entries": 2
+   },
+   "2013-03-01": {
+    "eligible": 999,
+    "universe": 665,
+    "exits": 6,
+    "entries": 6
+   },
+   "2013-06-03": {
+    "eligible": 1063,
+    "universe": 698,
+    "exits": 7,
+    "entries": 7
+   },
+   "2013-09-03": {
+    "eligible": 1064,
+    "universe": 698,
+    "exits": 1,
+    "entries": 1
+   },
+   "2013-12-02": {
+    "eligible": 1147,
+    "universe": 731,
+    "exits": 2,
+    "entries": 2
+   },
+   "2014-03-03": {
+    "eligible": 1189,
+    "universe": 807,
+    "exits": 4,
+    "entries": 4
+   },
+   "2014-06-02": {
+    "eligible": 1186,
+    "universe": 810,
+    "exits": 3,
+    "entries": 3
+   },
+   "2014-09-02": {
+    "eligible": 1213,
+    "universe": 818,
+    "exits": 2,
+    "entries": 3
+   },
+   "2014-12-01": {
+    "eligible": 1227,
+    "universe": 818,
+    "exits": 3,
+    "entries": 3
+   },
+   "2015-03-02": {
+    "eligible": 1250,
+    "universe": 842,
+    "exits": 5,
+    "entries": 5
+   },
+   "2015-06-01": {
+    "eligible": 1259,
+    "universe": 848,
+    "exits": 5,
+    "entries": 5
+   },
+   "2015-09-01": {
+    "eligible": 1205,
+    "universe": 797,
+    "exits": 0,
+    "entries": 1
+   },
+   "2015-12-01": {
+    "eligible": 1209,
+    "universe": 792,
+    "exits": 5,
+    "entries": 5
+   },
+   "2016-03-01": {
+    "eligible": 1111,
+    "universe": 761,
+    "exits": 3,
+    "entries": 4
+   },
+   "2016-06-01": {
+    "eligible": 1159,
+    "universe": 783,
+    "exits": 2,
+    "entries": 2
+   },
+   "2016-09-01": {
+    "eligible": 1213,
+    "universe": 822,
+    "exits": 1,
+    "entries": 2
+   },
+   "2016-12-01": {
+    "eligible": 1243,
+    "universe": 836,
+    "exits": 4,
+    "entries": 4
+   },
+   "2017-03-01": {
+    "eligible": 1270,
+    "universe": 854,
+    "exits": 4,
+    "entries": 5
+   },
+   "2017-06-01": {
+    "eligible": 1249,
+    "universe": 839,
+    "exits": 3,
+    "entries": 4
+   },
+   "2017-09-01": {
+    "eligible": 1270,
+    "universe": 833,
+    "exits": 3,
+    "entries": 3
+   },
+   "2017-12-01": {
+    "eligible": 1315,
+    "universe": 867,
+    "exits": 3,
+    "entries": 3
+   },
+   "2018-03-01": {
+    "eligible": 1316,
+    "universe": 893,
+    "exits": 2,
+    "entries": 3
+   },
+   "2018-06-01": {
+    "eligible": 1350,
+    "universe": 916,
+    "exits": 4,
+    "entries": 4
+   },
+   "2018-09-04": {
+    "eligible": 1403,
+    "universe": 955,
+    "exits": 4,
+    "entries": 4
+   },
+   "2018-12-03": {
+    "eligible": 1314,
+    "universe": 886,
+    "exits": 5,
+    "entries": 5
+   },
+   "2019-03-01": {
+    "eligible": 1328,
+    "universe": 899,
+    "exits": 3,
+    "entries": 3
+   },
+   "2019-06-03": {
+    "eligible": 1283,
+    "universe": 864,
+    "exits": 8,
+    "entries": 8
+   },
+   "2019-09-03": {
+    "eligible": 1297,
+    "universe": 869,
+    "exits": 5,
+    "entries": 5
+   },
+   "2019-12-02": {
+    "eligible": 1348,
+    "universe": 902,
+    "exits": 3,
+    "entries": 4
+   },
+   "2020-03-02": {
+    "eligible": 1307,
+    "universe": 883,
+    "exits": 7,
+    "entries": 7
+   },
+   "2020-06-01": {
+    "eligible": 1247,
+    "universe": 873,
+    "exits": 5,
+    "entries": 5
+   },
+   "2020-09-01": {
+    "eligible": 1342,
+    "universe": 930,
+    "exits": 4,
+    "entries": 4
+   },
+   "2020-12-01": {
+    "eligible": 1465,
+    "universe": 982,
+    "exits": 5,
+    "entries": 5
+   },
+   "2021-03-01": {
+    "eligible": 1604,
+    "universe": 1084,
+    "exits": 5,
+    "entries": 5
+   },
+   "2021-06-01": {
+    "eligible": 1659,
+    "universe": 1119,
+    "exits": 3,
+    "entries": 3
+   },
+   "2021-09-01": {
+    "eligible": 1705,
+    "universe": 1102,
+    "exits": 4,
+    "entries": 4
+   },
+   "2021-12-01": {
+    "eligible": 1683,
+    "universe": 1083,
+    "exits": 3,
+    "entries": 3
+   }
+  },
+  "yearly_coverage_mean_universe": {
+   "2010": 539.25,
+   "2011": 535.25,
+   "2012": 623.0,
+   "2013": 698.0,
+   "2014": 813.25,
+   "2015": 819.75,
+   "2016": 800.5,
+   "2017": 848.25,
+   "2018": 912.5,
+   "2019": 883.5,
+   "2020": 917.0,
+   "2021": 1097.0
+  }
+ }
+}
