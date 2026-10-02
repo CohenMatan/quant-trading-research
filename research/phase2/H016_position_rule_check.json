@@ -1,0 +1,44 @@
+{
+ "approved rules as written ($4,500 min, 15% gap reserve), entries scaled by the planner": {
+  "positions": 0,
+  "invested": 0.0,
+  "avg_position_usd": 0,
+  "orders": 0
+ },
+ "A: $4,000 min, 15% gap reserve, positions built to slot weight from settled cash": {
+  "positions": 20,
+  "invested": 0.975,
+  "avg_position_usd": 4850,
+  "orders": 60
+ },
+ "A without building ($4,000 min, scaled entries only)": {
+  "positions": 20,
+  "invested": 0.852,
+  "avg_position_usd": 4250,
+  "orders": 20
+ },
+ "B: 5% gap reserve for H016, $4,500 min": {
+  "positions": 20,
+  "invested": 0.932,
+  "avg_position_usd": 4650,
+  "orders": 20
+ },
+ "C: approved rules, only entries settled cash funds at full size": {
+  "positions": 19,
+  "invested": 0.932,
+  "avg_position_usd": 4895,
+  "orders": 19
+ },
+ "$200K, approved rules, scaled entries": {
+  "positions": 20,
+  "invested": 0.851,
+  "avg_position_usd": 8500,
+  "orders": 20
+ },
+ "$200K, approved rules, positions built to slot weight": {
+  "positions": 20,
+  "invested": 0.979,
+  "avg_position_usd": 9750,
+  "orders": 80
+ }
+}

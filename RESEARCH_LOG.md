@@ -1046,3 +1046,17 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Not done:** no H016 implementation or run, no returns, no slot, Holdout locked.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-02: H016 pre-registration approved; prerequisite 7 failed before any run; STOP (D115)
+
+- **Owner approval:** the H016 pre-registration (GP/A, 20 equal positions, $4,500 minimum, March 2010 common start, quarterly, same-universe EW, SPY, 5 random seeds, survivorship sensitivity). Execution is authorised if every prerequisite passes.
+- **Built:**
+  - decision logic `qr_h016` (tested incl. truncation);
+  - S016 for every book;
+  - evaluation `p2h016` (common window, gates, G2 median of 5, DSR, frozen survivorship sensitivity);
+  - an S016-only portfolio rule;
+  - the spec draft.
+- **Prerequisite 7 failed:** with D051's 15% gap reserve, every ~$4,900 first entry is scaled to ~$4,250, below the $4,500 minimum, so the $100K portfolio never forms. Options A/B/C are in `docs/checkpoints/P2_CP9a_H016_prerequisite_position_rule.md`.
+- **Not done:** nothing run on QuantConnect; slot 2 unused; Holdout locked.
+
+**STOP:** awaiting the owner's choice of §6.3.

@@ -66,6 +66,10 @@ RESEARCH_PORTFOLIOS = {
     "d051": {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 5000, "max_positions": 15,
              "buy_funding": "settled_cash_only", "gap_reserve": 0.15},
 }
+# D115: H016 only (owner 2026-10-02): 20 positions, $4,500 minimum new position; every other D051 rule unchanged.
+# Pending the owner's resolution of prerequisite 7 (P2-CP9a) before any S016 run.
+H016_PORTFOLIO = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 4500, "max_positions": 20,
+                  "buy_funding": "settled_cash_only", "gap_reserve": 0.15}
 CURRENT_EXECUTION_MODEL = "d051"
 RESEARCH_PORTFOLIO = RESEARCH_PORTFOLIOS[CURRENT_EXECUTION_MODEL]
 RESEARCH_CASH = 100_000.0
