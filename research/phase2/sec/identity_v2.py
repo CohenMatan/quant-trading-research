@@ -37,6 +37,12 @@ OUT = Path(__file__).parent
 NON_COMMON_NAME = re.compile(r"\b(L\.?P\.?|LLC|L\.L\.C\.|PARTNERS|PARTNERSHIP|TRUST|FUND|PORTFOLIO|ETF|ROYALTY)\b", re.I)
 NON_COMMON_SIC = {6726, 6770, 6792, 6221}
 SPAC = ("ACQUISITION CORP", "ACQUISITION CO", "CAPITAL ACQUISITION", "MERGER CORP")
+FOREIGN = re.compile(r"\b(PLC|N\.?V\.?|S\.?A\.?|AG|SE|LTD|LIMITED)\b", re.I)
+
+
+def overlap_days(a, b):
+    lo, hi = max(a[0], b[0]), min(a[1], b[1])
+    return (date.fromisoformat(hi) - date.fromisoformat(lo)).days if hi >= lo else -1
 
 
 def ym(d):
@@ -118,28 +124,50 @@ def main():
     for cik, L in links.items():
         if len(L["hits"]) > 1:
             spans = sorted((min(d), max(d), s) for s, d in L["hits"].items())
-            if any(spans[i][1] >= spans[i + 1][0] for i in range(len(spans) - 1)):
+            if any(overlap_days(spans[i][:2], spans[i + 1][:2]) > 120 for i in range(len(spans) - 1)):
                 L["status"] = "ambiguous: several securities at the same time"
                 continue
         for s, d in L["hits"].items():
             by_sid[s].append((min(d), max(d), cik))
-    for s, lst in by_sid.items():
-        lst.sort()
-        for i in range(len(lst) - 1):
-            if lst[i][1] >= lst[i + 1][0]:
-                for x in (lst[i], lst[i + 1]):
-                    links[x[2]]["status"] = f"ambiguous: security {s} claimed by overlapping registrants"
-    # F: no contradiction from public-float fingerprints
+    def f_status(cik, s):
+        rs = fp.get((str(cik), s))
+        if not rs:
+            return "none", None
+        med = statistics.median(rs)
+        lo = 0.1 if not FOREIGN.search(" ".join(links[cik]["names"])) else 0.2
+        for k in (0, -1, 1, -2, 2):                    # XBRL thousand-scale tagging errors
+            m = med * (1000.0 ** k)
+            if lo <= m <= 1.5:
+                return ("ok" if k == 0 else f"ok (XBRL scale error 1e{3 * -k})"), med
+        return "contradicts", med
+
     for cik, L in links.items():
         if L.get("status"):
             continue
         for s in L["hits"]:
-            rs = fp.get((str(cik), s))
-            if rs:
-                med = statistics.median(rs)
-                L.setdefault("float", {})[s] = {"n": len(rs), "median": med}
-                if not (0.2 <= med <= 1.5):
-                    L["status"] = f"rejected: float evidence contradicts ({med:.2f})"
+            st, med = f_status(cik, s)
+            if med is not None:
+                L.setdefault("float", {})[s] = {"n": len(fp[(str(cik), s)]), "median": med, "check": st}
+            if st == "contradicts":
+                L["status"] = f"rejected: float evidence contradicts ({med:.2f})"
+    for s, lst in by_sid.items():
+        lst = [x for x in sorted(lst) if not links[x[2]].get("status", "").startswith(("rejected", "ambiguous: several"))]
+        groups = []
+        for x in lst:                                  # chains of registrants overlapping in time on this security
+            if groups and overlap_days(groups[-1][-1][:2], x[:2]) > 120:
+                groups[-1].append(x)
+            else:
+                groups.append([x])
+        for g in groups:
+            if len(g) < 2:
+                continue
+            ok = [x for x in g if f_status(x[2], s)[0].startswith("ok")]
+            for x in g:
+                if len(ok) == 1 and x is ok[0]:
+                    links[x[2]]["conflict_resolved_by_float"] = [y[2] for y in g if y is not x]
+                else:
+                    links[x[2]]["status"] = f"ambiguous: security {s} claimed by overlapping registrants"
+    for L in links.values():
         L.setdefault("status", "linked")
     res = {"links": {str(k): v for k, v in links.items()}, "rejected_counts": dict(rejected),
            "summary": {s: sum(1 for v in links.values() if v["status"].startswith(s.split(":")[0]))

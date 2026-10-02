@@ -48,10 +48,11 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files["qr_fundamentals.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_fundamentals.py")
         except Exception:
             pass
-        try:   # D111 SEC correction layer (logic); absent in commits before it existed
-            files["qr_sec_corrections.py"] = gitutil.show_file(commit, "src/qresearch/lean/qr_sec_corrections.py")
-        except Exception:
-            pass
+        for extra in ("qr_sec_corrections.py", "qr_industry.py"):
+            try:   # D111/D113 SEC layer logic; absent in commits before it existed
+                files[extra] = gitutil.show_file(commit, f"src/qresearch/lean/{extra}")
+            except Exception:
+                pass
         if _uses_sec(cfg):   # the packed SEC correction table, only for opt-in configs
             data = [p for p in gitutil.list_files(commit, "src/qresearch/lean")
                     if Path(p).name.startswith("qr_sec_data") and p.endswith(".py")]
@@ -63,7 +64,7 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for p in sorted((config.REPO_ROOT / sdir).glob("*.py")):
             files[p.name] = p.read_text(encoding="utf-8")
         files["qr_harness.py"] = config.LEAN_HARNESS.read_text(encoding="utf-8")
-        for extra in ("qr_indicators.py", "qr_fundamentals.py", "qr_sec_corrections.py"):
+        for extra in ("qr_indicators.py", "qr_fundamentals.py", "qr_sec_corrections.py", "qr_industry.py"):
             ind = config.LEAN_HARNESS.parent / extra
             if ind.exists():
                 files[extra] = ind.read_text(encoding="utf-8")

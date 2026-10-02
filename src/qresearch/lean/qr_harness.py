@@ -337,6 +337,10 @@ class QRAlgorithm(QCAlgorithm):
         self.qr_timing_holds = self.qr_sec.timing_holds if self.qr_sec is not None else {}
         self.qr_quarantine_releases = self.qr_sec.quarantine_releases if self.qr_sec is not None else {}
         self.qr_restatement_blocks = self.qr_sec.restatement_blocks if self.qr_sec is not None else {}
+        self.qr_sic = None                # D113 historical SEC-assigned SIC per security (financial/REIT policy)
+        if self.qr_sec is not None:
+            from qr_industry import SICHistory
+            self.qr_sic = SICHistory(self.qr_sec.sic_history)
         if self.USES_UNIVERSE:
             self.add_universe(self._qr_select)
         self.qr_initialize()

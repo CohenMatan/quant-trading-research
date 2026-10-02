@@ -209,10 +209,11 @@ def record_for(facts: dict, filing: dict) -> dict:
             src[name] = tag
     ocf, cap = vals.get("operating_cash_flow_ttm"), vals.get("capex_ttm")
     vals["free_cash_flow_ttm"] = (ocf - cap) if (ocf is not None and cap is not None) else None
+    ocq, caq = vals.get("operating_cash_flow_q"), vals.get("capex_q")
+    vals["free_cash_flow_q"] = (ocq - caq) if (ocq is not None and caq is not None) else None   # D113 (True TTM)
     vals.pop("capex_ttm", None)
     vals.pop("capex_q", None)
     vals.pop("cost_of_revenue_q", None)
-    vals.pop("free_cash_flow_q", None)
     vals["total_debt"] = None          # not reconstructed from SEC tags (component definitions vary; D111)
     return {"values": {k: (float(v) if v is not None and v != 0 else None) for k, v in vals.items()},
             "tags": src}

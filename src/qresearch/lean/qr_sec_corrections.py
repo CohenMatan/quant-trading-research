@@ -49,9 +49,11 @@ class SECCorrections:
             self.timing_holds = table.get("timing_holds", {})
             self.quarantine_releases = table.get("quarantine_releases", {})
             self.restatement_blocks = table.get("restatement_blocks", {})
+            self.sic_history = table.get("sic_history", {})
             table = table["corrections"]
         else:
             self.timing_holds, self.quarantine_releases, self.restatement_blocks = {}, {}, {}
+            self.sic_history = {}
         for sid, c in table.items():
             if c.get("status") != "repaired":
                 continue                      # unresolved / rejected matches never reach the universe

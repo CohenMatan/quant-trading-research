@@ -4,6 +4,7 @@
    "first_filed": "2010-08-12",
    "float": {
     "SNDK R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.8465,
      "n": 6
     }
@@ -49,6 +50,7 @@
    "first_filed": "2010-07-26",
    "float": {
     "CRLBF R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.981,
      "n": 13
     }
@@ -105,6 +107,13 @@
   },
   "1000298": {
    "first_filed": "2011-08-15",
+   "float": {
+    "IMH R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.595,
+     "n": 11
+    }
+   },
    "hits": {
     "IMH R735QTJ8XC9X": [
      "2015-03-25",
@@ -153,6 +162,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "BLT RND0QG6OG8RP": {
+     "check": "ok",
      "median": 0.673,
      "n": 5
     }
@@ -191,6 +201,7 @@
    "first_filed": "2011-05-02",
    "float": {
     "ARTC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.99,
      "n": 3
     }
@@ -225,6 +236,7 @@
    "first_filed": "2011-05-10",
    "float": {
     "JDAS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.989,
      "n": 1
     }
@@ -251,6 +263,7 @@
    "first_filed": "2011-05-10",
    "float": {
     "SLXP RZVZH9PZHS9X": {
+     "check": "ok",
      "median": 0.825,
      "n": 5
     }
@@ -288,6 +301,7 @@
    "first_filed": "2010-08-04",
    "float": {
     "CRBO R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.7095,
      "n": 10
     }
@@ -341,6 +355,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "CQB SD5JAM4ULP45": {
+     "check": "ok",
      "median": 0.969,
      "n": 4
     }
@@ -377,6 +392,7 @@
    "first_filed": "2014-11-13",
    "float": {
     "FMSA VUF6QTHX146D": {
+     "check": "ok",
      "median": 0.519,
      "n": 4
     }
@@ -415,6 +431,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "BRE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9975,
      "n": 4
     }
@@ -451,6 +468,7 @@
    "first_filed": "2010-08-03",
    "float": {
     "TIMT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.4665,
      "n": 2
     }
@@ -482,6 +500,7 @@
    "first_filed": "2011-08-03",
    "float": {
     "CCVD R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.999,
      "n": 9
     }
@@ -526,6 +545,13 @@
   },
   "1019671": {
    "first_filed": "2011-09-09",
+   "float": {
+    "SEAC R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.96,
+     "n": 13
+    }
+   },
    "hits": {
     "SEAC R735QTJ8XC9X": [
      "2013-12-06",
@@ -545,10 +571,12 @@
    "first_filed": "2009-08-04",
    "float": {
     "UPL S1I2USAY0AQT": {
+     "check": "ok",
      "median": 1.001,
      "n": 7
     },
     "UPL WJO0D44PNHB9": {
+     "check": "ok",
      "median": 0.813,
      "n": 3
     }
@@ -602,6 +630,7 @@
    "first_filed": "2010-08-10",
    "float": {
     "URS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9635,
      "n": 4
     }
@@ -639,6 +668,13 @@
   },
   "1024126": {
    "first_filed": "2011-08-15",
+   "float": {
+    "GTA R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.901,
+     "n": 7
+    }
+   },
    "hits": {
     "GTA R735QTJ8XC9X": [
      "2014-03-17",
@@ -663,6 +699,7 @@
    "first_filed": "2011-12-12",
    "float": {
     "KMGB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.743,
      "n": 7
     }
@@ -690,6 +727,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "RAH R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.979,
      "n": 2
     }
@@ -720,6 +758,7 @@
    "first_filed": "2010-05-03",
    "float": {
     "GMRK R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.885,
      "n": 7
     }
@@ -779,6 +818,13 @@
   },
   "1034669": {
    "first_filed": "2011-08-03",
+   "float": {
+    "FSCI S4S8I0776U05": {
+     "check": "ok",
+     "median": 0.9504999999999999,
+     "n": 2
+    }
+   },
    "hits": {
     "FSCI S4S8I0776U05": [
      "2013-03-04",
@@ -817,6 +863,7 @@
    "first_filed": "2009-08-05",
    "float": {
     "NIHD W21WGWK0DLYD": {
+     "check": "ok",
      "median": 0.762,
      "n": 3
     }
@@ -851,6 +898,13 @@
   },
   "1038205": {
    "first_filed": "2011-08-05",
+   "float": {
+    "OZRK R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.846,
+     "n": 6
+    }
+   },
    "hits": {
     "OZRK R735QTJ8XC9X": [
      "2011-08-05",
@@ -890,6 +944,13 @@
   },
   "1039889": {
    "first_filed": "2011-08-22",
+   "float": {
+    "PFCB RG9ZY8FYMU79": {
+     "check": "ok",
+     "median": 0.46,
+     "n": 1
+    }
+   },
    "hits": {
     "PFCB RG9ZY8FYMU79": [
      "2011-08-22",
@@ -909,6 +970,13 @@
   },
   "1040719": {
    "first_filed": "2011-08-08",
+   "float": {
+    "HCM R96Z60P8TFMT": {
+     "check": "ok",
+     "median": 0.9295,
+     "n": 8
+    }
+   },
    "hits": {
     "HCM R96Z60P8TFMT": [
      "2011-08-08",
@@ -945,6 +1013,13 @@
   },
   "1040792": {
    "first_filed": "2011-08-15",
+   "float": {
+    "TACX R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.2645,
+     "n": 6
+    }
+   },
    "hits": {
     "TACX R735QTJ8XC9X": [
      "2016-05-16",
@@ -970,6 +1045,13 @@
   },
   "1046880": {
    "first_filed": "2010-08-09",
+   "float": {
+    "CEDC RCQZA696RIHX": {
+     "check": "ok",
+     "median": 0.944,
+     "n": 3
+    }
+   },
    "hits": {
     "CEDC RCQZA696RIHX": [
      "2010-08-09",
@@ -994,6 +1076,7 @@
    "first_filed": "2011-05-05",
    "float": {
     "DTG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.797,
      "n": 1
     }
@@ -1022,6 +1105,7 @@
    "first_filed": "2010-08-03",
    "float": {
     "BRKL R9BWEHJ377FP": {
+     "check": "ok",
      "median": 0.986,
      "n": 12
     }
@@ -1053,6 +1137,7 @@
    "first_filed": "2010-08-12",
    "float": {
     "WTW S9QGEXER1E1X": {
+     "check": "ok",
      "median": 0.488,
      "n": 14
     }
@@ -1109,6 +1194,13 @@
   },
   "1054102": {
    "first_filed": "2011-08-10",
+   "float": {
+    "PDII RAV1FQ0JHGF9": {
+     "check": "ok",
+     "median": 0.559,
+     "n": 11
+    }
+   },
    "hits": {
     "PDII RAV1FQ0JHGF9": [
      "2016-11-17",
@@ -1130,6 +1222,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "CVTY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 3
     }
@@ -1161,6 +1254,13 @@
   },
   "1055355": {
    "first_filed": "2011-08-04",
+   "float": {
+    "SONO R9OP7PAA70IT": {
+     "check": "ok",
+     "median": 0.998,
+     "n": 1
+    }
+   },
    "hits": {
     "SONO R9OP7PAA70IT": [
      "2011-08-04",
@@ -1179,6 +1279,13 @@
   },
   "1056386": {
    "first_filed": "2010-11-04",
+   "float": {
+    "INAP ROGEM6TFIF6T": {
+     "check": "ok",
+     "median": 0.769,
+     "n": 9
+    }
+   },
    "hits": {
     "INAP ROGEM6TFIF6T": [
      "2018-08-02",
@@ -1197,6 +1304,13 @@
   },
   "1057689": {
    "first_filed": "2011-08-05",
+   "float": {
+    "LSE SX4BMV62GG9X": {
+     "check": "ok",
+     "median": 0.951,
+     "n": 2
+    }
+   },
    "hits": {
     "LSE SX4BMV62GG9X": [
      "2013-02-21",
@@ -1216,6 +1330,13 @@
   },
   "1058623": {
    "first_filed": "2011-08-15",
+   "float": {
+    "CMLS RBVGZ6JSBDD1": {
+     "check": "ok",
+     "median": 0.401,
+     "n": 2
+    }
+   },
    "hits": {
     "CMLS RBVGZ6JSBDD1": [
      "2013-07-30",
@@ -1239,6 +1360,7 @@
    "first_filed": "2011-11-08",
    "float": {
     "MIPS RBZERK0GME05": {
+     "check": "ok",
      "median": 0.955,
      "n": 1
     }
@@ -1264,6 +1386,13 @@
   },
   "1059790": {
    "first_filed": "2011-08-04",
+   "float": {
+    "POZN RYSLLJ38FLUT": {
+     "check": "ok",
+     "median": 0.883,
+     "n": 4
+    }
+   },
    "hits": {
     "POZN RYSLLJ38FLUT": [
      "2011-08-04",
@@ -1297,6 +1426,13 @@
   },
   "1060990": {
    "first_filed": "2010-08-09",
+   "float": {
+    "KWK RIRLMQQBLHT1": {
+     "check": "ok",
+     "median": 0.696,
+     "n": 6
+    }
+   },
    "hits": {
     "KWK RIRLMQQBLHT1": [
      "2010-08-09",
@@ -1321,6 +1457,13 @@
   },
   "1061027": {
    "first_filed": "2011-08-11",
+   "float": {
+    "SNSS TCCRMXX32OO5": {
+     "check": "ok",
+     "median": 0.6805,
+     "n": 10
+    }
+   },
    "hits": {
     "SNSS TCCRMXX32OO5": [
      "2012-08-09",
@@ -1346,6 +1489,13 @@
   },
   "106455": {
    "first_filed": "2011-08-05",
+   "float": {
+    "WLB RJWYEO3ET6JP": {
+     "check": "ok",
+     "median": 0.803,
+     "n": 7
+    }
+   },
    "hits": {
     "WLB RJWYEO3ET6JP": [
      "2014-04-25",
@@ -1374,6 +1524,13 @@
   },
   "1064728": {
    "first_filed": "2009-08-07",
+   "float": {
+    "BTU S4X5QH11KLT1": {
+     "check": "ok",
+     "median": 0.71,
+     "n": 5
+    }
+   },
    "hits": {
     "BTU S4X5QH11KLT1": [
      "2017-03-22",
@@ -1418,6 +1575,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "LEAP T9W5EIZW6S85": {
+     "check": "ok",
      "median": 0.696,
      "n": 5
     }
@@ -1453,6 +1611,13 @@
   },
   "1065059": {
    "first_filed": "2010-08-05",
+   "float": {
+    "USU RCM21PFCDQP1": {
+     "check": "ok",
+     "median": 0.971,
+     "n": 5
+    }
+   },
    "hits": {
     "USU RCM21PFCDQP1": [
      "2010-08-05",
@@ -1486,6 +1651,13 @@
   },
   "1066134": {
    "first_filed": "2010-11-03",
+   "float": {
+    "COCO RI0144HLGDB9": {
+     "check": "ok",
+     "median": 0.993,
+     "n": 3
+    }
+   },
    "hits": {
     "COCO RI0144HLGDB9": [
      "2010-11-03",
@@ -1506,6 +1678,7 @@
    "first_filed": "2010-09-08",
    "float": {
     "WTNY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.628,
      "n": 1
     }
@@ -1529,6 +1702,13 @@
   },
   "1069996": {
    "first_filed": "2011-08-15",
+   "float": {
+    "TCHC RFHFZIU2EYJP": {
+     "check": "ok",
+     "median": 0.9235,
+     "n": 12
+    }
+   },
    "hits": {
     "TCHC RFHFZIU2EYJP": [
      "2014-05-12",
@@ -1552,6 +1732,13 @@
   },
   "107140": {
    "first_filed": "2010-09-17",
+   "float": {
+    "JWA R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.775,
+     "n": 1
+    }
+   },
    "hits": {
     "JWA R735QTJ8XC9X": [
      "2010-09-17",
@@ -1581,6 +1768,7 @@
    "first_filed": "2011-08-15",
    "float": {
     "NWBT SAJ0DN0N99PH": {
+     "check": "ok",
      "median": 0.5325,
      "n": 4
     }
@@ -1608,6 +1796,13 @@
   },
   "1074909": {
    "first_filed": "2011-08-15",
+   "float": {
+    "WZE TZYIFMLR3S6D": {
+     "check": "ok",
+     "median": 0.957,
+     "n": 3
+    }
+   },
    "hits": {
     "WZE TZYIFMLR3S6D": [
      "2013-08-14",
@@ -1627,6 +1822,13 @@
   },
   "1076682": {
    "first_filed": "2011-09-14",
+   "float": {
+    "MJES T5OIK4NWELID": {
+     "check": "ok",
+     "median": 0.796,
+     "n": 11
+    }
+   },
    "hits": {
     "MJES T5OIK4NWELID": [
      "2017-06-09",
@@ -1647,10 +1849,17 @@
     2836,
     7372
    ],
-   "status": "ambiguous: security MJES T5OIK4NWELID claimed by overlapping registrants"
+   "status": "linked"
   },
   "1076700": {
    "first_filed": "2011-09-08",
+   "float": {
+    "KITD UF30NBW3EZXH": {
+     "check": "ok",
+     "median": 0.656,
+     "n": 1
+    }
+   },
    "hits": {
     "KITD UF30NBW3EZXH": [
      "2011-09-08",
@@ -1672,6 +1881,7 @@
    "first_filed": "2011-05-05",
    "float": {
     "UMPQ R9JRZ8GFT8PX": {
+     "check": "ok",
      "median": 0.985,
      "n": 10
     }
@@ -1749,6 +1959,13 @@
   },
   "1082324": {
    "first_filed": "2011-08-25",
+   "float": {
+    "PASW RMSCCHI4UEED": {
+     "check": "ok",
+     "median": 0.891,
+     "n": 11
+    }
+   },
    "hits": {
     "PASW RMSCCHI4UEED": [
      "2011-08-25",
@@ -1800,6 +2017,7 @@
    "first_filed": "2010-08-04",
    "float": {
     "UIL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.976,
      "n": 7
     }
@@ -1845,6 +2063,7 @@
    "first_filed": "2011-08-11",
    "float": {
     "SQI UQ7RLDRSK291": {
+     "check": "ok",
      "median": 1.0,
      "n": 5
     }
@@ -1877,6 +2096,7 @@
    "first_filed": "2010-10-07",
    "float": {
     "RECN S0KLNLV7ENAD": {
+     "check": "ok",
      "median": 0.959,
      "n": 12
     }
@@ -1922,6 +2142,13 @@
   },
   "1085621": {
    "first_filed": "2011-08-08",
+   "float": {
+    "ICGE RMY911P5AXD1": {
+     "check": "ok",
+     "median": 0.901,
+     "n": 7
+    }
+   },
    "hits": {
     "ICGE RMY911P5AXD1": [
      "2017-11-09",
@@ -1941,6 +2168,13 @@
   },
   "1085706": {
    "first_filed": "2011-09-08",
+   "float": {
+    "COBH R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.92,
+     "n": 4
+    }
+   },
    "hits": {
     "COBH R735QTJ8XC9X": [
      "2015-08-10",
@@ -1975,6 +2209,13 @@
   },
   "109156": {
    "first_filed": "2011-12-08",
+   "float": {
+    "ZLC R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.9924999999999999,
+     "n": 2
+    }
+   },
    "hits": {
     "ZLC R735QTJ8XC9X": [
      "2011-12-08",
@@ -2003,6 +2244,7 @@
    "first_filed": "2011-05-03",
    "float": {
     "CHTR UPXX4G43SIN9": {
+     "check": "ok",
      "median": 0.7124999999999999,
      "n": 6
     }
@@ -2052,6 +2294,13 @@
   },
   "1092367": {
    "first_filed": "2011-12-01",
+   "float": {
+    "SCMR RP31WC8B9RVP": {
+     "check": "ok",
+     "median": 0.7,
+     "n": 2
+    }
+   },
    "hits": {
     "SCMR RP31WC8B9RVP": [
      "2011-12-01",
@@ -2074,6 +2323,7 @@
    "first_filed": "2009-09-02",
    "float": {
     "CPL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.997,
      "n": 3
     }
@@ -2097,6 +2347,7 @@
    "first_filed": "2011-05-04",
    "float": {
     "RTEC RPNQAAWUVM91": {
+     "check": "ok",
      "median": 0.9524999999999999,
      "n": 8
     }
@@ -2128,6 +2379,13 @@
   },
   "1100397": {
    "first_filed": "2011-09-12",
+   "float": {
+    "ADXS VKTKU03O6AUD": {
+     "check": "ok",
+     "median": 0.964,
+     "n": 8
+    }
+   },
    "hits": {
     "ADXS VKTKU03O6AUD": [
      "2015-01-06",
@@ -2164,6 +2422,7 @@
    "first_filed": "2010-08-02",
    "float": {
     "ENDP RWGWLKZVXH7P": {
+     "check": "ok",
      "median": 0.9804999999999999,
      "n": 4
     }
@@ -2201,6 +2460,7 @@
    "first_filed": "2010-07-30",
    "float": {
     "MSPG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.988,
      "n": 7
     }
@@ -2250,6 +2510,7 @@
    "first_filed": "2010-08-17",
    "float": {
     "SOHU RWAZX0SVGY91": {
+     "check": "ok",
      "median": 0.612,
      "n": 8
     }
@@ -2301,6 +2562,13 @@
   },
   "1104252": {
    "first_filed": "2011-07-29",
+   "float": {
+    "DDIC SWQJDK1PDW11": {
+     "check": "ok",
+     "median": 0.745,
+     "n": 1
+    }
+   },
    "hits": {
     "DDIC SWQJDK1PDW11": [
      "2012-02-17",
@@ -2320,6 +2588,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "WOL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.844,
      "n": 1
     }
@@ -2383,6 +2652,7 @@
    "first_filed": "2009-07-29",
    "float": {
     "AOL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.97,
      "n": 9
     }
@@ -2440,6 +2710,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "BBBB SZLXBDGFF3VP": {
+     "check": "ok",
      "median": 0.882,
      "n": 1
     }
@@ -2466,6 +2737,7 @@
    "first_filed": "2010-08-03",
    "float": {
     "DNDN RVLEALAHHC2T": {
+     "check": "ok",
      "median": 0.9735,
      "n": 4
     }
@@ -2499,6 +2771,7 @@
    "first_filed": "2010-08-24",
    "float": {
     "RAX U4YP8QJN3UJP": {
+     "check": "ok",
      "median": 0.543,
      "n": 7
     }
@@ -2547,6 +2820,7 @@
    "first_filed": "2011-07-25",
    "float": {
     "BAS TECN9RMENRDX": {
+     "check": "ok",
      "median": 0.736,
      "n": 9
     }
@@ -2595,6 +2869,13 @@
   },
   "1112412": {
    "first_filed": "2011-09-02",
+   "float": {
+    "END SZIYZ3CX6UED": {
+     "check": "ok",
+     "median": 0.9185000000000001,
+     "n": 4
+    }
+   },
    "hits": {
     "END SZIYZ3CX6UED": [
      "2011-09-02",
@@ -2621,6 +2902,7 @@
    "first_filed": "2011-08-16",
    "float": {
     "ATPG S20SCK95GMSL": {
+     "check": "ok",
      "median": 0.863,
      "n": 1
     }
@@ -2646,6 +2928,7 @@
    "first_filed": "2009-08-05",
    "float": {
     "FWC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.799,
      "n": 5
     }
@@ -2687,6 +2970,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "HOS SXB7RIQ8ZQED": {
+     "check": "ok",
      "median": 0.9544999999999999,
      "n": 10
     }
@@ -2736,6 +3020,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "CNVX ST9HLOL9O2N9": {
+     "check": "ok",
      "median": 0.961,
      "n": 1
     }
@@ -2758,6 +3043,13 @@
   },
   "1137091": {
    "first_filed": "2011-09-13",
+   "float": {
+    "PSIX VGXRCQ5PB61X": {
+     "check": "ok",
+     "median": 0.433,
+     "n": 3
+    }
+   },
    "hits": {
     "PSIX VGXRCQ5PB61X": [
      "2013-05-10",
@@ -2784,6 +3076,13 @@
   },
   "1138830": {
    "first_filed": "2011-08-09",
+   "float": {
+    "AUTH TTSYULARW12D": {
+     "check": "ok",
+     "median": 1.0,
+     "n": 1
+    }
+   },
    "hits": {
     "AUTH TTSYULARW12D": [
      "2012-05-09",
@@ -2803,6 +3102,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "ANTC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.009,
      "n": 5
     }
@@ -2846,6 +3146,7 @@
    "first_filed": "2009-08-06",
    "float": {
     "CBE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.995,
      "n": 3
     }
@@ -2880,6 +3181,13 @@
   },
   "1157762": {
    "first_filed": "2011-08-09",
+   "float": {
+    "CAAS T1FW9MYQJNMT": {
+     "check": "ok",
+     "median": 0.28,
+     "n": 11
+    }
+   },
    "hits": {
     "CAAS T1FW9MYQJNMT": [
      "2011-08-09",
@@ -2930,6 +3238,7 @@
    "first_filed": "2017-02-27",
    "float": {
     "PCX S8K46WOHQY5H": {
+     "check": "ok",
      "median": 1.0,
      "n": 2
     }
@@ -2958,6 +3267,13 @@
   },
   "1158223": {
    "first_filed": "2011-08-08",
+   "float": {
+    "AFFY TOHY4GC11NXH": {
+     "check": "ok",
+     "median": 0.855,
+     "n": 2
+    }
+   },
    "hits": {
     "AFFY TOHY4GC11NXH": [
      "2011-08-08",
@@ -2981,6 +3297,13 @@
   },
   "1159154": {
    "first_filed": "2011-08-09",
+   "float": {
+    "RJET SZ09HBEPQICL": {
+     "check": "ok",
+     "median": 1.0,
+     "n": 5
+    }
+   },
    "hits": {
     "RJET SZ09HBEPQICL": [
      "2011-08-09",
@@ -3014,6 +3337,13 @@
   },
   "1159281": {
    "first_filed": "2011-07-28",
+   "float": {
+    "FVE SB1PVEYUPLR9": {
+     "check": "ok",
+     "median": 0.8825000000000001,
+     "n": 10
+    }
+   },
    "hits": {
     "FVE SB1PVEYUPLR9": [
      "2011-07-28",
@@ -3035,6 +3365,7 @@
    "first_filed": "2009-09-09",
    "float": {
     "JCP R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.005,
      "n": 11
     }
@@ -3105,6 +3436,13 @@
   },
   "1167178": {
    "first_filed": "2011-05-10",
+   "float": {
+    "AONE UG8DF996MOO5": {
+     "check": "ok",
+     "median": 0.815,
+     "n": 1
+    }
+   },
    "hits": {
     "AONE UG8DF996MOO5": [
      "2011-05-10",
@@ -3125,6 +3463,7 @@
    "first_filed": "2010-09-08",
    "float": {
     "ARO SEPNRXZGYP9H": {
+     "check": "ok",
      "median": 0.9944999999999999,
      "n": 6
     }
@@ -3160,6 +3499,13 @@
   },
   "1169245": {
    "first_filed": "2018-11-29",
+   "float": {
+    "PHAS WYSIKTF1YP2D": {
+     "check": "ok",
+     "median": 0.893,
+     "n": 3
+    }
+   },
    "hits": {
     "PHAS WYSIKTF1YP2D": [
      "2019-03-26",
@@ -3178,6 +3524,13 @@
   },
   "1169987": {
    "first_filed": "2015-06-08",
+   "float": {
+    "HTGM W0AVUX57HBOL": {
+     "check": "ok",
+     "median": 0.978,
+     "n": 7
+    }
+   },
    "hits": {
     "HTGM W0AVUX57HBOL": [
      "2017-03-23",
@@ -3195,6 +3548,13 @@
   },
   "1171012": {
    "first_filed": "2011-05-09",
+   "float": {
+    "UNXLD USBL0KXSG5LX": {
+     "check": "ok",
+     "median": 0.965,
+     "n": 7
+    }
+   },
    "hits": {
     "UNXLD USBL0KXSG5LX": [
      "2012-11-07",
@@ -3220,6 +3580,7 @@
    "first_filed": "2010-08-03",
    "float": {
     "BBG T4E8JQGYT4YT": {
+     "check": "ok",
      "median": 0.9724999999999999,
      "n": 8
     }
@@ -3273,6 +3634,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "NCT SIQEHORA7LUT": {
+     "check": "ok",
      "median": 0.95,
      "n": 11
     }
@@ -3310,6 +3672,7 @@
    "first_filed": "2011-09-09",
    "float": {
     "TNGO UYL2DZPFYXD1": {
+     "check": "ok",
      "median": 0.8220000000000001,
      "n": 4
     }
@@ -3384,12 +3747,13 @@
    "sic_at_filing": [
     2860
    ],
-   "status": "ambiguous: security RRUS SG8ST6GX8Y91 claimed by overlapping registrants"
+   "status": "linked"
   },
   "1209821": {
    "first_filed": "2011-08-17",
    "float": {
     "XTXI SVBC4P0XENOL": {
+     "check": "ok",
      "median": 0.684,
      "n": 3
     }
@@ -3420,6 +3784,13 @@
   },
   "1213037": {
    "first_filed": "2012-05-15",
+   "float": {
+    "TROV V70C2SDFJASL": {
+     "check": "ok",
+     "median": 0.9135,
+     "n": 10
+    }
+   },
    "hits": {
     "TROV V70C2SDFJASL": [
      "2015-03-12",
@@ -3440,6 +3811,13 @@
   },
   "12239": {
    "first_filed": "2011-08-15",
+   "float": {
+    "BINC R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.995,
+     "n": 11
+    }
+   },
    "hits": {
     "BINC R735QTJ8XC9X": [
      "2013-08-19",
@@ -3513,6 +3891,13 @@
   },
   "1274032": {
    "first_filed": "2011-08-12",
+   "float": {
+    "IFO SZKXVA39CCPX": {
+     "check": "ok",
+     "median": 0.707,
+     "n": 9
+    }
+   },
    "hits": {
     "IFO SZKXVA39CCPX": [
      "2018-08-14",
@@ -3533,6 +3918,13 @@
   },
   "1277092": {
    "first_filed": "2011-08-11",
+   "float": {
+    "HOGS TYT5NP8NW3FP": {
+     "check": "ok",
+     "median": 0.7755000000000001,
+     "n": 2
+    }
+   },
    "hits": {
     "HOGS TYT5NP8NW3FP": [
      "2011-08-11",
@@ -3554,6 +3946,7 @@
    "first_filed": "2011-09-07",
    "float": {
     "TPLM URD4DB4VRQZP": {
+     "check": "ok",
      "median": 0.871,
      "n": 6
     }
@@ -3592,6 +3985,7 @@
    "first_filed": "2009-08-06",
    "float": {
     "WIN TKE92FGPKHUT": {
+     "check": "ok",
      "median": 1.0,
      "n": 10
     }
@@ -3648,6 +4042,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "RAME TIHBRVUW7OMD": {
+     "check": "ok",
      "median": 0.619,
      "n": 9
     }
@@ -3693,6 +4088,13 @@
   },
   "1283843": {
    "first_filed": "2011-08-09",
+   "float": {
+    "VOG UUJC85KGN9LX": {
+     "check": "ok",
+     "median": 0.7589999999999999,
+     "n": 4
+    }
+   },
    "hits": {
     "VOG UUJC85KGN9LX": [
      "2013-08-06",
@@ -3718,6 +4120,13 @@
   },
   "1289340": {
    "first_filed": "2011-08-09",
+   "float": {
+    "STXS T142WIKPMLPH": {
+     "check": "ok",
+     "median": 0.909,
+     "n": 6
+    }
+   },
    "hits": {
     "STXS T142WIKPMLPH": [
      "2013-05-14",
@@ -3738,6 +4147,13 @@
   },
   "1292426": {
    "first_filed": "2011-08-09",
+   "float": {
+    "GFIG T5OIK4NWELID": {
+     "check": "ok",
+     "median": 0.582,
+     "n": 4
+    }
+   },
    "hits": {
     "GFIG T5OIK4NWELID": [
      "2011-08-09",
@@ -3767,6 +4183,13 @@
   },
   "1297720": {
    "first_filed": "2011-08-09",
+   "float": {
+    "JRCC T5NJ41AQBUCL": {
+     "check": "ok",
+     "median": 0.7055,
+     "n": 2
+    }
+   },
    "hits": {
     "JRCC T5NJ41AQBUCL": [
      "2011-08-09",
@@ -3790,6 +4213,7 @@
    "first_filed": "2011-04-29",
    "float": {
     "BCC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.322,
      "n": 2
     }
@@ -3820,6 +4244,13 @@
   },
   "1299139": {
    "first_filed": "2011-08-12",
+   "float": {
+    "RHEO T4H6W0KH1EG5": {
+     "check": "ok",
+     "median": 0.907,
+     "n": 7
+    }
+   },
    "hits": {
     "RHEO T4H6W0KH1EG5": [
      "2013-03-26",
@@ -3840,6 +4271,13 @@
   },
   "1299704": {
    "first_filed": "2011-08-09",
+   "float": {
+    "AEA T4K58ANZ9NXH": {
+     "check": "ok",
+     "median": 0.887,
+     "n": 1
+    }
+   },
    "hits": {
     "AEA T4K58ANZ9NXH": [
      "2011-08-09",
@@ -3860,6 +4298,7 @@
    "first_filed": "2017-08-14",
    "float": {
     "ATNX WLD22WT6E99H": {
+     "check": "ok",
      "median": 0.603,
      "n": 5
     }
@@ -3887,6 +4326,13 @@
   },
   "1301063": {
    "first_filed": "2009-11-10",
+   "float": {
+    "ANR T687HZZ9XOPX": {
+     "check": "ok",
+     "median": 0.662,
+     "n": 5
+    }
+   },
    "hits": {
     "ANR T687HZZ9XOPX": [
      "2009-11-10",
@@ -3918,12 +4364,13 @@
    "sic_at_filing": [
     1221
    ],
-   "status": "ambiguous: security ANR T687HZZ9XOPX claimed by overlapping registrants"
+   "status": "linked"
   },
   "1301501": {
    "first_filed": "2014-05-12",
    "float": {
     "AKAO VOTC3NIBCG9X": {
+     "check": "ok",
      "median": 0.902,
      "n": 5
     }
@@ -3953,6 +4400,13 @@
   },
   "1305323": {
    "first_filed": "2011-08-02",
+   "float": {
+    "BPI UBSV03ZU8GO5": {
+     "check": "ok",
+     "median": 0.371,
+     "n": 13
+    }
+   },
    "hits": {
     "BPI UBSV03ZU8GO5": [
      "2011-08-02",
@@ -4000,6 +4454,13 @@
   },
   "1310067": {
    "first_filed": "2010-08-20",
+   "float": {
+    "KMRT SPDO4ENASXUT": {
+     "check": "ok",
+     "median": 0.22,
+     "n": 8
+    }
+   },
    "hits": {
     "KMRT SPDO4ENASXUT": [
      "2010-08-20",
@@ -4047,6 +4508,7 @@
    "first_filed": "2011-08-31",
    "float": {
     "SZYM UWX04AE5AWKL": {
+     "check": "ok",
      "median": 0.7865,
      "n": 6
     }
@@ -4083,6 +4545,7 @@
    "first_filed": "2011-08-12",
    "float": {
     "GTT VHHGALH2U99H": {
+     "check": "ok",
      "median": 0.735,
      "n": 8
     }
@@ -4106,6 +4569,13 @@
   },
   "1316175": {
    "first_filed": "2011-08-12",
+   "float": {
+    "ANTH UKJY211UPW11": {
+     "check": "ok",
+     "median": 0.988,
+     "n": 7
+    }
+   },
    "hits": {
     "ANTH UKJY211UPW11": [
      "2015-05-11",
@@ -4126,6 +4596,7 @@
    "first_filed": "2010-09-24",
    "float": {
     "IHS TDL2R5DOIMW5": {
+     "check": "ok",
      "median": 0.643,
      "n": 7
     }
@@ -4170,6 +4641,13 @@
   },
   "1316517": {
    "first_filed": "2011-08-15",
+   "float": {
+    "KNDI U11WBD8I5YLH": {
+     "check": "ok",
+     "median": 0.701,
+     "n": 13
+    }
+   },
    "hits": {
     "KNDI U11WBD8I5YLH": [
      "2013-04-01",
@@ -4214,6 +4692,13 @@
   },
   "1325702": {
    "first_filed": "2011-08-05",
+   "float": {
+    "MX UUT6P385ET7P": {
+     "check": "ok",
+     "median": 0.786,
+     "n": 11
+    }
+   },
    "hits": {
     "MX UUT6P385ET7P": [
      "2013-02-22",
@@ -4253,6 +4738,13 @@
   },
   "1326205": {
    "first_filed": "2011-08-18",
+   "float": {
+    "IGC THRQ5GCI82G5": {
+     "check": "ok",
+     "median": 0.829,
+     "n": 9
+    }
+   },
    "hits": {
     "IGC THRQ5GCI82G5": [
      "2018-08-03",
@@ -4274,6 +4766,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "SMBL TURFHV3OKFOL": {
+     "check": "ok",
      "median": 0.952,
      "n": 4
     }
@@ -4308,6 +4801,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "RSO TFZQ3DKJ910L": {
+     "check": "ok",
      "median": 0.942,
      "n": 11
     }
@@ -4354,6 +4848,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "PRC TLJLUCTSS6LH": {
+     "check": "ok",
      "median": 0.928,
      "n": 6
     }
@@ -4388,6 +4883,13 @@
   },
   "1336691": {
    "first_filed": "2011-08-18",
+   "float": {
+    "MOTR UNJ9S7X924IT": {
+     "check": "ok",
+     "median": 0.8069999999999999,
+     "n": 2
+    }
+   },
    "hits": {
     "MOTR UNJ9S7X924IT": [
      "2011-08-18",
@@ -4405,6 +4907,13 @@
   },
   "1338095": {
    "first_filed": "2014-05-14",
+   "float": {
+    "NRX VO1RL19L7BS5": {
+     "check": "ok",
+     "median": 0.5255,
+     "n": 2
+    }
+   },
    "hits": {
     "NRX VO1RL19L7BS5": [
      "2014-11-12",
@@ -4424,6 +4933,7 @@
    "first_filed": "2011-11-02",
    "float": {
     "EXXI TURFHV3OKFOL": {
+     "check": "ok",
      "median": 0.715,
      "n": 6
     }
@@ -4479,6 +4989,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "SGYPD V2245V5VOQQT": {
+     "check": "ok",
      "median": 0.858,
      "n": 6
     }
@@ -4518,6 +5029,7 @@
    "first_filed": "2009-08-06",
    "float": {
     "SD TXEXUXL1ZM91": {
+     "check": "ok",
      "median": 0.9390000000000001,
      "n": 8
     }
@@ -4557,6 +5069,13 @@
   },
   "1353970": {
    "first_filed": "2011-09-14",
+   "float": {
+    "CXDC UHZE18NZIYXX": {
+     "check": "ok",
+     "median": 0.3425,
+     "n": 10
+    }
+   },
    "hits": {
     "CXDC UHZE18NZIYXX": [
      "2014-03-26",
@@ -4575,6 +5094,13 @@
   },
   "1355128": {
    "first_filed": "2011-10-12",
+   "float": {
+    "OCZ UM04QZFSRVJ9": {
+     "check": "ok",
+     "median": 0.923,
+     "n": 2
+    }
+   },
    "hits": {
     "OCZ UM04QZFSRVJ9": [
      "2011-10-12",
@@ -4594,6 +5120,13 @@
   },
   "1356857": {
    "first_filed": "2011-08-15",
+   "float": {
+    "TSRX UOSKCIR0KTWL": {
+     "check": "ok",
+     "median": 0.4035,
+     "n": 2
+    }
+   },
    "hits": {
     "TSRX UOSKCIR0KTWL": [
      "2013-03-13",
@@ -4612,6 +5145,13 @@
   },
   "1358403": {
    "first_filed": "2015-05-12",
+   "float": {
+    "BLCM VWI0PXAQUGDH": {
+     "check": "ok",
+     "median": 0.717,
+     "n": 7
+    }
+   },
    "hits": {
     "BLCM VWI0PXAQUGDH": [
      "2015-05-12",
@@ -4641,6 +5181,13 @@
   },
   "13610": {
    "first_filed": "2009-08-04",
+   "float": {
+    "BNE R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.921,
+     "n": 1
+    }
+   },
    "hits": {
     "BNE R735QTJ8XC9X": [
      "2010-03-02",
@@ -4662,6 +5209,7 @@
    "first_filed": "2010-07-30",
    "float": {
     "WYN TKS1BQL2N23P": {
+     "check": "ok",
      "median": 0.9944999999999999,
      "n": 8
     }
@@ -4718,6 +5266,7 @@
    "first_filed": "2011-08-12",
    "float": {
     "PRMW URD4DB4VRQZP": {
+     "check": "ok",
      "median": 0.8314999999999999,
      "n": 8
     }
@@ -4772,6 +5321,7 @@
    "first_filed": "2011-08-11",
    "float": {
     "AMRS UQBPDR8GV2W5": {
+     "check": "ok",
      "median": 0.489,
      "n": 13
     }
@@ -4825,6 +5375,13 @@
   },
   "1371217": {
    "first_filed": "2011-08-05",
+   "float": {
+    "ETRM TXNSVRVKOEP1": {
+     "check": "ok",
+     "median": 0.6935,
+     "n": 8
+    }
+   },
    "hits": {
     "ETRM TXNSVRVKOEP1": [
      "2016-11-14",
@@ -4847,6 +5404,7 @@
    "first_filed": "2011-05-05",
    "float": {
     "ANV TSHPE3QO7TD1": {
+     "check": "ok",
      "median": 0.9345,
      "n": 4
     }
@@ -4879,6 +5437,13 @@
   },
   "1376812": {
    "first_filed": "2010-08-06",
+   "float": {
+    "PCXWI TWW8D5MUJA79": {
+     "check": "ok",
+     "median": 0.9855,
+     "n": 4
+    }
+   },
    "hits": {
     "PCXWI TWW8D5MUJA79": [
      "2010-08-06",
@@ -4904,6 +5469,13 @@
   },
   "1379246": {
    "first_filed": "2011-08-16",
+   "float": {
+    "BODY UQSFZCGC5WMD": {
+     "check": "ok",
+     "median": 0.997,
+     "n": 3
+    }
+   },
    "hits": {
     "BODY UQSFZCGC5WMD": [
      "2011-08-16",
@@ -4926,6 +5498,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "OREX TS3X4SMB5945": {
+     "check": "ok",
      "median": 0.875,
      "n": 6
     }
@@ -4962,6 +5535,13 @@
   },
   "1383701": {
    "first_filed": "2013-09-09",
+   "float": {
+    "CNAT VIIVA5DHQXD1": {
+     "check": "ok",
+     "median": 0.804,
+     "n": 9
+    }
+   },
    "hits": {
     "CNAT VIIVA5DHQXD1": [
      "2013-11-14",
@@ -4999,6 +5579,13 @@
   },
   "1384135": {
    "first_filed": "2011-08-12",
+   "float": {
+    "HEAT U9Q11070F4H1": {
+     "check": "ok",
+     "median": 0.647,
+     "n": 1
+    }
+   },
    "hits": {
     "HEAT U9Q11070F4H1": [
      "2011-08-12",
@@ -5020,6 +5607,13 @@
   },
   "1385228": {
    "first_filed": "2013-11-05",
+   "float": {
+    "BIND VK2ZRH843XID": {
+     "check": "ok",
+     "median": 0.7705,
+     "n": 2
+    }
+   },
    "hits": {
     "BIND VK2ZRH843XID": [
      "2014-11-06",
@@ -5040,6 +5634,13 @@
   },
   "1385544": {
    "first_filed": "2011-08-09",
+   "float": {
+    "ZINC TV0AIPE7984L": {
+     "check": "ok",
+     "median": 0.875,
+     "n": 5
+    }
+   },
    "hits": {
     "ZINC TV0AIPE7984L": [
      "2011-08-09",
@@ -5075,6 +5676,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "AII TTTYAONXYS85": {
+     "check": "ok",
      "median": 0.919,
      "n": 1
     }
@@ -5105,6 +5707,7 @@
    "first_filed": "2011-08-17",
    "float": {
     "SOLR U4JXJC23YJ51": {
+     "check": "ok",
      "median": 1.008,
      "n": 3
     }
@@ -5137,6 +5740,13 @@
   },
   "1396279": {
    "first_filed": "2011-08-04",
+   "float": {
+    "HGG TUFM4QPNNDR9": {
+     "check": "ok",
+     "median": 0.455,
+     "n": 5
+    }
+   },
    "hits": {
     "HGG TUFM4QPNNDR9": [
      "2011-08-04",
@@ -5164,6 +5774,13 @@
   },
   "1397516": {
    "first_filed": "2011-08-05",
+   "float": {
+    "REXX TUKJD7JI15K5": {
+     "check": "ok",
+     "median": 0.794,
+     "n": 7
+    }
+   },
    "hits": {
     "REXX TUKJD7JI15K5": [
      "2011-08-05",
@@ -5196,6 +5813,13 @@
   },
   "1398551": {
    "first_filed": "2011-08-16",
+   "float": {
+    "YONG UFNP1AKN0UAT": {
+     "check": "ok",
+     "median": 0.772,
+     "n": 3
+    }
+   },
    "hits": {
     "YONG UFNP1AKN0UAT": [
      "2011-08-16",
@@ -5225,6 +5849,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "MRIS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.988,
      "n": 1
     }
@@ -5248,6 +5873,13 @@
   },
   "1399352": {
    "first_filed": "2011-11-22",
+   "float": {
+    "MJES T5OIK4NWELID": {
+     "check": "contradicts",
+     "median": 0.098,
+     "n": 12
+    }
+   },
    "hits": {
     "MJES T5OIK4NWELID": [
      "2017-04-17",
@@ -5270,12 +5902,13 @@
    "sic_at_filing": [
     8200
    ],
-   "status": "ambiguous: security MJES T5OIK4NWELID claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.10)"
   },
   "1399935": {
    "first_filed": "2011-09-07",
    "float": {
     "FRAN UYG55IVLL5K5": {
+     "check": "ok",
      "median": 0.982,
      "n": 9
     }
@@ -5329,6 +5962,7 @@
    "first_filed": "2010-09-02",
    "float": {
     "MF TUEMONCHKMLH": {
+     "check": "ok",
      "median": 0.999,
      "n": 1
     }
@@ -5353,6 +5987,13 @@
   },
   "1401923": {
    "first_filed": "2011-08-08",
+   "float": {
+    "MAPP TWJFJXVNJH45": {
+     "check": "ok",
+     "median": 0.7,
+     "n": 1
+    }
+   },
    "hits": {
     "MAPP TWJFJXVNJH45": [
      "2012-03-30",
@@ -5374,6 +6015,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "AREX TXGWR4BE54KL": {
+     "check": "ok",
      "median": 0.8875,
      "n": 8
     }
@@ -5410,6 +6052,13 @@
   },
   "1410172": {
    "first_filed": "2011-08-08",
+   "float": {
+    "RBCN TXOSBV8QR5UT": {
+     "check": "ok",
+     "median": 0.837,
+     "n": 12
+    }
+   },
    "hits": {
     "RBCN TXOSBV8QR5UT": [
      "2011-08-08",
@@ -5438,6 +6087,13 @@
   },
   "1411906": {
    "first_filed": "2011-08-12",
+   "float": {
+    "AMPE UWP4JJGSOVAD": {
+     "check": "ok",
+     "median": 0.9484999999999999,
+     "n": 12
+    }
+   },
    "hits": {
     "AMPE UWP4JJGSOVAD": [
      "2014-02-14",
@@ -5461,6 +6117,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "TC TY1L52ZXQYXX": {
+     "check": "ok",
      "median": 0.993,
      "n": 6
     }
@@ -5490,6 +6147,13 @@
   },
   "1415277": {
    "first_filed": "2011-07-27",
+   "float": {
+    "FUBC UG2GQP2665PH": {
+     "check": "ok",
+     "median": 0.844,
+     "n": 3
+    }
+   },
    "hits": {
     "FUBC UG2GQP2665PH": [
      "2014-04-18",
@@ -5509,6 +6173,7 @@
    "first_filed": "2018-03-02",
    "float": {
     "AVYA WRAQ376SZZ39": {
+     "check": "ok",
      "median": 0.9975,
      "n": 6
     }
@@ -5535,6 +6200,7 @@
    "first_filed": "2010-11-03",
    "float": {
     "BGG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.972,
      "n": 9
     }
@@ -5589,6 +6255,13 @@
   },
   "1422105": {
    "first_filed": "2011-08-05",
+   "float": {
+    "NOR UMKT4Y4CDPWL": {
+     "check": "ok",
+     "median": 0.515,
+     "n": 5
+    }
+   },
    "hits": {
     "NOR UMKT4Y4CDPWL": [
      "2011-08-05",
@@ -5676,6 +6349,7 @@
    "first_filed": "2012-12-03",
    "float": {
     "KYTH VAO9ZBE1SEAT": {
+     "check": "ok",
      "median": 0.738,
      "n": 2
     }
@@ -5707,6 +6381,7 @@
    "first_filed": "2011-07-28",
    "float": {
     "DMRC U6VMJA5GGNS5": {
+     "check": "ok",
      "median": 0.9595,
      "n": 12
     }
@@ -5738,6 +6413,7 @@
    "first_filed": "2011-08-12",
    "float": {
     "RRTS UMJTOUR6AYQT": {
+     "check": "ok",
      "median": 0.615,
      "n": 9
     }
@@ -5773,6 +6449,7 @@
    "first_filed": "2011-08-03",
    "float": {
     "CLD UHSHWL3SZOTH": {
+     "check": "ok",
      "median": 1.0,
      "n": 7
     }
@@ -5819,6 +6496,13 @@
   },
   "1449732": {
    "first_filed": "2011-08-03",
+   "float": {
+    "WG R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.82,
+     "n": 7
+    }
+   },
    "hits": {
     "WG R735QTJ8XC9X": [
      "2011-08-03",
@@ -5846,6 +6530,13 @@
   },
   "1452217": {
    "first_filed": "2011-08-12",
+   "float": {
+    "TPCG UMAYO0GNM6AT": {
+     "check": "ok",
+     "median": 0.779,
+     "n": 1
+    }
+   },
    "hits": {
     "TPCG UMAYO0GNM6AT": [
      "2011-08-12",
@@ -5869,6 +6560,7 @@
    "first_filed": "2009-09-01",
    "float": {
     "EVI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.783,
      "n": 7
     }
@@ -5907,6 +6599,13 @@
   },
   "1456857": {
    "first_filed": "2011-09-14",
+   "float": {
+    "SEF U3EKREP0QUED": {
+     "check": "contradicts",
+     "median": 0.009,
+     "n": 7
+    }
+   },
    "hits": {
     "SEF U3EKREP0QUED": [
      "2011-09-14",
@@ -5924,10 +6623,17 @@
    "sic_at_filing": [
     7389
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.01)"
   },
   "1457612": {
    "first_filed": "2014-05-09",
+   "float": {
+    "GNCA VNUVGDPEO1NP": {
+     "check": "ok",
+     "median": 0.735,
+     "n": 9
+    }
+   },
    "hits": {
     "GNCA VNUVGDPEO1NP": [
      "2016-02-17",
@@ -5953,6 +6659,7 @@
    "first_filed": "2012-05-10",
    "float": {
     "CEMP V3T4RUKOL10L": {
+     "check": "ok",
      "median": 0.688,
      "n": 7
     }
@@ -5987,6 +6694,7 @@
    "first_filed": "2012-05-11",
    "float": {
     "CLVS V1NCGGOCJFC5": {
+     "check": "ok",
      "median": 0.881,
      "n": 10
     }
@@ -6034,6 +6742,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "CLNY UG8DF996MOO5": {
+     "check": "ok",
      "median": 0.981,
      "n": 4
     }
@@ -6155,6 +6864,7 @@
    "first_filed": "2011-07-27",
    "float": {
     "CIE UII3J0M6ZAZP": {
+     "check": "ok",
      "median": 0.766,
      "n": 7
     }
@@ -6195,6 +6905,7 @@
    "first_filed": "2011-08-12",
    "float": {
     "AH UMQPTIBCU8V9": {
+     "check": "ok",
      "median": 0.981,
      "n": 6
     }
@@ -6221,6 +6932,13 @@
   },
   "1473597": {
    "first_filed": "2011-08-05",
+   "float": {
+    "STRI UHEPN9ZFX4KL": {
+     "check": "ok",
+     "median": 0.435,
+     "n": 5
+    }
+   },
    "hits": {
     "STRI UHEPN9ZFX4KL": [
      "2011-08-05",
@@ -6240,6 +6958,7 @@
    "first_filed": "2011-08-11",
    "float": {
     "MCP UONN41X6723P": {
+     "check": "ok",
      "median": 0.67,
      "n": 5
     }
@@ -6274,6 +6993,7 @@
    "first_filed": "2010-10-28",
    "float": {
     "CCE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.996,
      "n": 5
     }
@@ -6316,6 +7036,13 @@
   },
   "1493566": {
    "first_filed": "2014-11-12",
+   "float": {
+    "OTIC VT0YY1UB4MZP": {
+     "check": "ok",
+     "median": 0.651,
+     "n": 8
+    }
+   },
    "hits": {
     "OTIC VT0YY1UB4MZP": [
      "2014-11-12",
@@ -6348,6 +7075,7 @@
    "first_filed": "2013-06-24",
    "float": {
     "NBCB VGG1B1KNXL5X": {
+     "check": "ok",
      "median": 0.834,
      "n": 3
     }
@@ -6369,6 +7097,13 @@
   },
   "1496671": {
    "first_filed": "2014-11-14",
+   "float": {
+    "CALA VUE7AQ4QYD0L": {
+     "check": "ok",
+     "median": 0.859,
+     "n": 7
+    }
+   },
    "hits": {
     "CALA VUE7AQ4QYD0L": [
      "2014-11-14",
@@ -6406,8 +7141,9 @@
    "first_filed": "2011-03-10",
    "float": {
     "DBRN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.906,
-     "n": 9
+     "n": 10
     }
    },
    "hits": {
@@ -6450,6 +7186,13 @@
   },
   "1498622": {
    "first_filed": "2011-09-27",
+   "float": {
+    "EOC R735QTJ8XC9X": {
+     "check": "contradicts",
+     "median": 0.0,
+     "n": 4
+    }
+   },
    "hits": {
     "EOC R735QTJ8XC9X": [
      "2011-09-27",
@@ -6466,10 +7209,17 @@
    "sic_at_filing": [
     5960
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1498828": {
    "first_filed": "2011-08-09",
+   "float": {
+    "HHC URI1LRYQ5ISL": {
+     "check": "ok",
+     "median": 0.7875000000000001,
+     "n": 12
+    }
+   },
    "hits": {
     "HHC URI1LRYQ5ISL": [
      "2011-08-09",
@@ -6555,6 +7305,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "GNC UVDV31WP0NL1": {
+     "check": "ok",
      "median": 0.997,
      "n": 9
     }
@@ -6602,6 +7353,13 @@
   },
   "1506932": {
    "first_filed": "2011-08-09",
+   "float": {
+    "LPR UWW0O70Z85ET": {
+     "check": "ok",
+     "median": 0.586,
+     "n": 2
+    }
+   },
    "hits": {
     "LPR UWW0O70Z85ET": [
      "2011-08-09",
@@ -6622,6 +7380,7 @@
    "first_filed": "2011-08-31",
    "float": {
     "CJES UYN1A6FS4FOL": {
+     "check": "ok",
      "median": 0.792,
      "n": 3
     }
@@ -6656,6 +7415,13 @@
   },
   "1515317": {
    "first_filed": "2011-12-08",
+   "float": {
+    "MGC TYQ7BF55NTYD": {
+     "check": "contradicts",
+     "median": 0.0025,
+     "n": 10
+    }
+   },
    "hits": {
     "MGC TYQ7BF55NTYD": [
      "2014-08-13",
@@ -6677,10 +7443,17 @@
    "sic_at_filing": [
     1000
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1516479": {
    "first_filed": "2013-06-05",
+   "float": {
+    "INSY VG85QANBBJVP": {
+     "check": "ok",
+     "median": 0.3235,
+     "n": 6
+    }
+   },
    "hits": {
     "INSY VG85QANBBJVP": [
      "2013-06-05",
@@ -6724,6 +7497,7 @@
    "first_filed": "2011-08-15",
    "float": {
     "RATE UXHOI92OWQXX": {
+     "check": "ok",
      "median": 0.456,
      "n": 6
     }
@@ -6767,6 +7541,7 @@
    "first_filed": "2012-05-14",
    "float": {
     "HMST V400WI4V4B51": {
+     "check": "ok",
      "median": 0.8354999999999999,
      "n": 10
     }
@@ -6800,6 +7575,13 @@
   },
   "1520108": {
    "first_filed": "2013-08-22",
+   "float": {
+    "RCAP VH5MXH31X7C5": {
+     "check": "contradicts",
+     "median": 0.032,
+     "n": 1
+    }
+   },
    "hits": {
     "RCAP VH5MXH31X7C5": [
      "2014-04-14",
@@ -6817,12 +7599,13 @@
     2300,
     3944
    ],
-   "status": "ambiguous: security RCAP VH5MXH31X7C5 claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.03)"
   },
   "1528837": {
    "first_filed": "2012-06-07",
    "float": {
     "SN V2EWZ2X2OJTX": {
+     "check": "ok",
      "median": 0.815,
      "n": 7
     }
@@ -6883,6 +7666,13 @@
   },
   "1532424": {
    "first_filed": "2012-09-13",
+   "float": {
+    "RRUS SG8ST6GX8Y91": {
+     "check": "contradicts",
+     "median": 0.0,
+     "n": 3
+    }
+   },
    "hits": {
     "RRUS SG8ST6GX8Y91": [
      "2012-09-13",
@@ -6898,10 +7688,17 @@
    "sic_at_filing": [
     7389
    ],
-   "status": "ambiguous: security RRUS SG8ST6GX8Y91 claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1533924": {
    "first_filed": "2012-06-01",
+   "float": {
+    "MPO V5WY71QOH4DH": {
+     "check": "ok",
+     "median": 0.505,
+     "n": 7
+    }
+   },
    "hits": {
     "MPO V5WY71QOH4DH": [
      "2012-06-01",
@@ -6926,6 +7723,13 @@
   },
   "1538217": {
    "first_filed": "2012-09-18",
+   "float": {
+    "SRAX WEOT03JZQ63P": {
+     "check": "ok",
+     "median": 0.967,
+     "n": 5
+    }
+   },
    "hits": {
     "SRAX WEOT03JZQ63P": [
      "2017-11-14",
@@ -6946,6 +7750,7 @@
    "first_filed": "2012-12-07",
    "float": {
     "KRFT VAFEYH3J3LUT": {
+     "check": "ok",
      "median": 0.9984999999999999,
      "n": 2
     }
@@ -6976,6 +7781,13 @@
   },
   "1551986": {
    "first_filed": "2016-08-15",
+   "float": {
+    "MSDI WBTF2A59OY91": {
+     "check": "ok",
+     "median": 0.8979999999999999,
+     "n": 6
+    }
+   },
    "hits": {
     "MSDI WBTF2A59OY91": [
      "2018-03-14",
@@ -6997,6 +7809,13 @@
   },
   "1553588": {
    "first_filed": "2013-12-20",
+   "float": {
+    "SFXE VKLP996BK9K5": {
+     "check": "ok",
+     "median": 0.567,
+     "n": 1
+    }
+   },
    "hits": {
     "SFXE VKLP996BK9K5": [
      "2013-12-20",
@@ -7018,6 +7837,7 @@
    "first_filed": "2013-05-09",
    "float": {
     "RESI VCP528GJG86D": {
+     "check": "ok",
      "median": 0.736,
      "n": 7
     }
@@ -7042,6 +7862,13 @@
   },
   "1561092": {
    "first_filed": "2013-03-25",
+   "float": {
+    "ACG R735QTJ8XC9X": {
+     "check": "contradicts",
+     "median": 0.0,
+     "n": 1
+    }
+   },
    "hits": {
     "ACG R735QTJ8XC9X": [
      "2013-03-25",
@@ -7062,10 +7889,17 @@
    "sic_at_filing": [
     6172
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1563855": {
    "first_filed": "2013-11-14",
+   "float": {
+    "SPHS VJ3JO421CRQD": {
+     "check": "ok",
+     "median": 0.998,
+     "n": 5
+    }
+   },
    "hits": {
     "SPHS VJ3JO421CRQD": [
      "2016-05-16",
@@ -7086,6 +7920,7 @@
    "first_filed": "2013-08-12",
    "float": {
     "MNK VHV8JWLFWTID": {
+     "check": "ok",
      "median": 0.997,
      "n": 8
     }
@@ -7125,6 +7960,13 @@
   },
   "1568319": {
    "first_filed": "2013-05-15",
+   "float": {
+    "MOTR UNJ9S7X924IT": {
+     "check": "ok",
+     "median": 0.839,
+     "n": 5
+    }
+   },
    "hits": {
     "MOTR UNJ9S7X924IT": [
      "2015-03-31",
@@ -7147,6 +7989,13 @@
   },
   "1568832": {
    "first_filed": "2013-08-02",
+   "float": {
+    "RCAP VH5MXH31X7C5": {
+     "check": "contradicts",
+     "median": 0.094,
+     "n": 1
+    }
+   },
    "hits": {
     "RCAP VH5MXH31X7C5": [
      "2014-05-15",
@@ -7165,10 +8014,17 @@
    "sic_at_filing": [
     6211
    ],
-   "status": "ambiguous: security RCAP VH5MXH31X7C5 claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.09)"
   },
   "1569329": {
    "first_filed": "2013-05-15",
+   "float": {
+    "YGYI WLJY7KDCXJDX": {
+     "check": "ok",
+     "median": 0.329,
+     "n": 3
+    }
+   },
    "hits": {
     "YGYI WLJY7KDCXJDX": [
      "2018-08-14",
@@ -7187,6 +8043,13 @@
   },
   "1571384": {
    "first_filed": "2014-05-08",
+   "float": {
+    "SIGM R735QTJ8XC9X": {
+     "check": "contradicts",
+     "median": 0.0965,
+     "n": 2
+    }
+   },
    "hits": {
     "SIGM R735QTJ8XC9X": [
      "2014-05-08",
@@ -7202,12 +8065,13 @@
    "sic_at_filing": [
     4899
    ],
-   "status": "ambiguous: security SIGM R735QTJ8XC9X claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.10)"
   },
   "1575360": {
    "first_filed": "2013-11-06",
    "float": {
     "FTDDV VKMOPCJHN0PX": {
+     "check": "ok",
      "median": 0.622,
      "n": 5
     }
@@ -7239,6 +8103,7 @@
    "first_filed": "2013-09-18",
    "float": {
     "FI VIXMZJV0W8RP": {
+     "check": "ok",
      "median": 0.2995,
      "n": 8
     }
@@ -7283,6 +8148,13 @@
   },
   "1579823": {
    "first_filed": "2014-05-08",
+   "float": {
+    "NBEV WI2WFOWX7Q05": {
+     "check": "ok",
+     "median": 0.777,
+     "n": 5
+    }
+   },
    "hits": {
     "NBEV WI2WFOWX7Q05": [
      "2018-08-14",
@@ -7305,6 +8177,13 @@
   },
   "1580185": {
    "first_filed": "2014-01-22",
+   "float": {
+    "JGW VLF8O25DUWDH": {
+     "check": "ok",
+     "median": 0.982,
+     "n": 2
+    }
+   },
    "hits": {
     "JGW VLF8O25DUWDH": [
      "2014-03-31",
@@ -7326,6 +8205,7 @@
    "first_filed": "2013-12-18",
    "float": {
     "STAY VLK5WIZ88O6D": {
+     "check": "ok",
      "median": 0.993,
      "n": 9
     }
@@ -7367,6 +8247,13 @@
   },
   "1586105": {
    "first_filed": "2014-06-11",
+   "float": {
+    "EGLT VNVUWH2KQSTH": {
+     "check": "ok",
+     "median": 0.582,
+     "n": 5
+    }
+   },
    "hits": {
     "EGLT VNVUWH2KQSTH": [
      "2016-11-08",
@@ -7385,6 +8272,13 @@
   },
   "1587221": {
    "first_filed": "2015-05-12",
+   "float": {
+    "ZSAN VXLELNXHWMSL": {
+     "check": "ok",
+     "median": 0.862,
+     "n": 8
+    }
+   },
    "hits": {
     "ZSAN VXLELNXHWMSL": [
      "2018-03-12",
@@ -7408,6 +8302,7 @@
    "first_filed": "2014-06-11",
    "float": {
     "TIME VR8YVZ2C5LK5": {
+     "check": "ok",
      "median": 0.99,
      "n": 3
     }
@@ -7444,8 +8339,9 @@
    "first_filed": "2015-05-15",
    "float": {
     "PRTY VZR6X1TTY8H1": {
-     "median": 0.3915,
-     "n": 6
+     "check": "ok",
+     "median": 0.526,
+     "n": 7
     }
    },
    "hits": {
@@ -7480,6 +8376,13 @@
   },
   "1593034": {
    "first_filed": "2014-05-09",
+   "float": {
+    "ENDP RWGWLKZVXH7P": {
+     "check": "ok",
+     "median": 0.9904999999999999,
+     "n": 8
+    }
+   },
    "hits": {
     "ENDP RWGWLKZVXH7P": [
      "2014-05-09",
@@ -7558,6 +8461,13 @@
   },
   "1594590": {
    "first_filed": "2014-08-29",
+   "float": {
+    "PGN VSS3X7JSFUJP": {
+     "check": "ok",
+     "median": 0.9924999999999999,
+     "n": 2
+    }
+   },
    "hits": {
     "PGN VSS3X7JSFUJP": [
      "2014-08-29",
@@ -7577,6 +8487,7 @@
    "first_filed": "2014-06-13",
    "float": {
     "WPG VQY4YY1HBASL": {
+     "check": "ok",
      "median": 0.9924999999999999,
      "n": 8
     }
@@ -7622,6 +8533,7 @@
    "first_filed": "2018-08-10",
    "float": {
     "TCDA WVP9292ZBFXH": {
+     "check": "ok",
      "median": 0.564,
      "n": 3
     }
@@ -7645,6 +8557,13 @@
   },
   "1596946": {
    "first_filed": "2014-08-06",
+   "float": {
+    "QTNT VPRSQXB80UW5": {
+     "check": "ok",
+     "median": 0.645,
+     "n": 9
+    }
+   },
    "hits": {
     "QTNT VPRSQXB80UW5": [
      "2018-05-30",
@@ -7668,6 +8587,7 @@
    "first_filed": "2014-07-14",
    "float": {
     "VRAY W9BTDRUWQAN9": {
+     "check": "ok",
      "median": 0.753,
      "n": 6
     }
@@ -7720,6 +8640,13 @@
   },
   "1614556": {
    "first_filed": "2015-02-23",
+   "float": {
+    "APT R735QTJ8XC9X": {
+     "check": "contradicts",
+     "median": 0.0675,
+     "n": 2
+    }
+   },
    "hits": {
     "APT R735QTJ8XC9X": [
      "2017-05-15",
@@ -7736,12 +8663,13 @@
    "sic_at_filing": [
     2590
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.07)"
   },
   "1615817": {
    "first_filed": "2015-05-11",
    "float": {
     "CJES UYN1A6FS4FOL": {
+     "check": "ok",
      "median": 0.45699999999999996,
      "n": 2
     }
@@ -7768,6 +8696,7 @@
    "first_filed": "2015-05-13",
    "float": {
     "CSALV VZV4PFAI9945": {
+     "check": "ok",
      "median": 0.646,
      "n": 9
     }
@@ -7807,6 +8736,7 @@
    "first_filed": "2016-05-12",
    "float": {
     "ADAP W0AVUX57HBOL": {
+     "check": "contradicts",
      "median": 0.14150000000000001,
      "n": 6
     }
@@ -7841,6 +8771,7 @@
    "first_filed": "2015-05-08",
    "float": {
     "MYL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.992,
      "n": 6
     }
@@ -7877,6 +8808,13 @@
   },
   "1626696": {
    "first_filed": "2015-02-11",
+   "float": {
+    "APT R735QTJ8XC9X": {
+     "check": "contradicts",
+     "median": 0.085,
+     "n": 4
+    }
+   },
    "hits": {
     "APT R735QTJ8XC9X": [
      "2019-01-14",
@@ -7892,10 +8830,17 @@
    "sic_at_filing": [
     2750
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.09)"
   },
   "1629261": {
    "first_filed": "2015-08-13",
+   "float": {
+    "LTEA WCLZ0ZR5WTWL": {
+     "check": "ok",
+     "median": 0.584,
+     "n": 1
+    }
+   },
    "hits": {
     "LTEA WCLZ0ZR5WTWL": [
      "2017-11-13",
@@ -7914,6 +8859,13 @@
   },
   "1635718": {
    "first_filed": "2015-08-06",
+   "float": {
+    "GCI W1S1ZYWBM2CL": {
+     "check": "ok",
+     "median": 1.04,
+     "n": 3
+    }
+   },
    "hits": {
     "GCI W1S1ZYWBM2CL": [
      "2015-08-06",
@@ -7945,6 +8897,13 @@
   },
   "1636050": {
    "first_filed": "2015-08-11",
+   "float": {
+    "AXON W1ABYABA8HGL": {
+     "check": "ok",
+     "median": 0.284,
+     "n": 7
+    }
+   },
    "hits": {
     "AXON W1ABYABA8HGL": [
      "2015-08-11",
@@ -7972,6 +8931,13 @@
   },
   "1639327": {
    "first_filed": "2015-09-10",
+   "float": {
+    "GUSH W0WJOZ6X5X7P": {
+     "check": "contradicts",
+     "median": 0.0,
+     "n": 1
+    }
+   },
    "hits": {
     "GUSH W0WJOZ6X5X7P": [
      "2016-03-08",
@@ -7988,10 +8954,17 @@
    "sic_at_filing": [
     7363
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1641640": {
    "first_filed": "2017-03-24",
+   "float": {
+    "NBRV W3ZT7JIZT6CL": {
+     "check": "ok",
+     "median": 0.981,
+     "n": 5
+    }
+   },
    "hits": {
     "NBRV W3ZT7JIZT6CL": [
      "2017-08-07",
@@ -8012,6 +8985,7 @@
    "first_filed": "2015-11-16",
    "float": {
     "ANTC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.011,
      "n": 4
     }
@@ -8045,6 +9019,13 @@
   },
   "1646587": {
    "first_filed": "2015-12-03",
+   "float": {
+    "CLNY WVNA62CN5XLX": {
+     "check": "contradicts",
+     "median": 2.112,
+     "n": 1
+    }
+   },
    "hits": {
     "CLNY WVNA62CN5XLX": [
      "2018-11-06",
@@ -8060,10 +9041,17 @@
    "sic_at_filing": [
     6798
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (2.11)"
   },
   "1648893": {
    "first_filed": "2016-05-11",
+   "float": {
+    "NVTR W8W28A07I82T": {
+     "check": "ok",
+     "median": 0.959,
+     "n": 3
+    }
+   },
    "hits": {
     "NVTR W8W28A07I82T": [
      "2018-05-02",
@@ -8082,6 +9070,13 @@
   },
   "1650445": {
    "first_filed": "2016-06-09",
+   "float": {
+    "QHC WA7BORKB6FS5": {
+     "check": "ok",
+     "median": 0.9359999999999999,
+     "n": 4
+    }
+   },
    "hits": {
     "QHC WA7BORKB6FS5": [
      "2016-06-09",
@@ -8101,10 +9096,12 @@
    "first_filed": "2016-05-16",
    "float": {
     "MFS W8L8B8ZCNXB9": {
+     "check": "ok",
      "median": 1.0,
      "n": 1
     },
     "WBT WIMLDK8AQT7P": {
+     "check": "ok",
      "median": 0.992,
      "n": 6
     }
@@ -8139,6 +9136,13 @@
   },
   "1655075": {
    "first_filed": "2016-05-09",
+   "float": {
+    "AFI W9FR65BL1BAD": {
+     "check": "ok",
+     "median": 0.8140000000000001,
+     "n": 4
+    }
+   },
    "hits": {
     "AFI W9FR65BL1BAD": [
      "2016-05-09",
@@ -8163,6 +9167,7 @@
    "first_filed": "2016-12-21",
    "float": {
     "VSM WEEYJ5WAYMHX": {
+     "check": "ok",
      "median": 0.86,
      "n": 2
     }
@@ -8195,6 +9200,7 @@
    "first_filed": "2019-02-28",
    "float": {
     "TLND WCLZ0ZR5WTWL": {
+     "check": "ok",
      "median": 0.929,
      "n": 2
     }
@@ -8217,6 +9223,13 @@
   },
   "1669812": {
    "first_filed": "2016-11-10",
+   "float": {
+    "LKSD WEEYJ5WAYMHX": {
+     "check": "ok",
+     "median": 0.962,
+     "n": 4
+    }
+   },
    "hits": {
     "LKSD WEEYJ5WAYMHX": [
      "2016-11-10",
@@ -8242,6 +9255,13 @@
   },
   "1674365": {
    "first_filed": "2018-08-14",
+   "float": {
+    "APTX WVJCDOVYUWYT": {
+     "check": "ok",
+     "median": 0.6305000000000001,
+     "n": 4
+    }
+   },
    "hits": {
     "APTX WVJCDOVYUWYT": [
      "2018-08-14",
@@ -8259,6 +9279,13 @@
   },
   "1688476": {
    "first_filed": "2017-05-05",
+   "float": {
+    "FRAC WHEA9CRPAUZP": {
+     "check": "ok",
+     "median": 0.5125,
+     "n": 4
+    }
+   },
    "hits": {
     "FRAC WHEA9CRPAUZP": [
      "2017-05-05",
@@ -8283,6 +9310,13 @@
   },
   "1690585": {
    "first_filed": "2018-08-09",
+   "float": {
+    "MGTA WVJCDOVYUWYT": {
+     "check": "ok",
+     "median": 0.6585000000000001,
+     "n": 4
+    }
+   },
    "hits": {
     "MGTA WVJCDOVYUWYT": [
      "2019-03-19",
@@ -8302,6 +9336,7 @@
    "first_filed": "2017-08-28",
    "float": {
     "VNTR WMQAFL3M7ZAD": {
+     "check": "ok",
      "median": 0.508,
      "n": 3
     }
@@ -8331,6 +9366,7 @@
    "first_filed": "2018-02-26",
    "float": {
     "DLPH WQ4DV6GJPJ6T": {
+     "check": "ok (XBRL scale error 1e6)",
      "median": 1022852.067,
      "n": 3
     }
@@ -8351,10 +9387,17 @@
    "sic_at_filing": [
     3714
    ],
-   "status": "rejected: float evidence contradicts (1022852.07)"
+   "status": "linked"
   },
   "1709401": {
    "first_filed": "2018-08-31",
+   "float": {
+    "RUBY WW9XG7RIXAAT": {
+     "check": "ok",
+     "median": 0.4135,
+     "n": 4
+    }
+   },
    "hits": {
     "RUBY WW9XG7RIXAAT": [
      "2018-08-31",
@@ -8394,6 +9437,7 @@
    "first_filed": "2018-05-24",
    "float": {
     "FMSA VUF6QTHX146D": {
+     "check": "contradicts",
      "median": 15.501499999999998,
      "n": 2
     }
@@ -8419,6 +9463,7 @@
    "first_filed": "2018-08-14",
    "float": {
     "PRSP WUZNFTKLBTR9": {
+     "check": "ok",
      "median": 0.855,
      "n": 2
     }
@@ -8445,6 +9490,7 @@
    "first_filed": "2018-05-08",
    "float": {
     "HPR WSZRSZV9QR1H": {
+     "check": "ok",
      "median": 0.512,
      "n": 4
     }
@@ -8471,8 +9517,9 @@
    "first_filed": "2018-07-27",
    "float": {
     "VNE WVU6APWTP7QD": {
-     "median": 1.0,
-     "n": 2
+     "check": "ok (XBRL scale error 1e3)",
+     "median": 500.422,
+     "n": 4
     }
    },
    "hits": {
@@ -8494,6 +9541,13 @@
   },
   "1735184": {
    "first_filed": "2018-08-10",
+   "float": {
+    "RVI WVU6APWTP7QD": {
+     "check": "ok",
+     "median": 0.819,
+     "n": 3
+    }
+   },
    "hits": {
     "RVI WVU6APWTP7QD": [
      "2018-08-10",
@@ -8513,6 +9567,13 @@
   },
   "1735707": {
    "first_filed": "2018-11-06",
+   "float": {
+    "GTX WYBRZ876NVC5": {
+     "check": "ok",
+     "median": 0.993,
+     "n": 2
+    }
+   },
    "hits": {
     "GTX WYBRZ876NVC5": [
      "2019-03-01",
@@ -8531,6 +9592,13 @@
   },
   "1742924": {
    "first_filed": "2018-11-06",
+   "float": {
+    "LTHM WYLMG5UVFEXX": {
+     "check": "ok",
+     "median": 0.995,
+     "n": 3
+    }
+   },
    "hits": {
     "LTHM WYLMG5UVFEXX": [
      "2018-11-06",
@@ -8552,6 +9620,7 @@
    "first_filed": "2019-06-07",
    "float": {
     "CVETV X1STR3NMDOPX": {
+     "check": "ok",
      "median": 0.754,
      "n": 3
     }
@@ -8573,6 +9642,13 @@
   },
   "18169": {
    "first_filed": "2011-07-28",
+   "float": {
+    "DOLE UH0XDYV2UKBP": {
+     "check": "ok",
+     "median": 0.40700000000000003,
+     "n": 2
+    }
+   },
    "hits": {
     "DOLE UH0XDYV2UKBP": [
      "2011-07-28",
@@ -8597,6 +9673,13 @@
   },
   "18172": {
    "first_filed": "2011-08-03",
+   "float": {
+    "CAS R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.7475,
+     "n": 6
+    }
+   },
    "hits": {
     "CAS R735QTJ8XC9X": [
      "2012-08-07",
@@ -8617,6 +9700,13 @@
   },
   "18808": {
    "first_filed": "2011-08-08",
+   "float": {
+    "CV R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.663,
+     "n": 1
+    }
+   },
    "hits": {
     "CV R735QTJ8XC9X": [
      "2011-08-08",
@@ -8636,6 +9726,7 @@
    "first_filed": "2011-12-12",
    "float": {
     "CNTL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.851,
      "n": 9
     }
@@ -8681,6 +9772,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "CYN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.858,
      "n": 5
     }
@@ -8724,6 +9816,7 @@
    "first_filed": "2009-08-10",
    "float": {
     "CB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9964999999999999,
      "n": 6
     }
@@ -8770,6 +9863,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "SUG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.929,
      "n": 2
     }
@@ -8799,6 +9893,7 @@
    "first_filed": "2011-11-04",
    "float": {
     "ACET R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.937,
      "n": 8
     }
@@ -8841,6 +9936,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "RKT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.979,
      "n": 4
     }
@@ -8882,6 +9978,7 @@
    "first_filed": "2009-08-07",
    "float": {
     "CSC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.994,
      "n": 9
     }
@@ -8935,6 +10032,7 @@
    "first_filed": "2009-11-05",
    "float": {
     "SLE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.982,
      "n": 5
     }
@@ -8977,6 +10075,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "CNF R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.706,
      "n": 5
     }
@@ -9018,6 +10117,7 @@
    "first_filed": "2010-11-05",
    "float": {
     "ALLY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9795,
      "n": 4
     }
@@ -9056,6 +10156,7 @@
    "first_filed": "2011-07-05",
    "float": {
     "PIR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.978,
      "n": 8
     }
@@ -9104,6 +10205,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "DBD R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9964999999999999,
      "n": 12
     }
@@ -9162,6 +10264,7 @@
    "first_filed": "2009-07-27",
    "float": {
     "DD R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.999,
      "n": 8
     }
@@ -9214,6 +10317,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "AKRN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.605,
      "n": 9
     }
@@ -9263,6 +10367,13 @@
   },
   "316300": {
    "first_filed": "2010-08-04",
+   "float": {
+    "XCO TG1OZKAVEJC5": {
+     "check": "ok",
+     "median": 0.594,
+     "n": 8
+    }
+   },
    "hits": {
     "XCO TG1OZKAVEJC5": [
      "2010-08-04",
@@ -9298,6 +10409,7 @@
    "first_filed": "2010-11-05",
    "float": {
     "IRF R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 4
     }
@@ -9336,6 +10448,7 @@
    "first_filed": "2010-08-10",
    "float": {
     "TLAB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.907,
      "n": 3
     }
@@ -9361,6 +10474,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "KEG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.848,
      "n": 7
     }
@@ -9416,6 +10530,13 @@
   },
   "320017": {
    "first_filed": "2011-08-12",
+   "float": {
+    "CLBS W17DM07S07Z9": {
+     "check": "ok",
+     "median": 0.935,
+     "n": 8
+    }
+   },
    "hits": {
     "CLBS W17DM07S07Z9": [
      "2018-05-10",
@@ -9437,6 +10558,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "PDC S2UBRD87R9LX": {
+     "check": "ok",
      "median": 0.974,
      "n": 9
     }
@@ -9489,6 +10611,7 @@
    "first_filed": "2011-01-05",
    "float": {
     "FDO R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.848,
      "n": 4
     }
@@ -9529,6 +10652,7 @@
    "first_filed": "2010-11-08",
    "float": {
     "WMS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.983,
      "n": 3
     }
@@ -9560,6 +10684,13 @@
   },
   "350832": {
    "first_filed": "2011-08-12",
+   "float": {
+    "APFC R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.917,
+     "n": 3
+    }
+   },
    "hits": {
     "APFC R735QTJ8XC9X": [
      "2013-12-13",
@@ -9579,6 +10710,7 @@
    "first_filed": "2010-11-05",
    "float": {
     "EMLX R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9835,
      "n": 4
     }
@@ -9619,6 +10751,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "CBCF R735QTJ8XC9X": {
+     "check": "contradicts",
      "median": 5.404,
      "n": 2
     }
@@ -9645,6 +10778,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "SFY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9744999999999999,
      "n": 6
     }
@@ -9684,6 +10818,13 @@
   },
   "351903": {
    "first_filed": "2011-11-07",
+   "float": {
+    "J R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.687,
+     "n": 1
+    }
+   },
    "hits": {
     "J R735QTJ8XC9X": [
      "2012-11-05",
@@ -9701,6 +10842,13 @@
   },
   "352998": {
    "first_filed": "2011-08-15",
+   "float": {
+    "IG R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.5585,
+     "n": 4
+    }
+   },
    "hits": {
     "IG R735QTJ8XC9X": [
      "2014-08-12",
@@ -9725,6 +10873,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "OCR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.983,
      "n": 5
     }
@@ -9765,6 +10914,13 @@
   },
   "354655": {
    "first_filed": "2011-11-09",
+   "float": {
+    "BTJ R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.953,
+     "n": 3
+    }
+   },
    "hits": {
     "BTJ R735QTJ8XC9X": [
      "2014-09-12",
@@ -9784,6 +10940,7 @@
    "first_filed": "2009-08-10",
    "float": {
     "FLIR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9915,
      "n": 12
     }
@@ -9843,6 +11000,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "BLC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.877,
      "n": 2
     }
@@ -9873,6 +11031,13 @@
   },
   "357264": {
    "first_filed": "2011-08-12",
+   "float": {
+    "SABB R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.235,
+     "n": 1
+    }
+   },
    "hits": {
     "SABB R735QTJ8XC9X": [
      "2012-03-15",
@@ -9892,6 +11057,7 @@
    "first_filed": "2009-08-07",
    "float": {
     "AYE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.899,
      "n": 2
     }
@@ -9919,6 +11085,7 @@
    "first_filed": "2009-08-11",
    "float": {
     "FLR R735QTJ8XC9X": {
+     "check": "ok (XBRL scale error 1e3)",
      "median": 497.894,
      "n": 2
     }
@@ -9940,12 +11107,13 @@
    "sic_at_filing": [
     1221
    ],
-   "status": "rejected: float evidence contradicts (497.89)"
+   "status": "linked"
   },
   "38079": {
    "first_filed": "2009-08-07",
    "float": {
     "FST R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.989,
      "n": 7
     }
@@ -9982,6 +11150,13 @@
   },
   "38984": {
    "first_filed": "2011-12-12",
+   "float": {
+    "RELY VZW45INOC09X": {
+     "check": "ok",
+     "median": 0.805,
+     "n": 3
+    }
+   },
    "hits": {
     "RELY VZW45INOC09X": [
      "2015-05-12",
@@ -10003,6 +11178,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "ALLY VPLW2D47KBXH": {
+     "check": "ok",
      "median": 1.005,
      "n": 7
     }
@@ -10045,6 +11221,7 @@
    "first_filed": "2009-07-23",
    "float": {
     "GR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 3
     }
@@ -10076,6 +11253,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "HSC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 12
     }
@@ -10128,6 +11306,13 @@
   },
   "46129": {
    "first_filed": "2011-08-12",
+   "float": {
+    "HATH R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.769,
+     "n": 11
+    }
+   },
    "hits": {
     "HATH R735QTJ8XC9X": [
      "2015-03-12",
@@ -10148,6 +11333,7 @@
    "first_filed": "2009-08-20",
    "float": {
     "HNZ R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.99,
      "n": 4
     }
@@ -10201,6 +11387,13 @@
   },
   "57725": {
    "first_filed": "2011-11-04",
+   "float": {
+    "LCI SDV4X1N8LBAD": {
+     "check": "ok",
+     "median": 0.7865,
+     "n": 10
+    }
+   },
    "hits": {
     "LCI SDV4X1N8LBAD": [
      "2013-09-12",
@@ -10243,6 +11436,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "MNRTA R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9444999999999999,
      "n": 10
     }
@@ -10285,6 +11479,7 @@
    "first_filed": "2011-11-07",
    "float": {
     "RI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 6
     }
@@ -10319,7 +11514,17 @@
    "status": "linked"
   },
   "6885": {
+   "conflict_resolved_by_float": [
+    1605674
+   ],
    "first_filed": "2011-09-07",
+   "float": {
+    "STGS SB7MJZ5V64PX": {
+     "check": "ok",
+     "median": 0.9464999999999999,
+     "n": 8
+    }
+   },
    "hits": {
     "STGS SB7MJZ5V64PX": [
      "2011-09-07",
@@ -10363,12 +11568,13 @@
    "sic_at_filing": [
     5651
    ],
-   "status": "ambiguous: security STGS SB7MJZ5V64PX claimed by overlapping registrants"
+   "status": "linked"
   },
   "69499": {
    "first_filed": "2010-07-29",
    "float": {
     "MYL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.996,
      "n": 5
     }
@@ -10407,6 +11613,13 @@
   },
   "701853": {
    "first_filed": "2010-08-09",
+   "float": {
+    "BXS R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.949,
+     "n": 7
+    }
+   },
    "hits": {
     "BXS R735QTJ8XC9X": [
      "2010-08-09",
@@ -10441,6 +11654,7 @@
    "first_filed": "2010-08-12",
    "float": {
     "LSI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.995,
      "n": 4
     }
@@ -10478,6 +11692,7 @@
    "first_filed": "2010-09-28",
    "float": {
     "NSM R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.728,
      "n": 1
     }
@@ -10503,6 +11718,7 @@
    "first_filed": "2010-08-04",
    "float": {
     "ARON R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.035,
      "n": 1
     }
@@ -10527,6 +11743,7 @@
    "first_filed": "2010-07-30",
    "float": {
     "OLDB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9724999999999999,
      "n": 12
     }
@@ -10581,6 +11798,7 @@
    "first_filed": "2009-08-27",
    "float": {
     "MDR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0085,
      "n": 12
     }
@@ -10655,6 +11873,13 @@
   },
   "710846": {
    "first_filed": "2011-08-09",
+   "float": {
+    "FSIN TVKYWO2QV2HX": {
+     "check": "ok",
+     "median": 1.0,
+     "n": 1
+    }
+   },
    "hits": {
     "FSIN TVKYWO2QV2HX": [
      "2011-08-09",
@@ -10675,6 +11900,13 @@
   },
   "714530": {
    "first_filed": "2011-08-12",
+   "float": {
+    "LXBK R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.9565,
+     "n": 2
+    }
+   },
    "hits": {
     "LXBK R735QTJ8XC9X": [
      "2015-08-07",
@@ -10694,6 +11926,7 @@
    "first_filed": "2011-08-08",
    "float": {
     "YELL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.969,
      "n": 11
     }
@@ -10737,6 +11970,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "CSN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.955,
      "n": 12
     }
@@ -10786,6 +12020,7 @@
    "first_filed": "2010-09-03",
    "float": {
     "BTGC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.993,
      "n": 3
     }
@@ -10813,6 +12048,7 @@
    "first_filed": "2011-08-02",
    "float": {
     "HGR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.02,
      "n": 3
     }
@@ -10849,6 +12085,7 @@
    "first_filed": "2011-09-08",
    "float": {
     "FRED R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.859,
      "n": 6
     }
@@ -10896,8 +12133,9 @@
    "first_filed": "2010-07-29",
    "float": {
     "NWEC T3CTK6KJWGV9": {
+     "check": "ok",
      "median": 1.0,
-     "n": 11
+     "n": 12
     }
    },
    "hits": {
@@ -10952,6 +12190,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "TIN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.911,
      "n": 1
     }
@@ -10979,6 +12218,7 @@
    "first_filed": "2009-09-04",
    "float": {
     "GENZ R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.972,
      "n": 2
     }
@@ -11007,6 +12247,7 @@
    "first_filed": "2010-08-04",
    "float": {
     "OLOG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.93,
      "n": 10
     }
@@ -11060,6 +12301,13 @@
   },
   "739944": {
    "first_filed": "2011-04-28",
+   "float": {
+    "TOX R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.833,
+     "n": 1
+    }
+   },
    "hits": {
     "TOX R735QTJ8XC9X": [
      "2012-04-26",
@@ -11079,6 +12327,7 @@
    "first_filed": "2010-08-19",
    "float": {
     "KDN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.982,
      "n": 3
     }
@@ -11113,6 +12362,7 @@
    "first_filed": "2013-08-02",
    "float": {
     "NVP R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.954,
      "n": 3
     }
@@ -11181,6 +12431,13 @@
   },
   "748270": {
    "first_filed": "2011-08-05",
+   "float": {
+    "MDCI R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.968,
+     "n": 4
+    }
+   },
    "hits": {
     "MDCI R735QTJ8XC9X": [
      "2014-06-16",
@@ -11199,6 +12456,13 @@
   },
   "749647": {
    "first_filed": "2011-08-09",
+   "float": {
+    "CLN RV5N53FS99ID": {
+     "check": "ok",
+     "median": 0.9844999999999999,
+     "n": 12
+    }
+   },
    "hits": {
     "CLN RV5N53FS99ID": [
      "2012-08-14",
@@ -11219,6 +12483,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "OSG R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.857,
      "n": 3
     }
@@ -11267,6 +12532,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "PKD R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.969,
      "n": 8
     }
@@ -11301,6 +12567,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "PVA R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9904999999999999,
      "n": 6
     }
@@ -11343,6 +12610,7 @@
    "first_filed": "2011-09-07",
    "float": {
     "PBY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.933,
      "n": 4
     }
@@ -11382,6 +12650,7 @@
    "first_filed": "2010-05-06",
    "float": {
     "NHP R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.979,
      "n": 1
     }
@@ -11406,6 +12675,13 @@
   },
   "785968": {
    "first_filed": "2011-10-05",
+   "float": {
+    "MILL UMCXK76ZROMD": {
+     "check": "ok",
+     "median": 0.766,
+     "n": 3
+    }
+   },
    "hits": {
     "MILL UMCXK76ZROMD": [
      "2013-12-10",
@@ -11423,6 +12699,13 @@
   },
   "789460": {
    "first_filed": "2010-08-03",
+   "float": {
+    "INT R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.979,
+     "n": 12
+    }
+   },
    "hits": {
     "INT R735QTJ8XC9X": [
      "2010-08-03",
@@ -11470,6 +12753,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "TKLC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.994,
      "n": 1
     }
@@ -11495,6 +12779,13 @@
   },
   "790715": {
    "first_filed": "2011-09-08",
+   "float": {
+    "SIGM R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.954,
+     "n": 7
+    }
+   },
    "hits": {
     "SIGM R735QTJ8XC9X": [
      "2011-09-08",
@@ -11533,12 +12824,13 @@
    "sic_at_filing": [
     3674
    ],
-   "status": "ambiguous: security SIGM R735QTJ8XC9X claimed by overlapping registrants"
+   "status": "linked"
   },
   "790730": {
    "first_filed": "2010-09-27",
    "float": {
     "AMN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.859,
      "n": 1
     }
@@ -11565,6 +12857,7 @@
    "first_filed": "2011-09-06",
    "float": {
     "BRLI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.886,
      "n": 3
     }
@@ -11602,6 +12895,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "HMA R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9595,
      "n": 4
     }
@@ -11638,6 +12932,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "UNT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.6134999999999999,
      "n": 12
     }
@@ -11694,6 +12989,7 @@
    "first_filed": "2009-08-07",
    "float": {
     "PCP R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 7
     }
@@ -11738,6 +13034,13 @@
   },
   "799698": {
    "first_filed": "2011-08-09",
+   "float": {
+    "CYTR R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.7595,
+     "n": 8
+    }
+   },
    "hits": {
     "CYTR R735QTJ8XC9X": [
      "2013-10-29",
@@ -11756,6 +13059,13 @@
   },
   "80124": {
    "first_filed": "2011-08-16",
+   "float": {
+    "PLFE R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.808,
+     "n": 1
+    }
+   },
    "hits": {
     "PLFE R735QTJ8XC9X": [
      "2012-05-09",
@@ -11774,6 +13084,13 @@
   },
   "804055": {
    "first_filed": "2009-07-30",
+   "float": {
+    "CCE R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.625,
+     "n": 1
+    }
+   },
    "hits": {
     "CCE R735QTJ8XC9X": [
      "2010-02-12",
@@ -11794,6 +13111,7 @@
    "first_filed": "2011-09-09",
    "float": {
     "QUIK R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.793,
      "n": 4
     }
@@ -11827,6 +13145,13 @@
   },
   "811532": {
    "first_filed": "2010-08-06",
+   "float": {
+    "FUN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.9795,
+     "n": 6
+    }
+   },
    "hits": {
     "FUN R735QTJ8XC9X": [
      "2010-08-06",
@@ -11880,6 +13205,7 @@
    "first_filed": "2010-09-01",
    "float": {
     "PFT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 4
     }
@@ -11913,6 +13239,13 @@
   },
   "813781": {
    "first_filed": "2011-08-04",
+   "float": {
+    "XIDE SYFL3CQ64NZ9": {
+     "check": "ok",
+     "median": 0.955,
+     "n": 3
+    }
+   },
    "hits": {
     "XIDE SYFL3CQ64NZ9": [
      "2011-08-04",
@@ -11931,7 +13264,13 @@
   "814184": {
    "first_filed": "2010-07-23",
    "float": {
+    "TCB R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.904,
+     "n": 7
+    },
     "TCF WKCMJG9XKCBP": {
+     "check": "ok",
      "median": 0.9145000000000001,
      "n": 2
     }
@@ -11990,6 +13329,7 @@
    "first_filed": "2010-11-08",
    "float": {
     "IIVI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.958,
      "n": 11
     }
@@ -12045,6 +13385,13 @@
   },
   "82628": {
    "first_filed": "2011-11-10",
+   "float": {
+    "SYMM R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.9744999999999999,
+     "n": 2
+    }
+   },
    "hits": {
     "SYMM R735QTJ8XC9X": [
      "2013-09-11",
@@ -12064,6 +13411,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "KCI SWGOWME0MCF9": {
+     "check": "ok",
      "median": 0.647,
      "n": 1
     }
@@ -12091,6 +13439,7 @@
    "first_filed": "2009-08-05",
    "float": {
     "BMCS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9984999999999999,
      "n": 4
     }
@@ -12126,6 +13475,7 @@
    "first_filed": "2010-08-04",
    "float": {
     "NVLS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0030000000000001,
      "n": 2
     }
@@ -12155,6 +13505,7 @@
    "first_filed": "2009-08-07",
    "float": {
     "WLT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9944999999999999,
      "n": 6
     }
@@ -12196,6 +13547,7 @@
    "first_filed": "2012-01-06",
    "float": {
     "RBN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.872,
      "n": 1
     }
@@ -12220,6 +13572,13 @@
   },
   "844143": {
    "first_filed": "2011-10-11",
+   "float": {
+    "INNO R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.77,
+     "n": 7
+    }
+   },
    "hits": {
     "INNO R735QTJ8XC9X": [
      "2018-05-15",
@@ -12242,6 +13601,7 @@
    "first_filed": "2011-08-12",
    "float": {
     "SRNE VL1GER10SC4L": {
+     "check": "ok",
      "median": 0.969,
      "n": 9
     }
@@ -12284,6 +13644,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "RDK R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9055,
      "n": 4
     }
@@ -12321,6 +13682,7 @@
    "first_filed": "2011-08-25",
    "float": {
     "CYBX R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.6425000000000001,
      "n": 4
     }
@@ -12357,6 +13719,13 @@
   },
   "864839": {
    "first_filed": "2011-07-29",
+   "float": {
+    "ROYL R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.7815000000000001,
+     "n": 6
+    }
+   },
    "hits": {
     "ROYL R735QTJ8XC9X": [
      "2011-07-29",
@@ -12377,6 +13746,13 @@
   },
   "865941": {
    "first_filed": "2011-11-04",
+   "float": {
+    "CLDN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.893,
+     "n": 5
+    }
+   },
    "hits": {
     "CLDN R735QTJ8XC9X": [
      "2014-09-15",
@@ -12400,6 +13776,7 @@
    "first_filed": "2011-08-04",
    "float": {
     "IO R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.936,
      "n": 11
     }
@@ -12450,6 +13827,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "ABP RXBFGHC4AV6T": {
+     "check": "ok",
      "median": 0.935,
      "n": 11
     }
@@ -12483,6 +13861,13 @@
   },
   "870732": {
    "first_filed": "2011-08-15",
+   "float": {
+    "ANR T687HZZ9XOPX": {
+     "check": "contradicts",
+     "median": 0.004,
+     "n": 3
+    }
+   },
    "hits": {
     "ANR T687HZZ9XOPX": [
      "2011-08-15",
@@ -12506,10 +13891,17 @@
    "sic_at_filing": [
     1311
    ],
-   "status": "ambiguous: security ANR T687HZZ9XOPX claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.00)"
   },
   "870826": {
    "first_filed": "2011-06-07",
+   "float": {
+    "VVTV R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.835,
+     "n": 11
+    }
+   },
    "hits": {
     "VVTV R735QTJ8XC9X": [
      "2011-06-07",
@@ -12529,6 +13921,13 @@
   },
   "872248": {
    "first_filed": "2011-08-05",
+   "float": {
+    "OPPCF R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.7475,
+     "n": 8
+    }
+   },
    "hits": {
     "OPPCF R735QTJ8XC9X": [
      "2011-08-05",
@@ -12560,6 +13959,7 @@
    "first_filed": "2010-07-28",
    "float": {
     "CEPH R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.726,
      "n": 1
     }
@@ -12584,6 +13984,13 @@
   },
   "878079": {
    "first_filed": "2011-09-07",
+   "float": {
+    "BONT R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.761,
+     "n": 1
+    }
+   },
    "hits": {
     "BONT R735QTJ8XC9X": [
      "2011-09-07",
@@ -12613,6 +14020,7 @@
    "first_filed": "2011-05-06",
    "float": {
     "PRX R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.98,
      "n": 1
     }
@@ -12640,6 +14048,7 @@
    "first_filed": "2011-10-31",
    "float": {
     "TUES RK2V38AF9PID": {
+     "check": "ok",
      "median": 0.766,
      "n": 9
     }
@@ -12676,6 +14085,13 @@
   },
   "880059": {
    "first_filed": "2010-11-09",
+   "float": {
+    "EDMC UGG9006J8PYD": {
+     "check": "ok",
+     "median": 0.158,
+     "n": 5
+    }
+   },
    "hits": {
     "EDMC UGG9006J8PYD": [
      "2010-11-09",
@@ -12700,6 +14116,7 @@
    "first_filed": "2011-05-06",
    "float": {
     "VVUS R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.975,
      "n": 9
     }
@@ -12735,6 +14152,7 @@
    "first_filed": "2011-05-10",
    "float": {
     "VCI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.7050000000000001,
      "n": 2
     }
@@ -12833,6 +14251,13 @@
   },
   "884940": {
    "first_filed": "2011-09-07",
+   "float": {
+    "SMRT R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.648,
+     "n": 9
+    }
+   },
    "hits": {
     "SMRT R735QTJ8XC9X": [
      "2014-12-04",
@@ -12853,6 +14278,7 @@
    "first_filed": "2009-10-07",
    "float": {
     "BBBY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.958,
      "n": 14
     }
@@ -12912,6 +14338,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "SESI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 1.0,
      "n": 11
     }
@@ -12966,6 +14393,13 @@
   },
   "887921": {
    "first_filed": "2011-07-28",
+   "float": {
+    "REV R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.156,
+     "n": 9
+    }
+   },
    "hits": {
     "REV R735QTJ8XC9X": [
      "2017-03-03",
@@ -12994,6 +14428,7 @@
    "first_filed": "2011-07-29",
    "float": {
     "CYPR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.65,
      "n": 3
     }
@@ -13027,6 +14462,13 @@
   },
   "892222": {
    "first_filed": "2011-08-15",
+   "float": {
+    "HOOK R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.583,
+     "n": 9
+    }
+   },
    "hits": {
     "HOOK R735QTJ8XC9X": [
      "2016-08-03",
@@ -13056,6 +14498,13 @@
   },
   "892986": {
    "first_filed": "2011-08-09",
+   "float": {
+    "WRES T4L4OE15CF39": {
+     "check": "ok",
+     "median": 0.996,
+     "n": 5
+    }
+   },
    "hits": {
     "WRES T4L4OE15CF39": [
      "2014-05-07",
@@ -13074,6 +14523,13 @@
   },
   "895051": {
    "first_filed": "2011-08-15",
+   "float": {
+    "ENMD R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.642,
+     "n": 12
+    }
+   },
    "hits": {
     "ENMD R735QTJ8XC9X": [
      "2018-03-29",
@@ -13095,6 +14551,7 @@
    "first_filed": "2010-10-21",
    "float": {
     "CREE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9915,
      "n": 12
     }
@@ -13175,6 +14632,13 @@
   },
   "895663": {
    "first_filed": "2010-08-05",
+   "float": {
+    "GLBL R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.895,
+     "n": 1
+    }
+   },
    "hits": {
     "GLBL R735QTJ8XC9X": [
      "2010-08-05",
@@ -13196,6 +14660,13 @@
   },
   "896985": {
    "first_filed": "2011-08-09",
+   "float": {
+    "MWRK R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.963,
+     "n": 7
+    }
+   },
    "hits": {
     "MWRK R735QTJ8XC9X": [
      "2018-04-19",
@@ -13216,6 +14687,7 @@
    "first_filed": "2011-08-09",
    "float": {
     "ETHCY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.723,
      "n": 1
     }
@@ -13267,6 +14739,13 @@
   },
   "899881": {
    "first_filed": "2009-08-04",
+   "float": {
+    "SCN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 1.35,
+     "n": 3
+    }
+   },
    "hits": {
     "SCN R735QTJ8XC9X": [
      "2009-11-04",
@@ -13292,6 +14771,7 @@
    "first_filed": "2011-04-29",
    "float": {
     "HGSI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.659,
      "n": 1
     }
@@ -13319,6 +14799,7 @@
    "first_filed": "2009-08-03",
    "float": {
     "SIAL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9295,
      "n": 6
     }
@@ -13364,6 +14845,7 @@
    "first_filed": "2011-08-05",
    "float": {
     "LBY R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.987,
      "n": 9
     }
@@ -13386,6 +14868,13 @@
   },
   "907649": {
    "first_filed": "2011-08-09",
+   "float": {
+    "FXEN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.944,
+     "n": 4
+    }
+   },
    "hits": {
     "FXEN R735QTJ8XC9X": [
      "2011-08-09",
@@ -13406,6 +14895,7 @@
    "first_filed": "2009-08-10",
    "float": {
     "QCSB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9615,
      "n": 14
     }
@@ -13442,6 +14932,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "ASFC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.952,
      "n": 7
     }
@@ -13492,6 +14983,7 @@
    "first_filed": "2010-08-09",
    "float": {
     "PRE R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9994999999999999,
      "n": 8
     }
@@ -13539,8 +15031,9 @@
    "first_filed": "2010-08-05",
    "float": {
     "PLT R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.993,
-     "n": 13
+     "n": 14
     }
    },
    "hits": {
@@ -13594,7 +15087,17 @@
    "status": "linked"
   },
   "916863": {
+   "conflict_resolved_by_float": [
+    107833
+   ],
    "first_filed": "2010-08-05",
+   "float": {
+    "WPS R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.994,
+     "n": 5
+    }
+   },
    "hits": {
     "WPS R735QTJ8XC9X": [
      "2010-08-05",
@@ -13628,10 +15131,17 @@
    "sic_at_filing": [
     4931
    ],
-   "status": "ambiguous: security WPS R735QTJ8XC9X claimed by overlapping registrants"
+   "status": "linked"
   },
   "919722": {
    "first_filed": "2011-08-09",
+   "float": {
+    "SUPG R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.8200000000000001,
+     "n": 2
+    }
+   },
    "hits": {
     "SUPG R735QTJ8XC9X": [
      "2013-03-18",
@@ -13653,6 +15163,7 @@
    "first_filed": "2011-09-12",
    "float": {
     "LJPC VNNZBQ584RJ9": {
+     "check": "ok",
      "median": 0.723,
      "n": 9
     }
@@ -13697,6 +15208,7 @@
    "first_filed": "2010-08-11",
    "float": {
     "PSSI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.959,
      "n": 2
     }
@@ -13727,6 +15239,13 @@
   },
   "921503": {
    "first_filed": "2011-06-23",
+   "float": {
+    "BTH R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.565,
+     "n": 4
+    }
+   },
    "hits": {
     "BTH R735QTJ8XC9X": [
      "2011-06-23",
@@ -13773,6 +15292,7 @@
    "first_filed": "2010-07-23",
    "float": {
     "ESI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.993,
      "n": 7
     }
@@ -13813,6 +15333,13 @@
   },
   "929351": {
    "first_filed": "2010-08-09",
+   "float": {
+    "LGF RFT9CN83C0H1": {
+     "check": "ok",
+     "median": 0.593,
+     "n": 8
+    }
+   },
    "hits": {
     "LGF RFT9CN83C0H1": [
      "2010-08-09",
@@ -13869,6 +15396,7 @@
    "first_filed": "2010-01-07",
    "float": {
     "APOL R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.849,
      "n": 1
     }
@@ -13921,6 +15449,7 @@
    "first_filed": "2010-08-06",
    "float": {
     "SZA R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.989,
      "n": 10
     }
@@ -13993,6 +15522,13 @@
   },
   "939930": {
    "first_filed": "2011-08-04",
+   "float": {
+    "DMN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.92,
+     "n": 10
+    }
+   },
    "hits": {
     "DMN R735QTJ8XC9X": [
      "2011-08-04",
@@ -14038,6 +15574,13 @@
   },
   "941138": {
    "first_filed": "2013-07-30",
+   "float": {
+    "UNS R735QTJ8XC9X": {
+     "check": "ok (XBRL scale error 1e-3)",
+     "median": 0.001,
+     "n": 1
+    }
+   },
    "hits": {
     "UNS R735QTJ8XC9X": [
      "2013-07-30",
@@ -14060,6 +15603,7 @@
    "first_filed": "2009-08-06",
    "float": {
     "RON R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.81,
      "n": 7
     }
@@ -14105,6 +15649,13 @@
   },
   "943034": {
    "first_filed": "2011-08-12",
+   "float": {
+    "ISNS R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.735,
+     "n": 11
+    }
+   },
    "hits": {
     "ISNS R735QTJ8XC9X": [
      "2014-08-04",
@@ -14139,6 +15690,7 @@
    "first_filed": "2010-08-05",
    "float": {
     "GDP R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.719,
      "n": 6
     }
@@ -14239,6 +15791,13 @@
   },
   "945114": {
    "first_filed": "2011-08-12",
+   "float": {
+    "GML R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.303,
+     "n": 11
+    }
+   },
    "hits": {
     "GML R735QTJ8XC9X": [
      "2018-05-08",
@@ -14260,6 +15819,7 @@
    "first_filed": "2009-08-05",
    "float": {
     "WFR R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9984999999999999,
      "n": 6
     }
@@ -14307,6 +15867,7 @@
    "first_filed": "2011-04-28",
    "float": {
     "VPHM R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.8260000000000001,
      "n": 2
     }
@@ -14337,6 +15898,13 @@
   },
   "949428": {
    "first_filed": "2011-08-11",
+   "float": {
+    "CDTI R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.89,
+     "n": 7
+    }
+   },
    "hits": {
     "CDTI R735QTJ8XC9X": [
      "2011-08-11",
@@ -14357,6 +15925,7 @@
    "first_filed": "2011-11-08",
    "float": {
     "PCYC R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.576,
      "n": 5
     }
@@ -14393,6 +15962,7 @@
    "first_filed": "2010-07-29",
    "float": {
     "TAN R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.8,
      "n": 5
     }
@@ -14424,6 +15994,7 @@
    "first_filed": "2010-09-24",
    "float": {
     "TXI R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.9815,
      "n": 4
     }
@@ -14461,6 +16032,7 @@
    "first_filed": "2010-07-30",
    "float": {
     "TNB R735QTJ8XC9X": {
+     "check": "ok",
      "median": 0.992,
      "n": 2
     }
@@ -14494,8 +16066,8 @@
   "non-common name": 956
  },
  "summary": {
-  "ambiguous": 19,
+  "ambiguous": 7,
   "linked": 431,
-  "rejected": 5
+  "rejected": 17
  }
 }
