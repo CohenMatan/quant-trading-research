@@ -1,4 +1,5 @@
-# X976 v1.2 — FINAL fundamental-data readiness canary (D113, D113a, D114). v1.2: the harness's history-only warm-up
+# X976 v1.3 — v1.3 uses the shared frozen observation step qr_fundamentals.observe_vendor (same logic as v1.2's
+# inline code). X976 v1.2 — FINAL fundamental-data readiness canary (D113, D113a, D114). v1.2: the harness's history-only warm-up
 # (config 'warmup_start') replaces the canary's own; D114 field-level releases feed the store; C11 accepts a
 # quarantined TTM component only through a verified field release of that very field; new C12 (a partial record is
 # never the current report); availability counts of each approved H016 field (coverage only, no returns).
@@ -33,7 +34,7 @@ from AlgorithmImports import *
 import json
 from datetime import date, timedelta
 from qr_harness import QRAlgorithm, _attr
-from qr_fundamentals import DEFAULT_MAX_AGE_DAYS, PITStore, TTM_BASES, accession_year, financial_format, read_values
+from qr_fundamentals import DEFAULT_MAX_AGE_DAYS, PITStore, TTM_BASES, financial_format, observe_vendor
 from qr_industry import classify, excluded
 from qr_sec_corrections import MAX_SHARE_AGE_DAYS
 
@@ -119,26 +120,15 @@ class RemediationCanary(QRAlgorithm):
                 by[sid] = f
             if sid in corr_sids or not f.has_fundamental_data:
                 continue
-            # v1.1: observe the vendor's latest report for EVERY company with fundamentals (history for True TTM)
-            try:
-                er = f.earning_reports
-                pe, fd = as_date(er.period_ending_date.three_months), as_date(er.file_date.three_months)
-            except Exception:
+            # v1.3: the shared frozen observation step (qr_fundamentals.observe_vendor), EVERY company daily
+            obs = observe_vendor(self.store, sid, f, today, get, self.seen_q)
+            if obs is None:
                 continue
-            k = (sid, pe, fd)
-            if k in self.seen_q:
-                continue
-            self.seen_q.add(k)
-            try:
-                ay = accession_year(er.accession_number.three_months)
-            except Exception:
-                ay = None
-            q = ay is not None and ay > today.year and (str(pe), str(fd)) not in self.store.releases.get(sid, ())
+            pe, fd, q = obs
             if q:
-                self.q_keys.add(k)
+                self.q_keys.add((sid, pe, fd))
                 self.q_keys_str.add((sid, str(pe), str(fd)))
             self.q_latest[sid] = q
-            self.store.observe(sid, pe, fd, read_values(f, get), ay, today)
         for sid, f in by.items():
             c["stock_days"] += 1
             fix = f.symbol in corr

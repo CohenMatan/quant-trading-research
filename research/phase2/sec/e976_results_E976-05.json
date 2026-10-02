@@ -1,0 +1,1110 @@
+{
+ "checks": {
+  "C10_ttm_before_component_available": 0,
+  "C11_ttm_uses_blocked_component": 0,
+  "C12_partial_record_is_current": 0,
+  "C1_sec_visible_before_filing": 0,
+  "C2_amendment_early": 0,
+  "C3_hold_violated": 0,
+  "C3_quarantine_exposed": 0,
+  "C3_restatement_block_exposed": 0,
+  "C4_unjustified_entry": 0,
+  "C5_future_share_info": 0,
+  "C6_split_jumps": 0,
+  "C7_eligible_after_last_trade": 0
+ },
+ "composition_returns": {
+  "2010": {
+   "availability_bias_of_usable_only_universe_pp": -0.63,
+   "corrected": {
+    "mean_month_return_x12": 0.2983,
+    "stock_months": 432
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.52,
+   "native": {
+    "mean_month_return_x12": 0.2038,
+    "stock_months": 7470
+   },
+   "repaired_share": 0.0547,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.2574,
+    "stock_months": 1027
+   },
+   "ttm_missing_share": 0.154,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.2168,
+    "stock_months": 5642
+   }
+  },
+  "2011": {
+   "availability_bias_of_usable_only_universe_pp": 0.61,
+   "corrected": {
+    "mean_month_return_x12": 0.0234,
+    "stock_months": 981
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.39,
+   "native": {
+    "mean_month_return_x12": 0.0674,
+    "stock_months": 10081
+   },
+   "repaired_share": 0.0887,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.0546,
+    "stock_months": 2120
+   },
+   "ttm_missing_share": 0.2333,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.0809,
+    "stock_months": 6966
+   }
+  },
+  "2012": {
+   "availability_bias_of_usable_only_universe_pp": 0.14,
+   "corrected": {
+    "mean_month_return_x12": 0.0388,
+    "stock_months": 815
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.81,
+   "native": {
+    "mean_month_return_x12": 0.1487,
+    "stock_months": 10238
+   },
+   "repaired_share": 0.0737,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.1242,
+    "stock_months": 1501
+   },
+   "ttm_missing_share": 0.1665,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.1325,
+    "stock_months": 7513
+   }
+  },
+  "2013": {
+   "availability_bias_of_usable_only_universe_pp": -0.06,
+   "corrected": {
+    "mean_month_return_x12": 0.2485,
+    "stock_months": 794
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.4,
+   "native": {
+    "mean_month_return_x12": 0.3115,
+    "stock_months": 11639
+   },
+   "repaired_share": 0.0639,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.3198,
+    "stock_months": 1544
+   },
+   "ttm_missing_share": 0.153,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.3158,
+    "stock_months": 8550
+   }
+  },
+  "2014": {
+   "availability_bias_of_usable_only_universe_pp": 1.05,
+   "corrected": {
+    "mean_month_return_x12": 0.0675,
+    "stock_months": 851
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.32,
+   "native": {
+    "mean_month_return_x12": 0.1203,
+    "stock_months": 13362
+   },
+   "repaired_share": 0.0599,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.0481,
+    "stock_months": 1539
+   },
+   "ttm_missing_share": 0.1354,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.1258,
+    "stock_months": 9827
+   }
+  },
+  "2015": {
+   "availability_bias_of_usable_only_universe_pp": 0.75,
+   "corrected": {
+    "mean_month_return_x12": -0.0127,
+    "stock_months": 716
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.22,
+   "native": {
+    "mean_month_return_x12": 0.0318,
+    "stock_months": 14017
+   },
+   "repaired_share": 0.0486,
+   "ttm_missing": {
+    "mean_month_return_x12": -0.031,
+    "stock_months": 1500
+   },
+   "ttm_missing_share": 0.1298,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.0266,
+    "stock_months": 10052
+   }
+  },
+  "2016": {
+   "availability_bias_of_usable_only_universe_pp": 0.36,
+   "corrected": {
+    "mean_month_return_x12": -0.0359,
+    "stock_months": 457
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.45,
+   "native": {
+    "mean_month_return_x12": 0.1023,
+    "stock_months": 13569
+   },
+   "repaired_share": 0.0326,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.0605,
+    "stock_months": 1206
+   },
+   "ttm_missing_share": 0.1114,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.0927,
+    "stock_months": 9618
+   }
+  },
+  "2017": {
+   "availability_bias_of_usable_only_universe_pp": 0.44,
+   "corrected": {
+    "mean_month_return_x12": -0.0005,
+    "stock_months": 438
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.54,
+   "native": {
+    "mean_month_return_x12": 0.1875,
+    "stock_months": 14780
+   },
+   "repaired_share": 0.0288,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.16,
+    "stock_months": 1647
+   },
+   "ttm_missing_share": 0.1411,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.1915,
+    "stock_months": 10028
+   }
+  },
+  "2018": {
+   "availability_bias_of_usable_only_universe_pp": 1.59,
+   "corrected": {
+    "mean_month_return_x12": -0.1816,
+    "stock_months": 399
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.52,
+   "native": {
+    "mean_month_return_x12": 0.0297,
+    "stock_months": 15666
+   },
+   "repaired_share": 0.0248,
+   "ttm_missing": {
+    "mean_month_return_x12": -0.0779,
+    "stock_months": 1566
+   },
+   "ttm_missing_share": 0.1265,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.0477,
+    "stock_months": 10813
+   }
+  },
+  "2019": {
+   "availability_bias_of_usable_only_universe_pp": 0.74,
+   "corrected": {
+    "mean_month_return_x12": -0.1821,
+    "stock_months": 294
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.58,
+   "native": {
+    "mean_month_return_x12": 0.1297,
+    "stock_months": 15448
+   },
+   "repaired_share": 0.0187,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.0674,
+    "stock_months": 1349
+   },
+   "ttm_missing_share": 0.1112,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.134,
+    "stock_months": 10780
+   }
+  },
+  "2020": {
+   "availability_bias_of_usable_only_universe_pp": -0.41,
+   "corrected": {
+    "mean_month_return_x12": -0.1158,
+    "stock_months": 202
+   },
+   "effect_of_repair_on_EW_universe_pp": -0.38,
+   "native": {
+    "mean_month_return_x12": 0.1793,
+    "stock_months": 15371
+   },
+   "repaired_share": 0.013,
+   "ttm_missing": {
+    "mean_month_return_x12": 0.2733,
+    "stock_months": 1294
+   },
+   "ttm_missing_share": 0.1058,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.2343,
+    "stock_months": 10942
+   }
+  },
+  "2021": {
+   "availability_bias_of_usable_only_universe_pp": 4.05,
+   "corrected": {
+    "mean_month_return_x12": 0.2229,
+    "stock_months": 285
+   },
+   "effect_of_repair_on_EW_universe_pp": 0.06,
+   "native": {
+    "mean_month_return_x12": 0.1794,
+    "stock_months": 19266
+   },
+   "repaired_share": 0.0146,
+   "ttm_missing": {
+    "mean_month_return_x12": -0.0853,
+    "stock_months": 2278
+   },
+   "ttm_missing_share": 0.1461,
+   "ttm_usable": {
+    "mean_month_return_x12": 0.1916,
+    "stock_months": 13312
+   }
+  }
+ },
+ "composition_returns_2010_2021": {
+  "corrected": 0.049,
+  "native": 0.1382
+ },
+ "composition_returns_ttm_2010_2021": {
+  "ttm_missing": 0.0836,
+  "ttm_usable": 0.1479
+ },
+ "coverage_by_year": {
+  "2010": {
+   "D043_estimate_missing_share_before": 0.141,
+   "P2_CP6_missing_share_after": 0.114,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9908,
+    "equity": 0.9908,
+    "equity_pos": 0.9691,
+    "gross_profit_ttm4q": 0.8093,
+    "gross_profit_ttm4q_and_assets_pos": 0.8084,
+    "net_income_ttm4q": 0.8747,
+    "net_income_ttm4q_and_assets_pos": 0.8724,
+    "net_income_ttm4q_and_equity_pos": 0.8522,
+    "operating_cash_flow_ttm4q": 0.8996,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.8971,
+    "revenue_ttm4q": 0.8666,
+    "revenue_ttm4q_and_assets_pos": 0.8643
+   },
+   "estimated_historically_eligible_per_month": 737.9,
+   "excluded_per_month": {
+    "REIT": 23.2,
+    "financial": 69.8,
+    "financial-format": 22.5
+   },
+   "final_usable_coverage_native / repaired": [
+    0.89,
+    0.0536
+   ],
+   "final_usable_coverage_of_non_financial": 0.8392,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 516.4,
+   "missing_share_after (upper bound incl. possible)": 0.0095,
+   "native_per_month": 688.4,
+   "non_financial_eligible_per_month": 615.3,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 27.6,
+    "missing quarterly value": 5.1,
+    "no balance-sheet snapshot": 1.2,
+    "no fiscal-year reconciliation inside the window": 46.6,
+    "quarters not consecutive": 15.2,
+    "stale": 3.2
+   },
+   "non_financial_repaired_per_month": 37.3,
+   "quarantine_lost_stock_months": 39,
+   "sec_repaired_per_month": 42.5,
+   "sec_side_unresolved_float_1_2B (possible)": 3,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 4,
+   "ttm_values_using_a_field_release (stock-months)": {
+    "gross_profit": 60,
+    "net_income": 177,
+    "operating_cash_flow": 187,
+    "revenue": 156
+   },
+   "usable_PIT_fundamentals_share": 0.9576,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7129,
+    "net_income": 0.8728,
+    "operating_cash_flow": 0.9031,
+    "revenue": 0.8648
+   }
+  },
+  "2011": {
+   "D043_estimate_missing_share_before": 0.115,
+   "P2_CP6_missing_share_after": 0.059,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9757,
+    "equity": 0.9757,
+    "equity_pos": 0.9489,
+    "gross_profit_ttm4q": 0.7079,
+    "gross_profit_ttm4q_and_assets_pos": 0.7026,
+    "net_income_ttm4q": 0.8203,
+    "net_income_ttm4q_and_assets_pos": 0.808,
+    "net_income_ttm4q_and_equity_pos": 0.7881,
+    "operating_cash_flow_ttm4q": 0.8296,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.8172,
+    "revenue_ttm4q": 0.7935,
+    "revenue_ttm4q_and_assets_pos": 0.7827
+   },
+   "estimated_historically_eligible_per_month": 932.8,
+   "excluded_per_month": {
+    "REIT": 50.0,
+    "financial": 113.0,
+    "financial-format": 2.2
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8321,
+    0.1535
+   ],
+   "final_usable_coverage_of_non_financial": 0.767,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 581.8,
+   "missing_share_after (upper bound incl. possible)": 0.0096,
+   "native_per_month": 842.7,
+   "non_financial_eligible_per_month": 758.5,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 34.8,
+    "missing quarterly value": 21.8,
+    "no balance-sheet snapshot": 7.4,
+    "no fiscal-year reconciliation inside the window": 56.9,
+    "quarters not consecutive": 50.8,
+    "stale": 5.0
+   },
+   "non_financial_repaired_per_month": 72.8,
+   "quarantine_lost_stock_months": 196,
+   "sec_repaired_per_month": 81.1,
+   "sec_side_unresolved_float_1_2B (possible)": 1,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 8,
+   "ttm_values_using_a_field_release (stock-months)": {
+    "gross_profit": 494,
+    "net_income": 1390,
+    "operating_cash_flow": 1417,
+    "revenue": 1185
+   },
+   "usable_PIT_fundamentals_share": 0.9439,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.6279,
+    "net_income": 0.8285,
+    "operating_cash_flow": 0.8401,
+    "revenue": 0.7912
+   }
+  },
+  "2012": {
+   "D043_estimate_missing_share_before": 0.124,
+   "P2_CP6_missing_share_after": 0.08,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9889,
+    "equity": 0.9891,
+    "equity_pos": 0.9572,
+    "gross_profit_ttm4q": 0.8053,
+    "gross_profit_ttm4q_and_assets_pos": 0.8053,
+    "net_income_ttm4q": 0.8933,
+    "net_income_ttm4q_and_assets_pos": 0.8933,
+    "net_income_ttm4q_and_equity_pos": 0.8708,
+    "operating_cash_flow_ttm4q": 0.8918,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.8918,
+    "revenue_ttm4q": 0.8652,
+    "revenue_ttm4q_and_assets_pos": 0.8652
+   },
+   "estimated_historically_eligible_per_month": 933.3,
+   "excluded_per_month": {
+    "REIT": 56.5,
+    "financial": 113.6,
+    "financial-format": 1.0
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8726,
+    0.4498
+   ],
+   "final_usable_coverage_of_non_financial": 0.8387,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 633.4,
+   "missing_share_after (upper bound incl. possible)": 0.0075,
+   "native_per_month": 858.9,
+   "non_financial_eligible_per_month": 755.2,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 12.2,
+    "missing quarterly value": 16.8,
+    "no balance-sheet snapshot": 0.2,
+    "no fiscal-year reconciliation inside the window": 60.2,
+    "quarters not consecutive": 27.2,
+    "stale": 5.2
+   },
+   "non_financial_repaired_per_month": 60.6,
+   "quarantine_lost_stock_months": 14,
+   "sec_repaired_per_month": 67.4,
+   "sec_side_unresolved_float_1_2B (possible)": 1,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 6,
+   "ttm_values_using_a_field_release (stock-months)": {
+    "gross_profit": 39,
+    "net_income": 73,
+    "operating_cash_flow": 68,
+    "revenue": 68
+   },
+   "usable_PIT_fundamentals_share": 0.9736,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7173,
+    "net_income": 0.901,
+    "operating_cash_flow": 0.9014,
+    "revenue": 0.8669
+   }
+  },
+  "2013": {
+   "D043_estimate_missing_share_before": 0.105,
+   "P2_CP6_missing_share_after": 0.068,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9902,
+    "equity": 0.9903,
+    "equity_pos": 0.9594,
+    "gross_profit_ttm4q": 0.8091,
+    "gross_profit_ttm4q_and_assets_pos": 0.8091,
+    "net_income_ttm4q": 0.9041,
+    "net_income_ttm4q_and_assets_pos": 0.9041,
+    "net_income_ttm4q_and_equity_pos": 0.8807,
+    "operating_cash_flow_ttm4q": 0.9057,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9057,
+    "revenue_ttm4q": 0.8667,
+    "revenue_ttm4q_and_assets_pos": 0.8667
+   },
+   "estimated_historically_eligible_per_month": 1063.2,
+   "excluded_per_month": {
+    "REIT": 69.3,
+    "financial": 128.6,
+    "financial-format": 1.1
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8632,
+    0.6116
+   ],
+   "final_usable_coverage_of_non_financial": 0.8459,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 722.5,
+   "missing_share_after (upper bound incl. possible)": 0.0094,
+   "native_per_month": 985.9,
+   "non_financial_eligible_per_month": 854.2,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 13.2,
+    "missing quarterly value": 12.7,
+    "no fiscal-year reconciliation inside the window": 67.2,
+    "quarters not consecutive": 32.2,
+    "stale": 6.2
+   },
+   "non_financial_repaired_per_month": 59.0,
+   "quarantine_lost_stock_months": 10,
+   "sec_repaired_per_month": 67.2,
+   "sec_side_unresolved_float_1_2B (possible)": 5,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 5,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.979,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7126,
+    "net_income": 0.9089,
+    "operating_cash_flow": 0.9107,
+    "revenue": 0.8593
+   }
+  },
+  "2014": {
+   "D043_estimate_missing_share_before": 0.083,
+   "P2_CP6_missing_share_after": 0.051,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9925,
+    "equity": 0.992,
+    "equity_pos": 0.9592,
+    "gross_profit_ttm4q": 0.841,
+    "gross_profit_ttm4q_and_assets_pos": 0.841,
+    "net_income_ttm4q": 0.9109,
+    "net_income_ttm4q_and_assets_pos": 0.9109,
+    "net_income_ttm4q_and_equity_pos": 0.8856,
+    "operating_cash_flow_ttm4q": 0.9107,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9107,
+    "revenue_ttm4q": 0.8846,
+    "revenue_ttm4q_and_assets_pos": 0.8846
+   },
+   "estimated_historically_eligible_per_month": 1202.1,
+   "excluded_per_month": {
+    "REIT": 81.7,
+    "financial": 157.6,
+    "financial-format": 1.2
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8793,
+    0.6835
+   ],
+   "final_usable_coverage_of_non_financial": 0.8674,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 824.6,
+   "missing_share_after (upper bound incl. possible)": 0.0092,
+   "native_per_month": 1120.9,
+   "non_financial_eligible_per_month": 950.7,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 20.1,
+    "missing quarterly value": 12.8,
+    "no fiscal-year reconciliation inside the window": 59.3,
+    "quarters not consecutive": 28.9,
+    "stale": 4.9
+   },
+   "non_financial_repaired_per_month": 57.9,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 70.2,
+   "sec_side_unresolved_float_1_2B (possible)": 4,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 7,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9771,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7343,
+    "net_income": 0.9102,
+    "operating_cash_flow": 0.9104,
+    "revenue": 0.8704
+   }
+  },
+  "2015": {
+   "D043_estimate_missing_share_before": 0.067,
+   "P2_CP6_missing_share_after": 0.042,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9911,
+    "equity": 0.9911,
+    "equity_pos": 0.9521,
+    "gross_profit_ttm4q": 0.8487,
+    "gross_profit_ttm4q_and_assets_pos": 0.8484,
+    "net_income_ttm4q": 0.9257,
+    "net_income_ttm4q_and_assets_pos": 0.9255,
+    "net_income_ttm4q_and_equity_pos": 0.8924,
+    "operating_cash_flow_ttm4q": 0.9253,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.925,
+    "revenue_ttm4q": 0.8872,
+    "revenue_ttm4q_and_assets_pos": 0.887
+   },
+   "estimated_historically_eligible_per_month": 1237.6,
+   "excluded_per_month": {
+    "REIT": 93.8,
+    "financial": 171.5,
+    "financial-format": 0.9
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8805,
+    0.6536
+   ],
+   "final_usable_coverage_of_non_financial": 0.87,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 836.4,
+   "missing_share_after (upper bound incl. possible)": 0.0081,
+   "native_per_month": 1169.2,
+   "non_financial_eligible_per_month": 961.4,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 16.8,
+    "missing quarterly value": 20.1,
+    "no balance-sheet snapshot": 0.2,
+    "no fiscal-year reconciliation inside the window": 57.8,
+    "quarters not consecutive": 25.8,
+    "stale": 4.2
+   },
+   "non_financial_repaired_per_month": 44.8,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 58.3,
+   "sec_side_unresolved_float_1_2B (possible)": 3,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 7,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9779,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7477,
+    "net_income": 0.924,
+    "operating_cash_flow": 0.9255,
+    "revenue": 0.8807
+   }
+  },
+  "2016": {
+   "D043_estimate_missing_share_before": 0.044,
+   "P2_CP6_missing_share_after": 0.027,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9893,
+    "equity": 0.9891,
+    "equity_pos": 0.9439,
+    "gross_profit_ttm4q": 0.8744,
+    "gross_profit_ttm4q_and_assets_pos": 0.8744,
+    "net_income_ttm4q": 0.9309,
+    "net_income_ttm4q_and_assets_pos": 0.9309,
+    "net_income_ttm4q_and_equity_pos": 0.8918,
+    "operating_cash_flow_ttm4q": 0.9383,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9383,
+    "revenue_ttm4q": 0.9081,
+    "revenue_ttm4q_and_assets_pos": 0.9081
+   },
+   "estimated_historically_eligible_per_month": 1179.9,
+   "excluded_per_month": {
+    "REIT": 100.9,
+    "financial": 166.6,
+    "financial-format": 1.0
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8971,
+    0.6721
+   ],
+   "final_usable_coverage_of_non_financial": 0.8907,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 804.7,
+   "missing_share_after (upper bound incl. possible)": 0.0068,
+   "native_per_month": 1134.8,
+   "non_financial_eligible_per_month": 903.4,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 9.4,
+    "missing quarterly value": 7.4,
+    "no fiscal-year reconciliation inside the window": 53.8,
+    "quarters not consecutive": 19.8,
+    "stale": 8.2
+   },
+   "non_financial_repaired_per_month": 25.7,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 37.1,
+   "sec_side_unresolved_float_1_2B (possible)": 3,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 5,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9833,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7737,
+    "net_income": 0.9355,
+    "operating_cash_flow": 0.9418,
+    "revenue": 0.9092
+   }
+  },
+  "2017": {
+   "D043_estimate_missing_share_before": 0.048,
+   "P2_CP6_missing_share_after": 0.033,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9857,
+    "equity": 0.9851,
+    "equity_pos": 0.9398,
+    "gross_profit_ttm4q": 0.8674,
+    "gross_profit_ttm4q_and_assets_pos": 0.8674,
+    "net_income_ttm4q": 0.8933,
+    "net_income_ttm4q_and_assets_pos": 0.8933,
+    "net_income_ttm4q_and_equity_pos": 0.8563,
+    "operating_cash_flow_ttm4q": 0.9239,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9239,
+    "revenue_ttm4q": 0.8984,
+    "revenue_ttm4q_and_assets_pos": 0.8984
+   },
+   "estimated_historically_eligible_per_month": 1285.8,
+   "excluded_per_month": {
+    "REIT": 104.8,
+    "financial": 189.7,
+    "financial-format": 1.7
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8633,
+    0.5272
+   ],
+   "final_usable_coverage_of_non_financial": 0.8549,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 836.7,
+   "missing_share_after (upper bound incl. possible)": 0.0086,
+   "native_per_month": 1238.3,
+   "non_financial_eligible_per_month": 978.7,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 17.5,
+    "missing quarterly value": 15.5,
+    "no fiscal-year reconciliation inside the window": 70.7,
+    "quarters not consecutive": 27.7,
+    "stale": 10.7
+   },
+   "non_financial_repaired_per_month": 24.5,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 36.5,
+   "sec_side_unresolved_float_1_2B (possible)": 2,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 9,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9767,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7625,
+    "net_income": 0.9023,
+    "operating_cash_flow": 0.9299,
+    "revenue": 0.9012
+   }
+  },
+  "2018": {
+   "D043_estimate_missing_share_before": 0.037,
+   "P2_CP6_missing_share_after": 0.022,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9863,
+    "equity": 0.9854,
+    "equity_pos": 0.9392,
+    "gross_profit_ttm4q": 0.8757,
+    "gross_profit_ttm4q_and_assets_pos": 0.8757,
+    "net_income_ttm4q": 0.9136,
+    "net_income_ttm4q_and_assets_pos": 0.9136,
+    "net_income_ttm4q_and_equity_pos": 0.8732,
+    "operating_cash_flow_ttm4q": 0.9226,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9226,
+    "revenue_ttm4q": 0.8973,
+    "revenue_ttm4q_and_assets_pos": 0.8973
+   },
+   "estimated_historically_eligible_per_month": 1349.9,
+   "excluded_per_month": {
+    "REIT": 103.8,
+    "financial": 200.8,
+    "financial-format": 2.8
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8842,
+    0.5222
+   ],
+   "final_usable_coverage_of_non_financial": 0.8763,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 903.9,
+   "missing_share_after (upper bound incl. possible)": 0.0081,
+   "native_per_month": 1306.0,
+   "non_financial_eligible_per_month": 1031.5,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 17.0,
+    "missing quarterly value": 15.6,
+    "no fiscal-year reconciliation inside the window": 55.8,
+    "quarters not consecutive": 28.7,
+    "stale": 10.6
+   },
+   "non_financial_repaired_per_month": 22.5,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 32.9,
+   "sec_side_unresolved_float_1_2B (possible)": 3,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 8,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9714,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7665,
+    "net_income": 0.9206,
+    "operating_cash_flow": 0.9275,
+    "revenue": 0.9021
+   }
+  },
+  "2019": {
+   "D043_estimate_missing_share_before": 0.044,
+   "P2_CP6_missing_share_after": 0.033,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9889,
+    "equity": 0.9885,
+    "equity_pos": 0.9378,
+    "gross_profit_ttm4q": 0.8735,
+    "gross_profit_ttm4q_and_assets_pos": 0.8735,
+    "net_income_ttm4q": 0.9247,
+    "net_income_ttm4q_and_assets_pos": 0.9247,
+    "net_income_ttm4q_and_equity_pos": 0.8815,
+    "operating_cash_flow_ttm4q": 0.9242,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9242,
+    "revenue_ttm4q": 0.8994,
+    "revenue_ttm4q_and_assets_pos": 0.8994
+   },
+   "estimated_historically_eligible_per_month": 1325.0,
+   "excluded_per_month": {
+    "REIT": 102.3,
+    "financial": 197.1,
+    "financial-format": 2.2
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8954,
+    0.4859
+   ],
+   "final_usable_coverage_of_non_financial": 0.8895,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 901.4,
+   "missing_share_after (upper bound incl. possible)": 0.0075,
+   "native_per_month": 1291.1,
+   "non_financial_eligible_per_month": 1013.4,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 19.0,
+    "missing quarterly value": 12.9,
+    "no fiscal-year reconciliation inside the window": 47.8,
+    "quarters not consecutive": 23.0,
+    "stale": 9.3
+   },
+   "non_financial_repaired_per_month": 14.8,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 23.9,
+   "sec_side_unresolved_float_1_2B (possible)": 4,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 6,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9788,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7657,
+    "net_income": 0.9288,
+    "operating_cash_flow": 0.9287,
+    "revenue": 0.8997
+   }
+  },
+  "2020": {
+   "D043_estimate_missing_share_before": 0.033,
+   "P2_CP6_missing_share_after": 0.024,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9927,
+    "equity": 0.9926,
+    "equity_pos": 0.9395,
+    "gross_profit_ttm4q": 0.8696,
+    "gross_profit_ttm4q_and_assets_pos": 0.8696,
+    "net_income_ttm4q": 0.925,
+    "net_income_ttm4q_and_assets_pos": 0.925,
+    "net_income_ttm4q_and_equity_pos": 0.8788,
+    "operating_cash_flow_ttm4q": 0.9281,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.9281,
+    "revenue_ttm4q": 0.9011,
+    "revenue_ttm4q_and_assets_pos": 0.9011
+   },
+   "estimated_historically_eligible_per_month": 1321.1,
+   "excluded_per_month": {
+    "REIT": 87.6,
+    "financial": 187.8,
+    "financial-format": 1.8
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8933,
+    0.7182
+   ],
+   "final_usable_coverage_of_non_financial": 0.8918,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 919.2,
+   "missing_share_after (upper bound incl. possible)": 0.0098,
+   "native_per_month": 1291.1,
+   "non_financial_eligible_per_month": 1030.8,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 23.4,
+    "missing quarterly value": 17.7,
+    "no fiscal-year reconciliation inside the window": 46.6,
+    "quarters not consecutive": 20.4,
+    "stale": 3.5
+   },
+   "non_financial_repaired_per_month": 9.2,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 17.0,
+   "sec_side_unresolved_float_1_2B (possible)": 7,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 6,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.981,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7814,
+    "net_income": 0.9306,
+    "operating_cash_flow": 0.9339,
+    "revenue": 0.9085
+   }
+  },
+  "2021": {
+   "D043_estimate_missing_share_before": 0.012,
+   "P2_CP6_missing_share_after": 0.005,
+   "approved_field_availability_share_of_non_financial": {
+    "assets_pos": 0.9862,
+    "equity": 0.9858,
+    "equity_pos": 0.9304,
+    "gross_profit_ttm4q": 0.8305,
+    "gross_profit_ttm4q_and_assets_pos": 0.8305,
+    "net_income_ttm4q": 0.8848,
+    "net_income_ttm4q_and_assets_pos": 0.8848,
+    "net_income_ttm4q_and_equity_pos": 0.8427,
+    "operating_cash_flow_ttm4q": 0.8903,
+    "operating_cash_flow_ttm4q_and_assets_pos": 0.8903,
+    "revenue_ttm4q": 0.8635,
+    "revenue_ttm4q_and_assets_pos": 0.8635
+   },
+   "estimated_historically_eligible_per_month": 1668.1,
+   "excluded_per_month": {
+    "REIT": 98.7,
+    "financial": 233.2,
+    "financial-format": 2.2
+   },
+   "final_usable_coverage_native / repaired": [
+    0.8517,
+    0.7443
+   ],
+   "final_usable_coverage_of_non_financial": 0.8505,
+   "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": 1117.6,
+   "missing_share_after (upper bound incl. possible)": 0.012,
+   "native_per_month": 1624.3,
+   "non_financial_eligible_per_month": 1314.0,
+   "non_financial_not_usable_per_month_by_reason": {
+    "fewer than four visible quarters": 77.8,
+    "missing quarterly value": 24.0,
+    "no fiscal-year reconciliation inside the window": 65.2,
+    "quarters not consecutive": 25.8,
+    "stale": 3.6
+   },
+   "non_financial_repaired_per_month": 14.7,
+   "quarantine_lost_stock_months": 0,
+   "sec_repaired_per_month": 23.8,
+   "sec_side_unresolved_float_1_2B (possible)": 9,
+   "sec_side_unresolved_float_ge_2B (registrants, year)": 11,
+   "ttm_values_using_a_field_release (stock-months)": {},
+   "usable_PIT_fundamentals_share": 0.9701,
+   "usable_true_TTM_share_by_field": {
+    "gross_profit": 0.7508,
+    "net_income": 0.8921,
+    "operating_cash_flow": 0.8987,
+    "revenue": 0.8732
+   }
+  }
+ },
+ "exchange_of_repaired_names (company-months)": {
+  "AMEX": 21,
+  "ARCA": 15,
+  "NASDAQ": 2311,
+  "NYSE": 4348
+ },
+ "fin_flips": {
+  "companies_with_flips": 15,
+  "flips": 16
+ },
+ "final_usable_share_by_size_tercile": {
+  "2010": {
+   "T1": 0.844,
+   "T2": 0.8216,
+   "T3": 0.8525
+  },
+  "2011": {
+   "T1": 0.7651,
+   "T2": 0.7628,
+   "T3": 0.773
+  },
+  "2012": {
+   "T1": 0.8205,
+   "T2": 0.8326,
+   "T3": 0.8631
+  },
+  "2013": {
+   "T1": 0.8384,
+   "T2": 0.8651,
+   "T3": 0.834
+  },
+  "2014": {
+   "T1": 0.8465,
+   "T2": 0.8562,
+   "T3": 0.8975
+  },
+  "2015": {
+   "T1": 0.8176,
+   "T2": 0.8693,
+   "T3": 0.9185
+  },
+  "2016": {
+   "T1": 0.8862,
+   "T2": 0.8876,
+   "T3": 0.8977
+  },
+  "2017": {
+   "T1": 0.8388,
+   "T2": 0.857,
+   "T3": 0.8678
+  },
+  "2018": {
+   "T1": 0.8552,
+   "T2": 0.8617,
+   "T3": 0.9099
+  },
+  "2019": {
+   "T1": 0.8478,
+   "T2": 0.8916,
+   "T3": 0.9265
+  },
+  "2020": {
+   "T1": 0.8489,
+   "T2": 0.9047,
+   "T3": 0.9193
+  },
+  "2021": {
+   "T1": 0.7875,
+   "T2": 0.8528,
+   "T3": 0.9078
+  }
+ },
+ "no_true_TTM_reasons_revenue (stock-months)": {
+  "fewer than four visible quarters": 3924,
+  "missing quarterly value": 2278,
+  "no fiscal-year reconciliation inside the window": 8208,
+  "quarters not consecutive": 4715,
+  "stale": 1130
+ },
+ "quarantine_coverage_loss_stock_months": {
+  "2010": 39,
+  "2011": 196,
+  "2012": 14,
+  "2013": 10,
+  "2014": 0,
+  "2015": 0,
+  "2016": 0,
+  "2017": 0,
+  "2018": 0,
+  "2019": 0,
+  "2020": 0,
+  "2021": 0
+ },
+ "repaired_ever_eligible": 194,
+ "repaired_outcomes": {
+  "acquired/other": 112,
+  "failed (bankruptcy 8-K item 1.03)": 32,
+  "still trading": 50
+ },
+ "sic_vs_structure (stock-months)": {
+  "sic=REIT|structure_fin=False|sic2=67": 10521,
+  "sic=REIT|structure_fin=True|sic2=67": 988,
+  "sic=fin|structure_fin=False|sic2=60": 97,
+  "sic=fin|structure_fin=False|sic2=61": 292,
+  "sic=fin|structure_fin=False|sic2=62": 2676,
+  "sic=fin|structure_fin=False|sic2=63": 767,
+  "sic=fin|structure_fin=False|sic2=64": 676,
+  "sic=fin|structure_fin=False|sic2=65": 1098,
+  "sic=fin|structure_fin=False|sic2=67": 292,
+  "sic=fin|structure_fin=True|sic2=60": 7784,
+  "sic=fin|structure_fin=True|sic2=61": 897,
+  "sic=fin|structure_fin=True|sic2=62": 1142,
+  "sic=fin|structure_fin=True|sic2=63": 6751,
+  "sic=fin|structure_fin=True|sic2=64": 57,
+  "sic=op|structure_fin=False": 123196,
+  "sic=op|structure_fin=True|sic2=12": 11,
+  "sic=op|structure_fin=True|sic2=13": 67,
+  "sic=op|structure_fin=True|sic2=28": 6,
+  "sic=op|structure_fin=True|sic2=45": 27,
+  "sic=op|structure_fin=True|sic2=73": 40,
+  "sic=op|structure_fin=True|sic2=75": 6
+ },
+ "store_stats": {
+  "amendments": 99,
+  "delayed_until_available": 13969,
+  "estimated": 14393,
+  "observed_new": 218760,
+  "quarantine_field_released": 134,
+  "quarantine_released": 20,
+  "quarantined": 637,
+  "restatement_blocked": 479,
+  "sec_timing_hold": 55,
+  "timing_unknown": 1704
+ },
+ "ttm_missing_reasons (stock-months)": {
+  "fewer than four visible quarters": 3467,
+  "missing quarterly value": 2188,
+  "no balance-sheet snapshot": 109,
+  "no fiscal-year reconciliation inside the window": 8255,
+  "quarters not consecutive": 3908,
+  "stale": 896
+ },
+ "ttm_missingness_by_outcome": {
+  "acquired/other": {
+   "eligible_months": 21898,
+   "securities": 606,
+   "usable_months": 17523,
+   "usable_share": 0.8002
+  },
+  "failed (bankruptcy 8-K item 1.03)": {
+   "eligible_months": 952,
+   "securities": 32,
+   "usable_months": 405,
+   "usable_share": 0.4254
+  },
+  "still trading": {
+   "eligible_months": 111156,
+   "securities": 1661,
+   "usable_months": 97255,
+   "usable_share": 0.8749
+  }
+ },
+ "visa_months_eligible": "143/143"
+}

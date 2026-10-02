@@ -90,3 +90,44 @@ def test_partial_without_fiscal_year_value_does_not_fake_a_fiscal_year_end():
         st.observe("K", pe, filed(pe), {"revenue_q": v, "revenue_ttm": 40.0}, 2011 if pe == QUAR else None, filed(pe))
     # 9 + 10 + 11 + 10 = 40 = FY2009 total by coincidence: no fiscal-year end inside the window -> no TTM
     assert st.ttm("K", "revenue", filed(date(2010, 9, 30)) + timedelta(days=1)) is None
+
+
+def test_observe_vendor_feeds_each_report_once():
+    import types
+
+    def obj(pe, fd, acc, rev):
+        three = lambda v: types.SimpleNamespace(three_months=v)
+        er = types.SimpleNamespace(period_ending_date=three(pe), file_date=three(fd), accession_number=three(acc))
+        return types.SimpleNamespace(earning_reports=er, rev=rev)
+
+    def getter(o, path):                      # resolve every whitelisted path to a stub holding 'rev'
+        return types.SimpleNamespace(three_months=o.rev, twelve_months=None)
+
+    st, seen = F.PITStore(), set()
+    pe, fd = date(2010, 3, 31), date(2010, 5, 5)
+    o = obj(pe, fd, "0000000000-10-000001", 10.0)
+    assert F.observe_vendor(st, "K", o, date(2010, 5, 6), getter, seen) == (pe, fd, False)
+    assert F.observe_vendor(st, "K", o, date(2010, 5, 7), getter, seen) is None          # already fed
+    later = obj(date(2010, 6, 30), date(2010, 8, 5), "0000000000-11-000002", 11.0)     # accession year 2011
+    assert F.observe_vendor(st, "K", later, date(2010, 8, 6), getter, seen)[2] is True   # quarantined
+    assert st.get("K", "revenue_q", date(2010, 8, 10)) == 10.0                           # clean report stays current
+
+
+def test_release_never_removes_a_ttm_of_an_unreleased_field():
+    # Q2 2011 is quarantined; only its revenue is released. Net income must behave exactly as without the release.
+    q = {date(2010, 3, 31): 1.0, date(2010, 6, 30): 1.0, date(2010, 9, 30): 1.0, date(2010, 12, 31): 1.0,
+         date(2011, 3, 31): 2.0, date(2011, 6, 30): 3.0}
+    hole = date(2011, 6, 30)
+
+    def build(rel):
+        st = F.PITStore(field_releases=rel)
+        for pe, v in sorted(q.items()):
+            fy = 4.0 if pe.year == 2011 or pe == date(2010, 12, 31) else 3.0
+            vals = {"revenue_q": v, "revenue_ttm": fy, "net_income_q": v, "net_income_ttm": fy}
+            st.observe("K", pe, filed(pe), vals, 2012 if pe == hole else None, filed(pe))
+        return st
+
+    day = filed(hole) + timedelta(days=2)
+    rel = {"K": [[str(hole), str(filed(hole)), ["revenue_q", "revenue_ttm"]]]}
+    assert build(rel).ttm("K", "net_income", day) == build(None).ttm("K", "net_income", day) == 1 + 1 + 1 + 2
+    assert build(rel).ttm("K", "revenue", day) == 1 + 1 + 2 + 3          # released field: the newer window

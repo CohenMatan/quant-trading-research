@@ -258,7 +258,9 @@ class PITStore:
         derived Q4). No interpolation, no backward filling."""
         self._promote(key, today)
         recs = sorted(self.hist.get(key, {}).values(), key=lambda r: r.period_end)
-        recs = [r for r in recs if r.available <= today]
+        # D114: a partial (field-released) record exists only for its released fields; for any other base it is
+        # absent, so a field-level release can only add information, never remove a window that existed before
+        recs = [r for r in recs if r.available <= today and not (r.partial and r.values.get(base + "_q") is None)]
         if len(recs) < 4:
             return None, "fewer than four visible quarters"
         if (today - recs[-1].period_end).days > self.max_age:
@@ -317,3 +319,37 @@ def financial_format(values):
         return None
     return (values.get("gross_profit_ttm") is None and values.get("cost_of_revenue_ttm") is None
             and values.get("operating_income_ttm") is None)
+
+
+def as_date(v):
+    """A vendor date object -> datetime.date (None for missing/sentinel dates)."""
+    try:
+        d = v.date() if callable(getattr(v, "date", None)) else v
+        return d if d is not None and d.year > 1900 else None
+    except Exception:
+        return None
+
+
+def observe_vendor(store, key, f, today, getter, seen):
+    """D114: the X976 v1.2 observation step, shared so every fundamental strategy uses the frozen code. Call it EVERY
+    day for EVERY company with fundamentals (not only eligible ones), from the history-only warm-up start, so a company
+    entering the universe already has its quarterly history. The caller skips objects without vendor fundamentals
+    and SEC-repaired securities (those are fed from the SEC table, SECCorrections.feed). `seen` is the caller's set
+    of reports already fed.
+    Returns (period_end, file_date, quarantined) for a newly observed report, else None."""
+    try:
+        er = f.earning_reports
+        pe, fd = as_date(er.period_ending_date.three_months), as_date(er.file_date.three_months)
+    except Exception:
+        return None
+    k = (key, pe, fd)
+    if k in seen:
+        return None
+    seen.add(k)
+    try:
+        ay = accession_year(er.accession_number.three_months)
+    except Exception:
+        ay = None
+    q = ay is not None and ay > today.year and (str(pe), str(fd)) not in store.releases.get(key, ())
+    store.observe(key, pe, fd, read_values(f, getter), ay, today)
+    return pe, fd, q

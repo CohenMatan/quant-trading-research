@@ -62,6 +62,12 @@ def main(exp="E976-02"):
                 round(v.get("final_usable_native", 0) / v["nonfin_eligible_native"], 4) if v.get("nonfin_eligible_native") else None,
                 round(v.get("final_usable_corrected", 0) / v["nonfin_eligible_corrected"], 4) if v.get("nonfin_eligible_corrected") else None],
             "non_financial_repaired_per_month": round(g("nonfin_eligible_corrected"), 1),
+            # D114 (X976 v1.2): availability of each approved field / ratio among non-financial eligible names
+            "approved_field_availability_share_of_non_financial": {
+                k[len("avail_"):]: round(n / 12 / nonfin, 4) for k, n in sorted(v.items()) if k.startswith("avail_")}
+            if nonfin else {},
+            "ttm_values_using_a_field_release (stock-months)": {
+                k[len("ttm_uses_field_release_"):]: n for k, n in sorted(v.items()) if k.startswith("ttm_uses_field_release_")},
             "quarantine_lost_stock_months": c["quarantine_lost"].get(y, 0),
             "non_financial_not_usable_per_month_by_reason": {k.split("|", 1)[1]: round(n / 12, 1)
                                                              for k, n in sorted(v.items()) if k.startswith("not_usable|")},
