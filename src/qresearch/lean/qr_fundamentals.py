@@ -19,6 +19,10 @@
 #   * SEC restatement guard (D111, optional): reports with a value first filed after the vendor date are blocked.
 #   * SEC timing holds (D111, optional): for the few vendor reports whose availability would precede every public
 #     SEC source (verified against EDGAR), the report is visible only from the day after that SEC date.
+#   * Field-level quarantine release (D114, optional): for a quarantined report whose individual FLOW fields were
+#     verified against the SEC original filing (value equal to the original, filed no later than the vendor date),
+#     ONLY those fields are released, as a partial record that enters the quarterly history used by True TTM. A
+#     partial record is never the current report: its balance sheet (and every unverified field) stays hidden.
 import math
 from datetime import date, timedelta
 
@@ -114,11 +118,18 @@ def available_from(period_end, file_date):
     return file_date + timedelta(days=1)
 
 
-class Record:
-    __slots__ = ("period_end", "file_date", "available", "values", "estimated", "accession_year")
+# D114: only these fields may ever be released field-by-field from a quarantined report (quarterly flows and the
+# vendor's fiscal-year values of the approved flows); balance-sheet fields never are
+FIELD_RELEASABLE = ("revenue_q", "gross_profit_q", "net_income_q", "operating_cash_flow_q",
+                    "revenue_ttm", "gross_profit_ttm", "net_income_ttm", "operating_cash_flow_ttm")
 
-    def __init__(self, period_end, file_date, values, accession_year_=None):
+
+class Record:
+    __slots__ = ("period_end", "file_date", "available", "values", "estimated", "accession_year", "partial")
+
+    def __init__(self, period_end, file_date, values, accession_year_=None, partial=False):
         self.period_end, self.file_date, self.values = period_end, file_date, dict(values)
+        self.partial = partial
         self.estimated = is_estimated_file_date(period_end, file_date)
         self.available = available_from(period_end, file_date)
         self.accession_year = accession_year_
@@ -128,7 +139,7 @@ class PITStore:
     """Per-symbol point-in-time fundamentals. Feed it the vendor's latest report each day (observe); read only via
     get()/record(), which return what was historically available on the given decision date."""
 
-    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS, holds=None, releases=None, blocked=None):
+    def __init__(self, max_age_days=DEFAULT_MAX_AGE_DAYS, holds=None, releases=None, blocked=None, field_releases=None):
         self.max_age = int(max_age_days)
         self.holds = holds or {}  # key -> {period end ISO: first visible date ISO} (D111 SEC timing holds)
         # key -> [[period end ISO, file date ISO], ...]: quarantined reports whose values were verified against the
@@ -137,6 +148,10 @@ class PITStore:
         # key -> [[period end ISO, file date ISO], ...]: vendor reports carrying a value first filed AFTER the
         # vendor's file date (restatement look-ahead found by the SEC restatement guard, D111): never exposed.
         self.blocked = {k: {tuple(x) for x in v} for k, v in (blocked or {}).items()}
+        # key -> {(period end ISO, file date ISO): (released field, ...)}: D114 field-level releases of quarantined
+        # reports; only FIELD_RELEASABLE names are honoured
+        self.field_releases = {k: {(x[0], x[1]): tuple(f for f in x[2] if f in FIELD_RELEASABLE) for x in v}
+                               for k, v in (field_releases or {}).items()}
         self.current = {}      # key -> Record exposed (visible) most recently
         self.seen = set()      # (key, period_end, file_date) already observed (each report counted once)
         self.pending = {}      # key -> list of Records seen but not yet visible
@@ -171,6 +186,14 @@ class PITStore:
                 self.stats["quarantine_released"] = self.stats.get("quarantine_released", 0) + 1
             else:
                 self.stats["quarantined"] += 1      # value may come from a later filing: never exposed
+                fr = self.field_releases.get(key, {}).get((str(period_end), str(file_date)))
+                if not fr:
+                    return
+                # D114: only the SEC-verified flow fields, as a partial record for the quarterly history
+                part = Record(period_end, file_date, {f: values.get(f) for f in fr}, accession_year_, partial=True)
+                part.available = rec.available
+                self.stats["quarantine_field_released"] = self.stats.get("quarantine_field_released", 0) + 1
+                pend.append(part)
                 return
         if rec.estimated:
             self.stats["estimated"] += 1
@@ -188,12 +211,16 @@ class PITStore:
         h = self.hist.setdefault(key, {})
         for r in ready:                    # amendments replace a period only from their own availability date
             old = h.get(r.period_end)
+            if r.partial and old is not None:
+                continue                   # D114: a partial record only fills a hole, never replaces a report
             if old is None or r.file_date >= old.file_date:
                 h[r.period_end] = r
-        best = max(ready, key=lambda r: (r.period_end, r.file_date))
-        cur = self.current.get(key)
-        if cur is None or (best.period_end, best.file_date) >= (cur.period_end, cur.file_date):
-            self.current[key] = best
+        full = [r for r in ready if not r.partial]     # D114: a partial record is never the current report
+        if full:
+            best = max(full, key=lambda r: (r.period_end, r.file_date))
+            cur = self.current.get(key)
+            if cur is None or (best.period_end, best.file_date) >= (cur.period_end, cur.file_date):
+                self.current[key] = best
         self.pending[key] = [r for r in pend if r.available > today]
 
     def record(self, key, today):
@@ -231,7 +258,9 @@ class PITStore:
         derived Q4). No interpolation, no backward filling."""
         self._promote(key, today)
         recs = sorted(self.hist.get(key, {}).values(), key=lambda r: r.period_end)
-        recs = [r for r in recs if r.available <= today]
+        # D114: a partial (field-released) record exists only for its released fields; for any other base it is
+        # absent, so a field-level release can only add information, never remove a window that existed before
+        recs = [r for r in recs if r.available <= today and not (r.partial and r.values.get(base + "_q") is None)]
         if len(recs) < 4:
             return None, "fewer than four visible quarters"
         if (today - recs[-1].period_end).days > self.max_age:
@@ -249,7 +278,10 @@ class PITStore:
             chain = self._chain(recs, j, 4)
             if fy is None or chain is None or j < 1:
                 continue
-            prev_fy = recs[j - 1].values.get(base + "_ttm")
+            i = j - 1                      # D114: look past partial records whose fiscal-year value was not released
+            while i > 0 and recs[i].partial and recs[i].values.get(base + "_ttm") is None:
+                i -= 1
+            prev_fy = recs[i].values.get(base + "_ttm")
             if prev_fy is not None and abs(prev_fy - fy) <= 1e-9 * max(abs(fy), 1.0):
                 continue                   # not a fiscal-year-end report: its fiscal-year value did not change
             vals = [r.values.get(base + "_q") for r in chain]
@@ -287,3 +319,37 @@ def financial_format(values):
         return None
     return (values.get("gross_profit_ttm") is None and values.get("cost_of_revenue_ttm") is None
             and values.get("operating_income_ttm") is None)
+
+
+def as_date(v):
+    """A vendor date object -> datetime.date (None for missing/sentinel dates)."""
+    try:
+        d = v.date() if callable(getattr(v, "date", None)) else v
+        return d if d is not None and d.year > 1900 else None
+    except Exception:
+        return None
+
+
+def observe_vendor(store, key, f, today, getter, seen):
+    """D114: the X976 v1.2 observation step, shared so every fundamental strategy uses the frozen code. Call it EVERY
+    day for EVERY company with fundamentals (not only eligible ones), from the history-only warm-up start, so a company
+    entering the universe already has its quarterly history. The caller skips objects without vendor fundamentals
+    and SEC-repaired securities (those are fed from the SEC table, SECCorrections.feed). `seen` is the caller's set
+    of reports already fed.
+    Returns (period_end, file_date, quarantined) for a newly observed report, else None."""
+    try:
+        er = f.earning_reports
+        pe, fd = as_date(er.period_ending_date.three_months), as_date(er.file_date.three_months)
+    except Exception:
+        return None
+    k = (key, pe, fd)
+    if k in seen:
+        return None
+    seen.add(k)
+    try:
+        ay = accession_year(er.accession_number.three_months)
+    except Exception:
+        ay = None
+    q = ay is not None and ay > today.year and (str(pe), str(fd)) not in store.releases.get(key, ())
+    store.observe(key, pe, fd, read_values(f, getter), ay, today)
+    return pe, fd, q

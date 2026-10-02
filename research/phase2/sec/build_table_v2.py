@@ -10,7 +10,8 @@ Tiers (strongest first):
      to another registrant, over an overlapping period of more than 120 days) is dropped.
 Records per registrant: periodic filings up to its equity end (Form 25/15 or last equity report) and 2021-12-31.
 Packed into src/qresearch/lean/qr_sec_data*.py: corrections, timing holds (D111), quarantine releases (D111),
-restatement blocks (E973-01), SEC SIC history (sic_history.py). Audit copy: corrections_v2.json."""
+restatement blocks (E973-01), SEC SIC history (sic_history.py), D114 field-level releases (field_releases.json).
+Audit copy: corrections_v2.json."""
 from __future__ import annotations
 
 import json
@@ -125,8 +126,11 @@ def main():
     sic, sic_src = sic_history.build({s: v["cik"] for s, v in table.items()})
     for p in LEAN.glob("qr_sec_data*.py"):
         p.unlink()
+    frel_path = OUT / "field_releases.json"           # D114 field-level releases (x979_analyse.py)
+    frel = json.loads(frel_path.read_text()) if frel_path.exists() else {}
     for name, text in pack({"corrections": table, "timing_holds": holds, "quarantine_releases": releases,
-                            "restatement_blocks": blocks, "sic_history": sic}, "qr_sec_data").items():
+                            "restatement_blocks": blocks, "sic_history": sic, "field_releases": frel},
+                           "qr_sec_data").items():
         (LEAN / name).write_text(text)
     (OUT / "corrections_v2.json").write_text(json.dumps({"links": audit, "dropped_v1": dropped, "rejected_F2": f2,
                                                          "sic_sources": sic_src}, indent=1, sort_keys=True) + "\n")

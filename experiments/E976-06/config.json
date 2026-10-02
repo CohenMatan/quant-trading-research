@@ -1,0 +1,45 @@
+{
+ "experiment_id": "E976-06",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X976",
+ "strategy_version": "v1.3",
+ "strategy_dir": "strategies/X976_final_readiness_canary",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2010-01-04",
+ "end": "2021-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": true
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07",
+  "E901-07"
+ ],
+ "programme": "P2",
+ "cycle": "P2C1",
+ "params": {},
+ "description": "FINAL fundamental-data canary on the FROZEN data infrastructure v1 (D114; research/phase2/data_freeze_v1.json): X976 v1.3 uses the shared observation step; True TTM ignores partial records for unreleased fields; correction table v3.2 + 135 field-level releases; harness history-only warm-up from 2008-07-01. PIT checks C1-C12, coverage, approved-field availability. No orders, no rankings, no factor returns. Verification; not a trial.",
+ "warmup_start": "2008-07-01"
+}

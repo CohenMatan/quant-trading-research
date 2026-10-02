@@ -1025,3 +1025,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Programme status:** no H016, no strategy or factor backtest, no slot used (1 of 3 consumed), Holdout locked.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-02: Final data policies approved; 2011 cleanup; data infrastructure frozen; H016 pre-registration proposed; STOP (D114, D114a)
+
+- **Owner approval:** P2-CP7 and its verdict, plus the final data policies:
+  - same universe for every book;
+  - July 2008 history-only warm-up;
+  - frozen field set and exclusions;
+  - conditional acceptance of the ~1% residual gap.
+- **2011 cleanup:**
+  - E979-01 verified the 135 held-back reports field by field against the SEC originals. Only verified flows are released, through the new field-level release; balance sheets and the 22 non-matching fields stay quarantined.
+  - 2011 usable coverage: 69.6% → 76.8%.
+  - Final canary E976-06 on the frozen files: C1–C12 all 0.
+- **Warm-up:** built into the harness and proven by 9 tests plus the live run (first equity exactly $100,000 after 380 warm-up sessions).
+- **Freeze:** data infrastructure **frozen as v1** (43 files, hash-pinned, test).
+- **H016 proposal (design only):** gross profits-to-assets, chosen from the literature; top 20; quarterly; EW-H016, SPY and random controls; 8 committed runs plus a canary.
+  - `docs/checkpoints/P2_CP8_2011_cleanup_and_H016_preregistration_proposal.md`;
+  - `research/hypotheses/H016.md`;
+  - `research/phase2/H016_literature_review.md`.
+- **Not done:** no H016 implementation or run, no returns, no slot, Holdout locked.
+
+**STOP:** awaiting the owner.
