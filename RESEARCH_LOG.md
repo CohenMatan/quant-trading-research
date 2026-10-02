@@ -985,3 +985,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Verdict: not yet safe to design H016.** Two items remain: the residual survivorship gap in 2010–2014 and the definition of the twelve-month fields.
 
 **STOP:** awaiting the owner. Decisions requested: an SEC contact email, the twelve-month definition and the residual-gap policy.
+
+## 2026-10-02: Continue SEC repair / True TTM approved; blocked at the SEC contact email; STOP (D112)
+
+- The owner approved:
+  - further SEC repair, using SEC ticker/company-history evidence;
+  - a True TTM layer built from quarterly filings;
+  - a re-audit of coverage and residual bias;
+  - a final readiness checkpoint.
+- This was conditional on a project-specific SEC contact email.
+- **No project email is available, and I will not invent one.** `www.sec.gov` still refuses the project-only User-Agent (HTTP 403); `data.sec.gov` works.
+- Nothing was built or run (`docs/checkpoints/P2_CP7a_sec_contact_blocked.md`).
+
+**STOP:** awaiting the owner (a project contact email, or permission to proceed with True TTM on `data.sec.gov` only).
