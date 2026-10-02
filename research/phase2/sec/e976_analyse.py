@@ -1,5 +1,5 @@
 """Final yearly coverage tables and residual-bias inputs (D113, owner items 3/11/12/13) from the final canary E976-01
-and the SEC-side residual audit (residual_audit.json). Output: research/phase2/sec/e976_results.json"""
+and the SEC-side residual audit (residual_audit.json). Output: research/phase2/sec/e976_results_<experiment>.json"""
 from __future__ import annotations
 
 import csv
@@ -18,7 +18,7 @@ from qresearch.sec_edgar import SECClient  # noqa: E402
 OUT = Path(__file__).parent
 
 
-def main(exp="E976-01"):
+def main(exp="E976-02"):
     lines = e970_parse.lines(exp)
     c = json.loads("".join(l.split("|", 2)[2] for l in lines if l.startswith("QRC76")))
     est = {r["year"]: r for r in csv.DictReader(open(ROOT / "docs/data/survivorship_gap_X954_by_year.csv"))}
@@ -91,10 +91,10 @@ def main(exp="E976-01"):
                sum(ret[y][g]["stock_months"] * ret[y][g]["mean_month_return_x12"] for y in ret if g in ret[y])]
            for g in ("native", "corrected")}
     res["composition_returns_2010_2021"] = {g: round(v[1] / v[0], 4) for g, v in tot.items() if v[0]}
-    (OUT / "e976_results.json").write_text(json.dumps(res, indent=1, sort_keys=True, default=str) + "\n")
+    (OUT / f"e976_results_{exp}.json").write_text(json.dumps(res, indent=1, sort_keys=True, default=str) + "\n")
     return res
 
 
 if __name__ == "__main__":
-    r = main()
+    r = main(*sys.argv[1:])
     print(json.dumps(r, indent=1, default=str)[:12000])

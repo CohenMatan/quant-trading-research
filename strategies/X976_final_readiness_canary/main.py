@@ -1,5 +1,11 @@
-# X976 v1.0 — FINAL fundamental-data readiness canary (D113). Extends X972 v1.1 (post-remediation PIT canary) with the
-# True TTM layer, the financial/REIT exclusion policy and final usable-coverage tables. Original X972 header:
+# X976 v1.1 — FINAL fundamental-data readiness canary (D113, D113a). Extends X972 v1.1 (post-remediation PIT canary)
+# with the True TTM layer, the financial/REIT exclusion policy and final usable-coverage tables.
+# v1.1 (after E976-01): (a) the PIT store observes EVERY company with fundamentals every day, not only eligible ones,
+# so a company entering the >= $2B universe already has its quarterly history (E976-01 observed eligible names only:
+# TTM was missing for every newly eligible company); (b) observation-only warm-up from the config start (2008-07-01):
+# vendor reports seen before 2010-01-04 are history only — no coverage, returns or eligibility statistics are
+# counted before 2010-01-04; (c) per-security TTM-missingness lines and size/return characterisation of the
+# non-financial names without usable True TTM. Original X972 header:
 # post-remediation PIT canary and coverage/bias re-audit (infrastructure; NO orders, no rankings,
 # no factor returns; D111). Universe = harness universe WITH the opt-in dated SEC correction layer
 # (universe.sec_corrections). 2010-2021.
@@ -20,13 +26,14 @@
 # Outputs: counts, dates, identifiers and ratios only (no vendor values).
 from AlgorithmImports import *
 import json
-from datetime import timedelta
+from datetime import date, timedelta
 from qr_harness import QRAlgorithm, _attr
 from qr_fundamentals import DEFAULT_MAX_AGE_DAYS, PITStore, TTM_BASES, accession_year, financial_format, read_values
 from qr_industry import classify, excluded
 from qr_sec_corrections import MAX_SHARE_AGE_DAYS
 
 USABLE = ("revenue_ttm", "net_income_ttm", "total_assets", "stockholders_equity")
+COUNT_FROM = date(2010, 1, 4)       # development start; earlier days are observation-only warm-up
 
 
 def get(obj, path):
@@ -74,6 +81,9 @@ class RemediationCanary(QRAlgorithm):
         self.q_keys = set()          # vendor reports observed while quarantined (and not on the release list)
         self.q_latest = {}           # sid -> newest vendor report is quarantined
         self.member_px = {}          # sid -> last adjusted price seen this month (members of last month)
+        self.ttm_members = {}        # previous month's non-financial eligible: sid -> 'ttm_usable' | 'ttm_missing'
+        self.ttm_px = {}
+        self.ttm_sec = {}            # sid -> [group, months non-financial eligible, months final-usable, {reason: n}]
 
     def on_data(self, data):
         super().on_data(data)
@@ -96,9 +106,33 @@ class RemediationCanary(QRAlgorithm):
         monthly = (today.year, today.month) != self.month
         self.month = (today.year, today.month)
         by = {}
+        corr_sids = {str(s.id) for s in corr}
         for f in fl:
+            sid = str(f.symbol.id)
             if f.symbol in elig:
-                by[str(f.symbol.id)] = f
+                by[sid] = f
+            if sid in corr_sids or not f.has_fundamental_data:
+                continue
+            # v1.1: observe the vendor's latest report for EVERY company with fundamentals (history for True TTM)
+            try:
+                er = f.earning_reports
+                pe, fd = as_date(er.period_ending_date.three_months), as_date(er.file_date.three_months)
+            except Exception:
+                continue
+            k = (sid, pe, fd)
+            if k in self.seen_q:
+                continue
+            self.seen_q.add(k)
+            try:
+                ay = accession_year(er.accession_number.three_months)
+            except Exception:
+                ay = None
+            q = ay is not None and ay > today.year and (str(pe), str(fd)) not in self.store.releases.get(sid, ())
+            if q:
+                self.q_keys.add(k)
+                self.q_keys_str.add((sid, str(pe), str(fd)))
+            self.q_latest[sid] = q
+            self.store.observe(sid, pe, fd, read_values(f, get), ay, today)
         for sid, f in by.items():
             c["stock_days"] += 1
             fix = f.symbol in corr
@@ -135,22 +169,6 @@ class RemediationCanary(QRAlgorithm):
                                 and fi.filed >= today:
                             c["C2_amendment_early"] += 1
             else:
-                try:
-                    er = f.earning_reports
-                    pe, fd = as_date(er.period_ending_date.three_months), as_date(er.file_date.three_months)
-                    ay = accession_year(er.accession_number.three_months)
-                except Exception:
-                    continue
-                k = (sid, pe, fd)
-                if k not in self.seen_q:
-                    self.seen_q.add(k)
-                    q = ay is not None and ay > today.year and \
-                        (str(pe), str(fd)) not in self.store.releases.get(sid, ())
-                    if q:
-                        self.q_keys.add(k)
-                        self.q_keys_str.add((sid, str(pe), str(fd)))
-                    self.q_latest[sid] = q
-                    self.store.observe(sid, pe, fd, read_values(f, get), ay, today)
                 r = self.store.record(sid, today)
                 if r is not None:
                     if (sid, r.period_end, r.file_date) in self.q_keys:
@@ -160,12 +178,12 @@ class RemediationCanary(QRAlgorithm):
                     h = self.store.holds.get(sid, {}).get(str(r.period_end))
                     if h is not None and str(today) < h:
                         c["C3_hold_violated"] += 1
-        if self.month_members:
+        if self.month_members or self.ttm_members:
             for f in fl:
                 sid = str(f.symbol.id)
-                if sid in self.month_members and float(f.adjusted_price or 0) > 0:
+                if (sid in self.month_members or sid in self.ttm_members) and float(f.adjusted_price or 0) > 0:
                     self.member_px[sid] = float(f.adjusted_price)
-        if monthly:
+        if monthly and today >= COUNT_FROM:
             self._monthly(fl, by, today)
         return out
 
@@ -195,8 +213,17 @@ class RemediationCanary(QRAlgorithm):
             cell = c["ret"].setdefault(f"{grp}|{y}", [0, 0.0])
             cell[0] += 1
             cell[1] += p1 / p0 - 1
+        for sid, grp in self.ttm_members.items():   # same measure for non-financial names with/without True TTM
+            p0, p1 = self.ttm_px.get(sid), px.get(sid, self.member_px.get(sid))
+            if p0 is None or p1 is None:
+                continue
+            cell = c["ret"].setdefault(f"{grp}|{y}", [0, 0.0])
+            cell[0] += 1
+            cell[1] += p1 / p0 - 1
         self.month_members = {sid: ("corrected" if sid in corr else "native") for sid in by}
         self.last_px = {sid: px[sid] for sid in by if sid in px}
+        self.ttm_members = {}
+        self.ttm_px = {}
         self.member_px = {}
         for sid, f in by.items():
             grp = "corrected" if sid in corr else "native"
@@ -248,8 +275,24 @@ class RemediationCanary(QRAlgorithm):
                 r.values.get("stockholders_equity") is not None
             if not excluded(cat):
                 add(cov, f"nonfin_eligible_{grp}")
-                if len(core) == 3 and snap:
+                ok = len(core) == 3 and snap
+                tc = terc.get(sid, "?")
+                add(cov, f"nonfin_eligible_{tc}")
+                ts = self.ttm_sec.setdefault(sid, [grp, 0, 0, {}])
+                ts[1] += 1
+                if ok:
                     add(cov, f"final_usable_{grp}")
+                    add(cov, f"final_usable_{tc}")
+                    ts[2] += 1
+                else:
+                    why = "no balance-sheet snapshot" if len(core) == 3 else \
+                        self.store.ttm_detail(sid, [b for b in ("revenue", "net_income", "operating_cash_flow")
+                                                    if b not in core][0], today)[1]
+                    add(ts[3], why)
+                    add(cov, f"not_usable|{why}")
+                if sid in px:
+                    self.ttm_members[sid] = "ttm_usable" if ok else "ttm_missing"
+                    self.ttm_px[sid] = px[sid]
             if grp == "corrected" and today.day <= 7:
                 try:
                     ex = str(self.securities[f.symbol].primary_exchange)
@@ -274,6 +317,11 @@ class RemediationCanary(QRAlgorithm):
         c["fin_flips_summary"] = {"companies_with_flips": len(c["fin_flips"]),
                                   "flips": sum(c["fin_flips"].values())}
         c["delisted_corrected"] = {sid: str(d) for sid, d in self.delisted.items() if self.qr_sec.has(sid)}
+        for sid, (grp, n, u, why) in sorted(self.ttm_sec.items()):
+            if u < n:
+                self._qr_log("T|%s|%s|%d|%d|%s" % (sid, grp, n, u, ";".join(f"{k}={v}" for k, v in sorted(why.items()))))
+        c["ttm_sec_summary"] = {"securities": len(self.ttm_sec),
+                                "with_missing_months": sum(1 for v in self.ttm_sec.values() if v[2] < v[1])}
         text = json.dumps(c, sort_keys=True, default=str)
         for i in range(0, len(text), 9000):
             self._qr_log(f"QRC76|{i // 9000}|{text[i:i + 9000]}")

@@ -10,7 +10,7 @@ Evidence (all historical, all from SEC filings):
   S  registrant files 10-K/10-Q with a public cover count >= 1,000,000 shares (excludes wholly owned subsidiaries
      that share the parent's prefix); no partnership/LLC/trust/fund name in force; SIC (as assigned at filing time)
      not a fund, blank-check or royalty-trust code.
-  F  where public-float fingerprints exist (E971-02/E974-01/E977-01), they must not contradict: median of
+  F  where public-float fingerprints exist (E971-02/E974-01/E977-01/E978-01), they must not contradict: median of
      float / (cover shares x close) within [0.2, 1.5].
 Stronger evidence overrides weaker: a v2 (ticker-evidenced) link replaces any v1 link it contradicts; v1 links that
 v2 confirms are upgraded; v1 links without v2 evidence keep their v1 tier.
@@ -66,7 +66,7 @@ def ym_add(v, k):
 
 def float_pairs():
     out = {}
-    for exp in ("E971-02", "E974-01", "E977-01"):
+    for exp in ("E971-02", "E974-01", "E977-01", "E978-01"):
         try:
             lines = e970_parse.lines(exp)
         except Exception:
