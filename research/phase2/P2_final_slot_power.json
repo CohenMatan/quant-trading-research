@@ -1,0 +1,342 @@
+{
+ "window": [
+  "2010-03-01",
+  "2021-12-31"
+ ],
+ "years": 11.835728952772074,
+ "n_boot": 2000,
+ "mean_block": 63,
+ "seed": 20261002,
+ "inputs": {
+  "SPY": "E900-07",
+  "EW": "E016-02",
+  "R1": "E016-03",
+  "R2": "E016-04",
+  "R3": "E016-05",
+  "R4": "E016-06",
+  "R5": "E016-07"
+ },
+ "observed": {
+  "books": {
+   "SPY": {
+    "sharpe": 0.9199975927419713,
+    "cagr": 0.14881009011690538,
+    "max_dd": -0.3305545466713222
+   },
+   "EW": {
+    "sharpe": 0.8492553634211156,
+    "cagr": 0.14418020318861235,
+    "max_dd": -0.3597575690658794
+   },
+   "R1": {
+    "sharpe": 0.84586517619811,
+    "cagr": 0.1537650877078438,
+    "max_dd": -0.33783283121733276
+   },
+   "R2": {
+    "sharpe": 0.6163049716096469,
+    "cagr": 0.10585430716731126,
+    "max_dd": -0.3801487048971196
+   },
+   "R3": {
+    "sharpe": 0.6719340451077239,
+    "cagr": 0.133378460499312,
+    "max_dd": -0.40376013891970164
+   },
+   "R4": {
+    "sharpe": 0.7501826894929565,
+    "cagr": 0.13386328019332372,
+    "max_dd": -0.40592943690794747
+   },
+   "R5": {
+    "sharpe": 0.9815206185646048,
+    "cagr": 0.18463874261781377,
+    "max_dd": -0.36351151582138386
+   }
+  },
+  "tracking": {
+   "R1": {
+    "te_vs_spy": 0.0987410099665596,
+    "te_vs_ew": 0.08405124267610634,
+    "corr_spy": 0.8557166986704122
+   },
+   "R2": {
+    "te_vs_spy": 0.08593416855193983,
+    "te_vs_ew": 0.06636228916125639,
+    "corr_spy": 0.8975659016130998
+   },
+   "R3": {
+    "te_vs_spy": 0.11002257577460638,
+    "te_vs_ew": 0.08921994994916864,
+    "corr_spy": 0.8825121710959677
+   },
+   "R4": {
+    "te_vs_spy": 0.08104055925710121,
+    "te_vs_ew": 0.07175107041797031,
+    "corr_spy": 0.9080867206301604
+   },
+   "R5": {
+    "te_vs_spy": 0.08225703127984484,
+    "te_vs_ew": 0.07034727812133656,
+    "corr_spy": 0.9037908536616819
+   }
+  },
+  "ew_te_vs_spy": 0.05160599757171667,
+  "random_cagr_sd": 0.029167953291311267,
+  "random_sharpe_sd": 0.14498132696721558,
+  "ew_minus_spy_cagr": -0.0046298869282930255
+ },
+ "results": {
+  "random-like (tracking as a random 20-stock book)": {
+   "0.00": {
+    "G1": 0.002,
+    "G2": 0.479,
+    "G3": 0.055,
+    "G1_5": 0.361,
+    "current_G1_G3": 0.002,
+    "amended_G1_G3": 0.002,
+    "cagr_gt_spy_only": 0.361,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.01": {
+    "G1": 0.004,
+    "G2": 0.654,
+    "G3": 0.1215,
+    "G1_5": 0.539,
+    "current_G1_G3": 0.004,
+    "amended_G1_G3": 0.004,
+    "cagr_gt_spy_only": 0.539,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.02": {
+    "G1": 0.0145,
+    "G2": 0.7755,
+    "G3": 0.2335,
+    "G1_5": 0.7005,
+    "current_G1_G3": 0.0145,
+    "amended_G1_G3": 0.0145,
+    "cagr_gt_spy_only": 0.7005,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.03": {
+    "G1": 0.0395,
+    "G2": 0.866,
+    "G3": 0.381,
+    "G1_5": 0.8225,
+    "current_G1_G3": 0.0385,
+    "amended_G1_G3": 0.0385,
+    "cagr_gt_spy_only": 0.8225,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.04": {
+    "G1": 0.0945,
+    "G2": 0.9265,
+    "G3": 0.5425,
+    "G1_5": 0.9065,
+    "current_G1_G3": 0.0935,
+    "amended_G1_G3": 0.0935,
+    "cagr_gt_spy_only": 0.9065,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.05": {
+    "G1": 0.1975,
+    "G2": 0.964,
+    "G3": 0.693,
+    "G1_5": 0.9565,
+    "current_G1_G3": 0.1945,
+    "amended_G1_G3": 0.1945,
+    "cagr_gt_spy_only": 0.9565,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.06": {
+    "G1": 0.3625,
+    "G2": 0.9805,
+    "G3": 0.8065,
+    "G1_5": 0.982,
+    "current_G1_G3": 0.3595,
+    "amended_G1_G3": 0.3595,
+    "cagr_gt_spy_only": 0.982,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.08": {
+    "G1": 0.676,
+    "G2": 0.996,
+    "G3": 0.9325,
+    "G1_5": 0.996,
+    "current_G1_G3": 0.669,
+    "amended_G1_G3": 0.669,
+    "cagr_gt_spy_only": 0.996,
+    "current_pass_but_cagr_below_spy": 0.0
+   }
+  },
+  "concentrated tilt (1.4x the random book's tracking)": {
+   "0.00": {
+    "G1": 0.004,
+    "G2": 0.343,
+    "G3": 0.0485,
+    "G1_5": 0.3405,
+    "current_G1_G3": 0.004,
+    "amended_G1_G3": 0.004,
+    "cagr_gt_spy_only": 0.3405,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.01": {
+    "G1": 0.007,
+    "G2": 0.454,
+    "G3": 0.087,
+    "G1_5": 0.4855,
+    "current_G1_G3": 0.007,
+    "amended_G1_G3": 0.007,
+    "cagr_gt_spy_only": 0.4855,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.02": {
+    "G1": 0.016,
+    "G2": 0.592,
+    "G3": 0.144,
+    "G1_5": 0.6255,
+    "current_G1_G3": 0.013,
+    "amended_G1_G3": 0.013,
+    "cagr_gt_spy_only": 0.6255,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.03": {
+    "G1": 0.033,
+    "G2": 0.706,
+    "G3": 0.224,
+    "G1_5": 0.737,
+    "current_G1_G3": 0.0325,
+    "amended_G1_G3": 0.0325,
+    "cagr_gt_spy_only": 0.737,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.04": {
+    "G1": 0.0675,
+    "G2": 0.789,
+    "G3": 0.322,
+    "G1_5": 0.8345,
+    "current_G1_G3": 0.064,
+    "amended_G1_G3": 0.064,
+    "cagr_gt_spy_only": 0.8345,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.05": {
+    "G1": 0.1095,
+    "G2": 0.8575,
+    "G3": 0.431,
+    "G1_5": 0.892,
+    "current_G1_G3": 0.1055,
+    "amended_G1_G3": 0.1055,
+    "cagr_gt_spy_only": 0.892,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.06": {
+    "G1": 0.183,
+    "G2": 0.905,
+    "G3": 0.5385,
+    "G1_5": 0.936,
+    "current_G1_G3": 0.1735,
+    "amended_G1_G3": 0.1735,
+    "cagr_gt_spy_only": 0.936,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.08": {
+    "G1": 0.3905,
+    "G2": 0.9655,
+    "G3": 0.7305,
+    "G1_5": 0.985,
+    "current_G1_G3": 0.3805,
+    "amended_G1_G3": 0.3805,
+    "cagr_gt_spy_only": 0.985,
+    "current_pass_but_cagr_below_spy": 0.0
+   }
+  },
+  "defensive (0.75x the universe's market moves, random-book tracking)": {
+   "0.00": {
+    "G1": 0.004,
+    "G2": 0.3575,
+    "G3": 0.0035,
+    "G1_5": 0.0475,
+    "current_G1_G3": 0.0015,
+    "amended_G1_G3": 0.0015,
+    "cagr_gt_spy_only": 0.0475,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.01": {
+    "G1": 0.0105,
+    "G2": 0.5305,
+    "G3": 0.0075,
+    "G1_5": 0.103,
+    "current_G1_G3": 0.0045,
+    "amended_G1_G3": 0.0045,
+    "cagr_gt_spy_only": 0.103,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.02": {
+    "G1": 0.0285,
+    "G2": 0.701,
+    "G3": 0.023,
+    "G1_5": 0.1995,
+    "current_G1_G3": 0.0125,
+    "amended_G1_G3": 0.0125,
+    "cagr_gt_spy_only": 0.1995,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.03": {
+    "G1": 0.0785,
+    "G2": 0.811,
+    "G3": 0.05,
+    "G1_5": 0.3315,
+    "current_G1_G3": 0.0325,
+    "amended_G1_G3": 0.032,
+    "cagr_gt_spy_only": 0.3315,
+    "current_pass_but_cagr_below_spy": 0.0005
+   },
+   "0.04": {
+    "G1": 0.165,
+    "G2": 0.8935,
+    "G3": 0.096,
+    "G1_5": 0.522,
+    "current_G1_G3": 0.0725,
+    "amended_G1_G3": 0.0725,
+    "cagr_gt_spy_only": 0.522,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.05": {
+    "G1": 0.3155,
+    "G2": 0.947,
+    "G3": 0.1725,
+    "G1_5": 0.708,
+    "current_G1_G3": 0.138,
+    "amended_G1_G3": 0.138,
+    "cagr_gt_spy_only": 0.708,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.06": {
+    "G1": 0.496,
+    "G2": 0.969,
+    "G3": 0.291,
+    "G1_5": 0.8345,
+    "current_G1_G3": 0.245,
+    "amended_G1_G3": 0.245,
+    "cagr_gt_spy_only": 0.8345,
+    "current_pass_but_cagr_below_spy": 0.0
+   },
+   "0.08": {
+    "G1": 0.768,
+    "G2": 0.9955,
+    "G3": 0.583,
+    "G1_5": 0.962,
+    "current_G1_G3": 0.528,
+    "amended_G1_G3": 0.528,
+    "cagr_gt_spy_only": 0.962,
+    "current_pass_but_cagr_below_spy": 0.0
+   }
+  }
+ },
+ "notes": [
+  "alpha = TRUE annual excess return over the same-universe equal-weight benchmark, added to a 20-stock book with the tracking noise of the observed random books; it is NOT an estimate for any factor.",
+  "G4 is not modelled; pass probabilities are upper bounds. G2 uses the median of four control seeds.",
+  "The bootstrap keeps the observed average gap between the universe (EW) and SPY in the window."
+ ]
+}
