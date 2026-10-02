@@ -185,3 +185,19 @@ Annual detail (per cent per year):
 
 - **Earlier runs are unchanged.** The layer applies only to configs that opt in.
 - **Details:** `docs/checkpoints/P2_CP6_sec_verification_survivorship_remediation.md`.
+
+## Update 2026-10-02 (D113): direct SEC-side measurement; the gap is about 1%
+
+- **Repair extended to 495 securities** (table v3.2), using the ticker each company filed under on each SEC filing (`www.sec.gov` XBRL RSS archives). It remains opt-in (`universe.sec_corrections`).
+- **Direct measurement replaces the estimate.**
+  - Every SEC registrant with an XBRL public float ≥ $2B (2010–2021) was classified: covered by QuantConnect, repaired, or missing.
+  - Unresolved: **4–11 registrants a year (about 0.5–1.2% of large companies)**, mostly multi-class companies, issuers not listed on NYSE/Nasdaq, and ADS listings. They are not a distressed group.
+  - Pre-XBRL blind spot: about six US companies ≥ $2B acquired in 2010 before their first XBRL filing.
+  - Source: `research/phase2/sec/residual_audit.py`.
+- **Why the estimates in §2/§2a were too high** (`research/phase2/sec/gap_reconciliation.py`). Of 2,928 liquid securities without fundamentals:
+  - 1,839 carry tickers no XBRL filer used (ETFs, funds, ADRs of non-filers);
+  - 292 are foreign private issuers;
+  - 495 are now repaired;
+  - only 302 carry a US filer's ticker, mostly companies already covered under another security, or small.
+- **New, separate limitation: data availability.** For fundamental research, names without usable True TTM data are a further, non-random gap: companies that later failed have usable data 43% of the time. An equal-weight universe of usable names is optimistic by about +1 pp a year.
+- **What every report must now state:** see P2-CP7 items 12–13 and 18 (`docs/checkpoints/P2_CP7_fundamental_data_final_readiness.md`). The §6 disclosure is superseded for runs with the SEC layer on.
