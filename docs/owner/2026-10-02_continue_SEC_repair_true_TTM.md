@@ -16,3 +16,5 @@ Recorded summary (the full message is in the session transcript):
   - TTM accounting and timing rules; inherited restatement protections.
   - Financial/REIT exclusion policy; residual-missingness analysis; no shortening of the development window yet.
   - No H016, no factor returns, no slot used, Holdout locked.
+
+**Follow-up (same day, after P2-CP7a):** the owner explicitly authorised their own email address as the SEC contact. It is used only at run time in the SEC User-Agent (local file outside the repository / environment variable). It is not recorded in any repository file.

@@ -14,6 +14,8 @@
 #   * Amendments (same period, later file date) replace the earlier record only from their own visibility date.
 #   * Freshness: a record is usable only while (decision date - period end) <= max_age_days (default 200).
 #   * Missing values (None / NaN / 0) are returned as None, never filled.
+#   * True TTM (D113): '<base>_ttm4q' = sum of the four most recent visible consecutive quarters, gated by a
+#     fiscal-year reconciliation; balance-sheet fields are snapshots of the latest visible report.
 #   * SEC restatement guard (D111, optional): reports with a value first filed after the vendor date are blocked.
 #   * SEC timing holds (D111, optional): for the few vendor reports whose availability would precede every public
 #     SEC source (verified against EDGAR), the report is visible only from the day after that SEC date.
@@ -42,7 +44,17 @@ WHITELIST = {
     "operating_cash_flow_ttm": (CF_ + "operating_cash_flow", "twelve_months"),
     "operating_cash_flow_q": (CF_ + "operating_cash_flow", "three_months"),
     "free_cash_flow_ttm": (CF_ + "free_cash_flow", "twelve_months"),
+    "free_cash_flow_q": (CF_ + "free_cash_flow", "three_months"),
 }
+# D111: the vendor's '*_ttm' fields on an INTERIM report hold the latest completed FISCAL YEAR's total (as filed in
+# the 10-K), not a rolling twelve months. D113: true rolling values are built by PITStore.ttm() from the four most
+# recent visible quarterly records ('<base>_ttm4q' names below); the vendor '*_ttm' fields remain readable only as
+# fiscal-year values (used by the TTM consistency gate).
+TTM_BASES = ("revenue", "gross_profit", "operating_income", "net_income", "operating_cash_flow", "free_cash_flow")
+TTM4Q = {b + "_ttm4q": b for b in TTM_BASES}
+SNAPSHOT_FIELDS = ("total_assets", "stockholders_equity", "total_debt")   # latest snapshot, never summed
+TTM_GAP_DAYS = (80, 100)          # consecutive fiscal quarters (13/14-week quarters included)
+TTM_FY_TOLERANCE = 0.01           # Q1+Q2+Q3+Q4 must equal the fiscal-year total within 1% (Q4 validity gate)
 MARKET_CAP = "market_cap"            # point-in-time (audit D107); read from the object itself, not from a report
 BLACKLIST = ("shares_outstanding", "share_class_level_shares_outstanding", "ordinary_shares_number", "share_issued",
              "basic_average_shares", "diluted_average_shares", "basic_eps", "diluted_eps", "book_value_per_share",
@@ -55,7 +67,7 @@ class FundamentalFieldError(KeyError):
 
 
 def check_field(name):
-    if name in WHITELIST or name == MARKET_CAP:
+    if name in WHITELIST or name == MARKET_CAP or name in TTM4Q:
         return
     why = "BLACKLISTED (unsafe, D107)" if any(b in name for b in BLACKLIST) else "not on the approved whitelist"
     raise FundamentalFieldError(f"fundamental field {name!r} is {why}")
@@ -121,6 +133,7 @@ class PITStore:
         self.current = {}      # key -> Record exposed (visible) most recently
         self.seen = set()      # (key, period_end, file_date) already observed (each report counted once)
         self.pending = {}      # key -> list of Records seen but not yet visible
+        self.hist = {}         # key -> {period_end: Record} visible versions (latest visible filing per period)
         self.stats = {"observed_new": 0, "estimated": 0, "quarantined": 0, "timing_unknown": 0,
                       "amendments": 0, "delayed_until_available": 0}
 
@@ -165,6 +178,11 @@ class PITStore:
         ready = [r for r in pend if r.available <= today]
         if not ready:
             return
+        h = self.hist.setdefault(key, {})
+        for r in ready:                    # amendments replace a period only from their own availability date
+            old = h.get(r.period_end)
+            if old is None or r.file_date >= old.file_date:
+                h[r.period_end] = r
         best = max(ready, key=lambda r: (r.period_end, r.file_date))
         cur = self.current.get(key)
         if cur is None or (best.period_end, best.file_date) >= (cur.period_end, cur.file_date):
@@ -181,8 +199,64 @@ class PITStore:
 
     def get(self, key, name, today):
         check_field(name)
+        if name in TTM4Q:
+            return self.ttm(key, TTM4Q[name], today)
         r = self.record(key, today)
         return None if r is None else r.values.get(name)
+
+    def _chain(self, recs, i, n):
+        """The n consecutive quarterly records ending at index i (oldest first), or None."""
+        if i - n + 1 < 0:
+            return None
+        seg = recs[i - n + 1:i + 1]
+        for a, b in zip(seg, seg[1:]):
+            gap = (b.period_end - a.period_end).days
+            if not (TTM_GAP_DAYS[0] <= gap <= TTM_GAP_DAYS[1]):
+                return None
+        return seg
+
+    def ttm_detail(self, key, base, today):
+        """True rolling twelve-month value of `base` on `today` with its components, or (None, reason).
+        Rules (D113): the four most recent VISIBLE quarterly records (quarantined/blocked reports never enter;
+        amendments only from their availability), consecutive, each with a '<base>_q' value, newest within the
+        freshness limit; and the fiscal-year-end quarter inside the window must reconcile: its fiscal year's four
+        quarterly values sum to the fiscal-year total reported on that same record within 1% (this validates a
+        derived Q4). No interpolation, no backward filling."""
+        self._promote(key, today)
+        recs = sorted(self.hist.get(key, {}).values(), key=lambda r: r.period_end)
+        recs = [r for r in recs if r.available <= today]
+        if len(recs) < 4:
+            return None, "fewer than four visible quarters"
+        if (today - recs[-1].period_end).days > self.max_age:
+            return None, "stale"
+        win = self._chain(recs, len(recs) - 1, 4)
+        if win is None:
+            return None, "quarters not consecutive"
+        qs = [r.values.get(base + "_q") for r in win]
+        if any(q is None for q in qs):
+            return None, "missing quarterly value"
+        idx = len(recs) - 1
+        for k in range(4):                  # find the fiscal-year-end quarter inside the window and reconcile it
+            j = idx - k
+            fy = recs[j].values.get(base + "_ttm")
+            chain = self._chain(recs, j, 4)
+            if fy is None or chain is None or j < 1:
+                continue
+            prev_fy = recs[j - 1].values.get(base + "_ttm")
+            if prev_fy is not None and abs(prev_fy - fy) <= 1e-9 * max(abs(fy), 1.0):
+                continue                   # not a fiscal-year-end report: its fiscal-year value did not change
+            vals = [r.values.get(base + "_q") for r in chain]
+            if any(v is None for v in vals):
+                continue
+            tot = sum(vals)
+            if abs(tot - fy) <= TTM_FY_TOLERANCE * abs(fy):
+                return sum(qs), {"quarters": [str(r.period_end) for r in win],
+                                 "filed": [str(r.file_date) for r in win], "fy_check_period": str(recs[j].period_end)}
+        return None, "no fiscal-year reconciliation inside the window"
+
+    def ttm(self, key, base, today):
+        v, _ = self.ttm_detail(key, base, today)
+        return v
 
 
 def read_values(f, getter):
