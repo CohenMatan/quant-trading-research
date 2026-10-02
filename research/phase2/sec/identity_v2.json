@@ -99,10 +99,20 @@
      "2018-07-27",
      "2018-10-25",
      "2019-02-11",
-     "2019-04-26"
+     "2019-04-26",
+     "2019-07-26",
+     "2019-10-24",
+     "2020-02-10",
+     "2020-04-24",
+     "2020-07-24",
+     "2020-10-22",
+     "2021-02-08",
+     "2021-04-23",
+     "2021-07-30",
+     "2021-10-29"
     ]
    },
-   "last_filed": "2019-10-24",
+   "last_filed": "2021-10-29",
    "names": [
     "CORE LABORATORIES N V"
    ],
@@ -130,7 +140,7 @@
      "2015-08-12"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-12",
    "names": [
     "IMPAC MORTGAGE HOLDINGS INC"
    ],
@@ -161,7 +171,7 @@
      "2013-04-29"
     ]
    },
-   "last_filed": "2019-08-02",
+   "last_filed": "2021-10-29",
    "names": [
     "TUCSON ELECTRIC POWER CO"
    ],
@@ -369,7 +379,7 @@
      "2018-07-26"
     ]
    },
-   "last_filed": "2019-07-25",
+   "last_filed": "2020-05-15",
    "names": [
     "CARBO CERAMICS INC"
    ],
@@ -577,7 +587,7 @@
      "2017-08-04"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-08-07",
    "names": [
     "ENDOLOGIX INC /DE/"
    ],
@@ -604,7 +614,7 @@
      "2014-04-04"
     ]
    },
-   "last_filed": "2019-08-30",
+   "last_filed": "2021-12-15",
    "names": [
     "SEACHANGE INTERNATIONAL INC"
    ],
@@ -666,7 +676,7 @@
      "2018-05-10"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-08-07",
    "names": [
     "ULTRA PETROLEUM CORP"
    ],
@@ -932,6 +942,29 @@
    ],
    "status": "linked"
   },
+  "1036848": {
+   "all_names": [
+    "AEROCENTURY CORP"
+   ],
+   "first_filed": "2011-08-12",
+   "hits": {
+    "ACY R7GY04NLZWIT": [
+     "2020-11-12",
+     "2021-04-15",
+     "2021-05-21",
+     "2021-08-23",
+     "2021-11-19"
+    ]
+   },
+   "last_filed": "2021-11-19",
+   "names": [
+    "AEROCENTURY CORP"
+   ],
+   "sic_at_filing": [
+    7359
+   ],
+   "status": "linked"
+  },
   "1037016": {
    "all_names": [
     "NII HOLDINGS INC"
@@ -963,7 +996,7 @@
      "2019-03-18"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2019-11-05",
    "names": [
     "NII HOLDINGS INC"
    ],
@@ -1156,7 +1189,7 @@
      "2015-05-08"
     ]
    },
-   "last_filed": "2019-03-26",
+   "last_filed": "2019-11-07",
    "names": [
     "RAIT Financial Trust"
    ],
@@ -1252,10 +1285,18 @@
      "2018-08-07",
      "2018-11-07",
      "2019-02-28",
-     "2019-05-08"
+     "2019-05-08",
+     "2019-08-07",
+     "2019-11-06",
+     "2020-02-28",
+     "2020-05-29",
+     "2020-08-06",
+     "2020-11-04",
+     "2021-02-26",
+     "2021-05-05"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-05",
    "names": [
     "BROOKLINE BANCORP INC"
    ],
@@ -1266,7 +1307,8 @@
   },
   "105319": {
    "all_names": [
-    "WEIGHT WATCHERS INTERNATIONAL INC"
+    "WEIGHT WATCHERS INTERNATIONAL INC",
+    "WW INTERNATIONAL, INC."
    ],
    "first_filed": "2010-08-12",
    "float": {
@@ -1314,12 +1356,24 @@
      "2018-08-07",
      "2018-11-02",
      "2019-02-26",
-     "2019-05-03"
+     "2019-05-03",
+     "2019-08-07",
+     "2019-11-06",
+     "2020-02-25",
+     "2020-04-28",
+     "2020-08-04",
+     "2020-10-29",
+     "2021-02-25",
+     "2021-03-30",
+     "2021-05-05",
+     "2021-08-10",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-04",
    "names": [
-    "WEIGHT WATCHERS INTERNATIONAL INC"
+    "WEIGHT WATCHERS INTERNATIONAL INC",
+    "WW INTERNATIONAL, INC."
    ],
    "sic_at_filing": [
     7200
@@ -1328,6 +1382,7 @@
   },
   "1054102": {
    "all_names": [
+    "INTERPACE BIOSCIENCES, INC.",
     "Interpace Diagnostics Group, Inc.",
     "PDI INC"
    ],
@@ -1345,7 +1400,7 @@
      "2017-03-31"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-11-10",
    "names": [
     "Interpace Diagnostics Group, Inc."
    ],
@@ -1439,7 +1494,7 @@
      "2018-11-01"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2020-05-08",
    "names": [
     "Internap Corp"
    ],
@@ -1499,7 +1554,7 @@
      "2014-11-10"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-03",
    "names": [
     "CUMULUS MEDIA INC"
    ],
@@ -1618,7 +1673,8 @@
   },
   "1061027": {
    "all_names": [
-    "SUNESIS PHARMACEUTICALS INC"
+    "SUNESIS PHARMACEUTICALS INC",
+    "Viracta Therapeutics, Inc."
    ],
    "first_filed": "2011-08-11",
    "float": {
@@ -1642,7 +1698,7 @@
      "2014-11-10"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-10",
    "names": [
     "SUNESIS PHARMACEUTICALS INC"
    ],
@@ -1712,10 +1768,20 @@
      "2018-08-03",
      "2018-11-01",
      "2019-02-27",
-     "2019-05-08"
+     "2019-05-08",
+     "2019-08-08",
+     "2019-11-05",
+     "2020-02-21",
+     "2020-05-06",
+     "2020-08-07",
+     "2020-11-09",
+     "2021-02-23",
+     "2021-05-05",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-05",
    "names": [
     "PEABODY ENERGY CORP"
    ],
@@ -1819,7 +1885,7 @@
      "2014-08-13"
     ]
    },
-   "last_filed": "2019-08-12",
+   "last_filed": "2021-11-12",
    "names": [
     "USEC INC"
    ],
@@ -1909,7 +1975,7 @@
      "2015-03-16"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-09",
    "names": [
     "FEDERATED NATIONAL HOLDING CO"
    ],
@@ -1946,7 +2012,7 @@
      "2013-03-11"
     ]
    },
-   "last_filed": "2019-09-06",
+   "last_filed": "2021-12-08",
    "names": [
     "WILEY JOHN & SONS, INC."
    ],
@@ -1979,7 +2045,7 @@
      "2015-11-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-15",
    "names": [
     "NORTHWEST BIOTHERAPEUTICS INC"
    ],
@@ -2041,7 +2107,7 @@
      "2019-05-10"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-10",
    "names": [
     "POLARITYTE, INC."
    ],
@@ -2124,10 +2190,20 @@
      "2018-08-09",
      "2018-11-02",
      "2019-02-21",
-     "2019-05-03"
+     "2019-05-03",
+     "2019-08-06",
+     "2019-11-06",
+     "2020-02-28",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-04",
    "names": [
     "UMPQUA HOLDINGS CORP"
    ],
@@ -2154,10 +2230,16 @@
      "2018-08-03",
      "2018-11-02",
      "2019-02-26",
-     "2019-05-03"
+     "2019-05-03",
+     "2019-08-06",
+     "2019-11-07",
+     "2020-02-27",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-06"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-04",
    "names": [
     "WISCONSIN PUBLIC SERVICE CORP"
    ],
@@ -2213,10 +2295,14 @@
      "2018-11-08",
      "2019-03-18",
      "2019-05-10",
-     "2019-08-09"
+     "2019-08-09",
+     "2019-11-08",
+     "2020-03-16",
+     "2020-05-11",
+     "2020-08-10"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-08",
    "names": [
     "VirnetX Holding Corp"
    ],
@@ -2310,9 +2396,31 @@
    ],
    "status": "linked"
   },
+  "1083301": {
+   "all_names": [
+    "IKONICS CORP"
+   ],
+   "first_filed": "2011-08-12",
+   "hits": {
+    "CMLH RSZUTPJG7NTX": [
+     "2021-05-13",
+     "2021-08-12"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "IKONICS CORP"
+   ],
+   "sic_at_filing": [
+    3861,
+    7374
+   ],
+   "status": "linked"
+  },
   "1084765": {
    "all_names": [
-    "RESOURCES CONNECTION INC"
+    "RESOURCES CONNECTION INC",
+    "RESOURCES CONNECTION, INC."
    ],
    "first_filed": "2010-10-07",
    "float": {
@@ -2352,7 +2460,7 @@
      "2017-01-05"
     ]
    },
-   "last_filed": "2019-10-03",
+   "last_filed": "2021-10-07",
    "names": [
     "RESOURCES CONNECTION INC"
    ],
@@ -2516,10 +2624,20 @@
      "2018-07-31",
      "2018-10-26",
      "2019-01-31",
-     "2019-04-30"
+     "2019-04-30",
+     "2019-07-26",
+     "2019-10-25",
+     "2020-01-31",
+     "2020-05-01",
+     "2020-07-31",
+     "2020-10-30",
+     "2021-01-29",
+     "2021-04-30",
+     "2021-07-30",
+     "2021-10-29"
     ]
    },
-   "last_filed": "2019-10-25",
+   "last_filed": "2021-10-29",
    "names": [
     "CHARTER COMMUNICATIONS, INC. /MO/"
    ],
@@ -2613,15 +2731,39 @@
      "2018-05-03",
      "2018-08-02",
      "2018-11-02",
-     "2019-02-15"
+     "2019-02-15",
+     "2019-05-07",
+     "2019-07-30",
+     "2019-11-07"
     ]
    },
-   "last_filed": "2019-07-30",
+   "last_filed": "2019-11-07",
    "names": [
     "RUDOLPH TECHNOLOGIES INC"
    ],
    "sic_at_filing": [
     3823
+   ],
+   "status": "linked"
+  },
+  "1095981": {
+   "all_names": [
+    "CYTORI THERAPEUTICS, INC.",
+    "PLUS THERAPEUTICS, INC."
+   ],
+   "first_filed": "2011-08-09",
+   "hits": {
+    "CYTX TEMHQPA3FAZP": [
+     "2019-08-15",
+     "2019-11-14"
+    ]
+   },
+   "last_filed": "2021-10-21",
+   "names": [
+    "PLUS THERAPEUTICS, INC."
+   ],
+   "sic_at_filing": [
+    3841
    ],
    "status": "linked"
   },
@@ -2660,7 +2802,7 @@
      "2019-06-10"
     ]
    },
-   "last_filed": "2019-09-09",
+   "last_filed": "2021-09-10",
    "names": [
     "Advaxis, Inc."
    ],
@@ -3099,6 +3241,36 @@
    ],
    "status": "linked"
   },
+  "1108967": {
+   "all_names": [
+    "CUI Global, Inc.",
+    "Orbital Energy Group, Inc."
+   ],
+   "first_filed": "2011-08-09",
+   "hits": {
+    "CUI V46X15P1NL9H": [
+     "2020-11-16",
+     "2021-03-30",
+     "2021-05-17",
+     "2021-08-16"
+    ],
+    "OEG XEEQU7AFNHPH": [
+     "2020-11-16",
+     "2021-03-30",
+     "2021-05-17",
+     "2021-08-16"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "Orbital Energy Group, Inc."
+   ],
+   "sic_at_filing": [
+    5065,
+    7310
+   ],
+   "status": "ambiguous: several securities at the same time"
+  },
   "1109189": {
    "all_names": [
     "BASIC ENERGY SERVICES INC",
@@ -3141,10 +3313,11 @@
      "2017-07-31",
      "2017-11-06",
      "2018-02-28",
-     "2018-05-07"
+     "2018-05-07",
+     "2018-08-02"
     ]
    },
-   "last_filed": "2019-08-02",
+   "last_filed": "2021-05-17",
    "names": [
     "BASIC ENERGY SERVICES INC"
    ],
@@ -3225,10 +3398,20 @@
      "2018-08-03",
      "2018-11-02",
      "2019-02-28",
-     "2019-05-03"
+     "2019-05-03",
+     "2019-08-02",
+     "2019-11-01",
+     "2020-02-25",
+     "2020-05-08",
+     "2020-08-07",
+     "2020-11-06",
+     "2021-02-26",
+     "2021-05-07",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-02",
+   "last_filed": "2021-11-05",
    "names": [
     "PINNACLE FINANCIAL PARTNERS INC"
    ],
@@ -3355,7 +3538,7 @@
      "2017-05-10"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-07-29",
    "names": [
     "HORNBECK OFFSHORE SERVICES INC /LA"
    ],
@@ -3392,6 +3575,59 @@
    ],
    "status": "linked"
   },
+  "1133869": {
+   "all_names": [
+    "CAPRICOR THERAPEUTICS, INC.",
+    "Nile Therapeutics, Inc."
+   ],
+   "first_filed": "2011-08-15",
+   "hits": {
+    "CAPR VYPRXHXF1KDH": [
+     "2020-03-27",
+     "2020-05-15",
+     "2020-08-10",
+     "2020-11-13",
+     "2021-03-15",
+     "2021-05-14"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "CAPRICOR THERAPEUTICS, INC."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
+  "1136174": {
+   "all_names": [
+    "CATASYS, INC.",
+    "Ontrak, Inc."
+   ],
+   "first_filed": "2011-08-12",
+   "hits": {
+    "CATS WK0T6BVWNAED": [
+     "2020-03-16",
+     "2020-05-07",
+     "2020-08-05",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-05"
+    ]
+   },
+   "last_filed": "2021-11-05",
+   "names": [
+    "CATASYS, INC.",
+    "Ontrak, Inc."
+   ],
+   "sic_at_filing": [
+    8090
+   ],
+   "status": "linked"
+  },
   "1137091": {
    "all_names": [
     "POWER SOLUTIONS INTERNATIONAL, INC."
@@ -3419,7 +3655,7 @@
      "2015-11-09"
     ]
    },
-   "last_filed": "2019-05-16",
+   "last_filed": "2021-11-12",
    "names": [
     "POWER SOLUTIONS INTERNATIONAL, INC."
    ],
@@ -3588,10 +3824,15 @@
      "2018-11-09",
      "2019-03-28",
      "2019-05-09",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-12",
+     "2020-05-14",
+     "2020-06-23",
+     "2020-11-12",
+     "2021-03-30"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-12",
    "names": [
     "CHINA AUTOMOTIVE SYSTEMS INC"
    ],
@@ -3622,10 +3863,12 @@
      "2018-05-03",
      "2018-08-02",
      "2018-11-06",
-     "2019-02-28"
+     "2019-02-28",
+     "2019-05-02",
+     "2019-08-01"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2019-11-04",
    "names": [
     "ENCANA CORP"
    ],
@@ -3730,7 +3973,7 @@
      "2011-10-28"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-03",
    "names": [
     "FIVE STAR QUALITY CARE INC"
    ],
@@ -3788,7 +4031,7 @@
      "2017-11-29"
     ]
    },
-   "last_filed": "2019-08-28",
+   "last_filed": "2020-12-10",
    "names": [
     "J C PENNEY CO INC"
    ],
@@ -3903,10 +4146,14 @@
     "PHAS WYSIKTF1YP2D": [
      "2019-03-26",
      "2019-05-09",
-     "2019-08-14"
+     "2019-08-14",
+     "2019-11-14",
+     "2020-03-30",
+     "2020-05-12",
+     "2020-08-11"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-10",
    "names": [
     "PhaseBio Pharmaceuticals Inc"
    ],
@@ -3933,7 +4180,7 @@
      "2017-05-15"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-10",
    "names": [
     "HTG MOLECULAR DIAGNOSTICS, INC"
    ],
@@ -4063,7 +4310,7 @@
      "2014-11-05"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-09",
    "names": [
     "NEWCASTLE INVESTMENT CORP"
    ],
@@ -4184,7 +4431,7 @@
      "2019-03-18"
     ]
    },
-   "last_filed": "2019-09-11",
+   "last_filed": "2021-12-30",
    "names": [
     "GOLDEN GRAIN ENERGY"
    ],
@@ -4231,6 +4478,7 @@
   },
   "1213037": {
    "all_names": [
+    "Cardiff Oncology, Inc.",
     "TrovaGene Inc.",
     "Trovagene, Inc."
    ],
@@ -4247,11 +4495,17 @@
      "2015-03-12",
      "2015-05-05",
      "2015-08-10",
-     "2015-11-09"
+     "2015-11-09",
+     "2020-08-11",
+     "2020-11-05",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
+    "Cardiff Oncology, Inc.",
     "Trovagene, Inc."
    ],
    "sic_at_filing": [
@@ -4261,6 +4515,8 @@
   },
   "12239": {
    "all_names": [
+    "AIkido Pharma Inc.",
+    "Aikido Pharma Inc.",
     "SPHERIX INC"
    ],
    "first_filed": "2011-08-15",
@@ -4277,14 +4533,36 @@
      "2013-11-14"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-10",
    "names": [
     "SPHERIX INC"
    ],
    "sic_at_filing": [
     6794,
     8700,
+    8731,
     8734
+   ],
+   "status": "linked"
+  },
+  "1228627": {
+   "all_names": [
+    "Ocuphire Pharma, Inc.",
+    "REXAHN PHARMACEUTICALS, INC."
+   ],
+   "first_filed": "2011-08-09",
+   "hits": {
+    "RNN U2YTLWUBIRTX": [
+     "2021-05-07",
+     "2021-08-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Ocuphire Pharma, Inc."
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -4307,10 +4585,12 @@
      "2013-11-12",
      "2014-02-27",
      "2014-05-07",
-     "2014-08-08"
+     "2014-08-08",
+     "2020-08-05",
+     "2020-11-03"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2020-11-03",
    "names": [
     "BLACK HILLS POWER INC"
    ],
@@ -4348,10 +4628,20 @@
      "2018-07-26",
      "2018-10-25",
      "2019-02-13",
-     "2019-04-25"
+     "2019-04-25",
+     "2019-07-25",
+     "2019-10-24",
+     "2020-02-13",
+     "2020-04-30",
+     "2020-07-31",
+     "2020-10-29",
+     "2021-02-18",
+     "2021-04-29",
+     "2021-07-29",
+     "2021-10-27"
     ]
    },
-   "last_filed": "2019-10-24",
+   "last_filed": "2021-10-27",
    "names": [
     "COLUMBIA PROPERTY TRUST, INC."
    ],
@@ -4394,7 +4684,8 @@
     "Cool Holdings, Inc.",
     "INFOSONICS CORP",
     "INFOSONICS Corp",
-    "InfoSonics Corp"
+    "InfoSonics Corp",
+    "Simply, Inc."
    ],
    "first_filed": "2011-08-12",
    "float": {
@@ -4410,7 +4701,7 @@
      "2018-11-14"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-12-14",
    "names": [
     "Cool Holdings, Inc."
    ],
@@ -4447,6 +4738,31 @@
     2011
    ],
    "status": "linked"
+  },
+  "1279715": {
+   "all_names": [
+    "NATIONAL PATENT DEVELOPMENT CORP",
+    "Wright Investors Service Holdings, Inc."
+   ],
+   "first_filed": "2011-08-18",
+   "hits": {
+    "WISH XKEDQOEEEPUT": [
+     "2020-11-12",
+     "2021-03-12",
+     "2021-05-13",
+     "2021-08-11",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Wright Investors Service Holdings, Inc."
+   ],
+   "sic_at_filing": [
+    3990,
+    6282
+   ],
+   "status": "ambiguous: security WISH XKEDQOEEEPUT claimed by overlapping registrants"
   },
   "1281922": {
    "all_names": [
@@ -4541,7 +4857,7 @@
      "2018-08-09"
     ]
    },
-   "last_filed": "2019-05-15",
+   "last_filed": "2020-07-30",
    "names": [
     "WINDSTREAM CORP",
     "WINDSTREAM HOLDINGS, INC."
@@ -4553,6 +4869,7 @@
   },
   "1282648": {
    "all_names": [
+    "BATTALION OIL CORP",
     "HALCON RESOURCES CORP",
     "RAM ENERGY RESOURCES INC"
    ],
@@ -4593,7 +4910,7 @@
      "2018-08-01"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-08",
    "names": [
     "HALCON RESOURCES CORP"
    ],
@@ -4658,7 +4975,7 @@
      "2014-05-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-12",
    "names": [
     "Stereotaxis, Inc."
    ],
@@ -4705,6 +5022,39 @@
     6200
    ],
    "status": "linked"
+  },
+  "1293310": {
+   "all_names": [
+    "HUMANIGEN, INC",
+    "KALOBIOS PHARMACEUTICALS INC"
+   ],
+   "first_filed": "2012-10-11",
+   "hits": {
+    "HGEN XHYQYCUDLKKL": [
+     "2020-08-14",
+     "2020-11-10",
+     "2021-03-10",
+     "2021-05-13",
+     "2021-08-12",
+     "2021-11-12"
+    ],
+    "KBIO VDQK1SCYCW9X": [
+     "2020-08-14",
+     "2020-11-10",
+     "2021-03-10",
+     "2021-05-13",
+     "2021-08-12",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "HUMANIGEN, INC"
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "ambiguous: several securities at the same time"
   },
   "1297720": {
    "all_names": [
@@ -4794,7 +5144,7 @@
      "2014-03-17"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-06-26",
    "names": [
     "TearLab Corp"
    ],
@@ -4852,10 +5202,17 @@
      "2018-11-14",
      "2019-03-11",
      "2019-05-09",
-     "2019-08-07"
+     "2019-08-07",
+     "2019-11-12",
+     "2020-03-02",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-03-01",
+     "2021-05-06"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-04",
    "names": [
     "Athenex, Inc."
    ],
@@ -4993,7 +5350,7 @@
      "2018-11-08"
     ]
    },
-   "last_filed": "2019-10-30",
+   "last_filed": "2021-10-27",
    "names": [
     "Bridgepoint Education Inc"
    ],
@@ -5097,6 +5454,36 @@
    ],
    "status": "linked"
   },
+  "1312109": {
+   "all_names": [
+    "Silvergate Capital Corp"
+   ],
+   "first_filed": "2019-12-04",
+   "float": {
+    "SI X9BLOT91F5UT": {
+     "check": "ok",
+     "median": 0.965,
+     "n": 1
+    }
+   },
+   "hits": {
+    "SI X9BLOT91F5UT": [
+     "2020-11-10",
+     "2021-03-08",
+     "2021-05-11",
+     "2021-08-10",
+     "2021-11-09"
+    ]
+   },
+   "last_filed": "2021-11-09",
+   "names": [
+    "Silvergate Capital Corp"
+   ],
+   "sic_at_filing": [
+    6022
+   ],
+   "status": "linked"
+  },
   "1315255": {
    "all_names": [
     "GTT Communications, Inc.",
@@ -5117,7 +5504,7 @@
      "2018-03-01"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2020-05-08",
    "names": [
     "GTT Communications, Inc."
    ],
@@ -5246,10 +5633,19 @@
      "2018-11-09",
      "2019-03-15",
      "2019-05-10",
-     "2019-08-09"
+     "2019-08-09",
+     "2019-11-12",
+     "2020-04-28",
+     "2020-06-05",
+     "2020-08-10",
+     "2020-11-09",
+     "2021-03-30",
+     "2021-05-10",
+     "2021-08-09",
+     "2021-11-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-09",
    "names": [
     "Kandi Technologies Group, Inc."
    ],
@@ -5257,6 +5653,33 @@
     3711
    ],
    "status": "linked"
+  },
+  "13239": {
+   "all_names": [
+    "HEXION INC.",
+    "MOMENTIVE SPECIALTY CHEMICALS INC."
+   ],
+   "first_filed": "2011-08-12",
+   "hits": {
+    "HSC R735QTJ8XC9X": [
+     "2020-03-03",
+     "2020-05-14",
+     "2020-08-14",
+     "2020-11-09",
+     "2021-03-10",
+     "2021-05-12",
+     "2021-08-11",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "HEXION INC."
+   ],
+   "sic_at_filing": [
+    2821
+   ],
+   "status": "ambiguous: security HSC R735QTJ8XC9X claimed by overlapping registrants"
   },
   "1325702": {
    "all_names": [
@@ -5295,10 +5718,20 @@
      "2018-11-07",
      "2019-02-22",
      "2019-05-10",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-07",
+     "2020-02-21",
+     "2020-05-11",
+     "2020-08-07",
+     "2020-11-06",
+     "2021-03-09",
+     "2021-04-30",
+     "2021-05-10",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-05",
    "names": [
     "MAGNACHIP SEMICONDUCTOR Corp"
    ],
@@ -5325,7 +5758,7 @@
      "2018-10-16"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-10-29",
    "names": [
     "India Globalization Capital, Inc."
    ],
@@ -5377,6 +5810,7 @@
   },
   "1332551": {
    "all_names": [
+    "ACRES Commercial Realty Corp.",
     "Exantas Capital Corp.",
     "Resource Capital Corp."
    ],
@@ -5416,7 +5850,7 @@
      "2017-05-10"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-09",
    "names": [
     "Resource Capital Corp."
    ],
@@ -5661,12 +6095,37 @@
      "2014-08-07"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-10",
    "names": [
     "SANDRIDGE ENERGY INC"
    ],
    "sic_at_filing": [
     1311
+   ],
+   "status": "linked"
+  },
+  "1349929": {
+   "all_names": [
+    "CANCER GENETICS, INC",
+    "Vyant Bio, Inc."
+   ],
+   "first_filed": "2013-06-04",
+   "hits": {
+    "CGIX VJ2K80OVA0KL": [
+     "2019-11-19",
+     "2020-05-29",
+     "2020-06-24",
+     "2020-08-13",
+     "2020-11-12",
+     "2021-03-31"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "CANCER GENETICS, INC"
+   ],
+   "sic_at_filing": [
+    8071
    ],
    "status": "linked"
   },
@@ -5689,7 +6148,7 @@
      "2014-08-12"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-15",
    "names": [
     "China XD Plastics Co Ltd"
    ],
@@ -5785,7 +6244,7 @@
      "2018-08-07"
     ]
    },
-   "last_filed": "2019-08-05",
+   "last_filed": "2021-11-04",
    "names": [
     "BELLICUM PHARMACEUTICALS, INC"
    ],
@@ -5825,6 +6284,7 @@
   },
   "1361658": {
    "all_names": [
+    "Travel & Leisure Co.",
     "WYNDHAM WORLDWIDE CORP",
     "Wyndham Destinations, Inc."
    ],
@@ -5874,7 +6334,7 @@
      "2018-08-09"
     ]
    },
-   "last_filed": "2019-10-30",
+   "last_filed": "2021-10-27",
    "names": [
     "WYNDHAM WORLDWIDE CORP",
     "Wyndham Destinations, Inc."
@@ -5930,10 +6390,11 @@
      "2018-11-08",
      "2019-03-06",
      "2019-05-09",
-     "2019-08-07"
+     "2019-08-07",
+     "2019-11-06"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2019-11-06",
    "names": [
     "Primo Water Corp"
    ],
@@ -5989,10 +6450,19 @@
      "2018-08-14",
      "2018-11-15",
      "2019-10-04",
-     "2019-10-07"
+     "2019-10-07",
+     "2019-11-12",
+     "2020-03-13",
+     "2020-05-11",
+     "2020-08-10",
+     "2020-11-06",
+     "2021-03-05",
+     "2021-05-07",
+     "2021-08-09",
+     "2021-11-08"
     ]
    },
-   "last_filed": "2019-10-07",
+   "last_filed": "2021-11-08",
    "names": [
     "AMYRIS, INC."
    ],
@@ -6022,12 +6492,33 @@
      "2017-08-08"
     ]
    },
-   "last_filed": "2019-08-19",
+   "last_filed": "2021-05-17",
    "names": [
     "EnteroMedics Inc"
    ],
    "sic_at_filing": [
     3845
+   ],
+   "status": "linked"
+  },
+  "1372514": {
+   "all_names": [
+    "EYEGATE PHARMACEUTICALS INC",
+    "KIORA PHARMACEUTICALS INC"
+   ],
+   "first_filed": "2015-05-18",
+   "hits": {
+    "EYEG W2MKUV8JZGBP": [
+     "2019-11-07",
+     "2020-03-04"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "EYEGATE PHARMACEUTICALS INC"
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -6179,7 +6670,8 @@
   "1383701": {
    "all_names": [
     "Conatus Pharmaceuticals Inc",
-    "Conatus Pharmaceuticals Inc."
+    "Conatus Pharmaceuticals Inc.",
+    "Histogen Inc."
    ],
    "first_filed": "2013-09-09",
    "float": {
@@ -6214,7 +6706,7 @@
      "2018-11-01"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-10",
    "names": [
     "Conatus Pharmaceuticals Inc",
     "Conatus Pharmaceuticals Inc."
@@ -6226,6 +6718,7 @@
   },
   "1384135": {
    "all_names": [
+    "Lithium & Boron Technology, Inc.",
     "SMARTHEAT INC."
    ],
    "first_filed": "2011-08-12",
@@ -6246,7 +6739,7 @@
      "2012-08-20"
     ]
    },
-   "last_filed": "2019-09-27",
+   "last_filed": "2021-11-15",
    "names": [
     "SMARTHEAT INC."
    ],
@@ -6516,6 +7009,31 @@
    ],
    "status": "linked"
   },
+  "1398805": {
+   "all_names": [
+    "Beam Global",
+    "Envision Solar International, Inc."
+   ],
+   "first_filed": "2011-08-15",
+   "hits": {
+    "BEEM XHVSM2QVDB39": [
+     "2020-11-12",
+     "2021-03-30",
+     "2021-05-24",
+     "2021-08-12",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Beam Global"
+   ],
+   "sic_at_filing": [
+    3674,
+    8711
+   ],
+   "status": "linked"
+  },
   "1399315": {
    "all_names": [
     "MARSHALL & ILSLEY CORP"
@@ -6572,7 +7090,7 @@
      "2018-11-19"
     ]
    },
-   "last_filed": "2019-08-19",
+   "last_filed": "2021-11-22",
    "names": [
     "COOL TECHNOLOGIES, INC."
    ],
@@ -6626,10 +7144,14 @@
      "2018-12-12",
      "2019-05-03",
      "2019-06-13",
-     "2019-09-10"
+     "2019-09-10",
+     "2019-12-11",
+     "2020-05-01",
+     "2020-07-28",
+     "2020-09-15"
     ]
    },
-   "last_filed": "2019-09-10",
+   "last_filed": "2020-09-15",
    "names": [
     "Francesca's Holdings CORP"
    ],
@@ -6730,7 +7252,7 @@
      "2015-08-06"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2019-11-18",
    "names": [
     "Approach Resources Inc"
    ],
@@ -6768,7 +7290,7 @@
      "2014-08-08"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-15",
    "names": [
     "Rubicon Technology, Inc."
    ],
@@ -6799,12 +7321,34 @@
      "2015-05-08"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-10",
    "names": [
     "Ampio Pharmaceuticals, Inc."
    ],
    "sic_at_filing": [
     2834
+   ],
+   "status": "linked"
+  },
+  "1412502": {
+   "all_names": [
+    "INREIT Real Estate Investment Trust",
+    "Sterling Real Estate Trust"
+   ],
+   "first_filed": "2011-08-15",
+   "hits": {
+    "SRET VYXNI8URNLNP": [
+     "2019-11-08",
+     "2020-03-13",
+     "2020-05-08"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "Sterling Real Estate Trust"
+   ],
+   "sic_at_filing": [
+    6798
    ],
    "status": "linked"
   },
@@ -6888,15 +7432,48 @@
      "2019-01-25",
      "2019-02-15",
      "2019-05-13",
-     "2019-08-13"
+     "2019-08-13",
+     "2019-11-29",
+     "2020-02-10",
+     "2020-03-06",
+     "2020-05-11",
+     "2020-08-10",
+     "2020-11-25",
+     "2021-02-09",
+     "2021-05-10",
+     "2021-08-09",
+     "2021-11-22"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-11-22",
    "names": [
     "Avaya Holdings Corp."
    ],
    "sic_at_filing": [
     3661
+   ],
+   "status": "linked"
+  },
+  "1419041": {
+   "all_names": [
+    "Forte Biosciences, Inc.",
+    "Tocagen Inc"
+   ],
+   "first_filed": "2017-05-23",
+   "hits": {
+    "FBRX XFE6XKGIENHH": [
+     "2021-03-16",
+     "2021-05-10",
+     "2021-08-16",
+     "2021-11-08"
+    ]
+   },
+   "last_filed": "2021-11-08",
+   "names": [
+    "Forte Biosciences, Inc."
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -6948,10 +7525,13 @@
      "2018-08-28",
      "2018-11-06",
      "2019-02-05",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-08-27",
+     "2019-11-05",
+     "2020-02-04"
     ]
    },
-   "last_filed": "2019-08-27",
+   "last_filed": "2020-05-08",
    "names": [
     "BRIGGS & STRATTON CORP"
    ],
@@ -7029,10 +7609,11 @@
      "2018-11-13",
      "2019-03-15",
      "2019-05-10",
-     "2019-08-13"
+     "2019-08-13",
+     "2019-11-08"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2019-11-08",
    "names": [
     "Carey Watermark Investors Inc"
    ],
@@ -7058,6 +7639,28 @@
    ],
    "sic_at_filing": [
     1311
+   ],
+   "status": "linked"
+  },
+  "1434647": {
+   "all_names": [
+    "KEMPHARM, INC"
+   ],
+   "first_filed": "2015-05-29",
+   "hits": {
+    "KMPH VZR6X1TTY8H1": [
+     "2021-03-12",
+     "2021-05-14",
+     "2021-08-13",
+     "2021-11-10"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "KEMPHARM, INC"
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -7119,10 +7722,17 @@
      "2019-02-22",
      "2019-05-02",
      "2019-07-25",
-     "2019-10-31"
+     "2019-10-31",
+     "2020-02-27",
+     "2020-05-01",
+     "2020-07-30",
+     "2020-10-30",
+     "2021-02-26",
+     "2021-04-29",
+     "2021-08-06"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-11-15",
    "names": [
     "Digimarc CORP"
    ],
@@ -7161,7 +7771,7 @@
      "2016-05-10"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2020-03-30",
    "names": [
     "Roadrunner Transportation Systems, Inc."
    ],
@@ -7356,7 +7966,7 @@
      "2012-08-20"
     ]
    },
-   "last_filed": "2019-10-16",
+   "last_filed": "2021-11-22",
    "names": [
     "Securitas EDGAR Filings, Inc."
    ],
@@ -7389,12 +7999,56 @@
      "2017-11-03"
     ]
    },
-   "last_filed": "2019-10-24",
+   "last_filed": "2021-10-28",
    "names": [
     "GENOCEA BIOSCIENCES, INC."
    ],
    "sic_at_filing": [
     2836
+   ],
+   "status": "linked"
+  },
+  "1460329": {
+   "all_names": [
+    "Cogint, Inc.",
+    "Fluent, Inc.",
+    "IDI, Inc.",
+    "Tiger Media, Inc."
+   ],
+   "first_filed": "2015-04-15",
+   "hits": {
+    "COGT WE82EIC4FCDH": [
+     "2021-03-16",
+     "2021-05-10"
+    ]
+   },
+   "last_filed": "2021-11-04",
+   "names": [
+    "Fluent, Inc."
+   ],
+   "sic_at_filing": [
+    7310
+   ],
+   "status": "linked"
+  },
+  "1460702": {
+   "all_names": [
+    "Qualigen Therapeutics, Inc.",
+    "RITTER PHARMACEUTICALS INC"
+   ],
+   "first_filed": "2015-08-12",
+   "hits": {
+    "RTTR W1I7J18MUIQT": [
+     "2020-08-14",
+     "2020-11-12"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "Qualigen Therapeutics, Inc."
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -7427,7 +8081,7 @@
      "2019-08-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2019-11-12",
    "names": [
     "CEMPRA, INC.",
     "MELINTA THERAPEUTICS, INC. /NEW/"
@@ -7476,10 +8130,19 @@
      "2018-08-02",
      "2018-11-01",
      "2019-02-28",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-08-02",
+     "2019-11-07",
+     "2020-02-26",
+     "2020-05-06",
+     "2020-08-07",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-05-05",
+     "2021-08-04"
     ]
    },
-   "last_filed": "2019-08-02",
+   "last_filed": "2021-11-03",
    "names": [
     "Clovis Oncology, Inc."
    ],
@@ -7534,6 +8197,27 @@
    ],
    "sic_at_filing": [
     6798
+   ],
+   "status": "linked"
+  },
+  "1467154": {
+   "all_names": [
+    "Novan, Inc."
+   ],
+   "first_filed": "2016-11-14",
+   "hits": {
+    "NOVN WE3561IA1KKL": [
+     "2021-05-11",
+     "2021-08-12",
+     "2021-11-10"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "Novan, Inc."
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -7684,7 +8368,7 @@
      "2012-11-08"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-02",
    "names": [
     "Accretive Health, Inc."
    ],
@@ -7711,7 +8395,7 @@
      "2011-11-08"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2019-11-14",
    "names": [
     "STR HOLDINGS, INC."
    ],
@@ -7755,6 +8439,32 @@
    ],
    "sic_at_filing": [
     1000
+   ],
+   "status": "linked"
+  },
+  "1491487": {
+   "all_names": [
+    "Cardigant Medical Inc.",
+    "Takung Art Co., Ltd",
+    "Takung Art Co., Ltd."
+   ],
+   "first_filed": "2012-05-17",
+   "hits": {
+    "TKAT WJ2CJ22ZYVS5": [
+     "2021-03-31",
+     "2021-05-17",
+     "2021-08-13",
+     "2021-11-23"
+    ]
+   },
+   "last_filed": "2021-11-23",
+   "names": [
+    "Takung Art Co., Ltd",
+    "Takung Art Co., Ltd."
+   ],
+   "sic_at_filing": [
+    2836,
+    5990
    ],
    "status": "linked"
   },
@@ -7837,7 +8547,7 @@
      "2018-03-08"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2021-11-10",
    "names": [
     "OTONOMY, INC.",
     "Otonomy, Inc."
@@ -7907,10 +8617,14 @@
      "2018-11-07",
      "2019-03-07",
      "2019-05-09",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-12",
+     "2020-03-11",
+     "2020-05-07",
+     "2020-08-10"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-09",
    "names": [
     "Calithera Biosciences, Inc."
    ],
@@ -7919,9 +8633,32 @@
    ],
    "status": "linked"
   },
+  "1497504": {
+   "all_names": [
+    "Dipexium Pharmaceuticals, Inc.",
+    "PLx Pharma Inc."
+   ],
+   "first_filed": "2014-05-12",
+   "hits": {
+    "DPRX VOUBJQVHF7FP": [
+     "2021-05-14",
+     "2021-08-06",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "PLx Pharma Inc."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
   "1498301": {
    "all_names": [
-    "Ascena Retail Group, Inc."
+    "Ascena Retail Group, Inc.",
+    "Mahwah Bergen Retail Group, Inc."
    ],
    "first_filed": "2011-03-10",
    "float": {
@@ -7960,7 +8697,7 @@
      "2017-03-06"
     ]
    },
-   "last_filed": "2019-10-10",
+   "last_filed": "2021-03-03",
    "names": [
     "Ascena Retail Group, Inc."
    ],
@@ -8044,10 +8781,21 @@
      "2018-08-06",
      "2018-11-05",
      "2019-02-27",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-07",
+     "2019-11-04",
+     "2020-02-27",
+     "2020-05-11",
+     "2020-08-03",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-03-24",
+     "2021-05-10",
+     "2021-08-04",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-04",
    "names": [
     "Howard Hughes Corp"
    ],
@@ -8139,7 +8887,7 @@
      "2018-03-01"
     ]
    },
-   "last_filed": "2019-10-25",
+   "last_filed": "2020-08-10",
    "names": [
     "GNC HOLDINGS, INC."
    ],
@@ -8244,7 +8992,7 @@
      "2016-03-17"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-08-14",
    "names": [
     "Global Eagle Entertainment Inc."
    ],
@@ -8274,7 +9022,7 @@
      "2018-11-13"
     ]
    },
-   "last_filed": "2019-05-14",
+   "last_filed": "2020-11-16",
    "names": [
     "SAExploration Holdings, Inc."
    ],
@@ -8307,10 +9055,16 @@
      "2016-03-28",
      "2016-05-12",
      "2016-08-15",
-     "2016-11-14"
+     "2016-11-14",
+     "2017-04-06",
+     "2017-05-19",
+     "2017-08-18",
+     "2017-11-20",
+     "2018-05-17",
+     "2018-06-28"
     ]
    },
-   "last_filed": "2019-08-15",
+   "last_filed": "2021-11-15",
    "names": [
     "MAGELLAN GOLD Corp"
    ],
@@ -8442,11 +9196,26 @@
      "2017-03-09",
      "2017-05-05",
      "2017-08-04",
+     "2017-11-03",
+     "2018-03-06",
+     "2018-05-04",
+     "2018-08-03",
      "2018-11-02",
-     "2019-05-10"
+     "2019-03-06",
+     "2019-05-10",
+     "2019-08-08",
+     "2019-11-06",
+     "2020-03-06",
+     "2020-05-08",
+     "2020-08-10",
+     "2020-11-06",
+     "2021-03-12",
+     "2021-05-07",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-05",
    "names": [
     "HomeStreet, Inc."
    ],
@@ -8527,7 +9296,7 @@
      "2018-03-01"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2019-11-08",
    "names": [
     "Sanchez Energy Corp"
    ],
@@ -8611,6 +9380,7 @@
   },
   "1533924": {
    "all_names": [
+    "Amplify Energy Corp.",
     "Midstates Petroleum Company, Inc."
    ],
    "first_filed": "2012-06-01",
@@ -8634,7 +9404,7 @@
      "2014-05-09"
     ]
    },
-   "last_filed": "2019-08-05",
+   "last_filed": "2021-11-15",
    "names": [
     "Midstates Petroleum Company, Inc."
    ],
@@ -8643,10 +9413,32 @@
    ],
    "status": "linked"
   },
+  "1534133": {
+   "all_names": [
+    "GRAYBUG VISION, INC."
+   ],
+   "first_filed": "2020-11-12",
+   "hits": {
+    "GRAY XI5N30EK4UP1": [
+     "2021-03-05",
+     "2021-05-14",
+     "2021-08-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "GRAYBUG VISION, INC."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
   "1538217": {
    "all_names": [
     "SOCIAL REALITY",
-    "SOCIAL REALITY, Inc."
+    "SOCIAL REALITY, Inc.",
+    "SRAX, Inc."
    ],
    "first_filed": "2012-09-18",
    "float": {
@@ -8662,7 +9454,7 @@
      "2018-04-02"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-15",
    "names": [
     "SOCIAL REALITY, Inc."
    ],
@@ -8709,6 +9501,7 @@
   },
   "1551986": {
    "all_names": [
+    "9 METERS BIOPHARMA, INC.",
     "INNOVATE BIOPHARMACEUTICALS, INC.",
     "Monster Digital, Inc."
    ],
@@ -8728,7 +9521,7 @@
      "2018-11-13"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-15",
    "names": [
     "INNOVATE BIOPHARMACEUTICALS, INC."
    ],
@@ -8788,7 +9581,7 @@
      "2014-07-22"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2020-11-04",
    "names": [
     "Altisource Residential Corp"
    ],
@@ -8850,7 +9643,7 @@
      "2016-11-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2019-11-08",
    "names": [
     "SOPHIRIS BIO INC."
    ],
@@ -8892,10 +9685,15 @@
      "2017-11-07",
      "2018-02-27",
      "2018-05-08",
-     "2018-08-07"
+     "2018-08-07",
+     "2018-11-06",
+     "2019-02-26",
+     "2019-05-07",
+     "2019-08-06",
+     "2019-11-05"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-02",
    "names": [
     "Mallinckrodt plc"
    ],
@@ -8987,7 +9785,7 @@
      "2018-11-14"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-09-13",
    "names": [
     "Youngevity International, Inc."
    ],
@@ -9062,6 +9860,7 @@
   },
   "1575828": {
    "all_names": [
+    "EXPRO GROUP HOLDINGS N.V.",
     "FRANK'S INTERNATIONAL N.V.",
     "Frank's International N.V."
    ],
@@ -9098,11 +9897,21 @@
      "2018-08-08",
      "2018-11-06",
      "2019-02-25",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-08-06",
+     "2019-11-05",
+     "2020-02-25",
+     "2020-05-11",
+     "2020-08-04",
+     "2020-11-03",
+     "2021-03-01",
+     "2021-05-04",
+     "2021-11-08"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-08",
    "names": [
+    "EXPRO GROUP HOLDINGS N.V.",
     "FRANK'S INTERNATIONAL N.V.",
     "Frank's International N.V."
    ],
@@ -9114,7 +9923,8 @@
   "1579823": {
    "all_names": [
     "American Brewing Company, Inc.",
-    "New Age Beverages Corp"
+    "New Age Beverages Corp",
+    "NewAge, Inc."
    ],
    "first_filed": "2014-05-08",
    "float": {
@@ -9134,7 +9944,7 @@
      "2019-08-08"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-09",
    "names": [
     "New Age Beverages Corp"
    ],
@@ -9207,10 +10017,19 @@
      "2018-07-25",
      "2018-10-31",
      "2019-02-27",
-     "2019-05-01"
+     "2019-05-01",
+     "2019-08-06",
+     "2019-11-06",
+     "2020-02-26",
+     "2020-05-06",
+     "2020-08-10",
+     "2020-11-09",
+     "2021-02-25",
+     "2021-04-30",
+     "2021-05-10"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-05-10",
    "names": [
     "Extended Stay America, Inc."
    ],
@@ -9238,7 +10057,7 @@
      "2017-03-13"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2020-05-14",
    "names": [
     "Egalet Corp"
    ],
@@ -9269,7 +10088,7 @@
      "2019-05-14"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-10",
    "names": [
     "Zosano Pharma Corp"
    ],
@@ -9348,10 +10167,20 @@
      "2018-08-09",
      "2018-11-08",
      "2019-02-28",
-     "2019-05-09"
+     "2019-05-09",
+     "2019-08-09",
+     "2019-11-12",
+     "2020-03-12",
+     "2020-06-12",
+     "2020-08-07",
+     "2020-11-09",
+     "2021-03-12",
+     "2021-05-10",
+     "2021-08-05",
+     "2021-11-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-09",
    "names": [
     "Party City Holdco Inc."
    ],
@@ -9394,10 +10223,20 @@
      "2018-08-08",
      "2018-11-08",
      "2019-02-28",
-     "2019-05-09"
+     "2019-05-09",
+     "2019-08-05",
+     "2019-11-04",
+     "2020-02-26",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-06",
+     "2021-02-26",
+     "2021-05-07",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-05",
+   "last_filed": "2021-11-05",
    "names": [
     "Endo International plc"
    ],
@@ -9428,7 +10267,10 @@
      "2017-11-03",
      "2018-03-16",
      "2018-05-10",
-     "2018-08-10"
+     "2018-08-10",
+     "2021-03-08",
+     "2021-04-26",
+     "2021-05-06"
     ],
     "TRNC WBJKLCHKXEN9": [
      "2016-08-05",
@@ -9439,10 +10281,13 @@
      "2017-11-03",
      "2018-03-16",
      "2018-05-10",
-     "2018-08-10"
+     "2018-08-10",
+     "2021-03-08",
+     "2021-04-26",
+     "2021-05-06"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-05-06",
    "names": [
     "Tribune Publishing Co",
     "tronc, Inc."
@@ -9515,10 +10360,19 @@
      "2018-07-26",
      "2018-10-25",
      "2019-02-21",
-     "2019-04-25"
+     "2019-04-25",
+     "2019-07-25",
+     "2019-10-24",
+     "2020-02-27",
+     "2020-05-08",
+     "2020-08-10",
+     "2020-11-06",
+     "2021-03-16",
+     "2021-04-30",
+     "2021-05-10"
     ]
    },
-   "last_filed": "2019-10-24",
+   "last_filed": "2021-08-09",
    "names": [
     "WASHINGTON PRIME GROUP INC.",
     "WP Glimcher Inc.",
@@ -9547,10 +10401,17 @@
      "2018-08-10",
      "2018-11-13",
      "2019-03-29",
-     "2019-05-10"
+     "2019-05-10",
+     "2019-08-09",
+     "2019-11-14",
+     "2020-03-02",
+     "2020-05-08",
+     "2020-08-06",
+     "2020-11-09",
+     "2021-02-26"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-08",
    "names": [
     "Tricida, Inc."
    ],
@@ -9578,10 +10439,16 @@
      "2018-11-06",
      "2019-02-05",
      "2019-05-29",
-     "2019-08-06"
+     "2019-08-06",
+     "2019-11-04",
+     "2020-02-04",
+     "2020-06-12",
+     "2020-08-06",
+     "2020-11-06",
+     "2021-02-04"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-16",
    "names": [
     "Quotient Ltd"
    ],
@@ -9615,16 +10482,67 @@
      "2018-11-09",
      "2019-03-15",
      "2019-05-03",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-12",
+     "2020-03-12",
+     "2020-05-01",
+     "2020-07-31",
+     "2020-11-06",
+     "2021-03-05",
+     "2021-05-07",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-05",
    "names": [
     "ViewRay, Inc."
    ],
    "sic_at_filing": [
     3845,
     5900
+   ],
+   "status": "linked"
+  },
+  "1601669": {
+   "all_names": [
+    "Watford Holdings Ltd."
+   ],
+   "first_filed": "2019-05-10",
+   "hits": {
+    "WTRE X371JVB8A5WL": [
+     "2020-08-07",
+     "2020-11-10",
+     "2021-02-26"
+    ]
+   },
+   "last_filed": "2021-05-10",
+   "names": [
+    "Watford Holdings Ltd."
+   ],
+   "sic_at_filing": [
+    6331
+   ],
+   "status": "linked"
+  },
+  "1604477": {
+   "all_names": [
+    "SQZ Biotechnologies Co"
+   ],
+   "first_filed": "2020-12-10",
+   "hits": {
+    "SQZ XJ43QA7GT9B9": [
+     "2020-12-10",
+     "2021-03-18",
+     "2021-05-11"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "SQZ Biotechnologies Co"
+   ],
+   "sic_at_filing": [
+    2836
    ],
    "status": "linked"
   },
@@ -9651,6 +10569,26 @@
    ],
    "status": "ambiguous: security STGS SB7MJZ5V64PX claimed by overlapping registrants"
   },
+  "1613780": {
+   "all_names": [
+    "DBV Technologies S.A."
+   ],
+   "first_filed": "2021-03-17",
+   "hits": {
+    "DBVT VUXW8LG4HG85": [
+     "2021-03-17",
+     "2021-05-05"
+    ]
+   },
+   "last_filed": "2021-10-26",
+   "names": [
+    "DBV Technologies S.A."
+   ],
+   "sic_at_filing": [
+    2836
+   ],
+   "status": "linked"
+  },
   "1614556": {
    "all_names": [
     "ASTERIKO CORP.",
@@ -9672,11 +10610,13 @@
      "2018-08-22"
     ]
    },
-   "last_filed": "2019-05-20",
+   "last_filed": "2021-11-15",
    "names": [
     "Star Alliance International Corp."
    ],
    "sic_at_filing": [
+    1000,
+    1040,
     2590
    ],
    "status": "rejected: float evidence contradicts (0.07)"
@@ -9711,6 +10651,28 @@
    ],
    "status": "linked"
   },
+  "1618835": {
+   "all_names": [
+    "Evofem Biosciences, Inc.",
+    "Neothetics, Inc."
+   ],
+   "first_filed": "2015-05-14",
+   "hits": {
+    "NEOT VVQG7B20PBVP": [
+     "2020-03-12",
+     "2020-05-06",
+     "2020-08-04"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "Evofem Biosciences, Inc."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
   "1620280": {
    "all_names": [
     "COMMUNICATIONS SALES & LEASING, INC.",
@@ -9742,10 +10704,21 @@
      "2018-08-09",
      "2018-11-01",
      "2019-03-18",
-     "2019-05-09"
+     "2019-05-09",
+     "2019-08-08",
+     "2019-11-07",
+     "2020-03-12",
+     "2020-05-11",
+     "2020-08-10",
+     "2020-11-09",
+     "2021-03-05",
+     "2021-03-30",
+     "2021-05-10",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
     "COMMUNICATIONS SALES & LEASING, INC.",
     "Uniti Group Inc."
@@ -9781,10 +10754,21 @@
      "2018-08-02",
      "2018-11-06",
      "2019-02-27",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-01",
+     "2019-11-06",
+     "2020-02-27",
+     "2020-05-14",
+     "2020-05-28",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-05-06",
+     "2021-08-09",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2021-11-04",
    "names": [
     "Adaptimmune Therapeutics PLC"
    ],
@@ -9823,10 +10807,17 @@
      "2018-08-08",
      "2018-11-06",
      "2019-02-27",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-07-29",
+     "2019-11-05",
+     "2020-02-28",
+     "2020-04-29",
+     "2020-05-11",
+     "2020-08-06",
+     "2020-11-06"
     ]
    },
-   "last_filed": "2019-07-29",
+   "last_filed": "2020-11-06",
    "names": [
     "Mylan N.V."
    ],
@@ -9855,7 +10846,7 @@
      "2019-05-15"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2020-04-24",
    "names": [
     "STAR WEALTH GROUP INC."
    ],
@@ -9922,10 +10913,12 @@
      "2018-08-09",
      "2018-11-08",
      "2019-02-27",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-08",
+     "2019-11-05"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2019-11-05",
    "names": [
     "Gannett Co., Inc."
    ],
@@ -9937,7 +10930,8 @@
   "1636050": {
    "all_names": [
     "Axovant Gene Therapies Ltd.",
-    "Axovant Sciences Ltd."
+    "Axovant Sciences Ltd.",
+    "Sio Gene Therapies Inc."
    ],
    "first_filed": "2015-08-11",
    "float": {
@@ -9962,7 +10956,7 @@
      "2018-02-09"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-12",
    "names": [
     "Axovant Sciences Ltd."
    ],
@@ -9992,7 +10986,7 @@
      "2017-03-14"
     ]
    },
-   "last_filed": "2017-12-05",
+   "last_filed": "2021-08-23",
    "names": [
     "Gushen, Inc"
    ],
@@ -10000,6 +10994,29 @@
     7363
    ],
    "status": "rejected: float evidence contradicts (0.00)"
+  },
+  "1641398": {
+   "all_names": [
+    "Code Chain New Continent Ltd",
+    "JM Global Holding Co",
+    "TMSR HOLDING Co Ltd"
+   ],
+   "first_filed": "2015-09-08",
+   "hits": {
+    "CCNC XELMYUUM6RTX": [
+     "2021-03-26",
+     "2021-05-14"
+    ]
+   },
+   "last_filed": "2021-12-10",
+   "names": [
+    "Code Chain New Continent Ltd"
+   ],
+   "sic_at_filing": [
+    5050,
+    6770
+   ],
+   "status": "linked"
   },
   "1641640": {
    "all_names": [
@@ -10020,7 +11037,7 @@
      "2017-11-09"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-09",
    "names": [
     "Nabriva Therapeutics plc"
    ],
@@ -10097,6 +11114,28 @@
    ],
    "status": "rejected: float evidence contradicts (2.11)"
   },
+  "1648428": {
+   "all_names": [
+    "Sequential Brands Group, Inc."
+   ],
+   "first_filed": "2016-03-14",
+   "hits": {
+    "SQBG VK6XJUOSEY5H": [
+     "2020-08-14",
+     "2020-11-16",
+     "2021-04-15",
+     "2021-08-10"
+    ]
+   },
+   "last_filed": "2021-08-10",
+   "names": [
+    "Sequential Brands Group, Inc."
+   ],
+   "sic_at_filing": [
+    2300
+   ],
+   "status": "linked"
+  },
   "1648893": {
    "all_names": [
     "Nuvectra Corp"
@@ -10143,7 +11182,7 @@
      "2016-08-10"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2020-05-15",
    "names": [
     "Quorum Health Corp"
    ],
@@ -10185,16 +11224,48 @@
      "2018-05-08",
      "2018-08-09",
      "2018-11-20",
-     "2019-03-01"
+     "2019-03-01",
+     "2019-05-08",
+     "2019-08-07",
+     "2019-11-06",
+     "2020-02-26",
+     "2020-05-06",
+     "2020-08-05",
+     "2020-11-04",
+     "2021-02-26",
+     "2021-05-06",
+     "2021-08-03",
+     "2021-11-02"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-02",
    "names": [
     "Manitowoc Foodservice, Inc.",
     "Welbilt, Inc."
    ],
    "sic_at_filing": [
     3580
+   ],
+   "status": "linked"
+  },
+  "1652724": {
+   "all_names": [
+    "Lucira Health, Inc."
+   ],
+   "first_filed": "2021-05-17",
+   "hits": {
+    "LHDX XLSLJG20B71H": [
+     "2021-05-17",
+     "2021-08-13",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Lucira Health, Inc."
+   ],
+   "sic_at_filing": [
+    2835
    ],
    "status": "linked"
   },
@@ -10208,10 +11279,15 @@
     "LCA WCE3G8TTASMD": [
      "2019-03-15",
      "2019-05-10",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-12",
+     "2020-03-16",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-09"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-02",
    "names": [
     "Waitr Holdings Inc."
    ],
@@ -10244,12 +11320,34 @@
      "2017-11-06"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-05",
    "names": [
     "Armstrong Flooring, Inc."
    ],
    "sic_at_filing": [
     3089
+   ],
+   "status": "linked"
+  },
+  "1659352": {
+   "all_names": [
+    "Codiak BioSciences, Inc."
+   ],
+   "first_filed": "2020-11-19",
+   "hits": {
+    "CDAK XIOCKSCRL6QT": [
+     "2020-11-19",
+     "2021-03-17",
+     "2021-05-06",
+     "2021-08-05"
+    ]
+   },
+   "last_filed": "2021-11-04",
+   "names": [
+    "Codiak BioSciences, Inc."
+   ],
+   "sic_at_filing": [
+    2836
    ],
    "status": "linked"
   },
@@ -10277,7 +11375,8 @@
      "2018-08-08",
      "2018-11-21",
      "2019-02-07",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-08-06"
     ]
    },
    "last_filed": "2019-08-06",
@@ -10286,6 +11385,28 @@
    ],
    "sic_at_filing": [
     2890
+   ],
+   "status": "linked"
+  },
+  "1661053": {
+   "all_names": [
+    "Hancock Jaffe Laboratories, Inc.",
+    "enVVeno Medical Corp"
+   ],
+   "first_filed": "2018-08-10",
+   "hits": {
+    "HJLI WQD8W0R2EBMT": [
+     "2020-11-17",
+     "2021-03-31",
+     "2021-05-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Hancock Jaffe Laboratories, Inc."
+   ],
+   "sic_at_filing": [
+    3841
    ],
    "status": "linked"
   },
@@ -10303,7 +11424,7 @@
      "2019-08-13"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-11-12",
    "names": [
     "Phunware, Inc."
    ],
@@ -10329,11 +11450,21 @@
    "hits": {
     "TLND WCLZ0ZR5WTWL": [
      "2019-02-28",
-     "2019-05-10"
+     "2019-05-10",
+     "2019-08-09",
+     "2019-11-08",
+     "2020-03-17",
+     "2020-05-08",
+     "2020-08-07",
+     "2020-11-09",
+     "2021-03-01",
+     "2021-05-07",
+     "2021-07-28"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-07-28",
    "names": [
+    "Talend S.A.",
     "Talend SA"
    ],
    "sic_at_filing": [
@@ -10367,7 +11498,7 @@
      "2019-02-19"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2020-10-29",
    "names": [
     "LSC Communications, Inc."
    ],
@@ -10394,7 +11525,7 @@
      "2018-11-13"
     ]
    },
-   "last_filed": "2019-08-12",
+   "last_filed": "2021-11-09",
    "names": [
     "Aptinyx Inc."
    ],
@@ -10405,7 +11536,8 @@
   },
   "1688476": {
    "all_names": [
-    "Keane Group, Inc."
+    "Keane Group, Inc.",
+    "NEXTIER OILFIELD SOLUTIONS INC."
    ],
    "first_filed": "2017-05-05",
    "float": {
@@ -10425,12 +11557,16 @@
      "2018-08-01",
      "2018-11-02",
      "2019-02-27",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-07-31",
+     "2019-08-19",
+     "2019-11-07"
     ]
    },
-   "last_filed": "2019-08-19",
+   "last_filed": "2021-11-09",
    "names": [
-    "Keane Group, Inc."
+    "Keane Group, Inc.",
+    "NEXTIER OILFIELD SOLUTIONS INC."
    ],
    "sic_at_filing": [
     1389
@@ -10455,12 +11591,33 @@
      "2019-05-09"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
     "Magenta Therapeutics, Inc."
    ],
    "sic_at_filing": [
     2834
+   ],
+   "status": "linked"
+  },
+  "1702924": {
+   "all_names": [
+    "WRAP TECHNOLOGIES, INC."
+   ],
+   "first_filed": "2017-09-08",
+   "hits": {
+    "WRTC X02SL7LZK5LX": [
+     "2021-04-29",
+     "2021-07-29",
+     "2021-10-28"
+    ]
+   },
+   "last_filed": "2021-10-28",
+   "names": [
+    "WRAP TECHNOLOGIES, INC."
+   ],
+   "sic_at_filing": [
+    3480
    ],
    "status": "linked"
   },
@@ -10488,7 +11645,7 @@
      "2019-05-09"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-05-06",
    "names": [
     "Venator Materials PLC"
    ],
@@ -10515,10 +11672,17 @@
      "2018-05-09",
      "2018-08-08",
      "2018-11-07",
-     "2019-02-21"
+     "2019-02-21",
+     "2019-05-02",
+     "2019-08-02",
+     "2019-10-31",
+     "2020-02-13",
+     "2020-04-29",
+     "2020-05-07",
+     "2020-08-05"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2020-08-05",
    "names": [
     "Delphi Technologies PLC"
    ],
@@ -10545,10 +11709,21 @@
      "2018-11-13",
      "2019-03-28",
      "2019-05-15",
-     "2019-08-13"
+     "2019-08-13",
+     "2019-11-14",
+     "2020-03-12",
+     "2020-05-11",
+     "2020-08-10",
+     "2020-11-09",
+     "2020-12-04",
+     "2021-02-23",
+     "2021-05-10",
+     "2021-08-09",
+     "2021-08-20",
+     "2021-11-08"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-11-08",
    "names": [
     "Rubius Therapeutics, Inc."
    ],
@@ -10577,6 +11752,72 @@
    ],
    "status": "linked"
   },
+  "1713832": {
+   "all_names": [
+    "HyreCar Inc."
+   ],
+   "first_filed": "2018-08-14",
+   "hits": {
+    "HYRE WVP9292ZBFXH": [
+     "2021-03-31",
+     "2021-05-13",
+     "2021-08-10",
+     "2021-11-09"
+    ]
+   },
+   "last_filed": "2021-11-09",
+   "names": [
+    "HyreCar Inc."
+   ],
+   "sic_at_filing": [
+    7510
+   ],
+   "status": "linked"
+  },
+  "1717452": {
+   "all_names": [
+    "Odonate Therapeutics, Inc."
+   ],
+   "first_filed": "2018-05-03",
+   "hits": {
+    "ODT WQ6CRD6VV1ID": [
+     "2020-07-30",
+     "2020-10-28",
+     "2021-02-23",
+     "2021-05-14"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "Odonate Therapeutics, Inc."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
+  "1717556": {
+   "all_names": [
+    "EDISON NATION, INC.",
+    "Vinco Ventures, Inc.",
+    "Xspand Products Lab, Inc."
+   ],
+   "first_filed": "2018-05-21",
+   "hits": {
+    "XSPL WU54KX8CYFS5": [
+     "2021-08-23",
+     "2021-11-22"
+    ]
+   },
+   "last_filed": "2021-11-22",
+   "names": [
+    "Vinco Ventures, Inc."
+   ],
+   "sic_at_filing": [
+    3944
+   ],
+   "status": "linked"
+  },
   "1722287": {
    "all_names": [
     "Covia Holdings Corp",
@@ -10597,7 +11838,7 @@
      "2019-03-22"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2020-11-09",
    "names": [
     "Covia Holdings Corp"
    ],
@@ -10624,10 +11865,16 @@
      "2018-11-14",
      "2019-02-13",
      "2019-06-06",
-     "2019-08-14"
+     "2019-08-14",
+     "2019-11-13",
+     "2020-02-12",
+     "2020-05-22",
+     "2020-08-07",
+     "2020-11-10",
+     "2021-02-05"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-02-05",
    "names": [
     "Perspecta Inc."
    ],
@@ -10654,15 +11901,45 @@
      "2018-08-09",
      "2018-10-31",
      "2019-02-26",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-05",
+     "2019-11-04",
+     "2020-02-26",
+     "2020-05-04",
+     "2020-08-03",
+     "2020-11-09",
+     "2021-02-24",
+     "2021-03-31"
     ]
    },
-   "last_filed": "2019-08-05",
+   "last_filed": "2021-03-31",
    "names": [
     "HighPoint Resources Corp"
    ],
    "sic_at_filing": [
     1311
+   ],
+   "status": "linked"
+  },
+  "1731727": {
+   "all_names": [
+    "LMP Automotive Holdings, Inc."
+   ],
+   "first_filed": "2020-02-25",
+   "hits": {
+    "LMPX XA367FHRKACL": [
+     "2020-08-14",
+     "2020-11-12",
+     "2021-03-25",
+     "2021-03-31"
+    ]
+   },
+   "last_filed": "2021-11-16",
+   "names": [
+    "LMP Automotive Holdings, Inc."
+   ],
+   "sic_at_filing": [
+    5500
    ],
    "status": "linked"
   },
@@ -10683,10 +11960,20 @@
      "2018-07-27",
      "2018-10-25",
      "2019-02-22",
-     "2019-04-29"
+     "2019-04-29",
+     "2019-07-26",
+     "2019-10-23",
+     "2020-02-21",
+     "2020-04-24",
+     "2020-07-24",
+     "2020-10-23",
+     "2021-02-19",
+     "2021-04-28",
+     "2021-07-23",
+     "2021-10-26"
     ]
    },
-   "last_filed": "2019-10-23",
+   "last_filed": "2021-10-26",
    "names": [
     "Veoneer, Inc."
    ],
@@ -10712,10 +11999,20 @@
      "2018-08-10",
      "2018-11-05",
      "2019-03-05",
-     "2019-05-08"
+     "2019-05-08",
+     "2019-08-06",
+     "2019-11-05",
+     "2020-03-02",
+     "2020-05-01",
+     "2020-08-05",
+     "2020-11-05",
+     "2021-03-10",
+     "2021-05-04",
+     "2021-08-03",
+     "2021-11-03"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-03",
    "names": [
     "Retail Value Inc."
    ],
@@ -10740,10 +12037,15 @@
     "GTX WYBRZ876NVC5": [
      "2019-03-01",
      "2019-05-08",
-     "2019-07-30"
+     "2019-07-30",
+     "2019-11-08",
+     "2020-02-27",
+     "2020-05-11",
+     "2020-07-30",
+     "2020-11-02"
     ]
    },
-   "last_filed": "2019-07-30",
+   "last_filed": "2021-10-28",
    "names": [
     "Garrett Motion Inc."
    ],
@@ -10769,15 +12071,94 @@
      "2018-11-06",
      "2019-02-28",
      "2019-05-08",
-     "2019-08-07"
+     "2019-08-07",
+     "2019-11-06",
+     "2020-02-28",
+     "2020-05-11",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-02-26",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-04",
    "names": [
     "Livent Corp."
    ],
    "sic_at_filing": [
     2800
+   ],
+   "status": "linked"
+  },
+  "1742927": {
+   "all_names": [
+    "REVIVA PHARMACEUTICALS HOLDINGS, INC.",
+    "Tenzing Acquisition Corp."
+   ],
+   "first_filed": "2018-10-11",
+   "hits": {
+    "RVPH XKDEAL18BYP1": [
+     "2021-03-22",
+     "2021-05-07",
+     "2021-05-17",
+     "2021-08-16"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "REVIVA PHARMACEUTICALS HOLDINGS, INC."
+   ],
+   "sic_at_filing": [
+    2834,
+    6770
+   ],
+   "status": "linked"
+  },
+  "1748907": {
+   "all_names": [
+    "Orchard Therapeutics plc"
+   ],
+   "first_filed": "2020-02-27",
+   "hits": {
+    "ORTX WZ5BE168YI5H": [
+     "2020-02-27",
+     "2020-05-07",
+     "2020-08-06",
+     "2020-11-03",
+     "2021-03-02",
+     "2021-05-13"
+    ]
+   },
+   "last_filed": "2021-11-04",
+   "names": [
+    "Orchard Therapeutics plc"
+   ],
+   "sic_at_filing": [
+    2836
+   ],
+   "status": "linked"
+  },
+  "1751143": {
+   "all_names": [
+    "ATLAS TECHNICAL CONSULTANTS, INC.",
+    "Boxwood Merger Corp."
+   ],
+   "first_filed": "2019-05-13",
+   "hits": {
+    "ATCX XC50QFXFAVDX": [
+     "2021-08-16",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "ATLAS TECHNICAL CONSULTANTS, INC."
+   ],
+   "sic_at_filing": [
+    6770,
+    8742
    ],
    "status": "linked"
   },
@@ -10796,15 +12177,101 @@
    "hits": {
     "CVETV X1STR3NMDOPX": [
      "2019-06-07",
-     "2019-08-13"
+     "2019-08-13",
+     "2019-11-12",
+     "2020-03-03",
+     "2020-05-14",
+     "2020-08-11",
+     "2020-11-10",
+     "2021-03-01",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-11-04",
    "names": [
     "COVETRUS, INC."
    ],
    "sic_at_filing": [
     5912
+   ],
+   "status": "linked"
+  },
+  "1753706": {
+   "all_names": [
+    "Act II Global Acquisition Corp.",
+    "Whole Earth Brands, Inc."
+   ],
+   "first_filed": "2019-06-06",
+   "hits": {
+    "FREE XFN1YER13FXH": [
+     "2020-08-14",
+     "2020-11-16",
+     "2021-03-16",
+     "2021-04-30",
+     "2021-05-14",
+     "2021-08-09"
+    ]
+   },
+   "last_filed": "2021-11-09",
+   "names": [
+    "Whole Earth Brands, Inc."
+   ],
+   "sic_at_filing": [
+    2060,
+    6770
+   ],
+   "status": "linked"
+  },
+  "1761612": {
+   "all_names": [
+    "BICYCLE THERAPEUTICS plc"
+   ],
+   "first_filed": "2019-08-08",
+   "float": {
+    "BCYC X4Q6L3SOKEW5": {
+     "check": "ok",
+     "median": 0.646,
+     "n": 3
+    }
+   },
+   "hits": {
+    "BCYC X4Q6L3SOKEW5": [
+     "2020-11-05",
+     "2021-03-11",
+     "2021-05-06",
+     "2021-08-05",
+     "2021-11-04"
+    ]
+   },
+   "last_filed": "2021-11-04",
+   "names": [
+    "BICYCLE THERAPEUTICS plc"
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
+  "1772028": {
+   "all_names": [
+    "Scopus BioPharma Inc."
+   ],
+   "first_filed": "2021-02-26",
+   "hits": {
+    "SCPS XKDEAL18BYP1": [
+     "2021-03-29",
+     "2021-05-17",
+     "2021-08-13"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Scopus BioPharma Inc."
+   ],
+   "sic_at_filing": [
+    2834
    ],
    "status": "linked"
   },
@@ -10836,6 +12303,81 @@
     4911
    ],
    "status": "ambiguous: security CPL R735QTJ8XC9X claimed by overlapping registrants"
+  },
+  "1788717": {
+   "all_names": [
+    "F45 Training Holdings Inc."
+   ],
+   "first_filed": "2021-09-17",
+   "hits": {
+    "FXLV XQ652EL0JWPX": [
+     "2021-09-17",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "F45 Training Holdings Inc."
+   ],
+   "sic_at_filing": [
+    5040
+   ],
+   "status": "linked"
+  },
+  "1803096": {
+   "all_names": [
+    "STARGUIDE GROUP, INC."
+   ],
+   "first_filed": "2020-09-08",
+   "hits": {
+    "APT R735QTJ8XC9X": [
+     "2020-09-08",
+     "2020-12-11",
+     "2021-04-21",
+     "2021-06-02",
+     "2021-08-26",
+     "2021-11-22"
+    ]
+   },
+   "last_filed": "2021-11-22",
+   "names": [
+    "STARGUIDE GROUP, INC."
+   ],
+   "sic_at_filing": [
+    5190
+   ],
+   "status": "linked"
+  },
+  "1807707": {
+   "all_names": [
+    "AppHarvest, Inc.",
+    "Novus Capital Corp"
+   ],
+   "first_filed": "2020-06-08",
+   "float": {
+    "NOVS XFA956ZU3MUD": {
+     "check": "contradicts",
+     "median": 0.069,
+     "n": 3
+    }
+   },
+   "hits": {
+    "NOVS XFA956ZU3MUD": [
+     "2021-05-17",
+     "2021-06-02",
+     "2021-08-11",
+     "2021-11-10"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "AppHarvest, Inc."
+   ],
+   "sic_at_filing": [
+    100,
+    6770
+   ],
+   "status": "rejected: float evidence contradicts (0.07)"
   },
   "18169": {
    "all_names": [
@@ -10892,12 +12434,136 @@
      "2013-05-02"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-03-04",
    "names": [
     "CASTLE A M & CO"
    ],
    "sic_at_filing": [
     5051
+   ],
+   "status": "linked"
+  },
+  "1820630": {
+   "all_names": [
+    "ArcLight Clean Transition Corp.",
+    "Proterra Inc"
+   ],
+   "first_filed": "2020-11-16",
+   "hits": {
+    "PTRA XPCLNLLY99WL": [
+     "2021-08-13",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Proterra Inc"
+   ],
+   "sic_at_filing": [
+    3711,
+    6770
+   ],
+   "status": "linked"
+  },
+  "1822250": {
+   "all_names": [
+    "ContextLogic Inc."
+   ],
+   "first_filed": "2021-03-25",
+   "hits": {
+    "WISH XKEDQOEEEPUT": [
+     "2021-03-25",
+     "2021-05-12",
+     "2021-08-12",
+     "2021-11-10"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "ContextLogic Inc."
+   ],
+   "sic_at_filing": [
+    5961
+   ],
+   "status": "ambiguous: security WISH XKEDQOEEEPUT claimed by overlapping registrants"
+  },
+  "1833908": {
+   "all_names": [
+    "Alfi, Inc."
+   ],
+   "first_filed": "2021-06-10",
+   "hits": {
+    "ALF XNMKHPKBFQSL": [
+     "2021-06-10",
+     "2021-08-16"
+    ]
+   },
+   "last_filed": "2021-08-16",
+   "names": [
+    "Alfi, Inc."
+   ],
+   "sic_at_filing": [
+    7370
+   ],
+   "status": "linked"
+  },
+  "1840904": {
+   "all_names": [
+    "ATAI Life Sciences N.V."
+   ],
+   "first_filed": "2021-08-20",
+   "hits": {
+    "ATAI XPDL3OZ4C12D": [
+     "2021-08-20",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "ATAI Life Sciences N.V."
+   ],
+   "sic_at_filing": [
+    2834
+   ],
+   "status": "linked"
+  },
+  "1844224": {
+   "all_names": [
+    "FREYR Battery"
+   ],
+   "first_filed": "2021-08-12",
+   "hits": {
+    "FREY XPZ8XR0U0MLH": [
+     "2021-08-12",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "FREYR Battery"
+   ],
+   "sic_at_filing": [
+    3690
+   ],
+   "status": "linked"
+  },
+  "1852117": {
+   "all_names": [
+    "Rockley Photonics Holdings Ltd"
+   ],
+   "first_filed": "2021-08-26",
+   "hits": {
+    "RKLY XQXPL0TQP17P": [
+     "2021-08-26",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "Rockley Photonics Holdings Ltd"
+   ],
+   "sic_at_filing": [
+    3674
    ],
    "status": "linked"
   },
@@ -10965,10 +12631,17 @@
      "2018-11-30",
      "2019-03-01",
      "2019-06-06",
-     "2019-09-25"
+     "2019-09-25",
+     "2019-12-10",
+     "2020-03-06",
+     "2020-06-09",
+     "2020-09-25",
+     "2020-12-10",
+     "2021-03-10",
+     "2021-05-28"
     ]
    },
-   "last_filed": "2019-09-25",
+   "last_filed": "2021-05-28",
    "names": [
     "CANTEL MEDICAL CORP"
    ],
@@ -11150,6 +12823,26 @@
    "sic_at_filing": [
     5122,
     5160
+   ],
+   "status": "linked"
+  },
+  "22701": {
+   "all_names": [
+    "COMMUNICATIONS SYSTEMS INC"
+   ],
+   "first_filed": "2011-08-10",
+   "hits": {
+    "CSII R735QTJ8XC9X": [
+     "2021-08-16",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "COMMUNICATIONS SYSTEMS INC"
+   ],
+   "sic_at_filing": [
+    3661
    ],
    "status": "linked"
   },
@@ -11432,7 +13125,7 @@
      "2017-10-03"
     ]
    },
-   "last_filed": "2019-10-09",
+   "last_filed": "2020-01-06",
    "names": [
     "PIER 1 IMPORTS INC/DE"
    ],
@@ -11491,10 +13184,20 @@
      "2018-08-06",
      "2018-11-08",
      "2019-03-01",
-     "2019-04-30"
+     "2019-04-30",
+     "2019-07-30",
+     "2019-10-29",
+     "2020-02-26",
+     "2020-05-05",
+     "2020-07-31",
+     "2020-10-28",
+     "2021-03-01",
+     "2021-05-10",
+     "2021-07-29",
+     "2021-10-28"
     ]
    },
-   "last_filed": "2019-10-29",
+   "last_filed": "2021-10-28",
    "names": [
     "DIEBOLD INC",
     "DIEBOLD NIXDORF, Inc"
@@ -11603,10 +13306,13 @@
      "2018-05-02",
      "2018-08-01",
      "2018-11-06",
-     "2019-03-01"
+     "2019-03-01",
+     "2019-05-09",
+     "2019-08-02",
+     "2019-10-31"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2020-08-07",
    "names": [
     "AKORN INC"
    ],
@@ -11763,7 +13469,7 @@
      "2014-11-04"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2020-11-16",
    "names": [
     "KEY ENERGY SERVICES INC"
    ],
@@ -11813,7 +13519,7 @@
      "2018-08-09"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
     "CALADRIUS BIOSCIENCES, INC."
    ],
@@ -11869,7 +13575,7 @@
      "2018-10-30"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-08-06",
    "names": [
     "PIONEER DRILLING CO",
     "PIONEER ENERGY SERVICES CORP"
@@ -12097,7 +13803,7 @@
      "2014-11-17"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-04",
    "names": [
     "SWIFT ENERGY CO"
    ],
@@ -12155,7 +13861,7 @@
      "2015-08-10"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-08-16",
    "names": [
     "IGI LABORATORIES, INC"
    ],
@@ -12289,10 +13995,18 @@
      "2018-07-27",
      "2018-10-30",
      "2019-02-28",
-     "2019-05-02"
+     "2019-05-02",
+     "2019-07-31",
+     "2019-10-31",
+     "2020-02-27",
+     "2020-05-06",
+     "2020-08-06",
+     "2020-10-30",
+     "2021-02-25",
+     "2021-05-06"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-05-06",
    "names": [
     "FLIR SYSTEMS INC"
    ],
@@ -12531,10 +14245,20 @@
      "2018-08-01",
      "2018-11-01",
      "2019-02-20",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-01",
+     "2019-11-05",
+     "2020-02-25",
+     "2020-04-28",
+     "2020-07-31",
+     "2020-11-03",
+     "2021-02-24",
+     "2021-05-03",
+     "2021-08-02",
+     "2021-11-02"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2021-11-02",
    "names": [
     "Ally Financial Inc."
    ],
@@ -12583,6 +14307,9 @@
    "all_names": [
     "HARSCO CORP"
    ],
+   "conflict_resolved_by_float": [
+    13239
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "HSC R735QTJ8XC9X": {
@@ -12625,15 +14352,29 @@
      "2017-11-08",
      "2018-02-22",
      "2018-05-02",
-     "2018-08-02"
+     "2018-08-02",
+     "2018-10-31",
+     "2019-02-21",
+     "2019-05-09",
+     "2019-07-31",
+     "2019-10-29",
+     "2020-02-21",
+     "2020-05-08",
+     "2020-08-05",
+     "2020-11-03",
+     "2021-02-25",
+     "2021-05-04",
+     "2021-08-03",
+     "2021-11-02"
     ]
    },
-   "last_filed": "2019-10-29",
+   "last_filed": "2021-11-02",
    "names": [
     "HARSCO CORP"
    ],
    "sic_at_filing": [
-    3440
+    3440,
+    8900
    ],
    "status": "linked"
   },
@@ -12656,7 +14397,7 @@
      "2015-08-06"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-11-03",
    "names": [
     "ALLIED MOTION TECHNOLOGIES INC"
    ],
@@ -12765,10 +14506,15 @@
      "2018-11-08",
      "2019-02-07",
      "2019-05-07",
-     "2019-08-28"
+     "2019-08-28",
+     "2019-11-07",
+     "2020-02-06",
+     "2020-05-07",
+     "2020-08-27",
+     "2020-11-05"
     ]
    },
-   "last_filed": "2019-08-28",
+   "last_filed": "2021-11-04",
    "names": [
     "LANNETT CO INC"
    ],
@@ -12811,10 +14557,20 @@
      "2018-08-01",
      "2018-11-28",
      "2019-02-07",
-     "2019-05-09"
+     "2019-05-09",
+     "2019-08-01",
+     "2019-11-25",
+     "2020-02-06",
+     "2020-05-06",
+     "2020-08-04",
+     "2020-11-23",
+     "2021-02-04",
+     "2021-05-06",
+     "2021-08-02",
+     "2021-11-12"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2021-11-12",
    "names": [
     "MONMOUTH REAL ESTATE INVESTMENT CORP"
    ],
@@ -12912,10 +14668,12 @@
      "2018-09-13",
      "2018-12-12",
      "2019-04-05",
-     "2019-06-13"
+     "2019-06-13",
+     "2019-09-12",
+     "2019-12-12"
     ]
    },
-   "last_filed": "2019-09-12",
+   "last_filed": "2019-12-12",
    "names": [
     "STAGE STORES INC"
    ],
@@ -13099,7 +14857,7 @@
      "2011-02-25"
     ]
    },
-   "last_filed": "2019-07-25",
+   "last_filed": "2020-07-29",
    "names": [
     "AARON'S INC"
    ],
@@ -13154,10 +14912,23 @@
      "2017-11-01",
      "2018-02-15",
      "2018-05-02",
-     "2018-08-01"
+     "2018-08-01",
+     "2018-10-31",
+     "2019-02-12",
+     "2019-05-02",
+     "2019-07-31",
+     "2019-10-30",
+     "2020-02-12",
+     "2020-04-29",
+     "2020-07-29",
+     "2020-10-28",
+     "2021-02-10",
+     "2021-04-28",
+     "2021-08-04",
+     "2021-10-27"
     ]
    },
-   "last_filed": "2019-10-30",
+   "last_filed": "2021-10-27",
    "names": [
     "OLD NATIONAL BANCORP /IN/"
    ],
@@ -13216,10 +14987,14 @@
      "2018-02-21",
      "2018-04-24",
      "2018-07-31",
-     "2018-10-30"
+     "2018-10-30",
+     "2019-02-25",
+     "2019-04-29",
+     "2019-07-29",
+     "2019-11-04"
     ]
    },
-   "last_filed": "2019-07-29",
+   "last_filed": "2020-05-08",
    "names": [
     "MCDERMOTT INTERNATIONAL INC"
    ],
@@ -13308,7 +15083,8 @@
   },
   "716006": {
    "all_names": [
-    "YRC Worldwide Inc."
+    "YRC Worldwide Inc.",
+    "Yellow Corp"
    ],
    "first_filed": "2011-08-08",
    "float": {
@@ -13341,12 +15117,21 @@
      "2019-02-19",
      "2019-05-08",
      "2019-08-09",
-     "2019-10-31"
+     "2019-10-31",
+     "2020-03-11",
+     "2020-05-11",
+     "2020-08-03",
+     "2020-11-02",
+     "2021-02-11",
+     "2021-05-05",
+     "2021-08-04",
+     "2021-11-03"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-11-03",
    "names": [
-    "YRC Worldwide Inc."
+    "YRC Worldwide Inc.",
+    "Yellow Corp"
    ],
    "sic_at_filing": [
     4213
@@ -13394,15 +15179,46 @@
      "2018-08-08",
      "2018-11-08",
      "2019-02-22",
-     "2019-05-08"
+     "2019-05-08",
+     "2019-08-08",
+     "2019-11-07",
+     "2020-02-24",
+     "2020-04-28",
+     "2020-05-05",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-04-23",
+     "2021-07-29"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-07-29",
    "names": [
     "CINCINNATI BELL INC"
    ],
    "sic_at_filing": [
     4813
+   ],
+   "status": "linked"
+  },
+  "720154": {
+   "all_names": [
+    "BIOANALYTICAL SYSTEMS INC",
+    "Inotiv, Inc."
+   ],
+   "first_filed": "2011-08-15",
+   "hits": {
+    "BASI R735QTJ8XC9X": [
+     "2021-08-13",
+     "2021-12-21"
+    ]
+   },
+   "last_filed": "2021-12-21",
+   "names": [
+    "Inotiv, Inc."
+   ],
+   "sic_at_filing": [
+    8731
    ],
    "status": "linked"
   },
@@ -13468,7 +15284,7 @@
      "2014-08-11"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-08",
    "names": [
     "HANGER ORTHOPEDIC GROUP INC",
     "HANGER, INC."
@@ -13577,10 +15393,21 @@
      "2018-04-25",
      "2018-07-20",
      "2018-10-24",
-     "2019-02-12"
+     "2019-02-12",
+     "2019-04-24",
+     "2019-07-24",
+     "2019-10-30",
+     "2020-02-13",
+     "2020-04-23",
+     "2020-07-29",
+     "2020-10-22",
+     "2021-02-12",
+     "2021-04-22",
+     "2021-07-28",
+     "2021-10-25"
     ]
    },
-   "last_filed": "2019-10-30",
+   "last_filed": "2021-10-25",
    "names": [
     "NORTHWESTERN CORP"
    ],
@@ -13652,6 +15479,31 @@
    ],
    "status": "linked"
   },
+  "73290": {
+   "all_names": [
+    "BIOMERICA INC"
+   ],
+   "first_filed": "2011-10-27",
+   "hits": {
+    "BMRA WDDJJLZW1YED": [
+     "2020-01-14",
+     "2020-04-14",
+     "2020-08-31",
+     "2020-10-15",
+     "2021-01-14",
+     "2021-04-14"
+    ]
+   },
+   "last_filed": "2021-10-14",
+   "names": [
+    "BIOMERICA INC"
+   ],
+   "sic_at_filing": [
+    2835,
+    3843
+   ],
+   "status": "linked"
+  },
   "73887": {
    "all_names": [
     "Bristow Group Inc"
@@ -13702,7 +15554,7 @@
      "2018-11-09"
     ]
    },
-   "last_filed": "2019-10-28",
+   "last_filed": "2019-12-27",
    "names": [
     "Bristow Group Inc"
    ],
@@ -13841,10 +15693,18 @@
      "2018-08-07",
      "2018-11-05",
      "2019-03-07",
-     "2019-05-06"
+     "2019-05-06",
+     "2019-08-05",
+     "2019-11-06",
+     "2020-03-09",
+     "2020-05-06",
+     "2020-08-06",
+     "2020-10-29",
+     "2021-03-03",
+     "2021-05-05"
     ]
    },
-   "last_filed": "2019-08-05",
+   "last_filed": "2021-10-27",
    "names": [
     "INVACARE CORP"
    ],
@@ -13900,7 +15760,7 @@
      "2013-03-18"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2021-11-15",
    "names": [
     "Celsion CORP"
    ],
@@ -13934,7 +15794,7 @@
      "2012-08-07"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-09",
    "names": [
     "OVERSEAS SHIPHOLDING GROUP INC"
    ],
@@ -13993,7 +15853,7 @@
      "2014-08-07"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2020-03-04",
    "names": [
     "PARKER DRILLING CO /DE/"
    ],
@@ -14004,7 +15864,8 @@
   },
   "77159": {
    "all_names": [
-    "PENN VIRGINIA CORP"
+    "PENN VIRGINIA CORP",
+    "Ranger Oil Corp"
    ],
    "first_filed": "2010-08-06",
    "float": {
@@ -14039,7 +15900,7 @@
      "2015-07-29"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
     "PENN VIRGINIA CORP"
    ],
@@ -14087,10 +15948,13 @@
      "2018-08-03",
      "2018-11-01",
      "2019-02-25",
-     "2019-05-07"
+     "2019-05-07",
+     "2019-08-02",
+     "2019-11-04",
+     "2020-03-16"
     ]
    },
-   "last_filed": "2019-08-02",
+   "last_filed": "2021-11-05",
    "names": [
     "PENNSYLVANIA REAL ESTATE INVESTMENT TRUST"
    ],
@@ -14242,10 +16106,28 @@
      "2016-10-28",
      "2016-10-31",
      "2017-02-21",
-     "2017-04-28"
+     "2017-04-28",
+     "2017-07-28",
+     "2017-10-31",
+     "2018-02-28",
+     "2018-04-30",
+     "2018-07-30",
+     "2018-10-30",
+     "2019-03-01",
+     "2019-05-07",
+     "2019-07-26",
+     "2019-10-31",
+     "2020-03-02",
+     "2020-05-05",
+     "2020-08-03",
+     "2020-11-02",
+     "2021-03-01",
+     "2021-04-30",
+     "2021-07-30",
+     "2021-10-29"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-10-29",
    "names": [
     "WORLD FUEL SERVICES CORP"
    ],
@@ -14497,10 +16379,11 @@
      "2018-05-03",
      "2018-08-06",
      "2018-08-09",
-     "2018-11-06"
+     "2018-11-06",
+     "2019-02-26"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-12",
    "names": [
     "UNIT CORP"
    ],
@@ -14578,7 +16461,7 @@
      "2014-05-01"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-12",
    "names": [
     "CYTRX CORP"
    ],
@@ -14803,7 +16686,9 @@
      "2018-05-03",
      "2018-08-03",
      "2018-11-08",
-     "2019-02-26"
+     "2019-02-26",
+     "2019-05-03",
+     "2019-07-31"
     ]
    },
    "last_filed": "2019-07-31",
@@ -14864,10 +16749,20 @@
      "2018-11-08",
      "2019-02-08",
      "2019-05-09",
-     "2019-08-16"
+     "2019-08-16",
+     "2019-11-12",
+     "2020-02-10",
+     "2020-05-11",
+     "2020-08-26",
+     "2020-11-09",
+     "2021-02-09",
+     "2021-05-07",
+     "2021-08-20",
+     "2021-11-09",
+     "2021-11-10"
     ]
    },
-   "last_filed": "2019-08-16",
+   "last_filed": "2021-11-10",
    "names": [
     "II-VI INC"
    ],
@@ -15102,7 +16997,7 @@
      "2018-11-14"
     ]
    },
-   "last_filed": "2019-08-14",
+   "last_filed": "2019-11-14",
    "names": [
     "Centric Brands Inc.",
     "Differential Brands Group Inc."
@@ -15146,14 +17041,25 @@
      "2018-08-09",
      "2018-11-09",
      "2019-03-15",
-     "2019-05-15"
+     "2019-05-15",
+     "2019-08-09",
+     "2019-11-12",
+     "2020-03-03",
+     "2020-05-11",
+     "2020-08-04",
+     "2020-11-09",
+     "2021-02-19",
+     "2021-05-05",
+     "2021-08-06",
+     "2021-11-05"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-05",
    "names": [
     "Sorrento Therapeutics, Inc."
    ],
    "sic_at_filing": [
+    2836,
     8731
    ],
    "status": "linked"
@@ -15348,7 +17254,7 @@
      "2018-08-02"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-11-03",
    "names": [
     "ION GEOPHYSICAL CORP"
    ],
@@ -15387,7 +17293,7 @@
      "2014-11-07"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-15",
    "names": [
     "ABRAXAS PETROLEUM CORP"
    ],
@@ -15453,7 +17359,7 @@
      "2011-09-08"
     ]
    },
-   "last_filed": "2019-09-10",
+   "last_filed": "2021-12-07",
    "names": [
     "VALUEVISION MEDIA INC"
    ],
@@ -15558,9 +17464,36 @@
    ],
    "status": "linked"
   },
+  "874710": {
+   "all_names": [
+    "ALLIED HEALTHCARE PRODUCTS INC"
+   ],
+   "first_filed": "2011-11-08",
+   "hits": {
+    "AHPI R735QTJ8XC9X": [
+     "2020-02-14",
+     "2020-05-15",
+     "2020-09-28",
+     "2020-11-16",
+     "2021-02-16",
+     "2021-05-14",
+     "2021-09-28",
+     "2021-11-15"
+    ]
+   },
+   "last_filed": "2021-11-15",
+   "names": [
+    "ALLIED HEALTHCARE PRODUCTS INC"
+   ],
+   "sic_at_filing": [
+    3842
+   ],
+   "status": "linked"
+  },
   "876883": {
    "all_names": [
-    "MDC PARTNERS INC"
+    "MDC PARTNERS INC",
+    "Stagwell Inc"
    ],
    "first_filed": "2011-08-04",
    "hits": {
@@ -15581,7 +17514,7 @@
      "2017-03-01"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-09",
    "names": [
     "MDC PARTNERS INC"
    ],
@@ -15691,7 +17624,7 @@
      "2015-10-29"
     ]
    },
-   "last_filed": "2019-08-22",
+   "last_filed": "2021-11-04",
    "names": [
     "TUESDAY MORNING CORP/DE"
    ],
@@ -15762,7 +17695,7 @@
      "2014-08-07"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2020-05-06",
    "names": [
     "VIVUS INC"
    ],
@@ -15850,7 +17783,9 @@
      "2018-09-13",
      "2018-12-13",
      "2019-03-29",
-     "2019-06-13"
+     "2019-06-13",
+     "2019-09-12",
+     "2019-12-12"
     ],
     "TLRD W7PQ099Y7S6D": [
      "2016-03-25",
@@ -15866,10 +17801,12 @@
      "2018-09-13",
      "2018-12-13",
      "2019-03-29",
-     "2019-06-13"
+     "2019-06-13",
+     "2019-09-12",
+     "2019-12-12"
     ]
    },
-   "last_filed": "2019-09-12",
+   "last_filed": "2020-07-27",
    "names": [
     "MENS WEARHOUSE INC",
     "TAILORED BRANDS INC"
@@ -15898,7 +17835,7 @@
      "2015-06-04"
     ]
    },
-   "last_filed": "2019-09-09",
+   "last_filed": "2020-07-16",
    "names": [
     "STEIN MART INC"
    ],
@@ -15958,10 +17895,22 @@
      "2018-07-06",
      "2018-10-10",
      "2019-01-09",
-     "2019-04-30"
+     "2019-04-30",
+     "2019-07-11",
+     "2019-10-09",
+     "2019-10-15",
+     "2020-01-09",
+     "2020-04-29",
+     "2020-07-08",
+     "2020-10-01",
+     "2021-01-07",
+     "2021-04-22",
+     "2021-04-27",
+     "2021-06-30",
+     "2021-09-30"
     ]
    },
-   "last_filed": "2019-10-15",
+   "last_filed": "2021-09-30",
    "names": [
     "BED BATH & BEYOND INC"
    ],
@@ -16021,7 +17970,7 @@
      "2019-02-21"
     ]
    },
-   "last_filed": "2019-07-24",
+   "last_filed": "2021-12-02",
    "names": [
     "SUPERIOR ENERGY SERVICES INC"
    ],
@@ -16054,15 +18003,43 @@
      "2018-11-09",
      "2019-03-28",
      "2019-05-09",
-     "2019-08-08"
+     "2019-08-08",
+     "2019-11-08",
+     "2020-03-12",
+     "2020-05-11",
+     "2020-08-06",
+     "2020-11-13",
+     "2021-03-11",
+     "2021-05-10"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-05",
    "names": [
     "REVLON INC /DE/"
    ],
    "sic_at_filing": [
     2844
+   ],
+   "status": "linked"
+  },
+  "890394": {
+   "all_names": [
+    "MoSys, Inc."
+   ],
+   "first_filed": "2011-08-08",
+   "hits": {
+    "MOSY S5WLTU74BRL1": [
+     "2021-03-18",
+     "2021-05-13",
+     "2021-08-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "MoSys, Inc."
+   ],
+   "sic_at_filing": [
+    3674
    ],
    "status": "linked"
   },
@@ -16132,10 +18109,13 @@
      "2018-11-07",
      "2019-03-06",
      "2019-05-08",
-     "2019-08-07"
+     "2019-08-07",
+     "2019-11-12",
+     "2020-03-11",
+     "2020-05-06"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2020-08-05",
    "names": [
     "CRAFT BREW ALLIANCE, INC."
    ],
@@ -16192,7 +18172,7 @@
      "2018-08-14"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-12",
    "names": [
     "CASI Pharmaceuticals, Inc."
    ],
@@ -16204,7 +18184,8 @@
   "895419": {
    "all_names": [
     "CREE INC",
-    "CREE, INC."
+    "CREE, INC.",
+    "WOLFSPEED, INC."
    ],
    "first_filed": "2010-10-21",
    "float": {
@@ -16250,12 +18231,24 @@
      "2018-08-20",
      "2018-10-17",
      "2019-01-31",
-     "2019-05-03"
+     "2019-05-03",
+     "2019-08-21",
+     "2019-10-31",
+     "2020-01-30",
+     "2020-04-30",
+     "2020-08-19",
+     "2020-10-29",
+     "2021-01-28",
+     "2021-04-29",
+     "2021-08-18",
+     "2021-10-28"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-10-28",
    "names": [
-    "CREE INC"
+    "CREE INC",
+    "CREE, INC.",
+    "WOLFSPEED, INC."
    ],
    "sic_at_filing": [
     3674
@@ -16394,10 +18387,21 @@
      "2018-08-01",
      "2018-11-01",
      "2019-02-27",
-     "2019-05-01"
+     "2019-05-01",
+     "2019-07-31",
+     "2019-11-05",
+     "2020-02-25",
+     "2020-04-29",
+     "2020-04-30",
+     "2020-08-04",
+     "2020-11-05",
+     "2021-02-25",
+     "2021-04-29",
+     "2021-08-05",
+     "2021-11-03"
     ]
    },
-   "last_filed": "2019-07-31",
+   "last_filed": "2021-11-03",
    "names": [
     "AMARIN CORP PLC\\UK"
    ],
@@ -16538,7 +18542,7 @@
      "2015-08-05"
     ]
    },
-   "last_filed": "2019-10-30",
+   "last_filed": "2020-08-10",
    "names": [
     "LIBBEY INC"
    ],
@@ -16603,10 +18607,21 @@
      "2012-08-09",
      "2012-11-09",
      "2014-11-07",
-     "2019-05-10"
+     "2019-05-10",
+     "2019-08-09",
+     "2019-11-12",
+     "2020-02-28",
+     "2020-05-11",
+     "2020-05-18",
+     "2020-08-07",
+     "2020-11-06",
+     "2021-02-26",
+     "2021-05-07",
+     "2021-08-06",
+     "2021-10-29"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-10-29",
    "names": [
     "NEW YORK COMMUNITY BANCORP INC"
    ],
@@ -16770,10 +18785,26 @@
      "2018-08-07",
      "2018-11-07",
      "2019-02-06",
-     "2019-05-17"
+     "2019-05-17",
+     "2019-08-06",
+     "2019-08-13",
+     "2019-11-05",
+     "2020-02-06",
+     "2020-06-08",
+     "2020-07-29",
+     "2020-08-18",
+     "2020-10-30",
+     "2021-02-04",
+     "2021-05-18",
+     "2021-07-30",
+     "2021-10-28"
+    ],
+    "POLY WT2Q59YRZ0IT": [
+     "2021-07-30",
+     "2021-10-28"
     ]
    },
-   "last_filed": "2019-08-13",
+   "last_filed": "2021-10-28",
    "names": [
     "PLANTRONICS INC /CA/"
    ],
@@ -16898,10 +18929,17 @@
      "2018-10-24",
      "2019-03-04",
      "2019-05-06",
-     "2019-08-01"
+     "2019-08-01",
+     "2019-11-12",
+     "2020-03-02",
+     "2020-05-04",
+     "2020-08-06",
+     "2020-11-09",
+     "2021-03-08",
+     "2021-05-07"
     ]
    },
-   "last_filed": "2019-08-01",
+   "last_filed": "2021-11-04",
    "names": [
     "LA JOLLA PHARMACEUTICAL CO"
    ],
@@ -17081,10 +19119,20 @@
      "2018-08-09",
      "2018-11-08",
      "2019-02-07",
-     "2019-05-23"
+     "2019-05-23",
+     "2019-08-08",
+     "2019-11-07",
+     "2020-02-06",
+     "2020-05-27",
+     "2020-08-06",
+     "2020-11-05",
+     "2021-02-04",
+     "2021-05-28",
+     "2021-08-05",
+     "2021-11-04"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2021-11-04",
    "names": [
     "LIONS GATE ENTERTAINMENT CORP /CN/"
    ],
@@ -17201,7 +19249,7 @@
      "2019-02-28"
     ]
    },
-   "last_filed": "2019-08-08",
+   "last_filed": "2020-03-20",
    "names": [
     "DEAN FOODS CO"
    ],
@@ -17274,10 +19322,15 @@
      "2018-02-08",
      "2018-06-07",
      "2018-08-02",
-     "2018-11-08"
+     "2018-11-08",
+     "2019-02-11",
+     "2019-03-26",
+     "2019-06-14",
+     "2019-08-09",
+     "2019-11-07"
     ]
    },
-   "last_filed": "2019-08-09",
+   "last_filed": "2021-11-10",
    "names": [
     "ALLIANCE ONE INTERNATIONAL, INC.",
     "PYXUS INTERNATIONAL, INC."
@@ -17370,6 +19423,7 @@
   },
   "943034": {
    "all_names": [
+    "AUTOSCOPE TECHNOLOGIES CORP",
     "IMAGE SENSING SYSTEMS INC"
    ],
    "first_filed": "2011-08-12",
@@ -17398,15 +19452,47 @@
      "2017-11-13",
      "2018-03-14",
      "2018-05-14",
-     "2019-03-14"
+     "2018-08-09",
+     "2018-11-13",
+     "2019-03-14",
+     "2019-05-07",
+     "2019-08-12",
+     "2019-11-13",
+     "2020-03-12",
+     "2020-05-14",
+     "2020-08-12",
+     "2020-11-10",
+     "2021-03-11",
+     "2021-05-03"
     ]
    },
-   "last_filed": "2019-08-12",
+   "last_filed": "2021-11-15",
    "names": [
     "IMAGE SENSING SYSTEMS INC"
    ],
    "sic_at_filing": [
     3829
+   ],
+   "status": "linked"
+  },
+  "943184": {
+   "all_names": [
+    "Ever-Glory International Group, Inc."
+   ],
+   "first_filed": "2011-08-10",
+   "hits": {
+    "ADCC R735QTJ8XC9X": [
+     "2021-05-13",
+     "2021-08-13",
+     "2021-11-12"
+    ]
+   },
+   "last_filed": "2021-11-12",
+   "names": [
+    "Ever-Glory International Group, Inc."
+   ],
+   "sic_at_filing": [
+    2300
    ],
    "status": "linked"
   },
@@ -17444,7 +19530,7 @@
      "2014-11-06"
     ]
    },
-   "last_filed": "2019-08-07",
+   "last_filed": "2021-11-08",
    "names": [
     "GOODRICH PETROLEUM CORP"
    ],
@@ -17470,7 +19556,18 @@
      "2018-05-03",
      "2018-08-02",
      "2018-11-01",
-     "2019-02-26"
+     "2019-02-26",
+     "2019-05-02",
+     "2019-08-01",
+     "2019-10-31",
+     "2020-02-25",
+     "2020-05-08",
+     "2020-08-07",
+     "2020-11-06",
+     "2021-02-23",
+     "2021-05-05",
+     "2021-08-04",
+     "2021-11-03"
     ],
     "SSS R735QTJ8XC9X": [
      "2010-08-06",
@@ -17507,10 +19604,21 @@
      "2018-05-03",
      "2018-08-02",
      "2018-11-01",
-     "2019-02-26"
+     "2019-02-26",
+     "2019-05-02",
+     "2019-08-01",
+     "2019-10-31",
+     "2020-02-25",
+     "2020-05-08",
+     "2020-08-07",
+     "2020-11-06",
+     "2021-02-23",
+     "2021-05-05",
+     "2021-08-04",
+     "2021-11-03"
     ]
    },
-   "last_filed": "2019-10-31",
+   "last_filed": "2021-11-03",
    "names": [
     "LIFE STORAGE, INC.",
     "SOVRAN SELF STORAGE INC"
@@ -17522,6 +19630,7 @@
   },
   "945114": {
    "all_names": [
+    "GLOBAL INDUSTRIAL Co",
     "SYSTEMAX INC"
    ],
    "first_filed": "2011-08-12",
@@ -17539,7 +19648,7 @@
      "2018-11-07"
     ]
    },
-   "last_filed": "2019-08-06",
+   "last_filed": "2021-11-04",
    "names": [
     "SYSTEMAX INC"
    ],
@@ -17598,6 +19707,27 @@
    ],
    "sic_at_filing": [
     3674
+   ],
+   "status": "linked"
+  },
+  "946454": {
+   "all_names": [
+    "BALLANTYNE STRONG, INC."
+   ],
+   "first_filed": "2011-08-09",
+   "hits": {
+    "BTN R735QTJ8XC9X": [
+     "2021-03-10",
+     "2021-05-06",
+     "2021-08-10"
+    ]
+   },
+   "last_filed": "2021-11-10",
+   "names": [
+    "BALLANTYNE STRONG, INC."
+   ],
+   "sic_at_filing": [
+    3861
    ],
    "status": "linked"
   },
@@ -17740,6 +19870,26 @@
    ],
    "status": "linked"
   },
+  "96699": {
+   "all_names": [
+    "TECHNICAL COMMUNICATIONS CORP"
+   ],
+   "first_filed": "2011-08-09",
+   "hits": {
+    "TCCO R735QTJ8XC9X": [
+     "2019-12-13",
+     "2020-02-11"
+    ]
+   },
+   "last_filed": "2021-12-22",
+   "names": [
+    "TECHNICAL COMMUNICATIONS CORP"
+   ],
+   "sic_at_filing": [
+    3663
+   ],
+   "status": "linked"
+  },
   "97472": {
    "all_names": [
     "TEXAS INDUSTRIES INC"
@@ -17816,14 +19966,14 @@
   }
  },
  "rejected_counts": {
-  "fund/blank-check/royalty SIC": 15,
-  "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 25,
-  "no security with >= 2 matching dated tickers": 8176,
-  "non-common name": 66
+  "fund/blank-check/royalty SIC": 28,
+  "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 27,
+  "no security with >= 2 matching dated tickers": 9306,
+  "non-common name": 93
  },
  "summary": {
-  "ambiguous": 8,
-  "linked": 441,
-  "rejected": 17
+  "ambiguous": 13,
+  "linked": 495,
+  "rejected": 18
  }
 }
