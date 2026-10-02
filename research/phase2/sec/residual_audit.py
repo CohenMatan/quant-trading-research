@@ -12,10 +12,14 @@ Missing registrants are characterised by: industry (SEC-assigned SIC at the time
 (bankruptcy 8-K item 1.03 within two years before the last equity report; ended otherwise; still filing), size
 (public float), and why no match was made (identity v2 status / no QuantConnect security with that ticker).
 Outcome classification is used only to characterise the residual, never to decide eligibility.
+Filters before classification (D113a): non-common names/SICs (identity v2 rules); investment vehicles (a TRUST/FUND
+name under SIC 6700-6799, 6199 or 6221: collective and commodity trusts); XBRL unit errors (float per single-class
+cover share outside $1-$2,000, or float above 25x the registrant's largest reported total assets).
 Output: research/phase2/sec/residual_audit.json"""
 from __future__ import annotations
 
 import json
+import re
 import sys
 from collections import Counter, defaultdict
 from datetime import date, timedelta
@@ -30,6 +34,7 @@ import rss_index  # noqa: E402
 from identity_v2 import NON_COMMON_NAME, NON_COMMON_SIC, ym, ym_add  # noqa: E402
 
 OUT = Path(__file__).parent
+INVESTMENT_VEHICLE = re.compile(r"\bTRUST\b|\bFUND\b", re.I)
 
 
 def industry(sic):
@@ -88,11 +93,20 @@ def main():
         if any(NON_COMMON_NAME.search(n or "") for n in names) or any(r["sic"] in NON_COMMON_SIC for r in fl):
             excluded["non-common (partnership/LLC/trust/fund name or fund/blank-check/royalty SIC)"] += 1
             continue
+        if any(INVESTMENT_VEHICLE.search(n or "") for n in names) and any(
+                r["sic"] and (6700 <= r["sic"] <= 6799 or r["sic"] in (6199, 6221)) for r in fl):
+            excluded["investment vehicle (trust name under an investment-office/commodity SIC)"] += 1
+            continue
         if max(obs.values()) >= 1e9:               # plausibility: float per cover share within $1-$2,000
             cf = client.companyfacts(cik)
-            sh = [f["val"] for f in index_facts(cf).get("EntityCommonStockSharesOutstanding", ()) if f["val"] > 0] if cf else []
+            fx = index_facts(cf) if cf else {}
+            sh = [f["val"] for f in fx.get("EntityCommonStockSharesOutstanding", ()) if f["val"] > 0]
             if sh:                                 # multi-class registrants report no single count: kept unchecked
                 obs = {d: v for d, v in obs.items() if 1.0 <= v / max(sh) and v / min(sh) <= 2000.0}
+            # D113a: balance-sheet scale (catches unit errors of multi-class filers): float <= 25 x largest total assets
+            ta = [f["val"] for f in fx.get("Assets", ()) if f["val"] > 0]
+            if ta:
+                obs = {d: v for d, v in obs.items() if v <= 25 * max(ta)}
             if not obs:
                 excluded["implausible float (XBRL unit error)"] += 1
                 continue

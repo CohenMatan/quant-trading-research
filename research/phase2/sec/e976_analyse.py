@@ -6,6 +6,7 @@ import csv
 import json
 import sys
 from collections import Counter, defaultdict
+from datetime import date, timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
@@ -58,6 +59,8 @@ def main(exp="E976-02"):
             "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": round(final, 1),
             "final_usable_coverage_of_non_financial": round(final / nonfin, 4) if nonfin else None,
             "quarantine_lost_stock_months": c["quarantine_lost"].get(y, 0),
+            "non_financial_not_usable_per_month_by_reason": {k.split("|", 1)[1]: round(n / 12, 1)
+                                                             for k, n in sorted(v.items()) if k.startswith("not_usable|")},
         }
     res["coverage_by_year"] = table
     res["sic_vs_structure (stock-months)"] = c["sic_vs_structure"]
@@ -81,6 +84,9 @@ def main(exp="E976-02"):
             grp, y = k.split("|")
             ret.setdefault(y, {})[grp] = {"stock_months": v[0], "mean_month_return_x12": round(12 * v[1] / v[0], 4)}
     for y, gr in ret.items():
+        if "ttm_usable" in gr and "ttm_missing" in gr:
+            gr["ttm_missing_share"] = round(gr["ttm_missing"]["stock_months"] / (gr["ttm_missing"]["stock_months"]
+                                                                                + gr["ttm_usable"]["stock_months"]), 4)
         if "corrected" in gr and "native" in gr:
             sh = gr["corrected"]["stock_months"] / (gr["corrected"]["stock_months"] + gr["native"]["stock_months"])
             gr["repaired_share"] = round(sh, 4)
@@ -91,6 +97,43 @@ def main(exp="E976-02"):
                sum(ret[y][g]["stock_months"] * ret[y][g]["mean_month_return_x12"] for y in ret if g in ret[y])]
            for g in ("native", "corrected")}
     res["composition_returns_2010_2021"] = {g: round(v[1] / v[0], 4) for g, v in tot.items() if v[0]}
+    # D113a: True-TTM missingness among non-financial eligible names (X976 v1.1 'T' lines) — who lacks TTM, by
+    # outcome (the survivorship audit's own classification), group and reason; plus the same equal-weight universe
+    # composition measure for names with / without usable TTM (characterisation, not a factor)
+    T = [l.split("|") for l in lines if l.startswith("T|")]
+    if T:
+        tt = {g: [sum(ret[y][g]["stock_months"] for y in ret if g in ret[y]),
+                  sum(ret[y][g]["stock_months"] * ret[y][g]["mean_month_return_x12"] for y in ret if g in ret[y])]
+              for g in ("ttm_usable", "ttm_missing")}
+        res["composition_returns_ttm_2010_2021"] = {g: round(v[1] / v[0], 4) for g, v in tt.items() if v[0]}
+        by_out = defaultdict(lambda: [0, 0, 0])          # outcome -> [securities, eligible months, usable months]
+        reasons = Counter()
+        for _, sid, grp, n, u, why in T:
+            if grp == "corrected":
+                ciks = [x["cik"] for x in corr.get(sid, [])]
+                last = t["nofund"][sid]["last_seen"]
+            else:
+                nat = t["native"].get(sid, {})
+                ciks = [nat["cik"]] if nat.get("cik") else []
+                ly, lm = divmod(nat.get("last", 202112), 100)
+                last = date(ly + (lm == 12), lm % 12 + 1, 1) - timedelta(days=1)
+            o = outcome(client, ciks, last)
+            cell = by_out[o]
+            cell[0] += 1
+            cell[1] += int(n)
+            cell[2] += int(u)
+            for kv in filter(None, why.split(";")):
+                k, v = kv.rsplit("=", 1)
+                reasons[k] += int(v)
+        res["ttm_missingness_by_outcome"] = {o: {"securities": v[0], "eligible_months": v[1], "usable_months": v[2],
+                                                 "usable_share": round(v[2] / v[1], 4) if v[1] else None}
+                                             for o, v in sorted(by_out.items())}
+        res["ttm_missing_reasons (stock-months)"] = dict(reasons.most_common())
+        terc = {}
+        for y, v in c["coverage"].items():
+            terc[y] = {tc: round(v.get(f"final_usable_{tc}", 0) / v[f"nonfin_eligible_{tc}"], 4)
+                       for tc in ("T1", "T2", "T3") if v.get(f"nonfin_eligible_{tc}")}
+        res["final_usable_share_by_size_tercile"] = terc
     (OUT / f"e976_results_{exp}.json").write_text(json.dumps(res, indent=1, sort_keys=True, default=str) + "\n")
     return res
 

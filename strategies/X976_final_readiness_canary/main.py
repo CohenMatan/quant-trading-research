@@ -317,9 +317,8 @@ class RemediationCanary(QRAlgorithm):
         c["fin_flips_summary"] = {"companies_with_flips": len(c["fin_flips"]),
                                   "flips": sum(c["fin_flips"].values())}
         c["delisted_corrected"] = {sid: str(d) for sid, d in self.delisted.items() if self.qr_sec.has(sid)}
-        for sid, (grp, n, u, why) in sorted(self.ttm_sec.items()):
-            if u < n:
-                self._qr_log("T|%s|%s|%d|%d|%s" % (sid, grp, n, u, ";".join(f"{k}={v}" for k, v in sorted(why.items()))))
+        for sid, (grp, n, u, why) in sorted(self.ttm_sec.items()):   # every non-financial eligible security
+            self._qr_log("T|%s|%s|%d|%d|%s" % (sid, grp, n, u, ";".join(f"{k}={v}" for k, v in sorted(why.items()))))
         c["ttm_sec_summary"] = {"securities": len(self.ttm_sec),
                                 "with_missing_months": sum(1 for v in self.ttm_sec.values() if v[2] < v[1])}
         text = json.dumps(c, sort_keys=True, default=str)

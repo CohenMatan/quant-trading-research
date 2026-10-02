@@ -8,6 +8,11 @@ Registrant behind a security:
   * native securities: the vendor CIK — only for filings made while the vendor CIK was actually the filer; where the
     vendor CIK is a later successor, the registrant whose filings carry the security's ticker (instance-name prefix
     = the security's QuantConnect ticker within +-3 months, >= 2 filings, unique) — the same evidence as identity v2;
+    the predecessor must not be a company QuantConnect covers itself, must have stopped filing within 120 days
+    after the vendor CIK's first filing, and must carry market-cap evidence for this security (E971-02 'Q': SEC
+    cover shares x close within 3% of the security's point-in-time market cap on >= 2 float dates and >= half of
+    them). D113a: instance prefixes alone attached shells to real securities (e.g. 'Global Gard' to GG); without
+    a qualifying predecessor the filing-structure rule decides until the vendor CIK's first filing;
   * repaired securities: their linked registrant(s).
 Never current-status metadata. Output: {sid: [[effective_date, sic, cik], ...]} (changes only)."""
 from __future__ import annotations
@@ -28,6 +33,18 @@ from identity_v2 import ym, ym_add  # noqa: E402
 OUT = Path(__file__).parent
 
 
+def market_cap_evidence():
+    """(cik, sid) pairs whose SEC cover shares x QuantConnect close matched the security's point-in-time market cap
+    within 3% on >= 2 float dates and >= half of them (E971-02 'Q' lines)."""
+    out = set()
+    for l in e970_parse.lines("E971-02"):
+        if l.startswith("Q|"):
+            _, c, s, n, k = l.split("|")
+            if int(k) >= 2 and int(k) >= 0.5 * int(n):
+                out.add((int(c), s))
+    return out
+
+
 def build(links):
     """links: {sid: [cik, ...]} for repaired securities."""
     t = e970_parse.load()
@@ -39,6 +56,8 @@ def build(links):
         by_cik[r["cik"]].append(r)
         if r["prefix"]:
             by_prefix[r["prefix"].replace(".", "")].append(r)
+    native_cik = {n["cik"] for n in t["native"].values() if n["cik"]}
+    qev = market_cap_evidence()
     out, source = {}, defaultdict(int)
     for sid, n in t["native"].items():
         ev = list(by_cik.get(n["cik"], ()))
@@ -49,7 +68,12 @@ def build(links):
             for r in by_prefix.get(tk.replace(".", "").upper(), ()):
                 if r["cik"] != n["cik"] and r["filed"] < first_own and ym_add(n["first"], -3) <= ym(r["filed"]) <= ym_add(n["last"], 3):
                     cand[r["cik"]].append(r)
-        good = [c for c, lst in cand.items() if len({x["filed"] for x in lst}) >= 2]
+        # a predecessor is a registrant that STOPPED filing when the vendor CIK took over (successions): never a
+        # company QuantConnect covers itself, never one still filing more than 120 days after the vendor CIK's
+        # first filing (D113a: Arlington Asset 'AI' was attached to C3.ai's 'AI' by the earlier rule)
+        stop_by = (date.fromisoformat(first_own) + timedelta(days=120)).isoformat() if first_own != "9999" else "9999"
+        good = [c for c, lst in cand.items() if len({x["filed"] for x in lst}) >= 2 and c not in native_cik
+                and max(r["filed"] for r in by_cik[c]) <= stop_by and (c, sid) in qev]
         if len(good) == 1:
             ev += cand[good[0]]
             source["native+ticker-evidenced predecessor"] += 1

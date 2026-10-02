@@ -1,7 +1,7 @@
 # generated (D111) — do not edit. load() reassembles the packed table and checks its SHA-256.
 import base64, hashlib, importlib, json, zlib
-N_PARTS = 17
-SHA256 = "348c633be9ea6dd2fd7a8e8dc939063edc3bb6fa4ea8f8ade9b2abbcb0a9c5c5"
+N_PARTS = 19
+SHA256 = "8dc37e16059f6c3afcbd3571ce38f3af0ad3a2f73842462df9d96e944af97bef"
 
 
 def load_table():

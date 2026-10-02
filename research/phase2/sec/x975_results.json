@@ -11,12 +11,12 @@
    "within_0.5pct": 1.0
   },
   "calendar-year filer": {
-   "n": 23125,
-   "within_0.5pct": 0.9396
+   "n": 22956,
+   "within_0.5pct": 0.9392
   },
   "changed fiscal year": {
-   "n": 8236,
-   "within_0.5pct": 0.9603
+   "n": 8501,
+   "within_0.5pct": 0.9599
   },
   "company with amended filings": {
    "n": 15034,
@@ -39,8 +39,8 @@
    "revenue": 866
   },
   "non-calendar fiscal year": {
-   "n": 13294,
-   "within_0.5pct": 0.9662
+   "n": 13463,
+   "within_0.5pct": 0.9666
   },
   "stock split company": {
    "n": 458,
@@ -440,20 +440,20 @@
     "within_2pct": 0.7907
    },
    "approved_for_H016_field_set": false,
-   "compared": 5381,
+   "compared": 5385,
    "fy_window_vs_10K_total": {
     "close": 63,
     "differs": 105,
     "far": 177,
-    "match": 1021
+    "match": 1022
    },
    "timing": {
     "before SEC periodic filing": 9,
     "later than SEC": 181,
-    "same day as SEC": 5191
+    "same day as SEC": 5195
    },
-   "within_0.5pct": 0.7396,
-   "within_2pct": 0.7857
+   "within_0.5pct": 0.7398,
+   "within_2pct": 0.7859
   },
   "gross_profit": {
    "all_companies_incl_financial": {
@@ -484,20 +484,20 @@
     "within_2pct": 0.9631
    },
    "approved_for_H016_field_set": true,
-   "compared": 9253,
+   "compared": 9257,
    "fy_window_vs_10K_total": {
     "close": 15,
     "differs": 21,
     "far": 13,
-    "match": 2235
+    "match": 2236
    },
    "timing": {
     "before SEC periodic filing": 22,
     "later than SEC": 313,
-    "same day as SEC": 8918
+    "same day as SEC": 8922
    },
-   "within_0.5pct": 0.9649,
-   "within_2pct": 0.9747
+   "within_0.5pct": 0.9645,
+   "within_2pct": 0.9743
   },
   "operating_cash_flow": {
    "all_companies_incl_financial": {
@@ -506,17 +506,17 @@
     "within_2pct": 0.9756
    },
    "approved_for_H016_field_set": true,
-   "compared": 8383,
+   "compared": 8387,
    "fy_window_vs_10K_total": {
     "close": 19,
     "differs": 13,
     "far": 10,
-    "match": 2072
+    "match": 2073
    },
    "timing": {
     "before SEC periodic filing": 20,
     "later than SEC": 265,
-    "same day as SEC": 8098
+    "same day as SEC": 8102
    },
    "within_0.5pct": 0.9736,
    "within_2pct": 0.9825
@@ -528,20 +528,20 @@
     "within_2pct": 0.5608
    },
    "approved_for_H016_field_set": false,
-   "compared": 8023,
+   "compared": 8027,
    "fy_window_vs_10K_total": {
     "close": 170,
     "differs": 365,
     "far": 485,
-    "match": 958
+    "match": 959
    },
    "timing": {
     "before SEC periodic filing": 19,
     "later than SEC": 274,
-    "same day as SEC": 7730
+    "same day as SEC": 7734
    },
-   "within_0.5pct": 0.48,
-   "within_2pct": 0.5609
+   "within_0.5pct": 0.4803,
+   "within_2pct": 0.5611
   },
   "revenue": {
    "all_companies_incl_financial": {
@@ -550,19 +550,19 @@
     "within_2pct": 0.9429
    },
    "approved_for_H016_field_set": true,
-   "compared": 8440,
+   "compared": 8444,
    "fy_window_vs_10K_total": {
     "close": 24,
     "differs": 27,
     "far": 31,
-    "match": 1993
+    "match": 1994
    },
    "timing": {
     "before SEC periodic filing": 20,
     "later than SEC": 282,
-    "same day as SEC": 8138
+    "same day as SEC": 8142
    },
-   "within_0.5pct": 0.9508,
+   "within_0.5pct": 0.9509,
    "within_2pct": 0.9604
   }
  },

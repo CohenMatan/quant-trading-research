@@ -26,8 +26,11 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0827",
+   "0828",
+   "0829",
    "0831",
-   "0901"
+   "0901",
+   "0903"
   ],
   "non_calendar": true,
   "why": [
@@ -117,6 +120,7 @@
   "fiscal_year_ends": [
    "0730",
    "0731",
+   "0801",
    "0802",
    "0803"
   ],
@@ -222,6 +226,8 @@
    "0102",
    "0328",
    "0330",
+   "0402",
+   "0403",
    "1231"
   ],
   "non_calendar": true,
@@ -304,7 +310,9 @@
   "fiscal_year_ends": [
    "0126",
    "0127",
-   "0129"
+   "0129",
+   "0130",
+   "0131"
   ],
   "non_calendar": true,
   "why": [
@@ -548,7 +556,8 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0127",
-   "0131"
+   "0131",
+   "0201"
   ],
   "non_calendar": true,
   "why": [
@@ -625,6 +634,7 @@
   "amended": true,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0101",
    "0102",
    "0103",
    "1228",
@@ -705,6 +715,8 @@
   "amended": true,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "1225",
+   "1226",
    "1228",
    "1229",
    "1230",
@@ -941,9 +953,10 @@
  },
  "12659": {
   "amended": true,
-  "changed_fiscal_year": false,
+  "changed_fiscal_year": true,
   "fiscal_year_ends": [
-   "0430"
+   "0430",
+   "0630"
   ],
   "non_calendar": true,
   "why": [
@@ -1236,6 +1249,7 @@
   "fiscal_year_ends": [
    "0128",
    "0129",
+   "0130",
    "0201",
    "0202",
    "0203"
@@ -1433,8 +1447,10 @@
  "1385867": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "fiscal_year_ends": [
+   "0131"
+  ],
+  "non_calendar": true,
   "why": [
    "random"
   ]
@@ -1601,8 +1617,10 @@
  "1443646": {
   "amended": true,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
   "why": [
    "quarantined"
   ]
@@ -1738,7 +1756,9 @@
  "1504776": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -1843,9 +1863,10 @@
  },
  "1528930": {
   "amended": true,
-  "changed_fiscal_year": false,
+  "changed_fiscal_year": true,
   "fiscal_year_ends": [
-   "0430"
+   "0430",
+   "1228"
   ],
   "non_calendar": true,
   "why": [
@@ -1856,8 +1877,10 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0327",
    "0328",
-   "0330"
+   "0330",
+   "0402"
   ],
   "non_calendar": true,
   "why": [
@@ -1920,7 +1943,9 @@
  "1559720": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2042,7 +2067,9 @@
   "fiscal_year_ends": [
    "0927",
    "0928",
-   "0930"
+   "0930",
+   "1001",
+   "1002"
   ],
   "non_calendar": true,
   "why": [
@@ -2163,6 +2190,8 @@
   "fiscal_year_ends": [
    "0101",
    "0103",
+   "1225",
+   "1226",
    "1228",
    "1229",
    "1230",
@@ -2187,8 +2216,10 @@
  "1643269": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "fiscal_year_ends": [
+   "0131"
+  ],
+  "non_calendar": true,
   "why": [
    "random"
   ]
@@ -2229,7 +2260,9 @@
  "1666291": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2239,6 +2272,8 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0101",
+   "0102",
    "1228",
    "1229"
   ],
@@ -2272,7 +2307,9 @@
  "1679788": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2281,7 +2318,9 @@
  "1680367": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2323,7 +2362,9 @@
  "1706431": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2355,6 +2396,9 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "1228",
    "1229",
    "1230"
   ],
@@ -2420,11 +2464,12 @@
  },
  "1739566": {
   "amended": true,
-  "changed_fiscal_year": false,
+  "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0103",
    "1231"
   ],
-  "non_calendar": false,
+  "non_calendar": true,
   "why": [
    "random"
   ]
@@ -2443,7 +2488,9 @@
  "1743759": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2496,8 +2543,10 @@
  "1782754": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
   "why": [
    "estimated_date"
   ]
@@ -2505,7 +2554,9 @@
  "1792789": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2513,18 +2564,24 @@
  },
  "1800347": {
   "amended": false,
-  "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0228",
+   "1231"
+  ],
+  "non_calendar": true,
   "why": [
    "estimated_date"
   ]
  },
  "1804745": {
   "amended": false,
-  "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1225",
+   "1226"
+  ],
+  "non_calendar": true,
   "why": [
    "estimated_date"
   ]
@@ -2532,7 +2589,9 @@
  "1812364": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2552,7 +2611,9 @@
  "1827980": {
   "amended": true,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2560,9 +2621,12 @@
  },
  "1828318": {
   "amended": false,
-  "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0102",
+   "1231"
+  ],
+  "non_calendar": true,
   "why": [
    "random"
   ]
@@ -2570,7 +2634,9 @@
  "1832466": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2579,8 +2645,10 @@
  "1835632": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
-  "non_calendar": false,
+  "fiscal_year_ends": [
+   "0130"
+  ],
+  "non_calendar": true,
   "why": [
    "random"
   ]
@@ -2588,7 +2656,9 @@
  "1845290": {
   "amended": false,
   "changed_fiscal_year": false,
-  "fiscal_year_ends": [],
+  "fiscal_year_ends": [
+   "1231"
+  ],
   "non_calendar": false,
   "why": [
    "random"
@@ -2719,9 +2789,10 @@
  },
  "27419": {
   "amended": true,
-  "changed_fiscal_year": false,
+  "changed_fiscal_year": true,
   "fiscal_year_ends": [
-   "0131"
+   "0131",
+   "0201"
   ],
   "non_calendar": true,
   "why": [
@@ -2917,6 +2988,7 @@
   "fiscal_year_ends": [
    "0128",
    "0129",
+   "0130",
    "0131",
    "0201",
    "0202",
@@ -2978,6 +3050,7 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0129",
+   "0130",
    "0131",
    "0201",
    "0202"
@@ -3108,6 +3181,7 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0128",
+   "0129",
    "0131",
    "0201",
    "0203"
@@ -3132,6 +3206,7 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "1030",
    "1031",
    "1101",
    "1102"
@@ -3234,6 +3309,8 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0128",
+   "0129",
+   "0130",
    "0131",
    "0201",
    "0202"
@@ -3249,7 +3326,9 @@
   "fiscal_year_ends": [
    "0624",
    "0625",
-   "0626"
+   "0626",
+   "0629",
+   "0630"
   ],
   "non_calendar": true,
   "why": [
@@ -3408,7 +3487,9 @@
   "fiscal_year_ends": [
    "0328",
    "0330",
-   "0401"
+   "0401",
+   "0402",
+   "0403"
   ],
   "non_calendar": true,
   "why": [
@@ -3452,6 +3533,8 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0129",
+   "0130",
    "0201",
    "0202",
    "0228",
@@ -3779,6 +3862,7 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0329",
+   "0401",
    "0402",
    "0403"
   ],
@@ -3791,9 +3875,11 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0101",
    "0102",
    "0103",
-   "1228"
+   "1228",
+   "1231"
   ],
   "non_calendar": true,
   "why": [
@@ -4042,6 +4128,7 @@
   "fiscal_year_ends": [
    "0128",
    "0129",
+   "0130",
    "0131",
    "0201",
    "0202"
@@ -4070,7 +4157,8 @@
    "0628",
    "0629",
    "0701",
-   "0702"
+   "0702",
+   "0703"
   ],
   "non_calendar": true,
   "why": [
@@ -4093,6 +4181,7 @@
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
    "0924",
+   "0925",
    "0926",
    "0928",
    "0929",
@@ -4251,6 +4340,7 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0326",
    "0328",
    "0330",
    "0331",
@@ -4267,6 +4357,7 @@
   "fiscal_year_ends": [
    "0828",
    "0830",
+   "0901",
    "0902"
   ],
   "non_calendar": true,
@@ -4334,6 +4425,8 @@
   "amended": false,
   "changed_fiscal_year": true,
   "fiscal_year_ends": [
+   "0101",
+   "0102",
    "0103",
    "1228",
    "1229",

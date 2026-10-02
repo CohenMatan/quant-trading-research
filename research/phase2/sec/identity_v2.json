@@ -149,37 +149,6 @@
    ],
    "status": "linked"
   },
-  "100122": {
-   "all_names": [
-    "TUCSON ELECTRIC POWER CO"
-   ],
-   "first_filed": "2010-08-05",
-   "hits": {
-    "UNS R735QTJ8XC9X": [
-     "2010-08-05",
-     "2010-10-27",
-     "2011-03-01",
-     "2011-05-02",
-     "2011-08-08",
-     "2011-10-31",
-     "2012-02-28",
-     "2012-04-30",
-     "2012-07-30",
-     "2012-11-02",
-     "2012-11-06",
-     "2013-02-27",
-     "2013-04-29"
-    ]
-   },
-   "last_filed": "2021-10-29",
-   "names": [
-    "TUCSON ELECTRIC POWER CO"
-   ],
-   "sic_at_filing": [
-    4911
-   ],
-   "status": "linked"
-  },
   "1001606": {
    "all_names": [
     "BLOUNT INTERNATIONAL INC"
@@ -947,6 +916,13 @@
     "AEROCENTURY CORP"
    ],
    "first_filed": "2011-08-12",
+   "float": {
+    "ACY R7GY04NLZWIT": {
+     "check": "ok",
+     "median": 0.761,
+     "n": 10
+    }
+   },
    "hits": {
     "ACY R7GY04NLZWIT": [
      "2020-11-12",
@@ -1169,6 +1145,13 @@
     "RAIT Financial Trust"
    ],
    "first_filed": "2011-08-05",
+   "float": {
+    "RAS R7A1VH3FGMED": {
+     "check": "ok",
+     "median": 0.984,
+     "n": 7
+    }
+   },
    "hits": {
     "RAS R7A1VH3FGMED": [
      "2011-08-05",
@@ -2212,42 +2195,6 @@
    ],
    "status": "linked"
   },
-  "107833": {
-   "all_names": [
-    "WISCONSIN PUBLIC SERVICE CORP"
-   ],
-   "first_filed": "2011-08-04",
-   "hits": {
-    "WPS R735QTJ8XC9X": [
-     "2014-11-06",
-     "2015-05-05",
-     "2015-08-05"
-    ],
-    "WPS TUTEE1U0PY05": [
-     "2017-11-03",
-     "2018-02-28",
-     "2018-05-04",
-     "2018-08-03",
-     "2018-11-02",
-     "2019-02-26",
-     "2019-05-03",
-     "2019-08-06",
-     "2019-11-07",
-     "2020-02-27",
-     "2020-05-07",
-     "2020-08-06",
-     "2020-11-06"
-    ]
-   },
-   "last_filed": "2021-11-04",
-   "names": [
-    "WISCONSIN PUBLIC SERVICE CORP"
-   ],
-   "sic_at_filing": [
-    4931
-   ],
-   "status": "ambiguous: security WPS R735QTJ8XC9X claimed by overlapping registrants"
-  },
   "1082324": {
    "all_names": [
     "VirnetX Holding Corp"
@@ -2401,6 +2348,13 @@
     "IKONICS CORP"
    ],
    "first_filed": "2011-08-12",
+   "float": {
+    "CMLH RSZUTPJG7NTX": {
+     "check": "ok",
+     "median": 0.509,
+     "n": 9
+    }
+   },
    "hits": {
     "CMLH RSZUTPJG7NTX": [
      "2021-05-13",
@@ -2680,9 +2634,6 @@
    "all_names": [
     "PROGRESS ENERGY INC"
    ],
-   "conflict_resolved_by_float": [
-    17797
-   ],
    "first_filed": "2009-09-02",
    "float": {
     "CPL R735QTJ8XC9X": {
@@ -2752,6 +2703,13 @@
     "PLUS THERAPEUTICS, INC."
    ],
    "first_filed": "2011-08-09",
+   "float": {
+    "CYTX TEMHQPA3FAZP": {
+     "check": "ok",
+     "median": 0.9325,
+     "n": 12
+    }
+   },
    "hits": {
     "CYTX TEMHQPA3FAZP": [
      "2019-08-15",
@@ -3365,6 +3323,13 @@
     "PINNACLE FINANCIAL PARTNERS INC"
    ],
    "first_filed": "2011-07-29",
+   "float": {
+    "PNFP SF1H52DHVR6T": {
+     "check": "ok",
+     "median": 0.961,
+     "n": 11
+    }
+   },
    "hits": {
     "PNFP SF1H52DHVR6T": [
      "2011-07-29",
@@ -3581,6 +3546,13 @@
     "Nile Therapeutics, Inc."
    ],
    "first_filed": "2011-08-15",
+   "float": {
+    "CAPR VYPRXHXF1KDH": {
+     "check": "ok",
+     "median": 0.647,
+     "n": 7
+    }
+   },
    "hits": {
     "CAPR VYPRXHXF1KDH": [
      "2020-03-27",
@@ -3606,6 +3578,13 @@
     "Ontrak, Inc."
    ],
    "first_filed": "2011-08-12",
+   "float": {
+    "CATS WK0T6BVWNAED": {
+     "check": "ok",
+     "median": 0.443,
+     "n": 7
+    }
+   },
    "hits": {
     "CATS WK0T6BVWNAED": [
      "2020-03-16",
@@ -4551,6 +4530,13 @@
     "REXAHN PHARMACEUTICALS, INC."
    ],
    "first_filed": "2011-08-09",
+   "float": {
+    "RNN U2YTLWUBIRTX": {
+     "check": "ok",
+     "median": 0.931,
+     "n": 11
+    }
+   },
    "hits": {
     "RNN U2YTLWUBIRTX": [
      "2021-05-07",
@@ -4566,45 +4552,19 @@
    ],
    "status": "linked"
   },
-  "12400": {
-   "all_names": [
-    "BLACK HILLS POWER INC"
-   ],
-   "first_filed": "2011-08-11",
-   "hits": {
-    "BHP R735QTJ8XC9X": [
-     "2011-08-11",
-     "2011-11-08",
-     "2012-03-12",
-     "2012-05-10",
-     "2012-08-10",
-     "2012-11-09",
-     "2013-03-06",
-     "2013-05-10",
-     "2013-08-07",
-     "2013-11-12",
-     "2014-02-27",
-     "2014-05-07",
-     "2014-08-08",
-     "2020-08-05",
-     "2020-11-03"
-    ]
-   },
-   "last_filed": "2020-11-03",
-   "names": [
-    "BLACK HILLS POWER INC"
-   ],
-   "sic_at_filing": [
-    4911
-   ],
-   "status": "linked"
-  },
   "1252849": {
    "all_names": [
     "COLUMBIA PROPERTY TRUST, INC.",
     "WELLS REAL ESTATE INVESTMENT TRUST II INC"
    ],
    "first_filed": "2011-08-12",
+   "float": {
+    "CXP VKSLDWQI3JOL": {
+     "check": "ok",
+     "median": 0.843,
+     "n": 7
+    }
+   },
    "hits": {
     "CXP VKSLDWQI3JOL": [
      "2013-11-05",
@@ -4647,35 +4607,6 @@
    ],
    "sic_at_filing": [
     6798
-   ],
-   "status": "linked"
-  },
-  "1271625": {
-   "all_names": [
-    "DFC GLOBAL CORP."
-   ],
-   "first_filed": "2011-11-07",
-   "hits": {
-    "DLLR T5QHGBE8K3TX": [
-     "2011-11-07",
-     "2012-02-09",
-     "2012-05-10",
-     "2012-08-29",
-     "2012-11-09",
-     "2013-02-08",
-     "2013-05-10",
-     "2013-08-29",
-     "2013-11-12",
-     "2014-02-10",
-     "2014-05-12"
-    ]
-   },
-   "last_filed": "2014-05-12",
-   "names": [
-    "DFC GLOBAL CORP."
-   ],
-   "sic_at_filing": [
-    6099
    ],
    "status": "linked"
   },
@@ -4745,6 +4676,13 @@
     "Wright Investors Service Holdings, Inc."
    ],
    "first_filed": "2011-08-18",
+   "float": {
+    "WISH XKEDQOEEEPUT": {
+     "check": "contradicts",
+     "median": 0.015,
+     "n": 2
+    }
+   },
    "hits": {
     "WISH XKEDQOEEEPUT": [
      "2020-11-12",
@@ -4762,7 +4700,7 @@
     3990,
     6282
    ],
-   "status": "ambiguous: security WISH XKEDQOEEEPUT claimed by overlapping registrants"
+   "status": "rejected: float evidence contradicts (0.01)"
   },
   "1281922": {
    "all_names": [
@@ -5654,33 +5592,6 @@
    ],
    "status": "linked"
   },
-  "13239": {
-   "all_names": [
-    "HEXION INC.",
-    "MOMENTIVE SPECIALTY CHEMICALS INC."
-   ],
-   "first_filed": "2011-08-12",
-   "hits": {
-    "HSC R735QTJ8XC9X": [
-     "2020-03-03",
-     "2020-05-14",
-     "2020-08-14",
-     "2020-11-09",
-     "2021-03-10",
-     "2021-05-12",
-     "2021-08-11",
-     "2021-11-12"
-    ]
-   },
-   "last_filed": "2021-11-12",
-   "names": [
-    "HEXION INC."
-   ],
-   "sic_at_filing": [
-    2821
-   ],
-   "status": "ambiguous: security HSC R735QTJ8XC9X claimed by overlapping registrants"
-  },
   "1325702": {
    "all_names": [
     "MAGNACHIP SEMICONDUCTOR Corp"
@@ -6110,6 +6021,13 @@
     "Vyant Bio, Inc."
    ],
    "first_filed": "2013-06-04",
+   "float": {
+    "CGIX VJ2K80OVA0KL": {
+     "check": "ok",
+     "median": 0.828,
+     "n": 8
+    }
+   },
    "hits": {
     "CGIX VJ2K80OVA0KL": [
      "2019-11-19",
@@ -6507,6 +6425,13 @@
     "KIORA PHARMACEUTICALS INC"
    ],
    "first_filed": "2015-05-18",
+   "float": {
+    "EYEG W2MKUV8JZGBP": {
+     "check": "ok",
+     "median": 0.811,
+     "n": 7
+    }
+   },
    "hits": {
     "EYEG W2MKUV8JZGBP": [
      "2019-11-07",
@@ -7015,6 +6940,13 @@
     "Envision Solar International, Inc."
    ],
    "first_filed": "2011-08-15",
+   "float": {
+    "BEEM XHVSM2QVDB39": {
+     "check": "ok",
+     "median": 0.798,
+     "n": 1
+    }
+   },
    "hits": {
     "BEEM XHVSM2QVDB39": [
      "2020-11-12",
@@ -7336,6 +7268,13 @@
     "Sterling Real Estate Trust"
    ],
    "first_filed": "2011-08-15",
+   "float": {
+    "SRET VYXNI8URNLNP": {
+     "check": "ok",
+     "median": 0.948,
+     "n": 5
+    }
+   },
    "hits": {
     "SRET VYXNI8URNLNP": [
      "2019-11-08",
@@ -7460,6 +7399,13 @@
     "Tocagen Inc"
    ],
    "first_filed": "2017-05-23",
+   "float": {
+    "FBRX XFE6XKGIENHH": {
+     "check": "ok",
+     "median": 0.637,
+     "n": 2
+    }
+   },
    "hits": {
     "FBRX XFE6XKGIENHH": [
      "2021-03-16",
@@ -7570,58 +7516,6 @@
    ],
    "status": "linked"
   },
-  "1430259": {
-   "all_names": [
-    "Carey Watermark Investors Inc"
-   ],
-   "first_filed": "2011-08-12",
-   "hits": {
-    "CWI TPEFVJELKK85": [
-     "2011-11-14",
-     "2012-03-22",
-     "2012-05-14",
-     "2012-08-14",
-     "2012-11-13",
-     "2013-03-12",
-     "2013-05-10",
-     "2013-08-13",
-     "2013-11-12",
-     "2014-03-18",
-     "2014-03-21",
-     "2014-05-14",
-     "2014-08-12",
-     "2014-11-12",
-     "2015-03-12",
-     "2015-05-15",
-     "2015-08-14",
-     "2015-11-13",
-     "2016-03-16",
-     "2016-05-13",
-     "2016-08-12",
-     "2016-11-14",
-     "2017-03-16",
-     "2017-05-12",
-     "2017-08-11",
-     "2017-11-13",
-     "2018-03-27",
-     "2018-05-14",
-     "2018-08-14",
-     "2018-11-13",
-     "2019-03-15",
-     "2019-05-10",
-     "2019-08-13",
-     "2019-11-08"
-    ]
-   },
-   "last_filed": "2019-11-08",
-   "names": [
-    "Carey Watermark Investors Inc"
-   ],
-   "sic_at_filing": [
-    6500
-   ],
-   "status": "linked"
-  },
   "1431372": {
    "all_names": [
     "Gastar Exploration Inc."
@@ -7647,6 +7541,13 @@
     "KEMPHARM, INC"
    ],
    "first_filed": "2015-05-29",
+   "float": {
+    "KMPH VZR6X1TTY8H1": {
+     "check": "ok",
+     "median": 0.793,
+     "n": 6
+    }
+   },
    "hits": {
     "KMPH VZR6X1TTY8H1": [
      "2021-03-12",
@@ -8016,6 +7917,13 @@
     "Tiger Media, Inc."
    ],
    "first_filed": "2015-04-15",
+   "float": {
+    "COGT WE82EIC4FCDH": {
+     "check": "ok",
+     "median": 0.543,
+     "n": 5
+    }
+   },
    "hits": {
     "COGT WE82EIC4FCDH": [
      "2021-03-16",
@@ -8037,6 +7945,13 @@
     "RITTER PHARMACEUTICALS INC"
    ],
    "first_filed": "2015-08-12",
+   "float": {
+    "RTTR W1I7J18MUIQT": {
+     "check": "ok",
+     "median": 0.6605,
+     "n": 8
+    }
+   },
    "hits": {
     "RTTR W1I7J18MUIQT": [
      "2020-08-14",
@@ -8205,6 +8120,13 @@
     "Novan, Inc."
    ],
    "first_filed": "2016-11-14",
+   "float": {
+    "NOVN WE3561IA1KKL": {
+     "check": "ok",
+     "median": 0.81,
+     "n": 7
+    }
+   },
    "hits": {
     "NOVN WE3561IA1KKL": [
      "2021-05-11",
@@ -8449,6 +8371,13 @@
     "Takung Art Co., Ltd."
    ],
    "first_filed": "2012-05-17",
+   "float": {
+    "TKAT WJ2CJ22ZYVS5": {
+     "check": "ok",
+     "median": 0.537,
+     "n": 5
+    }
+   },
    "hits": {
     "TKAT WJ2CJ22ZYVS5": [
      "2021-03-31",
@@ -8639,6 +8568,13 @@
     "PLx Pharma Inc."
    ],
    "first_filed": "2014-05-12",
+   "float": {
+    "DPRX VOUBJQVHF7FP": {
+     "check": "ok",
+     "median": 0.905,
+     "n": 9
+    }
+   },
    "hits": {
     "DPRX VOUBJQVHF7FP": [
      "2021-05-14",
@@ -9008,6 +8944,13 @@
     "Trio Merger Corp."
    ],
    "first_filed": "2011-08-15",
+   "float": {
+    "TRIO V5BACZOYSIUD": {
+     "check": "ok",
+     "median": 0.442,
+     "n": 7
+    }
+   },
    "hits": {
     "TRIO V5BACZOYSIUD": [
      "2016-08-12",
@@ -9360,6 +9303,13 @@
     "Seventy Seven Energy Inc."
    ],
    "first_filed": "2013-08-14",
+   "float": {
+    "SSE VRUMQ141U739": {
+     "check": "ok",
+     "median": 0.926,
+     "n": 1
+    }
+   },
    "hits": {
     "SSE VRUMQ141U739": [
      "2014-08-05",
@@ -9418,6 +9368,13 @@
     "GRAYBUG VISION, INC."
    ],
    "first_filed": "2020-11-12",
+   "float": {
+    "GRAY XI5N30EK4UP1": {
+     "check": "ok",
+     "median": 0.423,
+     "n": 2
+    }
+   },
    "hits": {
     "GRAY XI5N30EK4UP1": [
      "2021-03-05",
@@ -10509,6 +10466,13 @@
     "Watford Holdings Ltd."
    ],
    "first_filed": "2019-05-10",
+   "float": {
+    "WTRE X371JVB8A5WL": {
+     "check": "ok",
+     "median": 0.852,
+     "n": 3
+    }
+   },
    "hits": {
     "WTRE X371JVB8A5WL": [
      "2020-08-07",
@@ -10530,6 +10494,13 @@
     "SQZ Biotechnologies Co"
    ],
    "first_filed": "2020-12-10",
+   "float": {
+    "SQZ XJ43QA7GT9B9": {
+     "check": "ok",
+     "median": 0.861,
+     "n": 1
+    }
+   },
    "hits": {
     "SQZ XJ43QA7GT9B9": [
      "2020-12-10",
@@ -10546,34 +10517,18 @@
    ],
    "status": "linked"
   },
-  "1605674": {
-   "all_names": [
-    "Stallion Synergies, Inc"
-   ],
-   "first_filed": "2014-11-10",
-   "hits": {
-    "STGS SB7MJZ5V64PX": [
-     "2014-11-10",
-     "2015-03-26",
-     "2015-05-07",
-     "2015-08-04",
-     "2015-11-12"
-    ]
-   },
-   "last_filed": "2016-06-28",
-   "names": [
-    "Stallion Synergies, Inc"
-   ],
-   "sic_at_filing": [
-    8731
-   ],
-   "status": "ambiguous: security STGS SB7MJZ5V64PX claimed by overlapping registrants"
-  },
   "1613780": {
    "all_names": [
     "DBV Technologies S.A."
    ],
    "first_filed": "2021-03-17",
+   "float": {
+    "DBVT VUXW8LG4HG85": {
+     "check": "contradicts",
+     "median": 2.0,
+     "n": 1
+    }
+   },
    "hits": {
     "DBVT VUXW8LG4HG85": [
      "2021-03-17",
@@ -10587,7 +10542,7 @@
    "sic_at_filing": [
     2836
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (2.00)"
   },
   "1614556": {
    "all_names": [
@@ -10657,6 +10612,13 @@
     "Neothetics, Inc."
    ],
    "first_filed": "2015-05-14",
+   "float": {
+    "NEOT VVQG7B20PBVP": {
+     "check": "ok",
+     "median": 0.544,
+     "n": 7
+    }
+   },
    "hits": {
     "NEOT VVQG7B20PBVP": [
      "2020-03-12",
@@ -11002,6 +10964,13 @@
     "TMSR HOLDING Co Ltd"
    ],
    "first_filed": "2015-09-08",
+   "float": {
+    "CCNC XELMYUUM6RTX": {
+     "check": "ok",
+     "median": 0.7155,
+     "n": 2
+    }
+   },
    "hits": {
     "CCNC XELMYUUM6RTX": [
      "2021-03-26",
@@ -11119,6 +11088,13 @@
     "Sequential Brands Group, Inc."
    ],
    "first_filed": "2016-03-14",
+   "float": {
+    "SQBG VK6XJUOSEY5H": {
+     "check": "ok",
+     "median": 0.6325000000000001,
+     "n": 6
+    }
+   },
    "hits": {
     "SQBG VK6XJUOSEY5H": [
      "2020-08-14",
@@ -11253,6 +11229,13 @@
     "Lucira Health, Inc."
    ],
    "first_filed": "2021-05-17",
+   "float": {
+    "LHDX XLSLJG20B71H": {
+     "check": "ok",
+     "median": 0.751,
+     "n": 1
+    }
+   },
    "hits": {
     "LHDX XLSLJG20B71H": [
      "2021-05-17",
@@ -11275,6 +11258,13 @@
     "Waitr Holdings Inc."
    ],
    "first_filed": "2016-08-15",
+   "float": {
+    "LCA WCE3G8TTASMD": {
+     "check": "ok",
+     "median": 0.906,
+     "n": 4
+    }
+   },
    "hits": {
     "LCA WCE3G8TTASMD": [
      "2019-03-15",
@@ -11334,6 +11324,13 @@
     "Codiak BioSciences, Inc."
    ],
    "first_filed": "2020-11-19",
+   "float": {
+    "CDAK XIOCKSCRL6QT": {
+     "check": "ok (XBRL scale error 1e3)",
+     "median": 997.392,
+     "n": 1
+    }
+   },
    "hits": {
     "CDAK XIOCKSCRL6QT": [
      "2020-11-19",
@@ -11394,6 +11391,13 @@
     "enVVeno Medical Corp"
    ],
    "first_filed": "2018-08-10",
+   "float": {
+    "HJLI WQD8W0R2EBMT": {
+     "check": "ok",
+     "median": 1.0,
+     "n": 5
+    }
+   },
    "hits": {
     "HJLI WQD8W0R2EBMT": [
      "2020-11-17",
@@ -11416,6 +11420,13 @@
     "Stellar Acquisition III Inc."
    ],
    "first_filed": "2016-10-14",
+   "float": {
+    "PHUN X0QFBGE1E9GL": {
+     "check": "ok",
+     "median": 0.829,
+     "n": 5
+    }
+   },
    "hits": {
     "PHUN X0QFBGE1E9GL": [
      "2019-03-06",
@@ -11605,6 +11616,13 @@
     "WRAP TECHNOLOGIES, INC."
    ],
    "first_filed": "2017-09-08",
+   "float": {
+    "WRTC X02SL7LZK5LX": {
+     "check": "ok",
+     "median": 0.5395,
+     "n": 2
+    }
+   },
    "hits": {
     "WRTC X02SL7LZK5LX": [
      "2021-04-29",
@@ -11757,6 +11775,13 @@
     "HyreCar Inc."
    ],
    "first_filed": "2018-08-14",
+   "float": {
+    "HYRE WVP9292ZBFXH": {
+     "check": "ok",
+     "median": 0.735,
+     "n": 5
+    }
+   },
    "hits": {
     "HYRE WVP9292ZBFXH": [
      "2021-03-31",
@@ -11779,6 +11804,13 @@
     "Odonate Therapeutics, Inc."
    ],
    "first_filed": "2018-05-03",
+   "float": {
+    "ODT WQ6CRD6VV1ID": {
+     "check": "ok",
+     "median": 0.387,
+     "n": 3
+    }
+   },
    "hits": {
     "ODT WQ6CRD6VV1ID": [
      "2020-07-30",
@@ -11803,6 +11835,13 @@
     "Xspand Products Lab, Inc."
    ],
    "first_filed": "2018-05-21",
+   "float": {
+    "XSPL WU54KX8CYFS5": {
+     "check": "ok",
+     "median": 0.481,
+     "n": 4
+    }
+   },
    "hits": {
     "XSPL WU54KX8CYFS5": [
      "2021-08-23",
@@ -11926,6 +11965,13 @@
     "LMP Automotive Holdings, Inc."
    ],
    "first_filed": "2020-02-25",
+   "float": {
+    "LMPX XA367FHRKACL": {
+     "check": "ok",
+     "median": 0.592,
+     "n": 2
+    }
+   },
    "hits": {
     "LMPX XA367FHRKACL": [
      "2020-08-14",
@@ -12098,6 +12144,13 @@
     "Tenzing Acquisition Corp."
    ],
    "first_filed": "2018-10-11",
+   "float": {
+    "RVPH XKDEAL18BYP1": {
+     "check": "ok",
+     "median": 0.636,
+     "n": 1
+    }
+   },
    "hits": {
     "RVPH XKDEAL18BYP1": [
      "2021-03-22",
@@ -12121,6 +12174,13 @@
     "Orchard Therapeutics plc"
    ],
    "first_filed": "2020-02-27",
+   "float": {
+    "ORTX WZ5BE168YI5H": {
+     "check": "ok",
+     "median": 0.988,
+     "n": 3
+    }
+   },
    "hits": {
     "ORTX WZ5BE168YI5H": [
      "2020-02-27",
@@ -12146,6 +12206,13 @@
     "Boxwood Merger Corp."
    ],
    "first_filed": "2019-05-13",
+   "float": {
+    "ATCX XC50QFXFAVDX": {
+     "check": "contradicts",
+     "median": 0.079,
+     "n": 1
+    }
+   },
    "hits": {
     "ATCX XC50QFXFAVDX": [
      "2021-08-16",
@@ -12160,7 +12227,7 @@
     6770,
     8742
    ],
-   "status": "linked"
+   "status": "rejected: float evidence contradicts (0.08)"
   },
   "1752836": {
    "all_names": [
@@ -12204,6 +12271,13 @@
     "Whole Earth Brands, Inc."
    ],
    "first_filed": "2019-06-06",
+   "float": {
+    "FREE XFN1YER13FXH": {
+     "check": "ok",
+     "median": 0.883,
+     "n": 3
+    }
+   },
    "hits": {
     "FREE XFN1YER13FXH": [
      "2020-08-14",
@@ -12259,6 +12333,13 @@
     "Scopus BioPharma Inc."
    ],
    "first_filed": "2021-02-26",
+   "float": {
+    "SCPS XKDEAL18BYP1": {
+     "check": "ok",
+     "median": 0.51,
+     "n": 2
+    }
+   },
    "hits": {
     "SCPS XKDEAL18BYP1": [
      "2021-03-29",
@@ -12274,35 +12355,6 @@
     2834
    ],
    "status": "linked"
-  },
-  "17797": {
-   "all_names": [
-    "CAROLINA POWER & LIGHT CO",
-    "DUKE ENERGY PROGRESS, LLC."
-   ],
-   "first_filed": "2009-11-06",
-   "hits": {
-    "CPL R735QTJ8XC9X": [
-     "2009-11-06",
-     "2010-02-26",
-     "2010-05-10",
-     "2010-11-08",
-     "2011-02-28",
-     "2011-05-09",
-     "2011-08-08",
-     "2011-11-08",
-     "2012-02-29",
-     "2012-08-08"
-    ]
-   },
-   "last_filed": "2016-05-05",
-   "names": [
-    "CAROLINA POWER & LIGHT CO"
-   ],
-   "sic_at_filing": [
-    4911
-   ],
-   "status": "ambiguous: security CPL R735QTJ8XC9X claimed by overlapping registrants"
   },
   "1788717": {
    "all_names": [
@@ -12449,6 +12501,13 @@
     "Proterra Inc"
    ],
    "first_filed": "2020-11-16",
+   "float": {
+    "PTRA XPCLNLLY99WL": {
+     "check": "ok",
+     "median": 0.826,
+     "n": 1
+    }
+   },
    "hits": {
     "PTRA XPCLNLLY99WL": [
      "2021-08-13",
@@ -12485,13 +12544,20 @@
    "sic_at_filing": [
     5961
    ],
-   "status": "ambiguous: security WISH XKEDQOEEEPUT claimed by overlapping registrants"
+   "status": "linked"
   },
   "1833908": {
    "all_names": [
     "Alfi, Inc."
    ],
    "first_filed": "2021-06-10",
+   "float": {
+    "ALF XNMKHPKBFQSL": {
+     "check": "ok",
+     "median": 0.653,
+     "n": 1
+    }
+   },
    "hits": {
     "ALF XNMKHPKBFQSL": [
      "2021-06-10",
@@ -12512,6 +12578,13 @@
     "ATAI Life Sciences N.V."
    ],
    "first_filed": "2021-08-20",
+   "float": {
+    "ATAI XPDL3OZ4C12D": {
+     "check": "ok",
+     "median": 0.716,
+     "n": 1
+    }
+   },
    "hits": {
     "ATAI XPDL3OZ4C12D": [
      "2021-08-20",
@@ -12831,6 +12904,13 @@
     "COMMUNICATIONS SYSTEMS INC"
    ],
    "first_filed": "2011-08-10",
+   "float": {
+    "CSII R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.783,
+     "n": 11
+    }
+   },
    "hits": {
     "CSII R735QTJ8XC9X": [
      "2021-08-16",
@@ -14307,9 +14387,6 @@
    "all_names": [
     "HARSCO CORP"
    ],
-   "conflict_resolved_by_float": [
-    13239
-   ],
    "first_filed": "2010-08-05",
    "float": {
     "HSC R735QTJ8XC9X": {
@@ -14623,9 +14700,6 @@
   "6885": {
    "all_names": [
     "STAGE STORES INC"
-   ],
-   "conflict_resolved_by_float": [
-    1605674
    ],
    "first_filed": "2011-09-07",
    "float": {
@@ -15207,6 +15281,13 @@
     "Inotiv, Inc."
    ],
    "first_filed": "2011-08-15",
+   "float": {
+    "BASI R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.816,
+     "n": 11
+    }
+   },
    "hits": {
     "BASI R735QTJ8XC9X": [
      "2021-08-13",
@@ -15484,6 +15565,13 @@
     "BIOMERICA INC"
    ],
    "first_filed": "2011-10-27",
+   "float": {
+    "BMRA WDDJJLZW1YED": {
+     "check": "ok",
+     "median": 0.778,
+     "n": 7
+    }
+   },
    "hits": {
     "BMRA WDDJJLZW1YED": [
      "2020-01-14",
@@ -15914,6 +16002,13 @@
     "PENNSYLVANIA REAL ESTATE INVESTMENT TRUST"
    ],
    "first_filed": "2011-08-01",
+   "float": {
+    "PEI R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.957,
+     "n": 11
+    }
+   },
    "hits": {
     "PEI R735QTJ8XC9X": [
      "2011-08-01",
@@ -17469,6 +17564,13 @@
     "ALLIED HEALTHCARE PRODUCTS INC"
    ],
    "first_filed": "2011-11-08",
+   "float": {
+    "AHPI R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.555,
+     "n": 10
+    }
+   },
    "hits": {
     "AHPI R735QTJ8XC9X": [
      "2020-02-14",
@@ -18027,6 +18129,13 @@
     "MoSys, Inc."
    ],
    "first_filed": "2011-08-08",
+   "float": {
+    "MOSY S5WLTU74BRL1": {
+     "check": "ok",
+     "median": 0.97,
+     "n": 11
+    }
+   },
    "hits": {
     "MOSY S5WLTU74BRL1": [
      "2021-03-18",
@@ -18745,6 +18854,11 @@
      "check": "ok",
      "median": 0.993,
      "n": 14
+    },
+    "POLY WT2Q59YRZ0IT": {
+     "check": "ok",
+     "median": 0.984,
+     "n": 1
     }
    },
    "hits": {
@@ -18817,9 +18931,6 @@
    "all_names": [
     "INTEGRYS ENERGY GROUP, INC.",
     "INTEGRYS HOLDING, INC."
-   ],
-   "conflict_resolved_by_float": [
-    107833
    ],
    "first_filed": "2010-08-05",
    "float": {
@@ -19480,6 +19591,13 @@
     "Ever-Glory International Group, Inc."
    ],
    "first_filed": "2011-08-10",
+   "float": {
+    "ADCC R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.28,
+     "n": 9
+    }
+   },
    "hits": {
     "ADCC R735QTJ8XC9X": [
      "2021-05-13",
@@ -19715,6 +19833,13 @@
     "BALLANTYNE STRONG, INC."
    ],
    "first_filed": "2011-08-09",
+   "float": {
+    "BTN R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.787,
+     "n": 13
+    }
+   },
    "hits": {
     "BTN R735QTJ8XC9X": [
      "2021-03-10",
@@ -19875,6 +20000,13 @@
     "TECHNICAL COMMUNICATIONS CORP"
    ],
    "first_filed": "2011-08-09",
+   "float": {
+    "TCCO R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.791,
+     "n": 8
+    }
+   },
    "hits": {
     "TCCO R735QTJ8XC9X": [
      "2019-12-13",
@@ -19966,14 +20098,15 @@
   }
  },
  "rejected_counts": {
+  "10-K filer without any reported public float (subsidiary / not publicly traded)": 8,
   "fund/blank-check/royalty SIC": 28,
   "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 27,
   "no security with >= 2 matching dated tickers": 9306,
   "non-common name": 93
  },
  "summary": {
-  "ambiguous": 13,
-  "linked": 495,
-  "rejected": 18
+  "ambiguous": 7,
+  "linked": 490,
+  "rejected": 21
  }
 }
