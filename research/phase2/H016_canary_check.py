@@ -29,13 +29,16 @@ def load(exp):
 
 
 def episodes(fills):
-    """Per symbol: positions from 0 -> held -> 0; counts entry buys, top-ups and other buys in each."""
+    """Per symbol: positions from their entry buy to the next entry (or 0 -> held); counts entry buys, top-ups and
+    other buys in each."""
     out = []
     for sid, g in fills.sort_values(["date", "order_id"]).groupby("symbol_id"):
         q, cur = 0.0, None
         for r in g.itertuples():
             tag = str(r.tag).split("|")[0]
-            if q == 0 and r.quantity > 0:
+            # a new position starts at its entry buy (entries are only placed for names not held); the running
+            # quantity alone cannot delimit positions because splits change it without a fill (E980-01: GIS 2010)
+            if r.quantity > 0 and (q == 0 or tag == "s016_entry"):
                 cur = dict(sid=sid, start=r.date, entry=0, topup=0, other_buys=0, topup_before_entry=0,
                            entry_value=None, topup_values=[])
                 out.append(cur)

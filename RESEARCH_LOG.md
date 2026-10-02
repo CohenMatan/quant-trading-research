@@ -1071,3 +1071,25 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Spec frozen:** `research/phase2/H016_spec.md` §6.3, hash-pinned.
 - **Configs:** canary E980-01 (X980 = byte copy of S016, random seed 0) and E016-01..08.
 - **Next:** run the canary; run E016-01 (slot 2) onward only if every check passes.
+
+## 2026-10-02: H016 canary E980-01 passes; candidate run authorised
+
+- **Canary E980-01** (X980 = byte copy of S016, random book seed 0, 2010-03-01 → 2021-12-31): all 20 offline checks (`research/phase2/H016_canary_check.json`) and the harness integrity checks pass.
+- **Mechanics:**
+  - equity starts 2010-03-01 in cash; first fills 2010-03-02, with 20 positions that day;
+  - 48 quarterly rebalances;
+  - pit_violations 0; no financial or REIT company in the universe;
+  - minimum planned entry $4,153 (≥ $4,000); minimum entry fill $4,180.
+- **Top-ups:**
+  - 88 positions opened, 83 topped up exactly once, 5 not topped up (below threshold or unfunded);
+  - top-ups: minimum planned $309 (≥ $250), median fill $643, never above target;
+  - 7 top-up orders a year, top-up commissions $581 in total.
+- **Cash and costs:**
+  - no negative cash, maximum gross exposure 98.0%; $7 on every order;
+  - cash reconciles with the fills, and the remaining credits (dividends) are non-negative;
+  - mean invested 96.4%. Below 90% on 0.7% of days: rebalance transitions while D051 waits for sale proceeds to settle.
+- **Two minor issues:**
+  - two entries were never filled before the next rebalance (`pending_left_at_rebalance` 2);
+  - the checker's position reconstruction miscounted across a share split (GIS, 2010). It was fixed to delimit positions at each entry buy; the algorithm's own counter was 1 throughout.
+- **Freeze test:** passes.
+- **No candidate (GP/A) performance was computed.** Every prerequisite holds, so the H016 development runs start (E016-01 consumes Phase 2 slot 2).
