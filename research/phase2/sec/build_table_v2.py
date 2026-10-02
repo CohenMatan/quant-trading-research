@@ -35,6 +35,7 @@ LEAN = ROOT / "src" / "qresearch" / "lean"
 
 def main():
     v1 = json.loads((OUT / "corrections.json").read_text())
+    t = e970_parse.load()
     v2 = {c: L for c, L in json.loads((OUT / "identity_v2.json").read_text())["links"].items() if L["status"] == "linked"}
     v2pairs = {}
     for c, L in v2.items():
@@ -50,6 +51,11 @@ def main():
         for x in lst:
             c = str(x["cik"])
             span1 = (x.get("effective_from") or "2009-01-01", min(x.get("equity_end") or "2021-12-31", "2021-12-31"))
+            # D113a: compare on the security's own trading span (a registrant may have successive securities, e.g.
+            # C&J Energy: CJES 2015-2016, then the post-bankruptcy CJ 2017-2019)
+            nf = t["nofund"].get(s)
+            if nf:
+                span1 = (max(span1[0], str(nf["first_liquid"])), min(span1[1], str(nf["last_seen"])))
             if (c, s) in links:
                 links[(c, s)]["v1"] = x["confidence"]
                 continue

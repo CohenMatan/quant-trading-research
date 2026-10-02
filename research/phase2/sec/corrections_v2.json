@@ -1,17 +1,5 @@
 {
- "dropped_v1": [
-  {
-   "cik": "1615817",
-   "contradicted_by": [
-    [
-     "1615817",
-     "CJES UYN1A6FS4FOL"
-    ]
-   ],
-   "sid": "CJ WIMLDK8AQT7P",
-   "v1": "high"
-  }
- ],
+ "dropped_v1": [],
  "links": {
   "ABP RXBFGHC4AV6T": [
    {
@@ -19307,8 +19295,8 @@
     "end_source": "form25",
     "equity_end": "2020-06-03",
     "evidence_span": [
-     "2016-07-11",
-     "2020-06-03"
+     "2017-06-01",
+     "2020-06-02"
     ],
     "filings": [
      {
@@ -20212,6 +20200,171 @@
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
+   }
+  ],
+  "CJ WIMLDK8AQT7P": [
+   {
+    "cik": 1615817,
+    "end_source": "form25",
+    "equity_end": "2019-10-31",
+    "evidence_span": [
+     "2017-04-01",
+     "2019-10-31"
+    ],
+    "filings": [
+     {
+      "accn": "0001193125-15-181539",
+      "cover_date": "2015-05-01",
+      "cover_shares": 118920112.0,
+      "filed": "2015-05-11",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001628280-15-006345",
+      "cover_date": "2015-07-31",
+      "cover_shares": 120396006.0,
+      "filed": "2015-08-10",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001628280-15-008418",
+      "cover_date": "2015-11-04",
+      "cover_shares": 120344311.0,
+      "filed": "2015-11-06",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001615817-16-000014",
+      "cover_date": "2016-02-22",
+      "cover_shares": 120207209.0,
+      "filed": "2016-02-29",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001615817-16-000019",
+      "cover_date": "2016-05-06",
+      "cover_shares": 120042293.0,
+      "filed": "2016-05-10",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001615817-16-000023",
+      "cover_date": "2016-08-05",
+      "cover_shares": 119599227.0,
+      "filed": "2016-08-09",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001628280-16-020942",
+      "cover_date": "2016-11-04",
+      "cover_shares": 119568676.0,
+      "filed": "2016-11-07",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001628280-17-002117",
+      "cover_date": "2017-02-24",
+      "cover_shares": 56217229.0,
+      "filed": "2017-03-02",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001628280-17-005316",
+      "cover_date": "2017-05-05",
+      "cover_shares": 63272761.0,
+      "filed": "2017-05-10",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001628280-17-008410",
+      "cover_date": "2017-08-04",
+      "cover_shares": 63261567.0,
+      "filed": "2017-08-09",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001628280-17-011307",
+      "cover_date": "2017-11-08",
+      "cover_shares": 63242600.0,
+      "filed": "2017-11-09",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001628280-18-002585",
+      "cover_date": "2018-02-27",
+      "cover_shares": 68465637.0,
+      "filed": "2018-03-01",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001628280-18-006212",
+      "cover_date": "2018-05-04",
+      "cover_shares": 68399099.0,
+      "filed": "2018-05-08",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001628280-18-010738",
+      "cover_date": "2018-08-03",
+      "cover_shares": 68357617.0,
+      "filed": "2018-08-08",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001615817-18-000014",
+      "cover_date": "2018-11-02",
+      "cover_shares": 67325769.0,
+      "filed": "2018-11-05",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001615817-19-000025",
+      "cover_date": "2019-02-22",
+      "cover_shares": 66062430.0,
+      "filed": "2019-02-27",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001615817-19-000037",
+      "cover_date": "2019-05-03",
+      "cover_shares": 66058105.0,
+      "filed": "2019-05-07",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001615817-19-000058",
+      "cover_date": "2019-08-02",
+      "cover_shares": 66031830.0,
+      "filed": "2019-08-07",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     }
+    ],
+    "float_check": "v1",
+    "n_filings": 18,
+    "names": [
+     "C&J Energy Services Ltd.",
+     "C&J Energy Services, Inc."
+    ],
+    "tier": "B: v1 high",
+    "v1": "high"
    }
   ],
   "CJES UYN1A6FS4FOL": [
@@ -24040,7 +24193,7 @@
     "end_source": "form25",
     "equity_end": "2026-07-09",
     "evidence_span": [
-     "2011-08-08",
+     "2021-06-02",
      "2021-12-31"
     ],
     "filings": [
@@ -39509,7 +39662,7 @@
     "end_source": "last_equity_report",
     "equity_end": "2026-08-05",
     "evidence_span": [
-     "2011-08-02",
+     "2018-02-01",
      "2021-12-31"
     ],
     "filings": [
@@ -75769,7 +75922,7 @@
     "end_source": "last_equity_report",
     "equity_end": "2026-07-20",
     "evidence_span": [
-     "2011-10-06",
+     "2019-01-01",
      "2021-12-31"
     ],
     "filings": [
@@ -109438,6 +109591,6 @@
   "native vendor CIK only": 3425,
   "native+ticker-evidenced predecessor": 38,
   "native: no SEC filing found": 433,
-  "repaired": 495
+  "repaired": 496
  }
 }
