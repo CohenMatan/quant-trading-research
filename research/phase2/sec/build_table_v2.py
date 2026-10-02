@@ -4,6 +4,7 @@ dated ticker evidence) under evidence priority, then pack everything the opt-in 
 Tiers (strongest first):
   A  SEC ticker-evidenced (identity v2, >= 2 filings whose instance prefix equals the security's dated ticker),
      float evidence consistent or absent;
+  F2 (D113a) eligible links without a float fingerprint: SEC float >= 10% of the canary's reconstructed market cap;
   B  v1 link CONFIRMED by v2 is tier A; v1 links WITHOUT v2 evidence keep their v1 tier (high / medium / tier 2 /
      no-equity-end); a v1 link CONTRADICTED by v2 (the registrant is v2-linked to another security, or the security
      to another registrant, over an overlapping period of more than 120 days) is dropped.
@@ -31,6 +32,7 @@ from identity_v2 import overlap_days  # noqa: E402
 
 OUT = Path(__file__).parent
 LEAN = ROOT / "src" / "qresearch" / "lean"
+ELIGIBILITY_AUDIT_RUN = "E976-03"       # final canary whose reconstructed market caps feed rule F2
 
 
 def main():
@@ -67,6 +69,34 @@ def main():
             links[(c, s)] = {"tier": f"B: v1 {x['confidence']}", "float_check": "v1", "span": span1, "v1": x["confidence"],
                              "names": x["names"]}
     client = SECClient()
+    # F2 (D113a): links WITHOUT a float fingerprint that the final canary found eligible are checked against the
+    # canary's reconstructed market cap: SEC public float (10-K cover) / market cap of the nearest eligible month
+    # (within 6 months) must be >= 0.10 — float can never exceed market cap. Caught: 'Golden Grain Energy' (prefix
+    # 'gold', two unit classes, float $15M) linked to Randgold's ADR (ticker GOLD, $3B).
+    caps = defaultdict(dict)
+    try:
+        for l in e970_parse.lines(ELIGIBILITY_AUDIT_RUN):
+            if l.startswith("M|"):
+                _, ym_, sid_, cap, _tc = l.split("|")
+                caps[sid_][int(ym_)] = float(cap) * 1e6
+    except Exception:
+        pass
+    f2 = []
+    for (c, s), L in list(links.items()):
+        if L["float_check"] not in ("none", "v1") or s not in caps:
+            continue
+        cf = client.companyfacts(int(c))
+        fl = [f for f in index_facts(cf).get("EntityPublicFloat", ()) if f.get("form", "").startswith("10-K") and f["val"] > 0] if cf else []
+        for f in fl:
+            fy = int(f["end"][:4]) * 100 + int(f["end"][5:7])
+            near = [m for m in caps[s] if abs((m // 100 - fy // 100) * 12 + m % 100 - fy % 100) <= 6]
+            if near:
+                m = min(near, key=lambda m: abs((m // 100 - fy // 100) * 12 + m % 100 - fy % 100))
+                if f["val"] / caps[s][m] < 0.10:
+                    f2.append({"cik": c, "sid": s, "float": f["val"], "float_date": f["end"], "market_cap": caps[s][m],
+                               "month": m, "names": L["names"]})
+                    del links[(c, s)]
+                    break
     table, audit = {}, {}
     for (c, s), L in sorted(links.items()):
         cf, sub = client.companyfacts(int(c)), client.submissions(int(c))
@@ -98,13 +128,14 @@ def main():
     for name, text in pack({"corrections": table, "timing_holds": holds, "quarantine_releases": releases,
                             "restatement_blocks": blocks, "sic_history": sic}, "qr_sec_data").items():
         (LEAN / name).write_text(text)
-    (OUT / "corrections_v2.json").write_text(json.dumps({"links": audit, "dropped_v1": dropped,
+    (OUT / "corrections_v2.json").write_text(json.dumps({"links": audit, "dropped_v1": dropped, "rejected_F2": f2,
                                                          "sic_sources": sic_src}, indent=1, sort_keys=True) + "\n")
     tiers = defaultdict(int)
     for v in audit.values():
         for x in v:
             tiers[x["tier"]] += 1
-    print(len(table), "securities;", dict(tiers), "; dropped v1:", len(dropped), "; sic:", sic_src)
+    print(len(table), "securities;", dict(tiers), "; dropped v1:", len(dropped), "; rejected F2:",
+          [(x["sid"], x["names"][0]) for x in f2], "; sic:", sic_src)
 
 
 if __name__ == "__main__":

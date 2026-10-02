@@ -10,8 +10,9 @@ Evidence (all historical, all from SEC filings):
   S  registrant files 10-K/10-Q with a public cover count >= 1,000,000 shares (excludes wholly owned subsidiaries
      that share the parent's prefix); no partnership/LLC/trust/fund name in force; SIC (as assigned at filing time)
      not a fund, blank-check or royalty-trust code.
-  P  (D113a) a registrant that filed 10-Ks during the evidence span must have reported a positive public float on
-     some 10-K cover (otherwise it is a co-filing subsidiary or not publicly traded).
+  P  (D113a) a registrant that filed 10-Ks during the evidence span must have reported a positive public float dated
+     within that span (+-1 year) on a 10-K cover (otherwise it is a co-filing subsidiary or not publicly traded;
+     e.g. Golden Grain Energy, float 0 in 2011-2019, whose instance prefix 'gold' matched Randgold's ADR 'GOLD').
   F  where public-float fingerprints exist (E971-02/E974-01/E977-01/E978-01), they must not contradict: median of
      float / (cover shares x close) within [0.2, 1.5].
 Stronger evidence overrides weaker: a v2 (ticker-evidenced) link replaces any v1 link it contradicts; v1 links that
@@ -129,13 +130,16 @@ def main():
             rejected["no public cover count >= 1M shares (subsidiary/no XBRL cover)"] += 1
             del links[cik]
             continue
-        # P (D113a): a registrant that filed 10-Ks during the evidence span but never reported a positive public
-        # float on any 10-K cover is not publicly traded (wholly owned subsidiary co-filing under the parent's prefix,
+        # P (D113a): a registrant that filed 10-Ks during the evidence span but reported no positive public float
+        # dated within that span (+-1 year) on any 10-K cover is not publicly traded (wholly owned subsidiary co-filing under the parent's prefix,
         # e.g. Tucson Electric Power 'uns', Black Hills Power 'bhp', Hertz Corp 'htz'; non-traded REIT)
         lo = min(min(d) for d in links[cik]["hits"].values())
         hi = max(max(d) for d in links[cik]["hits"].values())
         k10 = [r for r in by_cik[cik] if r["form"] == "10-K" and lo <= r["filed"] <= hi]
-        pf = [f for f in index_facts(cf).get("EntityPublicFloat", ()) if f.get("form", "").startswith("10-K") and f["val"] > 0]
+        lo1 = f"{int(lo[:4]) - 1}{lo[4:]}"
+        hi1 = f"{int(hi[:4]) + 1}{hi[4:]}"
+        pf = [f for f in index_facts(cf).get("EntityPublicFloat", ()) if f.get("form", "").startswith("10-K") and f["val"] > 0
+              and lo1 <= f["end"] <= hi1]        # a positive float dated within the evidence span (+-1 year)
         if k10 and not pf:
             rejected["10-K filer without any reported public float (subsidiary / not publicly traded)"] += 1
             del links[cik]

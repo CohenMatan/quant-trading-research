@@ -1,8 +1,8 @@
 {
  "classification": {
-  "10-K/10-Q filer, unlinked": 301,
+  "10-K/10-Q filer, unlinked": 302,
   "20-F/40-F filer only (foreign private issuer listing)": 292,
-  "linked (repaired)": 496,
+  "linked (repaired)": 495,
   "no XBRL filer used the ticker": 1839
  },
  "liquid_no_fundamentals_securities": 2928,
@@ -2084,7 +2084,7 @@
     "GUSH"
    ],
    "why": {
-    "rejected": 1
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
    }
   },
   {
@@ -2913,6 +2913,17 @@
    }
   },
   {
+   "last_seen": "2018-12-29",
+   "sid": "RRUS SG8ST6GX8Y91",
+   "tickers": [
+    "GOLD"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "rejected": 1
+   }
+  },
+  {
    "last_seen": "2021-08-03",
    "sid": "RTPZ XL3ZD3WSEC11",
    "tickers": [
@@ -3676,7 +3687,7 @@
  ],
  "unlinked_10K_filer_reasons": {
   "ambiguous": 13,
-  "identity v2: < 2 dated matching filings or excluded before matching": 210,
+  "identity v2: < 2 dated matching filings or excluded before matching": 212,
   "registrant is covered by QuantConnect under another security": 94,
   "rejected": 13
  }

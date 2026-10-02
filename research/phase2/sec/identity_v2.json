@@ -4370,55 +4370,6 @@
    ],
    "status": "linked"
   },
-  "1206942": {
-   "all_names": [
-    "GOLDEN GRAIN ENERGY"
-   ],
-   "first_filed": "2011-09-14",
-   "hits": {
-    "RRUS SG8ST6GX8Y91": [
-     "2011-09-14",
-     "2011-12-23",
-     "2012-03-15",
-     "2012-06-13",
-     "2012-09-13",
-     "2012-12-19",
-     "2013-03-15",
-     "2013-06-13",
-     "2013-09-13",
-     "2013-12-23",
-     "2014-03-11",
-     "2014-06-16",
-     "2014-09-12",
-     "2014-12-23",
-     "2015-03-13",
-     "2015-06-11",
-     "2015-09-11",
-     "2015-12-22",
-     "2016-03-14",
-     "2016-06-14",
-     "2016-09-14",
-     "2016-12-29",
-     "2017-03-15",
-     "2017-06-14",
-     "2017-09-14",
-     "2017-12-22",
-     "2018-03-15",
-     "2018-06-14",
-     "2018-09-14",
-     "2018-12-21",
-     "2019-03-18"
-    ]
-   },
-   "last_filed": "2021-12-30",
-   "names": [
-    "GOLDEN GRAIN ENERGY"
-   ],
-   "sic_at_filing": [
-    2860
-   ],
-   "status": "linked"
-  },
   "1209821": {
    "all_names": [
     "CROSSTEX ENERGY INC"
@@ -10544,38 +10495,6 @@
    ],
    "status": "rejected: float evidence contradicts (2.00)"
   },
-  "1614556": {
-   "all_names": [
-    "ASTERIKO CORP.",
-    "Star Alliance International Corp."
-   ],
-   "first_filed": "2015-02-23",
-   "float": {
-    "APT R735QTJ8XC9X": {
-     "check": "contradicts",
-     "median": 0.0675,
-     "n": 2
-    }
-   },
-   "hits": {
-    "APT R735QTJ8XC9X": [
-     "2017-05-15",
-     "2017-11-27",
-     "2017-12-08",
-     "2018-08-22"
-    ]
-   },
-   "last_filed": "2021-11-15",
-   "names": [
-    "Star Alliance International Corp."
-   ],
-   "sic_at_filing": [
-    1000,
-    1040,
-    2590
-   ],
-   "status": "rejected: float evidence contradicts (0.07)"
-  },
   "1615817": {
    "all_names": [
     "C&J Energy Services Ltd.",
@@ -10926,36 +10845,6 @@
     2834
    ],
    "status": "linked"
-  },
-  "1639327": {
-   "all_names": [
-    "Gushen, Inc"
-   ],
-   "first_filed": "2015-09-10",
-   "float": {
-    "GUSH W0WJOZ6X5X7P": {
-     "check": "contradicts",
-     "median": 0.0,
-     "n": 1
-    }
-   },
-   "hits": {
-    "GUSH W0WJOZ6X5X7P": [
-     "2016-03-08",
-     "2016-07-25",
-     "2016-09-13",
-     "2016-12-20",
-     "2017-03-14"
-    ]
-   },
-   "last_filed": "2021-08-23",
-   "names": [
-    "Gushen, Inc"
-   ],
-   "sic_at_filing": [
-    7363
-   ],
-   "status": "rejected: float evidence contradicts (0.00)"
   },
   "1641398": {
    "all_names": [
@@ -20098,7 +19987,7 @@
   }
  },
  "rejected_counts": {
-  "10-K filer without any reported public float (subsidiary / not publicly traded)": 8,
+  "10-K filer without any reported public float (subsidiary / not publicly traded)": 11,
   "fund/blank-check/royalty SIC": 28,
   "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 27,
   "no security with >= 2 matching dated tickers": 9306,
@@ -20106,7 +19995,7 @@
  },
  "summary": {
   "ambiguous": 7,
-  "linked": 490,
-  "rejected": 21
+  "linked": 489,
+  "rejected": 19
  }
 }
