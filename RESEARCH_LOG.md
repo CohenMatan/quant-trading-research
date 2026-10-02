@@ -1093,3 +1093,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - the checker's position reconstruction miscounted across a share split (GIS, 2010). It was fixed to delimit positions at each entry buy; the algorithm's own counter was 1 throughout.
 - **Freeze test:** passes.
 - **No candidate (GP/A) performance was computed.** Every prerequisite holds, so the H016 development runs start (E016-01 consumes Phase 2 slot 2).
+
+## 2026-10-02: H016 development runs complete; H016 NOT development-qualified; STOP (D117)
+
+- **Runs:** E016-01..08 completed on the common window 2010-03-01 → 2021-12-31. Slot 2 is consumed.
+- **Result:**
+
+  | Book | Sharpe |
+  |---|---|
+  | H016 (CAGR 12.8%, MaxDD −40.5%) | 0.69 |
+  | EW-H016 | 0.85 |
+  | SPY | 0.92 |
+  | Random median (range 0.62–0.98) | 0.75 |
+
+  **G1, G2 and G3 fail; G4 fails by rule.** The conditional robustness runs were not run.
+- **Diagnostics:** the survivorship and low-coverage views make it worse (−0.21 / −0.26 vs EW). DSR 0.83 (N 3) / 0.09 (N 43). The ranking adds no measurable value over random selection.
+- **Mechanics:** behaved as designed. Top-ups cost 0.06% a year; about 95% invested; no leverage.
+- **Checkpoint:** `docs/checkpoints/P2_CP9_H016_development_checkpoint.md`. No Holdout request.
+- **Phase 2:** 2 of 3 slots used.
+
+**STOP:** awaiting the owner.

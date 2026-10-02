@@ -135,7 +135,8 @@ def test_real_registry_before_c03():
 
     def pre(ids):
         return [e for e in ids if json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
-                .get("cycle") not in ("C03", "P2C1")]      # C03 and Phase 2 add on top
+                .get("cycle") != "C03" and not str(json.loads((config.EXPERIMENTS_DIR / e / "config.json")
+                .read_text()).get("cycle", "")).startswith("P2")]      # C03 and every Phase 2 cycle add on top
     cats = a["by_category"]
     assert [len(pre(cats[c])) for c in ("selection", "replicate", "robustness", "validation")] == [37, 0, 26, 1]
     assert c03stats.PRE_C03 == dict(official=37, conservative=64)
