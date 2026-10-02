@@ -1,0 +1,3683 @@
+{
+ "classification": {
+  "10-K/10-Q filer, unlinked": 301,
+  "20-F/40-F filer only (foreign private issuer listing)": 292,
+  "linked (repaired)": 496,
+  "no XBRL filer used the ticker": 1839
+ },
+ "liquid_no_fundamentals_securities": 2928,
+ "pre_xbrl_blind_spot": {
+  "by_last_seen_half_year": {
+   "2010H1": 15,
+   "2010H2": 24,
+   "2011H1": 34
+  },
+  "list": [
+   {
+    "last_seen": "2010-02-06",
+    "liquid_months": 1,
+    "sid": "AFA R735QTJ8XC9X",
+    "tickers": [
+     "ACS"
+    ]
+   },
+   {
+    "last_seen": "2010-02-27",
+    "liquid_months": 1,
+    "sid": "WH R735QTJ8XC9X",
+    "tickers": [
+     "PAS"
+    ]
+   },
+   {
+    "last_seen": "2010-03-06",
+    "liquid_months": 2,
+    "sid": "CSG R735QTJ8XC9X",
+    "tickers": [
+     "CBY"
+    ]
+   },
+   {
+    "last_seen": "2010-03-13",
+    "liquid_months": 2,
+    "sid": "BDK R735QTJ8XC9X",
+    "tickers": [
+     "BDK"
+    ]
+   },
+   {
+    "last_seen": "2010-03-13",
+    "liquid_months": 1,
+    "sid": "FGXI TX34HT712KBP",
+    "tickers": [
+     "FGXI"
+    ]
+   },
+   {
+    "last_seen": "2010-03-13",
+    "liquid_months": 1,
+    "sid": "HDIX TM694I8OJJAD",
+    "tickers": [
+     "HDIX"
+    ]
+   },
+   {
+    "last_seen": "2010-03-26",
+    "liquid_months": 2,
+    "sid": "AXA R735QTJ8XC9X",
+    "tickers": [
+     "AXA"
+    ]
+   },
+   {
+    "last_seen": "2010-04-02",
+    "liquid_months": 1,
+    "sid": "KTII R735QTJ8XC9X",
+    "tickers": [
+     "KTII"
+    ]
+   },
+   {
+    "last_seen": "2010-04-08",
+    "liquid_months": 3,
+    "sid": "BPW U1FOKOCV8IUD",
+    "tickers": [
+     "BPW"
+    ]
+   },
+   {
+    "last_seen": "2010-05-14",
+    "liquid_months": 4,
+    "sid": "VIP R735QTJ8XC9X",
+    "tickers": [
+     "VIP",
+     "OVIP"
+    ]
+   },
+   {
+    "last_seen": "2010-05-21",
+    "liquid_months": 4,
+    "sid": "ZNT R735QTJ8XC9X",
+    "tickers": [
+     "ZNT"
+    ]
+   },
+   {
+    "last_seen": "2010-05-27",
+    "liquid_months": 3,
+    "sid": "CBTSY R735QTJ8XC9X",
+    "tickers": [
+     "SKIL"
+    ]
+   },
+   {
+    "last_seen": "2010-06-04",
+    "liquid_months": 1,
+    "sid": "DCAI R735QTJ8XC9X",
+    "tickers": [
+     "DCAI"
+    ]
+   },
+   {
+    "last_seen": "2010-06-05",
+    "liquid_months": 5,
+    "sid": "DCX RFT9CN83C0H1",
+    "tickers": [
+     "DAI"
+    ]
+   },
+   {
+    "last_seen": "2010-06-19",
+    "liquid_months": 5,
+    "sid": "DT R735QTJ8XC9X",
+    "tickers": [
+     "DT"
+    ]
+   },
+   {
+    "last_seen": "2010-07-07",
+    "liquid_months": 1,
+    "sid": "BELM R735QTJ8XC9X",
+    "tickers": [
+     "BELM"
+    ]
+   },
+   {
+    "last_seen": "2010-07-15",
+    "liquid_months": 6,
+    "sid": "MIL R735QTJ8XC9X",
+    "tickers": [
+     "MIL"
+    ]
+   },
+   {
+    "last_seen": "2010-07-17",
+    "liquid_months": 6,
+    "sid": "ARD SNUJ365UIOV9",
+    "tickers": [
+     "ARD"
+    ]
+   },
+   {
+    "last_seen": "2010-07-28",
+    "liquid_months": 5,
+    "sid": "PLB R735QTJ8XC9X",
+    "tickers": [
+     "AIPC"
+    ]
+   },
+   {
+    "last_seen": "2010-07-30",
+    "liquid_months": 6,
+    "sid": "DBCC R735QTJ8XC9X",
+    "tickers": [
+     "IDC"
+    ]
+   },
+   {
+    "last_seen": "2010-07-30",
+    "liquid_months": 6,
+    "sid": "SYBS R735QTJ8XC9X",
+    "tickers": [
+     "SY"
+    ]
+   },
+   {
+    "last_seen": "2010-08-05",
+    "liquid_months": 4,
+    "sid": "VTIV ROFF63G9FO11",
+    "tickers": [
+     "VTIV"
+    ]
+   },
+   {
+    "last_seen": "2010-08-26",
+    "liquid_months": 6,
+    "sid": "TII U3DLBBBUO38L",
+    "tickers": [
+     "TII"
+    ]
+   },
+   {
+    "last_seen": "2010-08-27",
+    "liquid_months": 4,
+    "sid": "RCNI T75OP6F0JC6D",
+    "tickers": [
+     "RCNI"
+    ]
+   },
+   {
+    "last_seen": "2010-08-28",
+    "liquid_months": 7,
+    "sid": "GNA T2V3IHZIIVZ9",
+    "tickers": [
+     "GNA"
+    ]
+   },
+   {
+    "last_seen": "2010-08-28",
+    "liquid_months": 7,
+    "sid": "LIHRY R735QTJ8XC9X",
+    "tickers": [
+     "LIHR"
+    ]
+   },
+   {
+    "last_seen": "2010-09-11",
+    "liquid_months": 8,
+    "sid": "SWSI TAPOTBYYHF1H",
+    "tickers": [
+     "SWSI"
+    ]
+   },
+   {
+    "last_seen": "2010-09-24",
+    "liquid_months": 1,
+    "sid": "TKS R735QTJ8XC9X",
+    "tickers": [
+     "TKS"
+    ]
+   },
+   {
+    "last_seen": "2010-09-25",
+    "liquid_months": 6,
+    "sid": "PAR TXOSBV8QR5UT",
+    "tickers": [
+     "PAR"
+    ]
+   },
+   {
+    "last_seen": "2010-10-08",
+    "liquid_months": 1,
+    "sid": "SCNI R735QTJ8XC9X",
+    "tickers": [
+     "HGRD"
+    ]
+   },
+   {
+    "last_seen": "2010-10-14",
+    "liquid_months": 3,
+    "sid": "SAY S4PA5Q3OYKIT",
+    "tickers": [
+     "SAY"
+    ]
+   },
+   {
+    "last_seen": "2010-10-21",
+    "liquid_months": 1,
+    "sid": "IFLG TW8LMWUSP6CL",
+    "tickers": [
+     "IFLG"
+    ]
+   },
+   {
+    "last_seen": "2010-11-18",
+    "liquid_months": 10,
+    "sid": "RINO UE8HSFJV1LYD",
+    "tickers": [
+     "RINO"
+    ]
+   },
+   {
+    "last_seen": "2010-11-19",
+    "liquid_months": 1,
+    "sid": "AGAM UGYYHS4QP205",
+    "tickers": [
+     "AGAM"
+    ]
+   },
+   {
+    "last_seen": "2010-12-07",
+    "liquid_months": 1,
+    "sid": "LYBB UQRGJ93635GL",
+    "tickers": [
+     "LYBB"
+    ]
+   },
+   {
+    "last_seen": "2010-12-09",
+    "liquid_months": 1,
+    "sid": "KEI R735QTJ8XC9X",
+    "tickers": [
+     "KEI"
+    ]
+   },
+   {
+    "last_seen": "2010-12-11",
+    "liquid_months": 1,
+    "sid": "GAP R735QTJ8XC9X",
+    "tickers": [
+     "GAP"
+    ]
+   },
+   {
+    "last_seen": "2010-12-22",
+    "liquid_months": 1,
+    "sid": "ACLI TCMM3VKRU89X",
+    "tickers": [
+     "ACLI"
+    ]
+   },
+   {
+    "last_seen": "2010-12-23",
+    "liquid_months": 4,
+    "sid": "RSCR R735QTJ8XC9X",
+    "tickers": [
+     "RSCR"
+    ]
+   },
+   {
+    "last_seen": "2011-01-11",
+    "liquid_months": 3,
+    "sid": "IHII R735QTJ8XC9X",
+    "tickers": [
+     "TTES"
+    ]
+   },
+   {
+    "last_seen": "2011-01-14",
+    "liquid_months": 1,
+    "sid": "CYPB R735QTJ8XC9X",
+    "tickers": [
+     "CYPB"
+    ]
+   },
+   {
+    "last_seen": "2011-02-24",
+    "liquid_months": 1,
+    "sid": "ALY T1ZL7IA42QUD",
+    "tickers": [
+     "ALY"
+    ]
+   },
+   {
+    "last_seen": "2011-02-24",
+    "liquid_months": 1,
+    "sid": "CIO U04F46SRKB51",
+    "tickers": [
+     "GFC"
+    ]
+   },
+   {
+    "last_seen": "2011-02-25",
+    "liquid_months": 3,
+    "sid": "BJGP TL0WCKVLBUJP",
+    "tickers": [
+     "BJGP"
+    ]
+   },
+   {
+    "last_seen": "2011-03-05",
+    "liquid_months": 2,
+    "sid": "PLA R735QTJ8XC9X",
+    "tickers": [
+     "PLA"
+    ]
+   },
+   {
+    "last_seen": "2011-03-05",
+    "liquid_months": 14,
+    "sid": "REP R735QTJ8XC9X",
+    "tickers": [
+     "REP"
+    ]
+   },
+   {
+    "last_seen": "2011-03-08",
+    "liquid_months": 1,
+    "sid": "SCSAY RBVGZ6JSBDD1",
+    "tickers": [
+     "ACGY"
+    ]
+   },
+   {
+    "last_seen": "2011-03-12",
+    "liquid_months": 8,
+    "sid": "TMI TXMTFOIELNJ9",
+    "tickers": [
+     "CCME"
+    ]
+   },
+   {
+    "last_seen": "2011-03-19",
+    "liquid_months": 14,
+    "sid": "JAS STFEA8SA4LLX",
+    "tickers": [
+     "JAS"
+    ]
+   },
+   {
+    "last_seen": "2011-03-22",
+    "liquid_months": 11,
+    "sid": "CAGC UG5F2Z5OEF6T",
+    "tickers": [
+     "CAGC"
+    ]
+   },
+   {
+    "last_seen": "2011-03-26",
+    "liquid_months": 2,
+    "sid": "CRXL RZ8CR0XXNOF9",
+    "tickers": [
+     "CRXL"
+    ]
+   },
+   {
+    "last_seen": "2011-03-29",
+    "liquid_months": 7,
+    "sid": "FUQI TX15LMGOX205",
+    "tickers": [
+     "FUQI"
+    ]
+   },
+   {
+    "last_seen": "2011-04-07",
+    "liquid_months": 9,
+    "sid": "FRG T9W5EIZW6S85",
+    "tickers": [
+     "FRG"
+    ]
+   },
+   {
+    "last_seen": "2011-04-09",
+    "liquid_months": 6,
+    "sid": "ATC R735QTJ8XC9X",
+    "tickers": [
+     "TMRK"
+    ]
+   },
+   {
+    "last_seen": "2011-04-09",
+    "liquid_months": 6,
+    "sid": "PUDA UG6EJ2IUH6CL",
+    "tickers": [
+     "PUDA"
+    ]
+   },
+   {
+    "last_seen": "2011-04-14",
+    "liquid_months": 3,
+    "sid": "NOVI R735QTJ8XC9X",
+    "tickers": [
+     "CLDA"
+    ]
+   },
+   {
+    "last_seen": "2011-04-20",
+    "liquid_months": 6,
+    "sid": "DGW UDPSANLNL9WL",
+    "tickers": [
+     "DGW"
+    ]
+   },
+   {
+    "last_seen": "2011-04-29",
+    "liquid_months": 2,
+    "sid": "RACN R735QTJ8XC9X",
+    "tickers": [
+     "RCRC"
+    ]
+   },
+   {
+    "last_seen": "2011-04-30",
+    "liquid_months": 3,
+    "sid": "UHCO R735QTJ8XC9X",
+    "tickers": [
+     "UAM"
+    ]
+   },
+   {
+    "last_seen": "2011-05-07",
+    "liquid_months": 7,
+    "sid": "WATG TUZB2M116GYT",
+    "tickers": [
+     "WATG"
+    ]
+   },
+   {
+    "last_seen": "2011-05-10",
+    "liquid_months": 4,
+    "sid": "LDSH R8X4P31K1W11",
+    "tickers": [
+     "LDSH"
+    ]
+   },
+   {
+    "last_seen": "2011-05-14",
+    "liquid_months": 1,
+    "sid": "PSQL R735QTJ8XC9X",
+    "tickers": [
+     "EPIC"
+    ]
+   },
+   {
+    "last_seen": "2011-05-17",
+    "liquid_months": 16,
+    "sid": "LFT TX251PTUZT5X",
+    "tickers": [
+     "LFT"
+    ]
+   },
+   {
+    "last_seen": "2011-05-26",
+    "liquid_months": 3,
+    "sid": "VCD R735QTJ8XC9X",
+    "tickers": [
+     "RVI"
+    ]
+   },
+   {
+    "last_seen": "2011-05-28",
+    "liquid_months": 12,
+    "sid": "WBD SC25EVI3JIP1",
+    "tickers": [
+     "WBD"
+    ]
+   },
+   {
+    "last_seen": "2011-06-01",
+    "liquid_months": 13,
+    "sid": "RHBC R735QTJ8XC9X",
+    "tickers": [
+     "RHB"
+    ]
+   },
+   {
+    "last_seen": "2011-06-02",
+    "liquid_months": 1,
+    "sid": "SPEC R735QTJ8XC9X",
+    "tickers": [
+     "SPEC"
+    ]
+   },
+   {
+    "last_seen": "2011-06-15",
+    "liquid_months": 10,
+    "sid": "ICO TDUX831DA6HX",
+    "tickers": [
+     "ICO"
+    ]
+   },
+   {
+    "last_seen": "2011-06-16",
+    "liquid_months": 5,
+    "sid": "CHBT U71J7UCGX6QT",
+    "tickers": [
+     "CHBT"
+    ]
+   },
+   {
+    "last_seen": "2011-06-17",
+    "liquid_months": 1,
+    "sid": "VTAL RYGS8EP7IJXH",
+    "tickers": [
+     "VTAL"
+    ]
+   },
+   {
+    "last_seen": "2011-06-22",
+    "liquid_months": 1,
+    "sid": "LVDG R735QTJ8XC9X",
+    "tickers": [
+     "CKXE"
+    ]
+   },
+   {
+    "last_seen": "2011-06-28",
+    "liquid_months": 10,
+    "sid": "APWR TZIRA4R1VPLX",
+    "tickers": [
+     "APWR"
+    ]
+   },
+   {
+    "last_seen": "2011-06-29",
+    "liquid_months": 1,
+    "sid": "LB R735QTJ8XC9X",
+    "tickers": [
+     "LB"
+    ]
+   }
+  ],
+  "securities": 73
+ },
+ "unlinked_10K_filer_detail": [
+  {
+   "last_seen": "2021-12-31",
+   "sid": "AA R735QTJ8XC9X",
+   "tickers": [
+    "AA",
+    "ARNC",
+    "HWM"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 3
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "AAAU WX1HYU092ESL",
+   "tickers": [
+    "AAAU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-04-19",
+   "sid": "ACG R735QTJ8XC9X",
+   "tickers": [
+    "ACG"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ACH SAG21CX51085",
+   "tickers": [
+    "OMI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-09",
+   "sid": "ACI R735QTJ8XC9X",
+   "tickers": [
+    "ACI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-16",
+   "sid": "ACIC.U XJ24U3H4NQZP",
+   "tickers": [
+    "ACIC.U"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ADAP W0AVUX57HBOL",
+   "tickers": [
+    "ADAP"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2015-02-03",
+   "sid": "ADES T2U42EMCG4TH",
+   "tickers": [
+    "ADES"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2017-04-20",
+   "sid": "ADPT VROQ1GX1DO4L",
+   "tickers": [
+    "ADPT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ADV XJ34A6UAQI5H",
+   "tickers": [
+    "ADV"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "AFIN WWAWWB4P01GL",
+   "tickers": [
+    "AFIN"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2013-08-09",
+   "sid": "AGREA R735QTJ8XC9X",
+   "tickers": [
+    "AM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-08-25",
+   "sid": "AJAX XKGCMV4QK86D",
+   "tickers": [
+    "AJAX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2012-01-05",
+   "sid": "AMR R735QTJ8XC9X",
+   "tickers": [
+    "AMR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2019-10-05",
+   "sid": "APW R735QTJ8XC9X",
+   "tickers": [
+    "ATU"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ARCT WPKOXB566FZ9",
+   "tickers": [
+    "ARCT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-06-10",
+   "sid": "ARYA XGSEQC44B4O5",
+   "tickers": [
+    "ARYA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ASBC R735QTJ8XC9X",
+   "tickers": [
+    "ASBC",
+    "ASB"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2019-07-12",
+   "sid": "ASCMA U6AY5BGWUTET",
+   "tickers": [
+    "ASCMA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-05-20",
+   "sid": "ATAC.U XIX7LMNA9Z6T",
+   "tickers": [
+    "ATAC.U"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ATCX XC50QFXFAVDX",
+   "tickers": [
+    "ATCX"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2016-07-01",
+   "sid": "ATG R735QTJ8XC9X",
+   "tickers": [
+    "AGL",
+    "GAS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BAR WNHUY7CCD3S5",
+   "tickers": [
+    "BAR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-05-25",
+   "sid": "BBEP TMJ1XPZVJCDH",
+   "tickers": [
+    "BBEP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-12-07",
+   "sid": "BBK R735QTJ8XC9X",
+   "tickers": [
+    "BBT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-11-02",
+   "sid": "BCEI V2FWF6A8RAZP",
+   "tickers": [
+    "BCEI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BCI WJB7JWDINO85",
+   "tickers": [
+    "BCI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BHP R735QTJ8XC9X",
+   "tickers": [
+    "BHP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BKFS W0OO489KJVXH",
+   "tickers": [
+    "BKFS",
+    "BKI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-10",
+   "sid": "BLUW XLWJBTIOM7OL",
+   "tickers": [
+    "BLUW"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BMRG XF1E4CPBEUED",
+   "tickers": [
+    "EOSE"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2012-08-22",
+   "sid": "BNHN R735QTJ8XC9X",
+   "tickers": [
+    "BNHN"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BNO UN3IMQ2JU1YD",
+   "tickers": [
+    "BNO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BRPM X3YM2HJYFAED",
+   "tickers": [
+    "BRPM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2013-12-17",
+   "sid": "BRY R735QTJ8XC9X",
+   "tickers": [
+    "BRY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "BTWNU XIQBGZ33QP2D",
+   "tickers": [
+    "BTWNU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2012-02-15",
+   "sid": "BVAS R735QTJ8XC9X",
+   "tickers": [
+    "SYNO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CARRW XCXKP5JBIR1H",
+   "tickers": [
+    "CARR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2013-04-13",
+   "sid": "CBCF R735QTJ8XC9X",
+   "tickers": [
+    "CRBC"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CBRE WSZRSZV9QR1H",
+   "tickers": [
+    "CBRE"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CCAC XDCCEK0UO2G5",
+   "tickers": [
+    "CCAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CCH WZUX0GOMY4BP",
+   "tickers": [
+    "CCH",
+    "UTZ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CFT TP8J6Z7L419H",
+   "tickers": [
+    "CFT",
+    "CRED",
+    "USIG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-06-27",
+   "sid": "CHK R735QTJ8XC9X",
+   "tickers": [
+    "CHK"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2012-05-10",
+   "sid": "CHUX R735QTJ8XC9X",
+   "tickers": [
+    "CHUX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-04-02",
+   "sid": "CIC WOHB1KIF49K5",
+   "tickers": [
+    "CIC",
+    "NSCO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CIG S85CHI6YLMQT",
+   "tickers": [
+    "CIG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2017-06-30",
+   "sid": "CLAC W66KZ0SHXJ6T",
+   "tickers": [
+    "CLAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CLMT TFNWQ96IBZ39",
+   "tickers": [
+    "CLMT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CLNY WVNA62CN5XLX",
+   "tickers": [
+    "CLNY",
+    "DBRG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1,
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2013-07-10",
+   "sid": "CLWR TQRO87P1EA91",
+   "tickers": [
+    "CLWR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-09-26",
+   "sid": "CNNX VU7B62KKF2W5",
+   "tickers": [
+    "CNNX",
+    "CNXM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CONXU XJ34A6UAQI5H",
+   "tickers": [
+    "CONXU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-07-16",
+   "sid": "CRC VW1A4C2VJMN9",
+   "tickers": [
+    "CRC"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CRHC XJ43QA7GT9B9",
+   "tickers": [
+    "CRHC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CRXT XRQ9JQFMWWV9",
+   "tickers": [
+    "CRXT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2015-12-18",
+   "sid": "CSG VGQV82LIRVXH",
+   "tickers": [
+    "CSG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2011-09-16",
+   "sid": "CSR TX72A6NPDKYT",
+   "tickers": [
+    "CSR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CSSE WN524ZL5DAP1",
+   "tickers": [
+    "CSSE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-08-20",
+   "sid": "CTQ UX8THES67YHX",
+   "tickers": [
+    "CTQ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CUI V46X15P1NL9H",
+   "tickers": [
+    "OEG"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "CWI TPEFVJELKK85",
+   "tickers": [
+    "CWI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-04-24",
+   "sid": "CZN R735QTJ8XC9X",
+   "tickers": [
+    "FTR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBA TP2MIF0KNIAT",
+   "tickers": [
+    "DBA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 3
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBB TP2MIF0KNIAT",
+   "tickers": [
+    "DBB"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBC TFVSB03UY0DH",
+   "tickers": [
+    "DBC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBE TP2MIF0KNIAT",
+   "tickers": [
+    "DBE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBO TP2MIF0KNIAT",
+   "tickers": [
+    "DBO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBP TP2MIF0KNIAT",
+   "tickers": [
+    "DBP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBS TP2MIF0KNIAT",
+   "tickers": [
+    "DBS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBV TM3AS856B9T1",
+   "tickers": [
+    "DBV"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DBVT VUXW8LG4HG85",
+   "tickers": [
+    "DBVT"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2017-09-15",
+   "sid": "DCTH S92TOOMP7A79",
+   "tickers": [
+    "DCTH"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2012-08-11",
+   "sid": "DEER UECFKT0JCMLH",
+   "tickers": [
+    "DEER"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DESI R735QTJ8XC9X",
+   "tickers": [
+    "DXLG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DGL TP2MIF0KNIAT",
+   "tickers": [
+    "DGL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-07-31",
+   "sid": "DGNR XIFHJY28WEAT",
+   "tickers": [
+    "DGNR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-09",
+   "sid": "DGNS XJLTRYSI6U79",
+   "tickers": [
+    "DGNS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2014-06-14",
+   "sid": "DLLR T5QHGBE8K3TX",
+   "tickers": [
+    "DLLR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-10-01",
+   "sid": "DMYI XKT5G2VXK19H",
+   "tickers": [
+    "DMYI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-08",
+   "sid": "DMYQ XNZDAXBIFJVP",
+   "tickers": [
+    "DMYQ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-07-29",
+   "sid": "DNR R735QTJ8XC9X",
+   "tickers": [
+    "DNR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DPHC X3ORLJW9NQSL",
+   "tickers": [
+    "DPHC",
+    "RIDE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DPM TE5R54284H9H",
+   "tickers": [
+    "DPM",
+    "DCP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-11",
+   "sid": "DPW R735QTJ8XC9X",
+   "tickers": [
+    "DPW"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DUG TPT7KXW4PVMT",
+   "tickers": [
+    "DUG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-12-28",
+   "sid": "DVMT WDPCWQDWZ0BP",
+   "tickers": [
+    "DVMT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2014-10-30",
+   "sid": "DVR TOGYOCYUYWRP",
+   "tickers": [
+    "DVR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "DW R735QTJ8XC9X",
+   "tickers": [
+    "DW",
+    "LCII"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-07",
+   "sid": "DXM VG76A7A58SPX",
+   "tickers": [
+    "DXM"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "EEM SNQLASP67O85",
+   "tickers": [
+    "EEM"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "EFR STZ3843NNOTH",
+   "tickers": [
+    "EFR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2012-01-19",
+   "sid": "EK R735QTJ8XC9X",
+   "tickers": [
+    "EK"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2011-08-23",
+   "sid": "ELMG R735QTJ8XC9X",
+   "tickers": [
+    "ELMG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2013-02-09",
+   "sid": "ELOQ V8RCORS8FL2D",
+   "tickers": [
+    "ELOQ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-06-01",
+   "sid": "EMES VGF1UY7HUU05",
+   "tickers": [
+    "EMES"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ENNV XNAR4L6AIOV9",
+   "tickers": [
+    "ENNV"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2014-11-27",
+   "sid": "ENP R735QTJ8XC9X",
+   "tickers": [
+    "KMP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-12-29",
+   "sid": "EOC R735QTJ8XC9X",
+   "tickers": [
+    "EOC",
+    "EOCC"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2019-05-23",
+   "sid": "EPE VNC5YLR77PLX",
+   "tickers": [
+    "EPE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ESPD RQFASX5L0QQT",
+   "tickers": [
+    "BGCP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-08-15",
+   "sid": "ESV UIOZNO6DIL45",
+   "tickers": [
+    "ESV",
+    "VAL"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ETM RHT4ZGXEX36T",
+   "tickers": [
+    "ETM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-05-11",
+   "sid": "EVEP TMC5T2FP0291",
+   "tickers": [
+    "EVEP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "EWD R735QTJ8XC9X",
+   "tickers": [
+    "EWD"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "EWT RVSAF8UO0M79",
+   "tickers": [
+    "EWT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FFC SLRP42D0PCO5",
+   "tickers": [
+    "FFC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-01-10",
+   "sid": "FGP R735QTJ8XC9X",
+   "tickers": [
+    "FGP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2020-02-01",
+   "sid": "FII RAP4R5TJ0XGL",
+   "tickers": [
+    "FII"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FIII XI1PAMXVTU1X",
+   "tickers": [
+    "FIII",
+    "ELMS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FMAC XJVO8WG6YDT1",
+   "tickers": [
+    "FMAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FMCI WXT2HG8Z7JAD",
+   "tickers": [
+    "FMCI",
+    "TTCF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FPF VGTTKCP105ET",
+   "tickers": [
+    "FPF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FRG X9JH9K6E1751",
+   "tickers": [
+    "FRG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2013-11-22",
+   "sid": "FSG UUEEZOQM9HT1",
+   "tickers": [
+    "FSG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-06-10",
+   "sid": "FSRV W1E9QNRYJI3P",
+   "tickers": [
+    "FSRV"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-06-26",
+   "sid": "FTOC XIQBGZ33QP2D",
+   "tickers": [
+    "FTOC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FUN R735QTJ8XC9X",
+   "tickers": [
+    "FUN"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-05-14",
+   "sid": "FWM VFTE0W5S68H1",
+   "tickers": [
+    "FWM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXA TJSL8DEZVWBP",
+   "tickers": [
+    "FXA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXB TJSL8DEZVWBP",
+   "tickers": [
+    "FXB"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXC TJSL8DEZVWBP",
+   "tickers": [
+    "FXC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXE TEFLM1PWW0V9",
+   "tickers": [
+    "FXE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXF TJSL8DEZVWBP",
+   "tickers": [
+    "FXF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-02-15",
+   "sid": "FXS TJSL8DEZVWBP",
+   "tickers": [
+    "FXS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "FXY TQ50Y2A5MXK5",
+   "tickers": [
+    "FXY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GCC TZKQ6BHE17XH",
+   "tickers": [
+    "GCC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2010-11-09",
+   "sid": "GGP R735QTJ8XC9X",
+   "tickers": [
+    "GGP"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2018-08-28",
+   "sid": "GGP UKNVUEIJ0WO5",
+   "tickers": [
+    "GGP"
+   ],
+   "why": {
+    "ambiguous": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-08",
+   "sid": "GIG.U WQ7C7GK1XSO5",
+   "tickers": [
+    "GIG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GLD T3SKPOF94JFP",
+   "tickers": [
+    "GLD"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GLDM WVO9M5PT8ORP",
+   "tickers": [
+    "GLDM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GLTR UQZC400IP6QT",
+   "tickers": [
+    "GLTR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GMHI X3437L7Q1WF9",
+   "tickers": [
+    "GMHI",
+    "LAZR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2011-11-17",
+   "sid": "GMR S5GUOCCF3P0L",
+   "tickers": [
+    "GMR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2013-03-29",
+   "sid": "GMXR S317W0SEAJQD",
+   "tickers": [
+    "GMXR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-03-09",
+   "sid": "GNCMA R735QTJ8XC9X",
+   "tickers": [
+    "GNCMA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-03",
+   "sid": "GNPK XL6XPE0AMLID",
+   "tickers": [
+    "GNPK"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-06-22",
+   "sid": "GNRS XEEQU7AFNHPH",
+   "tickers": [
+    "GNRS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GPACU W2MKUV8JZGBP",
+   "tickers": [
+    "GPACU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-07-02",
+   "sid": "GPAQ WSRW88XX4PR9",
+   "tickers": [
+    "GPAQ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-11-26",
+   "sid": "GPOR TGKEHC92UVDX",
+   "tickers": [
+    "GPOR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GRAF WZ0E5KCEKQCL",
+   "tickers": [
+    "GRAF",
+    "VLDR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GSG TKH7EPK7SRC5",
+   "tickers": [
+    "GSG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GSP TM4A8BICE0YT",
+   "tickers": [
+    "GSP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "GUSH W0WJOZ6X5X7P",
+   "tickers": [
+    "GUSH"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "HAACU XJHVZLBTVTK5",
+   "tickers": [
+    "HAACU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "HCAC X3PR1N9FQHYD",
+   "tickers": [
+    "HCAC",
+    "GOEV"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-07-11",
+   "sid": "HCLP V954Y2WLI5B9",
+   "tickers": [
+    "HCLP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2015-03-11",
+   "sid": "HDY T8DZTDVLZAED",
+   "tickers": [
+    "HDY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2013-05-18",
+   "sid": "HEK TXSQ48PF26HX",
+   "tickers": [
+    "HEK"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "HGEN XHYQYCUDLKKL",
+   "tickers": [
+    "HGEN"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2017-04-28",
+   "sid": "HPG R735QTJ8XC9X",
+   "tickers": [
+    "ETP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-09-25",
+   "sid": "HPT R735QTJ8XC9X",
+   "tickers": [
+    "HPT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-07-01",
+   "sid": "HSNI R735QTJ8XC9X",
+   "tickers": [
+    "IACI",
+    "IAC"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "HTA V7787FXM2KX1",
+   "tickers": [
+    "HTA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-05-19",
+   "sid": "I VFUDGZIY8ZMT",
+   "tickers": [
+    "I"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-06-30",
+   "sid": "IACA XJ15E03YKZTX",
+   "tickers": [
+    "IACA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "IAU T5QHGBE8K3TX",
+   "tickers": [
+    "IAU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "IAUM XPQDWWQBBU5H",
+   "tickers": [
+    "IAUM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2011-12-14",
+   "sid": "ICLK UHDQ76M9UDET",
+   "tickers": [
+    "ICLK"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2010-09-28",
+   "sid": "ICN R735QTJ8XC9X",
+   "tickers": [
+    "VRX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2019-10-26",
+   "sid": "IPOA WIGOP01AAA91",
+   "tickers": [
+    "IPOA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-12-19",
+   "sid": "IPOB XFG5TR6UK5T1",
+   "tickers": [
+    "IPOB"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-05-29",
+   "sid": "IPOE XJYML6JP6NAD",
+   "tickers": [
+    "IPOE"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "IQV WPKOXB566FZ9",
+   "tickers": [
+    "IQV"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2015-02-14",
+   "sid": "IRE R735QTJ8XC9X",
+   "tickers": [
+    "IRE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2012-11-01",
+   "sid": "IRI R735QTJ8XC9X",
+   "tickers": [
+    "IRIS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "IRNT XRCHAFB9UCMD",
+   "tickers": [
+    "IRNT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-11-27",
+   "sid": "JONE VIHVU20BO679",
+   "tickers": [
+    "JONE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "KBIO VDQK1SCYCW9X",
+   "tickers": [
+    "KBIO",
+    "HGEN"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "LBIO VYFXGK9QA0RP",
+   "tickers": [
+    "LBIO",
+    "IOVA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "LCAHU X4AFFLXZCCBP",
+   "tickers": [
+    "LCAHU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-04-07",
+   "sid": "LFIN WQC9FXDWBKH1",
+   "tickers": [
+    "LFIN"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-06-28",
+   "sid": "LGCY TP9IN2KR6SF9",
+   "tickers": [
+    "LGCY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-02-13",
+   "sid": "LGVW XG4S03C2H0TH",
+   "tickers": [
+    "LGVW"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2018-12-20",
+   "sid": "LHP R735QTJ8XC9X",
+   "tickers": [
+    "EEP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-05-24",
+   "sid": "LINE TFB3X1FBC605",
+   "tickers": [
+    "LINE"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2018-03-10",
+   "sid": "LINTA TIIB7Z82AFS5",
+   "tickers": [
+    "LINTA",
+    "QVCA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-05-24",
+   "sid": "LNCO VAP9FER7V5GL",
+   "tickers": [
+    "LNCO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "LSI WD2PMKZ17NMT",
+   "tickers": [
+    "LSI"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "LWAC XMG89OU25AW5",
+   "tickers": [
+    "EFTR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2012-12-11",
+   "sid": "MDRX R735QTJ8XC9X",
+   "tickers": [
+    "MRX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2017-05-05",
+   "sid": "MEMP V29ZQM38AS11",
+   "tickers": [
+    "MEMP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "MGC TYQ7BF55NTYD",
+   "tickers": [
+    "MGC"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2011-05-28",
+   "sid": "MICCF R735QTJ8XC9X",
+   "tickers": [
+    "MICC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-02-13",
+   "sid": "MNI R735QTJ8XC9X",
+   "tickers": [
+    "MNI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2013-01-01",
+   "sid": "MOGA R735QTJ8XC9X",
+   "tickers": [
+    "MOGA"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "MPAC WK9O766FC2UD",
+   "tickers": [
+    "MPAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-10-16",
+   "sid": "MRAC XLRM3COU8FVP",
+   "tickers": [
+    "MRAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "MSG W4CM0RA6SZFP",
+   "tickers": [
+    "MSG",
+    "MSGS"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 2
+   }
+  },
+  {
+   "last_seen": "2019-10-26",
+   "sid": "NANO R735QTJ8XC9X",
+   "tickers": [
+    "NANO"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2010-10-01",
+   "sid": "NBTY R735QTJ8XC9X",
+   "tickers": [
+    "NTY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-06-17",
+   "sid": "NEBU WSI1RBA8D65H",
+   "tickers": [
+    "NEBU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-20",
+   "sid": "NES TXSQ48PF26HX",
+   "tickers": [
+    "HEK",
+    "NES"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-05-07",
+   "sid": "NGA XIIFW85R4NS5",
+   "tickers": [
+    "NGA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-08-20",
+   "sid": "NGAC XK5IPU3VPXET",
+   "tickers": [
+    "NGAC"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-30",
+   "sid": "NGCA XOG3WIJDQDLX",
+   "tickers": [
+    "NGCA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "NOVS XFA956ZU3MUD",
+   "tickers": [
+    "APPH"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2011-10-12",
+   "sid": "NSTC T2FCD04TATET",
+   "tickers": [
+    "NSTC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "NYLD VIAZPEG54W2T",
+   "tickers": [
+    "NYLD",
+    "NYLD.A",
+    "CWEN.A"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-10-10",
+   "sid": "OAS UNIAC4K2ZDD1",
+   "tickers": [
+    "OAS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2016-02-10",
+   "sid": "OCAT VWG1TQKEOY1X",
+   "tickers": [
+    "OCAT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OEG XEEQU7AFNHPH",
+   "tickers": [
+    "OEG"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OMP WO2JC60VYY5H",
+   "tickers": [
+    "OMP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OPES WT5OHK2A7A05",
+   "tickers": [
+    "OPES",
+    "BFI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-04-17",
+   "sid": "OSIR WWNPPIVVZUJP",
+   "tickers": [
+    "OSIR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OTIS XDDBUNE0QTLX",
+   "tickers": [
+    "OTIS"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OUNZ VQLC5QAABHPH",
+   "tickers": [
+    "OUNZ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "OZM TXMTFOIELNJ9",
+   "tickers": [
+    "OZM",
+    "SCU"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PAH VNI2N5Y7O8KL",
+   "tickers": [
+    "PAH",
+    "ESI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PALL UJ4QT612QNOL",
+   "tickers": [
+    "PALL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2014-04-30",
+   "sid": "PCOP R735QTJ8XC9X",
+   "tickers": [
+    "ACCL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PHI R735QTJ8XC9X",
+   "tickers": [
+    "PHI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PJC SV0I7O02KCX1",
+   "tickers": [
+    "PJC",
+    "PIPR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2012-09-29",
+   "sid": "PNR R735QTJ8XC9X",
+   "tickers": [
+    "PNR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PPLT UJ4QT612QNOL",
+   "tickers": [
+    "PPLT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PRG XJZM19WV9EG5",
+   "tickers": [
+    "PRG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "PRPB XI1PAMXVTU1X",
+   "tickers": [
+    "PRPB"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-10-29",
+   "sid": "PSG VRJST036ZWBP",
+   "tickers": [
+    "PSG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2017-07-01",
+   "sid": "PTXP W13FTMR3P7C5",
+   "tickers": [
+    "PTXP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-12-19",
+   "sid": "PVT X3437L7Q1WF9",
+   "tickers": [
+    "PVT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "QRTEA WSRW88XX4PR9",
+   "tickers": [
+    "QRTEA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-01",
+   "sid": "RCAP VH5MXH31X7C5",
+   "tickers": [
+    "RCAP"
+   ],
+   "why": {
+    "rejected": 2
+   }
+  },
+  {
+   "last_seen": "2019-03-01",
+   "sid": "REN UGCB7MPUXPB9",
+   "tickers": [
+    "REN"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "RIDE XJ05XWQSI8O5",
+   "tickers": [
+    "RIDE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2013-11-14",
+   "sid": "ROCM R735QTJ8XC9X",
+   "tickers": [
+    "ROCM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-08-03",
+   "sid": "RTPZ XL3ZD3WSEC11",
+   "tickers": [
+    "RTPZ"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "RTRX VN59TY70OFHH",
+   "tickers": [
+    "RTRX",
+    "TVTX"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SBGI R735QTJ8XC9X",
+   "tickers": [
+    "SBGI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SEAH XJRQGIZIND5X",
+   "tickers": [
+    "SEAH"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SEF U3EKREP0QUED",
+   "tickers": [
+    "SEF"
+   ],
+   "why": {
+    "rejected": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SGOL UFTLPURNHD9H",
+   "tickers": [
+    "SGOL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2015-03-20",
+   "sid": "SGPH R735QTJ8XC9X",
+   "tickers": [
+    "SIGA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SIVR UEJBPGKPVWPX",
+   "tickers": [
+    "SIVR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-03-26",
+   "sid": "SKH TSMMMKKILL5X",
+   "tickers": [
+    "SKH"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SLV TI6HUUU1DDUT",
+   "tickers": [
+    "SLV"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SMLP VABH63MUSL7P",
+   "tickers": [
+    "SMLP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SNII XNVFIJUU4J8L",
+   "tickers": [
+    "SNII"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SNTA TPY4TEPZ3NFP",
+   "tickers": [
+    "SNTA",
+    "MDGL"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-10",
+   "sid": "SOAC XFO1EI476739",
+   "tickers": [
+    "SOAC"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SPAQ XNAR4L6AIOV9",
+   "tickers": [
+    "SPAQ"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SPAR R735QTJ8XC9X",
+   "tickers": [
+    "SPAR",
+    "SHYF"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-30",
+   "sid": "SPFR XLHRMF15GW9X",
+   "tickers": [
+    "SPFR"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SPKE VSHA06IXLJS5",
+   "tickers": [
+    "SPKE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-10-12",
+   "sid": "SRAQU W8CDAEOTZ4V9",
+   "tickers": [
+    "SRAQU"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2019-09-24",
+   "sid": "SRUN WK2S2IM8SSPX",
+   "tickers": [
+    "SRUN",
+    "AMR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-09-30",
+   "sid": "STPC XMD9XEQJX1ET",
+   "tickers": [
+    "STPC"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2015-11-05",
+   "sid": "STSI RT7QEGGSTP45",
+   "tickers": [
+    "CIGX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-08-01",
+   "sid": "SUIT R735QTJ8XC9X",
+   "tickers": [
+    "MW",
+    "TLRD"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2014-04-02",
+   "sid": "SUPX R735QTJ8XC9X",
+   "tickers": [
+    "SUPX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SVAC XJ722KAZ1ISL",
+   "tickers": [
+    "SVAC",
+    "CYXT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "SWB SK3MUD1Q1BVP",
+   "tickers": [
+    "SWHC",
+    "AOBC",
+    "SWBI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2017-09-09",
+   "sid": "SWFT USHHP54SWOKL",
+   "tickers": [
+    "SWFT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-15",
+   "sid": "SWSH UTSR5MOWKW9X",
+   "tickers": [
+    "SWSH"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-02-28",
+   "sid": "SXE VB9XTDFRGZTX",
+   "tickers": [
+    "SXE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-10-19",
+   "sid": "SXL SBZ72LELB97P",
+   "tickers": [
+    "SXL",
+    "ETP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-03-03",
+   "sid": "TCLPZ RKZCUBCZSLT1",
+   "tickers": [
+    "TCLP",
+    "TCP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "TDAC WVBGSXYM8VOL",
+   "tickers": [
+    "TDAC",
+    "LTRY"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "THCA X6L4ZGO5RPT1",
+   "tickers": [
+    "THCA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-07-30",
+   "sid": "TLLP UVWKKTUWGZMT",
+   "tickers": [
+    "TLLP",
+    "ANDX"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2020-08-01",
+   "sid": "TLRD W7PQ099Y7S6D",
+   "tickers": [
+    "TLRD"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2019-03-01",
+   "sid": "TOH TWMDW7Z5RQLH",
+   "tickers": [
+    "REN"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2019-11-21",
+   "sid": "TPGH WN524ZL5DAP1",
+   "tickers": [
+    "TPGH"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "TPGY.U XIHGG4SL1WMD",
+   "tickers": [
+    "TPGY.U"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-05-25",
+   "sid": "TPUB VST3DAWYILPH",
+   "tickers": [
+    "TPUB",
+    "TRNC",
+    "TPCO"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2015-10-03",
+   "sid": "TRGL R735QTJ8XC9X",
+   "tickers": [
+    "TRGL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-05-25",
+   "sid": "TRNC WBJKLCHKXEN9",
+   "tickers": [
+    "TRNC",
+    "TPCO"
+   ],
+   "why": {
+    "ambiguous": 1
+   }
+  },
+  {
+   "last_seen": "2015-10-02",
+   "sid": "TRNX UTTQLQ22NNFP",
+   "tickers": [
+    "TRNX"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "TSIA XKT5G2VXK19H",
+   "tickers": [
+    "TSIA",
+    "LTCH"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-09-03",
+   "sid": "TYC R735QTJ8XC9X",
+   "tickers": [
+    "TYC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2018-04-27",
+   "sid": "UCLP TMVUQXR2J5GL",
+   "tickers": [
+    "EXLP",
+    "APLP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2015-08-15",
+   "sid": "UCR R735QTJ8XC9X",
+   "tickers": [
+    "GTI"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2016-02-19",
+   "sid": "UDF VR41NI8HRTR9",
+   "tickers": [
+    "UDF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "UDN TQBX2PUC67OL",
+   "tickers": [
+    "UDN"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "UGA U0H7XEJYK485",
+   "tickers": [
+    "UGA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "UNG TRW1K1OYJ7TX",
+   "tickers": [
+    "UNG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-04-17",
+   "sid": "USAT XJNSO5IUCCIT",
+   "tickers": [
+    "USAT"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "USCI UOZGH6B74411",
+   "tickers": [
+    "USCI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "USL TY8H9QK4A92D",
+   "tickers": [
+    "USL"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "USO THORT68ZZSYT",
+   "tickers": [
+    "USO"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "UUP TQBX2PUC67OL",
+   "tickers": [
+    "UUP"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 2
+   }
+  },
+  {
+   "last_seen": "2021-08-25",
+   "sid": "VACQ XJKUBVFC431H",
+   "tickers": [
+    "VACQ"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "VIAB R735QTJ8XC9X",
+   "tickers": [
+    "CBS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "VIAC XA367FHRKACL",
+   "tickers": [
+    "VIAC"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "VISN TY8H9QK4A92D",
+   "tickers": [
+    "COMM"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "VNOM VRHTWTCUUE05",
+   "tickers": [
+    "VNOM"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2017-02-11",
+   "sid": "VNR TX251PTUZT5X",
+   "tickers": [
+    "VNR"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "VNTW XI4NMX1E23J9",
+   "tickers": [
+    "VNT"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2011-07-20",
+   "sid": "WMG T8JWHY2MFTD1",
+   "tickers": [
+    "WMG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2012-12-15",
+   "sid": "WNI R735QTJ8XC9X",
+   "tickers": [
+    "SHF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-07-03",
+   "sid": "WPF XG8PSGSQS1GL",
+   "tickers": [
+    "WPF"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "WPS TUTEE1U0PY05",
+   "tickers": [
+    "WPS"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2016-01-05",
+   "sid": "WSH S5GUOCCF3P0L",
+   "tickers": [
+    "WSH"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2015-01-27",
+   "sid": "WTSLA R735QTJ8XC9X",
+   "tickers": [
+    "WTSLA"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "XL XKKAF8LEV8TH",
+   "tickers": [
+    "XL"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2020-06-25",
+   "sid": "XOG WENTK06TNEXX",
+   "tickers": [
+    "XOG"
+   ],
+   "why": {
+    "registrant is covered by QuantConnect under another security": 1
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "XPDI XNEOWYMYTPID",
+   "tickers": [
+    "XPDI"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2019-01-26",
+   "sid": "XTEX SKGFNKSX14YT",
+   "tickers": [
+    "XTEX",
+    "ENLK"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  },
+  {
+   "last_seen": "2018-07-14",
+   "sid": "ZAP R735QTJ8XC9X",
+   "tickers": [
+    "HRG"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1,
+    "registrant is covered by QuantConnect under another security": 2
+   }
+  },
+  {
+   "last_seen": "2021-12-31",
+   "sid": "ZNTE XL01KQG43BDX",
+   "tickers": [
+    "ZNTE"
+   ],
+   "why": {
+    "identity v2: < 2 dated matching filings or excluded before matching": 1
+   }
+  }
+ ],
+ "unlinked_10K_filer_reasons": {
+  "ambiguous": 13,
+  "identity v2: < 2 dated matching filings or excluded before matching": 210,
+  "registrant is covered by QuantConnect under another security": 94,
+  "rejected": 13
+ }
+}

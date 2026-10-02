@@ -58,6 +58,10 @@ def main(exp="E976-02"):
             "non_financial_eligible_per_month": round(nonfin, 1),
             "final_usable_per_month (non-financial, approved TTM revenue/net income/OCF + assets/equity)": round(final, 1),
             "final_usable_coverage_of_non_financial": round(final / nonfin, 4) if nonfin else None,
+            "final_usable_coverage_native / repaired": [
+                round(v.get("final_usable_native", 0) / v["nonfin_eligible_native"], 4) if v.get("nonfin_eligible_native") else None,
+                round(v.get("final_usable_corrected", 0) / v["nonfin_eligible_corrected"], 4) if v.get("nonfin_eligible_corrected") else None],
+            "non_financial_repaired_per_month": round(g("nonfin_eligible_corrected"), 1),
             "quarantine_lost_stock_months": c["quarantine_lost"].get(y, 0),
             "non_financial_not_usable_per_month_by_reason": {k.split("|", 1)[1]: round(n / 12, 1)
                                                              for k, n in sorted(v.items()) if k.startswith("not_usable|")},
@@ -85,8 +89,12 @@ def main(exp="E976-02"):
             ret.setdefault(y, {})[grp] = {"stock_months": v[0], "mean_month_return_x12": round(12 * v[1] / v[0], 4)}
     for y, gr in ret.items():
         if "ttm_usable" in gr and "ttm_missing" in gr:
-            gr["ttm_missing_share"] = round(gr["ttm_missing"]["stock_months"] / (gr["ttm_missing"]["stock_months"]
-                                                                                + gr["ttm_usable"]["stock_months"]), 4)
+            sh_m = gr["ttm_missing"]["stock_months"] / (gr["ttm_missing"]["stock_months"] + gr["ttm_usable"]["stock_months"])
+            gr["ttm_missing_share"] = round(sh_m, 4)
+            # equal-weight non-financial universe restricted to names with usable data minus the full non-financial
+            # universe (positive = the data-available universe looks better): availability bias, pp a year
+            gr["availability_bias_of_usable_only_universe_pp"] = round(
+                100 * sh_m * (gr["ttm_usable"]["mean_month_return_x12"] - gr["ttm_missing"]["mean_month_return_x12"]), 2)
         if "corrected" in gr and "native" in gr:
             sh = gr["corrected"]["stock_months"] / (gr["corrected"]["stock_months"] + gr["native"]["stock_months"])
             gr["repaired_share"] = round(sh, 4)
