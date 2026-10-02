@@ -177,10 +177,12 @@ def analyse(cfg: dict, raw: dict) -> dict:
     trades = build_trades(fills, splits)
     checks = integrity.check_all(equity, fills, summary, cfg["start"], cfg["end"],
                                  commission_per_order=cfg["costs"].get("commission_per_order"),
-                                 tradeable_dates=raw["backtest"].get("tradeableDates"),
+                                 tradeable_dates=integrity.official_tradeable_dates(
+                                     raw["backtest"].get("tradeableDates"), summary),
                                  expected_orders=raw.get("expected_orders"),
                                  downloaded_orders=len({o.get("id") for o in raw["orders"]}),
-                                 late_open_orders=results.late_open_orders(raw["orders"], cfg["end"]))
+                                 late_open_orders=results.late_open_orders(raw["orders"], cfg["end"]),
+                                 initial_cash=cfg.get("cash"))
     texts = {
         "equity": results.canonical_csv(equity),
         "fills": results.canonical_csv(fills),

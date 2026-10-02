@@ -13,10 +13,18 @@ SIG = re.compile(r"\|sig=(\d{4}-\d{2}-\d{2})$")
 CASH_FAIL = -1e-9    # D051: ANY negative cash at a daily close is borrowing and fails the run
 
 
+def official_tradeable_dates(tradeable_dates, summary: dict):
+    """QuantConnect's tradeable-date count covers the whole LEAN run; with a history-only warm-up (D114) the harness
+    counts the warm-up sessions, which carry no equity record, so they are removed before the comparison."""
+    if tradeable_dates is None:
+        return None
+    return int(tradeable_dates) - int((summary or {}).get("warmup_days", 0) or 0)
+
+
 def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: str, end: str,
               commission_per_order: float | None = None, tradeable_dates: int | None = None,
               expected_orders: int | None = None, downloaded_orders: int | None = None,
-              late_open_orders: list | None = None) -> list[dict]:
+              late_open_orders: list | None = None, initial_cash: float | None = None) -> list[dict]:
     out: list[dict] = []
 
     def add(name, ok, detail, level="fail"):
@@ -35,6 +43,12 @@ def check_all(equity: pd.DataFrame, fills: pd.DataFrame, summary: dict, start: s
     if tradeable_dates is not None:
         add("equity_matches_qc_tradeable_dates", int(tradeable_dates) == len(equity),
             f"chart rows {len(equity)} vs QuantConnect tradeableDates {tradeable_dates}")
+    if int(summary.get("warmup_days", 0) or 0) > 0 and initial_cash is not None:
+        # D114: a history-only warm-up must leave the account untouched until the official start
+        first = float(equity["equity"].iloc[0])
+        add("warmup_left_account_untouched", abs(first - float(initial_cash)) < 1e-6,
+            f"first recorded equity {first:.2f} vs initial cash {float(initial_cash):.2f}; "
+            f"{summary.get('warmup_days')} warm-up sessions")
     cash_frac = (equity["cash"] / equity["equity"]).min()
     neg_days = int((equity["cash"] < -1e-6).sum())
     add("no_leverage", cash_frac >= CASH_FAIL, f"min cash/equity {cash_frac:.6f}; {neg_days} closes with negative cash")

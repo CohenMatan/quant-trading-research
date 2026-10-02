@@ -1,3 +1,8 @@
+# X976 v1.2 — FINAL fundamental-data readiness canary (D113, D113a, D114). v1.2: the harness's history-only warm-up
+# (config 'warmup_start') replaces the canary's own; D114 field-level releases feed the store; C11 accepts a
+# quarantined TTM component only through a verified field release of that very field; new C12 (a partial record is
+# never the current report); availability counts of each approved H016 field (coverage only, no returns).
+# v1.1 header (unchanged below):
 # X976 v1.1 — FINAL fundamental-data readiness canary (D113, D113a). Extends X972 v1.1 (post-remediation PIT canary)
 # with the True TTM layer, the financial/REIT exclusion policy and final usable-coverage tables.
 # v1.1 (after E976-01): (a) the PIT store observes EVERY company with fundamentals every day, not only eligible ones,
@@ -62,11 +67,12 @@ class RemediationCanary(QRAlgorithm):
         if self.qr_sec is None:
             raise Exception("X972 needs universe.sec_corrections")
         self.store = PITStore(DEFAULT_MAX_AGE_DAYS, holds=self.qr_timing_holds, releases=self.qr_quarantine_releases,
-                              blocked=self.qr_restatement_blocks)
+                              blocked=self.qr_restatement_blocks, field_releases=self.qr_field_releases)
         self.c = {k: 0 for k in ("C1_sec_visible_before_filing", "C2_amendment_early", "C3_quarantine_exposed",
                                  "C3_hold_violated", "C4_unjustified_entry", "C5_future_share_info",
                                  "C6_split_jumps", "C7_eligible_after_last_trade", "C3_restatement_block_exposed",
                                  "C10_ttm_before_component_available", "C11_ttm_uses_blocked_component",
+                                 "C12_partial_record_is_current",
                                  "stock_days", "corrected_days")}
         self.c.update(coverage={}, fin_flips={}, visa={}, exchange={}, split_checks=[], ret={}, size={},
                       corrected_first={}, corrected_last={}, quarantine_lost={}, ttm_reasons={}, sic_vs_structure={})
@@ -249,17 +255,27 @@ class RemediationCanary(QRAlgorithm):
                 add(cov, f"no_usable_record_{grp}")
             # ---- D113: True TTM availability, financial/REIT policy, final usable coverage
             core = []
+            have = {}
+            if r is not None and r.partial:
+                c["C12_partial_record_is_current"] += 1
             for b in TTM_BASES:
                 v, det = self.store.ttm_detail(sid, b, today)
                 if v is None:
                     add(c["ttm_reasons"], f"{y}|{b}|{det}")
                     continue
                 add(cov, f"ttm_{b}_{grp}")
+                have[b] = v
                 if any(fd >= str(today) for fd in det["filed"]):
                     c["C10_ttm_before_component_available"] += 1
                 for pe, fd in zip(det["quarters"], det["filed"]):
-                    if (sid, pe, fd) in self.q_keys_str or (pe, fd) in self.store.blocked.get(sid, ()):
+                    if (pe, fd) in self.store.blocked.get(sid, ()):
                         c["C11_ttm_uses_blocked_component"] += 1
+                    elif (sid, pe, fd) in self.q_keys_str:
+                        rel = self.store.field_releases.get(sid, {}).get((pe, fd), ())
+                        if b + "_q" not in rel:
+                            c["C11_ttm_uses_blocked_component"] += 1
+                        else:
+                            add(cov, f"ttm_uses_field_release_{b}")
                 if b in ("revenue", "net_income", "operating_cash_flow"):
                     core.append(b)
             ff = financial_format(r.values) if r is not None else None
@@ -278,6 +294,23 @@ class RemediationCanary(QRAlgorithm):
                 ok = len(core) == 3 and snap
                 tc = terc.get(sid, "?")
                 add(cov, f"nonfin_eligible_{tc}")
+                # D114: availability of each approved H016 field and of the profitability ratios they allow
+                # (coverage only; no ranking, no returns)
+                ta = r.values.get("total_assets") if r is not None else None
+                eq = r.values.get("stockholders_equity") if r is not None else None
+                for b in ("revenue", "gross_profit", "net_income", "operating_cash_flow"):
+                    if b in have:
+                        add(cov, f"avail_{b}_ttm4q")
+                        if ta is not None and ta > 0:
+                            add(cov, f"avail_{b}_ttm4q_and_assets_pos")
+                if ta is not None and ta > 0:
+                    add(cov, "avail_assets_pos")
+                if eq is not None:
+                    add(cov, "avail_equity")
+                    if eq > 0:
+                        add(cov, "avail_equity_pos")
+                        if "net_income" in have:
+                            add(cov, "avail_net_income_ttm4q_and_equity_pos")
                 ts = self.ttm_sec.setdefault(sid, [grp, 0, 0, {}])
                 ts[1] += 1
                 if ok:

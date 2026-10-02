@@ -20,10 +20,30 @@ from qr_indicators import plan_event_targets
 from qr_params import EXPERIMENT
 
 LAST_UNLOCKED = datetime(2021, 12, 31)
+WARMUP_EARLIEST = datetime(2008, 7, 1)   # D114: owner-approved history-only warm-up for fundamentals (July 2008)
 COMMON_STOCK = "ST00000001"
 EXCHANGES = ("NYS", "NYSE", "NAS", "ASE", "AMEX")   # old and new Morningstar codes
 STALE_SESSIONS = 10      # D059: a holding with no real price bar for this many sessions is terminated
 STALE_ORDER_SESSIONS = 5  # D059: a harness order still open after this many sessions fails the run
+
+
+def warmup_bounds(e):
+    """(LEAN start, official start) for an experiment config (D114). With 'warmup_start' the algorithm starts earlier
+    to accumulate HISTORY ONLY (fundamental reports, price windows); the official start stays e['start']: no close
+    hook, no orders and no equity record exist before it. Without 'warmup_start' both are e['start']."""
+    start = datetime.strptime(e["start"], "%Y-%m-%d")
+    ws = e.get("warmup_start")
+    if not ws:
+        return start, start
+    w = datetime.strptime(ws, "%Y-%m-%d")
+    if not (WARMUP_EARLIEST <= w < start):
+        raise Exception(f"QR warm-up: warmup_start {ws} must be on/after {WARMUP_EARLIEST:%Y-%m-%d} and before start")
+    return w, start
+
+
+def in_warmup(today, official_start):
+    """True on every day strictly before the official start (history-only days)."""
+    return today < official_start.date()
 
 
 def slot_weight(n_slots, pv, pf):
@@ -244,11 +264,12 @@ class QRAlgorithm(QCAlgorithm):
     def initialize(self):
         e = EXPERIMENT
         self.qr = e
-        start = datetime.strptime(e["start"], "%Y-%m-%d")
+        lean_start, start = warmup_bounds(e)
+        self.qr_official_start = start          # D114: no close hook, orders or equity before this date
         end = datetime.strptime(e["end"], "%Y-%m-%d")
         if end > LAST_UNLOCKED and not e.get("holdout_unlocked", False):
             raise Exception("QR holdout lock: end date after 2021-12-31 without owner unlock")
-        self.set_start_date(start.year, start.month, start.day)
+        self.set_start_date(lean_start.year, lean_start.month, lean_start.day)
         self.set_end_date(end.year, end.month, end.day)
         self.set_cash(float(e["cash"]))
         self.set_brokerage_model(BrokerageName.INTERACTIVE_BROKERS_BROKERAGE, AccountType.MARGIN)
@@ -425,6 +446,11 @@ class QRAlgorithm(QCAlgorithm):
         self.qr_corrected = corrected
         n = len(elig)
         s = self._qr_stats
+        if in_warmup(today, self.qr_official_start):
+            s["warmup_select_days"] = s.get("warmup_select_days", 0) + 1
+            chosen = list(self.qr_select_universe(elig))      # strategies may build history; never trade
+            held = [kv.key for kv in self.portfolio if kv.value.invested]
+            return list(dict.fromkeys(chosen + held + sec_syms))
         s["elig_min"] = n if s["elig_min"] is None else min(s["elig_min"], n)
         s["elig_max"] = max(s["elig_max"], n)
         s["elig_sum"] += n
@@ -573,6 +599,12 @@ class QRAlgorithm(QCAlgorithm):
                     self._qr_month_step(sym, ym, float(bar.close))
         if self._qr_last_plot == today:
             return
+        if in_warmup(today, self.qr_official_start):
+            # D114 history-only warm-up: windows and fundamentals history accumulate above; no strategy close
+            # hook (no decisions, no orders) and no equity/cash record before the official start
+            self._qr_last_plot = today
+            self._qr_stats["warmup_days"] = self._qr_stats.get("warmup_days", 0) + 1
+            return
         self._qr_in_close = True
         try:
             self._qr_check_stale(today)
@@ -656,6 +688,8 @@ class QRAlgorithm(QCAlgorithm):
         rules live in the pure function plan_orders() below. Returns number of orders placed."""
         if not self._qr_in_close:
             raise Exception("QR timing guard: orders may only be placed from qr_on_close")
+        if in_warmup(self.time.date(), self.qr_official_start):
+            raise Exception("QR warm-up guard: no orders before the official start (D114)")
         targets = dict(targets)
         if liquidate_others:
             for kv in self.portfolio:
@@ -702,6 +736,8 @@ class QRAlgorithm(QCAlgorithm):
         return slot_weight(n_slots, float(self.portfolio.total_portfolio_value), self._qr_pf)
 
     def _qr_submit(self, sym, qty, tag):
+        if in_warmup(self.time.date(), self.qr_official_start):
+            raise Exception("QR warm-up guard: no orders before the official start (D114)")
         t = self.market_on_open_order(sym, qty, tag=tag)
         self._qr_sig[t.order_id] = tag.rsplit("sig=", 1)[-1]
         self._qr_order_session[t.order_id] = self._qr_session

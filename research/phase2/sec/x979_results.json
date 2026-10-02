@@ -1,0 +1,3965 @@
+{
+ "detail": [
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ACL R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ACE"
+  },
+  {
+   "fd": "2010-08-17",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-18",
+   "orig_filed": "2010-08-17",
+   "pe": "2010-07-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ADI R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ADI"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AIZ SVXZEUFT60DH",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "AIZ"
+  },
+  {
+   "fd": "2010-10-27",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "net_income_q"
+   ],
+   "observed": "2010-10-28",
+   "orig_filed": "2010-10-27",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ALL R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ALL"
+  },
+  {
+   "fd": "2010-11-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-05",
+   "orig_filed": "2010-11-04",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AME R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "AME"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AMGN R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "AMGN"
+  },
+  {
+   "fd": "2010-11-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-05",
+   "orig_filed": "2010-11-04",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AOC R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "AON"
+  },
+  {
+   "fd": "2010-11-01",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.9867)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-02",
+   "orig_filed": "2010-11-01",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "APC R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "APC"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ATH S9AP9FK1TBHH",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "WLP"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ATVI R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "ATVI"
+  },
+  {
+   "fd": "2011-01-28",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-01-29",
+   "orig_filed": "2011-01-28",
+   "pe": "2011-01-01",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AVT R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "AVT"
+  },
+  {
+   "fd": "2010-11-02",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-03",
+   "orig_filed": "2010-11-02",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "AVZ R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "IVZ"
+  },
+  {
+   "fd": "2011-03-30",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-03-31",
+   "orig_filed": "2011-03-30",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "AYI S9PGYU1KYMW5",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "AYI"
+  },
+  {
+   "fd": "2010-10-20",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-21",
+   "orig_filed": "2010-10-20",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BA R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BA"
+  },
+  {
+   "fd": "2010-10-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-10-08",
+   "orig_filed": "2010-10-07",
+   "pe": "2010-08-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BBY R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BBY"
+  },
+  {
+   "fd": "2011-01-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2011-01-06",
+   "orig_filed": "2011-01-05",
+   "pe": "2010-11-26",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BBY R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BBY"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BHI R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BHI"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "differs (1.3317)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BK R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, operating_cash_flow_ttm",
+   "ticker": "BK"
+  },
+  {
+   "fd": "2010-10-26",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-27",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BMY R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BMY"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BSX R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, operating_cash_flow_ttm",
+   "ticker": "BSX"
+  },
+  {
+   "fd": "2010-10-27",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-28",
+   "orig_filed": "2010-10-27",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "BWA R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "BWA"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CEY S67FQV7Z62CL",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "FIS"
+  },
+  {
+   "fd": "2010-07-29",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-07-30",
+   "orig_filed": "2010-07-29",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CL R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CL"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CL R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CL"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "differs (0.9798)",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CLF R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CLF"
+  },
+  {
+   "fd": "2010-11-09",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-10",
+   "orig_filed": "2010-11-09",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CMB R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "JPM"
+  },
+  {
+   "fd": "2011-03-07",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-03-08",
+   "orig_filed": "2011-03-07",
+   "pe": "2011-01-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "CPRT R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "CPRT"
+  },
+  {
+   "fd": "2011-04-08",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-09",
+   "orig_filed": "2011-04-08",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "CTAS R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "CTAS"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CTSH RBOKUIZLS38L",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CTSH"
+  },
+  {
+   "fd": "2010-11-09",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "net_income_q",
+    "revenue_q"
+   ],
+   "observed": "2010-11-10",
+   "orig_filed": "2010-11-09",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CTXS R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CTXS"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-26",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "CUM R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CMI"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "D R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "D"
+  },
+  {
+   "fd": "2011-03-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-03-08",
+   "orig_filed": "2011-03-07",
+   "pe": "2011-01-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "DCI R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "DCI"
+  },
+  {
+   "fd": "2010-10-06",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-07",
+   "orig_filed": "2010-10-06",
+   "pe": "2010-08-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DFS TTXW324M9SV9",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DFS"
+  },
+  {
+   "fd": "2010-10-26",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-27",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DGX R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DGX"
+  },
+  {
+   "fd": "2010-12-03",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-04",
+   "orig_filed": "2010-12-03",
+   "pe": "2010-10-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DH R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "TGT"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DNY R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "RRD"
+  },
+  {
+   "fd": "2010-07-23",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "differs (0.9926)",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-07-24",
+   "orig_filed": "2010-07-23",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm"
+   ],
+   "sid": "DOV R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm",
+   "ticker": "DOV"
+  },
+  {
+   "fd": "2010-10-27",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-28",
+   "orig_filed": "2010-10-27",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "DPS U2F4O1IXZOMD",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "DPS"
+  },
+  {
+   "fd": "2011-01-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "differs (0.9821)",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-01-06",
+   "orig_filed": "2011-01-05",
+   "pe": "2010-11-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DRI R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DRI"
+  },
+  {
+   "fd": "2011-04-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-05",
+   "orig_filed": "2011-04-04",
+   "pe": "2011-02-27",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DRI R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DRI"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DTE R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DTE"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "DUK R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DUK"
+  },
+  {
+   "fd": "2010-11-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-05",
+   "orig_filed": "2010-11-04",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ECL R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ECL"
+  },
+  {
+   "fd": "2010-07-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-07-30",
+   "orig_filed": "2010-07-29",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "EFX R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "EFX"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "EFX R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "EFX"
+  },
+  {
+   "fd": "2010-10-21",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-22",
+   "orig_filed": "2010-10-21",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "FAST R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "FAST"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "differs (1.0878)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "FCX R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, operating_cash_flow_ttm",
+   "ticker": "FCX"
+  },
+  {
+   "fd": "2010-12-06",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-07",
+   "orig_filed": "2010-12-06",
+   "pe": "2010-10-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm"
+   ],
+   "sid": "FD R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm",
+   "ticker": "M"
+  },
+  {
+   "fd": "2011-04-06",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-07",
+   "orig_filed": "2011-04-06",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "FDS R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "FDS"
+  },
+  {
+   "fd": "2010-10-26",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-27",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "FE R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "FE"
+  },
+  {
+   "fd": "2010-08-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "differs (0.9929)",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-06",
+   "orig_filed": "2010-08-05",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm"
+   ],
+   "sid": "FISV R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm",
+   "ticker": "FISV"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "differs (0.9929)",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm"
+   ],
+   "sid": "FISV R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm",
+   "ticker": "FISV"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "FITB R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "FITB"
+  },
+  {
+   "fd": "2010-10-27",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-28",
+   "orig_filed": "2010-10-27",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "FLS R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "FLS"
+  },
+  {
+   "fd": "2011-03-23",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-03-24",
+   "orig_filed": "2011-03-23",
+   "pe": "2011-02-27",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GIS R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GIS"
+  },
+  {
+   "fd": "2010-07-30",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-07-31",
+   "orig_filed": "2010-07-30",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GLW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GLW"
+  },
+  {
+   "fd": "2010-11-01",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-02",
+   "orig_filed": "2010-11-01",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GLW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GLW"
+  },
+  {
+   "fd": "2010-12-08",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-09",
+   "orig_filed": "2010-12-08",
+   "pe": "2010-10-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GME SC72NCBXXAHX",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GME"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "net_income_q"
+   ],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GNW SYYAL4ODL011",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GNW"
+  },
+  {
+   "fd": "2011-04-01",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-02",
+   "orig_filed": "2011-04-01",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "GPN S1VV43FB2UZP",
+   "status": "released: net_income_q, operating_cash_flow_q",
+   "ticker": "GPN"
+  },
+  {
+   "fd": "2010-12-08",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-09",
+   "orig_filed": "2010-12-08",
+   "pe": "2010-10-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "GPS R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "GPS"
+  },
+  {
+   "fd": "2010-10-22",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-23",
+   "orig_filed": "2010-10-22",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HAL R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "HAL"
+  },
+  {
+   "fd": "2010-12-02",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-03",
+   "orig_filed": "2010-12-02",
+   "pe": "2010-10-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HD R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "HD"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HOU R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "CNP"
+  },
+  {
+   "fd": "2010-12-08",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.3379)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-12-09",
+   "orig_filed": "2010-12-08",
+   "pe": "2010-10-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HRB R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "HRB"
+  },
+  {
+   "fd": "2011-03-09",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.7332)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2011-03-10",
+   "orig_filed": "2011-03-09",
+   "pe": "2011-01-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HRB R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "HRB"
+  },
+  {
+   "fd": "2010-11-14",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-16",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "HSP SYCMR2MNWEHX",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "HSP"
+  },
+  {
+   "fd": "2010-11-01",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-02",
+   "orig_filed": "2010-11-01",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "IIN R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ITT"
+  },
+  {
+   "fd": "2011-04-08",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-09",
+   "orig_filed": "2011-04-08",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "JBIL R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "JBL"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "JNPR RLTVP7P85ZS5",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "JNPR"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.9906)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "KBR TNPE5QQ4TS9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "KBR"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LLY R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LLY"
+  },
+  {
+   "fd": "2010-11-09",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-10",
+   "orig_filed": "2010-11-09",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LM"
+  },
+  {
+   "fd": "2011-02-08",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-02-09",
+   "orig_filed": "2011-02-08",
+   "pe": "2010-12-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LM"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.8159)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LOM R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "RRC"
+  },
+  {
+   "fd": "2010-08-31",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-09-01",
+   "orig_filed": "2010-08-31",
+   "pe": "2010-07-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LOW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LOW"
+  },
+  {
+   "fd": "2010-12-01",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-02",
+   "orig_filed": "2010-12-01",
+   "pe": "2010-10-29",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LOW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LOW"
+  },
+  {
+   "fd": "2010-12-03",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-04",
+   "orig_filed": "2010-12-03",
+   "pe": "2010-10-29",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LTD R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LTD"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "LUK R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "LUK"
+  },
+  {
+   "fd": "2010-11-02",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-03",
+   "orig_filed": "2010-11-02",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MA TIX2XDPLFR6T",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MA"
+  },
+  {
+   "fd": "2012-10-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "sec_na",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2012-10-05",
+   "orig_filed": "2012-10-04",
+   "pe": "2012-09-07",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q"
+   ],
+   "sid": "MAR R9GTMYCXKZ8L",
+   "status": "released: revenue_q, net_income_q",
+   "ticker": "MAR"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MAS R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MAS"
+  },
+  {
+   "fd": "2010-10-27",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-28",
+   "orig_filed": "2010-10-27",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MAT R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MAT"
+  },
+  {
+   "fd": "2011-02-08",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-02-09",
+   "orig_filed": "2011-02-08",
+   "pe": "2010-12-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MCHP R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MCHP"
+  },
+  {
+   "fd": "2010-10-26",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-27",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MCK R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MCK"
+  },
+  {
+   "fd": "2011-02-01",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-02-02",
+   "orig_filed": "2011-02-01",
+   "pe": "2010-12-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MCK R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MCK"
+  },
+  {
+   "fd": "2010-11-09",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-10",
+   "orig_filed": "2010-11-09",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MMC R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MMC"
+  },
+  {
+   "fd": "2010-08-04",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-05",
+   "orig_filed": "2010-08-04",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MMM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MMM"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MMM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MMM"
+  },
+  {
+   "fd": "2011-04-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-08",
+   "orig_filed": "2011-04-07",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MON RYZHQ6NEYVZ9",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MON"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MRK R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MRK"
+  },
+  {
+   "fd": "2011-04-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-08",
+   "orig_filed": "2011-04-07",
+   "pe": "2011-02-26",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "MSM R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "MSM"
+  },
+  {
+   "fd": "2010-08-06",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-07",
+   "orig_filed": "2010-08-06",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "MUR R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "MUR"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (0.9550)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "NBL R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "NBL"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "differs (0.9488)"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "NBR R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "NBR"
+  },
+  {
+   "fd": "2010-10-26",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-27",
+   "orig_filed": "2010-10-26",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "NFLX SEWJWLJNHZDX",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "NFLX"
+  },
+  {
+   "fd": "2010-08-06",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-07",
+   "orig_filed": "2010-08-06",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "NLY R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "NLY"
+  },
+  {
+   "fd": "2010-12-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-12-08",
+   "orig_filed": "2010-12-07",
+   "pe": "2010-10-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "NVDA RHM8UTD8DT2D",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "NVDA"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "ORLY R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "ORLY"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "differs (0.9517)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PBI R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "PBI"
+  },
+  {
+   "fd": "2010-07-22",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-07-23",
+   "orig_filed": "2010-07-22",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "PE R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "EXC"
+  },
+  {
+   "fd": "2010-10-22",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-23",
+   "orig_filed": "2010-10-22",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "PE R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "EXC"
+  },
+  {
+   "fd": "2011-01-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "revenue_q"
+   ],
+   "observed": "2011-01-29",
+   "orig_filed": "2011-01-28",
+   "pe": "2010-12-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PG R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "PG"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PPL R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "PPL"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PRU SAI0XJNH6IJP",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "PRU"
+  },
+  {
+   "fd": "2010-08-09",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-10",
+   "orig_filed": "2010-08-09",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PSA R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "PSA"
+  },
+  {
+   "fd": "2010-11-01",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-02",
+   "orig_filed": "2010-11-01",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "PTEN R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "PTEN"
+  },
+  {
+   "fd": "2010-11-09",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-10",
+   "orig_filed": "2010-11-09",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "RE R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q",
+   "ticker": "RE"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [
+    "net_income_q"
+   ],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "RJR RLK18A1JEG6D",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "RAI"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ROP R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ROP"
+  },
+  {
+   "fd": "2011-04-07",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-04-08",
+   "orig_filed": "2011-04-07",
+   "pe": "2011-02-28",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "RPOW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "RPM"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SHW R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "SHW"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SLM R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "SLM"
+  },
+  {
+   "fd": "2010-08-06",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "differs (1.0310)",
+    "net_income_ttm": "differs (1.0396)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-07",
+   "orig_filed": "2010-08-06",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SO R735QTJ8XC9X",
+   "status": "released: revenue_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "SO"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "differs (1.0205)",
+    "net_income_ttm": "differs (1.0396)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SO R735QTJ8XC9X",
+   "status": "released: revenue_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "SO"
+  },
+  {
+   "fd": "2010-08-06",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "differs (1.0929)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-07",
+   "orig_filed": "2010-08-06",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SPG R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "SPG"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "differs (1.0929)",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SPG R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, operating_cash_flow_ttm",
+   "ticker": "SPG"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "STI R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "STI"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "differs (1.0645)",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "STT R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "STT"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SWN R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "SWN"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-10-01",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SYMC R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, operating_cash_flow_ttm",
+   "ticker": "SYMC"
+  },
+  {
+   "fd": "2011-02-02",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2011-02-03",
+   "orig_filed": "2011-02-02",
+   "pe": "2010-12-31",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "SYMC R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, operating_cash_flow_ttm",
+   "ticker": "SYMC"
+  },
+  {
+   "fd": "2010-11-24",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-25",
+   "orig_filed": "2010-11-24",
+   "pe": "2010-10-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "TJX R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "TJX"
+  },
+  {
+   "fd": "2010-11-08",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-09",
+   "orig_filed": "2010-11-08",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "TMK R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "TMK"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "sec_na",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "net_income_q",
+    "operating_cash_flow_q",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "TRL R735QTJ8XC9X",
+   "status": "released: net_income_q, operating_cash_flow_q, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "DVA"
+  },
+  {
+   "fd": "2011-03-10",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "sec_na",
+    "revenue_q": "verified",
+    "revenue_ttm": "sec_na"
+   },
+   "later_sec_value_differs": [
+    "net_income_q",
+    "revenue_q"
+   ],
+   "observed": "2011-03-11",
+   "orig_filed": "2011-03-10",
+   "pe": "2011-01-29",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q"
+   ],
+   "sid": "UNFI R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q",
+   "ticker": "UNFI"
+  },
+  {
+   "fd": "2010-08-04",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-08-05",
+   "orig_filed": "2010-08-04",
+   "pe": "2010-06-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "UNM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "UNM"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "vendor_na",
+    "gross_profit_ttm": "vendor_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "UNM R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "UNM"
+  },
+  {
+   "fd": "2010-10-28",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-29",
+   "orig_filed": "2010-10-28",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "UW R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "WM"
+  },
+  {
+   "fd": "2010-11-10",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-11",
+   "orig_filed": "2010-11-10",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "VFC R735QTJ8XC9X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "VFC"
+  },
+  {
+   "fd": "2010-10-29",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-10-30",
+   "orig_filed": "2010-10-29",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "VRSN R7UQ9FRZ2GRP",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "VRSN"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "sec_na",
+    "net_income_ttm": "sec_na",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-10-02",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "WAT R735QTJ8XC9X",
+   "status": "released: revenue_q, gross_profit_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, operating_cash_flow_ttm",
+   "ticker": "WAT"
+  },
+  {
+   "fd": "2010-11-05",
+   "fields": {
+    "gross_profit_q": "sec_na",
+    "gross_profit_ttm": "sec_na",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-06",
+   "orig_filed": "2010-11-05",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "WU TMH31J9JDU1X",
+   "status": "released: revenue_q, net_income_q, operating_cash_flow_q, revenue_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "WU"
+  },
+  {
+   "fd": "2010-11-03",
+   "fields": {
+    "gross_profit_q": "verified",
+    "gross_profit_ttm": "verified",
+    "net_income_q": "verified",
+    "net_income_ttm": "verified",
+    "operating_cash_flow_q": "verified",
+    "operating_cash_flow_ttm": "verified",
+    "revenue_q": "verified",
+    "revenue_ttm": "verified"
+   },
+   "later_sec_value_differs": [],
+   "observed": "2010-11-04",
+   "orig_filed": "2010-11-03",
+   "pe": "2010-09-30",
+   "quarantined_when_observed": true,
+   "released_fields": [
+    "revenue_q",
+    "gross_profit_q",
+    "net_income_q",
+    "operating_cash_flow_q",
+    "revenue_ttm",
+    "gross_profit_ttm",
+    "net_income_ttm",
+    "operating_cash_flow_ttm"
+   ],
+   "sid": "ZMH S6ZZPKTVDY05",
+   "status": "released: revenue_q, gross_profit_q, net_income_q, operating_cash_flow_q, revenue_ttm, gross_profit_ttm, net_income_ttm, operating_cash_flow_ttm",
+   "ticker": "ZMH"
+  }
+ ],
+ "fields_released": {
+  "gross_profit_q": 48,
+  "gross_profit_ttm": 41,
+  "net_income_q": 132,
+  "net_income_ttm": 103,
+  "operating_cash_flow_q": 133,
+  "operating_cash_flow_ttm": 113,
+  "revenue_q": 117,
+  "revenue_ttm": 105
+ },
+ "not_released_reasons (field-records)": {
+  "gross_profit_q: differs": 1,
+  "gross_profit_q: sec_na": 68,
+  "gross_profit_q: vendor_na": 18,
+  "gross_profit_ttm: sec_na": 76,
+  "gross_profit_ttm: vendor_na": 18,
+  "net_income_q: differs": 2,
+  "net_income_q: sec_na": 1,
+  "net_income_ttm: differs": 7,
+  "net_income_ttm: sec_na": 25,
+  "operating_cash_flow_q: differs": 1,
+  "operating_cash_flow_q: sec_na": 1,
+  "operating_cash_flow_ttm: differs": 3,
+  "operating_cash_flow_ttm: sec_na": 19,
+  "revenue_q: differs": 7,
+  "revenue_q: sec_na": 11,
+  "revenue_ttm: differs": 1,
+  "revenue_ttm: sec_na": 29
+ },
+ "observed": 135,
+ "records": 135,
+ "records_fully_quarantined": 0,
+ "records_with_any_release": 135,
+ "records_with_core_quarterly_flows_released (revenue, net income, OCF)": 112
+}

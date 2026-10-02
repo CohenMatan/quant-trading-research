@@ -1,0 +1,297 @@
+{
+ "experiment_id": "E979-01",
+ "harness_messages": [],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 904,
+  "elig_days": 904,
+  "elig_max": 898,
+  "elig_mean": 772.2466814159292,
+  "elig_min": 0,
+  "elig_sum": 698111,
+  "experiment_id": "E979-01",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 19864,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 1,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "38063f4946fbcdf14b87306bb430604a33d4de049804394868aacb39ef34ba5a",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "904 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2009-06-01..2012-12-31",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 904 vs algorithm days 904",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 904 vs QuantConnect tradeableDates 904",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2012-12-31",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 904,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2009-06-01",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2009": 0.0,
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-02T11:47:46Z",
+  "build_commit": "e392ebc7280938aa57d4ff474cf98c052b7d8408",
+  "code_sha256": "de5c96139257ca8f16dc9cab921df388fdad7280ebbb3ee860d0b24649fdae06",
+  "config_sha256": "7c9f8597f1a8316e04276222504456a83d9c1d16b3e00abb522f6820ad5e530a",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "ref.py",
+   "ref_00.py"
+  ],
+  "git_commit": "e392ebc7280938aa57d4ff474cf98c052b7d8408",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "55c5c68c537619d380b00635f7d510ea",
+  "qc_project_id": 37255826,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-02T11:47:27Z",
+  "runtime_s": 293.3522140979767
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.733",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.151",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "R|PE R735QTJ8XC9X|2010-06-30|2010-07-22|2010-07-23|1|2010-07-22|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|DOV R735QTJ8XC9X|2010-06-30|2010-07-23|2010-07-24|1|2010-07-23|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=0.99823;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99256\nR|CL R735QTJ8XC9X|2010-06-30|2010-07-29|2010-07-30|1|2010-07-29|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|EFX R735QTJ8XC9X|2010-06-30|2010-07-29|2010-07-30|1|2010-07-29|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|GLW R735QTJ8XC9X|2010-06-30|2010-07-30|2010-07-31|1|2010-07-30|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MMM R735QTJ8XC9X|2010-06-30|2010-08-04|2010-08-05|1|2010-08-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|UNM R735QTJ8XC9X|2010-06-30|2010-08-04|2010-08-05|1|2010-08-04|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|FISV R735QTJ8XC9X|2010-06-30|2010-08-05|2010-08-06|1|2010-08-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99294\nR|MUR R735QTJ8XC9X|2010-06-30|2010-08-06|2010-08-07|1|2010-08-06|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|NLY R735QTJ8XC9X|2010-06-30|2010-08-06|2010-08-07|1|2010-08-06|revenue_q=sec_na;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SO R735QTJ8XC9X|2010-06-30|2010-08-06|2010-08-07|1|2010-08-06|revenue_q=1.00014;gross_profit_q=sec_na;net_income_q=1.03098;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.03956;operating_cash_flow_ttm=1.00000\nR|SPG R735QTJ8XC9X|2010-06-30|2010-08-06|2010-08-07|1|2010-08-06|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=0.99564;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.09293;operating_cash_flow_ttm=1.00000\nR|PSA R735QTJ8XC9X|2010-06-30|2010-08-09|2010-08-10|1|2010-08-09|revenue_q=0.99921;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ADI R735QTJ8XC9X|2010-07-31|2010-08-17|2010-08-18|1|2010-08-17|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LOW R735QTJ8XC9X|2010-07-30|2010-08-31|2010-09-01|1|2010-08-31|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DFS TTXW324M9SV9|2010-08-31|2010-10-06|2010-10-07|1|2010-10-06|revenue_q=sec_na;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BBY R735QTJ8XC9X|2010-08-28|2010-10-07|2010-10-08|1|2010-10-07|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BA R735QTJ8XC9X|2010-09-30|2010-10-20|2010-10-21|1|2010-10-20|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|FAST R735QTJ8XC9X|2010-09-30|2010-10-21|2010-10-22|1|2010-10-21|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|HAL R735QTJ8XC9X|2010-09-30|2010-10-22|2010-10-23|1|2010-10-22|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|PE R735QTJ8XC9X|2010-09-30|2010-10-22|2010-10-23|1|2010-10-22|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|BMY R735QTJ8XC9X|2010-09-30|2010-10-26|2010-10-27|1|2010-10-26|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DGX R735QTJ8XC9X|2010-09-30|2010-10-26|2010-10-27|1|2010-10-26|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|FE R735QTJ8XC9X|2010-09-30|2010-10-26|2010-10-27|1|2010-10-26|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MCK R735QTJ8XC9X|2010-09-30|2010-10-26|2010-10-27|1|2010-10-26|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|NFLX SEWJWLJNHZDX|2010-09-30|2010-10-26|2010-10-27|1|2010-10-26|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ALL R735QTJ8XC9X|2010-09-30|2010-10-27|2010-10-28|1|2010-10-27|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BWA R735QTJ8XC9X|2010-09-30|2010-10-27|2010-10-28|1|2010-10-27|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DPS U2F4O1IXZOMD|2010-09-30|2010-10-27|2010-10-28|1|2010-10-27|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|FLS R735QTJ8XC9X|2010-09-30|2010-10-27|2010-10-28|1|2010-10-27|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MAT R735QTJ8XC9X|2010-09-30|2010-10-27|2010-10-28|1|2010-10-27|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CL R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|EFX R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|HOU R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|KBR TNPE5QQ4TS9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=0.99063;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|LOM R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=0.81588;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|MAS R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|NBL R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=0.95497;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|RJR RLK18A1JEG6D|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SHW R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SWN R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|UW R735QTJ8XC9X|2010-09-30|2010-10-28|2010-10-29|1|2010-10-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CLF R735QTJ8XC9X|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=1.00000;gross_profit_q=0.97985;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CUM R735QTJ8XC9X|2010-09-26|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|D R735QTJ8XC9X|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DTE R735QTJ8XC9X|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|GNW SYYAL4ODL011|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LLY R735QTJ8XC9X|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|PPL R735QTJ8XC9X|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|VRSN R7UQ9FRZ2GRP|2010-09-30|2010-10-29|2010-10-30|1|2010-10-29|revenue_q=0.99790;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|APC R735QTJ8XC9X|2010-09-30|2010-11-01|2010-11-02|1|2010-11-01|revenue_q=0.98667;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|GLW R735QTJ8XC9X|2010-09-30|2010-11-01|2010-11-02|1|2010-11-01|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|IIN R735QTJ8XC9X|2010-09-30|2010-11-01|2010-11-02|1|2010-11-01|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99842\nR|PTEN R735QTJ8XC9X|2010-09-30|2010-11-01|2010-11-02|1|2010-11-01|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AVZ R735QTJ8XC9X|2010-09-30|2010-11-02|2010-11-03|1|2010-11-02|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MA TIX2XDPLFR6T|2010-09-30|2010-11-02|2010-11-03|1|2010-11-02|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AIZ SVXZEUFT60DH|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ATH S9AP9FK1TBHH|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=0.99823;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CTSH RBOKUIZLS38L|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DNY R735QTJ8XC9X|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SYMC R735QTJ8XC9X|2010-10-01|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|UNM R735QTJ8XC9X|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ZMH S6ZZPKTVDY05|2010-09-30|2010-11-03|2010-11-04|1|2010-11-03|revenue_q=1.00000;gross_profit_q=1.00013;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AME R735QTJ8XC9X|2010-09-30|2010-11-04|2010-11-05|1|2010-11-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AOC R735QTJ8XC9X|2010-09-30|2010-11-04|2010-11-05|1|2010-11-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ECL R735QTJ8XC9X|2010-09-30|2010-11-04|2010-11-05|1|2010-11-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ATVI R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|BHI R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BSX R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|CEY S67FQV7Z62CL|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DUK R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|FCX R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=1.08785;operating_cash_flow_ttm=1.00000\nR|FISV R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99294\nR|JNPR RLTVP7P85ZS5|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LUK R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MMM R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|NBR R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=0.94883;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|PBI R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=0.95175;operating_cash_flow_ttm=1.00000\nR|PRU SAI0XJNH6IJP|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=0.99548;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ROP R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SO R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00002;gross_profit_q=sec_na;net_income_q=1.02051;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.03956;operating_cash_flow_ttm=1.00000\nR|SPG R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00362;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.09293;operating_cash_flow_ttm=1.00000\nR|STI R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=sec_na;gross_profit_q=vendor_na;net_income_q=0.99965;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|STT R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.06450;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|TRL R735QTJ8XC9X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|WAT R735QTJ8XC9X|2010-10-02|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=sec_na;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|WU TMH31J9JDU1X|2010-09-30|2010-11-05|2010-11-06|1|2010-11-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ACL R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AMGN R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BK R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=0.99651;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.33170;operating_cash_flow_ttm=1.00000\nR|FITB R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=sec_na;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MRK R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=1.00001;gross_profit_q=sec_na;net_income_q=1.00117;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|ORLY R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|SLM R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=sec_na;gross_profit_q=vendor_na;net_income_q=1.00011;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|TMK R735QTJ8XC9X|2010-09-30|2010-11-08|2010-11-09|1|2010-11-08|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CMB R735QTJ8XC9X|2010-09-30|2010-11-09|2010-11-10|1|2010-11-09|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=vendor_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CTXS R735QTJ8XC9X|2010-09-30|2010-11-09|2010-11-10|1|2010-11-09|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LM R735QTJ8XC9X|2010-09-30|2010-11-09|2010-11-10|1|2010-11-09|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MMC R735QTJ8XC9X|2010-09-30|2010-11-09|2010-11-10|1|2010-11-09|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|RE R735QTJ8XC9X|2010-09-30|2010-11-09|2010-11-10|1|2010-11-09|revenue_q=1.00000;gross_profit_q=vendor_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=vendor_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|VFC R735QTJ8XC9X|2010-09-30|2010-11-10|2010-11-11|1|2010-11-10|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|HSP SYCMR2MNWEHX|2010-09-30|2010-11-14|2010-11-16|1|2010-10-26|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|TJX R735QTJ8XC9X|2010-10-30|2010-11-24|2010-11-25|1|2010-11-24|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LOW R735QTJ8XC9X|2010-10-29|2010-12-01|2010-12-02|1|2010-12-01|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|HD R735QTJ8XC9X|2010-10-31|2010-12-02|2010-12-03|1|2010-12-02|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DH R735QTJ8XC9X|2010-10-30|2010-12-03|2010-12-04|1|2010-12-03|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|LTD R735QTJ8XC9X|2010-10-29|2010-12-03|2010-12-04|1|2010-12-03|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|FD R735QTJ8XC9X|2010-10-30|2010-12-06|2010-12-07|1|2010-12-06|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=sec_na\nR|NVDA RHM8UTD8DT2D|2010-10-31|2010-12-07|2010-12-08|1|2010-12-07|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|GME SC72NCBXXAHX|2010-10-30|2010-12-08|2010-12-09|1|2010-12-08|revenue_q=1.00003;gross_profit_q=0.99997;net_income_q=0.99985;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|GPS R735QTJ8XC9X|2010-10-30|2010-12-08|2010-12-09|1|2010-12-08|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|HRB R735QTJ8XC9X|2010-10-31|2010-12-08|2010-12-09|1|2010-12-08|revenue_q=0.33787;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|BBY R735QTJ8XC9X|2010-11-26|2011-01-05|2011-01-06|1|2011-01-05|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|DRI R735QTJ8XC9X|2010-11-28|2011-01-05|2011-01-06|1|2011-01-05|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=0.98214;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99845\nR|AVT R735QTJ8XC9X|2011-01-01|2011-01-28|2011-01-29|1|2011-01-28|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|PG R735QTJ8XC9X|2010-12-31|2011-01-28|2011-01-29|1|2011-01-28|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MCK R735QTJ8XC9X|2010-12-31|2011-02-01|2011-02-02|1|2011-02-01|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|SYMC R735QTJ8XC9X|2010-12-31|2011-02-02|2011-02-03|1|2011-02-02|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=sec_na;operating_cash_flow_ttm=1.00000\nR|LM R735QTJ8XC9X|2010-12-31|2011-02-08|2011-02-09|1|2011-02-08|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MCHP R735QTJ8XC9X|2010-12-31|2011-02-08|2011-02-09|1|2011-02-08|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|CPRT R735QTJ8XC9X|2011-01-31|2011-03-07|2011-03-08|1|2011-03-07|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|DCI R735QTJ8XC9X|2011-01-31|2011-03-07|2011-03-08|1|2011-03-07|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|HRB R735QTJ8XC9X|2011-01-31|2011-03-09|2011-03-10|1|2011-03-09|revenue_q=0.73317;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|UNFI R735QTJ8XC9X|2011-01-29|2011-03-10|2011-03-11|1|2011-03-10|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|GIS R735QTJ8XC9X|2011-02-27|2011-03-23|2011-03-24|1|2011-03-23|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|AYI S9PGYU1KYMW5|2011-02-28|2011-03-30|2011-03-31|1|2011-03-30|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|GPN S1VV43FB2UZP|2011-02-28|2011-04-01|2011-04-02|1|2011-04-01|revenue_q=sec_na;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|DRI R735QTJ8XC9X|2011-02-27|2011-04-04|2011-04-05|1|2011-04-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=0.99790;revenue_ttm=1.00000;gross_profit_ttm=sec_na;net_income_ttm=1.00000;operating_cash_flow_ttm=0.99845\nR|FDS R735QTJ8XC9X|2011-02-28|2011-04-06|2011-04-07|1|2011-04-06|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|MON RYZHQ6NEYVZ9|2011-02-28|2011-04-07|2011-04-08|1|2011-04-07|revenue_q=1.00048;gross_profit_q=1.00087;net_income_q=1.00098;operating_cash_flow_q=1.00000;revenue_ttm=1.00000;gross_profit_ttm=1.00000;net_income_ttm=1.00000;operating_cash_flow_ttm=1.00000\nR|MSM R735QTJ8XC9X|2011-02-26|2011-04-07|2011-04-08|1|2011-04-07|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|RPOW R735QTJ8XC9X|2011-02-28|2011-04-07|2011-04-08|1|2011-04-07|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|CTAS R735QTJ8XC9X|2011-02-28|2011-04-08|2011-04-09|1|2011-04-08|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|JBIL R735QTJ8XC9X|2011-02-28|2011-04-08|2011-04-09|1|2011-04-08|revenue_q=1.00000;gross_profit_q=1.00000;net_income_q=1.00000;operating_cash_flow_q=1.00000;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nR|MAR R9GTMYCXKZ8L|2012-09-07|2012-10-04|2012-10-05|1|2012-10-04|revenue_q=1.00000;gross_profit_q=sec_na;net_income_q=1.00000;operating_cash_flow_q=sec_na;revenue_ttm=sec_na;gross_profit_ttm=sec_na;net_income_ttm=sec_na;operating_cash_flow_ttm=sec_na\nSUMMARY|targets=135|seen=135",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 904, \"elig_days\": 904, \"elig_max\": 898, \"elig_mean\": 772.2466814159292, \"elig_min\": 0, \"elig_sum\": 698111, \"experiment_id\": \"E979-01\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 19864, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 1, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.10106763603296143
+  },
+  "E901-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.1250890727877041
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

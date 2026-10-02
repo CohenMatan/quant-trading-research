@@ -19,6 +19,7 @@ LEAN_HARNESS = Path(__file__).resolve().parent / "lean" / "qr_harness.py"
 # 2010 only): the official research period starts 2010-01-04. The holdout is unchanged.
 CURRENT_SCHEME = "2010"
 OFFICIAL_START = date(2010, 1, 4)
+WARMUP_EARLIEST = date(2008, 7, 1)   # D114: owner-approved history-only fundamentals warm-up (no performance)
 SCHEMES: dict[str, dict[str, tuple[date, date]]] = {
     "cp1": {  # D004, approved at CP1, superseded by D033/D034
         "IS": (date(1999, 1, 4), date(2014, 12, 31)),
