@@ -1129,3 +1129,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P2_CP10_final_hypothesis_opportunity_H017_proposal.md`.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-02: Research architecture and final-slot review (design only); STOP (D120)
+
+- **Owner:** keep slot 3, do not approve H017 = Value, and redesign around terminal wealth vs S&P 500 total return.
+- **Done (no strategy or factor runs, no candidate returns):**
+  - rolling-horizon luck profiles and gate operating characteristics from completed controls (`research/phase2/architecture/P2_arch_power.*`);
+  - an SEC 8-K earnings-timestamp metadata probe (`sec_8k_earnings_probe.*`): coverage from 2003–04, survivorship-safe;
+  - a literature review by period (`P2_arch_literature_review.md`).
+- **Findings:**
+  - The proposed terminal-wealth framework (Amendment 3) has about a 2.5% false-pass rate and about 5× the power of the current gates. It would still reject H014 and H016.
+  - Extending history to about 2000 is not feasible with current data: market cap is absent before October 2009, and fundamentals are missing for companies that died before 2009.
+  - Earnings-event continuation is the leading new family, but it has a documented large-cap decay.
+- **Recommendation:** preserve slot 3; approve the framework, a priced data study and an earnings-event audit; then pre-register one hypothesis.
+- **Checkpoint:** `docs/checkpoints/P2_CP11_research_architecture_final_slot_review.md`.
+
+**STOP:** awaiting the owner.
