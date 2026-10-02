@@ -94,8 +94,14 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 raise ConfigError("stress experiments must name the finalist strategy in 'finalist_of' (D035)")
     if cfg["strategy_id"] == "S016" and cfg.get("params", {}).get("book") in ("gpa", "random"):
         # D115: every trading H016 book (candidate, random controls, sensitivities) uses the H016 portfolio rules
-        if cfg["portfolio"] != config.H016_PORTFOLIO:
-            raise ConfigError(f"S016 books must use the H016 portfolio rules {config.H016_PORTFOLIO} (D115)")
+        approved = dict(config.H016_PORTFOLIO)
+        if cfg.get("construction_variant") == "H016_P2":
+            # D116: pre-declared perturbation P2 (H016_spec.md section 7): 25 slots, minimum new position x 20/25
+            if int(cfg["params"].get("slots", -1)) != 25:
+                raise ConfigError("H016 perturbation P2 holds 25 slots")
+            approved.update(max_positions=25, min_position_usd=config.H016_PORTFOLIO["min_position_usd"] * 20 // 25)
+        if cfg["portfolio"] != approved:
+            raise ConfigError(f"S016 books must use the H016 portfolio rules {approved} (D115/D116)")
         if cfg["kind"] == "research" and cfg.get("hypothesis_id") != "H016":
             raise ConfigError("S016 research runs belong to hypothesis H016")
         if float(cfg["costs"].get("slippage_bps", -1)) != 10:

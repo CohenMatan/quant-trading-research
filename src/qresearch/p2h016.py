@@ -19,7 +19,7 @@ import pandas as pd
 from . import config, metrics, p2spec
 
 SPEC = "research/phase2/H016_spec.md"
-SPEC_SHA256 = "PENDING"            # pinned when the spec is frozen (before the canary); tests/test_p2h016.py
+SPEC_SHA256 = "786088354d5efb882014855b78efa00779bbc73b4e7e6c160dcc65eca4c72b08"   # frozen 2026-10-02 (D116), before the canary; tests/test_p2h016.py
 COMMON_START, END = "2010-03-01", "2021-12-31"
 CANDIDATE, EW_H016, SIZING_200K = "E016-01", "E016-02", "E016-08"
 RANDOM = ("E016-03", "E016-04", "E016-05", "E016-06", "E016-07")          # seeds 1..5, frozen
@@ -113,6 +113,23 @@ def survivorship_sensitivity(eq_h, eq_ew) -> dict:
 
 def cost_drag(fills, eq, slippage_rate) -> dict:
     return p2spec.cost_drag(fills, window_eq(eq), slippage_rate)
+
+
+def topup_costs(fills, eq, slippage_rate) -> dict:
+    """Spec §6.3/§10 (owner): initial buys and one-time top-ups counted and costed separately, from the order tags.
+    The incremental cost of top-ups a year = (their commissions + notional x slippage rate) / mean equity / years."""
+    w = window_eq(eq)
+    years = (pd.Timestamp(w.index[-1]) - pd.Timestamp(w.index[0])).days / 365.25
+    m = float(w.mean())
+    tag = fills["tag"].astype(str).str.split("|").str[0]
+    buys = fills[fills["quantity"] > 0]
+    ini, top = buys[tag[buys.index] == "s016_entry"], buys[tag[buys.index] == "s016_topup"]
+    t_not = float((top["quantity"] * top["price"]).sum())
+    t_comm = float(top["fee"].sum())
+    return dict(initial_buys=int(ini["order_id"].nunique()), topup_orders=int(top["order_id"].nunique()),
+                topup_notional=t_not, topup_commissions=t_comm, topup_slippage=t_not * slippage_rate,
+                topup_cost_pa=(t_comm + t_not * slippage_rate) / m / years,
+                min_topup_fill_usd=float((top["quantity"] * top["price"]).min()) if len(top) else None)
 
 
 def dsr_views(r: np.ndarray, n_robustness_configs: int) -> dict:

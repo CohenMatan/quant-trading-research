@@ -1060,3 +1060,14 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Not done:** nothing run on QuantConnect; slot 2 unused; Holdout locked.
 
 **STOP:** awaiting the owner's choice of §6.3.
+
+## 2026-10-02: H016 sizing option A approved; one-time top-up built and verified offline; spec frozen (D116)
+
+- **Owner approval:** option A — $4,000 minimum new position, the 15% gap reserve kept, at most one top-up per new position toward its original target, a pre-declared minimum top-up, no other resizing.
+- **Built:**
+  - `qr_h016.plan_topups` with `MIN_TOPUP_USD` = $250 (2 × $7 / 6% ≈ $233, rounded up);
+  - the S016 one-time top-up step plus canary counters;
+  - an offline simulation with the harness's actual order planner (12 tests): at $100K, first fills ~$4,250, top-ups ~$500, ~95% invested; at $200K ~96%; no negative cash; no repeated top-ups.
+- **Spec frozen:** `research/phase2/H016_spec.md` §6.3, hash-pinned.
+- **Configs:** canary E980-01 (X980 = byte copy of S016, random seed 0) and E016-01..08.
+- **Next:** run the canary; run E016-01 (slot 2) onward only if every check passes.

@@ -73,6 +73,10 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
                 files[p.name] = p.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
+    if "qr_h016" in files["main.py"]:   # D116: H016 decision logic, only for strategies that import it (S016, X980)
+        src = "src/qresearch/lean/qr_h016.py"
+        files["qr_h016.py"] = gitutil.show_file(commit, src) if commit else (config.REPO_ROOT / src).read_text(
+            encoding="utf-8")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
