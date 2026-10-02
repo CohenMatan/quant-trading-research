@@ -1,0 +1,7 @@
+QRFORCEDFEE|119|7.00
+QRFORCEDFEE|139|7.00
+QRFORCEDFEE|168|7.00
+QRFORCEDFEE|169|7.00
+QRFORCEDFEE|174|7.00
+QRFORCEDFEE|264|7.00
+QRS016|summary|{"entries_decided": 122, "entry_orders": 120, "ew_rebalances": 0, "exits_decided": 94, "financial_in_universe": 0, "max_holdings": 20, "max_topup_over_target_usd": 0.0, "max_topups_per_position": 1, "min_entry_planned_usd": 4177.02, "min_topup_planned_usd": 362.46000000000004, "pending_left_at_rebalance": 2, "pit_violations": 0, "rebalances": 48, "topup_evaluations": 120, "topup_orders": 95, "topups_below_threshold_or_unfunded": 25, "universe_sum": 37920}
