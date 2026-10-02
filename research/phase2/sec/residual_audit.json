@@ -1,0 +1,650 @@
+{
+ "by_year": {
+  "2010": {
+   "missing": 4,
+   "missing|fin/REIT": 2,
+   "missing|non-financial": 2,
+   "native": 575,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 75,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 11,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 64,
+   "native|fin/REIT": 121,
+   "native|non-financial": 454,
+   "possible|missing": 3,
+   "possible|missing|fin/REIT": 1,
+   "possible|missing|non-financial": 2,
+   "possible|native": 241,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 41,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 4,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 37,
+   "possible|native|fin/REIT": 64,
+   "possible|native|non-financial": 177,
+   "possible|repaired": 9,
+   "possible|repaired|fin/REIT": 2,
+   "possible|repaired|non-financial": 7,
+   "repaired": 16,
+   "repaired|fin/REIT": 2,
+   "repaired|non-financial": 14
+  },
+  "2011": {
+   "missing": 11,
+   "missing|fin/REIT": 7,
+   "missing|non-financial": 4,
+   "native": 729,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 99,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 15,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 84,
+   "native|fin/REIT": 161,
+   "native|non-financial": 568,
+   "possible|missing": 1,
+   "possible|missing|non-financial": 1,
+   "possible|native": 307,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 50,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 7,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 43,
+   "possible|native|fin/REIT": 69,
+   "possible|native|non-financial": 238,
+   "possible|repaired": 14,
+   "possible|repaired|fin/REIT": 4,
+   "possible|repaired|non-financial": 10,
+   "repaired": 17,
+   "repaired|fin/REIT": 2,
+   "repaired|non-financial": 15
+  },
+  "2012": {
+   "missing": 10,
+   "missing|fin/REIT": 5,
+   "missing|non-financial": 5,
+   "native": 758,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 103,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 14,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 89,
+   "native|fin/REIT": 165,
+   "native|non-financial": 593,
+   "possible|missing": 1,
+   "possible|missing|fin/REIT": 1,
+   "possible|native": 329,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 52,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 10,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 42,
+   "possible|native|fin/REIT": 77,
+   "possible|native|non-financial": 252,
+   "possible|repaired": 9,
+   "possible|repaired|fin/REIT": 3,
+   "possible|repaired|non-financial": 6,
+   "repaired": 12,
+   "repaired|non-financial": 12
+  },
+  "2013": {
+   "missing": 7,
+   "missing|fin/REIT": 3,
+   "missing|non-financial": 4,
+   "native": 845,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 91,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 13,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 78,
+   "native|fin/REIT": 180,
+   "native|non-financial": 665,
+   "possible|missing": 5,
+   "possible|missing|fin/REIT": 3,
+   "possible|missing|non-financial": 2,
+   "possible|native": 377,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 62,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 16,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 46,
+   "possible|native|fin/REIT": 93,
+   "possible|native|non-financial": 284,
+   "possible|repaired": 8,
+   "possible|repaired|fin/REIT": 3,
+   "possible|repaired|non-financial": 5,
+   "repaired": 9,
+   "repaired|non-financial": 9
+  },
+  "2014": {
+   "missing": 7,
+   "missing|fin/REIT": 3,
+   "missing|non-financial": 4,
+   "native": 976,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 90,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 17,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 73,
+   "native|fin/REIT": 210,
+   "native|non-financial": 766,
+   "possible|missing": 4,
+   "possible|missing|fin/REIT": 3,
+   "possible|missing|non-financial": 1,
+   "possible|native": 413,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 51,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 9,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 42,
+   "possible|native|fin/REIT": 101,
+   "possible|native|non-financial": 312,
+   "possible|repaired": 9,
+   "possible|repaired|fin/REIT": 2,
+   "possible|repaired|non-financial": 7,
+   "repaired": 10,
+   "repaired|fin/REIT": 1,
+   "repaired|non-financial": 9
+  },
+  "2015": {
+   "missing": 9,
+   "missing|fin/REIT": 3,
+   "missing|non-financial": 6,
+   "native": 1067,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 99,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 20,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 79,
+   "native|fin/REIT": 239,
+   "native|non-financial": 828,
+   "possible|missing": 3,
+   "possible|missing|fin/REIT": 2,
+   "possible|missing|non-financial": 1,
+   "possible|native": 432,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 43,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 8,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 35,
+   "possible|native|fin/REIT": 98,
+   "possible|native|non-financial": 334,
+   "possible|repaired": 7,
+   "possible|repaired|fin/REIT": 2,
+   "possible|repaired|non-financial": 5,
+   "repaired": 10,
+   "repaired|fin/REIT": 1,
+   "repaired|non-financial": 9
+  },
+  "2016": {
+   "missing": 8,
+   "missing|fin/REIT": 2,
+   "missing|non-financial": 6,
+   "native": 1067,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 77,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 16,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 61,
+   "native|fin/REIT": 246,
+   "native|non-financial": 821,
+   "possible|missing": 3,
+   "possible|missing|fin/REIT": 2,
+   "possible|missing|non-financial": 1,
+   "possible|native": 425,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 34,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 7,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 27,
+   "possible|native|fin/REIT": 92,
+   "possible|native|non-financial": 333,
+   "possible|repaired": 4,
+   "possible|repaired|fin/REIT": 2,
+   "possible|repaired|non-financial": 2,
+   "repaired": 8,
+   "repaired|fin/REIT": 1,
+   "repaired|non-financial": 7
+  },
+  "2017": {
+   "missing": 9,
+   "missing|fin/REIT": 3,
+   "missing|non-financial": 6,
+   "native": 1099,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 68,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 14,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 54,
+   "native|fin/REIT": 256,
+   "native|non-financial": 843,
+   "possible|missing": 2,
+   "possible|missing|fin/REIT": 1,
+   "possible|missing|non-financial": 1,
+   "possible|native": 409,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 26,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 10,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 16,
+   "possible|native|fin/REIT": 96,
+   "possible|native|non-financial": 313,
+   "possible|repaired": 1,
+   "possible|repaired|non-financial": 1,
+   "repaired": 8,
+   "repaired|fin/REIT": 3,
+   "repaired|non-financial": 5
+  },
+  "2018": {
+   "missing": 9,
+   "missing|fin/REIT": 2,
+   "missing|non-financial": 7,
+   "native": 1186,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 62,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 10,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 52,
+   "native|fin/REIT": 275,
+   "native|non-financial": 911,
+   "possible|missing": 3,
+   "possible|missing|fin/REIT": 1,
+   "possible|missing|non-financial": 2,
+   "possible|native": 404,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 31,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 9,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 22,
+   "possible|native|fin/REIT": 103,
+   "possible|native|non-financial": 301,
+   "possible|repaired": 1,
+   "possible|repaired|fin/REIT": 1,
+   "repaired": 8,
+   "repaired|fin/REIT": 3,
+   "repaired|non-financial": 5
+  },
+  "2019": {
+   "missing": 8,
+   "missing|fin/REIT": 1,
+   "missing|non-financial": 7,
+   "native": 1205,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)": 52,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 12,
+   "native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 40,
+   "native|fin/REIT": 274,
+   "native|non-financial": 931,
+   "possible|missing": 4,
+   "possible|missing|fin/REIT": 2,
+   "possible|missing|non-financial": 2,
+   "possible|native": 401,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)": 30,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|fin/REIT": 6,
+   "possible|native (via ticker or market-cap evidence; vendor CIK is another registrant)|non-financial": 24,
+   "possible|native|fin/REIT": 105,
+   "possible|native|non-financial": 296,
+   "possible|repaired": 1,
+   "possible|repaired|fin/REIT": 1,
+   "repaired": 7,
+   "repaired|fin/REIT": 3,
+   "repaired|non-financial": 4
+  }
+ },
+ "excluded_before_classification": {
+  "implausible float (XBRL unit error)": 287,
+  "non-common (partnership/LLC/trust/fund name or fund/blank-check/royalty SIC)": 1309
+ },
+ "missing_by_first_missing_year": {
+  "2010": 4,
+  "2011": 9,
+  "2012": 1,
+  "2013": 1,
+  "2014": 1,
+  "2015": 2,
+  "2016": 1,
+  "2017": 2,
+  "2018": 2,
+  "2019": 1
+ },
+ "missing_by_float_size": {
+  "2-5B": 12,
+  "5-20B": 6,
+  ">20B": 6
+ },
+ "missing_characteristics": {
+  "foreign_form": {
+   "false": 19,
+   "true": 5
+  },
+  "industry": {
+   "financial": 9,
+   "manufacturing": 6,
+   "mining/energy": 2,
+   "services": 3,
+   "trade": 1,
+   "transport/utilities/telecom": 3
+  },
+  "outcome": {
+   "ended (acquired/other)": 12,
+   "failed (bankruptcy 8-K)": 1,
+   "still filing after 2021": 11
+  },
+  "why_unmatched": {
+   "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)": 19,
+   "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches": 5
+  }
+ },
+ "missing_detail": {
+  "1014052": {
+   "foreign_form": false,
+   "industry": "services",
+   "max_float": 4491743000,
+   "name": "Digerati Technologies, Inc.",
+   "outcome": "still filing after 2021",
+   "sic": 7374,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2019
+   ]
+  },
+  "1084031": {
+   "foreign_form": true,
+   "industry": "manufacturing",
+   "max_float": 6051000000,
+   "name": "INTEGRATED ENVIRONMENTAL TECHNOLOGIES, LTD.",
+   "outcome": "ended (acquired/other)",
+   "sic": 3569,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2012,
+    2013
+   ]
+  },
+  "1094831": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 2906205624,
+   "name": "BGC Partners, Inc.",
+   "outcome": "still filing after 2021",
+   "sic": 6200,
+   "why_unmatched": "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches",
+   "years": [
+    2017,
+    2018
+   ]
+  },
+  "1141197": {
+   "foreign_form": true,
+   "industry": "mining/energy",
+   "max_float": 12094000000,
+   "name": "BLAST ENERGY SERVICES, INC.",
+   "outcome": "still filing after 2021",
+   "sic": 1311,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2016,
+    2017,
+    2018
+   ]
+  },
+  "1163348": {
+   "foreign_form": true,
+   "industry": "financial",
+   "max_float": 3900000000,
+   "name": "ALLIED WORLD ASSURANCE CO HOLDINGS LTD",
+   "outcome": "ended (acquired/other)",
+   "sic": 6331,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017
+   ]
+  },
+  "1169055": {
+   "foreign_form": false,
+   "industry": "mining/energy",
+   "max_float": 7800000000,
+   "name": "NOBLE CORP",
+   "outcome": "still filing after 2021",
+   "sic": 1381,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2010,
+    2017
+   ]
+  },
+  "1310313": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 2392571000,
+   "name": "Brooklyn Federal Bancorp, Inc.",
+   "outcome": "ended (acquired/other)",
+   "sic": 6035,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011
+   ]
+  },
+  "1316944": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 11190000000,
+   "name": "Federal Home Loan Bank of San Francisco",
+   "outcome": "still filing after 2021",
+   "sic": 6111,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011,
+    2012
+   ]
+  },
+  "1331757": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 2269000000,
+   "name": "Federal Home Loan Bank of Dallas",
+   "outcome": "still filing after 2021",
+   "sic": 6111,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011
+   ]
+  },
+  "1334814": {
+   "foreign_form": false,
+   "industry": "services",
+   "max_float": 4627866009,
+   "name": "ZILLOW INC",
+   "outcome": "ended (acquired/other)",
+   "sic": 7389,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2014,
+    2015
+   ]
+  },
+  "1355096": {
+   "foreign_form": false,
+   "industry": "transport/utilities/telecom",
+   "max_float": 19400000000,
+   "name": "LIBERTY MEDIA CORP",
+   "outcome": "failed (bankruptcy 8-K)",
+   "sic": 4841,
+   "why_unmatched": "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches",
+   "years": [
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "1398702": {
+   "foreign_form": true,
+   "industry": "manufacturing",
+   "max_float": 20440000000,
+   "name": "Electronic Cigarettes International Group, Ltd.",
+   "outcome": "ended (acquired/other)",
+   "sic": 2111,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2015,
+    2016
+   ]
+  },
+  "1641129": {
+   "foreign_form": false,
+   "industry": "services",
+   "max_float": 3496010000,
+   "name": "LookSmart Group, Inc.",
+   "outcome": "ended (acquired/other)",
+   "sic": 7374,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2015,
+    2016
+   ]
+  },
+  "1651308": {
+   "foreign_form": true,
+   "industry": "manufacturing",
+   "max_float": 14700000000,
+   "name": "BeiGene, Ltd.",
+   "outcome": "still filing after 2021",
+   "sic": 2834,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2018,
+    2019
+   ]
+  },
+  "1669600": {
+   "foreign_form": false,
+   "industry": "trade",
+   "max_float": 2900000000,
+   "name": "Liberty Expedia Holdings, Inc.",
+   "outcome": "ended (acquired/other)",
+   "sic": 5960,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "310522": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 20932000000,
+   "name": "FEDERAL NATIONAL MORTGAGE ASSOCIATION FANNIE MAE",
+   "outcome": "still filing after 2021",
+   "sic": 6111,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2010,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "38067": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 3416468256,
+   "name": "FOREST CITY ENTERPRISES INC",
+   "outcome": "ended (acquired/other)",
+   "sic": 6512,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015
+   ]
+  },
+  "813828": {
+   "foreign_form": false,
+   "industry": "transport/utilities/telecom",
+   "max_float": 32764308589,
+   "name": "CBS CORP",
+   "outcome": "still filing after 2021",
+   "sic": 4833,
+   "why_unmatched": "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches",
+   "years": [
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "859368": {
+   "foreign_form": false,
+   "industry": "manufacturing",
+   "max_float": 2092313017,
+   "name": "MEDICIS PHARMACEUTICAL CORP",
+   "outcome": "ended (acquired/other)",
+   "sic": 2834,
+   "why_unmatched": "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches",
+   "years": [
+    2011,
+    2012
+   ]
+  },
+  "878375": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 3800000000,
+   "name": "AMERICAN BAR ASSOCIATION MEMBERS / NORTHERN TRUST COLLECTIVE TR",
+   "outcome": "ended (acquired/other)",
+   "sic": 6799,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011,
+    2012,
+    2013
+   ]
+  },
+  "883107": {
+   "foreign_form": false,
+   "industry": "manufacturing",
+   "max_float": 32493881000,
+   "name": "NANOPHASE TECHNOLOGIES CORPORATION",
+   "outcome": "still filing after 2021",
+   "sic": 3390,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2018,
+    2019
+   ]
+  },
+  "912382": {
+   "foreign_form": false,
+   "industry": "financial",
+   "max_float": 72626005000,
+   "name": "NATIONAL BANK OF INDIANAPOLIS CORP",
+   "outcome": "ended (acquired/other)",
+   "sic": 6021,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011,
+    2012
+   ]
+  },
+  "912752": {
+   "foreign_form": false,
+   "industry": "transport/utilities/telecom",
+   "max_float": 3515000000,
+   "name": "SINCLAIR BROADCAST GROUP INC",
+   "outcome": "still filing after 2021",
+   "sic": 4833,
+   "why_unmatched": "ticker found among QuantConnect securities without fundamentals, but < 2 dated matches",
+   "years": [
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019
+   ]
+  },
+  "921691": {
+   "foreign_form": false,
+   "industry": "manufacturing",
+   "max_float": 118455897000,
+   "name": "COLE KENNETH PRODUCTIONS INC",
+   "outcome": "ended (acquired/other)",
+   "sic": 3140,
+   "why_unmatched": "no QuantConnect security without fundamentals carries its ticker (not in QuantConnect price data under that ticker, or a non-common/ADS listing)",
+   "years": [
+    2011,
+    2012
+   ]
+  }
+ },
+ "missing_registrants": 24
+}

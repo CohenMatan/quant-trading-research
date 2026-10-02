@@ -1,6 +1,9 @@
 {
  "links": {
   "1000180": {
+   "all_names": [
+    "SANDISK CORP"
+   ],
    "first_filed": "2010-08-12",
    "float": {
     "SNDK R735QTJ8XC9X": {
@@ -47,6 +50,9 @@
    "status": "linked"
   },
   "1000229": {
+   "all_names": [
+    "CORE LABORATORIES N V"
+   ],
    "first_filed": "2010-07-26",
    "float": {
     "CRLBF R735QTJ8XC9X": {
@@ -106,6 +112,9 @@
    "status": "linked"
   },
   "1000298": {
+   "all_names": [
+    "IMPAC MORTGAGE HOLDINGS INC"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "IMH R735QTJ8XC9X": {
@@ -131,6 +140,9 @@
    "status": "linked"
   },
   "100122": {
+   "all_names": [
+    "TUCSON ELECTRIC POWER CO"
+   ],
    "first_filed": "2010-08-05",
    "hits": {
     "UNS R735QTJ8XC9X": [
@@ -159,6 +171,9 @@
    "status": "linked"
   },
   "1001606": {
+   "all_names": [
+    "BLOUNT INTERNATIONAL INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "BLT RND0QG6OG8RP": {
@@ -198,6 +213,9 @@
    "status": "linked"
   },
   "1005010": {
+   "all_names": [
+    "ARTHROCARE CORP"
+   ],
    "first_filed": "2011-05-02",
    "float": {
     "ARTC R735QTJ8XC9X": {
@@ -233,6 +251,9 @@
    "status": "linked"
   },
   "1006892": {
+   "all_names": [
+    "JDA SOFTWARE GROUP INC"
+   ],
    "first_filed": "2011-05-10",
    "float": {
     "JDAS R735QTJ8XC9X": {
@@ -260,6 +281,9 @@
    "status": "linked"
   },
   "1009356": {
+   "all_names": [
+    "SALIX PHARMACEUTICALS LTD"
+   ],
    "first_filed": "2011-05-10",
    "float": {
     "SLXP RZVZH9PZHS9X": {
@@ -298,6 +322,9 @@
    "status": "linked"
   },
   "1009672": {
+   "all_names": [
+    "CARBO CERAMICS INC"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "CRBO R735QTJ8XC9X": {
@@ -352,6 +379,9 @@
    "status": "linked"
   },
   "101063": {
+   "all_names": [
+    "CHIQUITA BRANDS INTERNATIONAL INC"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "CQB SD5JAM4ULP45": {
@@ -389,6 +419,10 @@
    "status": "linked"
   },
   "1010858": {
+   "all_names": [
+    "FAIRMOUNT SANTROL HOLDINGS INC.",
+    "FMSA HOLDINGS INC"
+   ],
    "first_filed": "2014-11-13",
    "float": {
     "FMSA VUF6QTHX146D": {
@@ -428,6 +462,9 @@
    "status": "linked"
   },
   "1011174": {
+   "all_names": [
+    "BRE PROPERTIES INC /MD/"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "BRE R735QTJ8XC9X": {
@@ -465,6 +502,9 @@
    "status": "linked"
   },
   "1011657": {
+   "all_names": [
+    "TITANIUM METALS CORP"
+   ],
    "first_filed": "2010-08-03",
    "float": {
     "TIMT R735QTJ8XC9X": {
@@ -497,6 +537,9 @@
    "status": "linked"
   },
   "1013606": {
+   "all_names": [
+    "ENDOLOGIX INC /DE/"
+   ],
    "first_filed": "2011-08-03",
    "float": {
     "CCVD R735QTJ8XC9X": {
@@ -544,6 +587,9 @@
    "status": "linked"
   },
   "1019671": {
+   "all_names": [
+    "SEACHANGE INTERNATIONAL INC"
+   ],
    "first_filed": "2011-09-09",
    "float": {
     "SEAC R735QTJ8XC9X": {
@@ -568,6 +614,9 @@
    "status": "linked"
   },
   "1022646": {
+   "all_names": [
+    "ULTRA PETROLEUM CORP"
+   ],
    "first_filed": "2009-08-04",
    "float": {
     "UPL S1I2USAY0AQT": {
@@ -627,6 +676,9 @@
    "status": "linked"
   },
   "102379": {
+   "all_names": [
+    "URS CORP /NEW/"
+   ],
    "first_filed": "2010-08-10",
    "float": {
     "URS R735QTJ8XC9X": {
@@ -667,6 +719,9 @@
    "status": "linked"
   },
   "1024126": {
+   "all_names": [
+    "PERNIX THERAPEUTICS HOLDINGS, INC."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "GTA R735QTJ8XC9X": {
@@ -696,6 +751,9 @@
    "status": "linked"
   },
   "1028215": {
+   "all_names": [
+    "KMG CHEMICALS INC"
+   ],
    "first_filed": "2011-12-12",
    "float": {
     "KMGB R735QTJ8XC9X": {
@@ -724,6 +782,9 @@
    "status": "linked"
   },
   "1029506": {
+   "all_names": [
+    "RALCORP HOLDINGS INC /MO"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "RAH R735QTJ8XC9X": {
@@ -755,6 +816,9 @@
    "status": "linked"
   },
   "1030749": {
+   "all_names": [
+    "GULFMARK OFFSHORE INC"
+   ],
    "first_filed": "2010-05-03",
    "float": {
     "GMRK R735QTJ8XC9X": {
@@ -800,6 +864,9 @@
    "status": "linked"
   },
   "1032863": {
+   "all_names": [
+    "FORCE PROTECTION INC"
+   ],
    "first_filed": "2011-08-04",
    "hits": {
     "FRPT TPFFBMRRNBDX": [
@@ -817,6 +884,9 @@
    "status": "linked"
   },
   "1034669": {
+   "all_names": [
+    "FISHER COMMUNICATIONS INC"
+   ],
    "first_filed": "2011-08-03",
    "float": {
     "FSCI S4S8I0776U05": {
@@ -842,6 +912,9 @@
    "status": "linked"
   },
   "1034755": {
+   "all_names": [
+    "BRIGHAM EXPLORATION CO"
+   ],
    "first_filed": "2011-05-05",
    "hits": {
     "BEXP R735QTJ8XC9X": [
@@ -860,6 +933,9 @@
    "status": "linked"
   },
   "1037016": {
+   "all_names": [
+    "NII HOLDINGS INC"
+   ],
    "first_filed": "2009-08-05",
    "float": {
     "NIHD W21WGWK0DLYD": {
@@ -897,6 +973,9 @@
    "status": "linked"
   },
   "1038205": {
+   "all_names": [
+    "BANK OF THE OZARKS INC"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "OZRK R735QTJ8XC9X": {
@@ -943,6 +1022,9 @@
    "status": "linked"
   },
   "1039889": {
+   "all_names": [
+    "P F CHANGS CHINA BISTRO INC"
+   ],
    "first_filed": "2011-08-22",
    "float": {
     "PFCB RG9ZY8FYMU79": {
@@ -969,6 +1051,10 @@
    "status": "linked"
   },
   "1040719": {
+   "all_names": [
+    "DITECH HOLDING Corp",
+    "WALTER INVESTMENT MANAGEMENT CORP"
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "HCM R96Z60P8TFMT": {
@@ -1002,7 +1088,6 @@
    },
    "last_filed": "2019-04-16",
    "names": [
-    "DITECH HOLDING Corp",
     "WALTER INVESTMENT MANAGEMENT CORP"
    ],
    "sic_at_filing": [
@@ -1012,6 +1097,10 @@
    "status": "linked"
   },
   "1040792": {
+   "all_names": [
+    "Helios & Matheson Analytics Inc.",
+    "Helios & Matheson Information Technology Inc."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "TACX R735QTJ8XC9X": {
@@ -1035,15 +1124,51 @@
    },
    "last_filed": "2019-03-19",
    "names": [
-    "Helios & Matheson Analytics Inc.",
-    "Helios & Matheson Information Technology Inc."
+    "Helios & Matheson Analytics Inc."
    ],
    "sic_at_filing": [
     7380
    ],
    "status": "linked"
   },
+  "1045425": {
+   "all_names": [
+    "RAIT Financial Trust"
+   ],
+   "first_filed": "2011-08-05",
+   "hits": {
+    "RAS R7A1VH3FGMED": [
+     "2011-08-05",
+     "2011-11-04",
+     "2012-02-24",
+     "2012-05-10",
+     "2012-08-06",
+     "2012-11-06",
+     "2013-03-18",
+     "2013-05-07",
+     "2013-08-07",
+     "2013-11-05",
+     "2014-03-07",
+     "2014-05-12",
+     "2014-08-06",
+     "2014-11-10",
+     "2015-03-17",
+     "2015-05-08"
+    ]
+   },
+   "last_filed": "2019-03-26",
+   "names": [
+    "RAIT Financial Trust"
+   ],
+   "sic_at_filing": [
+    6798
+   ],
+   "status": "linked"
+  },
   "1046880": {
+   "all_names": [
+    "CENTRAL EUROPEAN DISTRIBUTION CORP"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "CEDC RCQZA696RIHX": {
@@ -1073,6 +1198,9 @@
    "status": "linked"
   },
   "1049108": {
+   "all_names": [
+    "DOLLAR THRIFTY AUTOMOTIVE GROUP INC"
+   ],
    "first_filed": "2011-05-05",
    "float": {
     "DTG R735QTJ8XC9X": {
@@ -1102,6 +1230,9 @@
    "status": "linked"
   },
   "1049782": {
+   "all_names": [
+    "BROOKLINE BANCORP INC"
+   ],
    "first_filed": "2010-08-03",
    "float": {
     "BRKL R9BWEHJ377FP": {
@@ -1134,6 +1265,9 @@
    "status": "linked"
   },
   "105319": {
+   "all_names": [
+    "WEIGHT WATCHERS INTERNATIONAL INC"
+   ],
    "first_filed": "2010-08-12",
    "float": {
     "WTW S9QGEXER1E1X": {
@@ -1193,6 +1327,10 @@
    "status": "linked"
   },
   "1054102": {
+   "all_names": [
+    "Interpace Diagnostics Group, Inc.",
+    "PDI INC"
+   ],
    "first_filed": "2011-08-10",
    "float": {
     "PDII RAV1FQ0JHGF9": {
@@ -1209,8 +1347,7 @@
    },
    "last_filed": "2019-08-13",
    "names": [
-    "Interpace Diagnostics Group, Inc.",
-    "PDI INC"
+    "Interpace Diagnostics Group, Inc."
    ],
    "sic_at_filing": [
     3841,
@@ -1219,6 +1356,9 @@
    "status": "linked"
   },
   "1054833": {
+   "all_names": [
+    "COVENTRY HEALTH CARE INC"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "CVTY R735QTJ8XC9X": {
@@ -1253,6 +1393,9 @@
    "status": "linked"
   },
   "1055355": {
+   "all_names": [
+    "SONOSITE INC"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "SONO R9OP7PAA70IT": {
@@ -1278,6 +1421,10 @@
    "status": "linked"
   },
   "1056386": {
+   "all_names": [
+    "INTERNAP NETWORK SERVICES CORP",
+    "Internap Corp"
+   ],
    "first_filed": "2010-11-04",
    "float": {
     "INAP ROGEM6TFIF6T": {
@@ -1294,7 +1441,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "INTERNAP NETWORK SERVICES CORP",
     "Internap Corp"
    ],
    "sic_at_filing": [
@@ -1303,6 +1449,9 @@
    "status": "linked"
   },
   "1057689": {
+   "all_names": [
+    "CapLease, Inc."
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "LSE SX4BMV62GG9X": {
@@ -1329,6 +1478,9 @@
    "status": "linked"
   },
   "1058623": {
+   "all_names": [
+    "CUMULUS MEDIA INC"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "CMLS RBVGZ6JSBDD1": {
@@ -1357,6 +1509,9 @@
    "status": "linked"
   },
   "1059786": {
+   "all_names": [
+    "MIPS TECHNOLOGIES INC"
+   ],
    "first_filed": "2011-11-08",
    "float": {
     "MIPS RBZERK0GME05": {
@@ -1385,6 +1540,9 @@
    "status": "linked"
   },
   "1059790": {
+   "all_names": [
+    "POZEN INC /NC"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "POZN RYSLLJ38FLUT": {
@@ -1425,6 +1583,9 @@
    "status": "linked"
   },
   "1060990": {
+   "all_names": [
+    "QUICKSILVER RESOURCES INC"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "KWK RIRLMQQBLHT1": {
@@ -1456,6 +1617,9 @@
    "status": "linked"
   },
   "1061027": {
+   "all_names": [
+    "SUNESIS PHARMACEUTICALS INC"
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "SNSS TCCRMXX32OO5": {
@@ -1488,6 +1652,9 @@
    "status": "linked"
   },
   "106455": {
+   "all_names": [
+    "WESTMORELAND COAL Co"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "WLB RJWYEO3ET6JP": {
@@ -1523,6 +1690,9 @@
    "status": "linked"
   },
   "1064728": {
+   "all_names": [
+    "PEABODY ENERGY CORP"
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "BTU S4X5QH11KLT1": {
@@ -1555,6 +1725,9 @@
    "status": "linked"
   },
   "1065034": {
+   "all_names": [
+    "MAGMA DESIGN AUTOMATION INC"
+   ],
    "first_filed": "2011-09-09",
    "hits": {
     "LAVA S9VDNE8LF5UT": [
@@ -1572,6 +1745,9 @@
    "status": "linked"
   },
   "1065049": {
+   "all_names": [
+    "LEAP WIRELESS INTERNATIONAL INC"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "LEAP T9W5EIZW6S85": {
@@ -1610,6 +1786,10 @@
    "status": "linked"
   },
   "1065059": {
+   "all_names": [
+    "CENTRUS ENERGY CORP",
+    "USEC INC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "USU RCM21PFCDQP1": {
@@ -1641,7 +1821,6 @@
    },
    "last_filed": "2019-08-12",
    "names": [
-    "CENTRUS ENERGY CORP",
     "USEC INC"
    ],
    "sic_at_filing": [
@@ -1650,6 +1829,9 @@
    "status": "linked"
   },
   "1066134": {
+   "all_names": [
+    "CORINTHIAN COLLEGES INC"
+   ],
    "first_filed": "2010-11-03",
    "float": {
     "COCO RI0144HLGDB9": {
@@ -1675,6 +1857,9 @@
    "status": "linked"
   },
   "106926": {
+   "all_names": [
+    "WHITNEY HOLDING CORP"
+   ],
    "first_filed": "2010-09-08",
    "float": {
     "WTNY R735QTJ8XC9X": {
@@ -1701,6 +1886,13 @@
    "status": "linked"
   },
   "1069996": {
+   "all_names": [
+    "21ST CENTURY HOLDING CO",
+    "FEDERATED NATIONAL HOLDING CO",
+    "FEDERATED NATIONAL HOLDING Co",
+    "FEDNAT HOLDING Co",
+    "FedNat Holding Co"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "TCHC RFHFZIU2EYJP": {
@@ -1719,11 +1911,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "21ST CENTURY HOLDING CO",
-    "FEDERATED NATIONAL HOLDING CO",
-    "FEDERATED NATIONAL HOLDING Co",
-    "FEDNAT HOLDING Co",
-    "FedNat Holding Co"
+    "FEDERATED NATIONAL HOLDING CO"
    ],
    "sic_at_filing": [
     6331
@@ -1731,6 +1919,10 @@
    "status": "linked"
   },
   "107140": {
+   "all_names": [
+    "JOHN WILEY & SONS, INC.",
+    "WILEY JOHN & SONS, INC."
+   ],
    "first_filed": "2010-09-17",
    "float": {
     "JWA R735QTJ8XC9X": {
@@ -1756,7 +1948,6 @@
    },
    "last_filed": "2019-09-06",
    "names": [
-    "JOHN WILEY & SONS, INC.",
     "WILEY JOHN & SONS, INC."
    ],
    "sic_at_filing": [
@@ -1765,6 +1956,9 @@
    "status": "linked"
   },
   "1072379": {
+   "all_names": [
+    "NORTHWEST BIOTHERAPEUTICS INC"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "NWBT SAJ0DN0N99PH": {
@@ -1795,6 +1989,10 @@
    "status": "linked"
   },
   "1074909": {
+   "all_names": [
+    "FAB Universal Corp.",
+    "WIZZARD SOFTWARE CORP /CO"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "WZE TZYIFMLR3S6D": {
@@ -1812,8 +2010,7 @@
    },
    "last_filed": "2014-08-14",
    "names": [
-    "FAB Universal Corp.",
-    "WIZZARD SOFTWARE CORP /CO"
+    "FAB Universal Corp."
    ],
    "sic_at_filing": [
     7372
@@ -1821,6 +2018,10 @@
    "status": "linked"
   },
   "1076682": {
+   "all_names": [
+    "MAJESCO ENTERTAINMENT CO",
+    "POLARITYTE, INC."
+   ],
    "first_filed": "2011-09-14",
    "float": {
     "MJES T5OIK4NWELID": {
@@ -1842,7 +2043,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "MAJESCO ENTERTAINMENT CO",
     "POLARITYTE, INC."
    ],
    "sic_at_filing": [
@@ -1852,6 +2052,9 @@
    "status": "linked"
   },
   "1076700": {
+   "all_names": [
+    "KIT digital, Inc."
+   ],
    "first_filed": "2011-09-08",
    "float": {
     "KITD UF30NBW3EZXH": {
@@ -1878,6 +2081,9 @@
    "status": "linked"
   },
   "1077771": {
+   "all_names": [
+    "UMPQUA HOLDINGS CORP"
+   ],
    "first_filed": "2011-05-05",
    "float": {
     "UMPQ R9JRZ8GFT8PX": {
@@ -1931,6 +2137,9 @@
    "status": "linked"
   },
   "107833": {
+   "all_names": [
+    "WISCONSIN PUBLIC SERVICE CORP"
+   ],
    "first_filed": "2011-08-04",
    "hits": {
     "WPS R735QTJ8XC9X": [
@@ -1958,6 +2167,9 @@
    "status": "ambiguous: security WPS R735QTJ8XC9X claimed by overlapping registrants"
   },
   "1082324": {
+   "all_names": [
+    "VirnetX Holding Corp"
+   ],
    "first_filed": "2011-08-25",
    "float": {
     "PASW RMSCCHI4UEED": {
@@ -2014,6 +2226,9 @@
    "status": "linked"
   },
   "1082510": {
+   "all_names": [
+    "UIL HOLDINGS CORP"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "UIL R735QTJ8XC9X": {
@@ -2060,6 +2275,9 @@
    "status": "linked"
   },
   "1082526": {
+   "all_names": [
+    "SCIQUEST INC"
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "SQI UQ7RLDRSK291": {
@@ -2093,6 +2311,9 @@
    "status": "linked"
   },
   "1084765": {
+   "all_names": [
+    "RESOURCES CONNECTION INC"
+   ],
    "first_filed": "2010-10-07",
    "float": {
     "RECN S0KLNLV7ENAD": {
@@ -2141,6 +2362,10 @@
    "status": "linked"
   },
   "1085621": {
+   "all_names": [
+    "Actua Corp",
+    "ICG GROUP, INC."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "ICGE RMY911P5AXD1": {
@@ -2157,8 +2382,7 @@
    },
    "last_filed": "2018-03-30",
    "names": [
-    "Actua Corp",
-    "ICG GROUP, INC."
+    "Actua Corp"
    ],
    "sic_at_filing": [
     7371,
@@ -2167,6 +2391,9 @@
    "status": "linked"
   },
   "1085706": {
+   "all_names": [
+    "METRO BANCORP, INC."
+   ],
    "first_filed": "2011-09-08",
    "float": {
     "COBH R735QTJ8XC9X": {
@@ -2191,6 +2418,9 @@
    "status": "linked"
   },
   "1089976": {
+   "all_names": [
+    "PACTIV CORP"
+   ],
    "first_filed": "2010-08-09",
    "hits": {
     "PTV RPGU5NCOCC4L": [
@@ -2208,6 +2438,9 @@
    "status": "linked"
   },
   "109156": {
+   "all_names": [
+    "ZALE CORP"
+   ],
    "first_filed": "2011-12-08",
    "float": {
     "ZLC R735QTJ8XC9X": {
@@ -2241,6 +2474,9 @@
    "status": "linked"
   },
   "1091667": {
+   "all_names": [
+    "CHARTER COMMUNICATIONS, INC. /MO/"
+   ],
    "first_filed": "2011-05-03",
    "float": {
     "CHTR UPXX4G43SIN9": {
@@ -2293,6 +2529,9 @@
    "status": "linked"
   },
   "1092367": {
+   "all_names": [
+    "SYCAMORE NETWORKS INC"
+   ],
    "first_filed": "2011-12-01",
    "float": {
     "SCMR RP31WC8B9RVP": {
@@ -2320,6 +2559,12 @@
    "status": "linked"
   },
   "1094093": {
+   "all_names": [
+    "PROGRESS ENERGY INC"
+   ],
+   "conflict_resolved_by_float": [
+    17797
+   ],
    "first_filed": "2009-09-02",
    "float": {
     "CPL R735QTJ8XC9X": {
@@ -2344,6 +2589,9 @@
    "status": "linked"
   },
   "1094392": {
+   "all_names": [
+    "RUDOLPH TECHNOLOGIES INC"
+   ],
    "first_filed": "2011-05-04",
    "float": {
     "RTEC RPNQAAWUVM91": {
@@ -2378,6 +2626,9 @@
    "status": "linked"
   },
   "1100397": {
+   "all_names": [
+    "Advaxis, Inc."
+   ],
    "first_filed": "2011-09-12",
    "float": {
     "ADXS VKTKU03O6AUD": {
@@ -2419,6 +2670,10 @@
    "status": "linked"
   },
   "1100962": {
+   "all_names": [
+    "ENDO HEALTH SOLUTIONS INC.",
+    "ENDO PHARMACEUTICALS HOLDINGS INC"
+   ],
    "first_filed": "2010-08-02",
    "float": {
     "ENDP RWGWLKZVXH7P": {
@@ -2457,6 +2712,10 @@
    "status": "linked"
   },
   "1102541": {
+   "all_names": [
+    "EARTHLINK INC",
+    "EarthLink Holdings Corp."
+   ],
    "first_filed": "2010-07-30",
    "float": {
     "MSPG R735QTJ8XC9X": {
@@ -2507,6 +2766,9 @@
    "status": "linked"
   },
   "1104188": {
+   "all_names": [
+    "SOHU COM INC"
+   ],
    "first_filed": "2010-08-17",
    "float": {
     "SOHU RWAZX0SVGY91": {
@@ -2561,6 +2823,9 @@
    "status": "linked"
   },
   "1104252": {
+   "all_names": [
+    "DDI CORP"
+   ],
    "first_filed": "2011-07-29",
    "float": {
     "DDIC SWQJDK1PDW11": {
@@ -2585,6 +2850,9 @@
    "status": "linked"
   },
   "110430": {
+   "all_names": [
+    "FRONTIER OIL CORP /NEW/"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "WOL R735QTJ8XC9X": {
@@ -2611,6 +2879,9 @@
    "status": "linked"
   },
   "1104358": {
+   "all_names": [
+    "BROADVIEW NETWORKS HOLDINGS INC"
+   ],
    "first_filed": "2011-08-08",
    "hits": {
     "BVN R735QTJ8XC9X": [
@@ -2649,6 +2920,9 @@
    "status": "linked"
   },
   "1105705": {
+   "all_names": [
+    "TIME WARNER INC."
+   ],
    "first_filed": "2009-07-29",
    "float": {
     "AOL R735QTJ8XC9X": {
@@ -2707,6 +2981,9 @@
    "status": "linked"
   },
   "1106942": {
+   "all_names": [
+    "BLACKBOARD INC"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "BBBB SZLXBDGFF3VP": {
@@ -2734,6 +3011,9 @@
    "status": "linked"
   },
   "1107332": {
+   "all_names": [
+    "DENDREON CORP"
+   ],
    "first_filed": "2010-08-03",
    "float": {
     "DNDN RVLEALAHHC2T": {
@@ -2768,6 +3048,9 @@
    "status": "linked"
   },
   "1107694": {
+   "all_names": [
+    "RACKSPACE HOSTING, INC."
+   ],
    "first_filed": "2010-08-24",
    "float": {
     "RAX U4YP8QJN3UJP": {
@@ -2817,6 +3100,10 @@
    "status": "linked"
   },
   "1109189": {
+   "all_names": [
+    "BASIC ENERGY SERVICES INC",
+    "BASIC ENERGY SERVICES, INC."
+   ],
    "first_filed": "2011-07-25",
    "float": {
     "BAS TECN9RMENRDX": {
@@ -2859,8 +3146,7 @@
    },
    "last_filed": "2019-08-02",
    "names": [
-    "BASIC ENERGY SERVICES INC",
-    "BASIC ENERGY SERVICES, INC."
+    "BASIC ENERGY SERVICES INC"
    ],
    "sic_at_filing": [
     1389
@@ -2868,6 +3154,9 @@
    "status": "linked"
   },
   "1112412": {
+   "all_names": [
+    "ENDEAVOUR INTERNATIONAL CORP"
+   ],
    "first_filed": "2011-09-02",
    "float": {
     "END SZIYZ3CX6UED": {
@@ -2898,7 +3187,60 @@
    ],
    "status": "linked"
   },
+  "1115055": {
+   "all_names": [
+    "PINNACLE FINANCIAL PARTNERS INC"
+   ],
+   "first_filed": "2011-07-29",
+   "hits": {
+    "PNFP SF1H52DHVR6T": [
+     "2011-07-29",
+     "2011-10-31",
+     "2012-03-02",
+     "2012-05-04",
+     "2012-07-26",
+     "2012-10-25",
+     "2013-02-22",
+     "2013-05-03",
+     "2013-07-31",
+     "2013-11-01",
+     "2014-02-25",
+     "2014-05-02",
+     "2014-08-01",
+     "2014-11-07",
+     "2015-02-25",
+     "2015-05-08",
+     "2015-08-07",
+     "2015-11-09",
+     "2016-02-29",
+     "2016-05-06",
+     "2016-08-05",
+     "2016-11-04",
+     "2017-02-27",
+     "2017-05-05",
+     "2017-08-04",
+     "2017-11-07",
+     "2018-02-28",
+     "2018-05-07",
+     "2018-08-03",
+     "2018-11-02",
+     "2019-02-28",
+     "2019-05-03"
+    ]
+   },
+   "last_filed": "2019-08-02",
+   "names": [
+    "PINNACLE FINANCIAL PARTNERS INC"
+   ],
+   "sic_at_filing": [
+    6021
+   ],
+   "status": "linked"
+  },
   "1123647": {
+   "all_names": [
+    "ATP OIL & GAS CORP"
+   ],
    "first_filed": "2011-08-16",
    "float": {
     "ATPG S20SCK95GMSL": {
@@ -2925,6 +3267,9 @@
    "status": "linked"
   },
   "1130385": {
+   "all_names": [
+    "FOSTER WHEELER AG"
+   ],
    "first_filed": "2009-08-05",
    "float": {
     "FWC R735QTJ8XC9X": {
@@ -2967,6 +3312,9 @@
    "status": "linked"
   },
   "1131227": {
+   "all_names": [
+    "HORNBECK OFFSHORE SERVICES INC /LA"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "HOS SXB7RIQ8ZQED": {
@@ -3017,6 +3365,9 @@
    "status": "linked"
   },
   "1131907": {
+   "all_names": [
+    "MICROMET, INC."
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "CNVX ST9HLOL9O2N9": {
@@ -3042,6 +3393,9 @@
    "status": "linked"
   },
   "1137091": {
+   "all_names": [
+    "POWER SOLUTIONS INTERNATIONAL, INC."
+   ],
    "first_filed": "2011-09-13",
    "float": {
     "PSIX VGXRCQ5PB61X": {
@@ -3075,6 +3429,9 @@
    "status": "linked"
   },
   "1138830": {
+   "all_names": [
+    "AUTHENTEC INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "AUTH TTSYULARW12D": {
@@ -3099,6 +3456,9 @@
    "status": "linked"
   },
   "1141107": {
+   "all_names": [
+    "ARRIS GROUP INC"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "ANTC R735QTJ8XC9X": {
@@ -3143,6 +3503,10 @@
    "status": "linked"
   },
   "1141982": {
+   "all_names": [
+    "COOPER INDUSTRIES LTD",
+    "Cooper Industries plc"
+   ],
    "first_filed": "2009-08-06",
    "float": {
     "CBE R735QTJ8XC9X": {
@@ -3170,7 +3534,6 @@
    },
    "last_filed": "2012-11-05",
    "names": [
-    "COOPER INDUSTRIES LTD",
     "Cooper Industries plc"
    ],
    "sic_at_filing": [
@@ -3180,6 +3543,9 @@
    "status": "linked"
   },
   "1157762": {
+   "all_names": [
+    "CHINA AUTOMOTIVE SYSTEMS INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "CAAS T1FW9MYQJNMT": {
@@ -3235,6 +3601,9 @@
    "status": "linked"
   },
   "1157806": {
+   "all_names": [
+    "ENCANA CORP"
+   ],
    "first_filed": "2017-02-27",
    "float": {
     "PCX S8K46WOHQY5H": {
@@ -3266,6 +3635,9 @@
    "status": "linked"
   },
   "1158223": {
+   "all_names": [
+    "AFFYMAX INC"
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "AFFY TOHY4GC11NXH": {
@@ -3296,6 +3668,9 @@
    "status": "linked"
   },
   "1159154": {
+   "all_names": [
+    "REPUBLIC AIRWAYS HOLDINGS INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "RJET SZ09HBEPQICL": {
@@ -3336,6 +3711,11 @@
    "status": "linked"
   },
   "1159281": {
+   "all_names": [
+    "FIVE STAR QUALITY CARE INC",
+    "FIVE STAR QUALITY CARE, INC.",
+    "FIVE STAR SENIOR LIVING INC."
+   ],
    "first_filed": "2011-07-28",
    "float": {
     "FVE SB1PVEYUPLR9": {
@@ -3352,9 +3732,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "FIVE STAR QUALITY CARE INC",
-    "FIVE STAR QUALITY CARE, INC.",
-    "FIVE STAR SENIOR LIVING INC."
+    "FIVE STAR QUALITY CARE INC"
    ],
    "sic_at_filing": [
     8051
@@ -3362,6 +3740,9 @@
    "status": "linked"
   },
   "1166126": {
+   "all_names": [
+    "J C PENNEY CO INC"
+   ],
    "first_filed": "2009-09-09",
    "float": {
     "JCP R735QTJ8XC9X": {
@@ -3417,6 +3798,9 @@
    "status": "linked"
   },
   "1166380": {
+   "all_names": [
+    "QUANTUM FUEL SYSTEMS TECHNOLOGIES WORLDWIDE, INC."
+   ],
    "first_filed": "2011-09-14",
    "hits": {
     "QTWW SGKM6AUY606D": [
@@ -3435,6 +3819,10 @@
    "status": "linked"
   },
   "1167178": {
+   "all_names": [
+    "A123 SYSTEMS, INC.",
+    "B456 SYSTEMS, INC."
+   ],
    "first_filed": "2011-05-10",
    "float": {
     "AONE UG8DF996MOO5": {
@@ -3451,8 +3839,7 @@
    },
    "last_filed": "2013-06-28",
    "names": [
-    "A123 SYSTEMS, INC.",
-    "B456 SYSTEMS, INC."
+    "A123 SYSTEMS, INC."
    ],
    "sic_at_filing": [
     3690
@@ -3460,6 +3847,9 @@
    "status": "linked"
   },
   "1168213": {
+   "all_names": [
+    "AEROPOSTALE INC"
+   ],
    "first_filed": "2010-09-08",
    "float": {
     "ARO SEPNRXZGYP9H": {
@@ -3498,6 +3888,9 @@
    "status": "linked"
   },
   "1169245": {
+   "all_names": [
+    "PhaseBio Pharmaceuticals Inc"
+   ],
    "first_filed": "2018-11-29",
    "float": {
     "PHAS WYSIKTF1YP2D": {
@@ -3523,6 +3916,9 @@
    "status": "linked"
   },
   "1169987": {
+   "all_names": [
+    "HTG MOLECULAR DIAGNOSTICS, INC"
+   ],
    "first_filed": "2015-06-08",
    "float": {
     "HTGM W0AVUX57HBOL": {
@@ -3547,6 +3943,9 @@
    "status": "linked"
   },
   "1171012": {
+   "all_names": [
+    "Uni-Pixel"
+   ],
    "first_filed": "2011-05-09",
    "float": {
     "UNXLD USBL0KXSG5LX": {
@@ -3577,6 +3976,9 @@
    "status": "linked"
   },
   "1172139": {
+   "all_names": [
+    "BILL BARRETT CORP"
+   ],
    "first_filed": "2010-08-03",
    "float": {
     "BBG T4E8JQGYT4YT": {
@@ -3631,6 +4033,10 @@
    "status": "linked"
   },
   "1175483": {
+   "all_names": [
+    "Drive Shack Inc.",
+    "NEWCASTLE INVESTMENT CORP"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "NCT SIQEHORA7LUT": {
@@ -3659,7 +4065,6 @@
    },
    "last_filed": "2019-08-06",
    "names": [
-    "Drive Shack Inc.",
     "NEWCASTLE INVESTMENT CORP"
    ],
    "sic_at_filing": [
@@ -3669,6 +4074,9 @@
    "status": "linked"
   },
   "1182325": {
+   "all_names": [
+    "TANGOE INC"
+   ],
    "first_filed": "2011-09-09",
    "float": {
     "TNGO UYL2DZPFYXD1": {
@@ -3703,7 +4111,43 @@
    ],
    "status": "linked"
   },
+  "1183186": {
+   "all_names": [
+    "NATIONAL FINANCIAL PARTNERS CORP"
+   ],
+   "first_filed": "2011-08-02",
+   "float": {
+    "NFP SS44TR86GDWL": {
+     "check": "ok",
+     "median": 0.9764999999999999,
+     "n": 2
+    }
+   },
+   "hits": {
+    "NFP SS44TR86GDWL": [
+     "2011-08-02",
+     "2011-11-01",
+     "2012-02-13",
+     "2012-05-01",
+     "2012-08-01",
+     "2012-11-05",
+     "2013-02-15",
+     "2013-05-03"
+    ]
+   },
+   "last_filed": "2013-05-03",
+   "names": [
+    "NATIONAL FINANCIAL PARTNERS CORP"
+   ],
+   "sic_at_filing": [
+    6411
+   ],
+   "status": "linked"
+  },
   "1206942": {
+   "all_names": [
+    "GOLDEN GRAIN ENERGY"
+   ],
    "first_filed": "2011-09-14",
    "hits": {
     "RRUS SG8ST6GX8Y91": [
@@ -3750,6 +4194,9 @@
    "status": "linked"
   },
   "1209821": {
+   "all_names": [
+    "CROSSTEX ENERGY INC"
+   ],
    "first_filed": "2011-08-17",
    "float": {
     "XTXI SVBC4P0XENOL": {
@@ -3783,6 +4230,10 @@
    "status": "linked"
   },
   "1213037": {
+   "all_names": [
+    "TrovaGene Inc.",
+    "Trovagene, Inc."
+   ],
    "first_filed": "2012-05-15",
    "float": {
     "TROV V70C2SDFJASL": {
@@ -3801,7 +4252,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "TrovaGene Inc.",
     "Trovagene, Inc."
    ],
    "sic_at_filing": [
@@ -3810,6 +4260,9 @@
    "status": "linked"
   },
   "12239": {
+   "all_names": [
+    "SPHERIX INC"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "BINC R735QTJ8XC9X": {
@@ -3836,6 +4289,9 @@
    "status": "linked"
   },
   "12400": {
+   "all_names": [
+    "BLACK HILLS POWER INC"
+   ],
    "first_filed": "2011-08-11",
    "hits": {
     "BHP R735QTJ8XC9X": [
@@ -3863,7 +4319,51 @@
    ],
    "status": "linked"
   },
+  "1252849": {
+   "all_names": [
+    "COLUMBIA PROPERTY TRUST, INC.",
+    "WELLS REAL ESTATE INVESTMENT TRUST II INC"
+   ],
+   "first_filed": "2011-08-12",
+   "hits": {
+    "CXP VKSLDWQI3JOL": [
+     "2013-11-05",
+     "2014-05-08",
+     "2014-08-07",
+     "2014-10-30",
+     "2015-02-12",
+     "2015-04-30",
+     "2015-07-30",
+     "2015-10-29",
+     "2016-02-11",
+     "2016-04-28",
+     "2016-07-28",
+     "2016-10-27",
+     "2017-02-09",
+     "2017-04-27",
+     "2017-07-27",
+     "2017-10-26",
+     "2018-02-15",
+     "2018-04-26",
+     "2018-07-26",
+     "2018-10-25",
+     "2019-02-13",
+     "2019-04-25"
+    ]
+   },
+   "last_filed": "2019-10-24",
+   "names": [
+    "COLUMBIA PROPERTY TRUST, INC."
+   ],
+   "sic_at_filing": [
+    6798
+   ],
+   "status": "linked"
+  },
   "1271625": {
+   "all_names": [
+    "DFC GLOBAL CORP."
+   ],
    "first_filed": "2011-11-07",
    "hits": {
     "DLLR T5QHGBE8K3TX": [
@@ -3890,6 +4390,12 @@
    "status": "linked"
   },
   "1274032": {
+   "all_names": [
+    "Cool Holdings, Inc.",
+    "INFOSONICS CORP",
+    "INFOSONICS Corp",
+    "InfoSonics Corp"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "IFO SZKXVA39CCPX": {
@@ -3906,10 +4412,7 @@
    },
    "last_filed": "2019-08-14",
    "names": [
-    "Cool Holdings, Inc.",
-    "INFOSONICS CORP",
-    "INFOSONICS Corp",
-    "InfoSonics Corp"
+    "Cool Holdings, Inc."
    ],
    "sic_at_filing": [
     5065
@@ -3917,6 +4420,9 @@
    "status": "linked"
   },
   "1277092": {
+   "all_names": [
+    "ZHONGPIN INC."
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "HOGS TYT5NP8NW3FP": {
@@ -3943,6 +4449,9 @@
    "status": "linked"
   },
   "1281922": {
+   "all_names": [
+    "Triangle Petroleum Corp"
+   ],
    "first_filed": "2011-09-07",
    "float": {
     "TPLM URD4DB4VRQZP": {
@@ -3982,6 +4491,10 @@
    "status": "linked"
   },
   "1282266": {
+   "all_names": [
+    "WINDSTREAM CORP",
+    "WINDSTREAM HOLDINGS, INC."
+   ],
    "first_filed": "2009-08-06",
    "float": {
     "WIN TKE92FGPKHUT": {
@@ -4039,6 +4552,10 @@
    "status": "linked"
   },
   "1282648": {
+   "all_names": [
+    "HALCON RESOURCES CORP",
+    "RAM ENERGY RESOURCES INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "RAME TIHBRVUW7OMD": {
@@ -4078,8 +4595,7 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "HALCON RESOURCES CORP",
-    "RAM ENERGY RESOURCES INC"
+    "HALCON RESOURCES CORP"
    ],
    "sic_at_filing": [
     1311
@@ -4087,6 +4603,10 @@
    "status": "linked"
   },
   "1283843": {
+   "all_names": [
+    "Emerald Oil, Inc.",
+    "Voyager Oil & Gas, Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "VOG UUJC85KGN9LX": {
@@ -4110,8 +4630,7 @@
    },
    "last_filed": "2015-11-06",
    "names": [
-    "Emerald Oil, Inc.",
-    "Voyager Oil & Gas, Inc."
+    "Emerald Oil, Inc."
    ],
    "sic_at_filing": [
     1311
@@ -4119,6 +4638,9 @@
    "status": "linked"
   },
   "1289340": {
+   "all_names": [
+    "Stereotaxis, Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "STXS T142WIKPMLPH": {
@@ -4146,6 +4668,9 @@
    "status": "linked"
   },
   "1292426": {
+   "all_names": [
+    "GFI Group Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "GFIG T5OIK4NWELID": {
@@ -4182,6 +4707,9 @@
    "status": "linked"
   },
   "1297720": {
+   "all_names": [
+    "James River Coal CO"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "JRCC T5NJ41AQBUCL": {
@@ -4210,6 +4738,9 @@
    "status": "linked"
   },
   "12978": {
+   "all_names": [
+    "OFFICEMAX INC"
+   ],
    "first_filed": "2011-04-29",
    "float": {
     "BCC R735QTJ8XC9X": {
@@ -4243,6 +4774,9 @@
    "status": "linked"
   },
   "1299139": {
+   "all_names": [
+    "TearLab Corp"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "RHEO T4H6W0KH1EG5": {
@@ -4270,6 +4804,9 @@
    "status": "linked"
   },
   "1299704": {
+   "all_names": [
+    "Advance America, Cash Advance Centers, Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "AEA T4K58ANZ9NXH": {
@@ -4295,6 +4832,9 @@
    "status": "linked"
   },
   "1300699": {
+   "all_names": [
+    "Athenex, Inc."
+   ],
    "first_filed": "2017-08-14",
    "float": {
     "ATNX WLD22WT6E99H": {
@@ -4325,6 +4865,9 @@
    "status": "linked"
   },
   "1301063": {
+   "all_names": [
+    "Alpha Natural Resources, Inc."
+   ],
    "first_filed": "2009-11-10",
    "float": {
     "ANR T687HZZ9XOPX": {
@@ -4367,6 +4910,10 @@
    "status": "linked"
   },
   "1301501": {
+   "all_names": [
+    "Achaogen Inc",
+    "Achaogen, Inc."
+   ],
    "first_filed": "2014-05-12",
    "float": {
     "AKAO VOTC3NIBCG9X": {
@@ -4399,6 +4946,10 @@
    "status": "linked"
   },
   "1305323": {
+   "all_names": [
+    "Bridgepoint Education Inc",
+    "Zovio Inc"
+   ],
    "first_filed": "2011-08-02",
    "float": {
     "BPI UBSV03ZU8GO5": {
@@ -4444,8 +4995,7 @@
    },
    "last_filed": "2019-10-30",
    "names": [
-    "Bridgepoint Education Inc",
-    "Zovio Inc"
+    "Bridgepoint Education Inc"
    ],
    "sic_at_filing": [
     8200
@@ -4453,6 +5003,9 @@
    "status": "linked"
   },
   "1310067": {
+   "all_names": [
+    "SEARS HOLDINGS CORP"
+   ],
    "first_filed": "2010-08-20",
    "float": {
     "KMRT SPDO4ENASXUT": {
@@ -4505,6 +5058,10 @@
    "status": "linked"
   },
   "1311230": {
+   "all_names": [
+    "SOLAZYME INC",
+    "TerraVia Holdings, Inc."
+   ],
    "first_filed": "2011-08-31",
    "float": {
     "SZYM UWX04AE5AWKL": {
@@ -4533,8 +5090,7 @@
    },
    "last_filed": "2017-05-05",
    "names": [
-    "SOLAZYME INC",
-    "TerraVia Holdings, Inc."
+    "SOLAZYME INC"
    ],
    "sic_at_filing": [
     2860
@@ -4542,6 +5098,10 @@
    "status": "linked"
   },
   "1315255": {
+   "all_names": [
+    "GTT Communications, Inc.",
+    "Global Telecom & Technology, Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "GTT VHHGALH2U99H": {
@@ -4559,8 +5119,7 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "GTT Communications, Inc.",
-    "Global Telecom & Technology, Inc."
+    "GTT Communications, Inc."
    ],
    "sic_at_filing": [
     4813
@@ -4568,6 +5127,9 @@
    "status": "linked"
   },
   "1316175": {
+   "all_names": [
+    "Anthera Pharmaceuticals Inc"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "ANTH UKJY211UPW11": {
@@ -4593,6 +5155,9 @@
    "status": "linked"
   },
   "1316360": {
+   "all_names": [
+    "IHS Inc."
+   ],
    "first_filed": "2010-09-24",
    "float": {
     "IHS TDL2R5DOIMW5": {
@@ -4640,6 +5205,10 @@
    "status": "linked"
   },
   "1316517": {
+   "all_names": [
+    "Kandi Technologies Corp",
+    "Kandi Technologies Group, Inc."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "KNDI U11WBD8I5YLH": {
@@ -4682,7 +5251,6 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "Kandi Technologies Corp",
     "Kandi Technologies Group, Inc."
    ],
    "sic_at_filing": [
@@ -4691,6 +5259,9 @@
    "status": "linked"
   },
   "1325702": {
+   "all_names": [
+    "MAGNACHIP SEMICONDUCTOR Corp"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "MX UUT6P385ET7P": {
@@ -4737,6 +5308,9 @@
    "status": "linked"
   },
   "1326205": {
+   "all_names": [
+    "India Globalization Capital, Inc."
+   ],
    "first_filed": "2011-08-18",
    "float": {
     "IGC THRQ5GCI82G5": {
@@ -4763,6 +5337,10 @@
    "status": "linked"
   },
   "1331301": {
+   "all_names": [
+    "BOULDER BRANDS, INC.",
+    "SMART BALANCE, INC."
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "SMBL TURFHV3OKFOL": {
@@ -4798,6 +5376,10 @@
    "status": "linked"
   },
   "1332551": {
+   "all_names": [
+    "Exantas Capital Corp.",
+    "Resource Capital Corp."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "RSO TFZQ3DKJ910L": {
@@ -4836,7 +5418,6 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "Exantas Capital Corp.",
     "Resource Capital Corp."
    ],
    "sic_at_filing": [
@@ -4845,6 +5426,9 @@
    "status": "linked"
   },
   "1335190": {
+   "all_names": [
+    "MAGNUM HUNTER RESOURCES CORP"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "PRC TLJLUCTSS6LH": {
@@ -4882,6 +5466,9 @@
    "status": "linked"
   },
   "1336691": {
+   "all_names": [
+    "MOTRICITY INC"
+   ],
    "first_filed": "2011-08-18",
    "float": {
     "MOTR UNJ9S7X924IT": {
@@ -4906,6 +5493,9 @@
    "status": "linked"
   },
   "1338095": {
+   "all_names": [
+    "NephroGenex, Inc."
+   ],
    "first_filed": "2014-05-14",
    "float": {
     "NRX VO1RL19L7BS5": {
@@ -4930,6 +5520,10 @@
    "status": "linked"
   },
   "1343719": {
+   "all_names": [
+    "ENERGY XXI (BERMUDA) LTD",
+    "Energy XXI Ltd"
+   ],
    "first_filed": "2011-11-02",
    "float": {
     "EXXI TURFHV3OKFOL": {
@@ -4968,6 +5562,9 @@
    "status": "linked"
   },
   "1344632": {
+   "all_names": [
+    "Lawson Software, Inc."
+   ],
    "first_filed": "2010-10-08",
    "hits": {
     "LWSN SAC48ZGGPZL1": [
@@ -4986,6 +5583,9 @@
    "status": "linked"
   },
   "1347613": {
+   "all_names": [
+    "SYNERGY PHARMACEUTICALS, INC."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "SGYPD V2245V5VOQQT": {
@@ -5026,6 +5626,9 @@
    "status": "linked"
   },
   "1349436": {
+   "all_names": [
+    "SANDRIDGE ENERGY INC"
+   ],
    "first_filed": "2009-08-06",
    "float": {
     "SD TXEXUXL1ZM91": {
@@ -5068,6 +5671,9 @@
    "status": "linked"
   },
   "1353970": {
+   "all_names": [
+    "China XD Plastics Co Ltd"
+   ],
    "first_filed": "2011-09-14",
    "float": {
     "CXDC UHZE18NZIYXX": {
@@ -5093,6 +5699,9 @@
    "status": "linked"
   },
   "1355128": {
+   "all_names": [
+    "OCZ TECHNOLOGY GROUP INC"
+   ],
    "first_filed": "2011-10-12",
    "float": {
     "OCZ UM04QZFSRVJ9": {
@@ -5119,6 +5728,9 @@
    "status": "linked"
   },
   "1356857": {
+   "all_names": [
+    "Trius Therapeutics Inc"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "TSRX UOSKCIR0KTWL": {
@@ -5144,6 +5756,9 @@
    "status": "linked"
   },
   "1358403": {
+   "all_names": [
+    "BELLICUM PHARMACEUTICALS, INC"
+   ],
    "first_filed": "2015-05-12",
    "float": {
     "BLCM VWI0PXAQUGDH": {
@@ -5180,6 +5795,9 @@
    "status": "linked"
   },
   "13610": {
+   "all_names": [
+    "BOWNE & CO INC"
+   ],
    "first_filed": "2009-08-04",
    "float": {
     "BNE R735QTJ8XC9X": {
@@ -5206,6 +5824,10 @@
    "status": "linked"
   },
   "1361658": {
+   "all_names": [
+    "WYNDHAM WORLDWIDE CORP",
+    "Wyndham Destinations, Inc."
+   ],
    "first_filed": "2010-07-30",
    "float": {
     "WYN TKS1BQL2N23P": {
@@ -5263,6 +5885,9 @@
    "status": "linked"
   },
   "1365101": {
+   "all_names": [
+    "Primo Water Corp"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "PRMW URD4DB4VRQZP": {
@@ -5318,6 +5943,9 @@
    "status": "linked"
   },
   "1365916": {
+   "all_names": [
+    "AMYRIS, INC."
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "AMRS UQBPDR8GV2W5": {
@@ -5374,6 +6002,10 @@
    "status": "linked"
   },
   "1371217": {
+   "all_names": [
+    "EnteroMedics Inc",
+    "ReShape Lifesciences Inc."
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "ETRM TXNSVRVKOEP1": {
@@ -5392,8 +6024,7 @@
    },
    "last_filed": "2019-08-19",
    "names": [
-    "EnteroMedics Inc",
-    "ReShape Lifesciences Inc."
+    "EnteroMedics Inc"
    ],
    "sic_at_filing": [
     3845
@@ -5401,6 +6032,9 @@
    "status": "linked"
   },
   "1376610": {
+   "all_names": [
+    "Allied Nevada Gold Corp."
+   ],
    "first_filed": "2011-05-05",
    "float": {
     "ANV TSHPE3QO7TD1": {
@@ -5436,6 +6070,9 @@
    "status": "linked"
   },
   "1376812": {
+   "all_names": [
+    "Patriot Coal CORP"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "PCXWI TWW8D5MUJA79": {
@@ -5468,6 +6105,9 @@
    "status": "linked"
   },
   "1379246": {
+   "all_names": [
+    "BODY CENTRAL CORP"
+   ],
    "first_filed": "2011-08-16",
    "float": {
     "BODY UQSFZCGC5WMD": {
@@ -5495,6 +6135,9 @@
    "status": "linked"
   },
   "1382911": {
+   "all_names": [
+    "Orexigen Therapeutics, Inc."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "OREX TS3X4SMB5945": {
@@ -5534,6 +6177,10 @@
    "status": "linked"
   },
   "1383701": {
+   "all_names": [
+    "Conatus Pharmaceuticals Inc",
+    "Conatus Pharmaceuticals Inc."
+   ],
    "first_filed": "2013-09-09",
    "float": {
     "CNAT VIIVA5DHQXD1": {
@@ -5578,6 +6225,9 @@
    "status": "linked"
   },
   "1384135": {
+   "all_names": [
+    "SMARTHEAT INC."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "HEAT U9Q11070F4H1": {
@@ -5606,6 +6256,10 @@
    "status": "linked"
   },
   "1385228": {
+   "all_names": [
+    "BIND Therapeutics, Inc",
+    "DNIB UNWIND, INC."
+   ],
    "first_filed": "2013-11-05",
    "float": {
     "BIND VK2ZRH843XID": {
@@ -5624,8 +6278,7 @@
    },
    "last_filed": "2016-08-15",
    "names": [
-    "BIND Therapeutics, Inc",
-    "DNIB UNWIND, INC."
+    "BIND Therapeutics, Inc"
    ],
    "sic_at_filing": [
     2834
@@ -5633,6 +6286,9 @@
    "status": "linked"
   },
   "1385544": {
+   "all_names": [
+    "Horsehead Holding Corp"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "ZINC TV0AIPE7984L": {
@@ -5673,6 +6329,9 @@
    "status": "linked"
   },
   "1391390": {
+   "all_names": [
+    "BOISE INC."
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "AII TTTYAONXYS85": {
@@ -5704,6 +6363,9 @@
    "status": "linked"
   },
   "1394954": {
+   "all_names": [
+    "GT Advanced Technologies Inc."
+   ],
    "first_filed": "2011-08-17",
    "float": {
     "SOLR U4JXJC23YJ51": {
@@ -5739,6 +6401,9 @@
    "status": "linked"
   },
   "1396279": {
+   "all_names": [
+    "hhgregg, Inc."
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "HGG TUFM4QPNNDR9": {
@@ -5773,6 +6438,9 @@
    "status": "linked"
   },
   "1397516": {
+   "all_names": [
+    "REX ENERGY CORP"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "REXX TUKJD7JI15K5": {
@@ -5812,6 +6480,9 @@
    "status": "linked"
   },
   "1398551": {
+   "all_names": [
+    "Yongye International, Inc."
+   ],
    "first_filed": "2011-08-16",
    "float": {
     "YONG UFNP1AKN0UAT": {
@@ -5846,6 +6517,9 @@
    "status": "linked"
   },
   "1399315": {
+   "all_names": [
+    "MARSHALL & ILSLEY CORP"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "MRIS R735QTJ8XC9X": {
@@ -5872,6 +6546,11 @@
    "status": "linked"
   },
   "1399352": {
+   "all_names": [
+    "COOL TECHNOLOGIES, INC.",
+    "HPEV, INC.",
+    "Z3 ENTERPRISES, INC."
+   ],
    "first_filed": "2011-11-22",
    "float": {
     "MJES T5OIK4NWELID": {
@@ -5895,9 +6574,7 @@
    },
    "last_filed": "2019-08-19",
    "names": [
-    "COOL TECHNOLOGIES, INC.",
-    "HPEV, INC.",
-    "Z3 ENTERPRISES, INC."
+    "COOL TECHNOLOGIES, INC."
    ],
    "sic_at_filing": [
     8200
@@ -5905,6 +6582,9 @@
    "status": "rejected: float evidence contradicts (0.10)"
   },
   "1399935": {
+   "all_names": [
+    "Francesca's Holdings CORP"
+   ],
    "first_filed": "2011-09-07",
    "float": {
     "FRAN UYG55IVLL5K5": {
@@ -5959,6 +6639,9 @@
    "status": "linked"
   },
   "1401106": {
+   "all_names": [
+    "MF Global Holdings Ltd."
+   ],
    "first_filed": "2010-09-02",
    "float": {
     "MF TUEMONCHKMLH": {
@@ -5986,6 +6669,9 @@
    "status": "linked"
   },
   "1401923": {
+   "all_names": [
+    "MAP Pharmaceuticals, Inc."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "MAPP TWJFJXVNJH45": {
@@ -6012,6 +6698,9 @@
    "status": "linked"
   },
   "1405073": {
+   "all_names": [
+    "Approach Resources Inc"
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "AREX TXGWR4BE54KL": {
@@ -6051,6 +6740,9 @@
    "status": "linked"
   },
   "1410172": {
+   "all_names": [
+    "Rubicon Technology, Inc."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "RBCN TXOSBV8QR5UT": {
@@ -6086,6 +6778,9 @@
    "status": "linked"
   },
   "1411906": {
+   "all_names": [
+    "Ampio Pharmaceuticals, Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "AMPE UWP4JJGSOVAD": {
@@ -6114,6 +6809,10 @@
    "status": "linked"
   },
   "1415020": {
+   "all_names": [
+    "Thompson Creek Metals CO Inc.",
+    "Thompson Creek Metals Co Inc."
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "TC TY1L52ZXQYXX": {
@@ -6137,8 +6836,7 @@
    },
    "last_filed": "2016-08-08",
    "names": [
-    "Thompson Creek Metals CO Inc.",
-    "Thompson Creek Metals Co Inc."
+    "Thompson Creek Metals CO Inc."
    ],
    "sic_at_filing": [
     1000
@@ -6146,6 +6844,9 @@
    "status": "linked"
   },
   "1415277": {
+   "all_names": [
+    "1st United Bancorp, Inc."
+   ],
    "first_filed": "2011-07-27",
    "float": {
     "FUBC UG2GQP2665PH": {
@@ -6170,6 +6871,9 @@
    "status": "linked"
   },
   "1418100": {
+   "all_names": [
+    "Avaya Holdings Corp."
+   ],
    "first_filed": "2018-03-02",
    "float": {
     "AVYA WRAQ376SZZ39": {
@@ -6197,6 +6901,9 @@
    "status": "linked"
   },
   "14195": {
+   "all_names": [
+    "BRIGGS & STRATTON CORP"
+   ],
    "first_filed": "2010-11-03",
    "float": {
     "BGG R735QTJ8XC9X": {
@@ -6254,6 +6961,9 @@
    "status": "linked"
   },
   "1422105": {
+   "all_names": [
+    "Noranda Aluminum Holding CORP"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "NOR UMKT4Y4CDPWL": {
@@ -6281,6 +6991,9 @@
    "status": "linked"
   },
   "1430259": {
+   "all_names": [
+    "Carey Watermark Investors Inc"
+   ],
    "first_filed": "2011-08-12",
    "hits": {
     "CWI TPEFVJELKK85": [
@@ -6329,6 +7042,9 @@
    "status": "linked"
   },
   "1431372": {
+   "all_names": [
+    "Gastar Exploration Inc."
+   ],
    "first_filed": "2014-03-13",
    "hits": {
     "GST TF38CAHYQ4PX": [
@@ -6346,6 +7062,9 @@
    "status": "linked"
   },
   "1436304": {
+   "all_names": [
+    "KYTHERA BIOPHARMACEUTICALS INC"
+   ],
    "first_filed": "2012-12-03",
    "float": {
     "KYTH VAO9ZBE1SEAT": {
@@ -6378,6 +7097,9 @@
    "status": "linked"
   },
   "1438231": {
+   "all_names": [
+    "Digimarc CORP"
+   ],
    "first_filed": "2011-07-28",
    "float": {
     "DMRC U6VMJA5GGNS5": {
@@ -6410,6 +7132,9 @@
    "status": "linked"
   },
   "1440024": {
+   "all_names": [
+    "Roadrunner Transportation Systems, Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "RRTS UMJTOUR6AYQT": {
@@ -6446,6 +7171,9 @@
    "status": "linked"
   },
   "1441849": {
+   "all_names": [
+    "CLOUD PEAK ENERGY INC."
+   ],
    "first_filed": "2011-08-03",
    "float": {
     "CLD UHSHWL3SZOTH": {
@@ -6495,6 +7223,9 @@
    "status": "linked"
   },
   "1449732": {
+   "all_names": [
+    "Willbros Group, Inc.\\NEW\\"
+   ],
    "first_filed": "2011-08-03",
    "float": {
     "WG R735QTJ8XC9X": {
@@ -6529,6 +7260,9 @@
    "status": "linked"
   },
   "1452217": {
+   "all_names": [
+    "TPC Group Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "TPCG UMAYO0GNM6AT": {
@@ -6557,6 +7291,9 @@
    "status": "linked"
   },
   "1453090": {
+   "all_names": [
+    "Weatherford International Ltd./Switzerland"
+   ],
    "first_filed": "2009-09-01",
    "float": {
     "EVI R735QTJ8XC9X": {
@@ -6598,6 +7335,10 @@
    "status": "linked"
   },
   "1456857": {
+   "all_names": [
+    "MJ Holdings, Inc.",
+    "Securitas EDGAR Filings, Inc."
+   ],
    "first_filed": "2011-09-14",
    "float": {
     "SEF U3EKREP0QUED": {
@@ -6617,7 +7358,6 @@
    },
    "last_filed": "2019-10-16",
    "names": [
-    "MJ Holdings, Inc.",
     "Securitas EDGAR Filings, Inc."
    ],
    "sic_at_filing": [
@@ -6626,6 +7366,9 @@
    "status": "rejected: float evidence contradicts (0.01)"
   },
   "1457612": {
+   "all_names": [
+    "GENOCEA BIOSCIENCES, INC."
+   ],
    "first_filed": "2014-05-09",
    "float": {
     "GNCA VNUVGDPEO1NP": {
@@ -6656,6 +7399,10 @@
    "status": "linked"
   },
   "1461993": {
+   "all_names": [
+    "CEMPRA, INC.",
+    "MELINTA THERAPEUTICS, INC. /NEW/"
+   ],
    "first_filed": "2012-05-10",
    "float": {
     "CEMP V3T4RUKOL10L": {
@@ -6691,6 +7438,9 @@
    "status": "linked"
   },
   "1466301": {
+   "all_names": [
+    "Clovis Oncology, Inc."
+   ],
    "first_filed": "2012-05-11",
    "float": {
     "CLVS V1NCGGOCJFC5": {
@@ -6739,6 +7489,10 @@
    "status": "linked"
   },
   "1467076": {
+   "all_names": [
+    "Colony Capital, Inc.",
+    "Colony Financial, Inc."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "CLNY UG8DF996MOO5": {
@@ -6784,6 +7538,9 @@
    "status": "linked"
   },
   "1469510": {
+   "all_names": [
+    "Resolute Energy Corp"
+   ],
    "first_filed": "2011-08-08",
    "hits": {
     "REN UGCB7MPUXPB9": [
@@ -6861,6 +7618,9 @@
    "status": "ambiguous: several securities at the same time"
   },
   "1471261": {
+   "all_names": [
+    "Cobalt International Energy, Inc."
+   ],
    "first_filed": "2011-07-27",
    "float": {
     "CIE UII3J0M6ZAZP": {
@@ -6902,6 +7662,10 @@
    "status": "linked"
   },
   "1472595": {
+   "all_names": [
+    "Accretive Health, Inc.",
+    "R1 RCM INC."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "AH UMQPTIBCU8V9": {
@@ -6922,8 +7686,7 @@
    },
    "last_filed": "2019-08-06",
    "names": [
-    "Accretive Health, Inc.",
-    "R1 RCM INC."
+    "Accretive Health, Inc."
    ],
    "sic_at_filing": [
     8741
@@ -6931,6 +7694,9 @@
    "status": "linked"
   },
   "1473597": {
+   "all_names": [
+    "STR HOLDINGS, INC."
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "STRI UHEPN9ZFX4KL": {
@@ -6955,6 +7721,9 @@
    "status": "linked"
   },
   "1489137": {
+   "all_names": [
+    "Molycorp, Inc."
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "MCP UONN41X6723P": {
@@ -6990,6 +7759,9 @@
    "status": "linked"
   },
   "1491675": {
+   "all_names": [
+    "COCA-COLA ENTERPRISES, INC."
+   ],
    "first_filed": "2010-10-28",
    "float": {
     "CCE R735QTJ8XC9X": {
@@ -7035,6 +7807,10 @@
    "status": "linked"
   },
   "1493566": {
+   "all_names": [
+    "OTONOMY, INC.",
+    "Otonomy, Inc."
+   ],
    "first_filed": "2014-11-12",
    "float": {
     "OTIC VT0YY1UB4MZP": {
@@ -7072,6 +7848,9 @@
    "status": "linked"
   },
   "1496631": {
+   "all_names": [
+    "First NBC Bank Holding Co"
+   ],
    "first_filed": "2013-06-24",
    "float": {
     "NBCB VGG1B1KNXL5X": {
@@ -7096,6 +7875,9 @@
    "status": "linked"
   },
   "1496671": {
+   "all_names": [
+    "Calithera Biosciences, Inc."
+   ],
    "first_filed": "2014-11-14",
    "float": {
     "CALA VUE7AQ4QYD0L": {
@@ -7138,6 +7920,9 @@
    "status": "linked"
   },
   "1498301": {
+   "all_names": [
+    "Ascena Retail Group, Inc."
+   ],
    "first_filed": "2011-03-10",
    "float": {
     "DBRN R735QTJ8XC9X": {
@@ -7185,6 +7970,10 @@
    "status": "linked"
   },
   "1498622": {
+   "all_names": [
+    "Easy Organic Cookery, Inc.",
+    "New York Sub Co"
+   ],
    "first_filed": "2011-09-27",
    "float": {
     "EOC R735QTJ8XC9X": {
@@ -7203,8 +7992,7 @@
    },
    "last_filed": "2015-08-12",
    "names": [
-    "Easy Organic Cookery, Inc.",
-    "New York Sub Co"
+    "Easy Organic Cookery, Inc."
    ],
    "sic_at_filing": [
     5960
@@ -7212,6 +8000,9 @@
    "status": "rejected: float evidence contradicts (0.00)"
   },
   "1498828": {
+   "all_names": [
+    "Howard Hughes Corp"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "HHC URI1LRYQ5ISL": {
@@ -7266,6 +8057,10 @@
    "status": "linked"
   },
   "1499912": {
+   "all_names": [
+    "FXCM Inc.",
+    "Global Brokerage, Inc."
+   ],
    "first_filed": "2011-08-15",
    "hits": {
     "FXCM US3PFU0FU4BP": [
@@ -7293,8 +8088,7 @@
    },
    "last_filed": "2017-11-14",
    "names": [
-    "FXCM Inc.",
-    "Global Brokerage, Inc."
+    "FXCM Inc."
    ],
    "sic_at_filing": [
     6200
@@ -7302,6 +8096,9 @@
    "status": "linked"
   },
   "1502034": {
+   "all_names": [
+    "GNC HOLDINGS, INC."
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "GNC UVDV31WP0NL1": {
@@ -7352,6 +8149,9 @@
    "status": "linked"
   },
   "1506932": {
+   "all_names": [
+    "Lone Pine Resources Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "LPR UWW0O70Z85ET": {
@@ -7377,6 +8177,9 @@
    "status": "linked"
   },
   "1509273": {
+   "all_names": [
+    "C&J Energy Services, Inc."
+   ],
    "first_filed": "2011-08-31",
    "float": {
     "CJES UYN1A6FS4FOL": {
@@ -7413,7 +8216,78 @@
    ],
    "status": "linked"
   },
+  "1512077": {
+   "all_names": [
+    "Global Eagle Acquisition Corp.",
+    "Global Eagle Entertainment Inc."
+   ],
+   "first_filed": "2011-09-01",
+   "float": {
+    "EAGL UWX04AE5AWKL": {
+     "check": "ok",
+     "median": 0.611,
+     "n": 5
+    }
+   },
+   "hits": {
+    "EAGL UWX04AE5AWKL": [
+     "2013-11-12",
+     "2014-03-25",
+     "2014-05-12",
+     "2014-05-28",
+     "2014-08-11",
+     "2014-11-07",
+     "2015-03-17",
+     "2015-05-08",
+     "2015-08-07",
+     "2015-11-09",
+     "2016-03-17"
+    ]
+   },
+   "last_filed": "2019-08-09",
+   "names": [
+    "Global Eagle Entertainment Inc."
+   ],
+   "sic_at_filing": [
+    4899,
+    6770
+   ],
+   "status": "linked"
+  },
+  "1514732": {
+   "all_names": [
+    "SAExploration Holdings, Inc.",
+    "Trio Merger Corp."
+   ],
+   "first_filed": "2011-08-15",
+   "hits": {
+    "TRIO V5BACZOYSIUD": [
+     "2016-08-12",
+     "2016-11-04",
+     "2017-03-15",
+     "2017-05-05",
+     "2017-08-21",
+     "2017-11-08",
+     "2018-03-16",
+     "2018-05-15",
+     "2018-08-09",
+     "2018-11-13"
+    ]
+   },
+   "last_filed": "2019-05-14",
+   "names": [
+    "SAExploration Holdings, Inc."
+   ],
+   "sic_at_filing": [
+    1382,
+    6770
+   ],
+   "status": "linked"
+  },
   "1515317": {
+   "all_names": [
+    "MAGELLAN GOLD Corp"
+   ],
    "first_filed": "2011-12-08",
    "float": {
     "MGC TYQ7BF55NTYD": {
@@ -7446,6 +8320,9 @@
    "status": "rejected: float evidence contradicts (0.00)"
   },
   "1516479": {
+   "all_names": [
+    "Insys Therapeutics, Inc."
+   ],
    "first_filed": "2013-06-05",
    "float": {
     "INSY VG85QANBBJVP": {
@@ -7494,6 +8371,9 @@
    "status": "linked"
   },
   "1518222": {
+   "all_names": [
+    "Bankrate, Inc."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "RATE UXHOI92OWQXX": {
@@ -7538,6 +8418,9 @@
    "status": "linked"
   },
   "1518715": {
+   "all_names": [
+    "HomeStreet, Inc."
+   ],
    "first_filed": "2012-05-14",
    "float": {
     "HMST V400WI4V4B51": {
@@ -7574,6 +8457,10 @@
    "status": "linked"
   },
   "1520108": {
+   "all_names": [
+    "Rocap Marketing Inc.",
+    "Spiral Toys Inc."
+   ],
    "first_filed": "2013-08-22",
    "float": {
     "RCAP VH5MXH31X7C5": {
@@ -7592,8 +8479,7 @@
    },
    "last_filed": "2016-08-15",
    "names": [
-    "Rocap Marketing Inc.",
-    "Spiral Toys Inc."
+    "Rocap Marketing Inc."
    ],
    "sic_at_filing": [
     2300,
@@ -7602,6 +8488,9 @@
    "status": "rejected: float evidence contradicts (0.03)"
   },
   "1528837": {
+   "all_names": [
+    "Sanchez Energy Corp"
+   ],
    "first_filed": "2012-06-07",
    "float": {
     "SN V2EWZ2X2OJTX": {
@@ -7648,6 +8537,9 @@
    "status": "linked"
   },
   "1529979": {
+   "all_names": [
+    "FX Alliance Inc."
+   ],
    "first_filed": "2012-05-08",
    "hits": {
     "FX V3Z1GERP1JZ9": [
@@ -7665,6 +8557,10 @@
    "status": "linked"
   },
   "1532424": {
+   "all_names": [
+    "CANADIAN CANNABIS CORP.",
+    "GOLD PARTY PAYDAY INC"
+   ],
    "first_filed": "2012-09-13",
    "float": {
     "RRUS SG8ST6GX8Y91": {
@@ -7682,7 +8578,6 @@
    },
    "last_filed": "2018-11-15",
    "names": [
-    "CANADIAN CANNABIS CORP.",
     "GOLD PARTY PAYDAY INC"
    ],
    "sic_at_filing": [
@@ -7690,7 +8585,34 @@
    ],
    "status": "rejected: float evidence contradicts (0.00)"
   },
+  "1532930": {
+   "all_names": [
+    "CHESAPEAKE OILFIELD OPERATING LLC",
+    "Seventy Seven Energy Inc."
+   ],
+   "first_filed": "2013-08-14",
+   "hits": {
+    "SSE VRUMQ141U739": [
+     "2014-08-05",
+     "2014-10-30",
+     "2015-03-02",
+     "2015-05-05",
+     "2015-07-29"
+    ]
+   },
+   "last_filed": "2017-02-13",
+   "names": [
+    "Seventy Seven Energy Inc."
+   ],
+   "sic_at_filing": [
+    1389
+   ],
+   "status": "linked"
+  },
   "1533924": {
+   "all_names": [
+    "Midstates Petroleum Company, Inc."
+   ],
    "first_filed": "2012-06-01",
    "float": {
     "MPO V5WY71QOH4DH": {
@@ -7722,6 +8644,10 @@
    "status": "linked"
   },
   "1538217": {
+   "all_names": [
+    "SOCIAL REALITY",
+    "SOCIAL REALITY, Inc."
+   ],
    "first_filed": "2012-09-18",
    "float": {
     "SRAX WEOT03JZQ63P": {
@@ -7738,7 +8664,6 @@
    },
    "last_filed": "2019-08-14",
    "names": [
-    "SOCIAL REALITY",
     "SOCIAL REALITY, Inc."
    ],
    "sic_at_filing": [
@@ -7747,6 +8672,9 @@
    "status": "linked"
   },
   "1545158": {
+   "all_names": [
+    "Kraft Foods Group, Inc."
+   ],
    "first_filed": "2012-12-07",
    "float": {
     "KRFT VAFEYH3J3LUT": {
@@ -7780,6 +8708,10 @@
    "status": "linked"
   },
   "1551986": {
+   "all_names": [
+    "INNOVATE BIOPHARMACEUTICALS, INC.",
+    "Monster Digital, Inc."
+   ],
    "first_filed": "2016-08-15",
    "float": {
     "MSDI WBTF2A59OY91": {
@@ -7798,8 +8730,7 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "INNOVATE BIOPHARMACEUTICALS, INC.",
-    "Monster Digital, Inc."
+    "INNOVATE BIOPHARMACEUTICALS, INC."
    ],
    "sic_at_filing": [
     2834,
@@ -7808,6 +8739,9 @@
    "status": "linked"
   },
   "1553588": {
+   "all_names": [
+    "SFX Entertainment, INC"
+   ],
    "first_filed": "2013-12-20",
    "float": {
     "SFXE VKLP996BK9K5": {
@@ -7834,6 +8768,10 @@
    "status": "linked"
   },
   "1555039": {
+   "all_names": [
+    "Altisource Residential Corp",
+    "Front Yard Residential Corp"
+   ],
    "first_filed": "2013-05-09",
    "float": {
     "RESI VCP528GJG86D": {
@@ -7852,8 +8790,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "Altisource Residential Corp",
-    "Front Yard Residential Corp"
+    "Altisource Residential Corp"
    ],
    "sic_at_filing": [
     6500
@@ -7861,6 +8798,9 @@
    "status": "linked"
   },
   "1561092": {
+   "all_names": [
+    "Avangard Capital Group, Inc"
+   ],
    "first_filed": "2013-03-25",
    "float": {
     "ACG R735QTJ8XC9X": {
@@ -7892,6 +8832,9 @@
    "status": "rejected: float evidence contradicts (0.00)"
   },
   "1563855": {
+   "all_names": [
+    "SOPHIRIS BIO INC."
+   ],
    "first_filed": "2013-11-14",
    "float": {
     "SPHS VJ3JO421CRQD": {
@@ -7917,6 +8860,9 @@
    "status": "linked"
   },
   "1567892": {
+   "all_names": [
+    "Mallinckrodt plc"
+   ],
    "first_filed": "2013-08-12",
    "float": {
     "MNK VHV8JWLFWTID": {
@@ -7959,6 +8905,9 @@
    "status": "linked"
   },
   "1568319": {
+   "all_names": [
+    "Voltari Corp"
+   ],
    "first_filed": "2013-05-15",
    "float": {
     "MOTR UNJ9S7X924IT": {
@@ -7988,6 +8937,9 @@
    "status": "linked"
   },
   "1568832": {
+   "all_names": [
+    "RCS Capital Corp"
+   ],
    "first_filed": "2013-08-02",
    "float": {
     "RCAP VH5MXH31X7C5": {
@@ -8017,6 +8969,10 @@
    "status": "rejected: float evidence contradicts (0.09)"
   },
   "1569329": {
+   "all_names": [
+    "AL International, Inc.",
+    "Youngevity International, Inc."
+   ],
    "first_filed": "2013-05-15",
    "float": {
     "YGYI WLJY7KDCXJDX": {
@@ -8033,7 +8989,6 @@
    },
    "last_filed": "2019-08-14",
    "names": [
-    "AL International, Inc.",
     "Youngevity International, Inc."
    ],
    "sic_at_filing": [
@@ -8042,6 +8997,9 @@
    "status": "linked"
   },
   "1571384": {
+   "all_names": [
+    "SIGMABROADBAND CO."
+   ],
    "first_filed": "2014-05-08",
    "float": {
     "SIGM R735QTJ8XC9X": {
@@ -8068,6 +9026,9 @@
    "status": "rejected: float evidence contradicts (0.10)"
   },
   "1575360": {
+   "all_names": [
+    "FTD Companies, Inc."
+   ],
    "first_filed": "2013-11-06",
    "float": {
     "FTDDV VKMOPCJHN0PX": {
@@ -8100,6 +9061,10 @@
    "status": "linked"
   },
   "1575828": {
+   "all_names": [
+    "FRANK'S INTERNATIONAL N.V.",
+    "Frank's International N.V."
+   ],
    "first_filed": "2013-09-18",
    "float": {
     "FI VIXMZJV0W8RP": {
@@ -8147,6 +9112,10 @@
    "status": "linked"
   },
   "1579823": {
+   "all_names": [
+    "American Brewing Company, Inc.",
+    "New Age Beverages Corp"
+   ],
    "first_filed": "2014-05-08",
    "float": {
     "NBEV WI2WFOWX7Q05": {
@@ -8167,7 +9136,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "American Brewing Company, Inc.",
     "New Age Beverages Corp"
    ],
    "sic_at_filing": [
@@ -8176,6 +9144,10 @@
    "status": "linked"
   },
   "1580185": {
+   "all_names": [
+    "J.G. Wentworth Co",
+    "JGWPT Holdings Inc."
+   ],
    "first_filed": "2014-01-22",
    "float": {
     "JGW VLF8O25DUWDH": {
@@ -8193,7 +9165,6 @@
    },
    "last_filed": "2018-04-03",
    "names": [
-    "J.G. Wentworth Co",
     "JGWPT Holdings Inc."
    ],
    "sic_at_filing": [
@@ -8202,6 +9173,9 @@
    "status": "linked"
   },
   "1581164": {
+   "all_names": [
+    "Extended Stay America, Inc."
+   ],
    "first_filed": "2013-12-18",
    "float": {
     "STAY VLK5WIZ88O6D": {
@@ -8246,6 +9220,10 @@
    "status": "linked"
   },
   "1586105": {
+   "all_names": [
+    "Egalet Corp",
+    "Zyla Life Sciences"
+   ],
    "first_filed": "2014-06-11",
    "float": {
     "EGLT VNVUWH2KQSTH": {
@@ -8262,8 +9240,7 @@
    },
    "last_filed": "2019-08-13",
    "names": [
-    "Egalet Corp",
-    "Zyla Life Sciences"
+    "Egalet Corp"
    ],
    "sic_at_filing": [
     2834
@@ -8271,6 +9248,9 @@
    "status": "linked"
   },
   "1587221": {
+   "all_names": [
+    "Zosano Pharma Corp"
+   ],
    "first_filed": "2015-05-12",
    "float": {
     "ZSAN VXLELNXHWMSL": {
@@ -8299,6 +9279,9 @@
    "status": "linked"
   },
   "1591517": {
+   "all_names": [
+    "Time Inc."
+   ],
    "first_filed": "2014-06-11",
    "float": {
     "TIME VR8YVZ2C5LK5": {
@@ -8336,6 +9319,9 @@
    "status": "linked"
   },
   "1592058": {
+   "all_names": [
+    "Party City Holdco Inc."
+   ],
    "first_filed": "2015-05-15",
    "float": {
     "PRTY VZR6X1TTY8H1": {
@@ -8375,6 +9361,9 @@
    "status": "linked"
   },
   "1593034": {
+   "all_names": [
+    "Endo International plc"
+   ],
    "first_filed": "2014-05-09",
    "float": {
     "ENDP RWGWLKZVXH7P": {
@@ -8418,6 +9407,10 @@
    "status": "linked"
   },
   "1593195": {
+   "all_names": [
+    "Tribune Publishing Co",
+    "tronc, Inc."
+   ],
    "first_filed": "2014-08-21",
    "hits": {
     "TPUB VST3DAWYILPH": [
@@ -8460,6 +9453,9 @@
    "status": "ambiguous: several securities at the same time"
   },
   "1594590": {
+   "all_names": [
+    "PARAGON OFFSHORE PLC"
+   ],
    "first_filed": "2014-08-29",
    "float": {
     "PGN VSS3X7JSFUJP": {
@@ -8484,6 +9480,11 @@
    "status": "linked"
   },
   "1594686": {
+   "all_names": [
+    "WASHINGTON PRIME GROUP INC.",
+    "WP Glimcher Inc.",
+    "Washington Prime Group Inc."
+   ],
    "first_filed": "2014-06-13",
    "float": {
     "WPG VQY4YY1HBASL": {
@@ -8530,6 +9531,9 @@
    "status": "linked"
   },
   "1595585": {
+   "all_names": [
+    "Tricida, Inc."
+   ],
    "first_filed": "2018-08-10",
    "float": {
     "TCDA WVP9292ZBFXH": {
@@ -8556,6 +9560,9 @@
    "status": "linked"
   },
   "1596946": {
+   "all_names": [
+    "Quotient Ltd"
+   ],
    "first_filed": "2014-08-06",
    "float": {
     "QTNT VPRSQXB80UW5": {
@@ -8584,6 +9591,10 @@
    "status": "linked"
   },
   "1597313": {
+   "all_names": [
+    "Mirax Corp",
+    "ViewRay, Inc."
+   ],
    "first_filed": "2014-07-14",
    "float": {
     "VRAY W9BTDRUWQAN9": {
@@ -8609,7 +9620,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "Mirax Corp",
     "ViewRay, Inc."
    ],
    "sic_at_filing": [
@@ -8619,6 +9629,9 @@
    "status": "linked"
   },
   "1605674": {
+   "all_names": [
+    "Stallion Synergies, Inc"
+   ],
    "first_filed": "2014-11-10",
    "hits": {
     "STGS SB7MJZ5V64PX": [
@@ -8639,6 +9652,10 @@
    "status": "ambiguous: security STGS SB7MJZ5V64PX claimed by overlapping registrants"
   },
   "1614556": {
+   "all_names": [
+    "ASTERIKO CORP.",
+    "Star Alliance International Corp."
+   ],
    "first_filed": "2015-02-23",
    "float": {
     "APT R735QTJ8XC9X": {
@@ -8657,7 +9674,6 @@
    },
    "last_filed": "2019-05-20",
    "names": [
-    "ASTERIKO CORP.",
     "Star Alliance International Corp."
    ],
    "sic_at_filing": [
@@ -8666,6 +9682,10 @@
    "status": "rejected: float evidence contradicts (0.07)"
   },
   "1615817": {
+   "all_names": [
+    "C&J Energy Services Ltd.",
+    "C&J Energy Services, Inc."
+   ],
    "first_filed": "2015-05-11",
    "float": {
     "CJES UYN1A6FS4FOL": {
@@ -8684,8 +9704,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "C&J Energy Services Ltd.",
-    "C&J Energy Services, Inc."
+    "C&J Energy Services Ltd."
    ],
    "sic_at_filing": [
     1389
@@ -8693,6 +9712,10 @@
    "status": "linked"
   },
   "1620280": {
+   "all_names": [
+    "COMMUNICATIONS SALES & LEASING, INC.",
+    "Uniti Group Inc."
+   ],
    "first_filed": "2015-05-13",
    "float": {
     "CSALV VZV4PFAI9945": {
@@ -8733,6 +9756,9 @@
    "status": "linked"
   },
   "1621227": {
+   "all_names": [
+    "Adaptimmune Therapeutics PLC"
+   ],
    "first_filed": "2016-05-12",
    "float": {
     "ADAP W0AVUX57HBOL": {
@@ -8768,6 +9794,9 @@
    "status": "rejected: float evidence contradicts (0.14)"
   },
   "1623613": {
+   "all_names": [
+    "Mylan N.V."
+   ],
    "first_filed": "2015-05-08",
    "float": {
     "MYL R735QTJ8XC9X": {
@@ -8807,6 +9836,10 @@
    "status": "linked"
   },
   "1626696": {
+   "all_names": [
+    "STAR WEALTH GROUP INC.",
+    "Terafox Corp"
+   ],
    "first_filed": "2015-02-11",
    "float": {
     "APT R735QTJ8XC9X": {
@@ -8824,8 +9857,7 @@
    },
    "last_filed": "2019-08-14",
    "names": [
-    "STAR WEALTH GROUP INC.",
-    "Terafox Corp"
+    "STAR WEALTH GROUP INC."
    ],
    "sic_at_filing": [
     2750
@@ -8833,6 +9865,10 @@
    "status": "rejected: float evidence contradicts (0.09)"
   },
   "1629261": {
+   "all_names": [
+    "Long Blockchain Corp.",
+    "Long Island Iced Tea Corp."
+   ],
    "first_filed": "2015-08-13",
    "float": {
     "LTEA WCLZ0ZR5WTWL": {
@@ -8858,6 +9894,9 @@
    "status": "linked"
   },
   "1635718": {
+   "all_names": [
+    "Gannett Co., Inc."
+   ],
    "first_filed": "2015-08-06",
    "float": {
     "GCI W1S1ZYWBM2CL": {
@@ -8896,6 +9935,10 @@
    "status": "linked"
   },
   "1636050": {
+   "all_names": [
+    "Axovant Gene Therapies Ltd.",
+    "Axovant Sciences Ltd."
+   ],
    "first_filed": "2015-08-11",
    "float": {
     "AXON W1ABYABA8HGL": {
@@ -8921,7 +9964,6 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "Axovant Gene Therapies Ltd.",
     "Axovant Sciences Ltd."
    ],
    "sic_at_filing": [
@@ -8930,6 +9972,9 @@
    "status": "linked"
   },
   "1639327": {
+   "all_names": [
+    "Gushen, Inc"
+   ],
    "first_filed": "2015-09-10",
    "float": {
     "GUSH W0WJOZ6X5X7P": {
@@ -8957,6 +10002,10 @@
    "status": "rejected: float evidence contradicts (0.00)"
   },
   "1641640": {
+   "all_names": [
+    "Nabriva Therapeutics AG",
+    "Nabriva Therapeutics plc"
+   ],
    "first_filed": "2017-03-24",
    "float": {
     "NBRV W3ZT7JIZT6CL": {
@@ -8973,7 +10022,6 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "Nabriva Therapeutics AG",
     "Nabriva Therapeutics plc"
    ],
    "sic_at_filing": [
@@ -8982,6 +10030,10 @@
    "status": "linked"
   },
   "1645494": {
+   "all_names": [
+    "ARRIS International Ltd",
+    "ARRIS International plc"
+   ],
    "first_filed": "2015-11-16",
    "float": {
     "ANTC R735QTJ8XC9X": {
@@ -9009,7 +10061,6 @@
    },
    "last_filed": "2019-03-01",
    "names": [
-    "ARRIS International Ltd",
     "ARRIS International plc"
    ],
    "sic_at_filing": [
@@ -9018,6 +10069,9 @@
    "status": "linked"
   },
   "1646587": {
+   "all_names": [
+    "NorthStar Realty Europe Corp."
+   ],
    "first_filed": "2015-12-03",
    "float": {
     "CLNY WVNA62CN5XLX": {
@@ -9044,6 +10098,9 @@
    "status": "rejected: float evidence contradicts (2.11)"
   },
   "1648893": {
+   "all_names": [
+    "Nuvectra Corp"
+   ],
    "first_filed": "2016-05-11",
    "float": {
     "NVTR W8W28A07I82T": {
@@ -9069,6 +10126,9 @@
    "status": "linked"
   },
   "1650445": {
+   "all_names": [
+    "Quorum Health Corp"
+   ],
    "first_filed": "2016-06-09",
    "float": {
     "QHC WA7BORKB6FS5": {
@@ -9093,6 +10153,10 @@
    "status": "linked"
   },
   "1650962": {
+   "all_names": [
+    "Manitowoc Foodservice, Inc.",
+    "Welbilt, Inc."
+   ],
    "first_filed": "2016-05-16",
    "float": {
     "MFS W8L8B8ZCNXB9": {
@@ -9134,7 +10198,33 @@
    ],
    "status": "linked"
   },
+  "1653247": {
+   "all_names": [
+    "Landcadia Holdings, Inc.",
+    "Waitr Holdings Inc."
+   ],
+   "first_filed": "2016-08-15",
+   "hits": {
+    "LCA WCE3G8TTASMD": [
+     "2019-03-15",
+     "2019-05-10",
+     "2019-08-08"
+    ]
+   },
+   "last_filed": "2019-08-08",
+   "names": [
+    "Waitr Holdings Inc."
+   ],
+   "sic_at_filing": [
+    6770,
+    7389
+   ],
+   "status": "linked"
+  },
   "1655075": {
+   "all_names": [
+    "Armstrong Flooring, Inc."
+   ],
    "first_filed": "2016-05-09",
    "float": {
     "AFI W9FR65BL1BAD": {
@@ -9164,6 +10254,9 @@
    "status": "linked"
   },
   "1660690": {
+   "all_names": [
+    "Versum Materials, Inc."
+   ],
    "first_filed": "2016-12-21",
    "float": {
     "VSM WEEYJ5WAYMHX": {
@@ -9196,7 +10289,35 @@
    ],
    "status": "linked"
   },
+  "1665300": {
+   "all_names": [
+    "Phunware, Inc.",
+    "Stellar Acquisition III Inc."
+   ],
+   "first_filed": "2016-10-14",
+   "hits": {
+    "PHUN X0QFBGE1E9GL": [
+     "2019-03-06",
+     "2019-03-20",
+     "2019-05-15",
+     "2019-08-13"
+    ]
+   },
+   "last_filed": "2019-08-13",
+   "names": [
+    "Phunware, Inc."
+   ],
+   "sic_at_filing": [
+    6770,
+    7374
+   ],
+   "status": "linked"
+  },
   "1668105": {
+   "all_names": [
+    "Talend S.A.",
+    "Talend SA"
+   ],
    "first_filed": "2019-02-28",
    "float": {
     "TLND WCLZ0ZR5WTWL": {
@@ -9213,7 +10334,6 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "Talend S.A.",
     "Talend SA"
    ],
    "sic_at_filing": [
@@ -9222,6 +10342,9 @@
    "status": "linked"
   },
   "1669812": {
+   "all_names": [
+    "LSC Communications, Inc."
+   ],
    "first_filed": "2016-11-10",
    "float": {
     "LKSD WEEYJ5WAYMHX": {
@@ -9254,6 +10377,9 @@
    "status": "linked"
   },
   "1674365": {
+   "all_names": [
+    "Aptinyx Inc."
+   ],
    "first_filed": "2018-08-14",
    "float": {
     "APTX WVJCDOVYUWYT": {
@@ -9278,6 +10404,9 @@
    "status": "linked"
   },
   "1688476": {
+   "all_names": [
+    "Keane Group, Inc."
+   ],
    "first_filed": "2017-05-05",
    "float": {
     "FRAC WHEA9CRPAUZP": {
@@ -9309,6 +10438,9 @@
    "status": "linked"
   },
   "1690585": {
+   "all_names": [
+    "Magenta Therapeutics, Inc."
+   ],
    "first_filed": "2018-08-09",
    "float": {
     "MGTA WVJCDOVYUWYT": {
@@ -9333,6 +10465,9 @@
    "status": "linked"
   },
   "1705682": {
+   "all_names": [
+    "Venator Materials PLC"
+   ],
    "first_filed": "2017-08-28",
    "float": {
     "VNTR WMQAFL3M7ZAD": {
@@ -9363,6 +10498,9 @@
    "status": "linked"
   },
   "1707092": {
+   "all_names": [
+    "Delphi Technologies PLC"
+   ],
    "first_filed": "2018-02-26",
    "float": {
     "DLPH WQ4DV6GJPJ6T": {
@@ -9390,6 +10528,9 @@
    "status": "linked"
   },
   "1709401": {
+   "all_names": [
+    "Rubius Therapeutics, Inc."
+   ],
    "first_filed": "2018-08-31",
    "float": {
     "RUBY WW9XG7RIXAAT": {
@@ -9417,6 +10558,9 @@
    "status": "linked"
   },
   "1711675": {
+   "all_names": [
+    "Nightstar Therapeutics plc"
+   ],
    "first_filed": "2019-03-18",
    "hits": {
     "NITE WO9FGTL2I89X": [
@@ -9434,6 +10578,10 @@
    "status": "linked"
   },
   "1722287": {
+   "all_names": [
+    "Covia Holdings Corp",
+    "Unimin Corp"
+   ],
    "first_filed": "2018-05-24",
    "float": {
     "FMSA VUF6QTHX146D": {
@@ -9451,8 +10599,7 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "Covia Holdings Corp",
-    "Unimin Corp"
+    "Covia Holdings Corp"
    ],
    "sic_at_filing": [
     1400
@@ -9460,6 +10607,9 @@
    "status": "rejected: float evidence contradicts (15.50)"
   },
   "1724670": {
+   "all_names": [
+    "Perspecta Inc."
+   ],
    "first_filed": "2018-08-14",
    "float": {
     "PRSP WUZNFTKLBTR9": {
@@ -9487,6 +10637,9 @@
    "status": "linked"
   },
   "1725526": {
+   "all_names": [
+    "HighPoint Resources Corp"
+   ],
    "first_filed": "2018-05-08",
    "float": {
     "HPR WSZRSZV9QR1H": {
@@ -9514,6 +10667,9 @@
    "status": "linked"
   },
   "1733186": {
+   "all_names": [
+    "Veoneer, Inc."
+   ],
    "first_filed": "2018-07-27",
    "float": {
     "VNE WVU6APWTP7QD": {
@@ -9540,6 +10696,9 @@
    "status": "linked"
   },
   "1735184": {
+   "all_names": [
+    "Retail Value Inc."
+   ],
    "first_filed": "2018-08-10",
    "float": {
     "RVI WVU6APWTP7QD": {
@@ -9566,6 +10725,9 @@
    "status": "linked"
   },
   "1735707": {
+   "all_names": [
+    "Garrett Motion Inc."
+   ],
    "first_filed": "2018-11-06",
    "float": {
     "GTX WYBRZ876NVC5": {
@@ -9591,6 +10753,9 @@
    "status": "linked"
   },
   "1742924": {
+   "all_names": [
+    "Livent Corp."
+   ],
    "first_filed": "2018-11-06",
    "float": {
     "LTHM WYLMG5UVFEXX": {
@@ -9617,6 +10782,9 @@
    "status": "linked"
   },
   "1752836": {
+   "all_names": [
+    "COVETRUS, INC."
+   ],
    "first_filed": "2019-06-07",
    "float": {
     "CVETV X1STR3NMDOPX": {
@@ -9640,7 +10808,39 @@
    ],
    "status": "linked"
   },
+  "17797": {
+   "all_names": [
+    "CAROLINA POWER & LIGHT CO",
+    "DUKE ENERGY PROGRESS, LLC."
+   ],
+   "first_filed": "2009-11-06",
+   "hits": {
+    "CPL R735QTJ8XC9X": [
+     "2009-11-06",
+     "2010-02-26",
+     "2010-05-10",
+     "2010-11-08",
+     "2011-02-28",
+     "2011-05-09",
+     "2011-08-08",
+     "2011-11-08",
+     "2012-02-29",
+     "2012-08-08"
+    ]
+   },
+   "last_filed": "2016-05-05",
+   "names": [
+    "CAROLINA POWER & LIGHT CO"
+   ],
+   "sic_at_filing": [
+    4911
+   ],
+   "status": "ambiguous: security CPL R735QTJ8XC9X claimed by overlapping registrants"
+  },
   "18169": {
+   "all_names": [
+    "DOLE FOOD CO INC"
+   ],
    "first_filed": "2011-07-28",
    "float": {
     "DOLE UH0XDYV2UKBP": {
@@ -9672,6 +10872,10 @@
    "status": "linked"
   },
   "18172": {
+   "all_names": [
+    "A. M. Castle & Co.",
+    "CASTLE A M & CO"
+   ],
    "first_filed": "2011-08-03",
    "float": {
     "CAS R735QTJ8XC9X": {
@@ -9690,7 +10894,6 @@
    },
    "last_filed": "2019-08-14",
    "names": [
-    "A. M. Castle & Co.",
     "CASTLE A M & CO"
    ],
    "sic_at_filing": [
@@ -9699,6 +10902,9 @@
    "status": "linked"
   },
   "18808": {
+   "all_names": [
+    "CENTRAL VERMONT PUBLIC SERVICE CORP"
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "CV R735QTJ8XC9X": {
@@ -9723,6 +10929,9 @@
    "status": "linked"
   },
   "19446": {
+   "all_names": [
+    "CANTEL MEDICAL CORP"
+   ],
    "first_filed": "2011-12-12",
    "float": {
     "CNTL R735QTJ8XC9X": {
@@ -9769,6 +10978,9 @@
    "status": "linked"
   },
   "201461": {
+   "all_names": [
+    "CITY NATIONAL CORP"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "CYN R735QTJ8XC9X": {
@@ -9813,6 +11025,9 @@
    "status": "linked"
   },
   "20171": {
+   "all_names": [
+    "CHUBB CORP"
+   ],
    "first_filed": "2009-08-10",
    "float": {
     "CB R735QTJ8XC9X": {
@@ -9860,6 +11075,9 @@
    "status": "linked"
   },
   "203248": {
+   "all_names": [
+    "SOUTHERN UNION CO"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "SUG R735QTJ8XC9X": {
@@ -9890,6 +11108,9 @@
    "status": "linked"
   },
   "2034": {
+   "all_names": [
+    "ACETO CORP"
+   ],
    "first_filed": "2011-11-04",
    "float": {
     "ACET R735QTJ8XC9X": {
@@ -9933,6 +11154,9 @@
    "status": "linked"
   },
   "230498": {
+   "all_names": [
+    "Rock-Tenn CO"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "RKT R735QTJ8XC9X": {
@@ -9975,6 +11199,9 @@
    "status": "linked"
   },
   "23082": {
+   "all_names": [
+    "COMPUTER SCIENCES CORP"
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "CSC R735QTJ8XC9X": {
@@ -10029,6 +11256,10 @@
    "status": "linked"
   },
   "23666": {
+   "all_names": [
+    "Hillshire Brands Co",
+    "Sara Lee Corp"
+   ],
    "first_filed": "2009-11-05",
    "float": {
     "SLE R735QTJ8XC9X": {
@@ -10072,6 +11303,9 @@
    "status": "linked"
   },
   "23675": {
+   "all_names": [
+    "Con-way Inc."
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "CNF R735QTJ8XC9X": {
@@ -10114,6 +11348,9 @@
    "status": "linked"
   },
   "2491": {
+   "all_names": [
+    "BALLY TECHNOLOGIES, INC."
+   ],
    "first_filed": "2010-11-05",
    "float": {
     "ALLY R735QTJ8XC9X": {
@@ -10153,6 +11390,9 @@
    "status": "linked"
   },
   "278130": {
+   "all_names": [
+    "PIER 1 IMPORTS INC/DE"
+   ],
    "first_filed": "2011-07-05",
    "float": {
     "PIR R735QTJ8XC9X": {
@@ -10202,6 +11442,10 @@
    "status": "linked"
   },
   "28823": {
+   "all_names": [
+    "DIEBOLD INC",
+    "DIEBOLD NIXDORF, Inc"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "DBD R735QTJ8XC9X": {
@@ -10261,6 +11505,9 @@
    "status": "linked"
   },
   "30554": {
+   "all_names": [
+    "DUPONT E I DE NEMOURS & CO"
+   ],
    "first_filed": "2009-07-27",
    "float": {
     "DD R735QTJ8XC9X": {
@@ -10314,6 +11561,9 @@
    "status": "linked"
   },
   "3116": {
+   "all_names": [
+    "AKORN INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "AKRN R735QTJ8XC9X": {
@@ -10366,6 +11616,9 @@
    "status": "linked"
   },
   "316300": {
+   "all_names": [
+    "EXCO RESOURCES INC"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "XCO TG1OZKAVEJC5": {
@@ -10406,6 +11659,9 @@
    "status": "linked"
   },
   "316793": {
+   "all_names": [
+    "INTERNATIONAL RECTIFIER CORP /DE/"
+   ],
    "first_filed": "2010-11-05",
    "float": {
     "IRF R735QTJ8XC9X": {
@@ -10445,6 +11701,9 @@
    "status": "linked"
   },
   "317771": {
+   "all_names": [
+    "TELLABS INC"
+   ],
    "first_filed": "2010-08-10",
    "float": {
     "TLAB R735QTJ8XC9X": {
@@ -10471,6 +11730,9 @@
    "status": "linked"
   },
   "318996": {
+   "all_names": [
+    "KEY ENERGY SERVICES INC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "KEG R735QTJ8XC9X": {
@@ -10512,6 +11774,9 @@
    "status": "linked"
   },
   "319687": {
+   "all_names": [
+    "CONTINENTAL AIRLINES INC /DE/"
+   ],
    "first_filed": "2010-07-23",
    "hits": {
     "CAIB R735QTJ8XC9X": [
@@ -10529,6 +11794,11 @@
    "status": "linked"
   },
   "320017": {
+   "all_names": [
+    "CALADRIUS BIOSCIENCES, INC.",
+    "Caladrius Biosciences, Inc.",
+    "NeoStem, Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "CLBS W17DM07S07Z9": {
@@ -10545,9 +11815,7 @@
    },
    "last_filed": "2019-08-08",
    "names": [
-    "CALADRIUS BIOSCIENCES, INC.",
-    "Caladrius Biosciences, Inc.",
-    "NeoStem, Inc."
+    "CALADRIUS BIOSCIENCES, INC."
    ],
    "sic_at_filing": [
     8090
@@ -10555,6 +11823,10 @@
    "status": "linked"
   },
   "320575": {
+   "all_names": [
+    "PIONEER DRILLING CO",
+    "PIONEER ENERGY SERVICES CORP"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "PDC S2UBRD87R9LX": {
@@ -10608,6 +11880,9 @@
    "status": "linked"
   },
   "34408": {
+   "all_names": [
+    "FAMILY DOLLAR STORES INC"
+   ],
    "first_filed": "2011-01-05",
    "float": {
     "FDO R735QTJ8XC9X": {
@@ -10649,6 +11924,9 @@
    "status": "linked"
   },
   "350077": {
+   "all_names": [
+    "WMS INDUSTRIES INC /DE/"
+   ],
    "first_filed": "2010-11-08",
    "float": {
     "WMS R735QTJ8XC9X": {
@@ -10683,6 +11961,9 @@
    "status": "linked"
   },
   "350832": {
+   "all_names": [
+    "AMERICAN PACIFIC CORP"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "APFC R735QTJ8XC9X": {
@@ -10707,6 +11988,9 @@
    "status": "linked"
   },
   "350917": {
+   "all_names": [
+    "EMULEX CORP /DE/"
+   ],
    "first_filed": "2010-11-05",
    "float": {
     "EMLX R735QTJ8XC9X": {
@@ -10748,6 +12032,9 @@
    "status": "linked"
   },
   "351077": {
+   "all_names": [
+    "CITIZENS REPUBLIC BANCORP, INC."
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "CBCF R735QTJ8XC9X": {
@@ -10775,6 +12062,10 @@
    "status": "rejected: float evidence contradicts (5.40)"
   },
   "351817": {
+   "all_names": [
+    "SILVERBOW RESOURCES, INC.",
+    "SWIFT ENERGY CO"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "SFY R735QTJ8XC9X": {
@@ -10808,7 +12099,6 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "SILVERBOW RESOURCES, INC.",
     "SWIFT ENERGY CO"
    ],
    "sic_at_filing": [
@@ -10817,6 +12107,9 @@
    "status": "linked"
   },
   "351903": {
+   "all_names": [
+    "EPOCH HOLDING CORP"
+   ],
    "first_filed": "2011-11-07",
    "float": {
     "J R735QTJ8XC9X": {
@@ -10841,6 +12134,10 @@
    "status": "linked"
   },
   "352998": {
+   "all_names": [
+    "IGI LABORATORIES, INC",
+    "Teligent, Inc."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "IG R735QTJ8XC9X": {
@@ -10860,8 +12157,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "IGI LABORATORIES, INC",
-    "Teligent, Inc."
+    "IGI LABORATORIES, INC"
    ],
    "sic_at_filing": [
     2834,
@@ -10870,6 +12166,9 @@
    "status": "linked"
   },
   "353230": {
+   "all_names": [
+    "OMNICARE INC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "OCR R735QTJ8XC9X": {
@@ -10913,6 +12212,9 @@
    "status": "linked"
   },
   "354655": {
+   "all_names": [
+    "BOLT TECHNOLOGY CORP"
+   ],
    "first_filed": "2011-11-09",
    "float": {
     "BTJ R735QTJ8XC9X": {
@@ -10937,6 +12239,9 @@
    "status": "linked"
   },
   "354908": {
+   "all_names": [
+    "FLIR SYSTEMS INC"
+   ],
    "first_filed": "2009-08-10",
    "float": {
     "FLIR R735QTJ8XC9X": {
@@ -10997,6 +12302,9 @@
    "status": "linked"
   },
   "356080": {
+   "all_names": [
+    "BELO CORP"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "BLC R735QTJ8XC9X": {
@@ -11030,6 +12338,9 @@
    "status": "linked"
   },
   "357264": {
+   "all_names": [
+    "PACIFIC CAPITAL BANCORP /CA/"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "SABB R735QTJ8XC9X": {
@@ -11054,6 +12365,9 @@
    "status": "linked"
   },
   "3673": {
+   "all_names": [
+    "ALLEGHENY ENERGY, INC"
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "AYE R735QTJ8XC9X": {
@@ -11082,6 +12396,9 @@
    "status": "linked"
   },
   "37748": {
+   "all_names": [
+    "MASSEY ENERGY CO"
+   ],
    "first_filed": "2009-08-11",
    "float": {
     "FLR R735QTJ8XC9X": {
@@ -11110,6 +12427,10 @@
    "status": "linked"
   },
   "38079": {
+   "all_names": [
+    "FOREST OIL CORP",
+    "SABINE OIL & GAS CORP"
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "FST R735QTJ8XC9X": {
@@ -11140,8 +12461,7 @@
    },
    "last_filed": "2016-05-16",
    "names": [
-    "FOREST OIL CORP",
-    "SABINE OIL & GAS CORP"
+    "FOREST OIL CORP"
    ],
    "sic_at_filing": [
     1311
@@ -11149,6 +12469,10 @@
    "status": "linked"
   },
   "38984": {
+   "all_names": [
+    "Real Industry, Inc.",
+    "SIGNATURE GROUP HOLDINGS, INC."
+   ],
    "first_filed": "2011-12-12",
    "float": {
     "RELY VZW45INOC09X": {
@@ -11175,6 +12499,9 @@
    "status": "linked"
   },
   "40729": {
+   "all_names": [
+    "Ally Financial Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "ALLY VPLW2D47KBXH": {
@@ -11218,6 +12545,9 @@
    "status": "linked"
   },
   "42542": {
+   "all_names": [
+    "GOODRICH CORP"
+   ],
    "first_filed": "2009-07-23",
    "float": {
     "GR R735QTJ8XC9X": {
@@ -11250,6 +12580,9 @@
    "status": "linked"
   },
   "45876": {
+   "all_names": [
+    "HARSCO CORP"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "HSC R735QTJ8XC9X": {
@@ -11305,6 +12638,9 @@
    "status": "linked"
   },
   "46129": {
+   "all_names": [
+    "ALLIED MOTION TECHNOLOGIES INC"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "HATH R735QTJ8XC9X": {
@@ -11330,6 +12666,9 @@
    "status": "linked"
   },
   "46640": {
+   "all_names": [
+    "HEINZ H J CO"
+   ],
    "first_filed": "2009-08-20",
    "float": {
     "HNZ R735QTJ8XC9X": {
@@ -11368,6 +12707,9 @@
    "status": "linked"
   },
   "47129": {
+   "all_names": [
+    "HERTZ CORP"
+   ],
    "first_filed": "2010-08-09",
    "hits": {
     "HTZ WBUEIDIFRPET": [
@@ -11386,6 +12728,9 @@
    "status": "linked"
   },
   "57725": {
+   "all_names": [
+    "LANNETT CO INC"
+   ],
    "first_filed": "2011-11-04",
    "float": {
     "LCI SDV4X1N8LBAD": {
@@ -11433,6 +12778,9 @@
    "status": "linked"
   },
   "67625": {
+   "all_names": [
+    "MONMOUTH REAL ESTATE INVESTMENT CORP"
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "MNRTA R735QTJ8XC9X": {
@@ -11476,6 +12824,9 @@
    "status": "linked"
   },
   "68270": {
+   "all_names": [
+    "RUBY TUESDAY INC"
+   ],
    "first_filed": "2011-11-07",
    "float": {
     "RI R735QTJ8XC9X": {
@@ -11514,6 +12865,9 @@
    "status": "linked"
   },
   "6885": {
+   "all_names": [
+    "STAGE STORES INC"
+   ],
    "conflict_resolved_by_float": [
     1605674
    ],
@@ -11571,6 +12925,9 @@
    "status": "linked"
   },
   "69499": {
+   "all_names": [
+    "MYLAN INC."
+   ],
    "first_filed": "2010-07-29",
    "float": {
     "MYL R735QTJ8XC9X": {
@@ -11612,6 +12969,9 @@
    "status": "linked"
   },
   "701853": {
+   "all_names": [
+    "BANCORPSOUTH INC"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "BXS R735QTJ8XC9X": {
@@ -11651,6 +13011,9 @@
    "status": "linked"
   },
   "703360": {
+   "all_names": [
+    "LSI CORP"
+   ],
    "first_filed": "2010-08-12",
    "float": {
     "LSI R735QTJ8XC9X": {
@@ -11689,6 +13052,9 @@
    "status": "linked"
   },
   "70530": {
+   "all_names": [
+    "NATIONAL SEMICONDUCTOR CORP"
+   ],
    "first_filed": "2010-09-28",
    "float": {
     "NSM R735QTJ8XC9X": {
@@ -11715,6 +13081,9 @@
    "status": "linked"
   },
   "706688": {
+   "all_names": [
+    "AARON'S INC"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "ARON R735QTJ8XC9X": {
@@ -11740,6 +13109,9 @@
    "status": "linked"
   },
   "707179": {
+   "all_names": [
+    "OLD NATIONAL BANCORP /IN/"
+   ],
    "first_filed": "2010-07-30",
    "float": {
     "OLDB R735QTJ8XC9X": {
@@ -11795,6 +13167,9 @@
    "status": "linked"
   },
   "708819": {
+   "all_names": [
+    "MCDERMOTT INTERNATIONAL INC"
+   ],
    "first_filed": "2009-08-27",
    "float": {
     "MDR R735QTJ8XC9X": {
@@ -11854,6 +13229,9 @@
    "status": "linked"
   },
   "708850": {
+   "all_names": [
+    "DIONEX CORP /DE"
+   ],
    "first_filed": "2010-11-09",
    "hits": {
     "DNEX R735QTJ8XC9X": [
@@ -11872,6 +13250,9 @@
    "status": "linked"
   },
   "710846": {
+   "all_names": [
+    "Fushi Copperweld, Inc."
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "FSIN TVKYWO2QV2HX": {
@@ -11899,6 +13280,9 @@
    "status": "linked"
   },
   "714530": {
+   "all_names": [
+    "NEWBRIDGE BANCORP"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "LXBK R735QTJ8XC9X": {
@@ -11923,6 +13307,9 @@
    "status": "linked"
   },
   "716006": {
+   "all_names": [
+    "YRC Worldwide Inc."
+   ],
    "first_filed": "2011-08-08",
    "float": {
     "YELL R735QTJ8XC9X": {
@@ -11967,6 +13354,9 @@
    "status": "linked"
   },
   "716133": {
+   "all_names": [
+    "CINCINNATI BELL INC"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "CSN R735QTJ8XC9X": {
@@ -12017,6 +13407,9 @@
    "status": "linked"
   },
   "722104": {
+   "all_names": [
+    "SAVIENT PHARMACEUTICALS INC"
+   ],
    "first_filed": "2010-09-03",
    "float": {
     "BTGC R735QTJ8XC9X": {
@@ -12045,6 +13438,10 @@
    "status": "linked"
   },
   "722723": {
+   "all_names": [
+    "HANGER ORTHOPEDIC GROUP INC",
+    "HANGER, INC."
+   ],
    "first_filed": "2011-08-02",
    "float": {
     "HGR R735QTJ8XC9X": {
@@ -12082,6 +13479,9 @@
    "status": "linked"
   },
   "724571": {
+   "all_names": [
+    "FREDS INC"
+   ],
    "first_filed": "2011-09-08",
    "float": {
     "FRED R735QTJ8XC9X": {
@@ -12130,6 +13530,9 @@
    "status": "linked"
   },
   "73088": {
+   "all_names": [
+    "NORTHWESTERN CORP"
+   ],
    "first_filed": "2010-07-29",
    "float": {
     "NWEC T3CTK6KJWGV9": {
@@ -12187,6 +13590,9 @@
    "status": "linked"
   },
   "731939": {
+   "all_names": [
+    "TEMPLE INLAND INC"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "TIN R735QTJ8XC9X": {
@@ -12215,6 +13621,9 @@
    "status": "linked"
   },
   "732485": {
+   "all_names": [
+    "GENZYME CORP"
+   ],
    "first_filed": "2009-09-04",
    "float": {
     "GENZ R735QTJ8XC9X": {
@@ -12244,6 +13653,9 @@
    "status": "linked"
   },
   "73887": {
+   "all_names": [
+    "Bristow Group Inc"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "OLOG R735QTJ8XC9X": {
@@ -12300,6 +13712,9 @@
    "status": "linked"
   },
   "739944": {
+   "all_names": [
+    "MEDTOX SCIENTIFIC INC"
+   ],
    "first_filed": "2011-04-28",
    "float": {
     "TOX R735QTJ8XC9X": {
@@ -12324,6 +13739,9 @@
    "status": "linked"
   },
   "740694": {
+   "all_names": [
+    "KAYDON CORP"
+   ],
    "first_filed": "2010-08-19",
    "float": {
     "KDN R735QTJ8XC9X": {
@@ -12359,6 +13777,9 @@
    "status": "linked"
   },
   "741508": {
+   "all_names": [
+    "NV ENERGY, INC."
+   ],
    "first_filed": "2013-08-02",
    "float": {
     "NVP R735QTJ8XC9X": {
@@ -12383,6 +13804,9 @@
    "status": "linked"
   },
   "742112": {
+   "all_names": [
+    "INVACARE CORP"
+   ],
    "first_filed": "2011-08-08",
    "hits": {
     "IVCR R735QTJ8XC9X": [
@@ -12430,6 +13854,9 @@
    "status": "linked"
   },
   "748270": {
+   "all_names": [
+    "MEDICAL ACTION INDUSTRIES INC"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "MDCI R735QTJ8XC9X": {
@@ -12455,6 +13882,9 @@
    "status": "linked"
   },
   "749647": {
+   "all_names": [
+    "Celsion CORP"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "CLN RV5N53FS99ID": {
@@ -12480,6 +13910,9 @@
    "status": "linked"
   },
   "75208": {
+   "all_names": [
+    "OVERSEAS SHIPHOLDING GROUP INC"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "OSG R735QTJ8XC9X": {
@@ -12511,6 +13944,9 @@
    "status": "linked"
   },
   "758004": {
+   "all_names": [
+    "NOVELL INC"
+   ],
    "first_filed": "2010-09-09",
    "hits": {
     "NOVL R735QTJ8XC9X": [
@@ -12529,6 +13965,9 @@
    "status": "linked"
   },
   "76321": {
+   "all_names": [
+    "PARKER DRILLING CO /DE/"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "PKD R735QTJ8XC9X": {
@@ -12564,6 +14003,9 @@
    "status": "linked"
   },
   "77159": {
+   "all_names": [
+    "PENN VIRGINIA CORP"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "PVA R735QTJ8XC9X": {
@@ -12606,7 +14048,61 @@
    ],
    "status": "linked"
   },
+  "77281": {
+   "all_names": [
+    "PENNSYLVANIA REAL ESTATE INVESTMENT TRUST"
+   ],
+   "first_filed": "2011-08-01",
+   "hits": {
+    "PEI R735QTJ8XC9X": [
+     "2011-08-01",
+     "2011-11-02",
+     "2012-02-29",
+     "2012-04-30",
+     "2012-08-01",
+     "2012-10-26",
+     "2013-03-01",
+     "2013-04-26",
+     "2013-07-26",
+     "2013-10-30",
+     "2014-02-12",
+     "2014-02-28",
+     "2014-04-25",
+     "2014-08-01",
+     "2014-10-31",
+     "2015-02-23",
+     "2015-05-04",
+     "2015-08-03",
+     "2015-10-29",
+     "2016-02-26",
+     "2016-04-29",
+     "2016-07-28",
+     "2016-11-04",
+     "2017-02-28",
+     "2017-04-27",
+     "2017-08-09",
+     "2017-11-02",
+     "2018-02-16",
+     "2018-05-04",
+     "2018-08-03",
+     "2018-11-01",
+     "2019-02-25",
+     "2019-05-07"
+    ]
+   },
+   "last_filed": "2019-08-02",
+   "names": [
+    "PENNSYLVANIA REAL ESTATE INVESTMENT TRUST"
+   ],
+   "sic_at_filing": [
+    6798
+   ],
+   "status": "linked"
+  },
   "77449": {
+   "all_names": [
+    "PEP BOYS MANNY MOE & JACK"
+   ],
    "first_filed": "2011-09-07",
    "float": {
     "PBY R735QTJ8XC9X": {
@@ -12647,6 +14143,9 @@
    "status": "linked"
   },
   "780053": {
+   "all_names": [
+    "NATIONWIDE HEALTH PROPERTIES INC"
+   ],
    "first_filed": "2010-05-06",
    "float": {
     "NHP R735QTJ8XC9X": {
@@ -12674,6 +14173,9 @@
    "status": "linked"
   },
   "785968": {
+   "all_names": [
+    "MILLER ENERGY RESOURCES, INC."
+   ],
    "first_filed": "2011-10-05",
    "float": {
     "MILL UMCXK76ZROMD": {
@@ -12698,6 +14200,9 @@
    "status": "linked"
   },
   "789460": {
+   "all_names": [
+    "WORLD FUEL SERVICES CORP"
+   ],
    "first_filed": "2010-08-03",
    "float": {
     "INT R735QTJ8XC9X": {
@@ -12750,6 +14255,9 @@
    "status": "linked"
   },
   "790705": {
+   "all_names": [
+    "TEKELEC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "TKLC R735QTJ8XC9X": {
@@ -12778,6 +14286,9 @@
    "status": "linked"
   },
   "790715": {
+   "all_names": [
+    "SIGMA DESIGNS INC"
+   ],
    "first_filed": "2011-09-08",
    "float": {
     "SIGM R735QTJ8XC9X": {
@@ -12827,6 +14338,9 @@
    "status": "linked"
   },
   "790730": {
+   "all_names": [
+    "AMERON INTERNATIONAL CORP"
+   ],
    "first_filed": "2010-09-27",
    "float": {
     "AMN R735QTJ8XC9X": {
@@ -12854,6 +14368,9 @@
    "status": "linked"
   },
   "792641": {
+   "all_names": [
+    "BIO REFERENCE LABORATORIES INC"
+   ],
    "first_filed": "2011-09-06",
    "float": {
     "BRLI R735QTJ8XC9X": {
@@ -12892,6 +14409,10 @@
    "status": "linked"
   },
   "792985": {
+   "all_names": [
+    "HEALTH MANAGEMENT ASSOCIATES INC",
+    "HEALTH MANAGEMENT ASSOCIATES, INC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "HMA R735QTJ8XC9X": {
@@ -12929,6 +14450,9 @@
    "status": "linked"
   },
   "798949": {
+   "all_names": [
+    "UNIT CORP"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "UNT R735QTJ8XC9X": {
@@ -12986,6 +14510,9 @@
    "status": "linked"
   },
   "79958": {
+   "all_names": [
+    "PRECISION CASTPARTS CORP"
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "PCP R735QTJ8XC9X": {
@@ -13033,6 +14560,9 @@
    "status": "linked"
   },
   "799698": {
+   "all_names": [
+    "CYTRX CORP"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "CYTR R735QTJ8XC9X": {
@@ -13058,6 +14588,9 @@
    "status": "linked"
   },
   "80124": {
+   "all_names": [
+    "PRESIDENTIAL LIFE CORP"
+   ],
    "first_filed": "2011-08-16",
    "float": {
     "PLFE R735QTJ8XC9X": {
@@ -13083,6 +14616,9 @@
    "status": "linked"
   },
   "804055": {
+   "all_names": [
+    "COCA COLA ENTERPRISES INC"
+   ],
    "first_filed": "2009-07-30",
    "float": {
     "CCE R735QTJ8XC9X": {
@@ -13108,6 +14644,9 @@
    "status": "linked"
   },
   "805305": {
+   "all_names": [
+    "QUIKSILVER INC"
+   ],
    "first_filed": "2011-09-09",
    "float": {
     "QUIK R735QTJ8XC9X": {
@@ -13143,65 +14682,10 @@
    ],
    "status": "linked"
   },
-  "811532": {
-   "first_filed": "2010-08-06",
-   "float": {
-    "FUN R735QTJ8XC9X": {
-     "check": "ok",
-     "median": 0.9795,
-     "n": 6
-    }
-   },
-   "hits": {
-    "FUN R735QTJ8XC9X": [
-     "2010-08-06",
-     "2010-11-05",
-     "2011-03-01",
-     "2011-05-06",
-     "2011-08-05",
-     "2011-11-04",
-     "2012-02-29",
-     "2012-05-04",
-     "2012-08-10",
-     "2012-11-07",
-     "2013-02-25",
-     "2013-05-10",
-     "2013-08-08",
-     "2013-11-07",
-     "2014-02-26",
-     "2014-05-09",
-     "2014-08-07",
-     "2014-11-06",
-     "2015-02-26",
-     "2015-05-01",
-     "2015-08-04",
-     "2015-11-05",
-     "2016-02-26",
-     "2016-05-04",
-     "2016-08-03",
-     "2016-11-02",
-     "2017-02-24",
-     "2017-05-03",
-     "2017-08-02",
-     "2017-11-02",
-     "2018-02-23",
-     "2018-05-02",
-     "2018-08-01",
-     "2018-10-30",
-     "2019-02-22",
-     "2019-05-08"
-    ]
-   },
-   "last_filed": "2019-08-07",
-   "names": [
-    "CEDAR FAIR L P"
-   ],
-   "sic_at_filing": [
-    7990
-   ],
-   "status": "linked"
-  },
   "812900": {
+   "all_names": [
+    "SAKS INC"
+   ],
    "first_filed": "2010-09-01",
    "float": {
     "PFT R735QTJ8XC9X": {
@@ -13238,6 +14722,9 @@
    "status": "linked"
   },
   "813781": {
+   "all_names": [
+    "EXIDE TECHNOLOGIES"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "XIDE SYFL3CQ64NZ9": {
@@ -13262,6 +14749,9 @@
    "status": "linked"
   },
   "814184": {
+   "all_names": [
+    "TCF FINANCIAL CORP"
+   ],
    "first_filed": "2010-07-23",
    "float": {
     "TCB R735QTJ8XC9X": {
@@ -13326,6 +14816,9 @@
    "status": "linked"
   },
   "820318": {
+   "all_names": [
+    "II-VI INC"
+   ],
    "first_filed": "2010-11-08",
    "float": {
     "IIVI R735QTJ8XC9X": {
@@ -13384,6 +14877,9 @@
    "status": "linked"
   },
   "82628": {
+   "all_names": [
+    "SYMMETRICOM INC"
+   ],
    "first_filed": "2011-11-10",
    "float": {
     "SYMM R735QTJ8XC9X": {
@@ -13408,6 +14904,9 @@
    "status": "linked"
   },
   "831967": {
+   "all_names": [
+    "KINETIC CONCEPTS INC"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "KCI SWGOWME0MCF9": {
@@ -13436,6 +14935,9 @@
    "status": "linked"
   },
   "835729": {
+   "all_names": [
+    "BMC SOFTWARE INC"
+   ],
    "first_filed": "2009-08-05",
    "float": {
     "BMCS R735QTJ8XC9X": {
@@ -13472,6 +14974,9 @@
    "status": "linked"
   },
   "836106": {
+   "all_names": [
+    "NOVELLUS SYSTEMS INC"
+   ],
    "first_filed": "2010-08-04",
    "float": {
     "NVLS R735QTJ8XC9X": {
@@ -13502,6 +15007,9 @@
    "status": "linked"
   },
   "837173": {
+   "all_names": [
+    "Walter Energy, Inc."
+   ],
    "first_filed": "2009-08-07",
    "float": {
     "WLT R735QTJ8XC9X": {
@@ -13544,6 +15052,9 @@
    "status": "linked"
   },
   "84290": {
+   "all_names": [
+    "ROBBINS & MYERS, INC."
+   ],
    "first_filed": "2012-01-06",
    "float": {
     "RBN R735QTJ8XC9X": {
@@ -13571,6 +15082,11 @@
    "status": "linked"
   },
   "844143": {
+   "all_names": [
+    "Centric Brands Inc.",
+    "Differential Brands Group Inc.",
+    "JOE'S JEANS INC."
+   ],
    "first_filed": "2011-10-11",
    "float": {
     "INNO R735QTJ8XC9X": {
@@ -13589,8 +15105,7 @@
    "last_filed": "2019-08-14",
    "names": [
     "Centric Brands Inc.",
-    "Differential Brands Group Inc.",
-    "JOE'S JEANS INC."
+    "Differential Brands Group Inc."
    ],
    "sic_at_filing": [
     2300
@@ -13598,6 +15113,9 @@
    "status": "linked"
   },
   "850261": {
+   "all_names": [
+    "Sorrento Therapeutics, Inc."
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "SRNE VL1GER10SC4L": {
@@ -13641,6 +15159,10 @@
    "status": "linked"
   },
   "85704": {
+   "all_names": [
+    "HARRIS TEETER SUPERMARKETS, INC.",
+    "RUDDICK CORP"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "RDK R735QTJ8XC9X": {
@@ -13679,6 +15201,9 @@
    "status": "linked"
   },
   "864683": {
+   "all_names": [
+    "CYBERONICS INC"
+   ],
    "first_filed": "2011-08-25",
    "float": {
     "CYBX R735QTJ8XC9X": {
@@ -13718,6 +15243,10 @@
    "status": "linked"
   },
   "864839": {
+   "all_names": [
+    "ROYALE ENERGY FUNDS, INC",
+    "ROYALE ENERGY INC"
+   ],
    "first_filed": "2011-07-29",
    "float": {
     "ROYL R735QTJ8XC9X": {
@@ -13736,7 +15265,6 @@
    },
    "last_filed": "2018-03-23",
    "names": [
-    "ROYALE ENERGY FUNDS, INC",
     "ROYALE ENERGY INC"
    ],
    "sic_at_filing": [
@@ -13745,6 +15273,9 @@
    "status": "linked"
   },
   "865941": {
+   "all_names": [
+    "CELADON GROUP INC"
+   ],
    "first_filed": "2011-11-04",
    "float": {
     "CLDN R735QTJ8XC9X": {
@@ -13773,6 +15304,9 @@
    "status": "linked"
   },
   "866609": {
+   "all_names": [
+    "ION GEOPHYSICAL CORP"
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "IO R735QTJ8XC9X": {
@@ -13824,6 +15358,9 @@
    "status": "linked"
   },
   "867665": {
+   "all_names": [
+    "ABRAXAS PETROLEUM CORP"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "ABP RXBFGHC4AV6T": {
@@ -13860,6 +15397,9 @@
    "status": "linked"
   },
   "870732": {
+   "all_names": [
+    "American Natural Energy Corp"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "ANR T687HZZ9XOPX": {
@@ -13894,6 +15434,11 @@
    "status": "rejected: float evidence contradicts (0.00)"
   },
   "870826": {
+   "all_names": [
+    "EVINE Live Inc.",
+    "VALUEVISION MEDIA INC",
+    "iMedia Brands, Inc."
+   ],
    "first_filed": "2011-06-07",
    "float": {
     "VVTV R735QTJ8XC9X": {
@@ -13910,9 +15455,7 @@
    },
    "last_filed": "2019-09-10",
    "names": [
-    "EVINE Live Inc.",
-    "VALUEVISION MEDIA INC",
-    "iMedia Brands, Inc."
+    "VALUEVISION MEDIA INC"
    ],
    "sic_at_filing": [
     5961
@@ -13920,6 +15463,9 @@
    "status": "linked"
   },
   "872248": {
+   "all_names": [
+    "PETROQUEST ENERGY INC"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "OPPCF R735QTJ8XC9X": {
@@ -13955,7 +15501,37 @@
    ],
    "status": "linked"
   },
+  "872821": {
+   "all_names": [
+    "WILMINGTON TRUST CORP"
+   ],
+   "first_filed": "2010-08-09",
+   "float": {
+    "WILM R735QTJ8XC9X": {
+     "check": "ok",
+     "median": 0.989,
+     "n": 1
+    }
+   },
+   "hits": {
+    "WILM R735QTJ8XC9X": [
+     "2010-08-09",
+     "2010-11-08"
+    ]
+   },
+   "last_filed": "2011-05-13",
+   "names": [
+    "WILMINGTON TRUST CORP"
+   ],
+   "sic_at_filing": [
+    6022
+   ],
+   "status": "linked"
+  },
   "873364": {
+   "all_names": [
+    "CEPHALON INC"
+   ],
    "first_filed": "2010-07-28",
    "float": {
     "CEPH R735QTJ8XC9X": {
@@ -13982,7 +15558,42 @@
    ],
    "status": "linked"
   },
+  "876883": {
+   "all_names": [
+    "MDC PARTNERS INC"
+   ],
+   "first_filed": "2011-08-04",
+   "hits": {
+    "MDQ R735QTJ8XC9X": [
+     "2013-11-05",
+     "2014-03-10",
+     "2014-04-29",
+     "2014-08-11",
+     "2014-11-06",
+     "2015-03-02",
+     "2015-04-30",
+     "2015-08-07",
+     "2015-11-03",
+     "2016-02-26",
+     "2016-05-04",
+     "2016-08-03",
+     "2016-11-08",
+     "2017-03-01"
+    ]
+   },
+   "last_filed": "2019-08-07",
+   "names": [
+    "MDC PARTNERS INC"
+   ],
+   "sic_at_filing": [
+    7311
+   ],
+   "status": "linked"
+  },
   "878079": {
+   "all_names": [
+    "BON TON STORES INC"
+   ],
    "first_filed": "2011-09-07",
    "float": {
     "BONT R735QTJ8XC9X": {
@@ -14017,6 +15628,9 @@
    "status": "linked"
   },
   "878088": {
+   "all_names": [
+    "PAR PHARMACEUTICAL COMPANIES, INC."
+   ],
    "first_filed": "2011-05-06",
    "float": {
     "PRX R735QTJ8XC9X": {
@@ -14045,6 +15659,9 @@
    "status": "linked"
   },
   "878726": {
+   "all_names": [
+    "TUESDAY MORNING CORP/DE"
+   ],
    "first_filed": "2011-10-31",
    "float": {
     "TUES RK2V38AF9PID": {
@@ -14084,6 +15701,9 @@
    "status": "linked"
   },
   "880059": {
+   "all_names": [
+    "EDUCATION MANAGEMENT CORPORATION"
+   ],
    "first_filed": "2010-11-09",
    "float": {
     "EDMC UGG9006J8PYD": {
@@ -14113,6 +15733,9 @@
    "status": "linked"
   },
   "881524": {
+   "all_names": [
+    "VIVUS INC"
+   ],
    "first_filed": "2011-05-06",
    "float": {
     "VVUS R735QTJ8XC9X": {
@@ -14149,6 +15772,9 @@
    "status": "linked"
   },
   "883293": {
+   "all_names": [
+    "VALASSIS COMMUNICATIONS INC"
+   ],
    "first_filed": "2011-05-10",
    "float": {
     "VCI R735QTJ8XC9X": {
@@ -14182,6 +15808,10 @@
    "status": "linked"
   },
   "884217": {
+   "all_names": [
+    "MENS WEARHOUSE INC",
+    "TAILORED BRANDS INC"
+   ],
    "first_filed": "2010-09-09",
    "hits": {
     "SUIT R735QTJ8XC9X": [
@@ -14250,6 +15880,9 @@
    "status": "ambiguous: several securities at the same time"
   },
   "884940": {
+   "all_names": [
+    "STEIN MART INC"
+   ],
    "first_filed": "2011-09-07",
    "float": {
     "SMRT R735QTJ8XC9X": {
@@ -14275,6 +15908,9 @@
    "status": "linked"
   },
   "886158": {
+   "all_names": [
+    "BED BATH & BEYOND INC"
+   ],
    "first_filed": "2009-10-07",
    "float": {
     "BBBY R735QTJ8XC9X": {
@@ -14335,6 +15971,9 @@
    "status": "linked"
   },
   "886835": {
+   "all_names": [
+    "SUPERIOR ENERGY SERVICES INC"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "SESI R735QTJ8XC9X": {
@@ -14392,6 +16031,9 @@
    "status": "linked"
   },
   "887921": {
+   "all_names": [
+    "REVLON INC /DE/"
+   ],
    "first_filed": "2011-07-28",
    "float": {
     "REV R735QTJ8XC9X": {
@@ -14425,6 +16067,9 @@
    "status": "linked"
   },
   "891288": {
+   "all_names": [
+    "QUESTCOR PHARMACEUTICALS INC"
+   ],
    "first_filed": "2011-07-29",
    "float": {
     "CYPR R735QTJ8XC9X": {
@@ -14461,6 +16106,10 @@
    "status": "linked"
   },
   "892222": {
+   "all_names": [
+    "CRAFT BREW ALLIANCE, INC.",
+    "CRAFT BREWERS ALLIANCE, INC."
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "HOOK R735QTJ8XC9X": {
@@ -14488,8 +16137,7 @@
    },
    "last_filed": "2019-08-07",
    "names": [
-    "CRAFT BREW ALLIANCE, INC.",
-    "CRAFT BREWERS ALLIANCE, INC."
+    "CRAFT BREW ALLIANCE, INC."
    ],
    "sic_at_filing": [
     2082
@@ -14497,6 +16145,9 @@
    "status": "linked"
   },
   "892986": {
+   "all_names": [
+    "WARREN RESOURCES INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "WRES T4L4OE15CF39": {
@@ -14522,6 +16173,10 @@
    "status": "linked"
   },
   "895051": {
+   "all_names": [
+    "CASI Pharmaceuticals, Inc.",
+    "ENTREMED INC"
+   ],
    "first_filed": "2011-08-15",
    "float": {
     "ENMD R735QTJ8XC9X": {
@@ -14539,8 +16194,7 @@
    },
    "last_filed": "2019-08-09",
    "names": [
-    "CASI Pharmaceuticals, Inc.",
-    "ENTREMED INC"
+    "CASI Pharmaceuticals, Inc."
    ],
    "sic_at_filing": [
     2836
@@ -14548,6 +16202,10 @@
    "status": "linked"
   },
   "895419": {
+   "all_names": [
+    "CREE INC",
+    "CREE, INC."
+   ],
    "first_filed": "2010-10-21",
    "float": {
     "CREE R735QTJ8XC9X": {
@@ -14597,8 +16255,7 @@
    },
    "last_filed": "2019-10-31",
    "names": [
-    "CREE INC",
-    "CREE, INC."
+    "CREE INC"
    ],
    "sic_at_filing": [
     3674
@@ -14606,6 +16263,9 @@
    "status": "linked"
   },
   "895648": {
+   "all_names": [
+    "GENERAL GROWTH PROPERTIES INC"
+   ],
    "first_filed": "2009-08-10",
    "hits": {
     "GGP R735QTJ8XC9X": [
@@ -14631,6 +16291,9 @@
    "status": "ambiguous: several securities at the same time"
   },
   "895663": {
+   "all_names": [
+    "GLOBAL INDUSTRIES LTD"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "GLBL R735QTJ8XC9X": {
@@ -14659,6 +16322,9 @@
    "status": "linked"
   },
   "896985": {
+   "all_names": [
+    "Destination Maternity Corp"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "MWRK R735QTJ8XC9X": {
@@ -14684,6 +16350,9 @@
    "status": "linked"
   },
   "897448": {
+   "all_names": [
+    "AMARIN CORP PLC\\UK"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "ETHCY R735QTJ8XC9X": {
@@ -14738,6 +16407,9 @@
    "status": "linked"
   },
   "899881": {
+   "all_names": [
+    "PROLOGIS"
+   ],
    "first_filed": "2009-08-04",
    "float": {
     "SCN R735QTJ8XC9X": {
@@ -14768,6 +16440,9 @@
    "status": "linked"
   },
   "901219": {
+   "all_names": [
+    "HUMAN GENOME SCIENCES INC"
+   ],
    "first_filed": "2011-04-29",
    "float": {
     "HGSI R735QTJ8XC9X": {
@@ -14796,6 +16471,9 @@
    "status": "linked"
   },
   "90185": {
+   "all_names": [
+    "SIGMA ALDRICH CORP"
+   ],
    "first_filed": "2009-08-03",
    "float": {
     "SIAL R735QTJ8XC9X": {
@@ -14842,6 +16520,9 @@
    "status": "linked"
   },
   "902274": {
+   "all_names": [
+    "LIBBEY INC"
+   ],
    "first_filed": "2011-08-05",
    "float": {
     "LBY R735QTJ8XC9X": {
@@ -14867,6 +16548,9 @@
    "status": "linked"
   },
   "907649": {
+   "all_names": [
+    "FX ENERGY INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "FXEN R735QTJ8XC9X": {
@@ -14892,6 +16576,9 @@
    "status": "linked"
   },
   "910073": {
+   "all_names": [
+    "NEW YORK COMMUNITY BANCORP INC"
+   ],
    "first_filed": "2009-08-10",
    "float": {
     "QCSB R735QTJ8XC9X": {
@@ -14929,6 +16616,9 @@
    "status": "linked"
   },
   "910322": {
+   "all_names": [
+    "ASTORIA FINANCIAL CORP"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "ASFC R735QTJ8XC9X": {
@@ -14980,6 +16670,9 @@
    "status": "linked"
   },
   "911421": {
+   "all_names": [
+    "PARTNERRE LTD"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "PRE R735QTJ8XC9X": {
@@ -15028,6 +16721,9 @@
    "status": "linked"
   },
   "914025": {
+   "all_names": [
+    "PLANTRONICS INC /CA/"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "PLT R735QTJ8XC9X": {
@@ -15087,6 +16783,10 @@
    "status": "linked"
   },
   "916863": {
+   "all_names": [
+    "INTEGRYS ENERGY GROUP, INC.",
+    "INTEGRYS HOLDING, INC."
+   ],
    "conflict_resolved_by_float": [
     107833
    ],
@@ -15134,6 +16834,10 @@
    "status": "linked"
   },
   "919722": {
+   "all_names": [
+    "Astex Pharmaceuticals, Inc",
+    "SUPERGEN INC"
+   ],
    "first_filed": "2011-08-09",
    "float": {
     "SUPG R735QTJ8XC9X": {
@@ -15151,8 +16855,7 @@
    },
    "last_filed": "2013-08-09",
    "names": [
-    "Astex Pharmaceuticals, Inc",
-    "SUPERGEN INC"
+    "Astex Pharmaceuticals, Inc"
    ],
    "sic_at_filing": [
     2834
@@ -15160,6 +16863,9 @@
    "status": "linked"
   },
   "920465": {
+   "all_names": [
+    "LA JOLLA PHARMACEUTICAL CO"
+   ],
    "first_filed": "2011-09-12",
    "float": {
     "LJPC VNNZBQ584RJ9": {
@@ -15205,6 +16911,9 @@
    "status": "linked"
   },
   "920527": {
+   "all_names": [
+    "PSS WORLD MEDICAL INC"
+   ],
    "first_filed": "2010-08-11",
    "float": {
     "PSSI R735QTJ8XC9X": {
@@ -15238,6 +16947,9 @@
    "status": "linked"
   },
   "921503": {
+   "all_names": [
+    "BLYTH INC"
+   ],
    "first_filed": "2011-06-23",
    "float": {
     "BTH R735QTJ8XC9X": {
@@ -15271,24 +16983,10 @@
    ],
    "status": "linked"
   },
-  "922359": {
-   "first_filed": "2013-09-26",
-   "hits": {
-    "FGP R735QTJ8XC9X": [
-     "2013-09-26",
-     "2014-06-09"
-    ]
-   },
-   "last_filed": "2014-06-09",
-   "names": [
-    "FERRELLGAS L P"
-   ],
-   "sic_at_filing": [
-    5900
-   ],
-   "status": "linked"
-  },
   "922475": {
+   "all_names": [
+    "ITT EDUCATIONAL SERVICES INC"
+   ],
    "first_filed": "2010-07-23",
    "float": {
     "ESI R735QTJ8XC9X": {
@@ -15332,6 +17030,9 @@
    "status": "linked"
   },
   "929351": {
+   "all_names": [
+    "LIONS GATE ENTERTAINMENT CORP /CN/"
+   ],
    "first_filed": "2010-08-09",
    "float": {
     "LGF RFT9CN83C0H1": {
@@ -15393,6 +17094,10 @@
    "status": "linked"
   },
   "929887": {
+   "all_names": [
+    "APOLLO EDUCATION GROUP INC",
+    "APOLLO GROUP INC"
+   ],
    "first_filed": "2010-01-07",
    "float": {
     "APOL R735QTJ8XC9X": {
@@ -15446,6 +17151,9 @@
    "status": "linked"
   },
   "931336": {
+   "all_names": [
+    "DEAN FOODS CO"
+   ],
    "first_filed": "2010-08-06",
    "float": {
     "SZA R735QTJ8XC9X": {
@@ -15504,6 +17212,9 @@
    "status": "linked"
   },
   "9342": {
+   "all_names": [
+    "BALDOR ELECTRIC CO"
+   ],
    "first_filed": "2010-08-11",
    "hits": {
     "BEZ R735QTJ8XC9X": [
@@ -15521,6 +17232,10 @@
    "status": "linked"
   },
   "939930": {
+   "all_names": [
+    "ALLIANCE ONE INTERNATIONAL, INC.",
+    "PYXUS INTERNATIONAL, INC."
+   ],
    "first_filed": "2011-08-04",
    "float": {
     "DMN R735QTJ8XC9X": {
@@ -15573,6 +17288,9 @@
    "status": "linked"
   },
   "941138": {
+   "all_names": [
+    "UNS Energy Corp"
+   ],
    "first_filed": "2013-07-30",
    "float": {
     "UNS R735QTJ8XC9X": {
@@ -15600,6 +17318,9 @@
    "status": "linked"
   },
   "941548": {
+   "all_names": [
+    "CAMERON INTERNATIONAL CORP"
+   ],
    "first_filed": "2009-08-06",
    "float": {
     "RON R735QTJ8XC9X": {
@@ -15648,6 +17369,9 @@
    "status": "linked"
   },
   "943034": {
+   "all_names": [
+    "IMAGE SENSING SYSTEMS INC"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "ISNS R735QTJ8XC9X": {
@@ -15687,6 +17411,9 @@
    "status": "linked"
   },
   "943861": {
+   "all_names": [
+    "GOODRICH PETROLEUM CORP"
+   ],
    "first_filed": "2010-08-05",
    "float": {
     "GDP R735QTJ8XC9X": {
@@ -15727,6 +17454,10 @@
    "status": "linked"
   },
   "944314": {
+   "all_names": [
+    "LIFE STORAGE, INC.",
+    "SOVRAN SELF STORAGE INC"
+   ],
    "first_filed": "2010-08-06",
    "hits": {
     "LSI WD2PMKZ17NMT": [
@@ -15790,6 +17521,9 @@
    "status": "ambiguous: several securities at the same time"
   },
   "945114": {
+   "all_names": [
+    "SYSTEMAX INC"
+   ],
    "first_filed": "2011-08-12",
    "float": {
     "GML R735QTJ8XC9X": {
@@ -15816,6 +17550,10 @@
    "status": "linked"
   },
   "945436": {
+   "all_names": [
+    "MEMC ELECTRONIC MATERIALS INC",
+    "SUNEDISON, INC."
+   ],
    "first_filed": "2009-08-05",
    "float": {
     "WFR R735QTJ8XC9X": {
@@ -15864,6 +17602,9 @@
    "status": "linked"
   },
   "946840": {
+   "all_names": [
+    "VIROPHARMA INC"
+   ],
    "first_filed": "2011-04-28",
    "float": {
     "VPHM R735QTJ8XC9X": {
@@ -15897,6 +17638,10 @@
    "status": "linked"
   },
   "949428": {
+   "all_names": [
+    "CDTI ADVANCED MATERIALS, INC.",
+    "CLEAN DIESEL TECHNOLOGIES INC"
+   ],
    "first_filed": "2011-08-11",
    "float": {
     "CDTI R735QTJ8XC9X": {
@@ -15913,7 +17658,6 @@
    },
    "last_filed": "2018-11-14",
    "names": [
-    "CDTI ADVANCED MATERIALS, INC.",
     "CLEAN DIESEL TECHNOLOGIES INC"
    ],
    "sic_at_filing": [
@@ -15922,6 +17666,9 @@
    "status": "linked"
   },
   "949699": {
+   "all_names": [
+    "PHARMACYCLICS INC"
+   ],
    "first_filed": "2011-11-08",
    "float": {
     "PCYC R735QTJ8XC9X": {
@@ -15959,6 +17706,9 @@
    "status": "linked"
   },
   "96289": {
+   "all_names": [
+    "RADIOSHACK CORP"
+   ],
    "first_filed": "2010-07-29",
    "float": {
     "TAN R735QTJ8XC9X": {
@@ -15991,6 +17741,9 @@
    "status": "linked"
   },
   "97472": {
+   "all_names": [
+    "TEXAS INDUSTRIES INC"
+   ],
    "first_filed": "2010-09-24",
    "float": {
     "TXI R735QTJ8XC9X": {
@@ -16029,6 +17782,9 @@
    "status": "linked"
   },
   "97854": {
+   "all_names": [
+    "THOMAS & BETTS CORP"
+   ],
    "first_filed": "2010-07-30",
    "float": {
     "TNB R735QTJ8XC9X": {
@@ -16060,14 +17816,14 @@
   }
  },
  "rejected_counts": {
-  "fund/blank-check/royalty SIC": 465,
-  "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 24,
-  "no security with >= 2 matching dated tickers": 6848,
-  "non-common name": 956
+  "fund/blank-check/royalty SIC": 15,
+  "no public cover count >= 1M shares (subsidiary/no XBRL cover)": 25,
+  "no security with >= 2 matching dated tickers": 8176,
+  "non-common name": 66
  },
  "summary": {
-  "ambiguous": 7,
-  "linked": 431,
+  "ambiguous": 8,
+  "linked": 441,
   "rejected": 17
  }
 }

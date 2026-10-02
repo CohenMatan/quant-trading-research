@@ -53,6 +53,13 @@ WHITELIST = {
 TTM_BASES = ("revenue", "gross_profit", "operating_income", "net_income", "operating_cash_flow", "free_cash_flow")
 TTM4Q = {b + "_ttm4q": b for b in TTM_BASES}
 SNAPSHOT_FIELDS = ("total_assets", "stockholders_equity", "total_debt")   # latest snapshot, never summed
+# D113: the fields a future fundamental hypothesis may use, after SEC validation (E975-01; non-financial companies;
+# >= 90% within 0.5% and >= 95% within 2% of the SEC TTM; never before a public SEC source). Operating income
+# (48%: vendor standardisation) and free cash flow (74%: capex definitions) failed and are NOT approved; total debt
+# was never validated against SEC filings and is NOT approved. Vendor '*_ttm' fiscal-year values are not approved
+# as twelve-month measures.
+APPROVED_H016_FIELDS = ("revenue_ttm4q", "gross_profit_ttm4q", "net_income_ttm4q", "operating_cash_flow_ttm4q",
+                        "total_assets", "stockholders_equity", "market_cap")
 TTM_GAP_DAYS = (80, 100)          # consecutive fiscal quarters (13/14-week quarters included)
 TTM_FY_TOLERANCE = 0.01           # Q1+Q2+Q3+Q4 must equal the fiscal-year total within 1% (Q4 validity gate)
 MARKET_CAP = "market_cap"            # point-in-time (audit D107); read from the object itself, not from a report

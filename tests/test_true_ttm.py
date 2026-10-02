@@ -72,3 +72,10 @@ def test_amendment_changes_ttm_only_from_its_filing():
     st.observe("K", date(2011, 3, 31), amend_day - timedelta(days=1), v, None, amend_day - timedelta(days=1))
     assert st.ttm("K", "revenue", amend_day - timedelta(days=1)) == 54
     assert st.ttm("K", "revenue", amend_day) == 56
+
+
+def test_approved_field_set_is_the_validated_one():
+    assert F.APPROVED_H016_FIELDS == ("revenue_ttm4q", "gross_profit_ttm4q", "net_income_ttm4q",
+                                      "operating_cash_flow_ttm4q", "total_assets", "stockholders_equity", "market_cap")
+    for f in ("operating_income_ttm4q", "free_cash_flow_ttm4q", "total_debt", "revenue_ttm"):
+        assert f not in F.APPROVED_H016_FIELDS

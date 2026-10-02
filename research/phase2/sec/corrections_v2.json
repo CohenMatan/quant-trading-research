@@ -1699,8 +1699,7 @@
     "float_check": "ok",
     "n_filings": 38,
     "names": [
-     "Accretive Health, Inc.",
-     "R1 RCM INC."
+     "Accretive Health, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
@@ -4167,7 +4166,6 @@
     "float_check": "ok",
     "n_filings": 14,
     "names": [
-     "ARRIS International Ltd",
      "ARRIS International plc"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -4976,8 +4974,7 @@
     "float_check": "ok",
     "n_filings": 7,
     "names": [
-     "A123 SYSTEMS, INC.",
-     "B456 SYSTEMS, INC."
+     "A123 SYSTEMS, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -7274,7 +7271,6 @@
     "float_check": "ok",
     "n_filings": 26,
     "names": [
-     "Axovant Gene Therapies Ltd.",
      "Axovant Sciences Ltd."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -7707,8 +7703,7 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "BASIC ENERGY SERVICES INC",
-     "BASIC ENERGY SERVICES, INC."
+     "BASIC ENERGY SERVICES INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -9788,8 +9783,7 @@
     "float_check": "ok",
     "n_filings": 12,
     "names": [
-     "BIND Therapeutics, Inc",
-     "DNIB UNWIND, INC."
+     "BIND Therapeutics, Inc"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -11109,8 +11103,7 @@
     "float_check": "ok",
     "n_filings": 48,
     "names": [
-     "Bridgepoint Education Inc",
-     "Zovio Inc"
+     "Bridgepoint Education Inc"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -14090,7 +14083,6 @@
     "float_check": "ok",
     "n_filings": 40,
     "names": [
-     "A. M. Castle & Co.",
      "CASTLE A M & CO"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -14451,7 +14443,6 @@
     "float_check": "ok",
     "n_filings": 14,
     "names": [
-     "COOPER INDUSTRIES LTD",
      "Cooper Industries plc"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -15298,7 +15289,6 @@
     "float_check": "ok",
     "n_filings": 30,
     "names": [
-     "CDTI ADVANCED MATERIALS, INC.",
      "CLEAN DIESEL TECHNOLOGIES INC"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -16683,8 +16673,7 @@
     "float_check": "ok",
     "n_filings": 18,
     "names": [
-     "C&J Energy Services Ltd.",
-     "C&J Energy Services, Inc."
+     "C&J Energy Services Ltd."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -17040,9 +17029,7 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "CALADRIUS BIOSCIENCES, INC.",
-     "Caladrius Biosciences, Inc.",
-     "NeoStem, Inc."
+     "CALADRIUS BIOSCIENCES, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -20968,8 +20955,7 @@
     "float_check": "ok",
     "n_filings": 45,
     "names": [
-     "CREE INC",
-     "CREE, INC."
+     "CREE INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
@@ -23191,6 +23177,362 @@
     "n_filings": 39,
     "names": [
      "China XD Plastics Co Ltd"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "CXP VKSLDWQI3JOL": [
+   {
+    "cik": 1252849,
+    "end_source": "form25",
+    "equity_end": "2021-12-08",
+    "evidence_span": [
+     "2013-11-05",
+     "2019-04-25"
+    ],
+    "filings": [
+     {
+      "accn": "0001252849-11-000034",
+      "cover_date": "2011-07-31",
+      "cover_shares": 542764772.0,
+      "filed": "2011-08-12",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001252849-11-000049",
+      "cover_date": "2011-10-31",
+      "cover_shares": 543312563000.0,
+      "filed": "2011-11-08",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001252849-12-000009",
+      "cover_date": "2012-01-31",
+      "cover_shares": 544739989.0,
+      "filed": "2012-02-29",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001252849-12-000015",
+      "cover_date": "2012-04-30",
+      "cover_shares": 545581297.0,
+      "filed": "2012-05-04",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001252849-12-000023",
+      "cover_date": "2012-07-31",
+      "cover_shares": 546343214.0,
+      "filed": "2012-08-06",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001252849-12-000028",
+      "cover_date": "2012-10-31",
+      "cover_shares": 547636076.0,
+      "filed": "2012-11-08",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001252849-13-000015",
+      "cover_date": "2013-01-31",
+      "cover_shares": 545627061.0,
+      "filed": "2013-03-01",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001252849-13-000028",
+      "cover_date": "2013-04-30",
+      "cover_shares": 542777805.0,
+      "filed": "2013-05-08",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001252849-13-000040",
+      "cover_date": "2013-07-31",
+      "cover_shares": 537048293.0,
+      "filed": "2013-08-06",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001252849-13-000090",
+      "cover_date": "2013-10-31",
+      "cover_shares": 134192610.0,
+      "filed": "2013-11-05",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001252849-14-000036",
+      "cover_date": "2014-01-31",
+      "cover_shares": 124856642.0,
+      "filed": "2014-02-20",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001252849-14-000066",
+      "cover_date": "2014-04-30",
+      "cover_shares": 124966166.0,
+      "filed": "2014-05-08",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001252849-14-000097",
+      "cover_date": "2014-07-31",
+      "cover_shares": 124969182.0,
+      "filed": "2014-08-07",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001252849-14-000128",
+      "cover_date": "2014-10-24",
+      "cover_shares": 124974142.0,
+      "filed": "2014-10-30",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001252849-15-000048",
+      "cover_date": "2015-01-31",
+      "cover_shares": 125090973.0,
+      "filed": "2015-02-12",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001252849-15-000086",
+      "cover_date": "2015-04-24",
+      "cover_shares": 125077771.0,
+      "filed": "2015-04-30",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001252849-15-000110",
+      "cover_date": "2015-07-30",
+      "cover_shares": 125079946.0,
+      "filed": "2015-07-30",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001252849-15-000140",
+      "cover_date": "2015-10-23",
+      "cover_shares": 124363587.0,
+      "filed": "2015-10-29",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001252849-16-000191",
+      "cover_date": "2016-01-31",
+      "cover_shares": 123475470.0,
+      "filed": "2016-02-11",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001252849-16-000219",
+      "cover_date": "2016-04-25",
+      "cover_shares": 123467080.0,
+      "filed": "2016-04-28",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001252849-16-000247",
+      "cover_date": "2016-07-25",
+      "cover_shares": 123471082.0,
+      "filed": "2016-07-28",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001252849-16-000274",
+      "cover_date": "2016-10-24",
+      "cover_shares": 123478809.0,
+      "filed": "2016-10-27",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001252849-17-000046",
+      "cover_date": "2017-01-31",
+      "cover_shares": 122455763.0,
+      "filed": "2017-02-09",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001252849-17-000065",
+      "cover_date": "2017-04-25",
+      "cover_shares": 122450566.0,
+      "filed": "2017-04-27",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001252849-17-000098",
+      "cover_date": "2017-07-24",
+      "cover_shares": 121235494.0,
+      "filed": "2017-07-27",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001252849-17-000117",
+      "cover_date": "2017-10-23",
+      "cover_shares": 119803608.0,
+      "filed": "2017-10-26",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001252849-18-000029",
+      "cover_date": "2018-01-31",
+      "cover_shares": 119897777.0,
+      "filed": "2018-02-15",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001252849-18-000040",
+      "cover_date": "2018-04-20",
+      "cover_shares": 118601872.0,
+      "filed": "2018-04-26",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001252849-18-000071",
+      "cover_date": "2018-07-20",
+      "cover_shares": 117974127.0,
+      "filed": "2018-07-26",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001252849-18-000077",
+      "cover_date": "2018-10-22",
+      "cover_shares": 117984195.0,
+      "filed": "2018-10-25",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001252849-19-000035",
+      "cover_date": "2019-01-31",
+      "cover_shares": 116879665.0,
+      "filed": "2019-02-13",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001252849-19-000053",
+      "cover_date": "2019-04-22",
+      "cover_shares": 116879665.0,
+      "filed": "2019-04-25",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001252849-19-000081",
+      "cover_date": "2019-07-22",
+      "cover_shares": 116908658.0,
+      "filed": "2019-07-25",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001252849-19-000096",
+      "cover_date": "2019-10-21",
+      "cover_shares": 116898657.0,
+      "filed": "2019-10-24",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001252849-20-000038",
+      "cover_date": "2020-01-31",
+      "cover_shares": 115232240.0,
+      "filed": "2020-02-13",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001252849-20-000072",
+      "cover_date": "2020-04-24",
+      "cover_shares": 114413205.0,
+      "filed": "2020-04-30",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001252849-20-000100",
+      "cover_date": "2020-07-24",
+      "cover_shares": 114464247.0,
+      "filed": "2020-07-31",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001252849-20-000107",
+      "cover_date": "2020-10-23",
+      "cover_shares": 114465006.0,
+      "filed": "2020-10-29",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0001252849-21-000032",
+      "cover_date": "2021-01-31",
+      "cover_shares": 114871825.0,
+      "filed": "2021-02-18",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001252849-21-000070",
+      "cover_date": "2021-04-23",
+      "cover_shares": 114869125.0,
+      "filed": "2021-04-29",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0001252849-21-000106",
+      "cover_date": "2021-07-23",
+      "cover_shares": 114903984.0,
+      "filed": "2021-07-29",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0001252849-21-000112",
+      "cover_date": "2021-10-22",
+      "cover_shares": 114898733.0,
+      "filed": "2021-10-27",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 42,
+    "names": [
+     "COLUMBIA PROPERTY TRUST, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -26438,6 +26780,338 @@
     "v1": "medium (tier 2)"
    }
   ],
+  "EAGL UWX04AE5AWKL": [
+   {
+    "cik": 1512077,
+    "end_source": "form15",
+    "equity_end": "2020-08-21",
+    "evidence_span": [
+     "2013-11-12",
+     "2016-03-17"
+    ],
+    "filings": [
+     {
+      "accn": "0001144204-11-051018",
+      "cover_date": "2011-08-15",
+      "cover_shares": 23161585.0,
+      "filed": "2011-09-01",
+      "form": "10-Q/A",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001144204-11-063675",
+      "cover_date": "2011-11-11",
+      "cover_shares": 23161585.0,
+      "filed": "2011-11-14",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001144204-12-017745",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2012-03-28",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001144204-12-028458",
+      "cover_date": "2012-05-14",
+      "cover_shares": 23161585.0,
+      "filed": "2012-05-14",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001144204-12-043215",
+      "cover_date": "2012-08-03",
+      "cover_shares": 23161585.0,
+      "filed": "2012-08-07",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001144204-12-062848",
+      "cover_date": "2012-11-01",
+      "cover_shares": 23161585.0,
+      "filed": "2012-11-15",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001144204-13-015764",
+      "cover_date": "2013-03-10",
+      "cover_shares": 35724655.0,
+      "filed": "2013-03-18",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001512077-13-000006",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-05-15",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001512077-13-000008",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-05-15",
+      "form": "10-Q/A",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001512077-13-000011",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-08-09",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001512077-13-000013",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-11-12",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001512077-14-000002",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-03-25",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001445305-14-002095",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-05-12",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001445305-14-002337",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-05-28",
+      "form": "10-Q/A",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001512077-14-000006",
+      "cover_date": "2014-08-08",
+      "cover_shares": 71992433.0,
+      "filed": "2014-08-11",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001512077-14-000009",
+      "cover_date": "2014-11-07",
+      "cover_shares": 76260293.0,
+      "filed": "2014-11-07",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001512077-15-000003",
+      "cover_date": "2015-03-12",
+      "cover_shares": 76932261.0,
+      "filed": "2015-03-17",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001512077-15-000006",
+      "cover_date": "2015-05-06",
+      "cover_shares": 77104388.0,
+      "filed": "2015-05-08",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001512077-15-000010",
+      "cover_date": "2015-08-06",
+      "cover_shares": 77150607.0,
+      "filed": "2015-08-07",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001512077-15-000017",
+      "cover_date": "2015-11-05",
+      "cover_shares": 78520543.0,
+      "filed": "2015-11-09",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001512077-16-000022",
+      "cover_date": "2016-03-14",
+      "cover_shares": 78648407.0,
+      "filed": "2016-03-17",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001512077-16-000023",
+      "cover_date": "2016-05-06",
+      "cover_shares": 78057929.0,
+      "filed": "2016-05-09",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001512077-16-000028",
+      "cover_date": "2016-08-05",
+      "cover_shares": 83639083.0,
+      "filed": "2016-08-09",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001512077-16-000032",
+      "cover_date": "2016-11-04",
+      "cover_shares": 85309744.0,
+      "filed": "2016-11-09",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001512077-17-000009",
+      "cover_date": "2017-10-31",
+      "cover_shares": 90743565.0,
+      "filed": "2017-11-17",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001512077-18-000007",
+      "cover_date": "2018-01-22",
+      "cover_shares": 90782791.0,
+      "filed": "2018-01-31",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001512077-18-000009",
+      "cover_date": "2018-01-22",
+      "cover_shares": 90782791.0,
+      "filed": "2018-01-31",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001512077-18-000011",
+      "cover_date": "2018-01-22",
+      "cover_shares": 90782791.0,
+      "filed": "2018-01-31",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001512077-18-000014",
+      "cover_date": "2018-03-14",
+      "cover_shares": 93854711.0,
+      "filed": "2018-04-02",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001512077-18-000017",
+      "cover_date": "2018-05-10",
+      "cover_shares": 91057616.0,
+      "filed": "2018-05-15",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001512077-18-000019",
+      "cover_date": "2018-08-06",
+      "cover_shares": 91281799.0,
+      "filed": "2018-08-09",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001512077-18-000023",
+      "cover_date": "2018-11-06",
+      "cover_shares": 91695768.0,
+      "filed": "2018-11-08",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001512077-19-000003",
+      "cover_date": "2019-03-14",
+      "cover_shares": 91784388.0,
+      "filed": "2019-03-18",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001512077-19-000009",
+      "cover_date": "2019-05-09",
+      "cover_shares": 92367593.0,
+      "filed": "2019-05-15",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001512077-19-000013",
+      "cover_date": "2019-07-30",
+      "cover_shares": 92821420.0,
+      "filed": "2019-08-09",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001512077-19-000016",
+      "cover_date": "2019-10-31",
+      "cover_shares": 92860448.0,
+      "filed": "2019-11-08",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001512077-20-000006",
+      "cover_date": "2020-05-11",
+      "cover_shares": 3744643.0,
+      "filed": "2020-05-15",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001512077-20-000012",
+      "cover_date": "2020-06-30",
+      "cover_shares": 3753807.0,
+      "filed": "2020-07-06",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001512077-20-000016",
+      "cover_date": "2020-08-12",
+      "cover_shares": 3754482.0,
+      "filed": "2020-08-14",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     }
+    ],
+    "float_check": "ok",
+    "n_filings": 39,
+    "names": [
+     "Global Eagle Entertainment Inc."
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
   "EDMC UGG9006J8PYD": [
    {
     "cik": 880059,
@@ -26808,8 +27482,7 @@
     "float_check": "ok",
     "n_filings": 25,
     "names": [
-     "Egalet Corp",
-     "Zyla Life Sciences"
+     "Egalet Corp"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -27916,8 +28589,7 @@
     "float_check": "ok",
     "n_filings": 44,
     "names": [
-     "CASI Pharmaceuticals, Inc.",
-     "ENTREMED INC"
+     "CASI Pharmaceuticals, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -28601,8 +29273,7 @@
     "float_check": "ok",
     "n_filings": 40,
     "names": [
-     "EnteroMedics Inc",
-     "ReShape Lifesciences Inc."
+     "EnteroMedics Inc"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -29211,34 +29882,6 @@
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "high"
-   }
-  ],
-  "FGP R735QTJ8XC9X": [
-   {
-    "cik": 922359,
-    "end_source": "last_equity_report",
-    "equity_end": "2026-09-25",
-    "evidence_span": [
-     "2013-09-26",
-     "2014-06-09"
-    ],
-    "filings": [
-     {
-      "accn": "0000922358-14-000008",
-      "cover_date": "2014-05-31",
-      "cover_shares": 81228237.0,
-      "filed": "2014-06-09",
-      "form": "10-Q/A",
-      "period_end": "2014-04-30"
-     }
-    ],
-    "float_check": "none",
-    "n_filings": 1,
-    "names": [
-     "FERRELLGAS L P"
-    ],
-    "tier": "A: SEC ticker-evidenced",
-    "v1": null
    }
   ],
   "FI VIXMZJV0W8RP": [
@@ -31401,8 +32044,7 @@
     "float_check": "ok",
     "n_filings": 30,
     "names": [
-     "FOREST OIL CORP",
-     "SABINE OIL & GAS CORP"
+     "FOREST OIL CORP"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
@@ -31731,402 +32373,6 @@
     "n_filings": 13,
     "names": [
      "1st United Bancorp, Inc."
-    ],
-    "tier": "A: SEC ticker-evidenced",
-    "v1": null
-   }
-  ],
-  "FUN R735QTJ8XC9X": [
-   {
-    "cik": 811532,
-    "end_source": "form25",
-    "equity_end": "2024-07-02",
-    "evidence_span": [
-     "2010-08-06",
-     "2019-05-08"
-    ],
-    "filings": [
-     {
-      "accn": "0001193125-10-181393",
-      "cover_date": "2010-06-27",
-      "cover_shares": 0.0,
-      "filed": "2010-08-06",
-      "form": "10-Q",
-      "period_end": "2010-06-27"
-     },
-     {
-      "accn": "0000811532-10-000029",
-      "cover_date": "2010-11-01",
-      "cover_shares": 0.0,
-      "filed": "2010-11-05",
-      "form": "10-Q",
-      "period_end": "2010-09-26"
-     },
-     {
-      "accn": "0000811532-11-000019",
-      "cover_date": "2011-02-15",
-      "cover_shares": 0.0,
-      "filed": "2011-03-01",
-      "form": "10-K",
-      "period_end": "2010-12-31"
-     },
-     {
-      "accn": "0000811532-11-000036",
-      "cover_date": "2011-05-01",
-      "cover_shares": 0.0,
-      "filed": "2011-05-06",
-      "form": "10-Q",
-      "period_end": "2011-03-27"
-     },
-     {
-      "accn": "0000811532-11-000064",
-      "cover_date": "2011-08-01",
-      "cover_shares": 0.0,
-      "filed": "2011-08-05",
-      "form": "10-Q",
-      "period_end": "2011-06-26"
-     },
-     {
-      "accn": "0000811532-11-000094",
-      "cover_date": "2011-11-01",
-      "cover_shares": 0.0,
-      "filed": "2011-11-04",
-      "form": "10-Q",
-      "period_end": "2011-09-25"
-     },
-     {
-      "accn": "0000811532-12-000037",
-      "cover_date": "2012-02-15",
-      "cover_shares": 0.0,
-      "filed": "2012-02-29",
-      "form": "10-K",
-      "period_end": "2011-12-31"
-     },
-     {
-      "accn": "0000811532-12-000090",
-      "cover_date": "2012-05-01",
-      "cover_shares": 0.0,
-      "filed": "2012-05-04",
-      "form": "10-Q",
-      "period_end": "2012-03-25"
-     },
-     {
-      "accn": "0000811532-12-000113",
-      "cover_date": "2012-08-01",
-      "cover_shares": 0.0,
-      "filed": "2012-08-10",
-      "form": "10-Q",
-      "period_end": "2012-07-01"
-     },
-     {
-      "accn": "0000811532-12-000135",
-      "cover_date": "2012-11-01",
-      "cover_shares": 0.0,
-      "filed": "2012-11-07",
-      "form": "10-Q",
-      "period_end": "2012-09-30"
-     },
-     {
-      "accn": "0000811532-13-000018",
-      "cover_date": "2013-02-15",
-      "cover_shares": 0.0,
-      "filed": "2013-02-25",
-      "form": "10-K",
-      "period_end": "2012-12-31"
-     },
-     {
-      "accn": "0000811532-13-000044",
-      "cover_date": "2013-04-20",
-      "cover_shares": 0.0,
-      "filed": "2013-05-10",
-      "form": "10-K/A",
-      "period_end": "2012-12-31"
-     },
-     {
-      "accn": "0000811532-13-000047",
-      "cover_date": "2013-05-01",
-      "cover_shares": 0.0,
-      "filed": "2013-05-10",
-      "form": "10-Q",
-      "period_end": "2013-03-31"
-     },
-     {
-      "accn": "0000811532-13-000056",
-      "cover_date": "2013-08-01",
-      "cover_shares": 0.0,
-      "filed": "2013-08-08",
-      "form": "10-Q",
-      "period_end": "2013-06-30"
-     },
-     {
-      "accn": "0000811532-13-000064",
-      "cover_date": "2013-11-01",
-      "cover_shares": 0.0,
-      "filed": "2013-11-07",
-      "form": "10-Q",
-      "period_end": "2013-09-29"
-     },
-     {
-      "accn": "0000811532-14-000042",
-      "cover_date": "2014-02-14",
-      "cover_shares": 0.0,
-      "filed": "2014-02-26",
-      "form": "10-K",
-      "period_end": "2013-12-31"
-     },
-     {
-      "accn": "0000811532-14-000086",
-      "cover_date": "2014-05-01",
-      "cover_shares": 0.0,
-      "filed": "2014-05-09",
-      "form": "10-Q",
-      "period_end": "2014-03-30"
-     },
-     {
-      "accn": "0000811532-14-000098",
-      "cover_date": "2014-08-01",
-      "cover_shares": 0.0,
-      "filed": "2014-08-07",
-      "form": "10-Q",
-      "period_end": "2014-06-29"
-     },
-     {
-      "accn": "0000811532-14-000103",
-      "cover_date": "2014-11-01",
-      "cover_shares": 0.0,
-      "filed": "2014-11-06",
-      "form": "10-Q",
-      "period_end": "2014-09-28"
-     },
-     {
-      "accn": "0000811532-15-000057",
-      "cover_date": "2015-02-13",
-      "cover_shares": 0.0,
-      "filed": "2015-02-26",
-      "form": "10-K",
-      "period_end": "2014-12-31"
-     },
-     {
-      "accn": "0000811532-15-000105",
-      "cover_date": "2015-04-24",
-      "cover_shares": 0.0,
-      "filed": "2015-05-01",
-      "form": "10-Q",
-      "period_end": "2015-03-29"
-     },
-     {
-      "accn": "0000811532-15-000122",
-      "cover_date": "2015-07-28",
-      "cover_shares": 0.0,
-      "filed": "2015-08-04",
-      "form": "10-Q",
-      "period_end": "2015-06-28"
-     },
-     {
-      "accn": "0000811532-15-000164",
-      "cover_date": "2015-10-30",
-      "cover_shares": 56031776.0,
-      "filed": "2015-11-05",
-      "form": "10-Q",
-      "period_end": "2015-09-27"
-     },
-     {
-      "accn": "0000811532-16-000223",
-      "cover_date": "2016-02-19",
-      "cover_shares": 56019973.0,
-      "filed": "2016-02-26",
-      "form": "10-K",
-      "period_end": "2015-12-31"
-     },
-     {
-      "accn": "0000811532-16-000263",
-      "cover_date": "2016-05-01",
-      "cover_shares": 56068506.0,
-      "filed": "2016-05-04",
-      "form": "10-Q",
-      "period_end": "2016-03-27"
-     },
-     {
-      "accn": "0000811532-16-000281",
-      "cover_date": "2016-08-01",
-      "cover_shares": 56076294.0,
-      "filed": "2016-08-03",
-      "form": "10-Q",
-      "period_end": "2016-06-26"
-     },
-     {
-      "accn": "0000811532-16-000310",
-      "cover_date": "2016-10-31",
-      "cover_shares": 56160377.0,
-      "filed": "2016-11-02",
-      "form": "10-Q",
-      "period_end": "2016-09-25"
-     },
-     {
-      "accn": "0000811532-17-000062",
-      "cover_date": "2017-02-02",
-      "cover_shares": 56199709.0,
-      "filed": "2017-02-24",
-      "form": "10-K",
-      "period_end": "2016-12-31"
-     },
-     {
-      "accn": "0000811532-17-000093",
-      "cover_date": "2017-05-01",
-      "cover_shares": 56235646.0,
-      "filed": "2017-05-03",
-      "form": "10-Q",
-      "period_end": "2017-03-26"
-     },
-     {
-      "accn": "0000811532-17-000112",
-      "cover_date": "2017-07-31",
-      "cover_shares": 56238002.0,
-      "filed": "2017-08-02",
-      "form": "10-Q",
-      "period_end": "2017-06-25"
-     },
-     {
-      "accn": "0000811532-17-000145",
-      "cover_date": "2017-10-27",
-      "cover_shares": 56237988.0,
-      "filed": "2017-11-02",
-      "form": "10-Q",
-      "period_end": "2017-09-24"
-     },
-     {
-      "accn": "0000811532-18-000040",
-      "cover_date": "2018-01-31",
-      "cover_shares": 56364013.0,
-      "filed": "2018-02-23",
-      "form": "10-K",
-      "period_end": "2017-12-31"
-     },
-     {
-      "accn": "0000811532-18-000082",
-      "cover_date": "2018-04-30",
-      "cover_shares": 56416016.0,
-      "filed": "2018-05-02",
-      "form": "10-Q",
-      "period_end": "2018-03-25"
-     },
-     {
-      "accn": "0000811532-18-000091",
-      "cover_date": "2018-07-27",
-      "cover_shares": 56440139.0,
-      "filed": "2018-08-01",
-      "form": "10-Q",
-      "period_end": "2018-06-24"
-     },
-     {
-      "accn": "0000811532-18-000099",
-      "cover_date": "2018-10-26",
-      "cover_shares": 56440459.0,
-      "filed": "2018-10-30",
-      "form": "10-Q",
-      "period_end": "2018-09-23"
-     },
-     {
-      "accn": "0000811532-19-000037",
-      "cover_date": "2019-02-01",
-      "cover_shares": 56566681.0,
-      "filed": "2019-02-22",
-      "form": "10-K",
-      "period_end": "2018-12-31"
-     },
-     {
-      "accn": "0000811532-19-000067",
-      "cover_date": "2019-04-26",
-      "cover_shares": 56584432.0,
-      "filed": "2019-05-08",
-      "form": "10-Q",
-      "period_end": "2019-03-31"
-     },
-     {
-      "accn": "0000811532-19-000086",
-      "cover_date": "2019-08-02",
-      "cover_shares": 56597354.0,
-      "filed": "2019-08-07",
-      "form": "10-Q",
-      "period_end": "2019-06-30"
-     },
-     {
-      "accn": "0000811532-19-000110",
-      "cover_date": "2019-11-01",
-      "cover_shares": 56663821.0,
-      "filed": "2019-11-06",
-      "form": "10-Q",
-      "period_end": "2019-09-29"
-     },
-     {
-      "accn": "0000811532-20-000029",
-      "cover_date": "2020-01-31",
-      "cover_shares": 56669451.0,
-      "filed": "2020-02-21",
-      "form": "10-K",
-      "period_end": "2019-12-31"
-     },
-     {
-      "accn": "0000811532-20-000087",
-      "cover_date": "2020-05-01",
-      "cover_shares": 56703355.0,
-      "filed": "2020-05-06",
-      "form": "10-Q",
-      "period_end": "2020-03-29"
-     },
-     {
-      "accn": "0000811532-20-000109",
-      "cover_date": "2020-07-31",
-      "cover_shares": 56706946.0,
-      "filed": "2020-08-05",
-      "form": "10-Q",
-      "period_end": "2020-06-28"
-     },
-     {
-      "accn": "0000811532-20-000118",
-      "cover_date": "2020-10-30",
-      "cover_shares": 56706338.0,
-      "filed": "2020-11-04",
-      "form": "10-Q",
-      "period_end": "2020-09-27"
-     },
-     {
-      "accn": "0000811532-21-000033",
-      "cover_date": "2021-02-05",
-      "cover_shares": 56732553.0,
-      "filed": "2021-02-19",
-      "form": "10-K",
-      "period_end": "2020-12-31"
-     },
-     {
-      "accn": "0000811532-21-000091",
-      "cover_date": "2021-04-30",
-      "cover_shares": 56829250.0,
-      "filed": "2021-05-05",
-      "form": "10-Q",
-      "period_end": "2021-03-28"
-     },
-     {
-      "accn": "0000811532-21-000105",
-      "cover_date": "2021-07-30",
-      "cover_shares": 56828184.0,
-      "filed": "2021-08-05",
-      "form": "10-Q",
-      "period_end": "2021-06-27"
-     },
-     {
-      "accn": "0000811532-21-000115",
-      "cover_date": "2021-10-29",
-      "cover_shares": 56842303.0,
-      "filed": "2021-11-03",
-      "form": "10-Q",
-      "period_end": "2021-09-26"
-     }
-    ],
-    "float_check": "ok",
-    "n_filings": 47,
-    "names": [
-     "CEDAR FAIR L P"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -32514,9 +32760,7 @@
     "float_check": "ok",
     "n_filings": 46,
     "names": [
-     "FIVE STAR QUALITY CARE INC",
-     "FIVE STAR QUALITY CARE, INC.",
-     "FIVE STAR SENIOR LIVING INC."
+     "FIVE STAR QUALITY CARE INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -32888,8 +33132,7 @@
     "float_check": "none",
     "n_filings": 15,
     "names": [
-     "FXCM Inc.",
-     "Global Brokerage, Inc."
+     "FXCM Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -36421,8 +36664,7 @@
     "float_check": "ok",
     "n_filings": 37,
     "names": [
-     "GTT Communications, Inc.",
-     "Global Telecom & Technology, Inc."
+     "GTT Communications, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
@@ -37202,7 +37444,6 @@
     "float_check": "ok",
     "n_filings": 35,
     "names": [
-     "DITECH HOLDING Corp",
      "WALTER INVESTMENT MANAGEMENT CORP"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -39557,8 +39798,7 @@
     "float_check": "ok",
     "n_filings": 37,
     "names": [
-     "CRAFT BREW ALLIANCE, INC.",
-     "CRAFT BREWERS ALLIANCE, INC."
+     "CRAFT BREW ALLIANCE, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -41110,8 +41350,7 @@
     "float_check": "ok",
     "n_filings": 27,
     "names": [
-     "Actua Corp",
-     "ICG GROUP, INC."
+     "Actua Corp"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -41467,10 +41706,7 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "Cool Holdings, Inc.",
-     "INFOSONICS CORP",
-     "INFOSONICS Corp",
-     "InfoSonics Corp"
+     "Cool Holdings, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -41834,8 +42070,7 @@
     "float_check": "ok",
     "n_filings": 43,
     "names": [
-     "IGI LABORATORIES, INC",
-     "Teligent, Inc."
+     "IGI LABORATORIES, INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -43487,7 +43722,6 @@
     "float_check": "ok",
     "n_filings": 38,
     "names": [
-     "INTERNAP NETWORK SERVICES CORP",
      "Internap Corp"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -43789,8 +44023,7 @@
     "n_filings": 35,
     "names": [
      "Centric Brands Inc.",
-     "Differential Brands Group Inc.",
-     "JOE'S JEANS INC."
+     "Differential Brands Group Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -46286,7 +46519,6 @@
     "float_check": "ok",
     "n_filings": 4,
     "names": [
-     "J.G. Wentworth Co",
      "JGWPT Holdings Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -46439,7 +46671,6 @@
     "float_check": "ok",
     "n_filings": 4,
     "names": [
-     "JOHN WILEY & SONS, INC.",
      "WILEY JOHN & SONS, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -47948,7 +48179,6 @@
     "float_check": "ok",
     "n_filings": 43,
     "names": [
-     "Kandi Technologies Corp",
      "Kandi Technologies Group, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -48765,6 +48995,202 @@
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
+   }
+  ],
+  "LCA WCE3G8TTASMD": [
+   {
+    "cik": 1653247,
+    "end_source": "last_equity_report",
+    "equity_end": "2023-11-13",
+    "evidence_span": [
+     "2019-03-15",
+     "2019-08-08"
+    ],
+    "filings": [
+     {
+      "accn": "0001144204-16-118926",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-08-15",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001144204-16-134221",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-11-14",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001144204-17-017766",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-03-30",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001144204-17-026960",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-05-12",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001144204-17-042506",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-08-11",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001144204-17-058807",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-11-14",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001144204-18-014126",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-03-12",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001144204-18-027134",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-05-10",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001144204-18-043371",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-08-09",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001144204-18-057631",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-11-06",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001564590-19-007876",
+      "cover_date": "2019-03-07",
+      "cover_shares": 69881062.0,
+      "filed": "2019-03-15",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001564590-19-018544",
+      "cover_date": "2019-05-08",
+      "cover_shares": 69918381.0,
+      "filed": "2019-05-10",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001564590-19-030756",
+      "cover_date": "2019-08-06",
+      "cover_shares": 76684094.0,
+      "filed": "2019-08-08",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001564590-19-042393",
+      "cover_date": "2019-11-04",
+      "cover_shares": 76534253.0,
+      "filed": "2019-11-12",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001564590-20-011143",
+      "cover_date": "2020-03-06",
+      "cover_shares": 76598143.0,
+      "filed": "2020-03-16",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001564590-20-022624",
+      "cover_date": "2020-05-05",
+      "cover_shares": 90896555.0,
+      "filed": "2020-05-07",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001564590-20-037311",
+      "cover_date": "2020-08-04",
+      "cover_shares": 110075737.0,
+      "filed": "2020-08-06",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001564590-20-052517",
+      "cover_date": "2020-11-05",
+      "cover_shares": 110997964.0,
+      "filed": "2020-11-09",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0001564590-21-011498",
+      "cover_date": "2021-03-03",
+      "cover_shares": 111523854.0,
+      "filed": "2021-03-08",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001564590-21-025071",
+      "cover_date": "2021-05-04",
+      "cover_shares": 115390755.0,
+      "filed": "2021-05-06",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0001564590-21-042677",
+      "cover_date": "2021-08-05",
+      "cover_shares": 117080264.0,
+      "filed": "2021-08-09",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0001564590-21-053591",
+      "cover_date": "2021-11-01",
+      "cover_shares": 126617190.0,
+      "filed": "2021-11-02",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 22,
+    "names": [
+     "Waitr Holdings Inc."
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
    }
   ],
   "LCI SDV4X1N8LBAD": [
@@ -51696,6 +52122,386 @@
     "v1": null
    }
   ],
+  "MDQ R735QTJ8XC9X": [
+   {
+    "cik": 876883,
+    "end_source": "last_equity_report",
+    "equity_end": "2026-07-31",
+    "evidence_span": [
+     "2013-11-05",
+     "2017-03-01"
+    ],
+    "filings": [
+     {
+      "accn": "0001144204-11-043882",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2011-08-04",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001144204-11-061002",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2011-11-03",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001144204-12-014991",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2012-03-15",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001144204-12-027313",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2012-05-10",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001144204-12-048603",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2012-08-29",
+      "form": "10-Q/A",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001144204-12-060603",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2012-11-09",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001144204-13-013561",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-03-07",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001144204-13-026908",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-05-08",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001144204-13-042634",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-08-02",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001144204-13-058738",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-11-05",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001144204-14-014344",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-03-10",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001144204-14-025538",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-04-29",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001445305-14-003580",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-08-11",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001445305-14-004844",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-11-06",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001628280-15-001347",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2015-03-02",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001628280-15-003124",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2015-04-30",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001628280-15-006281",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2015-08-07",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001628280-15-008158",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2015-11-03",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001628280-16-011847",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-02-26",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001628280-16-015523",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-05-04",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001628280-16-018378",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-08-03",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001628280-16-021039",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2016-11-08",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0000876883-17-000004",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-03-01",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0000876883-17-000007",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-05-02",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0000876883-17-000011",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-08-14",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0000876883-17-000016",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-08-31",
+      "form": "10-K",
+      "period_end": "2017-08-30"
+     },
+     {
+      "accn": "0000876883-17-000017",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-08-31",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0000876883-17-000021",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2017-11-01",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0000876883-18-000007",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-03-01",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0000876883-18-000010",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-05-10",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0000876883-18-000015",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-08-07",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0000876883-18-000019",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2018-11-01",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0000876883-19-000004",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2019-03-18",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0000876883-19-000009",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2019-05-09",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0000876883-19-000015",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2019-08-07",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0000876883-19-000023",
+      "cover_date": "2019-10-18",
+      "cover_shares": 145000000.0,
+      "filed": "2019-11-06",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0000876883-20-000006",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2020-03-05",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0000876883-20-000010",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2020-05-11",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0000876883-20-000018",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2020-08-10",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0000876883-20-000033",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2020-10-29",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0000876883-21-000016",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2021-03-16",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001104659-21-055638",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2021-04-27",
+      "form": "10-K/A",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0000876883-21-000030",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2021-05-10",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0000876883-21-000038",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2021-08-05",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0000876883-21-000050",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2021-11-09",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 45,
+    "names": [
+     "MDC PARTNERS INC"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
   "MDR R735QTJ8XC9X": [
    {
     "cik": 708819,
@@ -53039,7 +53845,6 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "MAJESCO ENTERTAINMENT CO",
      "POLARITYTE, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -54586,8 +55391,7 @@
     "float_check": "ok",
     "n_filings": 22,
     "names": [
-     "INNOVATE BIOPHARMACEUTICALS, INC.",
-     "Monster Digital, Inc."
+     "INNOVATE BIOPHARMACEUTICALS, INC."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -56270,7 +57074,6 @@
     "float_check": "ok",
     "n_filings": 34,
     "names": [
-     "American Brewing Company, Inc.",
      "New Age Beverages Corp"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -56451,7 +57254,6 @@
     "float_check": "ok",
     "n_filings": 20,
     "names": [
-     "Nabriva Therapeutics AG",
      "Nabriva Therapeutics plc"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -56808,8 +57610,91 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "Drive Shack Inc.",
      "NEWCASTLE INVESTMENT CORP"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "NFP SS44TR86GDWL": [
+   {
+    "cik": 1183186,
+    "end_source": "form25",
+    "equity_end": "2013-07-03",
+    "evidence_span": [
+     "2011-08-02",
+     "2013-05-03"
+    ],
+    "filings": [
+     {
+      "accn": "0001193125-11-206315",
+      "cover_date": "2011-07-31",
+      "cover_shares": 42796033.0,
+      "filed": "2011-08-02",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001193125-11-289853",
+      "cover_date": "2011-10-27",
+      "cover_shares": 41373510.0,
+      "filed": "2011-11-01",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001193125-12-056154",
+      "cover_date": "2012-01-31",
+      "cover_shares": 40290742.0,
+      "filed": "2012-02-13",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001193125-12-201068",
+      "cover_date": "2012-04-25",
+      "cover_shares": 40603708.0,
+      "filed": "2012-05-01",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001193125-12-328802",
+      "cover_date": "2012-07-25",
+      "cover_shares": 40047257.0,
+      "filed": "2012-08-01",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001193125-12-451990",
+      "cover_date": "2012-10-25",
+      "cover_shares": 39836091.0,
+      "filed": "2012-11-05",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001193125-13-061661",
+      "cover_date": "2013-01-31",
+      "cover_shares": 39875468.0,
+      "filed": "2013-02-15",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001193125-13-197773",
+      "cover_date": "2013-04-25",
+      "cover_shares": 40117303.0,
+      "filed": "2013-05-03",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     }
+    ],
+    "float_check": "ok",
+    "n_filings": 8,
+    "names": [
+     "NATIONAL FINANCIAL PARTNERS CORP"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -63007,8 +63892,371 @@
     "float_check": "ok",
     "n_filings": 47,
     "names": [
-     "Interpace Diagnostics Group, Inc.",
-     "PDI INC"
+     "Interpace Diagnostics Group, Inc."
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "PEI R735QTJ8XC9X": [
+   {
+    "cik": 77281,
+    "end_source": "form15",
+    "equity_end": "2024-04-01",
+    "evidence_span": [
+     "2011-08-01",
+     "2019-05-07"
+    ],
+    "filings": [
+     {
+      "accn": "0001193125-11-204277",
+      "cover_date": "2011-07-29",
+      "cover_shares": 55687301.0,
+      "filed": "2011-08-01",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001193125-11-292774",
+      "cover_date": "2011-10-31",
+      "cover_shares": 55668837.0,
+      "filed": "2011-11-02",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001193125-12-088875",
+      "cover_date": "2012-02-27",
+      "cover_shares": 55486080.0,
+      "filed": "2012-02-29",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001193125-12-196638",
+      "cover_date": "2012-04-25",
+      "cover_shares": 55953163.0,
+      "filed": "2012-04-30",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001193125-12-327580",
+      "cover_date": "2012-07-30",
+      "cover_shares": 56009160.0,
+      "filed": "2012-08-01",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001193125-12-437556",
+      "cover_date": "2012-10-24",
+      "cover_shares": 55982082.0,
+      "filed": "2012-10-26",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001193125-13-086626",
+      "cover_date": "2013-02-22",
+      "cover_shares": 56235414.0,
+      "filed": "2013-03-01",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001193125-13-177263",
+      "cover_date": "2013-04-22",
+      "cover_shares": 56506001.0,
+      "filed": "2013-04-26",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0000077281-13-000008",
+      "cover_date": "2013-07-22",
+      "cover_shares": 68146543.0,
+      "filed": "2013-07-26",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0000077281-13-000022",
+      "cover_date": "2013-10-25",
+      "cover_shares": 68202291.0,
+      "filed": "2013-10-30",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0000077281-14-000006",
+      "cover_date": "2013-10-25",
+      "cover_shares": 68202291.0,
+      "filed": "2014-02-12",
+      "form": "10-Q/A",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0000077281-14-000019",
+      "cover_date": "2014-02-25",
+      "cover_shares": 68411463.0,
+      "filed": "2014-02-28",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0000077281-14-000038",
+      "cover_date": "2014-04-21",
+      "cover_shares": 68741417.0,
+      "filed": "2014-04-25",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0000077281-14-000057",
+      "cover_date": "2014-07-28",
+      "cover_shares": 68775675.0,
+      "filed": "2014-08-01",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0000077281-14-000069",
+      "cover_date": "2014-10-27",
+      "cover_shares": 68793240.0,
+      "filed": "2014-10-31",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0000077281-15-000010",
+      "cover_date": "2015-02-17",
+      "cover_shares": 69014266.0,
+      "filed": "2015-02-23",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0000077281-15-000041",
+      "cover_date": "2015-04-28",
+      "cover_shares": 69117325.0,
+      "filed": "2015-05-04",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0000077281-15-000061",
+      "cover_date": "2015-07-29",
+      "cover_shares": 69168395.0,
+      "filed": "2015-08-03",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0000077281-15-000072",
+      "cover_date": "2015-10-27",
+      "cover_shares": 69190692.0,
+      "filed": "2015-10-29",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0000077281-16-000093",
+      "cover_date": "2016-02-22",
+      "cover_shares": 69263083.0,
+      "filed": "2016-02-26",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0000077281-16-000108",
+      "cover_date": "2016-04-22",
+      "cover_shares": 69470731.0,
+      "filed": "2016-04-29",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0000077281-16-000123",
+      "cover_date": "2016-07-25",
+      "cover_shares": 69515348.0,
+      "filed": "2016-07-28",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0000077281-16-000134",
+      "cover_date": "2016-10-31",
+      "cover_shares": 69538313.0,
+      "filed": "2016-11-04",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0000077281-17-000012",
+      "cover_date": "2017-02-23",
+      "cover_shares": 69480553.0,
+      "filed": "2017-02-28",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0000077281-17-000025",
+      "cover_date": "2017-04-24",
+      "cover_shares": 69741102.0,
+      "filed": "2017-04-27",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0000077281-17-000043",
+      "cover_date": "2017-08-03",
+      "cover_shares": 69827608.0,
+      "filed": "2017-08-09",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0000077281-17-000055",
+      "cover_date": "2017-10-27",
+      "cover_shares": 69908935.0,
+      "filed": "2017-11-02",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0000077281-18-000018",
+      "cover_date": "2018-02-12",
+      "cover_shares": 70372236.0,
+      "filed": "2018-02-16",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0000077281-18-000041",
+      "cover_date": "2018-04-30",
+      "cover_shares": 70354111.0,
+      "filed": "2018-05-04",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0000077281-18-000070",
+      "cover_date": "2018-07-30",
+      "cover_shares": 70452612.0,
+      "filed": "2018-08-03",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0000077281-18-000084",
+      "cover_date": "2018-10-26",
+      "cover_shares": 70465156.0,
+      "filed": "2018-11-01",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0000077281-19-000017",
+      "cover_date": "2019-02-19",
+      "cover_shares": 71095084.0,
+      "filed": "2019-02-25",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0000077281-19-000034",
+      "cover_date": "2019-04-30",
+      "cover_shares": 77383675.0,
+      "filed": "2019-05-07",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001564590-19-028323",
+      "cover_date": "2019-07-29",
+      "cover_shares": 77549217.0,
+      "filed": "2019-08-02",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001564590-19-039818",
+      "cover_date": "2019-10-30",
+      "cover_shares": 77591841.0,
+      "filed": "2019-11-04",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001564590-20-010906",
+      "cover_date": "2020-03-06",
+      "cover_shares": 78528350.0,
+      "filed": "2020-03-16",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001564590-20-026556",
+      "cover_date": "2020-05-15",
+      "cover_shares": 78876389.0,
+      "filed": "2020-05-21",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001564590-20-039029",
+      "cover_date": "2020-08-07",
+      "cover_shares": 79485428.0,
+      "filed": "2020-08-11",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001564590-20-052425",
+      "cover_date": "2020-11-06",
+      "cover_shares": 79537167.0,
+      "filed": "2020-11-09",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0001564590-21-013558",
+      "cover_date": "2021-03-09",
+      "cover_shares": 79270322.0,
+      "filed": "2021-03-16",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001564590-21-025310",
+      "cover_date": "2021-05-03",
+      "cover_shares": 79259912.0,
+      "filed": "2021-05-07",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0001564590-21-041924",
+      "cover_date": "2021-08-04",
+      "cover_shares": 80205329.0,
+      "filed": "2021-08-06",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0000950170-21-003159",
+      "cover_date": "2021-11-03",
+      "cover_shares": 80200236.0,
+      "filed": "2021-11-05",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 43,
+    "names": [
+     "PENNSYLVANIA REAL ESTATE INVESTMENT TRUST"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -63433,6 +64681,218 @@
     "n_filings": 13,
     "names": [
      "PhaseBio Pharmaceuticals Inc"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "PHUN X0QFBGE1E9GL": [
+   {
+    "cik": 1665300,
+    "end_source": "last_equity_report",
+    "equity_end": "2026-08-10",
+    "evidence_span": [
+     "2019-03-06",
+     "2019-08-13"
+    ],
+    "filings": [
+     {
+      "accn": "0001213900-16-017537",
+      "cover_date": "2016-10-13",
+      "cover_shares": 9010177.0,
+      "filed": "2016-10-14",
+      "form": "10-Q",
+      "period_end": "2016-08-31"
+     },
+     {
+      "accn": "0001213900-17-001358",
+      "cover_date": "2017-02-09",
+      "cover_shares": 9010177.0,
+      "filed": "2017-02-14",
+      "form": "10-K",
+      "period_end": "2016-11-30"
+     },
+     {
+      "accn": "0001213900-17-003697",
+      "cover_date": "2017-04-10",
+      "cover_shares": 9010177.0,
+      "filed": "2017-04-13",
+      "form": "10-Q",
+      "period_end": "2017-02-28"
+     },
+     {
+      "accn": "0001213900-17-007281",
+      "cover_date": "2017-06-30",
+      "cover_shares": 9010177.0,
+      "filed": "2017-07-07",
+      "form": "10-Q",
+      "period_end": "2017-05-31"
+     },
+     {
+      "accn": "0001213900-17-010473",
+      "cover_date": "2017-10-09",
+      "cover_shares": 9010177.0,
+      "filed": "2017-10-11",
+      "form": "10-Q",
+      "period_end": "2017-08-31"
+     },
+     {
+      "accn": "0001213900-18-001544",
+      "cover_date": "2018-02-08",
+      "cover_shares": 9010177.0,
+      "filed": "2018-02-12",
+      "form": "10-K",
+      "period_end": "2017-11-30"
+     },
+     {
+      "accn": "0001213900-18-004361",
+      "cover_date": "2018-04-11",
+      "cover_shares": 9010177.0,
+      "filed": "2018-04-12",
+      "form": "10-Q",
+      "period_end": "2018-02-28"
+     },
+     {
+      "accn": "0001213900-18-009180",
+      "cover_date": "2018-07-13",
+      "cover_shares": 5657117.0,
+      "filed": "2018-07-13",
+      "form": "10-Q",
+      "period_end": "2018-05-31"
+     },
+     {
+      "accn": "0001213900-18-013919",
+      "cover_date": "2018-10-15",
+      "cover_shares": 3961287.0,
+      "filed": "2018-10-15",
+      "form": "10-Q",
+      "period_end": "2018-08-31"
+     },
+     {
+      "accn": "0001213900-19-003625",
+      "cover_date": "2019-03-01",
+      "cover_shares": 34595248.0,
+      "filed": "2019-03-06",
+      "form": "10-K",
+      "period_end": "2018-11-30"
+     },
+     {
+      "accn": "0001213900-19-004502",
+      "cover_date": "2019-03-13",
+      "cover_shares": 35201259.0,
+      "filed": "2019-03-20",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001213900-19-008896",
+      "cover_date": "2019-05-09",
+      "cover_shares": 38888285.0,
+      "filed": "2019-05-15",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001628280-19-010693",
+      "cover_date": "2019-08-08",
+      "cover_shares": 38966575.0,
+      "filed": "2019-08-13",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001628280-19-014220",
+      "cover_date": "2019-11-11",
+      "cover_shares": 39124023.0,
+      "filed": "2019-11-14",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001628280-20-004377",
+      "cover_date": "2020-03-23",
+      "cover_shares": 40368825.0,
+      "filed": "2020-03-30",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001628280-20-005857",
+      "cover_date": "2020-04-24",
+      "cover_shares": 40700206.0,
+      "filed": "2020-04-29",
+      "form": "10-K/A",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001628280-20-007915",
+      "cover_date": "2020-05-12",
+      "cover_shares": 40950206.0,
+      "filed": "2020-05-15",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001628280-20-012736",
+      "cover_date": "2020-08-12",
+      "cover_shares": 43623404.0,
+      "filed": "2020-08-14",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001628280-20-016344",
+      "cover_date": "2020-11-09",
+      "cover_shares": 49140540.0,
+      "filed": "2020-11-12",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0001628280-21-006256",
+      "cover_date": "2021-03-23",
+      "cover_shares": 71211399.0,
+      "filed": "2021-03-31",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001628280-21-008472",
+      "cover_date": "2021-04-23",
+      "cover_shares": 71211858.0,
+      "filed": "2021-04-30",
+      "form": "10-K/A",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001628280-21-010391",
+      "cover_date": "2021-05-10",
+      "cover_shares": 71662933.0,
+      "filed": "2021-05-14",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0001628280-21-017003",
+      "cover_date": "2021-08-10",
+      "cover_shares": 74870210.0,
+      "filed": "2021-08-13",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0001628280-21-023228",
+      "cover_date": "2021-11-09",
+      "cover_shares": 96261780.0,
+      "filed": "2021-11-12",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 24,
+    "names": [
+     "Phunware, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -64532,6 +65992,362 @@
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
+   }
+  ],
+  "PNFP SF1H52DHVR6T": [
+   {
+    "cik": 1115055,
+    "end_source": "form15",
+    "equity_end": "2026-01-12",
+    "evidence_span": [
+     "2011-07-29",
+     "2019-05-03"
+    ],
+    "filings": [
+     {
+      "accn": "0001140361-11-038595",
+      "cover_date": "2011-07-28",
+      "cover_shares": 34138304.0,
+      "filed": "2011-07-29",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001140361-11-050973",
+      "cover_date": "2011-10-28",
+      "cover_shares": 34311040.0,
+      "filed": "2011-10-31",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001140361-12-012791",
+      "cover_date": "2012-02-24",
+      "cover_shares": 34607034.0,
+      "filed": "2012-03-02",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001140361-12-022993",
+      "cover_date": "2012-04-27",
+      "cover_shares": 34588975.0,
+      "filed": "2012-05-04",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001140361-12-034072",
+      "cover_date": "2012-07-24",
+      "cover_shares": 34674783.0,
+      "filed": "2012-07-26",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001140361-12-044659",
+      "cover_date": "2012-10-23",
+      "cover_shares": 34694003.0,
+      "filed": "2012-10-25",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001140361-13-008936",
+      "cover_date": "2013-02-19",
+      "cover_shares": 34758813.0,
+      "filed": "2013-02-22",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001140361-13-018625",
+      "cover_date": "2013-04-30",
+      "cover_shares": 35028737.0,
+      "filed": "2013-05-03",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001140361-13-029733",
+      "cover_date": "2013-07-30",
+      "cover_shares": 35105822.0,
+      "filed": "2013-07-31",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001115055-13-000016",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-11-01",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001115055-14-000015",
+      "cover_date": "2014-02-21",
+      "cover_shares": 35336340.0,
+      "filed": "2014-02-25",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001115055-14-000024",
+      "cover_date": "2014-05-01",
+      "cover_shares": 35567991.0,
+      "filed": "2014-05-02",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001115055-14-000037",
+      "cover_date": "2014-07-31",
+      "cover_shares": 35610952.0,
+      "filed": "2014-08-01",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001115055-14-000044",
+      "cover_date": "2014-11-06",
+      "cover_shares": 35660470.0,
+      "filed": "2014-11-07",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001115055-15-000017",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2015-02-25",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001115055-15-000032",
+      "cover_date": "2015-05-06",
+      "cover_shares": 35876498.0,
+      "filed": "2015-05-08",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001115055-15-000065",
+      "cover_date": "2015-08-05",
+      "cover_shares": 39351636.0,
+      "filed": "2015-08-07",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001115055-15-000077",
+      "cover_date": "2015-11-03",
+      "cover_shares": 40850715.0,
+      "filed": "2015-11-09",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001115055-16-000088",
+      "cover_date": "2016-02-26",
+      "cover_shares": 41042125.0,
+      "filed": "2016-02-29",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001115055-16-000112",
+      "cover_date": "2016-05-05",
+      "cover_shares": 42045184.0,
+      "filed": "2016-05-06",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001115055-16-000155",
+      "cover_date": "2016-08-02",
+      "cover_shares": 46140190.0,
+      "filed": "2016-08-05",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001115055-16-000164",
+      "cover_date": "2016-11-02",
+      "cover_shares": 46179403.0,
+      "filed": "2016-11-04",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001115055-17-000018",
+      "cover_date": "2017-02-24",
+      "cover_shares": 49761376.0,
+      "filed": "2017-02-27",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001115055-17-000050",
+      "cover_date": "2017-05-02",
+      "cover_shares": 49828669.0,
+      "filed": "2017-05-05",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001115055-17-000074",
+      "cover_date": "2017-08-01",
+      "cover_shares": 77658511.0,
+      "filed": "2017-08-04",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001115055-17-000088",
+      "cover_date": "2017-11-01",
+      "cover_shares": 77722855.0,
+      "filed": "2017-11-07",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001115055-18-000012",
+      "cover_date": "2018-02-23",
+      "cover_shares": 77887015.0,
+      "filed": "2018-02-28",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001115055-18-000030",
+      "cover_date": "2018-05-01",
+      "cover_shares": 77868340.0,
+      "filed": "2018-05-07",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001115055-18-000045",
+      "cover_date": "2018-07-31",
+      "cover_shares": 77878457.0,
+      "filed": "2018-08-03",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001115055-18-000051",
+      "cover_date": "2018-10-31",
+      "cover_shares": 77888834.0,
+      "filed": "2018-11-02",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001115055-19-000011",
+      "cover_date": "2019-02-22",
+      "cover_shares": 77531750.0,
+      "filed": "2019-02-28",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001115055-19-000028",
+      "cover_date": "2019-04-30",
+      "cover_shares": 76958235.0,
+      "filed": "2019-05-03",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001115055-19-000038",
+      "cover_date": "2019-07-30",
+      "cover_shares": 76949554.0,
+      "filed": "2019-08-02",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001115055-19-000045",
+      "cover_date": "2019-10-31",
+      "cover_shares": 76565438.0,
+      "filed": "2019-11-01",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001115055-20-000018",
+      "cover_date": "2020-02-18",
+      "cover_shares": 77531750.0,
+      "filed": "2020-02-25",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001115055-20-000040",
+      "cover_date": "2020-05-01",
+      "cover_shares": 75848015.0,
+      "filed": "2020-05-08",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001115055-20-000055",
+      "cover_date": "2020-07-31",
+      "cover_shares": 75844238.0,
+      "filed": "2020-08-07",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001115055-20-000070",
+      "cover_date": "2020-11-03",
+      "cover_shares": 75848853.0,
+      "filed": "2020-11-06",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     },
+     {
+      "accn": "0001115055-21-000013",
+      "cover_date": "2021-02-22",
+      "cover_shares": 75991557.0,
+      "filed": "2021-02-26",
+      "form": "10-K",
+      "period_end": "2020-12-31"
+     },
+     {
+      "accn": "0001115055-21-000041",
+      "cover_date": "2021-04-30",
+      "cover_shares": 76094901.0,
+      "filed": "2021-05-07",
+      "form": "10-Q",
+      "period_end": "2021-03-31"
+     },
+     {
+      "accn": "0001115055-21-000054",
+      "cover_date": "2021-07-30",
+      "cover_shares": 76107958.0,
+      "filed": "2021-08-06",
+      "form": "10-Q",
+      "period_end": "2021-06-30"
+     },
+     {
+      "accn": "0001115055-21-000063",
+      "cover_date": "2021-10-29",
+      "cover_shares": 76136435.0,
+      "filed": "2021-11-05",
+      "form": "10-Q",
+      "period_end": "2021-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 42,
+    "names": [
+     "PINNACLE FINANCIAL PARTNERS INC"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
    }
   ],
   "POZN RYSLLJ38FLUT": [
@@ -68653,8 +70469,291 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "HALCON RESOURCES CORP",
-     "RAM ENERGY RESOURCES INC"
+     "HALCON RESOURCES CORP"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "RAS R7A1VH3FGMED": [
+   {
+    "cik": 1045425,
+    "end_source": "form15",
+    "equity_end": "2020-03-27",
+    "evidence_span": [
+     "2011-08-05",
+     "2015-05-08"
+    ],
+    "filings": [
+     {
+      "accn": "0001193125-11-212419",
+      "cover_date": "2011-08-03",
+      "cover_shares": 38425188.0,
+      "filed": "2011-08-05",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001193125-11-297251",
+      "cover_date": "2011-11-02",
+      "cover_shares": 40077148.0,
+      "filed": "2011-11-04",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001193125-12-078168",
+      "cover_date": "2012-02-21",
+      "cover_shares": 42359031.0,
+      "filed": "2012-02-24",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001193125-12-225565",
+      "cover_date": "2012-05-08",
+      "cover_shares": 49901961.0,
+      "filed": "2012-05-10",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001193125-12-335392",
+      "cover_date": "2012-08-01",
+      "cover_shares": 49905866.0,
+      "filed": "2012-08-06",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001193125-12-454753",
+      "cover_date": "2012-11-01",
+      "cover_shares": 49913142.0,
+      "filed": "2012-11-06",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001193125-13-112507",
+      "cover_date": "2013-02-28",
+      "cover_shares": 60720757.0,
+      "filed": "2013-03-18",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001193125-13-204743",
+      "cover_date": "2013-05-03",
+      "cover_shares": 69960454.0,
+      "filed": "2013-05-07",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001193125-13-324354",
+      "cover_date": "2013-08-05",
+      "cover_shares": 70249254.0,
+      "filed": "2013-08-07",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001193125-13-427737",
+      "cover_date": "2013-11-04",
+      "cover_shares": 70255832.0,
+      "filed": "2013-11-05",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001193125-14-089337",
+      "cover_date": "2014-03-06",
+      "cover_shares": 81865000.0,
+      "filed": "2014-03-07",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001193125-14-195190",
+      "cover_date": "2014-05-09",
+      "cover_shares": 82290907.0,
+      "filed": "2014-05-12",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001193125-14-296446",
+      "cover_date": "2014-08-04",
+      "cover_shares": 82509399.0,
+      "filed": "2014-08-06",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001193125-14-403814",
+      "cover_date": "2014-11-06",
+      "cover_shares": 82511313.0,
+      "filed": "2014-11-10",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001193125-15-094352",
+      "cover_date": "2015-03-13",
+      "cover_shares": 82811326.0,
+      "filed": "2015-03-17",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001193125-15-179798",
+      "cover_date": "2015-05-07",
+      "cover_shares": 82892702.0,
+      "filed": "2015-05-08",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001193125-15-283064",
+      "cover_date": "2015-08-07",
+      "cover_shares": 90895723.0,
+      "filed": "2015-08-07",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001564590-15-010165",
+      "cover_date": "2015-11-09",
+      "cover_shares": 91235358.0,
+      "filed": "2015-11-09",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001564590-16-014500",
+      "cover_date": "2016-02-29",
+      "cover_shares": 91643077.0,
+      "filed": "2016-03-11",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001564590-16-018677",
+      "cover_date": "2016-05-06",
+      "cover_shares": 91870571.0,
+      "filed": "2016-05-09",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001564590-16-023346",
+      "cover_date": "2016-08-03",
+      "cover_shares": 92187313.0,
+      "filed": "2016-08-08",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001564590-16-028783",
+      "cover_date": "2016-11-07",
+      "cover_shares": 92177079.0,
+      "filed": "2016-11-10",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001564590-17-004117",
+      "cover_date": "2017-03-07",
+      "cover_shares": 92465095.0,
+      "filed": "2017-03-13",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001564590-17-009117",
+      "cover_date": "2017-05-03",
+      "cover_shares": 92691743.0,
+      "filed": "2017-05-05",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001564590-17-016934",
+      "cover_date": "2017-08-04",
+      "cover_shares": 93105742.0,
+      "filed": "2017-08-09",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001564590-17-023392",
+      "cover_date": "2017-11-06",
+      "cover_shares": 93046621.0,
+      "filed": "2017-11-13",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001564590-18-006057",
+      "cover_date": "2018-03-09",
+      "cover_shares": 93045152.0,
+      "filed": "2018-03-16",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001564590-18-012979",
+      "cover_date": "2018-05-02",
+      "cover_shares": 92560068.0,
+      "filed": "2018-05-10",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001564590-18-021079",
+      "cover_date": "2018-08-01",
+      "cover_shares": 92532749.0,
+      "filed": "2018-08-09",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001564590-18-028614",
+      "cover_date": "2018-11-02",
+      "cover_shares": 1850471.0,
+      "filed": "2018-11-08",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001564590-19-009354",
+      "cover_date": "2019-03-18",
+      "cover_shares": 1849530.0,
+      "filed": "2019-03-26",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001564590-19-041699",
+      "cover_date": "2019-11-01",
+      "cover_shares": 1849252.0,
+      "filed": "2019-11-07",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001564590-19-041794",
+      "cover_date": "2019-11-01",
+      "cover_shares": 1849252.0,
+      "filed": "2019-11-07",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 33,
+    "names": [
+     "RAIT Financial Trust"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -70536,8 +72635,7 @@
     "float_check": "ok",
     "n_filings": 31,
     "names": [
-     "Altisource Residential Corp",
-     "Front Yard Residential Corp"
+     "Altisource Residential Corp"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -72545,7 +74643,6 @@
     "float_check": "ok",
     "n_filings": 30,
     "names": [
-     "ROYALE ENERGY FUNDS, INC",
      "ROYALE ENERGY INC"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -73550,7 +75647,6 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "Exantas Capital Corp.",
      "Resource Capital Corp."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -76227,7 +78323,6 @@
     "float_check": "ok",
     "n_filings": 50,
     "names": [
-     "SILVERBOW RESOURCES, INC.",
      "SWIFT ENERGY CO"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -79838,7 +81933,6 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "SOCIAL REALITY",
      "SOCIAL REALITY, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -80220,6 +82314,146 @@
     "n_filings": 45,
     "names": [
      "Sorrento Therapeutics, Inc."
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "SSE VRUMQ141U739": [
+   {
+    "cik": 1532930,
+    "end_source": "form15",
+    "equity_end": "2017-04-20",
+    "evidence_span": [
+     "2014-08-05",
+     "2015-07-29"
+    ],
+    "filings": [
+     {
+      "accn": "0001193125-13-333796",
+      "cover_date": "2013-06-30",
+      "cover_shares": 0.0,
+      "filed": "2013-08-14",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001532930-13-000003",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2013-11-13",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001532930-14-000005",
+      "cover_date": null,
+      "cover_shares": null,
+      "filed": "2014-03-14",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001532930-14-000008",
+      "cover_date": "2014-03-31",
+      "cover_shares": 0.0,
+      "filed": "2014-05-09",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001532930-14-000028",
+      "cover_date": "2014-08-01",
+      "cover_shares": 48178891.0,
+      "filed": "2014-08-05",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001532930-14-000046",
+      "cover_date": "2014-10-27",
+      "cover_shares": 50867348.0,
+      "filed": "2014-10-30",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001532930-15-000013",
+      "cover_date": "2015-02-25",
+      "cover_shares": 51249477.0,
+      "filed": "2015-03-02",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001532930-15-000039",
+      "cover_date": "2015-05-01",
+      "cover_shares": 56207319.0,
+      "filed": "2015-05-05",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001532930-15-000081",
+      "cover_date": "2015-07-27",
+      "cover_shares": 56909613.0,
+      "filed": "2015-07-29",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001532930-15-000091",
+      "cover_date": "2015-10-23",
+      "cover_shares": 56746769.0,
+      "filed": "2015-10-28",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001532930-16-000124",
+      "cover_date": "2016-02-15",
+      "cover_shares": 59311401.0,
+      "filed": "2016-02-17",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001532930-16-000149",
+      "cover_date": "2016-04-21",
+      "cover_shares": 58928042.0,
+      "filed": "2016-04-25",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001532930-16-000170",
+      "cover_date": "2016-08-04",
+      "cover_shares": 22000000.0,
+      "filed": "2016-08-09",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001532930-16-000176",
+      "cover_date": "2016-11-04",
+      "cover_shares": 22280349.0,
+      "filed": "2016-11-09",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001532930-17-000006",
+      "cover_date": "2017-02-09",
+      "cover_shares": 22932522.0,
+      "filed": "2017-02-13",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 15,
+    "names": [
+     "Seventy Seven Energy Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -81992,8 +84226,7 @@
     "float_check": "ok",
     "n_filings": 9,
     "names": [
-     "Astex Pharmaceuticals, Inc",
-     "SUPERGEN INC"
+     "Astex Pharmaceuticals, Inc"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -82629,8 +84862,7 @@
     "float_check": "ok",
     "n_filings": 24,
     "names": [
-     "SOLAZYME INC",
-     "TerraVia Holdings, Inc."
+     "SOLAZYME INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "high"
@@ -82898,8 +85130,7 @@
     "float_check": "ok",
     "n_filings": 31,
     "names": [
-     "Helios & Matheson Analytics Inc.",
-     "Helios & Matheson Information Technology Inc."
+     "Helios & Matheson Analytics Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -83315,8 +85546,7 @@
     "float_check": "ok",
     "n_filings": 25,
     "names": [
-     "Thompson Creek Metals CO Inc.",
-     "Thompson Creek Metals Co Inc."
+     "Thompson Creek Metals CO Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": "medium (no equity end; stable float ratio over >= 6 years)"
@@ -84436,11 +86666,7 @@
     "float_check": "ok",
     "n_filings": 42,
     "names": [
-     "21ST CENTURY HOLDING CO",
-     "FEDERATED NATIONAL HOLDING CO",
-     "FEDERATED NATIONAL HOLDING Co",
-     "FEDNAT HOLDING Co",
-     "FedNat Holding Co"
+     "FEDERATED NATIONAL HOLDING CO"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -85088,7 +87314,6 @@
     "float_check": "ok",
     "n_filings": 11,
     "names": [
-     "Talend S.A.",
      "Talend SA"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -85699,6 +87924,362 @@
     "v1": "high"
    }
   ],
+  "TRIO V5BACZOYSIUD": [
+   {
+    "cik": 1514732,
+    "end_source": "form15",
+    "equity_end": "2020-12-18",
+    "evidence_span": [
+     "2016-08-12",
+     "2018-11-13"
+    ],
+    "filings": [
+     {
+      "accn": "0001144204-11-046770",
+      "cover_date": "2011-08-12",
+      "cover_shares": 8625000.0,
+      "filed": "2011-08-15",
+      "form": "10-Q",
+      "period_end": "2011-06-30"
+     },
+     {
+      "accn": "0001144204-11-064290",
+      "cover_date": "2011-11-02",
+      "cover_shares": 7852855.0,
+      "filed": "2011-11-14",
+      "form": "10-Q",
+      "period_end": "2011-09-30"
+     },
+     {
+      "accn": "0001144204-12-021309",
+      "cover_date": "2012-03-30",
+      "cover_shares": 7841855.0,
+      "filed": "2012-04-12",
+      "form": "10-K",
+      "period_end": "2011-12-31"
+     },
+     {
+      "accn": "0001144204-12-028558",
+      "cover_date": "2012-05-14",
+      "cover_shares": 7841855.0,
+      "filed": "2012-05-14",
+      "form": "10-Q",
+      "period_end": "2012-03-31"
+     },
+     {
+      "accn": "0001144204-12-045578",
+      "cover_date": "2012-07-26",
+      "cover_shares": 7841855.0,
+      "filed": "2012-08-14",
+      "form": "10-Q",
+      "period_end": "2012-06-30"
+     },
+     {
+      "accn": "0001144204-12-062722",
+      "cover_date": "2012-11-08",
+      "cover_shares": 7841855.0,
+      "filed": "2012-11-14",
+      "form": "10-Q",
+      "period_end": "2012-09-30"
+     },
+     {
+      "accn": "0001144204-13-012598",
+      "cover_date": "2013-02-21",
+      "cover_shares": 7841855.0,
+      "filed": "2013-03-04",
+      "form": "10-K",
+      "period_end": "2012-12-31"
+     },
+     {
+      "accn": "0001144204-13-029606",
+      "cover_date": "2013-05-15",
+      "cover_shares": 7841855.0,
+      "filed": "2013-05-15",
+      "form": "10-Q",
+      "period_end": "2013-03-31"
+     },
+     {
+      "accn": "0001144204-13-048147",
+      "cover_date": "2013-08-23",
+      "cover_shares": 13402664.0,
+      "filed": "2013-08-28",
+      "form": "10-Q",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001144204-13-062080",
+      "cover_date": "2013-11-14",
+      "cover_shares": 13402664.0,
+      "filed": "2013-11-14",
+      "form": "10-Q",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001144204-14-019844",
+      "cover_date": "2013-08-23",
+      "cover_shares": 13402664.0,
+      "filed": "2014-04-01",
+      "form": "10-Q/A",
+      "period_end": "2013-06-30"
+     },
+     {
+      "accn": "0001144204-14-019847",
+      "cover_date": "2013-11-14",
+      "cover_shares": 13402664.0,
+      "filed": "2014-04-01",
+      "form": "10-Q/A",
+      "period_end": "2013-09-30"
+     },
+     {
+      "accn": "0001144204-14-020584",
+      "cover_date": "2014-03-31",
+      "cover_shares": 14870549.0,
+      "filed": "2014-04-03",
+      "form": "10-K",
+      "period_end": "2013-12-31"
+     },
+     {
+      "accn": "0001144204-14-028959",
+      "cover_date": "2014-05-07",
+      "cover_shares": 14870549.0,
+      "filed": "2014-05-09",
+      "form": "10-Q",
+      "period_end": "2014-03-31"
+     },
+     {
+      "accn": "0001144204-14-047971",
+      "cover_date": "2014-08-06",
+      "cover_shares": 14870549.0,
+      "filed": "2014-08-08",
+      "form": "10-Q",
+      "period_end": "2014-06-30"
+     },
+     {
+      "accn": "0001514732-14-000014",
+      "cover_date": "2014-10-31",
+      "cover_shares": 14870549.0,
+      "filed": "2014-11-07",
+      "form": "10-Q",
+      "period_end": "2014-09-30"
+     },
+     {
+      "accn": "0001514732-15-000021",
+      "cover_date": "2015-03-18",
+      "cover_shares": 14922497.0,
+      "filed": "2015-03-25",
+      "form": "10-K",
+      "period_end": "2014-12-31"
+     },
+     {
+      "accn": "0001514732-15-000045",
+      "cover_date": "2015-05-04",
+      "cover_shares": 14922497.0,
+      "filed": "2015-05-11",
+      "form": "10-Q",
+      "period_end": "2015-03-31"
+     },
+     {
+      "accn": "0001514732-15-000086",
+      "cover_date": "2015-07-31",
+      "cover_shares": 14922497.0,
+      "filed": "2015-08-07",
+      "form": "10-Q",
+      "period_end": "2015-06-30"
+     },
+     {
+      "accn": "0001514732-15-000107",
+      "cover_date": "2015-10-31",
+      "cover_shares": 17367673.0,
+      "filed": "2015-11-05",
+      "form": "10-Q",
+      "period_end": "2015-09-30"
+     },
+     {
+      "accn": "0001514732-16-000144",
+      "cover_date": "2016-03-09",
+      "cover_shares": 17451353.0,
+      "filed": "2016-03-15",
+      "form": "10-K",
+      "period_end": "2015-12-31"
+     },
+     {
+      "accn": "0001514732-16-000158",
+      "cover_date": "2016-05-09",
+      "cover_shares": 17451353.0,
+      "filed": "2016-05-16",
+      "form": "10-Q",
+      "period_end": "2016-03-31"
+     },
+     {
+      "accn": "0001514732-16-000246",
+      "cover_date": "2016-08-10",
+      "cover_shares": 9343513.0,
+      "filed": "2016-08-12",
+      "form": "10-Q",
+      "period_end": "2016-06-30"
+     },
+     {
+      "accn": "0001514732-16-000302",
+      "cover_date": "2016-10-28",
+      "cover_shares": 9343513.0,
+      "filed": "2016-11-04",
+      "form": "10-Q",
+      "period_end": "2016-09-30"
+     },
+     {
+      "accn": "0001514732-17-000017",
+      "cover_date": "2017-03-08",
+      "cover_shares": 9358529.0,
+      "filed": "2017-03-15",
+      "form": "10-K",
+      "period_end": "2016-12-31"
+     },
+     {
+      "accn": "0001514732-17-000045",
+      "cover_date": "2017-04-28",
+      "cover_shares": 9358529.0,
+      "filed": "2017-05-05",
+      "form": "10-Q",
+      "period_end": "2017-03-31"
+     },
+     {
+      "accn": "0001514732-17-000087",
+      "cover_date": "2017-08-14",
+      "cover_shares": 9424534.0,
+      "filed": "2017-08-21",
+      "form": "10-Q",
+      "period_end": "2017-06-30"
+     },
+     {
+      "accn": "0001514732-17-000100",
+      "cover_date": "2017-11-01",
+      "cover_shares": 9424534.0,
+      "filed": "2017-11-08",
+      "form": "10-Q",
+      "period_end": "2017-09-30"
+     },
+     {
+      "accn": "0001514732-18-000042",
+      "cover_date": "2018-03-09",
+      "cover_shares": 14907116.0,
+      "filed": "2018-03-16",
+      "form": "10-K",
+      "period_end": "2017-12-31"
+     },
+     {
+      "accn": "0001514732-18-000058",
+      "cover_date": "2018-05-08",
+      "cover_shares": 14940156.0,
+      "filed": "2018-05-15",
+      "form": "10-Q",
+      "period_end": "2018-03-31"
+     },
+     {
+      "accn": "0001564590-18-020651",
+      "cover_date": "2018-08-08",
+      "cover_shares": 20453273.0,
+      "filed": "2018-08-09",
+      "form": "10-Q",
+      "period_end": "2018-06-30"
+     },
+     {
+      "accn": "0001564590-18-029217",
+      "cover_date": "2018-11-09",
+      "cover_shares": 2917160.0,
+      "filed": "2018-11-13",
+      "form": "10-Q",
+      "period_end": "2018-09-30"
+     },
+     {
+      "accn": "0001564590-19-009158",
+      "cover_date": "2019-03-19",
+      "cover_shares": 4052157.0,
+      "filed": "2019-03-25",
+      "form": "10-K",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001564590-19-019018",
+      "cover_date": "2019-05-08",
+      "cover_shares": 4290697.0,
+      "filed": "2019-05-14",
+      "form": "10-Q",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001564590-20-003869",
+      "cover_date": "2019-03-19",
+      "cover_shares": 4052157.0,
+      "filed": "2020-02-07",
+      "form": "10-K/A",
+      "period_end": "2018-12-31"
+     },
+     {
+      "accn": "0001564590-20-003873",
+      "cover_date": "2019-05-08",
+      "cover_shares": 4290697.0,
+      "filed": "2020-02-07",
+      "form": "10-Q/A",
+      "period_end": "2019-03-31"
+     },
+     {
+      "accn": "0001564590-20-003876",
+      "cover_date": "2020-01-27",
+      "cover_shares": 4299670.0,
+      "filed": "2020-02-07",
+      "form": "10-Q",
+      "period_end": "2019-06-30"
+     },
+     {
+      "accn": "0001564590-20-003880",
+      "cover_date": "2020-01-27",
+      "cover_shares": 4299670.0,
+      "filed": "2020-02-07",
+      "form": "10-Q",
+      "period_end": "2019-09-30"
+     },
+     {
+      "accn": "0001564590-20-016488",
+      "cover_date": "2020-04-06",
+      "cover_shares": 4436292.0,
+      "filed": "2020-04-14",
+      "form": "10-K",
+      "period_end": "2019-12-31"
+     },
+     {
+      "accn": "0001564590-20-024815",
+      "cover_date": "2020-05-08",
+      "cover_shares": 4436292.0,
+      "filed": "2020-05-13",
+      "form": "10-Q",
+      "period_end": "2020-03-31"
+     },
+     {
+      "accn": "0001564590-20-040318",
+      "cover_date": "2020-08-12",
+      "cover_shares": 6612332.0,
+      "filed": "2020-08-14",
+      "form": "10-Q",
+      "period_end": "2020-06-30"
+     },
+     {
+      "accn": "0001564590-20-054033",
+      "cover_date": "2020-11-06",
+      "cover_shares": 6612332.0,
+      "filed": "2020-11-16",
+      "form": "10-Q",
+      "period_end": "2020-09-30"
+     }
+    ],
+    "float_check": "none",
+    "n_filings": 42,
+    "names": [
+     "SAExploration Holdings, Inc."
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
   "TROV V70C2SDFJASL": [
    {
     "cik": 1213037,
@@ -86025,7 +88606,6 @@
     "float_check": "ok",
     "n_filings": 39,
     "names": [
-     "TrovaGene Inc.",
      "Trovagene, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -89604,7 +92184,6 @@
     "float_check": "ok",
     "n_filings": 46,
     "names": [
-     "CENTRUS ENERGY CORP",
      "USEC INC"
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -90157,8 +92736,7 @@
     "float_check": "ok",
     "n_filings": 18,
     "names": [
-     "Emerald Oil, Inc.",
-     "Voyager Oil & Gas, Inc."
+     "Emerald Oil, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -90526,7 +93104,6 @@
     "float_check": "ok",
     "n_filings": 30,
     "names": [
-     "Mirax Corp",
      "ViewRay, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -91007,9 +93584,7 @@
     "float_check": "ok",
     "n_filings": 43,
     "names": [
-     "EVINE Live Inc.",
-     "VALUEVISION MEDIA INC",
-     "iMedia Brands, Inc."
+     "VALUEVISION MEDIA INC"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -92028,6 +94603,58 @@
     "n_filings": 30,
     "names": [
      "Willbros Group, Inc.\\NEW\\"
+    ],
+    "tier": "A: SEC ticker-evidenced",
+    "v1": null
+   }
+  ],
+  "WILM R735QTJ8XC9X": [
+   {
+    "cik": 872821,
+    "end_source": "form25",
+    "equity_end": "2011-05-16",
+    "evidence_span": [
+     "2010-08-09",
+     "2010-11-08"
+    ],
+    "filings": [
+     {
+      "accn": "0000950123-10-074970",
+      "cover_date": "2010-06-30",
+      "cover_shares": 91543232.0,
+      "filed": "2010-08-09",
+      "form": "10-Q",
+      "period_end": "2010-06-30"
+     },
+     {
+      "accn": "0000950123-10-102277",
+      "cover_date": "2010-09-30",
+      "cover_shares": 91483687.0,
+      "filed": "2010-11-08",
+      "form": "10-Q",
+      "period_end": "2010-09-30"
+     },
+     {
+      "accn": "0000950123-11-020427",
+      "cover_date": "2011-02-25",
+      "cover_shares": 91425794.0,
+      "filed": "2011-03-01",
+      "form": "10-K",
+      "period_end": "2010-12-31"
+     },
+     {
+      "accn": "0000950123-11-049770",
+      "cover_date": "2011-03-31",
+      "cover_shares": 91514375.0,
+      "filed": "2011-05-13",
+      "form": "10-Q",
+      "period_end": "2011-03-31"
+     }
+    ],
+    "float_check": "ok",
+    "n_filings": 4,
+    "names": [
+     "WILMINGTON TRUST CORP"
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -94696,8 +97323,7 @@
     "float_check": "ok",
     "n_filings": 15,
     "names": [
-     "FAB Universal Corp.",
-     "WIZZARD SOFTWARE CORP /CO"
+     "FAB Universal Corp."
     ],
     "tier": "A: SEC ticker-evidenced",
     "v1": null
@@ -95893,7 +98519,6 @@
     "float_check": "ok",
     "n_filings": 33,
     "names": [
-     "AL International, Inc.",
      "Youngevity International, Inc."
     ],
     "tier": "A: SEC ticker-evidenced",
@@ -96553,6 +99178,6 @@
   "native vendor CIK only": 2977,
   "native+ticker-evidenced predecessor": 89,
   "native: no SEC filing found": 830,
-  "repaired": 434
+  "repaired": 444
  }
 }

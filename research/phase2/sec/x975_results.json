@@ -1,0 +1,617 @@
+{
+ "approved_fields": [
+  "gross_profit",
+  "net_income",
+  "operating_cash_flow",
+  "revenue"
+ ],
+ "categories": {
+  "acquisition/delisting company": {
+   "n": 150,
+   "within_0.5pct": 1.0
+  },
+  "calendar-year filer": {
+   "n": 23125,
+   "within_0.5pct": 0.9396
+  },
+  "changed fiscal year": {
+   "n": 8236,
+   "within_0.5pct": 0.9603
+  },
+  "company with amended filings": {
+   "n": 15034,
+   "within_0.5pct": 0.9492
+  },
+  "company with restatement-blocked reports": {
+   "n": 5455,
+   "within_0.5pct": 0.9071
+  },
+  "early 2010-2012 window": {
+   "n": 5528,
+   "within_0.5pct": 0.9548
+  },
+  "missing-quarter cases (no TTM: quarters not consecutive)": {
+   "free_cash_flow": 866,
+   "gross_profit": 866,
+   "net_income": 866,
+   "operating_cash_flow": 866,
+   "operating_income": 866,
+   "revenue": 866
+  },
+  "non-calendar fiscal year": {
+   "n": 13294,
+   "within_0.5pct": 0.9662
+  },
+  "stock split company": {
+   "n": 458,
+   "within_0.5pct": 0.9869
+  }
+ },
+ "early_values": 98,
+ "early_values_without_public_sec_source": 0,
+ "examples": [
+  {
+   "case": "calendar-year filer",
+   "cik": "1637459",
+   "component_filed": [
+    "2016-05-05",
+    "2016-08-05",
+    "2016-11-04",
+    "2017-02-23"
+   ],
+   "component_quarters": [
+    "2016-04-03",
+    "2016-07-03",
+    "2016-10-02",
+    "2016-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2017-02-24",
+   "sec_available": "2017-02-24",
+   "sid": "KHC W1YY4MGI5CH1",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "calendar-year filer",
+   "cik": "1637459",
+   "component_filed": [
+    "2016-05-05",
+    "2016-08-05",
+    "2016-11-04",
+    "2017-02-23"
+   ],
+   "component_quarters": [
+    "2016-04-03",
+    "2016-07-03",
+    "2016-10-02",
+    "2016-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2017-02-24",
+   "sec_available": "2017-02-24",
+   "sid": "KHC W1YY4MGI5CH1",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "non-calendar fiscal year (Microsoft, June FY)",
+   "cik": "789019",
+   "component_filed": [
+    "2009-10-23",
+    "2010-01-28",
+    "2010-04-22",
+    "2010-07-30"
+   ],
+   "component_quarters": [
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31",
+    "2010-06-30"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-07-31",
+   "sec_available": "2010-07-31",
+   "sid": "MSFT R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "non-calendar fiscal year (Microsoft, June FY)",
+   "cik": "789019",
+   "component_filed": [
+    "2009-10-23",
+    "2010-01-28",
+    "2010-04-22",
+    "2010-07-30"
+   ],
+   "component_quarters": [
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31",
+    "2010-06-30"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-07-31",
+   "sec_available": "2010-07-31",
+   "sid": "MSFT R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "company with amended filings",
+   "cik": "1031296",
+   "component_filed": [
+    "2009-05-07",
+    "2009-08-03",
+    "2009-11-09",
+    "2010-02-19"
+   ],
+   "component_quarters": [
+    "2009-03-31",
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-02-20",
+   "sec_available": "2010-02-20",
+   "sid": "FE R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "company with amended filings",
+   "cik": "1031296",
+   "component_filed": [
+    "2009-05-07",
+    "2009-08-03",
+    "2009-11-09",
+    "2010-02-19"
+   ],
+   "component_quarters": [
+    "2009-03-31",
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "0.9990",
+   "pit_available": "2010-02-20",
+   "sec_available": "2010-02-20",
+   "sid": "FE R735QTJ8XC9X",
+   "ttm_vs_sec": 1.004
+  },
+  {
+   "case": "restatement-blocked company",
+   "cik": "29905",
+   "component_filed": [
+    "2009-07-24",
+    "2009-10-23",
+    "2010-02-19",
+    "2010-04-23"
+   ],
+   "component_quarters": [
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2010-04-24",
+   "sec_available": "2010-04-24",
+   "sid": "DOV R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "restatement-blocked company",
+   "cik": "29905",
+   "component_filed": [
+    "2009-07-24",
+    "2009-10-23",
+    "2010-02-19",
+    "2010-04-23"
+   ],
+   "component_quarters": [
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2010-04-24",
+   "sec_available": "2010-04-24",
+   "sid": "DOV R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "stock split (Apple 2014/2020)",
+   "cik": "320193",
+   "component_filed": [
+    "2013-07-24",
+    "2013-10-30",
+    "2014-01-28",
+    "2014-04-24"
+   ],
+   "component_quarters": [
+    "2013-06-29",
+    "2013-09-28",
+    "2013-12-28",
+    "2014-03-29"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2014-04-25",
+   "sec_available": "2014-04-25",
+   "sid": "AAPL R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "stock split (Apple 2014/2020)",
+   "cik": "320193",
+   "component_filed": [
+    "2013-07-24",
+    "2013-10-30",
+    "2014-01-28",
+    "2014-04-24"
+   ],
+   "component_quarters": [
+    "2013-06-29",
+    "2013-09-28",
+    "2013-12-28",
+    "2014-03-29"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2014-04-25",
+   "sec_available": "2014-04-25",
+   "sid": "AAPL R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "acquisition/delisting (Monsanto)",
+   "cik": "1110783",
+   "component_filed": [
+    "2010-01-08",
+    "2010-04-08",
+    "2010-07-02",
+    "2010-10-27"
+   ],
+   "component_quarters": [
+    "2009-11-30",
+    "2010-02-28",
+    "2010-05-31",
+    "2010-08-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-10-28",
+   "sec_available": "2010-10-28",
+   "sid": "MON RYZHQ6NEYVZ9",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "acquisition/delisting (Monsanto)",
+   "cik": "1110783",
+   "component_filed": [
+    "2010-01-08",
+    "2010-04-08",
+    "2010-07-02",
+    "2010-10-27"
+   ],
+   "component_quarters": [
+    "2009-11-30",
+    "2010-02-28",
+    "2010-05-31",
+    "2010-08-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-10-28",
+   "sec_available": "2010-10-28",
+   "sid": "MON RYZHQ6NEYVZ9",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "early 2010-2012",
+   "cik": "1031296",
+   "component_filed": [
+    "2009-05-07",
+    "2009-08-03",
+    "2009-11-09",
+    "2010-02-19"
+   ],
+   "component_quarters": [
+    "2009-03-31",
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "1.0000",
+   "pit_available": "2010-02-20",
+   "sec_available": "2010-02-20",
+   "sid": "FE R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "early 2010-2012",
+   "cik": "1031296",
+   "component_filed": [
+    "2009-05-07",
+    "2009-08-03",
+    "2009-11-09",
+    "2010-02-19"
+   ],
+   "component_quarters": [
+    "2009-03-31",
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "0.9990",
+   "pit_available": "2010-02-20",
+   "sec_available": "2010-02-20",
+   "sid": "FE R735QTJ8XC9X",
+   "ttm_vs_sec": 1.004
+  },
+  {
+   "case": "changed fiscal year",
+   "cik": "29989",
+   "component_filed": [
+    "2009-08-06",
+    "2009-10-26",
+    "2010-02-19",
+    "2010-04-23"
+   ],
+   "component_quarters": [
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "revenue",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2010-04-24",
+   "sec_available": "2010-04-24",
+   "sid": "OMC R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "changed fiscal year",
+   "cik": "29989",
+   "component_filed": [
+    "2009-08-06",
+    "2009-10-26",
+    "2010-02-19",
+    "2010-04-23"
+   ],
+   "component_quarters": [
+    "2009-06-30",
+    "2009-09-30",
+    "2009-12-31",
+    "2010-03-31"
+   ],
+   "derived_q4": "the fiscal-year-end quarter is the 10-K's three-month value (vendor) / FY - 9M YTD (SEC); reconciled to the FY total within 1%",
+   "field": "net_income",
+   "fy_check_vs_10K": "na",
+   "pit_available": "2010-04-24",
+   "sec_available": "2010-04-24",
+   "sid": "OMC R735QTJ8XC9X",
+   "ttm_vs_sec": 1.0
+  },
+  {
+   "case": "missing quarter (no TTM produced)",
+   "cik": "909832",
+   "date": "2009-12-19",
+   "field": "revenue",
+   "newest_quarter": "2009-11-22",
+   "reason": "quarters not consecutive",
+   "sid": "COST R735QTJ8XC9X"
+  }
+ ],
+ "excluded_fields": [
+  "free_cash_flow",
+  "operating_income"
+ ],
+ "fields": {
+  "free_cash_flow": {
+   "all_companies_incl_financial": {
+    "compared": 6172,
+    "within_0.5pct": 0.7489,
+    "within_2pct": 0.7907
+   },
+   "approved_for_H016_field_set": false,
+   "compared": 5381,
+   "fy_window_vs_10K_total": {
+    "close": 63,
+    "differs": 105,
+    "far": 177,
+    "match": 1021
+   },
+   "timing": {
+    "before SEC periodic filing": 9,
+    "later than SEC": 181,
+    "same day as SEC": 5191
+   },
+   "within_0.5pct": 0.7396,
+   "within_2pct": 0.7857
+  },
+  "gross_profit": {
+   "all_companies_incl_financial": {
+    "compared": 3966,
+    "within_0.5pct": 0.9506,
+    "within_2pct": 0.9614
+   },
+   "approved_for_H016_field_set": true,
+   "compared": 3882,
+   "fy_window_vs_10K_total": {
+    "close": 12,
+    "differs": 7,
+    "far": 20,
+    "match": 919
+   },
+   "timing": {
+    "before SEC periodic filing": 8,
+    "later than SEC": 164,
+    "same day as SEC": 3710
+   },
+   "within_0.5pct": 0.9531,
+   "within_2pct": 0.9642
+  },
+  "net_income": {
+   "all_companies_incl_financial": {
+    "compared": 11685,
+    "within_0.5pct": 0.9516,
+    "within_2pct": 0.9631
+   },
+   "approved_for_H016_field_set": true,
+   "compared": 9253,
+   "fy_window_vs_10K_total": {
+    "close": 15,
+    "differs": 21,
+    "far": 13,
+    "match": 2235
+   },
+   "timing": {
+    "before SEC periodic filing": 22,
+    "later than SEC": 313,
+    "same day as SEC": 8918
+   },
+   "within_0.5pct": 0.9649,
+   "within_2pct": 0.9747
+  },
+  "operating_cash_flow": {
+   "all_companies_incl_financial": {
+    "compared": 10650,
+    "within_0.5pct": 0.9684,
+    "within_2pct": 0.9756
+   },
+   "approved_for_H016_field_set": true,
+   "compared": 8383,
+   "fy_window_vs_10K_total": {
+    "close": 19,
+    "differs": 13,
+    "far": 10,
+    "match": 2072
+   },
+   "timing": {
+    "before SEC periodic filing": 20,
+    "later than SEC": 265,
+    "same day as SEC": 8098
+   },
+   "within_0.5pct": 0.9736,
+   "within_2pct": 0.9825
+  },
+  "operating_income": {
+   "all_companies_incl_financial": {
+    "compared": 8757,
+    "within_0.5pct": 0.481,
+    "within_2pct": 0.5608
+   },
+   "approved_for_H016_field_set": false,
+   "compared": 8023,
+   "fy_window_vs_10K_total": {
+    "close": 170,
+    "differs": 365,
+    "far": 485,
+    "match": 958
+   },
+   "timing": {
+    "before SEC periodic filing": 19,
+    "later than SEC": 274,
+    "same day as SEC": 7730
+   },
+   "within_0.5pct": 0.48,
+   "within_2pct": 0.5609
+  },
+  "revenue": {
+   "all_companies_incl_financial": {
+    "compared": 10118,
+    "within_0.5pct": 0.9261,
+    "within_2pct": 0.9429
+   },
+   "approved_for_H016_field_set": true,
+   "compared": 8440,
+   "fy_window_vs_10K_total": {
+    "close": 24,
+    "differs": 27,
+    "far": 31,
+    "match": 1993
+   },
+   "timing": {
+    "before SEC periodic filing": 20,
+    "later than SEC": 282,
+    "same day as SEC": 8138
+   },
+   "within_0.5pct": 0.9508,
+   "within_2pct": 0.9604
+  }
+ },
+ "no_ttm_reasons": {
+  "free_cash_flow": {
+   "missing quarterly value | SEC TTM absent": 9,
+   "missing quarterly value | SEC TTM exists": 4,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 1119,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 684,
+   "quarters not consecutive | SEC TTM absent": 512,
+   "quarters not consecutive | SEC TTM exists": 354
+  },
+  "gross_profit": {
+   "missing quarterly value | SEC TTM absent": 1684,
+   "missing quarterly value | SEC TTM exists": 38,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 987,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 199,
+   "quarters not consecutive | SEC TTM absent": 687,
+   "quarters not consecutive | SEC TTM exists": 179
+  },
+  "net_income": {
+   "missing quarterly value | SEC TTM absent": 11,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 321,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 417,
+   "quarters not consecutive | SEC TTM absent": 286,
+   "quarters not consecutive | SEC TTM exists": 580
+  },
+  "operating_cash_flow": {
+   "missing quarterly value | SEC TTM absent": 10,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 346,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 272,
+   "quarters not consecutive | SEC TTM absent": 319,
+   "quarters not consecutive | SEC TTM exists": 547
+  },
+  "operating_income": {
+   "missing quarterly value | SEC TTM absent": 1440,
+   "missing quarterly value | SEC TTM exists": 160,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 568,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 712,
+   "quarters not consecutive | SEC TTM absent": 446,
+   "quarters not consecutive | SEC TTM exists": 420
+  },
+  "revenue": {
+   "missing quarterly value | SEC TTM absent": 105,
+   "no fiscal-year reconciliation inside the window | SEC TTM absent": 437,
+   "no fiscal-year reconciliation inside the window | SEC TTM exists": 594,
+   "quarters not consecutive | SEC TTM absent": 354,
+   "quarters not consecutive | SEC TTM exists": 512
+  }
+ },
+ "vendor_ttm_without_sec_reference": 24221
+}

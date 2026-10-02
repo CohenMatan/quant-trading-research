@@ -34,7 +34,12 @@ import e970_parse  # noqa: E402
 import rss_index  # noqa: E402
 
 OUT = Path(__file__).parent
-NON_COMMON_NAME = re.compile(r"\b(L\.?P\.?|LLC|L\.L\.C\.|PARTNERS|PARTNERSHIP|TRUST|FUND|PORTFOLIO|ETF|ROYALTY)\b", re.I)
+# non-common forms only: partnership/LLC units, funds/ETFs, royalty/grantor/statutory/capital trusts. Bank and REIT
+# names containing 'Trust' or 'Partners' (Northern Trust, Camden Property Trust) are ordinary common stock.
+NON_COMMON_NAME = re.compile(r"(\bL\.?\s?P\.?$|,?\s\bL\.?P\.?\b|\bLLC\b|\bL\.L\.C\.|\bFUND\b|\bPORTFOLIO\b|\bETF\b|"
+                             r"\bROYALTY TRUST\b|\bGOLD TRUST\b|\bSILVER TRUST\b|\bISHARES\b|\bSPDR\b|\bPOWERSHARES\b|"
+                             r"\bPROSHARES\b|\bSTATUTORY TRUST\b|\bGRANTOR TRUST\b|\bCAPITAL TRUST\b|\bTRUST [IVX]+\b|"
+                             r"\bPARTNERSHIP\b)", re.I)
 NON_COMMON_SIC = {6726, 6770, 6792, 6221}
 SPAC = ("ACQUISITION CORP", "ACQUISITION CO", "CAPITAL ACQUISITION", "MERGER CORP")
 FOREIGN = re.compile(r"\b(PLC|N\.?V\.?|S\.?A\.?|AG|SE|LTD|LIMITED)\b", re.I)
@@ -91,14 +96,8 @@ def main():
     fp = float_pairs()
     links, rejected = {}, defaultdict(int)
     for cik, fl in by_cik.items():
-        names = {r["name"] for r in fl}
-        if any(NON_COMMON_NAME.search(n or "") for n in names) or any(x in (n or "").upper() for n in names for x in SPAC):
-            rejected["non-common name"] += 1
-            continue
-        if any(r["sic"] in NON_COMMON_SIC for r in fl):
-            rejected["fund/blank-check/royalty SIC"] += 1
-            continue
         hits = defaultdict(list)
+        hit_rows = []
         for r in fl:
             if not r["prefix"]:
                 continue
@@ -106,11 +105,19 @@ def main():
             for sid, a, b in tick.get(r["prefix"].replace(".", ""), ()):
                 if ym_add(a, -3) <= fym <= ym_add(b, 3):
                     hits[sid].append(r["filed"])
+                    hit_rows.append(r)
         hits = {s: sorted(set(d)) for s, d in hits.items() if len(set(d)) >= 2}
         if not hits:
             rejected["no security with >= 2 matching dated tickers"] += 1
             continue
-        links[cik] = {"hits": hits, "names": sorted(names), "first_filed": min(r["filed"] for r in fl),
+        names = {r["name"] for r in hit_rows}      # names IN FORCE on the matching filings only
+        if any(NON_COMMON_NAME.search(n or "") for n in names) or any(x in (n or "").upper() for n in names for x in SPAC):
+            rejected["non-common name"] += 1
+            continue
+        if any(r["sic"] in NON_COMMON_SIC for r in hit_rows):
+            rejected["fund/blank-check/royalty SIC"] += 1
+            continue
+        links[cik] = {"hits": hits, "names": sorted(names), "all_names": sorted({r["name"] for r in fl}), "first_filed": min(r["filed"] for r in fl),
                       "last_filed": max(r["filed"] for r in fl), "sic_at_filing": sorted({r["sic"] for r in fl if r["sic"]})}
     # S: public share count (exclude subsidiaries filing under the parent's prefix)
     for cik in list(links):
