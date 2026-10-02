@@ -985,3 +985,43 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Verdict: not yet safe to design H016.** Two items remain: the residual survivorship gap in 2010–2014 and the definition of the twelve-month fields.
 
 **STOP:** awaiting the owner. Decisions requested: an SEC contact email, the twelve-month definition and the residual-gap policy.
+
+## 2026-10-02: Continue SEC repair / True TTM approved; blocked at the SEC contact email; STOP (D112)
+
+- The owner approved:
+  - further SEC repair, using SEC ticker/company-history evidence;
+  - a True TTM layer built from quarterly filings;
+  - a re-audit of coverage and residual bias;
+  - a final readiness checkpoint.
+- This was conditional on a project-specific SEC contact email.
+- **No project email is available, and I will not invent one.** `www.sec.gov` still refuses the project-only User-Agent (HTTP 403); `data.sec.gov` works.
+- Nothing was built or run (`docs/checkpoints/P2_CP7a_sec_contact_blocked.md`).
+
+**STOP:** awaiting the owner (a project contact email, or permission to proceed with True TTM on `data.sec.gov` only).
+
+## 2026-10-02: SEC repair continued, True TTM, final data re-audit; P2-CP7; STOP (D113, D113a)
+
+- **SEC access:** the owner authorised their own email as the SEC contact (after P2-CP7a). It is used at run time only and never committed. `www.sec.gov` works.
+- **Filing index:** monthly XBRL RSS archives for 2009-06 to 2021-12. They give the SEC-assigned SIC at each filing and the ticker in each instance name.
+  - A parser defect (2019-11 to 2021 silently missing) was found and fixed, and everything downstream rebuilt (D113a).
+- **Identity v2:** links rest on SEC-dated ticker evidence, with new rules P and F2.
+  - 489 registrants linked.
+  - Correction table v3.2: **495 repaired securities** (P2-CP6: 163; none of those contradicted).
+  - Runs: E977-01 and E978-01 (float fingerprints).
+- **Survivorship gap, measured directly SEC-side:** about 0.5–1.2% of companies with float ≥ $2B a year (P2-CP6 estimate: up to 11%). A pre-XBRL blind spot remains: about six US companies acquired in 2010.
+- **True TTM:** built from the four latest visible quarters with a Q4 reconciliation gate.
+  - Validated against the SEC as first filed (E975-01, 403 companies).
+  - Approved: revenue, gross profit, net income and operating cash flow (95–97% within 0.5%).
+  - Excluded: operating income and free cash flow.
+- **Financial/REIT policy:** SEC SIC at filing time (`qr_industry.py`), with REIT conversions dated.
+- **Final canary E976-04:**
+  - X976 v1.1, observing the full universe with a 2008-07 warm-up.
+  - All 11 checks are 0, including the two new TTM checks.
+  - E976-03 reproduces identically.
+  - E976-01 and E976-02 are superseded and annotated.
+- **Coverage:** final usable non-financial coverage is 81–89% a year, except 2011 (70%: quarantine holes).
+- **Data-availability bias:** about +1 pp/yr in absolute levels for a usable-only universe.
+- **Checkpoint:** `docs/checkpoints/P2_CP7_fundamental_data_final_readiness.md`. **Verdict: safe enough to begin H016 design** (pre-registration only), subject to 8 owner decisions.
+- **Programme status:** no H016, no strategy or factor backtest, no slot used (1 of 3 consumed), Holdout locked.
+
+**STOP:** awaiting the owner.

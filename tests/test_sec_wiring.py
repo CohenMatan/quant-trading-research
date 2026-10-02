@@ -42,7 +42,22 @@ def test_harness_default_is_unchanged():
     assert "if sec is None or not sec.has(sid):\n                    continue" in src
 
 
-def test_client_caches_and_throttles(tmp_path):
+def test_contact_is_runtime_only(tmp_path, monkeypatch):
+    """D113: the SEC contact address comes only from the environment or a local file outside the repository."""
+    import qresearch.sec_edgar as E
+    monkeypatch.setattr(E, "CONTACT_FILE", tmp_path / "none")
+    monkeypatch.delenv("SEC_CONTACT_EMAIL", raising=False)
+    assert E.contact_user_agent() == USER_AGENT
+    monkeypatch.setenv("SEC_CONTACT_EMAIL", "contact@example.org")
+    assert E.contact_user_agent().endswith("contact@example.org")
+    src = (ROOT / "src/qresearch/sec_edgar.py").read_text()
+    assert "@" not in USER_AGENT and "gmail" not in src.lower()
+
+
+def test_client_caches_and_throttles(tmp_path, monkeypatch):
+    import qresearch.sec_edgar as E
+    monkeypatch.setattr(E, "CONTACT_FILE", tmp_path / "none")
+    monkeypatch.delenv("SEC_CONTACT_EMAIL", raising=False)
     calls = []
 
     class Sess:

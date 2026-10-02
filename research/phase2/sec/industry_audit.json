@@ -1,0 +1,353 @@
+{
+ "disagreement_companies_P2_CP6": [
+  {
+   "group (characterisation)": "managed-care insurer",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "financial",
+   "sic_timeline": [
+    [
+     "2009-11-06",
+     6324,
+     701221
+    ]
+   ],
+   "ticker": "CI"
+  },
+  {
+   "group (characterisation)": "managed-care insurer",
+   "old_structure_rule": "operating-format",
+   "sic_policy_category_at_start": "financial",
+   "sic_timeline": [
+    [
+     "2009-08-01",
+     6324,
+     1122304
+    ]
+   ],
+   "ticker": "AET"
+  },
+  {
+   "group (characterisation)": "mortgage REIT",
+   "old_structure_rule": "operating-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2011-08-05",
+     6798,
+     1465740
+    ]
+   ],
+   "ticker": "TWO"
+  },
+  {
+   "group (characterisation)": "mortgage REIT",
+   "old_structure_rule": "operating-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2010-08-07",
+     6798,
+     1409493
+    ]
+   ],
+   "ticker": "CIM"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "no SEC SIC (structure rule)",
+   "sic_timeline": [
+    [
+     "2010-08-05",
+     6798,
+     1035443
+    ]
+   ],
+   "ticker": "ARE"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "no SEC SIC (structure rule)",
+   "sic_timeline": [
+    [
+     "2010-07-31",
+     6798,
+     906345
+    ]
+   ],
+   "ticker": "CPT"
+  },
+  {
+   "group (characterisation)": "financial services (asset manager, servicer)",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "no SEC SIC (structure rule)",
+   "sic_timeline": [
+    [
+     "2010-07-31",
+     6282,
+     1311370
+    ]
+   ],
+   "ticker": "LAZ"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "no SEC SIC (structure rule)",
+   "sic_timeline": [
+    [
+     "2010-08-03",
+     6798,
+     890319
+    ]
+   ],
+   "ticker": "TCO"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2010-08-05",
+     6798,
+     1045450
+    ]
+   ],
+   "ticker": "EPR"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2010-07-22",
+     6798,
+     1053532
+    ]
+   ],
+   "ticker": "LHO"
+  },
+  {
+   "group (characterisation)": "equity REIT / real estate",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2011-08-16",
+     6798,
+     1360604
+    ]
+   ],
+   "ticker": "HTA"
+  },
+  {
+   "group (characterisation)": "financial services (asset manager, servicer)",
+   "old_structure_rule": "financial-format",
+   "sic_policy_category_at_start": "financial",
+   "sic_timeline": [
+    [
+     "2011-06-01",
+     6162,
+     873860
+    ]
+   ],
+   "ticker": "OCN"
+  },
+  {
+   "group (characterisation)": "mortgage REIT",
+   "old_structure_rule": "operating-format",
+   "sic_policy_category_at_start": "REIT",
+   "sic_timeline": [
+    [
+     "2011-08-04",
+     6798,
+     1428205
+    ]
+   ],
+   "ticker": "ARR"
+  }
+ ],
+ "reit_code_moves": [
+  {
+   "cik": 106535,
+   "date": "2011-02-26",
+   "direction": "into REIT code",
+   "from": 2400,
+   "name_as_filed": "WEYERHAEUSER CO",
+   "sid": "WY R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 1053507,
+   "date": "2012-03-01",
+   "direction": "into REIT code",
+   "from": 4899,
+   "name_as_filed": "AMERICAN TOWER CORP /MA/",
+   "sid": "AMT RBASL7V8PIZP",
+   "to": 6798
+  },
+  {
+   "cik": 1025378,
+   "date": "2013-02-27",
+   "direction": "into REIT code",
+   "from": 6500,
+   "name_as_filed": "W. P. Carey Inc.",
+   "sid": "CDC R7LV8LHGDOBP",
+   "to": 6798
+  },
+  {
+   "cik": 1040829,
+   "date": "2013-02-28",
+   "direction": "into REIT code",
+   "from": 7011,
+   "name_as_filed": "Ryman Hospitality Properties, Inc.",
+   "sid": "GET R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 923796,
+   "date": "2013-03-02",
+   "direction": "into REIT code",
+   "from": 8744,
+   "name_as_filed": "GEO GROUP INC",
+   "sid": "WHC R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 1040719,
+   "date": "2013-03-19",
+   "direction": "out of REIT code",
+   "from": 6798,
+   "name_as_filed": "WALTER INVESTMENT MANAGEMENT CORP",
+   "sid": "HCM R96Z60P8TFMT",
+   "to": 6162
+  },
+  {
+   "cik": 1070750,
+   "date": "2013-08-07",
+   "direction": "out of REIT code",
+   "from": 6798,
+   "name_as_filed": "HOST HOTELS & RESORTS, INC.",
+   "sid": "HMT R735QTJ8XC9X",
+   "to": 7011
+  },
+  {
+   "cik": 1090425,
+   "date": "2014-08-08",
+   "direction": "into REIT code",
+   "from": 7311,
+   "name_as_filed": "LAMAR ADVERTISING CO/NEW",
+   "sid": "LAMR R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 1594686,
+   "date": "2014-11-05",
+   "direction": "into REIT code",
+   "from": 6512,
+   "name_as_filed": "Washington Prime Group Inc.",
+   "sid": "WPG VQY4YY1HBASL",
+   "to": 6798
+  },
+  {
+   "cik": 1070985,
+   "date": "2014-11-06",
+   "direction": "into REIT code",
+   "from": 8744,
+   "name_as_filed": "CORRECTIONS CORP OF AMERICA",
+   "sid": "PZN R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 1051470,
+   "date": "2014-11-08",
+   "direction": "into REIT code",
+   "from": 4899,
+   "name_as_filed": "CROWN CASTLE INTERNATIONAL CORP",
+   "sid": "TWRS RDBNO4XQDCV9",
+   "to": 6798
+  },
+  {
+   "cik": 1579877,
+   "date": "2015-03-07",
+   "direction": "into REIT code",
+   "from": 6500,
+   "name_as_filed": "OUTFRONT Media Inc.",
+   "sid": "CBSO VP9395D0KIUD",
+   "to": 6798
+  },
+  {
+   "cik": 1020569,
+   "date": "2015-05-01",
+   "direction": "into REIT code",
+   "from": 4220,
+   "name_as_filed": "IRON MOUNTAIN INC",
+   "sid": "IMTN R735QTJ8XC9X",
+   "to": 6798
+  },
+  {
+   "cik": 1101239,
+   "date": "2015-10-31",
+   "direction": "into REIT code",
+   "from": 4813,
+   "name_as_filed": "EQUINIX INC",
+   "sid": "EQIXD SKZ55CR4HH0L",
+   "to": 6798
+  },
+  {
+   "cik": 1533615,
+   "date": "2016-05-10",
+   "direction": "into REIT code",
+   "from": 7200,
+   "name_as_filed": "Global Medical REIT Inc.",
+   "sid": "GMRE WBTF2A59OY91",
+   "to": 6798
+  },
+  {
+   "cik": 1577670,
+   "date": "2016-08-06",
+   "direction": "into REIT code",
+   "from": 6500,
+   "name_as_filed": "Ladder Capital Corp",
+   "sid": "LADR VNVUWH2KQSTH",
+   "to": 6798
+  },
+  {
+   "cik": 1034054,
+   "date": "2017-03-02",
+   "direction": "into REIT code",
+   "from": 4899,
+   "name_as_filed": "SBA COMMUNICATIONS CORP",
+   "sid": "SBAC RLL0ODEPH7C5",
+   "to": 6798
+  },
+  {
+   "cik": 1545654,
+   "date": "2018-03-02",
+   "direction": "into REIT code",
+   "from": 6500,
+   "name_as_filed": "Alexander & Baldwin, Inc.",
+   "sid": "ALEX V7WTTVG02739",
+   "to": 6798
+  },
+  {
+   "cik": 1175483,
+   "date": "2019-08-07",
+   "direction": "out of REIT code",
+   "from": 6798,
+   "name_as_filed": "Drive Shack Inc.",
+   "sid": "NCT SIQEHORA7LUT",
+   "to": 5810
+  }
+ ],
+ "reit_like_names_outside_financial_codes": [],
+ "summary": {
+  "into": 16,
+  "out_of": 3,
+  "reit_code_moves": 19,
+  "reit_like_names_kept": 0
+ }
+}

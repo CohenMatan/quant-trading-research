@@ -1,0 +1,4630 @@
+{
+ "1000697": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1002910": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1003078": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0827",
+   "0828",
+   "0829",
+   "0831",
+   "0901",
+   "0903"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1013237": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0831"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1013462": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1014473": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1015922": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1018003": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "101830": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0331",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1020416": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1020859": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0730",
+   "0731",
+   "0801",
+   "0802",
+   "0803"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1021860": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1022079": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1023731": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1025378": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "102741": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1030",
+   "1031"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1031296": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1032033": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1033012": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "103379": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "0328",
+   "0330",
+   "0402",
+   "0403",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1036960": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1225",
+   "1226",
+   "1230",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1037760": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1037868": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1037949": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1043219": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1043604": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1045810": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0126",
+   "0127",
+   "0129",
+   "0130",
+   "0131"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined",
+   "split (NVDA 2021 4:1)"
+  ]
+ },
+ "1046311": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1047862": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1048286": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0102",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "amendment",
+   "quarantined"
+  ]
+ },
+ "1048695": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1048911": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "105016": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1054374": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1058290": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1060391": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1060736": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1060822": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1228",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1060955": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1061630": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1062579": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1063761": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1065280": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1067983": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "multi-class (Berkshire)"
+  ]
+ },
+ "1077428": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1079023": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1001",
+   "1003"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "108312": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1087432": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "109198": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0127",
+   "0131",
+   "0201"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1095073": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1099219": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1099800": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1100412": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1102993": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1104485": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "110471": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "0103",
+   "1228",
+   "1229",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "110621": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1108827": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1109345": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1109357": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1110783": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0831"
+  ],
+  "non_calendar": true,
+  "why": [
+   "acquisition/delisting (Monsanto 2018)",
+   "quarantined"
+  ]
+ },
+ "1115128": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1121788": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1225",
+   "1226",
+   "1228",
+   "1229",
+   "1230",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1123360": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0512",
+   "0531",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1125920": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0301",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1130258": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1130310": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0724",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1136869": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1136893": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1137411": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1137774": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1140536": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "amendment"
+  ]
+ },
+ "1141391": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1141719": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1144215": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0831"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1156039": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1158172": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1163739": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1166003": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1167419": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1168478": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1169561": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1262823": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "12659": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0430",
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1267238": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1270073": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1273813": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1274057": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1274913": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1275283": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1276520": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1279363": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1280600": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1282637": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0215",
+   "1215",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1286225": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1289236": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1289490": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "12927": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1295810": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1297989": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1298675": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1298946": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1299709": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0613",
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1308161": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1318605": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date",
+   "split (TSLA 2020 5:1)"
+  ]
+ },
+ "1322705": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1226",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1324245": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1324424": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1326160": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1326380": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0128",
+   "0129",
+   "0130",
+   "0201",
+   "0202",
+   "0203"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1327567": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0731"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1328581": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1340041": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1357326": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1357615": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0119",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1360604": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1362004": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1364250": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1365135": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1366684": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1368458": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1371285": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1374684": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1378789": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1379895": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1383312": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1383729": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1385867": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0131"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1389170": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1390777": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1393311": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0504",
+   "0506",
+   "0529",
+   "1124",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1393612": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1130",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1402305": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1403161": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "Visa (dated exchange correction)"
+  ]
+ },
+ "1408075": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1408356": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1410997": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1418135": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1420800": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "14272": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1434418": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1434621": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1443646": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1447669": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1451505": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1452575": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1465112": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "acquisition/delisting (DirecTV 2015)"
+  ]
+ },
+ "1466258": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1467858": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1474627": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1477815": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1479094": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1486957": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1490281": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1501585": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1504776": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1509991": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1510295": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1510487": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1513845": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1515673": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1518832": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1519751": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1520566": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1524472": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1528930": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0430",
+   "1228"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1530721": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0327",
+   "0328",
+   "0330",
+   "0402"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1532063": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1538990": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1547282": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1551182": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1557860": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1559720": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1559865": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1564708": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1567683": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1570585": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1571949": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1574135": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0131",
+   "0201",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1574460": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0731"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1576427": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1576789": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1578735": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1584509": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0927",
+   "0928",
+   "0930",
+   "1001",
+   "1002"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1590955": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1594109": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1594864": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1598110": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1598428": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1600470": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1609550": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1609702": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1622194": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1629137": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1637459": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0103",
+   "1225",
+   "1226",
+   "1228",
+   "1229",
+   "1230",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "delayed filing (Kraft Heinz 2018 10-K)"
+  ]
+ },
+ "1639691": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1643269": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0131"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1650132": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1652044": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "multi-class (Alphabet)"
+  ]
+ },
+ "1662774": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1666291": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1670592": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "1228",
+   "1229"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1671933": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1674930": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1679788": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1680367": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1685040": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1702780": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1704720": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1706431": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1707753": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0430"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1707925": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1710155": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "1228",
+   "1229",
+   "1230"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1714899": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1722482": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1722964": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1725255": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1739104": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1739566": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0103",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1739940": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1743759": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1747009": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1748824": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1756497": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1770450": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "1782754": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1792789": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1800347": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0228",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1804745": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1225",
+   "1226"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "1812364": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "18230": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1827980": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1828318": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0102",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1832466": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "1835632": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0130"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "1845290": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "19617": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "bank (JPMorgan)",
+   "quarantined"
+  ]
+ },
+ "1996862": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "20520": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "21175": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1025",
+   "1212",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "21344": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0417",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "216228": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "21665": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "22444": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0831"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "24741": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "26172": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "26780": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "27419": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0131",
+   "0201"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "275880": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "29644": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0731"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29669": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29905": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "29989": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1211",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "30625": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "310158": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "31462": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "315293": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "315852": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "318154": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "320187": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "320193": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0924",
+   "0925",
+   "0926",
+   "0927",
+   "0928",
+   "0929",
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "split (AAPL 7:1 2014, 4:1 2020)"
+  ]
+ },
+ "320335": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "32604": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "33185": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "354950": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0128",
+   "0129",
+   "0130",
+   "0131",
+   "0201",
+   "0202",
+   "0203"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "35527": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "356028": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "38074": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0331",
+   "0913",
+   "1202"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "38777": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "39911": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0129",
+   "0130",
+   "0131",
+   "0201",
+   "0202"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "40704": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0529",
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "40888": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1130",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "42888": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1225",
+   "1227",
+   "1228",
+   "1229",
+   "1230"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "45012": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "47518": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "50104": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "5272": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "insurer (AIG)"
+  ]
+ },
+ "54381": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "5513": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "59478": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "60667": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0128",
+   "0129",
+   "0131",
+   "0201",
+   "0203"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "62709": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "6281": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1030",
+   "1031",
+   "1101",
+   "1102"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "62996": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "63276": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "63908": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "64040": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "64803": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "66740": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "66756": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "67472": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "701985": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0128",
+   "0129",
+   "0130",
+   "0131",
+   "0201",
+   "0202"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "703351": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0624",
+   "0625",
+   "0626",
+   "0629",
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "704051": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "708821": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1207",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "712534": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "715957": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "717423": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0209",
+   "0515",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "718877": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "721371": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "72207": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "723254": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "72331": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1031"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "73124": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "731802": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "7332": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "743988": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0328",
+   "0330",
+   "0401",
+   "0402",
+   "0403"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "750556": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "757011": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "764065": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "764478": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0129",
+   "0130",
+   "0201",
+   "0202",
+   "0228",
+   "0301",
+   "0303"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "765880": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "773910": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "784977": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "78814": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "788784": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0717",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "789019": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0630"
+  ],
+  "non_calendar": true,
+  "why": [
+   "normal (Microsoft)"
+  ]
+ },
+ "790051": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "790526": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "790816": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "794323": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "794367": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0117",
+   "0128",
+   "0129",
+   "0130",
+   "0201",
+   "0202"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "798354": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "803649": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "80424": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0421",
+   "0630",
+   "1213"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "808362": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "808450": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1031",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "812074": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "815556": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "816284": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0501",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "820313": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "821130": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "823768": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "824142": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "827054": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "831259": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "833081": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "833444": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0925",
+   "0926",
+   "0927",
+   "0929",
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "849399": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0329",
+   "0401",
+   "0402",
+   "0403"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "851520": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "0103",
+   "1228",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "85408": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "857005": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "858470": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "858803": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0930"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "859014": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0331",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "861842": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "86312": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "865754": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "866873": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0501",
+   "0502"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "87347": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "874016": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "874766": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1212",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "877212": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "877890": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "879101": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "880266": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "882095": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "882235": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "882835": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0420",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "883948": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1230",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "884887": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "885639": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0128",
+   "0129",
+   "0130",
+   "0131",
+   "0201",
+   "0202"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "885725": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "8858": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0627",
+   "0628",
+   "0629",
+   "0701",
+   "0702",
+   "0703"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "8868": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "887733": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0924",
+   "0925",
+   "0926",
+   "0928",
+   "0929",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "888919": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "889900": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "896159": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "896878": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0731"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "89800": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "898173": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "898293": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0831"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "899051": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "899460": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ },
+ "899923": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0630",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "900075": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0731"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "906107": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "908255": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "90896": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0326",
+   "0328",
+   "0330",
+   "0331",
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "909832": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0828",
+   "0830",
+   "0901",
+   "0902"
+  ],
+  "non_calendar": true,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "910521": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0331",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "910606": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "911109": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "912183": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "914208": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "91440": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "0102",
+   "0103",
+   "1228",
+   "1229",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "915389": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0505",
+   "0506",
+   "1007",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "918386": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0330"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "921112": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "92122": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "922224": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0405",
+   "1229"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "923796": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0101",
+   "1228",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "random"
+  ]
+ },
+ "927066": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "927653": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "0331"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "936340": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "936468": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "estimated_date"
+  ]
+ },
+ "93751": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0219",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "940944": {
+  "amended": false,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "0525",
+   "0526",
+   "0527",
+   "0528",
+   "0529",
+   "0530",
+   "0531"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "96223": {
+  "amended": true,
+  "changed_fiscal_year": true,
+  "fiscal_year_ends": [
+   "1130",
+   "1231"
+  ],
+  "non_calendar": true,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "97216": {
+  "amended": true,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "97745": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "quarantined"
+  ]
+ },
+ "98362": {
+  "amended": false,
+  "changed_fiscal_year": false,
+  "fiscal_year_ends": [
+   "1231"
+  ],
+  "non_calendar": false,
+  "why": [
+   "random"
+  ]
+ }
+}
