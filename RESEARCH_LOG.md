@@ -1198,3 +1198,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P2_CP14_H017_implementation_canary_readiness.md`: **READY FOR E017-01**.
 
 **STOP:** E017-01 (slot 3) and every other H017 run await explicit owner approval. No candidate performance computed; Holdout locked; no data purchase.
+
+## 2026-10-03: H017 development runs; H017 REJECTED; Phase 2 slots exhausted; STOP (D127, D128)
+
+- **Owner authorised** E017-01..08 under the frozen decision tree (D127). **Slot 3 consumed** at E017-01's start.
+- **All 8 runs completed**, no reruns.
+- **H017 vs SPY:** final $671,629 vs $516,514; CAGR 17.46% vs 14.88% (W1 pass).
+- **W2 fails:** g/SE = 0.71.
+- **W3 passes:** H017 beat EW-H017 (13.03%) and all five random-event seeds (10.26–13.62%).
+- **R1, R2, R4 pass; R3 fails:** 74% of the excess came from 2014–15; H017 trailed SPY in every block from 2016–21.
+- **Classification:** PbNQ rules 3 and 5 fail → **Case A: Rejected**. No conditional runs, no E983-01, no data purchase.
+- **Checkpoint:** `docs/checkpoints/P2_CP15_H017_development_result_phase2_final.md`.
+
+**STOP:** all three Phase 2 slots used, all three hypotheses rejected; Phase 2 ends with "No Production Candidate Found" unless the owner decides otherwise. Holdout untouched.

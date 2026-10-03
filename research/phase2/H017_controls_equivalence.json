@@ -1,0 +1,46 @@
+{
+ "fields": [
+  "n_table_events",
+  "n_universe",
+  "n_valid",
+  "n_breakpoint_sample",
+  "breakpoint",
+  "k_t"
+ ],
+ "reference": "E017-01",
+ "event_days": 2842,
+ "books": {
+  "E017-02": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-03": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-04": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-05": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-06": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-07": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E017-08": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  },
+  "E982-02": {
+   "identical_to_E017_01": true,
+   "event_days": 2842
+  }
+ }
+}
