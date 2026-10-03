@@ -1,0 +1,2350 @@
+{
+ "universe": {
+  "securities": 2719,
+  "with_cik": 2719,
+  "corrected": 190,
+  "unique_ciks": 2706,
+  "ciks_with_submissions": 2706
+ },
+ "identity": {
+  "verified (dated ticker evidence)": 2411,
+  "weak (one dated ticker match)": 46,
+  "unverified (no XBRL prefix evidence in span)": 47,
+  "contradicted (prefixes never match the security's tickers)": 25,
+  "verified (identity v2, SEC-corrected security)": 190
+ },
+ "coverage_by_year": {
+  "2010": {
+   "eligible_securities": 943,
+   "expected_security_quarters": 3339,
+   "observed": 3140,
+   "coverage": 0.9404013177598083
+  },
+  "2011": {
+   "eligible_securities": 1086,
+   "expected_security_quarters": 3890,
+   "observed": 3621,
+   "coverage": 0.9308483290488432
+  },
+  "2012": {
+   "eligible_securities": 1074,
+   "expected_security_quarters": 3881,
+   "observed": 3631,
+   "coverage": 0.9355836124710126
+  },
+  "2013": {
+   "eligible_securities": 1231,
+   "expected_security_quarters": 4419,
+   "observed": 4149,
+   "coverage": 0.9389002036659878
+  },
+  "2014": {
+   "eligible_securities": 1363,
+   "expected_security_quarters": 4994,
+   "observed": 4680,
+   "coverage": 0.9371245494593512
+  },
+  "2015": {
+   "eligible_securities": 1411,
+   "expected_security_quarters": 5150,
+   "observed": 4816,
+   "coverage": 0.9351456310679611
+  },
+  "2016": {
+   "eligible_securities": 1379,
+   "expected_security_quarters": 4931,
+   "observed": 4641,
+   "coverage": 0.9411883999188806
+  },
+  "2017": {
+   "eligible_securities": 1460,
+   "expected_security_quarters": 5284,
+   "observed": 4965,
+   "coverage": 0.9396290688872067
+  },
+  "2018": {
+   "eligible_securities": 1535,
+   "expected_security_quarters": 5612,
+   "observed": 5271,
+   "coverage": 0.9392373485388453
+  },
+  "2019": {
+   "eligible_securities": 1497,
+   "expected_security_quarters": 5494,
+   "observed": 5181,
+   "coverage": 0.9430287586457954
+  },
+  "2020": {
+   "eligible_securities": 1625,
+   "expected_security_quarters": 5564,
+   "observed": 5249,
+   "coverage": 0.9433860531991373
+  },
+  "2021": {
+   "eligible_securities": 1955,
+   "expected_security_quarters": 6977,
+   "observed": 6564,
+   "coverage": 0.940805503798194
+  }
+ },
+ "coverage_company_level": {
+  "expected": 59218,
+  "observed": 55587,
+  "coverage": 0.9386841838630147
+ },
+ "coverage_by_end_status": {
+  "continuing (eligible at end-2021)": {
+   "expected": 46405,
+   "observed": 43746,
+   "coverage": 0.942700140071113
+  },
+  "acquired / merged": {
+   "expected": 8861,
+   "observed": 8339,
+   "coverage": 0.9410901704096603
+  },
+  "left the universe, still trading": {
+   "expected": 3529,
+   "observed": 3238,
+   "coverage": 0.9175403797109662
+  },
+  "delisted / other": {
+   "expected": 279,
+   "observed": 137,
+   "coverage": 0.4910394265232975
+  },
+  "bankruptcy (8-K Item 1.03)": {
+   "expected": 461,
+   "observed": 448,
+   "coverage": 0.9718004338394793
+  }
+ },
+ "coverage_by_identity": {
+  "verified (dated ticker evidence)": {
+   "expected": 56023,
+   "observed": 53079,
+   "coverage": 0.9474501544008711
+  },
+  "weak (one dated ticker match)": {
+   "expected": 197,
+   "observed": 139,
+   "coverage": 0.7055837563451777
+  },
+  "unverified (no XBRL prefix evidence in span)": {
+   "expected": 414,
+   "observed": 28,
+   "coverage": 0.06763285024154589
+  },
+  "contradicted (prefixes never match the security's tickers)": {
+   "expected": 408,
+   "observed": 289,
+   "coverage": 0.7083333333333334
+  },
+  "verified (identity v2, SEC-corrected security)": {
+   "expected": 2493,
+   "observed": 2373,
+   "coverage": 0.9518652226233454
+  }
+ },
+ "securities_by_end_status": {
+  "continuing (eligible at end-2021)": 1683,
+  "acquired / merged": 596,
+  "left the universe, still trading": 375,
+  "delisted / other": 22,
+  "bankruptcy (8-K Item 1.03)": 43
+ },
+ "timing_by_year": {
+  "2010": {
+   "BMO": 2451,
+   "AMC": 2923,
+   "DURING": 1123,
+   "NONSESSION": 2
+  },
+  "2011": {
+   "BMO": 2547,
+   "AMC": 3022,
+   "DURING": 1009,
+   "NONSESSION": 3
+  },
+  "2012": {
+   "BMO": 2612,
+   "AMC": 3053,
+   "NONSESSION": 116,
+   "DURING": 921
+  },
+  "2013": {
+   "BMO": 2702,
+   "AMC": 3364,
+   "DURING": 836,
+   "NONSESSION": 1
+  },
+  "2014": {
+   "BMO": 2844,
+   "AMC": 3640,
+   "DURING": 734,
+   "NONSESSION": 1
+  },
+  "2015": {
+   "AMC": 3721,
+   "BMO": 2972,
+   "DURING": 612,
+   "NONSESSION": 2
+  },
+  "2016": {
+   "BMO": 2932,
+   "AMC": 3739,
+   "DURING": 586
+  },
+  "2017": {
+   "DURING": 495,
+   "AMC": 3852,
+   "BMO": 2884,
+   "NONSESSION": 2
+  },
+  "2018": {
+   "BMO": 2961,
+   "AMC": 3883,
+   "DURING": 415,
+   "NONSESSION": 1
+  },
+  "2019": {
+   "BMO": 3036,
+   "AMC": 3907,
+   "DURING": 368,
+   "NONSESSION": 2
+  },
+  "2020": {
+   "BMO": 3072,
+   "AMC": 4081,
+   "DURING": 304,
+   "NONSESSION": 1
+  },
+  "2021": {
+   "BMO": 3246,
+   "AMC": 4316,
+   "DURING": 241,
+   "NONSESSION": 2
+  }
+ },
+ "timing_total": {
+  "BMO": 34259,
+  "AMC": 43501,
+  "DURING": 7644,
+  "NONSESSION": 133
+ },
+ "duplicates_by_year": {
+  "2010": 500,
+  "2011": 490,
+  "2012": 580,
+  "2013": 526,
+  "2014": 548,
+  "2015": 539,
+  "2016": 487,
+  "2017": 476,
+  "2018": 459,
+  "2019": 407,
+  "2020": 617,
+  "2021": 430
+ },
+ "same_day_duplicate_filings": 1040,
+ "amendments_by_year": {
+  "2010": 72,
+  "2011": 52,
+  "2012": 70,
+  "2013": 68,
+  "2014": 74,
+  "2015": 69,
+  "2016": 74,
+  "2017": 57,
+  "2018": 75,
+  "2019": 78,
+  "2020": 74,
+  "2021": 72
+ },
+ "missing_by_year": {
+  "2010": {
+   "periodic report filed without any earnings 8-K": 13,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 84,
+   "other (no earnings 8-K, no periodic report in the quarter)": 6,
+   "timing shift (two events in an adjacent quarter)": 30,
+   "foreign or transition-period filer": 34,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 24,
+   "CIK contradicted by dated ticker evidence": 8
+  },
+  "2011": {
+   "foreign or transition-period filer": 52,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 92,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 52,
+   "other (no earnings 8-K, no periodic report in the quarter)": 17,
+   "timing shift (two events in an adjacent quarter)": 17,
+   "periodic report filed without any earnings 8-K": 28,
+   "CIK contradicted by dated ticker evidence": 11
+  },
+  "2012": {
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 43,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 88,
+   "foreign or transition-period filer": 54,
+   "timing shift (two events in an adjacent quarter)": 18,
+   "CIK contradicted by dated ticker evidence": 11,
+   "periodic report filed without any earnings 8-K": 18,
+   "other (no earnings 8-K, no periodic report in the quarter)": 18
+  },
+  "2013": {
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 42,
+   "foreign or transition-period filer": 70,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 87,
+   "timing shift (two events in an adjacent quarter)": 17,
+   "periodic report filed without any earnings 8-K": 25,
+   "CIK contradicted by dated ticker evidence": 10,
+   "other (no earnings 8-K, no periodic report in the quarter)": 19
+  },
+  "2014": {
+   "CIK contradicted by dated ticker evidence": 14,
+   "foreign or transition-period filer": 94,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 86,
+   "other (no earnings 8-K, no periodic report in the quarter)": 24,
+   "timing shift (two events in an adjacent quarter)": 18,
+   "periodic report filed without any earnings 8-K": 41,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 37
+  },
+  "2015": {
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 58,
+   "CIK contradicted by dated ticker evidence": 16,
+   "other (no earnings 8-K, no periodic report in the quarter)": 31,
+   "foreign or transition-period filer": 94,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 92,
+   "periodic report filed without any earnings 8-K": 29,
+   "timing shift (two events in an adjacent quarter)": 14
+  },
+  "2016": {
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 56,
+   "foreign or transition-period filer": 74,
+   "other (no earnings 8-K, no periodic report in the quarter)": 32,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 68,
+   "periodic report filed without any earnings 8-K": 35,
+   "timing shift (two events in an adjacent quarter)": 19,
+   "CIK contradicted by dated ticker evidence": 6
+  },
+  "2017": {
+   "other (no earnings 8-K, no periodic report in the quarter)": 31,
+   "CIK contradicted by dated ticker evidence": 11,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 64,
+   "foreign or transition-period filer": 90,
+   "timing shift (two events in an adjacent quarter)": 23,
+   "periodic report filed without any earnings 8-K": 44,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 56
+  },
+  "2018": {
+   "CIK contradicted by dated ticker evidence": 7,
+   "foreign or transition-period filer": 121,
+   "timing shift (two events in an adjacent quarter)": 20,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 68,
+   "periodic report filed without any earnings 8-K": 45,
+   "other (no earnings 8-K, no periodic report in the quarter)": 38,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 42
+  },
+  "2019": {
+   "CIK contradicted by dated ticker evidence": 8,
+   "foreign or transition-period filer": 111,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 74,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 39,
+   "other (no earnings 8-K, no periodic report in the quarter)": 26,
+   "timing shift (two events in an adjacent quarter)": 21,
+   "periodic report filed without any earnings 8-K": 34
+  },
+  "2020": {
+   "CIK contradicted by dated ticker evidence": 10,
+   "other (no earnings 8-K, no periodic report in the quarter)": 30,
+   "foreign or transition-period filer": 111,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 43,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 67,
+   "periodic report filed without any earnings 8-K": 32,
+   "timing shift (two events in an adjacent quarter)": 22
+  },
+  "2021": {
+   "CIK contradicted by dated ticker evidence": 7,
+   "foreign or transition-period filer": 169,
+   "other (no earnings 8-K, no periodic report in the quarter)": 48,
+   "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 103,
+   "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 32,
+   "periodic report filed without any earnings 8-K": 38,
+   "timing shift (two events in an adjacent quarter)": 16
+  }
+ },
+ "missing_total": {
+  "periodic report filed without any earnings 8-K": 382,
+  "registrant has no SEC filings around the quarter (successor/predecessor CIK)": 809,
+  "other (no earnings 8-K, no periodic report in the quarter)": 320,
+  "timing shift (two events in an adjacent quarter)": 235,
+  "foreign or transition-period filer": 1074,
+  "periodic report filed; results possibly released under 8-K Item 7.01/8.01": 688,
+  "CIK contradicted by dated ticker evidence": 119
+ },
+ "missing_top": [
+  {
+   "sid": "BAP R735QTJ8XC9X",
+   "ciks": "1001290",
+   "category": "foreign or transition-period filer",
+   "quarters": 48,
+   "name": "CREDICORP LTD"
+  },
+  {
+   "sid": "BG S6V2H4010679",
+   "ciks": "1996862",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 48,
+   "name": "Bunge Global SA"
+  },
+  {
+   "sid": "BLK ROIDIDJRNXID",
+   "ciks": "2012383",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 48,
+   "name": "BlackRock, Inc."
+  },
+  {
+   "sid": "DOX RBOKUIZLS38L",
+   "ciks": "1062579",
+   "category": "foreign or transition-period filer",
+   "quarters": 48,
+   "name": "AMDOCS LTD"
+  },
+  {
+   "sid": "QGENF R735QTJ8XC9X",
+   "ciks": "1015820",
+   "category": "foreign or transition-period filer",
+   "quarters": 48,
+   "name": "QIAGEN N.V."
+  },
+  {
+   "sid": "XON R735QTJ8XC9X",
+   "ciks": "2115436",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 48,
+   "name": "ExxonMobil Holdings Corp"
+  },
+  {
+   "sid": "CHKPF R735QTJ8XC9X",
+   "ciks": "1015922",
+   "category": "foreign or transition-period filer",
+   "quarters": 47,
+   "name": "CHECK POINT SOFTWARE TECHNOLOGIES LTD"
+  },
+  {
+   "sid": "APA R735QTJ8XC9X",
+   "ciks": "1841666",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 43,
+   "name": "APA Corp"
+  },
+  {
+   "sid": "HOC R735QTJ8XC9X",
+   "ciks": "1915657",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 43,
+   "name": "HF Sinclair Corp"
+  },
+  {
+   "sid": "SINA RTUDOLVOL1T1",
+   "ciks": "1094005",
+   "category": "foreign or transition-period filer",
+   "quarters": 43,
+   "name": "SINA CORP"
+  },
+  {
+   "sid": "MRVL RVW87MBCBMUD",
+   "ciks": "1835632",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 42,
+   "name": "Marvell Technology, Inc."
+  },
+  {
+   "sid": "YNDX UWU1S0AN2N39",
+   "ciks": "1513845",
+   "category": "foreign or transition-period filer",
+   "quarters": 42,
+   "name": "Nebius Group N.V."
+  },
+  {
+   "sid": "CPA TEIJYBTF4ACL",
+   "ciks": "1345105",
+   "category": "foreign or transition-period filer",
+   "quarters": 39,
+   "name": "Copa Holdings, S.A."
+  },
+  {
+   "sid": "AZPN R735QTJ8XC9X",
+   "ciks": "1897982",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 38,
+   "name": "Aspen Technology, Inc."
+  },
+  {
+   "sid": "AER TNUBE7JZ7K2T",
+   "ciks": "1378789",
+   "category": "foreign or transition-period filer",
+   "quarters": 35,
+   "name": "AerCap Holdings N.V."
+  },
+  {
+   "sid": "ICLRY RAQ4796P3OMD",
+   "ciks": "1060955",
+   "category": "foreign or transition-period filer",
+   "quarters": 35,
+   "name": "ICON PLC"
+  },
+  {
+   "sid": "NXPI UOVIOSUIT3DX",
+   "ciks": "1413447",
+   "category": "foreign or transition-period filer",
+   "quarters": 35,
+   "name": "NXP Semiconductors N.V."
+  },
+  {
+   "sid": "XRX R735QTJ8XC9X",
+   "ciks": "1770450",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 35,
+   "name": "Xerox Holdings Corp"
+  },
+  {
+   "sid": "CRHCY R735QTJ8XC9X",
+   "ciks": "849395",
+   "category": "foreign or transition-period filer",
+   "quarters": 34,
+   "name": "CRH PUBLIC LTD CO"
+  },
+  {
+   "sid": "CNHI VKCU8EVSVH45",
+   "ciks": "1567094",
+   "category": "foreign or transition-period filer",
+   "quarters": 33,
+   "name": "CNH Industrial N.V."
+  },
+  {
+   "sid": "UHAL R735QTJ8XC9X",
+   "ciks": "4457",
+   "category": "periodic report filed; results possibly released under 8-K Item 7.01/8.01",
+   "quarters": 33,
+   "name": "U-Haul Holding Co /NV/"
+  },
+  {
+   "sid": "CI R735QTJ8XC9X",
+   "ciks": "1739940",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 32,
+   "name": "Cigna Group"
+  },
+  {
+   "sid": "DIS R735QTJ8XC9X",
+   "ciks": "1744489",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 32,
+   "name": "Walt Disney Co"
+  },
+  {
+   "sid": "AVGO UEW4IOBWVPT1",
+   "ciks": "1730168",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 31,
+   "name": "Broadcom Inc."
+  },
+  {
+   "sid": "GGG R735QTJ8XC9X",
+   "ciks": "42888",
+   "category": "periodic report filed without any earnings 8-K",
+   "quarters": 30,
+   "name": "GRACO INC"
+  },
+  {
+   "sid": "GLNG SKGFNKSX14YT",
+   "ciks": "1207179",
+   "category": "foreign or transition-period filer",
+   "quarters": 30,
+   "name": "GOLAR LNG LTD"
+  },
+  {
+   "sid": "PX R735QTJ8XC9X",
+   "ciks": "1707925",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 28,
+   "name": "LINDE PLC"
+  },
+  {
+   "sid": "HIW R735QTJ8XC9X",
+   "ciks": "921082",
+   "category": "periodic report filed without any earnings 8-K",
+   "quarters": 27,
+   "name": "HIGHWOODS PROPERTIES, INC."
+  },
+  {
+   "sid": "IGT R735QTJ8XC9X",
+   "ciks": "1619762",
+   "category": "foreign or transition-period filer",
+   "quarters": 27,
+   "name": "Brightstar Lottery PLC"
+  },
+  {
+   "sid": "IOC T1UNZ1G9OZ1H",
+   "ciks": "1221715",
+   "category": "foreign or transition-period filer",
+   "quarters": 27,
+   "name": "INTEROIL CORP"
+  },
+  {
+   "sid": "STRL R735QTJ8XC9X",
+   "ciks": "1757898",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 27,
+   "name": "STERIS plc"
+  },
+  {
+   "sid": "BRKB R735QTJ8XC9X",
+   "ciks": "1067983",
+   "category": "CIK contradicted by dated ticker evidence",
+   "quarters": 25,
+   "name": "BERKSHIRE HATHAWAY INC"
+  },
+  {
+   "sid": "DOW R735QTJ8XC9X",
+   "ciks": "1666700",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 25,
+   "name": "DuPont de Nemours, Inc."
+  },
+  {
+   "sid": "ABY VRFV0MMIOVOL",
+   "ciks": "1601072",
+   "category": "CIK contradicted by dated ticker evidence",
+   "quarters": 24,
+   "name": "Atlantica Sustainable Infrastructure plc"
+  },
+  {
+   "sid": "ASH R735QTJ8XC9X",
+   "ciks": "1674862",
+   "category": "registrant has no SEC filings around the quarter (successor/predecessor CIK)",
+   "quarters": 24,
+   "name": "ASHLAND INC."
+  },
+  {
+   "sid": "LBDKV VVAP1T7BH9B9",
+   "ciks": "1611983",
+   "category": "CIK contradicted by dated ticker evidence",
+   "quarters": 24,
+   "name": "Liberty Broadband Corp"
+  },
+  {
+   "sid": "MPL R735QTJ8XC9X",
+   "ciks": "66756",
+   "category": "periodic report filed; results possibly released under 8-K Item 7.01/8.01",
+   "quarters": 24,
+   "name": "ALLETE INC"
+  },
+  {
+   "sid": "TAROF R735QTJ8XC9X",
+   "ciks": "906338",
+   "category": "foreign or transition-period filer",
+   "quarters": 24,
+   "name": "TARO PHARMACEUTICAL INDUSTRIES LTD"
+  },
+  {
+   "sid": "TROW R735QTJ8XC9X",
+   "ciks": "1113169",
+   "category": "periodic report filed without any earnings 8-K",
+   "quarters": 24,
+   "name": "PRICE T ROWE GROUP INC"
+  },
+  {
+   "sid": "FCEA R735QTJ8XC9X",
+   "ciks": "1647509",
+   "category": "CIK contradicted by dated ticker evidence",
+   "quarters": 22,
+   "name": "Forest City Realty Trust, Inc."
+  }
+ ],
+ "timestamp_canary": {
+  "sample": 204,
+  "matches": 204,
+  "with_index_page": 204,
+  "rows": [
+   {
+    "cik": 19617,
+    "accession": "0000950123-10-002767",
+    "convention": "UTC",
+    "json_et": "2010-01-15 07:07:37",
+    "index_page": "2010-01-15 07:07:37",
+    "match": true
+   },
+   {
+    "cik": 1122904,
+    "accession": "0001193125-10-236680",
+    "convention": "UTC",
+    "json_et": "2010-10-26 16:14:55",
+    "index_page": "2010-10-26 16:14:55",
+    "match": true
+   },
+   {
+    "cik": 4281,
+    "accession": "0001193125-10-226872",
+    "convention": "UTC",
+    "json_et": "2010-10-08 15:41:22",
+    "index_page": "2010-10-08 15:41:22",
+    "match": true
+   },
+   {
+    "cik": 872448,
+    "accession": "0000950123-10-009917",
+    "convention": "ET",
+    "json_et": "2010-02-08 16:17:06",
+    "index_page": "2010-02-08 16:17:06",
+    "match": true
+   },
+   {
+    "cik": 97476,
+    "accession": "0000097476-10-000018",
+    "convention": "UTC",
+    "json_et": "2010-04-26 16:39:07",
+    "index_page": "2010-04-26 16:39:07",
+    "match": true
+   },
+   {
+    "cik": 1032220,
+    "accession": "0001157523-10-001060",
+    "convention": "UTC",
+    "json_et": "2010-02-19 10:10:38",
+    "index_page": "2010-02-19 10:10:38",
+    "match": true
+   },
+   {
+    "cik": 814585,
+    "accession": "0001157523-10-001323",
+    "convention": "UTC",
+    "json_et": "2010-03-01 17:14:27",
+    "index_page": "2010-03-01 17:14:27",
+    "match": true
+   },
+   {
+    "cik": 1047340,
+    "accession": "0001157523-10-004608",
+    "convention": "UTC",
+    "json_et": "2010-08-03 10:04:32",
+    "index_page": "2010-08-03 10:04:32",
+    "match": true
+   },
+   {
+    "cik": 72903,
+    "accession": "0001140361-10-042473",
+    "convention": "UTC",
+    "json_et": "2010-10-28 07:14:53",
+    "index_page": "2010-10-28 07:14:53",
+    "match": true
+   },
+   {
+    "cik": 1131324,
+    "accession": "0000950123-10-008316",
+    "convention": "ET",
+    "json_et": "2010-02-03 16:10:26",
+    "index_page": "2010-02-03 16:10:26",
+    "match": true
+   },
+   {
+    "cik": 897723,
+    "accession": "0001104659-10-054989",
+    "convention": "UTC",
+    "json_et": "2010-11-01 16:33:44",
+    "index_page": "2010-11-01 16:33:44",
+    "match": true
+   },
+   {
+    "cik": 1041859,
+    "accession": "0001144204-10-029140",
+    "convention": "UTC",
+    "json_et": "2010-05-20 07:10:50",
+    "index_page": "2010-05-20 07:10:50",
+    "match": true
+   },
+   {
+    "cik": 821130,
+    "accession": "0000821130-10-000049",
+    "convention": "UTC",
+    "json_et": "2010-11-04 09:08:01",
+    "index_page": "2010-11-04 09:08:01",
+    "match": true
+   },
+   {
+    "cik": 34408,
+    "accession": "0001157523-10-001423",
+    "convention": "ET",
+    "json_et": "2010-03-04 16:59:06",
+    "index_page": "2010-03-04 16:59:06",
+    "match": true
+   },
+   {
+    "cik": 11199,
+    "accession": "0001104659-10-022799",
+    "convention": "ET",
+    "json_et": "2010-04-29 08:49:43",
+    "index_page": "2010-04-29 08:49:43",
+    "match": true
+   },
+   {
+    "cik": 1241199,
+    "accession": "0000950123-10-070175",
+    "convention": "ET",
+    "json_et": "2010-07-30 08:00:34",
+    "index_page": "2010-07-30 08:00:34",
+    "match": true
+   },
+   {
+    "cik": 1013857,
+    "accession": "0001193125-10-090184",
+    "convention": "UTC",
+    "json_et": "2010-04-22 16:54:57",
+    "index_page": "2010-04-22 16:54:57",
+    "match": true
+   },
+   {
+    "cik": 895417,
+    "accession": "0001193125-11-273452",
+    "convention": "UTC",
+    "json_et": "2011-10-18 09:49:35",
+    "index_page": "2011-10-18 09:49:35",
+    "match": true
+   },
+   {
+    "cik": 1489136,
+    "accession": "0001193125-11-083907",
+    "convention": "ET",
+    "json_et": "2011-03-31 07:55:36",
+    "index_page": "2011-03-31 07:55:36",
+    "match": true
+   },
+   {
+    "cik": 85535,
+    "accession": "0001144204-11-061014",
+    "convention": "UTC",
+    "json_et": "2011-11-03 11:06:33",
+    "index_page": "2011-11-03 11:06:33",
+    "match": true
+   },
+   {
+    "cik": 1164863,
+    "accession": "0001193125-11-294187",
+    "convention": "UTC",
+    "json_et": "2011-11-03 09:18:24",
+    "index_page": "2011-11-03 09:18:24",
+    "match": true
+   },
+   {
+    "cik": 1405197,
+    "accession": "0001104659-11-009369",
+    "convention": "ET",
+    "json_et": "2011-02-23 17:06:39",
+    "index_page": "2011-02-23 17:06:39",
+    "match": true
+   },
+   {
+    "cik": 87347,
+    "accession": "0000950123-11-091100",
+    "convention": "UTC",
+    "json_et": "2011-10-21 07:02:03",
+    "index_page": "2011-10-21 07:02:03",
+    "match": true
+   },
+   {
+    "cik": 1141391,
+    "accession": "0001193125-11-122894",
+    "convention": "UTC",
+    "json_et": "2011-05-03 08:09:47",
+    "index_page": "2011-05-03 08:09:47",
+    "match": true
+   },
+   {
+    "cik": 1043604,
+    "accession": "0001193125-11-273824",
+    "convention": "ET",
+    "json_et": "2011-10-18 16:30:57",
+    "index_page": "2011-10-18 16:30:57",
+    "match": true
+   },
+   {
+    "cik": 37996,
+    "accession": "0001157523-11-002229",
+    "convention": "UTC",
+    "json_et": "2011-04-26 07:38:57",
+    "index_page": "2011-04-26 07:38:57",
+    "match": true
+   },
+   {
+    "cik": 1286225,
+    "accession": "0001171843-11-001342",
+    "convention": "ET",
+    "json_et": "2011-05-05 16:06:12",
+    "index_page": "2011-05-05 16:06:12",
+    "match": true
+   },
+   {
+    "cik": 731766,
+    "accession": "0001193125-11-104386",
+    "convention": "UTC",
+    "json_et": "2011-04-21 06:12:58",
+    "index_page": "2011-04-21 06:12:58",
+    "match": true
+   },
+   {
+    "cik": 1084755,
+    "accession": "0001193125-11-015982",
+    "convention": "ET",
+    "json_et": "2011-01-27 16:14:51",
+    "index_page": "2011-01-27 16:14:51",
+    "match": true
+   },
+   {
+    "cik": 1033012,
+    "accession": "0000950123-11-068979",
+    "convention": "ET",
+    "json_et": "2011-07-27 17:11:41",
+    "index_page": "2011-07-27 17:11:41",
+    "match": true
+   },
+   {
+    "cik": 98246,
+    "accession": "0000098246-11-000164",
+    "convention": "ET",
+    "json_et": "2011-08-26 11:10:32",
+    "index_page": "2011-08-26 11:10:32",
+    "match": true
+   },
+   {
+    "cik": 743316,
+    "accession": "0001445305-11-002212",
+    "convention": "ET",
+    "json_et": "2011-07-28 16:07:38",
+    "index_page": "2011-07-28 16:07:38",
+    "match": true
+   },
+   {
+    "cik": 832988,
+    "accession": "0001191638-11-000386",
+    "convention": "UTC",
+    "json_et": "2011-03-30 08:28:23",
+    "index_page": "2011-03-30 08:28:23",
+    "match": true
+   },
+   {
+    "cik": 875357,
+    "accession": "0000875357-11-000012",
+    "convention": "UTC",
+    "json_et": "2011-04-26 15:58:20",
+    "index_page": "2011-04-26 15:58:20",
+    "match": true
+   },
+   {
+    "cik": 1230276,
+    "accession": "0001193125-12-099083",
+    "convention": "ET",
+    "json_et": "2012-03-06 16:27:18",
+    "index_page": "2012-03-06 16:27:18",
+    "match": true
+   },
+   {
+    "cik": 874766,
+    "accession": "0001299933-12-001664",
+    "convention": "UTC",
+    "json_et": "2012-07-16 16:22:39",
+    "index_page": "2012-07-16 16:22:39",
+    "match": true
+   },
+   {
+    "cik": 23217,
+    "accession": "0001193125-12-277795",
+    "convention": "UTC",
+    "json_et": "2012-06-21 07:37:25",
+    "index_page": "2012-06-21 07:37:25",
+    "match": true
+   },
+   {
+    "cik": 785956,
+    "accession": "0001437749-12-007074",
+    "convention": "UTC",
+    "json_et": "2012-07-23 16:02:52",
+    "index_page": "2012-07-23 16:02:52",
+    "match": true
+   },
+   {
+    "cik": 320345,
+    "accession": "0001144204-12-057725",
+    "convention": "ET",
+    "json_et": "2012-10-25 16:02:40",
+    "index_page": "2012-10-25 16:02:40",
+    "match": true
+   },
+   {
+    "cik": 1047340,
+    "accession": "0001445305-12-003295",
+    "convention": "UTC",
+    "json_et": "2012-10-30 10:09:15",
+    "index_page": "2012-10-30 10:09:15",
+    "match": true
+   },
+   {
+    "cik": 1319947,
+    "accession": "0001319947-12-000018",
+    "convention": "UTC",
+    "json_et": "2012-05-22 10:37:47",
+    "index_page": "2012-05-22 10:37:47",
+    "match": true
+   },
+   {
+    "cik": 1397911,
+    "accession": "0001397911-12-000014",
+    "convention": "UTC",
+    "json_et": "2012-04-30 06:31:17",
+    "index_page": "2012-04-30 06:31:17",
+    "match": true
+   },
+   {
+    "cik": 25232,
+    "accession": "0001193125-12-222083",
+    "convention": "UTC",
+    "json_et": "2012-05-09 16:17:53",
+    "index_page": "2012-05-09 16:17:53",
+    "match": true
+   },
+   {
+    "cik": 861884,
+    "accession": "0001157523-12-002124",
+    "convention": "UTC",
+    "json_et": "2012-04-26 08:50:20",
+    "index_page": "2012-04-26 08:50:20",
+    "match": true
+   },
+   {
+    "cik": 1002517,
+    "accession": "0001193125-12-188329",
+    "convention": "ET",
+    "json_et": "2012-04-27 08:31:07",
+    "index_page": "2012-04-27 08:31:07",
+    "match": true
+   },
+   {
+    "cik": 889331,
+    "accession": "0001437749-12-001141",
+    "convention": "UTC",
+    "json_et": "2012-02-07 07:00:46",
+    "index_page": "2012-02-07 07:00:46",
+    "match": true
+   },
+   {
+    "cik": 21076,
+    "accession": "0001206774-12-004402",
+    "convention": "UTC",
+    "json_et": "2012-10-31 08:45:30",
+    "index_page": "2012-10-31 08:45:30",
+    "match": true
+   },
+   {
+    "cik": 354707,
+    "accession": "0001104659-12-007895",
+    "convention": "UTC",
+    "json_et": "2012-02-09 06:01:01",
+    "index_page": "2012-02-09 06:01:01",
+    "match": true
+   },
+   {
+    "cik": 59478,
+    "accession": "0001193125-12-002878",
+    "convention": "UTC",
+    "json_et": "2012-01-05 08:01:23",
+    "index_page": "2012-01-05 08:01:23",
+    "match": true
+   },
+   {
+    "cik": 1302343,
+    "accession": "0001144204-12-024045",
+    "convention": "ET",
+    "json_et": "2012-04-26 16:19:49",
+    "index_page": "2012-04-26 16:19:49",
+    "match": true
+   },
+   {
+    "cik": 866368,
+    "accession": "0001193125-12-198701",
+    "convention": "ET",
+    "json_et": "2012-05-01 09:01:08",
+    "index_page": "2012-05-01 09:01:08",
+    "match": true
+   },
+   {
+    "cik": 1130310,
+    "accession": "0001193125-13-194299",
+    "convention": "UTC",
+    "json_et": "2013-05-02 08:29:54",
+    "index_page": "2013-05-02 08:29:54",
+    "match": true
+   },
+   {
+    "cik": 1333513,
+    "accession": "0001144204-13-027103",
+    "convention": "ET",
+    "json_et": "2013-05-08 16:52:27",
+    "index_page": "2013-05-08 16:52:27",
+    "match": true
+   },
+   {
+    "cik": 1413507,
+    "accession": "0001079973-13-000246",
+    "convention": "ET",
+    "json_et": "2013-04-10 13:50:08",
+    "index_page": "2013-04-10 13:50:08",
+    "match": true
+   },
+   {
+    "cik": 1524741,
+    "accession": "0001193125-13-430390",
+    "convention": "ET",
+    "json_et": "2013-11-06 17:14:52",
+    "index_page": "2013-11-06 17:14:52",
+    "match": true
+   },
+   {
+    "cik": 824142,
+    "accession": "0001026608-13-000022",
+    "convention": "UTC",
+    "json_et": "2013-03-14 14:53:33",
+    "index_page": "2013-03-14 14:53:33",
+    "match": true
+   },
+   {
+    "cik": 842162,
+    "accession": "0001193125-13-033493",
+    "convention": "UTC",
+    "json_et": "2013-02-01 07:17:25",
+    "index_page": "2013-02-01 07:17:25",
+    "match": true
+   },
+   {
+    "cik": 1014473,
+    "accession": "0001014473-13-000058",
+    "convention": "UTC",
+    "json_et": "2013-10-24 16:12:37",
+    "index_page": "2013-10-24 16:12:37",
+    "match": true
+   },
+   {
+    "cik": 724606,
+    "accession": "0000724606-13-000031",
+    "convention": "ET",
+    "json_et": "2013-10-22 16:54:11",
+    "index_page": "2013-10-22 16:54:11",
+    "match": true
+   },
+   {
+    "cik": 1410636,
+    "accession": "0001193125-13-430157",
+    "convention": "UTC",
+    "json_et": "2013-11-06 16:26:33",
+    "index_page": "2013-11-06 16:26:33",
+    "match": true
+   },
+   {
+    "cik": 88941,
+    "accession": "0001157523-13-002847",
+    "convention": "UTC",
+    "json_et": "2013-05-22 16:32:25",
+    "index_page": "2013-05-22 16:32:25",
+    "match": true
+   },
+   {
+    "cik": 1060391,
+    "accession": "0001060391-13-000016",
+    "convention": "UTC",
+    "json_et": "2013-04-25 16:13:25",
+    "index_page": "2013-04-25 16:13:25",
+    "match": true
+   },
+   {
+    "cik": 860730,
+    "accession": "0001193125-13-291317",
+    "convention": "UTC",
+    "json_et": "2013-07-16 08:57:36",
+    "index_page": "2013-07-16 08:57:36",
+    "match": true
+   },
+   {
+    "cik": 918160,
+    "accession": "0000918160-13-000031",
+    "convention": "ET",
+    "json_et": "2013-04-23 08:35:44",
+    "index_page": "2013-04-23 08:35:44",
+    "match": true
+   },
+   {
+    "cik": 1283699,
+    "accession": "0001283699-13-000024",
+    "convention": "UTC",
+    "json_et": "2013-02-26 06:34:26",
+    "index_page": "2013-02-26 06:34:26",
+    "match": true
+   },
+   {
+    "cik": 102741,
+    "accession": "0000897101-13-001711",
+    "convention": "ET",
+    "json_et": "2013-11-19 08:30:11",
+    "index_page": "2013-11-19 08:30:11",
+    "match": true
+   },
+   {
+    "cik": 857737,
+    "accession": "0001193125-13-304702",
+    "convention": "ET",
+    "json_et": "2013-07-26 16:02:03",
+    "index_page": "2013-07-26 16:02:03",
+    "match": true
+   },
+   {
+    "cik": 1058090,
+    "accession": "0001193125-13-402765",
+    "convention": "UTC",
+    "json_et": "2013-10-17 17:57:55",
+    "index_page": "2013-10-17 17:57:55",
+    "match": true
+   },
+   {
+    "cik": 708955,
+    "accession": "0000708955-14-000073",
+    "convention": "UTC",
+    "json_et": "2014-10-30 16:39:15",
+    "index_page": "2014-10-30 16:39:15",
+    "match": true
+   },
+   {
+    "cik": 863157,
+    "accession": "0001193125-14-417002",
+    "convention": "ET",
+    "json_et": "2014-11-18 17:20:59",
+    "index_page": "2014-11-18 17:20:59",
+    "match": true
+   },
+   {
+    "cik": 790703,
+    "accession": "0001171843-14-001641",
+    "convention": "ET",
+    "json_et": "2014-04-09 10:28:46",
+    "index_page": "2014-04-09 10:28:46",
+    "match": true
+   },
+   {
+    "cik": 352915,
+    "accession": "0001193125-14-073362",
+    "convention": "UTC",
+    "json_et": "2014-02-27 17:10:34",
+    "index_page": "2014-02-27 17:10:34",
+    "match": true
+   },
+   {
+    "cik": 85961,
+    "accession": "0000085961-14-000039",
+    "convention": "UTC",
+    "json_et": "2014-07-23 10:01:06",
+    "index_page": "2014-07-23 10:01:06",
+    "match": true
+   },
+   {
+    "cik": 1065332,
+    "accession": "0001157523-14-001876",
+    "convention": "ET",
+    "json_et": "2014-05-05 16:06:32",
+    "index_page": "2014-05-05 16:06:32",
+    "match": true
+   },
+   {
+    "cik": 1549346,
+    "accession": "0001104659-14-077714",
+    "convention": "UTC",
+    "json_et": "2014-11-06 16:17:51",
+    "index_page": "2014-11-06 16:17:51",
+    "match": true
+   },
+   {
+    "cik": 1091748,
+    "accession": "0001157523-14-003240",
+    "convention": "ET",
+    "json_et": "2014-08-04 16:03:08",
+    "index_page": "2014-08-04 16:03:08",
+    "match": true
+   },
+   {
+    "cik": 25232,
+    "accession": "0000025232-14-000002",
+    "convention": "UTC",
+    "json_et": "2014-02-13 16:13:22",
+    "index_page": "2014-02-13 16:13:22",
+    "match": true
+   },
+   {
+    "cik": 1093649,
+    "accession": "0001193125-14-073389",
+    "convention": "ET",
+    "json_et": "2014-02-27 17:15:09",
+    "index_page": "2014-02-27 17:15:09",
+    "match": true
+   },
+   {
+    "cik": 56047,
+    "accession": "0001140361-14-018112",
+    "convention": "UTC",
+    "json_et": "2014-04-30 19:03:31",
+    "index_page": "2014-04-30 19:03:31",
+    "match": true
+   },
+   {
+    "cik": 1060822,
+    "accession": "0001060822-14-000006",
+    "convention": "UTC",
+    "json_et": "2014-02-26 06:36:40",
+    "index_page": "2014-02-26 06:36:40",
+    "match": true
+   },
+   {
+    "cik": 1403568,
+    "accession": "0001193125-14-231947",
+    "convention": "UTC",
+    "json_et": "2014-06-10 16:12:34",
+    "index_page": "2014-06-10 16:12:34",
+    "match": true
+   },
+   {
+    "cik": 319687,
+    "accession": "0001193125-14-135674",
+    "convention": "UTC",
+    "json_et": "2014-04-08 17:22:30",
+    "index_page": "2014-04-08 17:22:30",
+    "match": true
+   },
+   {
+    "cik": 940944,
+    "accession": "0000940944-14-000118",
+    "convention": "UTC",
+    "json_et": "2014-09-02 14:47:09",
+    "index_page": "2014-09-02 14:47:09",
+    "match": true
+   },
+   {
+    "cik": 6281,
+    "accession": "0001157523-14-003567",
+    "convention": "UTC",
+    "json_et": "2014-08-26 16:15:06",
+    "index_page": "2014-08-26 16:15:06",
+    "match": true
+   },
+   {
+    "cik": 860546,
+    "accession": "0000860546-14-000039",
+    "convention": "UTC",
+    "json_et": "2014-10-23 19:58:34",
+    "index_page": "2014-10-23 19:58:34",
+    "match": true
+   },
+   {
+    "cik": 1530804,
+    "accession": "0001140361-15-039710",
+    "convention": "UTC",
+    "json_et": "2015-11-04 19:35:30",
+    "index_page": "2015-11-04 19:35:30",
+    "match": true
+   },
+   {
+    "cik": 1445305,
+    "accession": "0001445305-15-000044",
+    "convention": "UTC",
+    "json_et": "2015-05-05 16:08:03",
+    "index_page": "2015-05-05 16:08:03",
+    "match": true
+   },
+   {
+    "cik": 21175,
+    "accession": "0000021175-15-000100",
+    "convention": "UTC",
+    "json_et": "2015-11-02 10:58:59",
+    "index_page": "2015-11-02 10:58:59",
+    "match": true
+   },
+   {
+    "cik": 1365555,
+    "accession": "0001365555-15-000017",
+    "convention": "ET",
+    "json_et": "2015-02-11 07:05:04",
+    "index_page": "2015-02-11 07:05:04",
+    "match": true
+   },
+   {
+    "cik": 764065,
+    "accession": "0000764065-15-000136",
+    "convention": "UTC",
+    "json_et": "2015-10-29 08:29:08",
+    "index_page": "2015-10-29 08:29:08",
+    "match": true
+   },
+   {
+    "cik": 789019,
+    "accession": "0001193125-15-258359",
+    "convention": "UTC",
+    "json_et": "2015-07-21 16:06:00",
+    "index_page": "2015-07-21 16:06:00",
+    "match": true
+   },
+   {
+    "cik": 1605607,
+    "accession": "0001193125-15-368354",
+    "convention": "ET",
+    "json_et": "2015-11-05 16:25:57",
+    "index_page": "2015-11-05 16:25:57",
+    "match": true
+   },
+   {
+    "cik": 1115128,
+    "accession": "0001144204-15-007106",
+    "convention": "ET",
+    "json_et": "2015-02-09 16:35:00",
+    "index_page": "2015-02-09 16:35:00",
+    "match": true
+   },
+   {
+    "cik": 1404655,
+    "accession": "0001193125-15-366116",
+    "convention": "UTC",
+    "json_et": "2015-11-04 16:15:55",
+    "index_page": "2015-11-04 16:15:55",
+    "match": true
+   },
+   {
+    "cik": 1374310,
+    "accession": "0001374310-15-000013",
+    "convention": "UTC",
+    "json_et": "2015-05-01 08:13:52",
+    "index_page": "2015-05-01 08:13:52",
+    "match": true
+   },
+   {
+    "cik": 1520006,
+    "accession": "0001520006-15-000088",
+    "convention": "UTC",
+    "json_et": "2015-05-06 17:05:07",
+    "index_page": "2015-05-06 17:05:07",
+    "match": true
+   },
+   {
+    "cik": 66570,
+    "accession": "0000066570-15-000018",
+    "convention": "UTC",
+    "json_et": "2015-04-28 13:22:18",
+    "index_page": "2015-04-28 13:22:18",
+    "match": true
+   },
+   {
+    "cik": 1301063,
+    "accession": "0001301063-15-000010",
+    "convention": "ET",
+    "json_et": "2015-02-12 07:33:36",
+    "index_page": "2015-02-12 07:33:36",
+    "match": true
+   },
+   {
+    "cik": 1064728,
+    "accession": "0001064728-15-000092",
+    "convention": "UTC",
+    "json_et": "2015-10-27 07:08:00",
+    "index_page": "2015-10-27 07:08:00",
+    "match": true
+   },
+   {
+    "cik": 1474098,
+    "accession": "0001474098-15-000023",
+    "convention": "UTC",
+    "json_et": "2015-04-28 16:46:45",
+    "index_page": "2015-04-28 16:46:45",
+    "match": true
+   },
+   {
+    "cik": 28412,
+    "accession": "0000028412-15-000124",
+    "convention": "ET",
+    "json_et": "2015-10-16 06:50:06",
+    "index_page": "2015-10-16 06:50:06",
+    "match": true
+   },
+   {
+    "cik": 1428522,
+    "accession": "0001104659-15-075995",
+    "convention": "ET",
+    "json_et": "2015-11-05 07:05:44",
+    "index_page": "2015-11-05 07:05:44",
+    "match": true
+   },
+   {
+    "cik": 1002910,
+    "accession": "0001002910-16-000202",
+    "convention": "UTC",
+    "json_et": "2016-02-19 08:04:07",
+    "index_page": "2016-02-19 08:04:07",
+    "match": true
+   },
+   {
+    "cik": 1555280,
+    "accession": "0001555280-16-000303",
+    "convention": "UTC",
+    "json_et": "2016-02-16 07:03:05",
+    "index_page": "2016-02-16 07:03:05",
+    "match": true
+   },
+   {
+    "cik": 1073349,
+    "accession": "0001193125-16-441803",
+    "convention": "ET",
+    "json_et": "2016-01-28 16:05:54",
+    "index_page": "2016-01-28 16:05:54",
+    "match": true
+   },
+   {
+    "cik": 1085869,
+    "accession": "0001085869-16-000066",
+    "convention": "ET",
+    "json_et": "2016-05-05 11:12:26",
+    "index_page": "2016-05-05 11:12:26",
+    "match": true
+   },
+   {
+    "cik": 1104506,
+    "accession": "0001104659-16-099776",
+    "convention": "UTC",
+    "json_et": "2016-02-25 08:06:28",
+    "index_page": "2016-02-25 08:06:28",
+    "match": true
+   },
+   {
+    "cik": 1467858,
+    "accession": "0001467858-16-000361",
+    "convention": "UTC",
+    "json_et": "2016-10-25 09:59:03",
+    "index_page": "2016-10-25 09:59:03",
+    "match": true
+   },
+   {
+    "cik": 797721,
+    "accession": "0001193125-16-762973",
+    "convention": "UTC",
+    "json_et": "2016-11-08 16:09:56",
+    "index_page": "2016-11-08 16:09:56",
+    "match": true
+   },
+   {
+    "cik": 1114483,
+    "accession": "0001171843-16-007139",
+    "convention": "UTC",
+    "json_et": "2016-01-11 16:05:20",
+    "index_page": "2016-01-11 16:05:20",
+    "match": true
+   },
+   {
+    "cik": 889331,
+    "accession": "0001437749-16-036352",
+    "convention": "UTC",
+    "json_et": "2016-08-04 07:01:17",
+    "index_page": "2016-08-04 07:01:17",
+    "match": true
+   },
+   {
+    "cik": 1252849,
+    "accession": "0001252849-16-000190",
+    "convention": "ET",
+    "json_et": "2016-02-11 16:25:12",
+    "index_page": "2016-02-11 16:25:12",
+    "match": true
+   },
+   {
+    "cik": 1013871,
+    "accession": "0001013871-16-000036",
+    "convention": "UTC",
+    "json_et": "2016-11-04 06:34:20",
+    "index_page": "2016-11-04 06:34:20",
+    "match": true
+   },
+   {
+    "cik": 814547,
+    "accession": "0001144204-16-115010",
+    "convention": "UTC",
+    "json_et": "2016-07-28 16:16:19",
+    "index_page": "2016-07-28 16:16:19",
+    "match": true
+   },
+   {
+    "cik": 1402057,
+    "accession": "0001171843-16-007744",
+    "convention": "UTC",
+    "json_et": "2016-02-09 07:10:14",
+    "index_page": "2016-02-09 07:10:14",
+    "match": true
+   },
+   {
+    "cik": 68505,
+    "accession": "0001193125-16-671842",
+    "convention": "UTC",
+    "json_et": "2016-08-04 16:17:58",
+    "index_page": "2016-08-04 16:17:58",
+    "match": true
+   },
+   {
+    "cik": 350894,
+    "accession": "0000350894-16-000093",
+    "convention": "UTC",
+    "json_et": "2016-01-27 16:07:13",
+    "index_page": "2016-01-27 16:07:13",
+    "match": true
+   },
+   {
+    "cik": 10795,
+    "accession": "0001193125-16-757924",
+    "convention": "UTC",
+    "json_et": "2016-11-03 06:16:03",
+    "index_page": "2016-11-03 06:16:03",
+    "match": true
+   },
+   {
+    "cik": 886163,
+    "accession": "0000886163-16-000136",
+    "convention": "UTC",
+    "json_et": "2016-02-10 16:04:50",
+    "index_page": "2016-02-10 16:04:50",
+    "match": true
+   },
+   {
+    "cik": 36104,
+    "accession": "0001193125-17-011697",
+    "convention": "UTC",
+    "json_et": "2017-01-18 06:53:09",
+    "index_page": "2017-01-18 06:53:09",
+    "match": true
+   },
+   {
+    "cik": 1337553,
+    "accession": "0001564590-17-022724",
+    "convention": "ET",
+    "json_et": "2017-11-08 16:05:15",
+    "index_page": "2017-11-08 16:05:15",
+    "match": true
+   },
+   {
+    "cik": 779152,
+    "accession": "0000779152-17-000004",
+    "convention": "UTC",
+    "json_et": "2017-02-07 17:31:39",
+    "index_page": "2017-02-07 17:31:39",
+    "match": true
+   },
+   {
+    "cik": 1102112,
+    "accession": "0001104659-17-023657",
+    "convention": "ET",
+    "json_et": "2017-04-17 07:32:58",
+    "index_page": "2017-04-17 07:32:58",
+    "match": true
+   },
+   {
+    "cik": 731802,
+    "accession": "0000731802-17-000006",
+    "convention": "UTC",
+    "json_et": "2017-02-07 17:05:27",
+    "index_page": "2017-02-07 17:05:27",
+    "match": true
+   },
+   {
+    "cik": 1022671,
+    "accession": "0001104659-17-063216",
+    "convention": "UTC",
+    "json_et": "2017-10-23 10:25:33",
+    "index_page": "2017-10-23 10:25:33",
+    "match": true
+   },
+   {
+    "cik": 804753,
+    "accession": "0000804753-17-000003",
+    "convention": "ET",
+    "json_et": "2017-02-09 16:04:55",
+    "index_page": "2017-02-09 16:04:55",
+    "match": true
+   },
+   {
+    "cik": 712515,
+    "accession": "0000712515-17-000025",
+    "convention": "UTC",
+    "json_et": "2017-05-09 16:05:52",
+    "index_page": "2017-05-09 16:05:52",
+    "match": true
+   },
+   {
+    "cik": 1502034,
+    "accession": "0001628280-17-001414",
+    "convention": "ET",
+    "json_et": "2017-02-16 07:15:02",
+    "index_page": "2017-02-16 07:15:02",
+    "match": true
+   },
+   {
+    "cik": 1046311,
+    "accession": "0001046311-17-000013",
+    "convention": "UTC",
+    "json_et": "2017-05-04 09:10:33",
+    "index_page": "2017-05-04 09:10:33",
+    "match": true
+   },
+   {
+    "cik": 1680247,
+    "accession": "0001680247-17-000004",
+    "convention": "UTC",
+    "json_et": "2017-05-11 12:31:28",
+    "index_page": "2017-05-11 12:31:28",
+    "match": true
+   },
+   {
+    "cik": 1094285,
+    "accession": "0001094285-17-000067",
+    "convention": "UTC",
+    "json_et": "2017-05-04 07:53:14",
+    "index_page": "2017-05-04 07:53:14",
+    "match": true
+   },
+   {
+    "cik": 76334,
+    "accession": "0000076334-17-000073",
+    "convention": "UTC",
+    "json_et": "2017-08-03 09:13:09",
+    "index_page": "2017-08-03 09:13:09",
+    "match": true
+   },
+   {
+    "cik": 820318,
+    "accession": "0001171843-17-006408",
+    "convention": "UTC",
+    "json_et": "2017-10-31 06:55:18",
+    "index_page": "2017-10-31 06:55:18",
+    "match": true
+   },
+   {
+    "cik": 11199,
+    "accession": "0000011199-17-000005",
+    "convention": "ET",
+    "json_et": "2017-01-26 08:40:46",
+    "index_page": "2017-01-26 08:40:46",
+    "match": true
+   },
+   {
+    "cik": 1025996,
+    "accession": "0001025996-17-000154",
+    "convention": "UTC",
+    "json_et": "2017-07-26 18:07:10",
+    "index_page": "2017-07-26 18:07:10",
+    "match": true
+   },
+   {
+    "cik": 1108827,
+    "accession": "0001108827-17-000023",
+    "convention": "ET",
+    "json_et": "2017-04-26 16:13:14",
+    "index_page": "2017-04-26 16:13:14",
+    "match": true
+   },
+   {
+    "cik": 1168054,
+    "accession": "0001144204-18-009048",
+    "convention": "ET",
+    "json_et": "2018-02-14 17:16:43",
+    "index_page": "2018-02-14 17:16:43",
+    "match": true
+   },
+   {
+    "cik": 55242,
+    "accession": "0000055242-18-000030",
+    "convention": "UTC",
+    "json_et": "2018-11-05 16:36:21",
+    "index_page": "2018-11-05 16:36:21",
+    "match": true
+   },
+   {
+    "cik": 97216,
+    "accession": "0000097216-18-000078",
+    "convention": "UTC",
+    "json_et": "2018-05-01 16:28:12",
+    "index_page": "2018-05-01 16:28:12",
+    "match": true
+   },
+   {
+    "cik": 1469372,
+    "accession": "0001193125-18-249786",
+    "convention": "ET",
+    "json_et": "2018-08-15 16:31:04",
+    "index_page": "2018-08-15 16:31:04",
+    "match": true
+   },
+   {
+    "cik": 719955,
+    "accession": "0001193125-18-082351",
+    "convention": "UTC",
+    "json_et": "2018-03-14 16:19:02",
+    "index_page": "2018-03-14 16:19:02",
+    "match": true
+   },
+   {
+    "cik": 1443669,
+    "accession": "0001437749-18-007732",
+    "convention": "UTC",
+    "json_et": "2018-04-26 06:09:10",
+    "index_page": "2018-04-26 06:09:10",
+    "match": true
+   },
+   {
+    "cik": 64803,
+    "accession": "0000064803-18-000026",
+    "convention": "UTC",
+    "json_et": "2018-11-06 06:58:07",
+    "index_page": "2018-11-06 06:58:07",
+    "match": true
+   },
+   {
+    "cik": 1643953,
+    "accession": "0001213900-18-003014",
+    "convention": "UTC",
+    "json_et": "2018-03-15 16:10:33",
+    "index_page": "2018-03-15 16:10:33",
+    "match": true
+   },
+   {
+    "cik": 1144980,
+    "accession": "0001144980-18-000007",
+    "convention": "UTC",
+    "json_et": "2018-02-06 06:26:22",
+    "index_page": "2018-02-06 06:26:22",
+    "match": true
+   },
+   {
+    "cik": 1649749,
+    "accession": "0001157523-18-000086",
+    "convention": "UTC",
+    "json_et": "2018-01-22 17:07:39",
+    "index_page": "2018-01-22 17:07:39",
+    "match": true
+   },
+   {
+    "cik": 1581068,
+    "accession": "0001581068-18-000007",
+    "convention": "UTC",
+    "json_et": "2018-02-12 16:09:38",
+    "index_page": "2018-02-12 16:09:38",
+    "match": true
+   },
+   {
+    "cik": 1005284,
+    "accession": "0001564590-18-002890",
+    "convention": "UTC",
+    "json_et": "2018-02-22 16:30:27",
+    "index_page": "2018-02-22 16:30:27",
+    "match": true
+   },
+   {
+    "cik": 1108426,
+    "accession": "0001108426-18-000007",
+    "convention": "UTC",
+    "json_et": "2018-02-27 07:03:26",
+    "index_page": "2018-02-27 07:03:26",
+    "match": true
+   },
+   {
+    "cik": 732834,
+    "accession": "0001193125-18-311196",
+    "convention": "UTC",
+    "json_et": "2018-10-30 06:08:40",
+    "index_page": "2018-10-30 06:08:40",
+    "match": true
+   },
+   {
+    "cik": 1717547,
+    "accession": "0001193125-18-319063",
+    "convention": "UTC",
+    "json_et": "2018-11-06 08:45:13",
+    "index_page": "2018-11-06 08:45:13",
+    "match": true
+   },
+   {
+    "cik": 39368,
+    "accession": "0001437749-18-012554",
+    "convention": "UTC",
+    "json_et": "2018-06-28 09:51:43",
+    "index_page": "2018-06-28 09:51:43",
+    "match": true
+   },
+   {
+    "cik": 1410636,
+    "accession": "0001410636-18-000112",
+    "convention": "UTC",
+    "json_et": "2018-05-02 16:40:39",
+    "index_page": "2018-05-02 16:40:39",
+    "match": true
+   },
+   {
+    "cik": 815097,
+    "accession": "0000815097-19-000008",
+    "convention": "UTC",
+    "json_et": "2019-03-26 09:16:25",
+    "index_page": "2019-03-26 09:16:25",
+    "match": true
+   },
+   {
+    "cik": 1418121,
+    "accession": "0001185185-19-000666",
+    "convention": "UTC",
+    "json_et": "2019-05-08 16:30:11",
+    "index_page": "2019-05-08 16:30:11",
+    "match": true
+   },
+   {
+    "cik": 1409970,
+    "accession": "0001409970-19-000557",
+    "convention": "UTC",
+    "json_et": "2019-05-07 16:11:14",
+    "index_page": "2019-05-07 16:11:14",
+    "match": true
+   },
+   {
+    "cik": 908937,
+    "accession": "0000908937-19-000034",
+    "convention": "ET",
+    "json_et": "2019-10-31 08:03:51",
+    "index_page": "2019-10-31 08:03:51",
+    "match": true
+   },
+   {
+    "cik": 1428522,
+    "accession": "0001564590-19-030042",
+    "convention": "ET",
+    "json_et": "2019-08-07 16:03:18",
+    "index_page": "2019-08-07 16:03:18",
+    "match": true
+   },
+   {
+    "cik": 920522,
+    "accession": "0001140361-19-007529",
+    "convention": "UTC",
+    "json_et": "2019-04-24 16:32:12",
+    "index_page": "2019-04-24 16:32:12",
+    "match": true
+   },
+   {
+    "cik": 1590717,
+    "accession": "0001628280-19-006049",
+    "convention": "UTC",
+    "json_et": "2019-05-07 16:03:59",
+    "index_page": "2019-05-07 16:03:59",
+    "match": true
+   },
+   {
+    "cik": 808461,
+    "accession": "0000808461-19-000021",
+    "convention": "ET",
+    "json_et": "2019-05-13 13:56:32",
+    "index_page": "2019-05-13 13:56:32",
+    "match": true
+   },
+   {
+    "cik": 750577,
+    "accession": "0000750577-19-000002",
+    "convention": "UTC",
+    "json_et": "2019-01-16 17:01:00",
+    "index_page": "2019-01-16 17:01:00",
+    "match": true
+   },
+   {
+    "cik": 1701732,
+    "accession": "0001193125-19-057526",
+    "convention": "ET",
+    "json_et": "2019-02-28 16:19:33",
+    "index_page": "2019-02-28 16:19:33",
+    "match": true
+   },
+   {
+    "cik": 1690820,
+    "accession": "0001690820-19-000019",
+    "convention": "UTC",
+    "json_et": "2019-02-27 16:20:09",
+    "index_page": "2019-02-27 16:20:09",
+    "match": true
+   },
+   {
+    "cik": 720005,
+    "accession": "0000720005-19-000029",
+    "convention": "UTC",
+    "json_et": "2019-03-11 16:14:07",
+    "index_page": "2019-03-11 16:14:07",
+    "match": true
+   },
+   {
+    "cik": 898293,
+    "accession": "0001193125-19-315664",
+    "convention": "UTC",
+    "json_et": "2019-12-17 08:08:56",
+    "index_page": "2019-12-17 08:08:56",
+    "match": true
+   },
+   {
+    "cik": 874716,
+    "accession": "0001104659-19-058050",
+    "convention": "UTC",
+    "json_et": "2019-10-31 06:31:47",
+    "index_page": "2019-10-31 06:31:47",
+    "match": true
+   },
+   {
+    "cik": 105770,
+    "accession": "0000105770-19-000004",
+    "convention": "UTC",
+    "json_et": "2019-02-01 17:20:00",
+    "index_page": "2019-02-01 17:20:00",
+    "match": true
+   },
+   {
+    "cik": 894315,
+    "accession": "0001193125-19-270921",
+    "convention": "UTC",
+    "json_et": "2019-10-21 17:26:25",
+    "index_page": "2019-10-21 17:26:25",
+    "match": true
+   },
+   {
+    "cik": 109380,
+    "accession": "0000109380-19-000191",
+    "convention": "UTC",
+    "json_et": "2019-10-21 16:12:01",
+    "index_page": "2019-10-21 16:12:01",
+    "match": true
+   },
+   {
+    "cik": 71691,
+    "accession": "0001157523-20-001125",
+    "convention": "UTC",
+    "json_et": "2020-08-05 07:16:06",
+    "index_page": "2020-08-05 07:16:06",
+    "match": true
+   },
+   {
+    "cik": 1564408,
+    "accession": "0001564590-20-046960",
+    "convention": "UTC",
+    "json_et": "2020-10-20 16:15:30",
+    "index_page": "2020-10-20 16:15:30",
+    "match": true
+   },
+   {
+    "cik": 1593538,
+    "accession": "0001193125-20-113535",
+    "convention": "UTC",
+    "json_et": "2020-04-21 16:14:53",
+    "index_page": "2020-04-21 16:14:53",
+    "match": true
+   },
+   {
+    "cik": 1140859,
+    "accession": "0001140859-20-000032",
+    "convention": "UTC",
+    "json_et": "2020-08-05 07:12:13",
+    "index_page": "2020-08-05 07:12:13",
+    "match": true
+   },
+   {
+    "cik": 19411,
+    "accession": "0001558370-20-001717",
+    "convention": "ET",
+    "json_et": "2020-02-28 07:46:40",
+    "index_page": "2020-02-28 07:46:40",
+    "match": true
+   },
+   {
+    "cik": 919012,
+    "accession": "0001193125-20-305565",
+    "convention": "UTC",
+    "json_et": "2020-11-30 16:05:54",
+    "index_page": "2020-11-30 16:05:54",
+    "match": true
+   },
+   {
+    "cik": 766421,
+    "accession": "0000766421-20-000085",
+    "convention": "UTC",
+    "json_et": "2020-10-21 19:47:34",
+    "index_page": "2020-10-21 19:47:34",
+    "match": true
+   },
+   {
+    "cik": 7536,
+    "accession": "0001775474-20-000012",
+    "convention": "UTC",
+    "json_et": "2020-07-30 08:04:50",
+    "index_page": "2020-07-30 08:04:50",
+    "match": true
+   },
+   {
+    "cik": 1352010,
+    "accession": "0001352010-20-000028",
+    "convention": "UTC",
+    "json_et": "2020-08-05 20:47:54",
+    "index_page": "2020-08-05 20:47:54",
+    "match": true
+   },
+   {
+    "cik": 898174,
+    "accession": "0000898174-20-000031",
+    "convention": "UTC",
+    "json_et": "2020-11-05 16:30:06",
+    "index_page": "2020-11-05 16:30:06",
+    "match": true
+   },
+   {
+    "cik": 21535,
+    "accession": "0001437749-20-002502",
+    "convention": "UTC",
+    "json_et": "2020-02-13 06:03:57",
+    "index_page": "2020-02-13 06:03:57",
+    "match": true
+   },
+   {
+    "cik": 773840,
+    "accession": "0000773840-20-000037",
+    "convention": "UTC",
+    "json_et": "2020-07-24 06:36:09",
+    "index_page": "2020-07-24 06:36:09",
+    "match": true
+   },
+   {
+    "cik": 1627475,
+    "accession": "0001627475-20-000029",
+    "convention": "UTC",
+    "json_et": "2020-08-04 16:19:24",
+    "index_page": "2020-08-04 16:19:24",
+    "match": true
+   },
+   {
+    "cik": 1559053,
+    "accession": "0001559053-20-000038",
+    "convention": "UTC",
+    "json_et": "2020-11-04 16:13:04",
+    "index_page": "2020-11-04 16:13:04",
+    "match": true
+   },
+   {
+    "cik": 1102112,
+    "accession": "0001104659-20-049008",
+    "convention": "ET",
+    "json_et": "2020-04-21 07:39:31",
+    "index_page": "2020-04-21 07:39:31",
+    "match": true
+   },
+   {
+    "cik": 801337,
+    "accession": "0000801337-20-000021",
+    "convention": "UTC",
+    "json_et": "2020-04-21 07:52:32",
+    "index_page": "2020-04-21 07:52:32",
+    "match": true
+   },
+   {
+    "cik": 36146,
+    "accession": "0001564590-20-002296",
+    "convention": "UTC",
+    "json_et": "2020-01-28 16:46:03",
+    "index_page": "2020-01-28 16:46:03",
+    "match": true
+   },
+   {
+    "cik": 1800227,
+    "accession": "0001104659-21-003091",
+    "convention": "UTC",
+    "json_et": "2021-01-11 18:36:19",
+    "index_page": "2021-01-11 18:36:19",
+    "match": true
+   },
+   {
+    "cik": 64040,
+    "accession": "0001628280-21-020456",
+    "convention": "UTC",
+    "json_et": "2021-10-26 07:12:17",
+    "index_page": "2021-10-26 07:12:17",
+    "match": true
+   },
+   {
+    "cik": 1466085,
+    "accession": "0001564590-21-005267",
+    "convention": "UTC",
+    "json_et": "2021-02-10 16:13:39",
+    "index_page": "2021-02-10 16:13:39",
+    "match": true
+   },
+   {
+    "cik": 898173,
+    "accession": "0000898173-21-000042",
+    "convention": "UTC",
+    "json_et": "2021-07-28 16:32:43",
+    "index_page": "2021-07-28 16:32:43",
+    "match": true
+   },
+   {
+    "cik": 812011,
+    "accession": "0000812011-21-000139",
+    "convention": "UTC",
+    "json_et": "2021-12-09 16:07:50",
+    "index_page": "2021-12-09 16:07:50",
+    "match": true
+   },
+   {
+    "cik": 1274494,
+    "accession": "0001628280-21-003286",
+    "convention": "UTC",
+    "json_et": "2021-02-25 16:07:57",
+    "index_page": "2021-02-25 16:07:57",
+    "match": true
+   },
+   {
+    "cik": 1559865,
+    "accession": "0001559865-21-000006",
+    "convention": "UTC",
+    "json_et": "2021-03-01 07:11:15",
+    "index_page": "2021-03-01 07:11:15",
+    "match": true
+   },
+   {
+    "cik": 1574540,
+    "accession": "0001574540-21-000144",
+    "convention": "ET",
+    "json_et": "2021-11-05 08:48:57",
+    "index_page": "2021-11-05 08:48:57",
+    "match": true
+   },
+   {
+    "cik": 110471,
+    "accession": "0000110471-21-000006",
+    "convention": "UTC",
+    "json_et": "2021-02-25 07:31:13",
+    "index_page": "2021-02-25 07:31:13",
+    "match": true
+   },
+   {
+    "cik": 1649749,
+    "accession": "0001649749-21-000163",
+    "convention": "UTC",
+    "json_et": "2021-10-18 16:19:26",
+    "index_page": "2021-10-18 16:19:26",
+    "match": true
+   },
+   {
+    "cik": 76605,
+    "accession": "0000076605-21-000044",
+    "convention": "UTC",
+    "json_et": "2021-02-11 08:50:41",
+    "index_page": "2021-02-11 08:50:41",
+    "match": true
+   },
+   {
+    "cik": 1822492,
+    "accession": "0001104659-21-098010",
+    "convention": "UTC",
+    "json_et": "2021-07-30 10:13:28",
+    "index_page": "2021-07-30 10:13:28",
+    "match": true
+   },
+   {
+    "cik": 6201,
+    "accession": "0000006201-21-000046",
+    "convention": "UTC",
+    "json_et": "2021-04-13 07:30:23",
+    "index_page": "2021-04-13 07:30:23",
+    "match": true
+   },
+   {
+    "cik": 1535527,
+    "accession": "0001535527-21-000017",
+    "convention": "UTC",
+    "json_et": "2021-08-31 16:07:14",
+    "index_page": "2021-08-31 16:07:14",
+    "match": true
+   },
+   {
+    "cik": 1314727,
+    "accession": "0001314727-21-000034",
+    "convention": "UTC",
+    "json_et": "2021-11-17 16:14:56",
+    "index_page": "2021-11-17 16:14:56",
+    "match": true
+   },
+   {
+    "cik": 1024795,
+    "accession": "0001564590-21-026080",
+    "convention": "UTC",
+    "json_et": "2021-05-10 16:28:07",
+    "index_page": "2021-05-10 16:28:07",
+    "match": true
+   },
+   {
+    "cik": 1096752,
+    "accession": "0001096752-21-000026",
+    "convention": "UTC",
+    "json_et": "2021-08-05 06:03:46",
+    "index_page": "2021-08-05 06:03:46",
+    "match": true
+   }
+  ]
+ },
+ "tz_conventions": {
+  "UTC": 1759,
+  "ET": 935,
+  "UNRESOLVED": 12
+ },
+ "acceptance_minus_report_date_days": {
+  "-4": 1,
+  "-3": 21,
+  "-1": 638,
+  "0": 74918,
+  "1": 5414,
+  "2": 1044,
+  "3": 660,
+  "4": 586,
+  "5": 611,
+  "6": 658,
+  "7": 89,
+  "8": 897
+ },
+ "acceptance_hour_et": {
+  "6": 7953,
+  "7": 13011,
+  "8": 10263,
+  "9": 4572,
+  "10": 2003,
+  "11": 1110,
+  "12": 847,
+  "13": 734,
+  "14": 689,
+  "15": 782,
+  "16": 33476,
+  "17": 6432,
+  "18": 1497,
+  "19": 992,
+  "20": 632,
+  "21": 544
+ },
+ "filing_date_vs_acceptance": {
+  "same_date": 80982,
+  "after_1730": 4543,
+  "differs_before_1730": 12
+ },
+ "sec_requests": {
+  "fetched": 187,
+  "cache_hits": 4977
+ }
+}
