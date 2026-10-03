@@ -20,7 +20,14 @@ import earnings_event_audit as A  # noqa: E402
 
 
 def page_time(sec, cik, acc):
-    b = sec.get_bytes(f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc.replace('-', '')}/{acc}-index.htm") or b""
+    url = f"https://www.sec.gov/Archives/edgar/data/{cik}/{acc.replace('-', '')}/{acc}-index.htm"
+    b = b""
+    for _ in range(2):                       # one retry on a transient network error; failure -> no evidence
+        try:
+            b = sec.get_bytes(url) or b""
+            break
+        except Exception:
+            b = b""
     m = re.search(rb'Accepted</div>\s*<div class="info">([^<]+)<', b)
     return m.group(1).decode().strip() if m else None
 
