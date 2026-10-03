@@ -93,6 +93,11 @@ def book_report(eid, r, spy_eq):
     return out
 
 
+def lab(k):
+    return {"H": "H017 (E017-01)", "SPY": "SPY (E900-07)", "EW": "EW-H017 (E017-02)"}.get(
+        k, f"random seed {H.SEEDS.get(k)} ({k})")
+
+
 def yearly(r):
     return {str(y): float((1 + r[r.index.str[:4] == str(y)]).prod() - 1) for y in range(2010, 2022)}
 
@@ -125,8 +130,16 @@ def main(out_path=None):
     r4 = r4_inputs(cand)
     g = H.gates(R, "H", "SPY", "EW", list(H.RANDOM), r4["cost"]["total_pa"], r4["no_leverage"], r4["limits_ok"])
     out["gates"] = g
+    d = wealth.log_excess(R["H"].to_numpy(), R["SPY"].to_numpy())
+    out["w2_components"] = dict(g=g["W2"]["g"], se_iid=wealth.se_iid(d),
+                                se_stationary_bootstrap=wealth.se_stationary_bootstrap(d, wealth.W2_MEAN_BLOCK),
+                                se_used=g["W2"]["se"], ratio=g["W2"]["z"], critical=wealth.W2_CRITICAL,
+                                threshold=g["W2"]["threshold"], mean_block=wealth.W2_MEAN_BLOCK, n_days=len(d))
     out["r4_inputs"] = r4
     out["conditional_runs_allowed"] = H.conditional_runs(g)
+    out["case_path_after_committed_set"] = ("C (W1-W3, R1-R4 pass: run E017-09..17 + E983-01)" if g["core_ok"] and g["R4"]["ok"]
+                                            else "B (PbNQ rules 1-5 hold: run E017-09 + E983-01 only)"
+                                            if out["conditional_runs_allowed"][H.SLIP_2X] else "A (stop)")
     w1_2x = w1_of(H.SLIP_2X, spy_eq)
     pert = [w1_of(e, spy_eq) for e in H.PERTURBATIONS]
     g4 = wealth.g4_prime(None if any(p is None for p in pert) else pert, w1_2x) if g["core_ok"] and g["R4"]["ok"] \
@@ -143,8 +156,15 @@ def main(out_path=None):
     out["diagnostics_not_gates"] = dict(
         wealth_table=wealth.wealth_table(eqs["H"].reindex(R.index.insert(0, eqs["H"].index[0])).to_numpy(),
                                          spy_eq.reindex(R.index.insert(0, spy_eq.index[0])).to_numpy()),
+        wealth_tables={lab(k): wealth.wealth_table(np.concatenate([[1.0], np.cumprod(1 + R[k].to_numpy())]) * 100000.0,
+                                                   np.concatenate([[1.0], np.cumprod(1 + R["SPY"].to_numpy())]))
+                       for k in R.columns if k != "SPY"},
         rolling_vs_spy=wealth.rolling_report(R["H"].to_numpy(), R["SPY"].to_numpy()),
         rolling_ew_vs_spy=wealth.rolling_report(R["EW"].to_numpy(), R["SPY"].to_numpy()),
+        rolling_all_vs_spy={lab(k): wealth.rolling_report(R[k].to_numpy(), R["SPY"].to_numpy())
+                            for k in R.columns if k != "SPY"},
+        book_metrics={lab(k): dict(cagr=wealth.cagr(R[k].to_numpy()), sharpe=wealth.sharpe(R[k].to_numpy()),
+                                   max_dd=wealth.max_drawdown(R[k].to_numpy())) for k in R.columns},
         yearly={k: yearly(R[k]) for k in R.columns},
         random_books={f"seed {H.SEEDS[e]}": dict(cagr=wealth.cagr(R[e].to_numpy()),
                                                  sharpe=wealth.sharpe(R[e].to_numpy())) for e in H.RANDOM},

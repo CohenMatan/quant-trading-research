@@ -67,7 +67,7 @@ def main(exp=H.CANARY, out_path=OUT):
     sess = list(eq["date"].astype(str))
     pos = {d: i for i, d in enumerate(sess)}
     nxt = {sess[i]: sess[i + 1] for i in range(len(sess) - 1)}
-    out = dict(experiment=exp, config=dict(book=cfg["params"]["book"], seed=cfg["params"]["seed"],
+    out = dict(experiment=exp, config=dict(book=cfg["params"]["book"], seed=cfg["params"].get("seed"),
                                            canary=cfg["params"].get("canary"), warmup_start=cfg["warmup_start"],
                                            start=cfg["start"], end=cfg["end"]),
                status=res.get("status"), checks={})
@@ -230,9 +230,9 @@ def main(exp=H.CANARY, out_path=OUT):
                                                 and summ["entries_over_free"] == 0)
     s017 = (ROOT / "strategies/S017_earnings_continuation/main.py").read_bytes()
     C["E2_same_code_path"] = ok(dict(x982_is_byte_copy_of_s017=(ROOT / "strategies/X982_h017_canary/main.py")
-                                     .read_bytes() == s017, book=cfg["params"]["book"], seed=cfg["params"]["seed"]),
+                                     .read_bytes() == s017, book=cfg["params"]["book"], seed=cfg["params"].get("seed")),
                                 (ROOT / "strategies/X982_h017_canary/main.py").read_bytes() == s017
-                                and cfg["params"]["book"] == "random" and cfg["params"]["seed"] == 0)
+                                and cfg["params"]["book"] == "random" and cfg["params"].get("seed") == 0)
     C["E3_event_counts"] = ok(dict(events_seen=summ["events_seen"], events_universe=summ["events_universe"],
                                    events_valid=summ["events_valid"], events_missing_close=summ["events_missing_close"],
                                    decision_days=summ["decision_days"], ev_lines=len(ev)),
