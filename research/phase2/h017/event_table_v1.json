@@ -1,0 +1,96 @@
+{
+ "name": "H017 event table v1 (Event Data v1)",
+ "built_utc_date": "2026-10-03",
+ "builder": "research/phase2/h017/h017_event_table.py",
+ "payload_sha256": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70",
+ "csv_sha256": "5c20e58c7bd4b6a6047b5006569850330d6e029a63a911c551ffd246d83fb108",
+ "packed_files": "src/qresearch/lean/qr_h017_events.py + qr_h017_events_NN.py",
+ "inputs": {
+  "experiments/E981-01/messages.txt": "eac4fa7ebe803b22d054df750f715e803e966458521e0e9159505fb6bfb8f242",
+  "experiments/E976-04/equity.csv.gz": "70bce0b13ae8db19bbb008fea17222db63820f0d5e279d3779379e1454f827de",
+  "research/phase2/earnings_audit/tz_conventions.json": "a4bce819dc92173dbb803ecc97b00792ff35b3452f939c13e9a259b3da550b22",
+  "data/sec_derived/xbrl_filings.json.gz": "0f9dff22912b947124464b01d8935fd028ae5f07eb54e618f993599aa7c1cafc"
+ },
+ "sec_events_sha256": "59b30885d3d75c056f5994175be6ca9c410f94bcf3d574aec4415966a8459729",
+ "window": {
+  "decision_first": "2009-07-01",
+  "decision_last": "2021-12-31"
+ },
+ "rules": {
+  "dedup_days": 30,
+  "earnings_items": [
+   "2.02",
+   "12"
+  ],
+  "amendments": "ignored",
+  "identity": [
+   "verified (dated ticker evidence)",
+   "verified (identity v2, SEC-corrected security)"
+  ],
+  "predecessor": "unique, time-disjoint dated-ticker link only",
+  "unknown_time": "UNRESOLVED or unmeasured registrant conventions -> UNKNOWN (after the close of the filing date)",
+  "warmup_early_closes": [
+   "2008-07-03",
+   "2008-11-28",
+   "2008-12-24",
+   "2009-11-27",
+   "2009-12-24"
+  ]
+ },
+ "counts": {
+  "events": 88723,
+  "securities": 2549,
+  "registrants": 2573,
+  "events_by_decision_year": {
+   "2009": 3144,
+   "2010": 6516,
+   "2011": 6611,
+   "2012": 6735,
+   "2013": 6919,
+   "2014": 7214,
+   "2015": 7314,
+   "2016": 7267,
+   "2017": 7230,
+   "2018": 7255,
+   "2019": 7302,
+   "2020": 7441,
+   "2021": 7775
+  },
+  "events_by_class": {
+   "AMC": 44612,
+   "BMO": 35037,
+   "DURING": 8226,
+   "UNKNOWN": 715,
+   "NONSESSION": 133
+  },
+  "events_by_convention": {
+   "UTC": 64189,
+   "ET": 23819,
+   "UNMEASURED": 715
+  },
+  "events_by_role": {
+   "mapped": 87936,
+   "predecessor": 787
+  },
+  "first_decision": "2009-07-01",
+  "last_decision": "2021-12-30",
+  "events_outside_window": 33201,
+  "events_outside_calendar": 34302,
+  "securities_with_events": 2549,
+  "securities_ambiguous_predecessor_excluded": 12,
+  "verified_securities_without_events": 52,
+  "securities_with_predecessor_link": 53,
+  "linked_events_inside_mapped_span_not_used": 1285,
+  "cross_registrant_duplicates_dropped": 1
+ },
+ "universe": {
+  "securities": 2719,
+  "identity": {
+   "verified (dated ticker evidence)": 2411,
+   "weak (one dated ticker match)": 46,
+   "unverified (no XBRL prefix evidence in span)": 47,
+   "contradicted (prefixes never match the security's tickers)": 25,
+   "verified (identity v2, SEC-corrected security)": 190
+  }
+ }
+}

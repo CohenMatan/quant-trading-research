@@ -1,0 +1,219 @@
+{
+ "experiment": "E982-01",
+ "config": {
+  "book": "random",
+  "seed": 0,
+  "canary": true,
+  "warmup_start": "2009-07-01",
+  "start": "2010-03-01",
+  "end": "2021-12-31"
+ },
+ "status": "completed",
+ "checks": {
+  "A1_event_table_hash_in_lean": {
+   "lean": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70",
+   "pinned": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70",
+   "table_events_loaded": 88723,
+   "manifest": 88723,
+   "ok": true
+  },
+  "A2_offline_table_canary": {
+   "1_hashes": true,
+   "2_timezone_rules": true,
+   "3_edgar_sample": true,
+   "4_dedup": true,
+   "5_amendments_excluded": true,
+   "6_foreign_excluded": true,
+   "7_identities": true,
+   "8_predecessor_links": true,
+   "9_window": true,
+   "10_reproducible": true,
+   "ok": true
+  },
+  "A3_table_event_sessions_are_lean_sessions": {
+   "not_session": 0,
+   "lean_sessions": 3149,
+   "first_session": "2009-07-01",
+   "ok": true
+  },
+  "A4_no_event_after_2021": {
+   "last_decision": "2021-12-30",
+   "ok": true
+  },
+  "B1_breakpoint_strictly_earlier_sessions": {
+   "violations": 0,
+   "ok": true
+  },
+  "B2_reaction_bars_never_after_decision_close": {
+   "bars_after_today": 0,
+   "today_close_from_slice": 0,
+   "ok": true
+  },
+  "B3_breakpoint_sample_ge_400_from_start": {
+   "min_hist_official": 1692,
+   "days_without_threshold": 0,
+   "min_logged": 1692,
+   "ok": true
+  },
+  "B4_warmup_history_only": {
+   "first_trade_decision": "2010-03-01",
+   "first_equity": "2010-03-01",
+   "first_fill": "2010-03-02",
+   "warmup_days_logged": 156,
+   "warmup_decision_days": 166,
+   "harness_warmup_days": 166,
+   "ok": true
+  },
+  "B5_no_holdout_data": {
+   "end": "2021-12-31",
+   "last_equity": "2021-12-31",
+   "last_fill": "2021-11-26",
+   "last_table_decision": "2021-12-30",
+   "ok": true
+  },
+  "C1_every_entry_at_open_E_plus_2": {
+   "entries": 472,
+   "entry_lines": 472,
+   "violations": 0,
+   "examples": [],
+   "unfilled_decided_at_final_close": 0,
+   "unfilled_other": 0,
+   "skipped_or_cancelled_buys": 0,
+   "ok": true
+  },
+  "C2_normal_exits_exactly_60_sessions": {
+   "normal_exits": 458,
+   "violations": 0,
+   "examples": [],
+   "held_at_exit_order": {
+    "59": 458
+   },
+   "forced_exits": 4,
+   "forced_kinds": {
+    "Liquidate from delisting": 4
+   },
+   "open_at_end": 10,
+   "open_at_end_max_sessions": 51,
+   "ok": true
+  },
+  "C3_forced_exits_are_logged_integrity_exits": {
+   "forced": 4,
+   "stale_or_delist_lines": 0,
+   "harness_stale_exits": 0,
+   "held_delistings": 0,
+   "ok": false
+  },
+  "D1_max_10_holdings": {
+   "max_npos_chart": 10,
+   "max_holdings": 10,
+   "ok": true
+  },
+  "D2_no_leverage_no_negative_cash": {
+   "max_gross": 0.9701744714847923,
+   "min_cash_frac": 0.02982552851520756,
+   "min_cash_chart": 3141.4,
+   "negative_qty": 0,
+   "ok": true
+  },
+  "D3_sizing": {
+   "target_weight": 0.098,
+   "max_entry_weight": 0.11059697275329279,
+   "median_entry_weight": 0.09770752819154527,
+   "min_entry_value": 7749.742,
+   "entries_below_4000": 0,
+   "scaled_buys": 64,
+   "skipped_min_position": 0,
+   "skipped_max_positions": 0,
+   "ok": false
+  },
+  "D4_commission_7_per_order": {
+   "orders": 934,
+   "not_7": 0,
+   "forced_fee_debits": 4,
+   "ok": true
+  },
+  "D5_slippage_10bps_and_fill_timing": {
+   "max_fill_dev": 3.050748481174355e-16,
+   "timing_violations": 0,
+   "slippage_bps": 10,
+   "ok": true
+  },
+  "D6_no_top_ups": {
+   "buys_while_held": 0,
+   "examples": [],
+   "ok": true
+  },
+  "D7_no_queued_signals": {
+   "entries_not_decided_on_their_E_plus_1": 0,
+   "ok": true
+  },
+  "D8_no_early_replacement": {
+   "normal_exit_orders_not_at_59": 0,
+   "sells": 462,
+   "ok": true
+  },
+  "D9_held_stock_events_ignored": {
+   "held_events_ignored": 9,
+   "buys_while_held": 0,
+   "ok": true
+  },
+  "D10_run_integrity_checks": {
+   "equity_nonempty": true,
+   "equity_dates_increasing": true,
+   "equity_within_dates": true,
+   "equity_no_nan": true,
+   "equity_positive": true,
+   "equity_complete": true,
+   "equity_matches_qc_tradeable_dates": true,
+   "warmup_left_account_untouched": true,
+   "no_leverage": true,
+   "fills_after_signal_date": true,
+   "fills_within_dates": true,
+   "harness_timing_selfcheck": true,
+   "harness_no_short": true,
+   "no_invalid_orders": true,
+   "summary_present": true,
+   "orders_download_complete": true,
+   "fills_match_harness_count": true,
+   "no_stale_open_orders": true,
+   "harness_no_stale_open_orders": true,
+   "no_unresolved_stale_holdings": true,
+   "windows_restored": true,
+   "stale_exits": true,
+   "commission_fixed_per_order": true,
+   "ok": true
+  },
+  "E1_random_entries_le_k_t_and_free": {
+   "days": 2855,
+   "over_k": 0,
+   "over_free": 0,
+   "lean_over_k": 0,
+   "lean_over_free": 0,
+   "signals_total": 5545,
+   "entries_planned": 472,
+   "ok": true
+  },
+  "E2_same_code_path": {
+   "x982_is_byte_copy_of_s017": true,
+   "book": "random",
+   "seed": 0,
+   "ok": true
+  },
+  "E3_event_counts": {
+   "events_seen": 88716,
+   "events_universe": 55797,
+   "events_valid": 55793,
+   "events_missing_close": 4,
+   "decision_days": 2983,
+   "ev_lines": 2855,
+   "ok": true
+  }
+ },
+ "all_ok": false,
+ "frozen": {
+  "spec_ok": true,
+  "amendment3_ok": true,
+  "event_table": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70"
+ },
+ "note": "no return, CAGR, Sharpe or drawdown was computed or printed (mechanics only)"
+}

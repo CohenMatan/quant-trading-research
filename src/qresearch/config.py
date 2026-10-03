@@ -70,6 +70,11 @@ RESEARCH_PORTFOLIOS = {
 # 2% buffer and 15% gap reserve unchanged; the one-time top-up lives in qr_h016/S016. Earlier experiments untouched.
 H016_PORTFOLIO = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 4000, "max_positions": 20,
                   "buy_funding": "settled_cash_only", "gap_reserve": 0.15}
+# H017 only (owner 2026-10-03): 10 slots (target 0.98/10 of equity), 10% cap, $4,000 reference minimum, D051 settled
+# cash, 2% buffer and 15% gap reserve, no top-up. Pre-declared perturbations P5/P6 change only the slot count.
+H017_PORTFOLIO = {"max_position_weight": 0.10, "cash_buffer": 0.02, "min_position_usd": 4000, "max_positions": 10,
+                  "buy_funding": "settled_cash_only", "gap_reserve": 0.15}
+H017_SLOT_VARIANTS = {"H017_P5": 8, "H017_P6": 12}
 CURRENT_EXECUTION_MODEL = "d051"
 RESEARCH_PORTFOLIO = RESEARCH_PORTFOLIOS[CURRENT_EXECUTION_MODEL]
 RESEARCH_CASH = 100_000.0

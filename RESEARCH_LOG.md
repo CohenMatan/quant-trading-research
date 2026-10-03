@@ -1178,3 +1178,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P2_CP13_H017_earnings_event_preregistration_proposal.md`.
 
 **STOP:** awaiting the owner. Slot 3 unused; Holdout locked.
+
+## 2026-10-03: H017 implemented; canary E982 passed; READY FOR E017-01; STOP (D125, D126)
+
+- **Owner:** H017 specification approved exactly as proposed; implementation and the non-candidate canary only.
+- **Built:**
+  - event table v1 (88,723 events, 2,549 verified securities; hash-pinned; integrity canary 10/10 incl. EDGAR 50/50);
+  - `qr_h017`;
+  - S017 (candidate / random / EW, one code path) and the X982 byte-copy canary;
+  - X983 diagnostic (prepared, not run);
+  - frozen spec `research/phase2/H017_spec.md`;
+  - evaluation (`p2h017`, `H017_eval.py`: Amendment 3, PbNQ, decision tree);
+  - all configs, with a runner owner-approval gate.
+- **Canary:**
+  - E982-01 completed; two checker definitions were too narrow (forced-exit evidence, cap measured at fill), plus the matching R4 limit flaw in the evaluation, all fixed;
+  - planned-weight logging added;
+  - **E982-02: 25/25 checks pass**; trades identical to E982-01.
+- **Tests:** 583 pass.
+- **Checkpoint:** `docs/checkpoints/P2_CP14_H017_implementation_canary_readiness.md`: **READY FOR E017-01**.
+
+**STOP:** E017-01 (slot 3) and every other H017 run await explicit owner approval. No candidate performance computed; Holdout locked; no data purchase.

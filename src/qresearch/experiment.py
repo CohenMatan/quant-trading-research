@@ -106,6 +106,24 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("S016 research runs belong to hypothesis H016")
         if float(cfg["costs"].get("slippage_bps", -1)) != 10:
             raise ConfigError("base slippage is 10 bps per side (D024); stress multiples via slippage_stress_multiple")
+    if cfg["strategy_id"] == "S017" and cfg.get("params", {}).get("book") in ("candidate", "random"):
+        # H017 (owner 2026-10-03): every trading book (candidate, random-event controls, sensitivities) uses the H017
+        # portfolio rules; the pre-declared perturbations P5/P6 change only the slot count
+        approved = dict(config.H017_PORTFOLIO)
+        slots = int(cfg["params"].get("slots", 10))
+        variant = cfg.get("construction_variant")
+        if variant is not None:
+            if config.H017_SLOT_VARIANTS.get(variant) != slots:
+                raise ConfigError(f"H017 construction variant {variant!r} needs slots {config.H017_SLOT_VARIANTS.get(variant)}")
+            approved["max_positions"] = slots
+        elif slots != 10:
+            raise ConfigError("H017 books hold 10 slots (8/12 only as the pre-declared perturbations P5/P6)")
+        if cfg["portfolio"] != approved:
+            raise ConfigError(f"S017 books must use the H017 portfolio rules {approved}")
+        if cfg["kind"] == "research" and cfg.get("hypothesis_id") != "H017":
+            raise ConfigError("S017 research runs belong to hypothesis H017")
+        if float(cfg["costs"].get("slippage_bps", -1)) != 10:
+            raise ConfigError("base slippage is 10 bps per side (D024); stress multiples via slippage_stress_multiple")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
@@ -113,7 +131,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] != "S016":
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017"):
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")

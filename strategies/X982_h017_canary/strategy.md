@@ -1,0 +1,25 @@
+# X982 — H017 non-candidate technical canary (infrastructure; not a trial)
+
+- `main.py` is a **byte copy** of `strategies/S017_earnings_continuation/main.py` (`tests/test_h017.py` checks this). The candidate, the random-event controls, the EW book and the canary therefore run identical mechanics.
+- The run (E982-01) uses `book` random with **seed 0**, which is not one of the five frozen control seeds, plus `canary: true`. It covers the full window: warm-up from 2009-07-01, official start 2010-03-01, end 2021-12-31.
+- The candidate's signals are computed in every book: their daily count k_t limits the random book's entries. They are never traded or valued here, so the canary never reveals candidate performance.
+- **In-algorithm counters** (summary line `QRS017|summary|…`):
+  - `threshold_future_violations` = 0;
+  - `bars_after_today` = 0;
+  - `entries_over_kt` = 0;
+  - `entries_over_free` = 0;
+  - `table_E_not_lean_session` = 0;
+  - `min_hist_official` ≥ 400;
+  - `first_trade_decision` = 2010-03-01;
+  - `max_holdings` ≤ 10;
+  - the event-table SHA-256.
+- **Offline checks** (`research/phase2/H017_canary_check.py`, from fills, logged identifiers and the equity curve; no returns):
+  - event-table integrity (`research/phase2/h017/h017_event_table_canary.json`);
+  - every entry fills at the open of E+2 of a table event and never earlier;
+  - normal exits fill exactly 60 sessions after entry (other exits are logged forced exits);
+  - at most 10 holdings;
+  - no leverage and no negative cash;
+  - sizing, $7 per order and 10 bps slippage;
+  - no top-ups and no queued or early-replacement orders;
+  - held-stock events ignored;
+  - daily entries ≤ k_t.
