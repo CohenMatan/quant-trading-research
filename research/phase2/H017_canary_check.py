@@ -180,7 +180,7 @@ def main(exp=H.CANARY, out_path=OUT):
                                               and float(eq["cash"].min()) >= 0 and hs.get("negative_qty", 1) == 0)
     # sizing: the 10% cap and the 0.98/10 target apply when the order is placed (quantity x decision-close price /
     # equity, logged as EP lines); the weight at the next-open fill also moves with the overnight gap (reported)
-    ep = {(x[1], x[2]): (int(x[3]), float(x[4])) for x in L if x.startswith("EP|")}
+    ep = {(p[1], p[2]): (int(p[3]), float(p[4])) for p in (x.split("|") for x in L if x.startswith("EP|"))}
     e_by = dict(zip(eq["date"].astype(str), eq["equity"].astype(float)))
     w_fill = [(r.quantity * r.price) / e_by[r.sig] for r in buys.itertuples() if r.sig in e_by]
     val = [r.quantity * r.price for r in buys.itertuples()]
