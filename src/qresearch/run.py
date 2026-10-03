@@ -77,6 +77,17 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         src = "src/qresearch/lean/qr_h016.py"
         files["qr_h016.py"] = gitutil.show_file(commit, src) if commit else (config.REPO_ROOT / src).read_text(
             encoding="utf-8")
+    if "qr_h017" in files["main.py"]:   # H017 decision logic + packed event table v1, only for strategies importing it
+        lean = "src/qresearch/lean"
+        if commit:
+            names = [p for p in gitutil.list_files(commit, lean) if Path(p).name.startswith("qr_h017") and p.endswith(".py")]
+            for p in names:
+                files[Path(p).name] = gitutil.show_file(commit, p)
+        else:
+            for p in sorted((config.REPO_ROOT / lean).glob("qr_h017*.py")):
+                files[p.name] = p.read_text(encoding="utf-8")
+        if "qr_h017.py" not in files or "qr_h017_events.py" not in files:
+            raise experiment.ConfigError("S017 needs src/qresearch/lean/qr_h017.py and the packed event table qr_h017_events*.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
@@ -304,6 +315,8 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
                 files=sorted(files), holdout_unlocked=holdout.holdout_unlocked(), build_commit=build_commit,
                 datasets=["QC US Equities (AlgoSeek) daily", "QC US Equity Security Master",
                           "Morningstar US Fundamentals (QC)"])
+    if orig["provenance"].get("owner_approved"):
+        prov["owner_approved"] = orig["provenance"]["owner_approved"]
     try:
         raw = download(cfg, client, handle, bt, 0.0)
     except Exception as exc:
@@ -327,14 +340,23 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     return result
 
 
+def approval_gate(cfg: dict, owner_approved: str | None) -> None:
+    """Configs written ahead of an owner decision carry owner_approval_required (H017, 2026-10-03: E017-01 consumes
+    Phase 2 slot 3). They run only with --owner-approved <decision id> naming the written approval."""
+    if cfg.get("owner_approval_required") and not (owner_approved or "").strip():
+        raise SystemExit(f"{cfg['experiment_id']} needs explicit owner approval before it may run "
+                         f"({cfg['owner_approval_required']}); pass --owner-approved <decision id>")
+
+
 def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scratch: str | None = None,
-        notes: str = "") -> dict:
+        notes: str = "", owner_approved: str | None = None) -> dict:
     run_utc = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
     if exp_id and exp_id in experiment.withdrawn():      # D087: refused before anything else happens
         raise SystemExit(f"{exp_id} is withdrawn and may never run: {experiment.withdrawn()[exp_id]}")
     if scratch:
         cfg_text = Path(scratch).read_text(encoding="utf-8")
         cfg = experiment.parse(cfg_text)
+        approval_gate(cfg, owner_approved)
         if cfg["kind"] == "research":
             raise SystemExit("Scratch runs are not allowed for research experiments.")
         commit = None
@@ -346,6 +368,7 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
         cfg = experiment.parse(cfg_text)
         if cfg["experiment_id"] != exp_id:
             raise SystemExit(f"config experiment_id {cfg['experiment_id']} != {exp_id}")
+        approval_gate(cfg, owner_approved)
         prior = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
         if prior and not reproduce:
             raise SystemExit(f"{exp_id} already has an original run; use --reproduce or a new ID.")
@@ -375,6 +398,8 @@ def run(exp_id: str | None, reproduce: bool = False, dry_run: bool = False, scra
                 files=sorted(files), holdout_unlocked=unlocked,
                 datasets=["QC US Equities (AlgoSeek) daily", "QC US Equity Security Master",
                           "Morningstar US Fundamentals (QC)"])
+    if owner_approved:
+        prov["owner_approved"] = owner_approved
     if dry_run:
         print(json.dumps(prov, indent=1))
         return prov
@@ -457,13 +482,15 @@ def main(argv=None) -> int:
     ap.add_argument("--scratch", metavar="CONFIG_JSON")
     ap.add_argument("--notes", default="")
     ap.add_argument("--recover", metavar="QC_BACKTEST_ID")
+    ap.add_argument("--owner-approved", metavar="DECISION_ID", default=None)
     a = ap.parse_args(argv)
     if not a.scratch and not a.experiment_id:
         ap.error("experiment_id or --scratch is required")
     if a.recover:
         res = recover(a.experiment_id, a.recover, notes=a.notes)
     else:
-        res = run(a.experiment_id, reproduce=a.reproduce, dry_run=a.dry_run, scratch=a.scratch, notes=a.notes)
+        res = run(a.experiment_id, reproduce=a.reproduce, dry_run=a.dry_run, scratch=a.scratch, notes=a.notes,
+                  owner_approved=a.owner_approved)
     if a.dry_run:
         return 0
     m = res.get("metrics", {})

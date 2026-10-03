@@ -1,0 +1,598 @@
+{
+ "table": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70",
+ "events": 88723,
+ "securities": 2549,
+ "all_ok": true,
+ "checks": {
+  "1_hashes": {
+   "csv": true,
+   "payload": true,
+   "packed": true,
+   "packed_pin": true,
+   "frozen_pin": true,
+   "max_part_chars": 60000,
+   "ok": true
+  },
+  "2_timezone_rules": {
+   "rederived": 88723,
+   "acceptance_mismatches": 0,
+   "class_mismatches": 0,
+   "conventions": {
+    "ET": 23819,
+    "UTC": 64189,
+    "UNMEASURED": 715
+   },
+   "ok": true,
+   "examples": []
+  },
+  "3_edgar_sample": {
+   "sample": 50,
+   "with_page": 50,
+   "matches": 50,
+   "ok": true,
+   "rows": [
+    {
+     "sid": "BPOP R735QTJ8XC9X",
+     "cik": 763901,
+     "accession": "0001299933-09-002962",
+     "tz": "UTC",
+     "table": "2009-07-17 17:25:23",
+     "index_page": "2009-07-17 17:25:23",
+     "match": true
+    },
+    {
+     "sid": "USG R735QTJ8XC9X",
+     "cik": 757011,
+     "accession": "0001157523-10-005898",
+     "tz": "ET",
+     "table": "2010-10-20 08:30:28",
+     "index_page": "2010-10-20 08:30:28",
+     "match": true
+    },
+    {
+     "sid": "SKY R735QTJ8XC9X",
+     "cik": 90896,
+     "accession": "0000950123-11-001527",
+     "tz": "UTC",
+     "table": "2011-01-07 17:13:49",
+     "index_page": "2011-01-07 17:13:49",
+     "match": true
+    },
+    {
+     "sid": "NRG SXA8BFD2WZ8L",
+     "cik": 1013871,
+     "accession": "0001104659-12-032264",
+     "tz": "UTC",
+     "table": "2012-05-03 06:40:46",
+     "index_page": "2012-05-03 06:40:46",
+     "match": true
+    },
+    {
+     "sid": "CF TB2HMJQ5H84L",
+     "cik": 1324404,
+     "accession": "0001104659-13-011818",
+     "tz": "UTC",
+     "table": "2013-02-19 16:40:26",
+     "index_page": "2013-02-19 16:40:26",
+     "match": true
+    },
+    {
+     "sid": "ENSG TXHW77OK7VQD",
+     "cik": 1125376,
+     "accession": "0001125376-14-000109",
+     "tz": "UTC",
+     "table": "2014-11-10 17:22:54",
+     "index_page": "2014-11-10 17:22:54",
+     "match": true
+    },
+    {
+     "sid": "ORI R735QTJ8XC9X",
+     "cik": 74260,
+     "accession": "0000074260-15-000053",
+     "tz": "UTC",
+     "table": "2015-07-24 10:50:00",
+     "index_page": "2015-07-24 10:50:00",
+     "match": true
+    },
+    {
+     "sid": "SAI TMRWYKAE84TH",
+     "cik": 1336920,
+     "accession": "0001336920-16-000085",
+     "tz": "UTC",
+     "table": "2016-04-27 06:10:23",
+     "index_page": "2016-04-27 06:10:23",
+     "match": true
+    },
+    {
+     "sid": "KWR R735QTJ8XC9X",
+     "cik": 81362,
+     "accession": "0001144204-17-038738",
+     "tz": "UTC",
+     "table": "2017-07-27 16:31:10",
+     "index_page": "2017-07-27 16:31:10",
+     "match": true
+    },
+    {
+     "sid": "YUM R735QTJ8XC9X",
+     "cik": 1041061,
+     "accession": "0001041061-18-000007",
+     "tz": "UTC",
+     "table": "2018-02-08 07:12:47",
+     "index_page": "2018-02-08 07:12:47",
+     "match": true
+    },
+    {
+     "sid": "HANS R735QTJ8XC9X",
+     "cik": 865752,
+     "accession": "0001104659-19-044544",
+     "tz": "UTC",
+     "table": "2019-08-07 16:24:43",
+     "index_page": "2019-08-07 16:24:43",
+     "match": true
+    },
+    {
+     "sid": "RLGY VAO9ZBE1SEAT",
+     "cik": 1398987,
+     "accession": "0001398987-20-000068",
+     "tz": "UTC",
+     "table": "2020-05-07 07:29:27",
+     "index_page": "2020-05-07 07:29:27",
+     "match": true
+    },
+    {
+     "sid": "PII R735QTJ8XC9X",
+     "cik": 931015,
+     "accession": "0001157523-21-000920",
+     "tz": "UTC",
+     "table": "2021-07-27 06:00:37",
+     "index_page": "2021-07-27 06:00:37",
+     "match": true
+    },
+    {
+     "sid": "WMB R735QTJ8XC9X",
+     "cik": 107263,
+     "accession": "0000950123-09-030647",
+     "tz": "UTC",
+     "table": "2009-08-06 07:32:53",
+     "index_page": "2009-08-06 07:32:53",
+     "match": true
+    },
+    {
+     "sid": "NVR R735QTJ8XC9X",
+     "cik": 906163,
+     "accession": "0001144204-10-003841",
+     "tz": "UTC",
+     "table": "2010-01-27 16:12:05",
+     "index_page": "2010-01-27 16:12:05",
+     "match": true
+    },
+    {
+     "sid": "XLNX R735QTJ8XC9X",
+     "cik": 743988,
+     "accession": "0000950123-11-003754",
+     "tz": "ET",
+     "table": "2011-01-19 16:20:35",
+     "index_page": "2011-01-19 16:20:35",
+     "match": true
+    },
+    {
+     "sid": "CHH R735QTJ8XC9X",
+     "cik": 1046311,
+     "accession": "0001193125-12-434281",
+     "tz": "UTC",
+     "table": "2012-10-25 06:10:36",
+     "index_page": "2012-10-25 06:10:36",
+     "match": true
+    },
+    {
+     "sid": "PMTC R735QTJ8XC9X",
+     "cik": 857005,
+     "accession": "0000857005-13-000021",
+     "tz": "UTC",
+     "table": "2013-07-24 17:11:59",
+     "index_page": "2013-07-24 17:11:59",
+     "match": true
+    },
+    {
+     "sid": "OKE R735QTJ8XC9X",
+     "cik": 1039684,
+     "accession": "0001039684-14-000031",
+     "tz": "UTC",
+     "table": "2014-05-06 17:06:42",
+     "index_page": "2014-05-06 17:06:42",
+     "match": true
+    },
+    {
+     "sid": "NXTM TD6B1QW5DBHH",
+     "cik": 1333170,
+     "accession": "0001333170-15-000017",
+     "tz": "ET",
+     "table": "2015-11-03 07:59:42",
+     "index_page": "2015-11-03 07:59:42",
+     "match": true
+    },
+    {
+     "sid": "TDSC R735QTJ8XC9X",
+     "cik": 910638,
+     "accession": "0001171843-16-007827",
+     "tz": "UTC",
+     "table": "2016-02-11 08:35:11",
+     "index_page": "2016-02-11 08:35:11",
+     "match": true
+    },
+    {
+     "sid": "FM R735QTJ8XC9X",
+     "cik": 807882,
+     "accession": "0001157523-17-002333",
+     "tz": "UTC",
+     "table": "2017-08-09 16:10:17",
+     "index_page": "2017-08-09 16:10:17",
+     "match": true
+    },
+    {
+     "sid": "SFIX WPMNTHVIBYAT",
+     "cik": 1576942,
+     "accession": "0001576942-18-000011",
+     "tz": "UTC",
+     "table": "2018-12-10 16:14:43",
+     "index_page": "2018-12-10 16:14:43",
+     "match": true
+    },
+    {
+     "sid": "BWA R735QTJ8XC9X",
+     "cik": 908255,
+     "accession": "0000908255-19-000060",
+     "tz": "UTC",
+     "table": "2019-10-31 08:06:30",
+     "index_page": "2019-10-31 08:06:30",
+     "match": true
+    },
+    {
+     "sid": "ZBRA R735QTJ8XC9X",
+     "cik": 877212,
+     "accession": "0000877212-20-000004",
+     "tz": "UTC",
+     "table": "2020-02-13 07:30:21",
+     "index_page": "2020-02-13 07:30:21",
+     "match": true
+    },
+    {
+     "sid": "ISIP R735QTJ8XC9X",
+     "cik": 874015,
+     "accession": "0001140361-21-036328",
+     "tz": "UTC",
+     "table": "2021-11-03 11:15:24",
+     "index_page": "2021-11-03 11:15:24",
+     "match": true
+    },
+    {
+     "sid": "VMC R735QTJ8XC9X",
+     "cik": 1396009,
+     "accession": "0001144204-09-056094",
+     "tz": "UTC",
+     "table": "2009-11-03 09:53:21",
+     "index_page": "2009-11-03 09:53:21",
+     "match": true
+    },
+    {
+     "sid": "STFC R735QTJ8XC9X",
+     "cik": 874977,
+     "accession": "0001193125-10-173785",
+     "tz": "ET",
+     "table": "2010-08-02 17:14:34",
+     "index_page": "2010-08-02 17:14:34",
+     "match": true
+    },
+    {
+     "sid": "SNV R735QTJ8XC9X",
+     "cik": 18349,
+     "accession": "0001193125-11-016620",
+     "tz": "ET",
+     "table": "2011-01-28 08:10:53",
+     "index_page": "2011-01-28 08:10:53",
+     "match": true
+    },
+    {
+     "sid": "PG R735QTJ8XC9X",
+     "cik": 80424,
+     "accession": "0000080424-12-000088",
+     "tz": "UTC",
+     "table": "2012-10-25 07:04:38",
+     "index_page": "2012-10-25 07:04:38",
+     "match": true
+    },
+    {
+     "sid": "APH R735QTJ8XC9X",
+     "cik": 820313,
+     "accession": "0001104659-13-030497",
+     "tz": "UTC",
+     "table": "2013-04-18 10:35:39",
+     "index_page": "2013-04-18 10:35:39",
+     "match": true
+    },
+    {
+     "sid": "GDOT UOGQZECZNRZ9",
+     "cik": 1386278,
+     "accession": "0001386278-14-000057",
+     "tz": "UTC",
+     "table": "2014-07-31 16:37:21",
+     "index_page": "2014-07-31 16:37:21",
+     "match": true
+    },
+    {
+     "sid": "VWR VUE7AQ4QYD0L",
+     "cik": 1412232,
+     "accession": "0001412232-15-000040",
+     "tz": "ET",
+     "table": "2015-11-05 06:22:16",
+     "index_page": "2015-11-05 06:22:16",
+     "match": true
+    },
+    {
+     "sid": "AAPL R735QTJ8XC9X",
+     "cik": 320193,
+     "accession": "0001628280-16-017762",
+     "tz": "UTC",
+     "table": "2016-07-26 16:30:55",
+     "index_page": "2016-07-26 16:30:55",
+     "match": true
+    },
+    {
+     "sid": "YSI T31ZN5JP263P",
+     "cik": 1298675,
+     "accession": "0001298675-17-000004",
+     "tz": "UTC",
+     "table": "2017-02-17 08:03:45",
+     "index_page": "2017-02-17 08:03:45",
+     "match": true
+    },
+    {
+     "sid": "GBX R735QTJ8XC9X",
+     "cik": 923120,
+     "accession": "0001193125-18-109170",
+     "tz": "UTC",
+     "table": "2018-04-06 06:06:34",
+     "index_page": "2018-04-06 06:06:34",
+     "match": true
+    },
+    {
+     "sid": "PCH R735QTJ8XC9X",
+     "cik": 1338749,
+     "accession": "0001564590-19-013768",
+     "tz": "ET",
+     "table": "2019-04-29 16:53:19",
+     "index_page": "2019-04-29 16:53:19",
+     "match": true
+    },
+    {
+     "sid": "AOS R735QTJ8XC9X",
+     "cik": 91142,
+     "accession": "0001193125-20-132980",
+     "tz": "UTC",
+     "table": "2020-05-05 07:00:40",
+     "index_page": "2020-05-05 07:00:40",
+     "match": true
+    },
+    {
+     "sid": "GT R735QTJ8XC9X",
+     "cik": 42582,
+     "accession": "0001193125-21-238684",
+     "tz": "UTC",
+     "table": "2021-08-06 08:03:02",
+     "index_page": "2021-08-06 08:03:02",
+     "match": true
+    },
+    {
+     "sid": "AAP SA48O8J43YAT",
+     "cik": 1158449,
+     "accession": "0001158449-09-000078",
+     "tz": "UTC",
+     "table": "2009-08-12 17:25:31",
+     "index_page": "2009-08-12 17:25:31",
+     "match": true
+    },
+    {
+     "sid": "INFN TT99WPZECXUT",
+     "cik": 1138639,
+     "accession": "0001193125-10-013014",
+     "tz": "ET",
+     "table": "2010-01-26 16:19:33",
+     "index_page": "2010-01-26 16:19:33",
+     "match": true
+    },
+    {
+     "sid": "RII R735QTJ8XC9X",
+     "cik": 350698,
+     "accession": "0001193125-11-108640",
+     "tz": "UTC",
+     "table": "2011-04-26 07:48:50",
+     "index_page": "2011-04-26 07:48:50",
+     "match": true
+    },
+    {
+     "sid": "KOS UWH8YSJG2U05",
+     "cik": 1509991,
+     "accession": "0001104659-12-014792",
+     "tz": "UTC",
+     "table": "2012-03-01 08:30:34",
+     "index_page": "2012-03-01 08:30:34",
+     "match": true
+    },
+    {
+     "sid": "PSM R735QTJ8XC9X",
+     "cik": 866368,
+     "accession": "0001193125-13-307925",
+     "tz": "ET",
+     "table": "2013-07-29 19:17:08",
+     "index_page": "2013-07-29 19:17:08",
+     "match": true
+    },
+    {
+     "sid": "BCC VDWGQCJYTF8L",
+     "cik": 1328581,
+     "accession": "0001328581-14-000049",
+     "tz": "UTC",
+     "table": "2014-10-23 08:54:09",
+     "index_page": "2014-10-23 08:54:09",
+     "match": true
+    },
+    {
+     "sid": "AFC R735QTJ8XC9X",
+     "cik": 944695,
+     "accession": "0001193125-15-356621",
+     "tz": "UTC",
+     "table": "2015-10-28 19:45:05",
+     "index_page": "2015-10-28 19:45:05",
+     "match": true
+    },
+    {
+     "sid": "MKTX T3FRWGO24QCL",
+     "cik": 1278021,
+     "accession": "0001193125-16-439032",
+     "tz": "UTC",
+     "table": "2016-01-27 07:00:31",
+     "index_page": "2016-01-27 07:00:31",
+     "match": true
+    },
+    {
+     "sid": "ARE R735QTJ8XC9X",
+     "cik": 1035443,
+     "accession": "0001035443-17-000078",
+     "tz": "UTC",
+     "table": "2017-05-01 16:02:07",
+     "index_page": "2017-05-01 16:02:07",
+     "match": true
+    },
+    {
+     "sid": "DRH T8YO7CK5L4RP",
+     "cik": 1298946,
+     "accession": "0001104659-18-045658",
+     "tz": "UTC",
+     "table": "2018-07-18 08:30:30",
+     "index_page": "2018-07-18 08:30:30",
+     "match": true
+    },
+    {
+     "sid": "SPW R735QTJ8XC9X",
+     "cik": 88205,
+     "accession": "0000088205-19-000011",
+     "tz": "UTC",
+     "table": "2019-05-02 16:19:12",
+     "index_page": "2019-05-02 16:19:12",
+     "match": true
+    }
+   ]
+  },
+  "4_dedup": {
+   "violations": 0,
+   "ok": true
+  },
+  "5_amendments_excluded": {
+   "non_original_or_non_earnings": 0,
+   "ok": true
+  },
+  "6_foreign_excluded": {
+   "events_from_foreign_forms": 0,
+   "non_8k_events": 0,
+   "ok": true,
+   "info_transition_registrants": {
+    "SIGNET JEWELERS LTD": [
+     "2010-03-25",
+     "2010-05-27",
+     "2010-08-26",
+     "2010-11-23"
+    ],
+    "AMARIN CORP PLC\\UK": [
+     "2011-01-31",
+     "2011-03-17",
+     "2011-05-10"
+    ],
+    "PARTNERRE LTD": [
+     "2016-05-02"
+    ],
+    "Maxar Technologies Inc.": [
+     "2019-02-28"
+    ],
+    "ENCANA CORP": [
+     "2017-02-16"
+    ],
+    "Waste Connections, Inc.": [
+     "2016-08-03",
+     "2016-10-26",
+     "2017-02-21"
+    ],
+    "China Biologic Products Holdings, Inc.": [
+     "2017-05-03"
+    ],
+    "NXP Semiconductors N.V.": [
+     "2019-10-29",
+     "2020-02-04"
+    ],
+    "Thompson Creek Metals Co Inc.": [
+     "2010-03-01",
+     "2010-05-06",
+     "2010-08-06"
+    ],
+    "Pactiv Evergreen Inc.": [
+     "2020-11-12",
+     "2021-02-24"
+    ],
+    "Capri Holdings Ltd": [
+     "2013-05-29"
+    ],
+    "Criteo S.A.": [
+     "2016-01-21"
+    ],
+    "IHS Markit Ltd.": [
+     "2016-09-27",
+     "2017-01-17"
+    ],
+    "Orion S.A.": [
+     "2020-02-20"
+    ],
+    "Mimecast Ltd": [
+     "2018-05-14"
+    ],
+    "Talend S.A.": [
+     "2019-01-08",
+     "2019-02-14"
+    ],
+    "Venator Materials PLC": [
+     "2021-02-24",
+     "2021-05-06"
+    ],
+    "CLARIVATE PLC": [
+     "2020-05-04"
+    ]
+   },
+   "info_transition_events": 32
+  },
+  "7_identities": {
+   "by_status": {
+    "verified (identity v2, SEC-corrected security)": 190,
+    "verified (dated ticker evidence)": 2359
+   },
+   "ok": true
+  },
+  "8_predecessor_links": {
+   "securities_linked": 33,
+   "events": 787,
+   "non_unique": 0,
+   "inside_mapped_span": 0,
+   "mapped_rows_with_foreign_cik": 0,
+   "ok": true
+  },
+  "9_window": {
+   "first_decision": "2009-07-01",
+   "last_decision": "2021-12-30",
+   "after_2021": 0,
+   "before_warmup": 0,
+   "event_session_not_lean_session": 0,
+   "ok": true
+  },
+  "10_reproducible": {
+   "rebuild_payload": "ebb287536bca42874d36b73443dc0e0c5e02fc78245351e36d7b1c37334a5c70",
+   "ok": true
+  }
+ }
+}
