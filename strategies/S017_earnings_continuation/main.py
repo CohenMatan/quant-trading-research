@@ -13,8 +13,8 @@
 # harness (D051 settled cash, 2% buffer, 15% gap reserve, $4,000 minimum, 10% cap). Exit order at the close of the 59th
 # session after entry (executes at entry + 60 sessions). No top-up, no queue, no replacement; events of held or pending
 # stocks are ignored. History-only warm-up (harness warmup_start): reactions of universe events feed the breakpoint
-# history; no decision, order or equity before the official start. Outputs: counts, identifiers and the daily
-# breakpoint only (no returns are logged).
+# history; no decision, order or equity before the official start. Outputs: counts, identifiers, the daily
+# breakpoint and each entry's planned weight at placement (EP lines) only (no returns are logged).
 from AlgorithmImports import *
 from datetime import date, datetime, timedelta
 import hashlib
@@ -212,6 +212,14 @@ class EarningsContinuation(QRAlgorithm):
             placed = self._qr_stats["orders"] - n0
             self.st["exit_orders"] += len(exits)
             self.st["entry_orders"] += placed - len(exits)
+            pv = float(self.portfolio.total_portfolio_value)
+            want = {elig[sid]: sid for sid in entries}
+            for tk in self.transactions.get_open_order_tickets():
+                if tk.symbol in want and float(tk.quantity) > 0:
+                    # planned weight at placement: quantity x decision-close price / equity (the 10% cap applies here)
+                    w_pl = float(tk.quantity) * float(self.securities[tk.symbol].price) / pv
+                    self.st["max_planned_entry_weight"] = max(self.st.get("max_planned_entry_weight", 0.0), w_pl)
+                    self._qr_log(f"EP|{today}|{want[tk.symbol]}|{int(tk.quantity)}|{w_pl:.6f}")
         self.st["entries_planned"] += len(entries)
         for pos, sid in enumerate(entries):
             self.st["max_entry_rank_pos"] = max(self.st["max_entry_rank_pos"], ranked.index(sid))

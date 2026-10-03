@@ -257,7 +257,7 @@ def test_canary_is_a_byte_copy_of_s017():
 
 def test_runner_uploads_h017_files_only_for_strategies_that_import_them():
     from qresearch import run
-    for eid in ("E982-01", "E017-01", "E017-02", "E983-01"):
+    for eid in ("E982-01", "E982-02", "E017-01", "E017-02", "E983-01"):
         cfg = json.loads((ROOT / "experiments" / eid / "config.json").read_text())
         files = run.assemble_files(cfg, None, False)
         assert files["qr_h017.py"] == (ROOT / "src/qresearch/lean/qr_h017.py").read_text()
@@ -270,7 +270,7 @@ def test_runner_uploads_h017_files_only_for_strategies_that_import_them():
 
 def test_configs_use_h017_rules_and_need_owner_approval_except_the_canary():
     from qresearch import experiment, p2h017, run
-    can = json.loads((ROOT / "experiments/E982-01/config.json").read_text())
+    can = json.loads((ROOT / "experiments" / p2h017.CANARY / "config.json").read_text())
     assert not can.get("owner_approval_required") and can["params"]["seed"] == 0 and can["params"]["canary"]
     assert can["warmup_start"] == "2009-07-01" and can["start"] == "2010-03-01" and can["end"] == "2021-12-31"
     run.approval_gate(can, None)

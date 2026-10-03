@@ -49,9 +49,14 @@ def eq_of(r):
     return H.window_eq(p2spec.equity_series(r["eq"]))
 
 
+def lines_of(r):
+    q = r["res"]["qc_statistics"]
+    return "".join(q[f"qr_msgs_{i:02d}"] for i in range(int(q["qr_msgs_n"]))).split("\n")
+
+
 def r4_inputs(r):
     """R4: realised costs a year; no leverage (gross <= 1, no negative cash or quantity); limits (holdings <= slots,
-    every entry <= 10% of equity when placed, plus slippage)."""
+    every entry <= 10% of equity when placed: the EP lines' planned weights, one per buy order)."""
     cfg = r["cfg"]
     slip = cfg["costs"]["slippage_bps"] * cfg["costs"].get("slippage_stress_multiple", 1) / 1e4
     eq = eq_of(r)
@@ -61,12 +66,12 @@ def r4_inputs(r):
                   and hs.get("negative_qty", 1) == 0)
     df = r["eq"]
     slots = int(cfg["params"].get("slots", 10))
-    e_by_date = pd.Series(df["equity"].to_numpy(float), index=df["date"].astype(str))
-    buys = r["fi"][r["fi"]["quantity"] > 0]
-    sig = buys["tag"].astype(str).str.split("sig=").str[-1]
-    w = [(q * p) / e_by_date.get(s, np.nan) for q, p, s in zip(buys["quantity"], buys["price"], sig)]
-    max_w = float(np.nanmax(w)) if len(w) else 0.0
-    limits = bool(int(df["npos"].max()) <= slots and max_w <= float(cfg["portfolio"]["max_position_weight"]) * 1.03)
+    msgs = lines_of(r)
+    w_pl = [float(x.split("|")[4]) for x in msgs if x.startswith("EP|")]   # planned weight at placement (spec §9.10)
+    max_w = max(w_pl) if w_pl else float("nan")
+    n_buy_orders = int(r["fi"].loc[r["fi"]["quantity"] > 0, "order_id"].nunique())
+    limits = bool(int(df["npos"].max()) <= slots and w_pl and len(w_pl) >= n_buy_orders
+                  and max_w <= float(cfg["portfolio"]["max_position_weight"]) + 1e-9)
     return dict(cost=cost, no_leverage=no_lev, limits_ok=limits, max_entry_weight=max_w, max_holdings=int(df["npos"].max()))
 
 

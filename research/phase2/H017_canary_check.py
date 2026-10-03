@@ -7,6 +7,7 @@ a random-event book, seed 0; the candidate's signals are only counted, never tra
 """
 from __future__ import annotations
 
+import bisect
 import gzip
 import io
 import json
@@ -154,11 +155,21 @@ def main(exp=H.CANARY, out_path=OUT):
                                                                                      for e in still_open), default=0)),
                                                   not bad_hold and set(xt_held) <= {HOLD - 1}
                                                   and all(len(sess) - 1 - pos[e["entry"]] <= HOLD for e in still_open))
-    stale = [x for x in L if x.startswith(("QRSTALE|", "QRDELIST|"))]
-    C["C3_forced_exits_are_logged_integrity_exits"] = ok(dict(forced=len(forced), stale_or_delist_lines=len(stale),
-                                                              harness_stale_exits=hs.get("stale_exits"),
-                                                              held_delistings=hs.get("held_delistings")),
-                                                         len(forced) <= len(stale) + hs.get("held_delistings", 0))
+    # forced integrity exits: LEAN's delisting / acquisition liquidations (no harness tag; the harness debits the $7
+    # commission and logs QRFORCEDFEE) or the harness's D059 stale exits; always before the 60-session exit was due
+    fee_lines = [x for x in L if x.startswith("QRFORCEDFEE|")]
+    kinds_ok = all(e["exit_kind"] in ("Liquidate from delisting", "stale_exit") for e in forced)
+    def sidx(d):                                   # LEAN can date a delisting liquidation on a non-session day
+        return bisect.bisect_right(sess, d) - 1
+    early_ok = all(sidx(e["exit"]) - pos[e["entry"]] <= HOLD for e in forced)
+    C["C3_forced_exits_are_logged_integrity_exits"] = ok(
+        dict(forced=len(forced), kinds=dict(Counter(e["exit_kind"] for e in forced)),
+             harness_forced_fills=hs.get("forced_fills"), harness_stale_exits=hs.get("stale_exits"),
+             forced_fee_lines=len(fee_lines), forced_fee_debits=hs.get("forced_fee_debits"),
+             sessions_held=[sidx(e["exit"]) - pos[e["entry"]] for e in forced],
+             securities=[e["sid"] for e in forced]),
+        kinds_ok and early_ok and len(forced) == hs.get("forced_fills", 0) + hs.get("stale_exits", 0)
+        and len(fee_lines) == hs.get("forced_fee_debits", -1))
     # ---------------------------------------------------------------- D. portfolio / cash / costs
     C["D1_max_10_holdings"] = ok(dict(max_npos_chart=int(eq["npos"].max()), max_holdings=summ["max_holdings"]),
                                  int(eq["npos"].max()) <= SLOTS and summ["max_holdings"] <= SLOTS)
@@ -167,14 +178,26 @@ def main(exp=H.CANARY, out_path=OUT):
                                                    negative_qty=hs.get("negative_qty")),
                                               hs.get("max_gross", 2) <= 1 + 1e-9 and hs.get("min_cash_frac", -1) >= 0
                                               and float(eq["cash"].min()) >= 0 and hs.get("negative_qty", 1) == 0)
+    # sizing: the 10% cap and the 0.98/10 target apply when the order is placed (quantity x decision-close price /
+    # equity, logged as EP lines); the weight at the next-open fill also moves with the overnight gap (reported)
+    ep = {(x[1], x[2]): (int(x[3]), float(x[4])) for x in L if x.startswith("EP|")}
     e_by = dict(zip(eq["date"].astype(str), eq["equity"].astype(float)))
-    w = [(r.quantity * r.price) / e_by[r.sig] for r in buys.itertuples() if r.sig in e_by]
+    w_fill = [(r.quantity * r.price) / e_by[r.sig] for r in buys.itertuples() if r.sig in e_by]
     val = [r.quantity * r.price for r in buys.itertuples()]
-    C["D3_sizing"] = ok(dict(target_weight=(1 - BUFFER) / SLOTS, max_entry_weight=max(w), median_entry_weight=float(
-        pd.Series(w).median()), min_entry_value=min(val), entries_below_4000=sum(v < MIN_POS for v in val),
-        scaled_buys=hs.get("buys_scaled"), skipped_min_position=hs.get("skipped_min_position"),
-        skipped_max_positions=hs.get("skipped_max_positions")),
-        max(w) <= MAX_W * 1.03 and min(val) >= MIN_POS * 0.85)
+    no_ep = [(r.sig, r.symbol_id) for r in buys.itertuples() if (r.sig, r.symbol_id) not in ep]
+    qty_mismatch = [(r.sig, r.symbol_id) for r in buys.itertuples()
+                    if (r.sig, r.symbol_id) in ep and ep[(r.sig, r.symbol_id)][0] != int(r.quantity)]
+    w_pl = [w for _, w in ep.values()]
+    C["D3_sizing"] = ok(dict(target_weight=(1 - BUFFER) / SLOTS, max_planned_weight=max(w_pl) if w_pl else None,
+                             median_planned_weight=float(pd.Series(w_pl).median()) if w_pl else None,
+                             min_planned_value=min(w * e_by[d] for (d, _), (q, w) in ep.items()) if ep else None,
+                             buys_without_plan_line=len(no_ep), plan_fill_quantity_mismatch=len(qty_mismatch),
+                             max_fill_weight=max(w_fill), fill_weight_above_10pct=sum(w > MAX_W for w in w_fill),
+                             min_fill_value=min(val), scaled_buys=hs.get("buys_scaled"),
+                             skipped_min_position=hs.get("skipped_min_position"),
+                             skipped_max_positions=hs.get("skipped_max_positions")),
+                        bool(w_pl) and max(w_pl) <= MAX_W + 1e-9 and not no_ep and not qty_mismatch
+                        and min(w * e_by[d] for (d, _), (q, w) in ep.items()) >= MIN_POS)
     fee = fills.groupby("order_id")["fee"].sum()
     C["D4_commission_7_per_order"] = ok(dict(orders=int(len(fee)), not_7=int((fee.round(6) != FEE).sum()),
                                              forced_fee_debits=hs.get("forced_fee_debits")),

@@ -4,7 +4,8 @@ Owner 2026-10-03: only the canary E982-01 is authorised to run now. Every other 
 `owner_approval_required`; the runner refuses it without `--owner-approved <decision id>` (E017-01 consumes Phase 2
 slot 3; E983-01 computes post-event returns; E017-09..17 run only when the pre-registered conditions hold).
 
-    PYTHONPATH=src python research/phase2/H017_make_configs.py        (refuses to overwrite)
+    PYTHONPATH=src python research/phase2/H017_make_configs.py                  (refuses to overwrite)
+    PYTHONPATH=src python research/phase2/H017_make_configs.py --canary-rerun   (E982-02 only)
 """
 import json
 import sys
@@ -89,14 +90,14 @@ def build():
     return out
 
 
-def canary():
-    c = s017(H.CANARY, "infrastructure", dict(book="random", seed=0, canary=True))
+def canary(eid=H.CANARY_FIRST, note=""):
+    c = s017(eid, "infrastructure", dict(book="random", seed=0, canary=True))
     c.update(strategy_id="X982", strategy_version="v1.0", strategy_dir="strategies/X982_h017_canary",
              split="AUDIT", hypothesis_id=None,
              description="H017 non-candidate technical canary: byte copy of S017, random-event book seed 0 (not a "
                          "control seed), full window with the 2009-07-01 history-only warm-up. Checks the event table "
                          "hash, PIT reactions and breakpoints, E+2 entries, 60-session exits, 10 slots, k_t, held-stock "
-                         "events, sizing, cash, costs. Verification; not a trial.")
+                         "events, sizing, cash, costs. Verification; not a trial." + note)
     return c
 
 
@@ -111,8 +112,16 @@ def diagnostic():
     return c
 
 
+CANARY_RERUN_NOTE = (" Re-run of E982-01 on the S017 code that also logs each entry's planned weight at placement (EP "
+                     "lines), so the 10% cap is verified exactly (E982-01's offline sizing check measured weights at "
+                     "the next-open fill, which move with the overnight gap).")
+
+
 def main(argv):
-    cfgs = build()
+    if "--canary-rerun" in argv:
+        cfgs = [canary(H.CANARY, CANARY_RERUN_NOTE)]
+    else:
+        cfgs = build()
     for c in cfgs:
         experiment.validate(c)
         d = Path("experiments") / c["experiment_id"]
