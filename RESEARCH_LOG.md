@@ -1145,3 +1145,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P2_CP11_research_architecture_final_slot_review.md`.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-03: Amendment 3 frozen; data-extension options; SEC earnings-event audit; STOP (D121, D122)
+
+- **Amendment 3 frozen** with both refinements:
+  - W2 uses SE = max(iid, exact stationary bootstrap with 126-day blocks) and a calibrated critical value of 2.15, giving ≤ 5% false passes under plausible persistence;
+  - R2 tolerance 0.15.
+  - Honest consequence: with 12 years and 20 positions, about a 6.3% a year true edge is needed for an even chance.
+- **Data extension:** Sharadar is the best-fitting option (≈ $69/mo, to verify). Nothing bought.
+- **Earnings-event audit (no returns):**
+  - 85,537 events; coverage 93.9% (≈ 96.7% for domestic filers with predecessor linking);
+  - an SEC time-zone inconsistency was found and corrected (timestamp canary 204/204);
+  - 13 leakage tests pass.
+- **Runs:** E981-01 (identifier export) only.
+- **Checkpoint:** `docs/checkpoints/P2_CP12_amendment3_freeze_data_extension_earnings_audit.md`.
+- Slot 3 unused; Holdout locked.
+
+**STOP:** awaiting the owner.

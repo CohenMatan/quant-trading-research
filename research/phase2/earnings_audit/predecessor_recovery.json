@@ -1,0 +1,222 @@
+{
+ "counts": {
+  "quarters_no_registrant_filings": 862,
+  "no_unique_predecessor": 26,
+  "recoverable": 636,
+  "predecessor_found_no_event": 6,
+  "ambiguous_predecessor": 194
+ },
+ "examples": [
+  {
+   "sid": "BG S6V2H4010679",
+   "mapped_cik": 1996862,
+   "predecessor_cik": 1144519,
+   "predecessor_name": "BUNGELTD",
+   "recovered_quarters": 48
+  },
+  {
+   "sid": "BLK ROIDIDJRNXID",
+   "mapped_cik": 2012383,
+   "predecessor_cik": 1364742,
+   "predecessor_name": "BlackRock Finance, Inc.",
+   "recovered_quarters": 48
+  },
+  {
+   "sid": "XON R735QTJ8XC9X",
+   "mapped_cik": 2115436,
+   "predecessor_cik": 34088,
+   "predecessor_name": "EXXON MOBIL CORP",
+   "recovered_quarters": 48
+  },
+  {
+   "sid": "MRVL RVW87MBCBMUD",
+   "mapped_cik": 1835632,
+   "predecessor_cik": 1058057,
+   "predecessor_name": "MARVELL TECHNOLOGY GROUP LTD",
+   "recovered_quarters": 41
+  },
+  {
+   "sid": "AZPN R735QTJ8XC9X",
+   "mapped_cik": 1897982,
+   "predecessor_cik": 929940,
+   "predecessor_name": "ASPENTECH Corp",
+   "recovered_quarters": 39
+  },
+  {
+   "sid": "XRX R735QTJ8XC9X",
+   "mapped_cik": 1770450,
+   "predecessor_cik": 108772,
+   "predecessor_name": "XEROX CORP",
+   "recovered_quarters": 36
+  },
+  {
+   "sid": "DIS R735QTJ8XC9X",
+   "mapped_cik": 1744489,
+   "predecessor_cik": 1001039,
+   "predecessor_name": "TWDC Enterprises 18 Corp.",
+   "recovered_quarters": 33
+  },
+  {
+   "sid": "CI R735QTJ8XC9X",
+   "mapped_cik": 1739940,
+   "predecessor_cik": 701221,
+   "predecessor_name": "Cigna Holding Co",
+   "recovered_quarters": 32
+  },
+  {
+   "sid": "PX R735QTJ8XC9X",
+   "mapped_cik": 1707925,
+   "predecessor_cik": 884905,
+   "predecessor_name": "LINDE INC",
+   "recovered_quarters": 28
+  },
+  {
+   "sid": "DOW R735QTJ8XC9X",
+   "mapped_cik": 1666700,
+   "predecessor_cik": 29915,
+   "predecessor_name": "DOW CHEMICAL CO /DE/",
+   "recovered_quarters": 26
+  },
+  {
+   "sid": "GOOG T1AZ164W5VTX",
+   "mapped_cik": 1652044,
+   "predecessor_cik": 1288776,
+   "predecessor_name": "GOOGLE INC.",
+   "recovered_quarters": 22
+  },
+  {
+   "sid": "FTI S5ITKJ2R97C5",
+   "mapped_cik": 1681459,
+   "predecessor_cik": 1135152,
+   "predecessor_name": "FMC TECHNOLOGIES INC",
+   "recovered_quarters": 20
+  },
+  {
+   "sid": "MIC T4K58ANZ9NXH",
+   "mapped_cik": 1845290,
+   "predecessor_cik": 1289790,
+   "predecessor_name": "Macquarie Infrastructure Corp",
+   "recovered_quarters": 20
+  },
+  {
+   "sid": "MVSN R735QTJ8XC9X",
+   "mapped_cik": 1675820,
+   "predecessor_cik": 1424454,
+   "predecessor_name": "Rovi Corp",
+   "recovered_quarters": 18
+  },
+  {
+   "sid": "SWX R735QTJ8XC9X",
+   "mapped_cik": 1692115,
+   "predecessor_cik": 92416,
+   "predecessor_name": "SOUTHWEST GAS CORP",
+   "recovered_quarters": 18
+  },
+  {
+   "sid": "MDT R735QTJ8XC9X",
+   "mapped_cik": 1613103,
+   "predecessor_cik": 64670,
+   "predecessor_name": "MEDTRONIC INC",
+   "recovered_quarters": 17
+  },
+  {
+   "sid": "WAG R735QTJ8XC9X",
+   "mapped_cik": 1618921,
+   "predecessor_cik": 104207,
+   "predecessor_name": "WALGREEN CO",
+   "recovered_quarters": 17
+  },
+  {
+   "sid": "IGT R735QTJ8XC9X",
+   "mapped_cik": 1619762,
+   "predecessor_cik": 353944,
+   "predecessor_name": "INTERNATIONAL GAME TECHNOLOGY",
+   "recovered_quarters": 16
+  },
+  {
+   "sid": "QDEL R735QTJ8XC9X",
+   "mapped_cik": 1906324,
+   "predecessor_cik": 353569,
+   "predecessor_name": "QUIDEL CORP /DE/",
+   "recovered_quarters": 15
+  },
+  {
+   "sid": "PRGO R735QTJ8XC9X",
+   "mapped_cik": 1585364,
+   "predecessor_cik": 820096,
+   "predecessor_name": "PERRIGO CO",
+   "recovered_quarters": 13
+  },
+  {
+   "sid": "LBTYA SZC2UFSQNK9X",
+   "mapped_cik": 1570585,
+   "predecessor_cik": 1316631,
+   "predecessor_name": "Liberty Global, Inc.",
+   "recovered_quarters": 12
+  },
+  {
+   "sid": "WRK W1V0C8ZTUBTX",
+   "mapped_cik": 1732845,
+   "predecessor_cik": 1636023,
+   "predecessor_name": "WRKCo Inc.",
+   "recovered_quarters": 10
+  },
+  {
+   "sid": "ANAT R735QTJ8XC9X",
+   "mapped_cik": 1801075,
+   "predecessor_cik": 904163,
+   "predecessor_name": "AMERICAN NATIONAL INSURANCE CO",
+   "recovered_quarters": 9
+  },
+  {
+   "sid": "ETN R735QTJ8XC9X",
+   "mapped_cik": 1551182,
+   "predecessor_cik": 31277,
+   "predecessor_name": "EATON CORP",
+   "recovered_quarters": 8
+  },
+  {
+   "sid": "AMSGA R735QTJ8XC9X",
+   "mapped_cik": 1678531,
+   "predecessor_cik": 895930,
+   "predecessor_name": "AMSURG CORP",
+   "recovered_quarters": 6
+  },
+  {
+   "sid": "ESRX R735QTJ8XC9X",
+   "mapped_cik": 1532063,
+   "predecessor_cik": 885721,
+   "predecessor_name": "EXPRESS SCRIPTS INC",
+   "recovered_quarters": 6
+  },
+  {
+   "sid": "NCNO XG5RG6P8JRZ9",
+   "mapped_cik": 1902733,
+   "predecessor_cik": 1566895,
+   "predecessor_name": "nCino OpCo, Inc.",
+   "recovered_quarters": 6
+  },
+  {
+   "sid": "NSAM VRUMQ141U739",
+   "mapped_cik": 1679688,
+   "predecessor_cik": 1597503,
+   "predecessor_name": "NorthStar Asset Management Group Inc.",
+   "recovered_quarters": 6
+  },
+  {
+   "sid": "APO UVBW6V6CV59H",
+   "mapped_cik": 1858681,
+   "predecessor_cik": 1411494,
+   "predecessor_name": "Apollo Asset Management, Inc.",
+   "recovered_quarters": 5
+  },
+  {
+   "sid": "GOOCV VP83T1ZUHROL",
+   "mapped_cik": 1652044,
+   "predecessor_cik": 1288776,
+   "predecessor_name": "GOOGLE INC.",
+   "recovered_quarters": 5
+  }
+ ],
+ "note": "predecessors whose time-zone convention was not measured default to UTC here (counting only)"
+}
