@@ -1,0 +1,102 @@
+{
+ "pbnq_rule": {
+  "min_excess": 0.01,
+  "min_t": 1.0
+ },
+ "results": {
+  "10 positions, 12y": {
+   "0.00": {
+    "qualified": 0.0025,
+    "pbnq": 0.0315,
+    "qualified_or_pbnq": 0.034
+   },
+   "0.01": {
+    "qualified": 0.0085,
+    "pbnq": 0.0545,
+    "qualified_or_pbnq": 0.063
+   },
+   "0.02": {
+    "qualified": 0.018,
+    "pbnq": 0.0925,
+    "qualified_or_pbnq": 0.1105
+   },
+   "0.03": {
+    "qualified": 0.0395,
+    "pbnq": 0.1355,
+    "qualified_or_pbnq": 0.175
+   },
+   "0.04": {
+    "qualified": 0.0705,
+    "pbnq": 0.197,
+    "qualified_or_pbnq": 0.2675
+   },
+   "0.05": {
+    "qualified": 0.1215,
+    "pbnq": 0.245,
+    "qualified_or_pbnq": 0.3665
+   },
+   "0.06": {
+    "qualified": 0.2005,
+    "pbnq": 0.2865,
+    "qualified_or_pbnq": 0.487
+   },
+   "0.08": {
+    "qualified": 0.433,
+    "pbnq": 0.2295,
+    "qualified_or_pbnq": 0.6625
+   },
+   "0.10": {
+    "qualified": 0.6505,
+    "pbnq": 0.1245,
+    "qualified_or_pbnq": 0.775
+   }
+  },
+  "20 positions, 12y": {
+   "0.00": {
+    "qualified": 0.0015,
+    "pbnq": 0.035,
+    "qualified_or_pbnq": 0.0365
+   },
+   "0.01": {
+    "qualified": 0.0075,
+    "pbnq": 0.075,
+    "qualified_or_pbnq": 0.0825
+   },
+   "0.02": {
+    "qualified": 0.0285,
+    "pbnq": 0.1315,
+    "qualified_or_pbnq": 0.16
+   },
+   "0.03": {
+    "qualified": 0.07,
+    "pbnq": 0.1965,
+    "qualified_or_pbnq": 0.2665
+   },
+   "0.04": {
+    "qualified": 0.154,
+    "pbnq": 0.26,
+    "qualified_or_pbnq": 0.414
+   },
+   "0.05": {
+    "qualified": 0.268,
+    "pbnq": 0.291,
+    "qualified_or_pbnq": 0.559
+   },
+   "0.06": {
+    "qualified": 0.4255,
+    "pbnq": 0.2675,
+    "qualified_or_pbnq": 0.693
+   },
+   "0.08": {
+    "qualified": 0.7165,
+    "pbnq": 0.1405,
+    "qualified_or_pbnq": 0.857
+   },
+   "0.10": {
+    "qualified": 0.8855,
+    "pbnq": 0.0495,
+    "qualified_or_pbnq": 0.935
+   }
+  }
+ }
+}

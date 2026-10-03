@@ -1162,3 +1162,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - Slot 3 unused; Holdout locked.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-03: H017 earnings-event continuation pre-registration proposed; STOP (D123, D124)
+
+- **Owner decisions:** Event Data v1 approved; no data purchase until a promising result; H017 = earnings-event continuation (proposal only).
+- **Proposal** (no returns of any kind):
+  - the top decile of 2-session SPY-adjusted reactions to SEC 8-K earnings releases;
+  - entry at E+2; 60-session hold;
+  - 10 slots ranked by reaction;
+  - controls: SPY, EW-H017, day-matched random-event seeds 1–5;
+  - a pre-declared event-level diagnostic;
+  - a frozen "Promising but Not Qualified" rule and decision tree.
+- **Mechanics from event timing only:** ≈ 40 entries/yr, ≈ 1.36%/yr costs at $100K, ≈ 90% invested.
+- **Power:** low (a +3%/yr true edge qualifies 4%, or reaches PbNQ / qualifies 18%).
+- **Checkpoint:** `docs/checkpoints/P2_CP13_H017_earnings_event_preregistration_proposal.md`.
+
+**STOP:** awaiting the owner. Slot 3 unused; Holdout locked.
