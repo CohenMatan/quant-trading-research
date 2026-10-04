@@ -147,8 +147,12 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if not names or len(set(names)) != len(names):
             raise ConfigError("S018 runs need distinct world names")
         real = [n for n in names if n == "real"]
-        if real and (names != ["real"] or kind != "research"):
-            raise ConfigError("the real world runs alone, as the research run")
+        trace = bool(p.get("trace"))
+        if real and (names != ["real"] or kind != ("infrastructure" if trace else "research")):
+            raise ConfigError("the real world runs alone: as the research run, or as an infrastructure finalist trace "
+                              "(params.trace, P3_spec.md section 15)")
+        if trace and not real:
+            raise ConfigError("a finalist trace runs on the real world")
         if not real and kind != "infrastructure":
             raise ConfigError("null-world runs are infrastructure (never strategy trials)")
     if scheme == config.CURRENT_SCHEME:

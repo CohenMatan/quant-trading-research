@@ -18,7 +18,7 @@ from scipy import stats
 from . import config
 
 SPEC = "research/phase3/P3_spec.md"
-SPEC_SHA256 = "TO_BE_PINNED"
+SPEC_SHA256 = "d7fa11235e6bd8d7183f6bc78e1f0b78b847cd41fb94d1898efaae98ceb6ea81"
 CONFIG_LIST_SHA256 = "76b3dd3866bc1d0152426d68d1d17d88fce2a13c8f1c98189fb5817b6cba7016"
 N_CONFIGS = 1533
 PROGRAMME, CYCLE, HYPOTHESIS = "P3", "P3C1", "H018"

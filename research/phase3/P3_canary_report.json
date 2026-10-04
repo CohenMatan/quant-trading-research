@@ -1,0 +1,531 @@
+{
+ "runs": {
+  "E984-02": {
+   "worlds": 5,
+   "books": 7665,
+   "sessions": 1975,
+   "algorithm_wall_s": 696.1,
+   "runner_runtime_s": 869.2,
+   "shared_s": 304.7,
+   "per_world_total_s": 50.8,
+   "clock_s": {
+    "bars": 37.01,
+    "corp": 13.37,
+    "engine": 25.69,
+    "features": 82.67,
+    "history": 136.12,
+    "masks": 35.51,
+    "pipeline": 2.38,
+    "select": 20.74,
+    "stats": 2.02
+   },
+   "max_rss_mb": 4109.9,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 723,
+   "chunks": 1,
+   "y_lines": 0,
+   "wf_lines": 0,
+   "status": "completed",
+   "real_mask_digest": null,
+   "real_mask_cells": null,
+   "loaded_histories": 6998
+  },
+  "E984-03": {
+   "worlds": 100,
+   "books": 153300,
+   "sessions": 1975,
+   "algorithm_wall_s": 1853.2,
+   "runner_runtime_s": 1915.7,
+   "shared_s": 494.2,
+   "per_world_total_s": 992.9,
+   "clock_s": {
+    "bars": 34.92,
+    "corp": 255.58,
+    "engine": 508.31,
+    "features": 79.35,
+    "history": 95.57,
+    "masks": 28.83,
+    "pipeline": 50.22,
+    "select": 404.0,
+    "stats": 30.35
+   },
+   "max_rss_mb": 4316.6,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 4050,
+   "chunks": 1,
+   "y_lines": 0,
+   "wf_lines": 0,
+   "status": "completed",
+   "real_mask_digest": null,
+   "real_mask_cells": null,
+   "loaded_histories": 5520
+  },
+  "E984-05": {
+   "worlds": 100,
+   "books": 153300,
+   "sessions": 1975,
+   "algorithm_wall_s": 1940.0,
+   "runner_runtime_s": 2171.3,
+   "shared_s": 526.0,
+   "per_world_total_s": 1033.0,
+   "clock_s": {
+    "bars": 37.13,
+    "corp": 268.5,
+    "engine": 519.38,
+    "features": 81.22,
+    "history": 106.62,
+    "masks": 32.54,
+    "pipeline": 59.23,
+    "select": 421.25,
+    "stats": 33.11
+   },
+   "max_rss_mb": 4438.4,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 2259310,
+   "chunks": 16,
+   "y_lines": 1533,
+   "wf_lines": 100,
+   "status": "completed",
+   "real_mask_digest": "fcf734a273683bdca299456132e357e72f10ae136614a36e967dae82e1bca1cb",
+   "real_mask_cells": 575013700,
+   "loaded_histories": 5520
+  },
+  "E984-06": {
+   "worlds": 1,
+   "books": 1533,
+   "sessions": 1975,
+   "algorithm_wall_s": 617.0,
+   "runner_runtime_s": 630.9,
+   "shared_s": 297.4,
+   "per_world_total_s": 9.7,
+   "clock_s": {
+    "bars": 35.83,
+    "corp": 3.51,
+    "engine": 4.92,
+    "features": 78.26,
+    "history": 148.21,
+    "masks": 31.6,
+    "pipeline": 0.5,
+    "select": 3.86,
+    "stats": 0.43
+   },
+   "max_rss_mb": 4364.4,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 699,
+   "chunks": 1,
+   "y_lines": 0,
+   "wf_lines": 0,
+   "status": "completed",
+   "real_mask_digest": "9915b1e93035649c1d4555bc34c2e6b4a09dfc337c445d5b301e8beace2ee558",
+   "real_mask_cells": 575014605,
+   "loaded_histories": 8371
+  },
+  "E984-07": {
+   "worlds": 100,
+   "books": 153300,
+   "sessions": 1975,
+   "algorithm_wall_s": 1644.0,
+   "runner_runtime_s": 1706.5,
+   "shared_s": 446.3,
+   "per_world_total_s": 934.2,
+   "clock_s": {
+    "bars": 42.58,
+    "corp": 256.2,
+    "engine": 471.94,
+    "features": 74.99,
+    "history": 43.08,
+    "masks": 29.46,
+    "pipeline": 50.12,
+    "select": 382.13,
+    "stats": 30.02
+   },
+   "max_rss_mb": 4441.0,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 2259313,
+   "chunks": 16,
+   "y_lines": 1533,
+   "wf_lines": 100,
+   "status": "completed",
+   "real_mask_digest": "418aa1efe55da6fb8b910da4e10dd5d5d300b2707dba78e1310dd345bba87d80",
+   "real_mask_cells": 574991318,
+   "loaded_histories": 2282
+  },
+  "E984-08": {
+   "worlds": 1,
+   "books": 1533,
+   "sessions": 1975,
+   "algorithm_wall_s": 484.2,
+   "runner_runtime_s": 651.2,
+   "shared_s": 185.3,
+   "per_world_total_s": 9.6,
+   "clock_s": {
+    "bars": 38.65,
+    "corp": 3.73,
+    "engine": 4.86,
+    "features": 72.77,
+    "history": 40.71,
+    "masks": 29.44,
+    "pipeline": 0.51,
+    "select": 3.8,
+    "stats": 0.4
+   },
+   "max_rss_mb": 4102.9,
+   "max_eligible": 1331,
+   "stocks_indexed": 2282,
+   "published_chars": 697,
+   "chunks": 1,
+   "y_lines": 0,
+   "wf_lines": 0,
+   "status": "completed",
+   "real_mask_digest": "418aa1efe55da6fb8b910da4e10dd5d5d300b2707dba78e1310dd345bba87d80",
+   "real_mask_cells": 574991318,
+   "loaded_histories": 2282
+  }
+ },
+ "marginal_wall_s_per_world": 12.440709787808597,
+ "fixed_wall_s": 569.2003491904603,
+ "marginal_runtime_s_per_world": 12.463946084992958,
+ "fixed_runtime_s": 686.3947586511939,
+ "determinism": {
+  "worlds_compared": 100,
+  "all_identical": true,
+  "details": [
+   {
+    "world": "identity",
+    "runs": [
+     "E984-02",
+     "E984-03",
+     "E984-05",
+     "E984-06",
+     "E984-07",
+     "E984-08"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-02": [
+      478671,
+      458827,
+      4627
+     ],
+     "E984-03": [
+      478671,
+      458827,
+      4627
+     ],
+     "E984-05": [
+      478671,
+      458827,
+      4627
+     ],
+     "E984-06": [
+      478671,
+      458827,
+      4627
+     ],
+     "E984-07": [
+      478671,
+      458827,
+      4627
+     ],
+     "E984-08": [
+      478671,
+      458827,
+      4627
+     ]
+    }
+   },
+   {
+    "world": "perm1",
+    "runs": [
+     "E984-02",
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-02": [
+      478735,
+      458937,
+      4542
+     ],
+     "E984-03": [
+      478735,
+      458937,
+      4542
+     ],
+     "E984-05": [
+      478735,
+      458937,
+      4542
+     ],
+     "E984-07": [
+      478735,
+      458937,
+      4542
+     ]
+    }
+   },
+   {
+    "world": "perm10",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478815,
+      458870,
+      4722
+     ],
+     "E984-05": [
+      478815,
+      458870,
+      4722
+     ],
+     "E984-07": [
+      478815,
+      458870,
+      4722
+     ]
+    }
+   },
+   {
+    "world": "perm11",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478841,
+      458917,
+      4723
+     ],
+     "E984-05": [
+      478841,
+      458917,
+      4723
+     ],
+     "E984-07": [
+      478841,
+      458917,
+      4723
+     ]
+    }
+   },
+   {
+    "world": "perm12",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478768,
+      458927,
+      4604
+     ],
+     "E984-05": [
+      478768,
+      458927,
+      4604
+     ],
+     "E984-07": [
+      478768,
+      458927,
+      4604
+     ]
+    }
+   },
+   {
+    "world": "perm13",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478824,
+      458847,
+      4745
+     ],
+     "E984-05": [
+      478824,
+      458847,
+      4745
+     ],
+     "E984-07": [
+      478824,
+      458847,
+      4745
+     ]
+    }
+   },
+   {
+    "world": "perm14",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478687,
+      458927,
+      4499
+     ],
+     "E984-05": [
+      478687,
+      458927,
+      4499
+     ],
+     "E984-07": [
+      478687,
+      458927,
+      4499
+     ]
+    }
+   },
+   {
+    "world": "perm15",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478584,
+      458897,
+      4461
+     ],
+     "E984-05": [
+      478584,
+      458897,
+      4461
+     ],
+     "E984-07": [
+      478584,
+      458897,
+      4461
+     ]
+    }
+   },
+   {
+    "world": "perm16",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478569,
+      458938,
+      4377
+     ],
+     "E984-05": [
+      478569,
+      458938,
+      4377
+     ],
+     "E984-07": [
+      478569,
+      458938,
+      4377
+     ]
+    }
+   },
+   {
+    "world": "perm17",
+    "runs": [
+     "E984-03",
+     "E984-05",
+     "E984-07"
+    ],
+    "identical": true,
+    "counts": {
+     "E984-03": [
+      478567,
+      458887,
+      4475
+     ],
+     "E984-05": [
+      478567,
+      458887,
+      4475
+     ],
+     "E984-07": [
+      478567,
+      458887,
+      4475
+     ]
+    }
+   }
+  ]
+ },
+ "real_mask_digests": [
+  {
+   "pair": [
+    "E984-05",
+    "E984-06"
+   ],
+   "equal": false,
+   "cells": [
+    575013700,
+    575014605
+   ]
+  },
+  {
+   "pair": [
+    "E984-07",
+    "E984-08"
+   ],
+   "equal": true,
+   "cells": [
+    574991318,
+    574991318
+   ]
+  }
+ ],
+ "plan": {
+  "runs": 7,
+  "worlds": [
+   100,
+   100,
+   100,
+   100,
+   100,
+   100,
+   1
+  ],
+  "projected_runtime_s": [
+   1932.7893671504899,
+   1932.7893671504899,
+   1932.7893671504899,
+   1932.7893671504899,
+   1932.7893671504899,
+   1932.7893671504899,
+   698.8587047361868
+  ],
+  "projected_total_h": 3.415443029899757
+ },
+ "note": "dummy masks (random, seeded) over the real universe: timing, memory and output only; the real search has fewer entries than the dense dummy masks, so per-world costs are upper bounds"
+}
