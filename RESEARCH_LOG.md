@@ -1382,3 +1382,27 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Nothing real computed:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked.
 
 **STOP:** awaiting explicit approval of the corrected frozen specification.
+
+## 2026-10-04: P4-CP3R2 H019 implementation fidelity and null readiness (nothing run); STOP (D144)
+
+- **Owner:** conditional approval; one more fidelity checkpoint before any H019 run, focused on the published signal mechanics and the null.
+- **Trend factor, verified against the Chen-Zimmermann replication code:**
+  - partial moving-average windows for young stocks (the author notes the paper is silent);
+  - Stata-style omission of collinear regressors;
+  - a 12-month average of past coefficients. We require all 12, as in the paper; OSAP's start-up exception is disclosed.
+  - QuantConnect's 1998+ history gives established stocks full 1,000-day windows.
+- **Frog-in-the-pan conventions** (independent records): zero-return days count in the denominator; PRET quintiles then ID; the invented 200-day minimum is removed.
+- **Window fixed mechanically:** 83 decisions, 2011-01 → 2017-11 (the first trend-factor score needs 12 regressions starting 2010-01).
+- **Built:**
+  - a complete point-in-time pipeline (`qr_xs.Panel/Features/run_world`), checked against a slow reference;
+  - leakage canaries (future prices, next-month returns, truncation, late entrants, coefficient chronology);
+  - a null that permutes each stock's whole feature vector within history strata and **re-estimates the trend factor in every world**.
+- **End-to-end synthetic study:**
+  - false-promotion rates about 0–1%;
+  - about 83 effective monthly observations;
+  - 50% detectable top-decile edges: about 4–12% a year (S1), 4–15% (S3);
+  - a 1–3% edge stays undetectable.
+- **Spec v2** (`research/phase4/P4_xs_spec.md`, SHA-256 15fb0451…) pinned. Verdict: READY FOR H019 RUNS, subject to owner approval.
+- **Nothing real:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked.
+
+**STOP:** awaiting explicit approval before any H019 execution.

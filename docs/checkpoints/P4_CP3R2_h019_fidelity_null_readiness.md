@@ -242,7 +242,55 @@ Close of month-end t+1:
 
 ## 22. Updated power figures
 
-E2E_RESULTS
+**End-to-end synthetic study of the actual pipeline** (`P4_xs_e2e.py`).
+- **Panels:** synthetic daily panels of 1,100 stocks with IPOs and delistings. They have 48 history months plus research months 2010-01 → 2017-12, and 83 decisions.
+- **Three IC-noise scenarios:** the no-edge 1-month IC volatility of S1 is 0.064 / 0.113 / 0.157 (low / mid / high).
+- **Null:** 1,000 tethered worlds per scenario, each re-running the complete procedure.
+- **Independent check:** 100 independent no-edge panels per scenario, each judged with c.
+- **Planted edges:** 25 panels per edge level per signal. Each signal gets an edge in its own information, i.e. a monthly drift proportional to the score known at the month-end.
+
+**Null calibration and false promotion**
+
+| | Low | Mid | High |
+|---|---|---|---|
+| c (1%, max of 5 statistics, R = 1,000) | 2.72 | 2.67 | 2.85 |
+| Tethered null: any statistic > c | 0.9% | 0.9% | 0.9% |
+| Tethered null: complete rule promotes S2 / S3 | 0.0% | 0.0% | 0.0% |
+| Tethered null: complete rule passes S1 | 0.0% | 0.0% | 0.0% |
+| Null t-statistic dispersion (S1 / S2 / S3; ideal 1.0) | 1.00 / 1.00 / 1.05 | 0.98 / 0.99 / 1.03 | 0.98 / 0.98 / 1.04 |
+| **Independent no-edge panels:** any statistic > c | 3% | 0% | 1% |
+| Independent: complete rule promotes S2 / S3 | 1% | 0% | 0% |
+| Independent: complete rule passes S1 | 1% | 0% | 0% |
+
+- **Pooled independent-panel rate:** 4 of 300 = 1.3% (95% interval ≈ 0.4–3.4%), consistent with the 1% design.
+- **Pooled false promotion of S2 / S3:** 1 of 300.
+- Panel-to-panel variation is expected: here one panel's c judges other panels. In H019, c comes from the same data it judges.
+
+**Effective sample size**
+- Next-month ICs are essentially uncorrelated over time: lag-1 autocorrelation ≈ −0.01, and the variance-inflation factor is ≈ 0.94 (sampling noise around 1).
+- **So all ≈ 83 monthly decisions count as independent observations.** The 3-month design gave ≈ 35.
+
+**Minimum detectable effects (top-decile annualised demeaned excess)**
+
+| Signal | Scenario | Statistical gate, 50% | Statistical gate, 80% | **Complete rule, 50%** | **Complete rule, 80%** |
+|---|---|---|---|---|---|
+| S1 Plain Momentum | Low | 2.8% | 4.4% | **4.1%** | 7.1% |
+| | Mid | 7.2% | 10.3% | **7.7%** | 11.2% |
+| | High | 10.9% | 15.3% | **12.3%** | 17.2% |
+| S3 Trend Factor (fitted inside each world) | Low | 3.3% | 4.6% | **4.3%** | 6.6% |
+| | Mid | 5.8% | 8.3% | **9.9%** | 12.5% |
+| | High | 9.4% | 14.4% | **14.7%** | 21.1% |
+
+- **S3's complete-rule MDE is higher than its statistical one** because the planted trend information overlaps momentum, so the incremental gate binds. Fitting 11 coefficients each month adds noise as well.
+- **The S2 incremental (smoothness) test,** with a momentum backbone of ≈ 11% a year top-decile excess:
+  - with no smoothness edge, S2 is never promoted (0% in every scenario), although its standalone t passes 72–100% of the time on the backbone. **The incremental gate works.**
+  - with the smallest planted smoothness edge (≈ +2% a year on S2's top decile), the incremental test detects it in **100%** of panels, and the complete rule promotes S2 in **100% / 96% / 76%**.
+  - With a **weak** momentum backbone, S2's standalone gates bind (P4-CP3R: ≤ 19% complete-rule power in the mid / high monthly-model scenarios). This is reported, not changed.
+
+**Comparison with the earlier monthly-model study (P4-CP3R).** S1's complete-rule 50% MDE was 4.5 / 8.2 / 11.4%; the end-to-end figures are 4.1 / 7.7 / 12.3%. The conclusions are unchanged:
+- edges of roughly **4–12% a year** are detectable;
+- **a realistic 1–3% a year edge is not**;
+- the pre-registered failure interpretation therefore stands.
 
 ## 23. Exact Smooth Momentum null procedure
 
@@ -358,7 +406,7 @@ From P4-CP3R (`P4_xs_power_r`; synthetic, before any real data):
 
 | Item | Estimate |
 |---|---|
-| Local, synthetic (N = 1,100, 83 decisions, 95 regressions) | ≈ 0.6–0.7 s per world, including all regressions; ≈ 11 min per 1,000 worlds |
+| Local, synthetic (N = 1,100, 83 decisions, 95 regressions) | ≈ 0.65 s per world, including all regressions; 1,000 worlds in ≈ 11 min on one core (measured: 651–655 s per scenario) |
 | Per null run on the B2-8 node | ≈ 25–40 min, including the data pass |
 | Data pass | 1,000-bar histories for ≈ 2,300–2,500 stocks; daily arrays of ≈ 3,000 sessions; ≈ 150–200 MB |
 | Canary and real run | ≈ 20 min each |
@@ -372,7 +420,7 @@ From P4-CP3R (`P4_xs_power_r`; synthetic, before any real data):
 
 | Item | Value |
 |---|---|
-| Pre-registration | `research/phase4/P4_xs_spec.md` **v2**, SHA-256 `SPEC_HASH` |
+| Pre-registration | `research/phase4/P4_xs_spec.md` **v2**, SHA-256 `15fb0451d535ae31d234822ad60f58230f580b23a6683f2df67936429a47ca1e` |
 | Pin | `qresearch.p4xs.SPEC_SHA256` and `CONSTANTS` (window (2010, 1) / (2011, 1) / (2017, 11), 83 decisions, HZZ lags, 12 regressions, ID minimum 1, PRET staleness 5, deciles 10, momentum quintiles 5, monotonicity quintiles 5 and ρ 0.90, floor 3%, blocks, α 1%) |
 | Tests | `tests/test_p4xs_spec.py` |
 | Previous versions | v1 (`3a0e3643…`, P4-CP3R) and the P4-CP3 draft are superseded and kept in git history |
