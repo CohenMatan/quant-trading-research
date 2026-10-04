@@ -100,6 +100,18 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         missing = {"qr_p3_engine.py", "qr_p3_features.py", "qr_p3_grammar.py", "qr_p3_pipeline.py"} - set(files)
         if missing:
             raise experiment.ConfigError(f"Phase 3 engine modules missing: {sorted(missing)}")
+    if "qr_xs" in files["main.py"]:   # H019 cross-sectional modules (qr_xs, qr_xs_diag, qr_xs_panel), only when imported
+        lean = "src/qresearch/lean"
+        if commit:
+            for p in gitutil.list_files(commit, lean):
+                if Path(p).name.startswith("qr_xs") and p.endswith(".py"):
+                    files[Path(p).name] = gitutil.show_file(commit, p)
+        else:
+            for p in sorted((config.REPO_ROOT / lean).glob("qr_xs*.py")):
+                files[p.name] = p.read_text(encoding="utf-8")
+        missing = {"qr_xs.py", "qr_xs_diag.py", "qr_xs_panel.py"} - set(files)
+        if missing:
+            raise experiment.ConfigError(f"H019 modules missing: {sorted(missing)}")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 

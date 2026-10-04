@@ -155,6 +155,36 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("a finalist trace runs on the real world")
         if not real and kind != "infrastructure":
             raise ConfigError("null-world runs are infrastructure (never strategy trials)")
+    if cfg["strategy_id"] in ("X985", "S020"):
+        # H019 (research/phase4/P4_xs_spec.md v2; owner 2026-10-04): the frozen window and universe; nothing after
+        # 2017-12-31; X985 = the plumbing canary only; S020 = null batches (infrastructure) and the one real evaluation
+        # (research), every S020 run only with explicit owner approval
+        from . import p4xs
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2010-01-04", "2017-12-31", "2009-07-01")
+                or not u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20):
+            raise ConfigError("H019 runs use 2010-01-04..2017-12-31, warm-up 2009-07-01 and the data-v1 universe "
+                              "(>= $2B, >= $5, ADV20 >= $5M, SEC correction layer)")
+        mode = p.get("mode")
+        if cfg["strategy_id"] == "X985":
+            if mode != "canary" or kind != "infrastructure":
+                raise ConfigError("X985 runs only the H019 plumbing canary (infrastructure)")
+        else:
+            if cfg.get("hypothesis_id") != "H019" or cfg.get("programme") != "P4" or not cfg.get("owner_approval_required"):
+                raise ConfigError("S020 runs belong to H019 / P4 and need owner_approval_required")
+            if mode == "null":
+                if tuple(p.get("seeds", ())) not in p4xs.NULL_BATCHES or kind != "infrastructure":
+                    raise ConfigError(f"S020 null runs are infrastructure batches {p4xs.NULL_BATCHES}")
+            elif mode == "real":
+                if kind != "research" or not all(k in p for k in ("threshold_c", "threshold_commit",
+                                                                   "null_result_sha256", "spec_sha256")):
+                    raise ConfigError("the S020 real evaluation is the research run and carries the pinned null "
+                                      "provenance (threshold_c, threshold_commit, null_result_sha256, spec_sha256)")
+            else:
+                raise ConfigError("S020 modes: null or real")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
@@ -162,7 +192,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018"):
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018", "S020"):
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")

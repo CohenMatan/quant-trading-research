@@ -1406,3 +1406,22 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Nothing real:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked.
 
 **STOP:** awaiting explicit approval before any H019 execution.
+
+## 2026-10-04: H019 executed — plumbing canary, 5,000 null worlds, frozen threshold, ONE real evaluation; P4-CP4: NO SIGNAL QUALIFIED; STOP (D145–D149)
+
+- **Owner (D145):** authorised the final H019 run under the frozen spec v2, in a fixed order, with S1 as a replication check and prescribed wording.
+- **Plumbing / fidelity canary (X985):** E985-01..04 found technical defects, fixed without touching any signal definition or rule:
+  - a mis-specified regression-span check;
+  - S3 prices at spin-offs (QuantConnect's dividend feed carries spin-offs unlabelled, so CRSP's spin-off factor cannot be reproduced without an invented rule: split-feed prices kept, exposure 1.46% disclosed);
+  - one vendor split / price-factor inconsistency (BTU 2015), fixed by building every price from raw bars and QuantConnect's own split and dividend feeds.
+  - **E985-05 passed 14 / 14** (truncation exact, slow recomputation exact, planted response IC = 1, placebo |t| ≤ 1.73, determinism).
+- **Null:** E020-01..05, 5,000 / 5,000 worlds, none failed or retried. **c = 2.8715**, committed and pinned in 1dc6b07 before the real run (F > c 0.98%; full-rule false promotion 0 / 5,000).
+- **Real evaluation E020-06, once:** outcome **none**.
+  - Top decile vs the average stock: S1 −2.2%, S2 −1.2%, S3 −2.9% a year.
+  - IC t 0.22 / 0.34 / 0.12.
+  - S2's smoothness adds nothing detectable within momentum quintiles (t 1.31); S3 neither predicts nor adds (t 0.09) and is not merely momentum (correlation 0.23).
+  - F = 1.31 vs c = 2.87. Momentum not reproduced.
+- **Verdict: NO SIGNAL QUALIFIED FOR PORTFOLIO RESEARCH.** "No technical stock-selection signal large enough to satisfy the project's detection and economic-significance requirements was found."
+- **Untouched:** no 2018–2021, no Holdout, no portfolio, no paid data.
+
+**STOP:** awaiting the owner (recommendation: close H019 and the technical stock-selection line as No Production Candidate Found).

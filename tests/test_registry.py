@@ -139,7 +139,7 @@ def test_d069_counts_on_the_real_registry():
 
     def pre_c02(ids):
         return [e for e in ids if not str(json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
-                                          .get("cycle", "")).startswith(("C02", "C03", "P2", "P3"))]   # C02 and later cycles add their own
+                                          .get("cycle", "")).startswith(("C02", "C03", "P2", "P3", "P4"))]   # C02 and later cycles add their own
     cats = a["by_category"]
     assert (len(pre_c02(cats["selection"])), len(pre_c02(cats["robustness"])), len(pre_c02(cats["validation"]))) \
         == (19, 15, 1)
