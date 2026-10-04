@@ -31,6 +31,11 @@ NULL_SEEDS = tuple(range(1, 501))                 # primary: within-date permuta
 BLOCK_SEEDS = tuple(range(1001, 1101))            # secondary diagnostic: 63-session block permutation (R = 100)
 BLOCK = 63
 OOS_G_SE_MIN = 1.0
+# The null calibration, FROZEN before the real search (D137): computed by research/phase3/P3_eval.py null from the
+# 500 primary null worlds E018-01..05 and committed before E018-07 started; immutable for Phase 3.
+NULL_RESULT = "research/phase3/P3_null_result.json"
+NULL_RESULT_SHA256 = "46c92d12858fd7df67776c0798c2e459be4fceabf392cf88ee921438eac5d3a1"
+TAU = 0.028423616730466103
 
 
 def spec_hash() -> str:
