@@ -32,15 +32,15 @@ class P3Engine(QRAlgorithm):
 
     def qr_initialize(self):
         p = self.qr_params
-        self.mode = p["mode"]
-        if self.mode not in ("fidelity", "canary", "search"):
-            raise Exception(f"X984: unknown mode {self.mode!r}")
+        self.p3_mode = p["mode"]
+        if self.p3_mode not in ("fidelity", "canary", "search"):
+            raise Exception(f"X984: unknown mode {self.p3_mode!r}")
         if self.qr_sec is None:
             raise Exception("X984 needs universe.sec_corrections (frozen data infrastructure v1)")
         if self.qr["end"] > "2017-12-31":
             raise Exception("X984: Phase 3 engine runs end on or before 2017-12-31")
         self._qr_log_budget = 400000
-        self.clock = {k: 0.0 for k in ("corp", "bars", "history", "features", "masks", "select", "engine", "stats",
+        self.p3_clock = {k: 0.0 for k in ("corp", "bars", "history", "features", "masks", "select", "engine", "stats",
                                        "pipeline")}
         self.t_start = time.perf_counter()
         self.g_of, self.sym_of, self.sid_of = {}, {}, []
@@ -50,35 +50,35 @@ class P3Engine(QRAlgorithm):
         self.has_bar = np.zeros(MAXG, dtype=bool)
         self.last_real_sess = np.full(MAXG, -10 ** 6, dtype=np.int64)
         self.div_today = np.zeros(MAXG)
-        self.warned = set()
-        self.done = None
+        self.p3_warned = set()
+        self.p3_done = None
         self.day_index = 0
         self.slots, self.hold = int(p.get("slots", 10)), int(p.get("hold", 63))
         self.spy_prev = None
         self.spy_div = 0.0
         self.spy_level = 1.0
         self.ew_level = 1.0
-        self.st = {"official_sessions": 0, "max_eligible": 0, "loaded_histories": 0, "history_calls": 0,
+        self.p3_st = {"official_sessions": 0, "max_eligible": 0, "loaded_histories": 0, "history_calls": 0,
                    "replay_unknown_sid": 0, "replay_not_free": 0, "replay_blocked": 0}
-        if self.mode == "fidelity":
+        if self.p3_mode == "fidelity":
             from qr_p3_replay import SHA256 as RSHA, load_replay
             r = load_replay()
-            self.st["replay_sha256"] = RSHA
+            self.p3_st["replay_sha256"] = RSHA
             self.replay_books = r["books"]
-            self.schedule = {}
+            self.p3_schedule = {}
             for b, d, sid in r["entries"]:
-                self.schedule.setdefault(d, []).append((b, sid))
+                self.p3_schedule.setdefault(d, []).append((b, sid))
             self.hold = int(p.get("hold", 60))
-            self.worlds = [dict(name="fidelity", perm=None)]
-            self.books = [EN.Books(len(self.replay_books), self.slots, self.hold, float(self.qr["cash"]))]
-            self.books[0].fills = []
+            self.p3_worlds = [dict(name="fidelity", perm=None)]
+            self.p3_books = [EN.Books(len(self.replay_books), self.slots, self.hold, float(self.qr["cash"]))]
+            self.p3_books[0].fills = []
             self.fill_day = []
         else:
-            self.configs = GR.enumerate_configs()
-            self.table = FE.SignalTable(self.configs, GR.PRIMARY_TYPES, GR.CONFIRM_TYPES, GR.RISK_LEVELS)
-            n = len(self.configs)
-            self.worlds = [dict(name=w["name"], seed=w.get("seed"), block=w.get("block")) for w in p["worlds"]]
-            self.books = [EN.Books(n, self.slots, self.hold, float(self.qr["cash"])) for _ in self.worlds]
+            self.p3_configs = GR.enumerate_configs()
+            self.p3_table = FE.SignalTable(self.p3_configs, GR.PRIMARY_TYPES, GR.CONFIRM_TYPES, GR.RISK_LEVELS)
+            n = len(self.p3_configs)
+            self.p3_worlds = [dict(name=w["name"], seed=w.get("seed"), block=w.get("block")) for w in p["worlds"]]
+            self.p3_books = [EN.Books(n, self.slots, self.hold, float(self.qr["cash"])) for _ in self.p3_worlds]
             self.Cw = np.full((MAXG, W), np.nan)
             self.Hw = np.full((MAXG, W), np.nan)
             self.Lw = np.full((MAXG, W), np.nan)
@@ -87,15 +87,15 @@ class P3Engine(QRAlgorithm):
             self.loaded = np.zeros(MAXG, dtype=bool)
             self.spy_hist = []
             self.dummy_density = np.random.default_rng(20261004).uniform(0.02, 0.5, n)
-            self.stats = [self._new_stats(n, w["name"] == "real") for w in self.worlds]
-        nb = len(self.books[0].cash)
-        self.eq_prev = [np.full(len(b.cash), float(self.qr["cash"])) for b in self.books]
+            self.p3_stats = [self._new_stats(n, w["name"] == "real") for w in self.p3_worlds]
+        nb = len(self.p3_books[0].cash)
+        self.eq_prev = [np.full(len(b.cash), float(self.qr["cash"])) for b in self.p3_books]
         self.spy_peak, self.spy_dd = 1.0, 0.0
         self.spy_maxdd = np.zeros(len(YEARS))
-        self.sessions = np.zeros(len(YEARS))
+        self.p3_sessions = np.zeros(len(YEARS))
         self.ew_logex = np.zeros(len(YEARS))
-        self.st["books_per_world"] = nb
-        self.st["worlds"] = len(self.worlds)
+        self.p3_st["books_per_world"] = nb
+        self.p3_st["worlds"] = len(self.p3_worlds)
 
     def _new_stats(self, n, monthly):
         z = lambda: np.zeros((n, len(YEARS)))
@@ -122,7 +122,7 @@ class P3Engine(QRAlgorithm):
 
     def _held_g(self):
         out = set()
-        for b in self.books:
+        for b in self.p3_books:
             out.update(b.sid[b.state != EN.EMPTY].tolist())
         return out
 
@@ -136,7 +136,7 @@ class P3Engine(QRAlgorithm):
     # ---------------------------------------------------------------- windows (search / canary modes)
     def on_securities_changed(self, changes):
         super().on_securities_changed(changes)
-        if self.mode == "fidelity":
+        if self.p3_mode == "fidelity":
             return
         t0 = time.perf_counter()
         for sec in changes.removed_securities:
@@ -148,7 +148,7 @@ class P3Engine(QRAlgorithm):
         for i in range(0, len(add), 200):
             part = add[i:i + 200]
             h = self.history(part, W, Resolution.DAILY, data_normalization_mode=DataNormalizationMode.SCALED_RAW)
-            self.st["history_calls"] += 1
+            self.p3_st["history_calls"] += 1
             rows = {}
             if h is not None and not h.empty:
                 for (sym, tt), r in h[["open", "high", "low", "close", "volume"]].iterrows():
@@ -162,11 +162,11 @@ class P3Engine(QRAlgorithm):
                     self.Hw[g, k], self.Lw[g, k], self.Cw[g, k], self.Vw[g, k] = hh, ll, cc, vv
                 self.ptr[g] = len(v) % W
                 self.loaded[g] = True
-                self.st["loaded_histories"] += 1
-        self.clock["history"] += time.perf_counter() - t0
+                self.p3_st["loaded_histories"] += 1
+        self.p3_clock["history"] += time.perf_counter() - t0
 
     def _rescale(self, g, pf, vf):
-        if self.mode != "fidelity":
+        if self.p3_mode != "fidelity":
             self.Cw[g] *= pf
             self.Hw[g] *= pf
             self.Lw[g] *= pf
@@ -187,7 +187,7 @@ class P3Engine(QRAlgorithm):
             f = float(sp.split_factor)
             if g is None:
                 continue
-            for b in self.books:
+            for b in self.p3_books:
                 b.split(g, f, float(sp.reference_price))
             self.last_close[g] *= f
             self._rescale(g, f, 1.0 / f)
@@ -199,7 +199,7 @@ class P3Engine(QRAlgorithm):
             g = self._g(sym, create=False)
             if g is None:
                 continue
-            for b in self.books:
+            for b in self.p3_books:
                 b.dividend(g, amt)
             self.div_today[g] += amt
             if ref > 0:
@@ -210,40 +210,40 @@ class P3Engine(QRAlgorithm):
             if g is None:
                 continue
             if dl.type == DelistingType.WARNING:
-                self.warned.add(g)
+                self.p3_warned.add(g)
             else:
-                for b in self.books:
+                for b in self.p3_books:
                     b.delist(g, float(self.last_close[g]))
-        self.clock["corp"] += time.perf_counter() - t0
+        self.p3_clock["corp"] += time.perf_counter() - t0
         super().on_data(data)
         if data.bars.count == 0 or self.time.hour < 9:
             return
         today = self.time.date()
-        if self.done == today or self._qr_session_day != today:
+        if self.p3_done == today or self._qr_session_day != today:
             return
-        self.done = today
+        self.p3_done = today
         t0 = time.perf_counter()
         self.has_bar[:] = False
         spy_bar = data.bars[self.spy] if data.bars.contains_key(self.spy) else None
         for sym, bar in data.bars.items():
             if bar.is_fill_forward or sym == self.spy:
                 continue
-            g = self._g(sym, create=self.mode != "fidelity")
+            g = self._g(sym, create=self.p3_mode != "fidelity")
             if g is None:
                 continue
             self.prev_close[g] = self.last_close[g]
             self.open_px[g], self.last_close[g] = float(bar.open), float(bar.close)
             self.has_bar[g] = True
             self.last_real_sess[g] = self._qr_session
-            if self.mode != "fidelity" and self.loaded[g]:
+            if self.p3_mode != "fidelity" and self.loaded[g]:
                 k = self.ptr[g]
                 self.Cw[g, k], self.Hw[g, k], self.Lw[g, k] = float(bar.close), float(bar.high), float(bar.low)
                 self.Vw[g, k] = float(bar.volume)
                 self.ptr[g] = (k + 1) % W
-        self.clock["bars"] += time.perf_counter() - t0
+        self.p3_clock["bars"] += time.perf_counter() - t0
         warm = in_warmup(today, self.qr_official_start)
         spy_close = float(spy_bar.close) if spy_bar is not None else None
-        if self.mode != "fidelity" and spy_close is not None:
+        if self.p3_mode != "fidelity" and spy_close is not None:
             self.spy_hist.append(spy_close)
             self.spy_hist = self.spy_hist[-W:]
         if not warm:
@@ -263,8 +263,8 @@ class P3Engine(QRAlgorithm):
     def _step(self, today, spy_close):
         s = self._qr_session
         yi = YEARS.index(today.year)
-        self.st["official_sessions"] += 1
-        self.sessions[yi] += 1
+        self.p3_st["official_sessions"] += 1
+        self.p3_sessions[yi] += 1
         # SPY total return and the EW universe index (daily equal weight of eligible stocks with two real closes)
         r_spy = 0.0
         if self.spy_prev and spy_close:
@@ -274,7 +274,7 @@ class P3Engine(QRAlgorithm):
         self.spy_dd = min(self.spy_dd, self.spy_level / self.spy_peak - 1)
         self.spy_maxdd[yi] = self.spy_dd
         E = self._eligible_rows()
-        self.st["max_eligible"] = max(self.st["max_eligible"], len(E))
+        self.p3_st["max_eligible"] = max(self.p3_st["max_eligible"], len(E))
         if len(E):
             ok = self.has_bar[E] & np.isfinite(self.prev_close[E]) & (self.prev_close[E] > 0)
             if ok.any():
@@ -282,7 +282,7 @@ class P3Engine(QRAlgorithm):
                 r_ew = float(np.mean(rr))
                 self.ew_level *= 1 + r_ew
                 self.ew_logex[yi] += np.log1p(r_ew) - np.log1p(r_spy)
-        if self.mode == "fidelity":
+        if self.p3_mode == "fidelity":
             self._fidelity_step(today, s)
             return
         t0 = time.perf_counter()
@@ -290,23 +290,23 @@ class P3Engine(QRAlgorithm):
         if len(E):
             c, h, l, v = self._windows(E)
             f = FE.features(c, h, l, v, np.array(self.spy_hist))
-            self.clock["features"] += time.perf_counter() - t0
+            self.p3_clock["features"] += time.perf_counter() - t0
             t0 = time.perf_counter()
-            masks, strength, p_of = self.table.evaluate(f)
-            if self.mode == "canary":                            # discard real masks: dummy random masks and keys
+            masks, strength, p_of = self.p3_table.evaluate(f)
+            if self.p3_mode == "canary":                            # discard real masks: dummy random masks and keys
                 rng = np.random.default_rng([20261004, self.day_index])
                 masks = rng.random(masks.shape) < self.dummy_density[:, None]
                 strength = rng.random(strength.shape)
             orders = [EN.strength_order(strength[i]) for i in range(strength.shape[0])]
-            self.clock["masks"] += time.perf_counter() - t0
-        for wi, (w, B) in enumerate(zip(self.worlds, self.books)):
+            self.p3_clock["masks"] += time.perf_counter() - t0
+        for wi, (w, B) in enumerate(zip(self.p3_worlds, self.p3_books)):
             t0 = time.perf_counter()
             B.open_fills(self.open_px, self.has_bar, s)
             B.stale_exits(s, self.last_real_sess, self.last_close)
             pv = B.equity(self.last_close)
             due = B.exits_due(s)
             n_sells = due.sum(axis=1)
-            self.clock["engine"] += time.perf_counter() - t0
+            self.p3_clock["engine"] += time.perf_counter() - t0
             if masks is not None:
                 t0 = time.perf_counter()
                 if w.get("seed") is None:
@@ -317,14 +317,14 @@ class P3Engine(QRAlgorithm):
                 for b in np.nonzero(free > 0)[0]:
                     cand = EN.select_candidates(orders[p_of[b]], masks[b], perm_g, B.blocked(b), int(free[b]))
                     if cand:
-                        B.plan_entries(b, cand, self.last_close, float(pv[b]), int(n_sells[b]), skip=self.warned)
-                self.clock["select"] += time.perf_counter() - t0
+                        B.plan_entries(b, cand, self.last_close, float(pv[b]), int(n_sells[b]), skip=self.p3_warned)
+                self.p3_clock["select"] += time.perf_counter() - t0
             t0 = time.perf_counter()
             self._update_stats(wi, B, pv, r_spy, yi, today)
-            self.clock["stats"] += time.perf_counter() - t0
+            self.p3_clock["stats"] += time.perf_counter() - t0
 
     def _update_stats(self, wi, B, eq, r_spy, yi, today):
-        S = self.stats[wi]
+        S = self.p3_stats[wi]
         with np.errstate(divide="ignore", invalid="ignore"):
             lr = np.log(eq / self.eq_prev[wi]) - np.log1p(r_spy)
         lr = np.nan_to_num(lr)
@@ -346,7 +346,7 @@ class P3Engine(QRAlgorithm):
         self.eq_prev[wi] = eq
 
     def _fidelity_step(self, today, s):
-        B = self.books[0]
+        B = self.p3_books[0]
         n0 = len(B.fills)
         B.open_fills(self.open_px, self.has_bar, s)
         B.stale_exits(s, self.last_real_sess, self.last_close)
@@ -355,7 +355,7 @@ class P3Engine(QRAlgorithm):
         n_sells = due.sum(axis=1)
         d = str(today)
         by_book = {}
-        for b, sid in self.schedule.get(d, []):
+        for b, sid in self.p3_schedule.get(d, []):
             by_book.setdefault(b, []).append(sid)
         for b, sids in by_book.items():
             stocks = []
@@ -363,17 +363,17 @@ class P3Engine(QRAlgorithm):
             for sid in sids:
                 g = self.g_of.get(sid)
                 if g is None:
-                    self.st["replay_unknown_sid"] += 1
+                    self.p3_st["replay_unknown_sid"] += 1
                     continue
                 if g in blocked:
-                    self.st["replay_blocked"] += 1
+                    self.p3_st["replay_blocked"] += 1
                     continue
                 stocks.append(g)
             free = int(B.free()[b])
             if len(stocks) > free:
-                self.st["replay_not_free"] += len(stocks) - free
+                self.p3_st["replay_not_free"] += len(stocks) - free
                 stocks = stocks[:free]
-            B.plan_entries(b, stocks, self.last_close, float(pv[b]), int(n_sells[b]), skip=self.warned)
+            B.plan_entries(b, stocks, self.last_close, float(pv[b]), int(n_sells[b]), skip=self.p3_warned)
         for rec in B.fills[n0:]:
             self.fill_day.append((d,) + rec)
         eq = B.equity(self.last_close)
@@ -382,40 +382,40 @@ class P3Engine(QRAlgorithm):
 
     # ---------------------------------------------------------------- end
     def qr_on_end(self):
-        self.st["clock_s"] = {k: round(v, 2) for k, v in self.clock.items()}
-        self.st["wall_s"] = round(time.perf_counter() - self.t_start, 1)
+        self.p3_st["clock_s"] = {k: round(v, 2) for k, v in self.p3_clock.items()}
+        self.p3_st["wall_s"] = round(time.perf_counter() - self.t_start, 1)
         try:
             import resource
-            self.st["max_rss_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0, 1)
+            self.p3_st["max_rss_mb"] = round(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss / 1024.0, 1)
         except Exception as e:
-            self.st["max_rss_mb"] = f"unavailable: {type(e).__name__}"
-        self.st["stocks_indexed"] = len(self.sid_of)
-        if self.mode == "fidelity":
-            B = self.books[0]
-            self.st["counts"] = B.counts
+            self.p3_st["max_rss_mb"] = f"unavailable: {type(e).__name__}"
+        self.p3_st["stocks_indexed"] = len(self.sid_of)
+        if self.p3_mode == "fidelity":
+            B = self.p3_books[0]
+            self.p3_st["counts"] = B.counts
             for d, b, kind, g, q, px, fee in self.fill_day:
                 self._qr_log(f"F|{b}|{d}|{self.sid_of[g]}|{kind}|{q:.0f}|{px:.6f}|{fee:.2f}")
-            self._qr_log("QRX984|summary|" + json.dumps(self.st, sort_keys=True))
+            self._qr_log("QRX984|summary|" + json.dumps(self.p3_st, sort_keys=True))
             return
         t0 = time.perf_counter()
-        nbg = GR.neighbours(self.configs)
-        ix = {c["id"]: i for i, c in enumerate(self.configs)}
-        nbi = [np.array([ix[o] for o in nbg[c["id"]]], dtype=int) for c in self.configs]
-        cpx = [GR.complexity(c) for c in self.configs]
-        ids = [c["id"] for c in self.configs]
+        nbg = GR.neighbours(self.p3_configs)
+        ix = {c["id"]: i for i, c in enumerate(self.p3_configs)}
+        nbi = [np.array([ix[o] for o in nbg[c["id"]]], dtype=int) for c in self.p3_configs]
+        cpx = [GR.complexity(c) for c in self.p3_configs]
+        ids = [c["id"] for c in self.p3_configs]
         out_bytes = 0
-        for w, S in zip(self.worlds, self.stats):
-            inp = PL.Inputs(ids, S["logex"], S["cost"], S["eqsum"], S["notional"], S["maxdd"], self.sessions,
+        for w, S in zip(self.p3_worlds, self.p3_stats):
+            inp = PL.Inputs(ids, S["logex"], S["cost"], S["eqsum"], S["notional"], S["maxdd"], self.p3_sessions,
                             self.spy_maxdd, self.ew_logex, YEARS)
             tw = time.perf_counter()
             summ = PL.world_summary(inp, nbi, cpx)
-            if self.mode == "canary":                            # dummy configurations: publish timings only
+            if self.p3_mode == "canary":                            # dummy configurations: publish timings only
                 line = f"WC|{w['name']}|{time.perf_counter() - tw:.3f}|{summ['n_eligible']}"
             else:
                 line = "W|" + w["name"] + "|" + json.dumps(summ, sort_keys=True, default=float)
             self._qr_log(line)
             out_bytes += len(line)
-            if self.mode == "search" and w["name"] == "real":
+            if self.p3_mode == "search" and w["name"] == "real":
                 for i, cid in enumerate(ids):
                     ln = (f"Y|{cid}|" + ",".join(f"{x:.6g}" for x in S["logex"][i]) + "|" +
                           ",".join(f"{x:.6g}" for x in S["cost"][i]) + "|" + ",".join(f"{x:.6g}" for x in S["eqsum"][i])
@@ -424,10 +424,10 @@ class P3Engine(QRAlgorithm):
                           ",".join(f"{m[i]:.6g}" for m in S["mlogex"]))
                     self._qr_log(ln)
                     out_bytes += len(ln)
-        self.clock["pipeline"] += time.perf_counter() - t0
-        self.st["clock_s"] = {k: round(v, 2) for k, v in self.clock.items()}
-        self.st["published_bytes_worlds"] = out_bytes
-        self._qr_log("G|" + json.dumps(dict(sessions=self.sessions.tolist(), spy_maxdd=self.spy_maxdd.tolist(),
-                                            ew_logex=self.ew_logex.tolist()) if self.mode == "search" else
-                                       dict(sessions=self.sessions.tolist())))
-        self._qr_log("QRX984|summary|" + json.dumps(self.st, sort_keys=True, default=str))
+        self.p3_clock["pipeline"] += time.perf_counter() - t0
+        self.p3_st["clock_s"] = {k: round(v, 2) for k, v in self.p3_clock.items()}
+        self.p3_st["published_bytes_worlds"] = out_bytes
+        self._qr_log("G|" + json.dumps(dict(sessions=self.p3_sessions.tolist(), spy_maxdd=self.spy_maxdd.tolist(),
+                                            ew_logex=self.ew_logex.tolist()) if self.p3_mode == "search" else
+                                       dict(sessions=self.p3_sessions.tolist())))
+        self._qr_log("QRX984|summary|" + json.dumps(self.p3_st, sort_keys=True, default=str))
