@@ -1,6 +1,6 @@
 """Phase 4 cross-sectional signal-validation plumbing (qr_xs, P4-CP3 draft) on synthetic inputs only: signal formulas,
 look-ahead truncation, ranks and buckets, Spearman / partial correlations, Newey-West, the promotion rule and the
-identity-tethered within-date permutation. No market data is used."""
+identity-tethered within-date permutation, the information-discreteness measure and the point-in-time trend factor. No market data is used."""
 import math
 
 import numpy as np
@@ -18,40 +18,83 @@ def test_mom_12_1_and_missing():
     assert np.isnan(m[1]) and np.isnan(m[2])
 
 
-def test_nud_counts_zero_days_in_denominator_only():
+def test_id_measure_exact_definition():
+    """ID = sgn(PRET) x (%neg - %pos); shares over all valid trading days (zeros in the denominator only)."""
     r = np.r_[np.full(120, 0.01), np.full(60, -0.01), np.zeros(40)]
-    assert X.nud(r) == pytest.approx((120 - 60) / 220)
-    assert np.isnan(X.nud(r[:150]))                      # fewer than 200 valid returns
+    assert X.id_measure(r, 0.25) == pytest.approx((60 - 120) / 220)      # winner, continuous: negative ID
+    assert X.id_measure(r, -0.10) == pytest.approx(-(60 - 120) / 220)    # loser: sign flips
+    assert X.id_measure(r, 0.0) == 0.0                                   # sgn(0) = 0
+    assert np.isnan(X.id_measure(r[:150], 0.2))                          # fewer than 200 valid returns
+    assert np.isnan(X.id_measure(r, np.nan))
     r2 = np.r_[r, np.full(30, np.nan)]
-    assert X.nud(r2) == pytest.approx((120 - 60) / 220)  # missing returns ignored
+    assert X.id_measure(r2, 0.25) == X.id_measure(r, 0.25)               # missing returns ignored
+    assert -1.0 <= X.id_measure(np.full(230, 0.01), 0.5) == -1.0         # range [-1, 1]
 
 
-def test_nud_distinguishes_smooth_from_jumpy_paths_with_equal_total_return():
+def test_id_distinguishes_continuous_from_discrete_winners_with_equal_pret():
     smooth = np.full(230, math.exp(math.log(1.3) / 230) - 1)            # +30% in many small steps
     jumpy = np.full(230, -0.0005)
     jumpy[[10, 50]] = (1.3 / 0.9995 ** 228) ** 0.5 - 1                    # same +30% from two jumps
     assert np.prod(1 + smooth) == pytest.approx(np.prod(1 + jumpy))
-    assert X.nud(smooth) > X.nud(jumpy)
+    assert X.id_measure(smooth, 0.3) < X.id_measure(jumpy, 0.3)          # continuous = low ID
+    assert X.fip_key(X.id_measure(smooth, 0.3), 0.3) > X.fip_key(X.id_measure(jumpy, 0.3), 0.3)
 
 
-def test_trend_score_formula_and_history_requirement():
-    c = np.linspace(50, 100, 260)
-    exp = np.mean([math.log(c[-1] / c[-L:].mean()) for L in (50, 100, 200)])
-    assert X.trend_score(c) == pytest.approx(exp)
-    assert np.isnan(X.trend_score(c[-199:]))
-    assert X.trend_score(c) > 0 > X.trend_score(c[::-1])
+def test_fip_key_orders_both_tails_in_the_predicted_direction():
+    # losers: continuous losers (many down days, low ID) must rank BELOW discrete losers
+    cont_loser = X.id_measure(np.r_[np.full(160, -0.002), np.full(70, 0.001)], -0.2)
+    disc_loser = X.id_measure(np.r_[np.full(90, -0.002), np.full(140, 0.001)], -0.2)
+    assert cont_loser < disc_loser
+    assert X.fip_key(cont_loser, -0.2) < X.fip_key(disc_loser, -0.2)
+
+
+def test_hzz_normalised_mas_definition_and_partial_windows():
+    c = np.linspace(50, 100, 1200)
+    A = X.hzz_normalised_mas(c)
+    for L, a in zip(X.HZZ_LAGS, A):
+        assert a == pytest.approx(c[-L:].mean() / c[-1])
+    short = X.hzz_normalised_mas(c[-30:])                                # 30 days of history only
+    assert short[X.HZZ_LAGS.index(1000)] == pytest.approx(c[-30:].mean() / c[-1])
+    assert short[0] == pytest.approx(c[-3:].mean() / c[-1])
+
+
+def test_ols_slopes_recover_coefficients():
+    rng = np.random.default_rng(1)
+    Xm = rng.normal(size=(800, 3))
+    y = 0.5 + Xm @ np.array([0.2, -0.1, 0.05]) + rng.normal(0, 0.01, 800)
+    assert np.allclose(X.ols_slopes(Xm, y), [0.2, -0.1, 0.05], atol=0.01)
+    assert np.all(np.isnan(X.ols_slopes(Xm[:3], y[:3])))
+    assert np.all(np.isnan(X.ols_slopes(np.column_stack([Xm, Xm[:, 0]]), y)))   # rank-deficient
+
+
+def test_trend_factor_is_point_in_time():
+    """E[beta] at decision t uses exactly regressions s = t-12 .. t-1; later regressions never change the score."""
+    rng = np.random.default_rng(2)
+    TF = X.TrendFactor()
+    A = {s: rng.normal(1, 0.05, (300, 11)) for s in range(30)}
+    for s in range(0, 14):
+        TF.add_regression(s, A[s], rng.normal(size=300))
+    assert np.all(np.isnan(TF.score(11, A[11])))                         # only 11 regressions before t = 11
+    sc = TF.score(14, A[14])
+    exp = A[14] @ np.mean([TF.betas[s] for s in range(2, 14)], axis=0)
+    assert np.allclose(sc, exp)
+    TF.add_regression(14, A[14], rng.normal(size=300))                   # month-15 returns arrive later
+    TF.add_regression(15, A[15], rng.normal(size=300))
+    assert np.allclose(TF.score(14, A[14]), sc)                          # unchanged: no look-ahead
 
 
 def test_signals_use_no_data_after_the_decision_close():
     """Truncation test: appending future bars cannot change a signal computed on the history up to the decision."""
     rng = np.random.default_rng(1)
-    c = 100 * np.exp(np.cumsum(rng.normal(0, 0.01, 400)))
-    d = 300
-    t_now = X.trend_score(c[:d + 1])
-    assert X.trend_score(np.r_[c[:d + 1]]) == t_now
-    for k in (d + 2, 350, 400):                                          # later data exists but is not passed
-        assert X.trend_score(c[:d + 1]) == t_now
-        assert X.trend_score(c[:k]) != t_now
+    c = 100 * np.exp(np.cumsum(rng.normal(0, 0.01, 1400)))
+    d = 1100
+    a_now = X.hzz_normalised_mas(c[:d + 1])
+    r = np.diff(c) / c[:-1]
+    id_now = X.id_measure(r[d - 251:d - 21], c[d - 21] / c[d - 252] - 1)
+    for k in (d + 2, 1300, 1400):                                        # later data exists but is not passed
+        assert np.array_equal(X.hzz_normalised_mas(c[:d + 1]), a_now)
+        assert X.id_measure(r[d - 251:d - 21], c[d - 21] / c[d - 252] - 1) == id_now
+        assert not np.array_equal(X.hzz_normalised_mas(c[:k]), a_now)
 
 
 def test_avg_rank_and_spearman_match_scipy():
@@ -130,7 +173,7 @@ def test_date_stats_and_summary_on_a_planted_signal():
         y = 0.02 * mom + 0.02 * nd + rng.normal(0, 0.12, n)
         sig = {"S1": mom, "S2": X.smooth_momentum_score(mom, nd), "S3": tr}
         series.append(X.date_stats(sig, {"S2": nd, "S3": tr}, y))
-        years.append(2010 + (t + 1) // 12)
+        years.append(2011 + (t + 1) // 12)
     S = X.summarise(series, years)
     assert S["S1"]["t"] > 3 and S["S2"]["t_inc"] > 2 and abs(S["S3"]["t_inc"]) < 3
     assert S["S1"]["dec_mean"][-1] > S["S1"]["dec_mean"][0]
@@ -140,11 +183,11 @@ def test_date_stats_and_summary_on_a_planted_signal():
 
 
 def test_promotion_requires_every_criterion():
-    base = dict(ic_mean=0.05, t=5.0, top_ann=0.05, spread_ann=0.1, mono=0.9, half_gap=0.01, sub=[0.04, 0.05],
+    base = dict(ic_mean=0.05, t=5.0, top_ann=0.05, spread_ann=0.1, mono=0.9, q_gap=0.01, sub=[0.04, 0.05],
                 block_max=0.3, t_inc=4.0)
     S = {s: dict(base) for s in X.SIGNALS}
     assert X.promotion(S, 3.0)["S2"]["pass"]
-    for k, v in (("top_ann", 0.02), ("mono", 0.5), ("t", 2.9), ("sub", [0.05, -0.01]), ("block_max", 0.6),
+    for k, v in (("top_ann", 0.02), ("mono", 0.8), ("t", 2.9), ("sub", [0.05, -0.01]), ("block_max", 0.6),
                  ("t_inc", 2.0)):
         S2 = {s: dict(base) for s in X.SIGNALS}
         S2["S2"][k] = v

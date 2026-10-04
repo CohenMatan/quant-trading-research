@@ -1359,3 +1359,26 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Nothing real computed:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked; no purchase.
 
 **STOP:** awaiting the owner's GO / NO-GO and choices (P4-CP3 §40).
+
+## 2026-10-04: P4-CP3R corrected H019 specification v1 (frozen candidate; nothing run); STOP (D143)
+
+- **Owner:** conditional GO toward H019 after corrections. Primary horizon 1 month (3 months diagnostic only); exact published signal definitions; α = 1% described honestly; no real validation yet.
+- **Verification:**
+  - Paper PDFs still blocked; only GitHub reachable.
+  - Frog-in-the-pan ID, PRET (12-1), counting rule and sequential sort verified from several independent records.
+  - Han-Zhou-Zhu trend factor verified against the complete Chen-Zimmermann open-source reproduction (11 MA lags, monthly regressions, 12-month average of past coefficients).
+- **Frozen candidate v1** (`research/phase4/P4_xs_spec.md`, SHA-256 3a0e3643…, pinned):
+  - S1 12-1 momentum (reference);
+  - S2 exact ID with the sequential sort;
+  - S3 exact trend factor, point-in-time, estimated within the ≥ $2B universe;
+  - 82 monthly decisions 2011-02 → 2017-11, next-month demeaned returns, NW lag 2;
+  - quintile monotonicity (changed before any data after the synthetic study exposed S2's decile zig-zag);
+  - within-momentum-quintile incremental test; tethered null R = 5,000; max-statistic at 1%.
+- **Synthetic power:**
+  - effective sample ≈ 82 (vs ≈ 35 at 3 months);
+  - full-rule false promotion 0%;
+  - 50% detectable top-decile edge ≈ 4.5–11% a year; a 1–3% edge is almost certainly not confirmable.
+- **Verdict:** READY FOR H019 SIGNAL VALIDATION, subject to the owner's explicit approval (including S3 = exact HZZ, a broader multi-horizon model than P4-CP3's simplified score).
+- **Nothing real computed:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked.
+
+**STOP:** awaiting explicit approval of the corrected frozen specification.
