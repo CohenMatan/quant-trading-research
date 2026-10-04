@@ -199,20 +199,39 @@ def run_real():
     res = result(REAL_RUN)
     hs = host_summary(REAL_RUN)
     pv = hs["provenance"]
-    if (pv["threshold_c"] != p4xs.THRESHOLD_C or pv["null_result_sha256"] != p4xs.NULL_RESULT_SHA256
-            or pv["spec_sha256"] != p4xs.SPEC_SHA256 or pv["threshold_commit"] != p4xs.THRESHOLD_COMMIT):
+    # the host echoes its params in a summary line whose floats are rounded to 6 significant digits (c is never used
+    # inside QuantConnect); the exact state is proven by the run's recorded config hash (the committed E020-06 config
+    # holds the exact c) and by its commit descending from the threshold commit
+    import subprocess
+    cfg_path = ROOT / "experiments" / REAL_RUN / "config.json"
+    cfg = json.loads(cfg_path.read_text())
+    prov = res["provenance"]
+    run_commit = prov["git_commit"]
+    anc = subprocess.run(["git", "merge-base", "--is-ancestor", p4xs.THRESHOLD_COMMIT, run_commit], cwd=ROOT).returncode
+    committed_cfg = subprocess.run(["git", "show", f"{run_commit}:experiments/{REAL_RUN}/config.json"], cwd=ROOT,
+                                   check=True, capture_output=True).stdout
+    if (float(f"{p4xs.THRESHOLD_C:.6g}") != pv["threshold_c"] or pv["null_result_sha256"] != p4xs.NULL_RESULT_SHA256
+            or pv["spec_sha256"] != p4xs.SPEC_SHA256 or pv["threshold_commit"] != p4xs.THRESHOLD_COMMIT
+            or cfg["params"]["threshold_c"] != p4xs.THRESHOLD_C or "+" in run_commit or anc != 0
+            or json.loads(committed_cfg) != cfg or prov.get("owner_approved") != "D145"):
         raise SystemExit("the real run did not start from the pinned state")
     if hs["panel"]["features_sha256"] != nul["features_sha256"]:
         raise SystemExit("the real run saw different inputs than the null runs")
     c = p4xs.THRESHOLD_C
     sm = json.loads(tagged(REAL_RUN, "R")[0])
     prom = X.promotion(sm, c)
-    F_null = np.array([float(r["F"]) for r in csv.DictReader(open(NULL_TABLE))])
+    rows = list(csv.DictReader(open(NULL_TABLE)))
+    F_null = np.array([float(r["F"]) for r in rows])
     R = F_null.size
 
-    def pval(t):
-        return dict(p_family=float((1 + (F_null >= t).sum()) / (R + 1)),
-                    percentile_in_family_null=float(100.0 * (F_null < t).mean()))
+    def pval(t, stat=None):
+        out = dict(p_family=float((1 + (F_null >= t).sum()) / (R + 1)),
+                   percentile_in_family_null=float(100.0 * (F_null < t).mean()))
+        if stat is not None:     # reporting only: the statistic against its OWN null distribution (not the gate)
+            a = np.array([float(r[stat]) for r in rows])
+            out.update(p_marginal=float((1 + (a >= t).sum()) / (R + 1)), null_mean=float(a.mean()),
+                       null_median=float(np.median(a)))
+        return out
 
     per = {}
     for s in X.SIGNALS:
@@ -221,10 +240,10 @@ def run_real():
                  bottom_ann=r["dec_mean"][0] * 12.0, spread_ann=r["spread_ann"],
                  dec_ann=[v * 12.0 for v in r["dec_mean"]], q_ann=[v * 12.0 for v in r["q_mean"]],
                  mono=r["mono"], q_gap_ann=r["q_gap"] * 12.0, halves=r["sub"], block_max=r["block_max"],
-                 years=r["years"], **pval(r["t"]), criteria=prom[s])
+                 years=r["years"], **pval(r["t"], "t_" + s), criteria=prom[s])
         if s in X.INCREMENTAL:
             d.update(inc_mean=r["inc_mean"], inc_se=r["inc_se"], t_inc=r["t_inc"], inc_q_mean=r["inc_q_mean"],
-                     incremental=pval(r["t_inc"]))
+                     incremental=pval(r["t_inc"], "t_inc_" + s))
         per[s] = d
     out = dict(hypothesis="H019", run=REAL_RUN, c=c, threshold_commit=p4xs.THRESHOLD_COMMIT,
                null_result_sha256=p4xs.NULL_RESULT_SHA256, spec_sha256=p4xs.SPEC_SHA256, R=R,
@@ -233,7 +252,9 @@ def run_real():
                diagnostics=json.loads(tagged(REAL_RUN, "RD")[0]),
                diagnostic_3m_NON_GATING=json.loads(tagged(REAL_RUN, "R3")[0]),
                universe=hs["universe"], coverage=hs["coverage"], panel=hs["panel"],
-               provenance=res["provenance"], host_provenance=pv)
+               provenance=res["provenance"], host_provenance=pv,
+               pinned_state_verified=dict(run_commit=run_commit, descends_from_threshold_commit=True,
+                                          config_params=cfg["params"], owner_approved=prov.get("owner_approved")))
     REAL_OUT.write_text(json.dumps(out, indent=1) + "\n")
     print("outcome", out["outcome"], "| F", out["family_F"], "c", c)
     for s in X.SIGNALS:
