@@ -35,6 +35,8 @@ def spec_hash() -> str:
 # H019 execution (owner authorisation 2026-10-04, D145): the family null threshold is pinned here, with the hash of the
 # committed null result, BEFORE the one real evaluation E020-06; THRESHOLD_COMMIT (the commit that pinned them) is
 # recorded in the following commit together with the E020-06 config. None = not yet pinned (the real run is refused).
-THRESHOLD_C = None
-NULL_RESULT_SHA256 = None
+THRESHOLD_C = 2.8714967                     # c = the 50th largest of 5,000 null F (alpha 1%), E020-01..05
+NULL_RESULT = "research/phase4/H019_null_result.json"
+NULL_RESULT_SHA256 = "6d5ea4a0056728d116c6b96e3524d8be45bf3dc4e88fb54eb080db9ce44f883c"
+NULL_WORLDS_CSV_SHA256 = "59a6cfb70fd49fc7d7b741a39225a8025aea6ef8f4692ada5735625971be94fd"
 THRESHOLD_COMMIT = None
