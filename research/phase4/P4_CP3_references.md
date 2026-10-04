@@ -83,3 +83,29 @@
 - The construction is fully specified.
 - The only deviation is the estimation cross-section, a documented adaptation forced by the data. **Assessed as not material for the method.**
 - The resulting factor is **"the Han-Zhou-Zhu trend factor estimated within the ≥ $2B universe"**.
+
+## P4-CP3R2 code-level verification (2026-10-04)
+
+### Trend factor: Chen & Zimmermann OSAP, commit 8db892442c2c3a3779b0f1eac4370d3655be15a1
+
+| Step | Location | Behaviour |
+|---|---|---|
+| Daily data span | `Signals/pyCode/DataDownloads/CRSPDaily.py` lines 48–55 | CRSP daily 1926 → current: every stock's full history |
+| Price | `Signals/pyCode/Predictors/TrendFactor.py` 1374 | P = \|prc\| / cfacpr (split-adjusted); the cfacpr look-ahead cancels in the ratio (OSAP issue 95, quoted in `TrendFactor.do`) |
+| Row index | 1380 | `time_temp` = the row number of the stock's daily records |
+| MAs | 1392 (lags), 1397–1410 | `asrol(window=L, stat="mean", min_samples=1)`: the mean of the available records among the last L; partial windows allowed. `TrendFactor.do`: "Do they require a minimum number of obs? Not discussed in the paper" |
+| Month-end, normalisation | 1422; 1427–1430 | Last record of the month; A_L / P |
+| Regression sample | 1440–1475 | NYSE / AMEX / Nasdaq, share codes 10 / 11, \|prc\| ≥ 5, size ≥ the NYSE 10th percentile, inner join with the MAs |
+| Regression | 1509–1520; `regress` 216–300 | Per-month OLS of next-month return on A_* with an intercept; collinear regressors omitted, coefficient 0 |
+| Coefficients | 1532–1540 | `shift(1).rolling_mean(12, min_samples=1)` (12-month average excluding the not-yet-known month; partial windows only at sample start) |
+| Score | 1560–1582 | Σ EBeta_L × A_L; kept only when all 11 terms exist |
+
+### Frog in the pan: independent records (no public replication code found)
+
+| Item | Record wording |
+|---|---|
+| Formula | "ID = sign(PRET) × [%neg − %pos] … %neg and %pos represent the percentages of days during the formation period with negative and positive returns" |
+| PRET | "a firm's formation-period return in the prior twelve months after skipping the most recent month" |
+| Range | "If the series of daily returns are all positive, then ID equals its minimum value of −1" |
+| Zero days | Aalto replication: the proxy "does not take zero-trading-days into account" (no special treatment) |
+| Grouping | "double-sorts by first dividing stocks into quintiles according to their PRET and then subdividing these quintiles into ID portfolios" |
