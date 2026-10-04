@@ -21,7 +21,8 @@
 #             S3 = sum_L E[beta_L] x A_L(t). Estimation cross-section = the H019 eligible universe.
 # Response: total return from the open of the first session after the decision through the close of the last session
 #   of month m+H, cross-sectionally demeaned (equal-weighted mean over the same common sample).
-# Statistics per decision date: Spearman rank IC; decile means of the demeaned response; for S2 / S3 the incremental
+# Statistics per decision date: Spearman rank IC; decile and quintile means of the demeaned response (monotonicity is
+#   judged on quintiles: for S2 the quintiles are the PRET backbone, the within-quintile refinement is tested by P6); for S2 / S3 the incremental
 #   statistic = mean over the 5 MOM quintiles of the within-quintile partial rank correlation between the candidate's
 #   own component (the FIP key for S2, S3 itself) and the response, controlling for the MOM rank.
 # Time series: mean, Newey-West (Bartlett) HAC t with a fixed lag; halves / blocks / years by decision date.
@@ -42,7 +43,8 @@ ID_MIN_DAYS = 200                 # minimum valid daily returns in the 11-month 
 N_DECILES = 10
 N_MOM_Q = 5
 ECON_MIN_TOP = 0.03               # top-decile annualised demeaned excess >= 3% a year
-MONO_MIN = 0.70                   # Spearman(decile index, mean decile excess) >= 0.70
+N_MONO_Q = 5                      # monotonicity is judged on equal-count quintiles of the signal
+MONO_MIN = 0.90                   # Spearman(quintile index, mean quintile excess) >= 0.90 (<= one adjacent inversion)
 BLOCK_MAX_SHARE = 0.5             # no block > 50% of the total IC sum
 BLOCKS = ((2011, 2012), (2013, 2014), (2015, 2016), (2017, 2017))
 ALPHA = 0.01                      # conservative pre-registered family-wise level (prior momentum experimentation)
@@ -210,8 +212,10 @@ def date_stats(sig, comp, y):
     out = {}
     for s in SIGNALS:
         d = buckets(sig[s], N_DECILES)
+        qn = buckets(sig[s], N_MONO_Q)
         out[s] = dict(ic=spearman(sig[s], yd),
-                      dec=[float(yd[d == k].mean()) for k in range(N_DECILES)])
+                      dec=[float(yd[d == k].mean()) for k in range(N_DECILES)],
+                      q5=[float(yd[qn == k].mean()) for k in range(N_MONO_Q)])
     for s in INCREMENTAL:
         out[s]["inc"], out[s]["inc_q"] = within_quintile_partial_ic(np.asarray(comp[s], float),
                                                                     np.asarray(sig["S1"], float), yd)
@@ -248,14 +252,16 @@ def summarise(series, years, h=H_MONTHS, lag=NW_LAG):
     for s in SIGNALS:
         ic = np.array([d[s]["ic"] for d in series])
         dec = np.array([d[s]["dec"] for d in series])
+        q5 = np.array([d[s]["q5"] for d in series]).mean(axis=0)
         m, se, t = nw_tstat(ic, lag)
         mdec = dec.mean(axis=0)
         r = dict(ic_mean=m, ic_se=se, t=t,
                  top_ann=float(mdec[-1]) * 12.0 / h,
                  spread_ann=float(mdec[-1] - mdec[0]) * 12.0 / h,
                  dec_mean=mdec.tolist(),
-                 mono=spearman(np.arange(N_DECILES, dtype=float), mdec),
-                 half_gap=float(mdec[N_DECILES // 2:].mean() - mdec[:N_DECILES // 2].mean()),
+                 q_mean=q5.tolist(),
+                 mono=spearman(np.arange(N_MONO_Q, dtype=float), q5),
+                 q_gap=float(q5[-1] - q5[0]),
                  sub=[float(ic[:ic.size // 2].mean()), float(ic[ic.size // 2:].mean())],
                  block_max=block_share_max(ic, yrs),
                  years={int(y): float(ic[yrs == y].mean()) for y in sorted(set(yrs.tolist()))})
@@ -279,7 +285,7 @@ def promotion(summary, c):
     for s in SIGNALS:
         r = summary[s]
         crit = dict(P1_economic=(r["top_ann"] >= ECON_MIN_TOP) and (r["spread_ann"] > 0),
-                    P2_monotonic=(r["mono"] >= MONO_MIN) and (r["half_gap"] > 0),
+                    P2_monotonic=(r["mono"] >= MONO_MIN) and (r["q_gap"] > 0),
                     P3_statistical=r["t"] > c,
                     P4_stable=all(v > 0 for v in r["sub"]) and r["block_max"] <= BLOCK_MAX_SHARE)
         if s in INCREMENTAL:

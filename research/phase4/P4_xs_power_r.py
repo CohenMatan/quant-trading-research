@@ -12,6 +12,7 @@ and 3-month figures describe the same synthetic world. Reported per scenario:
   - the probability that a true effect passes the COMPLETE rule (economic floor included);
   - the incremental (smoothness beyond momentum) test;
   - the 3-month horizon (lag 6, 80 decisions) for comparison only.
+Monotonicity (P2) is judged on quintiles (S2's decile zig-zag artefact, P4-CP3R §18).
 Run: python research/phase4/P4_xs_power_r.py  ->  research/phase4/P4_xs_power_r.json
 """
 import json
@@ -78,9 +79,10 @@ def summary(st, h, lag, years):
         ic, dec = st["ic"][s], st["dec"][s]
         m, se, t = X.nw_tstat(ic, lag)
         md = dec.mean(axis=0)
+        q5 = np.array([(md[2 * k] + md[2 * k + 1]) / 2 for k in range(X.N_MONO_Q)])   # equal-count decile pairs
         out[s] = dict(ic_mean=m, t=t, top_ann=float(md[-1]) * 12 / h, spread_ann=float(md[-1] - md[0]) * 12 / h,
-                      mono=X.spearman(np.arange(X.N_DECILES, dtype=float), md),
-                      half_gap=float(md[5:].mean() - md[:5].mean()),
+                      mono=X.spearman(np.arange(X.N_MONO_Q, dtype=float), q5),
+                      q_gap=float(q5[-1] - q5[0]),
                       sub=[float(ic[:ic.size // 2].mean()), float(ic[ic.size // 2:].mean())],
                       block_max=X.block_share_max(ic, yrs))
         if s in X.INCREMENTAL:

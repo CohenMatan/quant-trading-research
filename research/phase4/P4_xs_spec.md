@@ -137,7 +137,7 @@ S3_t = Σ_L E[β_L]_t × A_L,t
 | Statistic | Definition |
 |---|---|
 | Rank IC (S1, S2, S3) | Spearman correlation (average ranks) between the signal and the demeaned response |
-| Deciles | 10 equal-count buckets by signal (ordinal rank, ties by security id); the mean demeaned response per decile |
+| Deciles and quintiles | 10 and 5 equal-count buckets by signal (ordinal rank, ties by security id); the mean demeaned response per bucket |
 | **Incremental (S2, S3)** | Mean over the five S1 (PRET) quintiles of the within-quintile **partial Spearman correlation** between the candidate component (S2: key; S3: S3) and the response, controlling for S1: (ρ_yc − ρ_ym ρ_cm) / √((1 − ρ_ym²)(1 − ρ_cm²)) |
 
 ## 5. Time-series inference
@@ -183,7 +183,7 @@ S3_t = Σ_L E[β_L]_t × A_L,t
 | Code | Condition |
 |---|---|
 | P1 Economic | Top-decile annualised mean demeaned excess ≥ **3.0% a year** **and** D10 − D1 > 0 |
-| P2 Monotonic | Spearman(decile index 1..10, mean decile excess) ≥ **0.70** **and** mean(D6..D10) > mean(D1..D5) |
+| P2 Monotonic | Spearman(quintile index 1..5, mean quintile excess) ≥ **0.90** (at most one adjacent inversion) **and** Q5 > Q1. For S2 the quintiles are its PRET backbone. Its within-quintile refinement is judged by P6, because S2's deciles zig-zag by construction when smoothness matters |
 | P3 Statistical | t (rank IC) > c |
 | P4 Stable | Mean IC > 0 in **both** halves **and** no block contributes more than **50%** of the total IC sum (and the sum is > 0) |
 | P5 Exceptional | Through c (§6); the full-rule null rate is reported |

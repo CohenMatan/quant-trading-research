@@ -183,11 +183,11 @@ def test_date_stats_and_summary_on_a_planted_signal():
 
 
 def test_promotion_requires_every_criterion():
-    base = dict(ic_mean=0.05, t=5.0, top_ann=0.05, spread_ann=0.1, mono=0.9, half_gap=0.01, sub=[0.04, 0.05],
+    base = dict(ic_mean=0.05, t=5.0, top_ann=0.05, spread_ann=0.1, mono=0.9, q_gap=0.01, sub=[0.04, 0.05],
                 block_max=0.3, t_inc=4.0)
     S = {s: dict(base) for s in X.SIGNALS}
     assert X.promotion(S, 3.0)["S2"]["pass"]
-    for k, v in (("top_ann", 0.02), ("mono", 0.5), ("t", 2.9), ("sub", [0.05, -0.01]), ("block_max", 0.6),
+    for k, v in (("top_ann", 0.02), ("mono", 0.8), ("t", 2.9), ("sub", [0.05, -0.01]), ("block_max", 0.6),
                  ("t_inc", 2.0)):
         S2 = {s: dict(base) for s in X.SIGNALS}
         S2["S2"][k] = v
