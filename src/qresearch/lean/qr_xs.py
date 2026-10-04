@@ -1,43 +1,51 @@
-# qr_xs.py — Phase 4 cross-sectional technical signal validation (H019 draft; research/phase4/P4_xs_spec.md, P4-CP3).
-# Pure numpy, no QuantConnect imports (tests/test_xs.py). The same code would run inside LEAN for the real world and
-# every null world, and locally on synthetic panels (research/phase4/P4_xs_power.py).
+# qr_xs.py — Phase 4 cross-sectional technical signal validation (H019; research/phase4/P4_xs_spec.md, P4-CP3R).
+# Pure numpy, no QuantConnect imports (tests/test_xs.py). The same code runs inside LEAN for the real world and every
+# null world, and locally on synthetic panels (research/phase4/P4_xs_power.py).
 #
-# DRAFT (P4-CP3): the constants below are the PROPOSED pre-registration. They are frozen (hash-pinned) only after the
-# owner approves the specification, and before any real signal or forward return is computed.
+# P4-CP3R (corrected, frozen candidate): the constants below are pinned with the specification by
+# qresearch.p4xs (tests/test_p4xs_spec.py). Nothing here may change after any real signal or return is computed.
 #
-# Signals (decision = the close of the last session of month m; all prices split- and dividend-adjusted as of that
-# close):
-#   S1 MOM   = P(end of m-1) / P(end of m-12) - 1                         (12-1 momentum; Jegadeesh-Titman; FF 'prior 2-12')
-#   NUD      = (#up days - #down days) / #days over the same window         (daily returns from the first session after
-#              the end of m-12 through the end of m-1; zero-return days count only in the denominator; >= 200 returns)
-#              NUD = -sgn(PRET) x ID of Da, Gurun & Warachka (2014): the unsigned share of positive minus negative days
-#   S2 SMOOTH= sequential sort (Da-Gurun-Warachka): MOM quintile first, then NUD within the quintile
-#              score = quintile index (1..5) + within-quintile percentile of NUD in (0, 1]
-#   S3 TREND = mean over L in {50, 100, 200} sessions of ln(P_t / SMA_L,t), P_t = the decision close (no skip)
-#              (the normalised-moving-average signal of Han, Zhou & Zhu 2016 at the intermediate horizons, unweighted)
-# Response: forward total return from the open of the first session after the decision through the close of the last
-#   session of month m+H, cross-sectionally demeaned (equal-weighted mean over the same eligible cross-section).
+# Decision = the close of the last session of month m. Prices: daily closes; S1 / S2 use split- and dividend-adjusted
+# closes (total-return convention, as CRSP 'ret'); S3 uses split-adjusted (not dividend-adjusted) closes, as in the
+# published construction (abs(prc) / cfacpr).
+#   S1 MOM  = P(end of m-1) / P(end of m-12) - 1                      (12-1 momentum: Jegadeesh-Titman; FF 'prior 2-12')
+#   S2 FIP  = Da, Gurun & Warachka (2014): PRET = S1 (12 months, skipping the most recent month);
+#             ID = sgn(PRET) x (%neg - %pos), %pos / %neg = shares of positive / negative daily returns among ALL
+#             trading days of the same window (zero-return days count in the denominator only); sequential sort:
+#             PRET quintile first, then, within the quintile, continuity in the direction of PRET, key = -sgn(PRET) x ID
+#             (low ID = continuous information); score = quintile index (1..5) + within-quintile percentile of the key
+#   S3 TF   = Han, Zhou & Zhu (2016) trend factor: A_L = mean of the last L split-adjusted closes / the decision close
+#             for L in HZZ_LAGS (partial windows allowed, as in the Chen-Zimmermann reproduction); every month s a
+#             cross-sectional OLS (with intercept) of month s+1 returns on A_L(s); E[beta_L] at decision t = mean of
+#             the 12 most recent completed regressions (s = t-12 .. t-1; the last uses month-t returns, known at t);
+#             S3 = sum_L E[beta_L] x A_L(t). Estimation cross-section = the H019 eligible universe.
+# Response: total return from the open of the first session after the decision through the close of the last session
+#   of month m+H, cross-sectionally demeaned (equal-weighted mean over the same common sample).
 # Statistics per decision date: Spearman rank IC; decile means of the demeaned response; for S2 / S3 the incremental
 #   statistic = mean over the 5 MOM quintiles of the within-quintile partial rank correlation between the candidate's
-#   own component (NUD for S2, TREND for S3) and the response, controlling for the MOM rank.
-# Time series: mean, Newey-West (Bartlett) HAC t with a fixed lag; years / subperiods by decision date.
+#   own component (the FIP key for S2, S3 itself) and the response, controlling for the MOM rank.
+# Time series: mean, Newey-West (Bartlett) HAC t with a fixed lag; halves / blocks / years by decision date.
 import math
 
 import numpy as np
 
-H_MONTHS = 3                      # primary forward horizon (months)
-DIAG_HORIZONS = (1, 6)            # secondary diagnostics only, never gated
-NW_LAG = 6                        # fixed HAC lag for the primary horizon (2 x H)
-MA_LENGTHS = (50, 100, 200)       # trend-score horizons (sessions)
-NUD_MIN_DAYS = 200                # minimum valid daily returns in the 11-month window
+H_MONTHS = 1                      # primary forward horizon (months): next month
+DIAG_HORIZONS = (3,)              # secondary diagnostic only, never gated, never rescues a primary failure
+NW_LAG = 2                        # fixed HAC lag for the primary (non-overlapping) horizon
+DIAG_NW_LAG = {3: 6}              # HAC lag for the 3-month diagnostic (2 x H)
+FIRST_DECISION = (2011, 2)        # first month with 12 completed trend-factor regressions (data from 2010-02)
+LAST_DECISION = (2017, 11)        # the next-month return ends at the 2017-12-29 close
+LAST_DECISION_DIAG = {3: (2017, 9)}
+HZZ_LAGS = (3, 5, 10, 20, 50, 100, 200, 400, 600, 800, 1000)
+HZZ_BETA_MONTHS = 12
+ID_MIN_DAYS = 200                 # minimum valid daily returns in the 11-month formation window
 N_DECILES = 10
 N_MOM_Q = 5
 ECON_MIN_TOP = 0.03               # top-decile annualised demeaned excess >= 3% a year
 MONO_MIN = 0.70                   # Spearman(decile index, mean decile excess) >= 0.70
-BLOCK_MAX_SHARE = 0.5             # no two-year block > 50% of the total IC sum
-SUBPERIODS = ((2010, 2013), (2014, 2017))
-BLOCKS = ((2010, 2011), (2012, 2013), (2014, 2015), (2016, 2017))
-ALPHA = 0.01                      # family-wise level: 0.05 / (1 + 4 prior momentum-family looks)
+BLOCK_MAX_SHARE = 0.5             # no block > 50% of the total IC sum
+BLOCKS = ((2011, 2012), (2013, 2014), (2015, 2016), (2017, 2017))
+ALPHA = 0.01                      # conservative pre-registered family-wise level (prior momentum experimentation)
 SIGNALS = ("S1", "S2", "S3")
 INCREMENTAL = ("S2", "S3")
 
@@ -52,24 +60,75 @@ def mom_12_1(p_end_m1, p_end_m12):
     return out
 
 
-def nud(daily_returns, min_days=NUD_MIN_DAYS):
-    """Net up-day share (#up - #down) / #valid days of one stock's daily returns over the formation window."""
+def id_measure(daily_returns, pret, min_days=ID_MIN_DAYS):
+    """Information discreteness of Da, Gurun & Warachka (2014): sgn(PRET) x (%neg - %pos) over the formation window.
+    %pos / %neg = the shares of positive / negative returns among all valid trading-day returns (zeros count in the
+    denominator only). NaN with fewer than min_days valid returns or a missing PRET."""
     r = np.asarray(daily_returns, float)
     r = r[np.isfinite(r)]
     n = r.size
-    if n < min_days:
+    if n < min_days or not np.isfinite(pret):
         return math.nan
-    return (int((r > 0).sum()) - int((r < 0).sum())) / n
+    pos, neg = int((r > 0).sum()) / n, int((r < 0).sum()) / n
+    return float(np.sign(pret)) * (neg - pos)
 
 
-def trend_score(closes, lengths=MA_LENGTHS):
-    """Mean over L of ln(P_t / SMA_L) from the adjusted closes up to and including the decision close (oldest first)."""
+def fip_key(id_v, pret):
+    """Within-PRET-quintile ordering key: -sgn(PRET) x ID = continuity in the direction of PRET. Higher = continuous
+    winners (low ID among PRET > 0) and discrete losers (high ID among PRET < 0) = higher predicted relative return."""
+    return -np.sign(np.asarray(pret, float)) * np.asarray(id_v, float)
+
+
+def hzz_normalised_mas(closes, lags=HZZ_LAGS):
+    """A_L = mean of the last L split-adjusted closes (fewer if the history is shorter; at least one) / the decision
+    close. closes: oldest first, ending at the decision close. Returns an array over lags (NaN if no valid close)."""
     c = np.asarray(closes, float)
-    L = max(lengths)
-    if c.size < L or not np.all(np.isfinite(c[-L:])) or np.any(c[-L:] <= 0):
-        return math.nan
+    c = c[np.isfinite(c) & (c > 0)]
+    if c.size == 0:
+        return np.full(len(lags), np.nan)
     p = c[-1]
-    return float(np.mean([math.log(p / c[-l:].mean()) for l in lengths]))
+    return np.array([c[-min(L, c.size):].mean() / p for L in lags])
+
+
+def ols_slopes(X, y):
+    """Cross-sectional OLS of y on X with an intercept; returns the slopes (NaN if too few rows or rank-deficient)."""
+    X, y = np.asarray(X, float), np.asarray(y, float)
+    ok = np.all(np.isfinite(X), axis=1) & np.isfinite(y)
+    X, y = X[ok], y[ok]
+    n, p = X.shape
+    if n <= p + 1:
+        return np.full(p, np.nan)
+    Z = np.column_stack([np.ones(n), X])
+    if np.linalg.matrix_rank(Z) < p + 1:
+        return np.full(p, np.nan)
+    return np.linalg.lstsq(Z, y, rcond=None)[0][1:]
+
+
+class TrendFactor:
+    """Point-in-time Han-Zhou-Zhu expected-return model. add_regression(s, A_s, r_next) is called only once month s+1
+    has ended (its returns are known); score(t, A_t) uses the 12 most recent completed regressions s = t-12 .. t-1
+    and refuses any regression for s >= t (look-ahead guard)."""
+
+    def __init__(self, months=HZZ_BETA_MONTHS):
+        self.months = months
+        self.betas = {}                                      # s (month index) -> slopes
+
+    def add_regression(self, s, A_s, r_next):
+        self.betas[s] = ols_slopes(A_s, r_next)
+
+    def expected_betas(self, t):
+        need = list(range(t - self.months, t))
+        if any(s >= t for s in self.betas if s in need):
+            raise ValueError("look-ahead")
+        if not all(s in self.betas and np.all(np.isfinite(self.betas[s])) for s in need):
+            return None
+        return np.mean([self.betas[s] for s in need], axis=0)
+
+    def score(self, t, A_t):
+        eb = self.expected_betas(t)
+        if eb is None:
+            return np.full(len(A_t), np.nan)
+        return np.asarray(A_t, float) @ eb
 
 
 # ----------------------------------------------------------------------------------------------- ranking utilities
@@ -103,9 +162,9 @@ def buckets(score, k):
     return ((ordinal_rank(score) - 1) * k // n).astype(int)
 
 
-def smooth_momentum_score(mom, nud_v, q=N_MOM_Q):
-    """S2: MOM quintile index (1..q) + within-quintile percentile of NUD in (0, 1] (sequential sort)."""
-    mom, nud_v = np.asarray(mom, float), np.asarray(nud_v, float)
+def smooth_momentum_score(mom, key, q=N_MOM_Q):
+    """S2: PRET (= MOM) quintile index (1..q) + within-quintile percentile of the FIP key in (0, 1] (sequential sort)."""
+    mom, nud_v = np.asarray(mom, float), np.asarray(key, float)
     qb = buckets(mom, q)
     out = np.empty(mom.size)
     for b in range(q):
@@ -145,7 +204,7 @@ def demean(r):
 
 
 def date_stats(sig, comp, y):
-    """One decision date. sig = {'S1': mom, 'S2': smooth score, 'S3': trend}; comp = {'S2': nud, 'S3': trend} (the
+    """One decision date. sig = {'S1': mom, 'S2': FIP score, 'S3': trend factor}; comp = {'S2': FIP key, 'S3': trend factor} (the
     candidates' own components); y = forward returns of the same common-sample cross-section (any scale)."""
     yd = demean(y)
     out = {}
@@ -197,7 +256,7 @@ def summarise(series, years, h=H_MONTHS, lag=NW_LAG):
                  dec_mean=mdec.tolist(),
                  mono=spearman(np.arange(N_DECILES, dtype=float), mdec),
                  half_gap=float(mdec[N_DECILES // 2:].mean() - mdec[:N_DECILES // 2].mean()),
-                 sub=[float(ic[(yrs >= a) & (yrs <= b)].mean()) for a, b in SUBPERIODS],
+                 sub=[float(ic[:ic.size // 2].mean()), float(ic[ic.size // 2:].mean())],
                  block_max=block_share_max(ic, yrs),
                  years={int(y): float(ic[yrs == y].mean()) for y in sorted(set(yrs.tolist()))})
         if s in INCREMENTAL:

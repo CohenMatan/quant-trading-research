@@ -5,6 +5,13 @@
 - **Decision record:** D142
 - **Owner direction:** "Phase 4 — Design Cross-Sectional Technical Signal Validation Before Any Portfolio Backtest" (`docs/owner/2026-10-04_phase4_xs_signal_validation_design.md`)
 - **Status:** STOP. Waiting for explicit owner approval before any real signal-validation run.
+- **Superseded in part by P4-CP3R** (`docs/checkpoints/P4_CP3R_corrected_xs_signal_specification.md`, D143):
+  - exact information-discreteness definition;
+  - exact Han-Zhou-Zhu trend factor instead of the simplified score;
+  - 1-month primary horizon;
+  - 82 decisions 2011-02 → 2017-11.
+
+  This document is kept unchanged otherwise, as the record of the P4-CP3 proposal.
 
 **Files:**
 - `research/phase4/P4_xs_spec.md`: the **draft pre-registration**. It is frozen and hash-pinned only after approval, before any real computation.

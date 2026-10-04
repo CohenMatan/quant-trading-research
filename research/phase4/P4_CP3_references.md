@@ -1,4 +1,4 @@
-# P4-CP3 source references (cross-sectional technical signal validation)
+# P4-CP3 / P4-CP3R source references (cross-sectional technical signal validation, H019)
 
 **Verification** follows the same convention as `P4_CP2_references.md`:
 - **Verified** = details checked on 2026-10-04 against search records of the publisher, SSRN, RePEc or the author's page.
@@ -35,3 +35,51 @@
 | Patton & Timmermann (2010), JFE 98(3), 605–625 | Memory | Formal monotonic-relation test (considered; the simpler pre-registered monotonicity rule is used instead) |
 | McLean & Pontiff (2016), JF 71(1) | Memory | Post-publication decay: expect smaller effects than published |
 | † Ben-David, Li, Rossi & Song (NBER w28624) | Verified (P4-CP2) | Caution: US momentum weakened after 2002 |
+
+
+## P4-CP3R verification of the two primary definitions (2026-10-04)
+
+**What was reachable.** This session's network allowed only GitHub (git) and the web-search tool. Every journal, SSRN, NBER, RePEc, author and archive host was blocked, so the full papers were again unavailable.
+
+**What was used:**
+- Search records quoting the papers.
+- For the trend factor, a **complete independent reproduction**: Chen & Zimmermann, "Open Source Cross-Sectional Asset Pricing" (Critical Finance Review 2022; code `github.com/OpenSourceAP/CrossSection`, commit 8db8924, 2025-10-22). Files: `Signals/pyCode/Predictors/TrendFactor.py`, `Signals/LegacyStataCode/Predictors/TrendFactor.do`, `SignalDoc.csv`. OSAP rates its replication of TrendFactor "1_good" and the original evidence "1_clear" (t = 15.0, EW quintile long-short, 1.63% a month, 1930–2014).
+
+### Da, Gurun & Warachka (2014), "Frog in the Pan" — verified vs uncertain
+
+| Item | Status | Source |
+|---|---|---|
+| ID = sgn(PRET) × (%neg − %pos); +1 = discrete, −1 = continuous; range [−1, 1] | **Verified** (several independent records quote the same formula) | Search records of the paper and of replications (SSE thesis 2022; EFMA 2024 paper; Lee, Huang, Song & Xiang, JFE 2022 †) |
+| PRET = the cumulative return over the past twelve months, skipping the most recent month | **Verified** (quoted verbatim in two independent records) | Search records |
+| %pos / %neg = the percentages of days in the formation period with positive / negative (daily) returns | **Verified** (wording) | Search records |
+| Sequential double sort: first on PRET, then on ID | **Verified** | Search records ("double-sorted portfolios sequentially that first condition on formation-period returns (PRET), then information discreteness") |
+| PRET groups are quintiles | Probable (one replication record says "quintile sorting") | Search record |
+| Zero-return days in the denominator | Implied by "percentage of days"; not quoted explicitly | — |
+| A minimum number of daily returns | Not found; **project rule: 200** | — |
+| sgn(0) = 0 | Verified in the formula records ("equals 0 when PRET = 0") | Search records |
+
+**Materiality.**
+- The formula, the window and the sort order are verified.
+- The unverified items affect only ties and bucket granularity:
+  - zero-return days are rare for liquid stocks ≥ $5 and ≥ $2B;
+  - the quintile grid is the replicated convention.
+- They are frozen as explicit conventions. **Assessed as not material.**
+
+### Han, Zhou & Zhu (2016), "A Trend Factor" — verified vs uncertain
+
+| Item | Status | Source |
+|---|---|---|
+| MA lags 3, 5, 10, 20, 50, 100, 200, 400, 600, 800, 1,000 days | **Verified** | Search records and the OSAP code |
+| A_L = mean of the last L daily closes ending on the last trading day of the month, normalised by that day's close | **Verified** | Search records and the OSAP code |
+| Monthly cross-sectional OLS of next-month returns on the 11 normalised MAs | **Verified** | OSAP code (`asreg fRet A_*`, intercept added) and search records |
+| E[β] = the average of the past 12 months' coefficients, using only regressions whose returns are already realised | **Verified** | OSAP code (`shift(1).rolling_mean(12)`; "leaving out most recent one to not use future information") and search records |
+| Expected return = Σ E[β_L] × A_L; sort into quintiles | **Verified** | OSAP code and SignalDoc |
+| Price = |prc| / cfacpr (split-adjusted, not dividend-adjusted) | **Verified** (OSAP) | OSAP code; the ratio is unaffected by later splits |
+| Minimum observations for an MA | **Paper silent** (OSAP comment); OSAP allows partial windows (min 1). **Adopted** | OSAP code |
+| Partial 12-month beta windows | OSAP allows (min 1). **Not adopted: 12 required** (the paper's stated 12-month average) | OSAP code |
+| Regression sample | Paper / OSAP: NYSE / AMEX / Nasdaq common stocks, price ≥ $5, size ≥ the NYSE 10th percentile. **Adapted: the H019 eligible universe** (≥ $2B, price ≥ $5, ADV20 ≥ $5M), the only point-in-time cross-section available here | OSAP code and SignalDoc |
+
+**Materiality.**
+- The construction is fully specified.
+- The only deviation is the estimation cross-section, a documented adaptation forced by the data. **Assessed as not material for the method.**
+- The resulting factor is **"the Han-Zhou-Zhu trend factor estimated within the ≥ $2B universe"**.
