@@ -1318,3 +1318,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Recommendation:** do not implement as a candidate search. The design is ready if the owner wants a definitive low-cost test.
 
 **STOP:** awaiting the owner's go / no-go. No engine implementation, no Weekly returns, no 2018–2021 or Holdout access, no purchase.
+
+## 2026-10-04: P4-CP2 Deep Technical Indicator & Strategy Evidence Review (research only); STOP (D141)
+
+- **Owner direction:** evidence-first review of technical concepts A–N (trend, cross-sectional and time-series momentum, 52-week high, breakout, RSI, MACD, ADX, volatility, Bollinger, volume, pullbacks, volatility contraction, multi-timeframe) before any new backtest.
+- **Sources:** about 50 references with a source level and verification status (`research/phase4/P4_CP2_references.md`). Post-2017 papers (†) are used only to caution. SEO statistics were rejected.
+- **Findings (`docs/checkpoints/P4_CP2_technical_evidence_review.md`):**
+  - only intermediate cross-sectional momentum is Tier A, and it is Tier B in large US caps after 2002;
+  - smooth (frog-in-the-pan) momentum and a multi-horizon trend score are credible refinements, new to the project;
+  - long-term trend, time-series momentum, volatility and market state are risk / exit / exposure tools, not selection alpha;
+  - RSI, MACD, ADX, Bollinger, squeeze, volume confirmation, pullback timing and short breakouts are Tier D for our universe, and most already failed here;
+  - multi-timeframe daily timing has practitioner support only.
+- **Archetypes:** 9; worth considering: AR2 smooth momentum, AR3 trend score, AR1 trend-filtered momentum with trend exit. AR6–AR9 are mostly tested and not recommended.
+- **Timeframe:** slow decisions (weekly / monthly), daily only for inputs and execution.
+- **Next architecture:** stop, or a universe-wide signal-level pre-test of at most 3 pre-registered signals followed by at most one book (recommended if continuing).
+- **Nothing computed or run:** no indicator returns, no QC run, no 2018–2021, no Holdout, no H019, no purchase.
+
+**STOP:** awaiting the owner's decisions (P4-CP2 §33).
