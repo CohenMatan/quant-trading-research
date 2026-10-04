@@ -5,12 +5,11 @@
 #                         adjusted prices whose adjustment uses only corporate actions up to the end of 2017; a factor
 #                         that LEAN dates on a stock's last session for an ex-date after it (first session of 2018, or
 #                         after a delisting) is a constant per stock and is divided out;
-#   split_close         = |prc| / cfacpr, CRSP-style: the total-return closes with the CASH-dividend factor (dividend
-#                         events up to 2017) removed, so splits, spin-offs and other price-factor distributions stay
-#                         adjusted and ordinary cash dividends do not (CRSP: a spin-off's price factor is the
-#                         distribution value / the ex-date price; cash dividends have no price factor).
-#   The split feed (RAW x split events) is kept only as a diagnostic of the price factors (split_multiplier,
-#   factor_steps).
+#   split_close         = RAW closes x the product of the split factors of the SPLIT events after each row (events
+#                         up to the end of 2017 only): split-adjusted, not dividend-adjusted. QuantConnect carries every
+#                         other price-factor event (cash dividends, spin-offs, share-class distributions) in its DIVIDEND
+#                         feed and does not label which are spin-offs, so, unlike CRSP's cfacpr, spin-offs are not
+#                         price-adjusted here (disclosed; the exposure is measured, LARGE_DISTRIBUTION).
 # Every signal input and return is a RATIO of prices of one stock inside a window that ends at or before the decision
 # (or at the end of the return window), so adjusting with the corporate actions up to 2017-12-31 gives exactly the
 # values known at each session: a later factor multiplies both ends of every ratio equally.
@@ -19,6 +18,7 @@ import numpy as np
 NS_DAY = 86_400 * 10 ** 9
 NS_HOUR = 3_600 * 10 ** 9
 SPLIT_TOL = 0.03          # |(c_before / c_after) / f - 1| tolerance for a split boundary (c = SCALED_RAW / RAW)
+LARGE_DISTRIBUTION = 0.25  # a distribution > 25% of the reference price (spin-off or special): reported exposure only
 SPLIT_SEARCH = 5          # valid rows searched on each side when the event date does not match the price jump
 
 
@@ -128,16 +128,10 @@ def dividend_multiplier(D, events):
     return m
 
 
-def cfacpr_close(P, div_mult):
-    """CRSP-style |prc| / cfacpr closes from QuantConnect total-return closes: remove the cash-dividend factor, keep the
-    split and spin-off (other price-factor distribution) adjustments, as CRSP's cumulative price factor does."""
-    return np.asarray(P, float) / np.asarray(div_mult, float)
-
-
 def factor_steps(q, q_split, small=0.002, big=0.25, detail=None):
-    """Steps of e = q / q_split between consecutive valid rows, where q = the cfacpr-style close and q_split = RAW x the
-    split events: e moves only at price-factor events that are not in the split history (spin-offs, stock distributions,
-    splits missing from the split feed) and at a misaligned cash dividend. Returns (n small steps: small < |log| <=
+    """Steps of e = q / q_split between consecutive valid rows, where q = the total-return close without the dividend-
+    feed factor and q_split = RAW x the split feed: e moves only at a price-factor event that neither feed explains
+    (or a misaligned dividend / split event). Returns (n small steps: small < |log| <=
     log(1 / (1 - big)), n big steps)."""
     q, qs = np.asarray(q, float), np.asarray(q_split, float)
     v = np.flatnonzero(np.isfinite(q) & np.isfinite(qs) & (q > 0) & (qs > 0))

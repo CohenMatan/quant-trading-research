@@ -7,7 +7,7 @@
 # remembered; the set of the LAST session of each month is that month-end's universe (with market cap and the point-
 # in-time SEC SIC). At the end (2017-12-31): the daily panel of every stock eligible at any research month-end is
 # assembled from history (qr_xs_panel: SCALED_RAW = total-return prices adjusted with corporate actions up to 2017
-# only; those prices without the cash-dividend factor = |prc| / cfacpr closes for S3), then qr_xs.Features ->
+# only; RAW x the split feed = split-adjusted, not dividend-adjusted closes for S3), then qr_xs.Features ->
 # qr_xs.run_world, exactly the
 # code of the synthetic studies. Only aggregates leave QuantConnect (summary statistics); no price is exported.
 # Modes (params.mode):
@@ -143,7 +143,8 @@ class H019XS(QRAlgorithm):
                   last_day=str(cal[-1].astype("datetime64[D]")), late_rows=0, unknown_day_rows=0, history_calls=0,
                   split_types={}, split=dict(n=0, aligned=0, realigned=0, unverified=0, outside=0),
                   dividend_events=0, factor_steps_small=0, factor_steps_big=0, stocks_with_factor_steps=0,
-                  last_scale_not_one=0)
+                  last_scale_not_one=0, large_distributions=0, split_unverified_without_same_day_distribution=0)
+        self.xs_bigdist = {}
         detail = dict(unverified=[], steps=[], last_scale=[])       # derived ratios only (no price levels)
         day = lambda r: str(cal[r].astype("datetime64[D]"))
 
@@ -202,16 +203,24 @@ class H019XS(QRAlgorithm):
                         ev.append((r_, float(fac)))
                 de = [(r_, float(amt), float(ref)) for r_, amt, ref in dev[j]]
                 st["dividend_events"] += len(de)
-                q = XP.cfacpr_close(sc, XP.dividend_multiplier(D, de))   # |prc| / cfacpr (spec section 1)
                 du, dj = [], []
-                mult, s1 = XP.split_multiplier(raw, sc, ev, detail=du)   # diagnostic: split feed vs price factors
+                mult, s1 = XP.split_multiplier(raw, sc, ev, detail=du)
                 for k2, v2 in s1.items():
                     st["split"][k2] += v2
-                sm, bg = XP.factor_steps(q, raw * mult, detail=dj)
+                # S3 closes (spec section 1): split-adjusted, not dividend-adjusted = RAW x the split feed. QuantConnect
+                # carries every other price-factor event (cash dividends, spin-offs, share-class distributions) in its
+                # dividend feed; the dividend feed must explain every remaining step of the total-return factor
+                q = raw * mult
+                sm, bg = XP.factor_steps(sc / XP.dividend_multiplier(D, de), q, detail=dj)
                 st["factor_steps_small"] += sm
                 st["factor_steps_big"] += bg
                 st["stocks_with_factor_steps"] += int(sm + bg > 0)
-                detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_) for b_, f_, r0, rb, rb_ in du]
+                drow = {r_ for r_, amt, ref in de}
+                big = sorted({r_ for r_, amt, ref in de if ref > 0 and amt / ref > XP.LARGE_DISTRIBUTION})
+                self.xs_bigdist[i + j] = big
+                st["large_distributions"] += len(big)
+                detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_, b_ in drow) for b_, f_, r0, rb, rb_ in du]
+                st["split_unverified_without_same_day_distribution"] += sum(1 for b_, *_ in du if b_ not in drow)
                 detail["steps"] += [(sid, day(r_), x) for r_, x in dj]
                 Q[:, i + j] = q
                 P[:, i + j] = sc
@@ -250,6 +259,7 @@ class H019XS(QRAlgorithm):
         F = self.xs_F
         k0, kl = months.index(X.FIRST_RESEARCH_MONTH), months.index((2017, 12))
         st["features_sha256"] = XD.features_digest(F, range(k0, kl + 1))
+        st["large_distribution_exposure"] = XD.distribution_exposure(F, me, self.xs_bigdist, range(k0, kl))
         st["fwd_end_last_decision"] = str(cal[me[months.index(X.LAST_DECISION) + 1]].astype("datetime64[D]"))
         st["fwd3_end_last_diag"] = str(cal[me[months.index(X.LAST_DECISION_DIAG[3]) + 3]].astype("datetime64[D]"))
         self.xs_st["panel"] = st

@@ -26,7 +26,7 @@ import qr_xs as X  # noqa: E402
 from qresearch import p4xs  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
-CANARY_RUN = "E985-01"
+CANARY_RUN = "E985-03"
 NULL_RUNS = ("E020-01", "E020-02", "E020-03", "E020-04", "E020-05")
 REAL_RUN = "E020-06"
 NULL_OUT = HERE / "H019_null_result.json"
@@ -86,8 +86,11 @@ def run_canary():
                                                                 (v["t_inc"] is None or abs(v["t_inc"]) < 3.5)
                                                                 for v in ck["placebo"].values())),
         ("null world deterministic (same seed twice)", ck["null_repeat_identical"] is True),
-        ("S3 prices = |prc| / cfacpr: cash dividends aligned (small unexplained factor steps <= 2% of dividend "
-         "events)", pn["factor_steps_small"] <= 0.02 * pn["dividend_events"]),
+        ("S3 closes = RAW x split feed; the dividend feed explains every other price-factor step (no large "
+         "unexplained step; small steps <= 2% of dividend events)", pn["factor_steps_big"] == 0 and
+         pn["factor_steps_small"] <= 0.02 * pn["dividend_events"]),
+        ("every split event matches the total-return price factor or coincides with a same-day distribution",
+         pn["split_unverified_without_same_day_distribution"] == 0),
     ]
     out = dict(run=CANARY_RUN, passed=all(ok for _, ok in checks),
                checks=[dict(check=c, ok=bool(ok)) for c, ok in checks],

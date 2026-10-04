@@ -133,6 +133,23 @@ def coverage(F, nb, decisions_k, regression_k):
     return out
 
 
+def distribution_exposure(F, me, bigdist, ks, window=max(X.HZZ_LAGS)):
+    """Share of regression-set observations (eligible with a bar at month-end k) whose 1,000-bar moving-average window
+    contains a large non-split distribution (spin-off / special): the observations whose A_L would differ under CRSP's
+    spin-off price factor. bigdist[j] = rows of such distributions of stock j."""
+    tot = hit = 0
+    stocks = set()
+    for k in ks:
+        d = me[k]
+        for j in np.flatnonzero(F.dom[k]):
+            tot += 1
+            rows = bigdist.get(int(j), ())
+            if any(d - window < r <= d for r in rows):
+                hit += 1
+                stocks.add(int(j))
+    return dict(observations=tot, exposed=hit, share=(hit / tot if tot else 0.0), stocks=len(stocks))
+
+
 def features_digest(F, ks):
     """SHA-256 of the world-independent inputs for months ks (identical inputs across the null and real runs)."""
     h = hashlib.sha256()

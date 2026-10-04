@@ -137,8 +137,10 @@ def _market(N=70, seed=7):
         if rng.random() < 0.35:
             for t in rng.choice(np.arange(300, D - 5), size=rng.integers(1, 3), replace=False):
                 splits[j].append((int(t), float(rng.choice([0.5, 1 / 7, 2.0, 1 / 3]))))
-        if rng.random() < 0.1:                                                     # spin-off: a price factor only
-            spin[:int(rng.integers(300, D - 5)), j] *= rng.uniform(0.4, 0.7)
+        if rng.random() < 0.1:              # spin-off: a price factor, carried in QuantConnect's DIVIDEND feed
+            t, g = int(rng.integers(300, D - 5)), rng.uniform(0.4, 0.7)
+            spin[:t, j] *= g
+            divs[j].append((t, 100.0 * (1 - g), 100.0))
     split_mult = np.ones((D, N))
     for j, ev in splits.items():
         for t, f in ev:
@@ -151,7 +153,7 @@ def _market(N=70, seed=7):
     SC[:, late] *= 0.99
     SO[:, late] *= 0.99
     return dict(cal=cal, Qt=Qt, RAW=RAW, SC=SC, SO=SO, splits=splits, divs=divs, alive=alive, born=born, N=N,
-                Qc=Qt * spin / _end_scale(SC / RAW, alive) * _end_scale(Qt * spin / RAW, alive),
+                Qc=Qt,
                 Pn=SC / _end_scale(SC / RAW, alive), On=SO / _end_scale(SC / RAW, alive))
 
 
@@ -278,10 +280,13 @@ def test_host_panel_equals_direct_panel_and_canary(monkeypatch, market):
     def scale_at_end(j):
         r = np.flatnonzero(market["alive"][:, j])[-1]
         return market["SC"][r, j] / market["RAW"][r, j]
-    assert st["factor_steps_small"] == 0
+    assert st["factor_steps_small"] == 0 and st["factor_steps_big"] == 0
+    assert st["split_unverified_without_same_day_distribution"] == 0
     assert st["last_scale_not_one"] == sum(abs(scale_at_end(j) - 1) > 1e-6 for j in cols) > 0
-    spun = [j for j in cols if np.nanmin(market["Qc"][:, j] / market["Qt"][:, j]) < 0.99]
-    assert st["factor_steps_big"] == len([j for j in spun if market["alive"][:, j].any()]) > 0
+    spun = [j for j in cols if any(amt > 25.0 for _, amt, _r in market["divs"][j])]
+    assert st["large_distributions"] == len(spun) > 0
+    ex = st["large_distribution_exposure"]
+    assert 0 < ex["exposed"] < ex["observations"] and ex["stocks"] <= len(spun)
     F, G = a.xs_F, _direct_features(market, a)
     assert np.array_equal(F.dom, G.dom) and np.array_equal(F.full, G.full)
     for name in ("pret", "idm", "A", "reg"):

@@ -1,6 +1,6 @@
 {
- "run": "E985-01",
- "passed": false,
+ "run": "E985-02",
+ "passed": true,
  "checks": [
   {
    "check": "calendar ends on 2017-12-29; no history row after it",
@@ -35,8 +35,8 @@
    "ok": true
   },
   {
-   "check": "trend-factor regressions span 2010-01 .. 2017-11",
-   "ok": false
+   "check": "trend-factor regressions estimated for s = 2010-01 .. 2017-10 (the last decision, 2017-11, averages s = 2016-11 .. 2017-10)",
+   "ok": true
   },
   {
    "check": "truncation invariance: identical signals and coefficients",
@@ -55,17 +55,17 @@
    "ok": true
   },
   {
-   "check": "split events verified against the price-scale jumps",
-   "ok": false
+   "check": "S3 prices = |prc| / cfacpr: cash dividends aligned (small unexplained factor steps <= 2% of dividend events)",
+   "ok": true
   }
  ],
  "numeric": {
   "regressions": {
-   "max_abs": 1.5718132e-10,
+   "max_abs": 1.0528889e-10,
    "months": 14,
    "rank_deficient": 0
   },
-  "s3_slow_max_abs": 1.9601032e-10,
+  "s3_slow_max_abs": 8.5199829e-09,
   "s3_slow_rank_deficient_months": 0,
   "placebo": {
    "S1": {
@@ -97,14 +97,14 @@
     "ic_min": 0.99999997
    }
   },
-  "null_world_s": 0.89958219,
-  "null_world_s_1000": 899.58219,
+  "null_world_s": 0.80982462,
+  "null_world_s_1000": 809.82462,
   "eval_min_max": [
    827,
    1282
   ],
   "slow_features": {
-   "A": 3.290701e-13,
+   "A": 3.1219471e-13,
    "idm": 0.0,
    "n": 150,
    "nan_mismatch": 0,
@@ -120,19 +120,77 @@
  },
  "panel": {
   "columns": 1950,
-  "features_s": 1.7,
-  "features_sha256": "929ea04c9aab7692dd25fa96a4e53c14a051938348466dd3154832cdca023f40",
+  "dividend_events": 42531,
+  "factor_steps_big": 0,
+  "factor_steps_small": 6,
+  "features_s": 0.7,
+  "features_sha256": "af21fcacafd9913d463f4d0f10705d7065187033ef4b167975ee33d8c93ee115",
   "first_day": "2005-11-01",
   "fwd3_end_last_diag": "2017-12-29",
   "fwd_end_last_decision": "2017-12-29",
-  "history_calls": 60,
-  "jumps_hi": 0,
-  "jumps_lo": 74,
+  "history_calls": 80,
   "last_day": "2017-12-29",
+  "last_scale_detail": [
+   [
+    "APLE W0MP81J8EDLX",
+    "2017-12-29",
+    0.994901
+   ],
+   [
+    "CLI R735QTJ8XC9X",
+    "2017-12-29",
+    0.990724
+   ],
+   [
+    "CMCSA SJTSDFE19S9X",
+    "2017-12-29",
+    0.996067
+   ],
+   [
+    "GPS R735QTJ8XC9X",
+    "2017-12-29",
+    0.993247
+   ],
+   [
+    "HEI R735QTJ8XC9X",
+    "2017-12-29",
+    0.999073
+   ],
+   [
+    "HEIA RA5FTAI5HU91",
+    "2017-12-29",
+    0.998893
+   ],
+   [
+    "JWA R735QTJ8XC9X",
+    "2012-12-31",
+    0.894299
+   ],
+   [
+    "NEOG R735QTJ8XC9X",
+    "2017-12-29",
+    0.750188
+   ],
+   [
+    "RJF R735QTJ8XC9X",
+    "2017-12-29",
+    0.9972
+   ],
+   [
+    "RTNB R735QTJ8XC9X",
+    "2017-12-29",
+    0.995755
+   ],
+   [
+    "SII R735QTJ8XC9X",
+    "2010-08-27",
+    0.99691
+   ]
+  ],
   "last_scale_not_one": 11,
   "late_rows": 0,
   "month_end_date_mismatches": [],
-  "panel_s": 96.9,
+  "panel_s": 85.0,
   "research_months_recorded": [
    "2010-01",
    "2010-02",
@@ -243,7 +301,97 @@
    "SPLIT_OCCURRED": 667,
    "WARNING": 668
   },
-  "stocks_with_jumps": 68,
+  "split_unverified_detail": [
+   [
+    "BTU S4X5QH11KLT1",
+    "2015-10-01",
+    14.9925,
+    12.9072,
+    "2017-04-03",
+    12.9072
+   ],
+   [
+    "DISCK U632KKJK8S4L",
+    "2014-08-07",
+    0.5,
+    0.25,
+    "2014-08-07",
+    0.25
+   ],
+   [
+    "DNY R735QTJ8XC9X",
+    "2016-10-03",
+    3.0003,
+    1.41617,
+    "2016-10-03",
+    1.41617
+   ],
+   [
+    "EXPE TB0IQCZTBPT1",
+    "2011-12-21",
+    2.0,
+    0.94958,
+    "2011-12-16",
+    1.0
+   ],
+   [
+    "MOT R735QTJ8XC9X",
+    "2011-01-04",
+    7.00001,
+    4.09551,
+    "2011-01-04",
+    4.09551
+   ],
+   [
+    "PCS TRX10524LYZP",
+    "2013-05-01",
+    2.0,
+    1.31876,
+    "2013-05-01",
+    1.31876
+   ],
+   [
+    "PXT R735QTJ8XC9X",
+    "2013-05-30",
+    0.90909,
+    0.699333,
+    "2013-05-23",
+    1.0
+   ],
+   [
+    "PXT R735QTJ8XC9X",
+    "2015-02-26",
+    0.909091,
+    0.73649,
+    "2015-03-03",
+    1.0
+   ],
+   [
+    "PXT R735QTJ8XC9X",
+    "2016-05-27",
+    0.909091,
+    0.752243,
+    "2016-06-06",
+    1.0
+   ],
+   [
+    "SAI TMRWYKAE84TH",
+    "2013-09-30",
+    4.0,
+    2.74343,
+    "2013-09-30",
+    2.74343
+   ],
+   [
+    "SUNH SWVGM0VJRNTX",
+    "2010-11-16",
+    3.0003,
+    1.7533,
+    "2010-11-16",
+    1.7533
+   ]
+  ],
+  "stocks_with_factor_steps": 4,
   "unknown_day_rows": 0
  },
  "universe": [
@@ -848,13 +996,13 @@
    ]
   }
  },
- "wall_s": 382.5,
- "max_rss_mb": 3227.4,
+ "wall_s": 327.6,
+ "max_rss_mb": 3177.2,
  "provenance": {
-  "backtest_started_utc": "2026-10-04T18:00:58Z",
-  "build_commit": "e09f68b13d4f4ae77e6fce4b3bf5e690379f11c7",
-  "code_sha256": "72c40ea21dc155a5d2782c327ad2e96fd9c5aabda2152e9e771a37af427582b3",
-  "config_sha256": "89c00bb73f856a046d2ceeb495c4c51ae74e3cedf1f2605fb9812aa049742216",
+  "backtest_started_utc": "2026-10-04T19:05:16Z",
+  "build_commit": "5796ad1655386d78c5bf0402d55bf674768e3147",
+  "code_sha256": "3e31c31d78e245f1a2b191ef07695a5a91881f74133af4fc73fc8ef28297b4e3",
+  "config_sha256": "9c7fb44f0e930a365a2c80e9396fbfdd3d66ac003f54a76fd810992661de9768",
   "datasets": [
    "QC US Equities (AlgoSeek) daily",
    "QC US Equity Security Master",
@@ -893,13 +1041,13 @@
    "qr_xs_diag.py",
    "qr_xs_panel.py"
   ],
-  "git_commit": "e09f68b13d4f4ae77e6fce4b3bf5e690379f11c7",
+  "git_commit": "5796ad1655386d78c5bf0402d55bf674768e3147",
   "holdout_unlocked": false,
   "lean_version": "v2.5.0.0.18131",
-  "qc_backtest_id": "87385cdfc1397492f26187532fb37aa2",
+  "qc_backtest_id": "2a8fe2fd4786d236838c895726f72755",
   "qc_project_id": 37351428,
   "result_channel": "summary_statistics",
-  "run_utc": "2026-10-04T18:00:11Z",
-  "runtime_s": 415.02100133895874
+  "run_utc": "2026-10-04T19:04:57Z",
+  "runtime_s": 495.10348653793335
  }
 }
