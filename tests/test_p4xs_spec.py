@@ -45,3 +45,19 @@ def test_h019_null_threshold_pinned():
     assert hashlib.sha256(csv.read_bytes()).hexdigest() == n["null_worlds_csv_sha256"] == p4xs.NULL_WORLDS_CSV_SHA256
     F = sorted((float(ln.split(",")[2]) for ln in csv.read_text().splitlines()[1:]), reverse=True)
     assert len(F) == 5000 and F[49] == p4xs.THRESHOLD_C
+
+
+def test_h019_real_run_config_carries_the_pinned_state():
+    import json
+    import subprocess
+    from qresearch import experiment, p4xs
+    root = config.REPO_ROOT
+    c = json.loads((root / "experiments/E020-06/config.json").read_text())
+    experiment.validate(c)
+    assert c["params"] == dict(mode="real", threshold_c=p4xs.THRESHOLD_C, threshold_commit=p4xs.THRESHOLD_COMMIT,
+                               null_result_sha256=p4xs.NULL_RESULT_SHA256, spec_sha256=p4xs.SPEC_SHA256)
+    # the threshold commit is an ancestor and already carried exactly these pins
+    subprocess.run(["git", "merge-base", "--is-ancestor", p4xs.THRESHOLD_COMMIT, "HEAD"], cwd=root, check=True)
+    old = subprocess.run(["git", "show", f"{p4xs.THRESHOLD_COMMIT}:src/qresearch/p4xs.py"], cwd=root, check=True,
+                         capture_output=True, text=True).stdout
+    assert f"THRESHOLD_C = {p4xs.THRESHOLD_C!r}" in old and p4xs.NULL_RESULT_SHA256 in old
