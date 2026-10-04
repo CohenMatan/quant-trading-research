@@ -190,12 +190,25 @@ def walk_forward(inp, nb_index, complexity, years=WF_YEARS):
                 passed=bool(picks >= 3 and tot_spy > 0 and tot_ew > 0))
 
 
+def apparent_winners(inp, table, last_year=2017):
+    """REPORTING ONLY (owner 2026-10-04, item 15: keep the fake-winner effect visible); never used for selection.
+    The most impressive raw numbers the search finds in a world: the best fold-median score s, the best total log
+    excess over SPY (log terminal-wealth ratio) over 2010-03 .. last_year, over all configurations and over eligible
+    ones, and how many configurations end with more wealth than SPY."""
+    tot = inp.logex[:, [inp.col(y) for y in range(FIRST_YEAR, last_year + 1)]].sum(axis=1)
+    el = table["eligible"]
+    mx = lambda x: float(np.max(x)) if len(x) else float("-inf")  # noqa: E731
+    return dict(best_s=mx(table["s"]), best_s_eligible=mx(table["s"][el]), best_total_logex=mx(tot),
+                best_total_logex_eligible=mx(tot[el]), median_total_logex=float(np.median(tot)),
+                n_beat_spy=int((tot > 0).sum()), n_configs=int(len(tot)))
+
+
 def world_summary(inp, nb_index, complexity, tau=-np.inf):
     """Everything the null calibration needs from one world (real or null): the search statistic T and the best
     cluster-centre plateau score on the full training window, the promotion order, and the walk-forward outcome."""
     full = select(inp, nb_index, complexity, 2017, tau=tau, k=3)
     wf = walk_forward(inp, nb_index, complexity)
-    return dict(T=full["T"], best_ps=full["best_ps"], n_eligible=full["n_eligible"], n_survivors=full["n_survivors"],
+    return dict(T=full["T"], best_ps=full["best_ps"], apparent=apparent_winners(inp, full["table"]), n_eligible=full["n_eligible"], n_survivors=full["n_survivors"],
                 n_clusters=len(full["clusters"]),
                 ranked=[dict(centre=inp.ids[c["centre"]], ps=float(full["ps"][c["centre"]]), size=c["size"],
                              se=c["se"]) for c in full["ranked"]],
