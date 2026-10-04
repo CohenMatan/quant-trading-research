@@ -75,7 +75,8 @@ def run_canary():
         ("independent PRET / ID / A_L recomputation identical", ck["slow_features"]["nan_mismatch"] == 0 and
          max(ck["slow_features"]["pret"], ck["slow_features"]["idm"], ck["slow_features"]["A"]) < 1e-9),
         ("S2 two-stage structure: 0 violations; ID in [-1, 1]", ck["s2_structure_violations"] == 0 and ck["id_range_ok"]),
-        ("trend-factor regressions span 2010-01 .. 2017-11", ck["betas_keys_ok"]),
+        ("trend-factor regressions estimated for s = 2010-01 .. 2017-10 (the last decision, 2017-11, averages "
+         "s = 2016-11 .. 2017-10)", ck["regression_months_first_last"] == ["2010-01", "2017-10"]),
         ("truncation invariance: identical signals and coefficients", ck["truncation"]["max_abs"] == 0 and
          ck["truncation"]["betas_max_abs"] == 0 and ck["truncation"]["id_mismatch"] == 0 and
          ck["truncation"]["dates"] == ck["truncation"]["dates_full"]),

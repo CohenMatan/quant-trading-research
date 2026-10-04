@@ -142,6 +142,8 @@ class H019XS(QRAlgorithm):
                   last_day=str(cal[-1].astype("datetime64[D]")), late_rows=0, unknown_day_rows=0, history_calls=0,
                   split_types={}, split=dict(n=0, aligned=0, realigned=0, unverified=0, outside=0),
                   jumps_hi=0, jumps_lo=0, stocks_with_jumps=0, last_scale_not_one=0)
+        detail = dict(unverified=[], jumps=[], last_scale=[])       # derived ratios only (no price levels)
+        day = lambda r: str(cal[r].astype("datetime64[D]"))
         for i in range(0, N, BATCH):
             part = sids[i:i + BATCH]
             syms = [self.xs_sym[s] for s in part]
@@ -175,17 +177,22 @@ class H019XS(QRAlgorithm):
                     ev[int(cols[r])].append((int(np.searchsorted(cal, eday[r])), float(fac[r])))
             for j in range(len(part)):
                 raw, sc = a["close"][:, j], b["close"][:, j]
-                mult, s1 = XP.split_multiplier(raw, sc, ev[j])
+                du, dj = [], []
+                mult, s1 = XP.split_multiplier(raw, sc, ev[j], detail=du)
                 for k2, v in s1.items():
                     st["split"][k2] += v
                 q = raw * mult
-                hi, lo = XP.residual_jumps(q, sc)
+                hi, lo = XP.residual_jumps(q, sc, detail=dj)
+                sid = part[j]
+                detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_) for b_, f_, r0, rb, rb_ in du]
+                detail["jumps"] += [(sid, day(r_), x, qa, pa) for r_, x, qa, pa in dj]
                 st["jumps_hi"] += hi
                 st["jumps_lo"] += lo
                 st["stocks_with_jumps"] += int(hi + lo > 0)
                 v = np.flatnonzero(np.isfinite(raw) & np.isfinite(sc) & (raw > 0))
                 if v.size and abs(sc[v[-1]] / raw[v[-1]] - 1.0) > 1e-6:
                     st["last_scale_not_one"] += 1
+                    detail["last_scale"].append((sid, day(v[-1]), float(sc[v[-1]] / raw[v[-1]])))
                 Q[:, i + j] = q
                 P[:, i + j] = sc
                 O[:, i + j] = b["open"][:, j]
@@ -209,6 +216,8 @@ class H019XS(QRAlgorithm):
                 self.xs_mcap[k, j] = mc
                 self.xs_sector[k][j] = XD.ff12(sic)
         st["month_end_date_mismatches"] = mism
+        if self.xs_mode == "canary":
+            self._qr_log("P|" + json.dumps(_r(detail, 8), default=str))
         st["research_months_recorded"] = sorted("%04d-%02d" % m for m in self.xs_me)
         st["panel_s"] = round(time.perf_counter() - t0, 1)
         self.xs_cal, self.xs_me_rows, self.xs_months = cal, me, months
@@ -363,8 +372,8 @@ class H019XS(QRAlgorithm):
         ck["s3_slow_rank_deficient_months"] = eb_bad
         ck["s2_structure_violations"] = s2bad
         ck["id_range_ok"] = bool(all(np.all(np.abs(r["idm"]) <= 1.0 + 1e-12) for r in full["_signals"]))
-        ck["betas_keys_ok"] = bool(min(full["_betas"]) == months.index(X.FIRST_RESEARCH_MONTH) and
-                                   max(full["_betas"]) == kd1)
+        ck["regression_months_first_last"] = ["%04d-%02d" % months[min(full["_betas"])],
+                                              "%04d-%02d" % months[max(full["_betas"])]]
         # 3b. truncation invariance: the panel cut at the close after decision TRUNC_DECISION gives identical signals
         kt = months.index(TRUNC_DECISION)
         cut = me[kt + 1] + 1

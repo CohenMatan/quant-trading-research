@@ -50,7 +50,7 @@ def month_ends(cal_days):
     return months, last.tolist()
 
 
-def split_multiplier(raw, scaled, events, tol=SPLIT_TOL, search=SPLIT_SEARCH):
+def split_multiplier(raw, scaled, events, tol=SPLIT_TOL, search=SPLIT_SEARCH, detail=None):
     """raw / scaled: one stock's RAW and SCALED_RAW closes on the calendar (NaN = no bar). events: [(b, f)] with b =
     the first calendar row on or after the split's event day and f = the LEAN split factor (price multiplier for the
     rows before the split, e.g. 1/7 for 7:1). Each boundary is verified against the jump of c = scaled / raw between
@@ -88,11 +88,14 @@ def split_multiplier(raw, scaled, events, tol=SPLIT_TOL, search=SPLIT_SEARCH):
                 st["realigned"] += 1
             else:
                 st["unverified"] += 1
+                if detail is not None:      # (event row, factor, c_before / c_after at the event, best row, its ratio)
+                    detail.append((int(b), float(f), float(c[valid[i - 1]] / c[valid[i]]), int(valid[j]),
+                                   float(c[valid[j - 1]] / c[valid[j]])))
         mult[:valid[best]] *= f
     return mult, st
 
 
-def residual_jumps(Q, P, lo=0.75, hi=1.02):
+def residual_jumps(Q, P, lo=0.75, hi=1.02, detail=None):
     """Checks of the split adjustment for one stock: d = P / Q is the dividend-only factor, non-decreasing in time with
     small steps. Counts consecutive valid-row steps d_before / d_after above hi (impossible for dividends: an
     unexplained split or data revision) or below lo (a > 25% distribution or a missed reverse split)."""
@@ -102,4 +105,24 @@ def residual_jumps(Q, P, lo=0.75, hi=1.02):
         return 0, 0
     d = P[v] / Q[v]
     r = d[:-1] / d[1:]
+    if detail is not None:              # (row after the step, d_before / d_after, Q_after / Q_before, P_after / P_before)
+        for i in np.flatnonzero((r > hi) | (r < lo)):
+            detail.append((int(v[i + 1]), float(r[i]), float(Q[v[i + 1]] / Q[v[i]]), float(P[v[i + 1]] / P[v[i]])))
     return int((r > hi).sum()), int((r < lo).sum())
+
+
+def dividend_multiplier(D, events):
+    """Cash-dividend factor per row: events = [(b, distribution, reference price)] with b = the first calendar row on or
+    after the ex-dividend day; rows before b are multiplied by (1 - distribution / reference), QuantConnect's own price-
+    factor convention (the reference price is the close before the ex-date)."""
+    m = np.ones(D)
+    for b, amt, ref in events:
+        if ref > 0 and 0 < amt < ref:
+            m[:b] *= 1.0 - amt / ref
+    return m
+
+
+def cfacpr_close(P, div_mult):
+    """CRSP-style |prc| / cfacpr closes from QuantConnect total-return closes: remove the cash-dividend factor, keep the
+    split and spin-off (other price-factor distribution) adjustments, as CRSP's cumulative price factor does."""
+    return np.asarray(P, float) / np.asarray(div_mult, float)
