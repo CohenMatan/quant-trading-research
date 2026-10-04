@@ -269,7 +269,7 @@ S3 = (1/3) × [ ln(P/SMA_50) + ln(P/SMA_100) + ln(P/SMA_200) ]
 | Turnover | Lower (one rebalance a month) | Higher threshold churn near bucket edges |
 | Serial dependence | 3-month horizon: 2 months of overlap, NW lag 6 on 92 points | 13-week horizon: 12 weeks of overlap, NW lag ≈ 26 on ≈ 400 points. Long-lag HAC is less reliable in small samples |
 | Literature convention | **All three sources (JT, DGW, HZZ) rank monthly** | Practitioner only |
-| Statistical power (synthetic, §§24–26) | WVM_MONTHLY | WVM_WEEKLY |
+| Statistical power (synthetic, §§24–26) | Same power: 0.81 at a fixed edge (101 decisions, null-calibrated c = 2.75) | Same power: 0.81 (403 decisions, c = 2.84). **4× the dates, no gain** |
 
 **Recommendation: monthly.**
 - Weekly ranking adds almost no independent information, because the extra dates are highly dependent.
@@ -295,7 +295,7 @@ This is not a daily trading strategy. Daily data only measures the inputs.
 4. **6 and 12 months are too long:**
    - 12 months enters the long-run reversal zone (JT 2001).
    - 6 months needs 5 months of overlap on only 89 dates, about 15 independent observations, where HAC is unreliable.
-5. **Power is roughly horizon-neutral when information persists** (§14 synthetic result). So the choice follows economics and inference quality, not power.
+5. **Power cost, stated honestly:** in the synthetic model 1 month has somewhat more power than 3 months (§14: 0.92 vs 0.82 at the same edge). 3 months is chosen for economic alignment and robustness to month-after-formation effects, accepting about a 10–15% larger detectable IC. **Owner choice offered (§40):** 1 month primary with 3 months as a diagnostic.
 
 ## 14. Secondary horizon diagnostics (never gated)
 
@@ -304,7 +304,22 @@ This is not a daily trading strategy. Daily data only measures the inputs.
 | 1 month | 94 | 2 | Non-overlapping check; the decay of information |
 | 6 months | 89 | 12 | Persistence (DGW's claim for S2) |
 
-**Synthetic comparison** at the same per-month edge (`P4_xs_power.json` → `horizons`): HORIZON_TABLE
+**Synthetic comparison** at the same per-month edge (`P4_xs_power.json` → `horizons`): 
+
+| Horizon | Decisions | Overlap | NW lag | Null 1% critical t | Power at the same edge |
+|---|---|---|---|---|---|
+| 1 month | 94 | 0 | 2 | 2.32 | **0.92** |
+| **3 months (primary)** | 92 | 2 months | 6 | 2.96 | **0.82** |
+| 6 months | 89 | 5 months | 12 | 2.94 | 0.79 |
+
+**Honest reading.**
+- In the synthetic model, information decays by ≈ 10% a month (persistence 0.90).
+- There, **1 month has somewhat more power** than 3 months (≈ 10 points at a mid-size edge; roughly a 10–15% smaller detectable IC). It also has the cleanest inference (no overlap).
+- 3 months is still recommended, for the reasons in §13:
+  - it matches the economic claim (persistence over the months a book would hold);
+  - it is less sensitive to month-after-formation effects, which matters for S3 because it has no skip month;
+  - Da-Gurun-Warachka's persistence argument.
+- **The power cost is stated openly.** "1 month primary, 3 months diagnostic" is offered as an owner choice (§40).
 
 ## 15. Primary response variable: cross-sectionally demeaned forward return
 
@@ -404,12 +419,12 @@ Spread = mean over dates of (D10 − D1) on the demeaned 3-month response, × 4 
 2. **Across dates:** the time-series mean, with a **Newey-West (Bartlett) HAC standard error, fixed lag 6**. This covers the 2-month overlap of 3-month returns plus signal persistence. t = mean / SE.
 3. **Calibration:**
    - The t-statistics are compared with the critical value c from the **tethered null** (§29).
-   - The null preserves overlap, persistence and cross-sectional structure. It corrects the small-sample error of HAC with an effective sample of ≈ 30 (§24).
+   - The null preserves overlap, persistence and cross-sectional structure. It corrects the small-sample error of HAC with an effective sample of ≈ 40: the naive test over-rejects about 3× (§24).
    - Studentised statistics are permuted, not raw means: a signal with factor tilts has a more volatile IC than a random ranking, and studentisation keeps the comparison fair (Chung-Romano 2013).
 4. **Rejected as primary:**
    - stock-level pooled OLS or naive standard errors: they treat about 100,000 stock-months as independent;
    - double-clustered (stock and month) errors: unreliable with ≈ 90 months and overlapping horizons, and redundant given the date-level time series;
-   - a block bootstrap: another tuning choice (block length) on the same ≈ 30 effective observations; the tethered null already preserves dependence.
+   - a block bootstrap: another tuning choice (block length) on the same ≈ 40 effective observations; the tethered null already preserves dependence.
 
 ## 23. Overlapping returns
 
@@ -424,28 +439,62 @@ Spread = mean over dates of (D10 − D1) on the demeaned 3-month response, × 4 
 
 **Naive count:** ≈ 92 dates × ≈ 1,150 stocks ≈ **106,000 stock-months.** That is the wrong number.
 
-**Synthetic panel** (`P4_xs_power.json`; N = 1,100, 12 sectors, 4 style factors, signal persistence 0.90 a month), no-edge null: ESS_TABLE
+**Synthetic panel** (`P4_xs_power.json`; N = 1,100, 12 sectors, 4 style factors, signal persistence 0.90 a month), no-edge null:
+
+| Quantity (no-edge null, 1,000 worlds per scenario) | Value |
+|---|---|
+| Autocorrelation of the monthly 3-month IC | lag 1 ≈ 0.62, lag 2 ≈ 0.28, then ≈ 0 |
+| Variance inflation (Bartlett, 12 lags) | ≈ 2.3 |
+| **Effective independent observations** | **≈ 40** (of 92 dates) |
+| Naive normal test at 1% (t > 2.33) with NW lag 6 | rejects in **2.8–3.2%** of no-edge worlds (≈ 3× too often) |
+| Null t-statistic dispersion (should be 1.0) | 1.15–1.23 |
+| Null 1% critical value, single statistic | 2.8–3.1 |
+| **Null 1% critical value, max of the 5 statistics (c)** | **3.55–3.85** |
+
+The naive HAC t over-rejects with only about 40 effective observations. **This is why c is taken from the null, not from the normal table.**
 
 **What this means:**
 - The cross-section reduces each month to **one** IC observation.
-- Overlap and persistence reduce the 92 monthly ICs to **ESS_TEFF effectively independent observations**: roughly one per quarter.
+- Overlap and persistence reduce the 92 monthly ICs to **≈ 40 effectively independent observations**: roughly one every 2–3 months.
 - **Cross-sectional breadth cannot remove the month-to-month variation of the signal's payoff.** That variation (σ_IC) comes from the signal's exposure to common factors (sectors, styles) and is the dominant noise.
-- With no factor alignment, σ_IC would be the breadth floor of ≈ 1/√N ≈ FLOOR_SD. Real price signals sit well above it.
+- With no factor alignment, σ_IC would be the breadth floor of ≈ 1/√N ≈ 0.029 (synthetic). Real price signals sit well above it.
 
 **The unknown σ_IC.**
 - The real σ_IC is unknown until the data is seen.
 - Power is therefore given for three pre-declared scenarios: σ_IC (3-month, no edge) = 0.06 / 0.10 / 0.15.
 - Momentum's payoff is notoriously volatile, so **0.10–0.15 is the realistic range for S1**.
-- The incremental statistic is less factor-exposed, so its noise is lower (σ_inc in the table).
+- The incremental statistic is less factor-exposed, so its noise is lower (its detectable sizes are in §§25–26).
 
 ## 25. 50% power and 26. 80% power
 
 **Synthetic, family-wise α = 1% (c = the null 99th percentile of the max of 5 statistics).** The minimum true effects detectable with 50% / 80% probability are below. "Top-decile excess" is the annualised demeaned excess of the top decile; "spread" is D10 − D1 annualised.
 
-POWER_TABLE
+| Scenario: σ_IC (3-month, no edge) | c (1%) | 50% power: rank IC | 50%: top-decile excess / yr | 50%: D10 − D1 / yr | 80% power: rank IC | 80%: top-decile excess / yr | 80%: D10 − D1 / yr |
+|---|---|---|---|---|---|---|---|
+| Low (0.06) | 3.57 | 0.034 | **3.9%** | 7.9% | 0.046 | 5.2% | 10.4% |
+| Mid (0.10) | 3.85 | 0.061 | **7.0%** | 14.1% | 0.082 | 9.5% | 18.9% |
+| High (0.15) | 3.55 | 0.086 | **10.1%** | 20.2% | 0.115 | 13.4% | 26.8% |
+
+**Incremental test (S2's smoothness beyond momentum).** Minimum within-quintile partial IC detectable (≈ the return gap between the smoother and the rougher half of a momentum quintile, annualised; approximate conversion):
+
+| Scenario | 50% power | 80% power |
+|---|---|---|
+| Low | 0.022 (≈ 2.2% a year) | 0.030 (≈ 3.0%) |
+| Mid | 0.033 (≈ 3.3% a year) | 0.046 (≈ 4.6%) |
+| High | 0.045 (≈ 4.6% a year) | 0.060 (≈ 6.1%) |
+
+**Power at small edges** (S1, mid scenario):
+- a true top-decile excess of ≈ 1.9% a year is detected in **1%** of samples;
+- ≈ 3.8% a year in **7%**;
+- ≈ 5.7% a year in **27%**.
+
+In the low scenario, ≈ 2% a year → 6% and ≈ 4% → 53%.
 
 **Reading the table:**
-- MDE_READING
+- In the realistic mid scenario, only a top-decile edge of **≈ 7% a year** (rank IC ≈ 0.06) has an even chance of being confirmed, and ≈ 9.5% a year for 80%.
+- **A realistic 1–3% a year edge is essentially undetectable** (power ≤ 7% in every scenario except "low", where ≈ 4% a year reaches about 50%).
+- **The incremental test is relatively better powered**: its statistic is less factor-exposed. It can detect a smooth-vs-rough gap of ≈ 2–5% a year within momentum quintiles.
+- **The cost of the history adjustment:** c (max of 5 at 1%) is ≈ 3.6–3.9, against ≈ 2.7 for the same family at 5%. That roughly 30–40% higher bar is the price of the four prior looks.
 
 ## 27. Year and subperiod stability
 
@@ -584,7 +633,7 @@ The rule is implemented in `qr_xs.promotion` and tested criterion by criterion.
 | Incomplete capture | — | 12 names are a noisy subset of ≈ 110; holding rules lag the ranking |
 
 - 3% is the smallest gross edge that leaves anything after the drags.
-- In synthetic terms it corresponds to a 3-month rank IC of roughly ECON_IC.
+- In synthetic terms it corresponds to a 3-month rank IC of roughly 0.026 (synthetic conversion: a 3-month IC of 0.01 ≈ 1.15% a year of top-decile excess).
 - **A signal can be statistically detectable and still fail P1.** That is intended: a detectable 0.5% a year edge is economically useless here.
 
 **Reported alongside:** the top decile vs SPY, the spread, and the IC.
@@ -668,25 +717,47 @@ No re-runs with changed rules. No 2018–2021 data. No Holdout.
 - It uses frozen formulas, one null and one threshold, so it creates no new search.
 
 **Honest expectation:**
-- With realistic factor-driven IC noise, the test detects with ≥ 50% probability only edges equivalent to a top-decile excess of about MDE_TOP_MID a year (mid scenario).
+- With realistic factor-driven IC noise, the test detects with ≥ 50% probability only edges equivalent to a top-decile excess of about 7% a year (mid scenario).
 - A true 1–3% a year edge will most likely **not** be confirmed.
 - A "none" outcome would therefore mean "no large edge", not "no edge". It would still justify stopping technical stock selection in this universe (pre-registered consequence §9 of the spec).
 
 **No-Go would be reasonable if** the owner considers that a test unable to confirm a 1–3% edge is not worth running. The alternative is to stop now.
+
+**Owner choices needed before freezing:**
+1. **GO or NO-GO** for the signal validation (implementation, canary E985-01, null E020-01..05, real E020-06), each run gated by `owner_approval_required`.
+2. **Primary horizon:**
+   - **3 months** (recommended: economic alignment; ≈ 10–15% power cost); or
+   - **1 month** (more synthetic power, no overlap) with 3 months as a diagnostic.
+3. **Formula confirmation:** whether the two definitions must first be checked against the full papers (recommended; the PDFs are blocked here), or accepted as quoted in the search records.
+4. **The history-adjusted level α = 1%** (four prior looks), or a different accounting.
+5. **Identifiers:**
+   - H019 = this procedure;
+   - X985 = canary host;
+   - S020 = the research host (S019 stays unused, as reserved and never built in Phase 3);
+   - experiments E985-01, E020-01..06.
 
 ---
 
 ## Answers A–K
 
 **A. Can cross-sectional analysis materially improve our ability to detect a realistic 1–3% stock-selection edge?**
-ANSWER_A
+**Only partly.**
+- Cross-sectional analysis removes idiosyncratic noise and the portfolio choices, and it gives a clean, cheap, null-calibrated test.
+- **But the binding noise is the month-to-month variation of the signal's payoff, which breadth cannot diversify.** With about 40 effective observations and a history-adjusted 1% family-wise bar:
+  - the 50%-power detectable top-decile excess is ≈ 4% a year if the signal's payoff is calm, ≈ 7% a year in the realistic mid case, and ≈ 10% a year if it is as volatile as momentum often is;
+  - P4-CP1's portfolio-level figure was ≈ 6–8% a year for its search gates and ≈ 12% for the full chain.
+- **A realistic 1–3% edge stays essentially undetectable** (power ≤ 7% in the mid scenario).
+- **The real gain is elsewhere:**
+  1. the incremental test can detect a moderately sized refinement (≈ 3% a year smooth-vs-rough gap, mid case);
+  2. a "none" result cleanly separates "no large edge in the information itself" from "a 12-stock book could not show it";
+  3. the realised IC volatility is measured, so the detectable edge is known after the run.
 
 **B. What is the statistically strongest way to test these signals without pretending stock-months are independent?**
 - One cross-sectional statistic (rank IC) per date.
 - The time-series mean with a Newey-West HAC t (lag 6).
 - Calibrated against an identity-tethered within-date permutation null that runs the whole procedure.
 - A max-statistic over the five tests at α = 1%.
-- The effective sample is ≈ 30 independent observations, not 100,000 (§§22–24, §29).
+- The effective sample is ≈ 40 independent observations, not ≈ 100,000 (§§22–24, §29).
 
 **C. Which published definition should we use for Smooth Momentum?**
 - Da, Gurun & Warachka (2014, RFS) information discreteness, via its unsigned form NUD = (#up − #down) / #days.
@@ -701,10 +772,11 @@ ANSWER_A
 **E. Which future-return horizon should be primary?**
 - 3 months (next open → the close of the third month-end), sampled monthly, NW lag 6.
 - 1 and 6 months are diagnostics only (§§13–14).
+- Note: 1 month has somewhat more synthetic power (0.92 vs 0.82). 3 months is recommended on economic grounds, and the alternative is an owner choice.
 
 **F. Monthly or weekly ranking?**
 - **Monthly.** Weekly adds dependent rather than independent observations, departs from all three source papers, and adds turnover and HAC fragility.
-- The synthetic power is equal or better for monthly (§12).
+- The synthetic power is identical (0.81 vs 0.81 at the same edge) with a quarter of the dates (§12).
 
 **G. Sector-neutral primary or diagnostic?**
 - **Diagnostic.** The primary test is the raw cross-section, because the future book is unconstrained and the objective is wealth.
@@ -720,7 +792,7 @@ ANSWER_A
 - Novelty: only the incremental test can show anything new (§32).
 
 **J. What minimum effect size would make a signal worth turning into a real portfolio?**
-- A top-decile demeaned excess of **≥ 3% a year** (≈ a 3-month rank IC of ECON_IC), monotonic and stable.
+- A top-decile demeaned excess of **≥ 3% a year** (≈ a 3-month rank IC of 0.026 (synthetic conversion: a 3-month IC of 0.01 ≈ 1.15% a year of top-decile excess)), monotonic and stable.
 - For S2 / S3, it must also add information beyond momentum.
 - Below that, costs, cash drag and concentration would likely consume the edge (§34).
 
