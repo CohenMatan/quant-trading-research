@@ -1211,3 +1211,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P2_CP15_H017_development_result_phase2_final.md`.
 
 **STOP:** all three Phase 2 slots used, all three hypotheses rejected; Phase 2 ends with "No Production Candidate Found" unless the owner decides otherwise. Holdout untouched.
+
+## 2026-10-04: Phase 2 closed (No Production Candidate Found); Phase 3 architecture proposed; STOP (D129, D130)
+
+- **Owner:** Phase 2 closed as No Production Candidate Found; H017 Rejected as tested; Holdout locked; no data purchase. New direction: a systematic multi-indicator technical strategy search, design only.
+- **P3-CP1 proposed** (`docs/checkpoints/P3_CP1_systematic_technical_search_architecture.md`):
+  - constrained grammar: 1,533 + ≤ 24 configurations, coarse literature grids, information-family redundancy rules;
+  - search 2010-03 → 2017-12, procedure walk-forward 2014–17, internal OOS 2018–21 once, Holdout locked;
+  - fold-median log excess vs SPY; plateau (neighbourhood 25th percentile); one-standard-error simplicity rule;
+  - permutation search-null of the whole procedure (R = 39) as the primary multiple-testing control;
+  - in-cloud shadow-book engine with LEAN verification;
+  - promotion ≤ 3 → ≤ 2 → 1 → 1.
+- **Supporting studies** (no strategy returns):
+  - cost feasibility: holdings < ≈ 56 sessions break R4 at 10 slots;
+  - search-space counts;
+  - calibration on control books only: fake training winners are certain without a null; the chain's false pass ≈ 1%; realistic edges ≤ 4%/yr undetectable; the universe EW trailed SPY by 4.1%/yr in 2018–21.
+
+**STOP:** awaiting the owner's decisions (P3-CP1 §31). Nothing implemented or run; Holdout locked.
