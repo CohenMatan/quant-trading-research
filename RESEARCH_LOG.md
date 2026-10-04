@@ -1335,3 +1335,27 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Nothing computed or run:** no indicator returns, no QC run, no 2018–2021, no Holdout, no H019, no purchase.
 
 **STOP:** awaiting the owner's decisions (P4-CP2 §33).
+
+## 2026-10-04: P4-CP3 Cross-Sectional Technical Signal Validation Architecture (design only); STOP (D142)
+
+- **Owner:** accepted P4-CP2. Next step = validate whether three pre-registered technical signals carry cross-sectional information **before** any portfolio is built. Design only.
+- **Signals:**
+  - S1 12-1 momentum (reference);
+  - S2 smooth momentum (Da-Gurun-Warachka sequential sort: momentum quintile, then net up-day share);
+  - S3 trend score (mean log distance above the 50/100/200-day averages; Han-Zhou-Zhu measurement, unweighted).
+- **Design** (draft pre-registration `research/phase4/P4_xs_spec.md`):
+  - monthly ranking, 92 decisions 2010-02 → 2017-09, 3-month forward demeaned returns;
+  - deciles, rank IC, monotonicity, raw-primary / sector-neutral and size diagnostics;
+  - Newey-West t, within-momentum-quintile incremental test;
+  - identity-tethered within-date permutation null (R = 5,000); max-statistic at α = 1% (prior momentum looks counted);
+  - multi-part promotion rule; pre-registered consequences.
+- **Built (synthetic only):** `qr_xs.py` (16 tests) and a power study (`P4_xs_power.json`). Findings:
+  - about 40 effective observations;
+  - the naive test over-rejects about 3×;
+  - 50%-power top-decile edge ≈ 4% / 7% / 10% a year depending on IC noise, so a 1–3% edge is essentially undetectable;
+  - weekly ranking gives no power gain;
+  - 1-month horizon somewhat more powerful than 3 months (owner choice offered).
+- **Caveat:** paper PDFs blocked by the network policy; formulas to be confirmed against the full texts before freezing.
+- **Nothing real computed:** no real signal, return, IC or null; no QC run; no 2018–2021; Holdout locked; no purchase.
+
+**STOP:** awaiting the owner's GO / NO-GO and choices (P4-CP3 §40).
