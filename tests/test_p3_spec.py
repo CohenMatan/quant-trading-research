@@ -162,3 +162,15 @@ def test_s018_is_byte_copy_of_verified_engine():
     a = (config.REPO_ROOT / "strategies/S018_p3_search/main.py").read_bytes()
     b = (config.REPO_ROOT / "strategies/X984_p3_engine/main.py").read_bytes()
     assert a == b
+
+
+def test_null_threshold_frozen_before_real_search():
+    """D137: the null calibration is pinned (file hash and tau) and tau is the frozen rule applied to its 500 worlds."""
+    import hashlib
+    import json
+    f = config.REPO_ROOT / p3spec.NULL_RESULT
+    assert hashlib.sha256(f.read_bytes()).hexdigest() == p3spec.NULL_RESULT_SHA256
+    d = json.loads(f.read_text())
+    assert d["spec_sha256"] == p3spec.SPEC_SHA256
+    assert len(d["primary"]["T"]) == 500 and d["primary"]["tau"] == p3spec.TAU
+    assert p3spec.tau_of(d["primary"]["T"]) == p3spec.TAU

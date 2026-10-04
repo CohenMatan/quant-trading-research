@@ -106,3 +106,26 @@ def test_world_summary_shape():
     s = P.world_summary(inputs(seed=1), NBI, CPX)
     assert set(s) >= {"best_ps", "n_eligible", "n_clusters", "ranked", "wf"}
     assert len(s["ranked"]) <= 3 and len(s["wf"]["years"]) == 4
+
+
+def test_apparent_winners_reporting_only():
+    """Reporting fields (owner item 15) equal direct computations and leave T / ranking unchanged."""
+    import qr_p3_grammar as GG
+    rng = np.random.default_rng(21)
+    C = GG.enumerate_configs()
+    ix = {c["id"]: i for i, c in enumerate(C)}
+    nbg = GG.neighbours(C)
+    nbi = [np.array([ix[o] for o in nbg[c["id"]]], dtype=int) for c in C]
+    n = len(C)
+    sess = np.array([214.0] + [252.0] * 7)
+    inp = P.Inputs([c["id"] for c in C], rng.normal(0.0, 0.05, (n, 8)) * sess / 252, np.full((n, 8), 500.0),
+                   np.full((n, 8), 1e5) * sess, np.full((n, 8), 3e5), np.full((n, 8), -0.2), sess, np.full(8, -0.25),
+                   np.zeros(8), list(range(2010, 2018)))
+    s = P.world_summary(inp, nbi, [GG.complexity(c) for c in C])
+    a = s["apparent"]
+    tot = inp.logex.sum(axis=1)
+    t = P.score_table(inp, 2017)
+    assert a["best_total_logex"] == pytest.approx(tot.max()) and a["n_beat_spy"] == int((tot > 0).sum())
+    assert a["best_s"] == pytest.approx(t["s"].max())
+    assert a["best_s_eligible"] == pytest.approx(t["s"][t["eligible"]].max())
+    assert a["best_s"] >= s["best_ps"] and a["n_configs"] == n
