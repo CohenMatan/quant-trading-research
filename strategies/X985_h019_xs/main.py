@@ -7,7 +7,8 @@
 # remembered; the set of the LAST session of each month is that month-end's universe (with market cap and the point-
 # in-time SEC SIC). At the end (2017-12-31): the daily panel of every stock eligible at any research month-end is
 # assembled from history (qr_xs_panel: SCALED_RAW = total-return prices adjusted with corporate actions up to 2017
-# only; RAW x split events up to 2017 = split-adjusted closes), then qr_xs.Features -> qr_xs.run_world, exactly the
+# only; those prices without the cash-dividend factor = |prc| / cfacpr closes for S3), then qr_xs.Features ->
+# qr_xs.run_world, exactly the
 # code of the synthetic studies. Only aggregates leave QuantConnect (summary statistics); no price is exported.
 # Modes (params.mode):
 #   canary : E985-01 plumbing / fidelity canary (spec section 10): universe and calendar facts, history coverage,
@@ -141,9 +142,29 @@ class H019XS(QRAlgorithm):
         st = dict(columns=N, rows=D, first_day=str(cal[0].astype("datetime64[D]")),
                   last_day=str(cal[-1].astype("datetime64[D]")), late_rows=0, unknown_day_rows=0, history_calls=0,
                   split_types={}, split=dict(n=0, aligned=0, realigned=0, unverified=0, outside=0),
-                  jumps_hi=0, jumps_lo=0, stocks_with_jumps=0, last_scale_not_one=0)
-        detail = dict(unverified=[], jumps=[], last_scale=[])       # derived ratios only (no price levels)
+                  dividend_events=0, factor_steps_small=0, factor_steps_big=0, stocks_with_factor_steps=0,
+                  last_scale_not_one=0)
+        detail = dict(unverified=[], steps=[], last_scale=[])       # derived ratios only (no price levels)
         day = lambda r: str(cal[r].astype("datetime64[D]"))
+
+        def events(frame, loc, fields):
+            out = {j: [] for j in loc.values()}
+            if frame is None or frame.empty:
+                return out, []
+            idx = frame.index
+            lmap = np.array([loc.get(_sid(s), -1) for s in idx.levels[0]], dtype=np.int64)
+            cols = lmap[np.asarray(idx.codes[0])]
+            eday = XP.event_days(idx.get_level_values(-1).values)
+            vals = [frame[f].tolist() for f in fields]
+            for r in range(len(cols)):
+                if cols[r] < 0:
+                    continue
+                if eday[r] > LAST_SESSION:
+                    st["late_rows"] += 1
+                    continue
+                out[int(cols[r])].append((int(np.searchsorted(cal, eday[r])),) + tuple(v[r] for v in vals))
+            return out, None
+
         for i in range(0, N, BATCH):
             part = sids[i:i + BATCH]
             syms = [self.xs_sym[s] for s in part]
@@ -152,50 +173,49 @@ class H019XS(QRAlgorithm):
             hs = self.history(syms, HIST_START, HIST_END, Resolution.DAILY, fill_forward=False,
                               data_normalization_mode=DataNormalizationMode.SCALED_RAW)
             sp = self.history(Split, syms, HIST_START, HIST_END)
-            st["history_calls"] += 3
+            dv = self.history(Dividend, syms, HIST_START, HIST_END)
+            st["history_calls"] += 4
             loc = {s: j for j, s in enumerate(part)}
             a, l1, u1 = self._cols(hr, loc, cal, D, len(part), ("close",))
             b, l2, u2 = self._cols(hs, loc, cal, D, len(part), ("close", "open"))
             st["late_rows"] += l1 + l2
             st["unknown_day_rows"] += u1 + u2
-            ev = {j: [] for j in range(len(part))}
-            if sp is not None and not sp.empty:
-                sidx = sp.index
-                lmap = np.array([loc.get(_sid(s), -1) for s in sidx.levels[0]], dtype=np.int64)
-                cols = lmap[np.asarray(sidx.codes[0])]
-                eday = XP.event_days(sidx.get_level_values(-1).values)
-                typ = [str(t) for t in sp["type"].tolist()]
-                ref = sp["referenceprice"].to_numpy(dtype=float)
-                fac = sp["splitfactor"].to_numpy(dtype=float)
-                for r in range(len(typ)):
-                    st["split_types"][typ[r]] = st["split_types"].get(typ[r], 0) + 1
-                    if cols[r] < 0 or not ("OCCUR" in typ[r].upper() or ref[r] > 0):
-                        continue
-                    if eday[r] > LAST_SESSION:
-                        st["late_rows"] += 1
-                        continue
-                    ev[int(cols[r])].append((int(np.searchsorted(cal, eday[r])), float(fac[r])))
+            sev, _ = events(sp, loc, ("type", "referenceprice", "splitfactor"))
+            dev, _ = events(dv, loc, ("distribution", "referenceprice"))
             for j in range(len(part)):
-                raw, sc = a["close"][:, j], b["close"][:, j]
-                du, dj = [], []
-                mult, s1 = XP.split_multiplier(raw, sc, ev[j], detail=du)
-                for k2, v in s1.items():
-                    st["split"][k2] += v
-                q = raw * mult
-                hi, lo = XP.residual_jumps(q, sc, detail=dj)
                 sid = part[j]
-                detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_) for b_, f_, r0, rb, rb_ in du]
-                detail["jumps"] += [(sid, day(r_), x, qa, pa) for r_, x, qa, pa in dj]
-                st["jumps_hi"] += hi
-                st["jumps_lo"] += lo
-                st["stocks_with_jumps"] += int(hi + lo > 0)
-                v = np.flatnonzero(np.isfinite(raw) & np.isfinite(sc) & (raw > 0))
+                raw, sc, so = a["close"][:, j], b["close"][:, j], b["open"][:, j]
+                v = np.flatnonzero(np.isfinite(raw) & np.isfinite(sc) & (raw > 0) & (sc > 0))
                 if v.size and abs(sc[v[-1]] / raw[v[-1]] - 1.0) > 1e-6:
+                    # LEAN dates a price factor on the last session BEFORE its ex-date: an event on the first session
+                    # of 2018 (or after a delisting) scales every row of the stock by one constant; removed here, so
+                    # no post-2017 factor remains even as a constant (it would cancel in every ratio anyway)
                     st["last_scale_not_one"] += 1
                     detail["last_scale"].append((sid, day(v[-1]), float(sc[v[-1]] / raw[v[-1]])))
+                    cl = sc[v[-1]] / raw[v[-1]]
+                    sc, so = sc / cl, so / cl
+                ev = []
+                for r_, typ, ref, fac in sev[j]:
+                    t = str(typ)
+                    st["split_types"][t] = st["split_types"].get(t, 0) + 1
+                    if "OCCUR" in t.upper() or float(ref) > 0:
+                        ev.append((r_, float(fac)))
+                de = [(r_, float(amt), float(ref)) for r_, amt, ref in dev[j]]
+                st["dividend_events"] += len(de)
+                q = XP.cfacpr_close(sc, XP.dividend_multiplier(D, de))   # |prc| / cfacpr (spec section 1)
+                du, dj = [], []
+                mult, s1 = XP.split_multiplier(raw, sc, ev, detail=du)   # diagnostic: split feed vs price factors
+                for k2, v2 in s1.items():
+                    st["split"][k2] += v2
+                sm, bg = XP.factor_steps(q, raw * mult, detail=dj)
+                st["factor_steps_small"] += sm
+                st["factor_steps_big"] += bg
+                st["stocks_with_factor_steps"] += int(sm + bg > 0)
+                detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_) for b_, f_, r0, rb, rb_ in du]
+                detail["steps"] += [(sid, day(r_), x) for r_, x in dj]
                 Q[:, i + j] = q
                 P[:, i + j] = sc
-                O[:, i + j] = b["open"][:, j]
+                O[:, i + j] = so
         if st["late_rows"]:
             raise Exception("X985: history returned data after 2017-12-29")
         months, me = XP.month_ends(cal)
@@ -216,6 +236,8 @@ class H019XS(QRAlgorithm):
                 self.xs_mcap[k, j] = mc
                 self.xs_sector[k][j] = XD.ff12(sic)
         st["month_end_date_mismatches"] = mism
+        st["split_unverified_detail"] = detail["unverified"]
+        st["last_scale_detail"] = detail["last_scale"]
         if self.xs_mode == "canary":
             self._qr_log("P|" + json.dumps(_r(detail, 8), default=str))
         st["research_months_recorded"] = sorted("%04d-%02d" % m for m in self.xs_me)

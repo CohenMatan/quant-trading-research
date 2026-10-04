@@ -104,6 +104,12 @@ class Sym:
         return self.id
 
 
+def _end_scale(c, alive):
+    """Per-stock value of c on the stock's last live row (the host divides every row by SCALED / RAW there)."""
+    last = np.array([np.flatnonzero(alive[:, j])[-1] if alive[:, j].any() else 0 for j in range(c.shape[1])])
+    return c[last, np.arange(c.shape[1])]
+
+
 def _market(N=70, seed=7):
     rng = np.random.default_rng(seed)
     cal = np.arange(np.datetime64("2005-11-01"), np.datetime64("2017-12-30"))
@@ -120,22 +126,33 @@ def _market(N=70, seed=7):
     alive = (np.arange(D)[:, None] >= born) & (np.arange(D)[:, None] < died)
     Qt[~alive] = np.nan
     divf = np.ones((D, N))
+    spin = np.ones((D, N))
+    divs = {j: [] for j in range(N)}
     splits = {j: [] for j in range(N)}
     for j in range(N):
-        for t in rng.choice(np.arange(5, D), size=24, replace=False):             # quarterly-ish dividends
-            divf[:t, j] *= 1 - rng.uniform(0.002, 0.01)
+        for t in rng.choice(np.arange(5, D), size=24, replace=False):             # quarterly-ish cash dividends
+            y = rng.uniform(0.002, 0.01)
+            divf[:t, j] *= 1 - y
+            divs[j].append((int(t), 100.0 * y, 100.0))                             # (row, distribution, reference)
         if rng.random() < 0.35:
             for t in rng.choice(np.arange(300, D - 5), size=rng.integers(1, 3), replace=False):
                 splits[j].append((int(t), float(rng.choice([0.5, 1 / 7, 2.0, 1 / 3]))))
+        if rng.random() < 0.1:                                                     # spin-off: a price factor only
+            spin[:int(rng.integers(300, D - 5)), j] *= rng.uniform(0.4, 0.7)
     split_mult = np.ones((D, N))
     for j, ev in splits.items():
         for t, f in ev:
             split_mult[:t, j] *= f
     RAW = Qt / split_mult
-    SC = Qt * divf
+    SC = Qt * divf * spin
     SO = SC * np.exp(rng.normal(0, 0.004, (D, N)))
     SO[~alive] = np.nan
-    return dict(cal=cal, Qt=Qt, RAW=RAW, SC=SC, SO=SO, splits=splits, alive=alive, born=born, N=N)
+    late = 5                                                                       # a factor dated after the end
+    SC[:, late] *= 0.99
+    SO[:, late] *= 0.99
+    return dict(cal=cal, Qt=Qt, RAW=RAW, SC=SC, SO=SO, splits=splits, divs=divs, alive=alive, born=born, N=N,
+                Qc=Qt * spin / _end_scale(SC / RAW, alive) * _end_scale(Qt * spin / RAW, alive),
+                Pn=SC / _end_scale(SC / RAW, alive), On=SO / _end_scale(SC / RAW, alive))
 
 
 def _ts(days):
@@ -150,7 +167,11 @@ def _fake_env(monkeypatch, M, mode, params=None, misdate=None):
 
     class Split:
         pass
+
+    class Dividend:
+        pass
     ai.Split = Split
+    ai.Dividend = Dividend
     monkeypatch.setitem(sys.modules, "AlgorithmImports", ai)
     h = types.ModuleType("qr_harness")
     syms = [Sym(f"S{j:03d}") for j in range(M["N"])]
@@ -188,6 +209,15 @@ def _fake_env(monkeypatch, M, mode, params=None, misdate=None):
                 if not rows:
                     return pd.DataFrame()
                 return pd.DataFrame(rows, index=pd.MultiIndex.from_arrays([ix_s, ix_t]))
+            if what is Dividend:
+                rows, ix_s, ix_t = [], [], []
+                for s in a[0]:
+                    j = int(s.id[1:])
+                    for t, amt, ref in M["divs"][j]:
+                        ix_s.append(s)
+                        ix_t.append(pd.Timestamp(cal[t]))
+                        rows.append(dict(distribution=amt, referenceprice=ref, value=amt))
+                return pd.DataFrame(rows, index=pd.MultiIndex.from_arrays([ix_s, ix_t])) if rows else pd.DataFrame()
             part = what
             mode_ = kw["data_normalization_mode"]
             ix_s, ix_t, cl, op = [], [], [], []
@@ -225,7 +255,7 @@ def _direct_features(M, a):
     months, me = XP.month_ends(M["cal"].astype(np.int64))
     elig = a.xs_panel.elig
     c = [int(sid[1:]) for sid in a.xs_sids]
-    return X.Features(X.Panel(M["Qt"][:, c], M["SC"][:, c], M["SO"][:, c], me, months, elig))
+    return X.Features(X.Panel(M["Qc"][:, c], M["Pn"][:, c], M["On"][:, c], me, months, elig))
 
 
 @pytest.fixture(scope="module")
@@ -234,15 +264,24 @@ def market():
 
 
 def test_host_panel_equals_direct_panel_and_canary(monkeypatch, market):
-    a, syms = _fake_env(monkeypatch, market, "canary", dict(timing_worlds=2), misdate=2)
+    md = min(j for j, ev in market["splits"].items()
+             if ev and all(market["alive"][t, j] and market["alive"][t - 1, j] for t, _ in ev) and market["born"][j] == 0
+             and market["alive"][-1, j])
+    a, syms = _fake_env(monkeypatch, market, "canary", dict(timing_worlds=2), misdate=md)
     a.qr_on_end()
     st = a.xs_st["panel"]
     sp = st["split"]
     cols = [int(sid[1:]) for sid in a.xs_sids]
     assert sp["n"] == sum(len(market["splits"][j]) for j in cols) and sp["unverified"] == 0
-    assert 2 in cols and sp["realigned"] == len(market["splits"][2]) > 0          # the misdated events
+    assert md in cols and sp["realigned"] == len(market["splits"][md]) > 0        # the misdated events
     assert st["late_rows"] == 0 and st["unknown_day_rows"] == 0 and st["month_end_date_mismatches"] == []
-    assert st["jumps_hi"] == 0 and st["jumps_lo"] == 0
+    def scale_at_end(j):
+        r = np.flatnonzero(market["alive"][:, j])[-1]
+        return market["SC"][r, j] / market["RAW"][r, j]
+    assert st["factor_steps_small"] == 0
+    assert st["last_scale_not_one"] == sum(abs(scale_at_end(j) - 1) > 1e-6 for j in cols) > 0
+    spun = [j for j in cols if np.nanmin(market["Qc"][:, j] / market["Qt"][:, j]) < 0.99]
+    assert st["factor_steps_big"] == len([j for j in spun if market["alive"][:, j].any()]) > 0
     F, G = a.xs_F, _direct_features(market, a)
     assert np.array_equal(F.dom, G.dom) and np.array_equal(F.full, G.full)
     for name in ("pret", "idm", "A", "reg"):

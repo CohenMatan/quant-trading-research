@@ -62,7 +62,6 @@ def run_canary():
     ck = json.loads(tagged(CANARY_RUN, "K")[0])
     hs = host_summary(CANARY_RUN)
     pn = hs["panel"]
-    sp = pn["split"]
     months = [f"{y}-{m:02d}" for y in range(2010, 2018) for m in range(1, 13)]
     checks = [
         ("calendar ends on 2017-12-29; no history row after it", pn["last_day"] == "2017-12-29" and pn["late_rows"] == 0),
@@ -87,7 +86,8 @@ def run_canary():
                                                                 (v["t_inc"] is None or abs(v["t_inc"]) < 3.5)
                                                                 for v in ck["placebo"].values())),
         ("null world deterministic (same seed twice)", ck["null_repeat_identical"] is True),
-        ("split events verified against the price-scale jumps", sp["unverified"] <= max(1, 0.01 * sp["n"])),
+        ("S3 prices = |prc| / cfacpr: cash dividends aligned (small unexplained factor steps <= 2% of dividend "
+         "events)", pn["factor_steps_small"] <= 0.02 * pn["dividend_events"]),
     ]
     out = dict(run=CANARY_RUN, passed=all(ok for _, ok in checks),
                checks=[dict(check=c, ok=bool(ok)) for c, ok in checks],

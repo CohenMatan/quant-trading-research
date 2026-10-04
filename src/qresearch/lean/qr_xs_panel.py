@@ -1,10 +1,16 @@
 # qr_xs_panel.py — H019 point-in-time daily panel assembly helpers (research/phase4/P4_xs_spec.md section 1).
 # Pure numpy, no QuantConnect imports (tests/test_xs_panel.py). Used by the X985 / S020 host at the end of a run whose
 # last session is 2017-12-29:
-#   tr_close / tr_open  = SCALED_RAW history requested at the end of 2017: total-return (split + dividend) adjusted
-#                         prices whose adjustment uses only corporate actions up to the end of 2017;
-#   split_close         = RAW closes x the product of the split factors of the SPLIT events after each row (events
-#                         up to the end of 2017 only): split-adjusted, not dividend-adjusted (|prc| / cfacpr).
+#   tr_close / tr_open  = SCALED_RAW history requested at the end of 2017: total-return (split + dividend + spin-off)
+#                         adjusted prices whose adjustment uses only corporate actions up to the end of 2017; a factor
+#                         that LEAN dates on a stock's last session for an ex-date after it (first session of 2018, or
+#                         after a delisting) is a constant per stock and is divided out;
+#   split_close         = |prc| / cfacpr, CRSP-style: the total-return closes with the CASH-dividend factor (dividend
+#                         events up to 2017) removed, so splits, spin-offs and other price-factor distributions stay
+#                         adjusted and ordinary cash dividends do not (CRSP: a spin-off's price factor is the
+#                         distribution value / the ex-date price; cash dividends have no price factor).
+#   The split feed (RAW x split events) is kept only as a diagnostic of the price factors (split_multiplier,
+#   factor_steps).
 # Every signal input and return is a RATIO of prices of one stock inside a window that ends at or before the decision
 # (or at the end of the return window), so adjusting with the corporate actions up to 2017-12-31 gives exactly the
 # values known at each session: a later factor multiplies both ends of every ratio equally.
@@ -126,3 +132,22 @@ def cfacpr_close(P, div_mult):
     """CRSP-style |prc| / cfacpr closes from QuantConnect total-return closes: remove the cash-dividend factor, keep the
     split and spin-off (other price-factor distribution) adjustments, as CRSP's cumulative price factor does."""
     return np.asarray(P, float) / np.asarray(div_mult, float)
+
+
+def factor_steps(q, q_split, small=0.002, big=0.25, detail=None):
+    """Steps of e = q / q_split between consecutive valid rows, where q = the cfacpr-style close and q_split = RAW x the
+    split events: e moves only at price-factor events that are not in the split history (spin-offs, stock distributions,
+    splits missing from the split feed) and at a misaligned cash dividend. Returns (n small steps: small < |log| <=
+    log(1 / (1 - big)), n big steps)."""
+    q, qs = np.asarray(q, float), np.asarray(q_split, float)
+    v = np.flatnonzero(np.isfinite(q) & np.isfinite(qs) & (q > 0) & (qs > 0))
+    if v.size < 2:
+        return 0, 0
+    e = q[v] / qs[v]
+    lr = np.abs(np.log(e[:-1] / e[1:]))
+    lim = -np.log(1.0 - big)
+    sm, bg = (lr > small) & (lr <= lim), lr > lim
+    if detail is not None:              # (row after the step, e_before / e_after)
+        for i in np.flatnonzero(sm | bg):
+            detail.append((int(v[i + 1]), float(e[i] / e[i + 1])))
+    return int(sm.sum()), int(bg.sum())
