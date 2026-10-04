@@ -145,6 +145,7 @@ class H019XS(QRAlgorithm):
                   dividend_events=0, factor_steps_small=0, factor_steps_big=0, stocks_with_factor_steps=0,
                   last_scale_not_one=0, large_distributions=0, split_unverified_without_same_day_distribution=0)
         self.xs_bigdist = {}
+        self.xs_lone = {}
         detail = dict(unverified=[], steps=[], last_scale=[])       # derived ratios only (no price levels)
         day = lambda r: str(cal[r].astype("datetime64[D]"))
 
@@ -220,7 +221,10 @@ class H019XS(QRAlgorithm):
                 self.xs_bigdist[i + j] = big
                 st["large_distributions"] += len(big)
                 detail["unverified"] += [(sid, day(b_), f_, r0, day(rb), rb_, b_ in drow) for b_, f_, r0, rb, rb_ in du]
-                st["split_unverified_without_same_day_distribution"] += sum(1 for b_, *_ in du if b_ not in drow)
+                lone = [b_ for b_, *_ in du if b_ not in drow]
+                st["split_unverified_without_same_day_distribution"] += len(lone)
+                if lone:
+                    self.xs_lone[i + j] = lone
                 detail["steps"] += [(sid, day(r_), x) for r_, x in dj]
                 Q[:, i + j] = q
                 P[:, i + j] = sc
@@ -260,6 +264,10 @@ class H019XS(QRAlgorithm):
         k0, kl = months.index(X.FIRST_RESEARCH_MONTH), months.index((2017, 12))
         st["features_sha256"] = XD.features_digest(F, range(k0, kl + 1))
         st["large_distribution_exposure"] = XD.distribution_exposure(F, me, self.xs_bigdist, range(k0, kl))
+        # an unexplained split / price-factor mismatch matters only for observations whose windows span it: the
+        # 1,000-bar MA window (S3) or the 12-month PRET / ID window and the forward return (S1, S2, responses)
+        st["split_unexplained_exposure"] = XD.distribution_exposure(F, me, self.xs_lone, range(k0, kl + 1),
+                                                                  ahead=max(F.fwd))
         st["fwd_end_last_decision"] = str(cal[me[months.index(X.LAST_DECISION) + 1]].astype("datetime64[D]"))
         st["fwd3_end_last_diag"] = str(cal[me[months.index(X.LAST_DECISION_DIAG[3]) + 3]].astype("datetime64[D]"))
         self.xs_st["panel"] = st
