@@ -1,0 +1,23 @@
+{
+ "T": 94,
+ "K": 200,
+ "rho": 0.5,
+ "sims": 200,
+ "n_boot": 499,
+ "alpha": 0.05,
+ "results": {
+  "iid_block6": {
+   "rejection_rate": 0.055,
+   "rejections": 11
+  },
+  "ar03_block6": {
+   "rejection_rate": 0.245,
+   "rejections": 49
+  },
+  "iid_block12": {
+   "rejection_rate": 0.06,
+   "rejections": 12
+  }
+ },
+ "decision": "SPA is not used in Phase 3: in this sample length it rejects a true null far more often than the nominal 5% (see results); the empirical full-search null is the only multiple-testing gate, PBO and DSR are diagnostics"
+}

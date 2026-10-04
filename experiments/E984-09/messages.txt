@@ -1,0 +1,19 @@
+QR2INKP0TH|buy|321|36.386350|7.00
+QR2INKP0TH|buy|327|36.386350|7.00
+QR2INKP0TH|buy|333|36.386350|7.00
+QR2INKP0TH|sell|-321|52.527420|7.00
+QR2INKP0TH|sell|-327|52.527420|7.00
+QR2INKP0TH|sell|-333|52.527420|7.00
+QR2INKP0TH|buy|207|62.442380|7.00
+QR2INKP0TH|sell|-207|74.155770|7.00
+QR2INKP0TH|buy|108|182.141960|7.00
+QR2INKP0TH|sell|-108|187.032780|7.00
+QR2INKP0TH|buy|105|173.883710|7.00
+QR2INKP0TH|sell|-105|173.835990|7.00
+QRQQYTO12D|buy|375|48.498450|7.00
+QR R735QTJ8XC9X|buy|278|60.039980|7.00
+QRQQYTO12D|sell|-375|50.399550|7.00
+QR R735QTJ8XC9X|sell|-278|61.918020|7.00
+QRQQYTO12D|buy|258|76.876800|7.00
+QRQQYTO12D|sell|-258|79.360560|7.00
+QRX984|summary|{"books_per_world": 6, "clock_s": {"bars": 38.22, "corp": 1.51, "engine": 0.0, "features": 0.0, "history": 0.0, "masks": 0.0, "pipeline": 0.0, "select": 0.0, "stats": 0.0}, "counts": {"cancelled_buys": 0, "dividends": 1389, "entries": 1871, "exits": 1796, "forced_delist": 16, "forced_stale": 0, "scaled": 238, "skipped_cap": 0, "skipped_min": 0, "split_adjust": 14}, "history_calls": 0, "loaded_histories": 0, "max_eligible": 1331, "max_rss_mb": 4076.0, "official_sessions": 1975, "replay_blocked": 0, "replay_not_free": 0, "replay_sha256": "16862615d96b2f4c890d58af28b6b2b322505f8a623988698f2b33abf7785969", "replay_unknown_sid": 0, "stocks_indexed": 2006, "wall_s": 468.4, "worlds": 1}

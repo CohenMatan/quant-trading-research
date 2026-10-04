@@ -1,0 +1,28 @@
+{
+ "declared": "2026-10-04, committed before any fidelity run (P3-CP2, owner instruction 18)",
+ "comparison": "Phase 3 shadow engine replaying the ENTRY DECISIONS of the completed control books E982-02 and E017-03..07 vs the same books' LEAN results, sessions 2010-03-01 .. 2017-12-29 (the replay ends 2017-12-31; later LEAN data is not compared)",
+ "per_book_tolerances": {
+  "buy_match_share_min": 0.99,
+  "buy_quantity_exact_share_min": 0.98,
+  "sell_match_share_min": 0.99,
+  "trade_count_diff_max_share": 0.01,
+  "fill_price_rel_diff_max": 1e-6,
+  "fill_price_exact_share_min": 0.99,
+  "commission_total_rel_diff_max": 0.01,
+  "slippage_total_rel_diff_max": 0.01,
+  "daily_return_rmse_max": 0.0005,
+  "daily_return_abs_diff_max": 0.005,
+  "terminal_wealth_rel_diff_max": 0.005,
+  "cash_rel_equity_diff_max": 0.01,
+  "cash_within_tolerance_share_min": 0.99,
+  "forced_exit_count_equal": true
+ },
+ "exact_equality_expected_for": ["buy and sell dates and securities", "quantities", "fill prices (open x (1 +- 10 bps))", "$7 per order"],
+ "why_exact_equality_is_not_always_possible": [
+  "LEAN cancels open orders on ticker changes and the harness re-issues cancelled sells one session later (D054); the engine does not model ticker changes",
+  "LEAN's delisting liquidation price and its timing relative to the delisting event (the engine closes at the last real close with $7)",
+  "fractional shares left by non-integer splits (LEAN pays them in cash; the engine uses the reference price x factor) and open-order quantities across a split",
+  "floating-point summation order"
+ ],
+ "stop_rule": "If any tolerance fails for any book, the engine is NOT fit for the search: STOP and report (a genuine engine defect may be fixed and the SAME tolerances re-applied; tolerances are never changed after seeing results; candidate strategies are never used to calibrate)"
+}

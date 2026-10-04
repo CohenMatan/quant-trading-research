@@ -1,0 +1,451 @@
+{
+ "hypothesis_id": "H018",
+ "strategy_id": "S018",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S018_p3_search",
+ "split_scheme": "2010",
+ "start": "2010-03-01",
+ "end": "2017-12-31",
+ "warmup_start": "2009-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": true
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P3",
+ "cycle": "P3C1",
+ "owner_approval_required": "Phase 3 search and null calibration (P3_spec.md; explicit owner approval after P3-CP2)",
+ "kind": "infrastructure",
+ "split": "AUDIT",
+ "experiment_id": "E018-01",
+ "params": {
+  "mode": "search",
+  "slots": 10,
+  "hold": 63,
+  "worlds": [
+   {
+    "name": "null1",
+    "seed": 1
+   },
+   {
+    "name": "null2",
+    "seed": 2
+   },
+   {
+    "name": "null3",
+    "seed": 3
+   },
+   {
+    "name": "null4",
+    "seed": 4
+   },
+   {
+    "name": "null5",
+    "seed": 5
+   },
+   {
+    "name": "null6",
+    "seed": 6
+   },
+   {
+    "name": "null7",
+    "seed": 7
+   },
+   {
+    "name": "null8",
+    "seed": 8
+   },
+   {
+    "name": "null9",
+    "seed": 9
+   },
+   {
+    "name": "null10",
+    "seed": 10
+   },
+   {
+    "name": "null11",
+    "seed": 11
+   },
+   {
+    "name": "null12",
+    "seed": 12
+   },
+   {
+    "name": "null13",
+    "seed": 13
+   },
+   {
+    "name": "null14",
+    "seed": 14
+   },
+   {
+    "name": "null15",
+    "seed": 15
+   },
+   {
+    "name": "null16",
+    "seed": 16
+   },
+   {
+    "name": "null17",
+    "seed": 17
+   },
+   {
+    "name": "null18",
+    "seed": 18
+   },
+   {
+    "name": "null19",
+    "seed": 19
+   },
+   {
+    "name": "null20",
+    "seed": 20
+   },
+   {
+    "name": "null21",
+    "seed": 21
+   },
+   {
+    "name": "null22",
+    "seed": 22
+   },
+   {
+    "name": "null23",
+    "seed": 23
+   },
+   {
+    "name": "null24",
+    "seed": 24
+   },
+   {
+    "name": "null25",
+    "seed": 25
+   },
+   {
+    "name": "null26",
+    "seed": 26
+   },
+   {
+    "name": "null27",
+    "seed": 27
+   },
+   {
+    "name": "null28",
+    "seed": 28
+   },
+   {
+    "name": "null29",
+    "seed": 29
+   },
+   {
+    "name": "null30",
+    "seed": 30
+   },
+   {
+    "name": "null31",
+    "seed": 31
+   },
+   {
+    "name": "null32",
+    "seed": 32
+   },
+   {
+    "name": "null33",
+    "seed": 33
+   },
+   {
+    "name": "null34",
+    "seed": 34
+   },
+   {
+    "name": "null35",
+    "seed": 35
+   },
+   {
+    "name": "null36",
+    "seed": 36
+   },
+   {
+    "name": "null37",
+    "seed": 37
+   },
+   {
+    "name": "null38",
+    "seed": 38
+   },
+   {
+    "name": "null39",
+    "seed": 39
+   },
+   {
+    "name": "null40",
+    "seed": 40
+   },
+   {
+    "name": "null41",
+    "seed": 41
+   },
+   {
+    "name": "null42",
+    "seed": 42
+   },
+   {
+    "name": "null43",
+    "seed": 43
+   },
+   {
+    "name": "null44",
+    "seed": 44
+   },
+   {
+    "name": "null45",
+    "seed": 45
+   },
+   {
+    "name": "null46",
+    "seed": 46
+   },
+   {
+    "name": "null47",
+    "seed": 47
+   },
+   {
+    "name": "null48",
+    "seed": 48
+   },
+   {
+    "name": "null49",
+    "seed": 49
+   },
+   {
+    "name": "null50",
+    "seed": 50
+   },
+   {
+    "name": "null51",
+    "seed": 51
+   },
+   {
+    "name": "null52",
+    "seed": 52
+   },
+   {
+    "name": "null53",
+    "seed": 53
+   },
+   {
+    "name": "null54",
+    "seed": 54
+   },
+   {
+    "name": "null55",
+    "seed": 55
+   },
+   {
+    "name": "null56",
+    "seed": 56
+   },
+   {
+    "name": "null57",
+    "seed": 57
+   },
+   {
+    "name": "null58",
+    "seed": 58
+   },
+   {
+    "name": "null59",
+    "seed": 59
+   },
+   {
+    "name": "null60",
+    "seed": 60
+   },
+   {
+    "name": "null61",
+    "seed": 61
+   },
+   {
+    "name": "null62",
+    "seed": 62
+   },
+   {
+    "name": "null63",
+    "seed": 63
+   },
+   {
+    "name": "null64",
+    "seed": 64
+   },
+   {
+    "name": "null65",
+    "seed": 65
+   },
+   {
+    "name": "null66",
+    "seed": 66
+   },
+   {
+    "name": "null67",
+    "seed": 67
+   },
+   {
+    "name": "null68",
+    "seed": 68
+   },
+   {
+    "name": "null69",
+    "seed": 69
+   },
+   {
+    "name": "null70",
+    "seed": 70
+   },
+   {
+    "name": "null71",
+    "seed": 71
+   },
+   {
+    "name": "null72",
+    "seed": 72
+   },
+   {
+    "name": "null73",
+    "seed": 73
+   },
+   {
+    "name": "null74",
+    "seed": 74
+   },
+   {
+    "name": "null75",
+    "seed": 75
+   },
+   {
+    "name": "null76",
+    "seed": 76
+   },
+   {
+    "name": "null77",
+    "seed": 77
+   },
+   {
+    "name": "null78",
+    "seed": 78
+   },
+   {
+    "name": "null79",
+    "seed": 79
+   },
+   {
+    "name": "null80",
+    "seed": 80
+   },
+   {
+    "name": "null81",
+    "seed": 81
+   },
+   {
+    "name": "null82",
+    "seed": 82
+   },
+   {
+    "name": "null83",
+    "seed": 83
+   },
+   {
+    "name": "null84",
+    "seed": 84
+   },
+   {
+    "name": "null85",
+    "seed": 85
+   },
+   {
+    "name": "null86",
+    "seed": 86
+   },
+   {
+    "name": "null87",
+    "seed": 87
+   },
+   {
+    "name": "null88",
+    "seed": 88
+   },
+   {
+    "name": "null89",
+    "seed": 89
+   },
+   {
+    "name": "null90",
+    "seed": 90
+   },
+   {
+    "name": "null91",
+    "seed": 91
+   },
+   {
+    "name": "null92",
+    "seed": 92
+   },
+   {
+    "name": "null93",
+    "seed": 93
+   },
+   {
+    "name": "null94",
+    "seed": 94
+   },
+   {
+    "name": "null95",
+    "seed": 95
+   },
+   {
+    "name": "null96",
+    "seed": 96
+   },
+   {
+    "name": "null97",
+    "seed": 97
+   },
+   {
+    "name": "null98",
+    "seed": 98
+   },
+   {
+    "name": "null99",
+    "seed": 99
+   },
+   {
+    "name": "null100",
+    "seed": 100
+   }
+  ]
+ },
+ "description": "Phase 3 PRIMARY NULL batch 1/5: the entire frozen search on within-date permutation worlds, seeds 1..100 (P3_spec.md section 12)"
+}

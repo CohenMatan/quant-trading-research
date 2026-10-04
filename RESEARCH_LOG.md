@@ -1228,3 +1228,42 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - calibration on control books only: fake training winners are certain without a null; the chain's false pass ≈ 1%; realistic edges ≤ 4%/yr undetectable; the universe EW trailed SPY by 4.1%/yr in 2018–21.
 
 **STOP:** awaiting the owner's decisions (P3-CP1 §31). Nothing implemented or run; Holdout locked.
+
+## 2026-10-04: Phase 3 engine implemented and fidelity-verified; search spec frozen; P3-CP2; STOP (D131–D135)
+
+- **Owner:**
+  - approved the architecture direction;
+  - authorised implementation and fidelity work only (no real search, no technical returns, no Holdout, no purchase);
+  - required the search to be frozen first.
+- **Built:**
+  - grammar (1,533 configurations with hashed ids and a one-step neighbour graph);
+  - point-in-time indicators;
+  - shadow-book engine (harness-identical sizing and mechanics);
+  - selection pipeline (gates, fold-median score, plateau, clusters, the cluster-level statistic T, one-standard-error rule, walk-forward);
+  - LEAN host X984 (fidelity / canary / gated search; finalist trace);
+  - null tooling (`p3spec`, `P3_eval.py`);
+  - tests.
+- **Fidelity** (tolerances committed before any run):
+  - E984-01 matched equity and cash exactly but did not report forced-exit fills (a reporting defect) → fix;
+  - **E984-04 passes every tolerance for all 6 control books** (RMSE 0, terminal difference 0, forced exits equal).
+- **Canaries** (dummy configurations only):
+  - E984-02 (5 worlds) and E984-03 (100 worlds, 31 min, 4.3 GB);
+  - E984-05 (100 worlds + full search-mode output, 2.26 MB returned intact);
+  - identical seeds give identical books across runs.
+- **Batch independence:**
+  - E984-06 (1 world) found that the real masks differed slightly from the 100-world run (holdings-dependent subscription and reload cycles) → fix: every stock stays subscribed from first eligibility until delisting, and history is loaded without fill-forward;
+  - after the fix, E984-07 (100 worlds) and E984-08 (1 world) have identical digests; E984-09 re-verified fidelity on the final code (all pass).
+- **Null design:**
+  - within-date signal permutation as the primary null, with R = 500 (R = 39 cannot bracket the 95th percentile);
+  - τ = the 25th largest null T (⇔ p ≤ 0.05);
+  - synthetic demonstration: search-stage false pass 17/500 = 3.4% (CI 2.0–5.4%);
+  - SPA dropped (24.5% size at AR(0.3));
+  - block null, PBO and DSR as diagnostics.
+- **Spec frozen:** `research/phase3/P3_spec.md` (hash-pinned).
+  - Stage 2 and 126/20 removed.
+  - Promotion ≤ 3 → ≤ 2 → 1 → 1.
+  - Configs E018-01..07 written and gated.
+- **Tests:** 621 pass.
+- **Checkpoint:** `docs/checkpoints/P3_CP2_engine_null_fidelity_readiness.md`: **READY FOR PHASE 3 SEARCH**.
+
+**STOP:** no real search or null run until the owner explicitly approves. No 2018+ data; Holdout locked; nothing bought.

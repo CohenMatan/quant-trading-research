@@ -124,6 +124,37 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("S017 research runs belong to hypothesis H017")
         if float(cfg["costs"].get("slippage_bps", -1)) != 10:
             raise ConfigError("base slippage is 10 bps per side (D024); stress multiples via slippage_stress_multiple")
+    if cfg["strategy_id"] in ("X984", "S018"):
+        # Phase 3 (P3-CP2): every engine run ends on or before 2017-12-31 (search window; 2018+ is the one-shot internal
+        # OOS and is never loaded by the engine); the real search / null runs need explicit owner approval
+        if cfg["end"] > "2017-12-31":
+            raise ConfigError("Phase 3 engine runs end on or before 2017-12-31 (search window)")
+        if cfg.get("params", {}).get("mode") == "search" and not cfg.get("owner_approval_required"):
+            raise ConfigError("Phase 3 search / null runs need owner_approval_required (owner 2026-10-04)")
+    if cfg["strategy_id"] == "S018":
+        # H018 frozen search (research/phase3/P3_spec.md, P3-CP2): exactly the frozen window, account, portfolio,
+        # costs and architecture (63 sessions, 10 slots; Stage 2 and 126/20 removed); the real world only in the
+        # research run, null worlds only in infrastructure runs
+        p = cfg.get("params", {})
+        names = [w.get("name") for w in p.get("worlds", [])]
+        if (cfg.get("hypothesis_id") != "H018" or cfg.get("programme") != "P3" or p.get("mode") != "search"
+                or (cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2010-03-01", "2017-12-31", "2009-07-01")
+                or float(cfg["cash"]) != 100000 or int(p.get("slots", -1)) != 10 or int(p.get("hold", -1)) != 63
+                or cfg["portfolio"] != dict(config.H017_PORTFOLIO)
+                or float(cfg["costs"].get("slippage_bps", -1)) != 10):
+            raise ConfigError("S018 runs must follow the frozen Phase 3 specification (H018, P3, search mode, "
+                              "2010-03-01..2017-12-31, warm-up 2009-07-01, $100K, 10 slots, 63 sessions, 10 bps)")
+        if not names or len(set(names)) != len(names):
+            raise ConfigError("S018 runs need distinct world names")
+        real = [n for n in names if n == "real"]
+        trace = bool(p.get("trace"))
+        if real and (names != ["real"] or kind != ("infrastructure" if trace else "research")):
+            raise ConfigError("the real world runs alone: as the research run, or as an infrastructure finalist trace "
+                              "(params.trace, P3_spec.md section 15)")
+        if trace and not real:
+            raise ConfigError("a finalist trace runs on the real world")
+        if not real and kind != "infrastructure":
+            raise ConfigError("null-world runs are infrastructure (never strategy trials)")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
@@ -131,7 +162,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017"):
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018"):
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")
