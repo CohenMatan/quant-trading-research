@@ -13,7 +13,7 @@ from . import config
 
 SPEC = "research/phase4/P4_xs_spec.md"
 SPEC_VERSION = 1
-SPEC_SHA256 = "4b75dfb7efc3b4fdcc80da858932de7d84921b54f248f37aa630ed9485b91503"
+SPEC_SHA256 = "3a0e36435543043ec0c6ddb30654a8d547b1b2bab7c1c9aca40b2bce2b445584"
 HYPOTHESIS = "H019"
 NULL_SEEDS = tuple(range(1, 5001))                # R = 5,000 identity-tethered within-date permutation worlds
 NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))   # E020-01..05

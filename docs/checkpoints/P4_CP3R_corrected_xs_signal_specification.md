@@ -271,7 +271,9 @@ This was found and fixed on synthetic data only, before any real computation.
 | No-edge IC volatility (low / mid / high scenario) | 0.068 / 0.110 / 0.169 | 0.063 / 0.102 / 0.149 |
 | Naive normal test at 1% rejects | 1.4–1.7% (close to nominal) | 2.4–3.8% (2–4× too often) |
 | Null 1% critical value of the max of 5 statistics (c) | 2.8–3.2 | 3.4–3.7 |
-FULLRULE_FALSEPASS
+| No-edge worlds in which **any** statistic exceeds c | **0.9%** (all scenarios) | — |
+| No-edge worlds in which the **complete rule** promotes S2 or S3 | **0.0%** (all scenarios) | — |
+| No-edge worlds in which the complete rule passes S1 | 0.0–0.2% | — |
 
 **Reading:**
 - The 1-month design **more than doubles the effective sample** (≈ 82 vs ≈ 35).
@@ -307,7 +309,28 @@ The 1-month annualised figure counts the first month's (undecayed) edge, so the 
 
 ## 27. Updated minimum detectable economic effect (complete rule)
 
-FULLRULE_TABLE
+**Smallest true effect that passes the COMPLETE rule (P1–P4, plain momentum-type signal).** Synthetic, 1-month primary:
+
+| Scenario | 50%: rank IC | 50%: top-decile excess / yr | 80%: rank IC | 80%: top-decile excess / yr |
+|---|---|---|---|---|
+| Low | 0.023 | **4.5%** | 0.031 | 6.1% |
+| Mid | 0.040 | **8.2%** | 0.052 | 10.4% |
+| High | 0.057 | **11.4%** | 0.078 | 15.7% |
+
+**How often small edges pass the complete rule:**
+
+| True top-decile excess | Mid scenario | Low scenario |
+|---|---|---|
+| ≈ 2% a year | ≈ 2% | ≈ 6% |
+| ≈ 4% a year | ≈ 10% | ≈ 42% |
+| ≈ 6.5% a year | ≈ 30% | ≈ 85% |
+
+**A realistic 1–3% a year edge will almost certainly not be confirmed.** This is why the failure interpretation (§30) is worded as it is.
+
+**Smooth momentum's complete-rule power depends on momentum itself.**
+- S2's standalone gates (P1–P3) use its ranking, whose backbone is momentum. So S2 can be promoted only if the momentum backbone is detectable too.
+- **Synthetic illustration:** with a weak momentum edge (≈ 4% a year top decile), a strong smoothness refinement passes the incremental test almost always (≥ 93% in all scenarios at the largest synthetic refinement). But it passes the complete rule in only 20–80% (low scenario) and ≤ 19% (mid / high).
+- This follows from the owner's multi-part rule (each signal must stand on its own *and* add information). It is reported so that a "none" outcome with a strong incremental statistic is read correctly.
 
 ## 28. Economic-significance floor
 
@@ -358,7 +381,7 @@ FULLRULE_TABLE
 | Item | Value |
 |---|---|
 | File | `research/phase4/P4_xs_spec.md`, **v1** |
-| SHA-256 | **SPEC_HASH** |
+| SHA-256 | `3a0e36435543043ec0c6ddb30654a8d547b1b2bab7c1c9aca40b2bce2b445584` |
 | Pinned in | `qresearch.p4xs.SPEC_SHA256`, together with every named constant of `qr_xs` (horizon 1, NW lag 2, decisions (2011, 2) – (2017, 11), HZZ lags, 12 regression months, ID minimum 200 days, deciles 10, momentum quintiles 5, monotonicity quintiles 5 and ρ 0.90, economic floor 3%, block cap 50%, α 1%) |
 | Test | `tests/test_p4xs_spec.py` |
 | Rule | Any change before your approval creates v2 with a new hash. **No change after any real statistic exists** |

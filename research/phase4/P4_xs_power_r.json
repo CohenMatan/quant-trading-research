@@ -15,7 +15,7 @@
   "primary_h": 1,
   "seed": 20261005
  },
- "runtime_s": 950.4,
+ "runtime_s": 942.8,
  "scenarios": {
   "high": {
    "diag3_mde_s1": {
@@ -550,7 +550,7 @@
      "inc": -0.00035763705923100314,
      "kappa": 0.0,
      "power": 0.005,
-     "power_full_rule": 0.005,
+     "power_full_rule": 0.0,
      "s2_minus_s1_top_ann": -0.005814764208881234,
      "spread_ann": 0.08820453313806018,
      "top_ann": 0.04361557557577198
@@ -580,7 +580,7 @@
      "inc": 0.01654783221579609,
      "kappa": 0.0015,
      "power": 0.73,
-     "power_full_rule": 0.45,
+     "power_full_rule": 0.48,
      "s2_minus_s1_top_ann": 0.007724054207284652,
      "spread_ann": 0.08518832566078485,
      "top_ann": 0.04255837332094156
@@ -590,7 +590,7 @@
      "inc": 0.021665671324903598,
      "kappa": 0.002,
      "power": 0.96,
-     "power_full_rule": 0.505,
+     "power_full_rule": 0.58,
      "s2_minus_s1_top_ann": 0.012583319468130304,
      "spread_ann": 0.08060964193574194,
      "top_ann": 0.040377379806093315
@@ -600,7 +600,7 @@
      "inc": 0.03194650248154966,
      "kappa": 0.003,
      "power": 1.0,
-     "power_full_rule": 0.395,
+     "power_full_rule": 0.7,
      "s2_minus_s1_top_ann": 0.02206229904089639,
      "spread_ann": 0.08477628967447969,
      "top_ann": 0.042657115746259945
@@ -610,7 +610,7 @@
      "inc": 0.04299762223484725,
      "kappa": 0.004,
      "power": 1.0,
-     "power_full_rule": 0.265,
+     "power_full_rule": 0.795,
      "s2_minus_s1_top_ann": 0.03072113979621925,
      "spread_ann": 0.09007379987289728,
      "top_ann": 0.045132110291456556
@@ -946,7 +946,7 @@
      "inc": 0.03294599624367428,
      "kappa": 0.003,
      "power": 0.935,
-     "power_full_rule": 0.15,
+     "power_full_rule": 0.155,
      "s2_minus_s1_top_ann": 0.02298556978191887,
      "spread_ann": 0.08387483208151568,
      "top_ann": 0.042083460260804825
@@ -956,7 +956,7 @@
      "inc": 0.04333877000260456,
      "kappa": 0.004,
      "power": 0.995,
-     "power_full_rule": 0.105,
+     "power_full_rule": 0.19,
      "s2_minus_s1_top_ann": 0.03214773482401201,
      "spread_ann": 0.08119429982715298,
      "top_ann": 0.04042731569539684
