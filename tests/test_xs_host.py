@@ -149,12 +149,13 @@ def _market(N=70, seed=7):
     SC = Qt * divf * spin
     SO = SC * np.exp(rng.normal(0, 0.004, (D, N)))
     SO[~alive] = np.nan
+    RAWO = SO / (split_mult * divf * spin)                                         # raw opens
+    Pt, Ot = SC.copy(), SO.copy()                                                  # true total-return closes / opens
     late = 5                                                                       # a factor dated after the end
     SC[:, late] *= 0.99
     SO[:, late] *= 0.99
     return dict(cal=cal, Qt=Qt, RAW=RAW, SC=SC, SO=SO, splits=splits, divs=divs, alive=alive, born=born, N=N,
-                Qc=Qt,
-                Pn=SC / _end_scale(SC / RAW, alive), On=SO / _end_scale(SC / RAW, alive))
+                Qc=Qt, Pn=Pt, On=Ot, RAWO=RAWO)
 
 
 def _ts(days):
@@ -230,7 +231,7 @@ def _fake_env(monkeypatch, M, mode, params=None, misdate=None):
                 ix_s += [s] * int(ok.sum())
                 ix_t += list(_ts(cal[ok]))
                 cl += list(src[ok, j])
-                op += list((M["RAW"] if mode_ == "raw" else M["SO"])[ok, j])
+                op += list((M["RAWO"] if mode_ == "raw" else M["SO"])[ok, j])
             return pd.DataFrame({"close": cl, "open": op}, index=pd.MultiIndex.from_arrays([ix_s, ix_t]))
 
     h.QRAlgorithm = QRAlgorithm
@@ -280,7 +281,7 @@ def test_host_panel_equals_direct_panel_and_canary(monkeypatch, market):
     def scale_at_end(j):
         r = np.flatnonzero(market["alive"][:, j])[-1]
         return market["SC"][r, j] / market["RAW"][r, j]
-    assert st["factor_steps_small"] == 0 and st["factor_steps_big"] == 0
+    assert st["factor_steps_small"] == 0 and st["factor_steps_big"] == 0           # SCALED_RAW cross-check agrees
     assert st["split_unverified_without_same_day_distribution"] == 0
     assert st["last_scale_not_one"] == sum(abs(scale_at_end(j) - 1) > 1e-6 for j in cols) > 0
     spun = [j for j in cols if any(amt > 25.0 for _, amt, _r in market["divs"][j])]

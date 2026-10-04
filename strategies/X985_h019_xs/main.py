@@ -6,9 +6,9 @@
 # During the run: at every official session the eligible set (as of the previous close, the harness convention) is
 # remembered; the set of the LAST session of each month is that month-end's universe (with market cap and the point-
 # in-time SEC SIC). At the end (2017-12-31): the daily panel of every stock eligible at any research month-end is
-# assembled from history (qr_xs_panel: SCALED_RAW = total-return prices adjusted with corporate actions up to 2017
-# only; RAW x the split feed = split-adjusted, not dividend-adjusted closes for S3), then qr_xs.Features ->
-# qr_xs.run_world, exactly the
+# assembled from history (qr_xs_panel: RAW bars x QuantConnect's split and dividend event feeds up to 2017 =
+# total-return closes / opens; RAW x the split feed = split-adjusted, not dividend-adjusted closes for S3; SCALED_RAW
+# only as a cross-check), then qr_xs.Features -> qr_xs.run_world, exactly the
 # code of the synthetic studies. Only aggregates leave QuantConnect (summary statistics); no price is exported.
 # Modes (params.mode):
 #   canary : E985-01 plumbing / fidelity canary (spec section 10): universe and calendar facts, history coverage,
@@ -178,7 +178,7 @@ class H019XS(QRAlgorithm):
             dv = self.history(Dividend, syms, HIST_START, HIST_END)
             st["history_calls"] += 4
             loc = {s: j for j, s in enumerate(part)}
-            a, l1, u1 = self._cols(hr, loc, cal, D, len(part), ("close",))
+            a, l1, u1 = self._cols(hr, loc, cal, D, len(part), ("close", "open"))
             b, l2, u2 = self._cols(hs, loc, cal, D, len(part), ("close", "open"))
             st["late_rows"] += l1 + l2
             st["unknown_day_rows"] += u1 + u2
@@ -186,16 +186,15 @@ class H019XS(QRAlgorithm):
             dev, _ = events(dv, loc, ("distribution", "referenceprice"))
             for j in range(len(part)):
                 sid = part[j]
-                raw, sc, so = a["close"][:, j], b["close"][:, j], b["open"][:, j]
+                raw, rop, sc = a["close"][:, j], a["open"][:, j], b["close"][:, j]
                 v = np.flatnonzero(np.isfinite(raw) & np.isfinite(sc) & (raw > 0) & (sc > 0))
                 if v.size and abs(sc[v[-1]] / raw[v[-1]] - 1.0) > 1e-6:
                     # LEAN dates a price factor on the last session BEFORE its ex-date: an event on the first session
-                    # of 2018 (or after a delisting) scales every row of the stock by one constant; removed here, so
-                    # no post-2017 factor remains even as a constant (it would cancel in every ratio anyway)
+                    # of 2018 (or after a delisting) scales every SCALED_RAW row of the stock by one constant (cross-
+                    # check series only; the panel is built from RAW and the event feeds up to 2017)
                     st["last_scale_not_one"] += 1
                     detail["last_scale"].append((sid, day(v[-1]), float(sc[v[-1]] / raw[v[-1]])))
-                    cl = sc[v[-1]] / raw[v[-1]]
-                    sc, so = sc / cl, so / cl
+                    sc = sc / (sc[v[-1]] / raw[v[-1]])
                 ev = []
                 for r_, typ, ref, fac in sev[j]:
                     t = str(typ)
@@ -208,11 +207,15 @@ class H019XS(QRAlgorithm):
                 mult, s1 = XP.split_multiplier(raw, sc, ev, detail=du)
                 for k2, v2 in s1.items():
                     st["split"][k2] += v2
-                # S3 closes (spec section 1): split-adjusted, not dividend-adjusted = RAW x the split feed. QuantConnect
-                # carries every other price-factor event (cash dividends, spin-offs, share-class distributions) in its
-                # dividend feed; the dividend feed must explain every remaining step of the total-return factor
+                # One consistent set of prices from RAW bars and QuantConnect's own event feeds (spec section 1):
+                #   S3 closes   q = RAW x split feed (split-adjusted, not dividend-adjusted);
+                #   S1 / S2 and returns: P, O = RAW x split feed x dividend feed (QuantConnect carries every non-split
+                #   price factor, spin-offs included, in its dividend feed) = total-return closes / opens.
+                # QuantConnect's pre-built SCALED_RAW series is only a cross-check: every disagreement is counted.
+                dm = XP.dividend_multiplier(D, de)
                 q = raw * mult
-                sm, bg = XP.factor_steps(sc / XP.dividend_multiplier(D, de), q, detail=dj)
+                pc, po = q * dm, rop * mult * dm
+                sm, bg = XP.factor_steps(sc, pc, detail=dj)
                 st["factor_steps_small"] += sm
                 st["factor_steps_big"] += bg
                 st["stocks_with_factor_steps"] += int(sm + bg > 0)
@@ -227,8 +230,8 @@ class H019XS(QRAlgorithm):
                     self.xs_lone[i + j] = lone
                 detail["steps"] += [(sid, day(r_), x) for r_, x in dj]
                 Q[:, i + j] = q
-                P[:, i + j] = sc
-                O[:, i + j] = so
+                P[:, i + j] = pc
+                O[:, i + j] = po
         if st["late_rows"]:
             raise Exception("X985: history returned data after 2017-12-29")
         months, me = XP.month_ends(cal)

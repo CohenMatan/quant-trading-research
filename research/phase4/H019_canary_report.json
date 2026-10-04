@@ -1,5 +1,5 @@
 {
- "run": "E985-03",
+ "run": "E985-04",
  "passed": false,
  "checks": [
   {
@@ -59,7 +59,7 @@
    "ok": true
   },
   {
-   "check": "every split event matches the total-return price factor or coincides with a same-day distribution",
+   "check": "every split event matches the total-return price factor or coincides with a same-day distribution, or no eligible observation's window spans it",
    "ok": false
   }
  ],
@@ -101,8 +101,8 @@
     "ic_min": 0.99999997
    }
   },
-  "null_world_s": 0.88647629,
-  "null_world_s_1000": 886.47629,
+  "null_world_s": 1.1610499,
+  "null_world_s_1000": 1161.0499,
   "eval_min_max": [
    827,
    1282
@@ -127,7 +127,7 @@
   "dividend_events": 42531,
   "factor_steps_big": 0,
   "factor_steps_small": 6,
-  "features_s": 0.6,
+  "features_s": 0.9,
   "features_sha256": "62e1685096707f1ba868e22ef60becaf46f36fab28f9d53d3715ee2a933bfef7",
   "first_day": "2005-11-01",
   "fwd3_end_last_diag": "2017-12-29",
@@ -201,7 +201,7 @@
   "last_scale_not_one": 11,
   "late_rows": 0,
   "month_end_date_mismatches": [],
-  "panel_s": 86.9,
+  "panel_s": 99.5,
   "research_months_recorded": [
    "2010-01",
    "2010-02",
@@ -311,6 +311,12 @@
   "split_types": {
    "SPLIT_OCCURRED": 667,
    "WARNING": 668
+  },
+  "split_unexplained_exposure": {
+   "exposed": 5,
+   "observations": 103376,
+   "share": 4.83671e-05,
+   "stocks": 1
   },
   "split_unverified_detail": [
    [
@@ -1019,13 +1025,13 @@
    ]
   }
  },
- "wall_s": 308.7,
- "max_rss_mb": 3115.6,
+ "wall_s": 365.9,
+ "max_rss_mb": 3129.4,
  "provenance": {
-  "backtest_started_utc": "2026-10-04T19:17:23Z",
-  "build_commit": "db0203f78e33158418ec67fdc5ed6230ec2e4602",
-  "code_sha256": "090f6e7a4ea4c433815ee4cca939c876cbbe4ea0d3582b73decf42921669dcf9",
-  "config_sha256": "55ada55a500117eb5906ec061293943b2ba25d0e6c97ec91e52ea66ab0c4e4b4",
+  "backtest_started_utc": "2026-10-04T19:25:27Z",
+  "build_commit": "72fe70a2414ff68339ebc326244baec1e669b97a",
+  "code_sha256": "8ddabff8b5c0d20f813c7cfd25e768402007063bdc71dd8efbb087da5c773326",
+  "config_sha256": "92051db53e5f1b52bb34ab2af357778ee84460242fd8b9e86da82d2e8eeeebb3",
   "datasets": [
    "QC US Equities (AlgoSeek) daily",
    "QC US Equity Security Master",
@@ -1064,13 +1070,13 @@
    "qr_xs_diag.py",
    "qr_xs_panel.py"
   ],
-  "git_commit": "db0203f78e33158418ec67fdc5ed6230ec2e4602",
+  "git_commit": "72fe70a2414ff68339ebc326244baec1e669b97a",
   "holdout_unlocked": false,
   "lean_version": "v2.5.0.0.18131",
-  "qc_backtest_id": "d7c0d74cd1f2456ee8984a7081507ef5",
+  "qc_backtest_id": "c4d94b17424d365f18e4885af2a7ba59",
   "qc_project_id": 37351428,
   "result_channel": "summary_statistics",
-  "run_utc": "2026-10-04T19:17:04Z",
-  "runtime_s": 326.8147301673889
+  "run_utc": "2026-10-04T19:25:11Z",
+  "runtime_s": 535.0554277896881
  }
 }

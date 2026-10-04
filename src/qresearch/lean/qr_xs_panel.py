@@ -1,15 +1,15 @@
 # qr_xs_panel.py — H019 point-in-time daily panel assembly helpers (research/phase4/P4_xs_spec.md section 1).
-# Pure numpy, no QuantConnect imports (tests/test_xs_panel.py). Used by the X985 / S020 host at the end of a run whose
-# last session is 2017-12-29:
-#   tr_close / tr_open  = SCALED_RAW history requested at the end of 2017: total-return (split + dividend + spin-off)
-#                         adjusted prices whose adjustment uses only corporate actions up to the end of 2017; a factor
-#                         that LEAN dates on a stock's last session for an ex-date after it (first session of 2018, or
-#                         after a delisting) is a constant per stock and is divided out;
-#   split_close         = RAW closes x the product of the split factors of the SPLIT events after each row (events
-#                         up to the end of 2017 only): split-adjusted, not dividend-adjusted. QuantConnect carries every
-#                         other price-factor event (cash dividends, spin-offs, share-class distributions) in its DIVIDEND
-#                         feed and does not label which are spin-offs, so, unlike CRSP's cfacpr, spin-offs are not
-#                         price-adjusted here (disclosed; the exposure is measured, LARGE_DISTRIBUTION).
+# Pure numpy, no QuantConnect imports (tests/test_xs_host.py). Used by the X985 / S020 host at the end of a run whose
+# last session is 2017-12-29. One consistent set of prices from RAW bars and QuantConnect's own event feeds (events up
+# to 2017 only):
+#   split_close (S3)    = RAW closes x the split factors of the SPLIT events after each row: split-adjusted, not
+#                         dividend-adjusted. QuantConnect carries every other price-factor event (cash dividends,
+#                         spin-offs, share-class distributions) in its DIVIDEND feed and does not label spin-offs, so,
+#                         unlike CRSP's cfacpr, spin-offs are not price-adjusted here (disclosed; exposure measured with
+#                         LARGE_DISTRIBUTION).
+#   tr_close / tr_open  = RAW closes / opens x the split factors x the dividend-feed factors (1 - distribution /
+#                         reference price) after each row: total-return prices, QuantConnect's own adjustment method.
+#   QuantConnect's pre-built SCALED_RAW series is used only as a cross-check (split_multiplier, factor_steps).
 # Every signal input and return is a RATIO of prices of one stock inside a window that ends at or before the decision
 # (or at the end of the return window), so adjusting with the corporate actions up to 2017-12-31 gives exactly the
 # values known at each session: a later factor multiplies both ends of every ratio equally.
