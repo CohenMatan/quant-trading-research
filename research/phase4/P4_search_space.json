@@ -1,0 +1,152 @@
+{
+ "status": "PROPOSAL (P4-CP1); not frozen",
+ "primary": {
+  "WP1": {
+   "group": "direction",
+   "axes": [
+    [
+     "L",
+     [
+      20,
+      30,
+      40
+     ]
+    ]
+   ],
+   "meaning": "weekly close > SMA(L weeks)"
+  },
+  "WP2": {
+   "group": "direction",
+   "axes": [
+    [
+     "SL",
+     [
+      [
+       10,
+       30
+      ],
+      [
+       13,
+       40
+      ],
+      [
+       17,
+       52
+      ]
+     ]
+    ]
+   ],
+   "meaning": "SMA(S) > SMA(L) on weekly closes"
+  },
+  "WP3": {
+   "group": "direction",
+   "axes": [
+    [
+     "K",
+     [
+      26,
+      52
+     ]
+    ]
+   ],
+   "meaning": "time-series momentum: K-week return > 0"
+  }
+ },
+ "confirm": {
+  "CRS": {
+   "group": "relative_strength",
+   "axes": [
+    [
+     "q",
+     [
+      0.2,
+      0.4
+     ]
+    ]
+   ],
+   "meaning": "26-week return (skip 4) in the top q of eligible stocks"
+  },
+  "CHI": {
+   "group": "range_position",
+   "axes": [
+    [
+     "x",
+     [
+      0.05,
+      0.15
+     ]
+    ]
+   ],
+   "meaning": "weekly close >= (1 - x) x highest weekly close of 52 weeks"
+  },
+  "CADX": {
+   "group": "trend_strength",
+   "axes": [
+    [
+     "a",
+     [
+      20,
+      25
+     ]
+    ]
+   ],
+   "meaning": "Wilder ADX(14 weeks) >= a"
+  },
+  "CRSI": {
+   "group": "oscillator",
+   "axes": [
+    [
+     "r",
+     [
+      50,
+      60
+     ]
+    ]
+   ],
+   "meaning": "Wilder RSI(14 weeks) >= r"
+  },
+  "CMH": {
+   "group": "oscillator",
+   "axes": [],
+   "meaning": "weekly MACD(12, 26) line above its 9-week signal (histogram > 0)"
+  }
+ },
+ "risk_levels": [
+  null,
+  0.8,
+  0.5
+ ],
+ "primary_variants": 8,
+ "confirm_variants": 9,
+ "configurations": 240,
+ "ids_unique": true,
+ "by_primary_type": {
+  "WP1": 90,
+  "WP2": 90,
+  "WP3": 60
+ },
+ "neighbour_degree": {
+  "2": 24,
+  "3": 116,
+  "4": 84,
+  "5": 16
+ },
+ "edges": 406,
+ "graph_components": {
+  "6": 2,
+  "9": 4,
+  "12": 4,
+  "18": 8
+ },
+ "complexity": {
+  "(1, 1)": 8,
+  "(2, 1)": 8,
+  "(2, 2)": 80,
+  "(3, 2)": 16,
+  "(3, 3)": 128
+ },
+ "list_sha256": "10921f4aa809e79cac25fccf73338137d8aab4077031ed792d5ae10cf1b96ed0",
+ "free_and_combinations_up_to_3": 1159,
+ "free_and_combinations_up_to_8": 169765,
+ "free_note": "free ANDs of the same 19 condition variants (8 primary + 9 confirmation + 2 risk), ignoring the exit role; the grammar admits 240"
+}
