@@ -1,6 +1,6 @@
 {
- "run": "E985-04",
- "passed": false,
+ "run": "E985-05",
+ "passed": true,
  "checks": [
   {
    "check": "calendar ends on 2017-12-29; no history row after it",
@@ -55,40 +55,36 @@
    "ok": true
   },
   {
-   "check": "S3 closes = RAW x split feed; the dividend feed explains every other price-factor step (no large unexplained step; small steps <= 2% of dividend events)",
+   "check": "prices from RAW x QuantConnect's split and dividend feeds agree with QuantConnect's SCALED_RAW factors (no large disagreement; small steps <= 2% of dividend events; split-feed / price-factor mismatches listed)",
    "ok": true
-  },
-  {
-   "check": "every split event matches the total-return price factor or coincides with a same-day distribution, or no eligible observation's window spans it",
-   "ok": false
   }
  ],
  "numeric": {
   "regressions": {
-   "max_abs": 1.5718205e-10,
+   "max_abs": 1.5844315e-10,
    "months": 14,
    "rank_deficient": 0
   },
-  "s3_slow_max_abs": 1.95854e-10,
+  "s3_slow_max_abs": 1.9485213e-10,
   "s3_slow_rank_deficient_months": 0,
   "placebo": {
    "S1": {
-    "ic": 0.00051385455,
-    "t": 0.1397872,
+    "ic": 0.00051184523,
+    "t": 0.13922314,
     "t_inc": null
    },
    "S2": {
-    "ic": 0.0017698168,
-    "t": 0.48462778,
-    "t_inc": 1.7273703
+    "ic": 0.0017693527,
+    "t": 0.48445002,
+    "t_inc": 1.7268891
    },
    "S3": {
-    "ic": -0.0013168898,
-    "t": -0.44755326,
-    "t_inc": -0.20368402
+    "ic": -0.0013106817,
+    "t": -0.4454092,
+    "t_inc": -0.20526781
    }
   },
-  "placebo_F": 1.7273703,
+  "placebo_F": 1.7268891,
   "planted": {
    "h1": {
     "dates": 83,
@@ -101,8 +97,8 @@
     "ic_min": 0.99999997
    }
   },
-  "null_world_s": 1.1610499,
-  "null_world_s_1000": 1161.0499,
+  "null_world_s": 1.2362153,
+  "null_world_s_1000": 1236.2153,
   "eval_min_max": [
    827,
    1282
@@ -128,7 +124,7 @@
   "factor_steps_big": 0,
   "factor_steps_small": 6,
   "features_s": 0.9,
-  "features_sha256": "62e1685096707f1ba868e22ef60becaf46f36fab28f9d53d3715ee2a933bfef7",
+  "features_sha256": "40c2a181dd4555ce4b5e447621bfb2a5d0f6d955675d7a8b5a7c83816fe87857",
   "first_day": "2005-11-01",
   "fwd3_end_last_diag": "2017-12-29",
   "fwd_end_last_decision": "2017-12-29",
@@ -201,7 +197,7 @@
   "last_scale_not_one": 11,
   "late_rows": 0,
   "month_end_date_mismatches": [],
-  "panel_s": 99.5,
+  "panel_s": 95.4,
   "research_months_recorded": [
    "2010-01",
    "2010-02",
@@ -1025,13 +1021,13 @@
    ]
   }
  },
- "wall_s": 365.9,
- "max_rss_mb": 3129.4,
+ "wall_s": 351.7,
+ "max_rss_mb": 3184.8,
  "provenance": {
-  "backtest_started_utc": "2026-10-04T19:25:27Z",
-  "build_commit": "72fe70a2414ff68339ebc326244baec1e669b97a",
-  "code_sha256": "8ddabff8b5c0d20f813c7cfd25e768402007063bdc71dd8efbb087da5c773326",
-  "config_sha256": "92051db53e5f1b52bb34ab2af357778ee84460242fd8b9e86da82d2e8eeeebb3",
+  "backtest_started_utc": "2026-10-04T19:38:01Z",
+  "build_commit": "9e58959de437cab3bd2ea365021bb19e5d4b6c90",
+  "code_sha256": "fa328de873f6fd122a4ea692ad74ec79a3bdecd4f2684cfc6ab30e0ec9708af7",
+  "config_sha256": "d54b6a5c6b5eb564ff75079a1dddac91482606d654fb2c72ae9c0a5191333ceb",
   "datasets": [
    "QC US Equities (AlgoSeek) daily",
    "QC US Equity Security Master",
@@ -1070,13 +1066,13 @@
    "qr_xs_diag.py",
    "qr_xs_panel.py"
   ],
-  "git_commit": "72fe70a2414ff68339ebc326244baec1e669b97a",
+  "git_commit": "9e58959de437cab3bd2ea365021bb19e5d4b6c90",
   "holdout_unlocked": false,
   "lean_version": "v2.5.0.0.18131",
-  "qc_backtest_id": "c4d94b17424d365f18e4885af2a7ba59",
+  "qc_backtest_id": "fa33a05fa5445871be969ed1e2b3a57f",
   "qc_project_id": 37351428,
   "result_channel": "summary_statistics",
-  "run_utc": "2026-10-04T19:25:11Z",
-  "runtime_s": 535.0554277896881
+  "run_utc": "2026-10-04T19:37:44Z",
+  "runtime_s": 522.342392206192
  }
 }

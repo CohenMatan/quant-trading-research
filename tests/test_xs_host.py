@@ -375,3 +375,12 @@ def test_h019_config_rules():
     experiment.validate(_cfg(**real))
     with pytest.raises(experiment.ConfigError):
         experiment.validate(_cfg(**{**real, "params": dict(mode="real")}))
+
+
+def test_s020_is_a_byte_copy_of_the_canary_verified_host_and_null_configs_valid():
+    from qresearch import experiment, p4xs
+    assert (ROOT / "strategies/S020_h019_xs/main.py").read_bytes() == (ROOT / "strategies/X985_h019_xs/main.py").read_bytes()
+    for i, (a, b) in enumerate(p4xs.NULL_BATCHES):
+        c = json.loads((ROOT / f"experiments/E020-{i + 1:02d}/config.json").read_text())
+        experiment.validate(c)
+        assert c["params"] == dict(mode="null", seeds=[a, b]) and c["kind"] == "infrastructure"
