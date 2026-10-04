@@ -1284,3 +1284,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P3_CP3_systematic_search_stage1_result.md`: **NO ROBUST TECHNICAL EDGE FOUND**.
 
 **STOP:** nothing promoted; no S019, no 2018–2021, no Holdout. Recommendation: close Phase 3 Stage 1 / H018 as No Production Candidate Found.
+
+## 2026-10-04: H018 / Phase 3 Stage 1 CLOSED: No Production Candidate Found; P3-CP4; STOP (D139)
+
+- **Owner closed** H018 / Phase 3 Stage 1 as No Production Candidate Found. The conclusion is limited to the frozen architecture tested; it is not proof that technical analysis fails in general.
+- **Recorded:**
+  - T 0.0127 vs τ 0.0284 (frozen in 3a1c915), p 0.31;
+  - no cluster passed; walk-forward −6.8% vs SPY;
+  - no finalist, no S019;
+  - 2018–2021 and the Holdout untouched; no purchase;
+  - search history preserved unchanged.
+- **Permanent lesson:** no-edge fake worlds always produced a SPY-beating best configuration (median +6.8%/yr) and about 8 apparently robust clusters. The best historical configuration is not evidence of an edge.
+- **Checkpoint:** `docs/checkpoints/P3_CP4_phase3_closure.md`, with programme status across Phases 1–3 and a context-only list of open directions (none authorised).
+- Hypothesis status headers for H016–H018 now cite their recorded outcomes.
+
+**STOP:** awaiting the owner's explicit instruction on the next research direction. No new phase, hypothesis, search, 2018–2021 or Holdout access, or purchase.
