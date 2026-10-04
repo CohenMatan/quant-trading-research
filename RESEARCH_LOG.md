@@ -1267,3 +1267,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Checkpoint:** `docs/checkpoints/P3_CP2_engine_null_fidelity_readiness.md`: **READY FOR PHASE 3 SEARCH**.
 
 **STOP:** no real search or null run until the owner explicitly approves. No 2018+ data; Holdout locked; nothing bought.
+
+## 2026-10-04: Phase 3 search run: 500 null worlds, threshold frozen, real search; NO ROBUST TECHNICAL EDGE FOUND; STOP (D136–D138)
+
+- **Owner authorised** E018-01..07 only (D136): null first; threshold committed before the real search; no 2018–2021, no Holdout, no S019.
+- **Null** (E018-01..05, 500 within-date permutation worlds; E018-06, 100 block-null worlds as a diagnostic):
+  - τ = 0.0284;
+  - search-stage false pass 8/500 = 1.6% (CI 0.69–3.13%);
+  - fake winners: every no-edge world's best configuration beat SPY, median +6.8%/yr excess CAGR (wealth ratio 1.57); a median of 8 apparent clusters per world.
+- **Threshold frozen** in commit 3a1c915 (D137; pinned hash and τ, tested) **before** E018-07 started.
+- **Real search E018-07** (1,533 configurations):
+  - 90 eligible; 0 clusters above τ; T = 0.0127, p = 0.31 → **Q1 FAIL**;
+  - walk-forward −6.8% vs SPY → **Q2 FAIL**;
+  - the real best raw winners are weaker than in most fake worlds.
+- **No reruns.** Total node time ≈ 3 h 45 min; $0 extra.
+- **Checkpoint:** `docs/checkpoints/P3_CP3_systematic_search_stage1_result.md`: **NO ROBUST TECHNICAL EDGE FOUND**.
+
+**STOP:** nothing promoted; no S019, no 2018–2021, no Holdout. Recommendation: close Phase 3 Stage 1 / H018 as No Production Candidate Found.
