@@ -31,3 +31,10 @@ RUNS = ("E985-01", "E020-01", "E020-02", "E020-03", "E020-04", "E020-05", "E020-
 
 def spec_hash() -> str:
     return hashlib.sha256((config.REPO_ROOT / SPEC).read_bytes()).hexdigest()
+
+# H019 execution (owner authorisation 2026-10-04, D145): the family null threshold is pinned here, with the hash of the
+# committed null result, BEFORE the one real evaluation E020-06; THRESHOLD_COMMIT (the commit that pinned them) is
+# recorded in the following commit together with the E020-06 config. None = not yet pinned (the real run is refused).
+THRESHOLD_C = None
+NULL_RESULT_SHA256 = None
+THRESHOLD_COMMIT = None
