@@ -2,7 +2,7 @@
 # Pure numpy, no QuantConnect imports (tests/test_xs.py). The same code runs inside LEAN for the real world and every
 # null world, and locally on synthetic panels (research/phase4/P4_xs_power.py).
 #
-# P4-CP3R (corrected, frozen candidate): the constants below are pinned with the specification by
+# P4-CP3R2 (v2, frozen candidate): the constants below are pinned with the specification by
 # qresearch.p4xs (tests/test_p4xs_spec.py). Nothing here may change after any real signal or return is computed.
 #
 # Decision = the close of the last session of month m. Prices: daily closes; S1 / S2 use split- and dividend-adjusted
@@ -38,6 +38,7 @@ FIRST_RESEARCH_MONTH = (2010, 1)  # first research month-end (D034: research dat
 FIRST_DECISION = (2011, 1)        # first month with 12 completed trend-factor regressions (s = 2010-01 .. 2010-12)
 LAST_DECISION = (2017, 11)        # the next-month return ends at the 2017-12-29 close
 LAST_DECISION_DIAG = {3: (2017, 9)}
+N_DECISIONS = 83                  # 2011-01 .. 2017-11
 HZZ_LAGS = (3, 5, 10, 20, 50, 100, 200, 400, 600, 800, 1000)
 HZZ_BETA_MONTHS = 12
 ID_MIN_DAYS = 1                   # ID is defined whenever PRET is (no extra minimum: none is published)
@@ -386,44 +387,64 @@ class Features:
         pn = panel
         K, N = len(pn.me), pn.P.shape[1]
         D = pn.P.shape[0]
+        me = np.asarray(pn.me)
         nl = len(HZZ_LAGS)
         self.months = pn.months
         self.A = np.full((K, N, nl), np.nan)
         self.pret = np.full((K, N), np.nan)
         self.idm = np.full((K, N), np.nan)
-        self.dom = np.zeros((K, N), bool)
         self.reg = np.full((K, N), np.nan)
         self.fwd = {h: np.full((K, N), np.nan) for h in horizons}
+        bar = np.isfinite(pn.Q[me]) & np.isfinite(pn.P[me])
+        self.dom = pn.elig & bar
         for j in range(N):
+            ks = np.flatnonzero(self.dom[:, j])
+            if ks.size == 0:
+                continue
             qr = np.flatnonzero(np.isfinite(pn.Q[:, j]) & (pn.Q[:, j] > 0))
             pr = np.flatnonzero(np.isfinite(pn.P[:, j]) & (pn.P[:, j] > 0))
-            if pr.size == 0 or qr.size == 0:
-                continue
             qv, pv = pn.Q[qr, j], pn.P[pr, j]
             qcs = np.r_[0.0, np.cumsum(qv)]
-            for k in range(K):
-                d = pn.me[k]
-                if not pn.elig[k, j] or not (np.isfinite(pn.Q[d, j]) and np.isfinite(pn.P[d, j])):
+            d = me[ks]
+            # moving-average ratios: mean of the last min(L, n) split-adjusted closes / the decision close
+            n = np.searchsorted(qr, d, side="right")
+            for li, L in enumerate(HZZ_LAGS):
+                w = np.minimum(L, n)
+                self.A[ks, j, li] = (qcs[n] - qcs[n - w]) / w / pn.Q[d, j]
+            # PRET and ID over the window (me[k-12], me[k-1]] of total-return closes
+            dr = pv[1:] / pv[:-1] - 1.0                          # return ending at valid row pr[i+1]
+            cpos = np.r_[0, np.cumsum(dr > 0)]
+            cneg = np.r_[0, np.cumsum(dr < 0)]
+            kk = ks[ks >= 12]
+            if kk.size:
+                r1, r12 = me[kk - 1], me[kk - 12]
+                i1 = np.searchsorted(pr, r1, side="right") - 1
+                i12 = np.searchsorted(pr, r12, side="right") - 1
+                ok = (i1 >= 0) & (i12 >= 0) & (i1 > i12)
+                ok &= (r1 - pr[np.maximum(i1, 0)] <= PRET_STALE_MAX) & (r12 - pr[np.maximum(i12, 0)] <= PRET_STALE_MAX)
+                i1, i12, kk = i1[ok], i12[ok], kk[ok]
+                pret = pv[i1] / pv[i12] - 1.0
+                nret = i1 - i12                                   # daily returns pv[i12+1..i1] / previous - 1
+                pos = cpos[i1] - cpos[i12]
+                neg = cneg[i1] - cneg[i12]
+                self.pret[kk, j] = pret
+                self.idm[kk, j] = np.sign(pret) * (neg - pos) / nret
+            # returns: regression response (close -> next month-end close) and forward responses (next open ->)
+            for h, arr in [(1, self.reg)] + [(h, self.fwd[h]) for h in self.fwd]:
+                kh = ks[ks + h < K]
+                if kh.size == 0:
                     continue
-                self.dom[k, j] = True
-                n = int(np.searchsorted(qr, d, side="right"))
-                self.A[k, j] = [(qcs[n] - qcs[n - min(L, n)]) / min(L, n) / pn.Q[d, j] for L in HZZ_LAGS]
-                if k >= 12:
-                    i1, i12 = _last_valid(pr, pn.me[k - 1], PRET_STALE_MAX), _last_valid(pr, pn.me[k - 12], PRET_STALE_MAX)
-                    if i1 >= 0 and i12 >= 0 and i1 > i12:
-                        pret = pv[i1] / pv[i12] - 1.0
-                        rets = pv[i12 + 1:i1 + 1] / pv[i12:i1] - 1.0
-                        self.pret[k, j] = pret
-                        self.idm[k, j] = id_measure(rets, pret)
-                if k + 1 < K:
-                    ie = _last_valid(pr, pn.me[k + 1])
-                    self.reg[k, j] = pv[ie] / pn.P[d, j] - 1.0
-                for h in self.fwd:
-                    if k + h < K:
-                        start = pn.O[d + 1, j] if d + 1 < D and np.isfinite(pn.O[d + 1, j]) else pn.P[d, j]
-                        ie = _last_valid(pr, pn.me[k + h])
-                        end = pv[ie] if pr[ie] > d else start
-                        self.fwd[h][k, j] = end / start - 1.0
+                dd = me[kh]
+                ie = np.searchsorted(pr, me[kh + h], side="right") - 1
+                end = pv[ie]
+                if arr is self.reg:
+                    arr[kh, j] = end / pn.P[dd, j] - 1.0
+                else:
+                    nxt = np.minimum(dd + 1, D - 1)
+                    op = pn.O[nxt, j]
+                    start = np.where((dd + 1 < D) & np.isfinite(op), op, pn.P[dd, j])
+                    end = np.where(pr[ie] > dd, end, start)
+                    arr[kh, j] = end / start - 1.0
         self.full = self.dom & np.isfinite(self.pret) & np.isfinite(self.idm)
 
 

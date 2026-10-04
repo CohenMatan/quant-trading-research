@@ -190,3 +190,39 @@ def test_young_stocks_use_partial_windows_as_replicated():
     q = pn_kw["split_close"][:d + 1, j]
     q = q[np.isfinite(q)]
     assert F.A[k, j, -1] == pytest.approx(q.mean() / q[-1])          # 1000-day MA from the available history
+
+
+def test_vectorised_features_match_slow_reference_definitions():
+    """Every feature and response equals an independent slow computation from the published definitions."""
+    kw, info = SY.make_panel(N=40, months=M, seed=6, first_research_k=FR)
+    F = X.Features(X.Panel(**kw), horizons=(1, 3))
+    Q, P, O, me = kw["split_close"], kw["tr_close"], kw["tr_open"], kw["month_end"]
+    checked = 0
+    for k in range(FR, M):
+        for j in range(40):
+            if not F.dom[k, j]:
+                continue
+            d = me[k]
+            q = Q[:d + 1, j]
+            assert np.allclose(F.A[k, j], X.hzz_normalised_mas(q[np.isfinite(q)]))
+            rows = np.flatnonzero(np.isfinite(P[:, j]))
+            i1 = rows[rows <= me[k - 1]]
+            i12 = rows[rows <= me[k - 12]]
+            if i1.size and i12.size and me[k - 1] - i1[-1] <= 5 and me[k - 12] - i12[-1] <= 5 and i1[-1] > i12[-1]:
+                pret = P[i1[-1], j] / P[i12[-1], j] - 1
+                w = rows[(rows >= i12[-1]) & (rows <= i1[-1])]
+                rets = P[w[1:], j] / P[w[:-1], j] - 1
+                assert F.pret[k, j] == pytest.approx(pret)
+                assert F.idm[k, j] == pytest.approx(X.id_measure(rets, pret))
+            else:
+                assert np.isnan(F.pret[k, j])
+            for h in (1, 3):
+                if k + h < M:
+                    e = rows[rows <= me[k + h]][-1]
+                    start = O[d + 1, j] if np.isfinite(O[d + 1, j]) else P[d, j]
+                    end = P[e, j] if e > d else start
+                    assert F.fwd[h][k, j] == pytest.approx(end / start - 1)
+            if k + 1 < M:
+                assert F.reg[k, j] == pytest.approx(P[rows[rows <= me[k + 1]][-1], j] / P[d, j] - 1)
+            checked += 1
+    assert checked > 500
