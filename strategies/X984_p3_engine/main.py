@@ -410,7 +410,9 @@ class P3Engine(QRAlgorithm):
             tw = time.perf_counter()
             summ = PL.world_summary(inp, nbi, cpx)
             if self.p3_mode == "canary":                            # dummy configurations: publish timings only
-                line = f"WC|{w['name']}|{time.perf_counter() - tw:.3f}|{summ['n_eligible']}"
+                B = self.p3_books[self.p3_worlds.index(w)]
+                line = (f"WC|{w['name']}|{time.perf_counter() - tw:.3f}|{B.counts['entries']}|{B.counts['exits']}|"
+                        f"{B.counts['forced_delist'] + B.counts['forced_stale']}")
             else:
                 line = "W|" + w["name"] + "|" + json.dumps(summ, sort_keys=True, default=float)
             self._qr_log(line)

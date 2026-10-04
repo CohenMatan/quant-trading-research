@@ -37,15 +37,19 @@ def build():
              description="Phase 3 engine RUNTIME / MEMORY CANARY: all 1,533 Stage-1 configurations with DUMMY random "
                          "masks and keys (real features computed for timing and discarded), 1 identity + 4 permutation "
                          "worlds, full search window. Publishes timings, memory and output size only.")
-    return [a, b]
+    c = dict(BASE, experiment_id="E984-03",
+             params=dict(mode="canary", slots=10, hold=63,
+                         worlds=[dict(name="identity")] + [dict(name=f"perm{i}", seed=900 + i) for i in range(1, 100)]),
+             description="Phase 3 engine SCALING CANARY: as E984-02 with 1 identity + 99 permutation worlds of DUMMY "
+                         "configurations (153,300 virtual books), full search window. Timings, memory, output only.")
+    return [a, b, c]
 
 
 def main():
     cfgs = build()
+    cfgs = [c for c in cfgs if not (Path("experiments") / c["experiment_id"] / "config.json").exists()]
     for c in cfgs:
         experiment.validate(c)
-        if (Path("experiments") / c["experiment_id"] / "config.json").exists():
-            raise SystemExit(f"{c['experiment_id']} exists; refusing to overwrite")
     for c in cfgs:
         d = Path("experiments") / c["experiment_id"]
         d.mkdir(parents=True, exist_ok=True)
