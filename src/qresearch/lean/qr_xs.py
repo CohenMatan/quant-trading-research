@@ -2,7 +2,7 @@
 # Pure numpy, no QuantConnect imports (tests/test_xs.py). The same code runs inside LEAN for the real world and every
 # null world, and locally on synthetic panels (research/phase4/P4_xs_power.py).
 #
-# P4-CP3R (corrected, frozen candidate): the constants below are pinned with the specification by
+# P4-CP3R2 (v2, frozen candidate): the constants below are pinned with the specification by
 # qresearch.p4xs (tests/test_p4xs_spec.py). Nothing here may change after any real signal or return is computed.
 #
 # Decision = the close of the last session of month m. Prices: daily closes; S1 / S2 use split- and dividend-adjusted
@@ -34,12 +34,15 @@ H_MONTHS = 1                      # primary forward horizon (months): next month
 DIAG_HORIZONS = (3,)              # secondary diagnostic only, never gated, never rescues a primary failure
 NW_LAG = 2                        # fixed HAC lag for the primary (non-overlapping) horizon
 DIAG_NW_LAG = {3: 6}              # HAC lag for the 3-month diagnostic (2 x H)
-FIRST_DECISION = (2011, 2)        # first month with 12 completed trend-factor regressions (data from 2010-02)
+FIRST_RESEARCH_MONTH = (2010, 1)  # first research month-end (D034: research data from 2010-01-04); first regression
+FIRST_DECISION = (2011, 1)        # first month with 12 completed trend-factor regressions (s = 2010-01 .. 2010-12)
 LAST_DECISION = (2017, 11)        # the next-month return ends at the 2017-12-29 close
 LAST_DECISION_DIAG = {3: (2017, 9)}
+N_DECISIONS = 83                  # 2011-01 .. 2017-11
 HZZ_LAGS = (3, 5, 10, 20, 50, 100, 200, 400, 600, 800, 1000)
 HZZ_BETA_MONTHS = 12
-ID_MIN_DAYS = 200                 # minimum valid daily returns in the 11-month formation window
+ID_MIN_DAYS = 1                   # ID is defined whenever PRET is (no extra minimum: none is published)
+PRET_STALE_MAX = 5                # a month-end price may be the last bar at most 5 sessions before the month-end
 N_DECILES = 10
 N_MOM_Q = 5
 ECON_MIN_TOP = 0.03               # top-decile annualised demeaned excess >= 3% a year
@@ -64,8 +67,9 @@ def mom_12_1(p_end_m1, p_end_m12):
 
 def id_measure(daily_returns, pret, min_days=ID_MIN_DAYS):
     """Information discreteness of Da, Gurun & Warachka (2014): sgn(PRET) x (%neg - %pos) over the formation window.
-    %pos / %neg = the shares of positive / negative returns among all valid trading-day returns (zeros count in the
-    denominator only). NaN with fewer than min_days valid returns or a missing PRET."""
+    %pos / %neg = the shares of positive / negative daily returns among all trading-day returns observed in the window
+    ('percentage of days during the formation period'; zero returns count in the denominator only). NaN if PRET is
+    missing or no daily return is observed."""
     r = np.asarray(daily_returns, float)
     r = r[np.isfinite(r)]
     n = r.size
@@ -93,17 +97,29 @@ def hzz_normalised_mas(closes, lags=HZZ_LAGS):
 
 
 def ols_slopes(X, y):
-    """Cross-sectional OLS of y on X with an intercept; returns the slopes (NaN if too few rows or rank-deficient)."""
+    """Cross-sectional OLS of y on X with an intercept, Stata 'regress' collinearity handling as in the Chen-Zimmermann
+    replication (TrendFactor.py: regress(..., omit_collinear=True), coefficient 0 for an omitted variable): columns are
+    taken in order and a column that does not raise the rank is omitted (slope 0). NaN slopes only if the remaining
+    regression is under-identified (rows <= kept regressors + 1)."""
     X, y = np.asarray(X, float), np.asarray(y, float)
     ok = np.all(np.isfinite(X), axis=1) & np.isfinite(y)
     X, y = X[ok], y[ok]
     n, p = X.shape
-    if n <= p + 1:
+    if n < 2:
         return np.full(p, np.nan)
-    Z = np.column_stack([np.ones(n), X])
-    if np.linalg.matrix_rank(Z) < p + 1:
+    Zf = np.column_stack([np.ones(n), X])
+    r = np.zeros(p + 1)
+    dg = np.abs(np.diag(np.linalg.qr(Zf, mode="r")))          # in-order (unpivoted) QR: r_jj ~ 0 <=> column j
+    r[:dg.size] = dg
+    tol = r.max() * max(Zf.shape) * np.finfo(float).eps * 10  # is spanned by the columns before it
+    kept = [j for j in range(p) if r[j + 1] > tol]
+    Z = Zf[:, [0] + [j + 1 for j in kept]]
+    if n <= Z.shape[1]:
         return np.full(p, np.nan)
-    return np.linalg.lstsq(Z, y, rcond=None)[0][1:]
+    b = np.linalg.lstsq(Z, y, rcond=None)[0]
+    out = np.zeros(p)
+    out[kept] = b[1:]
+    return out
 
 
 class TrendFactor:
@@ -307,28 +323,168 @@ def critical_value(null_family_stats, alpha=ALPHA):
 
 # ----------------------------------------------------------------------------------------------- tethered null
 class Tether:
-    """Identity-tethered within-date permutation. Each receiving stock is assigned the signals of a random partner
-    (source) stock and keeps that partner for as long as both stay in the eligible cross-section; stocks left without
-    a partner (entries, exits) are re-matched at random among the unmatched stocks of that date. On every date the
-    null signal vector is therefore an exact permutation of the real one over the same eligible stocks (cross-section,
-    universe and date structure preserved); a stock's null signal history is another stock's real history (signal
-    persistence and the joint distribution of S1-S3 preserved); the link to the stock's own future return is broken."""
+    """Identity-tethered within-date permutation, stratified by feature availability. Each receiving stock is assigned
+    the complete feature vector (PRET, ID, the 11 moving-average ratios) of a random partner (source) stock of the
+    same stratum, and keeps that partner while both stay in the cross-section and in the same stratum; stocks left
+    without a partner are re-matched at random within their stratum on that date. Strata: 'full' (PRET and ID defined)
+    and 'partial' (moving averages only; they enter the trend-factor regressions, never the evaluation). On every date
+    the null features are an exact permutation of the real ones within each stratum over the same stocks; a stock's
+    null feature history is another stock's real history; only the link to the stock's own returns is broken."""
 
     def __init__(self, seed):
         self.rng = np.random.default_rng(seed)
         self.map = {}
 
-    def step(self, eligible):
-        """eligible: sequence of stock ids (sorted by the caller). Returns src[i] = the stock whose signals receiver
-        eligible[i] gets on this date."""
+    def step(self, eligible, strata=None):
+        """eligible: stock ids (sorted by the caller); strata: labels aligned with eligible (None = one stratum).
+        Returns src[i] = the stock whose features receiver eligible[i] gets on this date."""
         E = list(eligible)
-        Es = set(E)
-        keep = {i: j for i, j in self.map.items() if i in Es and j in Es}
+        lab = dict(zip(E, strata)) if strata is not None else {i: 0 for i in E}
+        keep = {i: j for i, j in self.map.items() if i in lab and j in lab and lab[i] == lab[j]}
         used = set(keep.values())
-        free_r = [i for i in E if i not in keep]
-        free_s = [j for j in E if j not in used]
-        perm = self.rng.permutation(len(free_s))
-        for i, k in zip(free_r, perm):
-            keep[i] = free_s[k]
+        for g in sorted(set(lab.values())):
+            free_r = [i for i in E if lab[i] == g and i not in keep]
+            free_s = [j for j in E if lab[j] == g and j not in used]
+            perm = self.rng.permutation(len(free_s))
+            for i, k in zip(free_r, perm):
+                keep[i] = free_s[k]
         self.map = keep
         return [keep[i] for i in E]
+
+
+# ----------------------------------------------------------------------------------------------- end-to-end pipeline
+class Panel:
+    """Point-in-time daily panel (rows = sessions, oldest first; columns = stocks; NaN = no bar), as collected inside
+    LEAN or built synthetically. split_close: split-adjusted closes (S3); tr_close / tr_open: total-return-adjusted
+    closes / opens (S1, S2, returns). month_end[k] = row of the last session of month k; months[k] = (year, month);
+    elig[k] = eligibility (bool per stock) at that close, False outside the research period."""
+
+    def __init__(self, split_close, tr_close, tr_open, month_end, months, elig):
+        self.Q = np.asarray(split_close, float)
+        self.P = np.asarray(tr_close, float)
+        self.O = np.asarray(tr_open, float)
+        self.me = list(month_end)
+        self.months = list(months)
+        self.elig = np.asarray(elig, bool)
+
+
+def _last_valid(rows, r, stale=None):
+    """Index into rows (sorted valid rows of one stock) of the last valid row <= r, or -1; optional staleness cap."""
+    i = int(np.searchsorted(rows, r, side="right")) - 1
+    if i < 0 or (stale is not None and r - rows[i] > stale):
+        return -1
+    return i
+
+
+class Features:
+    """All signal inputs and returns, computed once from a Panel (they do not depend on the world).
+    For research month k (decision row d = me[k]): A[k] (N x 11), pret[k], idm[k]; dom[k] = eligible with a bar at d;
+    full[k] = dom with PRET and ID defined; reg[k] = close(me[k]) -> close(me[k+1]) total return (trend-factor
+    regression response for month k+1); fwd[h][k] = open(d+1) -> close(me[k+h]) total return (H019 response).
+    A stock delisted or without bars inside a return window is valued at its last real close (0 thereafter)."""
+
+    def __init__(self, panel, horizons=(H_MONTHS,) + tuple(DIAG_HORIZONS)):
+        pn = panel
+        K, N = len(pn.me), pn.P.shape[1]
+        D = pn.P.shape[0]
+        me = np.asarray(pn.me)
+        nl = len(HZZ_LAGS)
+        self.months = pn.months
+        self.A = np.full((K, N, nl), np.nan)
+        self.pret = np.full((K, N), np.nan)
+        self.idm = np.full((K, N), np.nan)
+        self.reg = np.full((K, N), np.nan)
+        self.fwd = {h: np.full((K, N), np.nan) for h in horizons}
+        bar = np.isfinite(pn.Q[me]) & np.isfinite(pn.P[me])
+        self.dom = pn.elig & bar
+        for j in range(N):
+            ks = np.flatnonzero(self.dom[:, j])
+            if ks.size == 0:
+                continue
+            qr = np.flatnonzero(np.isfinite(pn.Q[:, j]) & (pn.Q[:, j] > 0))
+            pr = np.flatnonzero(np.isfinite(pn.P[:, j]) & (pn.P[:, j] > 0))
+            qv, pv = pn.Q[qr, j], pn.P[pr, j]
+            qcs = np.r_[0.0, np.cumsum(qv)]
+            d = me[ks]
+            # moving-average ratios: mean of the last min(L, n) split-adjusted closes / the decision close
+            n = np.searchsorted(qr, d, side="right")
+            for li, L in enumerate(HZZ_LAGS):
+                w = np.minimum(L, n)
+                self.A[ks, j, li] = (qcs[n] - qcs[n - w]) / w / pn.Q[d, j]
+            # PRET and ID over the window (me[k-12], me[k-1]] of total-return closes
+            dr = pv[1:] / pv[:-1] - 1.0                          # return ending at valid row pr[i+1]
+            cpos = np.r_[0, np.cumsum(dr > 0)]
+            cneg = np.r_[0, np.cumsum(dr < 0)]
+            kk = ks[ks >= 12]
+            if kk.size:
+                r1, r12 = me[kk - 1], me[kk - 12]
+                i1 = np.searchsorted(pr, r1, side="right") - 1
+                i12 = np.searchsorted(pr, r12, side="right") - 1
+                ok = (i1 >= 0) & (i12 >= 0) & (i1 > i12)
+                ok &= (r1 - pr[np.maximum(i1, 0)] <= PRET_STALE_MAX) & (r12 - pr[np.maximum(i12, 0)] <= PRET_STALE_MAX)
+                i1, i12, kk = i1[ok], i12[ok], kk[ok]
+                pret = pv[i1] / pv[i12] - 1.0
+                nret = i1 - i12                                   # daily returns pv[i12+1..i1] / previous - 1
+                pos = cpos[i1] - cpos[i12]
+                neg = cneg[i1] - cneg[i12]
+                self.pret[kk, j] = pret
+                self.idm[kk, j] = np.sign(pret) * (neg - pos) / nret
+            # returns: regression response (close -> next month-end close) and forward responses (next open ->)
+            for h, arr in [(1, self.reg)] + [(h, self.fwd[h]) for h in self.fwd]:
+                kh = ks[ks + h < K]
+                if kh.size == 0:
+                    continue
+                dd = me[kh]
+                ie = np.searchsorted(pr, me[kh + h], side="right") - 1
+                end = pv[ie]
+                if arr is self.reg:
+                    arr[kh, j] = end / pn.P[dd, j] - 1.0
+                else:
+                    nxt = np.minimum(dd + 1, D - 1)
+                    op = pn.O[nxt, j]
+                    start = np.where((dd + 1 < D) & np.isfinite(op), op, pn.P[dd, j])
+                    end = np.where(pr[ie] > dd, end, start)
+                    arr[kh, j] = end / start - 1.0
+        self.full = self.dom & np.isfinite(self.pret) & np.isfinite(self.idm)
+
+
+def run_world(F, seed=None, first_research=FIRST_RESEARCH_MONTH, first_decision=FIRST_DECISION,
+              last_decision=LAST_DECISION, h=H_MONTHS, lag=NW_LAG, keep_series=False, keep_signals=False):
+    """The complete H019 procedure for one world. seed None = the real world (identity mapping); otherwise a null
+    world: the stratified tether maps every receiver to a partner's full feature vector, and EVERYTHING downstream is
+    recomputed from the mapped features with the receivers' real returns: the trend-factor regressions and rolling
+    coefficients, S2's two-stage sort, S3, the per-date statistics, the inference and the promotion inputs."""
+    T = Tether(seed) if seed is not None else None
+    tf = TrendFactor()
+    months = F.months
+    k0 = months.index(first_research)
+    kd0, kd1 = months.index(first_decision), months.index(last_decision)
+    prev = None
+    series, years, sigs = [], [], []
+    for k in range(k0, kd1 + 1):
+        dom = np.flatnonzero(F.dom[k])
+        full = F.full[k, dom]
+        src = np.asarray(T.step(dom.tolist(), full.tolist()) if T is not None else dom, int)
+        A_k = F.A[k, src]
+        if prev is not None:                                         # month-k returns are known at the k close
+            s, rec, A_s = prev
+            tf.add_regression(s, A_s, F.reg[s, rec])
+        prev = (k, dom, A_k)
+        if k < kd0:
+            continue
+        s3 = tf.score(k, A_k)
+        ok = F.full[k, src] & np.isfinite(s3)
+        rec, sk = dom[ok], src[ok]
+        pret, idm, s3 = F.pret[k, sk], F.idm[k, sk], s3[ok]
+        y = F.fwd[h][k, rec]
+        sig = {"S1": pret, "S2": smooth_momentum_score(pret, fip_key(idm, pret)), "S3": s3}
+        series.append(date_stats(sig, {"S2": fip_key(idm, pret), "S3": s3}, y))
+        years.append(months[k][0])
+        if keep_signals:
+            sigs.append(dict(k=k, rec=rec, src=sk, pret=pret, idm=idm, S2=sig["S2"], S3=s3, y=y))
+    out = summarise(series, years, h, lag)
+    if keep_series:
+        out["_series"], out["_years"] = series, years
+    if keep_signals:
+        out["_signals"], out["_betas"] = sigs, dict(tf.betas)
+    return out

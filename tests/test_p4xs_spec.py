@@ -20,8 +20,9 @@ def test_qr_xs_constants_pinned():
 def test_spec_states_the_corrected_design():
     s = (config.REPO_ROOT / p4xs.SPEC).read_text()
     for frag in ("ID = sgn(PRET) × (%neg − %pos)", "key = −sgn(PRET) × ID", "{3, 5, 10, 20, 50, 100, 200, 400, 600, 800, 1000}",
-                 "12 most recent completed regressions", "**2011-02 → 2017-11: 82 dates**", "**lag 2**",
-                 "R = 5,000", "α = 1%", "can never promote, rescue or veto", "2018-01-01 → 2021-12-31",
+                 "all 12 required", "**2011-01 → 2017-11: 83 month-ends.**", "**lag 2**", "min_samples=1",
+                 "Every null world re-runs the complete procedure", "the 50th largest F over R = 5,000",
+                 "R = 5,000", "α = 1%", "never promotes, rescues or vetoes", "2018-01-01 → 2021-12-31",
                  "2022-01-01 → 2026-08-31", "large enough to satisfy the project's detection and economic-significance"):
         assert frag in s, frag
     assert len(p4xs.NULL_SEEDS) == 5000 and p4xs.NULL_BATCHES[-1] == (4001, 5000)

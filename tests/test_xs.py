@@ -24,7 +24,8 @@ def test_id_measure_exact_definition():
     assert X.id_measure(r, 0.25) == pytest.approx((60 - 120) / 220)      # winner, continuous: negative ID
     assert X.id_measure(r, -0.10) == pytest.approx(-(60 - 120) / 220)    # loser: sign flips
     assert X.id_measure(r, 0.0) == 0.0                                   # sgn(0) = 0
-    assert np.isnan(X.id_measure(r[:150], 0.2))                          # fewer than 200 valid returns
+    assert X.id_measure(r[:150], 0.2) == pytest.approx((30 - 120) / 150)  # no extra minimum (none is published)
+    assert np.isnan(X.id_measure(np.array([]), 0.2))                     # no observed return
     assert np.isnan(X.id_measure(r, np.nan))
     r2 = np.r_[r, np.full(30, np.nan)]
     assert X.id_measure(r2, 0.25) == X.id_measure(r, 0.25)               # missing returns ignored
@@ -64,7 +65,8 @@ def test_ols_slopes_recover_coefficients():
     y = 0.5 + Xm @ np.array([0.2, -0.1, 0.05]) + rng.normal(0, 0.01, 800)
     assert np.allclose(X.ols_slopes(Xm, y), [0.2, -0.1, 0.05], atol=0.01)
     assert np.all(np.isnan(X.ols_slopes(Xm[:3], y[:3])))
-    assert np.all(np.isnan(X.ols_slopes(np.column_stack([Xm, Xm[:, 0]]), y)))   # rank-deficient
+    dup = X.ols_slopes(np.column_stack([Xm, Xm[:, 0]]), y)             # collinear column omitted, slope 0 (Stata)
+    assert np.allclose(dup[:3], [0.2, -0.1, 0.05], atol=0.01) and dup[3] == 0.0
 
 
 def test_trend_factor_is_point_in_time():
