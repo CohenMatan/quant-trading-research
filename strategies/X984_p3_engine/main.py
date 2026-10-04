@@ -56,6 +56,7 @@ class P3Engine(QRAlgorithm):
         self.last_real_sess = np.full(MAXG, -10 ** 6, dtype=np.int64)
         self.div_today = np.zeros(MAXG)
         self.p3_warned = set()
+        self.p3_dead = set()
         self.p3_done = None
         self.day_index = 0
         self.slots, self.hold = int(p.get("slots", 10)), int(p.get("hold", 63))
@@ -150,7 +151,14 @@ class P3Engine(QRAlgorithm):
         chosen = [f.symbol for f in eligible]
         for f in eligible:
             self._g(f.symbol)
-        chosen += [self.sym_of[g] for g in self._held_g() if g in self.sym_of]
+        if self.p3_mode == "fidelity":
+            chosen += [self.sym_of[g] for g in self._held_g() if g in self.sym_of]
+        else:
+            # every stock stays subscribed from its first eligibility until it is delisted, so each price window is
+            # loaded from history once and then streamed: the features never depend on what any book holds, i.e. a
+            # world's result does not depend on the other worlds in its run (batch independence; E984-06 showed that
+            # unsubscribe / reload cycles that depend on holdings perturb the windows)
+            chosen += [self.sym_of[g] for g in range(len(self.sid_of)) if g not in self.p3_dead]
         return list(dict.fromkeys(chosen))
 
     # ---------------------------------------------------------------- windows (search / canary modes)
@@ -167,7 +175,8 @@ class P3Engine(QRAlgorithm):
         add = [s for s in add if not self.loaded[self._g(s)]]
         for i in range(0, len(add), 200):
             part = add[i:i + 200]
-            h = self.history(part, W, Resolution.DAILY, data_normalization_mode=DataNormalizationMode.SCALED_RAW)
+            h = self.history(part, W, Resolution.DAILY, fill_forward=False,
+                             data_normalization_mode=DataNormalizationMode.SCALED_RAW)
             self.p3_st["history_calls"] += 1
             rows = {}
             if h is not None and not h.empty:
@@ -232,6 +241,7 @@ class P3Engine(QRAlgorithm):
             if dl.type == DelistingType.WARNING:
                 self.p3_warned.add(g)
             else:
+                self.p3_dead.add(g)
                 for b in self.p3_books:
                     b.delist(g, float(self.last_close[g]))
         self.p3_clock["corp"] += time.perf_counter() - t0

@@ -6,6 +6,8 @@
   E984-04  fidelity technical repeat of E984-01 after the fill-reporting fix (same tolerances)
   E984-05  output / batch canary: as E984-03 plus the search-mode output format (per-world summaries, 1,533 lines)
   E984-06  batch-independence canary: the identity world alone (digest of the real masks must equal E984-05's)
+           -> FAILED (holdings-dependent subscriptions perturbed the windows); fixed in X984
+  E984-07  as E984-05 after the fix;  E984-08  as E984-06 after the fix (digests must be equal)
 The real Stage-1 search and the null calibration (mode "search") are NOT written here: they need the owner's approval
 after the frozen Phase 3 specification (P3-CP2).
 
@@ -60,7 +62,15 @@ def build():
              description="Phase 3 engine BATCH-INDEPENDENCE CANARY: the identity world of DUMMY configurations alone "
                          "(subscriptions then differ from E984-05's 100 worlds); the digest of the real masks and the "
                          "dummy books must equal E984-05's. Timings, counts and digests only.")
-    return [a, b, c, d, e, f]
+    g = dict(e, experiment_id="E984-07",
+             description="Phase 3 engine OUTPUT / BATCH CANARY after the batch-independence fix (subscriptions and "
+                         "price windows no longer depend on holdings; history without fill-forward): 1 identity + 99 "
+                         "permutation worlds of DUMMY configurations with the search-mode output format. Timings, "
+                         "memory, output and the digest of the real masks only.")
+    h = dict(f, experiment_id="E984-08",
+             description="Phase 3 engine BATCH-INDEPENDENCE CANARY after the fix: the identity world alone; the digest "
+                         "of the real masks and the dummy books must equal E984-07's.")
+    return [a, b, c, d, e, f, g, h]
 
 
 def main():
