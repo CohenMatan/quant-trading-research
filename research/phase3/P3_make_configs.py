@@ -8,6 +8,7 @@
   E984-06  batch-independence canary: the identity world alone (digest of the real masks must equal E984-05's)
            -> FAILED (holdings-dependent subscriptions perturbed the windows); fixed in X984
   E984-07  as E984-05 after the fix;  E984-08  as E984-06 after the fix (digests must be equal)
+  E984-09  fidelity on the final engine code (= S018)
 The real Stage-1 search and the null calibration (mode "search") are NOT written here: they need the owner's approval
 after the frozen Phase 3 specification (P3-CP2).
 
@@ -70,7 +71,11 @@ def build():
     h = dict(f, experiment_id="E984-08",
              description="Phase 3 engine BATCH-INDEPENDENCE CANARY after the fix: the identity world alone; the digest "
                          "of the real masks and the dummy books must equal E984-07's.")
-    return [a, b, c, d, e, f, g, h]
+    i = dict(a, experiment_id="E984-09",
+             description="Phase 3 engine FIDELITY on the FINAL engine code (after the batch-independence fix; the "
+                         "fidelity path is unchanged): same replay, same tolerances. The search engine S018 is a byte "
+                         "copy of this code. Infrastructure; no strategy evaluated.")
+    return [a, b, c, d, e, f, g, h, i]
 
 
 def main():
