@@ -1,0 +1,101 @@
+{
+ "stage1_per_family": {
+  "trend": {
+   "primaries": 9,
+   "confirmation_options": 11,
+   "risk_options": 3,
+   "configs": 297
+  },
+  "momentum": {
+   "primaries": 15,
+   "confirmation_options": 11,
+   "risk_options": 3,
+   "configs": 495
+  },
+  "breakout": {
+   "primaries": 9,
+   "confirmation_options": 15,
+   "risk_options": 3,
+   "configs": 405
+  },
+  "pullback": {
+   "primaries": 8,
+   "confirmation_options": 14,
+   "risk_options": 3,
+   "configs": 336
+  }
+ },
+ "stage1_total": 1533,
+ "stage2_max": 24,
+ "total_configurations_budget": 1557,
+ "base_condition_variants": 58,
+ "primaries": {
+  "trend": {
+   "T1 close > SMA(L), L in {50,100,150,200}": 4,
+   "T2 SMA(S) > SMA(L), (S,L) in {(20,100),(50,150),(50,200)}": 3,
+   "T3 21-session slope of SMA(L) > 0, L in {100,200}": 2
+  },
+  "momentum": {
+   "M1 cross-sectional rank of return(K skip 21), K in {63,126,252} x top q in {10,20,30}%": 9,
+   "M2 time-series return(K) > 0, K in {63,126,252}": 3,
+   "M3 return(K) - SPY return(K) > 0, K in {63,126,252}": 3
+  },
+  "breakout": {
+   "B1 close >= (1-x) max close(N), N in {63,126,252}, x in {0,5,10}%": 9
+  },
+  "pullback": {
+   "R1 RSI(n) <= theta, (n,theta) in {(2,10),(2,20),(5,30),(14,40)}": 4,
+   "R2 close <= SMA(20) x (1-y), y in {3,6}%": 2,
+   "R3 Bollinger %b(20,2) <= z, z in {0,0.2}": 2
+  }
+ },
+ "confirmations": {
+  "trend": {
+   "close > SMA200": 1,
+   "SMA50 > SMA200": 1,
+   "ADX(14) >= {20,25}": 2,
+   "MACD(12,26) > 0": 1
+  },
+  "momentum": {
+   "return(126) > 0": 1,
+   "return(252 skip 21) > 0": 1,
+   "RSI(14) >= {50,60}": 2,
+   "MACD line > signal(9)": 1
+  },
+  "breakout": {
+   "close >= 0.9 x max close(252)": 1
+  },
+  "pullback": {
+   "RSI(5) <= 30": 1,
+   "close < SMA(20)": 1
+  },
+  "participation": {
+   "relative volume 20/120 >= {1.0,1.25}": 2
+  }
+ },
+ "risk": {
+  "none": 1,
+  "63-session realised-volatility cross-sectional rank <= {50,80}%": 2
+ },
+ "stage2_per_cluster": {
+  "exits: H=63 (base), H=126 (N=20), primary-reversal (weekly, min 21, max 126), 3xATR(14) trailing stop (max 126)": 4,
+  "market regime overlay SPY > SMA200 for new entries: off/on": 2
+ },
+ "max_conditions_per_strategy": "1 primary + <=1 confirmation + <=1 risk filter (+ Stage 2: exit variant, optional regime overlay)",
+ "unconstrained_and_combinations": {
+  "up to 3 conditions": 32567,
+  "up to 4 conditions": 456837,
+  "up to 6 conditions": 45514311,
+  "up to 8 conditions": 2262985710
+ },
+ "unconstrained_with_stage2_exits_and_regime": {
+  "up to 3 conditions": 260536,
+  "up to 4 conditions": 3654696,
+  "up to 6 conditions": 364114488,
+  "up to 8 conditions": 18103885680
+ },
+ "fine_grid_example": {
+  "template": "MA length 50..250 step 5 (41) x RSI period 2..20 (19) x RSI threshold 20..80 step 1 (61) x momentum 21..252 step 21 (12) x MACD fast/slow/signal 3 x 3 x 3 (27) x ATR window 5..30 (26) x volume ratio 1.0..2.0 step 0.1 (11) x holding 5..126 step 1 (122)",
+  "configs": 537202675152
+ }
+}

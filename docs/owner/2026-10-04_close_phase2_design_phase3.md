@@ -1,0 +1,45 @@
+# Owner message 2026-10-04: "Phase 3 — Close Phase 2 and Design a Systematic Multi-Indicator Technical Strategy Search"
+
+This is a recorded summary; the full message is in the session transcript.
+
+- **Confirmed:**
+  - H017 closed as Rejected, exactly as tested (no tuning, repair or re-run);
+  - Phase 2 used all 3 slots (H014, H016, H017 rejected);
+  - **Phase 2 formally CLOSED: No Production Candidate Found**;
+  - Holdout 2022-01-01 → 2026-08-31 locked; no data purchase.
+- **Phase 3 direction:** a Systematic Multi-Indicator Technical Strategy Search.
+  - Families are illustrative: trend (SMA/EMA), momentum / ROC, RSI, MACD, ADX, ATR / volatility, Bollinger, volume / relative volume, distance from moving averages, breakout.
+  - Do not assume all should be included.
+- **Objective unchanged:** terminal wealth above SPY total-return buy-and-hold after realistic costs, no leverage.
+  - $100K primary; $200K sensitivity.
+  - The final candidate reports the wealth table; risk metrics are safeguards.
+- **Main risk:** data mining / multiple testing. Distinguish a robust region from one lucky combination.
+- **Architecture / design only now. Design and freeze, before any search:**
+  - partitioning, search space, families, ranges, grammar;
+  - objective, complexity controls;
+  - walk-forward, robustness, multiple-testing protection;
+  - final selection rule, Holdout policy.
+- **Holdout sacred:** never used for any design or selection; opened only for one final frozen candidate with owner approval. No project Holdout knowledge reused.
+- **Required principles:**
+  - plateau, not peak (formal definition);
+  - indicators grouped into information families (redundancy);
+  - an explicit complexity penalty;
+  - a finite, pre-declared, coarse search space;
+  - grammar vs full combinatorial vs staged search compared;
+  - entry and exit searched separately where possible;
+  - an objective aligned with terminal wealth (not Sharpe or maximum CAGR alone; no arbitrary weights);
+  - SPY comparison throughout;
+  - controls: SPY, same-universe EW, random strategies, and a search-null experiment;
+  - the smallest coherent multiple-testing set;
+  - a finite search budget;
+  - computational efficiency: fast screening → LEAN verification, without approximating execution, delistings, costs, corporate actions or cash;
+  - portfolio architecture chosen without overfitting;
+  - realistic costs ($7 + $7, 10 bps per side, later stressed);
+  - rolling 1/3/5/10-year diagnostics;
+  - past-only walk-forward;
+  - a defined promotion pipeline with counts;
+  - exactly one final strategy to the Holdout, with owner approval;
+  - H017 not mined;
+  - no paid data.
+- **Deliverable:** P3-CP1 (31 items) answering questions A–I.
+- **STOP:** no optimizer, no configurations, no technical returns, no parameter optimisation, no candidate, no Holdout, no purchase, no Phase 3 backtests.
