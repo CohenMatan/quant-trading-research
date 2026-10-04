@@ -1299,3 +1299,22 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - Hypothesis status headers for H016–H018 now cite their recorded outcomes.
 
 **STOP:** awaiting the owner's explicit instruction on the next research direction. No new phase, hypothesis, search, 2018–2021 or Holdout access, or purchase.
+
+## 2026-10-04: Phase 4 Weekly trend/momentum architecture PROPOSED (design only); STOP (D140)
+
+- **Owner direction:** design a Weekly multi-indicator trend / momentum stock-selection architecture. It is not a rescue of H018, and no Weekly backtest is allowed.
+- **P4-CP1** (`docs/checkpoints/P4_CP1_weekly_trend_momentum_architecture.md`):
+  - ISO-week bars with leakage canaries;
+  - 240 configurations (trend-state primary that also defines the exit, entry-only confirmation, volatility filter, fixed relative-strength ranking);
+  - N = 12 from mechanics;
+  - tethered within-week permutation null with R = 1,000;
+  - duration-matched random twins;
+  - partition A (one-shot 2018–2021) preferred.
+- **Studies** (`research/phase4/`, synthetic / combinatorial only):
+  - literature review;
+  - grammar count;
+  - mechanical portfolio-size study: 20 positions break the D051 mechanics at $100K and 15 degrades with turnover;
+  - power study: ≈ 6–8%/yr selection edge needed for the search gates and ≈ 12%/yr for the full pre-Holdout chain, against ≈ 0–3%/yr plausible.
+- **Recommendation:** do not implement as a candidate search. The design is ready if the owner wants a definitive low-cost test.
+
+**STOP:** awaiting the owner's go / no-go. No engine implementation, no Weekly returns, no 2018–2021 or Holdout access, no purchase.
