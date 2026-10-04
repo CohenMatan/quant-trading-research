@@ -2,6 +2,10 @@
   E984-01  fidelity replay of the control books' entry decisions (E982-02, E017-03..07), 2010-03-01 .. 2017-12-31
   E984-02  runtime / memory / output canary: the full Stage-1 configuration set with DUMMY masks and strengths,
            1 identity world + 4 within-date permutation worlds, 2010-03-01 .. 2017-12-31
+  E984-03  scaling canary: 1 identity + 99 permutation worlds of dummy configurations
+  E984-04  fidelity technical repeat of E984-01 after the fill-reporting fix (same tolerances)
+  E984-05  output / batch canary: as E984-03 plus the search-mode output format (per-world summaries, 1,533 lines)
+  E984-06  batch-independence canary: the identity world alone (digest of the real masks must equal E984-05's)
 The real Stage-1 search and the null calibration (mode "search") are NOT written here: they need the owner's approval
 after the frozen Phase 3 specification (P3-CP2).
 
@@ -42,7 +46,21 @@ def build():
                          worlds=[dict(name="identity")] + [dict(name=f"perm{i}", seed=900 + i) for i in range(1, 100)]),
              description="Phase 3 engine SCALING CANARY: as E984-02 with 1 identity + 99 permutation worlds of DUMMY "
                          "configurations (153,300 virtual books), full search window. Timings, memory, output only.")
-    return [a, b, c]
+    d = dict(a, experiment_id="E984-04",
+             description="Phase 3 engine FIDELITY, technical repeat of E984-01 after the reporting fix (fills from "
+                         "corporate actions, e.g. delisting closes, are now published with their slice date). Same "
+                         "replay, same tolerances (research/phase3/P3_fidelity_tolerances.json, unchanged). "
+                         "Infrastructure; no strategy evaluated.")
+    e = dict(c, experiment_id="E984-05", params=dict(c["params"], publish_format=True),
+             description="Phase 3 engine OUTPUT / BATCH CANARY at the frozen batch size: 1 identity + 99 permutation "
+                         "worlds of DUMMY configurations (seeds as E984-03, so identical books are expected), publishing "
+                         "every world's summary and the first world's 1,533 per-configuration lines in the exact "
+                         "search-mode format (output-size test). Timings, memory and output only.")
+    f = dict(b, experiment_id="E984-06", params=dict(mode="canary", slots=10, hold=63, worlds=[dict(name="identity")]),
+             description="Phase 3 engine BATCH-INDEPENDENCE CANARY: the identity world of DUMMY configurations alone "
+                         "(subscriptions then differ from E984-05's 100 worlds); the digest of the real masks and the "
+                         "dummy books must equal E984-05's. Timings, counts and digests only.")
+    return [a, b, c, d, e, f]
 
 
 def main():

@@ -34,13 +34,14 @@ class Books:
         self.commission = np.zeros(B)             # accumulated since last reset_costs()
         self.slippage = np.zeros(B)
         self.notional = np.zeros(B)
-        self.fills = None                         # optional list of fill records (fidelity mode)
+        self.fills = None                         # optional list of fill records (fidelity / trace mode)
+        self.trace = None                         # optional set of books whose fills are recorded (None = all)
         self.counts = dict(entries=0, exits=0, forced_delist=0, forced_stale=0, skipped_min=0, skipped_cap=0,
                            scaled=0, split_adjust=0, dividends=0, cancelled_buys=0)
 
     # ---------------------------------------------------------------- helpers
     def _record(self, b, kind, s, q, px, fee):
-        if self.fills is not None:
+        if self.fills is not None and (self.trace is None or b in self.trace):
             self.fills.append((int(b), kind, int(s), float(q), float(px), float(fee)))
 
     def held_mask(self):

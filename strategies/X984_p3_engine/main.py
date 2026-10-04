@@ -6,13 +6,18 @@
 #   fidelity : replay the ENTRY DECISIONS of completed control books (qr_p3_replay: E982-02, E017-03..07, decisions
 #              <= 2017-12-31) through the engine; publish daily equity / cash and every fill for comparison with LEAN.
 #   canary   : runtime / memory / output canary of the search configuration with DUMMY masks and strengths (random,
-#              seeded): the real features and real configuration masks are computed for timing only and discarded.
+#              seeded): the real features and real configuration masks are computed for timing only and discarded
+#              (only a SHA-256 digest of the real masks is kept, to verify that worlds do not depend on their batch).
+#              params.publish_format = true also publishes every world's summary and the first world's per-configuration
+#              lines in the exact search-mode format (output-size test; dummy books only).
 #   search   : the Phase 3 Stage-1 search (real world = identity) and / or null worlds (within-date permutation of the
 #              signal rows; params.worlds). Runs ONLY with explicit owner approval (configs carry
-#              owner_approval_required).
+#              owner_approval_required). params.trace = [configuration ids]: the real world additionally publishes
+#              those books' daily equity / cash and every fill (finalist verification, P3_spec.md section 15).
 # Every run ends on or before 2017-12-31 (search window); 2018+ data is never loaded.
 from AlgorithmImports import *
 from datetime import timedelta
+import hashlib
 import json
 import time
 import numpy as np
@@ -73,6 +78,7 @@ class P3Engine(QRAlgorithm):
             self.p3_books = [EN.Books(len(self.replay_books), self.slots, self.hold, float(self.qr["cash"]))]
             self.p3_books[0].fills = []
             self.fill_day = []
+            self.p3_fill_mark = 0
         else:
             self.p3_configs = GR.enumerate_configs()
             self.p3_table = FE.SignalTable(self.p3_configs, GR.PRIMARY_TYPES, GR.CONFIRM_TYPES, GR.RISK_LEVELS)
@@ -87,7 +93,21 @@ class P3Engine(QRAlgorithm):
             self.loaded = np.zeros(MAXG, dtype=bool)
             self.spy_hist = []
             self.dummy_density = np.random.default_rng(20261004).uniform(0.02, 0.5, n)
-            self.p3_stats = [self._new_stats(n, w["name"] == "real") for w in self.p3_worlds]
+            self.p3_digest = hashlib.sha256()                 # canary: digest of the REAL masks (batch independence)
+            self.p3_mask_cells = 0
+            fmt0 = self.p3_mode == "canary" and bool(p.get("publish_format"))
+            self.p3_stats = [self._new_stats(n, w["name"] == "real" or (fmt0 and i == 0))
+                             for i, w in enumerate(self.p3_worlds)]
+            self.p3_trace = []
+            if p.get("trace"):
+                if self.p3_mode != "search" or self.p3_worlds[0]["name"] != "real":
+                    raise Exception("X984: trace needs search mode with the real world first")
+                ix = {c["id"]: i for i, c in enumerate(self.p3_configs)}
+                self.p3_trace = [ix[c] for c in p["trace"]]
+                self.p3_books[0].fills = []
+                self.p3_books[0].trace = set(self.p3_trace)
+                self.fill_day = []
+                self.p3_fill_mark = 0
         nb = len(self.p3_books[0].cash)
         self.eq_prev = [np.full(len(b.cash), float(self.qr["cash"])) for b in self.p3_books]
         self.spy_peak, self.spy_dd = 1.0, 0.0
@@ -215,6 +235,8 @@ class P3Engine(QRAlgorithm):
                 for b in self.p3_books:
                     b.delist(g, float(self.last_close[g]))
         self.p3_clock["corp"] += time.perf_counter() - t0
+        if self.p3_books[0].fills is not None:
+            self._flush_fills(str(self.time.date()))
         super().on_data(data)
         if data.bars.count == 0 or self.time.hour < 9:
             return
@@ -294,6 +316,9 @@ class P3Engine(QRAlgorithm):
             t0 = time.perf_counter()
             masks, strength, p_of = self.p3_table.evaluate(f)
             if self.p3_mode == "canary":                            # discard real masks: dummy random masks and keys
+                self.p3_digest.update(str(today).encode() + "|".join(self.sid_of[g] for g in E).encode())
+                self.p3_digest.update(np.packbits(masks).tobytes())
+                self.p3_mask_cells += int(masks.sum())
                 rng = np.random.default_rng([20261004, self.day_index])
                 masks = rng.random(masks.shape) < self.dummy_density[:, None]
                 strength = rng.random(strength.shape)
@@ -322,6 +347,12 @@ class P3Engine(QRAlgorithm):
             t0 = time.perf_counter()
             self._update_stats(wi, B, pv, r_spy, yi, today)
             self.p3_clock["stats"] += time.perf_counter() - t0
+            if wi == 0 and self.p3_trace:
+                d = str(today)
+                self._flush_fills(d)
+                eq = B.equity(self.last_close)
+                self._qr_log("D|" + d + "|" + ";".join(f"{eq[b]:.2f},{B.cash[b]:.2f},{int((B.state[b] == EN.HELD).sum())}"
+                                                       for b in self.p3_trace))
 
     def _update_stats(self, wi, B, eq, r_spy, yi, today):
         S = self.p3_stats[wi]
@@ -347,7 +378,6 @@ class P3Engine(QRAlgorithm):
 
     def _fidelity_step(self, today, s):
         B = self.p3_books[0]
-        n0 = len(B.fills)
         B.open_fills(self.open_px, self.has_bar, s)
         B.stale_exits(s, self.last_real_sess, self.last_close)
         pv = B.equity(self.last_close)
@@ -374,11 +404,16 @@ class P3Engine(QRAlgorithm):
                 self.p3_st["replay_not_free"] += len(stocks) - free
                 stocks = stocks[:free]
             B.plan_entries(b, stocks, self.last_close, float(pv[b]), int(n_sells[b]), skip=self.p3_warned)
-        for rec in B.fills[n0:]:
-            self.fill_day.append((d,) + rec)
+        self._flush_fills(d)
         eq = B.equity(self.last_close)
         self._qr_log("D|" + d + "|" + ";".join(f"{e:.2f},{c:.2f},{n}" for e, c, n in
                                                zip(eq, B.cash, (B.state == EN.HELD).sum(axis=1))))
+
+    def _flush_fills(self, d):
+        B = self.p3_books[0]
+        for rec in B.fills[self.p3_fill_mark:]:
+            self.fill_day.append((d,) + rec)
+        self.p3_fill_mark = len(B.fills)
 
     # ---------------------------------------------------------------- end
     def qr_on_end(self):
@@ -409,26 +444,32 @@ class P3Engine(QRAlgorithm):
                             self.spy_maxdd, self.ew_logex, YEARS)
             tw = time.perf_counter()
             summ = PL.world_summary(inp, nbi, cpx)
-            if self.p3_mode == "canary":                            # dummy configurations: publish timings only
+            fmt = self.p3_mode == "canary" and bool(self.qr_params.get("publish_format"))
+            if self.p3_mode == "canary":                            # dummy configurations: timings (and format test)
                 B = self.p3_books[self.p3_worlds.index(w)]
                 line = (f"WC|{w['name']}|{time.perf_counter() - tw:.3f}|{B.counts['entries']}|{B.counts['exits']}|"
                         f"{B.counts['forced_delist'] + B.counts['forced_stale']}")
+                if fmt:
+                    line += "\nWF|" + w["name"] + "|" + json.dumps(summ, sort_keys=True, default=float)
             else:
                 line = "W|" + w["name"] + "|" + json.dumps(summ, sort_keys=True, default=float)
             self._qr_log(line)
             out_bytes += len(line)
-            if self.p3_mode == "search" and w["name"] == "real":
+            if (self.p3_mode == "search" and w["name"] == "real") or (fmt and w is self.p3_worlds[0]):
                 for i, cid in enumerate(ids):
-                    ln = (f"Y|{cid}|" + ",".join(f"{x:.6g}" for x in S["logex"][i]) + "|" +
-                          ",".join(f"{x:.6g}" for x in S["cost"][i]) + "|" + ",".join(f"{x:.6g}" for x in S["eqsum"][i])
-                          + "|" + ",".join(f"{x:.6g}" for x in S["notional"][i]) + "|" +
-                          ",".join(f"{x:.5f}" for x in S["maxdd"][i]) + "|" +
-                          ",".join(f"{m[i]:.6g}" for m in S["mlogex"]))
+                    ln = PL.y_line(cid, S["logex"][i], S["cost"][i], S["eqsum"][i], S["notional"][i], S["maxdd"][i],
+                                   [m[i] for m in S["mlogex"]])
                     self._qr_log(ln)
                     out_bytes += len(ln)
+        if self.p3_trace:
+            for d, b, kind, g, q, px, fee in self.fill_day:
+                self._qr_log(f"F|{self.p3_trace.index(b)}|{d}|{self.sid_of[g]}|{kind}|{q:.0f}|{px:.6f}|{fee:.2f}")
         self.p3_clock["pipeline"] += time.perf_counter() - t0
         self.p3_st["clock_s"] = {k: round(v, 2) for k, v in self.p3_clock.items()}
         self.p3_st["published_bytes_worlds"] = out_bytes
+        if self.p3_mode == "canary":
+            self.p3_st["real_mask_digest"] = self.p3_digest.hexdigest()
+            self.p3_st["real_mask_cells"] = self.p3_mask_cells
         self._qr_log("G|" + json.dumps(dict(sessions=self.p3_sessions.tolist(), spy_maxdd=self.spy_maxdd.tolist(),
                                             ew_logex=self.ew_logex.tolist()) if self.p3_mode == "search" else
                                        dict(sessions=self.p3_sessions.tolist())))

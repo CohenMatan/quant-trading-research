@@ -18,6 +18,9 @@
 #              centre) / sqrt(folds), choose lexicographically fewest conditions, fewest parameters, lowest turnover,
 #              highest PS, lowest id. Ranks 2, 3 = the same rule applied to the remaining clusters.
 # Walk-forward: for test year Y = 2014..2017: data through Y-1 only, no tau gate, rank-1 centre -> its year-Y excess.
+# Search statistic T (Q1): the largest level t such that the eligible configurations with PS > t contain a connected
+#              cluster of >= 3 (the plateau level of the best cluster; -inf if none). T > tau <=> a promotable cluster
+#              exists at the null threshold tau, so the null statistic and the promotion rule are the same object.
 import math
 
 import numpy as np
@@ -113,6 +116,34 @@ def _idkey(cid):
     return int(cid[1:], 16)
 
 
+def cluster_level(ps, eligible, nb_index):
+    """T = max t such that {eligible c : PS(c) > t} contains a connected component of size >= MIN_CLUSTER. Adds
+    eligible configurations in decreasing PS order (ties by index) with union-find; T = the PS of the configuration
+    whose addition first creates such a component; -inf if none ever does."""
+    parent, size = {}, {}
+
+    def find(i):
+        while parent[i] != i:
+            parent[i] = parent[parent[i]]
+            i = parent[i]
+        return i
+
+    for i in sorted(np.nonzero(eligible)[0].tolist(), key=lambda j: (-ps[j], j)):
+        parent[i], size[i] = i, 1
+        for k in nb_index[i]:
+            k = int(k)
+            if k in parent:
+                a, b = find(i), find(k)
+                if a != b:
+                    if size[a] < size[b]:
+                        a, b = b, a
+                    parent[b] = a
+                    size[a] += size[b]
+        if size[find(i)] >= MIN_CLUSTER:
+            return float(ps[i])
+    return float("-inf")
+
+
 def rank_clusters(cl, ps, F, complexity, turnover, ids, k=3):
     """Promotion order by the one-standard-error simplicity rule (re-applied to the remaining clusters)."""
     rest = list(cl)
@@ -138,7 +169,7 @@ def select(inp, nb_index, complexity, last_year, tau=-np.inf, k=3):
     ranked = rank_clusters(cl, ps, t["F"], complexity, t["turnover"], inp.ids, k)
     best_ps = max((ps[c["centre"]] for c in cl), default=-np.inf)
     return dict(table=t, ps=ps, n_eligible=int(t["eligible"].sum()), n_survivors=int(surv.sum()), clusters=cl,
-                ranked=ranked, best_ps=float(best_ps))
+                ranked=ranked, best_ps=float(best_ps), T=cluster_level(ps, t["eligible"], nb_index))
 
 
 def walk_forward(inp, nb_index, complexity, years=WF_YEARS):
@@ -160,12 +191,26 @@ def walk_forward(inp, nb_index, complexity, years=WF_YEARS):
 
 
 def world_summary(inp, nb_index, complexity, tau=-np.inf):
-    """Everything the null calibration needs from one world (real or null): best plateau score on the full training
-    window, the promotion order, and the walk-forward outcome."""
+    """Everything the null calibration needs from one world (real or null): the search statistic T and the best
+    cluster-centre plateau score on the full training window, the promotion order, and the walk-forward outcome."""
     full = select(inp, nb_index, complexity, 2017, tau=tau, k=3)
     wf = walk_forward(inp, nb_index, complexity)
-    return dict(best_ps=full["best_ps"], n_eligible=full["n_eligible"], n_survivors=full["n_survivors"],
+    return dict(T=full["T"], best_ps=full["best_ps"], n_eligible=full["n_eligible"], n_survivors=full["n_survivors"],
                 n_clusters=len(full["clusters"]),
                 ranked=[dict(centre=inp.ids[c["centre"]], ps=float(full["ps"][c["centre"]]), size=c["size"],
                              se=c["se"]) for c in full["ranked"]],
                 wf=wf)
+
+
+def y_line(cid, logex, cost, eqsum, notional, maxdd, monthly):
+    """The published per-configuration line of the real world (derived results only): yearly log excess, costs, equity
+    sums, notional, drawdown to date, then monthly log excess. Parsed by parse_y_line / research/phase3/P3_eval.py."""
+    f6 = lambda xs: ",".join(f"{x:.6g}" for x in xs)  # noqa: E731
+    return (f"Y|{cid}|{f6(logex)}|{f6(cost)}|{f6(eqsum)}|{f6(notional)}|" + ",".join(f"{x:.5f}" for x in maxdd) + "|"
+            + f6(monthly))
+
+
+def parse_y_line(line):
+    """(configuration id, [logex, cost, eqsum, notional, maxdd, monthly] as float arrays)."""
+    f = line.split("|")
+    return f[1], [np.array([float(v) for v in part.split(",")]) if part else np.zeros(0) for part in f[2:]]

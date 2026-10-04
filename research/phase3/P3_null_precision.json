@@ -1,0 +1,286 @@
+{
+ "binomial": {
+  "39": {
+   "0.005": {
+    "expected_passes": 0.195,
+    "typical_interval": [
+     0.0,
+     0.09025110096033431
+    ],
+    "p_upper_below_5pct": 0.0,
+    "p_upper_below_10pct": 0.8224322824348491
+   },
+   "0.010": {
+    "expected_passes": 0.39,
+    "typical_interval": [
+     0.0,
+     0.09025110096033431
+    ],
+    "p_upper_below_5pct": 0.0,
+    "p_upper_below_10pct": 0.6757290490602839
+   },
+   "0.020": {
+    "expected_passes": 0.78,
+    "typical_interval": [
+     0.0006489638954819452,
+     0.13476392155949793
+    ],
+    "p_upper_below_5pct": 0.0,
+    "p_upper_below_10pct": 0.45479633056219526
+   },
+   "0.050": {
+    "expected_passes": 1.9500000000000002,
+    "typical_interval": [
+     0.006271972095690411,
+     0.17324478137360572
+    ],
+    "p_upper_below_5pct": 0.0,
+    "p_upper_below_10pct": 0.13527595427905628
+   },
+   "zero_passes_interval": [
+    0.0,
+    0.09025110096033431
+   ]
+  },
+  "100": {
+   "0.005": {
+    "expected_passes": 0.5,
+    "typical_interval": [
+     0.0,
+     0.03621669264517641
+    ],
+    "p_upper_below_5pct": 0.6057704364907283,
+    "p_upper_below_10pct": 0.9998414007611657
+   },
+   "0.010": {
+    "expected_passes": 1.0,
+    "typical_interval": [
+     0.00025314603297742064,
+     0.054459385392080645
+    ],
+    "p_upper_below_5pct": 0.36603234127322953,
+    "p_upper_below_10pct": 0.9965676784122454
+   },
+   "0.020": {
+    "expected_passes": 2.0,
+    "typical_interval": [
+     0.0024313368239425423,
+     0.07038393247107011
+    ],
+    "p_upper_below_5pct": 0.1326195558947532,
+    "p_upper_below_10pct": 0.9491695546304996
+   },
+   "0.050": {
+    "expected_passes": 5.0,
+    "typical_interval": [
+     0.016431879182052155,
+     0.11283491110546275
+    ],
+    "p_upper_below_5pct": 0.005920529220334024,
+    "p_upper_below_10pct": 0.4359813006857118
+   },
+   "zero_passes_interval": [
+    0.0,
+    0.03621669264517641
+   ]
+  },
+  "200": {
+   "0.005": {
+    "expected_passes": 1.0,
+    "typical_interval": [
+     0.00012658102786701825,
+     0.02754189845720562
+    ],
+    "p_upper_below_5pct": 0.9813186606051071,
+    "p_upper_below_10pct": 0.9999999993736407
+   },
+   "0.010": {
+    "expected_passes": 2.0,
+    "typical_interval": [
+     0.0012133490137360304,
+     0.035654668397239776
+    ],
+    "p_upper_below_5pct": 0.8580340344447439,
+    "p_upper_below_10pct": 0.9999989211747704
+   },
+   "0.020": {
+    "expected_passes": 4.0,
+    "typical_interval": [
+     0.0054755658795564485,
+     0.05041360908989629
+    ],
+    "p_upper_below_5pct": 0.4314949731615044,
+    "p_upper_below_10pct": 0.9992138361893361
+   },
+   "0.050": {
+    "expected_passes": 10.0,
+    "typical_interval": [
+     0.024234165472108552,
+     0.09002753770135137
+    ],
+    "p_upper_below_5pct": 0.009048376396101536,
+    "p_upper_below_10pct": 0.6997557033542191
+   },
+   "zero_passes_interval": [
+    0.0,
+    0.01827534035513624
+   ]
+  },
+  "500": {
+   "0.005": {
+    "expected_passes": 2.5,
+    "typical_interval": [
+     0.0004847861762900009,
+     0.014374078562200309
+    ],
+    "p_upper_below_5pct": 0.9999999910081215,
+    "p_upper_below_10pct": 1.0000000000000002
+   },
+   "0.010": {
+    "expected_passes": 5.0,
+    "typical_interval": [
+     0.0032547214070242523,
+     0.02318138806965964
+    ],
+    "p_upper_below_5pct": 0.9999385414341841,
+    "p_upper_below_10pct": 1.0
+   },
+   "0.020": {
+    "expected_passes": 10.0,
+    "typical_interval": [
+     0.009631429586433347,
+     0.03647240829220973
+    ],
+    "p_upper_below_5pct": 0.9530029019903548,
+    "p_upper_below_10pct": 0.9999999999786833
+   },
+   "0.050": {
+    "expected_passes": 25.0,
+    "typical_interval": [
+     0.03261518014933005,
+     0.07292762165047896
+    ],
+    "p_upper_below_5pct": 0.01985837716300666,
+    "p_upper_below_10pct": 0.9875750997373494
+   },
+   "zero_passes_interval": [
+    0.0,
+    0.007350610051907784
+   ]
+  },
+  "1000": {
+   "0.005": {
+    "expected_passes": 5.0,
+    "typical_interval": [
+     0.00162541951756276,
+     0.011629470559812147
+    ],
+    "p_upper_below_5pct": 0.9999999999999992,
+    "p_upper_below_10pct": 0.9999999999999991
+   },
+   "0.010": {
+    "expected_passes": 10.0,
+    "typical_interval": [
+     0.004805510691049308,
+     0.01831324305511245
+    ],
+    "p_upper_below_5pct": 0.9999999999689376,
+    "p_upper_below_10pct": 0.9999999999999998
+   },
+   "0.020": {
+    "expected_passes": 20.0,
+    "typical_interval": [
+     0.012258267972406329,
+     0.03072003268260911
+    ],
+    "p_upper_below_5pct": 0.9996351775719192,
+    "p_upper_below_10pct": 1.0
+   },
+   "0.050": {
+    "expected_passes": 50.0,
+    "typical_interval": [
+     0.03733539760466178,
+     0.06539048791549364
+    ],
+    "p_upper_below_5pct": 0.021154832411807198,
+    "p_upper_below_10pct": 0.9999881201601144
+   },
+   "zero_passes_interval": [
+    0.0,
+    0.003682083896865671
+   ]
+  }
+ },
+ "tau": {
+  "39": {
+   "order_statistics": null,
+   "note": "95th percentile not bracketed at 95% confidence"
+  },
+  "100": {
+   "order_statistics": [
+    90,
+    99
+   ],
+   "quantile_range": [
+    0.9,
+    0.99
+   ]
+  },
+  "200": {
+   "order_statistics": [
+    183,
+    196
+   ],
+   "quantile_range": [
+    0.915,
+    0.98
+   ]
+  },
+  "500": {
+   "order_statistics": [
+    464,
+    484
+   ],
+   "quantile_range": [
+    0.928,
+    0.968
+   ]
+  },
+  "1000": {
+   "order_statistics": [
+    937,
+    964
+   ],
+   "quantile_range": [
+    0.937,
+    0.964
+   ]
+  }
+ },
+ "synthetic_null": {
+  "worlds": 500,
+  "tau": 0.03922386983467842,
+  "worlds_without_cluster": 7,
+  "wf_pass_rate": 0.27,
+  "q1_passes_loo": 25,
+  "q1_rate_loo": 0.05,
+  "q1_ci95": [
+   0.03261518014933005,
+   0.07292762165047896
+  ],
+  "full_pipeline_false_passes": 17,
+  "false_pass_rate": 0.034,
+  "ci95": [
+   0.019928600046206307,
+   0.0538803507360769
+  ],
+  "wf_pass_rate_given_q1": 0.68,
+  "T_quantiles": {
+   "5": -0.020500040667042196,
+   "50": 0.014092500881120403,
+   "95": 0.03900314985567405,
+   "99": 0.053822127333860784
+  },
+  "note": "synthetic worlds only (no market data): demonstrates the pipeline and reporting; the real null comes from the QuantConnect null runs"
+ }
+}

@@ -163,3 +163,18 @@ def test_null_permutation_destroys_planted_edge_but_keeps_counts():
     assert (E.null_permutation(1, 7, 20) == E.null_permutation(1, 7, 20)).all()
     assert (E.null_permutation(1, 7, 20) != E.null_permutation(2, 7, 20)).any()
     assert (E.null_permutation(1, 70, 20, block=63) == E.null_permutation(1, 100, 20, block=63)).all()
+
+
+def test_trace_records_only_traced_books_and_delisting_fills():
+    """Finalist trace (P3_spec.md section 15): only the traced books' fills are recorded; a delisting close is recorded
+    as a fill (the fidelity host flushes fills after corporate actions, so forced exits are reported)."""
+    B = E.Books(3, 10, 63, 100_000)
+    B.fills, B.trace = [], {1}
+    price = np.full(5, 50.0)
+    for b in range(3):
+        B.plan_entries(b, [2], price, 100_000.0, 0)
+    B.open_fills(price, np.ones(5, bool), 1)
+    assert [f[0] for f in B.fills] == [1]
+    B.delist(2, 48.0)
+    assert [(f[0], f[1]) for f in B.fills] == [(1, "buy"), (1, "delist")]
+    assert B.counts["forced_delist"] == 3
