@@ -88,6 +88,18 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
                 files[p.name] = p.read_text(encoding="utf-8")
         if "qr_h017.py" not in files or "qr_h017_events.py" not in files:
             raise experiment.ConfigError("S017 needs src/qresearch/lean/qr_h017.py and the packed event table qr_h017_events*.py")
+    if "qr_p3" in files["main.py"]:   # Phase 3 engine modules (+ fidelity replay schedule), only for strategies importing them
+        lean = "src/qresearch/lean"
+        if commit:
+            for p in gitutil.list_files(commit, lean):
+                if Path(p).name.startswith("qr_p3") and p.endswith(".py"):
+                    files[Path(p).name] = gitutil.show_file(commit, p)
+        else:
+            for p in sorted((config.REPO_ROOT / lean).glob("qr_p3*.py")):
+                files[p.name] = p.read_text(encoding="utf-8")
+        missing = {"qr_p3_engine.py", "qr_p3_features.py", "qr_p3_grammar.py", "qr_p3_pipeline.py"} - set(files)
+        if missing:
+            raise experiment.ConfigError(f"Phase 3 engine modules missing: {sorted(missing)}")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 

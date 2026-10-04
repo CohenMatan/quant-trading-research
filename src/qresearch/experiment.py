@@ -124,6 +124,13 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("S017 research runs belong to hypothesis H017")
         if float(cfg["costs"].get("slippage_bps", -1)) != 10:
             raise ConfigError("base slippage is 10 bps per side (D024); stress multiples via slippage_stress_multiple")
+    if cfg["strategy_id"] in ("X984", "S018"):
+        # Phase 3 (P3-CP2): every engine run ends on or before 2017-12-31 (search window; 2018+ is the one-shot internal
+        # OOS and is never loaded by the engine); the real search / null runs need explicit owner approval
+        if cfg["end"] > "2017-12-31":
+            raise ConfigError("Phase 3 engine runs end on or before 2017-12-31 (search window)")
+        if cfg.get("params", {}).get("mode") == "search" and not cfg.get("owner_approval_required"):
+            raise ConfigError("Phase 3 search / null runs need owner_approval_required (owner 2026-10-04)")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
