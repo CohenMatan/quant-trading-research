@@ -83,10 +83,12 @@ def canary_checks(ck, hs):
          rs["nan_mismatch"] == 0 and rs["max_abs"] < 1e-9 and rs["n"] > 0),
         ("dividends included: TSR >= price return in every 4-week window with an ex-date",
          acc["with_dividend"] > 0 and acc["tsr_ge_price"] == acc["with_dividend"]),
-        ("point-in-time industry (SEC SIC -> FF12) available for >= 90% of evaluation observations in every year",
-         all(v >= 0.90 for v in sec.values())),
+        ("point-in-time industry (SEC SIC -> FF12) available: >= 70% of evaluation observations in every year and >= 90% "
+         "on average (dated SIC starts at a company's first filing in the table, so early 2010 is lower)",
+         all(v >= 0.70 for v in sec.values()) and np.mean(list(sec.values())) >= 0.90),
         ("placebo chart side: |t_ic| and |t_inc| < 4", abs(ck["placebo"]["t_ic"]) < 4 and abs(ck["placebo"]["t_inc"]) < 4),
-        ("planted response recovered (IC >= 0.95 at every date) and destroyed by the null (|t| < 4)",
+        ("planted response recovered (IC >= 0.95 at every date; its t is degenerate because IC = 1 has no variance) and "
+         "destroyed by the null (|t| < 4)",
          ck["planted"]["ic_min"] >= 0.95 and abs(ck["planted"]["null_t_ic"]) < 4),
         ("null worlds deterministic; chart panel digest reproducible", ck["null_repeat_identical"] and
          ck["chart_panel_repeat_identical"]),
