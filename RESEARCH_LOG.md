@@ -1484,3 +1484,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** no 2018–2021, Holdout locked, no portfolio, no AI, no data purchase, no tuning, no rerun.
 
 **STOP:** awaiting the owner (recommendation: close H020 as Rejected).
+
+## 2026-10-05: P6-CP1 Sector / ETF Rotation Evidence and Validation Architecture (design only); STOP (D159)
+
+- **Owner direction:** a new unit of prediction — sectors instead of stocks. Evidence, data feasibility and signal-validation design only.
+- **Evidence:**
+  - Industry momentum is a strong pre-1999 US result.
+  - It is mostly a short-horizon, no-skip effect, and its mechanism is debated.
+  - The best post-2000 sector-ETF test found no momentum.
+- **Data (E988-01 availability probe, no returns):**
+  - the nine original Select Sector SPDRs have complete QuantConnect history from 1998-12-22 with no backfill;
+  - XLRE starts in 2015 and XLC in 2018, so both are excluded;
+  - iShares and Vanguard sector ETFs start later and are less clean.
+- **Power (synthetic):**
+  - with about 6 effective sectors, only long samples help;
+  - the 50% detectable top-3 edge is about +3.3%/yr with 2000–2017 (needs a D035 amendment) and about +5.3%/yr with 2010–2017 alone;
+  - that is above a realistic 0–2.5%/yr.
+- **Recommendation:** NO-GO. Alternatively, one pre-registered falsification test (H021-A: 6-month total-return relative momentum, monthly, 9 SPDRs, 2000–2017).
+- **Untouched:** nothing real computed; no 2018–2021 data; Holdout locked; no purchase.
+
+**STOP:** awaiting the owner (H020 closure; Phase 6 GO / NO-GO; if GO, the decisions in P6-CP1 §39).

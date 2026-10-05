@@ -1,0 +1,65 @@
+{
+ "effective_cross_sectional_n": 6.120831127362366,
+ "n_minus_1": 8,
+ "relative_return_sd_monthly": 0.03907833168891882,
+ "null_ic_sd_per_date": 0.3760493739220073,
+ "iid_ic_sd_theory_1_over_sqrt_n_minus_1": 0.35355339059327373,
+ "null_ic_autocorr_lag1": 0.005914400482339209,
+ "tracking_error_vs_ew_sectors_ann": {
+  "1": 0.13764100942054133,
+  "2": 0.09088303908072036,
+  "3": 0.06856650019298985,
+  "4": 0.054329632807863945
+ },
+ "costs_6m_signal": {
+  "k1_100K": {
+   "replacements_per_month": 0.401,
+   "orders_per_year": 9.6,
+   "cost_usd_per_year": 1030.0,
+   "cost_pct_per_year": 1.03
+  },
+  "k1_200K": {
+   "replacements_per_month": 0.401,
+   "orders_per_year": 9.6,
+   "cost_usd_per_year": 1993.0,
+   "cost_pct_per_year": 0.997
+  },
+  "k2_100K": {
+   "replacements_per_month": 0.627,
+   "orders_per_year": 15.1,
+   "cost_usd_per_year": 858.0,
+   "cost_pct_per_year": 0.858
+  },
+  "k2_200K": {
+   "replacements_per_month": 0.627,
+   "orders_per_year": 15.1,
+   "cost_usd_per_year": 1611.0,
+   "cost_pct_per_year": 0.805
+  },
+  "k3_100K": {
+   "replacements_per_month": 0.755,
+   "orders_per_year": 18.1,
+   "cost_usd_per_year": 731.0,
+   "cost_pct_per_year": 0.731
+  },
+  "k3_200K": {
+   "replacements_per_month": 0.755,
+   "orders_per_year": 18.1,
+   "cost_usd_per_year": 1336.0,
+   "cost_pct_per_year": 0.668
+  },
+  "k4_100K": {
+   "replacements_per_month": 0.857,
+   "orders_per_year": 20.6,
+   "cost_usd_per_year": 658.0,
+   "cost_pct_per_year": 0.658
+  },
+  "k4_200K": {
+   "replacements_per_month": 0.857,
+   "orders_per_year": 20.6,
+   "cost_usd_per_year": 1172.0,
+   "cost_pct_per_year": 0.586
+  }
+ },
+ "note": "Costs exclude rebalancing back to equal weight between replacements (optional; with k ETFs and a 5% band it adds a few orders a year) and the SPY benchmark difference (cap-weighted vs equal-weight sectors)."
+}
