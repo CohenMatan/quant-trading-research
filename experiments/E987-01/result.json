@@ -1,0 +1,331 @@
+{
+ "experiment_id": "E987-01",
+ "harness_messages": [
+  "QRX987|summary|{\"max_rss_mb\": 3335.4, \"official_sessions\": 2013, \"panel\": {\"chart_panel_sha256\": \"aa5d3c51fb1203584adfc3604508fcfb0537af7f630381c51a11e34492cbb7d9\", \"columns\": 1972, \"decision_first_last\": [\"2010-01-08\", \"2017-11-24\"], \"decisions\": 412, \"decisions_13w\": 403, \"dividend_events\": 39733, \"eligible_per_decision\": [765, 767, 764, 747, 744, 749, 757, 759, 773, 784, 787, 796, 796, 806, 822, 829, 832, 790, 807, 768, 788, 784, 770, 789, 764, 745, 757, 765, 767, 781, 796, 792, 786, 779, 805, 810, 818, 821, 836, 841, 848, 840, 851, 879, 884, 865, 879, 894, 896, 904, 927, 924, 931, 930, 920, 927, 934, 942, 948, 933, 947, 930, 923, 934, 952, 964, 946, 953, 967, 965, 977, 976, 969, 958, 938, 931, 948, 959, 969, 942, 955, 934, 881, 865, 838, 848, 880, 863, 878, 831, 842, 852, 867, 856, 905, 898, 885, 875, 843, 881, 875, 865, 895, 898, 891, 906, 921, 920, 930, 943, 939, 942, 948, 943, 963, 955, 952, 940, 939, 934, 957, 949, 944, 901, 912, 910, 890, 897, 901, 905, 931, 906, 913, 897, 897, 917, 929, 923, 922, 937, 948, 945, 939, 944, 936, 939, 919, 936, 924, 910, 928, 940, 940, 946, 961, 955, 975, 972, 980, 982, 986, 995, 1001, 991, 999, 1022, 1032, 1034, 1034, 1022, 1033, 1012, 1033, 1038, 1053, 1066, 1066, 1063, 1059, 1058, 1048, 1061, 1061, 1086, 1096, 1097, 1098, 1095, 1076, 1078, 1071, 1076, 1093, 1110, 1106, 1101, 1103, 1120, 1125, 1117, 1114, 1133, 1142, 1148, 1137, 1126, 1145, 1162, 1155, 1170, 1170, 1174, 1158, 1140, 1151, 1165, 1188, 1200, 1187, 1204, 1180, 1199, 1176, 1175, 1174, 1169, 1164, 1157, 1172, 1191, 1194, 1202, 1210, 1221, 1227, 1213, 1198, 1215, 1186, 1181, 1204, 1210, 1207, 1210, 1212, 1202, 1180, 1165, 1161, 1164, 1180, 1212, 1229, 1242, 1236, 1240, 1224, 1216, 1232, 1236, 1236, 1229, 1197, 1216, 1217, 1242, 1236, 1240, 1251, 1246, 1257, 1259, 1247, 1260, 1270, 1272, 1270, 1245, 1252, 1265, 1268, 1267, 1262, 1270, 1283, 1278, 1258, 1242, 1260, 1249, 1247, 1243, 1237, 1217, 1208, 1192, 1188, 1210, 1176, 1153, 1196, 1190, 1190, 1193, 1205, 1192, 1200, 1214, 1196, 1187, 1167, 1182, 1179, 1126, 1105, 1085, 1093, 1100, 1054, 1095, 1097, 1135, 1128, 1149, 1129, 1157, 1133, 1158, 1157, 1162, 1136, 1132, 1131, 1155, 1166, 1174, 1158, 1179, 1163, 1154, 1193, 1192, 1202, 1203, 1215, 1215, 1216, 1210, 1218, 1202, 1220, 1202, 1209, 1195, 1191, 1175, 1161, 1214, 1246, 1258, 1235, 1268, 1252, 1249, 1250, 1256, 1258, 1244, 1266, 1262, 1264, 1266, 1272, 1275, 1261, 1270, 1255, 1267, 1261, 1255, 1260, 1273, 1255, 1256, 1245, 1256, 1257, 1264, 1254, 1263, 1276, 1271, 1276, 1283, 1277, 1276, 1256, 1257, 1261, 1270, 1269, 1277, 1285, 1308, 1314, 1306, 1310, 1299, 1298, 1300, 1303, 1315], \"exclusions_total\": {\"bad_bar_at_t\": 0, \"history_lt_504\": 20517, \"mom_undefined\": 3, \"no_bar_at_t\": 77, \"no_response\": 87, \"snapshot_error\": 0}, \"factor_steps_big\": 0, \"factor_steps_small\": 5, \"first_day\": \"2006-11-01\", \"fwd13_end_last_decision\": \"2017-12-26\", \"fwd_end_last_decision\": \"2017-12-22\", \"history_calls\": 80, \"large_distributions\": 76, \"last_day\": \"2017-12-29\", \"last_scale_not_one\": 11, \"late_rows\": 0, \"panel_s\": 85.3, \"response_panel_sha256\": \"bd0b67926352c568228fd5ea222b1bcac6d1670caed611e51786763bf25786ea\", \"rows\": 2810, \"score_table_s\": 1630.1, \"scored_per_decision\": [749, 750, 747, 730, 727, 731, 740, 741, 754, 766, 771, 779, 780, 788, 803, 812, 815, 775, 791, 753, 773, 769, 756, 775, 751, 734, 746, 754, 755, 768, 782, 778, 772, 766, 790, 795, 804, 808, 821, 827, 834, 826, 837, 864, 868, 849, 863, 878, 878, 885, 904, 902, 910, 907, 899, 905, 911, 918, 923, 910, 923, 908, 901, 911, 927, 937, 920, 928, 941, 937, 944, 943, 937, 930, 909, 900, 913, 925, 934, 907, 921, 900, 847, 830, 803, 813, 845, 832, 847, 803, 811, 823, 834, 827, 875, 867, 852, 847, 813, 848, 843, 836, 863, 867, 862, 873, 884, 884, 894, 905, 900, 906, 909, 904, 924, 915, 913, 902, 899, 892, 911, 904, 900, 862, 873, 871, 852, 861, 865, 871, 894, 871, 878, 864, 864, 882, 892, 888, 886, 900, 911, 905, 900, 903, 897, 901, 883, 899, 891, 875, 893, 902, 904, 909, 923, 917, 936, 935, 941, 944, 947, 954, 958, 947, 955, 977, 987, 989, 988, 978, 989, 969, 985, 990, 1005, 1017, 1021, 1015, 1011, 1008, 998, 1010, 1015, 1036, 1045, 1044, 1048, 1043, 1021, 1021, 1017, 1020, 1035, 1050, 1046, 1042, 1045, 1056, 1065, 1057, 1055, 1068, 1076, 1081, 1069, 1058, 1076, 1094, 1086, 1098, 1096, 1098, 1085, 1071, 1080, 1091, 1111, 1122, 1112, 1129, 1109, 1129, 1109, 1112, 1109, 1103, 1096, 1088, 1102, 1120, 1121, 1127, 1134, 1145, 1151, 1140, 1122, 1135, 1106, 1099, 1120, 1127, 1121, 1126, 1127, 1117, 1099, 1088, 1085, 1095, 1108, 1137, 1150, 1160, 1157, 1160, 1144, 1135, 1148, 1152, 1151, 1144, 1114, 1133, 1133, 1157, 1154, 1157, 1162, 1157, 1167, 1166, 1161, 1167, 1178, 1179, 1175, 1157, 1165, 1175, 1179, 1175, 1172, 1180, 1190, 1185, 1169, 1156, 1172, 1164, 1159, 1154, 1153, 1134, 1122, 1110, 1108, 1124, 1098, 1079, 1117, 1116, 1115, 1124, 1136, 1122, 1130, 1143, 1129, 1122, 1101, 1116, 1112, 1063, 1047, 1028, 1040, 1044, 1002, 1040, 1045, 1077, 1072, 1092, 1072, 1101, 1078, 1105, 1106, 1110, 1084, 1082, 1080, 1103, 1113, 1123, 1112, 1130, 1116, 1108, 1143, 1143, 1152, 1152, 1163, 1161, 1162, 1153, 1163, 1146, 1163, 1149, 1155, 1141, 1139, 1126, 1117, 1171, 1200, 1213, 1190, 1217, 1203, 1202, 1204, 1209, 1210, 1197, 1218, 1212, 1213, 1215, 1220, 1221, 1208, 1216, 1201, 1211, 1204, 1199, 1203, 1215, 1198, 1197, 1188, 1194, 1193, 1200, 1194, 1203, 1218, 1214, 1220, 1229, 1222, 1221, 1203, 1203, 1206, 1214, 1212, 1220, 1228, 1251, 1255, 1251, 1257, 1246, 1245, 1245, 1247, 1258], \"snapshots\": 420639, \"split\": {\"aligned\": 539, \"n\": 551, \"outside\": 1, \"realigned\": 0, \"unverified\": 11}, \"split_types\": {\"SPLIT_OCCURRED\": 551, \"WARNING\": 552}, \"stocks_with_factor_steps\": 3, \"unknown_day_rows\": 0, \"volume_missing_rows\": 0, \"week_end_universe_extra\": [], \"week_end_universe_missing\": [], \"week_ends_in_calendar\": 417, \"week_ends_recorded\": 417}, \"wall_s\": 1959.4}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 2013,
+  "elig_days": 2013,
+  "elig_max": 1331,
+  "elig_mean": 1073.5315449577745,
+  "elig_min": 737,
+  "elig_sum": 2161019,
+  "experiment_id": "E987-01",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 399998,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 340,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "warmup_days": 128,
+  "warmup_select_days": 129,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "a4356a5a198e161e7a6d926d982cfb2aa5b5164c0ea278dd4d893a60261cac72",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "2013 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2010-01-04..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 2013 vs algorithm days 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 2013 vs QuantConnect tradeableDates 2013",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "warmup_left_account_untouched",
+   "detail": "first recorded equity 100000.00 vs initial cash 100000.00; 128 warm-up sessions",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 2013,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2010-01-04",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-05T09:53:04Z",
+  "build_commit": "8b8abe9ee0681d1d6f5d411ae8b83958f4ca242b",
+  "code_sha256": "5fc86f5560290efd93873e5ca9ced4745e62562d5f361392aa9ae4195a8e1f34",
+  "config_sha256": "35ba509bb7abc3c44b1a87356f31df3a49af3364431ff3262a3c1bd1999a2ace",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_chart.py",
+   "qr_fundamentals.py",
+   "qr_h020_diag.py",
+   "qr_h020_panel.py",
+   "qr_h020_stats.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_sec_data.py",
+   "qr_sec_data_00.py",
+   "qr_sec_data_01.py",
+   "qr_sec_data_02.py",
+   "qr_sec_data_03.py",
+   "qr_sec_data_04.py",
+   "qr_sec_data_05.py",
+   "qr_sec_data_06.py",
+   "qr_sec_data_07.py",
+   "qr_sec_data_08.py",
+   "qr_sec_data_09.py",
+   "qr_sec_data_10.py",
+   "qr_sec_data_11.py",
+   "qr_sec_data_12.py",
+   "qr_sec_data_13.py",
+   "qr_sec_data_14.py",
+   "qr_sec_data_15.py",
+   "qr_sec_data_16.py",
+   "qr_sec_data_17.py",
+   "qr_sec_data_18.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "8b8abe9ee0681d1d6f5d411ae8b83958f4ca242b",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "080ddebab5b3c2147e8e5fc5c0d78403",
+  "qc_project_id": 37383009,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-05T09:52:49Z",
+  "runtime_s": 1998.735735654831
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.925",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.123",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "K|{\"chart_panel_repeat_identical\": true, \"coverage\": {\"eligible\": 441233, \"exclusions\": {\"bad_bar_at_t\": 0, \"history_lt_504\": 20517, \"mom_undefined\": 3, \"no_bar_at_t\": 77, \"no_response\": 87, \"snapshot_error\": 0}, \"scored\": 420639}, \"decisions_are_week_ends\": true, \"eligible_min_max_mean\": [744, 1315, 1070.9539], \"evaluated_mean_by_year\": {\"2010\": 792.42308, \"2011\": 884.46154, \"2012\": 891.59615, \"2013\": 1014.0, \"2014\": 1116.9808, \"2015\": 1145.3962, \"2016\": 1120.7885, \"2017\": 1216.8085}, \"evaluated_min_max_mean\": [727, 1258, 1020.75], \"first_decision_is_first_week_end_2010\": true, \"last_decision_is_maximal\": true, \"min_bars_scored\": 504, \"null_digest_900001\": \"bbd4cc23f913b442021d0f87716fa317d76af4b3fc07cc59aaade478754df86c\", \"null_repeat_identical\": true, \"null_world_s\": 0.4623063, \"null_world_s_1000\": 462.3063, \"placebo\": {\"ic\": -0.0013819162, \"mono\": -0.6, \"t_ic\": -0.93802057, \"t_inc\": -1.1624171}, \"planted\": {\"ic_mean\": 1.0, \"ic_min\": 1.0, \"mono\": 1.0, \"null_t_ic\": 4.4671029, \"null_t_inc\": 3.8895022, \"t_ic\": 0.0, \"t_inc\": 3.4080718e+16}, \"response_accounting\": {\"delisted_in_window\": 1153, \"max_tsr_minus_price\": 1.0564279, \"mean_tsr_minus_price\": 0.007622412, \"tsr_ge_price\": 86571, \"windows\": 420549, \"with_dividend\": 86571}, \"scored_min_max_mean\": [727, 1258, 1020.9684], \"sector_classified_share_by_year\": {\"2010\": 0.68704562, \"2011\": 0.94201268, \"2012\": 0.95671964, \"2013\": 0.96465132, \"2014\": 0.97656679, \"2015\": 0.97741184, \"2016\": 0.97911922, \"2017\": 0.97961247}, \"slow_recomputation\": {\"digest_panel\": \"78597240b49757e6d07e2a87c01784cda40295a3fe71276b0fe332bc2feb6358\", \"digest_pit\": \"78597240b49757e6d07e2a87c01784cda40295a3fe71276b0fe332bc2feb6358\", \"exact\": 120, \"max_rel\": 8.9241043e-14, \"missing\": 0, \"n\": 120}, \"slow_response\": {\"delisted_in_window\": 2, \"max_abs\": 6.6613381e-16, \"n\": 238, \"nan_mismatch\": 0, \"scaled_raw_max_abs\": null, \"with_dividend\": 88, \"with_split\": 1}}\nQRX987|summary|{\"max_rss_mb\": 3335.4, \"official_sessions\": 2013, \"panel\": {\"chart_panel_sha256\": \"aa5d3c51fb1203584adfc3604508fcfb0537af7f630381c51a11e34492cbb7d9\", \"columns\": 1972, \"decision_first_last\": [\"2010-01-08\", \"2017-11-24\"], \"decisions\": 412, \"decisions_13w\": 403, \"dividend_events\": 39733, \"eligible_per_decision\": [765, 767, 764, 747, 744, 749, 757, 759, 773, 784, 787, 796, 796, 806, 822, 829, 832, 790, 807, 768, 788, 784, 770, 789, 764, 745, 757, 765, 767, 781, 796, 792, 786, 779, 805, 810, 818, 821, 836, 841, 848, 840, 851, 879, 884, 865, 879, 894, 896, 904, 927, 924, 931, 930, 920, 927, 934, 942, 948, 933, 947, 930, 923, 934, 952, 964, 946, 953, 967, 965, 977, 976, 969, 958, 938, 931, 948, 959, 969, 942, 955, 934, 881, 865, 838, 848, 880, 863, 878, 831, 842, 852, 867, 856, 905, 898, 885, 875, 843, 881, 875, 865, 895, 898, 891, 906, 921, 920, 930, 943, 939, 942, 948, 943, 963, 955, 952, 940, 939, 934, 957, 949, 944, 901, 912, 910, 890, 897, 901, 905, 931, 906, 913, 897, 897, 917, 929, 923, 922, 937, 948, 945, 939, 944, 936, 939, 919, 936, 924, 910, 928, 940, 940, 946, 961, 955, 975, 972, 980, 982, 986, 995, 1001, 991, 999, 1022, 1032, 1034, 1034, 1022, 1033, 1012, 1033, 1038, 1053, 1066, 1066, 1063, 1059, 1058, 1048, 1061, 1061, 1086, 1096, 1097, 1098, 1095, 1076, 1078, 1071, 1076, 1093, 1110, 1106, 1101, 1103, 1120, 1125, 1117, 1114, 1133, 1142, 1148, 1137, 1126, 1145, 1162, 1155, 1170, 1170, 1174, 1158, 1140, 1151, 1165, 1188, 1200, 1187, 1204, 1180, 1199, 1176, 1175, 1174, 1169, 1164, 1157, 1172, 1191, 1194, 1202, 1210, 1221, 1227, 1213, 1198, 1215, 1186, 1181, 1204, 1210, 1207, 1210, 1212, 1202, 1180, 1165, 1161, 1164, 1180, 1212, 1229, 1242, 1236, 1240, 1224, 1216, 1232, 1236, 1236, 1229, 1197, 1216, 1217, 1242, 1236, 1240, 1251, 1246, 1257, 1259, 1247, 1260, 1270, 1272, 1270, 1245, 1252, 1265, 1268, 1267, 1262, 1270, 1283, 1278, 1258, 1242, 1260, 1249, 1247, 1243, 1237, 1217, 1208, 1192, 1188, 1210, 1176, 1153, 1196, 1190, 1190, 1193, 1205, 1192, 1200, 1214, 1196, 1187, 1167, 1182, 1179, 1126, 1105, 1085, 1093, 1100, 1054, 1095, 1097, 1135, 1128, 1149, 1129, 1157, 1133, 1158, 1157, 1162, 1136, 1132, 1131, 1155, 1166, 1174, 1158, 1179, 1163, 1154, 1193, 1192, 1202, 1203, 1215, 1215, 1216, 1210, 1218, 1202, 1220, 1202, 1209, 1195, 1191, 1175, 1161, 1214, 1246, 1258, 1235, 1268, 1252, 1249, 1250, 1256, 1258, 1244, 1266, 1262, 1264, 1266, 1272, 1275, 1261, 1270, 1255, 1267, 1261, 1255, 1260, 1273, 1255, 1256, 1245, 1256, 1257, 1264, 1254, 1263, 1276, 1271, 1276, 1283, 1277, 1276, 1256, 1257, 1261, 1270, 1269, 1277, 1285, 1308, 1314, 1306, 1310, 1299, 1298, 1300, 1303, 1315], \"exclusions_total\": {\"bad_bar_at_t\": 0, \"history_lt_504\": 20517, \"mom_undefined\": 3, \"no_bar_at_t\": 77, \"no_response\": 87, \"snapshot_error\": 0}, \"factor_steps_big\": 0, \"factor_steps_small\": 5, \"first_day\": \"2006-11-01\", \"fwd13_end_last_decision\": \"2017-12-26\", \"fwd_end_last_decision\": \"2017-12-22\", \"history_calls\": 80, \"large_distributions\": 76, \"last_day\": \"2017-12-29\", \"last_scale_not_one\": 11, \"late_rows\": 0, \"panel_s\": 85.3, \"response_panel_sha256\": \"bd0b67926352c568228fd5ea222b1bcac6d1670caed611e51786763bf25786ea\", \"rows\": 2810, \"score_table_s\": 1630.1, \"scored_per_decision\": [749, 750, 747, 730, 727, 731, 740, 741, 754, 766, 771, 779, 780, 788, 803, 812, 815, 775, 791, 753, 773, 769, 756, 775, 751, 734, 746, 754, 755, 768, 782, 778, 772, 766, 790, 795, 804, 808, 821, 827, 834, 826, 837, 864, 868, 849, 863, 878, 878, 885, 904, 902, 910, 907, 899, 905, 911, 918, 923, 910, 923, 908, 901, 911, 927, 937, 920, 928, 941, 937, 944, 943, 937, 930, 909, 900, 913, 925, 934, 907, 921, 900, 847, 830, 803, 813, 845, 832, 847, 803, 811, 823, 834, 827, 875, 867, 852, 847, 813, 848, 843, 836, 863, 867, 862, 873, 884, 884, 894, 905, 900, 906, 909, 904, 924, 915, 913, 902, 899, 892, 911, 904, 900, 862, 873, 871, 852, 861, 865, 871, 894, 871, 878, 864, 864, 882, 892, 888, 886, 900, 911, 905, 900, 903, 897, 901, 883, 899, 891, 875, 893, 902, 904, 909, 923, 917, 936, 935, 941, 944, 947, 954, 958, 947, 955, 977, 987, 989, 988, 978, 989, 969, 985, 990, 1005, 1017, 1021, 1015, 1011, 1008, 998, 1010, 1015, 1036, 1045, 1044, 1048, 1043, 1021, 1021, 1017, 1020, 1035, 1050, 1046, 1042, 1045, 1056, 1065, 1057, 1055, 1068, 1076, 1081, 1069, 1058, 1076, 1094, 1086, 1098, 1096, 1098, 1085, 1071, 1080, 1091, 1111, 1122, 1112, 1129, 1109, 1129, 1109, 1112, 1109, 1103, 1096, 1088, 1102, 1120, 1121, 1127, 1134, 1145, 1151, 1140, 1122, 1135, 1106, 1099, 1120, 1127, 1121, 1126, 1127, 1117, 1099, 1088, 1085, 1095, 1108, 1137, 1150, 1160, 1157, 1160, 1144, 1135, 1148, 1152, 1151, 1144, 1114, 1133, 1133, 1157, 1154, 1157, 1162, 1157, 1167, 1166, 1161, 1167, 1178, 1179, 1175, 1157, 1165, 1175, 1179, 1175, 1172, 1180, 1190, 1185, 1169, 1156, 1172, 1164, 1159, 1154, 1153, 1134, 1122, 1110, 1108, 1124, 1098, 1079, 1117, 1116, 1115, 1124, 1136, 1122, 1130, 1143, 1129, 1122, 1101, 1116, 1112, 1063, 1047, 1028, 1040, 1044, 1002, 1040, 1045, 1077, 1072, 1092, 1072, 1101, 1078, 1105, 1106, 1110, 1084, 1082, 1080, 1103, 1113, 1123, 1112, 1130, 1116, 1108, 1143, 1143, 1152, 1152, 1163, 1161, 1162, 1153, 1163, 1146, 1163, 1149, 1155, 1141, 1139, 1126, 1117, 1171, 1200, 1213, 1190, 1217, 1203, 1202, 1204, 1209, 1210, 1197, 1218, 1212, 1213, 1215, 1220, 1221, 1208, 1216, 1201, 1211, 1204, 1199, 1203, 1215, 1198, 1197, 1188, 1194, 1193, 1200, 1194, 1203, 1218, 1214, 1220, 1229, 1222, 1221, 1203, 1203, 1206, 1214, 1212, 1220, 1228, 1251, 1255, 1251, 1257, 1246, 1245, 1245, 1247, 1258], \"snapshots\": 420639, \"split\": {\"aligned\": 539, \"n\": 551, \"outside\": 1, \"realigned\": 0, \"unverified\": 11}, \"split_types\": {\"SPLIT_OCCURRED\": 551, \"WARNING\": 552}, \"stocks_with_factor_steps\": 3, \"unknown_day_rows\": 0, \"volume_missing_rows\": 0, \"week_end_universe_extra\": [], \"week_end_universe_missing\": [], \"week_ends_in_calendar\": 417, \"week_ends_recorded\": 417}, \"wall_s\": 1959.4}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 2013, \"elig_days\": 2013, \"elig_max\": 1331, \"elig_mean\": 1073.5315449577745, \"elig_min\": 737, \"elig_sum\": 2161019, \"experiment_id\": \"E987-01\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 399998, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 340, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"warmup_days\": 128, \"warmup_select_days\": 129, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.133409103357099
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}
