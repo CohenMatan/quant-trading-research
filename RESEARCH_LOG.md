@@ -1446,3 +1446,21 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** no historical chart scored or viewed, no AI call, no backtest, no 2018–2021, Holdout locked.
 
 **STOP:** awaiting owner decisions (P5-CP1 §42).
+
+## 2026-10-05: H020 implementation + synthetic canaries; P5-CP2 READY FOR H020 REAL SCORE VALIDATION; STOP (D151–D153)
+
+- **Owner authorisation (D151):** implementation, reproducibility, leakage testing and canary validation only. No real chart scores, no returns by score, no real-universe null, no AI.
+- **Built:**
+  - the deterministic chart-score pipeline (`qr_chart`): Daily + Weekly bars, confirmed swings, structure states, anchored zones, support / resistance trendlines, one base and one breakout definition, volume in three roles, contraction, entry risk, the 20-condition checklist (0–20, no weights) and 5 disqualifiers;
+  - the frozen renderer;
+  - the statistics / null / gates module;
+  - the threshold-provenance table (A–E);
+  - the frozen spec v1 (hash-pinned with the code and the scenario table).
+- **Canaries (synthetic):** every leakage canary passes, including byte-identical Daily and Weekly PNGs whatever follows t. All 12 synthetic scenarios match their frozen expectations exactly. Results are byte-reproducible across runs and processes. 95 tests.
+- **Fixed before any real data (D152):** the null's momentum strata made it self-match and then too narrow (6% false significance at 1%). The null is now an unstratified, no-self-match identity tether, calibrated at 0.3–0.8%. Each test statistic has its own critical value, and promotion needs both (intersection-union).
+- **Power (synthetic):** the +3%/yr economic floor binds before significance. The realistic 50% detectable High-group edge is ≈ 3–5%/yr.
+- **Runtime:** ≈ 8–9 h of QuantConnect node time for the full future sequence, $0 extra.
+- **Verdict:** READY FOR H020 REAL SCORE VALIDATION, subject to explicit approval.
+- **Untouched:** no real data, no QuantConnect run, no 2018–2021, Holdout locked.
+
+**STOP:** awaiting the owner's explicit approval before step 1 (E987-01 plumbing / fidelity canary).

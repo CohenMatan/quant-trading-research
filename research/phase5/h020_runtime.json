@@ -1,0 +1,37 @@
+{
+ "platform": "Linux-6.18.44-fc-v70-x86_64-with-glibc2.39",
+ "python": "3.11.15",
+ "numpy": "2.4.6",
+ "snapshot_ms_median": 3.99,
+ "snapshot_ms_max": 4.46,
+ "weekly_bars_ms": 0.03,
+ "render_daily_plus_weekly_ms": 125.7,
+ "png_bytes_daily_weekly": [
+  14041,
+  10962
+ ],
+ "snapshot_peak_kb": 78.1,
+ "null_prepare_s": 0.23,
+ "real_world_s": 0.132,
+ "null_world_s": 0.431,
+ "max_rss_mb": 102.0,
+ "capacity": {
+  "snapshots": 417000,
+  "snapshot_compute_min_local": 27.7,
+  "snapshot_compute_min_qc": 55.5,
+  "daily_panel_mb_float64": 190.2,
+  "score_table_mb": 15.9,
+  "null_hours_local": 0.6,
+  "null_hours_qc": 1.2,
+  "null_output_kb": 117.2,
+  "rendering_all_snapshots_hours_local": 14.6
+ },
+ "assumptions": {
+  "weeks": 417,
+  "eligible_per_week": 1000,
+  "unique_stocks": 1800,
+  "sessions": 2770,
+  "qc_slowdown": 2.0,
+  "r_null": 5000
+ }
+}

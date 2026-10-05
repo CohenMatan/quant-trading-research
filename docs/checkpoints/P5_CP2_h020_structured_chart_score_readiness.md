@@ -12,8 +12,8 @@
 3. **Two statistical design defects were found and fixed on synthetic data before any real data** (§27):
    - **Stratified null tether.** Stratifying the null by momentum quintile made it too narrow: 6% false significance at a nominal 1%. The frozen null is an unstratified identity tether, which is calibrated.
    - **Single critical value.** A single max(t_ic, t_inc) critical value would have crippled the incremental test. Each statistic now has its own critical value, combined as an intersection-union test.
-4. **Power:** {{POWER_SHORT}}
-5. **Verdict: {{VERDICT}}** — subject to your explicit approval. Nothing real has been computed:
+4. **Power:** With about 1,000 stocks × 417 weekly decisions, significance is not the binding constraint. The **economic floor** is. In the synthetic study, a High-group edge of about +3%/yr is promoted 50% of the time and about +4.5%/yr always. Real data (common factors, fat tails, a lumpier score) will need somewhat more, so the 50% detectable edge is estimated at ≈ 3–5%/yr. Edges of 1–2%/yr cannot qualify by design.
+5. **Verdict: READY FOR H020 REAL SCORE VALIDATION** — subject to your explicit approval. Nothing real has been computed:
    - no real chart scored;
    - no future return by score;
    - no null on the research universe;
@@ -321,7 +321,7 @@ Both stay with the stock in every null world.
 
 Momentum and trend are controlled by G5's regression, not by null strata.
 
-**Full-scale check (1,000 stocks):** {{SIZE_TEXT}}
+**Full-scale check (1,000 stocks):** 417 dates × 1,000 stocks, 1,000 null worlds, 300 independent no-edge panels. c_ic = 2.77, c_inc = 2.80 (α 1%). Size: t_ic 0.33%, t_inc 0.33%, false promotion 0 / 300. Null t_ic mean 0.08, sd 1.20. In a **momentum-only world** (the score correlated 0.5 with momentum; returns driven by momentum only; 8 panels, own nulls R = 150), G3 passes in 8 / 8 (the score does carry momentum information), but **G5 passes in 0 / 8 and promotion in 0 / 8**: the incremental test does its job.
 
 ## 28. Gates (all five required; outcome "qualified" / "not qualified")
 
@@ -341,7 +341,19 @@ Momentum and trend are controlled by G5's regression, not by null strata.
 
 `research/phase5/h020_power_result.json`, from `h020_power.py`. The design is 417 weekly dates × 1,000 stocks, with latent chart quality persistence 0.85 a week, correlation 0.5 with momentum, and weekly idiosyncratic volatility 4.5%.
 
-{{POWER_TABLE}}
+| Planted edge (parameter) | Realised mean IC | High-group excess (%/yr) | High − Low (%/yr) | G3 rate | G5 rate | G1 rate | **Promotion rate** |
+|---|---|---|---|---|---|---|---|
+| 0 (size, 300 panels) | ≈ 0 | ≈ 0 | ≈ 0 | 0.3% | 0.3% | — | **0%** |
+| 0.02 (30 panels) | 0.014 | +1.5 | +4.3 | 100% | 93% | 0% | **0%** |
+| 0.04 | 0.028 | +3.0 | +8.6 | 100% | 100% | 50% | **50%** |
+| 0.06 | 0.042 | +4.5 | +13.0 | 100% | 100% | 100% | **100%** |
+| 0.08 | 0.056 | +6.1 | +17.3 | 100% | 100% | 100% | **100%** |
+
+**Reading:**
+- **What binds.** At this sample size the economic floor (G1), not significance, decides promotion. An edge with IC ≈ 0.014 is statistically detectable but economically too small.
+- **Why the synthetic numbers are optimistic.** The synthetic panel has no common return factors and no fat tails, and its High group is large (≈ 45% of stocks). Real cross-sectional IC dispersion is larger (H019: monthly IC sd ≈ 0.155), so real significance thresholds bind sooner and the realistic 50% detectable High-group edge is ≈ 3–5%/yr.
+- **No change needed.** This does not change any design choice: power is reported, not tuned.
+- **Versus P5-CP1.** P5-CP1's ≈ 5%/yr estimate (monthly, 13-week) is superseded by this weekly 4-week design. The material mechanics change is weekly decisions, a 4-week horizon and the 0–20 score.
 
 ## 31. Leakage results
 
@@ -400,11 +412,28 @@ Example renders (synthetic) are in `research/phase5/h020_demo/`.
 
 ## 34. Runtime / memory (measured, synthetic, this container)
 
-{{RUNTIME_TABLE}}
+`research/phase5/h020_runtime.json` (`h020_runtime.py`; Python 3.11, numpy 2.4).
+
+| Item | Measured |
+|---|---|
+| One snapshot (all features, 20 conditions, 5 disqualifiers) | **4.0 ms** median (4.5 ms max), peak 78 KB |
+| Weekly aggregation (756 sessions) | 0.03 ms |
+| Daily + Weekly render (audit only) | 126 ms; PNGs ≈ 14 KB + 11 KB |
+| Null world (417 dates × 1,000 stocks) | **0.43 s** (real world 0.13 s; preparation 0.23 s) |
+| Process peak RSS (null scale) | 102 MB |
 
 ## 35. Expected real runtime (QuantConnect B2-8 node; assumptions: 2× slower than this container, ≈ 1,000 eligible stocks × ≈ 410 weeks)
 
-{{QC_RUNTIME}}
+| Step | Estimate |
+|---|---|
+| Snapshots | ≈ 417,000 (≈ 1,000 stocks × ≈ 410 weeks) → ≈ 28 min of compute here, **≈ 55 min in QuantConnect** (at 2× slower) |
+| Daily OHLCV panel in memory | ≈ 190 MB (float64; 1,800 stocks × 2,770 sessions × 5 fields); score table ≈ 16 MB; well inside the B2-8 node |
+| E987-01 canary | ≈ 1–1.5 h (scores + slow recomputation for a sample + placebo / planted checks) |
+| Null, 5,000 worlds | ≈ 0.6 h compute here → **≈ 1.2 h in QuantConnect**, plus the score computation in each batch (≈ 55 min) unless an in-project ObjectStore cache is verified in the canary: **≈ 5–6 h over 5 runs** |
+| E021-06 real evaluation | ≈ 1 h |
+| **Total node time** | **≈ 8–9 h**, sequential on our single node |
+| Output | null ≈ 120 KB (2 statistics × 5,000 worlds); real run: summary statistics and per-year / per-group tables only (no raw data) |
+| Rendering every snapshot | not needed (≈ 15 h); rendering stays an audit tool for synthetic charts |
 
 ## 36. Expected cost
 
@@ -414,7 +443,24 @@ Example renders (synthetic) are in `research/phase5/h020_demo/`.
 
 ## 37. Files / hashes
 
-{{FILES}}
+| File | Role | SHA-256 (first 16) |
+|---|---|---|
+| `research/phase5/H020_spec.md` | frozen pre-registration v1 (full hash pinned in `qresearch.p5h020`) | `48e6feccbdb734d6…` |
+| `research/phase5/H020_threshold_provenance.md` | threshold-source audit table | `da46e9caf9717fad…` |
+| `research/phase5/h020_scenarios_expected.json` | frozen synthetic scenario table (hash pinned) | `0cdec3e73c2d6435…` |
+| `src/qresearch/lean/qr_chart.py` | snapshot, checklist, score (hash pinned) | `c9dc5b18c7ef28f6…` |
+| `src/qresearch/lean/qr_chart_render.py` | frozen renderer (hash pinned) | `3bcf12077e7dc3e0…` |
+| `src/qresearch/lean/qr_h020_stats.py` | statistics, null, gates (hash pinned) | `426d37218f8a2770…` |
+| `src/qresearch/p5h020.py` | pins (spec, scenarios, code, constants; null critical values = None) | `a543e7d9fade98bb…` |
+| `research/phase5/h020_fixtures.py` | synthetic scenario fixtures | `218debd99f7e55cc…` |
+| `research/phase5/h020_scenarios.py` | scenario table generator | `1438f654560de7a4…` |
+| `research/phase5/h020_synth_panel.py` | synthetic latent panels | `06568dbb1e76f04f…` |
+| `research/phase5/h020_null_design_check.py / .json` | null design check | — |
+| `research/phase5/h020_power.py / h020_power_result.json` | power study | — |
+| `research/phase5/h020_runtime.py / h020_runtime.json` | runtime / memory | — |
+| `research/phase5/h020_demo/*.png` | synthetic example renders (C, E, F, H) | — |
+| `tests/test_h020_chart.py, test_h020_scenarios.py, test_h020_stats.py, test_h020_spec.py` | 95 tests (+1 skipped) | — |
+| `docs/owner/2026-10-05_h020_implementation_authorisation.md` | owner authorisation record | `9fcb238cbc37150f…` |
 
 ## 38. Risks
 
@@ -449,9 +495,23 @@ Example renders (synthetic) are in `research/phase5/h020_demo/`.
 
 ## 40. Final verdict
 
-**{{VERDICT}}**
+**READY FOR H020 REAL SCORE VALIDATION**
 
-{{VERDICT_TEXT}}
+Every element the owner required is implemented as one frozen definition:
+- a deterministic pipeline;
+- the 4 × 5 checklist with provenance;
+- frozen disqualifiers and a frozen renderer;
+- leakage and pixel canaries;
+- reproducibility hashes;
+- synthetic scenarios A–J matched exactly;
+- baselines and the incremental test;
+- a null calibrated on synthetic data;
+- gates and the economic floor;
+- power, runtime and cost.
+
+Two null-design defects were found and fixed **before** any real data. The remaining risks (§38) are disclosed; none blocks a clean, single real evaluation.
+
+**Readiness is conditional on your explicit approval.** The QuantConnect host (X987) is built and canaried only in step 1 of §39 after that approval, as in H019. If the canary finds a fidelity defect, it is fixed under the H019 rules (technical only; no threshold or definition change) and reported before any null run.
 
 **STOP.** Nothing further is done until your explicit approval of H020 real score validation. In particular:
 - no real historical chart scores;

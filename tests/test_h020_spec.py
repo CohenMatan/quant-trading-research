@@ -14,6 +14,9 @@ ROOT = config.REPO_ROOT
 def test_spec_and_scenarios_hash_pinned():
     assert p5h020.SPEC_SHA256 is not None and p5h020.spec_hash() == p5h020.SPEC_SHA256
     assert p5h020.sha256(p5h020.SCENARIOS) == p5h020.SCENARIOS_SHA256
+    assert set(p5h020.CODE_SHA256) == set(p5h020.CODE)
+    for rel, h in p5h020.CODE_SHA256.items():
+        assert p5h020.sha256(rel) == h, rel
 
 
 def test_code_constants_pinned():

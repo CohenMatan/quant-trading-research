@@ -14,11 +14,16 @@ from . import config
 
 SPEC = "research/phase5/H020_spec.md"
 SPEC_VERSION = 1
-SPEC_SHA256 = None                                   # set at the P5-CP2 freeze (tests/test_h020_spec.py)
+SPEC_SHA256 = "48e6feccbdb734d6918e28f332fe34154a529122bb6ed9ff3c76a95edca22b06"
 PROVENANCE = "research/phase5/H020_threshold_provenance.md"
 SCENARIOS = "research/phase5/h020_scenarios_expected.json"
-SCENARIOS_SHA256 = None
+SCENARIOS_SHA256 = "0cdec3e73c2d64351ee13abe02cf847c26120a6733be395c12a37415719db8b8"
 CODE = ("src/qresearch/lean/qr_chart.py", "src/qresearch/lean/qr_chart_render.py", "src/qresearch/lean/qr_h020_stats.py")
+CODE_SHA256 = {
+    "src/qresearch/lean/qr_chart.py": "c9dc5b18c7ef28f6aa56b6a4b0e5a7296d29f2d17decce6c8c61723fb7e609e5",
+    "src/qresearch/lean/qr_chart_render.py": "3bcf12077e7dc3e0c428a64b23cbea297cfbec6be9ebf99c7588c888f2784506",
+    "src/qresearch/lean/qr_h020_stats.py": "426d37218f8a27707a2b18e8e99559555d03a1e36ff0ddb499d92df4a676b049",
+}
 HYPOTHESIS = "H020"
 NULL_SEEDS = tuple(range(1, 5001))                   # R = 5,000 tethered within-date permutation worlds
 NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))   # E021-01..05 (future, owner approval)
