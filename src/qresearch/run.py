@@ -331,7 +331,10 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     exp_dir = config.EXPERIMENTS_DIR / exp_id
     orig = json.loads((exp_dir / "result.json").read_text())
     rows = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
-    if not rows or rows[-1]["status"] != "failed" or orig.get("status") != "failed":
+    # D077; H020 E021-01: also an original that failed integrity because the runner downloaded the results while
+    # QuantConnect still reported "In Progress..." (completed = True before the end-of-run computation finished)
+    bad = ("failed", "integrity_failed")
+    if not rows or rows[-1]["status"] not in bad or orig.get("status") not in bad:
         raise SystemExit(f"{exp_id}: recovery only applies to a failed original run")
     if orig["provenance"].get("qc_backtest_id") != backtest_id:
         raise SystemExit(f"{exp_id}: backtest {backtest_id} is not the one recorded for this run")
@@ -344,7 +347,8 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     client = QCClient()
     handle = BacktestHandle(int(orig["provenance"]["qc_project_id"]), backtest_id, "")
     bt = client.read_backtest(handle)
-    if not bt.get("completed") or bt.get("error") or bt.get("stacktrace"):
+    if (not bt.get("completed") or "in progress" in str(bt.get("status", "")).lower() or bt.get("error")
+            or bt.get("stacktrace")):
         raise SystemExit(f"{exp_id}: backtest {backtest_id} did not complete cleanly on QuantConnect")
     prov = dict(git_commit=build_commit, run_utc=orig["provenance"].get("run_utc", ""), recovered_utc=run_utc,
                 recovered_at_commit=head, config_sha256=results.sha256_text(cfg_text), code_sha256=code_hash(files),

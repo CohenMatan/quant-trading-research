@@ -168,7 +168,10 @@ class QCClient:
             bt = self.read_backtest(h)
             if bt.get("error") or bt.get("stacktrace"):
                 return bt
-            if bt.get("completed"):
+            # H020 E021-01: QuantConnect may report completed = True while the status is still "In Progress..."
+            # (progress 0.999) and the algorithm's end-of-run computation is still running; results are final only
+            # when the status is final as well
+            if bt.get("completed") and "in progress" not in str(bt.get("status", "")).lower():
                 return bt
             now = clock()
             prog = bt.get("progress")

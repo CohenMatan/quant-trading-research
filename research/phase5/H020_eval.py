@@ -35,7 +35,18 @@ REAL_OUT = HERE / "H020_real_result.json"
 
 
 def result(exp):
-    return json.loads((ROOT / "experiments" / exp / "result.json").read_text())
+    """The run's result; if the original failed and was recovered (D077, run.py --recover), the latest completed
+    recovery of the same QuantConnect backtest."""
+    d = ROOT / "experiments" / exp
+    r = json.loads((d / "result.json").read_text())
+    if r.get("status") == "completed":
+        return r
+    for rp in sorted((d / "recovery").glob("*/result.json"), reverse=True):
+        rr = json.loads(rp.read_text())
+        if rr.get("status") == "completed" and rr["provenance"].get("qc_backtest_id") == r["provenance"].get(
+                "qc_backtest_id"):
+            return rr
+    raise SystemExit(f"{exp}: no completed result (status {r.get('status')})")
 
 
 def lines(exp):
