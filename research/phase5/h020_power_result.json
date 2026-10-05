@@ -1,0 +1,99 @@
+{
+ "design": {
+  "n_dates": 417,
+  "n_stocks": 1000,
+  "r_null": 1000,
+  "alpha": 0.01,
+  "sigma_weekly": 0.045,
+  "phi_z": 0.85,
+  "phi_m": 0.97,
+  "rho": 0.5,
+  "churn": 0.05,
+  "quick": false
+ },
+ "size": {
+  "c": {
+   "t_ic": 2.7654152956362736,
+   "t_inc": 2.8017441602555495
+  },
+  "panels": 300,
+  "rate_t_ic": 0.0033333333333333335,
+  "rate_t_inc": 0.0033333333333333335,
+  "rate_promotion": 0.0,
+  "null_t_ic_mean": 0.08497977938872683,
+  "null_t_ic_sd": 1.1956652271273474,
+  "null_t_inc_sd": 1.1978291957361307
+ },
+ "momentum_only": {
+  "panels": 8,
+  "r": 150,
+  "rate_g3": 1.0,
+  "rate_g5": 0.0,
+  "rate_promotion": 0.0,
+  "mean_real_t_ic": 8.966310345274586,
+  "mean_null_t_ic": -0.01282905295891521
+ },
+ "power": [
+  {
+   "edge_param": 0.02,
+   "c": {
+    "t_ic": 2.730491674204748,
+    "t_inc": 2.7062202298283515
+   },
+   "panels": 30,
+   "mean_ic": 0.01418048329201085,
+   "mean_high_ann": 0.015036966041962276,
+   "mean_high_minus_low_ann": 0.04297090862961886,
+   "rate_g3": 1.0,
+   "rate_g5": 0.9333333333333333,
+   "rate_g1": 0.0,
+   "rate_promotion": 0.0
+  },
+  {
+   "edge_param": 0.04,
+   "c": {
+    "t_ic": 2.7010275414398333,
+    "t_inc": 2.684141121707856
+   },
+   "panels": 30,
+   "mean_ic": 0.028208353249866272,
+   "mean_high_ann": 0.030223687321383953,
+   "mean_high_minus_low_ann": 0.08631536886405783,
+   "rate_g3": 1.0,
+   "rate_g5": 1.0,
+   "rate_g1": 0.5,
+   "rate_promotion": 0.5
+  },
+  {
+   "edge_param": 0.06,
+   "c": {
+    "t_ic": 2.6687379646855742,
+    "t_inc": 2.6592218360792406
+   },
+   "panels": 30,
+   "mean_ic": 0.04220594743925222,
+   "mean_high_ann": 0.04541040860080561,
+   "mean_high_minus_low_ann": 0.12965982909849677,
+   "rate_g3": 1.0,
+   "rate_g5": 1.0,
+   "rate_g1": 1.0,
+   "rate_promotion": 1.0
+  },
+  {
+   "edge_param": 0.08,
+   "c": {
+    "t_ic": 2.6396886150113485,
+    "t_inc": 2.6675325857950627
+   },
+   "panels": 30,
+   "mean_ic": 0.05616156858652725,
+   "mean_high_ann": 0.06059712988022728,
+   "mean_high_minus_low_ann": 0.1730042893329358,
+   "rate_g3": 1.0,
+   "rate_g5": 1.0,
+   "rate_g1": 1.0,
+   "rate_promotion": 1.0
+  }
+ ],
+ "seconds": 1967
+}
