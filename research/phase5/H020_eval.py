@@ -166,6 +166,10 @@ def run_null():
         method="H020 null v1: unstratified identity-tethered within-date permutation of the chart side (Q, G), "
                "no self-matches (qr_h020_stats.ChartTether, NULL_STRATIFIED = False); complete procedure per world",
         worlds=len(W), seeds=[1, 5000], failed_worlds=0, retries=0, runs=info, rank_k=50, alpha=HS.ALPHA,
+        recovered_runs=dict(E021_01="runner downloaded before QuantConnect's status was final (completed = True, "
+                                    "'In Progress...'); the same backtest re-downloaded once final (D077)",
+                            E021_02="runner lost in a container restart; the same backtest downloaded once complete "
+                                    "(D077)"),
         c_ic=c["t_ic"], c_inc=c["t_inc"],
         null_t_ic=dict(mean=float(t_ic.mean()), sd=float(t_ic.std()), q99=float(np.quantile(t_ic, 0.99))),
         null_t_inc=dict(mean=float(t_inc.mean()), sd=float(t_inc.std()), q99=float(np.quantile(t_inc, 0.99))),

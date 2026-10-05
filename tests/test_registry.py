@@ -52,11 +52,12 @@ def test_repo_registry_is_valid(root):
     rows = registry.read(root / "experiments" / "INDEX.csv")
     for r in rows:
         assert r["experiment_id"] and r["run_type"] in ("original", "reproduce", "annotation", "recovery")
-    # D077: a recovery row only ever follows a FAILED original run of the same experiment
+    # D077: a recovery row only ever follows a FAILED original run of the same experiment (also integrity_failed when
+    # the runner downloaded before QuantConnect's status was final, H020 E021-01)
     for r in rows:
         if r["run_type"] == "recovery":
             orig = [o for o in rows if o["experiment_id"] == r["experiment_id"] and o["run_type"] == "original"]
-            assert orig and orig[-1]["status"] == "failed"
+            assert orig and orig[-1]["status"] in ("failed", "integrity_failed")
 
 
 def test_not_started_runs_are_not_trials(tmp_path):

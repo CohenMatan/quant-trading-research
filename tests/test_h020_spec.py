@@ -79,3 +79,24 @@ def test_chart_code_has_no_network_or_ai_dependency():
         src = (ROOT / rel).read_text().lower()
         for banned in ("import requests", "urllib", "anthropic", "openai", "socket", "http.client"):
             assert banned not in src, (rel, banned)
+
+
+def test_null_thresholds_pinned():
+    """D154: c_ic, c_inc, the null result and the per-world table are pinned before the one real evaluation."""
+    import csv
+    import json
+    if p5h020.C_IC is None:
+        return
+    assert p5h020.sha256(p5h020.NULL_RESULT) == p5h020.NULL_RESULT_SHA256
+    n = json.loads((ROOT / p5h020.NULL_RESULT).read_text())
+    assert n["worlds"] == 5000 and n["failed_worlds"] == 0 and n["rank_k"] == 50 and n["seeds"] == [1, 5000]
+    assert n["c_ic"] == p5h020.C_IC and n["c_inc"] == p5h020.C_INC
+    assert n["chart_panel_sha256"] == p5h020.CHART_PANEL_SHA256
+    assert n["spec_sha256"] == p5h020.SPEC_SHA256 and n["addendum_sha256"] == p5h020.ADDENDUM_SHA256
+    table = ROOT / "research/phase5/H020_null_worlds.csv"
+    assert p5h020.sha256("research/phase5/H020_null_worlds.csv") == n["null_worlds_csv_sha256"] == \
+        p5h020.NULL_WORLDS_CSV_SHA256
+    rows = list(csv.DictReader(table.open()))
+    assert [int(r["seed"]) for r in rows] == list(range(1, 5001))
+    for k, c in (("t_ic", p5h020.C_IC), ("t_inc", p5h020.C_INC)):
+        assert sorted((float(r[k]) for r in rows), reverse=True)[49] == c

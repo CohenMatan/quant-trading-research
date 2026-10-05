@@ -52,11 +52,12 @@ STATS_CONSTANTS = dict(
 
 # Future (after the owner's approval of real score validation): the null critical values are pinned here, with the
 # hash of the committed null result, BEFORE the one real evaluation E021-06. None = not pinned (the real run is refused).
-C_IC = None
-C_INC = None
+C_IC = 2.328878115                 # 50th largest of 5,000 null t_ic (E021-01..05)
+C_INC = 2.264744985                # 50th largest of 5,000 null t_inc
 NULL_RESULT = "research/phase5/H020_null_result.json"
-NULL_RESULT_SHA256 = None
-CHART_PANEL_SHA256 = None                     # the chart side the null was calibrated on (E021-01..05, all identical)
+NULL_RESULT_SHA256 = "4b26be842ce499696a82e29c8ddf84d386f590597f4f943f185d645d84be4e13"
+CHART_PANEL_SHA256 = "aa5d3c51fb1203584adfc3604508fcfb0537af7f630381c51a11e34492cbb7d9"                     # the chart side the null was calibrated on (E021-01..05, all identical)
+NULL_WORLDS_CSV_SHA256 = "fa936246d1af77dc99d75813ac30b43d22abee52a065ac795904969d96e35b2f"
 THRESHOLD_COMMIT = None                       # the commit that pinned the values above (recorded in the next commit)
 
 
