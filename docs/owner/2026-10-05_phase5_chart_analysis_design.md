@@ -1,0 +1,42 @@
+# Owner message 2026-10-05: "Phase 5 — Design a Structured Historical Chart Analysis Research Framework"
+
+This is a recorded summary; the full message is in the session transcript. Decision id: **D150**.
+
+- **Direction.** Continue technical stock-selection research with a materially different hypothesis: useful information may lie in the overall chart structure and in the interaction of several visible features, not in one isolated indicator or a large optimiser.
+- **Workflow.** Quantitative screening → Weekly structure → Daily setup / timing → fixed structured checklist → chart-quality score → test whether higher-quality setups outperform lower-quality ones.
+- **Historical reconstruction.** Rebuild every chart point-in-time from our own data. Finviz is inspiration and a possible future live screener, never the historical truth.
+- **Scope of the deliverable.** **DESIGN ONLY:** P5-CP1, 39 items plus questions A–J. The required design elements are:
+  - a point-in-time snapshot;
+  - Daily / Weekly roles;
+  - overlays;
+  - reproducible trendlines, pivots, support / resistance and HH / HL structure;
+  - base, breakout, volume, volatility contraction, relative-strength and extension definitions;
+  - checklist, scoring and disqualifiers;
+  - the AI option and its reproducibility;
+  - frozen rendering;
+  - leakage canaries;
+  - the candidate generator, decision frequency, entry / exit / risk concepts;
+  - signal-level validation and the null design;
+  - a subjectivity study;
+  - a cost estimate;
+  - the implementation architecture;
+  - a literature and practitioner review;
+  - overlap with H001–H019;
+  - risks, a recommendation and the decisions needed.
+- **Allowed.**
+  - Inspect the infrastructure.
+  - Research frameworks.
+  - Design deterministic algorithms and the snapshot format.
+  - Make synthetic / demo charts for plumbing only.
+  - Estimate costs.
+  - Write tests that reveal no future returns.
+- **Forbidden.**
+  - Backtesting the chart strategy.
+  - Computing historical chart scores on the research universe.
+  - Showing AI (or ourselves) known historical winners / losers.
+  - Optimising trendline parameters or checklist weights.
+  - Any portfolio or terminal wealth.
+  - 2018–2021 data and the Holdout.
+  - Buying Finviz Elite or any data / service.
+  - Creating a production candidate.
+- **STOP** after committing P5-CP1; wait for explicit approval.
