@@ -45,7 +45,9 @@ EXT_MA20_ATR = 2.0
 DIST_N, DIST_MAX, DIST_DROP = 25, 4, -0.002   # IBD distribution day (applied to the stock): <= 4 in 25 sessions
 EXT_MA50_DQ = 0.25              # disqualifier: close > 1.25 x 50-day MA
 GAP_DQ, GAP_N = 0.85, 10        # disqualifier: an open <= 0.85 x prior close within the last 10 sessions
-MIN_SESSIONS = 504               # universe rule: >= 2 years of bars (every condition computable)
+MIN_SESSIONS = 504              # universe rule: >= 2 years of bars (every condition computable)
+HIST_SESSIONS = 756             # the snapshot reads only the last 756 sessions (every look-back fits inside; the result
+#                                 does not depend on how much older history exists -- tested)
 STATES = ("strong_uptrend", "uptrend", "range", "deteriorating", "downtrend", "undefined")
 CONDITIONS = ("W1", "W2", "W3", "W4", "W5", "B1", "B2", "B3", "B4", "B5", "T1", "T2", "T3", "T4", "T5",
               "R1", "R2", "R3", "R4", "R5")
@@ -264,6 +266,10 @@ def snapshot(o, h, l, c, v, week_id):
     n = c.size
     if n < MIN_SESSIONS:
         raise ValueError("H020 snapshot needs >= %d sessions (universe rule)" % MIN_SESSIONS)
+    if n > HIST_SESSIONS:
+        o, h, l, c, v = (a[-HIST_SESSIONS:] for a in (o, h, l, c, v))
+        week_id = np.asarray(week_id)[-HIST_SESSIONS:]
+        n = HIST_SESSIONS
     lc = np.log(c)
     a20 = atr(h, l, c, D_ATR)
     atrp = a20[-1] / c[-1]
@@ -365,3 +371,32 @@ def score_group(snap):
         return 0
     s = snap["score"]
     return 1 if s <= 5 else (2 if s <= 10 else (3 if s <= 15 else 4))
+
+
+def snapshot_at(bars, t):
+    """The snapshot a decision at bar t may compute: bars 0..t only (the PIT cut used by the leakage canaries and by the
+    host). bars = dict with o, h, l, c, v, week_id arrays."""
+    s = slice(0, t + 1)
+    return snapshot(*(np.asarray(bars[k])[s] for k in ("o", "h", "l", "c", "v")), np.asarray(bars["week_id"])[s])
+
+
+def canonical(x):
+    """A snapshot (or any part of it) as plain JSON-able data: dict keys sorted, floats as 12-significant-digit strings
+    (stable across platforms), NaN / inf as strings. digest() hashes it."""
+    if isinstance(x, dict):
+        return {str(k): canonical(x[k]) for k in sorted(x)}
+    if isinstance(x, (list, tuple)):
+        return [canonical(y) for y in x]
+    if isinstance(x, (bool, np.bool_)):
+        return bool(x)
+    if isinstance(x, (int, np.integer)):
+        return int(x)
+    if isinstance(x, (float, np.floating)):
+        return "%.12g" % float(x)
+    return x
+
+
+def digest(snap):
+    import hashlib
+    import json
+    return hashlib.sha256(json.dumps(canonical(snap), sort_keys=True, separators=(",", ":")).encode()).hexdigest()
