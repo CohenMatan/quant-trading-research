@@ -1,0 +1,290 @@
+{
+ "experiment_id": "E988-01",
+ "harness_messages": [],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 20,
+  "elig_days": 0,
+  "elig_max": 0,
+  "elig_mean": 0,
+  "elig_min": null,
+  "elig_sum": 0,
+  "experiment_id": "E988-01",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 1999,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 1,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "9878f670cefdbce5d2c74c02753b00aadbc62eb4d4497ce30ab90fa419cb070d",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "20 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2017-12-01..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 20 vs algorithm days 20",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 20 vs QuantConnect tradeableDates 20",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 20,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2017-12-01",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-05T18:31:41Z",
+  "build_commit": "d2ebecbc34458c462b54f1a6e49a675cb6663efe",
+  "code_sha256": "80ae19b0793e48eec6877f52e3c483c1b5c9a0d46dc6caa38340d1b769bc6ee4",
+  "config_sha256": "e78d0d3542995a15f5257862156132337f31a5d4bd0d0eac9f1cacb314ac4e99",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "d2ebecbc34458c462b54f1a6e49a675cb6663efe",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "66a8413bc67f6273d1e77cf700b6897c",
+  "qc_project_id": 37399049,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-05T18:31:08Z",
+  "runtime_s": 26.53555727005005
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-2.99",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.046",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "P6PROBE|{\"IDU\": {\"bars\": 4398, \"distribution_events\": 71, \"first\": \"2000-06-20\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 6, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.344, \"2001\": 0.391, \"2002\": 3.538, \"2003\": 2.785, \"2004\": 2.276, \"2005\": 4.467, \"2006\": 3.911, \"2007\": 5.767, \"2008\": 8.051, \"2009\": 5.62, \"2010\": 3.283, \"2011\": 2.831, \"2012\": 2.873, \"2013\": 8.444, \"2014\": 9.216, \"2015\": 17.934, \"2016\": 19.443, \"2017\": 6.006}, \"missing_sessions_vs_spy\": 13, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYC\": {\"bars\": 4364, \"distribution_events\": 69, \"first\": \"2000-06-28\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 5, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.035, \"2001\": 0.32, \"2002\": 1.345, \"2003\": 1.097, \"2004\": 1.272, \"2005\": 1.483, \"2006\": 1.064, \"2007\": 3.56, \"2008\": 4.526, \"2009\": 5.042, \"2010\": 2.254, \"2011\": 1.789, \"2012\": 1.719, \"2013\": 2.264, \"2014\": 3.605, \"2015\": 7.484, \"2016\": 4.489, \"2017\": 3.123}, \"missing_sessions_vs_spy\": 41, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYE\": {\"bars\": 4411, \"distribution_events\": 70, \"first\": \"2000-06-16\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.271, \"2001\": 0.771, \"2002\": 0.793, \"2003\": 1.077, \"2004\": 3.929, \"2005\": 9.405, \"2006\": 8.007, \"2007\": 11.647, \"2008\": 72.129, \"2009\": 13.591, \"2010\": 5.558, \"2011\": 9.731, \"2012\": 5.615, \"2013\": 11.801, \"2014\": 20.951, \"2015\": 32.537, \"2016\": 48.095, \"2017\": 17.802}, \"missing_sessions_vs_spy\": 2, \"nan_close\": 0, \"split_events\": [[\"2008-07-23\", \"WARNING\", 0.333333], [\"2008-07-24\", \"SPLIT_OCCURR\", 0.333333]], \"zero_volume_days\": 0}, \"IYF\": {\"bars\": 4425, \"distribution_events\": 71, \"first\": \"2000-05-26\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.281, \"2001\": 0.779, \"2002\": 1.097, \"2003\": 1.455, \"2004\": 1.625, \"2005\": 1.89, \"2006\": 1.821, \"2007\": 10.706, \"2008\": 324.526, \"2009\": 258.9, \"2010\": 66.237, \"2011\": 23.931, \"2012\": 14.328, \"2013\": 14.248, \"2014\": 14.632, \"2015\": 25.53, \"2016\": 36.069, \"2017\": 26.686}, \"missing_sessions_vs_spy\": 2, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYH\": {\"bars\": 4413, \"distribution_events\": 73, \"first\": \"2000-06-16\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.701, \"2001\": 1.651, \"2002\": 2.513, \"2003\": 2.856, \"2004\": 4.688, \"2005\": 6.378, \"2006\": 6.126, \"2007\": 5.487, \"2008\": 4.642, \"2009\": 4.812, \"2010\": 3.305, \"2011\": 3.12, \"2012\": 2.383, \"2013\": 6.966, \"2014\": 20.175, \"2015\": 29.176, \"2016\": 13.882, \"2017\": 8.68}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYJ\": {\"bars\": 4347, \"distribution_events\": 72, \"first\": \"2000-07-14\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 8, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.042, \"2001\": 0.126, \"2002\": 0.464, \"2003\": 0.779, \"2004\": 1.352, \"2005\": 1.368, \"2006\": 1.52, \"2007\": 2.309, \"2008\": 4.586, \"2009\": 5.455, \"2010\": 3.718, \"2011\": 4.211, \"2012\": 2.558, \"2013\": 8.135, \"2014\": 10.12, \"2015\": 5.216, \"2016\": 5.081, \"2017\": 4.763}, \"missing_sessions_vs_spy\": 47, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYK\": {\"bars\": 4365, \"distribution_events\": 71, \"first\": \"2000-06-16\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 9, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.038, \"2001\": 0.165, \"2002\": 0.775, \"2003\": 0.881, \"2004\": 2.307, \"2005\": 1.928, \"2006\": 1.967, \"2007\": 1.108, \"2008\": 2.273, \"2009\": 2.013, \"2010\": 1.449, \"2011\": 1.901, \"2012\": 1.234, \"2013\": 1.378, \"2014\": 1.69, \"2015\": 3.263, \"2016\": 3.827, \"2017\": 2.271}, \"missing_sessions_vs_spy\": 48, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYM\": {\"bars\": 4357, \"distribution_events\": 72, \"first\": \"2000-06-20\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 9, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.038, \"2001\": 0.127, \"2002\": 0.625, \"2003\": 1.51, \"2004\": 2.923, \"2005\": 2.764, \"2006\": 4.332, \"2007\": 10.389, \"2008\": 48.465, \"2009\": 75.939, \"2010\": 71.579, \"2011\": 51.748, \"2012\": 9.101, \"2013\": 7.216, \"2014\": 10.163, \"2015\": 6.678, \"2016\": 7.275, \"2017\": 8.193}, \"missing_sessions_vs_spy\": 54, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYR\": {\"bars\": 4407, \"distribution_events\": 71, \"first\": \"2000-06-19\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 2, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.275, \"2001\": 0.731, \"2002\": 2.428, \"2003\": 2.988, \"2004\": 31.701, \"2005\": 106.588, \"2006\": 129.051, \"2007\": 389.421, \"2008\": 682.045, \"2009\": 941.858, \"2010\": 593.388, \"2011\": 441.403, \"2012\": 366.59, \"2013\": 525.896, \"2014\": 583.462, \"2015\": 676.22, \"2016\": 583.818, \"2017\": 509.612}, \"missing_sessions_vs_spy\": 5, \"nan_close\": 0, \"split_events\": [[\"2005-06-08\", \"WARNING\", 0.5], [\"2005-06-09\", \"SPLIT_OCCURR\", 0.5]], \"zero_volume_days\": 0}, \"IYW\": {\"bars\": 4432, \"distribution_events\": 50, \"first\": \"2000-05-19\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.865, \"2001\": 1.693, \"2002\": 1.705, \"2003\": 2.272, \"2004\": 2.362, \"2005\": 2.49, \"2006\": 2.896, \"2007\": 7.446, \"2008\": 10.788, \"2009\": 17.551, \"2010\": 13.961, \"2011\": 10.939, \"2012\": 9.444, \"2013\": 12.428, \"2014\": 26.066, \"2015\": 21.951, \"2016\": 21.736, \"2017\": 21.424}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"IYZ\": {\"bars\": 4426, \"distribution_events\": 71, \"first\": \"2000-05-26\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2000\": 0.311, \"2001\": 0.399, \"2002\": 0.68, \"2003\": 1.283, \"2004\": 2.388, \"2005\": 3.192, \"2006\": 5.917, \"2007\": 9.591, \"2008\": 7.057, \"2009\": 7.58, \"2010\": 8.116, \"2011\": 7.436, \"2012\": 7.535, \"2013\": 7.094, \"2014\": 4.988, \"2015\": 6.194, \"2016\": 11.584, \"2017\": 10.818}, \"missing_sessions_vs_spy\": 1, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"SPY\": {\"bars\": 5032, \"distribution_events\": 81, \"first\": \"1998-01-02\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 675.245, \"1999\": 856.793, \"2000\": 914.844, \"2001\": 1327.376, \"2002\": 2783.704, \"2003\": 3586.395, \"2004\": 4284.601, \"2005\": 6560.655, \"2006\": 7815.777, \"2007\": 17530.251, \"2008\": 30420.359, \"2009\": 19442.228, \"2010\": 18903.491, \"2011\": 21413.417, \"2012\": 16052.495, \"2013\": 15155.599, \"2014\": 16206.405, \"2015\": 19996.126, \"2016\": 17142.915, \"2017\": 13226.945}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VAW\": {\"bars\": 3502, \"distribution_events\": 21, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.14, \"2005\": 0.422, \"2006\": 0.668, \"2007\": 2.328, \"2008\": 11.857, \"2009\": 8.898, \"2010\": 5.397, \"2011\": 5.134, \"2012\": 3.258, \"2013\": 4.235, \"2014\": 7.106, \"2015\": 6.083, \"2016\": 6.875, \"2017\": 8.408}, \"missing_sessions_vs_spy\": 3, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VCR\": {\"bars\": 3494, \"distribution_events\": 21, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 4, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.06, \"2005\": 0.185, \"2006\": 0.279, \"2007\": 0.724, \"2008\": 3.527, \"2009\": 2.643, \"2010\": 2.788, \"2011\": 2.331, \"2012\": 3.042, \"2013\": 7.508, \"2014\": 9.81, \"2015\": 12.646, \"2016\": 9.054, \"2017\": 8.078}, \"missing_sessions_vs_spy\": 11, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VDC\": {\"bars\": 3501, \"distribution_events\": 21, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.131, \"2005\": 0.363, \"2006\": 0.937, \"2007\": 1.173, \"2008\": 6.076, \"2009\": 3.403, \"2010\": 2.297, \"2011\": 4.082, \"2012\": 4.722, \"2013\": 6.485, \"2014\": 7.455, \"2015\": 11.426, \"2016\": 16.813, \"2017\": 12.273}, \"missing_sessions_vs_spy\": 4, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VDE\": {\"bars\": 3338, \"distribution_events\": 21, \"first\": \"2004-09-29\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.347, \"2005\": 2.262, \"2006\": 3.148, \"2007\": 3.309, \"2008\": 10.17, \"2009\": 14.338, \"2010\": 8.934, \"2011\": 19.006, \"2012\": 11.287, \"2013\": 9.791, \"2014\": 23.281, \"2015\": 43.629, \"2016\": 22.92, \"2017\": 22.831}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VFH\": {\"bars\": 3493, \"distribution_events\": 53, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 2, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.094, \"2005\": 0.267, \"2006\": 0.74, \"2007\": 2.143, \"2008\": 9.807, \"2009\": 9.775, \"2010\": 4.406, \"2011\": 3.935, \"2012\": 3.961, \"2013\": 7.354, \"2014\": 8.963, \"2015\": 14.864, \"2016\": 21.704, \"2017\": 41.862}, \"missing_sessions_vs_spy\": 12, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VGT\": {\"bars\": 3493, \"distribution_events\": 21, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.064, \"2005\": 0.293, \"2006\": 1.043, \"2007\": 2.617, \"2008\": 5.838, \"2009\": 6.767, \"2010\": 7.652, \"2011\": 9.985, \"2012\": 11.25, \"2013\": 15.027, \"2014\": 29.922, \"2015\": 31.346, \"2016\": 36.758, \"2017\": 54.986}, \"missing_sessions_vs_spy\": 12, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VHT\": {\"bars\": 3505, \"distribution_events\": 21, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.316, \"2005\": 1.149, \"2006\": 1.607, \"2007\": 1.457, \"2008\": 3.616, \"2009\": 3.046, \"2010\": 2.245, \"2011\": 3.721, \"2012\": 4.541, \"2013\": 11.651, \"2014\": 26.103, \"2015\": 35.141, \"2016\": 25.026, \"2017\": 24.273}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VIS\": {\"bars\": 3331, \"distribution_events\": 21, \"first\": \"2004-09-29\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.12, \"2005\": 0.126, \"2006\": 0.745, \"2007\": 1.039, \"2008\": 4.143, \"2009\": 3.393, \"2010\": 2.442, \"2011\": 3.637, \"2012\": 2.241, \"2013\": 6.407, \"2014\": 11.712, \"2015\": 9.62, \"2016\": 8.954, \"2017\": 11.51}, \"missing_sessions_vs_spy\": 7, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VNQ\": {\"bars\": 3338, \"distribution_events\": 53, \"first\": \"2004-09-29\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.845, \"2005\": 1.768, \"2006\": 4.008, \"2007\": 12.039, \"2008\": 62.689, \"2009\": 92.745, \"2010\": 111.702, \"2011\": 103.236, \"2012\": 121.44, \"2013\": 177.687, \"2014\": 221.971, \"2015\": 303.798, \"2016\": 314.788, \"2017\": 292.9}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VOX\": {\"bars\": 3322, \"distribution_events\": 21, \"first\": \"2004-09-29\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 5, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.153, \"2005\": 0.08, \"2006\": 0.797, \"2007\": 2.13, \"2008\": 3.191, \"2009\": 1.595, \"2010\": 1.296, \"2011\": 1.869, \"2012\": 1.941, \"2013\": 2.472, \"2014\": 3.644, \"2015\": 3.988, \"2016\": 10.246, \"2017\": 8.571}, \"missing_sessions_vs_spy\": 16, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"VPU\": {\"bars\": 3502, \"distribution_events\": 54, \"first\": \"2004-01-30\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 2, \"median_dollar_volume_musd_by_year\": {\"2004\": 0.082, \"2005\": 0.694, \"2006\": 0.766, \"2007\": 2.149, \"2008\": 6.399, \"2009\": 7.84, \"2010\": 3.26, \"2011\": 3.751, \"2012\": 4.895, \"2013\": 5.797, \"2014\": 9.656, \"2015\": 11.715, \"2016\": 16.752, \"2017\": 12.015}, \"missing_sessions_vs_spy\": 3, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLB\": {\"bars\": 4787, \"distribution_events\": 78, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.032, \"1999\": 0.489, \"2000\": 0.966, \"2001\": 0.877, \"2002\": 4.343, \"2003\": 5.426, \"2004\": 22.487, \"2005\": 53.405, \"2006\": 93.498, \"2007\": 217.274, \"2008\": 441.174, \"2009\": 252.141, \"2010\": 332.386, \"2011\": 437.304, \"2012\": 279.359, \"2013\": 219.507, \"2014\": 223.375, \"2015\": 218.982, \"2016\": 237.248, \"2017\": 211.577}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLC\": {\"bars\": 0, \"distribution_events\": 0, \"large_distributions_over_5pct\": [], \"split_events\": []}, \"XLE\": {\"bars\": 4787, \"distribution_events\": 76, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.354, \"1999\": 2.213, \"2000\": 5.762, \"2001\": 6.21, \"2002\": 5.73, \"2003\": 6.426, \"2004\": 51.07, \"2005\": 613.333, \"2006\": 1154.705, \"2007\": 1340.196, \"2008\": 2118.11, \"2009\": 1085.461, \"2010\": 927.42, \"2011\": 1362.407, \"2012\": 833.322, \"2013\": 747.285, \"2014\": 959.628, \"2015\": 1142.477, \"2016\": 1048.839, \"2017\": 840.212}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLF\": {\"bars\": 4787, \"distribution_events\": 77, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [[\"2016-09-19\", 0.188]], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 1.245, \"1999\": 3.465, \"2000\": 8.125, \"2001\": 13.623, \"2002\": 41.571, \"2003\": 37.534, \"2004\": 76.235, \"2005\": 181.182, \"2006\": 225.212, \"2007\": 972.489, \"2008\": 2930.189, \"2009\": 1517.279, \"2010\": 1143.969, \"2011\": 1134.526, \"2012\": 843.287, \"2013\": 731.943, \"2014\": 701.55, \"2015\": 729.528, \"2016\": 1043.889, \"2017\": 1413.059}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLI\": {\"bars\": 4786, \"distribution_events\": 77, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.034, \"1999\": 0.324, \"2000\": 0.495, \"2001\": 0.563, \"2002\": 1.614, \"2003\": 3.375, \"2004\": 13.695, \"2005\": 18.966, \"2006\": 36.529, \"2007\": 122.249, \"2008\": 266.191, \"2009\": 235.65, \"2010\": 415.418, \"2011\": 635.05, \"2012\": 457.637, \"2013\": 379.202, \"2014\": 464.428, \"2015\": 500.974, \"2016\": 596.528, \"2017\": 547.681}, \"missing_sessions_vs_spy\": 1, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLK\": {\"bars\": 4787, \"distribution_events\": 50, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 8.032, \"1999\": 19.114, \"2000\": 21.309, \"2001\": 20.314, \"2002\": 16.145, \"2003\": 8.996, \"2004\": 9.104, \"2005\": 18.16, \"2006\": 36.066, \"2007\": 56.591, \"2008\": 120.181, \"2009\": 118.146, \"2010\": 208.518, \"2011\": 243.955, \"2012\": 224.158, \"2013\": 200.299, \"2014\": 251.463, \"2015\": 346.311, \"2016\": 412.299, \"2017\": 446.374}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLP\": {\"bars\": 4787, \"distribution_events\": 76, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 1.433, \"1999\": 1.064, \"2000\": 1.565, \"2001\": 1.132, \"2002\": 1.933, \"2003\": 2.928, \"2004\": 7.841, \"2005\": 17.043, \"2006\": 30.549, \"2007\": 45.889, \"2008\": 99.784, \"2009\": 123.19, \"2010\": 156.815, \"2011\": 216.916, \"2012\": 174.265, \"2013\": 268.754, \"2014\": 247.312, \"2015\": 343.502, \"2016\": 601.88, \"2017\": 483.38}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLRE\": {\"bars\": 559, \"distribution_events\": 8, \"first\": \"2015-10-08\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 1, \"median_dollar_volume_musd_by_year\": {\"2015\": 0.075, \"2016\": 0.284, \"2017\": 55.601}, \"missing_sessions_vs_spy\": 3, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLU\": {\"bars\": 4787, \"distribution_events\": 78, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.653, \"1999\": 0.383, \"2000\": 0.942, \"2001\": 0.77, \"2002\": 2.181, \"2003\": 8.494, \"2004\": 15.265, \"2005\": 48.881, \"2006\": 90.925, \"2007\": 183.329, \"2008\": 199.721, \"2009\": 177.208, \"2010\": 172.712, \"2011\": 213.592, \"2012\": 212.017, \"2013\": 307.907, \"2014\": 426.0, \"2015\": 501.837, \"2016\": 706.528, \"2017\": 576.649}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLV\": {\"bars\": 4787, \"distribution_events\": 71, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.172, \"1999\": 0.339, \"2000\": 0.422, \"2001\": 0.421, \"2002\": 1.382, \"2003\": 2.27, \"2004\": 7.83, \"2005\": 17.706, \"2006\": 32.083, \"2007\": 62.511, \"2008\": 108.159, \"2009\": 145.348, \"2010\": 183.677, \"2011\": 265.137, \"2012\": 188.763, \"2013\": 269.912, \"2014\": 429.545, \"2015\": 699.51, \"2016\": 657.053, \"2017\": 501.497}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}, \"XLY\": {\"bars\": 4787, \"distribution_events\": 76, \"first\": \"1998-12-22\", \"large_distributions_over_5pct\": [], \"last\": \"2017-12-29\", \"max_consecutive_missing\": 0, \"median_dollar_volume_musd_by_year\": {\"1998\": 0.222, \"1999\": 0.235, \"2000\": 0.732, \"2001\": 1.937, \"2002\": 2.32, \"2003\": 2.387, \"2004\": 6.493, \"2005\": 15.922, \"2006\": 28.151, \"2007\": 80.144, \"2008\": 174.15, \"2009\": 160.276, \"2010\": 202.812, \"2011\": 261.985, \"2012\": 229.775, \"2013\": 263.143, \"2014\": 320.585, \"2015\": 447.371, \"2016\": 419.563, \"2017\": 335.274}, \"missing_sessions_vs_spy\": 0, \"nan_close\": 0, \"split_events\": [], \"zero_volume_days\": 0}}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 20, \"elig_days\": 0, \"elig_max\": 0, \"elig_mean\": 0, \"elig_min\": null, \"elig_sum\": 0, \"experiment_id\": \"E988-01\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 1999, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 1, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.19776256492300948
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}
