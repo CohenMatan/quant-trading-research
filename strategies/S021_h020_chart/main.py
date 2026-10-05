@@ -177,6 +177,9 @@ class H020Chart(QRAlgorithm):
         st["week_end_universe_extra"] = [str(np.datetime64(d, "D")) for d in rec_days if d not in set(cal[we_res].tolist())]
         K = rows.size
         sids = sorted({sid for r in rows for sid in self.h_we.get(int(cal[r]), {})})
+        dev = int(self.qr_params.get("dev_max_columns", 0))       # scratch development runs only (plumbing)
+        if dev:
+            sids = sids[:dev]
         col_of = {sid: j for j, sid in enumerate(sids)}
         N = len(sids)
         self.h_sids = sids
@@ -186,7 +189,9 @@ class H020Chart(QRAlgorithm):
         sector = [["Unclassified"] * N for _ in range(K)]
         for k, r in enumerate(rows):
             for sid, (mc, ff) in self.h_we.get(int(cal[r]), {}).items():
-                j = col_of[sid]
+                j = col_of.get(sid)
+                if j is None:
+                    continue
                 elig[k, j] = True
                 mcap[k, j] = mc
                 sector[k][j] = ff

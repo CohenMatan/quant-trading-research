@@ -199,6 +199,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("H020 runs use 2010-01-04..2017-12-31, warm-up 2009-07-01 and the data-v1 universe "
                               "(>= $2B, >= $5, ADV20 >= $5M, SEC correction layer)")
         mode = p.get("mode")
+        if p.get("dev_max_columns") and not cfg.get("scratch_only"):
+            raise ConfigError("dev_max_columns is for scratch development runs only")
         if cfg["strategy_id"] == "X987":
             if mode != "canary" or kind != "infrastructure":
                 raise ConfigError("X987 runs only the H020 plumbing / fidelity canary (infrastructure)")
