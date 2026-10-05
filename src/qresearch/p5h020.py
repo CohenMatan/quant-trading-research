@@ -16,6 +16,8 @@ SPEC = "research/phase5/H020_spec.md"
 SPEC_VERSION = 1
 SPEC_SHA256 = "48e6feccbdb734d6918e28f332fe34154a529122bb6ed9ff3c76a95edca22b06"
 PROVENANCE = "research/phase5/H020_threshold_provenance.md"
+ADDENDUM = "research/phase5/H020_spec_addendum_1.md"      # pre-run clarifications (D154): sector diagnostic, TSR
+ADDENDUM_SHA256 = "c653513cb9ec754270c92ac6c7828f5dae45c1bc4882d94f6552d3a883186498"
 SCENARIOS = "research/phase5/h020_scenarios_expected.json"
 SCENARIOS_SHA256 = "0cdec3e73c2d64351ee13abe02cf847c26120a6733be395c12a37415719db8b8"
 CODE = ("src/qresearch/lean/qr_chart.py", "src/qresearch/lean/qr_chart_render.py", "src/qresearch/lean/qr_h020_stats.py")
@@ -27,7 +29,9 @@ CODE_SHA256 = {
 HYPOTHESIS = "H020"
 NULL_SEEDS = tuple(range(1, 5001))                   # R = 5,000 tethered within-date permutation worlds
 NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))   # E021-01..05 (future, owner approval)
-RUNS = ("E987-01", "E021-01", "E021-02", "E021-03", "E021-04", "E021-05", "E021-06")   # none run in P5-CP2
+RUNS = ("E987-01", "E021-01", "E021-02", "E021-03", "E021-04", "E021-05", "E021-06")
+HOST_CODE = ("src/qresearch/lean/qr_h020_panel.py", "src/qresearch/lean/qr_h020_diag.py",
+             "strategies/X987_h020_chart/main.py")              # real-run plumbing (D154), hashed with the null pins
 
 CHART_CONSTANTS = dict(
     D_K=5, W_K=3, PROM_ATR=1.0, PROM_WIN=2, D_ATR=20, W_ATR=10, TOL_ATR=0.5, D_SCAN=300, W_SCAN=104,
@@ -50,7 +54,10 @@ STATS_CONSTANTS = dict(
 # hash of the committed null result, BEFORE the one real evaluation E021-06. None = not pinned (the real run is refused).
 C_IC = None
 C_INC = None
+NULL_RESULT = "research/phase5/H020_null_result.json"
 NULL_RESULT_SHA256 = None
+CHART_PANEL_SHA256 = None                     # the chart side the null was calibrated on (E021-01..05, all identical)
+THRESHOLD_COMMIT = None                       # the commit that pinned the values above (recorded in the next commit)
 
 
 def sha256(rel: str) -> str:

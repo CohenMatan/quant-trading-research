@@ -185,6 +185,38 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                       "provenance (threshold_c, threshold_commit, null_result_sha256, spec_sha256)")
             else:
                 raise ConfigError("S020 modes: null or real")
+    if cfg["strategy_id"] in ("X987", "S021"):
+        # H020 (research/phase5/H020_spec.md v1 + addendum 1; owner authorisation 2026-10-05, D154): the frozen window
+        # and universe; nothing after 2017-12-31; X987 = the plumbing / fidelity canary only; S021 = null batches
+        # (infrastructure) and the one real evaluation (research), every S021 run only with explicit owner approval
+        from . import p5h020
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2010-01-04", "2017-12-31", "2009-07-01")
+                or not u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20):
+            raise ConfigError("H020 runs use 2010-01-04..2017-12-31, warm-up 2009-07-01 and the data-v1 universe "
+                              "(>= $2B, >= $5, ADV20 >= $5M, SEC correction layer)")
+        mode = p.get("mode")
+        if cfg["strategy_id"] == "X987":
+            if mode != "canary" or kind != "infrastructure":
+                raise ConfigError("X987 runs only the H020 plumbing / fidelity canary (infrastructure)")
+        else:
+            if cfg.get("hypothesis_id") != "H020" or cfg.get("programme") != "P5" or not cfg.get("owner_approval_required"):
+                raise ConfigError("S021 runs belong to H020 / P5 and need owner_approval_required")
+            if mode == "null":
+                if tuple(p.get("seeds", ())) not in p5h020.NULL_BATCHES or kind != "infrastructure":
+                    raise ConfigError(f"S021 null runs are infrastructure batches {p5h020.NULL_BATCHES}")
+            elif mode == "real":
+                if kind != "research" or not all(k in p for k in ("c_ic", "c_inc", "threshold_commit",
+                                                                   "null_result_sha256", "spec_sha256",
+                                                                   "addendum_sha256", "chart_panel_sha256")):
+                    raise ConfigError("the S021 real evaluation is the research run and carries the pinned null "
+                                      "provenance (c_ic, c_inc, threshold_commit, null_result_sha256, spec_sha256, "
+                                      "addendum_sha256, chart_panel_sha256)")
+            else:
+                raise ConfigError("S021 modes: null or real")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL

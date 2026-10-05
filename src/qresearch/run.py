@@ -112,6 +112,15 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         missing = {"qr_xs.py", "qr_xs_diag.py", "qr_xs_panel.py"} - set(files)
         if missing:
             raise experiment.ConfigError(f"H019 modules missing: {sorted(missing)}")
+    if "qr_chart" in files["main.py"] or "qr_h020" in files["main.py"]:
+        # H020 chart score + validation modules (frozen, hash-pinned in qresearch.p5h020); the renderer is never
+        # uploaded (no chart image of QuantConnect data is ever made)
+        names = ("qr_chart.py", "qr_h020_stats.py", "qr_h020_panel.py", "qr_h020_diag.py")
+        for n in names:
+            rel = f"src/qresearch/lean/{n}"
+            files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_xs.py" not in files:
+            raise experiment.ConfigError("H020 modules need qr_xs.py (imported by qr_h020_stats)")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
@@ -148,7 +157,10 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
         handle = client.start_backtest(project, compile_id, name)
     state.update(backtest_id=handle.backtest_id, backtest_name=name, stage="backtest",
                  backtest_started_utc=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
-    bt = client.wait_backtest(handle)
+    # long end-of-run computations (H020: the chart score of every stock-week) keep the backtest's progress still;
+    # such configs declare their own stall allowance
+    stall = cfg.get("stall_minutes")
+    bt = client.wait_backtest(handle, stall_s=float(stall) * 60) if stall else client.wait_backtest(handle)
     runtime = time.time() - t0
     state.update(stage="download_results", runtime_s=runtime)
     return download(cfg, client, handle, bt, runtime)
