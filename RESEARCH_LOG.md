@@ -1425,3 +1425,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** no 2018–2021, no Holdout, no portfolio, no paid data.
 
 **STOP:** awaiting the owner (recommendation: close H019 and the technical stock-selection line as No Production Candidate Found).
+
+## 2026-10-05: P5-CP1 Structured Historical Chart Analysis Architecture (design only); STOP (D150)
+
+- **Owner direction:** continue technical stock-selection research through structured chart analysis (Weekly structure → Daily setup → fixed checklist → chart-quality score), reconstructed point-in-time. Design only.
+- **Design reference (synthetic data only):**
+  - deterministic point-in-time algorithms for weekly bars, confirmed swing points, HH/HL structure, support / resistance zones, support trendlines, bases, breakouts, volume, extension and risk;
+  - a proposed four-category checklist (5 binary conditions each, total 0–20) with four disqualifiers;
+  - a dependency-free, byte-reproducible chart renderer;
+  - 35 tests, including future-perturbation pixel canaries.
+- **Two demo-driven design fixes, made before any real data:**
+  - anchored support / resistance clustering;
+  - active levels kept on screen.
+- **Key findings:**
+  - Every needed feature is reconstructable point-in-time inside QuantConnect.
+  - AI visual scoring of historical charts is blocked by the data licence and the protocol, is not reproducible enough and is over budget. It is at most a synthetic-chart consistency study.
+  - The trend part of the rubric re-tests ideas that already failed; the geometry part is new.
+  - Power is similar to H019 (≈ 5%/yr detectable).
+- **Recommendation:** one pre-registered deterministic rubric (H020) tested at the signal level if research continues; otherwise stop.
+- **Untouched:** no historical chart scored or viewed, no AI call, no backtest, no 2018–2021, Holdout locked.
+
+**STOP:** awaiting owner decisions (P5-CP1 §42).
