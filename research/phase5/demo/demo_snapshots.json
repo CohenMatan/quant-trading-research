@@ -1,0 +1,296 @@
+{
+ "base": {
+  "kind": "base",
+  "seed": 7,
+  "bars": 600,
+  "png_sha256": {
+   "daily": "357566083c93fb52ca5287f4feb5a251f3cb2c93e16a40b7fc00ccca1f3941a4",
+   "weekly": "8fdf855b54b1b950cca43162ecde5cb8a1fd3b010c1b5f11300459e3170dcbdf"
+  },
+  "checklist": {
+   "categories": {
+    "weekly_trend": 3,
+    "base": 3,
+    "trigger": 5,
+    "entry_risk": 3
+   },
+   "total": 14,
+   "disqualified": [],
+   "eligible": true
+  },
+  "snapshot": {
+   "n": 600,
+   "close": 47.267692,
+   "atr_pct": 0.008147,
+   "ma20": 44.975212,
+   "ma50": 44.705222,
+   "ma200": 45.927017,
+   "ma10w": 44.918108,
+   "ma30w": 45.509338,
+   "ma40w": 45.972309,
+   "ma30w_4ago": 45.89229,
+   "hi52": 51.743222,
+   "dist_hi52": 0.086495,
+   "weekly_state": "weak_uptrend",
+   "daily_state": "strong_uptrend",
+   "zones": [
+    {
+     "lo": 3.777308,
+     "hi": 3.79248,
+     "touches": 3,
+     "last": 578,
+     "first": 405
+    },
+    {
+     "lo": 3.791769,
+     "hi": 3.807723,
+     "touches": 3,
+     "last": 588,
+     "first": 455
+    },
+    {
+     "lo": 3.802002,
+     "hi": 3.811009,
+     "touches": 2,
+     "last": 570,
+     "first": 546
+    },
+    {
+     "lo": 3.91861,
+     "hi": 3.92867,
+     "touches": 3,
+     "last": 435,
+     "first": 369
+    },
+    {
+     "lo": 3.937745,
+     "hi": 3.950367,
+     "touches": 2,
+     "last": 377,
+     "first": 364
+    }
+   ],
+   "resistance": {
+    "lo": 3.91861,
+    "hi": 3.92867,
+    "touches": 3,
+    "last": 435,
+    "first": 369
+   },
+   "support": {
+    "lo": 3.802002,
+    "hi": 3.811009,
+    "touches": 2,
+    "last": 570,
+    "first": 546
+   },
+   "trendline": {
+    "i1": 557,
+    "i2": 588,
+    "slope": 0.000377,
+    "value_at_t": 3.799992,
+    "touches": 3
+   },
+   "base": {
+    "start": 377,
+    "length": 222,
+    "level": 3.946293,
+    "depth": 0.152032,
+    "pos": 0.431073,
+    "atr_ratio": 1.365666,
+    "vol_ratio": 1.018098,
+    "tight10": 0.05168,
+    "pullbacks": [
+     0.152032,
+     0.112223,
+     0.075266,
+     0.02253,
+     0.017515
+    ],
+    "contracting": true,
+    "slope": -0.000394
+   },
+   "level": 3.946293,
+   "breakout": {
+    "day": 599,
+    "age": 0,
+    "ext": 0.045837,
+    "clv": 0.960846,
+    "relvol": 2.229966,
+    "tr_atr": 8.516272
+   },
+   "volume": {
+    "updown": 1.916815,
+    "distribution_days": 0
+   },
+   "ext_ma20_atr": 6.25618,
+   "ext_ma50": 0.057319,
+   "weekly_partial": null,
+   "support_px": 45.196021,
+   "risk_pct": 0.043828
+  },
+  "n_pivots_daily": 49,
+  "n_pivots_weekly": 19
+ },
+ "random": {
+  "kind": "random",
+  "seed": 11,
+  "bars": 600,
+  "png_sha256": {
+   "daily": "53088ab29fdeba6ffbfc35f1462589812e32b537235c2a94f8d230ac4de39536",
+   "weekly": "40ac0c17e7b7f9470090a479817d1ed7975018a75855b755991039598edf2004"
+  },
+  "checklist": {
+   "categories": {
+    "weekly_trend": 3,
+    "base": 2,
+    "trigger": 0,
+    "entry_risk": 5
+   },
+   "total": 10,
+   "disqualified": [
+    "below_40w_ma"
+   ],
+   "eligible": false
+  },
+  "snapshot": {
+   "n": 600,
+   "close": 55.684653,
+   "atr_pct": 0.027461,
+   "ma20": 59.465726,
+   "ma50": 58.576957,
+   "ma200": 55.962796,
+   "ma10w": 58.454737,
+   "ma30w": 57.292224,
+   "ma40w": 55.844288,
+   "ma30w_4ago": 56.488356,
+   "hi52": 67.651667,
+   "dist_hi52": 0.176892,
+   "weekly_state": "range",
+   "daily_state": "deteriorating",
+   "zones": [
+    {
+     "lo": 3.845081,
+     "hi": 3.898917,
+     "touches": 3,
+     "last": 462,
+     "first": 409
+    },
+    {
+     "lo": 3.89105,
+     "hi": 3.940346,
+     "touches": 2,
+     "last": 452,
+     "first": 440
+    },
+    {
+     "lo": 3.930402,
+     "hi": 3.97983,
+     "touches": 2,
+     "last": 422,
+     "first": 397
+    },
+    {
+     "lo": 3.965662,
+     "hi": 4.006128,
+     "touches": 4,
+     "last": 572,
+     "first": 447
+    },
+    {
+     "lo": 3.997557,
+     "hi": 4.047142,
+     "touches": 4,
+     "last": 493,
+     "first": 399
+    },
+    {
+     "lo": 4.028205,
+     "hi": 4.080743,
+     "touches": 5,
+     "last": 587,
+     "first": 349
+    },
+    {
+     "lo": 4.05953,
+     "hi": 4.114352,
+     "touches": 2,
+     "last": 523,
+     "first": 486
+    },
+    {
+     "lo": 4.089278,
+     "hi": 4.142709,
+     "touches": 3,
+     "last": 557,
+     "first": 369
+    },
+    {
+     "lo": 4.149926,
+     "hi": 4.200836,
+     "touches": 3,
+     "last": 582,
+     "first": 374
+    },
+    {
+     "lo": 4.179029,
+     "hi": 4.228103,
+     "touches": 2,
+     "last": 380,
+     "first": 360
+    }
+   ],
+   "resistance": {
+    "lo": 4.028205,
+    "hi": 4.080743,
+    "touches": 5,
+    "last": 587,
+    "first": 349
+   },
+   "support": {
+    "lo": 3.965662,
+    "hi": 4.006128,
+    "touches": 4,
+    "last": 572,
+    "first": 447
+   },
+   "trendline": {
+    "i1": 417,
+    "i2": 572,
+    "slope": 0.00081,
+    "value_at_t": 4.00617,
+    "touches": 2
+   },
+   "base": {
+    "start": 540,
+    "length": 59,
+    "level": 4.171716,
+    "depth": 0.170894,
+    "pos": 0.1748,
+    "atr_ratio": 0.838311,
+    "vol_ratio": 1.151476,
+    "tight10": 0.074953,
+    "pullbacks": [
+     0.099409,
+     0.134692,
+     0.094909
+    ],
+    "contracting": false,
+    "slope": -0.001177
+   },
+   "level": 4.171716,
+   "breakout": null,
+   "volume": {
+    "updown": 0.844559,
+    "distribution_days": 3
+   },
+   "ext_ma20_atr": -2.3154,
+   "ext_ma50": -0.049376,
+   "weekly_partial": null,
+   "support_px": 54.936047,
+   "risk_pct": 0.013444
+  },
+  "n_pivots_daily": 73,
+  "n_pivots_weekly": 23
+ }
+}
