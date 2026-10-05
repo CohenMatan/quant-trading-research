@@ -45,11 +45,33 @@ def test_provenance_table_covers_every_rule():
     assert "Universe minimum history" in s
 
 
-def test_no_real_run_exists_and_the_threshold_is_not_pinned():
-    assert p5h020.C_IC is None and p5h020.C_INC is None and p5h020.NULL_RESULT_SHA256 is None
-    idx = (ROOT / "experiments" / "INDEX.csv").read_text()
-    for run in p5h020.RUNS:
-        assert not any(line.startswith(run + ",") for line in idx.splitlines()), run
+def test_real_run_never_precedes_the_pinned_thresholds():
+    """D154: E021-06 may exist only after c_ic, c_inc and the null result hash are pinned, and its committed config
+    must carry exactly those pins."""
+    import json
+    idx = (ROOT / "experiments" / "INDEX.csv").read_text().splitlines()
+    real_rows = [ln for ln in idx if ln.startswith("E021-06,")]
+    if p5h020.C_IC is None:
+        assert p5h020.C_INC is None and p5h020.NULL_RESULT_SHA256 is None
+        assert not real_rows
+        return
+    cfg = ROOT / "experiments" / "E021-06" / "config.json"
+    if cfg.exists():
+        p = json.loads(cfg.read_text())["params"]
+        assert p["c_ic"] == p5h020.C_IC and p["c_inc"] == p5h020.C_INC
+        assert p["null_result_sha256"] == p5h020.NULL_RESULT_SHA256 and p["spec_sha256"] == p5h020.SPEC_SHA256
+        assert p["addendum_sha256"] == p5h020.ADDENDUM_SHA256 and p["chart_panel_sha256"] == p5h020.CHART_PANEL_SHA256
+        assert p["threshold_commit"] == p5h020.THRESHOLD_COMMIT
+
+
+def test_addendum_pinned_and_host_copy():
+    assert p5h020.ADDENDUM_SHA256 is not None and p5h020.sha256(p5h020.ADDENDUM) == p5h020.ADDENDUM_SHA256
+    a = (ROOT / "strategies/X987_h020_chart/main.py").read_bytes()
+    assert a == (ROOT / "strategies/S021_h020_chart/main.py").read_bytes()
+    s = (ROOT / p5h020.ADDENDUM).read_text()
+    for frag in ("NON-GATING SECTOR DIAGNOSTIC", "total shareholder return", "last real close",
+                 "changes **nothing** in", "50th-largest of the 5,000"):
+        assert frag in s, frag
 
 
 def test_chart_code_has_no_network_or_ai_dependency():
@@ -57,3 +79,24 @@ def test_chart_code_has_no_network_or_ai_dependency():
         src = (ROOT / rel).read_text().lower()
         for banned in ("import requests", "urllib", "anthropic", "openai", "socket", "http.client"):
             assert banned not in src, (rel, banned)
+
+
+def test_null_thresholds_pinned():
+    """D154: c_ic, c_inc, the null result and the per-world table are pinned before the one real evaluation."""
+    import csv
+    import json
+    if p5h020.C_IC is None:
+        return
+    assert p5h020.sha256(p5h020.NULL_RESULT) == p5h020.NULL_RESULT_SHA256
+    n = json.loads((ROOT / p5h020.NULL_RESULT).read_text())
+    assert n["worlds"] == 5000 and n["failed_worlds"] == 0 and n["rank_k"] == 50 and n["seeds"] == [1, 5000]
+    assert n["c_ic"] == p5h020.C_IC and n["c_inc"] == p5h020.C_INC
+    assert n["chart_panel_sha256"] == p5h020.CHART_PANEL_SHA256
+    assert n["spec_sha256"] == p5h020.SPEC_SHA256 and n["addendum_sha256"] == p5h020.ADDENDUM_SHA256
+    table = ROOT / "research/phase5/H020_null_worlds.csv"
+    assert p5h020.sha256("research/phase5/H020_null_worlds.csv") == n["null_worlds_csv_sha256"] == \
+        p5h020.NULL_WORLDS_CSV_SHA256
+    rows = list(csv.DictReader(table.open()))
+    assert [int(r["seed"]) for r in rows] == list(range(1, 5001))
+    for k, c in (("t_ic", p5h020.C_IC), ("t_inc", p5h020.C_INC)):
+        assert sorted((float(r[k]) for r in rows), reverse=True)[49] == c

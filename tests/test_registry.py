@@ -52,11 +52,12 @@ def test_repo_registry_is_valid(root):
     rows = registry.read(root / "experiments" / "INDEX.csv")
     for r in rows:
         assert r["experiment_id"] and r["run_type"] in ("original", "reproduce", "annotation", "recovery")
-    # D077: a recovery row only ever follows a FAILED original run of the same experiment
+    # D077: a recovery row only ever follows a FAILED original run of the same experiment (also integrity_failed when
+    # the runner downloaded before QuantConnect's status was final, H020 E021-01)
     for r in rows:
         if r["run_type"] == "recovery":
             orig = [o for o in rows if o["experiment_id"] == r["experiment_id"] and o["run_type"] == "original"]
-            assert orig and orig[-1]["status"] == "failed"
+            assert orig and orig[-1]["status"] in ("failed", "integrity_failed")
 
 
 def test_not_started_runs_are_not_trials(tmp_path):
@@ -139,7 +140,7 @@ def test_d069_counts_on_the_real_registry():
 
     def pre_c02(ids):
         return [e for e in ids if not str(json.loads((config.EXPERIMENTS_DIR / e / "config.json").read_text())
-                                          .get("cycle", "")).startswith(("C02", "C03", "P2", "P3", "P4"))]   # C02 and later cycles add their own
+                                          .get("cycle", "")).startswith(("C02", "C03", "P2", "P3", "P4", "P5"))]   # C02 and later cycles add their own
     cats = a["by_category"]
     assert (len(pre_c02(cats["selection"])), len(pre_c02(cats["robustness"])), len(pre_c02(cats["validation"]))) \
         == (19, 15, 1)

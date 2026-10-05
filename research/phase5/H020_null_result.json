@@ -1,0 +1,111 @@
+{
+ "addendum_sha256": "c653513cb9ec754270c92ac6c7828f5dae45c1bc4882d94f6552d3a883186498",
+ "alpha": 0.01,
+ "c_ic": 2.328878115,
+ "c_inc": 2.264744985,
+ "chart_panel_sha256": "aa5d3c51fb1203584adfc3604508fcfb0537af7f630381c51a11e34492cbb7d9",
+ "code_sha256": {
+  "src/qresearch/lean/qr_chart.py": "c9dc5b18c7ef28f6aa56b6a4b0e5a7296d29f2d17decce6c8c61723fb7e609e5",
+  "src/qresearch/lean/qr_chart_render.py": "3bcf12077e7dc3e0c428a64b23cbea297cfbec6be9ebf99c7588c888f2784506",
+  "src/qresearch/lean/qr_h020_stats.py": "426d37218f8a27707a2b18e8e99559555d03a1e36ff0ddb499d92df4a676b049"
+ },
+ "corr_t_ic_t_inc": 0.9804783732105642,
+ "failed_worlds": 0,
+ "host_sha256": {
+  "src/qresearch/lean/qr_h020_diag.py": "6dac8dd01a181e69bdb783a40a54db6a84da058c490160c97b720b0792f1097f",
+  "src/qresearch/lean/qr_h020_panel.py": "6053c4aeb8a647d051b02b6c0d7f22ae5eb82c726584fd02a6650367a9f8554d",
+  "strategies/X987_h020_chart/main.py": "fd1f6fd98cc9c8e423e28abbec5095e32d9fad203fa54b2271cf641ee36394c8"
+ },
+ "method": "H020 null v1: unstratified identity-tethered within-date permutation of the chart side (Q, G), no self-matches (qr_h020_stats.ChartTether, NULL_STRATIFIED = False); complete procedure per world",
+ "null_full_promotions": 0,
+ "null_gate_pass_counts": {
+  "G1_economic": 0,
+  "G2_monotonic": 148,
+  "G3_significant": 49,
+  "G4_stable": 159,
+  "G5_incremental": 49
+ },
+ "null_t_ic": {
+  "mean": -0.4122802393768277,
+  "q99": 2.3225851661400014,
+  "sd": 1.1727402008012535
+ },
+ "null_t_inc": {
+  "mean": -0.48121869216257457,
+  "q99": 2.254964512650002,
+  "sd": 1.1734563230628985
+ },
+ "null_worlds_csv_sha256": "fa936246d1af77dc99d75813ac30b43d22abee52a065ac795904969d96e35b2f",
+ "rank_k": 50,
+ "recovered_runs": {
+  "E021_01": "runner downloaded before QuantConnect's status was final (completed = True, 'In Progress...'); the same backtest re-downloaded once final (D077)",
+  "E021_02": "runner lost in a container restart; the same backtest downloaded once complete (D077)"
+ },
+ "response_panel_sha256_set": [
+  "bd0b67926352c568228fd5ea222b1bcac6d1670caed611e51786763bf25786ea"
+ ],
+ "retries": 0,
+ "runs": [
+  {
+   "backtest": "9d80b52bf177b4a67b36df17bfdab566",
+   "run": "E021-01",
+   "seeds": [
+    1,
+    1000
+   ],
+   "wall_s": 2793.9,
+   "world_s": 567.9,
+   "worlds": 1000
+  },
+  {
+   "backtest": "97fd22dfe8a285e64d1d38226764d709",
+   "run": "E021-02",
+   "seeds": [
+    1001,
+    2000
+   ],
+   "wall_s": 2666.0,
+   "world_s": 502.8,
+   "worlds": 1000
+  },
+  {
+   "backtest": "4699501ad09ed73ab9fcea2bc86530de",
+   "run": "E021-03",
+   "seeds": [
+    2001,
+    3000
+   ],
+   "wall_s": 2586.7,
+   "world_s": 463.1,
+   "worlds": 1000
+  },
+  {
+   "backtest": "6c4c9e5d4a8ecad7e2fcd866a7e2ae7b",
+   "run": "E021-04",
+   "seeds": [
+    3001,
+    4000
+   ],
+   "wall_s": 2498.6,
+   "world_s": 450.3,
+   "worlds": 1000
+  },
+  {
+   "backtest": "eb46a96612e6adb4d38f43bd0df8f2d8",
+   "run": "E021-05",
+   "seeds": [
+    4001,
+    5000
+   ],
+   "wall_s": 2605.9,
+   "world_s": 463.8,
+   "worlds": 1000
+  }
+ ],
+ "seeds": [
+  1,
+  5000
+ ],
+ "spec_sha256": "48e6feccbdb734d6918e28f332fe34154a529122bb6ed9ff3c76a95edca22b06",
+ "worlds": 5000
+}

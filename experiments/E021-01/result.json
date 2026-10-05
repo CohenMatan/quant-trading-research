@@ -1,0 +1,221 @@
+{
+ "experiment_id": "E021-01",
+ "harness_messages": [],
+ "harness_summary": {},
+ "hashes": {
+  "equity_sha256": "cb8173d3063b80023d4da444c56c26df76898a20c6b5ad4f4411103d1d9f542e",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "1889 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2010-01-04..2017-07-05",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 1889 vs algorithm days None",
+   "level": "fail",
+   "ok": false
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 1889 vs QuantConnect tradeableDates 2141",
+   "level": "fail",
+   "ok": false
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=None max_fill_dev=None",
+   "level": "fail",
+   "ok": false
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=None",
+   "level": "fail",
+   "ok": false
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=None",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": false
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded None fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-07-05",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 1889,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2010-01-04",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-05T11:56:26Z",
+  "build_commit": "c6e716e07aba95ec1e751d08c407c3b753a01dd2",
+  "code_sha256": "e85e1f2eac46c16dc3a1b158d71c4938082b3fb669afd143d38256d123dda426",
+  "config_sha256": "a9d95d59393b61e72877fd535acf7d53e71062a0c789513e6103900454362b68",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_chart.py",
+   "qr_fundamentals.py",
+   "qr_h020_diag.py",
+   "qr_h020_panel.py",
+   "qr_h020_stats.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_sec_data.py",
+   "qr_sec_data_00.py",
+   "qr_sec_data_01.py",
+   "qr_sec_data_02.py",
+   "qr_sec_data_03.py",
+   "qr_sec_data_04.py",
+   "qr_sec_data_05.py",
+   "qr_sec_data_06.py",
+   "qr_sec_data_07.py",
+   "qr_sec_data_08.py",
+   "qr_sec_data_09.py",
+   "qr_sec_data_10.py",
+   "qr_sec_data_11.py",
+   "qr_sec_data_12.py",
+   "qr_sec_data_13.py",
+   "qr_sec_data_14.py",
+   "qr_sec_data_15.py",
+   "qr_sec_data_16.py",
+   "qr_sec_data_17.py",
+   "qr_sec_data_18.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "c6e716e07aba95ec1e751d08c407c3b753a01dd2",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "owner_approved": "D154",
+  "qc_backtest_id": "9d80b52bf177b4a67b36df17bfdab566",
+  "qc_project_id": 37386672,
+  "result_channel": "logs (legacy harness)",
+  "run_utc": "2026-10-05T11:55:30Z",
+  "runtime_s": 411.4036273956299
+ },
+ "qc_statistics": {},
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.1271282155564275
+  }
+ },
+ "segments": {},
+ "status": "integrity_failed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

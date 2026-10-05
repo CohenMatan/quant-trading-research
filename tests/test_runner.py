@@ -175,6 +175,20 @@ def test_stalled_backtest_is_detected():
     assert 45 * 60 < t[0] < 6 * 3600
 
 
+def test_completed_flag_with_status_in_progress_is_not_final():
+    from qresearch.qc_client import BacktestHandle
+    t = [0.0]
+    c = _ScriptedClient({"backtests/read": [
+        {"success": True, "backtest": {"completed": True, "progress": 0.999, "status": "In Progress..."}},
+        {"success": True, "backtest": {"completed": True, "progress": 0.999, "status": "In Progress..."}},
+        {"success": True, "backtest": {"completed": True, "progress": 1.0, "status": "Completed.", "statistics": {"x": 1}}}]})
+
+    def sleep(s):
+        t[0] += s
+    bt = c.wait_backtest(BacktestHandle(1, "b", "c"), poll_s=60, clock=lambda: t[0], sleep=sleep)
+    assert bt["status"] == "Completed." and t[0] == 120
+
+
 def test_running_backtests_lists_incomplete_only():
     c = _ScriptedClient({"projects/read": [{"success": True, "projects": [{"projectId": 7, "name": "qr-S003"}]}],
                          "backtests/list": [{"success": True, "backtests": [

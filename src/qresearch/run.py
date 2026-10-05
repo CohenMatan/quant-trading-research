@@ -112,6 +112,15 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         missing = {"qr_xs.py", "qr_xs_diag.py", "qr_xs_panel.py"} - set(files)
         if missing:
             raise experiment.ConfigError(f"H019 modules missing: {sorted(missing)}")
+    if "qr_chart" in files["main.py"] or "qr_h020" in files["main.py"]:
+        # H020 chart score + validation modules (frozen, hash-pinned in qresearch.p5h020); the renderer is never
+        # uploaded (no chart image of QuantConnect data is ever made)
+        names = ("qr_chart.py", "qr_h020_stats.py", "qr_h020_panel.py", "qr_h020_diag.py")
+        for n in names:
+            rel = f"src/qresearch/lean/{n}"
+            files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_xs.py" not in files:
+            raise experiment.ConfigError("H020 modules need qr_xs.py (imported by qr_h020_stats)")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
@@ -148,7 +157,10 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
         handle = client.start_backtest(project, compile_id, name)
     state.update(backtest_id=handle.backtest_id, backtest_name=name, stage="backtest",
                  backtest_started_utc=datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"))
-    bt = client.wait_backtest(handle)
+    # long end-of-run computations (H020: the chart score of every stock-week) keep the backtest's progress still;
+    # such configs declare their own stall allowance
+    stall = cfg.get("stall_minutes")
+    bt = client.wait_backtest(handle, stall_s=float(stall) * 60) if stall else client.wait_backtest(handle)
     runtime = time.time() - t0
     state.update(stage="download_results", runtime_s=runtime)
     return download(cfg, client, handle, bt, runtime)
@@ -319,7 +331,10 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     exp_dir = config.EXPERIMENTS_DIR / exp_id
     orig = json.loads((exp_dir / "result.json").read_text())
     rows = [r for r in registry.read() if r["experiment_id"] == exp_id and r["run_type"] == "original"]
-    if not rows or rows[-1]["status"] != "failed" or orig.get("status") != "failed":
+    # D077; H020 E021-01: also an original that failed integrity because the runner downloaded the results while
+    # QuantConnect still reported "In Progress..." (completed = True before the end-of-run computation finished)
+    bad = ("failed", "integrity_failed")
+    if not rows or rows[-1]["status"] not in bad or orig.get("status") not in bad:
         raise SystemExit(f"{exp_id}: recovery only applies to a failed original run")
     if orig["provenance"].get("qc_backtest_id") != backtest_id:
         raise SystemExit(f"{exp_id}: backtest {backtest_id} is not the one recorded for this run")
@@ -332,7 +347,8 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     client = QCClient()
     handle = BacktestHandle(int(orig["provenance"]["qc_project_id"]), backtest_id, "")
     bt = client.read_backtest(handle)
-    if not bt.get("completed") or bt.get("error") or bt.get("stacktrace"):
+    if (not bt.get("completed") or "in progress" in str(bt.get("status", "")).lower() or bt.get("error")
+            or bt.get("stacktrace")):
         raise SystemExit(f"{exp_id}: backtest {backtest_id} did not complete cleanly on QuantConnect")
     prov = dict(git_commit=build_commit, run_utc=orig["provenance"].get("run_utc", ""), recovered_utc=run_utc,
                 recovered_at_commit=head, config_sha256=results.sha256_text(cfg_text), code_sha256=code_hash(files),

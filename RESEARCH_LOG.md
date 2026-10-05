@@ -1464,3 +1464,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** no real data, no QuantConnect run, no 2018–2021, Holdout locked.
 
 **STOP:** awaiting the owner's explicit approval before step 1 (E987-01 plumbing / fidelity canary).
+
+## 2026-10-05: H020 real validation — canary, 5,000 null worlds, pinned thresholds, ONE real evaluation; P5-CP3: NO CHART SCORE QUALIFIED; STOP (D154–D158)
+
+- **Owner authorisation (D154).** The real H020 validation under the frozen spec. Pre-run addendum 1 fixed two things before any real computation: the response is total shareholder return, and a NON-GATING point-in-time sector diagnostic was added.
+- **Canary E987-01: 12 / 14 checks.**
+  - The independent point-in-time recomputation was identical in 120 / 120 samples.
+  - The total-return recomputation agreed to 7e-16, and dividends are included.
+  - The two failures were not fidelity defects: 2010 industry coverage of 69%, and a mis-specified planted-null criterion (D155).
+- **Null E021-01..05: 5,000 / 5,000 worlds.**
+  - Two download recoveries after a QuantConnect status quirk and a container restart (D156); no world was re-run.
+  - c_ic = 2.33 and c_inc = 2.26, pinned in commit 55bf663 before the real run (D157).
+- **Real evaluation E021-06, once.** Every gate fails.
+  - IC t = 0.27; incremental t = 0.22.
+  - The high-score group returned −0.4%/yr vs the average stock; the top group (16–20 points) −1.3%/yr.
+  - Monotonicity −0.3.
+  - The sector-adjusted and 13-week results (both non-gating) agree.
+- **Verdict: NO CHART SCORE QUALIFIED FOR PORTFOLIO RESEARCH.** "The frozen structured chart-analysis rubric did not demonstrate predictive information large enough and robust enough to qualify for portfolio research." This does not mean that chart analysis does not work, nor that no 1–2% edge exists.
+- **Untouched:** no 2018–2021, Holdout locked, no portfolio, no AI, no data purchase, no tuning, no rerun.
+
+**STOP:** awaiting the owner (recommendation: close H020 as Rejected).
