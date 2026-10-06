@@ -151,7 +151,7 @@ def real():
     sm = r["summary"]
     verdict = "H021-A QUALIFIED FOR PORTFOLIO-DESIGN RESEARCH" if r["gates"]["qualified"] else "H021-A DID NOT QUALIFY"
     out = dict(run=p6h021.REAL_RUN, qc_backtest_id=result(p6h021.REAL_RUN)["provenance"].get("qc_backtest_id"),
-               commit=result(p6h021.REAL_RUN)["provenance"].get("commit"), pins=pins, summary=sm, gates=r["gates"],
+               commit=result(p6h021.REAL_RUN)["provenance"].get("git_commit"), pins=pins, summary=sm, gates=r["gates"],
                c=r["c"], verdict=verdict,
                empirical_p=float((1 + np.sum(null_t >= t)) / (1 + null_t.size)),
                null_percentile=float(np.mean(null_t < t)),
