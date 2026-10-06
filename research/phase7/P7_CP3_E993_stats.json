@@ -1,0 +1,67 @@
+{
+ "calendar_check": {
+  "expected_reviews": 84,
+  "expected_weekly": 325,
+  "first_review": "2011-01-31",
+  "last_review": "2017-12-29",
+  "reviews": 84,
+  "reviews_match": true,
+  "weekly": 325,
+  "weekly_match": true
+ },
+ "checks": {
+  "month_ends": 96,
+  "sec_fed": 122429,
+  "selections": 2394,
+  "store_sids_max": 5275,
+  "weekly": 325
+ },
+ "max_rss_mb": 6151.7,
+ "panel": {
+  "build_s": 81.5,
+  "dividend_events": 38616,
+  "duplicate_bars": 0,
+  "first_session": "2007-01-03",
+  "history_calls": 80,
+  "large_distributions_10pct": 160,
+  "last_session": "2017-12-29",
+  "late_events": 0,
+  "late_rows": 0,
+  "off_calendar_rows": 0,
+  "securities": 1917,
+  "sessions": 2769,
+  "split": {
+   "aligned": 516,
+   "n": 528,
+   "outside": 1,
+   "realigned": 0,
+   "unverified": 11
+  },
+  "spy_splits": 0
+ },
+ "payload_chars": 1126892,
+ "payload_sha256": "b5cf4788d7b8f5659a2f4a776d41fc6af75f4aa824a408a96094042ef0070cb1",
+ "score_code_sha256": "430ce205c336a4ac120a606afb9ff7bdf2345752e7e3aeeadeff970dae4e6c9d",
+ "score_s": 30.8,
+ "slice_spot_check": {
+  "checked": 336,
+  "examples": [],
+  "full_fallbacks": 2109,
+  "mismatch": 0
+ },
+ "states_s": 8.8,
+ "store_stats": {
+  "amendments": 57,
+  "delayed_until_available": 11937,
+  "estimated": 12349,
+  "observed_new": 148376,
+  "quarantine_field_released": 134,
+  "quarantine_released": 20,
+  "quarantined": 637,
+  "restatement_blocked": 306,
+  "sec_timing_hold": 27,
+  "timing_unknown": 608
+ },
+ "wall_s": 548.6,
+ "weekly_s": 18.7
+}
