@@ -1632,3 +1632,25 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Verdict:** MECHANICS CONFIRMED — READY TO FREEZE FOR PREDICTIVE TEST DESIGN. Decisions for the owner are in section 10 of the report.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-06: P7-CP4 frozen mechanics and predictive-test architecture (H022); STOP (D175, D176)
+
+- **Owner (D175):** P7-CP3R approved. Frozen:
+  - the store-wide revenue baseline and CIK Option A;
+  - Score v1;
+  - mechanics 80 / 70 / 5, K = 10, regime limits 10 / 8 / 5 / 2, ≤ 3 per sector, owner tie-break, sticky share class, weekly sell-only, 20% grown-winner rule;
+  - costs.
+  Design the predictive test only.
+- **Built:**
+  - `qr_p7_pred.py`: total-return responses with a delisting rule; one-month demeaned response; monthly Spearman IC with NW t; gates G1–G4; identity-tethered full-procedure null; critical-value floor;
+  - `grown_winner_trims`;
+  - canaries A–G;
+  - frozen spec v1 + H022 + result template, pinned in `qresearch.p7pred` (commit 4c497df).
+- **Synthetic power** (real score tables, synthetic returns):
+  - false promotion 0.3%;
+  - 50% power at IC ≈ 0.033 (80+ group ≈ +6.3%/yr);
+  - 80% power at IC ≈ 0.047 (≈ +10.2%/yr).
+- **Recommendation:** GO for one real evaluation (canary X994 → null E023-01..05 → pin c_IC → E023-06 once), with the stated limitation that 2–4%/yr edges are usually missed.
+- No real return, IC or portfolio; no QuantConnect run; 2018–2021 and the Holdout untouched.
+
+**STOP:** awaiting the owner.
