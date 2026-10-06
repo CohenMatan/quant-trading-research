@@ -1504,3 +1504,28 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** nothing real computed; no 2018–2021 data; Holdout locked; no purchase.
 
 **STOP:** awaiting the owner (H020 closure; Phase 6 GO / NO-GO; if GO, the decisions in P6-CP1 §39).
+
+## 2026-10-06: H021-A sector relative-momentum falsification test; P6-CP2; STOP (D160–D164)
+
+- **Owner decisions (D160):**
+  - H020 closed as Rejected.
+  - D035 amended for Phase 6 only: 2000-01 → 2017-11, nine Select Sector SPDRs.
+  - Limited GO for ONE falsification test, H021-A: 6-month total-return relative momentum, monthly, next-month sector-relative total return, rank IC, gates P1–P4, R = 5,000 derangement null.
+- **Frozen spec v1** (`research/phase6/H021A_spec.md`) and module `qr_h021`, hash-pinned in `qresearch.p6h021`. Host: X989 / S022.
+- **Canary:**
+  - E989-01 failed on a plumbing KeyError, fixed (D161).
+  - E989-02 passed 10/12 check groups; every signal and response was reproduced day by day to 1e-15.
+  - The two tolerance failures are explained by QuantConnect's dividend feed rounding distributions to the cent (probe E990-02: 757/757 within half a cent of ADJUSTED). They were assessed as not a fidelity defect; the construction is unchanged (D162).
+- **Null E022-01..05:** 5,000/5,000 worlds, no failures, retries or recoveries.
+  - c = 2.658, pinned in commit ea284cb before the real run (D163).
+  - False qualification of the whole procedure under the null: 0.2%.
+- **Real evaluation E022-06, once:**
+  - IC −0.011 (t −0.35), p 0.64.
+  - Top 3 +0.16%/yr; middle +0.80; bottom −0.97.
+  - Halves + / −; IC sum negative.
+  - **P1–P4 all FAIL → H021-A DID NOT QUALIFY.**
+  - The non-gating diagnostics agree: 2010–2017 t −1.36; 3-month t 0.22; 6-month t 0.71.
+- **Interpretation:** "No sector-relative momentum edge large and robust enough to meet the project's pre-registered statistical and economic requirements was detected. The study has only about 50% power around a +3.3%/yr top-3 edge. A small real edge may therefore remain undetectable."
+- **Untouched:** no tuning, no other lookback, no H021-B, no portfolio, no 2018–2021, Holdout locked, nothing purchased.
+
+**STOP:** awaiting the owner (recommendation: close H021-A and Phase 6).

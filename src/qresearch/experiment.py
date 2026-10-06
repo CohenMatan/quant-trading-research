@@ -219,6 +219,33 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                       "addendum_sha256, chart_panel_sha256)")
             else:
                 raise ConfigError("S021 modes: null or real")
+    if cfg["strategy_id"] in ("X989", "S022"):
+        # H021-A (research/phase6/H021A_spec.md v1; owner 2026-10-06, D160): a non-trading one-month host that reads
+        # history 1998-12-01 .. 2017-12-31 only; X989 = the fidelity canary; S022 = null batches (infrastructure) and
+        # the one real evaluation (research), every S022 run only with explicit owner approval
+        from . import p6h021
+        p = cfg.get("params", {})
+        if (cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2017-12-01", "2017-12-31", None):
+            raise ConfigError("H021-A runs use the one-month host window 2017-12-01..2017-12-31 (no warm-up)")
+        mode = p.get("mode")
+        if cfg["strategy_id"] == "X989":
+            if mode != "canary" or kind != "infrastructure":
+                raise ConfigError("X989 runs only the H021-A fidelity canary (infrastructure)")
+        else:
+            if cfg.get("hypothesis_id") != "H021" or cfg.get("programme") != "P6" or not cfg.get("owner_approval_required"):
+                raise ConfigError("S022 runs belong to H021 / P6 and need owner_approval_required")
+            if mode == "null":
+                if tuple(p.get("seeds", ())) not in p6h021.NULL_BATCHES or kind != "infrastructure":
+                    raise ConfigError(f"S022 null runs are infrastructure batches {p6h021.NULL_BATCHES}")
+            elif mode == "real":
+                if kind != "research" or not all(k in p for k in ("threshold_c", "threshold_commit",
+                                                                   "null_result_sha256", "spec_sha256",
+                                                                   "panel_sha256", "diag_sha256")):
+                    raise ConfigError("the S022 real evaluation is the research run and carries the pinned null "
+                                      "provenance (threshold_c, threshold_commit, null_result_sha256, spec_sha256, "
+                                      "panel_sha256, diag_sha256)")
+            else:
+                raise ConfigError("S022 modes: null or real")
     if scheme == config.CURRENT_SCHEME:
         c = cfg["costs"]
         if (c.get("commission_model") != config.COMMISSION_MODEL
@@ -226,7 +253,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018", "S020", "S021"):
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018", "S020", "S021", "S022"):
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")
