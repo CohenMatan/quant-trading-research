@@ -13,7 +13,8 @@ from . import config
 
 SPEC = "research/phase7/P7_predictive_spec.md"
 SPEC_VERSION = 1
-SPEC_SHA256 = "389f9364541588f78f504843bdce32067dc3004a26a64eab5c91331b5ffc2bd9"
+SPEC_SHA256 = "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58"
+SPEC_SHA256_V1_ORIGINAL = "389f9364541588f78f504843bdce32067dc3004a26a64eab5c91331b5ffc2bd9"   # before the D177 wording-only fix (C3)
 HYPOTHESIS = "H022"
 CODE_SHA256 = {
     "src/qresearch/lean/qr_p7_score.py": "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572",

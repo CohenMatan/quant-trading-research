@@ -67,7 +67,7 @@ This is exactly the set the frozen planner ranks: 196–612 stocks per review, m
 The response window runs from the open of the first session after review t to the close of the next review session t'. Why one month:
 - the score is re-evaluated monthly and the portfolio re-decides every month;
 - high scores are short-lived (median spell above 80: 1 month; P7-CP3R);
-- one month gives 83 non-overlapping responses, which keeps inference simple and maximises independent observations;
+- one month gives 83 non-overlapping responses, which keeps inference simple and maximises the number of non-overlapping monthly response periods;
 - longer horizons mostly measure decayed information.
 
 **Diagnostic horizons (non-gating):** 2 and 3 months, ending at the close of the review two or three months later. These overlap; they use Newey-West lag h and are reported for the real assignment only. Their last decisions are 2017-10-31 and 2017-09-29.

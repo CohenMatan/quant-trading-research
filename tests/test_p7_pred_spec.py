@@ -21,6 +21,13 @@ def test_constants_pinned():
     assert (M.INITIAL_POSITION_CAP, M.GROWN_WINNER_CAP) == (0.10, 0.20)
 
 
+def test_d177_wording_only_correction():
+    # D177: the only change to spec v1 is the C3 wording; the original hash is kept for the record
+    assert p7pred.SPEC_SHA256_V1_ORIGINAL == "389f9364541588f78f504843bdce32067dc3004a26a64eab5c91331b5ffc2bd9"
+    from qresearch import config
+    assert "maximises independent observations" not in (config.REPO_ROOT / p7pred.SPEC).read_text()
+
+
 def test_no_real_threshold_pinned_yet():
     assert p7pred.C_IC is None and p7pred.NULL_RESULT_SHA256 is None and p7pred.THRESHOLD_COMMIT is None
 
@@ -31,5 +38,6 @@ def test_spec_states_the_frozen_rules():
     for frag in ("**83 dates:**", "**next session's open**", "**last real close**", "Newey-West standard error with **lag 2**", "+3.0% a year**",
                  "**≥ 0.90**", "**both halves**", "identity-tethered within-date permutation", "R = **5,000**",
                  "**one-sided 1%**", "**80 / 70 / 5**", "**STRONG 10, NORMAL 8, WEAK 5, RISK_OFF 2**",
-                 "**3** holdings per PIT FF12", "**20%** of equity", "CIK Option A"):
+                 "**3** holdings per PIT FF12", "**20%** of equity", "CIK Option A",
+                 "maximises the number of non-overlapping monthly response periods"):
         assert frag in s, frag
