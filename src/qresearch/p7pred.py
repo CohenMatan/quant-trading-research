@@ -52,7 +52,7 @@ C_IC = 2.390976216956                          # max(50th largest of 5,000 null 
 NULL_RESULT = "research/phase7/P7_CP5_null.json"
 NULL_WORLDS = "research/phase7/P7_CP5_null_worlds.json.gz"
 NULL_RESULT_SHA256 = "c96733d88c9a9f71127cf8a337d45543374a89ea104fd5a62aa53c25d98629b6"
-THRESHOLD_COMMIT = None                               # the commit that pins the values above (recorded in the next commit)
+THRESHOLD_COMMIT = "dbfdcc04913ddf084ed764b38bdf4dffe1024f4d"   # pinned the values above
 PANEL_SHA256 = "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a"   # prepared panel
 
 # P7-CP5 (D177 / D178): the execution host S023 v1.1 (X994 = byte copy), pinned before the canary; the null and the

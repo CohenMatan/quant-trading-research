@@ -59,3 +59,20 @@ def test_spec_states_the_frozen_rules():
                  "**3** holdings per PIT FF12", "**20%** of equity", "CIK Option A",
                  "maximises the number of non-overlapping monthly response periods"):
         assert frag in s, frag
+
+
+def test_real_config_carries_exactly_the_pinned_provenance():
+    import json
+    import subprocess
+
+    from qresearch import config, experiment
+    cfg = json.loads((config.REPO_ROOT / "experiments/E023-06/config.json").read_text())
+    experiment.validate(cfg)
+    p = cfg["params"]
+    assert (p["mode"], p["c_ic"], p["threshold_commit"], p["null_result_sha256"], p["panel_sha256"]) == \
+        ("real", p7pred.C_IC, p7pred.THRESHOLD_COMMIT, p7pred.NULL_RESULT_SHA256, p7pred.PANEL_SHA256)
+    # the threshold commit already carried c_IC and the null hash (pinned before the real run)
+    old = subprocess.run(["git", "show", f"{p7pred.THRESHOLD_COMMIT}:src/qresearch/p7pred.py"], capture_output=True,
+                         text=True, cwd=config.REPO_ROOT)
+    if old.returncode == 0:                         # shallow clones may lack the commit
+        assert f"C_IC = {p7pred.C_IC!r}" in old.stdout and p7pred.NULL_RESULT_SHA256 in old.stdout
