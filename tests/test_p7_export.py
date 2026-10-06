@@ -74,7 +74,7 @@ SIC = {"S05": 6798, "S06": None}
 CIK = {"S07": "c7", "S08": "c7"}
 
 
-def _host(monkeypatch, M):
+def _host(monkeypatch, M, excluded_2010=("S10",), gap=None):
     ai = types.ModuleType("AlgorithmImports")
     ai.Resolution = types.SimpleNamespace(DAILY="daily")
     ai.DataNormalizationMode = types.SimpleNamespace(RAW="raw", SCALED_RAW="scaled", ADJUSTED="adjusted")
@@ -87,8 +87,14 @@ def _host(monkeypatch, M):
     ai.Split, ai.Dividend = Split, Dividend
     monkeypatch.setitem(sys.modules, "AlgorithmImports", ai)
     hm = types.ModuleType("qr_harness")
+    hm.EXCHANGES = ("NYS",)
+    hm.exchange_of = lambda f, d: "NYS"
+    hm.is_us_common = lambda f, d=None: True
     cal = M["cal"]
     spy = Sym("SPY")
+    if gap is not None:                          # a security-life break (re-used id): > 60 missing sessions
+        j, a, b = gap
+        M["alive"][a:b, j] = False
     spy_px = np.linspace(100, 250, cal.size) * (1 + 0.05 * np.sin(np.arange(cal.size) / 60.0))
     days = [date.fromisoformat(str(np.datetime64(int(x), "D"))) for x in cal]
 
@@ -121,6 +127,8 @@ def _host(monkeypatch, M):
             self.qr_sic = types.SimpleNamespace(sic_on=sic_on)
             self.qr_timing_holds = self.qr_quarantine_releases = self.qr_restatement_blocks = {}
             self.qr_field_releases = {}
+            self._qr_u = {"min_market_cap": 2e9, "min_price": 5.0, "min_avg_dollar_volume": 5e6, "adv_days": 20}
+            self._qr_dv = {}
             self.spy = spy
             self.securities = {spy: types.SimpleNamespace(exchange=types.SimpleNamespace(hours=Hours()))}
             self.msgs = []
@@ -134,7 +142,8 @@ def _host(monkeypatch, M):
 
         def _qr_select(self, fl):
             r = int(np.searchsorted(cal, np.datetime64(self.time.strftime("%Y-%m-%d")).astype(np.int64))) - 1
-            self.qr_eligible = [f.symbol for f in fl if M["alive"][r, int(f.symbol.id[1:])]]
+            self.qr_eligible = [f.symbol for f in fl if M["alive"][r, int(f.symbol.id[1:])]
+                                and not (f.symbol.id in excluded_2010 and self.time.year < 2011)]
             self.qr_eligible_info = {s: (3e9, 1e7 + int(s.id[1:]) * (1 if s.id != "S08" else 0) + 7)
                                      for s in self.qr_eligible}
             self.qr_corrected = set()
@@ -198,6 +207,7 @@ def _host(monkeypatch, M):
                 continue
             f = _fund(f"S{j:02d}", f"T{j}", nd, 0, f"c{j}")
             f.symbol = syms.setdefault(j, f.symbol)
+            f.market_cap = 1e9 if (f"S{j:02d}" in excluded_2010 and nd.year < 2011) else 3e9
             fl.append(f)
         a._qr_select(fl)
     return a
@@ -246,6 +256,40 @@ def test_x993_export_on_synthetic_market(monkeypatch):
     assert len(pay["weekly"]) == cc["expected_weekly"] and pay["candidates_ever_75"] > 0
     assert sum(len(w[2]) for w in pay["weekly"]) > 0 and any(w[3] for w in pay["weekly"])
     assert st["score_code_sha256"] == "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572"
+
+
+def _run(monkeypatch, **kw):
+    a = _host(monkeypatch, _market(), **kw)
+    a.qr_on_end()
+    st = json.loads("".join(m.split("|", 2)[2] for m in sorted((m for m in a.msgs if m.startswith("QRP7S|")),
+                                                                 key=lambda m: int(m.split("|")[1]))))
+    blob = "".join(m.split("|", 2)[2] for m in sorted((m for m in a.msgs if m.startswith("QRP7X|")),
+                                                      key=lambda m: int(m.split("|")[1])))
+    pay = json.loads(E.unpack(blob))
+    rows = {t: {pay["sids"][r["i"]]: r for r in E.decode_rows(enc)} for t, tk, enc in pay["reviews"]}
+    return st, pay, rows, blob
+
+
+def test_x993_v11_store_wide_revenue_baseline(monkeypatch):
+    """P7-CP3R (D173) on the synthetic market: S10 is outside the universe in 2010 (market cap < $2B) but its revenue
+    history exists -> rescued in 2011 with reason 'market cap < $2B'; S09 has a 100-session gap (new security life)
+    in 2013 -> its baseline is rejected for the 12 months after the gap (H2); C) eligibility independence: S10's
+    2011 score is identical whether or not it was eligible in 2010; E) determinism."""
+    st, pay, rows, blob = _run(monkeypatch, gap=(9, 1580, 1680))
+    b = st["baseline"]
+    assert b["pit_violations"] == 0 and b["rescued"] > 0 and b["life_reject"] > 0
+    r = rows["2011-01-31"]["S10"]
+    assert r["bits"] & E.BIT["rescued"] and r["bits"] & E.BIT["H2_old_rule"] and not r["bits"] & E.BIT["H2"]
+    assert (r["bits"] >> E.REASON_SHIFT) & 7 == 2
+    life = [t for t, rr in rows.items() if "S09" in rr and rr["S09"]["bits"] & E.BIT["baseline_life_reject"]]
+    assert life and all("2013" <= t <= "2014-12" for t in life)
+    assert all(rows[t]["S09"]["bits"] & E.BIT["H2"] for t in life)
+    assert pay["rescued_sample"] and all(x["filed"][-1] < x["baseline_selection"] for x in pay["rescued_sample"])
+    st2, pay2, rows2, _ = _run(monkeypatch, excluded_2010=())
+    r2 = rows2["2011-01-31"]["S10"]
+    assert r2["total"] == r["total"] and r2["points"] == r["points"] and not r2["bits"] & E.BIT["rescued"]
+    _, _, _, blob3 = _run(monkeypatch, gap=(9, 1580, 1680))
+    assert blob3 == blob
 
 
 def test_runner_uploads_frozen_score_and_config_rule():

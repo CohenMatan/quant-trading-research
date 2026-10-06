@@ -1,3 +1,10 @@
+# X993 v1.1 (P7-CP3R, owner D173): the YoY revenue baseline is the company's PIT revenue True TTM recorded LIVE at
+# the review 12 months earlier for EVERY company in the PIT store (qr_p7_export.RevenueLedger), not only for securities
+# then eligible; valid only within the same security life and SEC registrant and with every component quarter usable on
+# or before that day (otherwise H2). SEC-repaired securities are fed whenever a further filing becomes usable. The CP3
+# eligible-only rule is evaluated alongside for the audit (bit H2_old_rule), with the reason each rescued company was
+# outside the universe a year earlier; non-chosen share classes are also scored (class substituted) so a held class can
+# be kept. Score v1 is unchanged.
 # X993 — Phase 7 (P7-CP3, owner D171) SCORE AVAILABILITY / MECHANICS EXPORT (infrastructure; NO orders, NO returns,
 # NO performance of any kind). Runs the FROZEN conviction score v1 (qr_p7_score, hash-pinned in qresearch.p7score) at
 # the 84 month-end reviews 2011-01 .. 2017-12 and exports the score tables, disqualifier flags, share-class choices,
@@ -22,7 +29,7 @@ import hashlib
 import json
 import time
 import numpy as np
-from qr_harness import QRAlgorithm
+from qr_harness import EXCHANGES, QRAlgorithm, exchange_of, is_us_common
 from qr_fundamentals import DEFAULT_MAX_AGE_DAYS, PITStore, observe_vendor
 import qr_p7 as P
 import qr_p7_score as S
@@ -40,6 +47,8 @@ BATCH = 100
 SPOT_SALT = "P7CP3-slice-check"
 SPOT_PER_REVIEW = 4
 WEEKLY_FROM_SCORE = 75                  # weekly states exported for every security that was ever a candidate >= 75
+RESCUE_SAMPLE = 40                      # v1.1: deterministic sample of rescued baselines (dates only) for SEC checks
+RESCUE_SALT = "P7CP3R-rescued"
 
 
 def get(obj, path):
@@ -83,11 +92,18 @@ class P7ScoreExport(QRAlgorithm):
         for sid, rows in (self.qr_sec.sic_history or {}).items():
             self.cik[sid] = [(date.fromisoformat(e), str(c) if c not in (None, "") else None) for e, _s, c in rows]
         self.sym = {}
-        self.mon = {}                    # t (date) -> {sid: dict(sic, cik, adv, fund, base_only, base_store)}
-        self.ledger = {}                 # (y, m) of t -> {sid: revenue True TTM} (eligible at that review)
-        self.shadow = {}                 # (y, m) -> {sid: revenue True TTM} (every company in the store; diagnostic)
-        self.wk = {}                     # weekly t -> {sid: H1 / H2 / H7 bits}
+        self.mon = {}                    # review t -> {sid: dict(sic, cik, adv, vals, base, old_base, reason, ...)}
+        self.mon_sel = {}                # review t -> selection day
+        self.rev = E.RevenueLedger()     # v1.1 (D173): store-wide company revenue True TTM at every month-end
+        self.elig_at = {}                # (y, m) -> eligible sids at that review (the CP3 eligible-only ledger rule)
+        self.why = {}                    # (y, m) -> {sid: reason code} for store companies outside the universe
+        self.first_seen = {}             # sid -> first day in QuantConnect's universe list
+        self.sec_next = {}               # sid -> next day a further SEC filing of a repaired security becomes usable
+        self.wk = {}                     # weekly t -> (review in force, {sid: H1 / H2 / H7 bits})
         self.last_review = None          # (t, eligible sids) of the latest scored review
+        u = self._qr_u
+        self.filt = (float(u.get("min_market_cap", 2e9)), float(u.get("min_price", 0.0)),
+                     float(u.get("min_avg_dollar_volume", 0.0)), int(u.get("adv_days", 20)))
         self.c = dict(selections=0, month_ends=0, weekly=0, sec_fed=0, store_sids_max=0)
 
     def on_data(self, data):
@@ -111,13 +127,19 @@ class P7ScoreExport(QRAlgorithm):
         self.c["selections"] += 1
         elig = {str(s.id): s for s in self.qr_eligible}
         adv = {str(s.id): v[1] for s, v in self.qr_eligible_info.items()}
-        watch = set(elig) | (set(self.last_review[1]) if self.last_review else set())
         for f in fl:
             sid = str(f.symbol.id)
+            self.first_seen.setdefault(sid, today)
             if not f.has_fundamental_data:
-                if sid in watch and self.qr_sec.has(sid):
-                    self.qr_sec.feed(sid, today, self.store)
-                    self.c["sec_fed"] += 1
+                # v1.1 (D173): every SEC-repaired security is fed on each day a further filing becomes usable (not only
+                # while eligible): the same filings with the same availability dates (idempotent), complete history
+                if self.qr_sec.has(sid):
+                    nxt = self.sec_next.get(sid)
+                    if nxt is None or nxt <= today:
+                        self.qr_sec.feed(sid, today, self.store)
+                        self.c["sec_fed"] += 1
+                        fut = [x.available for x in self.qr_sec.filings[sid] if x.available > today]
+                        self.sec_next[sid] = min(fut) if fut else date.max
                 continue
             observe_vendor(self.store, sid, f, today, get, self.seen_q)
         t = self.prev_session
@@ -128,7 +150,7 @@ class P7ScoreExport(QRAlgorithm):
         month_end = nxt.month != t.month or nxt.year != t.year
         week_end = nxt.isocalendar()[:2] != t.isocalendar()[:2]
         if month_end and t >= LEDGER_FROM:
-            self._month_end(t, today, elig, adv)
+            self._month_end(t, today, elig, adv, fl)
         elif week_end and self.last_review is not None:
             self._weekly(t, today)
         return out
@@ -136,53 +158,75 @@ class P7ScoreExport(QRAlgorithm):
     def qr_select_universe(self, eligible):
         return []
 
+    def _why_not(self, f, sid, today):
+        """Why a company in the store is outside the eligible universe today (P7-CP3R audit only)."""
+        min_cap, min_price, min_adv, adv_days = self.filt
+        fix = not f.has_fundamental_data
+        day = str(today)
+        if not fix:
+            try:
+                if not is_us_common(f, day) or exchange_of(f, day) not in EXCHANGES:
+                    return 5
+            except Exception:
+                return 6
+        try:
+            px = float(f.price)
+            mc = float(f.market_cap) if not fix else (self.qr_sec.market_cap(sid, today, px) or 0.0)
+        except Exception:
+            return 6
+        if not mc >= min_cap:
+            return 2
+        if px < min_price:
+            return 3
+        dq = self._qr_dv.get(f.symbol)
+        if dq is None or len(dq) < adv_days or not sum(dq) / len(dq) >= min_adv:
+            return 4
+        return 6
+
     # ------------------------------------------------------------------------------------------------ snapshots
-    def _month_end(self, t, today, elig, adv):
+    def _month_end(self, t, today, elig, adv, fl):
         self.c["month_ends"] += 1
         ym = (t.year, t.month)
-        prev = (t.year - 1, t.month)
-        led, base, sh = {}, self.ledger.get(prev, {}), self.shadow.get(prev, {})
+        store_sids = sorted(set(self.store.hist) | set(self.store.pending))
+        self.c["store_sids_max"] = max(self.c["store_sids_max"], len(store_sids))
+        if t < date(2017, 1, 1):                       # baselines are needed up to the 2017-12 review
+            self.rev.record(ym, t, today, self.store, store_sids)
+            self.elig_at[ym] = set(elig)
+            byf = {str(f.symbol.id): f for f in fl}
+            self.why[ym] = {sid: (0 if sid in elig else (self._why_not(byf[sid], sid, today) if sid in byf else 1))
+                            for sid in self.rev.v[ym]}
         rows = {}
-        for sid, s in elig.items():
-            self.sym[sid] = s
-            vals = E.fund_values(self.store, sid, today)
-            if vals[0] is not None:
-                led[sid] = vals[0]
-            if t < REVIEW_FROM:
-                continue
-            sic = self.qr_sic.sic_on(sid, today)
-            fi, why, bo = E.fund_inputs(vals, base.get(sid))
-            rows[sid] = dict(sic=sic, cik=self._cik_on(sid, today), adv=adv[sid], fund=(fi, why), base_only=bo,
-                             base_store=bo and sid in sh)
-        self.ledger[ym] = led
-        if t < date(2017, 1, 1):          # the shadow ledger is only needed as a 12-month-earlier diagnostic
-            sh_now = {}
-            for sid in sorted(set(self.store.hist) | set(self.store.pending)):
-                v = self.store.ttm(sid, "revenue", today)
-                if v is not None:
-                    sh_now[sid] = v
-            self.shadow[ym] = sh_now
-            self.c["store_sids_max"] = max(self.c["store_sids_max"], len(self.store.hist))
-        self.ledger.pop((t.year - 2, t.month), None)
-        self.shadow.pop((t.year - 2, t.month), None)
         if t >= REVIEW_FROM:
+            prev = self.rev.prior(ym)
+            for sid, s in elig.items():
+                self.sym[sid] = s
+                v, det, bday = self.rev.baseline(ym, sid)
+                rows[sid] = dict(sic=self.qr_sic.sic_on(sid, today), cik=self._cik_on(sid, today), adv=adv[sid],
+                                 vals=E.fund_values(self.store, sid, today), base=v, base_det=det, base_day=bday,
+                                 old_base=v if sid in self.elig_at.get(prev, ()) else None,
+                                 prior_reason=self.why.get(prev, {}).get(sid))
             self.mon[t] = rows
+            self.mon_sel[t] = today
             self.last_review = (t, tuple(sorted(elig)))
+        for old in [k for k in self.rev.v if k < (t.year - 1, t.month)]:
+            self.rev.drop(old)
+            self.why.pop(old, None)
+            self.elig_at.pop(old, None)
 
     def _weekly(self, t, today):
+        """H1 / H2 / H7 of the possible holdings with the baseline of the score in force (validated at the end)."""
         self.c["weekly"] += 1
         lt = self.last_review[0]
-        base = self.ledger.get((lt.year - 1, lt.month), {})       # the baseline of the score in force
         out = {}
         for sid in self.last_review[1]:
             bits = E.sic_bits(self.qr_sic.sic_on(sid, today))
-            fi, _, _ = E.fund_inputs(E.fund_values(self.store, sid, today), base.get(sid))
+            fi, _, _ = E.fund_inputs(E.fund_values(self.store, sid, today), self.mon[lt][sid]["base"])
             if fi is None:
                 bits |= E.BIT["H2"]
             elif fi["impaired"]:
                 bits |= E.BIT["H7"]
             out[sid] = bits
-        self.wk[t] = out
+        self.wk[t] = (lt, out)
 
     # ------------------------------------------------------------------------------------------------ panel
     def _cols(self, frame, loc, cal, D, n, fields, st):
@@ -253,7 +297,7 @@ class P7ScoreExport(QRAlgorithm):
         cal = np.unique(XP.session_days(spy.index.get_level_values(-1).values))
         cal = cal[cal <= LAST_SESSION]
         D = cal.size
-        sids = sorted({s for rows in self.mon.values() for s in rows} | {s for w in self.wk.values() for s in w})
+        sids = sorted({s for rows in self.mon.values() for s in rows} | {s for w in self.wk.values() for s in w[1]})
         N = len(sids)
         st = dict(sessions=D, first_session=_ds(cal[0]), last_session=_ds(cal[-1]), securities=N, late_rows=0,
                   off_calendar_rows=0, duplicate_bars=0, late_events=0, history_calls=0,
@@ -312,6 +356,79 @@ class P7ScoreExport(QRAlgorithm):
             raise Exception(f"X993: review session {t} not on the SPY calendar")
         return k
 
+    # ------------------------------------------------------------------------------------------------ baselines
+    def _life_start_row(self, j, k):
+        if j not in self._life:
+            v = P.valid_rows(self.C[:, j], self.P[:, j])
+            self._life[j] = (v, P.life_starts(v))
+        v, ls = self._life[j]
+        b = int(np.searchsorted(v, k, side="right")) - 1
+        return None if b < 0 else int(v[ls[b]])
+
+    def _baselines(self, reviews, rows_k):
+        """v1.1 (D173): validate every store-wide revenue baseline (same security life, same SEC registrant, every
+        component quarter usable on or before the baseline selection day), then compute the fundamental inputs under
+        the corrected rule and, for the audit, under the CP3 eligible-only rule."""
+        self._life = {}
+        st = dict(rows=0, nonfin_rows=0, store_baseline=0, life_reject=0, cik_reject=0, rescued=0, lost=0,
+                  pit_violations=0, h2_new=0, h2_old=0, reasons={}, listed_lt_1y=0)
+        resc = []
+        for t in reviews:
+            k = rows_k[t]
+            today = self.mon_sel[t]
+            for sid, e in self.mon[t].items():
+                st["rows"] += 1
+                ok, why = False, "none"
+                if e["base"] is not None:
+                    st["store_baseline"] += 1
+                    bsess, bsel = e["base_day"]
+                    j = self.col.get(sid)
+                    ls = self._life_start_row(j, k) if j is not None else None
+                    ok, why = E.baseline_check(ls, self._row(bsess), self._cik_on(sid, bsel), self._cik_on(sid, today))
+                    st["life_reject"] += int(why == "life")
+                    st["cik_reject"] += int(why == "cik")
+                    _, pe, fd = e["base_det"]
+                    if any(x >= bsel.toordinal() for x in fd) or any(x > bsess.toordinal() for x in pe):
+                        st["pit_violations"] += 1
+                        ok = False
+                e["base_ok"] = ok
+                fi, why2, bo = E.fund_inputs(e["vals"], e["base"] if ok else None)
+                fi_old = E.fund_inputs(e["vals"], e["old_base"])[0]
+                e["fund"] = (fi, why2)
+                e["base_only"] = bo
+                e["H2_old_rule"] = fi_old is None
+                e["baseline_life_reject"] = why == "life"
+                e["baseline_cik_reject"] = why == "cik"
+                nonfin = e["sic"] is not None and not 6000 <= int(e["sic"]) <= 6999
+                st["nonfin_rows"] += int(nonfin)
+                st["h2_new"] += int(fi is None and nonfin)
+                st["h2_old"] += int(fi_old is None and nonfin)
+                if fi is not None and fi_old is None:
+                    st["rescued"] += 1
+                    e["rescued"] = True
+                    e["reason"] = e["prior_reason"] if e["prior_reason"] is not None else 6
+                    add(st["reasons"], str(e["reason"]))
+                    fs = self.first_seen.get(sid)
+                    e["listed_lt_1y_at_baseline"] = fs is not None and (e["base_day"][1] - fs).days < 365 \
+                        and fs > date(2008, 7, 15)
+                    st["listed_lt_1y"] += int(e["listed_lt_1y_at_baseline"])
+                    resc.append((sid, t))
+                elif fi is None and fi_old is not None:
+                    st["lost"] += 1
+        self.st["baseline"] = st
+        pick = set(P.pick([f"{s}|{t}" for s, t in resc], RESCUE_SAMPLE, RESCUE_SALT))
+        self.rescued_sample = []
+        for s_, t in resc:
+            if f"{s_}|{t}" not in pick:
+                continue
+            e = self.mon[t][s_]
+            _, pe, fd = e["base_det"]
+            self.rescued_sample.append(dict(
+                sid=s_, review=str(t), baseline_session=str(e["base_day"][0]), baseline_selection=str(e["base_day"][1]),
+                quarters=[str(date.fromordinal(x)) for x in pe], filed=[str(date.fromordinal(x)) for x in fd],
+                reason=E.REASONS.get(e["reason"]), cik=self._cik_on(s_, self.mon_sel[t]),
+                first_seen=str(self.first_seen.get(s_))))
+
     # ------------------------------------------------------------------------------------------------ end
     def qr_on_end(self):
         self.st = dict(checks=self.c, store_stats=dict(self.store.stats))
@@ -343,6 +460,7 @@ class P7ScoreExport(QRAlgorithm):
                                          weekly=len(self.wk), expected_weekly=len(exp_w),
                                          weekly_match=[str(x) for x in exp_w] == [str(x) for x in sorted(self.wk)],
                                          first_review=str(reviews[0]), last_review=str(reviews[-1]))
+        self._baselines(reviews, rows_k)
         sid_index = {s: i for i, s in enumerate(self.sids)}
         ff_names = list(XD.FF12_NAMES)
         spot = dict(checked=0, mismatch=0, full_fallbacks=0, examples=[])
@@ -407,7 +525,10 @@ class P7ScoreExport(QRAlgorithm):
         for t in sorted(self.wk):
             k = wk_rows[t]
             parts = []
-            for s, bits in sorted(self.wk[t].items()):
+            lt, wbits = self.wk[t]
+            for s, bits in sorted(wbits.items()):
+                if not self.mon[lt][s]["base_ok"]:          # baseline of the score in force rejected / absent
+                    bits = (bits & ~(E.BIT["H2"] | E.BIT["H7"])) | E.BIT["H2"]
                 if s not in cand_ever:
                     continue
                 j = self.col[s]
@@ -422,7 +543,7 @@ class P7ScoreExport(QRAlgorithm):
                     bits |= E.BIT["H6"]
                 if bits:
                     parts.append(f"{sid_index[s]}:{bits}")
-            weekly.append([str(t), _ds(self.cal[k]), sorted(sid_index[s] for s in self.wk[t] if s in cand_ever),
+            weekly.append([str(t), _ds(self.cal[k]), sorted(sid_index[s] for s in wbits if s in cand_ever),
                            ",".join(parts)])
         self.st["weekly_s"] = round(time.perf_counter() - t3, 1)
         self.st["wall_s"] = round(time.perf_counter() - self.t0, 1)
@@ -436,7 +557,7 @@ class P7ScoreExport(QRAlgorithm):
             self.st["score_code_sha256"] = hashlib.sha256(open(_m.__file__, "rb").read()).hexdigest()
         except Exception as ex:
             self.st["score_code_sha256"] = f"unavailable: {type(ex).__name__}"
-        payload = dict(sids=self.sids, ff12_names=ff_names, bits=list(E.BITS), dims=list(E.DIMS), reviews=review_out,
+        payload = dict(rescued_sample=self.rescued_sample, sids=self.sids, ff12_names=ff_names, bits=list(E.BITS), dims=list(E.DIMS), reviews=review_out,
                        regimes=regimes, sectors=sectors, weekly=weekly, duplicates=dq_dup,
                        candidates_ever_75=len(cand_ever))
         blob = E.pack(json.dumps(payload, sort_keys=True, separators=(",", ":")))

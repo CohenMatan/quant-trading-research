@@ -3,6 +3,7 @@
 # qresearch.p7score) on point-in-time inputs; nothing here changes a score definition. NO RETURN of any kind is computed
 # or exported: the only price quantities are the frozen score's own features at each decision session.
 import base64
+import datetime as _dt
 import math
 import zlib
 
@@ -15,7 +16,13 @@ SPAN = 420                 # calendar rows handed to technical_inputs (exactness
 # disqualifier / status bits of an exported row (raw flags: H6 / H7 are evaluated for every stock with the inputs,
 # so overlaps can be counted; the frozen score applies them only to the data-scorable set)
 BITS = ("H1_financial", "H1_no_sic", "H2", "H3", "H4", "H5", "H6", "H7", "duplicate_class", "H2_baseline_only",
-        "baseline_in_store")
+        "baseline_in_store",
+        # P7-CP3R (D173): store-wide revenue baseline
+        "rescued", "baseline_life_reject", "baseline_cik_reject", "listed_lt_1y_at_baseline", "H2_old_rule",
+        "alt_class_scored")
+REASON_SHIFT = 20          # bits 20-22: why a rescued stock was outside the eligible universe at the baseline review
+REASONS = {0: "eligible", 1: "not in QuantConnect's universe list", 2: "market cap < $2B", 3: "price < $5",
+           4: "ADV20 < $5M or < 20 days of ADV history", 5: "not US common stock / exchange", 6: "unknown"}
 BIT = {b: 1 << i for i, b in enumerate(BITS)}
 DIMS = ("trend", "momentum", "risk", "profitability", "cash_conversion", "balance_sheet", "growth", "sector")
 FUND_BASES = ("revenue", "gross_profit", "net_income", "operating_cash_flow")
@@ -67,6 +74,55 @@ def fund_inputs(vals, rev_prev):
     return fi, why, base_only
 
 
+# ----------------------------------------------------------------------------------------------- revenue baseline
+class RevenueLedger:
+    """P7-CP3R (D173): the company PIT revenue True TTM recorded LIVE at every month-end review for every company in
+    the PIT store (not only eligible ones). Keyed by the (year, month) of the review session; each value is what the
+    frozen store returned on the selection day reflecting that session, with its quarter period ends / filing dates
+    (date ordinals) for audit. Values are never recomputed later, so later filings cannot alter them."""
+
+    def __init__(self):
+        self.v = {}            # (y, m) -> {sid: (value, (period end ordinals), (filed ordinals))}
+        self.day = {}          # (y, m) -> (review session date, selection date)
+
+    def record(self, ym, session, today, store, sids):
+        d = {}
+        for sid in sids:
+            v, det = store.ttm_detail(sid, "revenue", today)
+            if v is not None:
+                d[sid] = (v, tuple(_ord(x) for x in det["quarters"]), tuple(_ord(x) for x in det["filed"]))
+        self.v[ym] = d
+        self.day[ym] = (session, today)
+
+    def prior(self, ym):
+        return (ym[0] - 1, ym[1])
+
+    def baseline(self, ym, sid):
+        """(value, detail, (session, selection day)) recorded at the review 12 months earlier, or (None, None, day)."""
+        p = self.prior(ym)
+        x = self.v.get(p, {}).get(sid)
+        return (x[0], x, self.day.get(p)) if x else (None, None, self.day.get(p))
+
+    def drop(self, ym):
+        self.v.pop(ym, None)
+
+
+def _ord(iso):
+    y, m, d = (int(t) for t in str(iso)[:10].split("-"))
+    return _dt.date(y, m, d).toordinal()
+
+
+def baseline_check(life_start_row, base_row, cik_base, cik_now):
+    """Same-company continuity of a store-wide revenue baseline: the security's current price life must have started
+    on or before the baseline review session (security-life rule, D167), and the SEC registrant CIK (PIT SIC table) must
+    not differ where it is known at both dates. Returns (ok, reason)."""
+    if life_start_row is None or base_row is None or life_start_row > base_row:
+        return False, "life"
+    if cik_base is not None and cik_now is not None and cik_base != cik_now:
+        return False, "cik"
+    return True, ""
+
+
 # ----------------------------------------------------------------------------------------------- one review
 def sic_bits(sic):
     if sic is None:
@@ -97,6 +153,24 @@ def score_review(elig, state200, tech, ff12):
         techs[s] = ti
         stocks[s] = dict(ff12=grp[s], sic=e["sic"], tech=ti, contaminated=cont, fund=e["fund"])
     rec = S.score_date(stocks, ctx)
+    # P7-CP3R (D173): score each non-chosen class of a multi-class company with that class substituted (same ranking
+    # population otherwise); used only to keep an already-held class (owner rule 23)
+    alt = {}
+    groups = {}
+    for s_, e in elig.items():
+        if e["cik"] is not None:
+            groups.setdefault(e["cik"], []).append(s_)
+    for cik, mem in sorted(groups.items()):
+        if len(mem) < 2:
+            continue
+        chosen = [m for m in mem if m in kept]
+        for a in sorted(m for m in mem if m not in kept):
+            st2 = {k: v for k, v in stocks.items() if k not in chosen}
+            e = elig[a]
+            ti, cont = tech(a)[:2]
+            techs[a] = ti
+            st2[a] = dict(ff12=grp[a], sic=e["sic"], tech=ti, contaminated=cont, fund=e["fund"])
+            alt[a] = S.score_date(st2, ctx)[a]
     rows = {}
     for s, e in elig.items():
         bits = sic_bits(e["sic"])
@@ -104,10 +178,19 @@ def score_review(elig, state200, tech, ff12):
             bits |= BIT["H2_baseline_only"]
         if e.get("base_store"):
             bits |= BIT["baseline_in_store"]
+        for b in ("rescued", "baseline_life_reject", "baseline_cik_reject", "listed_lt_1y_at_baseline", "H2_old_rule"):
+            if e.get(b):
+                bits |= BIT[b]
+        bits |= int(e.get("reason", 0)) << REASON_SHIFT
         if s not in kept:
-            rows[s] = (bits | BIT["duplicate_class"], None, None)
-            continue
-        r = rec[s]
+            bits |= BIT["duplicate_class"]
+            if s not in alt:
+                rows[s] = (bits, None, None)
+                continue
+            bits |= BIT["alt_class_scored"]
+            r = alt[s]
+        else:
+            r = rec[s]
         ti, fi = techs[s], e["fund"][0]
         for code, b in (("H2", "H2_fundamentals_missing_or_stale"), ("H3", "H3_insufficient_history"),
                         ("H4", "H4_corporate_event_contamination"), ("H5", "H5_stale_price")):
@@ -124,7 +207,7 @@ def score_review(elig, state200, tech, ff12):
         else:
             rows[s] = (bits, None, None)
     return dict(records=rec, context=ctx, sectors=sect, breadth=(mb if known else None, up, known, n_el),
-                rows=rows, kept=kept)
+                rows=rows, kept=kept, alt=alt)
 
 
 def eligible_flag(bits, total):
