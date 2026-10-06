@@ -1,0 +1,186 @@
+{
+ "c_ic": 2.390976216956,
+ "code_sha256": {
+  "research/hypotheses/H022.md": "54683a81ae334cc5babf584b6cde46e8b2200aa34944e910f5b3bb3a67b7158a",
+  "research/phase7/P7_CP5_result_template.md": "ffd3ffeb8c233bca982a066e210be88d7593198ccaf1866b6dc829c572198cf9",
+  "research/phase7/P7_power.json": "f45d5145322f314b711c3a58ddb2e87ea89d5651ed47e0628b32c2dd4bac4c40",
+  "research/phase7/P7_power.py": "17952573cbad5874b3d6e8a5cd7c2e4fd64d8a53ca7ece11489eb053c8aeea3b",
+  "src/qresearch/lean/qr_fundamentals.py": "0774343f24820ce4d847e27299107f2218f1a536184fb6d51db6e8f8c6106907",
+  "src/qresearch/lean/qr_h020_stats.py": "426d37218f8a27707a2b18e8e99559555d03a1e36ff0ddb499d92df4a676b049",
+  "src/qresearch/lean/qr_p7.py": "86abb2b2e9284f1dfaa89bddb6a57d354d399b3069822be8b8efb80dcb04bb5a",
+  "src/qresearch/lean/qr_p7_export.py": "40e1410ef00a7e1cc610dc823561efe81530264e199c535022cda13c4eef203c",
+  "src/qresearch/lean/qr_p7_mech.py": "838ffce8d9ab5fd37eb9392d4395153b7da46aaa3ce982ec66fae8cafa9bc726",
+  "src/qresearch/lean/qr_p7_pred.py": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "src/qresearch/lean/qr_p7_score.py": "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572",
+  "src/qresearch/lean/qr_xs.py": "bd69bc6ae5e0598eebdb75114cfc0b740469cc545a2a25952174f56cd98b4358",
+  "src/qresearch/lean/qr_xs_panel.py": "4dd5f6df09d9cad383065aca0f6a0350ed85ca40bfb081102b769d77a3c539b0",
+  "strategies/X993_p7_score_mechanics_export/main.py": "912d841f1d1df36f86c3f5fae7498565dcb54266e3147e8c585958255e3fbe9e",
+  "tests/test_p7_cp3r.py": "912861b07ea2fb525b5fb54c9cc269078d9d740f48840218d205b0fc2aa0727c",
+  "tests/test_p7_pred.py": "e1c070bcc08897e13460be441653c98fdddaa01f9646c48d0eb822560ac6be0c"
+ },
+ "empirical_threshold": 2.390976216956,
+ "false_promotion": 0.0014,
+ "floor": 2.326,
+ "floor_binding": false,
+ "gate_definition": "qr_p7_pred.promotion: G1 t_IC > c_IC and mean IC > 0; G2 80+ >= +3.0%/yr; G3 Spearman >= 0.90 and Q5 > Q1; G4 both halves > 0 and largest block share <= 50%; all four required",
+ "gate_pass_counts": {
+  "G1_significant": 49,
+  "G2_economic": 1284,
+  "G3_monotonic": 277,
+  "G4_stable": 312,
+  "pass": 7
+ },
+ "gate_pass_shares": {
+  "G1_significant": 0.0098,
+  "G2_economic": 0.2568,
+  "G3_monotonic": 0.0554,
+  "G4_stable": 0.0624,
+  "pass": 0.0014
+ },
+ "host_sha256": "8f4d6076caca6b56188a21be5c1bb065b535d97fbcbb9db69c45a034296e65fb",
+ "integrity": {
+  "completed": 5000,
+  "duplicate_seeds": 0,
+  "failed": 0,
+  "finite_t_ic": 5000,
+  "identical_panel_all_batches": true,
+  "module_all": true,
+  "panel_equals_canary": true,
+  "recovered_runs": [],
+  "requested": 5000,
+  "retried": 0,
+  "seeds_exact": true,
+  "spec_all": true
+ },
+ "null_t_ic": {
+  "max": 3.66327570660982,
+  "mean": 0.19507832963726274,
+  "min": -3.0272654565966297,
+  "p50": 0.20029961469911184,
+  "p90": 1.3908426375554335,
+  "p95": 1.7134284075080612,
+  "p99": 2.3896030376850894,
+  "p995": 2.5826341202173304,
+  "rank50": 2.390976216956,
+  "rank51": 2.389589167187403,
+  "sd": 0.9270298010819354
+ },
+ "null_t_inc": {
+  "mean": -0.18578313660271492,
+  "p95": 1.4812314257660497,
+  "p99": 2.1796407297994818,
+  "sd": 1.020024102099654
+ },
+ "other": {
+  "hi_ann_mean": 0.0025236769306468524,
+  "hi_months_mean": 81.0,
+  "mono_ge_090": 0.0554
+ },
+ "runs": [
+  {
+   "commit": null,
+   "complete": true,
+   "decisions": 83,
+   "experiment": "E023-01",
+   "max_rss_mb": 6493.3,
+   "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+   "qc_backtest_id": null,
+   "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+   "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+   "seeds": [
+    1,
+    1000
+   ],
+   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+   "uploaded_ok": true,
+   "wall_s": 627.3,
+   "world_s": 63.8,
+   "worlds": 1000
+  },
+  {
+   "commit": null,
+   "complete": true,
+   "decisions": 83,
+   "experiment": "E023-02",
+   "max_rss_mb": 6439.0,
+   "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+   "qc_backtest_id": null,
+   "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+   "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+   "seeds": [
+    1001,
+    2000
+   ],
+   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+   "uploaded_ok": true,
+   "wall_s": 733.4,
+   "world_s": 72.8,
+   "worlds": 1000
+  },
+  {
+   "commit": null,
+   "complete": true,
+   "decisions": 83,
+   "experiment": "E023-03",
+   "max_rss_mb": 6390.8,
+   "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+   "qc_backtest_id": null,
+   "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+   "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+   "seeds": [
+    2001,
+    3000
+   ],
+   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+   "uploaded_ok": true,
+   "wall_s": 709.6,
+   "world_s": 65.8,
+   "worlds": 1000
+  },
+  {
+   "commit": null,
+   "complete": true,
+   "decisions": 83,
+   "experiment": "E023-04",
+   "max_rss_mb": 6503.3,
+   "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+   "qc_backtest_id": null,
+   "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+   "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+   "seeds": [
+    3001,
+    4000
+   ],
+   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+   "uploaded_ok": true,
+   "wall_s": 672.5,
+   "world_s": 70.3,
+   "worlds": 1000
+  },
+  {
+   "commit": null,
+   "complete": true,
+   "decisions": 83,
+   "experiment": "E023-05",
+   "max_rss_mb": 6182.9,
+   "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+   "qc_backtest_id": null,
+   "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+   "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+   "seeds": [
+    4001,
+    5000
+   ],
+   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+   "uploaded_ok": true,
+   "wall_s": 698.8,
+   "world_s": 70.1,
+   "worlds": 1000
+  }
+ ],
+ "seed_definition": "null world w uses numpy default_rng(w) in qr_p7_pred.Tether; w = 1..5,000 (E023-01 1-1000 ... E023-05 4001-5000)",
+ "share_t_ic_above_c": 0.0098,
+ "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+ "worlds_file_sha256": "8f32708d3cc2debf35dad912d655e324c9f09022a9292f7b4a9329dab47a5a57",
+ "worlds_json_sha256": "fcbaa66ea90999ac18872d3e59bd1a2c68c2da4005f25777c0331616fc5a6021"
+}

@@ -1,5 +1,5 @@
 """P7-CP4 (D175): the frozen predictive-test specification, the score / mechanics / null / power code and the tests it
-names are hash-pinned, and the code carries exactly the pinned constants; c_IC is not pinned yet (no real run)."""
+names are hash-pinned, and the code carries exactly the pinned constants; c_IC is pinned from the committed null before the one real run (D179)."""
 import qr_p7_mech as M
 import qr_p7_pred as R
 from qresearch import p7pred, p7score
@@ -28,9 +28,21 @@ def test_d177_wording_only_correction():
     assert "maximises independent observations" not in (config.REPO_ROOT / p7pred.SPEC).read_text()
 
 
-def test_no_real_threshold_pinned_yet():
-    assert p7pred.C_IC is None and p7pred.NULL_RESULT_SHA256 is None and p7pred.THRESHOLD_COMMIT is None
-    assert p7pred.PANEL_SHA256 is None
+def test_null_threshold_pinned_before_the_real_run():
+    """P7-CP5 (D179): c_IC = max(50th largest of the 5,000 committed null t_IC, 2.326), pinned with the null result hash
+    and the prepared-panel digest BEFORE the one real evaluation E023-06."""
+    import gzip
+    import json
+
+    from qresearch import config
+    root = config.REPO_ROOT
+    assert p7pred.sha256(p7pred.NULL_RESULT) == p7pred.NULL_RESULT_SHA256
+    null = json.loads((root / p7pred.NULL_RESULT).read_text())
+    worlds = json.loads(gzip.open(root / p7pred.NULL_WORLDS).read())
+    assert len(worlds) == 5000 and [w["seed"] for w in worlds] == list(p7pred.NULL_SEEDS)
+    assert R.critical_value(worlds) == p7pred.C_IC == null["c_ic"]
+    assert null["integrity"]["identical_panel_all_batches"] and null["integrity"]["panel_equals_canary"]
+    assert null["runs"][0]["panel_sha256"] == p7pred.PANEL_SHA256
 
 
 def test_execution_host_pinned():
