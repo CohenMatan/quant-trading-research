@@ -121,6 +121,10 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_xs.py" not in files:
             raise experiment.ConfigError("H020 modules need qr_xs.py (imported by qr_h020_stats)")
+    if "qr_p7" in files["main.py"]:
+        # Phase 7 data / fidelity audit helpers (P7-CP1, D165)
+        rel = "src/qresearch/lean/qr_p7.py"
+        files["qr_p7.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     if "qr_h021" in files["main.py"]:
         # H021-A sector relative-momentum module (frozen, hash-pinned in qresearch.p6h021); the panel helpers come
         # from qr_xs_panel (uploaded above with the qr_xs modules)

@@ -219,6 +219,16 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                       "addendum_sha256, chart_panel_sha256)")
             else:
                 raise ConfigError("S021 modes: null or real")
+    if cfg["strategy_id"] in ("X991", "X992"):
+        # P7-CP1 data / fidelity audits (owner 2026-10-06, D165): infrastructure only, the frozen data-v1 universe,
+        # 2010-01-04..2017-12-31 with the history-only warm-up from 2008-07-01; never 2018+ (no returns, no score)
+        u = cfg["universe"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2010-01-04", "2017-12-31", "2008-07-01")
+                or kind != "infrastructure" or not u.get("sec_corrections")
+                or float(u.get("min_market_cap", 0)) != 2e9 or float(u.get("min_price", 0)) != 5.0
+                or float(u.get("min_avg_dollar_volume", 0)) != 5e6 or int(u.get("adv_days", 0)) != 20):
+            raise ConfigError("P7-CP1 audits are infrastructure runs on 2010-01-04..2017-12-31 (warm-up 2008-07-01) "
+                              "with the data-v1 universe")
     if cfg["strategy_id"] in ("X989", "S022"):
         # H021-A (research/phase6/H021A_spec.md v1; owner 2026-10-06, D160): a non-trading one-month host that reads
         # history 1998-12-01 .. 2017-12-31 only; X989 = the fidelity canary; S022 = null batches (infrastructure) and

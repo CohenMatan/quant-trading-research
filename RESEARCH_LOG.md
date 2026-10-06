@@ -1529,3 +1529,32 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Untouched:** no tuning, no other lookback, no H021-B, no portfolio, no 2018–2021, Holdout locked, nothing purchased.
 
 **STOP:** awaiting the owner (recommendation: close H021-A and Phase 6).
+
+## 2026-10-06: Phase 6 closed; P7-CP1 Multi-Factor Conviction Score data & fidelity readiness audit; STOP (D165–D168)
+
+- **Owner (D165):** H021-A rejected and Phase 6 closed. Phase 7 = a multi-factor stock conviction score (technical + fundamental + sector per stock; the market regime controls exposure). P7-CP1 = a data / point-in-time / fidelity / feasibility audit only.
+- **Audits** (infrastructure; 2010–2017; no returns, no score):
+  - X991: fundamentals, universe, sector, alignment (E991-01, E991-02);
+  - X992: prices, technical features, breadth, corporate actions (E992-01, E992-02, E992-03);
+  - an SEC sample check;
+  - 18 new offline tests (feature fidelity, leakage canaries, host pipelines).
+- **Results:**
+  - technical features recomputed independently: 380/380 agree;
+  - fundamental leakage checks all 0; 0 of 268 sampled records usable before the SEC filing;
+  - non-financial full-core fundamental coverage 77–89%;
+  - SEC SIC sector ≥ 92% from 2011; Morningstar sector codes are current-status;
+  - breadth computable without survivorship bias (survivors-only would err by up to 3.2 points);
+  - cross-domain alignment: 0 violations.
+- **Defects:**
+  - re-used ticker ids joining two companies → security-life rule (D167);
+  - corporate-event mis-adjustments → disqualifier needed;
+  - blank Morningstar company id;
+  - duplicate share classes;
+  - 2 unexplained moves.
+
+  No earlier result is affected or re-run.
+- **Mechanical development window:** 2011-01 → 2017-12.
+- **Verdict:** READY TO DESIGN SCORE.
+
+**STOP:** awaiting the owner (P7-CP1 item 40).
+

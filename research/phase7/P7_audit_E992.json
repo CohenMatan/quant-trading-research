@@ -1,0 +1,8995 @@
+{
+ "alignment_price": [
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-02-01",
+   "late": [],
+   "nbars_panel": 776,
+   "ok": true,
+   "sid": "MRO R735QTJ8XC9X",
+   "t": "2010-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2010-02-01",
+   "late": [],
+   "nbars_panel": 776,
+   "ok": true,
+   "sid": "WYNN SJ56738TCX9H",
+   "t": "2010-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2010-02-01",
+   "late": [],
+   "nbars_panel": 776,
+   "ok": true,
+   "sid": "ALV R735QTJ8XC9X",
+   "t": "2010-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-02-01",
+   "late": [],
+   "nbars_panel": 776,
+   "ok": true,
+   "sid": "NTAP R735QTJ8XC9X",
+   "t": "2010-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-03-01",
+   "late": [],
+   "nbars_panel": 795,
+   "ok": true,
+   "sid": "NRG SXA8BFD2WZ8L",
+   "t": "2010-03-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-03-01",
+   "late": [],
+   "nbars_panel": 795,
+   "ok": true,
+   "sid": "TEX R735QTJ8XC9X",
+   "t": "2010-03-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-03-01",
+   "late": [],
+   "nbars_panel": 648,
+   "ok": true,
+   "sid": "CXO TUTEE1U0PY05",
+   "t": "2010-03-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-03-01",
+   "late": [],
+   "nbars_panel": 795,
+   "ok": true,
+   "sid": "GPN S1VV43FB2UZP",
+   "t": "2010-03-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-03-31",
+   "late": [],
+   "nbars_panel": 817,
+   "ok": true,
+   "sid": "AFL R735QTJ8XC9X",
+   "t": "2010-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-03-31",
+   "late": [],
+   "nbars_panel": 817,
+   "ok": true,
+   "sid": "SON R735QTJ8XC9X",
+   "t": "2010-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-03-31",
+   "late": [],
+   "nbars_panel": 817,
+   "ok": true,
+   "sid": "TWTC RKMK13LSSSPX",
+   "t": "2010-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-03-31",
+   "late": [],
+   "nbars_panel": 817,
+   "ok": true,
+   "sid": "NTLI SLBXYKIBHA3P",
+   "t": "2010-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-04-30",
+   "late": [],
+   "nbars_panel": 838,
+   "ok": true,
+   "sid": "WCRX TM694I8OJJAD",
+   "t": "2010-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-04-30",
+   "late": [],
+   "nbars_panel": 838,
+   "ok": true,
+   "sid": "PSC R735QTJ8XC9X",
+   "t": "2010-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-04-30",
+   "late": [],
+   "nbars_panel": 838,
+   "ok": true,
+   "sid": "BK R735QTJ8XC9X",
+   "t": "2010-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-04-30",
+   "late": [],
+   "nbars_panel": 838,
+   "ok": true,
+   "sid": "OII R735QTJ8XC9X",
+   "t": "2010-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 6,
+   "last_bar": "2010-06-01",
+   "late": [],
+   "nbars_panel": 859,
+   "ok": true,
+   "sid": "DDR R735QTJ8XC9X",
+   "t": "2010-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-06-01",
+   "late": [],
+   "nbars_panel": 859,
+   "ok": true,
+   "sid": "SLB R735QTJ8XC9X",
+   "t": "2010-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-06-01",
+   "late": [],
+   "nbars_panel": 859,
+   "ok": true,
+   "sid": "CVS R735QTJ8XC9X",
+   "t": "2010-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-06-01",
+   "late": [],
+   "nbars_panel": 859,
+   "ok": true,
+   "sid": "STI R735QTJ8XC9X",
+   "t": "2010-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2010-06-30",
+   "late": [],
+   "nbars_panel": 880,
+   "ok": true,
+   "sid": "EXPE TB0IQCZTBPT1",
+   "t": "2010-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2010-06-30",
+   "late": [],
+   "nbars_panel": 880,
+   "ok": true,
+   "sid": "DV R735QTJ8XC9X",
+   "t": "2010-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-06-30",
+   "late": [],
+   "nbars_panel": 880,
+   "ok": true,
+   "sid": "EMR R735QTJ8XC9X",
+   "t": "2010-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-06-30",
+   "late": [],
+   "nbars_panel": 880,
+   "ok": true,
+   "sid": "NFG R735QTJ8XC9X",
+   "t": "2010-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-08-02",
+   "late": [],
+   "nbars_panel": 902,
+   "ok": true,
+   "sid": "QGENF R735QTJ8XC9X",
+   "t": "2010-08-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-08-02",
+   "late": [],
+   "nbars_panel": 902,
+   "ok": true,
+   "sid": "ROST R735QTJ8XC9X",
+   "t": "2010-08-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-08-02",
+   "late": [],
+   "nbars_panel": 902,
+   "ok": true,
+   "sid": "PMTC R735QTJ8XC9X",
+   "t": "2010-08-02"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2010-08-02",
+   "late": [],
+   "nbars_panel": 902,
+   "ok": true,
+   "sid": "MET RTMI3UYBZ0IT",
+   "t": "2010-08-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-08-31",
+   "late": [],
+   "nbars_panel": 923,
+   "ok": true,
+   "sid": "PCP R735QTJ8XC9X",
+   "t": "2010-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-08-31",
+   "late": [],
+   "nbars_panel": 923,
+   "ok": true,
+   "sid": "UPL S1I2USAY0AQT",
+   "t": "2010-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-08-31",
+   "late": [],
+   "nbars_panel": 923,
+   "ok": true,
+   "sid": "ALL R735QTJ8XC9X",
+   "t": "2010-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 6,
+   "last_bar": "2010-08-31",
+   "late": [],
+   "nbars_panel": 799,
+   "ok": true,
+   "sid": "TEL TTXW324M9SV9",
+   "t": "2010-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-09-30",
+   "late": [],
+   "nbars_panel": 944,
+   "ok": true,
+   "sid": "RJR RLK18A1JEG6D",
+   "t": "2010-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-09-30",
+   "late": [],
+   "nbars_panel": 944,
+   "ok": true,
+   "sid": "UNP R735QTJ8XC9X",
+   "t": "2010-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2010-09-30",
+   "late": [],
+   "nbars_panel": 944,
+   "ok": true,
+   "sid": "NOI R735QTJ8XC9X",
+   "t": "2010-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-09-30",
+   "late": [],
+   "nbars_panel": 944,
+   "ok": true,
+   "sid": "PRGO R735QTJ8XC9X",
+   "t": "2010-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-01",
+   "late": [],
+   "nbars_panel": 966,
+   "ok": true,
+   "sid": "NSM R735QTJ8XC9X",
+   "t": "2010-11-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-01",
+   "late": [],
+   "nbars_panel": 966,
+   "ok": true,
+   "sid": "NEM R735QTJ8XC9X",
+   "t": "2010-11-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-01",
+   "late": [],
+   "nbars_panel": 966,
+   "ok": true,
+   "sid": "AMAT R735QTJ8XC9X",
+   "t": "2010-11-01"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2010-11-01",
+   "late": [],
+   "nbars_panel": 966,
+   "ok": true,
+   "sid": "LNCR R735QTJ8XC9X",
+   "t": "2010-11-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-30",
+   "late": [],
+   "nbars_panel": 986,
+   "ok": true,
+   "sid": "CINF R735QTJ8XC9X",
+   "t": "2010-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-30",
+   "late": [],
+   "nbars_panel": 986,
+   "ok": true,
+   "sid": "QCSB R735QTJ8XC9X",
+   "t": "2010-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-11-30",
+   "late": [],
+   "nbars_panel": 986,
+   "ok": true,
+   "sid": "BAX R735QTJ8XC9X",
+   "t": "2010-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2010-11-30",
+   "late": [],
+   "nbars_panel": 986,
+   "ok": true,
+   "sid": "CVTY R735QTJ8XC9X",
+   "t": "2010-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-12-31",
+   "late": [],
+   "nbars_panel": 1008,
+   "ok": true,
+   "sid": "EOG R735QTJ8XC9X",
+   "t": "2010-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-12-31",
+   "late": [],
+   "nbars_panel": 1008,
+   "ok": true,
+   "sid": "ETR R735QTJ8XC9X",
+   "t": "2010-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2010-12-31",
+   "late": [],
+   "nbars_panel": 1008,
+   "ok": true,
+   "sid": "IEI R735QTJ8XC9X",
+   "t": "2010-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2010-12-31",
+   "late": [],
+   "nbars_panel": 1008,
+   "ok": true,
+   "sid": "BMR T0Y67YDP62QT",
+   "t": "2010-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-01-31",
+   "late": [],
+   "nbars_panel": 1028,
+   "ok": true,
+   "sid": "EMC R735QTJ8XC9X",
+   "t": "2011-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2011-01-31",
+   "late": [],
+   "nbars_panel": 1028,
+   "ok": true,
+   "sid": "DHC R735QTJ8XC9X",
+   "t": "2011-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-01-31",
+   "late": [],
+   "nbars_panel": 1028,
+   "ok": true,
+   "sid": "AZO R735QTJ8XC9X",
+   "t": "2011-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-01-31",
+   "late": [],
+   "nbars_panel": 1028,
+   "ok": true,
+   "sid": "SNA R735QTJ8XC9X",
+   "t": "2011-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-02-28",
+   "late": [],
+   "nbars_panel": 827,
+   "ok": true,
+   "sid": "MXB TXNSVRVKOEP1",
+   "t": "2011-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-02-28",
+   "late": [],
+   "nbars_panel": 1047,
+   "ok": true,
+   "sid": "LBTYA SZC2UFSQNK9X",
+   "t": "2011-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-02-28",
+   "late": [],
+   "nbars_panel": 1047,
+   "ok": true,
+   "sid": "VLY R735QTJ8XC9X",
+   "t": "2011-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-02-28",
+   "late": [],
+   "nbars_panel": 1047,
+   "ok": true,
+   "sid": "TWRS RDBNO4XQDCV9",
+   "t": "2011-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-03-31",
+   "late": [],
+   "nbars_panel": 1070,
+   "ok": true,
+   "sid": "FRT R735QTJ8XC9X",
+   "t": "2011-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-03-31",
+   "late": [],
+   "nbars_panel": 1070,
+   "ok": true,
+   "sid": "QGENF R735QTJ8XC9X",
+   "t": "2011-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-03-31",
+   "late": [],
+   "nbars_panel": 1070,
+   "ok": true,
+   "sid": "WLK T133GF7JJUJP",
+   "t": "2011-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-03-31",
+   "late": [],
+   "nbars_panel": 1070,
+   "ok": true,
+   "sid": "MAR R9GTMYCXKZ8L",
+   "t": "2011-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-05-02",
+   "late": [],
+   "nbars_panel": 1091,
+   "ok": true,
+   "sid": "SLB R735QTJ8XC9X",
+   "t": "2011-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-05-02",
+   "late": [],
+   "nbars_panel": 1091,
+   "ok": true,
+   "sid": "SIGYY R735QTJ8XC9X",
+   "t": "2011-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-05-02",
+   "late": [],
+   "nbars_panel": 660,
+   "ok": true,
+   "sid": "DISCK U632KKJK8S4L",
+   "t": "2011-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-05-02",
+   "late": [],
+   "nbars_panel": 1091,
+   "ok": true,
+   "sid": "VMC R735QTJ8XC9X",
+   "t": "2011-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-05-31",
+   "late": [],
+   "nbars_panel": 1111,
+   "ok": true,
+   "sid": "MCHP R735QTJ8XC9X",
+   "t": "2011-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-05-31",
+   "late": [],
+   "nbars_panel": 1111,
+   "ok": true,
+   "sid": "ITW R735QTJ8XC9X",
+   "t": "2011-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-05-31",
+   "late": [],
+   "nbars_panel": 1111,
+   "ok": true,
+   "sid": "GS RKEOGCOG6RFP",
+   "t": "2011-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2011-05-31",
+   "late": [],
+   "nbars_panel": 1111,
+   "ok": true,
+   "sid": "EL R735QTJ8XC9X",
+   "t": "2011-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2011-06-30",
+   "late": [],
+   "nbars_panel": 1133,
+   "ok": true,
+   "sid": "EXPD R735QTJ8XC9X",
+   "t": "2011-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-06-30",
+   "late": [],
+   "nbars_panel": 1133,
+   "ok": true,
+   "sid": "GNWR R735QTJ8XC9X",
+   "t": "2011-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-06-30",
+   "late": [],
+   "nbars_panel": 1133,
+   "ok": true,
+   "sid": "WPO R735QTJ8XC9X",
+   "t": "2011-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-06-30",
+   "late": [],
+   "nbars_panel": 1133,
+   "ok": true,
+   "sid": "KMX SIHJGUGRITET",
+   "t": "2011-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-08-01",
+   "late": [],
+   "nbars_panel": 1154,
+   "ok": true,
+   "sid": "OC TNAMGC8LOGV9",
+   "t": "2011-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-08-01",
+   "late": [],
+   "nbars_panel": 1154,
+   "ok": true,
+   "sid": "NST ROEFQ033CWV9",
+   "t": "2011-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-08-01",
+   "late": [],
+   "nbars_panel": 1154,
+   "ok": true,
+   "sid": "RAH R735QTJ8XC9X",
+   "t": "2011-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2011-08-01",
+   "late": [],
+   "nbars_panel": 1154,
+   "ok": true,
+   "sid": "DLTR R735QTJ8XC9X",
+   "t": "2011-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-08-31",
+   "late": [],
+   "nbars_panel": 1176,
+   "ok": true,
+   "sid": "ATR R735QTJ8XC9X",
+   "t": "2011-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2011-08-31",
+   "late": [],
+   "nbars_panel": 1176,
+   "ok": true,
+   "sid": "CTAS R735QTJ8XC9X",
+   "t": "2011-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-08-31",
+   "late": [],
+   "nbars_panel": 1176,
+   "ok": true,
+   "sid": "VAL R735QTJ8XC9X",
+   "t": "2011-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2011-08-31",
+   "late": [],
+   "nbars_panel": 1176,
+   "ok": true,
+   "sid": "DECK R735QTJ8XC9X",
+   "t": "2011-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-09-30",
+   "late": [],
+   "nbars_panel": 1197,
+   "ok": true,
+   "sid": "CYN R735QTJ8XC9X",
+   "t": "2011-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-09-30",
+   "late": [],
+   "nbars_panel": 1197,
+   "ok": true,
+   "sid": "AVP R735QTJ8XC9X",
+   "t": "2011-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-09-30",
+   "late": [],
+   "nbars_panel": 1197,
+   "ok": true,
+   "sid": "MSFT R735QTJ8XC9X",
+   "t": "2011-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-09-30",
+   "late": [],
+   "nbars_panel": 1197,
+   "ok": true,
+   "sid": "CCK R735QTJ8XC9X",
+   "t": "2011-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2011-10-31",
+   "late": [],
+   "nbars_panel": 1218,
+   "ok": true,
+   "sid": "STX SKFG7HFQYDT1",
+   "t": "2011-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-10-31",
+   "late": [],
+   "nbars_panel": 1218,
+   "ok": true,
+   "sid": "BA R735QTJ8XC9X",
+   "t": "2011-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2011-10-31",
+   "late": [],
+   "nbars_panel": 1218,
+   "ok": true,
+   "sid": "HOT THORT68ZZSYT",
+   "t": "2011-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-10-31",
+   "late": [],
+   "nbars_panel": 1096,
+   "ok": true,
+   "sid": "PPO TTTYAONXYS85",
+   "t": "2011-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2011-11-30",
+   "late": [],
+   "nbars_panel": 1239,
+   "ok": true,
+   "sid": "CMP SUFTTPBIYIJP",
+   "t": "2011-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-11-30",
+   "late": [],
+   "nbars_panel": 1239,
+   "ok": true,
+   "sid": "LBTYA SZC2UFSQNK9X",
+   "t": "2011-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2011-11-30",
+   "late": [],
+   "nbars_panel": 1239,
+   "ok": true,
+   "sid": "TIBX RMCL6ZNFMBTX",
+   "t": "2011-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2011-11-30",
+   "late": [],
+   "nbars_panel": 1239,
+   "ok": true,
+   "sid": "CL R735QTJ8XC9X",
+   "t": "2011-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-01-03",
+   "late": [],
+   "nbars_panel": 1261,
+   "ok": true,
+   "sid": "BKD TDVWO6EJCXNP",
+   "t": "2012-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-01-03",
+   "late": [],
+   "nbars_panel": 1261,
+   "ok": true,
+   "sid": "CMS R735QTJ8XC9X",
+   "t": "2012-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2012-01-03",
+   "late": [],
+   "nbars_panel": 1261,
+   "ok": true,
+   "sid": "LXK R735QTJ8XC9X",
+   "t": "2012-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2012-01-03",
+   "late": [],
+   "nbars_panel": 535,
+   "ok": true,
+   "sid": "FTNT UHQJ0EDGU6HX",
+   "t": "2012-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-01-31",
+   "late": [],
+   "nbars_panel": 1280,
+   "ok": true,
+   "sid": "GRA R9PONSNG9ROL",
+   "t": "2012-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-01-31",
+   "late": [],
+   "nbars_panel": 1280,
+   "ok": true,
+   "sid": "NVP R735QTJ8XC9X",
+   "t": "2012-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-01-31",
+   "late": [],
+   "nbars_panel": 1280,
+   "ok": true,
+   "sid": "EAT R735QTJ8XC9X",
+   "t": "2012-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2012-01-31",
+   "late": [],
+   "nbars_panel": 1280,
+   "ok": true,
+   "sid": "EXPD R735QTJ8XC9X",
+   "t": "2012-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-02-29",
+   "late": [],
+   "nbars_panel": 1300,
+   "ok": true,
+   "sid": "CPRT R735QTJ8XC9X",
+   "t": "2012-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 9,
+   "last_bar": "2012-02-29",
+   "late": [],
+   "nbars_panel": 1300,
+   "ok": true,
+   "sid": "SUN R735QTJ8XC9X",
+   "t": "2012-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-02-29",
+   "late": [],
+   "nbars_panel": 1300,
+   "ok": true,
+   "sid": "MCD R735QTJ8XC9X",
+   "t": "2012-02-29"
+  },
+  {
+   "bars": 264,
+   "events": 4,
+   "last_bar": "2012-02-29",
+   "late": [],
+   "nbars_panel": 264,
+   "ok": true,
+   "sid": "KMI UU1M6GZF9OPX",
+   "t": "2012-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-04-02",
+   "late": [],
+   "nbars_panel": 1323,
+   "ok": true,
+   "sid": "FDO R735QTJ8XC9X",
+   "t": "2012-04-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-04-02",
+   "late": [],
+   "nbars_panel": 1323,
+   "ok": true,
+   "sid": "CDN R735QTJ8XC9X",
+   "t": "2012-04-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-04-02",
+   "late": [],
+   "nbars_panel": 1323,
+   "ok": true,
+   "sid": "NBCP RA1I0X1H6TLX",
+   "t": "2012-04-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-04-02",
+   "late": [],
+   "nbars_panel": 1323,
+   "ok": true,
+   "sid": "IIN R735QTJ8XC9X",
+   "t": "2012-04-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-04-30",
+   "late": [],
+   "nbars_panel": 1342,
+   "ok": true,
+   "sid": "ECL R735QTJ8XC9X",
+   "t": "2012-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-04-30",
+   "late": [],
+   "nbars_panel": 1342,
+   "ok": true,
+   "sid": "CMCSA SJTSDFE19S9X",
+   "t": "2012-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-04-30",
+   "late": [],
+   "nbars_panel": 1342,
+   "ok": true,
+   "sid": "MYL R735QTJ8XC9X",
+   "t": "2012-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2012-04-30",
+   "late": [],
+   "nbars_panel": 1342,
+   "ok": true,
+   "sid": "Y R735QTJ8XC9X",
+   "t": "2012-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-05-31",
+   "late": [],
+   "nbars_panel": 1364,
+   "ok": true,
+   "sid": "MSFT R735QTJ8XC9X",
+   "t": "2012-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 6,
+   "last_bar": "2012-05-31",
+   "late": [],
+   "nbars_panel": 711,
+   "ok": true,
+   "sid": "AVGO UEW4IOBWVPT1",
+   "t": "2012-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-05-31",
+   "late": [],
+   "nbars_panel": 1364,
+   "ok": true,
+   "sid": "LTR R735QTJ8XC9X",
+   "t": "2012-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-05-31",
+   "late": [],
+   "nbars_panel": 1364,
+   "ok": true,
+   "sid": "SLG R735QTJ8XC9X",
+   "t": "2012-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-02",
+   "late": [],
+   "nbars_panel": 1386,
+   "ok": true,
+   "sid": "SON R735QTJ8XC9X",
+   "t": "2012-07-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-02",
+   "late": [],
+   "nbars_panel": 1386,
+   "ok": true,
+   "sid": "ABT R735QTJ8XC9X",
+   "t": "2012-07-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-07-02",
+   "late": [],
+   "nbars_panel": 1386,
+   "ok": true,
+   "sid": "KMX SIHJGUGRITET",
+   "t": "2012-07-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-07-02",
+   "late": [],
+   "nbars_panel": 1386,
+   "ok": true,
+   "sid": "HOLX R735QTJ8XC9X",
+   "t": "2012-07-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-31",
+   "late": [],
+   "nbars_panel": 1406,
+   "ok": true,
+   "sid": "OMC R735QTJ8XC9X",
+   "t": "2012-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-31",
+   "late": [],
+   "nbars_panel": 1406,
+   "ok": true,
+   "sid": "DBD R735QTJ8XC9X",
+   "t": "2012-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-31",
+   "late": [],
+   "nbars_panel": 1406,
+   "ok": true,
+   "sid": "ACL R735QTJ8XC9X",
+   "t": "2012-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-07-31",
+   "late": [],
+   "nbars_panel": 1406,
+   "ok": true,
+   "sid": "LNC R735QTJ8XC9X",
+   "t": "2012-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2012-08-31",
+   "late": [],
+   "nbars_panel": 1429,
+   "ok": true,
+   "sid": "EL R735QTJ8XC9X",
+   "t": "2012-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-08-31",
+   "late": [],
+   "nbars_panel": 1429,
+   "ok": true,
+   "sid": "SPR TNUBE7JZ7K2T",
+   "t": "2012-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-08-31",
+   "late": [],
+   "nbars_panel": 1429,
+   "ok": true,
+   "sid": "MGG R735QTJ8XC9X",
+   "t": "2012-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-08-31",
+   "late": [],
+   "nbars_panel": 1429,
+   "ok": true,
+   "sid": "UNH R735QTJ8XC9X",
+   "t": "2012-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-10-01",
+   "late": [],
+   "nbars_panel": 1449,
+   "ok": true,
+   "sid": "DE R735QTJ8XC9X",
+   "t": "2012-10-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-10-01",
+   "late": [],
+   "nbars_panel": 1449,
+   "ok": true,
+   "sid": "SWY R735QTJ8XC9X",
+   "t": "2012-10-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-10-01",
+   "late": [],
+   "nbars_panel": 1449,
+   "ok": true,
+   "sid": "SWN R735QTJ8XC9X",
+   "t": "2012-10-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-10-01",
+   "late": [],
+   "nbars_panel": 1449,
+   "ok": true,
+   "sid": "UPL S1I2USAY0AQT",
+   "t": "2012-10-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-10-31",
+   "late": [],
+   "nbars_panel": 1469,
+   "ok": true,
+   "sid": "OHI R735QTJ8XC9X",
+   "t": "2012-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-10-31",
+   "late": [],
+   "nbars_panel": 1469,
+   "ok": true,
+   "sid": "AMZN R735QTJ8XC9X",
+   "t": "2012-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-10-31",
+   "late": [],
+   "nbars_panel": 1469,
+   "ok": true,
+   "sid": "PVH R735QTJ8XC9X",
+   "t": "2012-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-10-31",
+   "late": [],
+   "nbars_panel": 1469,
+   "ok": true,
+   "sid": "RS R735QTJ8XC9X",
+   "t": "2012-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-11-30",
+   "late": [],
+   "nbars_panel": 1490,
+   "ok": true,
+   "sid": "HOU R735QTJ8XC9X",
+   "t": "2012-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-11-30",
+   "late": [],
+   "nbars_panel": 1490,
+   "ok": true,
+   "sid": "JOYG S6U310MUXF1H",
+   "t": "2012-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2012-11-30",
+   "late": [],
+   "nbars_panel": 1490,
+   "ok": true,
+   "sid": "BXP R735QTJ8XC9X",
+   "t": "2012-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-11-30",
+   "late": [],
+   "nbars_panel": 1490,
+   "ok": true,
+   "sid": "ANSS R735QTJ8XC9X",
+   "t": "2012-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-12-31",
+   "late": [],
+   "nbars_panel": 1510,
+   "ok": true,
+   "sid": "NFX R735QTJ8XC9X",
+   "t": "2012-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2012-12-31",
+   "late": [],
+   "nbars_panel": 1510,
+   "ok": true,
+   "sid": "QGENF R735QTJ8XC9X",
+   "t": "2012-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2012-12-31",
+   "late": [],
+   "nbars_panel": 1510,
+   "ok": true,
+   "sid": "CNX RKAQNZ7RVQSL",
+   "t": "2012-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2012-12-31",
+   "late": [],
+   "nbars_panel": 1510,
+   "ok": true,
+   "sid": "RESM R735QTJ8XC9X",
+   "t": "2012-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-01-31",
+   "late": [],
+   "nbars_panel": 1531,
+   "ok": true,
+   "sid": "AYI S9PGYU1KYMW5",
+   "t": "2013-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-01-31",
+   "late": [],
+   "nbars_panel": 786,
+   "ok": true,
+   "sid": "TMH UII3J0M6ZAZP",
+   "t": "2013-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-01-31",
+   "late": [],
+   "nbars_panel": 1531,
+   "ok": true,
+   "sid": "CCK R735QTJ8XC9X",
+   "t": "2013-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-01-31",
+   "late": [],
+   "nbars_panel": 1531,
+   "ok": true,
+   "sid": "SON R735QTJ8XC9X",
+   "t": "2013-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-02-28",
+   "late": [],
+   "nbars_panel": 1550,
+   "ok": true,
+   "sid": "MAT R735QTJ8XC9X",
+   "t": "2013-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-02-28",
+   "late": [],
+   "nbars_panel": 1550,
+   "ok": true,
+   "sid": "GNWR R735QTJ8XC9X",
+   "t": "2013-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2013-02-28",
+   "late": [],
+   "nbars_panel": 1550,
+   "ok": true,
+   "sid": "UARM TDRYVSXV1X0L",
+   "t": "2013-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-02-28",
+   "late": [],
+   "nbars_panel": 1550,
+   "ok": true,
+   "sid": "AMGN R735QTJ8XC9X",
+   "t": "2013-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-04-01",
+   "late": [],
+   "nbars_panel": 1571,
+   "ok": true,
+   "sid": "RS R735QTJ8XC9X",
+   "t": "2013-04-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-04-01",
+   "late": [],
+   "nbars_panel": 1571,
+   "ok": true,
+   "sid": "RSG RC0E7NDMP55X",
+   "t": "2013-04-01"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2013-04-01",
+   "late": [],
+   "nbars_panel": 1571,
+   "ok": true,
+   "sid": "NRG SXA8BFD2WZ8L",
+   "t": "2013-04-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-04-01",
+   "late": [],
+   "nbars_panel": 815,
+   "ok": true,
+   "sid": "TW UJ0T0SKEFN1H",
+   "t": "2013-04-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-04-30",
+   "late": [],
+   "nbars_panel": 1592,
+   "ok": true,
+   "sid": "FDO R735QTJ8XC9X",
+   "t": "2013-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-04-30",
+   "late": [],
+   "nbars_panel": 1348,
+   "ok": true,
+   "sid": "N TYM9J1OHCTB9",
+   "t": "2013-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-04-30",
+   "late": [],
+   "nbars_panel": 1592,
+   "ok": true,
+   "sid": "SINA RTUDOLVOL1T1",
+   "t": "2013-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-04-30",
+   "late": [],
+   "nbars_panel": 921,
+   "ok": true,
+   "sid": "CFN UFLQ53UAVBZ9",
+   "t": "2013-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2013-05-31",
+   "late": [],
+   "nbars_panel": 1614,
+   "ok": true,
+   "sid": "CYPR R735QTJ8XC9X",
+   "t": "2013-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2013-05-31",
+   "late": [],
+   "nbars_panel": 1614,
+   "ok": true,
+   "sid": "NVDA RHM8UTD8DT2D",
+   "t": "2013-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-05-31",
+   "late": [],
+   "nbars_panel": 1614,
+   "ok": true,
+   "sid": "DDS R735QTJ8XC9X",
+   "t": "2013-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-05-31",
+   "late": [],
+   "nbars_panel": 1614,
+   "ok": true,
+   "sid": "DCI R735QTJ8XC9X",
+   "t": "2013-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-07-01",
+   "late": [],
+   "nbars_panel": 1232,
+   "ok": true,
+   "sid": "RAX U4YP8QJN3UJP",
+   "t": "2013-07-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-07-01",
+   "late": [],
+   "nbars_panel": 1635,
+   "ok": true,
+   "sid": "KIM R735QTJ8XC9X",
+   "t": "2013-07-01"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2013-07-01",
+   "late": [],
+   "nbars_panel": 1635,
+   "ok": true,
+   "sid": "AWI TMWU7148LWMD",
+   "t": "2013-07-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-07-01",
+   "late": [],
+   "nbars_panel": 1296,
+   "ok": true,
+   "sid": "CFX U2G444W42FS5",
+   "t": "2013-07-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-07-31",
+   "late": [],
+   "nbars_panel": 1656,
+   "ok": true,
+   "sid": "EW RTKJ7O7ZTI79",
+   "t": "2013-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-07-31",
+   "late": [],
+   "nbars_panel": 1656,
+   "ok": true,
+   "sid": "COH RYMOWYW7Z2W5",
+   "t": "2013-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-07-31",
+   "late": [],
+   "nbars_panel": 1656,
+   "ok": true,
+   "sid": "FULL R735QTJ8XC9X",
+   "t": "2013-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2013-07-31",
+   "late": [],
+   "nbars_panel": 1656,
+   "ok": true,
+   "sid": "CAKE R735QTJ8XC9X",
+   "t": "2013-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-09-03",
+   "late": [],
+   "nbars_panel": 1679,
+   "ok": true,
+   "sid": "ADM R735QTJ8XC9X",
+   "t": "2013-09-03"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-09-03",
+   "late": [],
+   "nbars_panel": 1679,
+   "ok": true,
+   "sid": "MSFT R735QTJ8XC9X",
+   "t": "2013-09-03"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-09-03",
+   "late": [],
+   "nbars_panel": 1679,
+   "ok": true,
+   "sid": "X R735QTJ8XC9X",
+   "t": "2013-09-03"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2013-09-03",
+   "late": [],
+   "nbars_panel": 1679,
+   "ok": true,
+   "sid": "CPRT R735QTJ8XC9X",
+   "t": "2013-09-03"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-09-30",
+   "late": [],
+   "nbars_panel": 1698,
+   "ok": true,
+   "sid": "BDAL RWXN767R8AXX",
+   "t": "2013-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-09-30",
+   "late": [],
+   "nbars_panel": 1698,
+   "ok": true,
+   "sid": "SINA RTUDOLVOL1T1",
+   "t": "2013-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-09-30",
+   "late": [],
+   "nbars_panel": 1698,
+   "ok": true,
+   "sid": "SRE RBYFBGNAJMUD",
+   "t": "2013-09-30"
+  },
+  {
+   "bars": 450,
+   "events": 0,
+   "last_bar": "2013-09-30",
+   "late": [],
+   "nbars_panel": 1697,
+   "ok": true,
+   "sid": "NPSP R735QTJ8XC9X",
+   "t": "2013-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-10-31",
+   "late": [],
+   "nbars_panel": 1721,
+   "ok": true,
+   "sid": "RS R735QTJ8XC9X",
+   "t": "2013-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-10-31",
+   "late": [],
+   "nbars_panel": 1721,
+   "ok": true,
+   "sid": "AVY R735QTJ8XC9X",
+   "t": "2013-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-10-31",
+   "late": [],
+   "nbars_panel": 1721,
+   "ok": true,
+   "sid": "UPS RPLRE46IQ3XH",
+   "t": "2013-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-10-31",
+   "late": [],
+   "nbars_panel": 1721,
+   "ok": true,
+   "sid": "ATK R735QTJ8XC9X",
+   "t": "2013-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-12-02",
+   "late": [],
+   "nbars_panel": 1742,
+   "ok": true,
+   "sid": "LH R735QTJ8XC9X",
+   "t": "2013-12-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-12-02",
+   "late": [],
+   "nbars_panel": 1742,
+   "ok": true,
+   "sid": "PRSP RFOC46E8Y8O5",
+   "t": "2013-12-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2013-12-02",
+   "late": [],
+   "nbars_panel": 1742,
+   "ok": true,
+   "sid": "IDXX R735QTJ8XC9X",
+   "t": "2013-12-02"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2013-12-02",
+   "late": [],
+   "nbars_panel": 1659,
+   "ok": true,
+   "sid": "DAL TSAT9G6HOJ8L",
+   "t": "2013-12-02"
+  },
+  {
+   "bars": 451,
+   "events": 6,
+   "last_bar": "2013-12-31",
+   "late": [],
+   "nbars_panel": 1762,
+   "ok": true,
+   "sid": "TXN R735QTJ8XC9X",
+   "t": "2013-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2013-12-31",
+   "late": [],
+   "nbars_panel": 1762,
+   "ok": true,
+   "sid": "FELE R735QTJ8XC9X",
+   "t": "2013-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-12-31",
+   "late": [],
+   "nbars_panel": 1762,
+   "ok": true,
+   "sid": "DNB R735QTJ8XC9X",
+   "t": "2013-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2013-12-31",
+   "late": [],
+   "nbars_panel": 1762,
+   "ok": true,
+   "sid": "HRS R735QTJ8XC9X",
+   "t": "2013-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2014-01-31",
+   "late": [],
+   "nbars_panel": 1783,
+   "ok": true,
+   "sid": "CRM SZQUJUA9SVOL",
+   "t": "2014-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-01-31",
+   "late": [],
+   "nbars_panel": 1783,
+   "ok": true,
+   "sid": "VC R735QTJ8XC9X",
+   "t": "2014-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-01-31",
+   "late": [],
+   "nbars_panel": 1783,
+   "ok": true,
+   "sid": "SUSQ R735QTJ8XC9X",
+   "t": "2014-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 5,
+   "last_bar": "2014-01-31",
+   "late": [],
+   "nbars_panel": 1783,
+   "ok": true,
+   "sid": "LAP R735QTJ8XC9X",
+   "t": "2014-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-02-28",
+   "late": [],
+   "nbars_panel": 1802,
+   "ok": true,
+   "sid": "RS R735QTJ8XC9X",
+   "t": "2014-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 5,
+   "last_bar": "2014-02-28",
+   "late": [],
+   "nbars_panel": 1802,
+   "ok": true,
+   "sid": "CGNX R735QTJ8XC9X",
+   "t": "2014-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-02-28",
+   "late": [],
+   "nbars_panel": 1802,
+   "ok": true,
+   "sid": "WFSL R735QTJ8XC9X",
+   "t": "2014-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2014-02-28",
+   "late": [],
+   "nbars_panel": 829,
+   "ok": true,
+   "sid": "SEMG URJ11VBW89YD",
+   "t": "2014-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2014-03-31",
+   "late": [],
+   "nbars_panel": 1823,
+   "ok": true,
+   "sid": "PXD R735QTJ8XC9X",
+   "t": "2014-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-03-31",
+   "late": [],
+   "nbars_panel": 1823,
+   "ok": true,
+   "sid": "LMT R735QTJ8XC9X",
+   "t": "2014-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-03-31",
+   "late": [],
+   "nbars_panel": 1823,
+   "ok": true,
+   "sid": "SSYS R735QTJ8XC9X",
+   "t": "2014-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-03-31",
+   "late": [],
+   "nbars_panel": 1823,
+   "ok": true,
+   "sid": "PWR R87J2NJ629UT",
+   "t": "2014-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-04-30",
+   "late": [],
+   "nbars_panel": 1844,
+   "ok": true,
+   "sid": "ED R735QTJ8XC9X",
+   "t": "2014-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-04-30",
+   "late": [],
+   "nbars_panel": 1844,
+   "ok": true,
+   "sid": "PRSP RFOC46E8Y8O5",
+   "t": "2014-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-04-30",
+   "late": [],
+   "nbars_panel": 1844,
+   "ok": true,
+   "sid": "FM R735QTJ8XC9X",
+   "t": "2014-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-04-30",
+   "late": [],
+   "nbars_panel": 477,
+   "ok": true,
+   "sid": "HR R735QTJ8XC9X",
+   "t": "2014-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-06-02",
+   "late": [],
+   "nbars_panel": 1866,
+   "ok": true,
+   "sid": "OCR R735QTJ8XC9X",
+   "t": "2014-06-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-06-02",
+   "late": [],
+   "nbars_panel": 1866,
+   "ok": true,
+   "sid": "EMCG R735QTJ8XC9X",
+   "t": "2014-06-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-06-02",
+   "late": [],
+   "nbars_panel": 1866,
+   "ok": true,
+   "sid": "MA TIX2XDPLFR6T",
+   "t": "2014-06-02"
+  },
+  {
+   "bars": 451,
+   "events": 6,
+   "last_bar": "2014-06-02",
+   "late": [],
+   "nbars_panel": 1866,
+   "ok": true,
+   "sid": "WTHG R735QTJ8XC9X",
+   "t": "2014-06-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-06-30",
+   "late": [],
+   "nbars_panel": 1886,
+   "ok": true,
+   "sid": "MHP R735QTJ8XC9X",
+   "t": "2014-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2014-06-30",
+   "late": [],
+   "nbars_panel": 1886,
+   "ok": true,
+   "sid": "SHO T310726IZEXX",
+   "t": "2014-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-06-30",
+   "late": [],
+   "nbars_panel": 1886,
+   "ok": true,
+   "sid": "WSGC R735QTJ8XC9X",
+   "t": "2014-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-06-30",
+   "late": [],
+   "nbars_panel": 1886,
+   "ok": true,
+   "sid": "JBLU SDS6KRJQD1T1",
+   "t": "2014-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 10,
+   "last_bar": "2014-07-31",
+   "late": [],
+   "nbars_panel": 1908,
+   "ok": true,
+   "sid": "AFG R735QTJ8XC9X",
+   "t": "2014-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-07-31",
+   "late": [],
+   "nbars_panel": 1908,
+   "ok": true,
+   "sid": "HANS R735QTJ8XC9X",
+   "t": "2014-07-31"
+  },
+  {
+   "bars": 252,
+   "events": 0,
+   "last_bar": "2014-07-31",
+   "late": [],
+   "nbars_panel": 252,
+   "ok": true,
+   "sid": "SFM VIPRESXOA7HH",
+   "t": "2014-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-07-31",
+   "late": [],
+   "nbars_panel": 1908,
+   "ok": true,
+   "sid": "IPG R735QTJ8XC9X",
+   "t": "2014-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-09-02",
+   "late": [],
+   "nbars_panel": 1930,
+   "ok": true,
+   "sid": "TSN R735QTJ8XC9X",
+   "t": "2014-09-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-09-02",
+   "late": [],
+   "nbars_panel": 1930,
+   "ok": true,
+   "sid": "RII R735QTJ8XC9X",
+   "t": "2014-09-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-09-02",
+   "late": [],
+   "nbars_panel": 1930,
+   "ok": true,
+   "sid": "ALGN S1PYFJ8AMC11",
+   "t": "2014-09-02"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2014-09-02",
+   "late": [],
+   "nbars_panel": 1930,
+   "ok": true,
+   "sid": "IPGP TOFZ89LOW5LX",
+   "t": "2014-09-02"
+  },
+  {
+   "bars": 451,
+   "events": 20,
+   "last_bar": "2014-09-30",
+   "late": [],
+   "nbars_panel": 1950,
+   "ok": true,
+   "sid": "EPR R735QTJ8XC9X",
+   "t": "2014-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-09-30",
+   "late": [],
+   "nbars_panel": 1950,
+   "ok": true,
+   "sid": "PRSP RFOC46E8Y8O5",
+   "t": "2014-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-09-30",
+   "late": [],
+   "nbars_panel": 621,
+   "ok": true,
+   "sid": "FET V5P2MATBV339",
+   "t": "2014-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-09-30",
+   "late": [],
+   "nbars_panel": 1950,
+   "ok": true,
+   "sid": "RE R735QTJ8XC9X",
+   "t": "2014-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2014-10-31",
+   "late": [],
+   "nbars_panel": 1973,
+   "ok": true,
+   "sid": "ALC R735QTJ8XC9X",
+   "t": "2014-10-31"
+  },
+  {
+   "bars": 98,
+   "events": 0,
+   "last_bar": "2014-10-31",
+   "late": [],
+   "nbars_panel": 98,
+   "ok": true,
+   "sid": "ABY VRFV0MMIOVOL",
+   "t": "2014-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-10-31",
+   "late": [],
+   "nbars_panel": 1973,
+   "ok": true,
+   "sid": "FMC R735QTJ8XC9X",
+   "t": "2014-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-10-31",
+   "late": [],
+   "nbars_panel": 1973,
+   "ok": true,
+   "sid": "MHP R735QTJ8XC9X",
+   "t": "2014-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-12-01",
+   "late": [],
+   "nbars_panel": 740,
+   "ok": true,
+   "sid": "TRIP V2LT3QH97TYD",
+   "t": "2014-12-01"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2014-12-01",
+   "late": [],
+   "nbars_panel": 1993,
+   "ok": true,
+   "sid": "EXPD R735QTJ8XC9X",
+   "t": "2014-12-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-12-01",
+   "late": [],
+   "nbars_panel": 1993,
+   "ok": true,
+   "sid": "CFR R735QTJ8XC9X",
+   "t": "2014-12-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2014-12-01",
+   "late": [],
+   "nbars_panel": 1993,
+   "ok": true,
+   "sid": "CACC R735QTJ8XC9X",
+   "t": "2014-12-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2014-12-31",
+   "late": [],
+   "nbars_panel": 2014,
+   "ok": true,
+   "sid": "AAPL R735QTJ8XC9X",
+   "t": "2014-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-12-31",
+   "late": [],
+   "nbars_panel": 2014,
+   "ok": true,
+   "sid": "EXR T142WIKPMLPH",
+   "t": "2014-12-31"
+  },
+  {
+   "bars": 352,
+   "events": 5,
+   "last_bar": "2014-12-31",
+   "late": [],
+   "nbars_panel": 352,
+   "ok": true,
+   "sid": "FI VIXMZJV0W8RP",
+   "t": "2014-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2014-12-31",
+   "late": [],
+   "nbars_panel": 2014,
+   "ok": true,
+   "sid": "BKH R735QTJ8XC9X",
+   "t": "2014-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-02-02",
+   "late": [],
+   "nbars_panel": 1130,
+   "ok": true,
+   "sid": "NXPI UOVIOSUIT3DX",
+   "t": "2015-02-02"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2015-02-02",
+   "late": [],
+   "nbars_panel": 1219,
+   "ok": true,
+   "sid": "SSNC ULDHGU0X0IUD",
+   "t": "2015-02-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-02-02",
+   "late": [],
+   "nbars_panel": 2035,
+   "ok": true,
+   "sid": "NHI R735QTJ8XC9X",
+   "t": "2015-02-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-02-02",
+   "late": [],
+   "nbars_panel": 2035,
+   "ok": true,
+   "sid": "NFLX SEWJWLJNHZDX",
+   "t": "2015-02-02"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2015-03-02",
+   "late": [],
+   "nbars_panel": 2054,
+   "ok": true,
+   "sid": "COO R735QTJ8XC9X",
+   "t": "2015-03-02"
+  },
+  {
+   "bars": 109,
+   "events": 2,
+   "last_bar": "2015-03-02",
+   "late": [],
+   "nbars_panel": 109,
+   "ok": true,
+   "sid": "CFG VU6BPZ7ECBQD",
+   "t": "2015-03-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-03-02",
+   "late": [],
+   "nbars_panel": 1993,
+   "ok": true,
+   "sid": "BR TRGAEJU9B59H",
+   "t": "2015-03-02"
+  },
+  {
+   "bars": 451,
+   "events": 21,
+   "last_bar": "2015-03-02",
+   "late": [],
+   "nbars_panel": 873,
+   "ok": true,
+   "sid": "ARCP UZQF5X2J6M3P",
+   "t": "2015-03-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-03-31",
+   "late": [],
+   "nbars_panel": 2075,
+   "ok": true,
+   "sid": "FEIC R735QTJ8XC9X",
+   "t": "2015-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-03-31",
+   "late": [],
+   "nbars_panel": 2075,
+   "ok": true,
+   "sid": "AOC R735QTJ8XC9X",
+   "t": "2015-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2015-03-31",
+   "late": [],
+   "nbars_panel": 1322,
+   "ok": true,
+   "sid": "PPC UIUWC8DDZ42T",
+   "t": "2015-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-03-31",
+   "late": [],
+   "nbars_panel": 2075,
+   "ok": true,
+   "sid": "UFC R735QTJ8XC9X",
+   "t": "2015-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-04-30",
+   "late": [],
+   "nbars_panel": 2096,
+   "ok": true,
+   "sid": "ORI R735QTJ8XC9X",
+   "t": "2015-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2015-04-30",
+   "late": [],
+   "nbars_panel": 2096,
+   "ok": true,
+   "sid": "APH R735QTJ8XC9X",
+   "t": "2015-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-04-30",
+   "late": [],
+   "nbars_panel": 2096,
+   "ok": true,
+   "sid": "GME SC72NCBXXAHX",
+   "t": "2015-04-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-04-30",
+   "late": [],
+   "nbars_panel": 2096,
+   "ok": true,
+   "sid": "ROP R735QTJ8XC9X",
+   "t": "2015-04-30"
+  },
+  {
+   "bars": 334,
+   "events": 5,
+   "last_bar": "2015-06-01",
+   "late": [],
+   "nbars_panel": 334,
+   "ok": true,
+   "sid": "OGS VNSWK6Z2IJC5",
+   "t": "2015-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2015-06-01",
+   "late": [],
+   "nbars_panel": 2117,
+   "ok": true,
+   "sid": "MARY R735QTJ8XC9X",
+   "t": "2015-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-06-01",
+   "late": [],
+   "nbars_panel": 2117,
+   "ok": true,
+   "sid": "PPG R735QTJ8XC9X",
+   "t": "2015-06-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2015-06-01",
+   "late": [],
+   "nbars_panel": 2117,
+   "ok": true,
+   "sid": "MA TIX2XDPLFR6T",
+   "t": "2015-06-01"
+  },
+  {
+   "bars": 255,
+   "events": 0,
+   "last_bar": "2015-06-30",
+   "late": [],
+   "nbars_panel": 255,
+   "ok": true,
+   "sid": "GPRO VRPPHKA7GFAD",
+   "t": "2015-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-06-30",
+   "late": [],
+   "nbars_panel": 2138,
+   "ok": true,
+   "sid": "AKAM RP9Y0ZSHT205",
+   "t": "2015-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-06-30",
+   "late": [],
+   "nbars_panel": 2138,
+   "ok": true,
+   "sid": "ANSS R735QTJ8XC9X",
+   "t": "2015-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-06-30",
+   "late": [],
+   "nbars_panel": 2138,
+   "ok": true,
+   "sid": "RHAT RN45PLW5RGBP",
+   "t": "2015-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-07-31",
+   "late": [],
+   "nbars_panel": 2160,
+   "ok": true,
+   "sid": "LTR R735QTJ8XC9X",
+   "t": "2015-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-07-31",
+   "late": [],
+   "nbars_panel": 2160,
+   "ok": true,
+   "sid": "BRKB R735QTJ8XC9X",
+   "t": "2015-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-07-31",
+   "late": [],
+   "nbars_panel": 2160,
+   "ok": true,
+   "sid": "RGLD R735QTJ8XC9X",
+   "t": "2015-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2015-07-31",
+   "late": [],
+   "nbars_panel": 2160,
+   "ok": true,
+   "sid": "WLK T133GF7JJUJP",
+   "t": "2015-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-08-31",
+   "late": [],
+   "nbars_panel": 2181,
+   "ok": true,
+   "sid": "CPB R735QTJ8XC9X",
+   "t": "2015-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-08-31",
+   "late": [],
+   "nbars_panel": 726,
+   "ok": true,
+   "sid": "AMBA VANAJ80VPN51",
+   "t": "2015-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-08-31",
+   "late": [],
+   "nbars_panel": 2181,
+   "ok": true,
+   "sid": "PPS R735QTJ8XC9X",
+   "t": "2015-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2015-08-31",
+   "late": [],
+   "nbars_panel": 2181,
+   "ok": true,
+   "sid": "FFC R735QTJ8XC9X",
+   "t": "2015-08-31"
+  },
+  {
+   "bars": 68,
+   "events": 0,
+   "last_bar": "2015-09-30",
+   "late": [],
+   "nbars_panel": 68,
+   "ok": true,
+   "sid": "TRU W1O47LFNB1PH",
+   "t": "2015-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-09-30",
+   "late": [],
+   "nbars_panel": 2202,
+   "ok": true,
+   "sid": "THO R735QTJ8XC9X",
+   "t": "2015-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-09-30",
+   "late": [],
+   "nbars_panel": 2202,
+   "ok": true,
+   "sid": "BLK ROIDIDJRNXID",
+   "t": "2015-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2015-09-30",
+   "late": [],
+   "nbars_panel": 2202,
+   "ok": true,
+   "sid": "HLF T4K58ANZ9NXH",
+   "t": "2015-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2015-11-02",
+   "late": [],
+   "nbars_panel": 1472,
+   "ok": true,
+   "sid": "PPC UIUWC8DDZ42T",
+   "t": "2015-11-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-11-02",
+   "late": [],
+   "nbars_panel": 769,
+   "ok": true,
+   "sid": "RLGY VAO9ZBE1SEAT",
+   "t": "2015-11-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-11-02",
+   "late": [],
+   "nbars_panel": 2225,
+   "ok": true,
+   "sid": "EIX R735QTJ8XC9X",
+   "t": "2015-11-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-11-02",
+   "late": [],
+   "nbars_panel": 2225,
+   "ok": true,
+   "sid": "GART R735QTJ8XC9X",
+   "t": "2015-11-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-11-30",
+   "late": [],
+   "nbars_panel": 2244,
+   "ok": true,
+   "sid": "JCP R735QTJ8XC9X",
+   "t": "2015-11-30"
+  },
+  {
+   "bars": 299,
+   "events": 5,
+   "last_bar": "2015-11-30",
+   "late": [],
+   "nbars_panel": 299,
+   "ok": true,
+   "sid": "CFG VU6BPZ7ECBQD",
+   "t": "2015-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-11-30",
+   "late": [],
+   "nbars_panel": 2244,
+   "ok": true,
+   "sid": "WAG R735QTJ8XC9X",
+   "t": "2015-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2015-11-30",
+   "late": [],
+   "nbars_panel": 2244,
+   "ok": true,
+   "sid": "LFUS R735QTJ8XC9X",
+   "t": "2015-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2015-12-31",
+   "late": [],
+   "nbars_panel": 2266,
+   "ok": true,
+   "sid": "MSCC R735QTJ8XC9X",
+   "t": "2015-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-12-31",
+   "late": [],
+   "nbars_panel": 2266,
+   "ok": true,
+   "sid": "BRCD RKZCUBCZSLT1",
+   "t": "2015-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2015-12-31",
+   "late": [],
+   "nbars_panel": 567,
+   "ok": true,
+   "sid": "ESRT VKET4LM50ZFP",
+   "t": "2015-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 4,
+   "last_bar": "2015-12-31",
+   "late": [],
+   "nbars_panel": 2266,
+   "ok": true,
+   "sid": "LAP R735QTJ8XC9X",
+   "t": "2015-12-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-02-01",
+   "late": [],
+   "nbars_panel": 2286,
+   "ok": true,
+   "sid": "WOOF S9WD3HLRHX0L",
+   "t": "2016-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-02-01",
+   "late": [],
+   "nbars_panel": 595,
+   "ok": true,
+   "sid": "FEYE VK2ZRH843XID",
+   "t": "2016-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-02-01",
+   "late": [],
+   "nbars_panel": 2286,
+   "ok": true,
+   "sid": "AMZN R735QTJ8XC9X",
+   "t": "2016-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-02-01",
+   "late": [],
+   "nbars_panel": 2286,
+   "ok": true,
+   "sid": "ALV R735QTJ8XC9X",
+   "t": "2016-02-01"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-02-29",
+   "late": [],
+   "nbars_panel": 2305,
+   "ok": true,
+   "sid": "ALD R735QTJ8XC9X",
+   "t": "2016-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-02-29",
+   "late": [],
+   "nbars_panel": 2305,
+   "ok": true,
+   "sid": "CALM R735QTJ8XC9X",
+   "t": "2016-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-02-29",
+   "late": [],
+   "nbars_panel": 2305,
+   "ok": true,
+   "sid": "FFIV RL97B90OK5ET",
+   "t": "2016-02-29"
+  },
+  {
+   "bars": 171,
+   "events": 0,
+   "last_bar": "2016-02-29",
+   "late": [],
+   "nbars_panel": 171,
+   "ok": true,
+   "sid": "TRU W1O47LFNB1PH",
+   "t": "2016-02-29"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-03-31",
+   "late": [],
+   "nbars_panel": 2327,
+   "ok": true,
+   "sid": "MSFT R735QTJ8XC9X",
+   "t": "2016-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-03-31",
+   "late": [],
+   "nbars_panel": 581,
+   "ok": true,
+   "sid": "AAL VM9RIYHM8ACL",
+   "t": "2016-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-03-31",
+   "late": [],
+   "nbars_panel": 2327,
+   "ok": true,
+   "sid": "CCE R735QTJ8XC9X",
+   "t": "2016-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-03-31",
+   "late": [],
+   "nbars_panel": 2327,
+   "ok": true,
+   "sid": "DISH R735QTJ8XC9X",
+   "t": "2016-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-05-02",
+   "late": [],
+   "nbars_panel": 2349,
+   "ok": true,
+   "sid": "DD R735QTJ8XC9X",
+   "t": "2016-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-05-02",
+   "late": [],
+   "nbars_panel": 2349,
+   "ok": true,
+   "sid": "ALB R735QTJ8XC9X",
+   "t": "2016-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-05-02",
+   "late": [],
+   "nbars_panel": 2349,
+   "ok": true,
+   "sid": "HBI TLRHF3R5E7VP",
+   "t": "2016-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-05-02",
+   "late": [],
+   "nbars_panel": 2349,
+   "ok": true,
+   "sid": "AMZN R735QTJ8XC9X",
+   "t": "2016-05-02"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-05-31",
+   "late": [],
+   "nbars_panel": 2369,
+   "ok": true,
+   "sid": "TRMB R735QTJ8XC9X",
+   "t": "2016-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-05-31",
+   "late": [],
+   "nbars_panel": 2369,
+   "ok": true,
+   "sid": "SCH R735QTJ8XC9X",
+   "t": "2016-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-05-31",
+   "late": [],
+   "nbars_panel": 2369,
+   "ok": true,
+   "sid": "TE R735QTJ8XC9X",
+   "t": "2016-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-05-31",
+   "late": [],
+   "nbars_panel": 2369,
+   "ok": true,
+   "sid": "MCCRK R735QTJ8XC9X",
+   "t": "2016-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-06-30",
+   "late": [],
+   "nbars_panel": 1258,
+   "ok": true,
+   "sid": "AMCX UXVGRK71ZB6T",
+   "t": "2016-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-06-30",
+   "late": [],
+   "nbars_panel": 2391,
+   "ok": true,
+   "sid": "SPG R735QTJ8XC9X",
+   "t": "2016-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-06-30",
+   "late": [],
+   "nbars_panel": 2391,
+   "ok": true,
+   "sid": "MAI R735QTJ8XC9X",
+   "t": "2016-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-06-30",
+   "late": [],
+   "nbars_panel": 2391,
+   "ok": true,
+   "sid": "AMTD R735QTJ8XC9X",
+   "t": "2016-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-08-01",
+   "late": [],
+   "nbars_panel": 1534,
+   "ok": true,
+   "sid": "TSLA UNU3P8Y3WFAD",
+   "t": "2016-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-08-01",
+   "late": [],
+   "nbars_panel": 2412,
+   "ok": true,
+   "sid": "SWK R735QTJ8XC9X",
+   "t": "2016-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-08-01",
+   "late": [],
+   "nbars_panel": 2412,
+   "ok": true,
+   "sid": "URBN R735QTJ8XC9X",
+   "t": "2016-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-08-01",
+   "late": [],
+   "nbars_panel": 2412,
+   "ok": true,
+   "sid": "AAS R735QTJ8XC9X",
+   "t": "2016-08-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-08-31",
+   "late": [],
+   "nbars_panel": 2434,
+   "ok": true,
+   "sid": "CERN R735QTJ8XC9X",
+   "t": "2016-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-08-31",
+   "late": [],
+   "nbars_panel": 2434,
+   "ok": true,
+   "sid": "APA R735QTJ8XC9X",
+   "t": "2016-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-08-31",
+   "late": [],
+   "nbars_panel": 2434,
+   "ok": true,
+   "sid": "EOG R735QTJ8XC9X",
+   "t": "2016-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 1,
+   "last_bar": "2016-08-31",
+   "late": [],
+   "nbars_panel": 2434,
+   "ok": true,
+   "sid": "IDXX R735QTJ8XC9X",
+   "t": "2016-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-09-30",
+   "late": [],
+   "nbars_panel": 2455,
+   "ok": true,
+   "sid": "KEX R735QTJ8XC9X",
+   "t": "2016-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-09-30",
+   "late": [],
+   "nbars_panel": 726,
+   "ok": true,
+   "sid": "STAY VLK5WIZ88O6D",
+   "t": "2016-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-09-30",
+   "late": [],
+   "nbars_panel": 2455,
+   "ok": true,
+   "sid": "OI R735QTJ8XC9X",
+   "t": "2016-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-09-30",
+   "late": [],
+   "nbars_panel": 2455,
+   "ok": true,
+   "sid": "FLS R735QTJ8XC9X",
+   "t": "2016-09-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-10-31",
+   "late": [],
+   "nbars_panel": 2476,
+   "ok": true,
+   "sid": "CLI R735QTJ8XC9X",
+   "t": "2016-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-10-31",
+   "late": [],
+   "nbars_panel": 2476,
+   "ok": true,
+   "sid": "CNA R735QTJ8XC9X",
+   "t": "2016-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-10-31",
+   "late": [],
+   "nbars_panel": 2476,
+   "ok": true,
+   "sid": "PNW R735QTJ8XC9X",
+   "t": "2016-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2016-10-31",
+   "late": [],
+   "nbars_panel": 2385,
+   "ok": true,
+   "sid": "CLR TSMMMKKILL5X",
+   "t": "2016-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-11-30",
+   "late": [],
+   "nbars_panel": 2497,
+   "ok": true,
+   "sid": "BEN R735QTJ8XC9X",
+   "t": "2016-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2016-11-30",
+   "late": [],
+   "nbars_panel": 2497,
+   "ok": true,
+   "sid": "MKSI RJG7T2VJICTH",
+   "t": "2016-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2016-11-30",
+   "late": [],
+   "nbars_panel": 2497,
+   "ok": true,
+   "sid": "ATH S9AP9FK1TBHH",
+   "t": "2016-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 9,
+   "last_bar": "2016-11-30",
+   "late": [],
+   "nbars_panel": 2193,
+   "ok": true,
+   "sid": "V U12VRGLO8PR9",
+   "t": "2016-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-03",
+   "late": [],
+   "nbars_panel": 2519,
+   "ok": true,
+   "sid": "CMC R735QTJ8XC9X",
+   "t": "2017-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-01-03",
+   "late": [],
+   "nbars_panel": 800,
+   "ok": true,
+   "sid": "CRTO VL6DN7UV63XH",
+   "t": "2017-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-03",
+   "late": [],
+   "nbars_panel": 2519,
+   "ok": true,
+   "sid": "ASH R735QTJ8XC9X",
+   "t": "2017-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-03",
+   "late": [],
+   "nbars_panel": 2519,
+   "ok": true,
+   "sid": "LUK R735QTJ8XC9X",
+   "t": "2017-01-03"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-31",
+   "late": [],
+   "nbars_panel": 2538,
+   "ok": true,
+   "sid": "IDC R735QTJ8XC9X",
+   "t": "2017-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-31",
+   "late": [],
+   "nbars_panel": 2538,
+   "ok": true,
+   "sid": "OZRK R735QTJ8XC9X",
+   "t": "2017-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-31",
+   "late": [],
+   "nbars_panel": 2538,
+   "ok": true,
+   "sid": "BOKF R735QTJ8XC9X",
+   "t": "2017-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-01-31",
+   "late": [],
+   "nbars_panel": 2538,
+   "ok": true,
+   "sid": "WGOV R735QTJ8XC9X",
+   "t": "2017-01-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-02-28",
+   "late": [],
+   "nbars_panel": 2557,
+   "ok": true,
+   "sid": "IIVI R735QTJ8XC9X",
+   "t": "2017-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-02-28",
+   "late": [],
+   "nbars_panel": 2557,
+   "ok": true,
+   "sid": "TECD R735QTJ8XC9X",
+   "t": "2017-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2017-02-28",
+   "late": [],
+   "nbars_panel": 2557,
+   "ok": true,
+   "sid": "NKE R735QTJ8XC9X",
+   "t": "2017-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-02-28",
+   "late": [],
+   "nbars_panel": 1100,
+   "ok": true,
+   "sid": "WDAY VAP9FER7V5GL",
+   "t": "2017-02-28"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-03-31",
+   "late": [],
+   "nbars_panel": 2580,
+   "ok": true,
+   "sid": "KMX SIHJGUGRITET",
+   "t": "2017-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-03-31",
+   "late": [],
+   "nbars_panel": 745,
+   "ok": true,
+   "sid": "NAVIV VPSS70OE3M1X",
+   "t": "2017-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-03-31",
+   "late": [],
+   "nbars_panel": 2555,
+   "ok": true,
+   "sid": "EGBN RONAQUDM1PB9",
+   "t": "2017-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-03-31",
+   "late": [],
+   "nbars_panel": 2580,
+   "ok": true,
+   "sid": "PRXL R735QTJ8XC9X",
+   "t": "2017-03-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-05-01",
+   "late": [],
+   "nbars_panel": 2600,
+   "ok": true,
+   "sid": "MORN T8C0X759TS2T",
+   "t": "2017-05-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-05-01",
+   "late": [],
+   "nbars_panel": 2600,
+   "ok": true,
+   "sid": "CELG R735QTJ8XC9X",
+   "t": "2017-05-01"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-05-01",
+   "late": [],
+   "nbars_panel": 2600,
+   "ok": true,
+   "sid": "CHKPF R735QTJ8XC9X",
+   "t": "2017-05-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-05-01",
+   "late": [],
+   "nbars_panel": 2600,
+   "ok": true,
+   "sid": "UHS R735QTJ8XC9X",
+   "t": "2017-05-01"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-05-31",
+   "late": [],
+   "nbars_panel": 2621,
+   "ok": true,
+   "sid": "NNN R735QTJ8XC9X",
+   "t": "2017-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2017-05-31",
+   "late": [],
+   "nbars_panel": 2621,
+   "ok": true,
+   "sid": "WWP R735QTJ8XC9X",
+   "t": "2017-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-05-31",
+   "late": [],
+   "nbars_panel": 2621,
+   "ok": true,
+   "sid": "CLNP R735QTJ8XC9X",
+   "t": "2017-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-05-31",
+   "late": [],
+   "nbars_panel": 2621,
+   "ok": true,
+   "sid": "EV R735QTJ8XC9X",
+   "t": "2017-05-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2017-06-30",
+   "late": [],
+   "nbars_panel": 2643,
+   "ok": true,
+   "sid": "RTNB R735QTJ8XC9X",
+   "t": "2017-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-06-30",
+   "late": [],
+   "nbars_panel": 2297,
+   "ok": true,
+   "sid": "NAV R735QTJ8XC9X",
+   "t": "2017-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-06-30",
+   "late": [],
+   "nbars_panel": 2643,
+   "ok": true,
+   "sid": "WGOV R735QTJ8XC9X",
+   "t": "2017-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-06-30",
+   "late": [],
+   "nbars_panel": 2643,
+   "ok": true,
+   "sid": "CRL RVSAF8UO0M79",
+   "t": "2017-06-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-07-31",
+   "late": [],
+   "nbars_panel": 1430,
+   "ok": true,
+   "sid": "VAC V1T950VCZYAT",
+   "t": "2017-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-07-31",
+   "late": [],
+   "nbars_panel": 2663,
+   "ok": true,
+   "sid": "LII RMRCWE4YRN8L",
+   "t": "2017-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-07-31",
+   "late": [],
+   "nbars_panel": 1922,
+   "ok": true,
+   "sid": "CBPO UI4B9PHTWQQT",
+   "t": "2017-07-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-07-31",
+   "late": [],
+   "nbars_panel": 2663,
+   "ok": true,
+   "sid": "LPNT RKMK13LSSSPX",
+   "t": "2017-07-31"
+  },
+  {
+   "bars": 444,
+   "events": 0,
+   "last_bar": "2017-08-31",
+   "late": [],
+   "nbars_panel": 444,
+   "ok": true,
+   "sid": "OMF W5WQI34T5ZL1",
+   "t": "2017-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-08-31",
+   "late": [],
+   "nbars_panel": 853,
+   "ok": true,
+   "sid": "PAYC VPQTATY1Y3QD",
+   "t": "2017-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-08-31",
+   "late": [],
+   "nbars_panel": 2686,
+   "ok": true,
+   "sid": "VFC R735QTJ8XC9X",
+   "t": "2017-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 3,
+   "last_bar": "2017-08-31",
+   "late": [],
+   "nbars_panel": 1060,
+   "ok": true,
+   "sid": "NWSAV VHJF6S7EZRL1",
+   "t": "2017-08-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-10-02",
+   "late": [],
+   "nbars_panel": 1365,
+   "ok": true,
+   "sid": "SUPN V67S42RJBF51",
+   "t": "2017-10-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-10-02",
+   "late": [],
+   "nbars_panel": 821,
+   "ok": true,
+   "sid": "NSAM VRUMQ141U739",
+   "t": "2017-10-02"
+  },
+  {
+   "bars": 451,
+   "events": 5,
+   "last_bar": "2017-10-02",
+   "late": [],
+   "nbars_panel": 1085,
+   "ok": true,
+   "sid": "COTY VHDII80EJ8MD",
+   "t": "2017-10-02"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-10-02",
+   "late": [],
+   "nbars_panel": 2707,
+   "ok": true,
+   "sid": "MKTX T3FRWGO24QCL",
+   "t": "2017-10-02"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2017-10-31",
+   "late": [],
+   "nbars_panel": 2728,
+   "ok": true,
+   "sid": "CL R735QTJ8XC9X",
+   "t": "2017-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-10-31",
+   "late": [],
+   "nbars_panel": 2728,
+   "ok": true,
+   "sid": "NOC R735QTJ8XC9X",
+   "t": "2017-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-10-31",
+   "late": [],
+   "nbars_panel": 1320,
+   "ok": true,
+   "sid": "GMED V8SC4V5EIC85",
+   "t": "2017-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 2,
+   "last_bar": "2017-10-31",
+   "late": [],
+   "nbars_panel": 2728,
+   "ok": true,
+   "sid": "PGR R735QTJ8XC9X",
+   "t": "2017-10-31"
+  },
+  {
+   "bars": 451,
+   "events": 8,
+   "last_bar": "2017-11-30",
+   "late": [],
+   "nbars_panel": 2749,
+   "ok": true,
+   "sid": "RLI R735QTJ8XC9X",
+   "t": "2017-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 0,
+   "last_bar": "2017-11-30",
+   "late": [],
+   "nbars_panel": 2747,
+   "ok": true,
+   "sid": "GY R735QTJ8XC9X",
+   "t": "2017-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 9,
+   "last_bar": "2017-11-30",
+   "late": [],
+   "nbars_panel": 1000,
+   "ok": true,
+   "sid": "HLT VMCPV8L4GJTX",
+   "t": "2017-11-30"
+  },
+  {
+   "bars": 451,
+   "events": 7,
+   "last_bar": "2017-11-30",
+   "late": [],
+   "nbars_panel": 2749,
+   "ok": true,
+   "sid": "MCCRK R735QTJ8XC9X",
+   "t": "2017-11-30"
+  }
+ ],
+ "audit": {
+  "alignment_price": {
+   "pairs": 380,
+   "violations": 0
+  },
+  "breadth": {
+   "above200": {
+    "2010": {
+     "days": 233,
+     "insufficient_per_day": 6.98283,
+     "max": 0.941889,
+     "mean": 0.71812,
+     "min": 0.302865
+    },
+    "2011": {
+     "days": 252,
+     "insufficient_per_day": 12.0238,
+     "max": 0.941115,
+     "mean": 0.630817,
+     "min": 0.0923845
+    },
+    "2012": {
+     "days": 250,
+     "insufficient_per_day": 13.684,
+     "max": 0.880423,
+     "mean": 0.698753,
+     "min": 0.457684
+    },
+    "2013": {
+     "days": 252,
+     "insufficient_per_day": 17.7262,
+     "max": 0.929991,
+     "mean": 0.839574,
+     "min": 0.722328
+    },
+    "2014": {
+     "days": 252,
+     "insufficient_per_day": 30.3175,
+     "max": 0.841297,
+     "mean": 0.717651,
+     "min": 0.329475
+    },
+    "2015": {
+     "days": 252,
+     "insufficient_per_day": 24.127,
+     "max": 0.771944,
+     "mean": 0.573662,
+     "min": 0.233188
+    },
+    "2016": {
+     "days": 252,
+     "insufficient_per_day": 12.6468,
+     "max": 0.819835,
+     "mean": 0.62153,
+     "min": 0.170732
+    },
+    "2017": {
+     "days": 251,
+     "insufficient_per_day": 24.498,
+     "max": 0.82035,
+     "mean": 0.723658,
+     "min": 0.570033
+    }
+   },
+   "above50": {
+    "2010": {
+     "days": 233,
+     "insufficient_per_day": 0.772532,
+     "max": 0.931707,
+     "mean": 0.626973,
+     "min": 0.0625
+    },
+    "2011": {
+     "days": 252,
+     "insufficient_per_day": 2.45238,
+     "max": 0.934807,
+     "mean": 0.551857,
+     "min": 0.00982801
+    },
+    "2012": {
+     "days": 250,
+     "insufficient_per_day": 1.564,
+     "max": 0.907839,
+     "mean": 0.619559,
+     "min": 0.140749
+    },
+    "2013": {
+     "days": 252,
+     "insufficient_per_day": 3.11508,
+     "max": 0.931104,
+     "mean": 0.713045,
+     "min": 0.291587
+    },
+    "2014": {
+     "days": 252,
+     "insufficient_per_day": 4.77381,
+     "max": 0.858414,
+     "mean": 0.610176,
+     "min": 0.139494
+    },
+    "2015": {
+     "days": 252,
+     "insufficient_per_day": 3.44048,
+     "max": 0.794686,
+     "mean": 0.519299,
+     "min": 0.0551249
+    },
+    "2016": {
+     "days": 252,
+     "insufficient_per_day": 1.42063,
+     "max": 0.931602,
+     "mean": 0.599759,
+     "min": 0.0825603
+    },
+    "2017": {
+     "days": 251,
+     "insufficient_per_day": 4.25896,
+     "max": 0.842231,
+     "mean": 0.637493,
+     "min": 0.369513
+    }
+   },
+   "new_high": {
+    "2010": {
+     "days": 233,
+     "insufficient_per_day": 9.27468,
+     "max": 0.353939,
+     "mean": 0.0745314,
+     "min": 0.0
+    },
+    "2011": {
+     "days": 252,
+     "insufficient_per_day": 14.5198,
+     "max": 0.233906,
+     "mean": 0.0558833,
+     "min": 0.0
+    },
+    "2012": {
+     "days": 250,
+     "insufficient_per_day": 17.772,
+     "max": 0.23617,
+     "mean": 0.0510312,
+     "min": 0.00335946
+    },
+    "2013": {
+     "days": 252,
+     "insufficient_per_day": 23.4563,
+     "max": 0.340304,
+     "mean": 0.113407,
+     "min": 0.00376294
+    },
+    "2014": {
+     "days": 252,
+     "insufficient_per_day": 38.254,
+     "max": 0.220823,
+     "mean": 0.0692418,
+     "min": 0.0
+    },
+    "2015": {
+     "days": 252,
+     "insufficient_per_day": 33.3175,
+     "max": 0.184124,
+     "mean": 0.0487706,
+     "min": 0.0
+    },
+    "2016": {
+     "days": 252,
+     "insufficient_per_day": 18.0278,
+     "max": 0.278177,
+     "mean": 0.0544591,
+     "min": 0.0
+    },
+    "2017": {
+     "days": 251,
+     "insufficient_per_day": 29.9084,
+     "max": 0.224701,
+     "mean": 0.0762857,
+     "min": 0.00980392
+    }
+   },
+   "new_low": {
+    "2010": {
+     "days": 233,
+     "insufficient_per_day": 9.27468,
+     "max": 0.0813954,
+     "mean": 0.00545531,
+     "min": 0.0
+    },
+    "2011": {
+     "days": 252,
+     "insufficient_per_day": 14.5198,
+     "max": 0.355198,
+     "mean": 0.0138609,
+     "min": 0.0
+    },
+    "2012": {
+     "days": 250,
+     "insufficient_per_day": 17.772,
+     "max": 0.0529954,
+     "mean": 0.0059839,
+     "min": 0.0
+    },
+    "2013": {
+     "days": 252,
+     "insufficient_per_day": 23.4563,
+     "max": 0.0272639,
+     "mean": 0.00311747,
+     "min": 0.0
+    },
+    "2014": {
+     "days": 252,
+     "insufficient_per_day": 38.254,
+     "max": 0.16726,
+     "mean": 0.00932817,
+     "min": 0.0
+    },
+    "2015": {
+     "days": 252,
+     "insufficient_per_day": 33.3175,
+     "max": 0.282837,
+     "mean": 0.01923,
+     "min": 0.0
+    },
+    "2016": {
+     "days": 252,
+     "insufficient_per_day": 18.0278,
+     "max": 0.3459,
+     "mean": 0.0159104,
+     "min": 0.0
+    },
+    "2017": {
+     "days": 251,
+     "insufficient_per_day": 29.9084,
+     "max": 0.0540098,
+     "mean": 0.00928543,
+     "min": 0.0
+    }
+   }
+  },
+  "breadth_dead_stock_days_in_denominator": 240986,
+  "breadth_monthly": {
+   "above200": [
+    [
+     "2010-02-01",
+     0.8713,
+     746,
+     754
+    ],
+    [
+     "2010-03-01",
+     0.8701,
+     762,
+     770
+    ],
+    [
+     "2010-03-31",
+     0.9085,
+     787,
+     796
+    ],
+    [
+     "2010-04-30",
+     0.8882,
+     805,
+     815
+    ],
+    [
+     "2010-06-01",
+     0.4895,
+     764,
+     772
+    ],
+    [
+     "2010-06-30",
+     0.3451,
+     739,
+     746
+    ],
+    [
+     "2010-08-02",
+     0.6432,
+     782,
+     789
+    ],
+    [
+     "2010-08-31",
+     0.3915,
+     774,
+     780
+    ],
+    [
+     "2010-09-30",
+     0.6795,
+     833,
+     836
+    ],
+    [
+     "2010-11-01",
+     0.7703,
+     849,
+     852
+    ],
+    [
+     "2010-11-30",
+     0.752,
+     863,
+     867
+    ],
+    [
+     "2010-12-31",
+     0.8884,
+     914,
+     921
+    ],
+    [
+     "2011-01-31",
+     0.8957,
+     920,
+     927
+    ],
+    [
+     "2011-02-28",
+     0.9234,
+     940,
+     950
+    ],
+    [
+     "2011-03-31",
+     0.9171,
+     941,
+     952
+    ],
+    [
+     "2011-05-02",
+     0.9331,
+     956,
+     965
+    ],
+    [
+     "2011-05-31",
+     0.8848,
+     972,
+     983
+    ],
+    [
+     "2011-06-30",
+     0.7669,
+     944,
+     959
+    ],
+    [
+     "2011-08-01",
+     0.5121,
+     912,
+     931
+    ],
+    [
+     "2011-08-31",
+     0.3661,
+     874,
+     892
+    ],
+    [
+     "2011-09-30",
+     0.1851,
+     821,
+     834
+    ],
+    [
+     "2011-10-31",
+     0.4485,
+     883,
+     893
+    ],
+    [
+     "2011-11-30",
+     0.4512,
+     871,
+     883
+    ],
+    [
+     "2012-01-03",
+     0.5266,
+     883,
+     896
+    ],
+    [
+     "2012-01-31",
+     0.7078,
+     900,
+     915
+    ],
+    [
+     "2012-02-29",
+     0.8319,
+     928,
+     944
+    ],
+    [
+     "2012-04-02",
+     0.8789,
+     941,
+     953
+    ],
+    [
+     "2012-04-30",
+     0.8465,
+     938,
+     952
+    ],
+    [
+     "2012-05-31",
+     0.5853,
+     897,
+     910
+    ],
+    [
+     "2012-07-02",
+     0.6597,
+     908,
+     922
+    ],
+    [
+     "2012-07-31",
+     0.6229,
+     891,
+     904
+    ],
+    [
+     "2012-08-31",
+     0.6836,
+     907,
+     920
+    ],
+    [
+     "2012-10-01",
+     0.7017,
+     922,
+     935
+    ],
+    [
+     "2012-10-31",
+     0.6238,
+     917,
+     926
+    ],
+    [
+     "2012-11-30",
+     0.6562,
+     925,
+     941
+    ],
+    [
+     "2012-12-31",
+     0.6995,
+     945,
+     959
+    ],
+    [
+     "2013-01-31",
+     0.8717,
+     974,
+     986
+    ],
+    [
+     "2013-02-28",
+     0.8497,
+     985,
+     999
+    ],
+    [
+     "2013-04-01",
+     0.8806,
+     1013,
+     1027
+    ],
+    [
+     "2013-04-30",
+     0.8922,
+     1020,
+     1035
+    ],
+    [
+     "2013-05-31",
+     0.8824,
+     1046,
+     1063
+    ],
+    [
+     "2013-07-01",
+     0.827,
+     1046,
+     1065
+    ],
+    [
+     "2013-07-31",
+     0.8709,
+     1069,
+     1086
+    ],
+    [
+     "2013-09-03",
+     0.7223,
+     1048,
+     1065
+    ],
+    [
+     "2013-09-30",
+     0.7786,
+     1084,
+     1104
+    ],
+    [
+     "2013-10-31",
+     0.8342,
+     1098,
+     1117
+    ],
+    [
+     "2013-12-02",
+     0.8052,
+     1114,
+     1141
+    ],
+    [
+     "2013-12-31",
+     0.8329,
+     1137,
+     1168
+    ],
+    [
+     "2014-01-31",
+     0.7089,
+     1120,
+     1149
+    ],
+    [
+     "2014-02-28",
+     0.8212,
+     1158,
+     1189
+    ],
+    [
+     "2014-03-31",
+     0.8038,
+     1162,
+     1192
+    ],
+    [
+     "2014-04-30",
+     0.7402,
+     1143,
+     1167
+    ],
+    [
+     "2014-06-02",
+     0.7541,
+     1155,
+     1184
+    ],
+    [
+     "2014-06-30",
+     0.808,
+     1193,
+     1227
+    ],
+    [
+     "2014-07-31",
+     0.6028,
+     1153,
+     1186
+    ],
+    [
+     "2014-09-02",
+     0.7608,
+     1183,
+     1218
+    ],
+    [
+     "2014-09-30",
+     0.551,
+     1147,
+     1175
+    ],
+    [
+     "2014-10-31",
+     0.7057,
+     1203,
+     1233
+    ],
+    [
+     "2014-12-01",
+     0.713,
+     1188,
+     1217
+    ],
+    [
+     "2014-12-31",
+     0.7364,
+     1199,
+     1236
+    ],
+    [
+     "2015-02-02",
+     0.6579,
+     1184,
+     1213
+    ],
+    [
+     "2015-03-02",
+     0.7639,
+     1220,
+     1251
+    ],
+    [
+     "2015-03-31",
+     0.71,
+     1231,
+     1259
+    ],
+    [
+     "2015-04-30",
+     0.6664,
+     1223,
+     1245
+    ],
+    [
+     "2015-06-01",
+     0.6683,
+     1239,
+     1260
+    ],
+    [
+     "2015-06-30",
+     0.5792,
+     1238,
+     1262
+    ],
+    [
+     "2015-07-31",
+     0.5824,
+     1219,
+     1247
+    ],
+    [
+     "2015-08-31",
+     0.3539,
+     1181,
+     1205
+    ],
+    [
+     "2015-09-30",
+     0.2924,
+     1139,
+     1159
+    ],
+    [
+     "2015-11-02",
+     0.5194,
+     1184,
+     1200
+    ],
+    [
+     "2015-11-30",
+     0.5256,
+     1191,
+     1209
+    ],
+    [
+     "2015-12-31",
+     0.4298,
+     1154,
+     1174
+    ],
+    [
+     "2016-02-01",
+     0.2887,
+     1091,
+     1110
+    ],
+    [
+     "2016-02-29",
+     0.3391,
+     1091,
+     1111
+    ],
+    [
+     "2016-03-31",
+     0.587,
+     1138,
+     1157
+    ],
+    [
+     "2016-05-02",
+     0.6777,
+     1148,
+     1158
+    ],
+    [
+     "2016-05-31",
+     0.7433,
+     1149,
+     1159
+    ],
+    [
+     "2016-06-30",
+     0.6791,
+     1153,
+     1163
+    ],
+    [
+     "2016-08-01",
+     0.7761,
+     1188,
+     1197
+    ],
+    [
+     "2016-08-31",
+     0.7993,
+     1201,
+     1213
+    ],
+    [
+     "2016-09-30",
+     0.7817,
+     1205,
+     1215
+    ],
+    [
+     "2016-10-31",
+     0.6452,
+     1167,
+     1175
+    ],
+    [
+     "2016-11-30",
+     0.6846,
+     1230,
+     1243
+    ],
+    [
+     "2017-01-03",
+     0.7055,
+     1236,
+     1250
+    ],
+    [
+     "2017-01-31",
+     0.7353,
+     1239,
+     1258
+    ],
+    [
+     "2017-02-28",
+     0.8002,
+     1246,
+     1270
+    ],
+    [
+     "2017-03-31",
+     0.7705,
+     1246,
+     1268
+    ],
+    [
+     "2017-05-01",
+     0.7516,
+     1248,
+     1269
+    ],
+    [
+     "2017-05-31",
+     0.6827,
+     1223,
+     1249
+    ],
+    [
+     "2017-06-30",
+     0.7259,
+     1244,
+     1276
+    ],
+    [
+     "2017-07-31",
+     0.7149,
+     1245,
+     1274
+    ],
+    [
+     "2017-08-31",
+     0.6264,
+     1242,
+     1270
+    ],
+    [
+     "2017-10-02",
+     0.7337,
+     1288,
+     1315
+    ],
+    [
+     "2017-10-31",
+     0.7127,
+     1274,
+     1295
+    ],
+    [
+     "2017-11-30",
+     0.7668,
+     1291,
+     1315
+    ]
+   ],
+   "above50": [
+    [
+     "2010-02-01",
+     0.375,
+     752,
+     754
+    ],
+    [
+     "2010-03-01",
+     0.6398,
+     769,
+     770
+    ],
+    [
+     "2010-03-31",
+     0.8731,
+     796,
+     796
+    ],
+    [
+     "2010-04-30",
+     0.7297,
+     814,
+     815
+    ],
+    [
+     "2010-06-01",
+     0.1075,
+     772,
+     772
+    ],
+    [
+     "2010-06-30",
+     0.0737,
+     746,
+     746
+    ],
+    [
+     "2010-08-02",
+     0.7602,
+     788,
+     789
+    ],
+    [
+     "2010-08-31",
+     0.3522,
+     778,
+     780
+    ],
+    [
+     "2010-09-30",
+     0.8419,
+     835,
+     836
+    ],
+    [
+     "2010-11-01",
+     0.8345,
+     852,
+     852
+    ],
+    [
+     "2010-11-30",
+     0.6286,
+     867,
+     867
+    ],
+    [
+     "2010-12-31",
+     0.8183,
+     919,
+     921
+    ],
+    [
+     "2011-01-31",
+     0.7203,
+     926,
+     927
+    ],
+    [
+     "2011-02-28",
+     0.7265,
+     947,
+     950
+    ],
+    [
+     "2011-03-31",
+     0.74,
+     950,
+     952
+    ],
+    [
+     "2011-05-02",
+     0.7946,
+     964,
+     965
+    ],
+    [
+     "2011-05-31",
+     0.6517,
+     982,
+     983
+    ],
+    [
+     "2011-06-30",
+     0.5503,
+     954,
+     959
+    ],
+    [
+     "2011-08-01",
+     0.3052,
+     924,
+     931
+    ],
+    [
+     "2011-08-31",
+     0.3052,
+     888,
+     892
+    ],
+    [
+     "2011-09-30",
+     0.1813,
+     833,
+     834
+    ],
+    [
+     "2011-10-31",
+     0.8791,
+     893,
+     893
+    ],
+    [
+     "2011-11-30",
+     0.798,
+     881,
+     883
+    ],
+    [
+     "2012-01-03",
+     0.7144,
+     893,
+     896
+    ],
+    [
+     "2012-01-31",
+     0.8304,
+     914,
+     915
+    ],
+    [
+     "2012-02-29",
+     0.786,
+     944,
+     944
+    ],
+    [
+     "2012-04-02",
+     0.7765,
+     953,
+     953
+    ],
+    [
+     "2012-04-30",
+     0.6158,
+     950,
+     952
+    ],
+    [
+     "2012-05-31",
+     0.2506,
+     906,
+     910
+    ],
+    [
+     "2012-07-02",
+     0.6326,
+     920,
+     922
+    ],
+    [
+     "2012-07-31",
+     0.7018,
+     902,
+     904
+    ],
+    [
+     "2012-08-31",
+     0.7135,
+     918,
+     920
+    ],
+    [
+     "2012-10-01",
+     0.6503,
+     935,
+     935
+    ],
+    [
+     "2012-10-31",
+     0.473,
+     926,
+     926
+    ],
+    [
+     "2012-11-30",
+     0.5921,
+     939,
+     941
+    ],
+    [
+     "2012-12-31",
+     0.7122,
+     959,
+     959
+    ],
+    [
+     "2013-01-31",
+     0.8883,
+     985,
+     986
+    ],
+    [
+     "2013-02-28",
+     0.742,
+     996,
+     999
+    ],
+    [
+     "2013-04-01",
+     0.7354,
+     1024,
+     1027
+    ],
+    [
+     "2013-04-30",
+     0.7195,
+     1034,
+     1035
+    ],
+    [
+     "2013-05-31",
+     0.6601,
+     1059,
+     1063
+    ],
+    [
+     "2013-07-01",
+     0.533,
+     1062,
+     1065
+    ],
+    [
+     "2013-07-31",
+     0.78,
+     1082,
+     1086
+    ],
+    [
+     "2013-09-03",
+     0.3902,
+     1061,
+     1065
+    ],
+    [
+     "2013-09-30",
+     0.5951,
+     1099,
+     1104
+    ],
+    [
+     "2013-10-31",
+     0.7848,
+     1115,
+     1117
+    ],
+    [
+     "2013-12-02",
+     0.6931,
+     1134,
+     1141
+    ],
+    [
+     "2013-12-31",
+     0.7756,
+     1163,
+     1168
+    ],
+    [
+     "2014-01-31",
+     0.4651,
+     1146,
+     1149
+    ],
+    [
+     "2014-02-28",
+     0.7302,
+     1186,
+     1189
+    ],
+    [
+     "2014-03-31",
+     0.7073,
+     1189,
+     1192
+    ],
+    [
+     "2014-04-30",
+     0.5322,
+     1163,
+     1167
+    ],
+    [
+     "2014-06-02",
+     0.6774,
+     1175,
+     1184
+    ],
+    [
+     "2014-06-30",
+     0.808,
+     1224,
+     1227
+    ],
+    [
+     "2014-07-31",
+     0.3209,
+     1175,
+     1186
+    ],
+    [
+     "2014-09-02",
+     0.6978,
+     1211,
+     1218
+    ],
+    [
+     "2014-09-30",
+     0.3137,
+     1173,
+     1175
+    ],
+    [
+     "2014-10-31",
+     0.739,
+     1230,
+     1233
+    ],
+    [
+     "2014-12-01",
+     0.7716,
+     1213,
+     1217
+    ],
+    [
+     "2014-12-31",
+     0.7079,
+     1229,
+     1236
+    ],
+    [
+     "2015-02-02",
+     0.4921,
+     1209,
+     1213
+    ],
+    [
+     "2015-03-02",
+     0.7498,
+     1247,
+     1251
+    ],
+    [
+     "2015-03-31",
+     0.6293,
+     1257,
+     1259
+    ],
+    [
+     "2015-04-30",
+     0.3847,
+     1245,
+     1245
+    ],
+    [
+     "2015-06-01",
+     0.5191,
+     1258,
+     1260
+    ],
+    [
+     "2015-06-30",
+     0.3762,
+     1260,
+     1262
+    ],
+    [
+     "2015-07-31",
+     0.523,
+     1239,
+     1247
+    ],
+    [
+     "2015-08-31",
+     0.1697,
+     1196,
+     1205
+    ],
+    [
+     "2015-09-30",
+     0.1971,
+     1157,
+     1159
+    ],
+    [
+     "2015-11-02",
+     0.77,
+     1200,
+     1200
+    ],
+    [
+     "2015-11-30",
+     0.7015,
+     1206,
+     1209
+    ],
+    [
+     "2015-12-31",
+     0.38,
+     1171,
+     1174
+    ],
+    [
+     "2016-02-01",
+     0.3008,
+     1107,
+     1110
+    ],
+    [
+     "2016-02-29",
+     0.569,
+     1109,
+     1111
+    ],
+    [
+     "2016-03-31",
+     0.9248,
+     1157,
+     1157
+    ],
+    [
+     "2016-05-02",
+     0.7582,
+     1158,
+     1158
+    ],
+    [
+     "2016-05-31",
+     0.7049,
+     1159,
+     1159
+    ],
+    [
+     "2016-06-30",
+     0.5912,
+     1162,
+     1163
+    ],
+    [
+     "2016-08-01",
+     0.7458,
+     1196,
+     1197
+    ],
+    [
+     "2016-08-31",
+     0.6491,
+     1211,
+     1213
+    ],
+    [
+     "2016-09-30",
+     0.5395,
+     1214,
+     1215
+    ],
+    [
+     "2016-10-31",
+     0.3722,
+     1174,
+     1175
+    ],
+    [
+     "2016-11-30",
+     0.6723,
+     1239,
+     1243
+    ],
+    [
+     "2017-01-03",
+     0.7657,
+     1246,
+     1250
+    ],
+    [
+     "2017-01-31",
+     0.6361,
+     1253,
+     1258
+    ],
+    [
+     "2017-02-28",
+     0.711,
+     1263,
+     1270
+    ],
+    [
+     "2017-03-31",
+     0.5709,
+     1263,
+     1268
+    ],
+    [
+     "2017-05-01",
+     0.6058,
+     1266,
+     1269
+    ],
+    [
+     "2017-05-31",
+     0.5587,
+     1244,
+     1249
+    ],
+    [
+     "2017-06-30",
+     0.6068,
+     1269,
+     1276
+    ],
+    [
+     "2017-07-31",
+     0.6289,
+     1272,
+     1274
+    ],
+    [
+     "2017-08-31",
+     0.5419,
+     1266,
+     1270
+    ],
+    [
+     "2017-10-02",
+     0.7502,
+     1313,
+     1315
+    ],
+    [
+     "2017-10-31",
+     0.7193,
+     1293,
+     1295
+    ],
+    [
+     "2017-11-30",
+     0.754,
+     1309,
+     1315
+    ]
+   ]
+  },
+  "breadth_s": 11.9,
+  "breadth_survivor_bias": {
+   "above200": {
+    "days": 1994,
+    "max_abs": 0.0316578,
+    "mean": -0.00462702,
+    "mean_abs": 0.00788032
+   },
+   "above50": {
+    "days": 1994,
+    "max_abs": 0.0383246,
+    "mean": -0.00153842,
+    "mean_abs": 0.00790947
+   },
+   "new_high": {
+    "days": 1994,
+    "max_abs": 0.0300391,
+    "mean": -0.00135087,
+    "mean_abs": 0.00348185
+   },
+   "new_low": {
+    "days": 1994,
+    "max_abs": 0.0152711,
+    "mean": 0.000332283,
+    "mean_abs": 0.000945197
+   }
+  },
+  "eligibility": {
+   "eligible_after_last_bar": 0,
+   "eligible_no_bar_at_t": 0,
+   "eligible_stale_gt5": 0,
+   "securities_last_bar_before_end": 378,
+   "selections": 1994,
+   "stock_days": 2146562
+  },
+  "features": {
+   "2010": {
+    "decisions": 12,
+    "eligible": 9698,
+    "has_all_features": 9587,
+    "has|adv20_usd": 9698,
+    "has|atr14_ratio": 9698,
+    "has|high252_ratio": 9590,
+    "has|low252_ratio": 9590,
+    "has|mom_12_1": 9587,
+    "has|mom_6_1": 9650,
+    "has|sma200_ratio": 9618,
+    "has|sma50_over_sma200": 9618,
+    "has|sma50_ratio": 9688,
+    "has|vol60": 9685
+   },
+   "2011": {
+    "decisions": 11,
+    "eligible": 10169,
+    "has_all_features": 10004,
+    "has|adv20_usd": 10169,
+    "has|atr14_ratio": 10169,
+    "has|high252_ratio": 10004,
+    "has|low252_ratio": 10004,
+    "has|mom_12_1": 10004,
+    "has|mom_6_1": 10083,
+    "has|sma200_ratio": 10034,
+    "has|sma50_over_sma200": 10034,
+    "has|sma50_ratio": 10142,
+    "has|vol60": 10132
+   },
+   "2012": {
+    "decisions": 13,
+    "eligible": 12077,
+    "has_all_features": 11848,
+    "has|adv20_usd": 12077,
+    "has|atr14_ratio": 12077,
+    "has|high252_ratio": 11849,
+    "has|low252_ratio": 11849,
+    "has|mom_12_1": 11848,
+    "has|mom_6_1": 11985,
+    "has|sma200_ratio": 11902,
+    "has|sma50_over_sma200": 11902,
+    "has|sma50_ratio": 12059,
+    "has|vol60": 12048
+   },
+   "2013": {
+    "decisions": 12,
+    "eligible": 12856,
+    "has_all_features": 12561,
+    "has|adv20_usd": 12856,
+    "has|atr14_ratio": 12856,
+    "has|high252_ratio": 12563,
+    "has|low252_ratio": 12563,
+    "has|mom_12_1": 12561,
+    "has|mom_6_1": 12722,
+    "has|sma200_ratio": 12634,
+    "has|sma50_over_sma200": 12634,
+    "has|sma50_ratio": 12814,
+    "has|vol60": 12801
+   },
+   "2014": {
+    "decisions": 12,
+    "eligible": 14373,
+    "has_all_features": 13905,
+    "has|adv20_usd": 14373,
+    "has|atr14_ratio": 14373,
+    "has|high252_ratio": 13910,
+    "has|low252_ratio": 13910,
+    "has|mom_12_1": 13905,
+    "has|mom_6_1": 14152,
+    "has|sma200_ratio": 14004,
+    "has|sma50_over_sma200": 14004,
+    "has|sma50_ratio": 14314,
+    "has|vol60": 14291
+   },
+   "2015": {
+    "decisions": 12,
+    "eligible": 14684,
+    "has_all_features": 14291,
+    "has|adv20_usd": 14684,
+    "has|atr14_ratio": 14684,
+    "has|high252_ratio": 14296,
+    "has|low252_ratio": 14296,
+    "has|mom_12_1": 14291,
+    "has|mom_6_1": 14525,
+    "has|sma200_ratio": 14403,
+    "has|sma50_over_sma200": 14403,
+    "has|sma50_ratio": 14645,
+    "has|vol60": 14627
+   },
+   "2016": {
+    "decisions": 11,
+    "eligible": 12901,
+    "has_all_features": 12698,
+    "has|adv20_usd": 12901,
+    "has|atr14_ratio": 12901,
+    "has|high252_ratio": 12703,
+    "has|low252_ratio": 12703,
+    "has|mom_12_1": 12698,
+    "has|mom_6_1": 12838,
+    "has|sma200_ratio": 12761,
+    "has|sma50_over_sma200": 12761,
+    "has|sma50_ratio": 12886,
+    "has|vol60": 12883
+   },
+   "2017": {
+    "decisions": 12,
+    "eligible": 15309,
+    "has_all_features": 14960,
+    "has|adv20_usd": 15309,
+    "has|atr14_ratio": 15309,
+    "has|high252_ratio": 14964,
+    "has|low252_ratio": 14964,
+    "has|mom_12_1": 14960,
+    "has|mom_6_1": 15127,
+    "has|sma200_ratio": 15022,
+    "has|sma50_over_sma200": 15022,
+    "has|sma50_ratio": 15257,
+    "has|vol60": 15243
+   }
+  },
+  "features_s": 14.6,
+  "fidelity": {
+   "agree": 380,
+   "by_feature": {},
+   "examples": [],
+   "last_bar_day_mismatch": 0,
+   "mismatch": 0,
+   "missing": 0,
+   "pairs": 380,
+   "seconds": 7.8,
+   "with_events": 265,
+   "worst_rel": 7.23865e-14
+  },
+  "jumps_on_eligible_days": {
+   "items": [
+    [
+     "ABT R735QTJ8XC9X",
+     "2013-01-02",
+     0.4891,
+     false,
+     false,
+     true
+    ],
+    [
+     "ACV R735QTJ8XC9X",
+     "2015-05-22",
+     0.6663,
+     false,
+     false,
+     false
+    ],
+    [
+     "AMLN R735QTJ8XC9X",
+     "2010-10-20",
+     0.5383,
+     false,
+     false,
+     false
+    ],
+    [
+     "AMLN R735QTJ8XC9X",
+     "2012-03-28",
+     1.5445,
+     false,
+     false,
+     false
+    ],
+    [
+     "ATK R735QTJ8XC9X",
+     "2015-02-10",
+     0.4438,
+     false,
+     false,
+     true
+    ],
+    [
+     "ATLS SYKIBTK0IFS5",
+     "2011-04-28",
+     0.5696,
+     false,
+     false,
+     false
+    ],
+    [
+     "BETA RM7NYITL8K11",
+     "2011-07-15",
+     1.6249,
+     false,
+     false,
+     false
+    ],
+    [
+     "BETA RM7NYITL8K11",
+     "2012-02-09",
+     0.1086,
+     false,
+     false,
+     false
+    ],
+    [
+     "CPL R735QTJ8XC9X",
+     "2014-08-04",
+     0.1809,
+     false,
+     false,
+     false
+    ],
+    [
+     "CPRT R735QTJ8XC9X",
+     "2017-04-10",
+     2.0144,
+     false,
+     true,
+     false
+    ],
+    [
+     "CSC R735QTJ8XC9X",
+     "2015-11-30",
+     0.4566,
+     false,
+     false,
+     true
+    ],
+    [
+     "CTXS R735QTJ8XC9X",
+     "2017-02-01",
+     1.5625,
+     false,
+     true,
+     false
+    ],
+    [
+     "CYH RVEI5XQAY1YD",
+     "2011-04-11",
+     0.6424,
+     false,
+     false,
+     false
+    ],
+    [
+     "CYH RVEI5XQAY1YD",
+     "2015-10-22",
+     0.6486,
+     false,
+     false,
+     false
+    ],
+    [
+     "DISCA TAHT8L1LVDR9",
+     "2014-08-07",
+     0.4936,
+     false,
+     false,
+     true
+    ],
+    [
+     "DNY R735QTJ8XC9X",
+     "2016-10-03",
+     0.5048,
+     false,
+     true,
+     true
+    ],
+    [
+     "EAC S2VB7GLDU0RP",
+     "2012-04-11",
+     0.1534,
+     false,
+     false,
+     false
+    ],
+    [
+     "EXPE TB0IQCZTBPT1",
+     "2011-12-21",
+     0.4883,
+     false,
+     true,
+     true
+    ],
+    [
+     "FAF R735QTJ8XC9X",
+     "2010-06-02",
+     0.6191,
+     false,
+     false,
+     true
+    ],
+    [
+     "FOSL R735QTJ8XC9X",
+     "2012-05-08",
+     0.6243,
+     false,
+     false,
+     false
+    ],
+    [
+     "FOSL R735QTJ8XC9X",
+     "2015-11-13",
+     0.635,
+     false,
+     false,
+     false
+    ],
+    [
+     "GCI R735QTJ8XC9X",
+     "2017-06-01",
+     0.6463,
+     false,
+     false,
+     true
+    ],
+    [
+     "GDI R735QTJ8XC9X",
+     "2017-05-12",
+     0.2777,
+     false,
+     false,
+     false
+    ],
+    [
+     "GMCR R735QTJ8XC9X",
+     "2011-11-10",
+     0.6101,
+     false,
+     false,
+     false
+    ],
+    [
+     "GMCR R735QTJ8XC9X",
+     "2012-05-03",
+     0.5224,
+     false,
+     false,
+     false
+    ],
+    [
+     "GMCR R735QTJ8XC9X",
+     "2015-12-07",
+     1.7193,
+     false,
+     false,
+     false
+    ],
+    [
+     "GNW SYYAL4ODL011",
+     "2014-11-06",
+     0.6162,
+     false,
+     false,
+     false
+    ],
+    [
+     "GPRO SI2RRFZ8DI05",
+     "2014-06-26",
+     0.379,
+     false,
+     false,
+     false
+    ],
+    [
+     "HCC R735QTJ8XC9X",
+     "2017-04-13",
+     0.231,
+     false,
+     false,
+     false
+    ],
+    [
+     "HS SUQNQQCDSTB9",
+     "2016-10-11",
+     0.5431,
+     false,
+     false,
+     false
+    ],
+    [
+     "IOC T1UNZ1G9OZ1H",
+     "2013-12-06",
+     0.6262,
+     false,
+     false,
+     false
+    ],
+    [
+     "IVGN RIKPI36527OL",
+     "2015-05-07",
+     0.1966,
+     false,
+     false,
+     false
+    ],
+    [
+     "JCI R735QTJ8XC9X",
+     "2012-10-01",
+     0.5066,
+     false,
+     false,
+     false
+    ],
+    [
+     "KFT S5HU4FPL6G6D",
+     "2012-10-02",
+     0.6588,
+     false,
+     false,
+     true
+    ],
+    [
+     "LBTYA SZC2UFSQNK9X",
+     "2014-03-04",
+     0.5101,
+     false,
+     false,
+     true
+    ],
+    [
+     "MDR R735QTJ8XC9X",
+     "2010-08-02",
+     0.5334,
+     false,
+     false,
+     true
+    ],
+    [
+     "MKL R735QTJ8XC9X",
+     "2010-04-19",
+     0.0687,
+     false,
+     false,
+     false
+    ],
+    [
+     "MOT R735QTJ8XC9X",
+     "2011-01-04",
+     0.6236,
+     false,
+     true,
+     true
+    ],
+    [
+     "MRO R735QTJ8XC9X",
+     "2011-07-01",
+     0.6261,
+     false,
+     false,
+     true
+    ],
+    [
+     "MVSN R735QTJ8XC9X",
+     "2011-11-09",
+     0.6134,
+     false,
+     false,
+     false
+    ],
+    [
+     "NETA R735QTJ8XC9X",
+     "2010-08-19",
+     1.5707,
+     false,
+     false,
+     false
+    ],
+    [
+     "NFLX SEWJWLJNHZDX",
+     "2011-10-25",
+     0.651,
+     false,
+     false,
+     false
+    ],
+    [
+     "OSIP R735QTJ8XC9X",
+     "2010-03-01",
+     1.5194,
+     false,
+     false,
+     false
+    ],
+    [
+     "PCS TRX10524LYZP",
+     "2011-08-02",
+     0.6337,
+     false,
+     false,
+     false
+    ],
+    [
+     "PENN R735QTJ8XC9X",
+     "2013-11-04",
+     0.2332,
+     false,
+     false,
+     true
+    ],
+    [
+     "PZN R735QTJ8XC9X",
+     "2016-08-18",
+     0.6481,
+     false,
+     false,
+     false
+    ],
+    [
+     "SCN R735QTJ8XC9X",
+     "2011-06-03",
+     2.2354,
+     false,
+     false,
+     false
+    ],
+    [
+     "SE TP0NM8A8HZZ9",
+     "2017-10-20",
+     0.3997,
+     false,
+     false,
+     false
+    ],
+    [
+     "SGR R735QTJ8XC9X",
+     "2012-07-30",
+     1.5549,
+     false,
+     false,
+     false
+    ],
+    [
+     "SLM R735QTJ8XC9X",
+     "2014-05-01",
+     0.3503,
+     false,
+     false,
+     true
+    ],
+    [
+     "STR R735QTJ8XC9X",
+     "2010-07-01",
+     0.3345,
+     false,
+     false,
+     true
+    ],
+    [
+     "THC R735QTJ8XC9X",
+     "2010-12-10",
+     1.5501,
+     false,
+     false,
+     false
+    ],
+    [
+     "VPRT TCFPZ80LAY5H",
+     "2010-07-29",
+     0.6365,
+     false,
+     false,
+     false
+    ],
+    [
+     "VRTX R735QTJ8XC9X",
+     "2012-05-07",
+     1.5536,
+     false,
+     false,
+     false
+    ],
+    [
+     "VRTX R735QTJ8XC9X",
+     "2013-04-19",
+     1.6145,
+     false,
+     false,
+     false
+    ],
+    [
+     "VSEA RJM4HN2JYVS5",
+     "2011-05-04",
+     1.5132,
+     false,
+     false,
+     false
+    ],
+    [
+     "WCNX RB0Y4A7JXZDX",
+     "2010-11-15",
+     1.5007,
+     false,
+     true,
+     false
+    ],
+    [
+     "WCNX RB0Y4A7JXZDX",
+     "2016-06-01",
+     2.1253,
+     false,
+     false,
+     false
+    ],
+    [
+     "WMB R735QTJ8XC9X",
+     "2016-02-08",
+     0.6519,
+     false,
+     false,
+     false
+    ],
+    [
+     "WY R735QTJ8XC9X",
+     "2010-07-20",
+     0.3811,
+     false,
+     false,
+     true
+    ],
+    [
+     "TPX SULQI9IJF1ID",
+     "2012-06-06",
+     0.5131,
+     false,
+     false,
+     false
+    ],
+    [
+     "OIS S23QOUCNOW9X",
+     "2014-06-02",
+     0.5726,
+     false,
+     false,
+     true
+    ],
+    [
+     "ODP R735QTJ8XC9X",
+     "2016-05-11",
+     0.5961,
+     false,
+     false,
+     false
+    ],
+    [
+     "ITMN RTAOQQKB1YLH",
+     "2010-05-05",
+     0.25,
+     false,
+     false,
+     false
+    ],
+    [
+     "ITMN RTAOQQKB1YLH",
+     "2014-02-25",
+     2.7077,
+     false,
+     false,
+     false
+    ],
+    [
+     "ONXX R735QTJ8XC9X",
+     "2013-07-01",
+     1.5127,
+     false,
+     false,
+     false
+    ],
+    [
+     "QWST R735QTJ8XC9X",
+     "2013-05-09",
+     6.1385,
+     false,
+     false,
+     false
+    ],
+    [
+     "HRP R735QTJ8XC9X",
+     "2013-02-26",
+     1.5394,
+     false,
+     false,
+     false
+    ],
+    [
+     "NETL T06LPC4Z0Y91",
+     "2011-09-12",
+     1.5085,
+     false,
+     false,
+     false
+    ],
+    [
+     "TIVO ROHE2A6LL6CL",
+     "2010-05-14",
+     0.5842,
+     false,
+     false,
+     false
+    ],
+    [
+     "ENDP RWGWLKZVXH7P",
+     "2016-05-06",
+     0.6081,
+     false,
+     false,
+     false
+    ],
+    [
+     "DNDN RVLEALAHHC2T",
+     "2011-08-04",
+     0.3262,
+     false,
+     false,
+     false
+    ],
+    [
+     "NVLS R735QTJ8XC9X",
+     "2015-06-17",
+     0.3694,
+     false,
+     false,
+     false
+    ],
+    [
+     "SZA R735QTJ8XC9X",
+     "2013-05-24",
+     0.4939,
+     false,
+     false,
+     true
+    ],
+    [
+     "NSM R735QTJ8XC9X",
+     "2011-04-05",
+     1.71,
+     false,
+     false,
+     false
+    ],
+    [
+     "NSM R735QTJ8XC9X",
+     "2012-03-08",
+     0.5682,
+     false,
+     false,
+     false
+    ],
+    [
+     "SYNT R735QTJ8XC9X",
+     "2016-10-04",
+     0.6112,
+     false,
+     false,
+     true
+    ],
+    [
+     "SFSF TXSQ48PF26HX",
+     "2011-12-05",
+     1.5135,
+     false,
+     false,
+     false
+    ],
+    [
+     "LSI R735QTJ8XC9X",
+     "2016-08-15",
+     8.2413,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALK R735QTJ8XC9X",
+     "2014-07-10",
+     0.506,
+     false,
+     false,
+     true
+    ],
+    [
+     "BAH UROXQFIWOSX1",
+     "2012-09-04",
+     0.6558,
+     false,
+     false,
+     true
+    ],
+    [
+     "FNSR RPNQAAWUVM91",
+     "2011-03-09",
+     0.6145,
+     false,
+     false,
+     false
+    ],
+    [
+     "LPLA URPX6IW2RK2T",
+     "2016-02-12",
+     0.6532,
+     false,
+     false,
+     false
+    ],
+    [
+     "MMI UT076X30D0MD",
+     "2011-08-15",
+     1.5582,
+     false,
+     false,
+     false
+    ],
+    [
+     "MMI UT076X30D0MD",
+     "2013-10-31",
+     0.3374,
+     false,
+     false,
+     false
+    ],
+    [
+     "VC UT63VHA0TJL1",
+     "2016-01-25",
+     0.6019,
+     false,
+     false,
+     true
+    ],
+    [
+     "MOXY R735QTJ8XC9X",
+     "2012-12-05",
+     1.8723,
+     false,
+     false,
+     false
+    ],
+    [
+     "VRUS TS4WKVZH809X",
+     "2011-11-21",
+     1.8459,
+     false,
+     false,
+     false
+    ],
+    [
+     "THS T9V5YFMQ412D",
+     "2017-11-02",
+     0.6484,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALEX R735QTJ8XC9X",
+     "2012-07-02",
+     0.5226,
+     false,
+     false,
+     true
+    ],
+    [
+     "HGSI R735QTJ8XC9X",
+     "2012-04-19",
+     1.9763,
+     false,
+     false,
+     false
+    ],
+    [
+     "SLXP RZVZH9PZHS9X",
+     "2014-11-07",
+     0.6602,
+     false,
+     false,
+     false
+    ],
+    [
+     "CPHD RVQBJ24BV3VP",
+     "2016-09-06",
+     1.5261,
+     false,
+     false,
+     false
+    ],
+    [
+     "CROX TG0PJGXPBS6D",
+     "2011-10-18",
+     0.6062,
+     false,
+     false,
+     false
+    ],
+    [
+     "LNKD UWP4JJGSOVAD",
+     "2016-02-05",
+     0.5637,
+     false,
+     false,
+     false
+    ],
+    [
+     "P UXFPM2CCR8MD",
+     "2015-10-23",
+     0.6463,
+     false,
+     false,
+     false
+    ],
+    [
+     "CYPR R735QTJ8XC9X",
+     "2012-09-19",
+     0.5218,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALKS R735QTJ8XC9X",
+     "2016-01-21",
+     0.5576,
+     false,
+     false,
+     false
+    ],
+    [
+     "DFG R735QTJ8XC9X",
+     "2011-12-21",
+     1.7309,
+     false,
+     false,
+     false
+    ],
+    [
+     "LTM SZXQOHUGC5T1",
+     "2017-05-15",
+     0.179,
+     false,
+     false,
+     false
+    ],
+    [
+     "LPI V2FWF6A8RAZP",
+     "2014-11-28",
+     0.6648,
+     false,
+     false,
+     false
+    ],
+    [
+     "ARIA R735QTJ8XC9X",
+     "2013-10-09",
+     0.3401,
+     false,
+     false,
+     false
+    ],
+    [
+     "ARIA R735QTJ8XC9X",
+     "2017-01-09",
+     1.7285,
+     false,
+     false,
+     false
+    ],
+    [
+     "MLNX TQ03PLGB95R9",
+     "2012-04-19",
+     1.5211,
+     false,
+     false,
+     false
+    ],
+    [
+     "AOS R735QTJ8XC9X",
+     "2016-09-19",
+     2.0221,
+     false,
+     true,
+     false
+    ],
+    [
+     "WHC R735QTJ8XC9X",
+     "2016-08-18",
+     0.6039,
+     false,
+     false,
+     false
+    ],
+    [
+     "LMCAD VD9TG75322JP",
+     "2014-07-24",
+     0.3463,
+     false,
+     false,
+     true
+    ],
+    [
+     "LMCAD VD9TG75322JP",
+     "2016-04-18",
+     0.4872,
+     false,
+     false,
+     false
+    ],
+    [
+     "MENT R735QTJ8XC9X",
+     "2015-11-20",
+     0.6425,
+     false,
+     false,
+     false
+    ],
+    [
+     "ISIP R735QTJ8XC9X",
+     "2016-05-26",
+     0.6058,
+     false,
+     false,
+     false
+    ],
+    [
+     "NCT SIQEHORA7LUT",
+     "2013-05-16",
+     0.4639,
+     false,
+     false,
+     true
+    ],
+    [
+     "MNKD T0PB7436HAAT",
+     "2014-04-02",
+     1.7388,
+     false,
+     false,
+     false
+    ],
+    [
+     "ET V54E8C4S98PX",
+     "2013-06-04",
+     1.5244,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALNY SZ18XERVT9ID",
+     "2016-10-06",
+     0.5151,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALNY SZ18XERVT9ID",
+     "2017-09-20",
+     1.5171,
+     false,
+     false,
+     false
+    ],
+    [
+     "CLVS V1NCGGOCJFC5",
+     "2015-11-16",
+     0.3041,
+     false,
+     false,
+     false
+    ],
+    [
+     "MNK VHV8JWLFWTID",
+     "2017-11-07",
+     0.6443,
+     false,
+     false,
+     false
+    ],
+    [
+     "EVHC VJ2K80OVA0KL",
+     "2016-12-02",
+     3.0961,
+     false,
+     false,
+     false
+    ],
+    [
+     "PBYI VAW5K2BEEFL1",
+     "2013-12-05",
+     1.6695,
+     false,
+     false,
+     false
+    ],
+    [
+     "PBYI VAW5K2BEEFL1",
+     "2014-07-23",
+     3.9431,
+     false,
+     false,
+     false
+    ],
+    [
+     "TRMS R735QTJ8XC9X",
+     "2015-05-06",
+     2.1215,
+     false,
+     false,
+     false
+    ],
+    [
+     "TRAK TEGL2532YS11",
+     "2015-06-15",
+     1.5804,
+     false,
+     false,
+     false
+    ],
+    [
+     "DWRE V4XI3OKLPYLH",
+     "2016-06-01",
+     1.5584,
+     false,
+     false,
+     false
+    ],
+    [
+     "ICPT VAO9ZBE1SEAT",
+     "2014-01-09",
+     3.8109,
+     false,
+     false,
+     false
+    ],
+    [
+     "ICPT VAO9ZBE1SEAT",
+     "2014-01-10",
+     1.6161,
+     false,
+     false,
+     false
+    ],
+    [
+     "EFII R735QTJ8XC9X",
+     "2017-08-04",
+     0.5466,
+     false,
+     false,
+     false
+    ],
+    [
+     "DATA VGMXFP4UGVAD",
+     "2016-02-05",
+     0.5056,
+     false,
+     false,
+     false
+    ],
+    [
+     "ALEX V7WTTVG02739",
+     "2017-11-28",
+     0.6384,
+     false,
+     false,
+     true
+    ],
+    [
+     "LJPC VNNZBQ584RJ9",
+     "2014-03-11",
+     1.6477,
+     false,
+     false,
+     false
+    ],
+    [
+     "IDIX T0JEIJW60RC5",
+     "2014-06-09",
+     3.2905,
+     false,
+     false,
+     false
+    ],
+    [
+     "CVEO VR22RBI5MBFP",
+     "2014-09-29",
+     0.5041,
+     false,
+     false,
+     false
+    ],
+    [
+     "AMSGA R735QTJ8XC9X",
+     "2017-11-01",
+     0.658,
+     false,
+     false,
+     false
+    ],
+    [
+     "LMCKV VS1IUOO8DH7P",
+     "2016-04-18",
+     0.4744,
+     false,
+     false,
+     false
+    ],
+    [
+     "MFRM V1PBCNEOOXNP",
+     "2016-08-08",
+     2.1436,
+     false,
+     false,
+     false
+    ],
+    [
+     "LDAKA R735QTJ8XC9X",
+     "2014-09-15",
+     1.8531,
+     false,
+     false,
+     false
+    ],
+    [
+     "BLUE VHJF6S7EZRL1",
+     "2014-12-09",
+     1.7239,
+     false,
+     false,
+     false
+    ],
+    [
+     "BLUE VHJF6S7EZRL1",
+     "2015-12-07",
+     0.6246,
+     false,
+     false,
+     false
+    ],
+    [
+     "DYAX RX8H478M2LPH",
+     "2015-04-01",
+     1.5364,
+     false,
+     false,
+     false
+    ],
+    [
+     "LC VWB4L9QKB691",
+     "2016-05-09",
+     0.6507,
+     false,
+     false,
+     false
+    ],
+    [
+     "HZNP UYM1U32M1OIT",
+     "2017-05-08",
+     0.6496,
+     false,
+     false,
+     false
+    ],
+    [
+     "NOX R735QTJ8XC9X",
+     "2016-09-16",
+     0.1547,
+     false,
+     false,
+     false
+    ],
+    [
+     "TSRO V7SW1HZBR6G5",
+     "2016-06-29",
+     2.0801,
+     false,
+     false,
+     false
+    ],
+    [
+     "SAGE VSBDBMBX50TH",
+     "2017-11-09",
+     1.5425,
+     false,
+     false,
+     false
+    ],
+    [
+     "SAGE VSBDBMBX50TH",
+     "2017-12-07",
+     1.7004,
+     false,
+     false,
+     false
+    ],
+    [
+     "AXON W1ABYABA8HGL",
+     "2017-09-26",
+     0.261,
+     false,
+     false,
+     false
+    ],
+    [
+     "OMF W5WQI34T5ZL1",
+     "2016-11-08",
+     0.613,
+     false,
+     false,
+     false
+    ],
+    [
+     "FIT W1H82XVGRRL1",
+     "2016-11-03",
+     0.6635,
+     false,
+     false,
+     false
+    ],
+    [
+     "AVII R735QTJ8XC9X",
+     "2016-09-19",
+     1.7385,
+     false,
+     false,
+     false
+    ],
+    [
+     "ONCE VXOCXY104W9X",
+     "2017-12-11",
+     0.6503,
+     false,
+     false,
+     false
+    ]
+   ],
+   "n": 149,
+   "near_large_distribution": 27,
+   "near_split": 7,
+   "reversed_spikes": 0
+  },
+  "max_rss_mb": 3409.5,
+  "missing_sessions_detail": {
+   "items": [
+    [
+     "BTU S4X5QH11KLT1",
+     2375,
+     0,
+     2370,
+     "2007-10-18",
+     "2017-12-29",
+     "2007-10-19"
+    ],
+    [
+     "ARCT V4JPUDG8NECL",
+     1215,
+     0,
+     1215,
+     "2012-03-01",
+     "2017-12-29",
+     "2013-01-23"
+    ],
+    [
+     "CAIB R735QTJ8XC9X",
+     1171,
+     0,
+     1171,
+     "2007-01-03",
+     "2017-12-29",
+     "2010-10-01"
+    ],
+    [
+     "ACV R735QTJ8XC9X",
+     1014,
+     0,
+     1014,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-05-11"
+    ],
+    [
+     "RRR TSUI7BHV7MG5",
+     1003,
+     0,
+     1003,
+     "2007-05-23",
+     "2017-12-29",
+     "2012-05-01"
+    ],
+    [
+     "GDI R735QTJ8XC9X",
+     953,
+     0,
+     953,
+     "2007-01-03",
+     "2017-12-29",
+     "2013-07-31"
+    ],
+    [
+     "CTV R735QTJ8XC9X",
+     932,
+     0,
+     932,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-01-14"
+    ],
+    [
+     "KNGT R735QTJ8XC9X",
+     908,
+     0,
+     908,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-05-11"
+    ],
+    [
+     "VRNT SEPNRXZGYP9H",
+     862,
+     0,
+     862,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-02-01"
+    ],
+    [
+     "NVLS R735QTJ8XC9X",
+     762,
+     0,
+     762,
+     "2007-01-03",
+     "2017-07-24",
+     "2012-06-05"
+    ],
+    [
+     "AH UMQPTIBCU8V9",
+     755,
+     0,
+     755,
+     "2010-05-20",
+     "2017-12-29",
+     "2014-03-17"
+    ],
+    [
+     "TRLA VA4L1G2O9B39",
+     657,
+     0,
+     657,
+     "2012-09-20",
+     "2017-09-26",
+     "2015-02-18"
+    ],
+    [
+     "LSI R735QTJ8XC9X",
+     573,
+     0,
+     573,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-05-07"
+    ],
+    [
+     "QWST R735QTJ8XC9X",
+     528,
+     0,
+     528,
+     "2007-01-03",
+     "2017-11-14",
+     "2011-04-01"
+    ],
+    [
+     "EAC S2VB7GLDU0RP",
+     527,
+     0,
+     527,
+     "2007-01-03",
+     "2016-11-18",
+     "2010-03-10"
+    ],
+    [
+     "CPL R735QTJ8XC9X",
+     523,
+     0,
+     523,
+     "2007-01-03",
+     "2015-12-17",
+     "2012-07-03"
+    ],
+    [
+     "SUN R735QTJ8XC9X",
+     516,
+     0,
+     516,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-10-05"
+    ],
+    [
+     "AZPN R735QTJ8XC9X",
+     499,
+     0,
+     499,
+     "2007-01-03",
+     "2017-12-29",
+     "2008-02-19"
+    ],
+    [
+     "LTM SZXQOHUGC5T1",
+     485,
+     0,
+     485,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-06-11"
+    ],
+    [
+     "GPRO SI2RRFZ8DI05",
+     477,
+     0,
+     477,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-08-01"
+    ],
+    [
+     "ROSE TG5MRXRJPJZ9",
+     447,
+     0,
+     447,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-07-21"
+    ],
+    [
+     "CNK R735QTJ8XC9X",
+     418,
+     0,
+     418,
+     "2007-01-03",
+     "2017-04-20",
+     "2009-03-18"
+    ],
+    [
+     "HCC R735QTJ8XC9X",
+     367,
+     0,
+     367,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-10-28"
+    ],
+    [
+     "MMI UT076X30D0MD",
+     363,
+     0,
+     363,
+     "2011-01-04",
+     "2017-12-29",
+     "2012-05-22"
+    ],
+    [
+     "NAV R735QTJ8XC9X",
+     346,
+     0,
+     346,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-02-14"
+    ],
+    [
+     "IVGN RIKPI36527OL",
+     316,
+     0,
+     316,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-02-04"
+    ],
+    [
+     "HS SUQNQQCDSTB9",
+     309,
+     0,
+     306,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-07-27"
+    ],
+    [
+     "MXIM R735QTJ8XC9X",
+     257,
+     0,
+     257,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-10-02"
+    ],
+    [
+     "EST TY5IXGGM1ZL1",
+     242,
+     0,
+     94,
+     "2007-12-03",
+     "2017-12-29",
+     "2007-12-14"
+    ],
+    [
+     "UPL S1I2USAY0AQT",
+     240,
+     0,
+     240,
+     "2007-01-03",
+     "2017-12-29",
+     "2016-05-02"
+    ],
+    [
+     "EXXI TURFHV3OKFOL",
+     214,
+     0,
+     213,
+     "2007-08-02",
+     "2017-12-29",
+     "2007-11-29"
+    ],
+    [
+     "WMS R735QTJ8XC9X",
+     192,
+     0,
+     192,
+     "2007-01-03",
+     "2017-12-29",
+     "2013-10-18"
+    ],
+    [
+     "SD TXEXUXL1ZM91",
+     187,
+     0,
+     187,
+     "2007-11-06",
+     "2017-12-29",
+     "2016-01-07"
+    ],
+    [
+     "UA.C W9JOYIS9CBXH",
+     167,
+     0,
+     167,
+     "2016-04-08",
+     "2017-12-29",
+     "2016-04-11"
+    ],
+    [
+     "SE TP0NM8A8HZZ9",
+     165,
+     0,
+     165,
+     "2007-01-03",
+     "2017-12-29",
+     "2017-02-27"
+    ],
+    [
+     "PAX TY5IXGGM1ZL1",
+     148,
+     0,
+     7,
+     "2007-12-03",
+     "2017-12-29",
+     "2007-12-07"
+    ],
+    [
+     "BETA RM7NYITL8K11",
+     114,
+     0,
+     114,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-08-26"
+    ],
+    [
+     "NSM R735QTJ8XC9X",
+     113,
+     0,
+     113,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-09-26"
+    ],
+    [
+     "KEG R735QTJ8XC9X",
+     99,
+     0,
+     99,
+     "2007-10-03",
+     "2017-12-29",
+     "2016-07-28"
+    ],
+    [
+     "AGN R735QTJ8XC9X",
+     62,
+     0,
+     62,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-03-17"
+    ],
+    [
+     "DYN RRWGXYWP5HET",
+     62,
+     0,
+     62,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-07-06"
+    ],
+    [
+     "NAQ TX81QA0VGC4L",
+     49,
+     0,
+     3,
+     "2007-10-30",
+     "2017-12-29",
+     "2007-11-19"
+    ],
+    [
+     "ATLS SYKIBTK0IFS5",
+     47,
+     0,
+     47,
+     "2007-01-03",
+     "2016-03-18",
+     "2011-02-18"
+    ],
+    [
+     "COHR R735QTJ8XC9X",
+     38,
+     0,
+     38,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-12-19"
+    ],
+    [
+     "BOFI T6ZS0M802T7P",
+     35,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-08-07"
+    ],
+    [
+     "SRAQ W9QL36CFVM1X",
+     29,
+     0,
+     5,
+     "2016-04-15",
+     "2017-12-29",
+     "2016-04-18"
+    ],
+    [
+     "EGBN RONAQUDM1PB9",
+     25,
+     0,
+     3,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-01-31"
+    ],
+    [
+     "LCI SDV4X1N8LBAD",
+     16,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-10-30"
+    ],
+    [
+     "RBIN R735QTJ8XC9X",
+     11,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-03-07"
+    ],
+    [
+     "GTT VHHGALH2U99H",
+     11,
+     0,
+     2,
+     "2013-06-17",
+     "2017-12-29",
+     "2013-06-20"
+    ],
+    [
+     "TBPHV VQLC5QAABHPH",
+     7,
+     0,
+     7,
+     "2014-05-16",
+     "2017-12-29",
+     "2014-05-21"
+    ],
+    [
+     "CBPO UI4B9PHTWQQT",
+     6,
+     0,
+     1,
+     "2009-12-02",
+     "2017-12-29",
+     "2012-07-12"
+    ],
+    [
+     "CPS VKTKU03O6AUD",
+     5,
+     0,
+     2,
+     "2013-10-17",
+     "2017-12-29",
+     "2013-11-05"
+    ],
+    [
+     "GAS R735QTJ8XC9X",
+     4,
+     0,
+     4,
+     "2007-01-03",
+     "2016-06-30",
+     "2011-12-12"
+    ],
+    [
+     "THRX T2L91KBTRCDH",
+     4,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-11-29"
+    ],
+    [
+     "ETHCY R735QTJ8XC9X",
+     4,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2009-02-05"
+    ],
+    [
+     "PASW RMSCCHI4UEED",
+     3,
+     0,
+     1,
+     "2007-12-26",
+     "2017-12-29",
+     "2009-01-07"
+    ],
+    [
+     "SZI SYLHRWX6L6XX",
+     3,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2008-07-25"
+    ],
+    [
+     "BFA R735QTJ8XC9X",
+     3,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-07-24"
+    ],
+    [
+     "BMRN RMLG7TXYB49X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2013-11-19"
+    ],
+    [
+     "VIAB TF19G3RMKMED",
+     2,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-12-01"
+    ],
+    [
+     "VRTX R735QTJ8XC9X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-04-28"
+    ],
+    [
+     "DNDN RVLEALAHHC2T",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2014-11-18",
+     "2007-03-29"
+    ],
+    [
+     "SLXP RZVZH9PZHS9X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2015-03-31",
+     "2010-02-23"
+    ],
+    [
+     "INHX SZ8522C2CJMT",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2012-02-13",
+     "2009-02-12"
+    ],
+    [
+     "VVUS R735QTJ8XC9X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2010-07-15"
+    ],
+    [
+     "ARNA RWQR2INKP0TH",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2010-09-16"
+    ],
+    [
+     "ARCP UZQF5X2J6M3P",
+     2,
+     0,
+     1,
+     "2011-09-07",
+     "2017-12-29",
+     "2011-10-06"
+    ],
+    [
+     "MDCO RX1KZJOFJBL1",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-02-12"
+    ],
+    [
+     "NPSP R735QTJ8XC9X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2015-02-20",
+     "2012-10-16"
+    ],
+    [
+     "ESGRD TPT7KXW4PVMT",
+     2,
+     0,
+     1,
+     "2007-02-01",
+     "2017-12-29",
+     "2007-04-05"
+    ],
+    [
+     "INHL R735QTJ8XC9X",
+     2,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-06-11"
+    ],
+    [
+     "INSY VG85QANBBJVP",
+     2,
+     0,
+     2,
+     "2013-05-02",
+     "2017-12-29",
+     "2017-10-27"
+    ],
+    [
+     "CSALV VZV4PFAI9945",
+     2,
+     0,
+     2,
+     "2015-04-20",
+     "2017-12-29",
+     "2015-04-27"
+    ],
+    [
+     "NARA R7TQTCESZPLX",
+     2,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-12-01"
+    ],
+    [
+     "ALX R735QTJ8XC9X",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2013-05-06"
+    ],
+    [
+     "GY R735QTJ8XC9X",
+     2,
+     0,
+     2,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-04-27"
+    ],
+    [
+     "CORT SXTX9AOGG2G5",
+     2,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2008-11-10"
+    ],
+    [
+     "ATK R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-02-09"
+    ],
+    [
+     "REGN R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-06-09"
+    ],
+    [
+     "ITMN RTAOQQKB1YLH",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2014-09-26",
+     "2010-03-09"
+    ],
+    [
+     "FON R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2013-07-11"
+    ],
+    [
+     "TAN R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2015-02-02",
+     "2014-10-03"
+    ],
+    [
+     "KRO SUCVHF80Q92D",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2010-04-26"
+    ],
+    [
+     "VRUS TS4WKVZH809X",
+     1,
+     0,
+     1,
+     "2007-04-27",
+     "2012-01-17",
+     "2007-09-20"
+    ],
+    [
+     "HGSI R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2012-08-02",
+     "2010-11-16"
+    ],
+    [
+     "SGEN S2TCB9V1OIG5",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2011-07-14"
+    ],
+    [
+     "ALKS R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2010-09-16"
+    ],
+    [
+     "JAZZ TT3D85SDWEW5",
+     1,
+     0,
+     1,
+     "2007-06-01",
+     "2017-12-29",
+     "2010-08-20"
+    ],
+    [
+     "MSG UK18K93N9JZ9",
+     1,
+     0,
+     1,
+     "2010-02-10",
+     "2017-12-29",
+     "2015-10-01"
+    ],
+    [
+     "TWO UH6U2J23B3AD",
+     1,
+     0,
+     1,
+     "2009-10-29",
+     "2017-12-29",
+     "2010-02-01"
+    ],
+    [
+     "PCYC R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2015-05-22",
+     "2009-02-26"
+    ],
+    [
+     "SMBL TURFHV3OKFOL",
+     1,
+     0,
+     1,
+     "2007-08-02",
+     "2016-01-15",
+     "2013-01-03"
+    ],
+    [
+     "CYPH R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-06-11",
+     "2017-12-29",
+     "2007-06-13"
+    ],
+    [
+     "ISIP R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-10-18"
+    ],
+    [
+     "SPF R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2015-10-01"
+    ],
+    [
+     "AEGR UQZC400IP6QT",
+     1,
+     0,
+     1,
+     "2010-10-22",
+     "2016-11-29",
+     "2012-10-17"
+    ],
+    [
+     "MNKD T0PB7436HAAT",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-04-01"
+    ],
+    [
+     "TSAI R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-07-25"
+    ],
+    [
+     "ACAD SZ09HBEPQICL",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2016-03-29"
+    ],
+    [
+     "DXCM T7TBFF72DG11",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2016-07-21"
+    ],
+    [
+     "ARC SW4VJHZZPAHX",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2007-08-01"
+    ],
+    [
+     "TRMS R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2015-06-22",
+     "2011-11-03"
+    ],
+    [
+     "ICPT VAO9ZBE1SEAT",
+     1,
+     0,
+     1,
+     "2012-10-11",
+     "2017-12-29",
+     "2016-04-07"
+    ],
+    [
+     "PKY R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-10-11",
+     "2016-10-06"
+    ],
+    [
+     "EXAS S1UVO02503TX",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2014-03-27"
+    ],
+    [
+     "DYAX RX8H478M2LPH",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2016-01-21",
+     "2009-02-04"
+    ],
+    [
+     "PTCT VHKEMVKL2IQT",
+     1,
+     0,
+     1,
+     "2013-06-20",
+     "2017-12-29",
+     "2017-09-28"
+    ],
+    [
+     "ABMD R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2012-12-06"
+    ],
+    [
+     "AVII R735QTJ8XC9X",
+     1,
+     0,
+     1,
+     "2007-01-03",
+     "2017-12-29",
+     "2016-04-25"
+    ],
+    [
+     "ONCE VXOCXY104W9X",
+     1,
+     0,
+     1,
+     "2015-01-30",
+     "2017-12-29",
+     "2017-10-12"
+    ],
+    [
+     "SYRG UYL2DZPFYXD1",
+     1,
+     0,
+     1,
+     "2011-07-27",
+     "2017-12-29",
+     "2011-11-11"
+    ]
+   ],
+   "on_eligible_days": 0,
+   "securities": 112
+  },
+  "overlap": {
+   "dates": 95,
+   "mean_spearman": [
+    [
+     1.0,
+     0.645,
+     0.24,
+     0.568,
+     0.469,
+     0.131,
+     0.177,
+     -0.063,
+     0.016,
+     -0.042
+    ],
+    [
+     0.645,
+     1.0,
+     0.862,
+     0.728,
+     0.765,
+     0.599,
+     0.754,
+     -0.049,
+     -0.021,
+     -0.043
+    ],
+    [
+     0.24,
+     0.862,
+     1.0,
+     0.575,
+     0.714,
+     0.718,
+     0.897,
+     -0.008,
+     -0.022,
+     -0.028
+    ],
+    [
+     0.568,
+     0.728,
+     0.575,
+     1.0,
+     0.374,
+     0.448,
+     0.485,
+     -0.478,
+     -0.455,
+     -0.049
+    ],
+    [
+     0.469,
+     0.765,
+     0.714,
+     0.374,
+     1.0,
+     0.658,
+     0.597,
+     0.29,
+     0.323,
+     -0.028
+    ],
+    [
+     0.131,
+     0.599,
+     0.718,
+     0.448,
+     0.658,
+     1.0,
+     0.626,
+     0.018,
+     0.004,
+     -0.026
+    ],
+    [
+     0.177,
+     0.754,
+     0.897,
+     0.485,
+     0.597,
+     0.626,
+     1.0,
+     -0.019,
+     -0.038,
+     -0.024
+    ],
+    [
+     -0.063,
+     -0.049,
+     -0.008,
+     -0.478,
+     0.29,
+     0.018,
+     -0.019,
+     1.0,
+     0.832,
+     0.007
+    ],
+    [
+     0.016,
+     -0.021,
+     -0.022,
+     -0.455,
+     0.323,
+     0.004,
+     -0.038,
+     0.832,
+     1.0,
+     0.044
+    ],
+    [
+     -0.042,
+     -0.043,
+     -0.028,
+     -0.049,
+     -0.028,
+     -0.026,
+     -0.024,
+     0.007,
+     0.044,
+     1.0
+    ]
+   ],
+   "names": [
+    "sma50_ratio",
+    "sma200_ratio",
+    "sma50_over_sma200",
+    "high252_ratio",
+    "low252_ratio",
+    "mom_12_1",
+    "mom_6_1",
+    "atr14_ratio",
+    "vol60",
+    "log adv20_usd"
+   ]
+  },
+  "panel": {
+   "adj_dev_event_beyond_cent": 49,
+   "adj_dev_nonevent_gt_1e6": 2,
+   "adj_max_dev_nonevent": 0.0053734,
+   "adj_steps": 4394438,
+   "build_s": 127.1,
+   "dividend_events": 39245,
+   "duplicate_bars": 0,
+   "examples": {
+    "adj_event": [
+     [
+      "AYI S9PGYU1KYMW5",
+      "2007-11-01",
+      0.000122707
+     ],
+     [
+      "BMR T0Y67YDP62QT",
+      "2008-12-29",
+      0.000467219
+     ],
+     [
+      "BMR T0Y67YDP62QT",
+      "2009-03-27",
+      0.000712179
+     ],
+     [
+      "BTU S4X5QH11KLT1",
+      "2017-04-03",
+      0.00060447
+     ],
+     [
+      "COF R735QTJ8XC9X",
+      "2009-02-06",
+      0.000361517
+     ],
+     [
+      "CTB R735QTJ8XC9X",
+      "2008-11-28",
+      0.00113892
+     ],
+     [
+      "CTB R735QTJ8XC9X",
+      "2009-03-05",
+      0.00124376
+     ],
+     [
+      "CTCM TJ3Z219RZ1B9",
+      "2014-11-26",
+      0.000812978
+     ],
+     [
+      "CTCM TJ3Z219RZ1B9",
+      "2015-03-12",
+      0.00133686
+     ],
+     [
+      "CUZ R735QTJ8XC9X",
+      "2016-10-07",
+      0.000524451
+     ],
+     [
+      "CVC R735QTJ8XC9X",
+      "2010-02-10",
+      0.000231876
+     ],
+     [
+      "DRE R735QTJ8XC9X",
+      "2008-11-12",
+      0.000441633
+     ],
+     [
+      "EDR T5OIK4NWELID",
+      "2008-10-29",
+      0.00110127
+     ],
+     [
+      "FRO S6Z09HGPB6UD",
+      "2007-03-06",
+      0.000155287
+     ],
+     [
+      "FST R735QTJ8XC9X",
+      "2011-10-03",
+      0.000395265
+     ],
+     [
+      "KIND S9JKA9UKI3XH",
+      "2007-08-01",
+      0.000191843
+     ],
+     [
+      "KRG T133GF7JJUJP",
+      "2009-01-05",
+      0.000943349
+     ],
+     [
+      "LMCAD VD9TG75322JP",
+      "2014-11-05",
+      0.0001362
+     ],
+     [
+      "LMCKV VS1IUOO8DH7P",
+      "2014-11-05",
+      0.000137492
+     ],
+     [
+      "LRY R735QTJ8XC9X",
+      "2009-03-30",
+      0.000265517
+     ]
+    ],
+    "adj_nonevent": [
+     [
+      "CB R735QTJ8XC9X",
+      "2016-03-29",
+      0.00521764
+     ],
+     [
+      "CB R735QTJ8XC9X",
+      "2016-06-28",
+      0.0053734
+     ]
+    ],
+    "jumps": [
+     [
+      "ABII TXMTFOIELNJ9",
+      [
+       "2007-11-15"
+      ]
+     ],
+     [
+      "ABT R735QTJ8XC9X",
+      [
+       "2013-01-02"
+      ]
+     ],
+     [
+      "ACAD SZ09HBEPQICL",
+      [
+       "2007-03-19",
+       "2008-06-16",
+       "2008-10-13"
+      ]
+     ],
+     [
+      "ACTG SKKDFY9LC5LX",
+      [
+       "2007-11-16"
+      ]
+     ],
+     [
+      "ACV R735QTJ8XC9X",
+      [
+       "2015-05-22"
+      ]
+     ],
+     [
+      "AEGR UQZC400IP6QT",
+      [
+       "2014-10-31"
+      ]
+     ],
+     [
+      "AEL SU7Y8YE6CH9H",
+      [
+       "2008-10-09"
+      ]
+     ],
+     [
+      "AERI VL4ER14J0LLX",
+      [
+       "2015-04-24",
+       "2015-06-16",
+       "2015-09-17"
+      ]
+     ],
+     [
+      "AFL R735QTJ8XC9X",
+      [
+       "2009-01-22"
+      ]
+     ],
+     [
+      "AGO SY2SA4YZ4UW5",
+      [
+       "2008-07-22"
+      ]
+     ],
+     [
+      "AH UMQPTIBCU8V9",
+      [
+       "2012-04-25",
+       "2017-03-15"
+      ]
+     ],
+     [
+      "AIG R735QTJ8XC9X",
+      [
+       "2008-09-15",
+       "2008-09-17",
+       "2008-09-19"
+      ]
+     ],
+     [
+      "ALEX R735QTJ8XC9X",
+      [
+       "2012-07-02"
+      ]
+     ],
+     [
+      "ALEX V7WTTVG02739",
+      [
+       "2017-11-28"
+      ]
+     ],
+     [
+      "ALGN S1PYFJ8AMC11",
+      [
+       "2007-10-25"
+      ]
+     ],
+     [
+      "ALK R735QTJ8XC9X",
+      [
+       "2014-07-10"
+      ]
+     ],
+     [
+      "ALKS R735QTJ8XC9X",
+      [
+       "2016-01-21"
+      ]
+     ],
+     [
+      "ALNY SZ18XERVT9ID",
+      [
+       "2007-07-09",
+       "2012-07-16",
+       "2016-10-06"
+      ]
+     ],
+     [
+      "AMD R735QTJ8XC9X",
+      [
+       "2016-04-22"
+      ]
+     ],
+     [
+      "AMLN R735QTJ8XC9X",
+      [
+       "2010-10-20",
+       "2012-03-28"
+      ]
+     ],
+     [
+      "AMSGA R735QTJ8XC9X",
+      [
+       "2017-11-01"
+      ]
+     ],
+     [
+      "ANAB WHK6XWYPRDYD",
+      [
+       "2017-10-10"
+      ]
+     ],
+     [
+      "ANN R735QTJ8XC9X",
+      [
+       "2009-03-06"
+      ]
+     ],
+     [
+      "ANV TSHPE3QO7TD1",
+      [
+       "2008-11-13"
+      ]
+     ],
+     [
+      "APKT TMRWYKAE84TH",
+      [
+       "2008-07-03"
+      ]
+     ]
+    ],
+    "split_unverified": [
+     [
+      "BTU S4X5QH11KLT1",
+      [
+       "2015-10-01",
+       14.9925,
+       12.9072
+      ]
+     ],
+     [
+      "DISCK U632KKJK8S4L",
+      [
+       "2014-08-07",
+       0.5,
+       0.25
+      ]
+     ],
+     [
+      "DNY R735QTJ8XC9X",
+      [
+       "2016-10-03",
+       3.0003,
+       1.41617
+      ]
+     ],
+     [
+      "EXPE TB0IQCZTBPT1",
+      [
+       "2011-12-21",
+       2.0,
+       0.94958
+      ]
+     ],
+     [
+      "MOT R735QTJ8XC9X",
+      [
+       "2011-01-04",
+       7.00001,
+       4.09551
+      ]
+     ],
+     [
+      "PCS TRX10524LYZP",
+      [
+       "2013-05-01",
+       2.0,
+       1.31876
+      ]
+     ],
+     [
+      "PXT R735QTJ8XC9X",
+      [
+       "2013-05-30",
+       0.90909,
+       0.699333
+      ],
+      [
+       "2015-02-26",
+       0.909091,
+       0.73649
+      ]
+     ],
+     [
+      "SAI TMRWYKAE84TH",
+      [
+       "2013-09-30",
+       4.0,
+       2.74343
+      ]
+     ],
+     [
+      "SUNH SWVGM0VJRNTX",
+      [
+       "2010-11-16",
+       3.0003,
+       1.7533
+      ]
+     ]
+    ]
+   },
+   "factor_steps_big": 0,
+   "factor_steps_small": 5,
+   "first_session": "2007-01-03",
+   "history_calls": 100,
+   "jumps_gt_50pct": 700,
+   "jumps_gt_50pct_near_split": 17,
+   "large_distributions": 72,
+   "last_scale_not_one": 11,
+   "last_session": "2017-12-29",
+   "late_events": 0,
+   "late_rows": 0,
+   "missing_inside_life": 21935,
+   "nonpositive_or_nan_ohlc": 0,
+   "off_calendar_rows": 0,
+   "ohlc_inconsistent": 0,
+   "out_of_order_securities": 0,
+   "residual_down": 71,
+   "residual_up": 0,
+   "securities": 1996,
+   "securities_adjusted_missing": 0,
+   "securities_with_factor_steps": 3,
+   "securities_with_missing_inside_life": 112,
+   "sessions": 2769,
+   "split": {
+    "aligned": 527,
+    "n": 540,
+    "outside": 2,
+    "realigned": 0,
+    "unverified": 11
+   },
+   "split_types": {
+    "SPLIT_OCCURRED": 540,
+    "WARNING": 541
+   },
+   "stale_runs_ge5": 0,
+   "tr_jumps_gt_50pct": 661,
+   "zero_volume_bars": 4
+  },
+  "regime_inputs": {
+   "SPY": {
+    "bars": 2769,
+    "first": "2007-01-03",
+    "last": "2017-12-29"
+   }
+  },
+  "sector_group_sizes": {
+   "2010": {
+    "BusEq": {
+     "max": 127,
+     "median": 59.5,
+     "min": 55
+    },
+    "Chems": {
+     "max": 28,
+     "median": 14.0,
+     "min": 12
+    },
+    "Durbl": {
+     "max": 21,
+     "median": 10.5,
+     "min": 6
+    },
+    "Enrgy": {
+     "max": 52,
+     "median": 38.5,
+     "min": 33
+    },
+    "Hlth": {
+     "max": 63,
+     "median": 37.5,
+     "min": 31
+    },
+    "Manuf": {
+     "max": 92,
+     "median": 44.5,
+     "min": 40
+    },
+    "Money": {
+     "max": 163,
+     "median": 82.5,
+     "min": 71
+    },
+    "NoDur": {
+     "max": 46,
+     "median": 26.0,
+     "min": 23
+    },
+    "Other": {
+     "max": 102,
+     "median": 56.5,
+     "min": 44
+    },
+    "Shops": {
+     "max": 87,
+     "median": 49.0,
+     "min": 41
+    },
+    "Telcm": {
+     "max": 22,
+     "median": 13.0,
+     "min": 10
+    },
+    "Unclassified": {
+     "max": 409,
+     "median": 318.0,
+     "min": 75
+    },
+    "Utils": {
+     "max": 40,
+     "median": 25.0,
+     "min": 24
+    }
+   },
+   "2011": {
+    "BusEq": {
+     "max": 132,
+     "median": 127.0,
+     "min": 116
+    },
+    "Chems": {
+     "max": 33,
+     "median": 30.0,
+     "min": 28
+    },
+    "Durbl": {
+     "max": 24,
+     "median": 23.0,
+     "min": 22
+    },
+    "Enrgy": {
+     "max": 58,
+     "median": 55.0,
+     "min": 49
+    },
+    "Hlth": {
+     "max": 71,
+     "median": 64.0,
+     "min": 57
+    },
+    "Manuf": {
+     "max": 98,
+     "median": 93.0,
+     "min": 81
+    },
+    "Money": {
+     "max": 169,
+     "median": 163.0,
+     "min": 155
+    },
+    "NoDur": {
+     "max": 49,
+     "median": 46.0,
+     "min": 45
+    },
+    "Other": {
+     "max": 108,
+     "median": 102.0,
+     "min": 91
+    },
+    "Shops": {
+     "max": 97,
+     "median": 91.0,
+     "min": 87
+    },
+    "Telcm": {
+     "max": 23,
+     "median": 21.0,
+     "min": 20
+    },
+    "Unclassified": {
+     "max": 96,
+     "median": 78.0,
+     "min": 39
+    },
+    "Utils": {
+     "max": 40,
+     "median": 39.0,
+     "min": 38
+    }
+   },
+   "2012": {
+    "BusEq": {
+     "max": 135,
+     "median": 128.0,
+     "min": 123
+    },
+    "Chems": {
+     "max": 31,
+     "median": 29.0,
+     "min": 28
+    },
+    "Durbl": {
+     "max": 27,
+     "median": 23.0,
+     "min": 20
+    },
+    "Enrgy": {
+     "max": 56,
+     "median": 54.0,
+     "min": 52
+    },
+    "Hlth": {
+     "max": 74,
+     "median": 70.0,
+     "min": 62
+    },
+    "Manuf": {
+     "max": 100,
+     "median": 92.0,
+     "min": 85
+    },
+    "Money": {
+     "max": 176,
+     "median": 172.0,
+     "min": 162
+    },
+    "NoDur": {
+     "max": 50,
+     "median": 49.0,
+     "min": 46
+    },
+    "Other": {
+     "max": 111,
+     "median": 105.0,
+     "min": 100
+    },
+    "Shops": {
+     "max": 105,
+     "median": 100.0,
+     "min": 94
+    },
+    "Telcm": {
+     "max": 28,
+     "median": 27.0,
+     "min": 23
+    },
+    "Unclassified": {
+     "max": 47,
+     "median": 43.0,
+     "min": 39
+    },
+    "Utils": {
+     "max": 40,
+     "median": 39.0,
+     "min": 36
+    }
+   },
+   "2013": {
+    "BusEq": {
+     "max": 161,
+     "median": 149.0,
+     "min": 130
+    },
+    "Chems": {
+     "max": 38,
+     "median": 34.5,
+     "min": 30
+    },
+    "Durbl": {
+     "max": 28,
+     "median": 27.0,
+     "min": 25
+    },
+    "Enrgy": {
+     "max": 59,
+     "median": 56.5,
+     "min": 53
+    },
+    "Hlth": {
+     "max": 88,
+     "median": 79.5,
+     "min": 71
+    },
+    "Manuf": {
+     "max": 110,
+     "median": 102.5,
+     "min": 99
+    },
+    "Money": {
+     "max": 231,
+     "median": 201.5,
+     "min": 184
+    },
+    "NoDur": {
+     "max": 62,
+     "median": 54.0,
+     "min": 50
+    },
+    "Other": {
+     "max": 143,
+     "median": 130.0,
+     "min": 116
+    },
+    "Shops": {
+     "max": 125,
+     "median": 118.5,
+     "min": 109
+    },
+    "Telcm": {
+     "max": 34,
+     "median": 31.0,
+     "min": 28
+    },
+    "Unclassified": {
+     "max": 51,
+     "median": 44.0,
+     "min": 29
+    },
+    "Utils": {
+     "max": 60,
+     "median": 46.0,
+     "min": 39
+    }
+   },
+   "2014": {
+    "BusEq": {
+     "max": 178,
+     "median": 170.0,
+     "min": 159
+    },
+    "Chems": {
+     "max": 39,
+     "median": 37.0,
+     "min": 35
+    },
+    "Durbl": {
+     "max": 30,
+     "median": 28.0,
+     "min": 27
+    },
+    "Enrgy": {
+     "max": 67,
+     "median": 62.0,
+     "min": 54
+    },
+    "Hlth": {
+     "max": 93,
+     "median": 87.5,
+     "min": 85
+    },
+    "Manuf": {
+     "max": 111,
+     "median": 109.0,
+     "min": 107
+    },
+    "Money": {
+     "max": 264,
+     "median": 237.0,
+     "min": 223
+    },
+    "NoDur": {
+     "max": 65,
+     "median": 62.0,
+     "min": 60
+    },
+    "Other": {
+     "max": 150,
+     "median": 143.5,
+     "min": 139
+    },
+    "Shops": {
+     "max": 132,
+     "median": 127.0,
+     "min": 122
+    },
+    "Telcm": {
+     "max": 33,
+     "median": 32.0,
+     "min": 30
+    },
+    "Unclassified": {
+     "max": 39,
+     "median": 36.5,
+     "min": 30
+    },
+    "Utils": {
+     "max": 63,
+     "median": 61.0,
+     "min": 58
+    }
+   },
+   "2015": {
+    "BusEq": {
+     "max": 185,
+     "median": 174.5,
+     "min": 161
+    },
+    "Chems": {
+     "max": 38,
+     "median": 37.0,
+     "min": 31
+    },
+    "Durbl": {
+     "max": 29,
+     "median": 26.0,
+     "min": 26
+    },
+    "Enrgy": {
+     "max": 61,
+     "median": 55.5,
+     "min": 50
+    },
+    "Hlth": {
+     "max": 107,
+     "median": 101.0,
+     "min": 92
+    },
+    "Manuf": {
+     "max": 111,
+     "median": 106.0,
+     "min": 90
+    },
+    "Money": {
+     "max": 274,
+     "median": 263.0,
+     "min": 258
+    },
+    "NoDur": {
+     "max": 67,
+     "median": 65.0,
+     "min": 63
+    },
+    "Other": {
+     "max": 148,
+     "median": 145.0,
+     "min": 139
+    },
+    "Shops": {
+     "max": 131,
+     "median": 126.0,
+     "min": 116
+    },
+    "Telcm": {
+     "max": 34,
+     "median": 31.5,
+     "min": 28
+    },
+    "Unclassified": {
+     "max": 44,
+     "median": 34.5,
+     "min": 26
+    },
+    "Utils": {
+     "max": 64,
+     "median": 61.5,
+     "min": 59
+    }
+   },
+   "2016": {
+    "BusEq": {
+     "max": 184,
+     "median": 170.0,
+     "min": 162
+    },
+    "Chems": {
+     "max": 40,
+     "median": 35.0,
+     "min": 33
+    },
+    "Durbl": {
+     "max": 29,
+     "median": 26.0,
+     "min": 25
+    },
+    "Enrgy": {
+     "max": 58,
+     "median": 52.0,
+     "min": 44
+    },
+    "Hlth": {
+     "max": 99,
+     "median": 89.0,
+     "min": 82
+    },
+    "Manuf": {
+     "max": 108,
+     "median": 93.0,
+     "min": 86
+    },
+    "Money": {
+     "max": 290,
+     "median": 271.0,
+     "min": 249
+    },
+    "NoDur": {
+     "max": 65,
+     "median": 64.0,
+     "min": 62
+    },
+    "Other": {
+     "max": 153,
+     "median": 142.0,
+     "min": 130
+    },
+    "Shops": {
+     "max": 117,
+     "median": 114.0,
+     "min": 110
+    },
+    "Telcm": {
+     "max": 30,
+     "median": 27.0,
+     "min": 26
+    },
+    "Unclassified": {
+     "max": 29,
+     "median": 24.0,
+     "min": 23
+    },
+    "Utils": {
+     "max": 62,
+     "median": 60.0,
+     "min": 56
+    }
+   },
+   "2017": {
+    "BusEq": {
+     "max": 188,
+     "median": 180.0,
+     "min": 176
+    },
+    "Chems": {
+     "max": 45,
+     "median": 40.0,
+     "min": 39
+    },
+    "Durbl": {
+     "max": 31,
+     "median": 29.5,
+     "min": 29
+    },
+    "Enrgy": {
+     "max": 62,
+     "median": 58.0,
+     "min": 54
+    },
+    "Hlth": {
+     "max": 116,
+     "median": 104.0,
+     "min": 91
+    },
+    "Manuf": {
+     "max": 114,
+     "median": 108.5,
+     "min": 101
+    },
+    "Money": {
+     "max": 304,
+     "median": 295.0,
+     "min": 287
+    },
+    "NoDur": {
+     "max": 67,
+     "median": 65.0,
+     "min": 62
+    },
+    "Other": {
+     "max": 179,
+     "median": 163.0,
+     "min": 154
+    },
+    "Shops": {
+     "max": 119,
+     "median": 115.5,
+     "min": 108
+    },
+    "Telcm": {
+     "max": 32,
+     "median": 30.0,
+     "min": 27
+    },
+    "Unclassified": {
+     "max": 35,
+     "median": 31.0,
+     "min": 27
+    },
+    "Utils": {
+     "max": 60,
+     "median": 57.5,
+     "min": 55
+    }
+   }
+  },
+  "security_life_rule": {
+   "by_year": {
+    "2013": 5,
+    "2017": 15
+   },
+   "eligible_month_rows_where_rule_binds": 20,
+   "gap": 60,
+   "items": [
+    [
+     "ACV R735QTJ8XC9X",
+     [
+      "2011-05-10",
+      "2015-05-22"
+     ]
+    ],
+    [
+     "AGN R735QTJ8XC9X",
+     [
+      "2015-03-16",
+      "2015-06-15"
+     ]
+    ],
+    [
+     "AH UMQPTIBCU8V9",
+     [
+      "2014-03-14",
+      "2017-03-15"
+     ]
+    ],
+    [
+     "ARCT V4JPUDG8NECL",
+     [
+      "2013-01-22",
+      "2017-11-16"
+     ]
+    ],
+    [
+     "AZPN R735QTJ8XC9X",
+     [
+      "2008-02-15",
+      "2010-02-10"
+     ]
+    ],
+    [
+     "BETA RM7NYITL8K11",
+     [
+      "2011-08-25",
+      "2012-02-09"
+     ]
+    ],
+    [
+     "BTU S4X5QH11KLT1",
+     [
+      "2007-10-31",
+      "2017-04-03"
+     ]
+    ],
+    [
+     "CAIB R735QTJ8XC9X",
+     [
+      "2010-09-30",
+      "2015-05-29"
+     ]
+    ],
+    [
+     "CNK R735QTJ8XC9X",
+     [
+      "2009-03-17",
+      "2010-11-11"
+     ]
+    ],
+    [
+     "CPL R735QTJ8XC9X",
+     [
+      "2012-07-02",
+      "2014-08-04"
+     ]
+    ],
+    [
+     "CTV R735QTJ8XC9X",
+     [
+      "2011-01-13",
+      "2014-09-30"
+     ]
+    ],
+    [
+     "DYN RRWGXYWP5HET",
+     [
+      "2012-07-05",
+      "2012-10-03"
+     ]
+    ],
+    [
+     "EAC S2VB7GLDU0RP",
+     [
+      "2010-03-09",
+      "2012-04-11"
+     ]
+    ],
+    [
+     "EST TY5IXGGM1ZL1",
+     [
+      "2010-01-29",
+      "2010-06-16"
+     ]
+    ],
+    [
+     "EXXI TURFHV3OKFOL",
+     [
+      "2016-04-22",
+      "2017-02-28"
+     ]
+    ],
+    [
+     "GDI R735QTJ8XC9X",
+     [
+      "2013-07-30",
+      "2017-05-12"
+     ]
+    ],
+    [
+     "GPRO SI2RRFZ8DI05",
+     [
+      "2012-07-31",
+      "2014-06-26"
+     ]
+    ],
+    [
+     "HCC R735QTJ8XC9X",
+     [
+      "2015-10-27",
+      "2017-04-13"
+     ]
+    ],
+    [
+     "HS SUQNQQCDSTB9",
+     [
+      "2015-07-24",
+      "2016-10-11"
+     ]
+    ],
+    [
+     "IVGN RIKPI36527OL",
+     [
+      "2014-02-03",
+      "2015-05-07"
+     ]
+    ],
+    [
+     "KEG R735QTJ8XC9X",
+     [
+      "2016-07-27",
+      "2016-12-16"
+     ]
+    ],
+    [
+     "KNGT R735QTJ8XC9X",
+     [
+      "2007-05-10",
+      "2010-12-16"
+     ]
+    ],
+    [
+     "LSI R735QTJ8XC9X",
+     [
+      "2014-05-06",
+      "2016-08-15"
+     ]
+    ],
+    [
+     "LTM SZXQOHUGC5T1",
+     [
+      "2015-06-10",
+      "2017-05-15"
+     ]
+    ],
+    [
+     "MMI UT076X30D0MD",
+     [
+      "2012-05-21",
+      "2013-10-31"
+     ]
+    ],
+    [
+     "MXIM R735QTJ8XC9X",
+     [
+      "2007-10-01",
+      "2008-10-08"
+     ]
+    ],
+    [
+     "NAV R735QTJ8XC9X",
+     [
+      "2007-02-13",
+      "2008-06-30"
+     ]
+    ],
+    [
+     "NSM R735QTJ8XC9X",
+     [
+      "2011-09-23",
+      "2012-03-08"
+     ]
+    ],
+    [
+     "NVLS R735QTJ8XC9X",
+     [
+      "2012-06-04",
+      "2015-06-17"
+     ]
+    ],
+    [
+     "QWST R735QTJ8XC9X",
+     [
+      "2011-03-31",
+      "2013-05-09"
+     ]
+    ],
+    [
+     "ROSE TG5MRXRJPJZ9",
+     [
+      "2015-07-20",
+      "2017-04-28"
+     ]
+    ],
+    [
+     "RRR TSUI7BHV7MG5",
+     [
+      "2012-04-30",
+      "2016-04-27"
+     ]
+    ],
+    [
+     "SD TXEXUXL1ZM91",
+     [
+      "2016-01-06",
+      "2016-10-04"
+     ]
+    ],
+    [
+     "SE TP0NM8A8HZZ9",
+     [
+      "2017-02-24",
+      "2017-10-20"
+     ]
+    ],
+    [
+     "SUN R735QTJ8XC9X",
+     [
+      "2012-10-04",
+      "2014-10-27"
+     ]
+    ],
+    [
+     "TRLA VA4L1G2O9B39",
+     [
+      "2015-02-17",
+      "2017-09-26"
+     ]
+    ],
+    [
+     "UA.C W9JOYIS9CBXH",
+     [
+      "2016-04-08",
+      "2016-12-06"
+     ]
+    ],
+    [
+     "UPL S1I2USAY0AQT",
+     [
+      "2016-04-29",
+      "2017-04-13"
+     ]
+    ],
+    [
+     "VRNT SEPNRXZGYP9H",
+     [
+      "2007-01-31",
+      "2010-07-06"
+     ]
+    ],
+    [
+     "WMS R735QTJ8XC9X",
+     [
+      "2013-10-17",
+      "2014-07-25"
+     ]
+    ]
+   ],
+   "securities_with_new_life": 40
+  },
+  "wall_s": 442.9,
+  "young": {
+   "2010": {
+    "eligible": 9698,
+    "lt252_bars": 108,
+    "lt504_bars": 188
+   },
+   "2011": {
+    "eligible": 10169,
+    "lt252_bars": 165,
+    "lt504_bars": 327
+   },
+   "2012": {
+    "eligible": 12077,
+    "lt252_bars": 228,
+    "lt504_bars": 481
+   },
+   "2013": {
+    "eligible": 12856,
+    "lt252_bars": 288,
+    "lt504_bars": 635
+   },
+   "2014": {
+    "eligible": 14373,
+    "lt252_bars": 463,
+    "lt504_bars": 919
+   },
+   "2015": {
+    "eligible": 14684,
+    "lt252_bars": 388,
+    "lt504_bars": 984
+   },
+   "2016": {
+    "eligible": 12901,
+    "lt252_bars": 198,
+    "lt504_bars": 572
+   },
+   "2017": {
+    "eligible": 15309,
+    "lt252_bars": 345,
+    "lt504_bars": 658
+   }
+  }
+ }
+}
