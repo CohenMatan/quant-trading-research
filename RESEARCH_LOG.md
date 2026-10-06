@@ -1558,3 +1558,29 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner (P7-CP1 item 40).
 
+## 2026-10-06: P7-CP2 conviction score v1 architecture and pre-registration; STOP (D169, D170)
+
+- **Owner (D169):** P7-CP1 accepted. Adopted:
+  - the 2011–2017 window and the seven approved fields;
+  - Financials / REITs excluded (no technical-only route);
+  - the same-universe missing-data rule;
+  - mechanical corporate-event exclusion and the security-life rule;
+  - the price-series rules and one share class per company;
+  - $100K, 10% cap, cash allowed;
+  - portfolio size not yet chosen.
+- **Score v1** (frozen candidate, hash-pinned):
+  - **Technical 40:** trend state 15 / 8 / 0; 12-1 momentum quintile 15; volatility quintile 10.
+  - **Fundamental 45:** GP/A 15 and equity/assets 10 (both sector-relative); cash conversion 10; revenue growth 10.
+  - **Sector 15:** breadth vs market.
+  - **Seven hard disqualifiers.**
+  - **Market regime** (SPY trend × PIT breadth): caps positions only.
+  - **Monthly review**, plus a weekly disqualifier check of holdings.
+  - **Hysteresis and replacement buffer;** no time stop, no forced filling.
+- **Deferred to P7-CP3** (returns-blind): entry, exit, buffer, max positions, regime ceilings.
+- **Tests:** 20 synthetic sanity tests (cases A–E, regime cases, hysteresis) and 3 pin tests.
+- **Synthetic difficulty:** median ≈ 43; ≈ 1–3% of scorable names ≥ 80.
+- **Verdict:** READY FOR AVAILABILITY / MECHANICS STUDY.
+- **Untouched:** no market data, no returns, no 2018–2021, Holdout locked.
+
+**STOP:** awaiting the owner (P7-CP2 item 49).
+
