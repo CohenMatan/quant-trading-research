@@ -1584,3 +1584,33 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner (P7-CP2 item 49).
 
+
+## 2026-10-06: P7-CP3 score availability, capacity, churn and cost mechanics; STOP (D171, D172)
+
+- **Owner (D171):** P7-CP2 accepted.
+  - Score v1 is frozen exactly as specified; disqualifiers, data and price-series rules are frozen.
+  - Monthly review plus a weekly disqualifier check of holdings.
+  - 10% is the maximum initial position (no trimming); no forced filling.
+  - The automatic selection rules are rejected.
+  - Mechanics only: no returns of any kind.
+- **Built:**
+  - X993 v1.0 non-trading export host (`qr_p7_export`: exact sliced technical inputs, verified against the full computation);
+  - runner / config rule;
+  - tests;
+  - pre-registered conventions (whipsaw within 3 reviews, ties score → ADV20 → id, cost notional $100K × min(10%, 1/K)).
+- **Run:** E993-01 (0 orders, 712 s) exported 84 monthly reviews (2011-01 → 2017-12) and 325 weekly checks, with no price and no return.
+- **Offline mechanics:** `research/phase7/P7_CP3_mechanics.py`, covering 4 entries × 3 profiles × 4 sizes.
+- **Findings:**
+  - **Rarity** among about 425 eligible stocks a month: 75+ 3.7% (about 15.6 a month); 80+ 1.4% (about 6.1); 85+ 0.4% (about 1.6); 90+ 0.13% (about 0.5). The maximum score was 94.
+  - **Breadth across layers:** every 80+ stock had Technical ≥ 23, Fundamental ≥ 25 and Sector ≥ 8.
+  - **Persistence:** high scores are short-lived (median 1 month above any threshold). The causes are the trend / sector 7-point steps and the volatility rank.
+  - **Holding periods:** median implied holding 1–3 months (H3 Patient longest).
+  - **Capacity:** 80+ fills 6 slots in 46% of months and 10 slots in 21%; 75+ fills 10 slots in 76%; 85–90 leave the book mostly in cash.
+  - **Costs:** 0.1% (90+) to 1.7% a year (75 / H1 / 12); 80+ costs 0.55–1.04%.
+  - **Regime:** STRONG 75% of months, RISK_OFF 6% (3 short episodes).
+  - **Weekly checks:** 1.5–7.5% of orders, mostly acquisitions.
+  - **Exclusions:** H2 is the dominant disqualifier. The baseline-ledger reading (eligible-only) is put to the owner.
+  - **Sector clustering** (technology, utilities) is material; candidate caps are proposed.
+- **Report:** `docs/checkpoints/P7_CP3_score_availability_capacity_churn_cost_mechanics.md`. Nothing is chosen. No 2018–2021 data, Holdout locked, nothing purchased.
+
+**STOP:** awaiting the owner's selection of the mechanics (P7-CP3 section 12).

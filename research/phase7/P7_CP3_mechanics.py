@@ -102,7 +102,7 @@ def universe_and_funnel(revs):
         for name, b in FUNNEL:
             rem = [r for r in rem if not has(r, b)]
             stages.append((name, len(rem)))
-        stages[-1] = ("scorable and eligible (no hard disqualifier)", len(rem))
+        stages.append(("fully scorable and eligible (no hard disqualifier)", len(rem)))
         assert all(elig(r) for r in rem) and len(rem) == sum(1 for r in rows if elig(r))
         for th in sorted(THRESHOLDS):
             stages.append((f"score >= {th}", sum(1 for r in rem if r["total"] >= th)))
@@ -234,6 +234,13 @@ def composition(revs, ff_names):
         L = np.array([layers(r) for r in rs], float)
         ff = Counter(ff_names[r["ff"]] for r in rs)
         out[th] = dict(stock_months=len(rs), distinct_stocks=len(ids),
+                       layer_quantiles=dict(technical=q(L[:, 0], (10, 50)), fundamental=q(L[:, 1], (10, 50)),
+                                            sector=q(L[:, 2], (10, 50))),
+                       share_with_a_weak_layer=dict(
+                           technical_below_half=r3(np.mean(L[:, 0] < 20)), fundamental_below_half=r3(np.mean(L[:, 1] < 22.5)),
+                           sector_zero=r3(np.mean(L[:, 2] == 0)),
+                           any=r3(np.mean((L[:, 0] < 20) | (L[:, 1] < 22.5) | (L[:, 2] == 0)))),
+                       max_possible_without_layer=dict(technical=60, fundamental=55, sector=85),
                        mean_layers=dict(technical=r3(L[:, 0].mean()), fundamental=r3(L[:, 1].mean()),
                                         sector=r3(L[:, 2].mean())),
                        mean_points={d: r3(P[:, i].mean()) for i, d in enumerate(DIMS)},
@@ -315,6 +322,31 @@ def persistence(revs):
     return out
 
 
+def score_changes(revs):
+    """Month-to-month change of the total for eligible stocks >= th at review m that are data-scorable at m + 1, and
+    which dimensions lost points when the stock fell below th (explains short persistence; scores only)."""
+    out = {}
+    for th in THRESHOLDS:
+        d, lost, n_fell, n = [], Counter(), 0, 0
+        for a, b in zip(revs, revs[1:]):
+            for s, r in a["rows"].items():
+                if not (elig(r) and r["total"] >= th):
+                    continue
+                r2 = b["rows"].get(s)
+                if r2 is None or r2["total"] is None:
+                    continue
+                n += 1
+                d.append(r2["total"] - r["total"])
+                if r2["total"] < th:
+                    n_fell += 1
+                    for i, dim in enumerate(DIMS):
+                        if r2["points"][i] < r["points"][i]:
+                            lost[dim] += 1
+        out[th] = dict(pairs=n, change=q(d, (10, 25, 50, 75, 90)), fell_below=n_fell,
+                       dimension_lost_points_share={k: r3(v / n_fell) for k, v in lost.most_common()} if n_fell else {})
+    return out
+
+
 def sector_concentration(revs, ff_names):
     out = {}
     for th in THRESHOLDS:
@@ -329,8 +361,18 @@ def sector_concentration(revs, ff_names):
             mx.append(k / n)
             top[g] += 1
             n50 += int(k / n > 0.5)
+        per_year = defaultdict(Counter)
+        tot = Counter()
+        for rv in revs:
+            for r in rv["rows"].values():
+                if elig(r) and r["total"] >= th:
+                    per_year[rv["year"]][ff_names[r["ff"]]] += 1
+                    tot[ff_names[r["ff"]]] += 1
         out[th] = dict(reviews_with_ge5=nrev, max_sector_share=q(mx, (50, 90)), reviews_one_sector_gt_50pct=n50,
-                       most_frequent_top_sector=dict(top.most_common(5)))
+                       most_frequent_top_sector=dict(top.most_common(5)),
+                       mean_candidates_per_review_by_sector={k: r3(v / len(revs)) for k, v in tot.most_common()},
+                       share_by_year={y: {k: r3(v / sum(c.values())) for k, v in c.most_common(4)}
+                                      for y, c in sorted(per_year.items())})
     return out
 
 
@@ -487,6 +529,7 @@ def churn_metrics(revs, weekly, ev, ff_by_sid, th, prof, K):
                                                 "0.5-1.0%" if 100 * (com + slip) / cap <= 1.0 else "> 1.0%"))
     # weekly disqualifier burden and requalification (months until the stock is again an eligible candidate >= th)
     wk = [t for t in sells if t[4].startswith("dq_weekly")]
+    wk_names = sorted({f"{t[1].split()[0]} {t[2]} {t[4].split(':')[1]}" for t in wk})
     wk_cat = Counter(x for t in wk for x in t[4].split(":")[1].split(","))
     req = []
     for t in [s for s in sells if s[4] in ("dq_review",) or s[4].startswith("dq_weekly")]:
@@ -524,7 +567,8 @@ def churn_metrics(revs, weekly, ev, ff_by_sid, th, prof, K):
                                           for y in sorted({b[0] for b in books})}),
                 book_max_sector_share=q(maxsec, (50, 90)),
                 book_median_score=r3(np.median([x for b in books for x in b[2]])) if any(b[2] for b in books) else None,
-                weekly_dq_exits_per_year=r3(len(wk) / YEARS), weekly_dq_categories=dict(wk_cat),
+                weekly_dq_exits_per_year=r3(len(wk) / YEARS), weekly_dq_categories=dict(wk_cat), weekly_dq_names=wk_names,
+                weekly_share_of_orders=r3(len(wk) / orders) if orders else None,
                 dq_requalified=len(rq), dq_not_requalified=len(req) - len(rq),
                 requalify_months=q(rq, (25, 50, 75)),
                 costs=costs, weekly_anomalies=anom)
@@ -599,6 +643,7 @@ def main(path=HERE / "P7_CP3_E993_payload.json.gz"):
     cc = candidate_counts(revs)
     out["candidates"] = cc
     out["persistence"] = persistence(revs)
+    out["score_changes"] = score_changes(revs)
     out["sector_concentration"] = sector_concentration(revs, ff_names)
     out["regime"] = regime_stats(pay)
     out["capacity"] = capacity(cc)
