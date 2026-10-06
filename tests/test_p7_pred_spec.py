@@ -66,8 +66,12 @@ def test_real_config_carries_exactly_the_pinned_provenance():
     import subprocess
 
     from qresearch import config, experiment
-    cfg = json.loads((config.REPO_ROOT / "experiments/E023-06/config.json").read_text())
+    cfg = json.loads((config.REPO_ROOT / "experiments/E023-07/config.json").read_text())
     experiment.validate(cfg)
+    # D180: E023-07 = E023-06 (never started) with the identical configuration
+    c6 = json.loads((config.REPO_ROOT / "experiments/E023-06/config.json").read_text())
+    assert {k: v for k, v in c6.items() if k not in ("experiment_id", "description")} == \
+        {k: v for k, v in cfg.items() if k not in ("experiment_id", "description")}
     p = cfg["params"]
     assert (p["mode"], p["c_ic"], p["threshold_commit"], p["null_result_sha256"], p["panel_sha256"]) == \
         ("real", p7pred.C_IC, p7pred.THRESHOLD_COMMIT, p7pred.NULL_RESULT_SHA256, p7pred.PANEL_SHA256)
