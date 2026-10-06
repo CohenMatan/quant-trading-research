@@ -1,0 +1,49 @@
+{
+ "kind": "infrastructure",
+ "strategy_id": "S022",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S022_h021_sector",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2017-12-01",
+ "end": "2017-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P6",
+ "cycle": "P6H021",
+ "hypothesis_id": "H021",
+ "owner_approval_required": "H021-A sector relative-momentum falsification test (owner authorisation 2026-10-06, D160)",
+ "params": {
+  "mode": "null",
+  "seeds": [
+   1,
+   1000
+  ]
+ },
+ "description": "H021-A NULL worlds 1-1000 of 5,000 (identity-tethered derangement of the nine sector identities; the complete evaluation per world; H021A_spec.md section 10). Publishes per-world null statistics only. Infrastructure (never a strategy trial).",
+ "experiment_id": "E022-01"
+}
