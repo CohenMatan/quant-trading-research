@@ -1,0 +1,86 @@
+{
+ "baseline": {
+  "cik_reject": 11,
+  "h2_new": 17885,
+  "h2_old": 23182,
+  "life_reject": 5,
+  "listed_lt_1y": 27,
+  "lost": 0,
+  "nonfin_rows": 71030,
+  "pit_violations": 0,
+  "reasons": {
+   "2": 6038,
+   "3": 51,
+   "4": 187,
+   "5": 11
+  },
+  "rescued": 6287,
+  "rows": 93687,
+  "store_baseline": 78633
+ },
+ "calendar_check": {
+  "expected_reviews": 84,
+  "expected_weekly": 325,
+  "first_review": "2011-01-31",
+  "last_review": "2017-12-29",
+  "reviews": 84,
+  "reviews_match": true,
+  "weekly": 325,
+  "weekly_match": true
+ },
+ "checks": {
+  "month_ends": 96,
+  "sec_fed": 8193,
+  "selections": 2394,
+  "store_sids_max": 6023,
+  "weekly": 325
+ },
+ "max_rss_mb": 6243.8,
+ "panel": {
+  "build_s": 97.2,
+  "dividend_events": 38616,
+  "duplicate_bars": 0,
+  "first_session": "2007-01-03",
+  "history_calls": 80,
+  "large_distributions_10pct": 160,
+  "last_session": "2017-12-29",
+  "late_events": 0,
+  "late_rows": 0,
+  "off_calendar_rows": 0,
+  "securities": 1917,
+  "sessions": 2769,
+  "split": {
+   "aligned": 516,
+   "n": 528,
+   "outside": 1,
+   "realigned": 0,
+   "unverified": 11
+  },
+  "spy_splits": 0
+ },
+ "payload_chars": 1233236,
+ "payload_sha256": "e6e157028cca4ff08cbb8f0e26706c91ab6af067a7b5a947e697680b50aab52b",
+ "score_code_sha256": "430ce205c336a4ac120a606afb9ff7bdf2345752e7e3aeeadeff970dae4e6c9d",
+ "score_s": 49.8,
+ "slice_spot_check": {
+  "checked": 336,
+  "examples": [],
+  "full_fallbacks": 2139,
+  "mismatch": 0
+ },
+ "states_s": 9.6,
+ "store_stats": {
+  "amendments": 135,
+  "delayed_until_available": 12254,
+  "estimated": 12714,
+  "observed_new": 153871,
+  "quarantine_field_released": 134,
+  "quarantine_released": 20,
+  "quarantined": 637,
+  "restatement_blocked": 306,
+  "sec_timing_hold": 27,
+  "timing_unknown": 608
+ },
+ "wall_s": 673.1,
+ "weekly_s": 20.2
+}
