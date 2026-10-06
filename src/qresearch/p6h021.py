@@ -40,7 +40,7 @@ NULL_WORLDS_CSV_SHA256 = "c9ec9367da001360ff6f413d43d2e4c2130cd307bca1b30349ec16
 PANEL_SHA256 = "50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251"   # digest(S, Y1) the null was calibrated on (canary and every batch identical)
 DIAG_SHA256 = "b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b"   # digest of the diagnostic panels
 HOST_SHA256 = "7c3d19f000e4aec93c55f31a1b533ec09045323623c8e749180c03ac436bdcee"
-THRESHOLD_COMMIT = None       # the commit that pinned the values above (recorded in the next commit)
+THRESHOLD_COMMIT = "ea284cb2db2dbec986d6c0f06c255fb3a0fb481c"   # the commit that pinned the values above
 
 
 def sha256(rel: str) -> str:

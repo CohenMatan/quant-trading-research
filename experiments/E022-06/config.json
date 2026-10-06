@@ -1,0 +1,51 @@
+{
+ "kind": "research",
+ "strategy_id": "S022",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S022_h021_sector",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2017-12-01",
+ "end": "2017-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P6",
+ "cycle": "P6H021",
+ "hypothesis_id": "H021",
+ "owner_approval_required": "H021-A sector relative-momentum falsification test (owner authorisation 2026-10-06, D160)",
+ "params": {
+  "mode": "real",
+  "threshold_c": 2.658089662,
+  "threshold_commit": "ea284cb2db2dbec986d6c0f06c255fb3a0fb481c",
+  "null_result_sha256": "6db1ed17d4832292bc35ff3046036b773ec702c60d95b12db742b85f1bc7367d",
+  "spec_sha256": "d4a2b8864603965d52e09206d32246d368639eb52b277ee16e57d116fc960141",
+  "panel_sha256": "50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251",
+  "diag_sha256": "b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b"
+ },
+ "description": "H021-A REAL EVALUATION, ONCE: 6-month total-return relative momentum of the 9 Select Sector SPDRs, 215 monthly decisions 2000-01..2017-11, next-month sector-relative TSR; gates P1-P4 with the pinned c; then the NON-GATING DIAGNOSTICS. No portfolio.",
+ "experiment_id": "E022-06"
+}
