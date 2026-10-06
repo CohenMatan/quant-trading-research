@@ -1614,3 +1614,21 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Report:** `docs/checkpoints/P7_CP3_score_availability_capacity_churn_cost_mechanics.md`. Nothing is chosen. No 2018–2021 data, Holdout locked, nothing purchased.
 
 **STOP:** awaiting the owner's selection of the mechanics (P7-CP3 section 12).
+
+## 2026-10-06: P7-CP3R revenue-baseline correction and final mechanics confirmation; STOP (D173, D174)
+
+- **Owner (D173):** the YoY revenue baseline becomes the company's PIT revenue from the full store, regardless of past universe eligibility ("fundamental history belongs to the company"). Score v1 is unchanged. Provisional mechanics: 80 / 70 / 5, K = 10, regime limits 10 / 8 / 5 / 2, at most 3 per sector, sticky share class, 20% grown-winner cap (rule only), no ladder.
+- **Built:**
+  - `RevenueLedger`, recorded live for every store company, with same-life / same-registrant / chronology checks;
+  - X993 v1.1;
+  - the provisional planner `qr_p7_mech`;
+  - PIT tests A–E.
+- **Run:** E993-02 (0 orders).
+- **Result:**
+  - 6,282 rescued stock-months (8.9% of non-financial rows; 96% had been below $2B), all point-in-time; SEC sample of 160 quarters all public before the baseline day.
+  - The change is exactly isolated (0 H2 mismatches vs E993-01; regime identical).
+  - Fully scorable stocks +13%; 80+ mean 6.1 → 7.0 and still rare (1.47%); persistence and the score distribution unchanged.
+  - Provisional mechanics: 47 orders a year, 0.80% a year, 69% utilisation.
+- **Verdict:** MECHANICS CONFIRMED — READY TO FREEZE FOR PREDICTIVE TEST DESIGN. Decisions for the owner are in section 10 of the report.
+
+**STOP:** awaiting the owner.
