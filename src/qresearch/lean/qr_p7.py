@@ -207,3 +207,57 @@ def alignment(t, **dates):
     (ok, [components dated after t])."""
     late = [k for k, d in dates.items() if d is not None and str(d) > str(t)]
     return not late, late
+
+
+# ----------------------------------------------------------------------------------------------- daily breadth states
+def calendar_states(C, H, L, max_age=MAX_LAST_BAR_AGE):
+    """For ONE security, states on EVERY calendar row (same definitions as features_at, from the last valid bar at
+    or before the row): nbars (own bars so far), age (sessions since that bar), above50 / above200 (close > SMA;
+    NaN if fewer bars than the window or the last bar is older than max_age), new_high / new_low (that bar's
+    high / low is the 252-bar extreme; NaN if < 252 bars or stale). Used for breadth with point-in-time
+    denominators; computed in one pass."""
+    C, H, L = (np.asarray(x, float) for x in (C, H, L))
+    D = C.size
+    out = {k: np.full(D, np.nan) for k in ("nbars", "age", "above50", "above200", "new_high", "new_low")}
+    v = valid_rows(C, H, L)
+    if v.size == 0:
+        return out
+    c, h, lo = C[v], H[v], L[v]
+    n = c.size
+    cs = np.r_[0.0, np.cumsum(c)]
+    idx = np.arange(n)
+    s50 = np.full(n, np.nan)
+    s200 = np.full(n, np.nan)
+    s50[49:] = (cs[50:] - cs[:-50]) / 50
+    s200[199:] = (cs[200:] - cs[:-200]) / 200
+    a50 = np.where(np.isfinite(s50), (c > s50).astype(float), np.nan)
+    a200 = np.where(np.isfinite(s200), (c > s200).astype(float), np.nan)
+    hmax = np.full(n, np.nan)
+    lmin = np.full(n, np.nan)
+    from collections import deque
+    dq, dl = deque(), deque()
+    for i in range(n):
+        while dq and h[dq[-1]] <= h[i]:
+            dq.pop()
+        dq.append(i)
+        while dl and lo[dl[-1]] >= lo[i]:
+            dl.pop()
+        dl.append(i)
+        if dq[0] <= i - 252:
+            dq.popleft()
+        if dl[0] <= i - 252:
+            dl.popleft()
+        if i >= 251:
+            hmax[i], lmin[i] = h[dq[0]], lo[dl[0]]
+    nh = np.where(np.isfinite(hmax), (h >= hmax).astype(float), np.nan)
+    nl = np.where(np.isfinite(lmin), (lo <= lmin).astype(float), np.nan)
+    pos = np.searchsorted(v, np.arange(D), side="right") - 1
+    ok = pos >= 0
+    p = np.where(ok, pos, 0)
+    age = np.where(ok, np.arange(D) - v[p], np.nan)
+    fresh = ok & (age <= max_age)
+    out["nbars"] = np.where(ok, idx[p] + 1, np.nan)
+    out["age"] = age
+    for k, arr in (("above50", a50), ("above200", a200), ("new_high", nh), ("new_low", nl)):
+        out[k] = np.where(fresh, arr[p], np.nan)
+    return out

@@ -93,3 +93,27 @@ def test_sampling_combos_alignment():
     assert c["technical_only"] and c["tech+profitability_NI+cashflow"] and not c["tech+all_core"]
     assert P.alignment("2012-03-30", price="2012-03-30", filing="2012-02-28") == (True, [])
     assert P.alignment("2012-03-30", price="2012-03-30", filing="2012-04-02") == (False, ["filing"])
+
+
+def test_calendar_states_match_primary_features(panel):
+    st = P.calendar_states(panel["C"], panel["H"], panel["L"])
+    rows = np.arange(0, 900)
+    A = P.features_at(panel["C"], panel["H"], panel["L"], panel["V"], panel["P"], rows)
+    for t in rows:
+        age = A["last_bar_age"][t]
+        if np.isnan(age):
+            assert np.isnan(st["nbars"][t])
+            continue
+        assert st["age"][t] == age
+        fresh = age <= P.MAX_LAST_BAR_AGE
+        r200 = A["sma200_ratio"][t]
+        exp = np.nan if (not fresh or np.isnan(r200)) else float(r200 > 0)
+        assert (np.isnan(exp) and np.isnan(st["above200"][t])) or exp == st["above200"][t], t
+        r50 = A["sma50_ratio"][t]
+        exp = np.nan if (not fresh or np.isnan(r50)) else float(r50 > 0)
+        assert (np.isnan(exp) and np.isnan(st["above50"][t])) or exp == st["above50"][t], t
+    # new 52-week high: the last bar's high is the 252-bar maximum (independent brute force)
+    v = P.valid_rows(panel["C"], panel["H"], panel["L"])
+    h = panel["H"][v]
+    for i in range(251, v.size, 37):
+        assert st["new_high"][v[i]] == float(h[i] >= h[i - 251:i + 1].max())
