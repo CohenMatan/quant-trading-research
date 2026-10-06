@@ -1,0 +1,293 @@
+{
+ "experiment_id": "E989-02",
+ "harness_messages": [
+  "QRX989|summary|{\"panel\": {\"build_s\": 5.0, \"decision_first_last\": [\"2000-01-31\", \"2017-11-30\"], \"decisions\": 215, \"decisions_3m_6m\": [213, 210], \"diag_sha256\": \"b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b\", \"finite\": true, \"first_session\": \"1998-12-01\", \"last_session\": \"2017-12-29\", \"panel_sha256\": \"50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251\", \"response_end_last\": \"2017-12-29\", \"sessions\": 4802, \"signal_base_first\": \"1999-07-30\", \"tickers\": {\"SPY\": {\"adjusted_bars\": 4802, \"bars\": 4802, \"distributions\": 78, \"first_bar\": \"1998-12-01\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLB\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 78, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLE\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLF\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 77, \"first_bar\": \"1998-12-22\", \"large_distributions\": [[\"2016-09-19\", 0.18797629]], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLI\": {\"adjusted_bars\": 4786, \"bars\": 4786, \"distributions\": 77, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [\"1999-01-26\"], \"missing_sessions_after_first\": 1, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLK\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 50, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLP\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLU\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 78, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLV\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 71, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLY\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}}}, \"wall_s\": 10.9}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 20,
+  "elig_days": 0,
+  "elig_max": 0,
+  "elig_mean": 0,
+  "elig_min": null,
+  "elig_sum": 0,
+  "experiment_id": "E989-02",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 4998,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 1,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "9878f670cefdbce5d2c74c02753b00aadbc62eb4d4497ce30ab90fa419cb070d",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "20 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2017-12-01..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 20 vs algorithm days 20",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 20 vs QuantConnect tradeableDates 20",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 20,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2017-12-01",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-06T04:58:38Z",
+  "build_commit": "8334354221a74d3ac6694a3b49d918b61df0f754",
+  "code_sha256": "66ef103882e2936d1a932155b64eb99c9a58ba2f12bbe9d4a29caabcc9a31d3c",
+  "config_sha256": "91ab623d15e5521f6b4457cc0c28741b14cdfac224afaedf56ddeeedd4bb1154",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_h021.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "8334354221a74d3ac6694a3b49d918b61df0f754",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "5f10ffbbbca518dded4381c1c9f1cb9f",
+  "qc_project_id": 37418175,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-06T04:58:28Z",
+  "runtime_s": 21.540601015090942
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-2.99",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.046",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "K|{\"adjusted_cross_check\": {\"SPY\": {\"at\": \"2003-03-21\", \"max_step_dev\": 4.563648906e-05, \"rows\": 4802}, \"XLB\": {\"at\": \"2001-12-21\", \"max_step_dev\": 0.0002225472788, \"rows\": 4787}, \"XLE\": {\"at\": \"2002-09-20\", \"max_step_dev\": 0.0002353719194, \"rows\": 4787}, \"XLF\": {\"at\": \"2009-03-20\", \"max_step_dev\": 0.0004646512846, \"rows\": 4787}, \"XLI\": {\"at\": \"2003-03-21\", \"max_step_dev\": 0.0002010962951, \"rows\": 4786}, \"XLK\": {\"at\": \"2006-12-15\", \"max_step_dev\": 0.0002081821542, \"rows\": 4787}, \"XLP\": {\"at\": \"2003-03-21\", \"max_step_dev\": 0.0002619510223, \"rows\": 4787}, \"XLU\": {\"at\": \"2003-09-19\", \"max_step_dev\": 0.0002301447883, \"rows\": 4787}, \"XLV\": {\"at\": \"2001-03-16\", \"max_step_dev\": 0.0001822792822, \"rows\": 4787}, \"XLY\": {\"at\": \"2000-03-17\", \"max_step_dev\": 0.0001714728976, \"rows\": 4787}}, \"adjusted_ok\": false, \"all_histories_present\": true, \"all_ok\": false, \"calendar_ok\": true, \"decision_first_last\": [\"2000-01-31\", \"2017-11-30\"], \"decisions\": 215, \"decisions_are_month_ends\": true, \"diag_sha256\": \"b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b\", \"earliest_row_used\": \"1999-07-30\", \"entries_not_next_session\": [], \"first_bars\": {\"SPY\": \"1998-12-01\", \"XLB\": \"1998-12-22\", \"XLE\": \"1998-12-22\", \"XLF\": \"1998-12-22\", \"XLI\": \"1998-12-22\", \"XLK\": \"1998-12-22\", \"XLP\": \"1998-12-22\", \"XLU\": \"1998-12-22\", \"XLV\": \"1998-12-22\", \"XLY\": \"1998-12-22\"}, \"future_perturbation_changed\": {\"responses\": 0, \"signals\": 0, \"trials\": 20}, \"missing_sessions\": {\"SPY\": 0, \"XLB\": 0, \"XLE\": 0, \"XLF\": 0, \"XLI\": 1, \"XLK\": 0, \"XLP\": 0, \"XLU\": 0, \"XLV\": 0, \"XLY\": 0}, \"no_missing_month\": true, \"no_use_before_launch\": true, \"null_digest_900001\": \"988ec312b5a51132c1cf17c7119230e73e33b592da5ae2b296ee4cb4b69f31d9\", \"null_ok\": true, \"null_world_s\": 0.004464590002, \"panel_repeat_identical\": true, \"panel_sha256\": \"50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251\", \"placebo\": {\"first_t\": -0.3284121158, \"max_abs_t\": 3.642154768, \"mean_t\": 0.03600430325, \"sd_t\": 1.089677199, \"share_abs_t_gt_2576\": 0.01}, \"placebo_ok\": true, \"planted\": {\"ic_mean\": 1.0, \"ic_min\": 1.0, \"monotonic\": true, \"weak_t\": 11.18269785}, \"planted_ok\": true, \"response_end_last\": \"2017-12-29\", \"signal_vs_adjusted_max_abs\": 0.0007441796442, \"slow_ok\": true, \"slow_worst_abs\": {\"f1\": 1.998401444e-15, \"f3\": 2.442490654e-15, \"f6\": 3.330669074e-15, \"signal\": 3.774758284e-15, \"spy\": 1.33226763e-15}, \"truncation\": {\"bars_after_decision_returned\": 0, \"comparisons\": 135, \"decisions\": [\"2000-01-31\", \"2002-03-28\", \"2004-02-27\", \"2005-07-29\", \"2005-08-31\", \"2008-02-29\", \"2009-05-29\", \"2011-10-31\", \"2011-12-30\", \"2012-06-29\", \"2013-03-28\", \"2013-11-29\", \"2016-09-30\", \"2017-09-29\", \"2017-11-30\"], \"worst_abs\": 2.442490654e-15}, \"truncation_ok\": true, \"used_close_rows_carried_forward\": {}, \"xlf_2016_ok\": false, \"xlf_large_distributions\": [{\"adjusted_step\": 0.006964811976, \"day\": \"2016-09-19\", \"ratio\": 0.1879762913, \"raw_step\": -0.1824724809, \"tr_minus_adjusted\": 0.0001869183367, \"tr_step\": 0.006777893639}]}\nQRX989|summary|{\"panel\": {\"build_s\": 5.0, \"decision_first_last\": [\"2000-01-31\", \"2017-11-30\"], \"decisions\": 215, \"decisions_3m_6m\": [213, 210], \"diag_sha256\": \"b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b\", \"finite\": true, \"first_session\": \"1998-12-01\", \"last_session\": \"2017-12-29\", \"panel_sha256\": \"50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251\", \"response_end_last\": \"2017-12-29\", \"sessions\": 4802, \"signal_base_first\": \"1999-07-30\", \"tickers\": {\"SPY\": {\"adjusted_bars\": 4802, \"bars\": 4802, \"distributions\": 78, \"first_bar\": \"1998-12-01\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLB\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 78, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLE\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLF\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 77, \"first_bar\": \"1998-12-22\", \"large_distributions\": [[\"2016-09-19\", 0.18797629]], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLI\": {\"adjusted_bars\": 4786, \"bars\": 4786, \"distributions\": 77, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [\"1999-01-26\"], \"missing_sessions_after_first\": 1, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLK\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 50, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLP\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLU\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 78, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLV\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 71, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}, \"XLY\": {\"adjusted_bars\": 4787, \"bars\": 4787, \"distributions\": 76, \"first_bar\": \"1998-12-22\", \"large_distributions\": [], \"last_bar\": \"2017-12-29\", \"late_rows\": 0, \"missing_days\": [], \"missing_sessions_after_first\": 0, \"split_check\": {\"aligned\": 0, \"n\": 0, \"outside\": 0, \"realigned\": 0, \"unverified\": 0}, \"split_events\": 0, \"split_types\": {}, \"unknown_rows\": 0}}}, \"wall_s\": 10.9}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 20, \"elig_days\": 0, \"elig_max\": 0, \"elig_mean\": 0, \"elig_min\": null, \"elig_sum\": 0, \"experiment_id\": \"E989-02\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 4998, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 1, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.19776256492300948
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}
