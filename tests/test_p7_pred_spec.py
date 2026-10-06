@@ -30,6 +30,12 @@ def test_d177_wording_only_correction():
 
 def test_no_real_threshold_pinned_yet():
     assert p7pred.C_IC is None and p7pred.NULL_RESULT_SHA256 is None and p7pred.THRESHOLD_COMMIT is None
+    assert p7pred.PANEL_SHA256 is None
+
+
+def test_execution_host_pinned():
+    assert p7pred.sha256(p7pred.HOST) == p7pred.HOST_SHA256
+    assert p7pred.sha256("strategies/X994_h022_canary/main.py") == p7pred.HOST_SHA256
 
 
 def test_spec_states_the_frozen_rules():

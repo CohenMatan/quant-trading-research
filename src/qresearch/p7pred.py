@@ -51,6 +51,11 @@ POWER_SEED_BASE = 20261006
 C_IC = None
 NULL_RESULT_SHA256 = None
 THRESHOLD_COMMIT = None
+PANEL_SHA256 = None                                   # the prepared H022 panel the null was calibrated on
+
+# P7-CP5 (D177): the execution host S023 (X994 = byte copy), pinned before the canary; the null and the real run use it
+HOST = "strategies/S023_h022_predictive/main.py"
+HOST_SHA256 = "9b8476e12203586d8d6471acebe180f5944b8b4ff0cb564691aac2ca32d9fa8a"
 
 
 def sha256(rel: str) -> str:

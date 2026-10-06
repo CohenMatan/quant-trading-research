@@ -241,6 +241,42 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params", {}).get("mode") != "export"):
             raise ConfigError("X993 (P7-CP3) is an infrastructure export on 2011-01-03..2017-12-31 (warm-up "
                               "2008-07-01) with the data-v1 universe")
+    if cfg["strategy_id"] in ("X994", "S023"):
+        # H022 (research/phase7/P7_predictive_spec.md v1 + the D177 wording fix; owner authorisation 2026-10-06, D177):
+        # the X993 v1.1 window and data-v1 universe, nothing after 2017-12-31, the frozen spec / module fingerprints;
+        # X994 = the plumbing canary only; S023 = null batches (infrastructure) and the ONE real evaluation (research,
+        # only with the pinned c_IC and null provenance), every S023 run only with explicit owner approval
+        from . import p7pred
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2017-12-31", "2008-07-01")
+                or not u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20):
+            raise ConfigError("H022 runs use 2011-01-03..2017-12-31, warm-up 2008-07-01 and the data-v1 universe "
+                              "(>= $2B, >= $5, ADV20 >= $5M, SEC correction layer)")
+        if (p.get("spec_sha256") != p7pred.SPEC_SHA256
+                or p.get("pred_code_sha256") != p7pred.CODE_SHA256["src/qresearch/lean/qr_p7_pred.py"]):
+            raise ConfigError("H022 runs carry the pinned spec and qr_p7_pred fingerprints (qresearch.p7pred)")
+        mode = p.get("mode")
+        if cfg["strategy_id"] == "X994":
+            if mode != "canary" or kind != "infrastructure":
+                raise ConfigError("X994 runs only the H022 plumbing canary (infrastructure)")
+        else:
+            if cfg.get("hypothesis_id") != "H022" or cfg.get("programme") != "P7" or not cfg.get("owner_approval_required"):
+                raise ConfigError("S023 runs belong to H022 / P7 and need owner_approval_required")
+            if mode == "null":
+                if tuple(p.get("seeds", ())) not in p7pred.NULL_BATCHES or kind != "infrastructure":
+                    raise ConfigError(f"S023 null runs are infrastructure batches {p7pred.NULL_BATCHES}")
+            elif mode == "real":
+                if (kind != "research" or p7pred.C_IC is None or p.get("c_ic") != p7pred.C_IC
+                        or p.get("threshold_commit") != p7pred.THRESHOLD_COMMIT
+                        or p.get("null_result_sha256") != p7pred.NULL_RESULT_SHA256
+                        or p.get("panel_sha256") != getattr(p7pred, "PANEL_SHA256", None)):
+                    raise ConfigError("the S023 real evaluation is the research run and carries exactly the pinned "
+                                      "null provenance (c_ic, threshold_commit, null_result_sha256, panel_sha256)")
+            else:
+                raise ConfigError("S023 modes: null or real")
     if cfg["strategy_id"] in ("X989", "S022"):
         # H021-A (research/phase6/H021A_spec.md v1; owner 2026-10-06, D160): a non-trading one-month host that reads
         # history 1998-12-01 .. 2017-12-31 only; X989 = the fidelity canary; S022 = null batches (infrastructure) and
@@ -275,7 +311,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError(f"costs must use the fixed ${config.COMMISSION_PER_ORDER:g} per-order commission (D039)")
         if "slippage_bps" not in c:
             raise ConfigError("costs need slippage_bps (slippage is modelled separately from commission)")
-        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018", "S020", "S021", "S022"):
+        if kind in ("research", "sizing", "stress") and cfg["strategy_id"] not in ("S016", "S017", "S018", "S020", "S021", "S022",
+                                                                                     "S023"):
             model = cfg.get("execution_model", "d044")
             if model not in config.RESEARCH_PORTFOLIOS:
                 raise ConfigError(f"unknown execution_model {model!r}")
