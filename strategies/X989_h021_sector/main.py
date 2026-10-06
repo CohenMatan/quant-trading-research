@@ -97,7 +97,7 @@ class H021Sector(QRAlgorithm):
         """Split events [(row, f)] and distributions {row: [(amount, reference)]} with event day <= upto."""
         splits, divs, late, types = [], {}, 0, {}
         sp = self.history(Split, [sym], d0, d1)
-        if sp is not None and not sp.empty:
+        if sp is not None and not sp.empty and {"type", "referenceprice", "splitfactor"} <= set(sp.columns):
             ed = XP.event_days(sp.index.get_level_values(-1).values)
             for e, typ, ref, fac in zip(ed, sp["type"].tolist(), sp["referenceprice"].tolist(),
                                         sp["splitfactor"].tolist()):
@@ -108,8 +108,8 @@ class H021Sector(QRAlgorithm):
                     continue
                 if "OCCUR" in t.upper() or float(ref) > 0:
                     splits.append((int(np.searchsorted(cal, e)), float(fac)))
-        dv = self.history(Dividend, [sym], d0, d1)
-        if dv is not None and not dv.empty:
+        dv = self.history(Dividend, [sym], d0, d1)      # a window without events may come back without the columns
+        if dv is not None and not dv.empty and {"distribution", "referenceprice"} <= set(dv.columns):
             ed = XP.event_days(dv.index.get_level_values(-1).values)
             for e, amt, ref in zip(ed, dv["distribution"].tolist(), dv["referenceprice"].tolist()):
                 if e > upto:

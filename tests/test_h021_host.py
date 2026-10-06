@@ -37,6 +37,8 @@ def _market():
     divs = {j: [] for j in range(N)}
     for j in range(N):
         for b in range(launch + 40, D, 63):
+            if j == 4 and b < 1300:                          # XLK: no distributions in its early years (E988-01)
+                continue
             divs[j].append((b, 0.004))
     xlf = int(np.searchsorted(cal, np.datetime64("2016-09-19").astype(np.int64)))
     divs[2].append((xlf, 0.188))
@@ -97,8 +99,8 @@ def _host(monkeypatch, M, mode, params=None, sid="X989"):
                 j = TICKERS.index(s.value)
                 sel = rng_rows(d0, d1)
                 rows = [(cal[b], amt, ref) for b, amt, ref in M["divs"][j] if sel[b]]
-                if not rows:
-                    return pd.DataFrame()
+                if not rows:                                 # QuantConnect (E989-01): a non-empty frame, no columns
+                    return pd.DataFrame({"value": [0.0]}, index=pd.MultiIndex.from_arrays([[s], [pd.Timestamp(d0)]]))
                 ix = pd.MultiIndex.from_arrays([[s] * len(rows), [pd.Timestamp(np.datetime64(int(r[0]), "D"))
                                                                   for r in rows]])
                 return pd.DataFrame({"distribution": [r[1] for r in rows], "referenceprice": [r[2] for r in rows]},

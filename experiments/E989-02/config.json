@@ -1,0 +1,44 @@
+{
+ "kind": "infrastructure",
+ "strategy_id": "X989",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X989_h021_sector",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2017-12-01",
+ "end": "2017-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P6",
+ "cycle": "P6H021",
+ "hypothesis_id": null,
+ "params": {
+  "mode": "canary"
+ },
+ "description": "H021-A FIDELITY CANARY (infrastructure): the 9 Select Sector SPDRs + SPY, history 1998-12-01..2017-12-31 only; histories / launch / calendar / independent day-by-day recomputation of every signal and response / ADJUSTED cross-check / XLF 2016 XLRE distribution / future perturbation / truncation / placebo / planted / null determinism. Publishes NO real IC and no other signal-response statistic.",
+ "experiment_id": "E989-02"
+}

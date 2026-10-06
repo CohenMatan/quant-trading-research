@@ -20,7 +20,7 @@ HYPOTHESIS = "H021"
 OWNER_DECISION = "D160"
 NULL_SEEDS = tuple(range(1, 5001))                                        # R = 5,000 derangement worlds
 NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))    # E022-01..05
-CANARY = "E989-01"
+CANARY = "E989-02"                 # E989-01 failed on a plumbing KeyError (D161); the canary re-run
 NULL_RUNS = ("E022-01", "E022-02", "E022-03", "E022-04", "E022-05")
 REAL_RUN = "E022-06"
 HOST_CODE = ("strategies/X989_h021_sector/main.py",)                      # hashed with the null pins

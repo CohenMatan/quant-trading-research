@@ -1,0 +1,39 @@
+{
+ "error": "2017-12-29 16:00:00 Runtime Error: The key &#039;No key found for either mapped or original key. Mapped Key: [&#039;distribution&#039;]; Original Key: [&#039;distribution&#039;]&#039; was not found in the collection, which raises a KeyError exception. To prevent the exception, use collection.get(key), which returns None when the key is not found, or guard the access with &#039;if key in collection:&#039;.\n  at wrapped_function\n    raise KeyError(f&quot;No key found for either mapped or original key. Mapped Key: {mKey}; Original Key: {oKey}&quot;)\n in PandasMapper.py: line 93\n  at _events\n    for e, amt, ref in zip(ed, dv[&quot;distribution&quot;].tolist(), dv[&quot;referenceprice&quot;].tolist()):\n                               ~~^^^^^^^^^^^^^^^^\n in main.py: line 114\n  at _canary\n    sp, dv, _, _ = self._events(self.h_sym[j], cal, d0 - timedelta(days=5), d1, upto=t_day)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n in main.py: line 370\n  at qr_on_end\n    self._canary()\n in main.py: line 197\n  at on_end_of_algorithm\n    self.qr_on_end()\n in qr_harness.py: line 873\n\nThe key 'No key found for either mapped or original key. Mapped Key: ['distribution']; Original Key: ['distribution']' was not found in the collection, which raises a KeyError exception. To prevent the exception, use collection.get(key), which returns None when the key is not found, or guard the access with 'if key in collection:'.\n  at wrapped_function\n    raise KeyError(f\"No key found for either mapped or original key. Mapped Key: {mKey}; Original Key: {oKey}\")\n in PandasMapper.py: line 93\n  at _events\n    for e, amt, ref in zip(ed, dv[\"distribution\"].tolist(), dv[\"referenceprice\"].tolist()):\n                               ~~^^^^^^^^^^^^^^^^\n in main.py: line 114\n  at _canary\n    sp, dv, _, _ = self._events(self.h_sym[j], cal, d0 - timedelta(days=5), d1, upto=t_day)\n                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n in main.py: line 370\n  at qr_on_end\n    self._canary()\n in main.py: line 197\n  at on_end_of_algorithm\n    self.qr_on_end()\n in qr_harness.py: line 873\n",
+ "experiment_id": "E989-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-10-06T04:54:08Z",
+  "build_commit": "47101cb07e37c5891e83dd83a13158b102f0b3b3",
+  "code_sha256": "8085802338595ad0ce97d513c747152c331f989355c06d12ab6f262dc1b1d405",
+  "config_sha256": "09eb33c72739f6db0b32d11bbc4af3eb43d78933e8eafcbc52e4152fa1cda85c",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_h021.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "47101cb07e37c5891e83dd83a13158b102f0b3b3",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "qc_backtest_id": "1c619fa52bf742073477b42006c32d08",
+  "qc_project_id": 37418175,
+  "result_channel": "",
+  "run_utc": "2026-10-06T04:53:47Z",
+  "runtime_s": 173.83576560020447
+ },
+ "status": "failed"
+}
