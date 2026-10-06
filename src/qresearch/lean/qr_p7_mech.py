@@ -109,3 +109,14 @@ def plan(holdings, records, adv, sector, company, entry, exit_, buffer, max_posi
         buy.append(k)
         reasons[k] = f"replacement (score {records[k]['total']})"
     return dict(sell=sell, buy=buy, reasons=reasons, skipped_sector=skipped_sector, skipped_company=skipped_company)
+
+
+def grown_winner_trims(values, equity, cap=GROWN_WINNER_CAP):
+    """P7-CP4 (D175) frozen PORTFOLIO-STAGE risk rule (not part of the signal validation): at each monthly review,
+    valued at that review session's close, any holding whose market value exceeds cap x portfolio equity (cash +
+    holdings) is trimmed back to cap x equity by a sell at the next session's open, together with the review's other
+    orders (sells before buys). It is a ceiling, never a target: holdings between 10% and 20% are not traded, and a
+    trimmed holding is not topped up. values: {sid: market value}; returns {sid: value to sell} (whole shares are
+    rounded down by the executing harness)."""
+    lim = cap * float(equity)
+    return {s: float(v) - lim for s, v in sorted(values.items()) if float(v) > lim}
