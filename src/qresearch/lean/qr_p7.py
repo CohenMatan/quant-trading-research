@@ -22,7 +22,19 @@ FEATURES = ("sma50_ratio", "sma200_ratio", "sma50_over_sma200", "high252_ratio",
 MIN_BARS = dict(sma50_ratio=50, sma200_ratio=200, sma50_over_sma200=200, high252_ratio=252, low252_ratio=252,
                 mom_12_1=253, mom_6_1=127, atr14_ratio=15, vol60=61, adv20_usd=20, last_bar_age=1)
 SKIP = 21                      # momentum skip (bars)
+LIFE_GAP = 60                  # P7-CP1 (D167): more than this many missing sessions between two bars starts a NEW
+                               # security life; windows never reach back across it (QuantConnect ticker-based ids
+                               # can carry two companies' histories joined across a long gap, e.g. GDI 2013 / 2017)
 MAX_LAST_BAR_AGE = 5           # a security whose last bar is older than this many sessions at t is 'stale'
+
+
+def life_starts(v, gap=LIFE_GAP):
+    """v: sorted valid rows. Returns, for each valid bar, the index (into v) of the first bar of its life."""
+    v = np.asarray(v)
+    st = np.zeros(v.size, dtype=int)
+    for i in range(1, v.size):
+        st[i] = i if v[i] - v[i - 1] - 1 > gap else st[i - 1]
+    return st
 
 
 def valid_rows(*cols):
@@ -50,10 +62,11 @@ def features_at(C, H, L, V, P, rows):
     prevc = np.r_[np.nan, c[:-1]]
     tr = np.maximum(h, prevc) - np.minimum(lo, prevc)
     pos = np.searchsorted(v, rows, side="right") - 1          # index of the last valid bar at or before t
+    ls = life_starts(v)
     for k, b in enumerate(pos):
         if b < 0:
             continue
-        n = b + 1                                              # bars available
+        n = b - ls[b] + 1                                      # bars available in the security's current life
         out["last_bar_age"][k] = rows[k] - v[b]
         last = c[b]
         if n >= 50:
@@ -81,11 +94,21 @@ def features_at(C, H, L, V, P, rows):
 
 
 # ----------------------------------------------------------------------------------------------- independent (slow)
-def features_slow(bars):
+def features_slow(bars, sessions=None, gap=LIFE_GAP):
     """Independent implementation from a plain list of bars [(c, h, l, v, p)] of ONE security ending at the decision
-    session (python loops, no cumulative sums, no shared code with features_at). Returns {feature: value or None}."""
+    session (python loops, no cumulative sums, no shared code with features_at). `sessions` (optional, same length):
+    each bar's session number, used to drop every bar before the last gap of more than `gap` missing sessions (the
+    security-life rule). Returns {feature: value or None}."""
     out = {f: None for f in FEATURES}
-    bars = [b for b in bars if all(x is not None and math.isfinite(x) and x > 0 for x in (b[0], b[1], b[2], b[4]))]
+    keep = [i for i, b in enumerate(bars) if all(x is not None and math.isfinite(x) and x > 0 for x in (b[0], b[1], b[2], b[4]))]
+    if sessions is not None and keep:
+        first = 0
+        for a in range(len(keep) - 1, 0, -1):
+            if sessions[keep[a]] - sessions[keep[a - 1]] - 1 > gap:
+                first = a
+                break
+        keep = keep[first:]
+    bars = [bars[i] for i in keep]
     n = len(bars)
     if n == 0:
         return out
@@ -225,11 +248,15 @@ def calendar_states(C, H, L, max_age=MAX_LAST_BAR_AGE):
     c, h, lo = C[v], H[v], L[v]
     n = c.size
     cs = np.r_[0.0, np.cumsum(c)]
+    ls = life_starts(v)
     idx = np.arange(n)
+    nlife = idx - ls + 1                                      # bars in the current life
     s50 = np.full(n, np.nan)
     s200 = np.full(n, np.nan)
     s50[49:] = (cs[50:] - cs[:-50]) / 50
     s200[199:] = (cs[200:] - cs[:-200]) / 200
+    s50[nlife < 50] = np.nan
+    s200[nlife < 200] = np.nan
     a50 = np.where(np.isfinite(s50), (c > s50).astype(float), np.nan)
     a200 = np.where(np.isfinite(s200), (c > s200).astype(float), np.nan)
     hmax = np.full(n, np.nan)
@@ -237,6 +264,9 @@ def calendar_states(C, H, L, max_age=MAX_LAST_BAR_AGE):
     from collections import deque
     dq, dl = deque(), deque()
     for i in range(n):
+        if ls[i] == i:                                        # a new life: forget the previous one
+            dq.clear()
+            dl.clear()
         while dq and h[dq[-1]] <= h[i]:
             dq.pop()
         dq.append(i)
@@ -247,7 +277,7 @@ def calendar_states(C, H, L, max_age=MAX_LAST_BAR_AGE):
             dq.popleft()
         if dl[0] <= i - 252:
             dl.popleft()
-        if i >= 251:
+        if nlife[i] >= 252:
             hmax[i], lmin[i] = h[dq[0]], lo[dl[0]]
     nh = np.where(np.isfinite(hmax), (h >= hmax).astype(float), np.nan)
     nl = np.where(np.isfinite(lmin), (lo <= lmin).astype(float), np.nan)
@@ -256,7 +286,7 @@ def calendar_states(C, H, L, max_age=MAX_LAST_BAR_AGE):
     p = np.where(ok, pos, 0)
     age = np.where(ok, np.arange(D) - v[p], np.nan)
     fresh = ok & (age <= max_age)
-    out["nbars"] = np.where(ok, idx[p] + 1, np.nan)
+    out["nbars"] = np.where(ok, nlife[p], np.nan)
     out["age"] = age
     for k, arr in (("above50", a50), ("above200", a200), ("new_high", nh), ("new_low", nl)):
         out[k] = np.where(fresh, arr[p], np.nan)

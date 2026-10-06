@@ -1,3 +1,6 @@
+# X992 v1.2 (after E992-02, D167): the security-life rule (qr_p7.LIFE_GAP: a gap of more than 60 missing sessions
+# starts a new life; windows never cross it) in both implementations, and counts of the eligible month-end rows where
+# it changes the inputs (ticker-based ids carrying two companies' histories).
 # X992 v1.1 (after E992-01): no VIX subscription (availability answered by E992-01; the custom-data subscription
 # changed QuantConnect's tradeable-date count and tripped the runner's equity-dates integrity check); itemised
 # lists of chart jumps > 50% and of missing sessions restricted to the days a security was ELIGIBLE (with spike-
@@ -440,6 +443,28 @@ class P7PriceAudit(QRAlgorithm):
                                                  items=jumps[:300])
         self.st["missing_sessions_detail"] = dict(securities=len(gaps), on_eligible_days=sum(g[2] for g in gaps),
                                                   items=sorted(gaps, key=lambda g: -g[1])[:120])
+        # v1.2: where the security-life rule binds (bars of an earlier life exist and the current life is shorter
+        # than the longest window): eligible month-end rows whose inputs differ from a gap-blind computation
+        lives = []
+        bind = 0
+        bind_y = {}
+        for j in range(len(self.sids)):
+            v = np.flatnonzero(np.isfinite(self.C[:, j]) & (self.C[:, j] > 0))
+            if v.size < 2:
+                continue
+            ls = P.life_starts(v)
+            if not (ls > 0).any():
+                continue
+            starts = sorted(set(int(x) for x in ls if x > 0))
+            lives.append([self.sids[j]] + [[_ds(self.cal[v[a - 1]]), _ds(self.cal[v[a]])] for a in starts[:3]])
+            for sd, k in self.mrows:
+                if self.sids[j] in self.sel[sd]:
+                    b = int(np.searchsorted(v, k, side="right")) - 1
+                    if b >= 0 and ls[b] > 0 and b - ls[b] + 1 < 253:
+                        bind += 1
+                        add(bind_y, _ds(self.cal[k])[:4])
+        self.st["security_life_rule"] = dict(gap=P.LIFE_GAP, securities_with_new_life=len(lives),
+                                             eligible_month_rows_where_rule_binds=bind, by_year=bind_y, items=lives[:80])
         self.st["sector_group_sizes"] = {y: {g: dict(min=min(v), median=float(np.median(v)), max=max(v))
                                              for g, v in sorted(d.items())} for y, d in sorted(sect.items())}
         self.st["features_s"] = round(time.perf_counter() - t1, 1)
@@ -527,7 +552,8 @@ class P7PriceAudit(QRAlgorithm):
                     nev += 1
         bars = [(c[i] * fac[i], hi[i] * fac[i], lo[i] * fac[i], vol[i] / fac[i], c[i] * fac[i] * div[i])
                 for i in range(days.size)]
-        return bars, (int(days[-1]) if days.size else None), nev
+        sess = [int(x) for x in np.searchsorted(self.cal, days)]        # session numbers (security-life rule)
+        return (bars, sess), (int(days[-1]) if days.size else None), nev
 
     def _fidelity(self):
         t1 = time.perf_counter()
@@ -549,7 +575,8 @@ class P7PriceAudit(QRAlgorithm):
                     continue
                 res["with_events"] += int(nev > 0)
                 a = self.featv[(j, k)]
-                b = P.features_slow(bars)
+                bars, sess = bars
+                b = P.features_slow(bars, sessions=sess)
                 ok, w, bad = P.compare(a, b)
                 res["worst_rel"] = max(res["worst_rel"], w)
                 if ok:

@@ -117,3 +117,33 @@ def test_calendar_states_match_primary_features(panel):
     h = panel["H"][v]
     for i in range(251, v.size, 37):
         assert st["new_high"][v[i]] == float(h[i] >= h[i - 251:i + 1].max())
+
+
+def test_security_life_rule_never_crosses_a_long_gap():
+    """D167: a ticker-based id carrying company A (rows 0-499) and, after a 300-session gap, company B (rows
+    800-1099): B's features use only B's bars, in both implementations and in the calendar states."""
+    rng = np.random.default_rng(11)
+    D = 1100
+    C = np.full(D, np.nan)
+    C[:500] = 200 * np.exp(np.cumsum(rng.normal(0, 0.01, 500)))
+    C[800:] = 20 * np.exp(np.cumsum(rng.normal(0, 0.01, 300)))
+    H, L, V, Pt = C * 1.01, C * 0.99, np.where(np.isfinite(C), 1e6, np.nan), C.copy()
+    rows = np.array([900, 1050, 1099])
+    A = P.features_at(C, H, L, V, Pt, rows)
+    assert np.isnan(A["sma200_ratio"][0]) and np.isfinite(A["sma50_ratio"][0])          # 101 bars of B only
+    assert np.isfinite(A["sma200_ratio"][1]) and np.isnan(A["high252_ratio"][1])
+    v = P.valid_rows(C, H, L, Pt)
+    for k, t in enumerate(rows):
+        sel = v[v <= t]
+        bars = [(C[r], H[r], L[r], V[r], Pt[r]) for r in sel]
+        b = P.features_slow(bars, sessions=list(sel))
+        ok, w, bad = P.compare({f: A[f][k] for f in P.FEATURES}, b)
+        assert ok, (t, bad)
+    # B's 50-bar mean never includes A's prices: the ratio is that of B alone
+    assert abs(A["sma50_ratio"][0] - (C[900] / C[851:901].mean() - 1)) < 1e-12
+    st = P.calendar_states(C, H, L)
+    assert st["nbars"][900] == 101 and np.isnan(st["above200"][900]) and np.isnan(st["new_high"][1050])
+    # a short halt (<= 60 missing sessions) stays inside one life
+    C2 = C.copy()
+    C2[820:850] = np.nan
+    assert P.calendar_states(C2, C2 * 1.01, C2 * 0.99)["nbars"][900] == 71
