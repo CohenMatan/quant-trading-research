@@ -1,0 +1,1492 @@
+{
+ "V2_violations": 0,
+ "V3_vendor_before_sec": 1,
+ "items": [
+  {
+   "baseline_selection": "2010-01-30",
+   "quarters": [
+    {
+     "period_end": "2008-12-31",
+     "result": "ok",
+     "sec_first_filed": "2009-02-27",
+     "sec_form": "10-K",
+     "vendor_filed": "2009-02-27"
+    },
+    {
+     "period_end": "2009-03-30",
+     "result": "ok",
+     "sec_first_filed": "2009-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-05-08"
+    },
+    {
+     "period_end": "2009-06-30",
+     "result": "ok",
+     "sec_first_filed": "2009-08-10",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-08-10"
+    },
+    {
+     "period_end": "2009-09-30",
+     "result": "ok",
+     "sec_first_filed": "2009-11-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-11-06"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-01-31",
+   "sid": "GTE U1MKPBX1RSYT"
+  },
+  {
+   "baseline_selection": "2010-04-01",
+   "quarters": [
+    {
+     "period_end": "2009-04-30",
+     "result": "ok",
+     "sec_first_filed": "2009-06-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-06-05"
+    },
+    {
+     "period_end": "2009-07-31",
+     "result": "ok",
+     "sec_first_filed": "2009-09-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-09-04"
+    },
+    {
+     "period_end": "2009-10-31",
+     "result": "ok",
+     "sec_first_filed": "2009-12-21",
+     "sec_form": "10-K",
+     "vendor_filed": "2009-12-21"
+    },
+    {
+     "period_end": "2010-01-31",
+     "result": "ok",
+     "sec_first_filed": "2010-03-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-03-05"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-03-31",
+   "sid": "COO R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2010-05-01",
+   "quarters": [
+    {
+     "period_end": "2009-03-31",
+     "result": "ok",
+     "sec_first_filed": "2009-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-05-08"
+    },
+    {
+     "period_end": "2009-06-30",
+     "result": "ok",
+     "sec_first_filed": "2009-08-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-08-07"
+    },
+    {
+     "period_end": "2009-09-30",
+     "result": "ok",
+     "sec_first_filed": "2009-11-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2009-11-25"
+    },
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-02-05"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-04-29",
+   "sid": "WGL R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2010-05-29",
+   "quarters": [
+    {
+     "period_end": "2009-06-30",
+     "result": "ok",
+     "sec_first_filed": "2009-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-08-06"
+    },
+    {
+     "period_end": "2009-09-30",
+     "result": "ok",
+     "sec_first_filed": "2009-11-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-11-05"
+    },
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-02-25"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-05-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-05-06"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-05-31",
+   "sid": "HLEX RQJ8LAM9BRDX"
+  },
+  {
+   "baseline_selection": "2010-05-29",
+   "quarters": [
+    {
+     "period_end": "2009-06-30",
+     "result": "ok",
+     "sec_first_filed": "2009-08-10",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-08-10"
+    },
+    {
+     "period_end": "2009-09-30",
+     "result": "ok",
+     "sec_first_filed": "2009-11-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-11-09"
+    },
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-19",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-02-19"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-05-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-05-07"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-05-31",
+   "sid": "QSFT RN64LSMHWYN9"
+  },
+  {
+   "baseline_selection": "2010-10-01",
+   "quarters": [
+    {
+     "period_end": "2009-09-30",
+     "result": "ok",
+     "sec_first_filed": "2009-11-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2009-11-06"
+    },
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-03-12",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-03-12"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-05-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-05-07"
+    },
+    {
+     "period_end": "2010-06-30",
+     "result": "ok",
+     "sec_first_filed": "2010-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-08-06"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-09-30",
+   "sid": "SGEN S2TCB9V1OIG5"
+  },
+  {
+   "baseline_selection": "2010-12-01",
+   "quarters": [
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-26",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-02-26"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-04-30"
+    },
+    {
+     "period_end": "2010-06-30",
+     "result": "ok",
+     "sec_first_filed": "2010-07-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-07-30"
+    },
+    {
+     "period_end": "2010-09-30",
+     "result": "ok",
+     "sec_first_filed": "2010-10-28",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-10-28"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-11-30",
+   "sid": "RCII R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2010-12-01",
+   "quarters": [
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-02-09"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-05-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-05-05"
+    },
+    {
+     "period_end": "2010-06-30",
+     "result": "ok",
+     "sec_first_filed": "2010-08-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-08-09"
+    },
+    {
+     "period_end": "2010-09-30",
+     "result": "ok",
+     "sec_first_filed": "2010-11-23",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-11-23"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2011-11-30",
+   "sid": "VRUS TS4WKVZH809X"
+  },
+  {
+   "baseline_selection": "2011-02-01",
+   "quarters": [
+    {
+     "period_end": "2009-12-31",
+     "result": "ok",
+     "sec_first_filed": "2010-02-26",
+     "sec_form": "10-K",
+     "vendor_filed": "2010-02-26"
+    },
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-05-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-05-07"
+    },
+    {
+     "period_end": "2010-06-30",
+     "result": "ok",
+     "sec_first_filed": "2010-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-08-06"
+    },
+    {
+     "period_end": "2010-09-30",
+     "result": "ok",
+     "sec_first_filed": "2010-11-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-11-08"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2012-01-31",
+   "sid": "HMSY R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2011-03-01",
+   "quarters": [
+    {
+     "period_end": "2010-03-31",
+     "result": "ok",
+     "sec_first_filed": "2010-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-04-30"
+    },
+    {
+     "period_end": "2010-06-30",
+     "result": "ok",
+     "sec_first_filed": "2010-07-27",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-07-27"
+    },
+    {
+     "period_end": "2010-09-30",
+     "result": "ok",
+     "sec_first_filed": "2010-11-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-11-08"
+    },
+    {
+     "period_end": "2010-12-31",
+     "result": "ok",
+     "sec_first_filed": "2011-02-28",
+     "sec_form": "10-K",
+     "vendor_filed": "2011-02-28"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2012-02-29",
+   "sid": "WXS T696Y3CG0FVP"
+  },
+  {
+   "baseline_selection": "2011-10-01",
+   "quarters": [
+    {
+     "period_end": "2010-09-30",
+     "result": "ok",
+     "sec_first_filed": "2010-11-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2010-11-03"
+    },
+    {
+     "period_end": "2010-12-31",
+     "result": "ok",
+     "sec_first_filed": "2011-02-23",
+     "sec_form": "10-K",
+     "vendor_filed": "2011-02-23"
+    },
+    {
+     "period_end": "2011-03-31",
+     "result": "ok",
+     "sec_first_filed": "2011-05-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-05-04"
+    },
+    {
+     "period_end": "2011-06-30",
+     "result": "ok",
+     "sec_first_filed": "2011-08-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-08-03"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2012-09-28",
+   "sid": "HSNI U5BI1YAU3NMT"
+  },
+  {
+   "baseline_selection": "2011-12-01",
+   "quarters": [
+    {
+     "period_end": "2010-12-31",
+     "result": "ok",
+     "sec_first_filed": "2011-03-03",
+     "sec_form": "10-K",
+     "vendor_filed": "2011-03-03"
+    },
+    {
+     "period_end": "2011-03-31",
+     "result": "ok",
+     "sec_first_filed": "2011-05-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-05-06"
+    },
+    {
+     "period_end": "2011-06-30",
+     "result": "ok",
+     "sec_first_filed": "2011-08-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-08-05"
+    },
+    {
+     "period_end": "2011-09-30",
+     "result": "ok",
+     "sec_first_filed": "2011-11-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-11-07"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2012-11-30",
+   "sid": "CHEX R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2012-08-01",
+   "quarters": [
+    {
+     "period_end": "2011-09-30",
+     "result": "ok",
+     "sec_first_filed": "2011-10-31",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-10-31"
+    },
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-02-29",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-02-29"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-05-01",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-05-01"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-07-27",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-07-27"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-07-31",
+   "sid": "POOL R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2012-09-01",
+   "quarters": [
+    {
+     "period_end": "2011-09-24",
+     "result": "ok",
+     "sec_first_filed": "2011-11-02",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-11-02"
+    },
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-02-27",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-02-27"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-05-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-05-04"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-07"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-08-30",
+   "sid": "CRL RVSAF8UO0M79"
+  },
+  {
+   "baseline_selection": "2012-09-01",
+   "quarters": [
+    {
+     "period_end": "2011-09-30",
+     "result": "ok",
+     "sec_first_filed": "2011-11-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-11-03"
+    },
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-02-28",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-02-28"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-05-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-05-04"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-03"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-08-30",
+   "sid": "QLIK UOAUAU5Z790L"
+  },
+  {
+   "baseline_selection": "2012-09-29",
+   "quarters": [
+    {
+     "period_end": "2011-09-30",
+     "result": "ok",
+     "sec_first_filed": "2011-11-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2011-11-04"
+    },
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-02-21",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-02-21"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-05-08"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-08"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-09-30",
+   "sid": "THS T9V5YFMQ412D"
+  },
+  {
+   "baseline_selection": "2012-11-01",
+   "quarters": [
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-01-30",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-01-30"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-04-26",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-04-26"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-07-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-07-30"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-10-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-10-30"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-10-31",
+   "sid": "TPX SULQI9IJF1ID"
+  },
+  {
+   "baseline_selection": "2013-01-01",
+   "quarters": [
+    {
+     "period_end": "2011-12-31",
+     "result": "ok",
+     "sec_first_filed": "2012-02-17",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-02-17"
+    },
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-04-30"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-02",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-02"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-11-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-11-09"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2013-12-31",
+   "sid": "DBD R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2013-03-29",
+   "quarters": [
+    {
+     "period_end": "2012-03-31",
+     "result": "ok",
+     "sec_first_filed": "2012-05-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-05-04"
+    },
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-07"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-11-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-11-08"
+    },
+    {
+     "period_end": "2012-12-31",
+     "result": "ok",
+     "sec_first_filed": "2013-02-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2013-02-25"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2014-03-31",
+   "sid": "BKH R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2013-06-01",
+   "quarters": [
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-01",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-08-14"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-11-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-11-14"
+    },
+    {
+     "period_end": "2012-12-31",
+     "result": "VIOLATION",
+     "sec_first_filed": "2013-02-21",
+     "sec_form": "10-K",
+     "vendor_filed": "2013-02-14"
+    },
+    {
+     "period_end": "2013-03-31",
+     "result": "ok",
+     "sec_first_filed": "2013-05-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-05-09"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "see quarters",
+   "review": "2014-05-30",
+   "sid": "NPSP R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2013-06-29",
+   "quarters": [
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-08-28",
+     "sec_form": "10-K",
+     "vendor_filed": "2012-08-28"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-11-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-11-05"
+    },
+    {
+     "period_end": "2012-12-31",
+     "result": "ok",
+     "sec_first_filed": "2013-02-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-02-07"
+    },
+    {
+     "period_end": "2013-03-31",
+     "result": "ok",
+     "sec_first_filed": "2013-05-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-05-03"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2014-06-30",
+   "sid": "DV R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2013-06-29",
+   "quarters": [
+    {
+     "period_end": "2012-06-30",
+     "result": "ok",
+     "sec_first_filed": "2012-07-25",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-07-25"
+    },
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-10-24",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-10-24"
+    },
+    {
+     "period_end": "2012-12-31",
+     "result": "ok",
+     "sec_first_filed": "2013-02-20",
+     "sec_form": "10-K",
+     "vendor_filed": "2013-02-20"
+    },
+    {
+     "period_end": "2013-03-31",
+     "result": "ok",
+     "sec_first_filed": "2013-04-24",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-04-24"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2014-06-30",
+   "sid": "MNES R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2013-10-01",
+   "quarters": [
+    {
+     "period_end": "2012-10-30",
+     "result": "ok",
+     "sec_first_filed": "2012-12-10",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-12-15"
+    },
+    {
+     "period_end": "2013-01-29",
+     "result": "ok",
+     "sec_first_filed": "2013-04-01",
+     "sec_form": "10-K",
+     "vendor_filed": "2013-04-01"
+    },
+    {
+     "period_end": "2013-04-30",
+     "result": "ok",
+     "sec_first_filed": "2013-06-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-06-06"
+    },
+    {
+     "period_end": "2013-07-30",
+     "result": "ok",
+     "sec_first_filed": "2013-09-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-09-09"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2014-09-30",
+   "sid": "MFRM V1PBCNEOOXNP"
+  },
+  {
+   "baseline_selection": "2013-11-01",
+   "quarters": [
+    {
+     "period_end": "2012-09-30",
+     "result": "ok",
+     "sec_first_filed": "2012-11-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2012-11-06"
+    },
+    {
+     "period_end": "2012-12-31",
+     "result": "ok",
+     "sec_first_filed": "2013-02-27",
+     "sec_form": "10-K",
+     "vendor_filed": "2013-02-27"
+    },
+    {
+     "period_end": "2013-03-31",
+     "result": "ok",
+     "sec_first_filed": "2013-05-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-05-07"
+    },
+    {
+     "period_end": "2013-06-30",
+     "result": "ok",
+     "sec_first_filed": "2013-08-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-08-09"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2014-10-31",
+   "sid": "BLKB T0JEIJW60RC5"
+  },
+  {
+   "baseline_selection": "2014-03-01",
+   "quarters": [
+    {
+     "period_end": "2013-03-30",
+     "result": "ok",
+     "sec_first_filed": "2013-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-04-30"
+    },
+    {
+     "period_end": "2013-06-29",
+     "result": "ok",
+     "sec_first_filed": "2013-07-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-07-30"
+    },
+    {
+     "period_end": "2013-09-28",
+     "result": "ok",
+     "sec_first_filed": "2013-11-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-11-05"
+    },
+    {
+     "period_end": "2013-12-28",
+     "result": "ok",
+     "sec_first_filed": "2014-02-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-25"
+    }
+   ],
+   "reason": "price < $5",
+   "result": "ok",
+   "review": "2015-02-27",
+   "sid": "ODP R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2014-03-01",
+   "quarters": [
+    {
+     "period_end": "2013-03-31",
+     "result": "ok",
+     "sec_first_filed": "2013-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-05-08"
+    },
+    {
+     "period_end": "2013-06-30",
+     "result": "ok",
+     "sec_first_filed": "2013-08-01",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-08-01"
+    },
+    {
+     "period_end": "2013-09-30",
+     "result": "ok",
+     "sec_first_filed": "2013-11-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-11-05"
+    },
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-02-26",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-26"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2015-02-27",
+   "sid": "SZI SYLHRWX6L6XX"
+  },
+  {
+   "baseline_selection": "2014-08-01",
+   "quarters": [
+    {
+     "period_end": "2013-06-30",
+     "result": "ok",
+     "sec_first_filed": "2013-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-08-06"
+    },
+    {
+     "period_end": "2013-09-30",
+     "result": "ok",
+     "sec_first_filed": "2013-11-05",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-11-05"
+    },
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-03-12",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-03-12"
+    },
+    {
+     "period_end": "2014-03-31",
+     "result": "ok",
+     "sec_first_filed": "2014-05-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-05-06"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2015-07-31",
+   "sid": "CBPO UI4B9PHTWQQT"
+  },
+  {
+   "baseline_selection": "2014-08-01",
+   "quarters": [
+    {
+     "period_end": "2013-06-29",
+     "result": "ok",
+     "sec_first_filed": "2013-07-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-07-30"
+    },
+    {
+     "period_end": "2013-09-28",
+     "result": "ok",
+     "sec_first_filed": "2013-10-29",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-10-29"
+    },
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-02-21",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-21"
+    },
+    {
+     "period_end": "2014-03-29",
+     "result": "ok",
+     "sec_first_filed": "2014-04-29",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-04-29"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2015-07-31",
+   "sid": "HONI R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2014-10-01",
+   "quarters": [
+    {
+     "period_end": "2013-09-30",
+     "result": "ok",
+     "sec_first_filed": "2013-11-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2013-11-07"
+    },
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-02-27",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-27"
+    },
+    {
+     "period_end": "2014-03-31",
+     "result": "ok",
+     "sec_first_filed": "2014-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-05-08"
+    },
+    {
+     "period_end": "2014-06-30",
+     "result": "ok",
+     "sec_first_filed": "2014-08-07",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-08-07"
+    }
+   ],
+   "reason": "ADV20 < $5M or < 20 days of ADV history",
+   "result": "ok",
+   "review": "2015-09-30",
+   "sid": "COLM R9DVAO9FCPR9"
+  },
+  {
+   "baseline_selection": "2014-11-01",
+   "quarters": [
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-02-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-25"
+    },
+    {
+     "period_end": "2014-03-31",
+     "result": "ok",
+     "sec_first_filed": "2014-04-28",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-04-28"
+    },
+    {
+     "period_end": "2014-06-30",
+     "result": "ok",
+     "sec_first_filed": "2014-07-28",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-07-28"
+    },
+    {
+     "period_end": "2014-09-30",
+     "result": "ok",
+     "sec_first_filed": "2014-10-27",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-10-27"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2015-10-30",
+   "sid": "B R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2014-11-29",
+   "quarters": [
+    {
+     "period_end": "2013-12-31",
+     "result": "ok",
+     "sec_first_filed": "2014-02-18",
+     "sec_form": "10-K",
+     "vendor_filed": "2014-02-18"
+    },
+    {
+     "period_end": "2014-03-31",
+     "result": "ok",
+     "sec_first_filed": "2014-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-05-08"
+    },
+    {
+     "period_end": "2014-06-30",
+     "result": "ok",
+     "sec_first_filed": "2014-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-08-06"
+    },
+    {
+     "period_end": "2014-09-30",
+     "result": "ok",
+     "sec_first_filed": "2014-11-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-11-06"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2015-11-30",
+   "sid": "Z UYE69C59FN8L"
+  },
+  {
+   "baseline_selection": "2015-05-01",
+   "quarters": [
+    {
+     "period_end": "2014-03-31",
+     "result": "ok",
+     "sec_first_filed": "2014-05-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-05-08"
+    },
+    {
+     "period_end": "2014-06-30",
+     "result": "ok",
+     "sec_first_filed": "2014-08-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-08-06"
+    },
+    {
+     "period_end": "2014-09-30",
+     "result": "ok",
+     "sec_first_filed": "2014-11-06",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-11-06"
+    },
+    {
+     "period_end": "2014-12-31",
+     "result": "ok",
+     "sec_first_filed": "2015-03-02",
+     "sec_form": "10-K",
+     "vendor_filed": "2015-03-02"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2016-04-29",
+   "sid": "ELLI UVRNCD1237TX"
+  },
+  {
+   "baseline_selection": "2015-09-01",
+   "quarters": [
+    {
+     "period_end": "2014-09-27",
+     "result": "ok",
+     "sec_first_filed": "2014-10-31",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-10-31"
+    },
+    {
+     "period_end": "2014-12-31",
+     "result": "ok",
+     "sec_first_filed": "2015-02-26",
+     "sec_form": "10-K",
+     "vendor_filed": "2015-02-26"
+    },
+    {
+     "period_end": "2015-03-28",
+     "result": "ok",
+     "sec_first_filed": "2015-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-04-30"
+    },
+    {
+     "period_end": "2015-06-27",
+     "result": "ok",
+     "sec_first_filed": "2015-07-31",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-07-31"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2016-08-31",
+   "sid": "ENTG RWA0GXFPE739"
+  },
+  {
+   "baseline_selection": "2015-09-01",
+   "quarters": [
+    {
+     "period_end": "2014-09-30",
+     "result": "ok",
+     "sec_first_filed": "2014-11-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2014-11-04"
+    },
+    {
+     "period_end": "2014-12-31",
+     "result": "ok",
+     "sec_first_filed": "2015-03-02",
+     "sec_form": "10-K",
+     "vendor_filed": "2015-03-02"
+    },
+    {
+     "period_end": "2015-03-31",
+     "result": "ok",
+     "sec_first_filed": "2015-04-30",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-04-30"
+    },
+    {
+     "period_end": "2015-06-30",
+     "result": "ok",
+     "sec_first_filed": "2015-08-11",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-08-11"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2016-08-31",
+   "sid": "EXEL RTSESF5CFJHH"
+  },
+  {
+   "baseline_selection": "2016-01-30",
+   "quarters": [
+    {
+     "period_end": "2014-12-31",
+     "result": "ok",
+     "sec_first_filed": "2015-02-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-02-04"
+    },
+    {
+     "period_end": "2015-03-31",
+     "result": "ok",
+     "sec_first_filed": "2015-05-20",
+     "sec_form": "10-K",
+     "vendor_filed": "2015-05-20"
+    },
+    {
+     "period_end": "2015-06-30",
+     "result": "ok",
+     "sec_first_filed": "2015-08-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-08-04"
+    },
+    {
+     "period_end": "2015-09-30",
+     "result": "ok",
+     "sec_first_filed": "2015-11-03",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-11-03"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-01-31",
+   "sid": "RXN V5BACZOYSIUD"
+  },
+  {
+   "baseline_selection": "2016-03-01",
+   "quarters": [
+    {
+     "period_end": "2015-03-31",
+     "result": "ok",
+     "sec_first_filed": "2015-05-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-05-04"
+    },
+    {
+     "period_end": "2015-06-30",
+     "result": "ok",
+     "sec_first_filed": "2015-08-26",
+     "sec_form": "10-K",
+     "vendor_filed": "2015-08-26"
+    },
+    {
+     "period_end": "2015-09-30",
+     "result": "ok",
+     "sec_first_filed": "2015-11-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-11-04"
+    },
+    {
+     "period_end": "2015-12-31",
+     "result": "ok",
+     "sec_first_filed": "2016-01-29",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-01-29"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-02-28",
+   "sid": "APZ R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2016-06-01",
+   "quarters": [
+    {
+     "period_end": "2015-06-30",
+     "result": "ok",
+     "sec_first_filed": "2015-07-23",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-07-23"
+    },
+    {
+     "period_end": "2015-09-30",
+     "result": "ok",
+     "sec_first_filed": "2015-10-22",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-10-22"
+    },
+    {
+     "period_end": "2015-12-31",
+     "result": "ok",
+     "sec_first_filed": "2016-02-18",
+     "sec_form": "10-K",
+     "vendor_filed": "2016-02-18"
+    },
+    {
+     "period_end": "2016-03-31",
+     "result": "ok",
+     "sec_first_filed": "2016-04-21",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-04-21"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-05-31",
+   "sid": "DAN TZSLR2EQN97P"
+  },
+  {
+   "baseline_selection": "2016-10-01",
+   "quarters": [
+    {
+     "period_end": "2015-09-30",
+     "result": "ok",
+     "sec_first_filed": "2015-11-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-11-09"
+    },
+    {
+     "period_end": "2015-12-31",
+     "result": "ok",
+     "sec_first_filed": "2016-02-29",
+     "sec_form": "10-K",
+     "vendor_filed": "2016-02-29"
+    },
+    {
+     "period_end": "2016-03-31",
+     "result": "ok",
+     "sec_first_filed": "2016-05-10",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-05-10"
+    },
+    {
+     "period_end": "2016-06-30",
+     "result": "ok",
+     "sec_first_filed": "2016-08-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-08-09"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-09-29",
+   "sid": "GDOT UOGQZECZNRZ9"
+  },
+  {
+   "baseline_selection": "2016-11-01",
+   "quarters": [
+    {
+     "period_end": "2015-10-03",
+     "result": "ok",
+     "sec_first_filed": "2015-11-12",
+     "sec_form": "10-Q",
+     "vendor_filed": "2015-11-12"
+    },
+    {
+     "period_end": "2016-01-02",
+     "result": "ok",
+     "sec_first_filed": "2016-02-09",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-02-09"
+    },
+    {
+     "period_end": "2016-04-02",
+     "result": "ok",
+     "sec_first_filed": "2016-05-10",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-05-10"
+    },
+    {
+     "period_end": "2016-07-02",
+     "result": "ok",
+     "sec_first_filed": "2016-08-30",
+     "sec_form": "10-K",
+     "vendor_filed": "2016-08-30"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-10-31",
+   "sid": "UNPH R735QTJ8XC9X"
+  },
+  {
+   "baseline_selection": "2016-12-01",
+   "quarters": [
+    {
+     "period_end": "2015-11-30",
+     "result": "ok",
+     "sec_first_filed": "2016-01-25",
+     "sec_form": "10-K",
+     "vendor_filed": "2016-01-25"
+    },
+    {
+     "period_end": "2016-02-29",
+     "result": "ok",
+     "sec_first_filed": "2016-04-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-04-08"
+    },
+    {
+     "period_end": "2016-05-31",
+     "result": "ok",
+     "sec_first_filed": "2016-07-08",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-07-08"
+    },
+    {
+     "period_end": "2016-08-31",
+     "result": "ok",
+     "sec_first_filed": "2016-10-04",
+     "sec_form": "10-Q",
+     "vendor_filed": "2016-10-04"
+    }
+   ],
+   "reason": "market cap < $2B",
+   "result": "ok",
+   "review": "2017-11-30",
+   "sid": "KBH R735QTJ8XC9X"
+  }
+ ],
+ "no_cik": 0,
+ "not_found": 0,
+ "quarters": 160,
+ "samples": 40,
+ "samples_all_quarters_verified": 39,
+ "sec_found": 160
+}

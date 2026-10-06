@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[2]
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(ROOT / "src/qresearch/lean"))
 import qr_p7_export as E  # noqa: E402
+import qr_p7_mech as M  # noqa: E402
 import qr_p7_score as S  # noqa: E402
 
 THRESHOLDS = (90, 85, 80, 75)
@@ -85,6 +86,11 @@ def elig(r):
 
 def has(r, b):
     return bool(r["bits"] & E.BIT[b])
+
+
+def scorable(r):
+    """Data-scorable row of the chosen share class (X993 v1.1 also scores non-chosen classes, flagged)."""
+    return r["total"] is not None and not has(r, "duplicate_class")
 
 
 def layers(r):
@@ -165,7 +171,7 @@ def distributions(revs):
         vals = defaultdict(list)
         for rv in revs:
             for r in rv["rows"].values():
-                if r["total"] is None or (pop == "eligible" and not elig(r)):
+                if not scorable(r) or (pop == "eligible" and not elig(r)):
                     continue
                 for lo, hi in BINS:
                     if lo <= r["total"] <= hi:
@@ -187,7 +193,7 @@ def layer_stats(revs):
     for rv in revs:
         lt, lf, ls, lo = [], [], [], []
         for r in rv["rows"].values():
-            if r["total"] is None:
+            if not scorable(r):
                 continue
             a, b, c = layers(r)
             lt.append(a)
@@ -333,7 +339,7 @@ def score_changes(revs):
                 if not (elig(r) and r["total"] >= th):
                     continue
                 r2 = b["rows"].get(s)
-                if r2 is None or r2["total"] is None:
+                if r2 is None or not scorable(r2):
                     continue
                 n += 1
                 d.append(r2["total"] - r["total"])
@@ -502,13 +508,115 @@ def simulate(revs, weekly, ev, th, gap, buf, K):
     return trades, closed, open_, util, books, anomalies
 
 
+def simulate_v2(revs, weekly, ev, regime_of, dup_groups, th, gap, buf, K, caps=None, sector_max=M.SECTOR_MAX):
+    """P7-CP3R (D173) provisional mechanics with qr_p7_mech.plan: owner tie-break, optional regime position limits,
+    <= sector_max holdings per PIT FF12, one class per company with the held class kept (its own alternate-class
+    score), weekly disqualifier exits to cash until the next monthly review. Same outputs as simulate + diagnostics."""
+    hold, last_sale, trades, closed, util, books = {}, {}, [], [], [], []
+    diag = Counter()
+    anomalies, m_cur = 0, -1
+    for kind, tk, i in ev:
+        if kind == "R":
+            m_cur = i
+            rv = revs[i]
+            rows = rv["rows"]
+            company = {s: s for s in rows}
+            for cik, mem, kept in dup_groups[i]:
+                for s in mem:
+                    company[s] = cik
+            rec = {}
+            for s, r in rows.items():
+                if has(r, "duplicate_class") and s not in hold:
+                    continue
+                bits = r["bits"] & ~E.BIT["duplicate_class"]
+                dq = [DQ_FULL[b] for b in DATA_BITS if bits & E.BIT[b]]
+                if r["total"] is None:
+                    rec[s] = dict(total=None, eligible=False, dq=list(dict.fromkeys(dq)) or ["no score"])
+                    continue
+                dq += [DQ_FULL[b] for b in ("H6", "H7") if bits & E.BIT[b]]
+                p = r["points"]
+                rec[s] = dict(total=r["total"], fund=p[3] + p[4] + p[5] + p[6], tech=p[0] + p[1] + p[2],
+                              eligible=E.eligible_flag(bits, r["total"]), dq=list(dict.fromkeys(dq)))
+            diag["held_alternate_class_reviews"] += sum(1 for h in hold if h in rows and has(rows[h], "duplicate_class"))
+            adv = {s: r["adv_k"] * 1000.0 for s, r in rows.items()}
+            sector = {s: r["ff"] for s, r in rows.items()}
+            frozen = {h for h in hold if h in rec and "H4_corporate_event_contamination" in rec[h]["dq"]}
+            cap = caps[regime_of[i]] if caps else K
+            diag["reviews_cap_below_holdings"] += int(len(hold) > cap)
+            plan = M.plan(set(hold), rec, adv, sector, company, th, th - gap, buf, K, cap, frozenset(frozen),
+                          set(rows), sector_max)
+            diag["sector_skips"] += len(plan["skipped_sector"])
+            diag["reviews_with_sector_skip"] += int(bool(plan["skipped_sector"]))
+            diag["company_skips"] += len(plan["skipped_company"])
+            for s in plan["sell"]:
+                c = cause_of(plan["reasons"][s])
+                trades.append(("sell", s, tk, i, c))
+                closed.append((s, hold[s][0], tk, c))
+                del hold[s]
+                last_sale[s] = i
+            for s in plan["buy"]:
+                rep = plan["reasons"][s].startswith("replacement")
+                ws = s in last_sale and 0 < i - last_sale[s] <= WHIPSAW_REVIEWS
+                trades.append(("buy", s, tk, i, ("replacement_buy" if rep else "entry") + ("|whipsaw" if ws else "")))
+                hold[s] = (tk, i)
+            util.append(len(hold) / K)
+            diag["slots_vs_cap_sum"] += len(hold) / max(cap, 1)
+            books.append((rv["year"], sorted(hold), [rec[h]["total"] for h in hold if rec.get(h, {}).get("total") is not None]))
+        else:
+            w = weekly[i]
+            recs = {s: dict(dq=[DQ_FULL[x] for x in DQ_BITS if w["bits"].get(s, 0) & E.BIT[x]]) for s in w["members"]}
+            for h in hold:
+                if h not in recs:
+                    anomalies += 1
+            frozen = {h for h in hold if w["bits"].get(h, 0) & E.BIT["H4"]}
+            out = S.weekly_check(set(hold), recs, frozenset(frozen))
+            for s, dq in out.items():
+                trades.append(("sell", s, tk, m_cur, "dq_weekly:" + ",".join(dq)))
+                closed.append((s, hold[s][0], tk, "dq_weekly"))
+                del hold[s]
+                last_sale[s] = m_cur
+    end = revs[-1]["tk"]
+    open_ = [(s, v[0], end) for s, v in hold.items()]
+    diag["mean_utilisation_of_regime_cap"] = r3(diag.pop("slots_vs_cap_sum") / len(util)) if util else None
+    return (trades, closed, open_, util, books, anomalies), dict(diag)
+
+
+def provisional(revs, weekly, ev, pay, ff_by_sid):
+    """Owner's provisional mechanics (D173): entry 80 / exit 70 / buffer 5 / K 10, without and with regime limits;
+    the frozen P7-CP2 planner row for reference; tie-break differences between the two conventions."""
+    regime_of = [x[7] for x in pay["regimes"]]
+    dup = [g for _, g in pay["duplicates"]]
+    out = {}
+    for name, caps in (("v2_no_regime_limits", None), ("v2_regime_limits_10_8_5_2", M.REGIME_POSITIONS)):
+        sim, diag = simulate_v2(revs, weekly, ev, regime_of, dup, 80, 10, 5, 10, caps)
+        r = churn_metrics(revs, weekly, ev, ff_by_sid, 80, "H2", 10, sim_out=sim)
+        r["diagnostics"] = diag
+        r["regime_exits_per_year"] = r["exits_per_year"].get("regime_cap", 0.0)
+        out[name] = r
+    out["frozen_planner_reference"] = churn_metrics(revs, weekly, ev, ff_by_sid, 80, "H2", 10)
+    # tie-break: reviews where the 10 best eligible 80+ candidates differ between (total, ADV20, id) and
+    # (total, Fundamental, Technical, ADV20, id)
+    diff_set = diff_order = ties = 0
+    for rv in revs:
+        c = [(s, r) for s, r in rv["rows"].items() if elig(r) and r["total"] >= 80]
+        old = sorted(c, key=lambda x: (-x[1]["total"], -x[1]["adv_k"], x[0]))
+        new = sorted(c, key=lambda x: (-x[1]["total"], -sum(x[1]["points"][3:7]), -sum(x[1]["points"][:3]),
+                                       -x[1]["adv_k"], x[0]))
+        diff_order += int([s for s, _ in old] != [s for s, _ in new])
+        diff_set += int({s for s, _ in old[:10]} != {s for s, _ in new[:10]})
+        ties += sum(1 for a, b in zip(old, old[1:]) if a[1]["total"] == b[1]["total"])
+    out["tie_break"] = dict(reviews_order_differs=diff_order, reviews_top10_set_differs=diff_set,
+                            adjacent_equal_score_pairs=ties)
+    return out
+
+
 def months(a, b):
     return (date.fromisoformat(b) - date.fromisoformat(a)).days / 30.4375
 
 
-def churn_metrics(revs, weekly, ev, ff_by_sid, th, prof, K):
+def churn_metrics(revs, weekly, ev, ff_by_sid, th, prof, K, sim_out=None):
     gap, buf = PROFILES[prof]
-    trades, closed, open_, util, books, anom = simulate(revs, weekly, ev, th, gap, buf, K)
+    trades, closed, open_, util, books, anom = sim_out or simulate(revs, weekly, ev, th, gap, buf, K)
     buys = [t for t in trades if t[0] == "buy"]
     sells = [t for t in trades if t[0] == "sell"]
     cause = Counter(t[4].split(":")[0] for t in sells)
@@ -621,7 +729,8 @@ def share_class_audit(pay, revs):
 
 
 # ----------------------------------------------------------------------------------------------- main
-def main(path=HERE / "P7_CP3_E993_payload.json.gz"):
+def main(path=HERE / "P7_CP3_E993_payload.json.gz", label="E993-01 (X993 v1.0)", prefix="P7_CP3"):
+    path = Path(path)
     pay, revs, weekly = load(path)
     assert len(revs) == 84 and revs[0]["tk"] == "2011-01-31" and revs[-1]["tk"] == "2017-12-29"
     assert all(rv["tk"] <= "2017-12-29" for rv in revs) and all(w["tk"] <= "2017-12-29" for w in weekly)
@@ -630,7 +739,7 @@ def main(path=HERE / "P7_CP3_E993_payload.json.gz"):
     for rv in revs:
         for s, r in rv["rows"].items():
             ff_by_sid[s] = ff_names[r["ff"]]
-    out = dict(source="E993-01 (X993 v1.0)", reviews=len(revs), weekly_checks=len(weekly),
+    out = dict(source=label, reviews=len(revs), weekly_checks=len(weekly),
                first_review=revs[0]["tk"], last_review=revs[-1]["tk"])
     out["base_universe_by_year"] = {y: q([len(rv["rows"]) for rv in revs if rv["year"] == y], (50,))
                                     for y in sorted({rv["year"] for rv in revs})}
@@ -652,16 +761,17 @@ def main(path=HERE / "P7_CP3_E993_payload.json.gz"):
                     for K in KS]
     out["weekly_burden"] = weekly_burden(revs, weekly)
     out["share_classes"] = share_class_audit(pay, revs)
+    out["provisional"] = provisional(revs, weekly, ev, pay, ff_by_sid)
     txt = json.dumps(out, indent=1, sort_keys=True, default=str)
     for bad in ("return", "cagr", "sharpe", "alpha", "drawdown", "forward"):
         assert bad not in txt.lower(), bad
-    (HERE / "P7_CP3_mechanics.json").write_text(txt + "\n")
-    (HERE / "P7_CP3_tables.md").write_text(tables(out) + "\n")
+    (HERE / f"{prefix}_mechanics.json").write_text(txt + "\n")
+    (HERE / f"{prefix}_tables.md").write_text(tables(out, label) + "\n")
     print("ok", len(out["churn"]))
 
 
-def tables(o):
-    L = ["# P7-CP3 tables (generated by P7_CP3_mechanics.py from E993-01; no returns)", ""]
+def tables(o, label="E993-01"):
+    L = [f"# P7-CP3 tables (generated by P7_CP3_mechanics.py from {label}; no returns)", ""]
     L += ["## Availability and capacity", "",
           "| Entry | Median candidates | Zero months | Median persistence (months) | Max 6 filled | Max 8 filled | "
           "Max 10 filled | Max 12 filled |", "|---|---|---|---|---|---|---|---|"]
@@ -694,4 +804,4 @@ def tables(o):
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    sys.exit(main(*sys.argv[1:]))

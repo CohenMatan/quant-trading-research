@@ -9232,6 +9232,431 @@
    }
   }
  },
+ "provisional": {
+  "frozen_planner_reference": {
+   "K": 10,
+   "book_max_sector_share": {
+    "max": 1.0,
+    "mean": 0.477,
+    "min": 0.2,
+    "n": 84,
+    "p50": 0.429,
+    "p90": 0.7
+   },
+   "book_median_score": 81.0,
+   "buffer": 5,
+   "buys_per_year": 27.8571,
+   "costs": {
+    "100000": {
+     "commission_pct": 0.381,
+     "commission_usd_yr": 381.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 10000.0,
+     "slippage_pct": 0.5443,
+     "slippage_usd_yr": 544.2857,
+     "total_pct": 0.9253,
+     "total_usd_yr": 925.2857
+    },
+    "200000": {
+     "commission_pct": 0.1905,
+     "commission_usd_yr": 381.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 20000.0,
+     "slippage_pct": 0.5443,
+     "slippage_usd_yr": 1088.5714,
+     "total_pct": 0.7348,
+     "total_usd_yr": 1469.5714
+    }
+   },
+   "dq_exits_per_year": 3.2857,
+   "dq_not_requalified": 14,
+   "dq_requalified": 9,
+   "entries_per_year": 22.1429,
+   "entry": 80,
+   "exit": 70,
+   "exits_per_year": {
+    "dq_review": 1.5714,
+    "dq_weekly": 1.7143,
+    "exit_threshold": 17.2857,
+    "replacement": 5.7143,
+    "universe_exit": 0.2857
+   },
+   "held_ge": {
+    "12": 0.0376,
+    "3": 0.3333,
+    "6": 0.129
+   },
+   "held_ge_incl_open": {
+    "12": 0.0359,
+    "3": 0.3282,
+    "6": 0.1333
+   },
+   "holding_months_closed": {
+    "max": 15.967145790554415,
+    "mean": 3.167,
+    "min": 0.32854209445585214,
+    "n": 186,
+    "p25": 1.051,
+    "p50": 2.037,
+    "p75": 4.008
+   },
+   "holding_months_open_at_end": {
+    "max": 9.987679671457906,
+    "mean": 2.537,
+    "min": 0.0,
+    "n": 9,
+    "p50": 0.953
+   },
+   "longest_months": 15.9671,
+   "normal_exits_per_year": 17.2857,
+   "orders_per_year": 54.4286,
+   "orders_total": 381,
+   "positions_closed": 186,
+   "positions_open_at_end": 9,
+   "profile": "H2",
+   "replacement_buys_per_year": 5.7143,
+   "replacements_per_year": 5.7143,
+   "requalify_months": {
+    "max": 41.0,
+    "mean": 13.0,
+    "min": 1.0,
+    "n": 9,
+    "p25": 2.0,
+    "p50": 6.0,
+    "p75": 22.0
+   },
+   "sell_then_rebuy": 27,
+   "sell_then_rebuy_per_year": 3.8571,
+   "sell_then_rebuy_share_of_sells": 0.1452,
+   "sells_per_year": 26.5714,
+   "universe_exits_per_year": 0.2857,
+   "utilisation": {
+    "by_year": {
+     "2011": 0.7583,
+     "2012": 0.7417,
+     "2013": 0.4917,
+     "2014": 0.6,
+     "2015": 0.8417,
+     "2016": 0.8,
+     "2017": 0.975
+    },
+    "empty_reviews": 0.0,
+    "full_reviews": 0.3452,
+    "mean": 0.744,
+    "mean_empty_slots": 2.5595
+   },
+   "weekly_anomalies": 0,
+   "weekly_dq_categories": {
+    "H2_fundamentals_missing_or_stale": 1,
+    "H5_stale_price": 9,
+    "H6_broken_long_term_trend": 2
+   },
+   "weekly_dq_exits_per_year": 1.7143,
+   "weekly_dq_names": [
+    "AGN 2015-03-27 H5_stale_price",
+    "ARBA 2012-10-12 H5_stale_price",
+    "CYPR 2014-08-22 H5_stale_price",
+    "FDS 2011-06-24 H2_fundamentals_missing_or_stale",
+    "FDS 2016-01-22 H6_broken_long_term_trend",
+    "GPRO 2012-08-10 H5_stale_price",
+    "IDTI 2016-02-26 H6_broken_long_term_trend",
+    "LLTC 2017-03-24 H5_stale_price",
+    "LSI 2014-05-16 H5_stale_price",
+    "N 2016-11-18 H5_stale_price",
+    "SWI 2016-02-12 H5_stale_price",
+    "TWC 2016-05-27 H5_stale_price"
+   ],
+   "weekly_share_of_orders": 0.0315
+  },
+  "tie_break": {
+   "adjacent_equal_score_pairs": 208,
+   "reviews_order_differs": 42,
+   "reviews_top10_set_differs": 7
+  },
+  "v2_no_regime_limits": {
+   "K": 10,
+   "book_max_sector_share": {
+    "max": 1.0,
+    "mean": 0.398,
+    "min": 0.2,
+    "n": 84,
+    "p50": 0.375,
+    "p90": 0.5
+   },
+   "book_median_score": 80.0,
+   "buffer": 5,
+   "buys_per_year": 23.2857,
+   "costs": {
+    "100000": {
+     "commission_pct": 0.316,
+     "commission_usd_yr": 316.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 10000.0,
+     "slippage_pct": 0.4514,
+     "slippage_usd_yr": 451.4286,
+     "total_pct": 0.7674,
+     "total_usd_yr": 767.4286
+    },
+    "200000": {
+     "commission_pct": 0.158,
+     "commission_usd_yr": 316.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 20000.0,
+     "slippage_pct": 0.4514,
+     "slippage_usd_yr": 902.8571,
+     "total_pct": 0.6094,
+     "total_usd_yr": 1218.8571
+    }
+   },
+   "diagnostics": {
+    "company_skips": 0,
+    "held_alternate_class_reviews": 0,
+    "mean_utilisation_of_regime_cap": 0.6857,
+    "reviews_cap_below_holdings": 0,
+    "reviews_with_sector_skip": 34,
+    "sector_skips": 102
+   },
+   "dq_exits_per_year": 3.1429,
+   "dq_not_requalified": 14,
+   "dq_requalified": 8,
+   "entries_per_year": 21.1429,
+   "entry": 80,
+   "exit": 70,
+   "exits_per_year": {
+    "dq_review": 1.4286,
+    "dq_weekly": 1.7143,
+    "exit_threshold": 16.5714,
+    "replacement": 2.1429
+   },
+   "held_ge": {
+    "12": 0.0458,
+    "3": 0.3791,
+    "6": 0.1503
+   },
+   "held_ge_incl_open": {
+    "12": 0.0429,
+    "3": 0.3804,
+    "6": 0.1534
+   },
+   "holding_months_closed": {
+    "max": 15.967145790554415,
+    "mean": 3.45,
+    "min": 0.32854209445585214,
+    "n": 153,
+    "p25": 1.051,
+    "p50": 2.07,
+    "p75": 4.862
+   },
+   "holding_months_open_at_end": {
+    "max": 8.049281314168377,
+    "mean": 3.384,
+    "min": 0.0,
+    "n": 10,
+    "p50": 1.938
+   },
+   "longest_months": 15.9671,
+   "normal_exits_per_year": 16.5714,
+   "orders_per_year": 45.1429,
+   "orders_total": 316,
+   "positions_closed": 153,
+   "positions_open_at_end": 10,
+   "profile": "H2",
+   "regime_exits_per_year": 0.0,
+   "replacement_buys_per_year": 2.1429,
+   "replacements_per_year": 2.1429,
+   "requalify_months": {
+    "max": 41.0,
+    "mean": 11.875,
+    "min": 1.0,
+    "n": 8,
+    "p25": 1.75,
+    "p50": 4.5,
+    "p75": 13.25
+   },
+   "sell_then_rebuy": 16,
+   "sell_then_rebuy_per_year": 2.2857,
+   "sell_then_rebuy_share_of_sells": 0.1046,
+   "sells_per_year": 21.8571,
+   "universe_exits_per_year": 0.0,
+   "utilisation": {
+    "by_year": {
+     "2011": 0.75,
+     "2012": 0.7,
+     "2013": 0.4833,
+     "2014": 0.5583,
+     "2015": 0.825,
+     "2016": 0.5917,
+     "2017": 0.8917
+    },
+    "empty_reviews": 0.0,
+    "full_reviews": 0.2143,
+    "mean": 0.6857,
+    "mean_empty_slots": 3.1429
+   },
+   "weekly_anomalies": 0,
+   "weekly_dq_categories": {
+    "H2_fundamentals_missing_or_stale": 1,
+    "H5_stale_price": 9,
+    "H6_broken_long_term_trend": 2
+   },
+   "weekly_dq_exits_per_year": 1.7143,
+   "weekly_dq_names": [
+    "AGN 2015-03-27 H5_stale_price",
+    "ARBA 2012-10-12 H5_stale_price",
+    "CYPR 2014-08-22 H5_stale_price",
+    "FDS 2011-06-24 H2_fundamentals_missing_or_stale",
+    "FDS 2016-01-22 H6_broken_long_term_trend",
+    "GPRO 2012-08-10 H5_stale_price",
+    "IDTI 2016-02-26 H6_broken_long_term_trend",
+    "LLTC 2017-03-24 H5_stale_price",
+    "LSI 2014-05-16 H5_stale_price",
+    "SWI 2016-02-12 H5_stale_price",
+    "TWC 2016-05-27 H5_stale_price",
+    "VSEA 2011-11-18 H5_stale_price"
+   ],
+   "weekly_share_of_orders": 0.038
+  },
+  "v2_regime_limits_10_8_5_2": {
+   "K": 10,
+   "book_max_sector_share": {
+    "max": 1.0,
+    "mean": 0.418,
+    "min": 0.25,
+    "n": 84,
+    "p50": 0.4,
+    "p90": 0.6
+   },
+   "book_median_score": 80.0,
+   "buffer": 5,
+   "buys_per_year": 22.2857,
+   "costs": {
+    "100000": {
+     "commission_pct": 0.302,
+     "commission_usd_yr": 302.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 10000.0,
+     "slippage_pct": 0.4314,
+     "slippage_usd_yr": 431.4286,
+     "total_pct": 0.7334,
+     "total_usd_yr": 733.4286
+    },
+    "200000": {
+     "commission_pct": 0.151,
+     "commission_usd_yr": 302.0,
+     "cost_class": "0.5-1.0%",
+     "notional_per_order": 20000.0,
+     "slippage_pct": 0.4314,
+     "slippage_usd_yr": 862.8571,
+     "total_pct": 0.5824,
+     "total_usd_yr": 1164.8571
+    }
+   },
+   "diagnostics": {
+    "company_skips": 0,
+    "held_alternate_class_reviews": 0,
+    "mean_utilisation_of_regime_cap": 0.7378,
+    "reviews_cap_below_holdings": 6,
+    "reviews_with_sector_skip": 29,
+    "sector_skips": 91
+   },
+   "dq_exits_per_year": 2.5714,
+   "dq_not_requalified": 10,
+   "dq_requalified": 8,
+   "entries_per_year": 19.5714,
+   "entry": 80,
+   "exit": 70,
+   "exits_per_year": {
+    "dq_review": 1.2857,
+    "dq_weekly": 1.2857,
+    "exit_threshold": 14.1429,
+    "regime_cap": 1.4286,
+    "replacement": 2.7143
+   },
+   "held_ge": {
+    "12": 0.0411,
+    "3": 0.3836,
+    "6": 0.1233
+   },
+   "held_ge_incl_open": {
+    "12": 0.0385,
+    "3": 0.3846,
+    "6": 0.1282
+   },
+   "holding_months_closed": {
+    "max": 15.967145790554415,
+    "mean": 3.319,
+    "min": 0.32854209445585214,
+    "n": 146,
+    "p25": 1.051,
+    "p50": 2.07,
+    "p75": 4.074
+   },
+   "holding_months_open_at_end": {
+    "max": 8.049281314168377,
+    "mean": 3.384,
+    "min": 0.0,
+    "n": 10,
+    "p50": 1.938
+   },
+   "longest_months": 15.9671,
+   "normal_exits_per_year": 14.1429,
+   "orders_per_year": 43.1429,
+   "orders_total": 302,
+   "positions_closed": 146,
+   "positions_open_at_end": 10,
+   "profile": "H2",
+   "regime_exits_per_year": 1.4286,
+   "replacement_buys_per_year": 2.7143,
+   "replacements_per_year": 2.7143,
+   "requalify_months": {
+    "max": 41.0,
+    "mean": 11.875,
+    "min": 1.0,
+    "n": 8,
+    "p25": 1.75,
+    "p50": 4.5,
+    "p75": 13.25
+   },
+   "sell_then_rebuy": 17,
+   "sell_then_rebuy_per_year": 2.4286,
+   "sell_then_rebuy_share_of_sells": 0.1164,
+   "sells_per_year": 20.8571,
+   "universe_exits_per_year": 0.0,
+   "utilisation": {
+    "by_year": {
+     "2011": 0.5667,
+     "2012": 0.6667,
+     "2013": 0.4833,
+     "2014": 0.5583,
+     "2015": 0.725,
+     "2016": 0.5417,
+     "2017": 0.8917
+    },
+    "empty_reviews": 0.0,
+    "full_reviews": 0.1548,
+    "mean": 0.6333,
+    "mean_empty_slots": 3.6667
+   },
+   "weekly_anomalies": 0,
+   "weekly_dq_categories": {
+    "H2_fundamentals_missing_or_stale": 1,
+    "H5_stale_price": 8
+   },
+   "weekly_dq_exits_per_year": 1.2857,
+   "weekly_dq_names": [
+    "AGN 2015-03-27 H5_stale_price",
+    "ARBA 2012-10-12 H5_stale_price",
+    "CYPR 2014-08-22 H5_stale_price",
+    "FDS 2011-06-24 H2_fundamentals_missing_or_stale",
+    "GPRO 2012-08-10 H5_stale_price",
+    "LLTC 2017-03-24 H5_stale_price",
+    "LSI 2014-05-16 H5_stale_price",
+    "SWI 2016-02-12 H5_stale_price",
+    "TWC 2016-05-27 H5_stale_price"
+   ],
+   "weekly_share_of_orders": 0.0298
+  }
+ },
  "regime": {
   "breadth": {
    "max": 0.935618,

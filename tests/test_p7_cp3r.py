@@ -161,3 +161,25 @@ def test_replacement_buffer_and_frozen():
     assert p["buy"] == ["D"] and p["sell"] == ["A"]                         # 83 >= 78 + 5; 82 then fails vs 82
     p2 = M.plan(hold, recs, {}, {}, {}, 80, 70, 5, 2, 2, frozen={"A"})
     assert p2["buy"] == [] and p2["sell"] == []
+
+
+def test_committed_cp3r_outputs():
+    """E993-02 isolates the revenue-baseline change: same universe and share classes as E993-01, the CP3 rule
+    reproduces E993-01's H2 exactly, regime identical, every rescued baseline usable before its baseline day (in-host,
+    all rows) and on the SEC sample; no return-like field."""
+    import json
+
+    from conftest import ROOT
+    c = json.loads((ROOT / "research/phase7/P7_CP3R_compare.json").read_text())
+    assert c["consistency"] == dict(same_eligible_universe_every_review=True, share_class_choice_differences=0,
+                                    cp3_rule_h2_mismatches=0)
+    assert c["regime"]["identical"] and c["rescued"]["host"]["pit_violations"] == 0
+    assert c["rescued"]["total"]["rescued"] > 0 and c["rescued"]["host"]["lost"] == 0
+    sec = json.loads((ROOT / "research/phase7/P7_CP3R_sec_check.json").read_text())
+    assert sec["V2_violations"] == 0 and sec["not_found"] == 0 and sec["samples"] == 40
+    m = json.loads((ROOT / "research/phase7/P7_CP3R_mechanics.json").read_text())
+    txt = json.dumps(m).lower() + json.dumps(c).lower()
+    for bad in ("return", "cagr", "sharpe", "alpha", "drawdown", "forward", "profit_factor", "win_rate"):
+        assert bad not in txt, bad
+    r = json.loads((ROOT / "experiments/E993-02/result.json").read_text())
+    assert r["harness_summary"]["orders"] == 0
