@@ -166,6 +166,7 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
     state["project_id"] = project
     client.sync_files(project, files)
+    verify_stored_modules(cfg, client.read_file_contents(project))
     client.pin_lean_version(project, cfg["lean_version_id"])
     state["stage"] = "compile"
     compile_id = client.compile(project)
@@ -402,6 +403,19 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     from .report import write_report
     write_report(outdir, cfg, result)
     return result
+
+
+def verify_stored_modules(cfg: dict, stored: dict[str, str]) -> None:
+    """P7-CP5 (D178): configs that pin a module fingerprint (params.pred_code_sha256 = qr_p7_pred.py) are checked on the
+    copy QuantConnect stores for the project, read back after the upload and before compiling (LEAN's runtime copy of a
+    source file is not byte-identical to the stored one, so the check cannot live in the algorithm)."""
+    want = cfg.get("params", {}).get("pred_code_sha256")
+    if want is None:
+        return
+    got = hashlib.sha256(stored.get("qr_p7_pred.py", "").encode()).hexdigest()
+    if got != want:
+        raise experiment.ConfigError(f"{cfg['experiment_id']}: QuantConnect's stored qr_p7_pred.py ({got[:12]}...) "
+                                     f"differs from the pinned module ({want[:12]}...); nothing compiled")
 
 
 def approval_gate(cfg: dict, owner_approved: str | None) -> None:

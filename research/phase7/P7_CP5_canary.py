@@ -19,7 +19,21 @@ sys.path.insert(0, str(HERE))
 from P7_CP3R_extract import joined, lines  # noqa: E402
 
 
-def main(exp="E994-01"):
+def uploaded_modules_ok(exp):
+    """D178: the files uploaded for a run (re-assembled at its build commit) hash to the recorded code_sha256, and every
+    pinned module among them equals its pin (the runner also verified QuantConnect's stored copy before compiling)."""
+    from qresearch import run as RUN
+    cfg = json.loads((ROOT / "experiments" / exp / "config.json").read_text())
+    prov = json.loads((ROOT / "experiments" / exp / "result.json").read_text())["provenance"]
+    files = RUN.assemble_files(cfg, prov["build_commit"], False)
+    pins = {Path(k).name: v for k, v in p7pred.CODE_SHA256.items() if k.startswith("src/qresearch/lean/")}
+    mods = {n: hashlib.sha256(files[n].encode()).hexdigest() == pins[n] for n in pins if n in files}
+    host = hashlib.sha256(files["main.py"].encode()).hexdigest() == p7pred.HOST_SHA256
+    return RUN.code_hash(files) == prov["code_sha256"] and all(mods.values()) and host and len(mods) >= 8, \
+        dict(build_commit=prov["build_commit"], code_sha256=prov["code_sha256"], modules=mods, host=host)
+
+
+def main(exp="E994-02"):
     ls = lines(exp)
     st = json.loads(joined(ls, "QRP7S"))
     assert not any(x.startswith(("QRN|", "QRR|")) for x in ls), "canary exported null / real statistics"
@@ -31,13 +45,13 @@ def main(exp="E994-01"):
     pop = st["coverage"]["population"]
     tm, fr, inv, sc, nm = (ck[k] for k in ("timing", "fresh_recomputation", "response_invariance", "score_invariance",
                                            "null_machinery"))
-    pins = {Path(k).name: v for k, v in p7pred.CODE_SHA256.items() if k.startswith("src/qresearch/lean/")}
+    up_ok, up = uploaded_modules_ok(exp)
     status = {}
     for key, n in st["coverage"]["status"].items():
         status[key.split("|")[2]] = status.get(key.split("|")[2], 0) + n
     checks = {
         "1 no real IC / gate / null statistic computed": not ck["real_ic_computed"] and not ck["gates_computed"],
-        "2 module fingerprints = pins": all(st["modules"][n] == pins[n] for n in st["modules"]),
+        "2 uploaded host + module fingerprints = pins (runner-verified stored copies, D178)": up_ok,
         "3 spec fingerprint = pinned spec (D177)": st["spec_sha256"] == p7pred.SPEC_SHA256,
         "4 calendar: 84 reviews / weekly checks match the session calendar": st["calendar_check"]["reviews_match"]
         and st["calendar_check"]["weekly_match"] and st["calendar_check"]["reviews"] == 84,
@@ -71,7 +85,7 @@ def main(exp="E994-01"):
                population=dict(min=min(ns), median=statistics.median(ns), max=max(ns), mean=sum(ns) / len(ns)),
                hi80=dict(mean=sum(hi) / len(hi), months_without=sum(1 for h in hi if h == 0)),
                status=status, status_by_year_quintile=st["coverage"]["status"], timing=tm, fresh=fr, invariance=inv,
-               score_invariance=sc, null_machinery=nm, event_classes=ck["event_classes"],
+               score_invariance=sc, null_machinery=nm, uploaded=up, event_classes=ck["event_classes"],
                digests={k: st[k] for k in ("panel_sha256", "score_side_sha256", "response_side_sha256",
                                            "score_tables_sha256", "sids_sha256")},
                runtime={k: st.get(k) for k in ("wall_s", "max_rss_mb", "score_s", "responses_s", "states_s")}

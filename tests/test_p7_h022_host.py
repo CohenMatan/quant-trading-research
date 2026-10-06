@@ -81,7 +81,7 @@ def test_canary_checks_pass_and_compute_no_real_ic(monkeypatch):
     assert nm["tether"]["not_permutation"] == nm["tether"]["self_matches"] == 0
     assert st["coverage"]["mcap_missing"] == st["coverage"]["mom_missing"] == 0
     assert sum(st["coverage"]["status"].values()) == sum(n for _, n, _ in st["coverage"]["population"])
-    assert st["modules"]["qr_p7_pred.py"] == BASE["pred_code_sha256"]
+    assert st["runtime_modules"]["qr_p7_pred.py"] == BASE["pred_code_sha256"]     # informational in-host (D178)
     assert st["spec_sha256"] == p7pred.SPEC_SHA256
 
 
@@ -124,8 +124,8 @@ def test_real_mode_refuses_a_different_panel_and_matches_the_frozen_gates(monkey
 
 
 def test_initialisation_refuses_bad_params(monkeypatch):
-    for bad in (dict(BASE, mode="search"), dict(BASE, mode="null", seeds=[0, 10]),
-                dict(BASE, mode="canary", pred_code_sha256="0" * 64), dict(BASE, mode="real", c_ic=2.5)):
+    for bad in (dict(BASE, mode="search"), dict(BASE, mode="null", seeds=[0, 10]), dict(BASE, mode="real", c_ic=2.5),
+                dict(mode="canary")):
         with pytest.raises(Exception):
             _host(monkeypatch, _market(n=4), path=S023, cls="H022Predictive", params=bad)
 
@@ -139,13 +139,13 @@ def test_configs_and_runner_wiring():
 
     from qresearch import experiment, run
     cfgs = {e: json.loads((ROOT / f"experiments/{e}/config.json").read_text())
-            for e in ("E994-01", "E023-01", "E023-02", "E023-03", "E023-04", "E023-05")}
+            for e in ("E994-02", "E023-01", "E023-02", "E023-03", "E023-04", "E023-05")}
     for e, c in cfgs.items():
         experiment.validate(c)
-        assert (c["strategy_id"] == "X994") == (e == "E994-01")
-        assert bool(c.get("owner_approval_required")) == (e != "E994-01")
+        assert (c["strategy_id"] == "X994") == (e == "E994-02") and c["strategy_version"] == "v1.1"
+        assert bool(c.get("owner_approval_required")) == (e != "E994-02")
     assert [tuple(cfgs[f"E023-0{i}"]["params"]["seeds"]) for i in range(1, 6)] == list(p7pred.NULL_BATCHES)
-    files = run.assemble_files(cfgs["E994-01"], None, False)
+    files = run.assemble_files(cfgs["E994-02"], None, False)
     for n in ("qr_p7_pred.py", "qr_h020_stats.py", "qr_xs.py", "qr_xs_panel.py", "qr_p7_score.py"):
         assert hashlib.sha256(files[n].encode()).hexdigest() == p7pred.CODE_SHA256[f"src/qresearch/lean/{n}"], n
     bad = copy.deepcopy(cfgs["E023-01"])
@@ -154,7 +154,7 @@ def test_configs_and_runner_wiring():
     with pytest.raises(experiment.ConfigError):           # refused: no c_IC pinned
         experiment.validate(bad)
     for k, v in (("end", "2018-01-31"), ("start", "2010-01-04")):
-        b2 = copy.deepcopy(cfgs["E994-01"])
+        b2 = copy.deepcopy(cfgs["E994-02"])
         b2[k] = v
         with pytest.raises(experiment.ConfigError):
             experiment.validate(b2)
@@ -162,6 +162,15 @@ def test_configs_and_runner_wiring():
     b3["params"]["spec_sha256"] = p7pred.SPEC_SHA256_V1_ORIGINAL
     with pytest.raises(experiment.ConfigError):
         experiment.validate(b3)
+    b5 = copy.deepcopy(cfgs["E023-04"])
+    b5["params"]["pred_code_sha256"] = "0" * 64
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(b5)
+    # D178: the runner checks QuantConnect's STORED copy of the pinned module before compiling
+    run.verify_stored_modules(cfgs["E994-02"], files)
+    with pytest.raises(experiment.ConfigError):
+        run.verify_stored_modules(cfgs["E994-02"], dict(files, **{"qr_p7_pred.py": files["qr_p7_pred.py"] + "#"}))
+    run.verify_stored_modules(json.loads((ROOT / "experiments/E993-02/config.json").read_text()), {})
     b4 = copy.deepcopy(cfgs["E023-03"])
     b4["params"]["seeds"] = [1, 5000]
     with pytest.raises(experiment.ConfigError):

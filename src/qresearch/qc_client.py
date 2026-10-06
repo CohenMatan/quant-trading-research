@@ -116,6 +116,9 @@ class QCClient:
     def list_files(self, project_id: int) -> list[str]:
         return [f["name"] for f in self.call("files/read", projectId=project_id).get("files", [])]
 
+    def read_file_contents(self, project_id: int) -> dict[str, str]:
+        return {f["name"]: f.get("content", "") for f in self.call("files/read", projectId=project_id).get("files", [])}
+
     def sync_files(self, project_id: int, files: dict[str, str]) -> None:
         """Make the project contain exactly `files` (name -> content)."""
         existing = set(self.list_files(project_id))

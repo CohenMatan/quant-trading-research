@@ -1,9 +1,9 @@
 {
  "kind": "infrastructure",
- "hypothesis_id": "H022",
- "strategy_id": "S023",
+ "hypothesis_id": null,
+ "strategy_id": "X994",
  "strategy_version": "v1.1",
- "strategy_dir": "strategies/S023_h022_predictive",
+ "strategy_dir": "strategies/X994_h022_canary",
  "split_scheme": "2010",
  "split": "AUDIT",
  "start": "2011-01-03",
@@ -38,17 +38,12 @@
  ],
  "programme": "P7",
  "cycle": "P7H022",
- "experiment_id": "E023-02",
+ "experiment_id": "E994-02",
  "stall_minutes": 240,
  "params": {
-  "mode": "null",
-  "seeds": [
-   1001,
-   2000
-  ],
+  "mode": "canary",
   "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
   "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5"
  },
- "description": "H022 NULL worlds 1001-2000 of 5,000 (frozen identity-tethered within-date permutation of the score side, one stratum, no self-matches; the complete procedure per world: IC series, t_IC, 80+, quintiles, halves, blocks; P7_predictive_spec.md C9). Publishes per-world null statistics only. Infrastructure (never a strategy trial).",
- "owner_approval_required": "H022 frozen predictive validation, one real evaluation (owner authorisation 2026-10-06, D177)"
+ "description": "H022 PLUMBING CANARY, re-run of E994-01 after the D178 fix (X994 v1.1 = byte copy of S023; infrastructure, non-trading, D177): the frozen X993 v1.1 score pipeline + the H022 responses on the 83 decisions 2011-01-31..2017-11-30; checks response timing, score / spec / module fingerprints, corporate-action accounting (fresh single-security history), status counts, independent recomputation of every response, future-data invariance, truncation (responses and whole re-scored reviews), determinism and the null machinery on SYNTHETIC responses. Computes NO IC of the real assignment, NO gate, NO null statistic; nothing after 2017-12-31."
 }

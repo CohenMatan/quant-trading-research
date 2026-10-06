@@ -2,7 +2,7 @@
  "kind": "infrastructure",
  "hypothesis_id": "H022",
  "strategy_id": "S023",
- "strategy_version": "v1.0",
+ "strategy_version": "v1.1",
  "strategy_dir": "strategies/S023_h022_predictive",
  "split_scheme": "2010",
  "split": "AUDIT",

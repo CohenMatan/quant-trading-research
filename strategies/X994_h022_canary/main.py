@@ -1,4 +1,4 @@
-# S023 v1.0 — H022 PREDICTIVE VALIDATION HOST (research/phase7/P7_predictive_spec.md v1 as corrected by D177; owner
+# S023 v1.1 — H022 PREDICTIVE VALIDATION HOST (research/phase7/P7_predictive_spec.md v1 as corrected by D177; owner
 # authorisation 2026-10-06, D177). X994 = a byte copy run as the plumbing canary. NO orders, NO portfolio, NO
 # performance; nothing after 2017-12-31 is requested (the last price row is the 2017-12-29 session).
 # The score pipeline is the X993 v1.1 export (E993-02, P7-CP3R) unchanged: PIT store + observe_vendor daily, SEC feed of
@@ -105,8 +105,8 @@ class H022Predictive(QRAlgorithm):
             raise Exception(f"S023: unknown mode {self.h_mode!r}")
         if "spec_sha256" not in p or "pred_code_sha256" not in p:
             raise Exception("S023: params need spec_sha256 and pred_code_sha256 (frozen fingerprints)")
-        if _module_hashes()["qr_p7_pred.py"] != p["pred_code_sha256"]:
-            raise Exception("S023: the uploaded qr_p7_pred.py differs from the pinned module; nothing run")
+        # D178: the pinned module fingerprints are verified by the runner on QuantConnect's stored project files before
+        # compiling; LEAN's runtime copy of a source file is not byte-identical, so in-host hashes are informational
         if self.h_mode == "null":
             a, b = (int(x) for x in p["seeds"])
             if not (1 <= a <= b <= R.R_NULL):
@@ -486,7 +486,7 @@ class H022Predictive(QRAlgorithm):
         return out
 
     def qr_on_end(self):
-        self.st = dict(mode=self.h_mode, checks=self.c, store_stats=dict(self.store.stats), modules=_module_hashes(),
+        self.st = dict(mode=self.h_mode, checks=self.c, store_stats=dict(self.store.stats), runtime_modules=_module_hashes(),
                        spec_sha256=self.qr_params["spec_sha256"])
         self._build()
         t1 = time.perf_counter()

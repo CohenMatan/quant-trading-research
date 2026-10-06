@@ -53,9 +53,10 @@ NULL_RESULT_SHA256 = None
 THRESHOLD_COMMIT = None
 PANEL_SHA256 = None                                   # the prepared H022 panel the null was calibrated on
 
-# P7-CP5 (D177): the execution host S023 (X994 = byte copy), pinned before the canary; the null and the real run use it
+# P7-CP5 (D177 / D178): the execution host S023 v1.1 (X994 = byte copy), pinned before the canary; the null and the
+# real run use it (v1.0 failed E994-01 at initialisation: its in-host fingerprint guard, D178)
 HOST = "strategies/S023_h022_predictive/main.py"
-HOST_SHA256 = "9b8476e12203586d8d6471acebe180f5944b8b4ff0cb564691aac2ca32d9fa8a"
+HOST_SHA256 = "8f4d6076caca6b56188a21be5c1bb065b535d97fbcbb9db69c45a034296e65fb"
 
 
 def sha256(rel: str) -> str:
