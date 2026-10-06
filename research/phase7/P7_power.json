@@ -1,0 +1,680 @@
+{
+ "calibration_worlds": 2000,
+ "datasets_per_kappa": 200,
+ "holdout_worlds": 1000,
+ "kappas": [
+  0.0,
+  0.001,
+  0.002,
+  0.003,
+  0.004,
+  0.005,
+  0.006,
+  0.008,
+  0.01
+ ],
+ "model": "P7-CP4 (D175): synthetic null calibration and power study for the Phase 7 predictive test (H022) under the FULL\nfrozen gate procedure (qr_p7_pred). NO REAL RETURN IS USED: the cross-sections are the REAL score tables of E993-02\n(scores, eligibility, kept share class, PIT FF12 sector, risk band, momentum band, ADV20 -- no prices), so the score\ndistribution, its persistence, the changing universe (\u2248 340-580 stocks / month), the sector structure and the 83\ndecision dates are the real ones; the RETURNS are synthetic:\n    y_i,t = beta_i m_t + f_sector(i),t + sum_k g_k,t x_k,i,t + sigma_i,t e_i,t + kappa z_i,t\n  m_t ~ N(0.8%, 3.5%) market; f_g,t ~ N(0, 2.5%) sector factors; beta_i ~ N(1, 0.25) fixed per security;\n  three zero-mean STYLE factors the score itself loads on (so the IC swings month to month as in real data):\n  x_k = normal scores of the stock's REAL momentum band, volatility band and fundamental subtotal at t, g_k,t ~ N(0,\n  STYLE_SD) per standard deviation of exposure;\n  sigma_i,t = idiosyncratic monthly volatility by the stock's REAL volatility band at t (risk points 10 / 7 / 3 / 0 ->\n  4.5% / 5.5% / 6.5% / 8.5%), e ~ Student-t(5) scaled to unit variance (fat tails);\n  z = normal score of the cross-sectional rank of the score; kappa = the planted monthly edge per standard deviation\n  of z (kappa = 0: the null).",
+ "scenarios": {
+  "main": {
+   "by_kappa": {
+    "0.0": {
+     "datasets": 200,
+     "hi_ann_mean": -0.002850159435211659,
+     "hi_ann_sd": 0.0521338570378734,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": -0.0006751868373268681,
+     "ic_month_sd": 0.09217312624790308,
+     "kappa_bp_per_month": 0.0,
+     "pass_rates": {
+      "G1_significant": 0.0,
+      "G2_economic": 0.24,
+      "G3_monotonic": 0.12,
+      "G4_stable": 0.06,
+      "pass": 0.0
+     },
+     "q5_minus_q1_ann_mean": -0.0024512861973740342,
+     "t_ic_mean": -0.07927904334554454
+    },
+    "0.001": {
+     "datasets": 200,
+     "hi_ann_mean": 0.03616765980903124,
+     "hi_ann_sd": 0.051451271164085426,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.015858668793755512,
+     "ic_month_sd": 0.09240026313788935,
+     "kappa_bp_per_month": 10.0,
+     "pass_rates": {
+      "G1_significant": 0.175,
+      "G2_economic": 0.55,
+      "G3_monotonic": 0.505,
+      "G4_stable": 0.335,
+      "pass": 0.125
+     },
+     "q5_minus_q1_ann_mean": 0.037919667030985905,
+     "t_ic_mean": 1.5812048321335035
+    },
+    "0.002": {
+     "datasets": 200,
+     "hi_ann_mean": 0.05268449539260737,
+     "hi_ann_sd": 0.05042827837885225,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.02948340475904833,
+     "ic_month_sd": 0.09271693791817218,
+     "kappa_bp_per_month": 20.0,
+     "pass_rates": {
+      "G1_significant": 0.62,
+      "G2_economic": 0.69,
+      "G3_monotonic": 0.855,
+      "G4_stable": 0.665,
+      "pass": 0.42
+     },
+     "q5_minus_q1_ann_mean": 0.06721768190986677,
+     "t_ic_mean": 2.9318790286939453
+    },
+    "0.003": {
+     "datasets": 200,
+     "hi_ann_mean": 0.099053156523537,
+     "hi_ann_sd": 0.05160742979447996,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.04533804204632799,
+     "ic_month_sd": 0.0931829508845289,
+     "kappa_bp_per_month": 30.0,
+     "pass_rates": {
+      "G1_significant": 0.965,
+      "G2_economic": 0.885,
+      "G3_monotonic": 0.985,
+      "G4_stable": 0.895,
+      "pass": 0.785
+     },
+     "q5_minus_q1_ann_mean": 0.1032085854984653,
+     "t_ic_mean": 4.482874421300413
+    },
+    "0.004": {
+     "datasets": 200,
+     "hi_ann_mean": 0.12402270528074018,
+     "hi_ann_sd": 0.05568575840731147,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.05914892681093684,
+     "ic_month_sd": 0.09445385777230943,
+     "kappa_bp_per_month": 40.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.96,
+      "G3_monotonic": 1.0,
+      "G4_stable": 0.97,
+      "pass": 0.935
+     },
+     "q5_minus_q1_ann_mean": 0.1351807770075753,
+     "t_ic_mean": 5.771471624644985
+    },
+    "0.005": {
+     "datasets": 200,
+     "hi_ann_mean": 0.16064949249863186,
+     "hi_ann_sd": 0.05610768082081026,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.07443358672518625,
+     "ic_month_sd": 0.09191267964100845,
+     "kappa_bp_per_month": 50.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.995,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 0.995
+     },
+     "q5_minus_q1_ann_mean": 0.16863214325638232,
+     "t_ic_mean": 7.461763934920852
+    },
+    "0.006": {
+     "datasets": 200,
+     "hi_ann_mean": 0.17599040723405282,
+     "hi_ann_sd": 0.04699705696923453,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.08769869527996488,
+     "ic_month_sd": 0.09228606395534689,
+     "kappa_bp_per_month": 60.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.995,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 0.995
+     },
+     "q5_minus_q1_ann_mean": 0.19952274273869502,
+     "t_ic_mean": 8.766020541232066
+    },
+    "0.008": {
+     "datasets": 200,
+     "hi_ann_mean": 0.25196980244863093,
+     "hi_ann_sd": 0.04982523802958271,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.1174429907180901,
+     "ic_month_sd": 0.0902929015474606,
+     "kappa_bp_per_month": 80.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.26786868461603236,
+     "t_ic_mean": 12.014209828498572
+    },
+    "0.01": {
+     "datasets": 200,
+     "hi_ann_mean": 0.3147954714322027,
+     "hi_ann_sd": 0.04998220563954104,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.1469217802420635,
+     "ic_month_sd": 0.08933793729604501,
+     "kappa_bp_per_month": 100.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.3365894887242702,
+     "t_ic_mean": 15.18801428960619
+    }
+   },
+   "c_ic_synthetic": 2.5007889922051643,
+   "calibration_worlds": 2000,
+   "full_procedure": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.06284748961308509,
+     "ic": 0.03295839375352058,
+     "kappa_bp_per_month": 22.191780821917806,
+     "q5_minus_q1_ann": 0.07510609913476507
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.10155011139925732,
+     "ic": 0.04671913052278888,
+     "kappa_bp_per_month": 31.000000000000004,
+     "q5_minus_q1_ann": 0.10640580464937631
+    }
+   },
+   "holdout_false_g1": 0.009,
+   "holdout_false_promotion_full": 0.003,
+   "holdout_gate_pass_rates": {
+    "G1_significant": 0.009,
+    "G2_economic": 0.25,
+    "G3_monotonic": 0.046,
+    "G4_stable": 0.051
+   },
+   "holdout_worlds": 1000,
+   "n_dates": 83,
+   "null_ic_month_sd": 0.09217312624790308,
+   "null_t_ic": {
+    "mean": -0.043844441090459985,
+    "p95": 1.7186995259351083,
+    "p99": 2.476549218237896,
+    "sd": 1.0336308366095748
+   },
+   "runtime_s": 167.6,
+   "significance_gate_only": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.04823051725771044,
+     "ic": 0.025809318656048023,
+     "kappa_bp_per_month": 17.303370786516854,
+     "q5_minus_q1_ann": 0.05931709362792137
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.07687684033048371,
+     "ic": 0.037755389430672505,
+     "kappa_bp_per_month": 25.21739130434783,
+     "q5_minus_q1_ann": 0.08599554465174428
+    }
+   },
+   "stocks_per_date": {
+    "max": 612,
+    "median": 516.0,
+    "min": 196
+   },
+   "style_sd": 0.0055
+  },
+  "optimistic": {
+   "by_kappa": {
+    "0.0": {
+     "datasets": 200,
+     "hi_ann_mean": -0.0010150385093052022,
+     "hi_ann_sd": 0.04680670133055369,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 8.0408745654109e-06,
+     "ic_month_sd": 0.06336978230081382,
+     "kappa_bp_per_month": 0.0,
+     "pass_rates": {
+      "G1_significant": 0.0,
+      "G2_economic": 0.24,
+      "G3_monotonic": 0.06,
+      "G4_stable": 0.06,
+      "pass": 0.0
+     },
+     "q5_minus_q1_ann_mean": -0.0009918235728944202,
+     "t_ic_mean": -0.0046682138553312
+    },
+    "0.001": {
+     "datasets": 200,
+     "hi_ann_mean": 0.03317764127916482,
+     "hi_ann_sd": 0.0473951717230937,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.014944223186111313,
+     "ic_month_sd": 0.06421866541252173,
+     "kappa_bp_per_month": 10.0,
+     "pass_rates": {
+      "G1_significant": 0.37,
+      "G2_economic": 0.515,
+      "G3_monotonic": 0.46,
+      "G4_stable": 0.505,
+      "pass": 0.17
+     },
+     "q5_minus_q1_ann_mean": 0.03526211097547189,
+     "t_ic_mean": 2.1405464787889175
+    },
+    "0.002": {
+     "datasets": 200,
+     "hi_ann_mean": 0.054631171826946955,
+     "hi_ann_sd": 0.04749944508236079,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.030434058419742685,
+     "ic_month_sd": 0.06359746932663503,
+     "kappa_bp_per_month": 20.0,
+     "pass_rates": {
+      "G1_significant": 0.96,
+      "G2_economic": 0.715,
+      "G3_monotonic": 0.91,
+      "G4_stable": 0.9,
+      "pass": 0.605
+     },
+     "q5_minus_q1_ann_mean": 0.0682893093698097,
+     "t_ic_mean": 4.41113448735901
+    },
+    "0.003": {
+     "datasets": 200,
+     "hi_ann_mean": 0.09752174580613439,
+     "hi_ann_sd": 0.047732113829266745,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.045342800132455584,
+     "ic_month_sd": 0.06345397520427254,
+     "kappa_bp_per_month": 30.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.915,
+      "G3_monotonic": 0.995,
+      "G4_stable": 0.99,
+      "pass": 0.905
+     },
+     "q5_minus_q1_ann_mean": 0.10168068915906385,
+     "t_ic_mean": 6.617198836110499
+    },
+    "0.004": {
+     "datasets": 200,
+     "hi_ann_mean": 0.12359516040104548,
+     "hi_ann_sd": 0.05106878047053007,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.060377452471804996,
+     "ic_month_sd": 0.06311838730479144,
+     "kappa_bp_per_month": 40.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.98,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 0.98
+     },
+     "q5_minus_q1_ann_mean": 0.13567971905885098,
+     "t_ic_mean": 8.810345581319721
+    },
+    "0.005": {
+     "datasets": 200,
+     "hi_ann_mean": 0.160124761342729,
+     "hi_ann_sd": 0.053644289278443225,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.07571872926458213,
+     "ic_month_sd": 0.06292431628307102,
+     "kappa_bp_per_month": 50.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.99,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 0.99
+     },
+     "q5_minus_q1_ann_mean": 0.16853010269304886,
+     "t_ic_mean": 11.127706586799968
+    },
+    "0.006": {
+     "datasets": 200,
+     "hi_ann_mean": 0.17757738650494698,
+     "hi_ann_sd": 0.04226816789560621,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.0897025728193842,
+     "ic_month_sd": 0.0629981731665586,
+     "kappa_bp_per_month": 60.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.200439043432076,
+     "t_ic_mean": 13.175840507640737
+    },
+    "0.008": {
+     "datasets": 200,
+     "hi_ann_mean": 0.25330951308757,
+     "hi_ann_sd": 0.044331043498034316,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.12011390244295952,
+     "ic_month_sd": 0.06248521001565391,
+     "kappa_bp_per_month": 80.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.26930328034198453,
+     "t_ic_mean": 17.757459441350083
+    },
+    "0.01": {
+     "datasets": 200,
+     "hi_ann_mean": 0.31296716091957405,
+     "hi_ann_sd": 0.04761569756100082,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.14858976682769268,
+     "ic_month_sd": 0.06168622236059403,
+     "kappa_bp_per_month": 100.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.3348650729102836,
+     "t_ic_mean": 22.21467703422436
+    }
+   },
+   "c_ic_synthetic": 2.4858094578749768,
+   "calibration_worlds": 2000,
+   "full_procedure": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.04945273341886161,
+     "ic": 0.026695132673693733,
+     "kappa_bp_per_month": 17.586206896551722,
+     "q5_minus_q1_ann": 0.060317226998762644
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.0825100449134188,
+     "ic": 0.040124740533006076,
+     "kappa_bp_per_month": 26.500000000000004,
+     "q5_minus_q1_ann": 0.0899937062328249
+    }
+   },
+   "holdout_false_g1": 0.009,
+   "holdout_false_promotion_full": 0.003,
+   "holdout_gate_pass_rates": {
+    "G1_significant": 0.009,
+    "G2_economic": 0.251,
+    "G3_monotonic": 0.045,
+    "G4_stable": 0.057
+   },
+   "holdout_worlds": 1000,
+   "n_dates": 83,
+   "null_ic_month_sd": 0.06336978230081382,
+   "null_t_ic": {
+    "mean": -0.10920813924213477,
+    "p95": 1.6813054565371424,
+    "p99": 2.483545656148919,
+    "sd": 1.0543257784068933
+   },
+   "runtime_s": 158.4,
+   "significance_gate_only": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.03790469038291343,
+     "ic": 0.018357237729114836,
+     "kappa_bp_per_month": 12.203389830508476,
+     "q5_minus_q1_ann": 0.04253929028269887
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.04881326523771791,
+     "ic": 0.026233425136046044,
+     "kappa_bp_per_month": 17.28813559322034,
+     "q5_minus_q1_ann": 0.059332780991684195
+    }
+   },
+   "stocks_per_date": {
+    "max": 612,
+    "median": 516.0,
+    "min": 196
+   },
+   "style_sd": 0.0
+  },
+  "pessimistic": {
+   "by_kappa": {
+    "0.0": {
+     "datasets": 200,
+     "hi_ann_mean": -0.004017963660788498,
+     "hi_ann_sd": 0.058135462658524796,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": -0.0010850333400311107,
+     "ic_month_sd": 0.12400707205502655,
+     "kappa_bp_per_month": 0.0,
+     "pass_rates": {
+      "G1_significant": 0.0,
+      "G2_economic": 0.265,
+      "G3_monotonic": 0.175,
+      "G4_stable": 0.06,
+      "pass": 0.0
+     },
+     "q5_minus_q1_ann_mean": -0.0033800351402246986,
+     "t_ic_mean": -0.09182983982952414
+    },
+    "0.001": {
+     "datasets": 200,
+     "hi_ann_mean": 0.0380703988734917,
+     "hi_ann_sd": 0.056597318072758036,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.016160577551385086,
+     "ic_month_sd": 0.12403601074491576,
+     "kappa_bp_per_month": 10.0,
+     "pass_rates": {
+      "G1_significant": 0.095,
+      "G2_economic": 0.555,
+      "G3_monotonic": 0.51,
+      "G4_stable": 0.255,
+      "pass": 0.075
+     },
+     "q5_minus_q1_ann_mean": 0.039610839066313006,
+     "t_ic_mean": 1.19989634868808
+    },
+    "0.002": {
+     "datasets": 200,
+     "hi_ann_mean": 0.05144570129802762,
+     "hi_ann_sd": 0.05542812115339471,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.028434005666485632,
+     "ic_month_sd": 0.12462587009801815,
+     "kappa_bp_per_month": 20.0,
+     "pass_rates": {
+      "G1_significant": 0.37,
+      "G2_economic": 0.665,
+      "G3_monotonic": 0.79,
+      "G4_stable": 0.495,
+      "pass": 0.26
+     },
+     "q5_minus_q1_ann_mean": 0.06653573716263037,
+     "t_ic_mean": 2.103303619032627
+    },
+    "0.003": {
+     "datasets": 200,
+     "hi_ann_mean": 0.10002769061642958,
+     "hi_ann_sd": 0.05721997911589488,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.044653757902813895,
+     "ic_month_sd": 0.12554010607717625,
+     "kappa_bp_per_month": 30.0,
+     "pass_rates": {
+      "G1_significant": 0.755,
+      "G2_economic": 0.875,
+      "G3_monotonic": 0.965,
+      "G4_stable": 0.735,
+      "pass": 0.585
+     },
+     "q5_minus_q1_ann_mean": 0.1041808831689935,
+     "t_ic_mean": 3.270680827987369
+    },
+    "0.004": {
+     "datasets": 200,
+     "hi_ann_mean": 0.12429477929509136,
+     "hi_ann_sd": 0.06115931718403101,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.05747715027522719,
+     "ic_month_sd": 0.12710972701353473,
+     "kappa_bp_per_month": 40.0,
+     "pass_rates": {
+      "G1_significant": 0.95,
+      "G2_economic": 0.945,
+      "G3_monotonic": 0.995,
+      "G4_stable": 0.89,
+      "pass": 0.835
+     },
+     "q5_minus_q1_ann_mean": 0.13486326842949078,
+     "t_ic_mean": 4.168434398013725
+    },
+    "0.005": {
+     "datasets": 200,
+     "hi_ann_mean": 0.1609834123251155,
+     "hi_ann_sd": 0.06051102705185879,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.07251843094744237,
+     "ic_month_sd": 0.12448231385986919,
+     "kappa_bp_per_month": 50.0,
+     "pass_rates": {
+      "G1_significant": 0.995,
+      "G2_economic": 0.99,
+      "G3_monotonic": 1.0,
+      "G4_stable": 0.965,
+      "pass": 0.95
+     },
+     "q5_minus_q1_ann_mean": 0.16869707816032178,
+     "t_ic_mean": 5.367284792322802
+    },
+    "0.006": {
+     "datasets": 200,
+     "hi_ann_mean": 0.1749805113343929,
+     "hi_ann_sd": 0.05274541120032163,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.08513113993002147,
+     "ic_month_sd": 0.12394256117416501,
+     "kappa_bp_per_month": 60.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 0.995,
+      "G3_monotonic": 1.0,
+      "G4_stable": 0.995,
+      "pass": 0.99
+     },
+     "q5_minus_q1_ann_mean": 0.1989396422974526,
+     "t_ic_mean": 6.335400455649395
+    },
+    "0.008": {
+     "datasets": 200,
+     "hi_ann_mean": 0.2511172593147606,
+     "hi_ann_sd": 0.05579818337687578,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.1140267881580643,
+     "ic_month_sd": 0.12161728563254978,
+     "kappa_bp_per_month": 80.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.2669557600631538,
+     "t_ic_mean": 8.65229594393368
+    },
+    "0.01": {
+     "datasets": 200,
+     "hi_ann_mean": 0.315958941758421,
+     "hi_ann_sd": 0.054601147769557525,
+     "hi_n_mean": 7.048192771084335,
+     "ic_mean": 0.14369934470887027,
+     "ic_month_sd": 0.12020233656916461,
+     "kappa_bp_per_month": 100.0,
+     "pass_rates": {
+      "G1_significant": 1.0,
+      "G2_economic": 1.0,
+      "G3_monotonic": 1.0,
+      "G4_stable": 1.0,
+      "pass": 1.0
+     },
+     "q5_minus_q1_ann_mean": 0.33768684424226164,
+     "t_ic_mean": 11.036312288297509
+    }
+   },
+   "c_ic_synthetic": 2.476118587409564,
+   "calibration_worlds": 2000,
+   "full_procedure": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.08732163187161676,
+     "ic": 0.04041166885638958,
+     "kappa_bp_per_month": 27.384615384615387,
+     "q5_minus_q1_ann": 0.09433522959809854
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.12089738688007873,
+     "ic": 0.05568187534308934,
+     "kappa_bp_per_month": 38.60000000000001,
+     "q5_minus_q1_ann": 0.13056773449302117
+    }
+   },
+   "holdout_false_g1": 0.009,
+   "holdout_false_promotion_full": 0.002,
+   "holdout_gate_pass_rates": {
+    "G1_significant": 0.009,
+    "G2_economic": 0.249,
+    "G3_monotonic": 0.046,
+    "G4_stable": 0.045
+   },
+   "holdout_worlds": 1000,
+   "n_dates": 83,
+   "null_ic_month_sd": 0.12400707205502655,
+   "null_t_ic": {
+    "mean": -0.007297063894800591,
+    "p95": 1.6936049679077767,
+    "p99": 2.4049763574786085,
+    "sd": 1.0127435885144622
+   },
+   "runtime_s": 158.7,
+   "significance_gate_only": {
+    "mde50": {
+     "hi_ann_80plus_excess": 0.06785000937956594,
+     "ic": 0.033910805122908165,
+     "kappa_bp_per_month": 23.376623376623378,
+     "q5_minus_q1_ann": 0.07924708516477895
+    },
+    "mde80": {
+     "hi_ann_80plus_excess": 0.10562778800381308,
+     "ic": 0.047613002296447736,
+     "kappa_bp_per_month": 32.307692307692314,
+     "q5_minus_q1_ann": 0.11126143361372365
+    }
+   },
+   "stocks_per_date": {
+    "max": 612,
+    "median": 516.0,
+    "min": 196
+   },
+   "style_sd": 0.009
+  }
+ },
+ "seed_base": 20261006
+}
