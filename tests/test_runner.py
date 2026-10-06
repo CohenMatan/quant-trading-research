@@ -212,3 +212,26 @@ def test_failed_run_keeps_backtest_id_and_stage():
         runmod.execute({"experiment_id": "E003-09", "strategy_id": "S003", "lean_version_id": 1}, {}, C(), state)
     assert state["backtest_id"] == "bt123" and state["project_id"] == 7 and state["stage"] == "backtest"
     assert state["backtest_started_utc"]
+
+
+def test_lean_pin_skips_the_update_when_already_pinned():
+    """D180: QuantConnect refuses projects/update(versionId) below the trading-firm tier; an existing identical pin is
+    verified without the update, and a different pin still requires (and attempts) the update."""
+    from qresearch.qc_client import QCClient
+
+    calls = []
+
+    class C(QCClient):
+        def __init__(self, cur):
+            self.cur = cur
+
+        def call(self, endpoint, **payload):
+            calls.append(endpoint)
+            if endpoint == "projects/update":
+                raise QCError("projects/update failed: ['Please migrate your organization to trading firm ...']")
+            return {"projects": [dict(leanVersionId=self.cur, leanPinnedToMaster=False)]}
+    C(18131).pin_lean_version(7, 18131)
+    assert "projects/update" not in calls
+    with pytest.raises(QCError):
+        C(17999).pin_lean_version(7, 18131)
+    assert calls[-1] == "projects/update"

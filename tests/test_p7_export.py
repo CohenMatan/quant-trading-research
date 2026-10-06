@@ -74,7 +74,8 @@ SIC = {"S05": 6798, "S06": None}
 CIK = {"S07": "c7", "S08": "c7"}
 
 
-def _host(monkeypatch, M, excluded_2010=("S10",), gap=None):
+def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X993_p7_score_mechanics_export/main.py",
+          cls="P7ScoreExport", params=None):
     ai = types.ModuleType("AlgorithmImports")
     ai.Resolution = types.SimpleNamespace(DAILY="daily")
     ai.DataNormalizationMode = types.SimpleNamespace(RAW="raw", SCALED_RAW="scaled", ADJUSTED="adjusted")
@@ -189,8 +190,9 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None):
 
     hm.QRAlgorithm = QRAlgorithm
     monkeypatch.setitem(sys.modules, "qr_harness", hm)
-    mod = load_module(ROOT / "strategies/X993_p7_score_mechanics_export/main.py", "x993_test")
-    a = mod.P7ScoreExport()
+    mod = load_module(ROOT / path, "x993_test" if cls == "P7ScoreExport" else "host_test")
+    a = getattr(mod, cls)()
+    a.qr_params = dict(params or {})
     a.qr_initialize()
     data = types.SimpleNamespace(bars=types.SimpleNamespace(count=1))
     syms = {}

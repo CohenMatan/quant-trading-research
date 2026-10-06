@@ -1,0 +1,239 @@
+{
+ "checks": {
+  "1 no real IC / gate / null statistic computed": true,
+  "10 sliced technical inputs = full computation": true,
+  "11 response timing (entry after t, exit within window)": true,
+  "12 every response independently recomputed (all horizons)": true,
+  "13 corporate actions: fresh single-security history agrees": true,
+  "14 response future / past / truncation invariance": true,
+  "15 score truncation / future invariance (whole reviews re-scored)": true,
+  "16 determinism (responses recomputed identically)": true,
+  "17 null machinery deterministic, exact permutations, no self-match": true,
+  "18 market cap and momentum present for every population row": true,
+  "19 status counts cover every population row": true,
+  "2 uploaded host + module fingerprints = pins (runner-verified stored copies, D178)": true,
+  "3 spec fingerprint = pinned spec (D177)": true,
+  "4 calendar: 84 reviews / weekly checks match the session calendar": true,
+  "5 decisions 2011-01-31 .. 2017-11-30 (83), last response end 2017-12-29": true,
+  "6 no price after 2017-12-29": true,
+  "7 score fingerprint = E993-02 (every review encoding identical)": true,
+  "8 regimes = E993-02": true,
+  "9 population = E993-02 eligible, kept, fully scorable rows": true
+ },
+ "digests": {
+  "panel_sha256": "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a",
+  "response_side_sha256": "f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb",
+  "score_side_sha256": "470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09",
+  "score_tables_sha256": "c12427aceaa84d88f61eb704d3cc25c6e8c2e978a9424b3c9a86e33e59b394c8",
+  "sids_sha256": "c8ed01490f49bc8373ea8ba2363dfad1f4aa49ba5eed1257c7807ce1a981104f"
+ },
+ "event_classes": {
+  "dividend": 8497,
+  "plain": 30950,
+  "split": 142,
+  "truncated": 122
+ },
+ "experiment": "E994-02",
+ "fresh": {
+  "agree_1e6": 120,
+  "agree_1e9": 120,
+  "by_class": {
+   "dividend": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 6.661338147750939e-16
+   },
+   "plain": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 2.220446049250313e-16
+   },
+   "split": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 4.440892098500626e-16
+   },
+   "truncated": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 0.0
+   }
+  },
+  "checked": 120,
+  "examples": [],
+  "status_agree": 120,
+  "worst_rel": 6.661338147750939e-16
+ },
+ "hi80": {
+  "mean": 7.048192771084337,
+  "months_without": 2
+ },
+ "invariance": {
+  "checked": 80,
+  "future_changed": 0,
+  "past_changed": 0,
+  "truncation_changed": 0
+ },
+ "null_machinery": {
+  "distinct_worlds": 20,
+  "repeat_identical": true,
+  "synthetic_responses": true,
+  "tether": {
+   "dates": 83,
+   "kept": 32625,
+   "not_permutation": 0,
+   "receivers": 39368,
+   "self_matches": 0
+  },
+  "world_s": 0.0608,
+  "world_s_1000": 60.8
+ },
+ "passed": 19,
+ "population": {
+  "max": 612,
+  "mean": 478.72289156626505,
+  "median": 516,
+  "min": 196
+ },
+ "runtime": {
+  "build_s": 91.9,
+  "canary_s": 84.5,
+  "max_rss_mb": 6371.9,
+  "responses_s": 2.6,
+  "score_s": 40.0,
+  "states_s": 8.7,
+  "wall_s": 684.1
+ },
+ "score_invariance": {
+  "future_mismatch": 0,
+  "regime_mismatch": 0,
+  "reviews": [
+   "2016-07-29",
+   "2013-10-31",
+   "2011-02-28",
+   "2017-03-31",
+   "2012-06-29",
+   "2015-07-31"
+  ],
+  "rows": 6708,
+  "truncated_mismatch": 0
+ },
+ "status": {
+  "no_bar_after_t": 19,
+  "ok": 39584,
+  "truncated": 127,
+  "unverified_split": 4
+ },
+ "status_by_year_quintile": {
+  "2011|1|ok": 823,
+  "2011|2|ok": 791,
+  "2011|2|truncated": 1,
+  "2011|3|no_bar_after_t": 2,
+  "2011|3|ok": 828,
+  "2011|3|truncated": 4,
+  "2011|3|unverified_split": 1,
+  "2011|4|ok": 814,
+  "2011|4|truncated": 2,
+  "2011|5|no_bar_after_t": 1,
+  "2011|5|ok": 818,
+  "2011|5|truncated": 5,
+  "2012|1|ok": 931,
+  "2012|2|ok": 961,
+  "2012|2|truncated": 1,
+  "2012|3|ok": 920,
+  "2012|4|ok": 940,
+  "2012|4|truncated": 2,
+  "2012|5|no_bar_after_t": 3,
+  "2012|5|ok": 931,
+  "2012|5|truncated": 5,
+  "2013|1|ok": 1280,
+  "2013|2|ok": 1280,
+  "2013|2|truncated": 1,
+  "2013|2|unverified_split": 1,
+  "2013|3|ok": 1261,
+  "2013|3|truncated": 3,
+  "2013|3|unverified_split": 1,
+  "2013|4|no_bar_after_t": 1,
+  "2013|4|ok": 1248,
+  "2013|4|truncated": 3,
+  "2013|5|no_bar_after_t": 1,
+  "2013|5|ok": 1283,
+  "2013|5|truncated": 8,
+  "2014|1|ok": 1339,
+  "2014|1|truncated": 3,
+  "2014|2|ok": 1355,
+  "2014|2|truncated": 1,
+  "2014|3|no_bar_after_t": 1,
+  "2014|3|ok": 1395,
+  "2014|3|truncated": 1,
+  "2014|4|ok": 1338,
+  "2014|4|truncated": 3,
+  "2014|5|no_bar_after_t": 3,
+  "2014|5|ok": 1333,
+  "2014|5|truncated": 5,
+  "2015|1|ok": 1119,
+  "2015|2|ok": 1106,
+  "2015|2|truncated": 4,
+  "2015|3|no_bar_after_t": 1,
+  "2015|3|ok": 1158,
+  "2015|3|truncated": 6,
+  "2015|4|ok": 1117,
+  "2015|4|truncated": 9,
+  "2015|5|no_bar_after_t": 1,
+  "2015|5|ok": 1131,
+  "2015|5|truncated": 7,
+  "2016|1|ok": 1163,
+  "2016|2|no_bar_after_t": 1,
+  "2016|2|ok": 1151,
+  "2016|2|truncated": 2,
+  "2016|2|unverified_split": 1,
+  "2016|3|no_bar_after_t": 1,
+  "2016|3|ok": 1167,
+  "2016|3|truncated": 6,
+  "2016|4|no_bar_after_t": 1,
+  "2016|4|ok": 1163,
+  "2016|4|truncated": 4,
+  "2016|5|ok": 1162,
+  "2016|5|truncated": 14,
+  "2017|1|ok": 1251,
+  "2017|1|truncated": 1,
+  "2017|2|no_bar_after_t": 1,
+  "2017|2|ok": 1255,
+  "2017|2|truncated": 4,
+  "2017|3|ok": 1250,
+  "2017|3|truncated": 6,
+  "2017|4|ok": 1283,
+  "2017|4|truncated": 7,
+  "2017|5|no_bar_after_t": 1,
+  "2017|5|ok": 1239,
+  "2017|5|truncated": 9
+ },
+ "timing": {
+  "entry_not_after_t": 0,
+  "entry_on_or_before_t_day": 0,
+  "exit_outside": 0,
+  "no_bar": 57,
+  "response_end_after_last_session": 0,
+  "rows": 117473,
+  "status_mismatch": 0,
+  "truncated": 784,
+  "unverified": 24,
+  "value_mismatch": 0
+ },
+ "total": 19,
+ "uploaded": {
+  "build_commit": "f59bfb5390d90c1ccc5822f12c90fa7a512c59a0",
+  "code_sha256": "5a14501f8105f752a6047e8e9c4b235214aebcdd661f0939d096b6a38837ec8a",
+  "host": true,
+  "modules": {
+   "qr_fundamentals.py": true,
+   "qr_h020_stats.py": true,
+   "qr_p7.py": true,
+   "qr_p7_export.py": true,
+   "qr_p7_pred.py": true,
+   "qr_p7_score.py": true,
+   "qr_xs.py": true,
+   "qr_xs_panel.py": true
+  }
+ }
+}

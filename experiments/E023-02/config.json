@@ -1,0 +1,54 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H022",
+ "strategy_id": "S023",
+ "strategy_version": "v1.1",
+ "strategy_dir": "strategies/S023_h022_predictive",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": true
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P7",
+ "cycle": "P7H022",
+ "experiment_id": "E023-02",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "null",
+  "seeds": [
+   1001,
+   2000
+  ],
+  "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5"
+ },
+ "description": "H022 NULL worlds 1001-2000 of 5,000 (frozen identity-tethered within-date permutation of the score side, one stratum, no self-matches; the complete procedure per world: IC series, t_IC, 80+, quintiles, halves, blocks; P7_predictive_spec.md C9). Publishes per-world null statistics only. Infrastructure (never a strategy trial).",
+ "owner_approval_required": "H022 frozen predictive validation, one real evaluation (owner authorisation 2026-10-06, D177)"
+}

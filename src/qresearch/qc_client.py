@@ -116,6 +116,9 @@ class QCClient:
     def list_files(self, project_id: int) -> list[str]:
         return [f["name"] for f in self.call("files/read", projectId=project_id).get("files", [])]
 
+    def read_file_contents(self, project_id: int) -> dict[str, str]:
+        return {f["name"]: f.get("content", "") for f in self.call("files/read", projectId=project_id).get("files", [])}
+
     def sync_files(self, project_id: int, files: dict[str, str]) -> None:
         """Make the project contain exactly `files` (name -> content)."""
         existing = set(self.list_files(project_id))
@@ -128,8 +131,13 @@ class QCClient:
             self.call("files/delete", projectId=project_id, name=name)
 
     def pin_lean_version(self, project_id: int, version_id: int) -> None:
-        """Pin the project to an explicit LEAN build (API field `versionId`) and verify it stuck."""
-        self.call("projects/update", projectId=project_id, versionId=int(version_id))
+        """Pin the project to an explicit LEAN build (API field `versionId`) and verify it stuck. D180: when the project is
+        already pinned to that build the update is skipped (QuantConnect began refusing the version update itself on
+        2026-10-06 for organisations below the trading-firm tier); the pin is verified either way."""
+        cur = self.call("projects/read", projectId=project_id)["projects"][0]
+        if not (cur.get("leanVersionId") is not None and int(cur["leanVersionId"]) == int(version_id)
+                and not cur.get("leanPinnedToMaster")):
+            self.call("projects/update", projectId=project_id, versionId=int(version_id))
         got = self.call("projects/read", projectId=project_id)["projects"][0].get("leanVersionId")
         if int(got) != int(version_id):
             raise QCError(f"LEAN version pin failed: project reports {got}, wanted {version_id}")

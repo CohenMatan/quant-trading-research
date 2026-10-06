@@ -1654,3 +1654,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - No real return, IC or portfolio; no QuantConnect run; 2018–2021 and the Holdout untouched.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-06: P7-CP5 execution of H022 — canary passed, null pinned, real evaluation BLOCKED by an engine change; STOP (D177–D181)
+
+- **Owner (D177):** one frozen real evaluation of H022, after a wording-only fix in spec C3 (new spec SHA-256 `2c99f962…`; committed 7906b0b).
+- **Host:** S023 / X994 (byte copy) built from the X993 v1.1 pipeline plus total-return responses; synthetic host tests.
+- **Canary:**
+  - E994-01 failed at start-up on its own fingerprint guard (LEAN's runtime copy of a source file is not byte-identical; nothing computed). The check moved to the runner (D178).
+  - **E994-02 passed 19 / 19** (timing, fresh-history corporate actions, invariance, truncation, score identical to E993-02, determinism; no real IC).
+- **Null E023-01..05:** 5,000 / 5,000 worlds, identical panel everywhere. **c_IC = 2.390976** (floor not binding); full-procedure false promotion 7 / 5,000. Pinned in dbfdcc0 BEFORE any real run (D179).
+- **Real evaluation — not computed:**
+  - E023-06 never started: QuantConnect refused the engine-pin call (Trading Firm tier now required; D180).
+  - E023-07 ran on LEAN 18166 instead of 18131; the host refused because the panel differed ("nothing computed"; D181).
+  - No real statistic exists; H022 is neither qualified nor rejected.
+- **Options for the owner** (P7-CP5a): A upgrade (≈ $480 / month, over the ceiling), **B** diagnostic canary on the default build after 2026-10-10 (recommended), C data v2 + new null, D stop.
+- 2018–2021 and the Holdout untouched; no portfolio; nothing purchased.
+
+**STOP:** awaiting the owner.

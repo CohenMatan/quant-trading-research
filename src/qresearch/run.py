@@ -126,12 +126,18 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         rel = "src/qresearch/lean/qr_p7.py"
         files["qr_p7.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         # P7-CP3 (D171): the frozen score v1 (hash-pinned in qresearch.p7score) and its export helpers
-        for n in ("qr_p7_score.py", "qr_p7_export.py"):
+        for n in ("qr_p7_score.py", "qr_p7_export.py", "qr_p7_pred.py"):
             if n[:-3] in files["main.py"]:
                 rel = f"src/qresearch/lean/{n}"
                 files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_p7_export.py" in files and "qr_p7_score.py" not in files:
             raise experiment.ConfigError("qr_p7_export needs qr_p7_score.py")
+        if "qr_p7_pred.py" in files:      # P7-CP5 (D177): H022's frozen module imports the H020 tether and qr_xs
+            rel = "src/qresearch/lean/qr_h020_stats.py"
+            files["qr_h020_stats.py"] = gitutil.show_file(commit, rel) if commit else \
+                (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+            if "qr_xs.py" not in files:
+                raise experiment.ConfigError("qr_p7_pred needs qr_xs.py")
     if "qr_h021" in files["main.py"]:
         # H021-A sector relative-momentum module (frozen, hash-pinned in qresearch.p6h021); the panel helpers come
         # from qr_xs_panel (uploaded above with the qr_xs modules)
@@ -160,6 +166,8 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
     state["project_id"] = project
     client.sync_files(project, files)
+    if cfg.get("params", {}).get("pred_code_sha256"):           # D178: pinned modules checked on the stored copy
+        verify_stored_modules(cfg, client.read_file_contents(project))
     client.pin_lean_version(project, cfg["lean_version_id"])
     state["stage"] = "compile"
     compile_id = client.compile(project)
@@ -396,6 +404,19 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     from .report import write_report
     write_report(outdir, cfg, result)
     return result
+
+
+def verify_stored_modules(cfg: dict, stored: dict[str, str]) -> None:
+    """P7-CP5 (D178): configs that pin a module fingerprint (params.pred_code_sha256 = qr_p7_pred.py) are checked on the
+    copy QuantConnect stores for the project, read back after the upload and before compiling (LEAN's runtime copy of a
+    source file is not byte-identical to the stored one, so the check cannot live in the algorithm)."""
+    want = cfg.get("params", {}).get("pred_code_sha256")
+    if want is None:
+        return
+    got = hashlib.sha256(stored.get("qr_p7_pred.py", "").encode()).hexdigest()
+    if got != want:
+        raise experiment.ConfigError(f"{cfg['experiment_id']}: QuantConnect's stored qr_p7_pred.py ({got[:12]}...) "
+                                     f"differs from the pinned module ({want[:12]}...); nothing compiled")
 
 
 def approval_gate(cfg: dict, owner_approved: str | None) -> None:

@@ -1,0 +1,336 @@
+{
+ "experiment_id": "E994-02",
+ "harness_messages": [
+  "QRP7S|0|{\"baseline\": {\"cik_reject\": 11, \"h2_new\": 17885, \"h2_old\": 23182, \"life_reject\": 5, \"listed_lt_1y\": 27, \"lost\": 0, \"nonfin_rows\": 71030, \"pit_violations\": 0, \"reasons\": {\"2\": 6038, \"3\": 51, \"4\": 187, \"5\": 11}, \"rescued\": 6287, \"rows\": 93687, \"store_baseline\": 78633}, \"calendar_check\": {\"expected_reviews\": 84, \"expected_weekly\": 325, \"first_review\": \"2011-01-31\", \"last_review\": \"2017-12-29\", \"reviews\": 84, \"reviews_match\": true, \"weekly\": 325, \"weekly_match\": true}, \"canary\": {\"canary_s\": 84.5, \"event_classes\": {\"dividend\": 8497, \"plain\": 30950, \"split\": 142, \"truncated\": 122}, \"fresh_recomputation\": {\"agree_1e6\": 120, \"agree_1e9\": 120, \"by_class\": {\"dividend\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 6.661338147750939e-16}, \"plain\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 2.220446049250313e-16}, \"split\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 4.440892098500626e-16}, \"truncated\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 0.0}}, \"checked\": 120, \"examples\": [], \"status_agree\": 120, \"worst_rel\": 6.661338147750939e-16}, \"gates_computed\": false, \"null_machinery\": {\"distinct_worlds\": 20, \"repeat_identical\": true, \"synthetic_responses\": true, \"tether\": {\"dates\": 83, \"kept\": 32625, \"not_permutation\": 0, \"receivers\": 39368, \"self_matches\": 0}, \"world_s\": 0.0608, \"world_s_1000\": 60.8}, \"real_ic_computed\": false, \"response_invariance\": {\"checked\": 80, \"future_changed\": 0, \"past_changed\": 0, \"truncation_changed\": 0}, \"responses_repeat_identical\": true, \"score_invariance\": {\"future_mismatch\": 0, \"regime_mismatch\": 0, \"reviews\": [\"2016-07-29\", \"2013-10-31\", \"2011-02-28\", \"2017-03-31\", \"2012-06-29\", \"2015-07-31\"], \"rows\": 6708, \"truncated_mismatch\": 0}, \"timing\": {\"entry_not_after_t\": 0, \"entry_on_or_before_t_day\": 0, \"exit_outside\": 0, \"no_bar\": 57, \"response_end_after_last_session\": 0, \"rows\": 117473, \"status_mismatch\": 0, \"truncated\": 784, \"unverified\": 24, \"value_mismatch\": 0}}, \"checks\": {\"month_ends\": 96, \"sec_fed\": 8193, \"selections\": 2394, \"store_sids_max\": 6023, \"weekly\": 325}, \"coverage\": {\"mcap_missing\": 0, \"mom_missing\": 0, \"population\": [[\"2011-01-31\", 366, 5], [\"2011-02-28\", 419, 6], [\"2011-03-31\", 432, 5], [\"2011-04-29\", 449, 2], [\"2011-05-31\", 442, 2], [\"2011-06-30\", 429, 7], [\"2011-07-29\", 400, 11], [\"2011-08-31\", 250, 7], [\"2011-09-30\", 196, 5], [\"2011-10-31\", 226, 10], [\"2011-11-30\", 240, 10], [\"2011-12-30\", 241, 7], [\"2012-01-31\", 337, 11], [\"2012-02-29\", 415, 8], [\"2012-03-30\", 446, 10], [\"2012-04-30\", 424, 8], [\"2012-05-31\", 342, 5], [\"2012-06-29\", 382, 6], [\"2012-07-31\", 397, 8], [\"2012-08-31\", 387, 12], [\"2012-09-28\", 411, 9], [\"2012-10-31\", 388, 3], [\"2012-11-30\", 358, 3], [\"2012-12-31\", 407, 2], [\"2013-01-31\", 461, 2], [\"2013-02-28\", 493, 2], [\"2013-03-28\", 530, 2], [\"2013-04-30\", 512, 1], [\"2013-05-31\", 531, 0], [\"2013-06-28\", 511, 3], [\"2013-07-31\", 542, 1], [\"2013-08-30\", 539, 6], [\"2013-09-30\", 567, 5], [\"2013-10-31\", 557, 5], [\"2013-11-29\", 566, 5], [\"2013-12-31\", 562, 5], [\"2014-01-31\", 549, 7], [\"2014-02-28\", 597, 3], [\"2014-03-31\", 611, 0], [\"2014-04-30\", 585, 3], [\"2014-05-30\", 566, 5], [\"2014-06-30\", 611, 8], [\"2014-07-31\", 554, 2], [\"2014-08-29\", 560, 8], [\"2014-09-30\", 520, 2], [\"2014-10-31\", 516, 6], [\"2014-11-28\", 572, 13], [\"2014-12-31\", 536, 19], [\"2015-01-30\", 490, 13], [\"2015-02-27\", 574, 13], [\"2015-03-31\", 560, 16], [\"2015-04-30\", 551, 8], [\"2015-05-29\", 557, 10], [\"2015-06-30\", 516, 15], [\"2015-07-31\", 507, 9], [\"2015-08-31\", 428, 3], [\"2015-09-30\", 333, 1], [\"2015-10-30\", 394, 3], [\"2015-11-30\", 415, 8], [\"2015-12-31\", 334, 2], [\"2016-01-29\", 256, 1], [\"2016-02-29\", 279, 4], [\"2016-03-31\", 437, 6], [\"2016-04-29\", 478, 5], [\"2016-05-31\", 484, 7], [\"2016-06-30\", 482, 12], [\"2016-07-29\", 555, 9], [\"2016-08-31\", 556, 4], [\"2016-09-30\", 564, 7], [\"2016-10-31\", 539, 10], [\"2016-11-30\", 612, 9], [\"2016-12-30\", 594, 5], [\"2017-01-31\", 571, 14], [\"2017-02-28\", 605, 9], [\"2017-03-31\", 608, 4], [\"2017-04-28\", 599, 9], [\"2017-05-31\", 551, 21], [\"2017-06-30\", 560, 17], [\"2017-07-31\", 559, 18], [\"2017-08-31\", 548, 15], [\"2017-09-29\", 562, 5], [\"2017-10-31\", 559, 9], [\"2017-11-30\", 585, 9]], \"status\": {\"2011|1|ok\": 823, \"2011|2|ok\": 791, \"2011|2|truncated\": 1, \"2011|3|no_bar_after_t\": 2, \"2011|3|ok\": 828, \"2011|3|truncated\": 4, \"2011|3|unverified_split\": 1, \"2011|4|ok\": 814, \"2011|4|truncated\": 2, \"2011|5|no_bar_after_t\": 1, \"2011|5|ok\": 818, \"2011|5|truncated\": 5, \"2012|1|ok\": 931, \"2012|2|ok\": 961, \"2012|2|truncated\": 1, \"2012|3|ok\": 920, \"2012|4|ok\": 940, \"2012|4|truncated\": 2, \"2012|5|no_bar_after_t\": 3, \"2012|5|ok\": 931, \"2012|5|truncated\": 5, \"2013|1|ok\": 1280, \"2013|2|ok\": 1280, \"2013|2|truncated\": 1, \"2013|2|unverified_split\": 1, \"2013|3|ok\": 1261, \"2013|3|truncated\": 3, \"2013|3|unverified_split\": 1, \"2013|4|no_bar_after_t\": 1, \"2013|4|ok\": 1248, \"2013|4|truncated\": 3, \"2013|5|no_bar_after_t\": 1, \"2013|5|ok\": 1283, \"2013|5|truncated\": 8, \"2014|1|ok\": 1339, \"2014|1|truncated\": 3, \"2014|2|ok\": 1355, \"2014|2|truncated\": 1, \"2014|3|no_bar_after_t\": 1, \"2014|3|ok\": 1395, \"2014|3|truncated\": 1, \"2014|4|ok\": 1338, \"2014|4|truncated\": 3, \"2014|5|no_bar_after_t\": 3, \"2014|5|ok\": 1333, \"2014|5|truncated\": 5, \"2015|1|ok\": 1119, \"2015|2|ok\": 1106, \"2015|2|truncated\": 4, \"2015|3|no_bar_after_t\": 1, \"2015|3|ok\": 1158, \"2015|3|truncated\": 6, \"2015|4|ok\": 1117, \"2015|4|truncated\": 9, \"2015|5|no_bar_after_t\": 1, \"2015|5|ok\": 1131, \"2015|5|truncated\": 7, \"2016|1|ok\": 1163, \"2016|2|no_bar_after_t\": 1, \"2016|2|ok\": 1151, \"2016|2|truncated\": 2, \"2016|2|unverified_split\": 1, \"2016|3|no_bar_after_t\": 1, \"2016|3|ok\": 1167, \"2016|3|truncated\": 6, \"2016|4|no_bar_after_t\": 1, \"2016|4|ok\": 1163, \"2016|4|truncated\": 4, \"2016|5|ok\": 1162, \"2016|5|truncated\": 14, \"2017|1|ok\": 1251, \"2017|1|truncated\": 1, \"2017|2|no_bar_after_t\": 1, \"2017|2|ok\": 1255, \"2017|2|truncated\": 4, \"2017|3|ok\": 1250, \"2017|3|truncated\": 6, \"2017|4|ok\": 1283, \"2017|4|truncated\": 7, \"2017|5|no_bar_after_t\": 1, \"2017|5|ok\": 1239, \"2017|5|truncated\": 9}}, \"decisions\": {\"first\": \"2011-01-31\", \"last\": \"2017-11-30\", \"last_response_end\": \"2017-12-29\", \"n\": 83}, \"max_rss_mb\": 6371.9, \"mode\": \"canary\", \"panel\": {\"build_s\": 91.9, \"dividend_events\": 38616, \"duplicate_bars\": 0, \"first_session\": \"2007-01-03\", \"history_calls\": 80, \"large_distributions_10pct\": 160, \"last_session\": \"2017-12-29\", \"late_events\": 0, \"late_rows\": 0, \"off_calendar_rows\": 0, \"securities\": 1917, \"sessions\": 2769, \"split\": {\"aligned\": 516, \"n\": 528, \"outside\": 1, \"realigned\": 0, \"unverified\": 11}, \"spy_splits\": 0}, \"panel_sha256\": \"a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a\", \"regimes\": [[\"2011-01-31\", \"STRONG\"], [\"2011-02-28\", \"STRONG\"], [\"2011-03-31\", \"STRONG\"], [\"2011-04-29\", \"STRONG\"], [\"2011-05-31\", \"STRONG\"], [\"2011-06-30\", \"STRONG\"], [\"2011-07-29\", \"NORMAL\"], [\"2011-08-31\", \"RISK_OFF\"], [\"2011-09-30\", \"RISK_OFF\"], [\"2011-10-31\", \"WEAK\"], [\"2011-11-30\", \"WEAK\"], [\"2011-12-30\", \"WEAK\"], [\"2012-01-31\", \"NORMAL\"], [\"2012-02-29\", \"STRONG\"], [\"2012-03-30\", \"STRONG\"], [\"2012-04-30\", \"STRONG\"], [\"2012-05-31\", \"NORMAL\"], [\"2012-06-29\", \"STRONG\"], [\"2012-07-31\", \"STRONG\"], [\"2012-08-31\", \"STRONG\"], [\"2012-09-28\", \"STRONG\"], [\"2012-10-31\", \"STRONG\"], [\"2012-11-30\", \"STRONG\"], [\"2012-12-31\", \"STRONG\"], [\"2013-01-31\", \"STRONG\"], [\"2013-02-28\", \"STRONG\"], [\"2013-03-28\", \"STRONG\"], [\"2013-04-30\", \"STRONG\"], [\"2013-05-31\", \"STRONG\"], [\"2013-06-28\", \"STRONG\"], [\"2013-07-31\", \"STRONG\"], [\"2013-08-30\", \"STRONG\"], [\"2013-09-30\", \"STRONG\"], [\"2013-10-31\", \"STRONG\"], [\"2013-11-29\", \"STRONG\"], [\"2013-12-31\", \"STRONG\"], [\"2014-01-31\", \"STRONG\"], [\"2014-02-28\", \"STRONG\"], [\"2014-03-31\", \"STRONG\"], [\"2014-04-30\", \"STRONG\"], [\"2014-05-30\", \"STRONG\"], [\"2014-06-30\", \"STRONG\"], [\"2014-07-31\", \"STRONG\"], [\"2014-08-29\", \"STRONG\"], [\"2014-09-30\", \"NORMAL\"], [\"2014-10-31\", \"STRONG\"], [\"2014-11-28\", \"STRONG\"], [\"2014-12-31\", \"STRONG\"], [\"2015-01-30\", \"STRONG\"], [\"2015-02-27\", \"STRONG\"], [\"2015-03-31\", \"STRONG\"], [\"2015-04-30\", \"STRONG\"], [\"2015-05-29\", \"STRONG\"], [\"2015-06-30\", \"NORMAL\"], [\"2015-07-31\", \"NORMAL\"], [\"2015-08-31\", \"WEAK\"], [\"2015-09-30\", \"RISK_OFF\"], [\"2015-10-30\", \"WEAK\"], [\"2015-11-30\", \"NORMAL\"], [\"2015-12-31\", \"WEAK\"], [\"2016-01-29\", \"RISK_OFF\"], [\"2016-02-29\", \"RISK_OFF\"], [\"2016-03-31\", \"WEAK\"], [\"2016-04-29\", \"NORMAL\"], [\"2016-05-31\", \"NORMAL\"], [\"2016-06-30\", \"STRONG\"], [\"2016-07-29\", \"STRONG\"], [\"2016-08-31\", \"STRONG\"], [\"2016-09-30\", \"STRONG\"], [\"2016-10-31\", \"STRONG\"], [\"2016-11-30\", \"STRONG\"], [\"2016-12-30\", \"STRONG\"], [\"2017-01-31\", \"STRONG\"], [\"2017-02-28\", \"STRONG\"], [\"2017-03-31\", \"STRONG\"], [\"2017-04-28\", \"STRONG\"], [\"2017-05-31\", \"STRONG\"], [\"2017-06-30\", \"STRONG\"], [\"2017-07-31\", \"STRONG\"], [\"2017-08-31\", \"STRONG\"], [\"2017-09-29\", \"STRONG\"], [\"2017-10-31\", \"STRONG\"], [\"2017-11-30\", \"STRONG\"], [\"2017-12-29\", \"STRONG\"]], \"response_side_sha256\": \"f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb\", \"responses_s\": 2.6, \"review_sha256\": [[\"2011-01-31\", \"6d41a085d9c05f89fea9f294bc0886e275b4480193e231c52b30afd93c5204ff\"], [\"2011-02-28\", \"250dd57b83378f76792aa91ed5f2f8",
+  "QRP7S|1|4f78a13b72d92e558c150629ac802a6a63\"], [\"2011-03-31\", \"a27d1071dfc5876f7c3bc898c95b7bbe0f17f1ab6a55e22f524ff786fe5d4436\"], [\"2011-04-29\", \"2f75fd52b4c1f17048a693df1b8ea9b877dcc48bcd1f9e043a909b3f44d68dae\"], [\"2011-05-31\", \"43e07b01a0bded68f174cede41fb21f1260d2c0e73b48b0bc029b3c0526c6726\"], [\"2011-06-30\", \"82f198cffc3b4b8daef67f8bdb600d71ad1734f7e22a1f493ebdbc52e4ff0a91\"], [\"2011-07-29\", \"46bac7af29f53c0c0ae351fb3530bea714c7fc7b2c96d7846e36bab6ae8888cb\"], [\"2011-08-31\", \"84b0dd3d2f8998bd04ee6dd870763f54d03320dd913135bd6eebb79c0166a59c\"], [\"2011-09-30\", \"5926e66757291c9d0865e0b1ffe1ca0e8b0e0389ca128a46aca850df94561d7a\"], [\"2011-10-31\", \"7e1bde28f67c365132ef561c79cbb3af1701723e78b6ac05a733b41074fc1449\"], [\"2011-11-30\", \"99eb5cfb16e2ab563928719c6f187a7c02d0caf5416838222e3e4cd1765f4239\"], [\"2011-12-30\", \"1a55d84ab760bd36e7581263368c0ee61fb952ee4ac618ffcb72a0d9d135d9b4\"], [\"2012-01-31\", \"b8ba38b01c5e578e29f0679cf7af9d8197fa10290050a423c7692c9267270eaa\"], [\"2012-02-29\", \"113c2e5894526e57c71926f6b781788d8c67344d3e2d71a1269d04b1fd244de4\"], [\"2012-03-30\", \"2c0dc7f51493f4ec0c460d4396f83065f7de463ee2f330fe413fbbc64bfd8eb6\"], [\"2012-04-30\", \"3726cc8948346b9c3906ca69eb213f85e2cd0cd69b7a4f88250edcae143b9be9\"], [\"2012-05-31\", \"2e6b9c5c9ad2bf93d7044b5982c5bffd7c961346d87800bf67424a2924499b01\"], [\"2012-06-29\", \"12ec3a7a6dc86c81cfc86151d3df68dc7587933d63c3b75a3707c6d3ebea9f43\"], [\"2012-07-31\", \"7d3b3a325272f2394c3b8461ac8fc5e60b652211f9a68e558286a783560bff94\"], [\"2012-08-31\", \"f28018468aebab903350b15908aa084eeba2805dabc4c9b9bc2070086da22613\"], [\"2012-09-28\", \"b4f279b67d351522b122e9480c710923336cc77222aa6558dd9325257ce373d4\"], [\"2012-10-31\", \"eab12d25d162628d1f14096230faccc059cf25efde1dbc1640c740e4a69cbdf6\"], [\"2012-11-30\", \"644acef90411c5499ab407f82fc74a3fb01ef1b6117f7a620da867866a96416f\"], [\"2012-12-31\", \"f575f0008ec0437b501af2e3489a58e762ad5a2b56d00d24956591c0c55df945\"], [\"2013-01-31\", \"d7f7929787c905c6c0a995e9f320e18bc7320ec0f32557a4f5d0a2d3fb4d04be\"], [\"2013-02-28\", \"486f174a266c76e3015fe5ffec29ab9bf43f980d7486fa6404affcbc414fe177\"], [\"2013-03-28\", \"8e01080796cda06dd28c30910a0b540e49a76d68bbca3c1d17002480a89a1a88\"], [\"2013-04-30\", \"7b0bb8e51e28a929bbff4212853719149918d90ba8dff1e3952e8e27074af26b\"], [\"2013-05-31\", \"cb7ee4644aaf898e0ea3607a1b99bb60f39f14daa4e98e8b6f916133bf85b4f0\"], [\"2013-06-28\", \"c3a3f38d9a4a9fdcd3cc9acc36e93840f8d5c08d94a7ef668f3e35f0f01497d7\"], [\"2013-07-31\", \"51fdc48c23488dc5d952632d6ec0658eafc158f00bf0ba05e5b2ef152d48b58f\"], [\"2013-08-30\", \"62915b012d7561f40f9a5e73252f246c7114ab778a41f215733383c1b9b6cfe3\"], [\"2013-09-30\", \"d41ef3ceb0feb7c7ff41eb5a709722df8e192e6cd5f17a0825afbafce1702afe\"], [\"2013-10-31\", \"a8148b0a68f8effeeb9bbce2e32f8ff0d300fe3869ceafe23a9062acc4ac4e59\"], [\"2013-11-29\", \"b48b3a9167301542076166df0dc66160a81ce9f2eedab5a7bcf4c40f3ee1684e\"], [\"2013-12-31\", \"621111562fdd407cf613defcfe8724c3c4c88b1884129c424e0639221fb7f6ec\"], [\"2014-01-31\", \"13125e254337a273c6a1a27e11c09db56ed3f5b89f489c0ebdf32948224b39c9\"], [\"2014-02-28\", \"c4d15ca095445da57ae5684342ec26abb88a84375a9caba1d446e07ebd397009\"], [\"2014-03-31\", \"d72df3a41e9f59826b1ad8a1b0974a42cb5a7ee1cab1bc41786ecf9adbcf361b\"], [\"2014-04-30\", \"e8336385fe13544c8c4506d9964db3dd3854644ba2ddc6142dad0b3173d10b47\"], [\"2014-05-30\", \"db26d24c5ce5611d36171fe2198812a1b75bc645d082969b8225b8d5746950e9\"], [\"2014-06-30\", \"4061751c7a12805d21b366da3f0df8a86cefd1c5fd01fdec4bf8c61650d0f9d6\"], [\"2014-07-31\", \"1d4c9873fb0076e1a0d208baefc1cec84c10f0c9e0613cb9708696b7ee5668d2\"], [\"2014-08-29\", \"4a9c30c069c229e8772686caed3a37865a28ab1da114fb82cf0392db02a69197\"], [\"2014-09-30\", \"0316d3f7a6d0e4b6e235fd254cba34b7f4c122f6eb5523f5edbc9c212253dc24\"], [\"2014-10-31\", \"04b0b88e7853840333bcc3dfc02322e1448270e9b493494fa4f8fc05faa6be1e\"], [\"2014-11-28\", \"a1aa503faddebc43f9a73d1a899b246838ed7358ab98b9c8461f9c19f9384c52\"], [\"2014-12-31\", \"38cac8d31874379f4588901b63af257884bbc8ed0bd62e5c571fefd5d35cca09\"], [\"2015-01-30\", \"7cabbcf6eb291e1663e9124808901712e43c78a37fe74d1a125c74e7058d2dd3\"], [\"2015-02-27\", \"00e80628112728923107105d5cf64debdaae19d59c843639f1e0167035c4b9fc\"], [\"2015-03-31\", \"714c1b7af852880d4bbd5eb6993d33568d1aacfeacd32166c085354561853033\"], [\"2015-04-30\", \"914203c371269e05fb72ba960d763a98eeb22ec9dda40d01928c42bea1e22fd5\"], [\"2015-05-29\", \"2e1d57df4e0291b1ffecce2228c2f3f570c9088ecf83eebbfc63c1abb1d0add2\"], [\"2015-06-30\", \"ec72c5cf2e1af4aafbd6bae83e890d925cb42f2783d6e4023f532ddef465e4ee\"], [\"2015-07-31\", \"1fc4535ea2497e10e5e5e5cbfd76069af22b4a99d454e64af81009d55e7a402c\"], [\"2015-08-31\", \"1a35a6d34ad07a5924afd3482b33fabe4829c8ac290fb35c00899e7aa285c40e\"], [\"2015-09-30\", \"b0db3d4544f81769538a914207c01b6f83cd36170ceb9fce86bd624df79d23e3\"], [\"2015-10-30\", \"8f54003ecb8480733f4903fcadd48ab0700eeeb254da86d45e50704a26091310\"], [\"2015-11-30\", \"4123ad3fe7da40297711b9641c99ea47576f92912d9f6e51461c46846edb7257\"], [\"2015-12-31\", \"a83c0a1953a7f06ed77c5493139417d0f581c5dea8313f0063f8ac5ccf6e3ac5\"], [\"2016-01-29\", \"ad2e19e6a8968b674f64bb6129c2c7e853c7ee2c33b8f05158b75bdf6772cbbf\"], [\"2016-02-29\", \"9cfeab385bfb6c9d22697454681d59fab51705d8dd3da852c357e7cc2e4be409\"], [\"2016-03-31\", \"23e50ccd8f262428a0ef0ac57116f7e911c73caff7c4206f98a83cf5f6343f7d\"], [\"2016-04-29\", \"0b622a4c6af987b926e3524296aab3d4889aded40750ba6e7ef3a3895cb560e0\"], [\"2016-05-31\", \"a75b0878935a0bf1bc3087433c760f99313eeb841b2a15f2698f3c03bf0f6530\"], [\"2016-06-30\", \"17676719520e995b7c87e17bb8d89071ad5441945360ff23c8cd6731349b9fc3\"], [\"2016-07-29\", \"61e8ba957dd885d022acab3f2b1aa494e3c7adb9215fc46ffc6bb415346a41a0\"], [\"2016-08-31\", \"afcfa8a22ef39eb8136da4e025c47c6fd4c9eaa7094e8b9e4367d46d9dd7f6ce\"], [\"2016-09-30\", \"3bcb047ffb9ca67a3413f2c4a53457abf9a5a64f64c2f3b819297c39d471110f\"], [\"2016-10-31\", \"a4ce45032df2bd4bb85054f9eb26596a6dd146182fd7c871ffcfcc805fb43773\"], [\"2016-11-30\", \"1b8d860e98c0ff7274a83ccf94a60a3cc589dee97fa1f1b5028657a66bc1b733\"], [\"2016-12-30\", \"fdfb2448d391520c1e144d86a332c7acae436a3abb67276ffb176598d65ac5c5\"], [\"2017-01-31\", \"03d1fa00bca4d841b3bdd8a62cc640bcb91eedd5790fc24c0b1128c7746e8e7e\"], [\"2017-02-28\", \"d827808f41d7e6c078c742357cb278717a8fec74c738f093120d12445d801710\"], [\"2017-03-31\", \"3ec1a738528471a2be656b7454004cadee3f59c9fd87c7e68d1eaba329ce1b71\"], [\"2017-04-28\", \"2ce7b4343c8c93cdbe92a977687e789d173f47682bcccb6cae02e5f93d7040d5\"], [\"2017-05-31\", \"25f1b2c58da1540ed727110fe29fd8e744858937774ddf8574187871ebd828e8\"], [\"2017-06-30\", \"e1663b139650626d24d37f6507c7cc2baf0e140b538894d9ff570950a080b4b8\"], [\"2017-07-31\", \"8e1e74157a12dd51778a7d48ae86e0a8d092f956eb6d349bbde4c541e1d30118\"], [\"2017-08-31\", \"1f7dddca8f9977a3236a3405d3b2341729acc0cb4bc4e1597bbed2cdaf6135a4\"], [\"2017-09-29\", \"ac6a35aa3ebbc68fd131b8775c996e55997a74cafa8f089428511b99a7f94042\"], [\"2017-10-31\", \"6417fd7323b61c960d31cb3a588d8efa75d05c05aacf62da3a228fc7e5f4520c\"], [\"2017-11-30\", \"39dc89ea972b55500ef55a5d113b746452cc3fb25a880fae70caf18b27aa2dcd\"], [\"2017-12-29\", \"3b99399df591345edffc045e3ea0bc9cafae0e6da96f476ec857d83d0fe1b555\"]], \"runtime_modules\": {\"qr_fundamentals.py\": \"3db7f1b7b73fbda75fe1105561ab5ec785be902e2aad00514be969990c460852\", \"qr_h020_stats.py\": \"e360c4216e03ae0e67211c834b6770cefafa8b0c74e8f88cf6737a7b70110c78\", \"qr_p7.py\": \"b5d880ed9734a9eacff93ac4c25b73bb799be6368183650465cf8330782a8d6d\", \"qr_p7_export.py\": \"afa96b2735bc8dc0e55dabbc041087de75cfad6d1bacd4e6b92fabae74a7079a\", \"qr_p7_pred.py\": \"31419851fa744ba996d7bcf279a5aaaf524a11710edcf63140c37782f08e5471\", \"qr_p7_score.py\": \"430ce205c336a4ac120a606afb9ff7bdf2345752e7e3aeeadeff970dae4e6c9d\", \"qr_xs.py\": \"6adf07e43cadc14db930531be4298f91639681358ba4c6802b1f67d7c72c09bc\", \"qr_xs_panel.py\": \"20375c2776fe1de4e9730d201c98c0585d604424ecd21a9f3079eb3170da9f5b\"}, \"score_s\": 40.0, \"score_side_sha256\": \"470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09\", \"score_tables_sha256\": \"c12427aceaa84d88f61eb704d3cc25c6e8c2e978a9424b3c9a86e33e59b394c8\", \"sids_sha256\": \"c8ed01490f49bc8373ea8ba2363dfad1f4aa49ba5eed1257c7807ce1a981104f\", \"slice_spot_check\": {\"checked\": 336, \"examples\": [], \"full_fallbacks\": 2139, \"mismatch\": 0}, \"spec_sha256\": \"2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58\", \"states_s\": 8.7, \"store_stats\": {\"amendments\": 135, \"delayed_until_available\": 12254, \"estimated\": 12714, \"observed_new\": 153871, \"quarantine_field_released\": 134, \"quarantine_released\": 20, \"quarantined\": 637, \"restatement_blocked\": 306, \"sec_timing_hold\": 27, \"timing_unknown\": 608}, \"wall_s\": 684.1}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 1761,
+  "elig_days": 1761,
+  "elig_max": 1331,
+  "elig_mean": 1111.6195343554798,
+  "elig_min": 801,
+  "elig_sum": 1957562,
+  "experiment_id": "E994-02",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 399998,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 340,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "warmup_days": 632,
+  "warmup_select_days": 633,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "31ffd821427e447b7b06b7971ec539c1c99f5f333f3cc9ba40faf692bd64d354",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "1761 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2011-01-03..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 1761 vs algorithm days 1761",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 1761 vs QuantConnect tradeableDates 1761",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "warmup_left_account_untouched",
+   "detail": "first recorded equity 100000.00 vs initial cash 100000.00; 632 warm-up sessions",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 1761,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2011-01-03",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-06T20:33:33Z",
+  "build_commit": "f59bfb5390d90c1ccc5822f12c90fa7a512c59a0",
+  "code_sha256": "5a14501f8105f752a6047e8e9c4b235214aebcdd661f0939d096b6a38837ec8a",
+  "config_sha256": "8343bf45a6bd34aedb48c0ac51e3553f9cd37cf4cf045ecb5dc208ea83c70d54",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_chart.py",
+   "qr_fundamentals.py",
+   "qr_h020_diag.py",
+   "qr_h020_panel.py",
+   "qr_h020_stats.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_p7.py",
+   "qr_p7_export.py",
+   "qr_p7_pred.py",
+   "qr_p7_score.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_sec_data.py",
+   "qr_sec_data_00.py",
+   "qr_sec_data_01.py",
+   "qr_sec_data_02.py",
+   "qr_sec_data_03.py",
+   "qr_sec_data_04.py",
+   "qr_sec_data_05.py",
+   "qr_sec_data_06.py",
+   "qr_sec_data_07.py",
+   "qr_sec_data_08.py",
+   "qr_sec_data_09.py",
+   "qr_sec_data_10.py",
+   "qr_sec_data_11.py",
+   "qr_sec_data_12.py",
+   "qr_sec_data_13.py",
+   "qr_sec_data_14.py",
+   "qr_sec_data_15.py",
+   "qr_sec_data_16.py",
+   "qr_sec_data_17.py",
+   "qr_sec_data_18.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "f59bfb5390d90c1ccc5822f12c90fa7a512c59a0",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18131",
+  "owner_approved": "D177",
+  "qc_backtest_id": "a89766eef8c98efe543b8dc93e0762ea",
+  "qc_project_id": 37445003,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-06T20:33:18Z",
+  "runtime_s": 697.8470506668091
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.514",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.165",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "QRP7S|0|{\"baseline\": {\"cik_reject\": 11, \"h2_new\": 17885, \"h2_old\": 23182, \"life_reject\": 5, \"listed_lt_1y\": 27, \"lost\": 0, \"nonfin_rows\": 71030, \"pit_violations\": 0, \"reasons\": {\"2\": 6038, \"3\": 51, \"4\": 187, \"5\": 11}, \"rescued\": 6287, \"rows\": 93687, \"store_baseline\": 78633}, \"calendar_check\": {\"expected_reviews\": 84, \"expected_weekly\": 325, \"first_review\": \"2011-01-31\", \"last_review\": \"2017-12-29\", \"reviews\": 84, \"reviews_match\": true, \"weekly\": 325, \"weekly_match\": true}, \"canary\": {\"canary_s\": 84.5, \"event_classes\": {\"dividend\": 8497, \"plain\": 30950, \"split\": 142, \"truncated\": 122}, \"fresh_recomputation\": {\"agree_1e6\": 120, \"agree_1e9\": 120, \"by_class\": {\"dividend\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 6.661338147750939e-16}, \"plain\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 2.220446049250313e-16}, \"split\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 4.440892098500626e-16}, \"truncated\": {\"agree_1e9\": 30, \"n\": 30, \"worst_rel\": 0.0}}, \"checked\": 120, \"examples\": [], \"status_agree\": 120, \"worst_rel\": 6.661338147750939e-16}, \"gates_computed\": false, \"null_machinery\": {\"distinct_worlds\": 20, \"repeat_identical\": true, \"synthetic_responses\": true, \"tether\": {\"dates\": 83, \"kept\": 32625, \"not_permutation\": 0, \"receivers\": 39368, \"self_matches\": 0}, \"world_s\": 0.0608, \"world_s_1000\": 60.8}, \"real_ic_computed\": false, \"response_invariance\": {\"checked\": 80, \"future_changed\": 0, \"past_changed\": 0, \"truncation_changed\": 0}, \"responses_repeat_identical\": true, \"score_invariance\": {\"future_mismatch\": 0, \"regime_mismatch\": 0, \"reviews\": [\"2016-07-29\", \"2013-10-31\", \"2011-02-28\", \"2017-03-31\", \"2012-06-29\", \"2015-07-31\"], \"rows\": 6708, \"truncated_mismatch\": 0}, \"timing\": {\"entry_not_after_t\": 0, \"entry_on_or_before_t_day\": 0, \"exit_outside\": 0, \"no_bar\": 57, \"response_end_after_last_session\": 0, \"rows\": 117473, \"status_mismatch\": 0, \"truncated\": 784, \"unverified\": 24, \"value_mismatch\": 0}}, \"checks\": {\"month_ends\": 96, \"sec_fed\": 8193, \"selections\": 2394, \"store_sids_max\": 6023, \"weekly\": 325}, \"coverage\": {\"mcap_missing\": 0, \"mom_missing\": 0, \"population\": [[\"2011-01-31\", 366, 5], [\"2011-02-28\", 419, 6], [\"2011-03-31\", 432, 5], [\"2011-04-29\", 449, 2], [\"2011-05-31\", 442, 2], [\"2011-06-30\", 429, 7], [\"2011-07-29\", 400, 11], [\"2011-08-31\", 250, 7], [\"2011-09-30\", 196, 5], [\"2011-10-31\", 226, 10], [\"2011-11-30\", 240, 10], [\"2011-12-30\", 241, 7], [\"2012-01-31\", 337, 11], [\"2012-02-29\", 415, 8], [\"2012-03-30\", 446, 10], [\"2012-04-30\", 424, 8], [\"2012-05-31\", 342, 5], [\"2012-06-29\", 382, 6], [\"2012-07-31\", 397, 8], [\"2012-08-31\", 387, 12], [\"2012-09-28\", 411, 9], [\"2012-10-31\", 388, 3], [\"2012-11-30\", 358, 3], [\"2012-12-31\", 407, 2], [\"2013-01-31\", 461, 2], [\"2013-02-28\", 493, 2], [\"2013-03-28\", 530, 2], [\"2013-04-30\", 512, 1], [\"2013-05-31\", 531, 0], [\"2013-06-28\", 511, 3], [\"2013-07-31\", 542, 1], [\"2013-08-30\", 539, 6], [\"2013-09-30\", 567, 5], [\"2013-10-31\", 557, 5], [\"2013-11-29\", 566, 5], [\"2013-12-31\", 562, 5], [\"2014-01-31\", 549, 7], [\"2014-02-28\", 597, 3], [\"2014-03-31\", 611, 0], [\"2014-04-30\", 585, 3], [\"2014-05-30\", 566, 5], [\"2014-06-30\", 611, 8], [\"2014-07-31\", 554, 2], [\"2014-08-29\", 560, 8], [\"2014-09-30\", 520, 2], [\"2014-10-31\", 516, 6], [\"2014-11-28\", 572, 13], [\"2014-12-31\", 536, 19], [\"2015-01-30\", 490, 13], [\"2015-02-27\", 574, 13], [\"2015-03-31\", 560, 16], [\"2015-04-30\", 551, 8], [\"2015-05-29\", 557, 10], [\"2015-06-30\", 516, 15], [\"2015-07-31\", 507, 9], [\"2015-08-31\", 428, 3], [\"2015-09-30\", 333, 1], [\"2015-10-30\", 394, 3], [\"2015-11-30\", 415, 8], [\"2015-12-31\", 334, 2], [\"2016-01-29\", 256, 1], [\"2016-02-29\", 279, 4], [\"2016-03-31\", 437, 6], [\"2016-04-29\", 478, 5], [\"2016-05-31\", 484, 7], [\"2016-06-30\", 482, 12], [\"2016-07-29\", 555, 9], [\"2016-08-31\", 556, 4], [\"2016-09-30\", 564, 7], [\"2016-10-31\", 539, 10], [\"2016-11-30\", 612, 9], [\"2016-12-30\", 594, 5], [\"2017-01-31\", 571, 14], [\"2017-02-28\", 605, 9], [\"2017-03-31\", 608, 4], [\"2017-04-28\", 599, 9], [\"2017-05-31\", 551, 21], [\"2017-06-30\", 560, 17], [\"2017-07-31\", 559, 18], [\"2017-08-31\", 548, 15], [\"2017-09-29\", 562, 5], [\"2017-10-31\", 559, 9], [\"2017-11-30\", 585, 9]], \"status\": {\"2011|1|ok\": 823, \"2011|2|ok\": 791, \"2011|2|truncated\": 1, \"2011|3|no_bar_after_t\": 2, \"2011|3|ok\": 828, \"2011|3|truncated\": 4, \"2011|3|unverified_split\": 1, \"2011|4|ok\": 814, \"2011|4|truncated\": 2, \"2011|5|no_bar_after_t\": 1, \"2011|5|ok\": 818, \"2011|5|truncated\": 5, \"2012|1|ok\": 931, \"2012|2|ok\": 961, \"2012|2|truncated\": 1, \"2012|3|ok\": 920, \"2012|4|ok\": 940, \"2012|4|truncated\": 2, \"2012|5|no_bar_after_t\": 3, \"2012|5|ok\": 931, \"2012|5|truncated\": 5, \"2013|1|ok\": 1280, \"2013|2|ok\": 1280, \"2013|2|truncated\": 1, \"2013|2|unverified_split\": 1, \"2013|3|ok\": 1261, \"2013|3|truncated\": 3, \"2013|3|unverified_split\": 1, \"2013|4|no_bar_after_t\": 1, \"2013|4|ok\": 1248, \"2013|4|truncated\": 3, \"2013|5|no_bar_after_t\": 1, \"2013|5|ok\": 1283, \"2013|5|truncated\": 8, \"2014|1|ok\": 1339, \"2014|1|truncated\": 3, \"2014|2|ok\": 1355, \"2014|2|truncated\": 1, \"2014|3|no_bar_after_t\": 1, \"2014|3|ok\": 1395, \"2014|3|truncated\": 1, \"2014|4|ok\": 1338, \"2014|4|truncated\": 3, \"2014|5|no_bar_after_t\": 3, \"2014|5|ok\": 1333, \"2014|5|truncated\": 5, \"2015|1|ok\": 1119, \"2015|2|ok\": 1106, \"2015|2|truncated\": 4, \"2015|3|no_bar_after_t\": 1, \"2015|3|ok\": 1158, \"2015|3|truncated\": 6, \"2015|4|ok\": 1117, \"2015|4|truncated\": 9, \"2015|5|no_bar_after_t\": 1, \"2015|5|ok\": 1131, \"2015|5|truncated\": 7, \"2016|1|ok\": 1163, \"2016|2|no_bar_after_t\": 1, \"2016|2|ok\": 1151, \"2016|2|truncated\": 2, \"2016|2|unverified_split\": 1, \"2016|3|no_bar_after_t\": 1, \"2016|3|ok\": 1167, \"2016|3|truncated\": 6, \"2016|4|no_bar_after_t\": 1, \"2016|4|ok\": 1163, \"2016|4|truncated\": 4, \"2016|5|ok\": 1162, \"2016|5|truncated\": 14, \"2017|1|ok\": 1251, \"2017|1|truncated\": 1, \"2017|2|no_bar_after_t\": 1, \"2017|2|ok\": 1255, \"2017|2|truncated\": 4, \"2017|3|ok\": 1250, \"2017|3|truncated\": 6, \"2017|4|ok\": 1283, \"2017|4|truncated\": 7, \"2017|5|no_bar_after_t\": 1, \"2017|5|ok\": 1239, \"2017|5|truncated\": 9}}, \"decisions\": {\"first\": \"2011-01-31\", \"last\": \"2017-11-30\", \"last_response_end\": \"2017-12-29\", \"n\": 83}, \"max_rss_mb\": 6371.9, \"mode\": \"canary\", \"panel\": {\"build_s\": 91.9, \"dividend_events\": 38616, \"duplicate_bars\": 0, \"first_session\": \"2007-01-03\", \"history_calls\": 80, \"large_distributions_10pct\": 160, \"last_session\": \"2017-12-29\", \"late_events\": 0, \"late_rows\": 0, \"off_calendar_rows\": 0, \"securities\": 1917, \"sessions\": 2769, \"split\": {\"aligned\": 516, \"n\": 528, \"outside\": 1, \"realigned\": 0, \"unverified\": 11}, \"spy_splits\": 0}, \"panel_sha256\": \"a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a\", \"regimes\": [[\"2011-01-31\", \"STRONG\"], [\"2011-02-28\", \"STRONG\"], [\"2011-03-31\", \"STRONG\"], [\"2011-04-29\", \"STRONG\"], [\"2011-05-31\", \"STRONG\"], [\"2011-06-30\", \"STRONG\"], [\"2011-07-29\", \"NORMAL\"], [\"2011-08-31\", \"RISK_OFF\"], [\"2011-09-30\", \"RISK_OFF\"], [\"2011-10-31\", \"WEAK\"], [\"2011-11-30\", \"WEAK\"], [\"2011-12-30\", \"WEAK\"], [\"2012-01-31\", \"NORMAL\"], [\"2012-02-29\", \"STRONG\"], [\"2012-03-30\", \"STRONG\"], [\"2012-04-30\", \"STRONG\"], [\"2012-05-31\", \"NORMAL\"], [\"2012-06-29\", \"STRONG\"], [\"2012-07-31\", \"STRONG\"], [\"2012-08-31\", \"STRONG\"], [\"2012-09-28\", \"STRONG\"], [\"2012-10-31\", \"STRONG\"], [\"2012-11-30\", \"STRONG\"], [\"2012-12-31\", \"STRONG\"], [\"2013-01-31\", \"STRONG\"], [\"2013-02-28\", \"STRONG\"], [\"2013-03-28\", \"STRONG\"], [\"2013-04-30\", \"STRONG\"], [\"2013-05-31\", \"STRONG\"], [\"2013-06-28\", \"STRONG\"], [\"2013-07-31\", \"STRONG\"], [\"2013-08-30\", \"STRONG\"], [\"2013-09-30\", \"STRONG\"], [\"2013-10-31\", \"STRONG\"], [\"2013-11-29\", \"STRONG\"], [\"2013-12-31\", \"STRONG\"], [\"2014-01-31\", \"STRONG\"], [\"2014-02-28\", \"STRONG\"], [\"2014-03-31\", \"STRONG\"], [\"2014-04-30\", \"STRONG\"], [\"2014-05-30\", \"STRONG\"], [\"2014-06-30\", \"STRONG\"], [\"2014-07-31\", \"STRONG\"], [\"2014-08-29\", \"STRONG\"], [\"2014-09-30\", \"NORMAL\"], [\"2014-10-31\", \"STRONG\"], [\"2014-11-28\", \"STRONG\"], [\"2014-12-31\", \"STRONG\"], [\"2015-01-30\", \"STRONG\"], [\"2015-02-27\", \"STRONG\"], [\"2015-03-31\", \"STRONG\"], [\"2015-04-30\", \"STRONG\"], [\"2015-05-29\", \"STRONG\"], [\"2015-06-30\", \"NORMAL\"], [\"2015-07-31\", \"NORMAL\"], [\"2015-08-31\", \"WEAK\"], [\"2015-09-30\", \"RISK_OFF\"], [\"2015-10-30\", \"WEAK\"], [\"2015-11-30\", \"NORMAL\"], [\"2015-12-31\", \"WEAK\"], [\"2016-01-29\", \"RISK_OFF\"], [\"2016-02-29\", \"RISK_OFF\"], [\"2016-03-31\", \"WEAK\"], [\"2016-04-29\", \"NORMAL\"], [\"2016-05-31\", \"NORMAL\"], [\"2016-06-30\", \"STRONG\"], [\"2016-07-29\", \"STRONG\"], [\"2016-08-31\", \"STRONG\"], [\"2016-09-30\", \"STRONG\"], [\"2016-10-31\", \"STRONG\"], [\"2016-11-30\", \"STRONG\"], [\"2016-12-30\", \"STRONG\"], [\"2017-01-31\", \"STRONG\"], [\"2017-02-28\", \"STRONG\"], [\"2017-03-31\", \"STRONG\"], [\"2017-04-28\", \"STRONG\"], [\"2017-05-31\", \"STRONG\"], [\"2017-06-30\", \"STRONG\"], [\"2017-07-31\", \"STRONG\"], [\"2017-08-31\", \"STRONG\"], [\"2017-09-29\", \"STRONG\"], [\"2017-10-31\", \"STRONG\"], [\"2017-11-30\", \"STRONG\"], [\"2017-12-29\", \"STRONG\"]], \"response_side_sha256\": \"f6050b999463901a6ccef3836ee1e8195c76d883d68ebb97a49599bc4c4a86eb\", \"responses_s\": 2.6, \"review_sha256\": [[\"2011-01-31\", \"6d41a085d9c05f89fea9f294bc0886e275b4480193e231c52b30afd93c5204ff\"], [\"2011-02-28\", \"250dd57b83378f76792aa91ed5f2f8\nQRP7S|1|4f78a13b72d92e558c150629ac802a6a63\"], [\"2011-03-31\", \"a27d1071dfc5876f7c3bc898c95b7bbe0f17f1ab6a55e22f524ff786fe5d4436\"], [\"2011-04-29\", \"2f75fd52b4c1f17048a693df1b8ea9b877dcc48bcd1f9e043a909b3f44d68dae\"], [\"2011-05-31\", \"43e07b01a0bded68f174cede41fb21f1260d2c0e73b48b0bc029b3c0526c6726\"], [\"2011-06-30\", \"82f198cffc3b4b8daef67f8bdb600d71ad1734f7e22a1f493ebdbc52e4ff0a91\"], [\"2011-07-29\", \"46bac7af29f53c0c0ae351fb3530bea714c7fc7b2c96d7846e36bab6ae8888cb\"], [\"2011-08-31\", \"84b0dd3d2f8998bd04ee6dd870763f54d03320dd913135bd6eebb79c0166a59c\"], [\"2011-09-30\", \"5926e66757291c9d0865e0b1ffe1ca0e8b0e0389ca128a46aca850df94561d7a\"], [\"2011-10-31\", \"7e1bde28f67c365132ef561c79cbb3af1701723e78b6ac05a733b41074fc1449\"], [\"2011-11-30\", \"99eb5cfb16e2ab563928719c6f187a7c02d0caf5416838222e3e4cd1765f4239\"], [\"2011-12-30\", \"1a55d84ab760bd36e7581263368c0ee61fb952ee4ac618ffcb72a0d9d135d9b4\"], [\"2012-01-31\", \"b8ba38b01c5e578e29f0679cf7af9d8197fa10290050a423c7692c9267270eaa\"], [\"2012-02-29\", \"113c2e5894526e57c71926f6b781788d8c67344d3e2d71a1269d04b1fd244de4\"], [\"2012-03-30\", \"2c0dc7f51493f4ec0c460d4396f83065f7de463ee2f330fe413fbbc64bfd8eb6\"], [\"2012-04-30\", \"3726cc8948346b9c3906ca69eb213f85e2cd0cd69b7a4f88250edcae143b9be9\"], [\"2012-05-31\", \"2e6b9c5c9ad2bf93d7044b5982c5bffd7c961346d87800bf67424a2924499b01\"], [\"2012-06-29\", \"12ec3a7a6dc86c81cfc86151d3df68dc7587933d63c3b75a3707c6d3ebea9f43\"], [\"2012-07-31\", \"7d3b3a325272f2394c3b8461ac8fc5e60b652211f9a68e558286a783560bff94\"], [\"2012-08-31\", \"f28018468aebab903350b15908aa084eeba2805dabc4c9b9bc2070086da22613\"], [\"2012-09-28\", \"b4f279b67d351522b122e9480c710923336cc77222aa6558dd9325257ce373d4\"], [\"2012-10-31\", \"eab12d25d162628d1f14096230faccc059cf25efde1dbc1640c740e4a69cbdf6\"], [\"2012-11-30\", \"644acef90411c5499ab407f82fc74a3fb01ef1b6117f7a620da867866a96416f\"], [\"2012-12-31\", \"f575f0008ec0437b501af2e3489a58e762ad5a2b56d00d24956591c0c55df945\"], [\"2013-01-31\", \"d7f7929787c905c6c0a995e9f320e18bc7320ec0f32557a4f5d0a2d3fb4d04be\"], [\"2013-02-28\", \"486f174a266c76e3015fe5ffec29ab9bf43f980d7486fa6404affcbc414fe177\"], [\"2013-03-28\", \"8e01080796cda06dd28c30910a0b540e49a76d68bbca3c1d17002480a89a1a88\"], [\"2013-04-30\", \"7b0bb8e51e28a929bbff4212853719149918d90ba8dff1e3952e8e27074af26b\"], [\"2013-05-31\", \"cb7ee4644aaf898e0ea3607a1b99bb60f39f14daa4e98e8b6f916133bf85b4f0\"], [\"2013-06-28\", \"c3a3f38d9a4a9fdcd3cc9acc36e93840f8d5c08d94a7ef668f3e35f0f01497d7\"], [\"2013-07-31\", \"51fdc48c23488dc5d952632d6ec0658eafc158f00bf0ba05e5b2ef152d48b58f\"], [\"2013-08-30\", \"62915b012d7561f40f9a5e73252f246c7114ab778a41f215733383c1b9b6cfe3\"], [\"2013-09-30\", \"d41ef3ceb0feb7c7ff41eb5a709722df8e192e6cd5f17a0825afbafce1702afe\"], [\"2013-10-31\", \"a8148b0a68f8effeeb9bbce2e32f8ff0d300fe3869ceafe23a9062acc4ac4e59\"], [\"2013-11-29\", \"b48b3a9167301542076166df0dc66160a81ce9f2eedab5a7bcf4c40f3ee1684e\"], [\"2013-12-31\", \"621111562fdd407cf613defcfe8724c3c4c88b1884129c424e0639221fb7f6ec\"], [\"2014-01-31\", \"13125e254337a273c6a1a27e11c09db56ed3f5b89f489c0ebdf32948224b39c9\"], [\"2014-02-28\", \"c4d15ca095445da57ae5684342ec26abb88a84375a9caba1d446e07ebd397009\"], [\"2014-03-31\", \"d72df3a41e9f59826b1ad8a1b0974a42cb5a7ee1cab1bc41786ecf9adbcf361b\"], [\"2014-04-30\", \"e8336385fe13544c8c4506d9964db3dd3854644ba2ddc6142dad0b3173d10b47\"], [\"2014-05-30\", \"db26d24c5ce5611d36171fe2198812a1b75bc645d082969b8225b8d5746950e9\"], [\"2014-06-30\", \"4061751c7a12805d21b366da3f0df8a86cefd1c5fd01fdec4bf8c61650d0f9d6\"], [\"2014-07-31\", \"1d4c9873fb0076e1a0d208baefc1cec84c10f0c9e0613cb9708696b7ee5668d2\"], [\"2014-08-29\", \"4a9c30c069c229e8772686caed3a37865a28ab1da114fb82cf0392db02a69197\"], [\"2014-09-30\", \"0316d3f7a6d0e4b6e235fd254cba34b7f4c122f6eb5523f5edbc9c212253dc24\"], [\"2014-10-31\", \"04b0b88e7853840333bcc3dfc02322e1448270e9b493494fa4f8fc05faa6be1e\"], [\"2014-11-28\", \"a1aa503faddebc43f9a73d1a899b246838ed7358ab98b9c8461f9c19f9384c52\"], [\"2014-12-31\", \"38cac8d31874379f4588901b63af257884bbc8ed0bd62e5c571fefd5d35cca09\"], [\"2015-01-30\", \"7cabbcf6eb291e1663e9124808901712e43c78a37fe74d1a125c74e7058d2dd3\"], [\"2015-02-27\", \"00e80628112728923107105d5cf64debdaae19d59c843639f1e0167035c4b9fc\"], [\"2015-03-31\", \"714c1b7af852880d4bbd5eb6993d33568d1aacfeacd32166c085354561853033\"], [\"2015-04-30\", \"914203c371269e05fb72ba960d763a98eeb22ec9dda40d01928c42bea1e22fd5\"], [\"2015-05-29\", \"2e1d57df4e0291b1ffecce2228c2f3f570c9088ecf83eebbfc63c1abb1d0add2\"], [\"2015-06-30\", \"ec72c5cf2e1af4aafbd6bae83e890d925cb42f2783d6e4023f532ddef465e4ee\"], [\"2015-07-31\", \"1fc4535ea2497e10e5e5e5cbfd76069af22b4a99d454e64af81009d55e7a402c\"], [\"2015-08-31\", \"1a35a6d34ad07a5924afd3482b33fabe4829c8ac290fb35c00899e7aa285c40e\"], [\"2015-09-30\", \"b0db3d4544f81769538a914207c01b6f83cd36170ceb9fce86bd624df79d23e3\"], [\"2015-10-30\", \"8f54003ecb8480733f4903fcadd48ab0700eeeb254da86d45e50704a26091310\"], [\"2015-11-30\", \"4123ad3fe7da40297711b9641c99ea47576f92912d9f6e51461c46846edb7257\"], [\"2015-12-31\", \"a83c0a1953a7f06ed77c5493139417d0f581c5dea8313f0063f8ac5ccf6e3ac5\"], [\"2016-01-29\", \"ad2e19e6a8968b674f64bb6129c2c7e853c7ee2c33b8f05158b75bdf6772cbbf\"], [\"2016-02-29\", \"9cfeab385bfb6c9d22697454681d59fab51705d8dd3da852c357e7cc2e4be409\"], [\"2016-03-31\", \"23e50ccd8f262428a0ef0ac57116f7e911c73caff7c4206f98a83cf5f6343f7d\"], [\"2016-04-29\", \"0b622a4c6af987b926e3524296aab3d4889aded40750ba6e7ef3a3895cb560e0\"], [\"2016-05-31\", \"a75b0878935a0bf1bc3087433c760f99313eeb841b2a15f2698f3c03bf0f6530\"], [\"2016-06-30\", \"17676719520e995b7c87e17bb8d89071ad5441945360ff23c8cd6731349b9fc3\"], [\"2016-07-29\", \"61e8ba957dd885d022acab3f2b1aa494e3c7adb9215fc46ffc6bb415346a41a0\"], [\"2016-08-31\", \"afcfa8a22ef39eb8136da4e025c47c6fd4c9eaa7094e8b9e4367d46d9dd7f6ce\"], [\"2016-09-30\", \"3bcb047ffb9ca67a3413f2c4a53457abf9a5a64f64c2f3b819297c39d471110f\"], [\"2016-10-31\", \"a4ce45032df2bd4bb85054f9eb26596a6dd146182fd7c871ffcfcc805fb43773\"], [\"2016-11-30\", \"1b8d860e98c0ff7274a83ccf94a60a3cc589dee97fa1f1b5028657a66bc1b733\"], [\"2016-12-30\", \"fdfb2448d391520c1e144d86a332c7acae436a3abb67276ffb176598d65ac5c5\"], [\"2017-01-31\", \"03d1fa00bca4d841b3bdd8a62cc640bcb91eedd5790fc24c0b1128c7746e8e7e\"], [\"2017-02-28\", \"d827808f41d7e6c078c742357cb278717a8fec74c738f093120d12445d801710\"], [\"2017-03-31\", \"3ec1a738528471a2be656b7454004cadee3f59c9fd87c7e68d1eaba329ce1b71\"], [\"2017-04-28\", \"2ce7b4343c8c93cdbe92a977687e789d173f47682bcccb6cae02e5f93d7040d5\"], [\"2017-05-31\", \"25f1b2c58da1540ed727110fe29fd8e744858937774ddf8574187871ebd828e8\"], [\"2017-06-30\", \"e1663b139650626d24d37f6507c7cc2baf0e140b538894d9ff570950a080b4b8\"], [\"2017-07-31\", \"8e1e74157a12dd51778a7d48ae86e0a8d092f956eb6d349bbde4c541e1d30118\"], [\"2017-08-31\", \"1f7dddca8f9977a3236a3405d3b2341729acc0cb4bc4e1597bbed2cdaf6135a4\"], [\"2017-09-29\", \"ac6a35aa3ebbc68fd131b8775c996e55997a74cafa8f089428511b99a7f94042\"], [\"2017-10-31\", \"6417fd7323b61c960d31cb3a588d8efa75d05c05aacf62da3a228fc7e5f4520c\"], [\"2017-11-30\", \"39dc89ea972b55500ef55a5d113b746452cc3fb25a880fae70caf18b27aa2dcd\"], [\"2017-12-29\", \"3b99399df591345edffc045e3ea0bc9cafae0e6da96f476ec857d83d0fe1b555\"]], \"runtime_modules\": {\"qr_fundamentals.py\": \"3db7f1b7b73fbda75fe1105561ab5ec785be902e2aad00514be969990c460852\", \"qr_h020_stats.py\": \"e360c4216e03ae0e67211c834b6770cefafa8b0c74e8f88cf6737a7b70110c78\", \"qr_p7.py\": \"b5d880ed9734a9eacff93ac4c25b73bb799be6368183650465cf8330782a8d6d\", \"qr_p7_export.py\": \"afa96b2735bc8dc0e55dabbc041087de75cfad6d1bacd4e6b92fabae74a7079a\", \"qr_p7_pred.py\": \"31419851fa744ba996d7bcf279a5aaaf524a11710edcf63140c37782f08e5471\", \"qr_p7_score.py\": \"430ce205c336a4ac120a606afb9ff7bdf2345752e7e3aeeadeff970dae4e6c9d\", \"qr_xs.py\": \"6adf07e43cadc14db930531be4298f91639681358ba4c6802b1f67d7c72c09bc\", \"qr_xs_panel.py\": \"20375c2776fe1de4e9730d201c98c0585d604424ecd21a9f3079eb3170da9f5b\"}, \"score_s\": 40.0, \"score_side_sha256\": \"470cd0f37d65dc9a307b13d7ec61b0d7628d36233458d6a684dbba221f134b09\", \"score_tables_sha256\": \"c12427aceaa84d88f61eb704d3cc25c6e8c2e978a9424b3c9a86e33e59b394c8\", \"sids_sha256\": \"c8ed01490f49bc8373ea8ba2363dfad1f4aa49ba5eed1257c7807ce1a981104f\", \"slice_spot_check\": {\"checked\": 336, \"examples\": [], \"full_fallbacks\": 2139, \"mismatch\": 0}, \"spec_sha256\": \"2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58\", \"states_s\": 8.7, \"store_stats\": {\"amendments\": 135, \"delayed_until_available\": 12254, \"estimated\": 12714, \"observed_new\": 153871, \"quarantine_field_released\": 134, \"quarantine_released\": 20, \"quarantined\": 637, \"restatement_blocked\": 306, \"sec_timing_hold\": 27, \"timing_unknown\": 608}, \"wall_s\": 684.1}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 1761, \"elig_days\": 1761, \"elig_max\": 1331, \"elig_mean\": 1111.6195343554798, \"elig_min\": 801, \"elig_sum\": 1957562, \"experiment_id\": \"E994-02\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 399998, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 340, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"warmup_days\": 632, \"warmup_select_days\": 633, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.13193579015860157
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

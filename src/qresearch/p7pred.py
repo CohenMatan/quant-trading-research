@@ -13,7 +13,8 @@ from . import config
 
 SPEC = "research/phase7/P7_predictive_spec.md"
 SPEC_VERSION = 1
-SPEC_SHA256 = "389f9364541588f78f504843bdce32067dc3004a26a64eab5c91331b5ffc2bd9"
+SPEC_SHA256 = "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58"
+SPEC_SHA256_V1_ORIGINAL = "389f9364541588f78f504843bdce32067dc3004a26a64eab5c91331b5ffc2bd9"   # before the D177 wording-only fix (C3)
 HYPOTHESIS = "H022"
 CODE_SHA256 = {
     "src/qresearch/lean/qr_p7_score.py": "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572",
@@ -45,11 +46,19 @@ NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))     # E02
 RUNS = ("X994 canary", "E023-01", "E023-02", "E023-03", "E023-04", "E023-05", "E023-06")
 POWER_SEED_BASE = 20261006
 
-# Future (after the owner's approval of the real evaluation): c_IC is pinned here with the hash of the committed null
-# result BEFORE the one real evaluation E023-06. None = not pinned (the real run must be refused).
-C_IC = None
-NULL_RESULT_SHA256 = None
-THRESHOLD_COMMIT = None
+# P7-CP5 (D179): c_IC pinned with the hash of the committed null result BEFORE the one real evaluation E023-06
+# (E023-01..05: 5,000 / 5,000 worlds, seeds 1..5,000, identical panel in every batch and in the canary E994-02).
+C_IC = 2.390976216956                          # max(50th largest of 5,000 null t_IC, 2.326); the floor does not bind
+NULL_RESULT = "research/phase7/P7_CP5_null.json"
+NULL_WORLDS = "research/phase7/P7_CP5_null_worlds.json.gz"
+NULL_RESULT_SHA256 = "c96733d88c9a9f71127cf8a337d45543374a89ea104fd5a62aa53c25d98629b6"
+THRESHOLD_COMMIT = "dbfdcc04913ddf084ed764b38bdf4dffe1024f4d"   # pinned the values above
+PANEL_SHA256 = "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a"   # prepared panel
+
+# P7-CP5 (D177 / D178): the execution host S023 v1.1 (X994 = byte copy), pinned before the canary; the null and the
+# real run use it (v1.0 failed E994-01 at initialisation: its in-host fingerprint guard, D178)
+HOST = "strategies/S023_h022_predictive/main.py"
+HOST_SHA256 = "8f4d6076caca6b56188a21be5c1bb065b535d97fbcbb9db69c45a034296e65fb"
 
 
 def sha256(rel: str) -> str:
