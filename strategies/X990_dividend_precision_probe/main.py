@@ -1,6 +1,6 @@
 # X990 — dividend-feed precision probe (H021-A canary follow-up, D162; infrastructure, NOT research). For the nine
 # Select Sector SPDRs + SPY, history 1998-12-01 .. 2017-12-31 only: at every distribution in QuantConnect's dividend
-# feed, the amount implied by QuantConnect's own ADJUSTED series, a_imp = ref x (1 - (A_b / A_prev) / (R_b / R_prev))
+# feed, the amount implied by QuantConnect's own ADJUSTED series, a_imp = ref x (1 - (R_b / R_prev) / (A_b / A_prev))
 # (A = ADJUSTED close, R = RAW close, b = ex-row, prev = previous bar), is compared with the feed's amount. Publishes
 # only aggregate statistics of these differences (no price, no amount, no return).
 from AlgorithmImports import *
@@ -54,7 +54,7 @@ class DividendPrecisionProbe(QRAlgorithm):
                     amt, ref = float(amt), float(ref)
                     cents += int(abs(round(amt * 100) - amt * 100) < 1e-6)
                     ref_prev += int(abs(ref / raw[b - 1] - 1) < 1e-6)
-                    a_imp = ref * (1.0 - (adj[b] / adj[b - 1]) / (raw[b] / raw[b - 1]))
+                    a_imp = ref * (1.0 - (raw[b] / raw[b - 1]) / (adj[b] / adj[b - 1]))     # d = raw step / adjusted step
                     diffs.append(a_imp - amt)
                     rel.append(abs(a_imp - amt) / ref)
                 d = np.abs(np.array(diffs))
