@@ -1,3 +1,7 @@
+# X991 v1.1 (after E991-01): the year-over-year ledger is keyed by the SELECTION month (one snapshot per calendar
+# month; E991-01 keyed it by the month of t, which shifts at weekend / holiday month boundaries and under-counted
+# year-over-year availability), and the snapshot publishes the average cross-sectional Spearman correlation matrix of
+# candidate fundamental inputs (feature-feature information overlap only; no return).
 # X991 — Phase 7 (P7-CP1, D165) FUNDAMENTAL / UNIVERSE / SECTOR / ALIGNMENT DATA AUDIT (infrastructure; NO orders,
 # NO returns, NO ranking, NO score). 2010-01-04 .. 2017-12-31 with the history-only warm-up from 2008-07-01; the frozen
 # data-v1 universe (>= $2B, >= $5, ADV20 >= $5M, NYSE/Nasdaq, SEC correction layer). Built on the frozen X976 v1.3
@@ -18,6 +22,7 @@ from qr_fundamentals import DEFAULT_MAX_AGE_DAYS, PITStore, TTM_BASES, financial
 from qr_industry import classify, excluded
 import qr_p7 as P
 import qr_xs_diag as XD
+import numpy as np
 
 COUNT_FROM = date(2010, 2, 1)       # first snapshot: data through the 2010-01-29 close
 APPROVED_TTM = ("revenue", "gross_profit", "net_income", "operating_cash_flow")
@@ -59,7 +64,8 @@ class P7FundamentalAudit(QRAlgorithm):
         self.msec = {}                   # sid -> set of Morningstar sector codes seen (current-status test)
         self.prev_sic = {}               # sid -> last FF12 / SIC seen at a snapshot
         self.prev_mc = {}                # sid -> (implied shares, market cap, price) at the previous snapshot
-        self.ttm_ledger = {}             # sid -> {ym: set of bases with True TTM at that snapshot}
+        self.ttm_ledger = {}             # sid -> {selection ym: {base: True TTM value at that snapshot}} (in-host only)
+        self.corr_sum, self.corr_n = None, 0
         self.miss = []                   # (y, ym, sid, missing core?, tercile, ff12, listing-age bucket, group)
         self.prev_session = None
         self.prev_elig = None            # previous snapshot's eligible set (universe dynamics)
@@ -111,8 +117,9 @@ class P7FundamentalAudit(QRAlgorithm):
     def _snapshot(self, fl, by, corr, today):
         t = self.prev_session or (today - timedelta(days=1))   # the month-end session whose close the data reflects
         y = str(t.year)
-        ym = t.year * 100 + t.month
+        ym = today.year * 100 + today.month        # v1.1: the selection month (exactly one snapshot per month)
         Y = self.y.setdefault(y, {})
+        rows_f = []                                 # candidate fundamental inputs for the overlap matrix
         caps = {str(s.id): v[0] for s, v in self.qr_eligible_info.items()}
         order = sorted(caps, key=lambda k: (caps[k], k))
         terc = {k: ("T1" if i < len(order) / 3 else "T2" if i < 2 * len(order) / 3 else "T3") for i, k in enumerate(order)}
@@ -166,11 +173,13 @@ class P7FundamentalAudit(QRAlgorithm):
                 ages.setdefault("record_age_since_available", []).append((t - r.available).days + 1)
             have = set()
             ttm_new = None
+            vals = {}
             for b in APPROVED_TTM:
                 v, det = self.store.ttm_detail(sid, b, today)
                 if v is None:
                     add(Y, f"ttm_missing|{b}|{det}")
                     continue
+                vals[b] = v
                 have.add(b + "_ttm4q")
                 if any(fd >= str(today) for fd in det["filed"]):
                     self.c["C10_ttm_before_component_available"] += 1
@@ -220,11 +229,17 @@ class P7FundamentalAudit(QRAlgorithm):
             # year-over-year availability (growth / deterioration): True TTM now AND at the snapshot 12 months earlier,
             # each as it was known at its own date (ledger of earlier snapshots; nothing recomputed backwards)
             led = self.ttm_ledger.setdefault(sid, {})
-            led[ym] = {b for b in APPROVED_TTM if b + "_ttm4q" in have}
-            prev = led.get(ym - 100)
+            led[ym] = dict(vals)
+            prev = led.get(ym - 100) or {}
             for b in APPROVED_TTM:
-                if b + "_ttm4q" in have and prev is not None and b in prev:
+                if b in vals and b in prev:
                     add(Y, f"{scope}_yoy|{b}")
+            if nonfin and ta is not None and ta > 0 and eq is not None and mc and all(b in vals for b in APPROVED_TTM) \
+                    and all(b in prev for b in ("revenue", "net_income")):
+                ni, oc, rv, gp = vals["net_income"], vals["operating_cash_flow"], vals["revenue"], vals["gross_profit"]
+                rows_f.append([gp / ta, ni / ta, oc / ta, (ni - oc) / ta, eq / ta, ni / mc, oc / mc, rv / mc, eq / mc,
+                               rv / prev["revenue"] - 1 if prev["revenue"] > 0 else np.nan,
+                               (ni - prev["net_income"]) / ta])
             # valuation inputs (point-in-time market cap with the approved fields)
             if mc:
                 for b in ("net_income", "operating_cash_flow", "revenue", "gross_profit"):
@@ -265,6 +280,16 @@ class P7FundamentalAudit(QRAlgorithm):
                 self._qr_log("A|" + json.dumps(dict(t=str(t), decision_morning=str(today), sid=sid,
                                                     ticker=f.symbol.value, group=grp, cat=cat, ff12=ff12, ok=ok,
                                                     late=late, **comps), sort_keys=True))
+        # ---- feature-feature overlap (average cross-sectional Spearman; no return involved)
+        if len(rows_f) >= 30:
+            X = np.array(rows_f, float)
+            X = X[np.isfinite(X).all(axis=1)]
+            if X.shape[0] >= 30:
+                R = np.argsort(np.argsort(X, axis=0), axis=0).astype(float)
+                cm = np.corrcoef(R, rowvar=False)
+                self.corr_sum = cm if self.corr_sum is None else self.corr_sum + cm
+                self.corr_n += 1
+                add(Y, "overlap_rows", X.shape[0])
         # ---- universe dynamics (entrants / exits between consecutive month-end snapshots)
         cur = set(by)
         feed_now = {str(f_.symbol.id) for f_ in fl}
@@ -321,6 +346,10 @@ class P7FundamentalAudit(QRAlgorithm):
             cell[0] += 1
             cell[1] += miss
         out["missingness"] = mc
+        out["overlap"] = dict(names=["GP/A", "NI/A", "OCF/A", "accruals (NI-OCF)/A", "E/A", "NI/mcap", "OCF/mcap",
+                                     "Rev/mcap", "E/mcap (B/M)", "revenue YoY growth", "change NI / A"],
+                              snapshots=self.corr_n,
+                              mean_spearman=(self.corr_sum / self.corr_n).round(3).tolist() if self.corr_n else None)
         text = json.dumps(out, sort_keys=True, default=str)
         for i in range(0, len(text), 9000):
             self._qr_log(f"QRP7F|{i // 9000}|{text[i:i + 9000]}")

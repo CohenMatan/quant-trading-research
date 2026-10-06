@@ -174,7 +174,8 @@ def test_x992_end_pipeline_on_synthetic_market(monkeypatch):
     assert st["breadth_dead_stock_days_in_denominator"] > 0           # the delisted security counted before it died
     assert "2012" in st["breadth"]["above200"] and st["breadth_survivor_bias"]["above200"]["days"] > 0
     assert st["young"]["2010"]["lt252_bars"] > 0                        # the 2010 IPO
-    assert "error" in st["regime_inputs"]["VIX_index"] and st["regime_inputs"]["SPY"]["bars"] > 0
+    assert st["regime_inputs"]["SPY"]["bars"] > 0 and st["overlap"]["dates"] == 0      # < 30 securities: no matrix
+    assert st["missing_sessions_detail"]["securities"] == 1 and st["jumps_on_eligible_days"]["n"] == 0
     assert any(m.startswith("AP|") for m in a.msgs)
 
 

@@ -1,3 +1,8 @@
+# X992 v1.1 (after E992-01): no VIX subscription (availability answered by E992-01; the custom-data subscription
+# changed QuantConnect's tradeable-date count and tripped the runner's equity-dates integrity check); itemised
+# lists of chart jumps > 50% and of missing sessions restricted to the days a security was ELIGIBLE (with spike-
+# reversal, split and large-distribution flags); the average cross-sectional Spearman matrix of the candidate
+# technical features (feature-feature overlap only; no return).
 # X992 — Phase 7 (P7-CP1, D165) PRICE / TECHNICAL / BREADTH / CORPORATE-ACTION DATA AUDIT (infrastructure; NO
 # orders, NO returns after any decision date, NO ranking, NO score). 2010-01-04 .. 2017-12-31 with the history-only
 # warm-up from 2008-07-01; the frozen data-v1 universe (>= $2B, >= $5, ADV20 >= $5M, NYSE/Nasdaq, SEC correction
@@ -84,13 +89,7 @@ class P7PriceAudit(QRAlgorithm):
         self.ff12_m = {}                 # month-end selection day -> {sid: FF12}
         self.month = None
         self.st = {}
-        self.vix = {}                    # market-regime candidates (availability only)
-        for name, fn in (("VIX_index", lambda: self.add_index("VIX", Resolution.DAILY).symbol),
-                         ("VIX_cboe", lambda: self.add_data(CBOE, "VIX", Resolution.DAILY).symbol)):
-            try:
-                self.vix[name] = fn()
-            except Exception as e:
-                self.vix[name] = f"{type(e).__name__}: {str(e)[:150]}"
+        self.vix = {}                    # v1.1: VIX availability was measured by E992-01 (index and CBOE from 2005)
 
     def _qr_select(self, fundamental):
         fl = list(fundamental)
@@ -387,6 +386,60 @@ class P7PriceAudit(QRAlgorithm):
             feat[y]["decisions"] = sum(1 for sd, k in self.mrows if _ds(self.cal[k])[:4] == y)
         self.st["features"] = feat
         self.st["young"] = young
+        # v1.1: feature-feature overlap at month-ends (average cross-sectional Spearman over complete rows)
+        names = [f for f in P.FEATURES if f != "last_bar_age"]
+        csum, cn = None, 0
+        for sd, k in self.mrows:
+            X = []
+            for s in self.sel[sd]:
+                fv = self.featv[(self.col[s], k)]
+                row = [fv[f] if f != "adv20_usd" else (np.log(fv[f]) if fv[f] > 0 else np.nan) for f in names]
+                if all(np.isfinite(row)):
+                    X.append(row)
+            if len(X) >= 30:
+                X = np.array(X)
+                R = np.argsort(np.argsort(X, axis=0), axis=0).astype(float)
+                cm = np.corrcoef(R, rowvar=False)
+                csum = cm if csum is None else csum + cm
+                cn += 1
+        self.st["overlap"] = dict(names=names[:-1] + ["log adv20_usd"], dates=cn,
+                                  mean_spearman=np.round(csum / cn, 3).tolist() if cn else None)
+        # v1.1: itemised data-error lists on ELIGIBLE days only
+        erow = {}
+        for sd, lst in self.sel.items():
+            k = self._t_of(sd)
+            for s_ in lst:
+                erow.setdefault(self.col[s_], set()).add(k)
+        jumps, gaps = [], []
+        for j, rws in erow.items():
+            c = self.C[:, j]
+            v = np.flatnonzero(np.isfinite(c) & (c > 0))
+            if v.size < 3:
+                continue
+            ratio = c[v][1:] / c[v][:-1]
+            evs, des = self.ev.get(j, ([], []))
+            for i in np.flatnonzero(np.abs(np.log(ratio)) > np.log(1.5)):
+                r_ = int(v[i + 1])
+                if r_ not in rws and int(v[i]) not in rws:
+                    continue
+                nxt = ratio[i + 1] if i + 1 < ratio.size else np.nan
+                rev = bool(np.isfinite(nxt) and abs(np.log(ratio[i]) + np.log(nxt)) < 0.2 * abs(np.log(ratio[i])))
+                jumps.append([self.sids[j], _ds(self.cal[r_]), round(float(ratio[i]), 4), rev,
+                              any(abs(r_ - e[0]) <= 2 for e in evs),
+                              any(abs(r_ - e[0]) <= 2 and e[2] > 0 and e[1] / e[2] > 0.10 for e in des)])
+            inside = np.arange(v[0], v[-1] + 1)
+            miss = inside[~(np.isfinite(c[inside]) & (c[inside] > 0))]
+            if miss.size:
+                me = int(sum(1 for r_ in miss if r_ in rws))
+                runs = np.split(miss, np.flatnonzero(np.diff(miss) > 1) + 1)
+                gaps.append([self.sids[j], int(miss.size), me, int(max(len(x) for x in runs)), _ds(self.cal[v[0]]),
+                             _ds(self.cal[v[-1]]), _ds(self.cal[miss[0]])])
+        self.st["jumps_on_eligible_days"] = dict(n=len(jumps), reversed_spikes=sum(1 for x in jumps if x[3]),
+                                                 near_split=sum(1 for x in jumps if x[4]),
+                                                 near_large_distribution=sum(1 for x in jumps if x[5]),
+                                                 items=jumps[:300])
+        self.st["missing_sessions_detail"] = dict(securities=len(gaps), on_eligible_days=sum(g[2] for g in gaps),
+                                                  items=sorted(gaps, key=lambda g: -g[1])[:120])
         self.st["sector_group_sizes"] = {y: {g: dict(min=min(v), median=float(np.median(v)), max=max(v))
                                              for g, v in sorted(d.items())} for y, d in sorted(sect.items())}
         self.st["features_s"] = round(time.perf_counter() - t1, 1)
