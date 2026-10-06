@@ -166,7 +166,8 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
     state["project_id"] = project
     client.sync_files(project, files)
-    verify_stored_modules(cfg, client.read_file_contents(project))
+    if cfg.get("params", {}).get("pred_code_sha256"):           # D178: pinned modules checked on the stored copy
+        verify_stored_modules(cfg, client.read_file_contents(project))
     client.pin_lean_version(project, cfg["lean_version_id"])
     state["stage"] = "compile"
     compile_id = client.compile(project)
