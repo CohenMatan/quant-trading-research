@@ -1,0 +1,101 @@
+{
+ "alpha": 0.01,
+ "batches": [
+  {
+   "original_status": "completed",
+   "qc_backtest_id": "8b84a61d48fc7755598fa225f3ca0eac",
+   "recovered": false,
+   "run": "E022-01",
+   "seeds": [
+    1,
+    1000
+   ],
+   "wall_s": 12.7,
+   "world_s": 7.12,
+   "worlds": 1000
+  },
+  {
+   "original_status": "completed",
+   "qc_backtest_id": "fd8da4288ecc8dc480597cfc690e28ee",
+   "recovered": false,
+   "run": "E022-02",
+   "seeds": [
+    1001,
+    2000
+   ],
+   "wall_s": 9.9,
+   "world_s": 5.09,
+   "worlds": 1000
+  },
+  {
+   "original_status": "completed",
+   "qc_backtest_id": "5f05cc1723cf6221e98474c896ad73e8",
+   "recovered": false,
+   "run": "E022-03",
+   "seeds": [
+    2001,
+    3000
+   ],
+   "wall_s": 10.0,
+   "world_s": 5.04,
+   "worlds": 1000
+  },
+  {
+   "original_status": "completed",
+   "qc_backtest_id": "bde836b99f210da14633573dd08357ac",
+   "recovered": false,
+   "run": "E022-04",
+   "seeds": [
+    3001,
+    4000
+   ],
+   "wall_s": 9.3,
+   "world_s": 4.45,
+   "worlds": 1000
+  },
+  {
+   "original_status": "completed",
+   "qc_backtest_id": "cf621ca2b66b952dcc27313ab3f4ea1e",
+   "recovered": false,
+   "run": "E022-05",
+   "seeds": [
+    4001,
+    5000
+   ],
+   "wall_s": 8.8,
+   "world_s": 4.39,
+   "worlds": 1000
+  }
+ ],
+ "c": 2.658089662,
+ "code_sha256": {
+  "src/qresearch/lean/qr_h021.py": "67820d91e783c24da1850ec03fa72f82d190becca30cba1bd4aa6df2136fc6cf"
+ },
+ "diag_sha256": "b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b",
+ "host_sha256": {
+  "strategies/X989_h021_sector/main.py": "7c3d19f000e4aec93c55f31a1b533ec09045323623c8e749180c03ac436bdcee"
+ },
+ "null_full_procedure_qualified": 10,
+ "null_full_procedure_rate": 0.002,
+ "null_share_p2": 0.0256,
+ "null_share_t_gt_c": 0.0098,
+ "null_t": {
+  "max": 3.576038243,
+  "mean": 0.059048322617914595,
+  "min": -3.744248606,
+  "q": {
+   "p01": -2.45744955702,
+   "p05": -1.72330261525,
+   "p50": 0.04725344196,
+   "p95": 1.91587956265,
+   "p99": 2.6425480103800036
+  },
+  "sd": 1.1072863092094092
+ },
+ "null_worlds_csv_sha256": "c9ec9367da001360ff6f413d43d2e4c2130cd307bca1b30349ec16f8ee656ec9",
+ "panel_sha256": "50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251",
+ "rank_of_c": 50,
+ "spec_sha256": "d4a2b8864603965d52e09206d32246d368639eb52b277ee16e57d116fc960141",
+ "worlds_completed": 5000,
+ "worlds_failed": 0
+}

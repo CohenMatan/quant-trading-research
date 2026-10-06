@@ -44,3 +44,18 @@ def test_real_run_never_precedes_the_pinned_threshold():
         assert p["threshold_c"] == p6h021.C and p["null_result_sha256"] == p6h021.NULL_RESULT_SHA256
         assert p["spec_sha256"] == p6h021.SPEC_SHA256 and p["panel_sha256"] == p6h021.PANEL_SHA256
         assert p["diag_sha256"] == p6h021.DIAG_SHA256 and p["threshold_commit"] == p6h021.THRESHOLD_COMMIT
+
+
+def test_null_pins_match_the_committed_null():
+    if p6h021.C is None:
+        return
+    d = json.loads((ROOT / p6h021.NULL_RESULT).read_text())
+    assert d["worlds_completed"] == 5000 and d["c"] == p6h021.C
+    assert d["panel_sha256"] == p6h021.PANEL_SHA256 and d["diag_sha256"] == p6h021.DIAG_SHA256
+    assert p6h021.sha256("research/phase6/H021A_null_worlds.csv") == p6h021.NULL_WORLDS_CSV_SHA256
+    assert d["host_sha256"]["strategies/X989_h021_sector/main.py"] == p6h021.HOST_SHA256
+    assert p6h021.sha256("strategies/X989_h021_sector/main.py") == p6h021.HOST_SHA256
+    assert p6h021.sha256("strategies/S022_h021_sector/main.py") == p6h021.HOST_SHA256
+    import numpy as np
+    t = np.loadtxt(ROOT / "research/phase6/H021A_null_worlds.csv", delimiter=",", skiprows=1, usecols=1)
+    assert H.critical_value(t) == p6h021.C

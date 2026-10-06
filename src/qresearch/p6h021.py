@@ -33,13 +33,13 @@ CONSTANTS = dict(
 )
 
 # Pinned after the null (E022-01..05) and BEFORE E022-06. None = not pinned (the real run is refused).
-C = None                      # 50th largest of 5,000 null t_IC
+C = 2.658089662                  # 50th largest of 5,000 null t_IC (E022-01..05)
 NULL_RESULT = "research/phase6/H021A_null_result.json"
-NULL_RESULT_SHA256 = None
-NULL_WORLDS_CSV_SHA256 = None
-PANEL_SHA256 = None           # digest(S, Y1) the null was calibrated on (canary and every batch identical)
-DIAG_SHA256 = None            # digest of the diagnostic panels
-HOST_SHA256 = None
+NULL_RESULT_SHA256 = "6db1ed17d4832292bc35ff3046036b773ec702c60d95b12db742b85f1bc7367d"
+NULL_WORLDS_CSV_SHA256 = "c9ec9367da001360ff6f413d43d2e4c2130cd307bca1b30349ec16f8ee656ec9"
+PANEL_SHA256 = "50338b14768ce6cf0c3f2deb5ebac9dc5e409633b25c67fde9500fee0896d251"   # digest(S, Y1) the null was calibrated on (canary and every batch identical)
+DIAG_SHA256 = "b5465aac8c5f87ac910d57079b02bec23587844ca428c62216969440dea8dc0b"   # digest of the diagnostic panels
+HOST_SHA256 = "7c3d19f000e4aec93c55f31a1b533ec09045323623c8e749180c03ac436bdcee"
 THRESHOLD_COMMIT = None       # the commit that pinned the values above (recorded in the next commit)
 
 
