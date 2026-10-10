@@ -1,0 +1,1529 @@
+{
+ "E998-01": {
+  "baseline": {
+   "cik_reject": 12,
+   "life_reject": 7,
+   "store_baseline": 68769
+  },
+  "checks": {
+   "cand_no_cik": 4519,
+   "cand_no_shares_table": 1513,
+   "fed": 69087,
+   "guard_blocked": 114,
+   "m2_delayed": 154,
+   "m2_not_fed": 62358,
+   "m2_revision_unfed": 4,
+   "month_ends": 96,
+   "no_period_end": 459115,
+   "pe_after_seen": 0,
+   "presence_break": 136,
+   "reports_new": 131113,
+   "revisions": 450,
+   "sec_fed": 8127,
+   "selections": 2394,
+   "weekly": 325
+  },
+  "criteria": {
+   "MC2_fresh_sec_mcap_pct": 85.95,
+   "MC3_evaluable": 224,
+   "MC3_split_continuous_pct": 99.55,
+   "MC4_agreement_away_pct": 98.42,
+   "MC5_abs_rel_median": 0.00032,
+   "MC5_disagreement_near_pct": 4.35,
+   "MC6_recovered_later_disappearing_pct": 66.75,
+   "MC6_recovered_pct": 68.93,
+   "MC7_gap_points": {
+    "2011": 2.7,
+    "2012": 1.76,
+    "2013": 1.64,
+    "2014": 1.32,
+    "2015": 0.8,
+    "2016": -0.27,
+    "2017": -2.02,
+    "all": 0.79
+   }
+  },
+  "digests": {
+   "h_counts": "0bc7ead1d52e8fab7738ebec2ac47c3c0d597338f899c83b8cd376b6c304de4e",
+   "ledger_by_year": {
+    "2008": "c8634ced370644bec48c2a4b056f3c45a3d2395043ee7cdfe21496b625f56cae",
+    "2009": "468ada85e4a934cadc1ef9da7cd557c6c07b5a0de642e166d504ab8ed0c80b3d",
+    "2010": "e41d5d5612a50eb1b55e6f138f5e6cb9de925e1e3a030707ccc51a43a77ba06d",
+    "2011": "8e49723442fc8463df9e23ecfe098025841d6609a04cc7eb8d5cc2049192d9f2",
+    "2012": "4ab7879a024011419e51df4c1d25063c186d249882bd7909226b05f05993a9d4",
+    "2013": "efba905ec6002e7d50429c641d5d2342c8501c54bbfa4c218e678eeeeb004fc6",
+    "2014": "b53030dee4925f947dad34966b39c9e8956a3aa8c65db56169a202593e9620cc",
+    "2015": "3527e55a27a21085b6b358b9fb53533ddf1356680e91b5f537370c82a562904b",
+    "2016": "3fbb4aab7fb965b0d92aa46cb4a64b632503c689657f661f7cfe5533e674bacb",
+    "2017": "1f0c6026b633c2e4de886427aca0d42340f028699582ff660ffbd13828e12fb4"
+   },
+   "ledger_to_2013": "ce5d95f3c8cd354c3038b1cb4788627b277e5047f1fc45c4c699a35437c64745",
+   "mechanics": "3ab9aa2bbb3c99d88e3d4987a37d6803874c20458fbd8b1a2f5406c4e91ed52c",
+   "review_eligibility": {
+    "2011-01-31": "006cc962739bcc256940ea878b30da229b9b0a0b94545e0190fbee797518e06e",
+    "2011-02-28": "a2322f1518048a6a4e5717b3538bfa352f0f62a89a4185d2e40385af6f20f92f",
+    "2011-03-31": "a25260fc17dd2f7deab27323ea78ba3e3c0feb29d86fffedab3c62ff5facdee6",
+    "2011-04-29": "6e01d5a0cd245692a8c74906de4a3d0d482d583cafcb0c20c1d49bf470bd11c2",
+    "2011-05-31": "222d16c9033514b5842b664a6f956b65dddfe125a46faa68d4d4d84424342aa7",
+    "2011-06-30": "eabddfa43f30fd933780521e3b0495b3644ac05aeddec40c616bfbcf159cea32",
+    "2011-07-29": "8958ddff1766a2dbac965780d867fa632653ace8d3783626cf03415a4b479cb5",
+    "2011-08-31": "bbecbf799f18e66f11a2458d3e164af71ab25a506633390a17e5a3d626e13002",
+    "2011-09-30": "359908ec31a576590d0fd24fc540352c2dba23679c68fd51a1e00c9d194f75f5",
+    "2011-10-31": "ee1a2a457d3fd34b3334ed7035a6625d7e54c5080d705167d507e2fcb5f57287",
+    "2011-11-30": "22764b89e3c587d6f8d8e6cacd8a1e9f80bd1222a15ef88d7cb0df966f5fc5fe",
+    "2011-12-30": "60485232496da127c40d86c174885031b053267d4c7da71ea71d3ca529fa7997",
+    "2012-01-31": "68cf29cabbd9c29d2b3b78aa8870a8f06d81524043710083a15218285fb460ba",
+    "2012-02-29": "7921a5200b4e11f97d4925f89f399abebf404cabaf2876a273f82865f4b7e4b0",
+    "2012-03-30": "ef4a6f35a8416ab9a53710eb64f4a53eb10303430e06ea8478027195367266d9",
+    "2012-04-30": "979bf1c12592af5b5bcb21ea1a05dd9337112a6aface0460d725ba871eba817e",
+    "2012-05-31": "8bc9c2f132426daa8916b40a1c6f56aed1ac1fd51e5dae85faee335ea6d0bae2",
+    "2012-06-29": "cb834a16c28f12d400f2aa4257ca1c969f7817e2f36505b214e01abdf03267b3",
+    "2012-07-31": "7ff57f666a395d90ecf9aec15578b748ad3df6cab41e23a9c79e49182d83d5be",
+    "2012-08-31": "6fcafd8a123ea2001b73a13df5c88aa67884330e90e959a297c01132e68c02dd",
+    "2012-09-28": "5c025be1a4e7c68e3f8def55c61539a37cc06a8d50fc0632329879610bf4f639",
+    "2012-10-31": "379bd21ffda8add441875fc4193598f6a8ef80fb12f47d2dace959e75c89e68d",
+    "2012-11-30": "4fb341d03aa914734417edd0376287443407c850daf0dc067df887174b5fc8f2",
+    "2012-12-31": "ff36cad90c9b3411782f00f70b7a44142887809539ec394e1fd4fc881e42c271",
+    "2013-01-31": "4dd55c1914c3ee06b1eacb980aa868e1db41a7ecc096c52701fed0a2eb1d141e",
+    "2013-02-28": "b81cae89c2f033f79e899674a0cd1e1ec84773f987862a8a5bc2cd2729cb627f",
+    "2013-03-28": "e72ccb55a50b94d371e0c3da9e58ed32172c1f2970848db09837c4bdfd8d8e6a",
+    "2013-04-30": "68c080aef831cbb8df4fda4d2cac5ca8f45f224451ab40262689fc5a8eac1397",
+    "2013-05-31": "ac06436bd17b716f37901e35a6d7465aeeb3cbfe7f55be53714f8f453e3b821a",
+    "2013-06-28": "90a1a40b51eb7d2a2909c2d97ccded0b2ca3a6d0df933eb9feb33866841cf2b0",
+    "2013-07-31": "74f16f31f018dd1eaf838ed4b4118e10b241bf6d7e6e803cf49c18c0bc32bd63",
+    "2013-08-30": "dc7fd93b3b2e9da290bce499114730286505920fe7696e4edd268868eb2a29b2",
+    "2013-09-30": "bd6fe686a520829f92b4a37b7ab7e9ff3ff5505f56533e03ba23c70d8da23079",
+    "2013-10-31": "3ef9dcce877b000e1faff1b748b3568758401a8c5119eecbc2f4d8f74f3990c2",
+    "2013-11-29": "f1d73e716bc275f3ee366fadff0e126ac00eec574b21f69ca1fbec996c57d4d8",
+    "2013-12-31": "13dd33c73880aa589234bd330ca1c08b48e668f0374751de1f68d0a31cb55548",
+    "2014-01-31": "34bdbf629864259786c140ea36482617c00ba78289f1b689f7dc173dcac5d782",
+    "2014-02-28": "fb77b309ffc2e709f5b0de7b4efb28babcd9d218dfa75d3c54ab8f751f9232d3",
+    "2014-03-31": "89babf7fcd098d24727d589e14d2288342efddce6e8b4ca926aeb0879b938184",
+    "2014-04-30": "e782a2a2d3d2045444825dbf434f839481b8055bb27ad17b50a5286e43418ed3",
+    "2014-05-30": "bb3995faf99b21ec2e6703251a440feec757be1064ea95f47f02581f91b4ae1e",
+    "2014-06-30": "29baea5df82572e16c26b650396d9efda5d7a1915a2c9f0bc692f4e0751fe349",
+    "2014-07-31": "012edb645f8236685dbe177252419742629703701667bd0035ab9d4e434872a1",
+    "2014-08-29": "373297d9d5212522df8625cdf66cf05e320288e74997bd9d4e37a32e049d649d",
+    "2014-09-30": "d10235dbe764377fdf68dce774cc3c6e530a8d95c2a407fa056626d57c47048f",
+    "2014-10-31": "3a62642d0b68cba3db5ca40983c5b1cce4e7752dd1d061bcd339585a3e1cb207",
+    "2014-11-28": "d2ca79387cae7318c89df6e3bf7d021d572ed17ccaf59567d7009d404039c8b1",
+    "2014-12-31": "9e417e139348db6b8a06e50819cce49538e7711c107705a91476b72f85cc9324",
+    "2015-01-30": "e4114e2d5caf7ee4615240cdcaa679b0a9b99c7848da6e46b3da56c912847d17",
+    "2015-02-27": "b26e5215cd672168b933594e90d699bb06c8ec4e9447fe82720a90182ee3a6cd",
+    "2015-03-31": "e6215aeb4fc6df20a329095bd3c47d83ee4c49afd34f658673ed0038090c2eef",
+    "2015-04-30": "5d7b2ef61460a933bcd464397237936193288556d9d82b808788d081ea2d6eda",
+    "2015-05-29": "49e86fb62b8be8992d899cfed3eeac79b662b1a7e5edf4d4e28439702ec55bd3",
+    "2015-06-30": "2a8acbb0ca22dc0d8bbe8af69ada8599cf325df2200e60def99af635515fd4db",
+    "2015-07-31": "219a56865a0fc93d5a5240898151a3400450c6eb26cf55b636a02ea47203650d",
+    "2015-08-31": "70677f46cf58011a3f6c59221eeb030f4477025dad3bc169ea1230adfc65214d",
+    "2015-09-30": "e3f3d63fb0ef4075a3db55135d0b0f869ad4a60f6576569055cd24a9afd9b6cc",
+    "2015-10-30": "082760aa6789f86b1f8ee48f896a78e3bbb852f0bfd351519b53f1cb4cf88e67",
+    "2015-11-30": "f895ca9bbbd645c61fbf1d9d18a805118864e9f2aba057155d727834067aa2b9",
+    "2015-12-31": "c77d99d2140540118e688493cc083d639d176f2c3d5e3d9cf99304f37d6c49e5",
+    "2016-01-29": "7e5efc27b980c3e25833195ff515c3d6b9a4d09477562ff082a3fd331b3597a7",
+    "2016-02-29": "3fd6b0734c638b48a36e7b376fb4789a5a60e68a9272686f1798383c96289298",
+    "2016-03-31": "35b8a1798892001d1ea03c57366a540d0403effa0f22c97f243d8f3e6a640d57",
+    "2016-04-29": "dfd477d0c558e18fbffb9d25471aabb8cbfd2196a86115dac9b5d6f13045b753",
+    "2016-05-31": "74b72f85e070276b79d1604d556ec860f956a60b77a52203967be0d5a8983202",
+    "2016-06-30": "7748405cb8f5af7f91fe55b56e891888740dcab77ce6d7ecdf12affa097998af",
+    "2016-07-29": "10d64a57626b7bb8f34a71ab95ad8b8ab677ced7249e218a1d04bbf4e658ffad",
+    "2016-08-31": "7a80e941e21ba1c59ba4193b225a09e78adeb78be9ad1b65a401d4c895040b4a",
+    "2016-09-30": "b43411b28b57cef9425ec3ae97264af3fbe061f3d1afa5597a14e65ab7c45c3d",
+    "2016-10-31": "90a92203bc4c90bbada133ed539be1bce3de4ce285d3d90bb19bf15353f58f44",
+    "2016-11-30": "a46c6fd083bedc39da33fab427c1fb23b149d4d0f2f68f3ed62f0e6148a0872c",
+    "2016-12-30": "e2ddbf026dd7d4c46f6acec6f0349674a8568067f1ea44912d18b4c032a614af",
+    "2017-01-31": "03f8b2e980e163099b0884234e85b4ed27e8eb3634e103b20a095a8a5e6b9c56",
+    "2017-02-28": "999be85ddae35dd11de0c0155a6ecea441e95d142076e24f86277de6f42bc824",
+    "2017-03-31": "a68b08f6bf37506aee6cd185fd84e6a96addf0b568b43d5426af2254d1b626f5",
+    "2017-04-28": "fad0440b2d59b10f8bcc1ecfad10ec57acd40bcb50d19409ccbdec2f2c77a3c5",
+    "2017-05-31": "0e43d2695763ede8e31ac9c4843e36a8c3a38a56e9cade617bcc670f8c382eb2",
+    "2017-06-30": "caeae860efb604c688ebcbbab06148b448b7606bd64061ab69e7e4b2299d36fe",
+    "2017-07-31": "81e421fc15adf22f60dc1d6f30bb09ad01dde0079ba4c89170fce4a995cc46f0",
+    "2017-08-31": "ec85e919a7a8650c985b41b5d9c98cb6264af12f92ff9a8facbaf0313be1dec5",
+    "2017-09-29": "1a5edefbd13ac4bdd0d55979c3d0500ccec3b936d69d90ddffbb22c90a0cbbde",
+    "2017-10-31": "5ff6e3c3f7e9e095a045158928c60ee7eb8038b033aaf11512f6d896bbe672fb",
+    "2017-11-30": "dfb267272a350847c71a10742d072370c62667b34907ce4865f653fe13ac91f2",
+    "2017-12-29": "b960e476418f602d450634049a8d2befbc7766f461bd8f25ceaaf5903597cc06"
+   },
+   "review_scores": {
+    "2011-01-31": "6a23e3168ec7cc033ecca8b6270b7f9810e64fa083d161e12514512d40a7079b",
+    "2011-02-28": "977670a834d4214f62a3a32ac654f1fa82d52bf016019c5e92253ebdb006de94",
+    "2011-03-31": "ac6ac9daa7f1385cbe556e20b7517554e1d315c89ce1d7626197aab0977c0318",
+    "2011-04-29": "a61abe09903b4920a1df94f875e256a1a2fa55f265ccb0bd14b30bc4f3cb0fe0",
+    "2011-05-31": "4003606ec2dc6cd167b29cf73364a004e38ff18019e17aa45ab627b5d4f269cb",
+    "2011-06-30": "8a07cd053a744f2547cd2ad74bce4f63b23524ea959b47a9ddf43ac180d2c10c",
+    "2011-07-29": "c853d3d408ba70d231c557b0763645628181a61ccec83a7fff544c6c0ff532b6",
+    "2011-08-31": "c5b430f77aecf1695c6ee01dbc9a5f8a2139f75eec3c3493cb75481cd1aad575",
+    "2011-09-30": "1fe5fabaadc6bf80355c402f9ba7010c499ddfaa2c64420181375878ec1bf17c",
+    "2011-10-31": "3798c66730009ab020e71a6b41417c4a74911bdbb814301426b3aec562fd9cb5",
+    "2011-11-30": "e45a6e534018a1d8ed3fdb8e8c16f4791682401ae428ac1e23cac2da6b0628a6",
+    "2011-12-30": "85a18f3fe842510d96fcb0133b687982effd26fd088d80b0f6c5e0db88cfc8f2",
+    "2012-01-31": "013bb31f132623fe8ba482b9bbde0473d14838dedcc36800886cd569c1af1061",
+    "2012-02-29": "d17fa3e23acaf9598c2eb8a075e2a16011f7b422894cb83a4e3d09d34c224b2c",
+    "2012-03-30": "e14b5ad45f347c08252cc082cdbab365acdfa840ef71be2aaa46dc0031567952",
+    "2012-04-30": "edf25c7e1b44abbccd3f2d464bb2252cbc0944b84ab5f8311aea3f84c6d58d50",
+    "2012-05-31": "1434539c6eadb93d504eb061d0005d801ebe6657475d95738e19df2a0450da8f",
+    "2012-06-29": "4c56ef0b60bbc9a49a156760b1f5557572bd9483022eca61fa63250b23d5a1f5",
+    "2012-07-31": "a407c27dfd5941c9a1636aaac4991475a1c5d415d82c03d2295dfe33ddee07ba",
+    "2012-08-31": "44563c60871aec6d677fb100a9652f84d0d1b79aaae42f623a3579e523023127",
+    "2012-09-28": "cb208de8c7a4c2751cbb31b19b633c0003a06d5e643f7fd4e98cf9248651ddc4",
+    "2012-10-31": "1c6ac183a1484603185d0a5de8857ef2a43c8f9d0be6c3b494d8524ecb0b95e1",
+    "2012-11-30": "25cec30ee27b85c45d0be5d1d4cf39c8332da35cba27e43c95ad33784fd0179f",
+    "2012-12-31": "dd9789001573489dd4a6e8ce9faeab93dd049c04a031c916a1e5fa1bd3b106e5",
+    "2013-01-31": "5fa327694cc15369539a16424408f8096e341b903e487ed0aebc731703592d16",
+    "2013-02-28": "d64c87bfc1f21e9e9f57d6baf469a08b159ceb9dbc44b6ec958a58dfd8065b27",
+    "2013-03-28": "0abec705bae427fe54721d839f192259af34a7eea22854854d6d20b04f9288c7",
+    "2013-04-30": "d4b28f2d76401f89e75bfe67ea6877f1c64f015b8598985a850832f6b9203de2",
+    "2013-05-31": "93465c65a7395228c1109b53a2a1e7409434a2bdd178943a590b765879a6f653",
+    "2013-06-28": "f042e017ac51e8cd5432b54fe6b8942bfa26ca2dfc8ef0ef2349b51fb8687d58",
+    "2013-07-31": "0a926c492f79c6e1621a6239f8bea6fc2de3440bf8e6dae72dcf6257e3ac93f5",
+    "2013-08-30": "90972551f09ad7498e3b6ce02cf5a3f14b800c7dccd2c1f91a65145567f362ee",
+    "2013-09-30": "44451ea78f9d5a5f4a4846b436b115a3919206dd4602957bcbab2b29cb3e0dea",
+    "2013-10-31": "28d85ef91a1156273efe835a2b6b21a23ed710fc195fb274e9ebe1611557b588",
+    "2013-11-29": "52a31a7c8e760f5cb2c6bdeaac974f0af9b880040713e7b06194da53c5cf64e1",
+    "2013-12-31": "b0055e04a0b802b7bac6b3afcccb6433e9c25fe94b1faa51e5f30afa0867b1ef",
+    "2014-01-31": "5fd63cd075b9903e2cce64f34e88dffea715d4c5f41f348e2ee6084bf6fc418f",
+    "2014-02-28": "66b332d6734792e08e1b4cdff2e5906c91e6360da2c2d3a5d37247e124c2fd83",
+    "2014-03-31": "29c8c04709929f6710f5a656d50313273e0524532398be65db09d85a58206dc8",
+    "2014-04-30": "81e618615980d473017221c97061c4b5a04daa791f3bd7e82fff4f943ce1dac3",
+    "2014-05-30": "5b0f177120bed63e22ac838ebbb785c31079fbb7433699e57562fe20bad288f0",
+    "2014-06-30": "a95b48c2c79de6e960e0a0c031dacc38fb433fdee729034f12d2c93a0318f8c6",
+    "2014-07-31": "0935ac43b08fb8abcf60b3329690df5fbafa1ca0e7f7d4f5e578dc4b6a46d907",
+    "2014-08-29": "a63963094e9db93189aefae1812b20e648a4dab08a2135f97a47480fcb4f9123",
+    "2014-09-30": "6f4b403d4e079e08d8e959bde99e8858b1ed68335baa86fa3c2e87c63811da18",
+    "2014-10-31": "1a2d55fa7a0dfc93de0e722729f6fd9d73a3385956348c9ee132d0879537e5f7",
+    "2014-11-28": "1c0919b94d763842f1dc46c190adeb231fbf945bb19e6c0a51f2491e8a8fc0d5",
+    "2014-12-31": "0101b910d5f22b0675ab9d3065ee54a52855479fe3dd1adb6db94abc77d11509",
+    "2015-01-30": "500aa6e6026f10195ac28ecd73a7406b56807d33f82af5c0acb3c2e90cc1f807",
+    "2015-02-27": "4852c2692638e54b5977ad01e80840e6be2717d26c37b04eb41d4c7edd38cfa7",
+    "2015-03-31": "8ebb22b9f6f96f96831830952a76905bf2590383fd1f9f6d750ed78fab6d5b36",
+    "2015-04-30": "17b625e0f9825882fa05d2d009d6bbf6268945625a0c368474174580b9e9ee03",
+    "2015-05-29": "ffc2a4ca4ebcf9b8aef286b1dcafdc63ea36b64f02514f09ebf862a6b9e0dbd3",
+    "2015-06-30": "639248a152a6148aa8290797f8f5c64df45de0650e5e398c86408b85befc3513",
+    "2015-07-31": "9b914b6d62a6a3214ddec2da02782e0943dfb3e6d185100db0f735b3549cdc78",
+    "2015-08-31": "6cc8558f8e8ef33dcabd95004b23ce24ba6146403dd29fdca558874aecb1aff2",
+    "2015-09-30": "5c99e90672e8bad0753ed9ac6592c5dce20dc28e69af4a4007cdbb74cb0155f3",
+    "2015-10-30": "814114fff69af225aa50fdda04f7cd9793e5af3cfc389cb5adfc68a0c88e5099",
+    "2015-11-30": "b0396f63d57c14bece56c2d386decd41a47b16d65b0b0458cba75ab8e6ec6a88",
+    "2015-12-31": "961fa9477de9ea1de965095b568dcf3b5c0a8db7df420db3def9bcd0ef4971be",
+    "2016-01-29": "ecf0dbef9ab58ebce2dcb910af394d574f1326979d2816182b755f85cc18a658",
+    "2016-02-29": "9c60a574d5b63ac21859fb44df1e106b41ff65d0825d69e15c7a1bb0329c54d4",
+    "2016-03-31": "8a35ec267bb86303372cc4cb8125325046428eec2e957c202a52bb7299cc3c7d",
+    "2016-04-29": "68e26fe5a43af4647f443998fb0c0b2735c29ff80feb46525bee51ff2b01f441",
+    "2016-05-31": "c14e5a31ae16cc20834ee0cbd5a021841e1ba66b2fb856dd25fc71c9cb45cfb1",
+    "2016-06-30": "c98eac90743370b91105fdea0c700780482a0ec0228af1e88e62948afee8fb06",
+    "2016-07-29": "914ab9b8ffb69b0c48ca08e6b3831537ffbd7e037ba7b438746d232ad8cdae1a",
+    "2016-08-31": "052f5ad7b97fc06e72b7c1418d360748e65126112c7e634470b99f55f939cb88",
+    "2016-09-30": "807f046d1f2d1af0498c92730d4ef990dcd4bbcbae6dfa78aad050933078802e",
+    "2016-10-31": "1dd3137965fb1bbb18953ce49a78136eae5084d456e0fcc4b0d230759d8c9a2f",
+    "2016-11-30": "30735608f99df17c3e74b4977ffb0597d1eca9ef34155bfc86678566f0fea359",
+    "2016-12-30": "79fc12a9afb492f089568054d84155d416062059f340d0f90f84273db84f7d8e",
+    "2017-01-31": "1a1d5279009fe7bf6b6a8353b29c62911700247bd3b08f3e458c8ad4dffe2571",
+    "2017-02-28": "de0f946068f474bc68f6c72172193f6eeecdda547f2e978d012200f86ba2769d",
+    "2017-03-31": "6847a5f9a596dfe75d8483e8cb81eebed201ce8fbc518a5ed8edcf11f8c3c625",
+    "2017-04-28": "50e0f1742278e51ea8f5bcf181856851ab49e2155e41116ae7887e328eda24cf",
+    "2017-05-31": "b823ac1af65c9699e46756040874f44272c2eaf04bc471521c03f545475ed987",
+    "2017-06-30": "154bda03b3871742476061ab6c2492519e00a235587eec8c41cda1990957f73c",
+    "2017-07-31": "db5be7798a5e3b2355bb6a0fd0e70ac00ba6f0e9f1179dead0f7cc0c5a85098c",
+    "2017-08-31": "bcd12ef0998e0d7cada6c003080416abdc9eb03defd9a27b4d419f14ff825ab2",
+    "2017-09-29": "5a452becb6b232430bb18831fdcde031d076dd568348664510ecb71becfc7b18",
+    "2017-10-31": "7d1e801277c4f368655d2413f931641bd32ff0537efa71c0d62e279ef8db5d85",
+    "2017-11-30": "78283e99ce43297c4c1c478b02b941e3dcf8b79aa130be1c34769e209f6df2a1",
+    "2017-12-29": "d05cb4f7cdcd7b61350322105f7af77c7a83e328f53464060fac5912df8caea2"
+   },
+   "score_distribution": "7872921b97cc01790d375f4ed26991d5b265ee5c0b4c8f2b2c24e9cede705dfd",
+   "universe_by_year": {
+    "2011": "962221f0b4474c2945b53501fb913c4e675cf34ca31a4df86a07c31b98fcf12f",
+    "2012": "a81d21cf36ee15840fa39a190cf22f11002d7f820750db41d773325e5d34a72e",
+    "2013": "75a03adad0549ccf388b52efeb0618855fa4fe476435f76dca0def78f981eef9",
+    "2014": "22066006fbc4790f7db34c7d56f3a28440391a4a7810ab2ba920112eb1b24ed8",
+    "2015": "81a96d89c4671737780ee5a4627644c2778e7ae85f5d241103573b4a98d2678f",
+    "2016": "64c076a411abc567e13bec6b207c2e75d5fd11f3d774f624e1078bc1853c28e0",
+    "2017": "95032e2e11b74a214690a6e868c171e9a82ccee6af14f5019e8c71b8b1558ec0"
+   }
+  },
+  "digests_sha256": "a6e82854ae03aece3747aad95b82867ec084c49ea69c91be3543e453fc200d8b",
+  "ge80_per_review": 7.07,
+  "identity_mapping": {
+   "mapped|ext|2008": 3187,
+   "mapped|ext|2009": 4064,
+   "mapped|ext|2010": 2364,
+   "mapped|ext|2011": 644,
+   "mapped|ext|2012": 87,
+   "mapped|ext|2013": 47,
+   "mapped|ext|2014": 17,
+   "mapped|ext|2015": 8,
+   "mapped|ext|2016": 5,
+   "mapped|ext|2017": 6,
+   "mapped|v2|2009": 640,
+   "mapped|v2|2010": 2647,
+   "mapped|v2|2011": 5767,
+   "mapped|v2|2012": 7474,
+   "mapped|v2|2013": 7727,
+   "mapped|v2|2014": 8175,
+   "mapped|v2|2015": 8597,
+   "mapped|v2|2016": 8816,
+   "mapped|v2|2017": 8897,
+   "unmapped|no_cik|2008": 5865,
+   "unmapped|no_cik|2009": 7466,
+   "unmapped|no_cik|2010": 7065,
+   "unmapped|no_cik|2011": 6031,
+   "unmapped|no_cik|2012": 5125,
+   "unmapped|no_cik|2013": 5320,
+   "unmapped|no_cik|2014": 5640,
+   "unmapped|no_cik|2015": 5843,
+   "unmapped|no_cik|2016": 5802,
+   "unmapped|no_cik|2017": 5956,
+   "unmapped|no_period|2008": 278,
+   "unmapped|no_period|2009": 107,
+   "unmapped|no_period|2010": 101,
+   "unmapped|no_period|2011": 111,
+   "unmapped|no_period|2012": 132,
+   "unmapped|no_period|2013": 190,
+   "unmapped|no_period|2014": 303,
+   "unmapped|no_period|2015": 235,
+   "unmapped|no_period|2016": 153,
+   "unmapped|no_period|2017": 221
+  },
+  "identity_sanity": {
+   "affected_securities": 161,
+   "affected_stock_months": 4656,
+   "affected_survival": 0.8243,
+   "by_year": {
+    "2011": {
+     "affected_eligible": 357,
+     "affected_h2": 357,
+     "affected_scored": 0,
+     "eligible": 10466,
+     "excluded_share": 0.0341,
+     "retained_scored": 4236
+    },
+    "2012": {
+     "affected_eligible": 399,
+     "affected_h2": 368,
+     "affected_scored": 31,
+     "eligible": 10672,
+     "excluded_share": 0.0374,
+     "retained_scored": 4577
+    },
+    "2013": {
+     "affected_eligible": 521,
+     "affected_h2": 433,
+     "affected_scored": 88,
+     "eligible": 12293,
+     "excluded_share": 0.0424,
+     "retained_scored": 5414
+    },
+    "2014": {
+     "affected_eligible": 703,
+     "affected_h2": 553,
+     "affected_scored": 150,
+     "eligible": 13793,
+     "excluded_share": 0.051,
+     "retained_scored": 7256
+    },
+    "2015": {
+     "affected_eligible": 799,
+     "affected_h2": 637,
+     "affected_scored": 162,
+     "eligible": 14154,
+     "excluded_share": 0.0565,
+     "retained_scored": 7903
+    },
+    "2016": {
+     "affected_eligible": 827,
+     "affected_h2": 590,
+     "affected_scored": 224,
+     "eligible": 13837,
+     "excluded_share": 0.0598,
+     "retained_scored": 7817
+    },
+    "2017": {
+     "affected_eligible": 1050,
+     "affected_h2": 767,
+     "affected_scored": 239,
+     "eligible": 15155,
+     "excluded_share": 0.0693,
+     "retained_scored": 8239
+    }
+   },
+   "implied_scored_population_bias_points": 0.469,
+   "retained_fully_scorable_stock_months": 45442,
+   "retained_survival": 0.8748,
+   "survival_difference_points": 5.05
+  },
+  "identity_value_check": {
+   "ext|revenue_q|differ": 393,
+   "ext|revenue_q|match": 2459,
+   "ext|revenue_q|no_ref": 7577,
+   "ext|total_assets|differ": 48,
+   "ext|total_assets|match": 1661,
+   "ext|total_assets|no_ref": 8720,
+   "v2|revenue_q|differ": 267,
+   "v2|revenue_q|match": 2945,
+   "v2|revenue_q|no_ref": 55528,
+   "v2|total_assets|differ": 170,
+   "v2|total_assets|match": 3709,
+   "v2|total_assets|no_ref": 54861
+  },
+  "layer_corr": {
+   "F_S": -0.0115,
+   "T_F": -0.0119,
+   "T_S": 0.2267
+  },
+  "layers": {
+   "F": {
+    "hist5": [
+     4017,
+     5203,
+     9256,
+     7790,
+     7241,
+     5873,
+     3515,
+     2496,
+     664,
+     281,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "stats": {
+     "max": 45.0,
+     "mean": 17.998,
+     "median": 17.0,
+     "min": 0.0,
+     "n": 46336,
+     "p10": 5.0,
+     "p90": 32.0,
+     "sd": 10.138
+    }
+   },
+   "S": {
+    "hist5": [
+     8184,
+     30635,
+     0,
+     7517,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "stats": {
+     "max": 15.0,
+     "mean": 7.723,
+     "median": 8.0,
+     "min": 0.0,
+     "n": 46336,
+     "p10": 0.0,
+     "p90": 15.0,
+     "sd": 4.379
+    }
+   },
+   "T": {
+    "hist5": [
+     9149,
+     4281,
+     4262,
+     5330,
+     5832,
+     6384,
+     7683,
+     2567,
+     848,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0,
+     0
+    ],
+    "stats": {
+     "max": 40.0,
+     "mean": 17.88,
+     "median": 20.0,
+     "min": 0.0,
+     "n": 46336,
+     "p10": 0.0,
+     "p90": 33.0,
+     "sd": 11.894
+    }
+   }
+  },
+  "max_rss_mb": 5951.7,
+  "mcap_comparison": {
+   "abs_rel_median": 0.00032,
+   "abs_rel_p90": 0.01957,
+   "agree_away": 81504,
+   "agree_near": 5273,
+   "disagree_kind": {
+    "away|sec_above": 1184,
+    "away|sec_below": 121,
+    "near|sec_above": 142,
+    "near|sec_below": 98
+   },
+   "n_away": 82809,
+   "n_near": 5513,
+   "no_sec": 3371,
+   "records": 91693,
+   "rel": {
+    "gt10pct": 3944,
+    "le10pct": 1494,
+    "le2pct": 79597,
+    "le5pct": 3287
+   }
+  },
+  "mcap_missing_status": {
+   "below_2B": [
+    57,
+    9
+   ],
+   "no_cik": [
+    757,
+    398
+   ],
+   "no_fresh_shares": [
+    456,
+    183
+   ],
+   "no_shares_table": [
+    927,
+    246
+   ],
+   "repaired": [
+    13038,
+    6331
+   ]
+  },
+  "mechanics": {
+   "buys": 168,
+   "buys_per_year": 24.0,
+   "by_year": {
+    "2011": {
+     "buys": 22,
+     "held": 58,
+     "mean_held": 4.83,
+     "reviews": 12,
+     "sells": 18
+    },
+    "2012": {
+     "buys": 28,
+     "held": 98,
+     "mean_held": 8.17,
+     "reviews": 12,
+     "sells": 24
+    },
+    "2013": {
+     "buys": 19,
+     "held": 77,
+     "mean_held": 6.42,
+     "reviews": 12,
+     "sells": 19
+    },
+    "2014": {
+     "buys": 27,
+     "held": 78,
+     "mean_held": 6.5,
+     "reviews": 12,
+     "sells": 23
+    },
+    "2015": {
+     "buys": 24,
+     "held": 90,
+     "mean_held": 7.5,
+     "reviews": 12,
+     "sells": 29
+    },
+    "2016": {
+     "buys": 30,
+     "held": 74,
+     "mean_held": 6.17,
+     "reviews": 12,
+     "sells": 22
+    },
+    "2017": {
+     "buys": 18,
+     "held": 101,
+     "mean_held": 8.42,
+     "reviews": 12,
+     "sells": 17
+    }
+   },
+   "cap_utilisation_mean": 0.7911,
+   "company_skips": 0,
+   "costs": {
+    "100000": {
+     "commission_usd_yr": 326.0,
+     "slippage_usd_yr": 465.71,
+     "total_pct_yr": 0.7917
+    },
+    "200000": {
+     "commission_usd_yr": 326.0,
+     "slippage_usd_yr": 931.43,
+     "total_pct_yr": 0.6287
+    }
+   },
+   "empty_reviews": 0,
+   "frozen_constants": {
+    "K": 10,
+    "buffer": 5,
+    "entry": 80,
+    "exit": 70,
+    "grown_winner_cap": 0.2,
+    "initial_cap": 0.1,
+    "regime_positions": {
+     "NORMAL": 8,
+     "RISK_OFF": 2,
+     "STRONG": 10,
+     "WEAK": 5
+    },
+    "sector_max": 3
+   },
+   "frozen_holding_reviews": 0,
+   "full_reviews": 15,
+   "holding_reviews": {
+    "max": 18.0,
+    "mean": 3.304,
+    "median": 2.0,
+    "p75": 4.75
+   },
+   "max_holdings": 10,
+   "open_at_end": 10,
+   "orders": 326,
+   "orders_per_year": 46.57,
+   "reviews": 84,
+   "rule_checks": {
+    "cap_violations": 0,
+    "max_holdings_le_K": true,
+    "sector_violations": 0
+   },
+   "sector_skips": 119,
+   "sells": {
+    "dq_weekly": 6,
+    "exit_threshold": 112,
+    "regime_cap": 8,
+    "replacement": 26,
+    "universe_exit": 6
+   },
+   "utilisation_mean": 0.6857,
+   "weekly_dq_exits": 6
+  },
+  "months_ge80_zero": 1,
+  "per_year": {
+   "2011": {
+    "candidates_mean": 267.7,
+    "eligible_mean": 872.2,
+    "field_present_pct": [
+     66.03,
+     62.53,
+     67.38,
+     67.48,
+     96.61,
+     96.61,
+     73.54
+    ],
+    "from_qc_cap_mean": 652.8,
+    "from_sec_repair_mean": 140.5,
+    "from_v1_sec_layer_mean": 78.9,
+    "ge75_mean": 12.92,
+    "ge80_mean": 5.58,
+    "ge85_mean": 1.25,
+    "ge90_mean": 0.5,
+    "h2_pct_nonfin": 46.59,
+    "h_bits": {
+     "H1_financial": 1912,
+     "H1_no_sic": 595,
+     "H2": 5649,
+     "H3": 166,
+     "H4": 81,
+     "H5": 0,
+     "H6": 2356,
+     "H7": 141,
+     "duplicate_class": 12
+    },
+    "mappable_ext": 314,
+    "mappable_pct": 97.32,
+    "nonfin_mean": 663.2,
+    "reviews": 12,
+    "scored_mean": 353.0
+   },
+   "2012": {
+    "candidates_mean": 302.9,
+    "eligible_mean": 889.3,
+    "field_present_pct": [
+     71.49,
+     66.88,
+     73.3,
+     73.3,
+     97.13,
+     97.17,
+     64.76
+    ],
+    "from_qc_cap_mean": 687.2,
+    "from_sec_repair_mean": 136.2,
+    "from_v1_sec_layer_mean": 65.9,
+    "ge75_mean": 13.42,
+    "ge80_mean": 5.0,
+    "ge85_mean": 0.58,
+    "ge90_mean": 0.25,
+    "h2_pct_nonfin": 43.12,
+    "h_bits": {
+     "H1_financial": 2046,
+     "H1_no_sic": 428,
+     "H2": 5449,
+     "H3": 208,
+     "H4": 98,
+     "H5": 0,
+     "H6": 1943,
+     "H7": 170,
+     "duplicate_class": 12
+    },
+    "mappable_ext": 181,
+    "mappable_pct": 97.69,
+    "nonfin_mean": 683.2,
+    "reviews": 12,
+    "scored_mean": 384.0
+   },
+   "2013": {
+    "candidates_mean": 408.1,
+    "eligible_mean": 1024.4,
+    "field_present_pct": [
+     82.68,
+     77.43,
+     86.48,
+     86.75,
+     98.33,
+     98.34,
+     69.27
+    ],
+    "from_qc_cap_mean": 792.8,
+    "from_sec_repair_mean": 164.3,
+    "from_v1_sec_layer_mean": 67.3,
+    "ge75_mean": 9.92,
+    "ge80_mean": 3.5,
+    "ge85_mean": 0.25,
+    "ge90_mean": 0.08,
+    "h2_pct_nonfin": 41.05,
+    "h_bits": {
+     "H1_financial": 2423,
+     "H1_no_sic": 405,
+     "H2": 6213,
+     "H3": 301,
+     "H4": 123,
+     "H5": 0,
+     "H6": 1054,
+     "H7": 165,
+     "duplicate_class": 14
+    },
+    "mappable_ext": 112,
+    "mappable_pct": 97.62,
+    "nonfin_mean": 788.8,
+    "reviews": 12,
+    "scored_mean": 458.5
+   },
+   "2014": {
+    "candidates_mean": 509.7,
+    "eligible_mean": 1149.4,
+    "field_present_pct": [
+     87.41,
+     83.47,
+     90.04,
+     90.39,
+     98.31,
+     98.31,
+     79.16
+    ],
+    "from_qc_cap_mean": 896.2,
+    "from_sec_repair_mean": 185.8,
+    "from_v1_sec_layer_mean": 67.4,
+    "ge75_mean": 16.25,
+    "ge80_mean": 6.17,
+    "ge85_mean": 1.42,
+    "ge90_mean": 0.33,
+    "h2_pct_nonfin": 29.26,
+    "h_bits": {
+     "H1_financial": 2848,
+     "H1_no_sic": 374,
+     "H2": 5577,
+     "H3": 445,
+     "H4": 151,
+     "H5": 0,
+     "H6": 2093,
+     "H7": 269,
+     "duplicate_class": 29
+    },
+    "mappable_ext": 22,
+    "mappable_pct": 97.45,
+    "nonfin_mean": 880.9,
+    "reviews": 12,
+    "scored_mean": 617.2
+   },
+   "2015": {
+    "candidates_mean": 445.2,
+    "eligible_mean": 1179.5,
+    "field_present_pct": [
+     87.28,
+     82.98,
+     90.47,
+     90.41,
+     98.69,
+     98.69,
+     84.69
+    ],
+    "from_qc_cap_mean": 941.3,
+    "from_sec_repair_mean": 183.0,
+    "from_v1_sec_layer_mean": 55.2,
+    "ge75_mean": 23.17,
+    "ge80_mean": 8.75,
+    "ge85_mean": 4.08,
+    "ge90_mean": 1.42,
+    "h2_pct_nonfin": 23.74,
+    "h_bits": {
+     "H1_financial": 3117,
+     "H1_no_sic": 365,
+     "H2": 5064,
+     "H3": 375,
+     "H4": 125,
+     "H5": 0,
+     "H6": 4335,
+     "H7": 353,
+     "duplicate_class": 48
+    },
+    "mappable_ext": 15,
+    "mappable_pct": 97.53,
+    "nonfin_mean": 889.3,
+    "reviews": 12,
+    "scored_mean": 672.1
+   },
+   "2016": {
+    "candidates_mean": 465.8,
+    "eligible_mean": 1153.1,
+    "field_present_pct": [
+     89.3,
+     85.95,
+     91.61,
+     92.19,
+     98.79,
+     98.77,
+     85.56
+    ],
+    "from_qc_cap_mean": 957.7,
+    "from_sec_repair_mean": 161.1,
+    "from_v1_sec_layer_mean": 34.3,
+    "ge75_mean": 18.75,
+    "ge80_mean": 7.58,
+    "ge85_mean": 1.17,
+    "ge90_mean": 0.42,
+    "h2_pct_nonfin": 21.6,
+    "h_bits": {
+     "H1_financial": 3199,
+     "H1_no_sic": 325,
+     "H2": 4533,
+     "H3": 227,
+     "H4": 80,
+     "H5": 0,
+     "H6": 3756,
+     "H7": 399,
+     "duplicate_class": 68
+    },
+    "mappable_ext": 5,
+    "mappable_pct": 97.69,
+    "nonfin_mean": 859.4,
+    "reviews": 12,
+    "scored_mean": 670.1
+   },
+   "2017": {
+    "candidates_mean": 555.4,
+    "eligible_mean": 1262.9,
+    "field_present_pct": [
+     88.67,
+     85.62,
+     87.8,
+     91.29,
+     98.22,
+     98.2,
+     84.77
+    ],
+    "from_qc_cap_mean": 1078.2,
+    "from_sec_repair_mean": 150.2,
+    "from_v1_sec_layer_mean": 34.5,
+    "ge75_mean": 28.33,
+    "ge80_mean": 12.92,
+    "ge85_mean": 2.83,
+    "ge90_mean": 0.75,
+    "h2_pct_nonfin": 24.33,
+    "h_bits": {
+     "H1_financial": 3499,
+     "H1_no_sic": 397,
+     "H2": 5279,
+     "H3": 361,
+     "H4": 62,
+     "H5": 0,
+     "H6": 2520,
+     "H7": 461,
+     "duplicate_class": 81
+    },
+    "mappable_ext": 8,
+    "mappable_pct": 97.43,
+    "nonfin_mean": 938.2,
+    "reviews": 12,
+    "scored_mean": 706.5
+   }
+  },
+  "pit_audit": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0
+  },
+  "population": {
+   "2011": {
+    "candidates": {
+     "max": 351,
+     "mean": 267.7,
+     "median": 313,
+     "min": 163,
+     "months": 12
+    },
+    "eligible": {
+     "max": 918,
+     "mean": 872.2,
+     "median": 887,
+     "min": 792,
+     "months": 12
+    },
+    "ge80": {
+     "max": 11,
+     "mean": 5.6,
+     "median": 5,
+     "min": 1,
+     "months": 12
+    },
+    "scored": {
+     "max": 376,
+     "mean": 353.0,
+     "median": 357,
+     "min": 304,
+     "months": 12
+    }
+   },
+   "2012": {
+    "candidates": {
+     "max": 342,
+     "mean": 302.9,
+     "median": 308,
+     "min": 263,
+     "months": 12
+    },
+    "eligible": {
+     "max": 918,
+     "mean": 889.3,
+     "median": 894,
+     "min": 859,
+     "months": 12
+    },
+    "ge80": {
+     "max": 9,
+     "mean": 5.0,
+     "median": 5,
+     "min": 1,
+     "months": 12
+    },
+    "scored": {
+     "max": 402,
+     "mean": 384.0,
+     "median": 385,
+     "min": 355,
+     "months": 12
+    }
+   },
+   "2013+": {
+    "candidates": {
+     "max": 595,
+     "mean": 476.9,
+     "median": 509,
+     "min": 241,
+     "months": 60
+    },
+    "eligible": {
+     "max": 1304,
+     "mean": 1153.9,
+     "median": 1163,
+     "min": 948,
+     "months": 60
+    },
+    "ge80": {
+     "max": 21,
+     "mean": 7.8,
+     "median": 6,
+     "min": 0,
+     "months": 60
+    },
+    "scored": {
+     "max": 728,
+     "mean": 624.9,
+     "median": 659,
+     "min": 402,
+     "months": 60
+    }
+   },
+   "all": {
+    "candidates": {
+     "max": 595,
+     "mean": 422.1,
+     "median": 436,
+     "min": 163,
+     "months": 84
+    },
+    "eligible": {
+     "max": 1304,
+     "mean": 1075.8,
+     "median": 1130,
+     "min": 792,
+     "months": 84
+    },
+    "ge80": {
+     "max": 21,
+     "mean": 7.1,
+     "median": 6,
+     "min": 0,
+     "months": 84
+    },
+    "scored": {
+     "max": 728,
+     "mean": 551.6,
+     "median": 621,
+     "min": 304,
+     "months": 84
+    }
+   }
+  },
+  "recovery_by_reason": {
+   "mcap_lt_2B": [
+    1300,
+    0,
+    0
+   ],
+   "mcap_missing": [
+    15235,
+    13038,
+    6331
+   ],
+   "no_fundamentals": [
+    2212,
+    0,
+    0
+   ],
+   "reference_or_security_type": [
+    168,
+    0,
+    0
+   ]
+  },
+  "regimes": {
+   "NORMAL": 9,
+   "RISK_OFF": 5,
+   "STRONG": 63,
+   "WEAK": 7
+  },
+  "repair": {
+   "bands": {
+    "1.5-1.8B": 2022,
+    "1.8-2.0B": 1158,
+    "2.0-2.2B": 922,
+    "2.2-2.5B": 1290,
+    "gt2.5B": 11243,
+    "lt1.5B": 6593
+   },
+   "below_2B": 9773,
+   "candidate_stock_months": 24220,
+   "no_fresh_shares": 992,
+   "repaired": 13455,
+   "repaired_near_2_0_to_2_2B": 922,
+   "share_age": {
+    "max": 135.0,
+    "mean": 57.313,
+    "median": 60.0,
+    "min": 1.0,
+    "n": 23228,
+    "p10": 20.0,
+    "p90": 93.0,
+    "sd": 29.345
+   },
+   "stale_near": 379
+  },
+  "restatement_guard": {
+   "blocked": 114,
+   "blocked_pct_of_matched": 0.16,
+   "categories": {
+    "blocked|new|2009": 2,
+    "blocked|new|2010": 4,
+    "blocked|new|2011": 8,
+    "blocked|new|2012": 25,
+    "blocked|new|2013": 25,
+    "blocked|new|2014": 12,
+    "blocked|new|2015": 14,
+    "blocked|new|2016": 21,
+    "blocked|new|2017": 2,
+    "blocked|revision|2014": 1,
+    "new|revenue_q|later_not_yet_public": 102,
+    "new|revenue_q|later_public": 26,
+    "new|total_assets|later_not_yet_public": 21,
+    "new|total_assets|later_public": 5,
+    "revision|revenue_q|later_not_yet_public": 1
+   },
+   "fed": 69087
+  },
+  "sectors_80plus": {
+   "BusEq": 188,
+   "Chems": 3,
+   "Durbl": 8,
+   "Enrgy": 10,
+   "Hlth": 92,
+   "Manuf": 33,
+   "NoDur": 29,
+   "Other": 102,
+   "Shops": 50,
+   "Telcm": 18,
+   "Utils": 61
+  },
+  "split": {
+   "ambiguous": 1,
+   "continuous": 223,
+   "no_sec_identity": 34,
+   "no_sec_mcap": 10
+  },
+  "spot": {
+   "checked": 168,
+   "mismatch": 0
+  },
+  "survivorship": {
+   "2011": {
+    "added_not_v1": {
+     "stock_months": 73,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 11069,
+     "survivor_share": 0.7448
+    },
+    "delivered": {
+     "stock_months": 8780,
+     "survivor_share": 0.8535
+    },
+    "lost": {
+     "stock_months": 2527,
+     "survivor_share": 0.3328
+    },
+    "recovered": {
+     "stock_months": 1613,
+     "survivor_share": 0.3621
+    },
+    "still_lost": {
+     "stock_months": 914,
+     "survivor_share": 0.2812
+    },
+    "v2_universe": {
+     "stock_months": 10466,
+     "survivor_share": 0.7718
+    }
+   },
+   "2012": {
+    "added_not_v1": {
+     "stock_months": 78,
+     "survivor_share": 0.0385
+    },
+    "data_v1": {
+     "stock_months": 11182,
+     "survivor_share": 0.783
+    },
+    "delivered": {
+     "stock_months": 9037,
+     "survivor_share": 0.8752
+    },
+    "lost": {
+     "stock_months": 2363,
+     "survivor_share": 0.3876
+    },
+    "recovered": {
+     "stock_months": 1557,
+     "survivor_share": 0.4059
+    },
+    "still_lost": {
+     "stock_months": 806,
+     "survivor_share": 0.3524
+    },
+    "v2_universe": {
+     "stock_months": 10672,
+     "survivor_share": 0.8006
+    }
+   },
+   "2013": {
+    "added_not_v1": {
+     "stock_months": 68,
+     "survivor_share": 0.1471
+    },
+    "data_v1": {
+     "stock_months": 12860,
+     "survivor_share": 0.781
+    },
+    "delivered": {
+     "stock_months": 10321,
+     "survivor_share": 0.873
+    },
+    "lost": {
+     "stock_months": 2808,
+     "survivor_share": 0.3992
+    },
+    "recovered": {
+     "stock_months": 1904,
+     "survivor_share": 0.4112
+    },
+    "still_lost": {
+     "stock_months": 904,
+     "survivor_share": 0.3739
+    },
+    "v2_universe": {
+     "stock_months": 12293,
+     "survivor_share": 0.7974
+    }
+   },
+   "2014": {
+    "added_not_v1": {
+     "stock_months": 59,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 14380,
+     "survivor_share": 0.7908
+    },
+    "delivered": {
+     "stock_months": 11563,
+     "survivor_share": 0.8765
+    },
+    "lost": {
+     "stock_months": 3131,
+     "survivor_share": 0.4235
+    },
+    "recovered": {
+     "stock_months": 2171,
+     "survivor_share": 0.4399
+    },
+    "still_lost": {
+     "stock_months": 960,
+     "survivor_share": 0.3865
+    },
+    "v2_universe": {
+     "stock_months": 13793,
+     "survivor_share": 0.804
+    }
+   },
+   "2015": {
+    "added_not_v1": {
+     "stock_months": 55,
+     "survivor_share": 0.1636
+    },
+    "data_v1": {
+     "stock_months": 14667,
+     "survivor_share": 0.8279
+    },
+    "delivered": {
+     "stock_months": 11958,
+     "survivor_share": 0.8968
+    },
+    "lost": {
+     "stock_months": 3064,
+     "survivor_share": 0.5029
+    },
+    "recovered": {
+     "stock_months": 2141,
+     "survivor_share": 0.5133
+    },
+    "still_lost": {
+     "stock_months": 923,
+     "survivor_share": 0.4789
+    },
+    "v2_universe": {
+     "stock_months": 14154,
+     "survivor_share": 0.8359
+    }
+   },
+   "2016": {
+    "added_not_v1": {
+     "stock_months": 33,
+     "survivor_share": 0.0303
+    },
+    "data_v1": {
+     "stock_months": 14156,
+     "survivor_share": 0.9007
+    },
+    "delivered": {
+     "stock_months": 11904,
+     "survivor_share": 0.9416
+    },
+    "lost": {
+     "stock_months": 2638,
+     "survivor_share": 0.6391
+    },
+    "recovered": {
+     "stock_months": 1900,
+     "survivor_share": 0.6395
+    },
+    "still_lost": {
+     "stock_months": 738,
+     "survivor_share": 0.6382
+    },
+    "v2_universe": {
+     "stock_months": 13837,
+     "survivor_share": 0.898
+    }
+   },
+   "2017": {
+    "added_not_v1": {
+     "stock_months": 51,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 15373,
+     "survivor_share": 0.9567
+    },
+    "delivered": {
+     "stock_months": 13352,
+     "survivor_share": 0.9551
+    },
+    "lost": {
+     "stock_months": 2384,
+     "survivor_share": 0.8389
+    },
+    "recovered": {
+     "stock_months": 1752,
+     "survivor_share": 0.8213
+    },
+    "still_lost": {
+     "stock_months": 632,
+     "survivor_share": 0.8877
+    },
+    "v2_universe": {
+     "stock_months": 15155,
+     "survivor_share": 0.9365
+    }
+   },
+   "all": {
+    "added_not_v1": {
+     "stock_months": 417,
+     "survivor_share": 0.0552
+    },
+    "data_v1": {
+     "stock_months": 93687,
+     "survivor_share": 0.8327
+    },
+    "delivered": {
+     "stock_months": 76915,
+     "survivor_share": 0.9001
+    },
+    "lost": {
+     "stock_months": 18915,
+     "survivor_share": 0.4986
+    },
+    "recovered": {
+     "stock_months": 13038,
+     "survivor_share": 0.5144
+    },
+    "still_lost": {
+     "stock_months": 5877,
+     "survivor_share": 0.4635
+    },
+    "v2_universe": {
+     "stock_months": 90370,
+     "survivor_share": 0.8406
+    }
+   }
+  },
+  "target_check": {
+   "securities": 560,
+   "sha256_match": true,
+   "stock_months": 18915
+  },
+  "target_securities": {
+   "never_recovered_by_last_reason": {
+    "mcap_lt_2B|in_v1_universe_end_2017": 56,
+    "mcap_lt_2B|later_disappearing": 18,
+    "mcap_missing|in_v1_universe_end_2017": 22,
+    "mcap_missing|later_disappearing": 22,
+    "no_fundamentals|in_v1_universe_end_2017": 1,
+    "no_fundamentals|later_disappearing": 67,
+    "reference_or_security_type|in_v1_universe_end_2017": 3
+   },
+   "recovered_at_least_once": 371,
+   "recovered_later_disappearing": 232,
+   "targets": 560
+  },
+  "totals_candidates": {
+   "max": 94.0,
+   "mean": 47.653,
+   "median": 48.0,
+   "min": 0.0,
+   "n": 35458,
+   "p10": 26.0,
+   "p90": 68.0,
+   "sd": 15.547
+  },
+  "totals_hist5_candidates": [
+   41,
+   95,
+   353,
+   844,
+   1324,
+   2054,
+   2546,
+   3299,
+   4076,
+   4351,
+   4189,
+   4001,
+   2953,
+   2416,
+   1443,
+   879,
+   455,
+   94,
+   45,
+   0,
+   0
+  ],
+  "totals_hist5_scored": [
+   137,
+   390,
+   1137,
+   2025,
+   2868,
+   3771,
+   3998,
+   4519,
+   4968,
+   4974,
+   4629,
+   4247,
+   3124,
+   2542,
+   1507,
+   894,
+   467,
+   94,
+   45,
+   0,
+   0
+  ],
+  "totals_scored": {
+   "max": 94.0,
+   "mean": 43.6,
+   "median": 43.0,
+   "min": 0.0,
+   "n": 46336,
+   "p10": 21.0,
+   "p90": 66.0,
+   "sd": 16.827
+  },
+  "wall_s": 675.4,
+  "weekly_checks": 325
+ },
+ "E998-02": "no aggregate output",
+ "E998-03": "no aggregate output",
+ "E998-04": "no aggregate output",
+ "freeze_gates": {
+  "A_score_v1_hash": "checked by tests/test_p7_score_spec.py and test_p7_pred_spec.py (pinned hashes unchanged)",
+  "B_m2_timing": true,
+  "C_market_cap_repair": true,
+  "D_identity": false,
+  "E_restatement_guard": true,
+  "F_pit_zero": true,
+  "G_splits": true,
+  "H_determinism": false,
+  "I_truncation": false,
+  "J_2011_2012_operational": true,
+  "K_survivorship_bounds": true,
+  "L_compliance": false,
+  "M_export": false,
+  "N_no_real_return": "by construction: X998 computes no forward / portfolio / SPY return (tests/test_data_v2.py)",
+  "O_2018_2021_untouched": true,
+  "P_holdout_untouched": false,
+  "all": false
+ },
+ "records": {
+  "E998-01": {
+   "git_commit": "5c6854fcfb52851e07c4ed2175843a9063357ee7",
+   "holdout_unlocked": false,
+   "integrity_ok": true,
+   "lean_version": "v2.5.0.0.18178",
+   "orders": 0,
+   "qc_backtest_id": "b94e25ccf0a55d54907ed0b77eaa6990",
+   "runtime_s": 687.8405554294586,
+   "status": "completed"
+  },
+  "E998-02": null,
+  "E998-03": null,
+  "E998-04": null
+ },
+ "residual_recheck": {
+  "agree_away": 98.42,
+  "cp5e": {
+   "agree_away": 98.42,
+   "gap_all": 0.79,
+   "ge80_per_review": 7.07,
+   "mcap_fresh": 85.95,
+   "recovered_pct": 68.93,
+   "scored_mean": {
+    "2011": 355.4,
+    "2012": 388.1,
+    "2013+": 630.6
+   },
+   "split_continuous": 99.55
+  },
+  "gap_all": 0.79,
+  "ge80_per_review": 7.07,
+  "mcap_fresh": 85.95,
+  "recovered_pct": 68.93,
+  "same_range": true,
+  "scored_mean_rel_change": {
+   "2011": -0.0068,
+   "2012": -0.0106,
+   "2013+": -0.009
+  },
+  "split_continuous": 99.55
+ }
+}

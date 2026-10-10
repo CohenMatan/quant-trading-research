@@ -16,7 +16,9 @@ V1_SURV = {"all": 0.8327, "2011": 0.7448, "2012": 0.783, "2013": 0.781, "2014": 
            "2016": 0.9007, "2017": 0.9567}
 # P7-CP5e residuals (E997-03, research/phase7/cp5e/x997_summary.json) for the "about the same range" re-check
 CP5E = dict(recovered_pct=68.93, gap_all=0.79, agree_away=98.42, split_continuous=99.55, mcap_fresh=85.95,
-            eligible_mean={"2011": 355.4, "2012": 388.1, "2013+": 630.6}, ge80_per_review=7.07)
+            scored_mean={"2011": 355.4, "2012": 388.1, "2013+": 630.6}, ge80_per_review=7.07)
+# (fix after E998-01, documented in P7-CP5f: these P7-CP5e means are X997 per_review column 5 = 'scored' (fully scored
+# stocks), so they are compared with X998 'scored', not 'eligible'; the threshold is unchanged)
 # freeze-gate thresholds (fixed before any E998 output was read)
 TH = dict(MC2=75.0, MC3=95.0, MC4=97.0, MC5_dis=30.0, MC5_rel=0.05, MC6=60.0, MC7_all=2.0, MC7_year=4.0,
           residual_recovery=(60.0, 78.0), residual_population_rel=0.15, min_scored_2011_2012=200,
@@ -197,11 +199,11 @@ def gates(out, st, rec):
 def residuals(s1):
     c = s1["criteria"]
     pop = s1["population"]
-    rel = {k: round(pop[k]["eligible"]["mean"] / CP5E["eligible_mean"][k] - 1, 4) for k in ("2011", "2012", "2013+")}
+    rel = {k: round(pop[k]["scored"]["mean"] / CP5E["scored_mean"][k] - 1, 4) for k in ("2011", "2012", "2013+")}
     lo, hi = TH["residual_recovery"]
     return dict(cp5e=CP5E, recovered_pct=c["MC6_recovered_pct"], gap_all=c["MC7_gap_points"]["all"],
                 agree_away=c["MC4_agreement_away_pct"], split_continuous=c["MC3_split_continuous_pct"],
-                mcap_fresh=c["MC2_fresh_sec_mcap_pct"], eligible_mean_rel_change=rel, ge80_per_review=s1["ge80_per_review"],
+                mcap_fresh=c["MC2_fresh_sec_mcap_pct"], scored_mean_rel_change=rel, ge80_per_review=s1["ge80_per_review"],
                 same_range=(lo <= c["MC6_recovered_pct"] <= hi and abs(c["MC7_gap_points"]["all"]) <= TH["MC7_all"]
                             and all(abs(v) <= TH["residual_population_rel"] for v in rel.values())))
 
