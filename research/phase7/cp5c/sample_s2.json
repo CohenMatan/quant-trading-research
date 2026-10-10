@@ -1,0 +1,473 @@
+{
+ "salt": "P7CP5c-S2",
+ "rule": "P7-CP5c (D184): the PRE-REGISTERED supplementary probe sample S2, chosen from score tables only (no timing result,\nno return), before any new-dataset timing probe ran. The main probe sample is the P2-CP6 X971 sample (seed 20261004,\nfixed on 2026-10-01), which has an old-build (LEAN 18131) report-level record (E971-02). S2 adds the categories the\nowner asked for (P7-CP5c item 8) from the E993-02 (LEAN 18131) and E993-03 (LEAN 18178) X993 exports:\n\n  C1  became H2 only after the migration: in the H022 population (eligible, kept class, fully scorable) at some\n      review under 18131 and disqualified by H2 at the same review under 18178 -> 4 per FF12 group (non-financial);\n  C2  continuously inside the universe (eligible at all 84 reviews under 18131) -> 10;\n  C3  grew into the universe (first eligible review 2012-01 or later under 18131, eligible at >= 12 reviews) -> 10;\n  C4  SEC-repaired securities of the frozen correction layer that were eligible under 18131 -> 10.\n\nOrder inside each category: SHA-256 of \"P7CP5c-S2|<category>|<sid>\" (salt fixed here), excluding companies already\nin the X971 sample or already chosen. CIK = the SEC-dated CIK in force at the sid's first review in the category\n(sic_history), or the correction layer's CIK for C4; a sid without a CIK is skipped and counted.\nOutput: research/phase7/cp5c/sample_s2.json. No price, no return, no timing information is read.",
+ "n": 74,
+ "skipped": {
+  "no_cik": 4
+ },
+ "by_category": {
+  "C1": 44,
+  "C2": 10,
+  "C3": 10,
+  "C4": 10
+ },
+ "c1_groups": [
+  "C1:BusEq",
+  "C1:Chems",
+  "C1:Durbl",
+  "C1:Enrgy",
+  "C1:Hlth",
+  "C1:Manuf",
+  "C1:NoDur",
+  "C1:Other",
+  "C1:Shops",
+  "C1:Telcm",
+  "C1:Utils"
+ ],
+ "sample": [
+  {
+   "sid": "CACI R735QTJ8XC9X",
+   "cik": 16058,
+   "category": "C1:BusEq",
+   "day": "2014-11-28"
+  },
+  {
+   "sid": "QCOM R735QTJ8XC9X",
+   "cik": 804328,
+   "category": "C1:BusEq",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "BDAL RWXN767R8AXX",
+   "cik": 1109354,
+   "category": "C1:BusEq",
+   "day": "2011-05-31"
+  },
+  {
+   "sid": "TYL R735QTJ8XC9X",
+   "cik": 860731,
+   "category": "C1:BusEq",
+   "day": "2013-05-31"
+  },
+  {
+   "sid": "ALB R735QTJ8XC9X",
+   "cik": 915913,
+   "category": "C1:Chems",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "DOW R735QTJ8XC9X",
+   "cik": 1666700,
+   "category": "C1:Chems",
+   "day": "2017-11-30"
+  },
+  {
+   "sid": "FMC R735QTJ8XC9X",
+   "cik": 37785,
+   "category": "C1:Chems",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "BCP R735QTJ8XC9X",
+   "cik": 9326,
+   "category": "C1:Chems",
+   "day": "2014-12-31"
+  },
+  {
+   "sid": "F R735QTJ8XC9X",
+   "cik": 37996,
+   "category": "C1:Durbl",
+   "day": "2011-05-31"
+  },
+  {
+   "sid": "HDI R735QTJ8XC9X",
+   "cik": 793952,
+   "category": "C1:Durbl",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "TEN R735QTJ8XC9X",
+   "cik": 1024725,
+   "category": "C1:Durbl",
+   "day": "2011-05-31"
+  },
+  {
+   "sid": "AOS R735QTJ8XC9X",
+   "cik": 91142,
+   "category": "C1:Durbl",
+   "day": "2013-02-28"
+  },
+  {
+   "sid": "MARY R735QTJ8XC9X",
+   "cik": 893538,
+   "category": "C1:Enrgy",
+   "day": "2011-02-28"
+  },
+  {
+   "sid": "XON R735QTJ8XC9X",
+   "cik": 34088,
+   "category": "C1:Enrgy",
+   "day": "2014-02-28"
+  },
+  {
+   "sid": "GTE U1MKPBX1RSYT",
+   "cik": 1273441,
+   "category": "C1:Enrgy",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "CNX RKAQNZ7RVQSL",
+   "cik": 1070412,
+   "category": "C1:Enrgy",
+   "day": "2011-02-28"
+  },
+  {
+   "sid": "ABMD R735QTJ8XC9X",
+   "cik": 815094,
+   "category": "C1:Hlth",
+   "day": "2015-01-30"
+  },
+  {
+   "sid": "HAE R735QTJ8XC9X",
+   "cik": 313143,
+   "category": "C1:Hlth",
+   "day": "2012-09-28"
+  },
+  {
+   "sid": "ABBV VCY032R250MD",
+   "cik": 1551152,
+   "category": "C1:Hlth",
+   "day": "2015-02-27"
+  },
+  {
+   "sid": "ABT R735QTJ8XC9X",
+   "cik": 1800,
+   "category": "C1:Hlth",
+   "day": "2011-03-31"
+  },
+  {
+   "sid": "STLD R735QTJ8XC9X",
+   "cik": 1022671,
+   "category": "C1:Manuf",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SPW R735QTJ8XC9X",
+   "cik": 88205,
+   "category": "C1:Manuf",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "HEIA RA5FTAI5HU91",
+   "cik": 46619,
+   "category": "C1:Manuf",
+   "day": "2015-06-30"
+  },
+  {
+   "sid": "ETN R735QTJ8XC9X",
+   "cik": 31277,
+   "category": "C1:Manuf",
+   "day": "2015-02-27"
+  },
+  {
+   "sid": "FIZ R735QTJ8XC9X",
+   "cik": 69891,
+   "category": "C1:NoDur",
+   "day": "2015-12-31"
+  },
+  {
+   "sid": "HAS R735QTJ8XC9X",
+   "cik": 46080,
+   "category": "C1:NoDur",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "MCCRK R735QTJ8XC9X",
+   "cik": 63754,
+   "category": "C1:NoDur",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "CPO R735QTJ8XC9X",
+   "cik": 1046257,
+   "category": "C1:NoDur",
+   "day": "2011-02-28"
+  },
+  {
+   "sid": "ALLE VM2VEAXFP085",
+   "cik": 1579241,
+   "category": "C1:Other",
+   "day": "2016-02-29"
+  },
+  {
+   "sid": "CSX R735QTJ8XC9X",
+   "cik": 277948,
+   "category": "C1:Other",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "DOOR VJS5UG799MQT",
+   "cik": 893691,
+   "category": "C1:Other",
+   "day": "2016-04-29"
+  },
+  {
+   "sid": "PCLN RJG7T2VJICTH",
+   "cik": 1075531,
+   "category": "C1:Other",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SBUX R735QTJ8XC9X",
+   "cik": 829224,
+   "category": "C1:Shops",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SFM VIPRESXOA7HH",
+   "cik": 1575515,
+   "category": "C1:Shops",
+   "day": "2015-02-27"
+  },
+  {
+   "sid": "DG UHLLRXJMGEP1",
+   "cik": 29534,
+   "category": "C1:Shops",
+   "day": "2012-03-30"
+  },
+  {
+   "sid": "OLLI W28SLK46WW2T",
+   "cik": 1639300,
+   "category": "C1:Shops",
+   "day": "2017-04-28"
+  },
+  {
+   "sid": "TDS R735QTJ8XC9X",
+   "cik": 1051512,
+   "category": "C1:Telcm",
+   "day": "2013-02-28"
+  },
+  {
+   "sid": "DISH R735QTJ8XC9X",
+   "cik": 1001082,
+   "category": "C1:Telcm",
+   "day": "2012-08-31"
+  },
+  {
+   "sid": "EQIXD SKZ55CR4HH0L",
+   "cik": 1101239,
+   "category": "C1:Telcm",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "PCS TRX10524LYZP",
+   "cik": 1283699,
+   "category": "C1:Telcm",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "IDA R735QTJ8XC9X",
+   "cik": 1057877,
+   "category": "C1:Utils",
+   "day": "2014-02-28"
+  },
+  {
+   "sid": "PSC R735QTJ8XC9X",
+   "cik": 78128,
+   "category": "C1:Utils",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "OGS VNSWK6Z2IJC5",
+   "cik": 1587732,
+   "category": "C1:Utils",
+   "day": "2016-02-29"
+  },
+  {
+   "sid": "EIX R735QTJ8XC9X",
+   "cik": 827052,
+   "category": "C1:Utils",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "STX SKFG7HFQYDT1",
+   "cik": 1137789,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "OC TNAMGC8LOGV9",
+   "cik": 1370946,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "CMA R735QTJ8XC9X",
+   "cik": 28412,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "MRVL RVW87MBCBMUD",
+   "cik": 1058057,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "CDN R735QTJ8XC9X",
+   "cik": 813672,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SNPS R735QTJ8XC9X",
+   "cik": 883241,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "PEP R735QTJ8XC9X",
+   "cik": 77476,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "MRO R735QTJ8XC9X",
+   "cik": 101778,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "EGN R735QTJ8XC9X",
+   "cik": 277595,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SLG R735QTJ8XC9X",
+   "cik": 1040971,
+   "category": "C2",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "MIC T4K58ANZ9NXH",
+   "cik": 1289790,
+   "category": "C3",
+   "day": "2015-06-30"
+  },
+  {
+   "sid": "NYT R735QTJ8XC9X",
+   "cik": 71691,
+   "category": "C3",
+   "day": "2013-10-31"
+  },
+  {
+   "sid": "HAWK VFVCX2W4BQSL",
+   "cik": 1411488,
+   "category": "C3",
+   "day": "2015-07-31"
+  },
+  {
+   "sid": "UBSI R735QTJ8XC9X",
+   "cik": 729986,
+   "category": "C3",
+   "day": "2014-03-31"
+  },
+  {
+   "sid": "MSG UK18K93N9JZ9",
+   "cik": 1469372,
+   "category": "C3",
+   "day": "2012-03-30"
+  },
+  {
+   "sid": "CW R735QTJ8XC9X",
+   "cik": 26324,
+   "category": "C3",
+   "day": "2013-09-30"
+  },
+  {
+   "sid": "RH VB9XTDFRGZTX",
+   "cik": 1528849,
+   "category": "C3",
+   "day": "2013-05-31"
+  },
+  {
+   "sid": "HONI R735QTJ8XC9X",
+   "cik": 48287,
+   "category": "C3",
+   "day": "2014-10-31"
+  },
+  {
+   "sid": "CRZO R735QTJ8XC9X",
+   "cik": 1040593,
+   "category": "C3",
+   "day": "2014-02-28"
+  },
+  {
+   "sid": "UMPQ R9JRZ8GFT8PX",
+   "cik": 1077771,
+   "category": "C3",
+   "day": "2013-11-29"
+  },
+  {
+   "sid": "VVUS R735QTJ8XC9X",
+   "cik": 881524,
+   "category": "C4",
+   "day": "2012-02-29"
+  },
+  {
+   "sid": "XTXI SVBC4P0XENOL",
+   "cik": 1209821,
+   "category": "C4",
+   "day": "2011-08-31"
+  },
+  {
+   "sid": "KWK RIRLMQQBLHT1",
+   "cik": 1060990,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "JWA R735QTJ8XC9X",
+   "cik": 107140,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "WIN TKE92FGPKHUT",
+   "cik": 1282266,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "ANR T687HZZ9XOPX",
+   "cik": 1301063,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "ESI R735QTJ8XC9X",
+   "cik": 922475,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "EDMC UGG9006J8PYD",
+   "cik": 880059,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "SD TXEXUXL1ZM91",
+   "cik": 1349436,
+   "category": "C4",
+   "day": "2011-01-31"
+  },
+  {
+   "sid": "FDO R735QTJ8XC9X",
+   "cik": 34408,
+   "category": "C4",
+   "day": "2011-01-31"
+  }
+ ]
+}
