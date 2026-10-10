@@ -1,0 +1,168 @@
+{
+ "securities": 1512,
+ "no_cik": 13,
+ "no_sec_facts": 0,
+ "sec_requests": 13,
+ "vendor": {
+  "old": {
+   "rows": 70804,
+   "h2": 17778,
+   "h2_share": 0.2510875091802723
+  },
+  "new": {
+   "rows": 57502,
+   "h2": 56818,
+   "h2_share": 0.9881047615735105
+  }
+ },
+ "sec_only": {
+  "old": {
+   "h2": 53827,
+   "pass_if_gp_derivable": 17239,
+   "pass": 16400,
+   "no_cik": 577,
+   "pass_share": 0.23162533190215243,
+   "pass_share_if_gp_derivable": 0.47510027682051864
+  },
+  "new": {
+   "h2": 43160,
+   "pass_if_gp_derivable": 14378,
+   "pass": 13962,
+   "no_cik": 380,
+   "pass_share": 0.2428089457757991,
+   "pass_share_if_gp_derivable": 0.49285242252443395
+  }
+ },
+ "sec_only_by_year": {
+  "old": {
+   "2011": {
+    "h2": 8162,
+    "pass": 101,
+    "no_cik": 23,
+    "pass_share": 0.012189234853970552
+   },
+   "2012": {
+    "h2": 7469,
+    "pass": 1083,
+    "no_cik": 39,
+    "pass_share": 0.12606215807240134
+   },
+   "2013": {
+    "h2": 7200,
+    "pass": 2641,
+    "no_cik": 88,
+    "pass_share": 0.26598851848121663
+   },
+   "2014": {
+    "h2": 7882,
+    "pass": 3014,
+    "no_cik": 122,
+    "pass_share": 0.2735523688509711
+   },
+   "2015": {
+    "h2": 7847,
+    "pass": 3056,
+    "no_cik": 125,
+    "pass_share": 0.2771128037722162
+   },
+   "2016": {
+    "h2": 7257,
+    "pass": 3209,
+    "no_cik": 94,
+    "pass_share": 0.30388257575757577
+   },
+   "2017": {
+    "h2": 8010,
+    "pass": 3296,
+    "no_cik": 86,
+    "pass_share": 0.2893258426966292
+   }
+  },
+  "new": {
+   "2011": {
+    "h2": 6460,
+    "pass": 88,
+    "no_cik": 11,
+    "pass_share": 0.013416679371855466
+   },
+   "2012": {
+    "h2": 5895,
+    "pass": 953,
+    "no_cik": 23,
+    "pass_share": 0.13869887934798428
+   },
+   "2013": {
+    "h2": 5592,
+    "pass": 2217,
+    "no_cik": 58,
+    "pass_share": 0.28181009279267827
+   },
+   "2014": {
+    "h2": 6217,
+    "pass": 2456,
+    "no_cik": 81,
+    "pass_share": 0.2805574594471099
+   },
+   "2015": {
+    "h2": 6277,
+    "pass": 2535,
+    "no_cik": 77,
+    "pass_share": 0.28518393520081
+   },
+   "2016": {
+    "h2": 5926,
+    "pass": 2763,
+    "no_cik": 67,
+    "pass_share": 0.31555504796710826
+   },
+   "2017": {
+    "h2": 6793,
+    "pass": 2950,
+    "no_cik": 63,
+    "pass_share": 0.3008362227207832
+   }
+  }
+ },
+ "h2_reasons_new_universe": {
+  "missing: gross_profit": 21929,
+  "missing: revenue": 14430,
+  "missing: revenue_prev": 3776,
+  "missing: operating_cash_flow": 1903,
+  "missing: net_income": 1059,
+  "missing: equity": 32,
+  "missing: total_assets": 16,
+  "invalid denominator (assets / revenue <= 0)": 15
+ },
+ "sec_filing_delay_days": {
+  "10-Q": {
+   "n": 28790,
+   "median": 35.0,
+   "p90": 40,
+   "p99": 68,
+   "max": 991,
+   "share_gt_45": 0.0174018756512678,
+   "share_gt_90": 0.0074331365057311565,
+   "share_negative": 0.0
+  },
+  "10-K": {
+   "n": 9786,
+   "median": 56.0,
+   "p90": 61,
+   "p99": 198,
+   "max": 846,
+   "share_gt_45": 0.8746167995095033,
+   "share_gt_90": 0.018291436746372368,
+   "share_negative": 0.0
+  },
+  "10-KT": {
+   "n": 17,
+   "median": 59,
+   "p90": 113,
+   "p99": 421,
+   "max": 421,
+   "share_gt_45": 0.9411764705882353,
+   "share_gt_90": 0.17647058823529413,
+   "share_negative": 0.0
+  }
+ }
+}

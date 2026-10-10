@@ -1,0 +1,52 @@
+{
+ "revenue_q": {
+  "periods": 9246,
+  "changed_later_gt_0.5pct": 1154,
+  "changed_later_gt_5pct": 618,
+  "share_changed": 0.12481072896387627,
+  "share_changed_gt_5pct": 0.06683971447112265
+ },
+ "revenue_fy": {
+  "periods": 2613,
+  "changed_later_gt_0.5pct": 409,
+  "changed_later_gt_5pct": 233,
+  "share_changed": 0.15652506697282817,
+  "share_changed_gt_5pct": 0.08916953693073096
+ },
+ "net_income_q": {
+  "periods": 10105,
+  "changed_later_gt_0.5pct": 676,
+  "changed_later_gt_5pct": 415,
+  "share_changed": 0.06689757545769422,
+  "share_changed_gt_5pct": 0.04106877783275606
+ },
+ "net_income_fy": {
+  "periods": 2811,
+  "changed_later_gt_0.5pct": 200,
+  "changed_later_gt_5pct": 93,
+  "share_changed": 0.0711490572749911,
+  "share_changed_gt_5pct": 0.033084311632870865
+ },
+ "operating_cash_flow_fy": {
+  "periods": 2807,
+  "changed_later_gt_0.5pct": 426,
+  "changed_later_gt_5pct": 139,
+  "share_changed": 0.15176344852155327,
+  "share_changed_gt_5pct": 0.04951905949412184
+ },
+ "total_assets": {
+  "periods": 10488,
+  "changed_later_gt_0.5pct": 321,
+  "changed_later_gt_5pct": 36,
+  "share_changed": 0.03060640732265446,
+  "share_changed_gt_5pct": 0.003432494279176201
+ },
+ "stockholders_equity": {
+  "periods": 10548,
+  "changed_later_gt_0.5pct": 276,
+  "changed_later_gt_5pct": 110,
+  "share_changed": 0.026166097838452786,
+  "share_changed_gt_5pct": 0.010428517254455821
+ },
+ "_note": "'changed' = a LATER SEC filing reported the same period with a value differing from the first filing (restatement, reclassification, discontinued-operations recast, segment re-presentation)"
+}

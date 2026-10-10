@@ -121,3 +121,29 @@ def test_x995_fits_the_project_file_limit():
     c = json.loads((ROOT / "experiments/E995-05/config.json").read_text())
     files = run.assemble_files(c, None, False)
     assert len(files) <= 50 and all(len(v) <= 64_000 for v in files.values())
+
+
+def test_sec_only_store_is_vintage_correct_and_truncation_invariant():
+    """P7-CP5c item 13/16 (SEC-only path, offline): fed with SEC filings in filing order, the frozen PIT store shows
+    the ORIGINAL value between the original filing and a later amendment, the amended value only after the
+    amendment's own filing date, and the same state whether or not later filings exist (truncation)."""
+    from datetime import date, timedelta
+
+    from qr_fundamentals import PITStore
+    q = [(date(2014, 3, 31), date(2014, 5, 2)), (date(2014, 6, 30), date(2014, 8, 1)),
+         (date(2014, 9, 30), date(2014, 10, 31)), (date(2014, 12, 31), date(2015, 2, 20))]
+    recs = [(pe, fd, {"revenue_q": 100.0 + i, "revenue_ttm": 406.0 if i == 3 else 390.0, "total_assets": 1e3})
+            for i, (pe, fd) in enumerate(q)]
+    amend = (date(2014, 12, 31), date(2015, 6, 15), {"revenue_q": 150.0, "revenue_ttm": 456.0, "total_assets": 1e3})
+
+    def build(upto):
+        s = PITStore(200)
+        for pe, fd, v in sorted(recs + [amend], key=lambda r: r[1]):
+            if fd < upto:
+                s.observe("X", pe, fd, v, None, fd + timedelta(days=1))
+        return s
+    between, after = date(2015, 3, 2), date(2015, 6, 20)
+    full = build(date(2030, 1, 1))
+    assert full.ttm("X", "revenue", between) == build(between).ttm("X", "revenue", between) == 406.0
+    assert full.ttm("X", "revenue", after) == 453.0            # amended quarter visible only after its filing
+    assert full.ttm("X", "revenue", date(2015, 2, 20)) is None  # the 10-K itself only from the day after filing
