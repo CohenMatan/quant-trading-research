@@ -18,6 +18,9 @@ from qresearch.sec_pit import build_company, index_facts, period_versions  # noq
 
 STRAT = ROOT / "strategies" / "X995_timing_probe"
 X971 = ROOT / "strategies" / "X971_sec_verification"
+KEEP = ("revenue_ttm", "net_income_ttm", "total_assets", "stockholders_equity", "operating_cash_flow_ttm",
+        "gross_profit_ttm", "operating_income_ttm", "revenue_q", "net_income_q", "revenue_fy", "net_income_fy",
+        "operating_cash_flow_fy")
 
 
 def compact(vals):
@@ -55,6 +58,13 @@ def main():
                          for pe in pes},
         }
         added += 1
+    # QuantConnect (2026-10-10) limits researcher projects to 50 files (E995-01): keep only what the timing probe
+    # compares -- SEC filings for periods ending <= 2017-12-31 and the compared fields (vendor reports seen <= 2017)
+    for c in sample.values():
+        c["records"] = [r[:6] + [{k: v for k, v in (r[6] or {}).items() if k in KEEP}] for r in c["records"]
+                        if r[3] <= "2017-12-31"]
+        c["versions"] = {pe: [[a, fo, fi, {k: v for k, v in (vv or {}).items() if k in KEEP}] for a, fo, fi, vv in vs]
+                         for pe, vs in c["versions"].items() if pe <= "2017-12-31"}
     table = {"sample": sample, "float_obs": {}, "pairs": {}}
     for p in STRAT.glob("p5c_ref*.py"):
         p.unlink()
