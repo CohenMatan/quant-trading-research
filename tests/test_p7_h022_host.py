@@ -175,3 +175,49 @@ def test_configs_and_runner_wiring():
     b4["params"]["seeds"] = [1, 5000]
     with pytest.raises(experiment.ConfigError):
         experiment.validate(b4)
+
+
+def test_default_build_policy_is_scoped_to_the_h022_family():
+    """D182: only X994 canaries and the digest-guarded S023 real evaluation may run on QuantConnect's default build."""
+    from qresearch import experiment, run
+    can = json.loads((ROOT / "experiments/E994-03/config.json").read_text())
+    assert can["lean_version_policy"] == run.DEFAULT_BUILD_POLICY
+    experiment.validate(can)
+    null = json.loads((ROOT / "experiments/E023-01/config.json").read_text())
+    null["lean_version_policy"] = run.DEFAULT_BUILD_POLICY
+    with pytest.raises(experiment.ConfigError):            # null batches stay on their calibration build
+        experiment.validate(null)
+    x993 = json.loads((ROOT / "experiments/E993-03/config.json").read_text())
+    assert x993["lean_version_policy"] == run.DEFAULT_BUILD_POLICY
+    experiment.validate(x993)                             # the scores-only export used to diagnose option B (D182)
+    other = json.loads((ROOT / "experiments/E021-01/config.json").read_text())
+    other["lean_version_policy"] = run.DEFAULT_BUILD_POLICY
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(other)
+    bad = copy.deepcopy(can)
+    bad["lean_version_policy"] = "anything"
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(bad)
+
+
+def test_default_build_policy_skips_the_pin_and_records_the_build():
+    from qresearch import run
+    from qresearch.qc_client import BacktestHandle
+    calls = []
+
+    class C:
+        def find_or_create_project(self, name): return 7
+        def sync_files(self, p, f): pass
+        def read_file_contents(self, p): return {}
+        def pin_lean_version(self, p, v): calls.append("pin")
+        def compile(self, p): return "cid"
+        def start_backtest(self, p, cid, name): return BacktestHandle(p, "bt1", cid)
+        def wait_backtest(self, h): return {"error": "stop here", "serverStatistics": {"LEAN Version": "v2.5.0.0.18999"}}
+        def lean_version(self, bt): return bt["serverStatistics"]["LEAN Version"]
+    cfg = {"experiment_id": "E994-99", "strategy_id": "X994", "lean_version_id": 18131,
+           "lean_version_policy": run.DEFAULT_BUILD_POLICY, "params": {}}
+    out = run.execute(cfg, {}, C(), {})
+    assert calls == [] and out["lean_version"].endswith("18999") and "expected build" not in out.get("error", "")
+    cfg.pop("lean_version_policy")
+    out = run.execute(cfg, {}, C(), {})
+    assert calls == ["pin"] and "expected build" in out["error"]

@@ -1,0 +1,2907 @@
+{
+ "baseline": [
+  {
+   "cik_reject": 11,
+   "h2_new": 17885,
+   "h2_old": 23182,
+   "life_reject": 5,
+   "listed_lt_1y": 27,
+   "lost": 0,
+   "nonfin_rows": 71030,
+   "pit_violations": 0,
+   "reasons": {
+    "2": 6038,
+    "3": 51,
+    "4": 187,
+    "5": 11
+   },
+   "rescued": 6287,
+   "rows": 93687,
+   "store_baseline": 78633
+  },
+  {
+   "cik_reject": 0,
+   "h2_new": 56998,
+   "h2_old": 57116,
+   "life_reject": 0,
+   "listed_lt_1y": 1,
+   "lost": 0,
+   "nonfin_rows": 57682,
+   "pit_violations": 0,
+   "reasons": {
+    "2": 122
+   },
+   "rescued": 122,
+   "rows": 76915,
+   "store_baseline": 2269
+  }
+ ],
+ "bits_total_new": {
+  "H1_financial": 16344,
+  "H1_no_sic": 2889,
+  "H2": 76172,
+  "H3": 1689,
+  "H4": 634,
+  "H6": 15320,
+  "H7": 28,
+  "duplicate_class": 264
+ },
+ "bits_total_ref": {
+  "H1_financial": 19307,
+  "H1_no_sic": 3350,
+  "H2": 32999,
+  "H3": 2144,
+  "H4": 766,
+  "H6": 18661,
+  "H7": 2416,
+  "duplicate_class": 394
+ },
+ "calendar": [
+  {
+   "expected_reviews": 84,
+   "expected_weekly": 325,
+   "first_review": "2011-01-31",
+   "last_review": "2017-12-29",
+   "reviews": 84,
+   "reviews_match": true,
+   "weekly": 325,
+   "weekly_match": true
+  },
+  {
+   "expected_reviews": 84,
+   "expected_weekly": 325,
+   "first_review": "2011-01-31",
+   "last_review": "2017-12-29",
+   "reviews": 84,
+   "reviews_match": true,
+   "weekly": 325,
+   "weekly_match": true
+  }
+ ],
+ "checks": [
+  {
+   "month_ends": 96,
+   "sec_fed": 8193,
+   "selections": 2394,
+   "store_sids_max": 6023,
+   "weekly": 325
+  },
+  {
+   "month_ends": 96,
+   "sec_fed": 8127,
+   "selections": 2394,
+   "store_sids_max": 5443,
+   "weekly": 325
+  }
+ ],
+ "lean_new": "v2.5.0.0.18178",
+ "lean_ref": "v2.5.0.0.18131",
+ "new": "E993-03",
+ "panel": [
+  {
+   "build_s": 97.2,
+   "dividend_events": 38616,
+   "duplicate_bars": 0,
+   "first_session": "2007-01-03",
+   "history_calls": 80,
+   "large_distributions_10pct": 160,
+   "last_session": "2017-12-29",
+   "late_events": 0,
+   "late_rows": 0,
+   "off_calendar_rows": 0,
+   "securities": 1917,
+   "sessions": 2769,
+   "split": {
+    "aligned": 516,
+    "n": 528,
+    "outside": 1,
+    "realigned": 0,
+    "unverified": 11
+   },
+   "spy_splits": 0
+  },
+  {
+   "build_s": 66.3,
+   "dividend_events": 33676,
+   "duplicate_bars": 0,
+   "first_session": "2007-01-03",
+   "history_calls": 60,
+   "large_distributions_10pct": 127,
+   "last_session": "2017-12-29",
+   "late_events": 0,
+   "late_rows": 0,
+   "off_calendar_rows": 0,
+   "securities": 1459,
+   "sessions": 2769,
+   "split": {
+    "aligned": 469,
+    "n": 482,
+    "outside": 1,
+    "realigned": 1,
+    "unverified": 11
+   },
+   "spy_splits": 0
+  }
+ ],
+ "per_review": [
+  {
+   "bits_new": {
+    "H1_financial": 136,
+    "H1_no_sic": 61,
+    "H2": 736,
+    "H3": 10,
+    "H4": 8,
+    "H6": 57,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 163,
+    "H1_no_sic": 78,
+    "H2": 437,
+    "H3": 8,
+    "H4": 13,
+    "H6": 75,
+    "H7": 20,
+    "duplicate_class": 3
+   },
+   "common": 713,
+   "eligible": [
+    927,
+    736
+   ],
+   "identical_rows": 1,
+   "population": [
+    366,
+    0
+   ],
+   "review": "2011-01-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 138,
+    "H1_no_sic": 66,
+    "H2": 747,
+    "H3": 9,
+    "H4": 8,
+    "H6": 45,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 169,
+    "H1_no_sic": 87,
+    "H2": 400,
+    "H3": 11,
+    "H4": 13,
+    "H6": 60,
+    "H7": 23,
+    "duplicate_class": 3
+   },
+   "common": 725,
+   "eligible": [
+    950,
+    747
+   ],
+   "identical_rows": 1,
+   "population": [
+    419,
+    0
+   ],
+   "review": "2011-02-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 137,
+    "H1_no_sic": 67,
+    "H2": 751,
+    "H3": 9,
+    "H4": 8,
+    "H6": 35,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 166,
+    "H1_no_sic": 96,
+    "H2": 384,
+    "H3": 11,
+    "H4": 12,
+    "H6": 44,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 727,
+   "eligible": [
+    952,
+    751
+   ],
+   "identical_rows": 1,
+   "population": [
+    432,
+    0
+   ],
+   "review": "2011-03-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 137,
+    "H1_no_sic": 67,
+    "H2": 760,
+    "H3": 9,
+    "H4": 7,
+    "H6": 21,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 167,
+    "H1_no_sic": 97,
+    "H2": 398,
+    "H3": 13,
+    "H4": 11,
+    "H6": 24,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 741,
+   "eligible": [
+    973,
+    760
+   ],
+   "identical_rows": 1,
+   "population": [
+    449,
+    0
+   ],
+   "review": "2011-04-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 139,
+    "H1_no_sic": 60,
+    "H2": 767,
+    "H3": 13,
+    "H4": 6,
+    "H6": 36,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 168,
+    "H1_no_sic": 88,
+    "H2": 411,
+    "H3": 18,
+    "H4": 8,
+    "H6": 47,
+    "H7": 22,
+    "duplicate_class": 3
+   },
+   "common": 748,
+   "eligible": [
+    983,
+    767
+   ],
+   "identical_rows": 1,
+   "population": [
+    442,
+    0
+   ],
+   "review": "2011-05-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 139,
+    "H1_no_sic": 58,
+    "H2": 761,
+    "H3": 15,
+    "H4": 4,
+    "H6": 52,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 164,
+    "H1_no_sic": 81,
+    "H2": 407,
+    "H3": 19,
+    "H4": 6,
+    "H6": 67,
+    "H7": 19,
+    "duplicate_class": 3
+   },
+   "common": 739,
+   "eligible": [
+    959,
+    762
+   ],
+   "identical_rows": 1,
+   "population": [
+    429,
+    1
+   ],
+   "review": "2011-06-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 137,
+    "H1_no_sic": 55,
+    "H2": 744,
+    "H3": 16,
+    "H4": 5,
+    "H6": 90,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 161,
+    "H1_no_sic": 75,
+    "H2": 400,
+    "H3": 22,
+    "H4": 7,
+    "H6": 103,
+    "H7": 16,
+    "duplicate_class": 3
+   },
+   "common": 724,
+   "eligible": [
+    932,
+    745
+   ],
+   "identical_rows": 1,
+   "population": [
+    400,
+    1
+   ],
+   "review": "2011-07-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 135,
+    "H1_no_sic": 32,
+    "H2": 709,
+    "H3": 15,
+    "H4": 4,
+    "H6": 315,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 162,
+    "H1_no_sic": 44,
+    "H2": 380,
+    "H3": 20,
+    "H4": 5,
+    "H6": 379,
+    "H7": 12,
+    "duplicate_class": 3
+   },
+   "common": 694,
+   "eligible": [
+    892,
+    710
+   ],
+   "identical_rows": 1,
+   "population": [
+    250,
+    1
+   ],
+   "review": "2011-08-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 130,
+    "H1_no_sic": 30,
+    "H2": 672,
+    "H3": 11,
+    "H4": 4,
+    "H6": 360,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 155,
+    "H1_no_sic": 42,
+    "H2": 351,
+    "H3": 15,
+    "H4": 5,
+    "H6": 427,
+    "H7": 11,
+    "duplicate_class": 3
+   },
+   "common": 658,
+   "eligible": [
+    834,
+    673
+   ],
+   "identical_rows": 1,
+   "population": [
+    196,
+    1
+   ],
+   "review": "2011-09-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 132,
+    "H1_no_sic": 34,
+    "H2": 710,
+    "H3": 11,
+    "H4": 3,
+    "H6": 349,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 161,
+    "H1_no_sic": 45,
+    "H2": 377,
+    "H3": 14,
+    "H4": 5,
+    "H6": 427,
+    "H7": 13,
+    "duplicate_class": 3
+   },
+   "common": 691,
+   "eligible": [
+    893,
+    711
+   ],
+   "identical_rows": 1,
+   "population": [
+    226,
+    1
+   ],
+   "review": "2011-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 134,
+    "H1_no_sic": 31,
+    "H2": 703,
+    "H3": 11,
+    "H4": 3,
+    "H6": 328,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 160,
+    "H1_no_sic": 39,
+    "H2": 373,
+    "H3": 16,
+    "H4": 5,
+    "H6": 408,
+    "H7": 12,
+    "duplicate_class": 3
+   },
+   "common": 685,
+   "eligible": [
+    883,
+    704
+   ],
+   "identical_rows": 1,
+   "population": [
+    240,
+    1
+   ],
+   "review": "2011-11-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 132,
+    "H1_no_sic": 34,
+    "H2": 713,
+    "H3": 13,
+    "H4": 3,
+    "H6": 314,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 161,
+    "H1_no_sic": 42,
+    "H2": 385,
+    "H3": 17,
+    "H4": 5,
+    "H6": 398,
+    "H7": 12,
+    "duplicate_class": 3
+   },
+   "common": 697,
+   "eligible": [
+    891,
+    714
+   ],
+   "identical_rows": 1,
+   "population": [
+    241,
+    1
+   ],
+   "review": "2011-12-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 138,
+    "H1_no_sic": 37,
+    "H2": 734,
+    "H3": 15,
+    "H4": 3,
+    "H6": 173,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 166,
+    "H1_no_sic": 45,
+    "H2": 395,
+    "H3": 18,
+    "H4": 6,
+    "H6": 225,
+    "H7": 15,
+    "duplicate_class": 3
+   },
+   "common": 716,
+   "eligible": [
+    915,
+    735
+   ],
+   "identical_rows": 1,
+   "population": [
+    337,
+    1
+   ],
+   "review": "2012-01-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 144,
+    "H1_no_sic": 36,
+    "H2": 754,
+    "H3": 15,
+    "H4": 4,
+    "H6": 104,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 172,
+    "H1_no_sic": 47,
+    "H2": 362,
+    "H3": 19,
+    "H4": 7,
+    "H6": 141,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 737,
+   "eligible": [
+    944,
+    755
+   ],
+   "identical_rows": 1,
+   "population": [
+    415,
+    1
+   ],
+   "review": "2012-02-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 147,
+    "H1_no_sic": 35,
+    "H2": 757,
+    "H3": 14,
+    "H4": 5,
+    "H6": 81,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 174,
+    "H1_no_sic": 46,
+    "H2": 349,
+    "H3": 21,
+    "H4": 8,
+    "H6": 109,
+    "H7": 22,
+    "duplicate_class": 3
+   },
+   "common": 743,
+   "eligible": [
+    952,
+    759
+   ],
+   "identical_rows": 1,
+   "population": [
+    446,
+    2
+   ],
+   "review": "2012-03-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 146,
+    "H1_no_sic": 35,
+    "H2": 759,
+    "H3": 15,
+    "H4": 4,
+    "H6": 95,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 173,
+    "H1_no_sic": 47,
+    "H2": 368,
+    "H3": 24,
+    "H4": 7,
+    "H6": 129,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 744,
+   "eligible": [
+    952,
+    761
+   ],
+   "identical_rows": 1,
+   "population": [
+    424,
+    2
+   ],
+   "review": "2012-04-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 145,
+    "H1_no_sic": 33,
+    "H2": 736,
+    "H3": 12,
+    "H4": 4,
+    "H6": 206,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 172,
+    "H1_no_sic": 39,
+    "H2": 352,
+    "H3": 16,
+    "H4": 7,
+    "H6": 262,
+    "H7": 18,
+    "duplicate_class": 3
+   },
+   "common": 721,
+   "eligible": [
+    910,
+    738
+   ],
+   "identical_rows": 1,
+   "population": [
+    342,
+    2
+   ],
+   "review": "2012-05-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 145,
+    "H1_no_sic": 37,
+    "H2": 746,
+    "H3": 14,
+    "H4": 5,
+    "H6": 135,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 171,
+    "H1_no_sic": 43,
+    "H2": 357,
+    "H3": 17,
+    "H4": 7,
+    "H6": 169,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 729,
+   "eligible": [
+    923,
+    748
+   ],
+   "identical_rows": 1,
+   "population": [
+    382,
+    1
+   ],
+   "review": "2012-06-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 138,
+    "H1_no_sic": 34,
+    "H2": 728,
+    "H3": 11,
+    "H4": 4,
+    "H6": 100,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 165,
+    "H1_no_sic": 42,
+    "H2": 347,
+    "H3": 14,
+    "H4": 7,
+    "H6": 130,
+    "H7": 18,
+    "duplicate_class": 3
+   },
+   "common": 714,
+   "eligible": [
+    904,
+    730
+   ],
+   "identical_rows": 1,
+   "population": [
+    397,
+    1
+   ],
+   "review": "2012-07-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 144,
+    "H1_no_sic": 36,
+    "H2": 743,
+    "H3": 11,
+    "H4": 4,
+    "H6": 128,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 171,
+    "H1_no_sic": 42,
+    "H2": 351,
+    "H3": 15,
+    "H4": 7,
+    "H6": 165,
+    "H7": 18,
+    "duplicate_class": 3
+   },
+   "common": 730,
+   "eligible": [
+    920,
+    746
+   ],
+   "identical_rows": 1,
+   "population": [
+    387,
+    2
+   ],
+   "review": "2012-08-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 146,
+    "H1_no_sic": 36,
+    "H2": 759,
+    "H3": 14,
+    "H4": 6,
+    "H6": 94,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 172,
+    "H1_no_sic": 43,
+    "H2": 365,
+    "H3": 17,
+    "H4": 9,
+    "H6": 123,
+    "H7": 18,
+    "duplicate_class": 3
+   },
+   "common": 745,
+   "eligible": [
+    936,
+    762
+   ],
+   "identical_rows": 1,
+   "population": [
+    411,
+    2
+   ],
+   "review": "2012-09-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 146,
+    "H1_no_sic": 37,
+    "H2": 753,
+    "H3": 12,
+    "H4": 10,
+    "H6": 126,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 171,
+    "H1_no_sic": 43,
+    "H2": 358,
+    "H3": 16,
+    "H4": 11,
+    "H6": 154,
+    "H7": 16,
+    "duplicate_class": 3
+   },
+   "common": 737,
+   "eligible": [
+    926,
+    756
+   ],
+   "identical_rows": 1,
+   "population": [
+    388,
+    2
+   ],
+   "review": "2012-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 148,
+    "H1_no_sic": 36,
+    "H2": 763,
+    "H3": 16,
+    "H4": 10,
+    "H6": 192,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 173,
+    "H1_no_sic": 43,
+    "H2": 363,
+    "H3": 20,
+    "H4": 10,
+    "H6": 248,
+    "H7": 17,
+    "duplicate_class": 3
+   },
+   "common": 746,
+   "eligible": [
+    941,
+    767
+   ],
+   "identical_rows": 1,
+   "population": [
+    358,
+    3
+   ],
+   "review": "2012-11-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 151,
+    "H1_no_sic": 36,
+    "H2": 776,
+    "H3": 14,
+    "H4": 10,
+    "H6": 150,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 176,
+    "H1_no_sic": 43,
+    "H2": 367,
+    "H3": 17,
+    "H4": 9,
+    "H6": 195,
+    "H7": 16,
+    "duplicate_class": 3
+   },
+   "common": 757,
+   "eligible": [
+    959,
+    780
+   ],
+   "identical_rows": 1,
+   "population": [
+    407,
+    3
+   ],
+   "review": "2012-12-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 158,
+    "H1_no_sic": 37,
+    "H2": 799,
+    "H3": 15,
+    "H4": 11,
+    "H6": 71,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 184,
+    "H1_no_sic": 45,
+    "H2": 386,
+    "H3": 17,
+    "H4": 11,
+    "H6": 91,
+    "H7": 17,
+    "duplicate_class": 3
+   },
+   "common": 778,
+   "eligible": [
+    986,
+    803
+   ],
+   "identical_rows": 2,
+   "population": [
+    461,
+    3
+   ],
+   "review": "2013-01-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 159,
+    "H1_no_sic": 37,
+    "H2": 796,
+    "H3": 19,
+    "H4": 10,
+    "H6": 86,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 188,
+    "H1_no_sic": 44,
+    "H2": 354,
+    "H3": 21,
+    "H4": 11,
+    "H6": 109,
+    "H7": 17,
+    "duplicate_class": 3
+   },
+   "common": 783,
+   "eligible": [
+    999,
+    807
+   ],
+   "identical_rows": 1,
+   "population": [
+    493,
+    8
+   ],
+   "review": "2013-02-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 161,
+    "H1_no_sic": 41,
+    "H2": 808,
+    "H3": 19,
+    "H4": 9,
+    "H6": 65,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 191,
+    "H1_no_sic": 50,
+    "H2": 357,
+    "H3": 20,
+    "H4": 9,
+    "H6": 83,
+    "H7": 18,
+    "duplicate_class": 3
+   },
+   "common": 797,
+   "eligible": [
+    1033,
+    818
+   ],
+   "identical_rows": 1,
+   "population": [
+    530,
+    8
+   ],
+   "review": "2013-03-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 168,
+    "H1_no_sic": 39,
+    "H2": 818,
+    "H3": 13,
+    "H4": 11,
+    "H6": 53,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 196,
+    "H1_no_sic": 51,
+    "H2": 378,
+    "H3": 20,
+    "H4": 11,
+    "H6": 68,
+    "H7": 20,
+    "duplicate_class": 3
+   },
+   "common": 809,
+   "eligible": [
+    1035,
+    830
+   ],
+   "identical_rows": 1,
+   "population": [
+    512,
+    11
+   ],
+   "review": "2013-04-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 171,
+    "H1_no_sic": 39,
+    "H2": 839,
+    "H3": 16,
+    "H4": 10,
+    "H6": 50,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 200,
+    "H1_no_sic": 49,
+    "H2": 391,
+    "H3": 23,
+    "H4": 10,
+    "H6": 69,
+    "H7": 19,
+    "duplicate_class": 3
+   },
+   "common": 833,
+   "eligible": [
+    1063,
+    854
+   ],
+   "identical_rows": 2,
+   "population": [
+    531,
+    13
+   ],
+   "review": "2013-05-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 173,
+    "H1_no_sic": 38,
+    "H2": 838,
+    "H3": 15,
+    "H4": 12,
+    "H6": 78,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 205,
+    "H1_no_sic": 49,
+    "H2": 389,
+    "H3": 22,
+    "H4": 12,
+    "H6": 98,
+    "H7": 19,
+    "duplicate_class": 3
+   },
+   "common": 830,
+   "eligible": [
+    1058,
+    851
+   ],
+   "identical_rows": 2,
+   "population": [
+    511,
+    11
+   ],
+   "review": "2013-06-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 170,
+    "H1_no_sic": 35,
+    "H2": 855,
+    "H3": 15,
+    "H4": 11,
+    "H6": 65,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 204,
+    "H1_no_sic": 44,
+    "H2": 409,
+    "H3": 24,
+    "H4": 11,
+    "H6": 78,
+    "H7": 21,
+    "duplicate_class": 3
+   },
+   "common": 848,
+   "eligible": [
+    1086,
+    870
+   ],
+   "identical_rows": 2,
+   "population": [
+    542,
+    13
+   ],
+   "review": "2013-07-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 164,
+    "H1_no_sic": 27,
+    "H2": 838,
+    "H3": 16,
+    "H4": 9,
+    "H6": 80,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 198,
+    "H1_no_sic": 29,
+    "H2": 394,
+    "H3": 26,
+    "H4": 9,
+    "H6": 98,
+    "H7": 22,
+    "duplicate_class": 3
+   },
+   "common": 832,
+   "eligible": [
+    1064,
+    852
+   ],
+   "identical_rows": 2,
+   "population": [
+    539,
+    11
+   ],
+   "review": "2013-08-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 170,
+    "H1_no_sic": 27,
+    "H2": 865,
+    "H3": 21,
+    "H4": 10,
+    "H6": 60,
+    "H7": 1,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 203,
+    "H1_no_sic": 30,
+    "H2": 410,
+    "H3": 30,
+    "H4": 10,
+    "H6": 77,
+    "H7": 23,
+    "duplicate_class": 3
+   },
+   "common": 858,
+   "eligible": [
+    1104,
+    882
+   ],
+   "identical_rows": 2,
+   "population": [
+    567,
+    13
+   ],
+   "review": "2013-09-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 176,
+    "H1_no_sic": 27,
+    "H2": 877,
+    "H3": 18,
+    "H4": 9,
+    "H6": 75,
+    "duplicate_class": 1
+   },
+   "bits_ref": {
+    "H1_financial": 210,
+    "H1_no_sic": 31,
+    "H2": 419,
+    "H3": 24,
+    "H4": 8,
+    "H6": 88,
+    "H7": 20,
+    "duplicate_class": 3
+   },
+   "common": 871,
+   "eligible": [
+    1117,
+    892
+   ],
+   "identical_rows": 2,
+   "population": [
+    557,
+    11
+   ],
+   "review": "2013-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 185,
+    "H1_no_sic": 29,
+    "H2": 907,
+    "H3": 27,
+    "H4": 6,
+    "H6": 88,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 223,
+    "H1_no_sic": 31,
+    "H2": 445,
+    "H3": 33,
+    "H4": 7,
+    "H6": 106,
+    "H7": 17,
+    "duplicate_class": 4
+   },
+   "common": 901,
+   "eligible": [
+    1147,
+    921
+   ],
+   "identical_rows": 2,
+   "population": [
+    566,
+    11
+   ],
+   "review": "2013-11-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 192,
+    "H1_no_sic": 29,
+    "H2": 926,
+    "H3": 30,
+    "H4": 7,
+    "H6": 112,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 231,
+    "H1_no_sic": 31,
+    "H2": 460,
+    "H3": 36,
+    "H4": 8,
+    "H6": 138,
+    "H7": 17,
+    "duplicate_class": 4
+   },
+   "common": 912,
+   "eligible": [
+    1168,
+    941
+   ],
+   "identical_rows": 2,
+   "population": [
+    562,
+    14
+   ],
+   "review": "2013-12-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 187,
+    "H1_no_sic": 32,
+    "H2": 918,
+    "H3": 27,
+    "H4": 8,
+    "H6": 110,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 223,
+    "H1_no_sic": 36,
+    "H2": 453,
+    "H3": 31,
+    "H4": 9,
+    "H6": 142,
+    "H7": 19,
+    "duplicate_class": 4
+   },
+   "common": 898,
+   "eligible": [
+    1149,
+    931
+   ],
+   "identical_rows": 2,
+   "population": [
+    549,
+    12
+   ],
+   "review": "2014-01-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 196,
+    "H1_no_sic": 33,
+    "H2": 935,
+    "H3": 28,
+    "H4": 11,
+    "H6": 104,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 234,
+    "H1_no_sic": 39,
+    "H2": 420,
+    "H3": 37,
+    "H4": 11,
+    "H6": 130,
+    "H7": 27,
+    "duplicate_class": 4
+   },
+   "common": 924,
+   "eligible": [
+    1189,
+    951
+   ],
+   "identical_rows": 1,
+   "population": [
+    597,
+    14
+   ],
+   "review": "2014-02-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 195,
+    "H1_no_sic": 31,
+    "H2": 938,
+    "H3": 28,
+    "H4": 11,
+    "H6": 106,
+    "H7": 1,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 236,
+    "H1_no_sic": 36,
+    "H2": 412,
+    "H3": 36,
+    "H4": 12,
+    "H6": 128,
+    "H7": 30,
+    "duplicate_class": 4
+   },
+   "common": 928,
+   "eligible": [
+    1192,
+    954
+   ],
+   "identical_rows": 1,
+   "population": [
+    611,
+    11
+   ],
+   "review": "2014-03-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 194,
+    "H1_no_sic": 30,
+    "H2": 926,
+    "H3": 27,
+    "H4": 10,
+    "H6": 99,
+    "H7": 1,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 232,
+    "H1_no_sic": 37,
+    "H2": 413,
+    "H3": 33,
+    "H4": 12,
+    "H6": 126,
+    "H7": 27,
+    "duplicate_class": 4
+   },
+   "common": 919,
+   "eligible": [
+    1167,
+    942
+   ],
+   "identical_rows": 1,
+   "population": [
+    585,
+    10
+   ],
+   "review": "2014-04-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 196,
+    "H1_no_sic": 27,
+    "H2": 940,
+    "H3": 34,
+    "H4": 9,
+    "H6": 140,
+    "H7": 1,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 236,
+    "H1_no_sic": 30,
+    "H2": 421,
+    "H3": 39,
+    "H4": 10,
+    "H6": 174,
+    "H7": 28,
+    "duplicate_class": 4
+   },
+   "common": 932,
+   "eligible": [
+    1186,
+    955
+   ],
+   "identical_rows": 2,
+   "population": [
+    566,
+    8
+   ],
+   "review": "2014-05-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 205,
+    "H1_no_sic": 28,
+    "H2": 967,
+    "H3": 35,
+    "H4": 12,
+    "H6": 96,
+    "H7": 1,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 250,
+    "H1_no_sic": 32,
+    "H2": 441,
+    "H3": 41,
+    "H4": 13,
+    "H6": 125,
+    "H7": 27,
+    "duplicate_class": 4
+   },
+   "common": 955,
+   "eligible": [
+    1227,
+    984
+   ],
+   "identical_rows": 2,
+   "population": [
+    611,
+    12
+   ],
+   "review": "2014-06-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 197,
+    "H1_no_sic": 34,
+    "H2": 946,
+    "H3": 38,
+    "H4": 14,
+    "H6": 136,
+    "H7": 1,
+    "duplicate_class": 2
+   },
+   "bits_ref": {
+    "H1_financial": 237,
+    "H1_no_sic": 38,
+    "H2": 429,
+    "H3": 46,
+    "H4": 15,
+    "H6": 168,
+    "H7": 28,
+    "duplicate_class": 4
+   },
+   "common": 932,
+   "eligible": [
+    1186,
+    962
+   ],
+   "identical_rows": 2,
+   "population": [
+    554,
+    9
+   ],
+   "review": "2014-07-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 203,
+    "H1_no_sic": 34,
+    "H2": 958,
+    "H3": 39,
+    "H4": 15,
+    "H6": 165,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 241,
+    "H1_no_sic": 38,
+    "H2": 439,
+    "H3": 48,
+    "H4": 17,
+    "H6": 196,
+    "H7": 26,
+    "duplicate_class": 5
+   },
+   "common": 950,
+   "eligible": [
+    1213,
+    974
+   ],
+   "identical_rows": 2,
+   "population": [
+    560,
+    9
+   ],
+   "review": "2014-08-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 200,
+    "H1_no_sic": 30,
+    "H2": 933,
+    "H3": 34,
+    "H4": 15,
+    "H6": 198,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 234,
+    "H1_no_sic": 33,
+    "H2": 417,
+    "H3": 41,
+    "H4": 17,
+    "H6": 236,
+    "H7": 26,
+    "duplicate_class": 5
+   },
+   "common": 924,
+   "eligible": [
+    1175,
+    948
+   ],
+   "identical_rows": 2,
+   "population": [
+    520,
+    11
+   ],
+   "review": "2014-09-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 213,
+    "H1_no_sic": 34,
+    "H2": 972,
+    "H3": 30,
+    "H4": 14,
+    "H6": 222,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 255,
+    "H1_no_sic": 38,
+    "H2": 441,
+    "H3": 38,
+    "H4": 16,
+    "H6": 281,
+    "H7": 26,
+    "duplicate_class": 5
+   },
+   "common": 963,
+   "eligible": [
+    1233,
+    989
+   ],
+   "identical_rows": 2,
+   "population": [
+    516,
+    10
+   ],
+   "review": "2014-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 215,
+    "H1_no_sic": 31,
+    "H2": 970,
+    "H3": 28,
+    "H4": 17,
+    "H6": 162,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 261,
+    "H1_no_sic": 35,
+    "H2": 435,
+    "H3": 36,
+    "H4": 19,
+    "H6": 200,
+    "H7": 26,
+    "duplicate_class": 5
+   },
+   "common": 960,
+   "eligible": [
+    1227,
+    985
+   ],
+   "identical_rows": 2,
+   "population": [
+    572,
+    10
+   ],
+   "review": "2014-11-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 217,
+    "H1_no_sic": 30,
+    "H2": 974,
+    "H3": 27,
+    "H4": 15,
+    "H6": 216,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 264,
+    "H1_no_sic": 38,
+    "H2": 438,
+    "H3": 41,
+    "H4": 17,
+    "H6": 266,
+    "H7": 27,
+    "duplicate_class": 5
+   },
+   "common": 964,
+   "eligible": [
+    1236,
+    988
+   ],
+   "identical_rows": 2,
+   "population": [
+    536,
+    9
+   ],
+   "review": "2014-12-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 213,
+    "H1_no_sic": 32,
+    "H2": 970,
+    "H3": 28,
+    "H4": 14,
+    "H6": 266,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 258,
+    "H1_no_sic": 40,
+    "H2": 426,
+    "H3": 40,
+    "H4": 15,
+    "H6": 317,
+    "H7": 27,
+    "duplicate_class": 5
+   },
+   "common": 952,
+   "eligible": [
+    1207,
+    982
+   ],
+   "identical_rows": 2,
+   "population": [
+    490,
+    7
+   ],
+   "review": "2015-01-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 216,
+    "H1_no_sic": 34,
+    "H2": 986,
+    "H3": 28,
+    "H4": 14,
+    "H6": 195,
+    "H7": 1,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 261,
+    "H1_no_sic": 44,
+    "H2": 399,
+    "H3": 40,
+    "H4": 17,
+    "H6": 239,
+    "H7": 35,
+    "duplicate_class": 5
+   },
+   "common": 980,
+   "eligible": [
+    1250,
+    1003
+   ],
+   "identical_rows": 1,
+   "population": [
+    574,
+    10
+   ],
+   "review": "2015-02-27"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 221,
+    "H1_no_sic": 36,
+    "H2": 1006,
+    "H3": 27,
+    "H4": 13,
+    "H6": 233,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 262,
+    "H1_no_sic": 43,
+    "H2": 397,
+    "H3": 39,
+    "H4": 16,
+    "H6": 275,
+    "H7": 34,
+    "duplicate_class": 5
+   },
+   "common": 993,
+   "eligible": [
+    1259,
+    1023
+   ],
+   "identical_rows": 0,
+   "population": [
+    560,
+    11
+   ],
+   "review": "2015-03-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 217,
+    "H1_no_sic": 33,
+    "H2": 985,
+    "H3": 23,
+    "H4": 11,
+    "H6": 216,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 259,
+    "H1_no_sic": 41,
+    "H2": 402,
+    "H3": 35,
+    "H4": 14,
+    "H6": 267,
+    "H7": 38,
+    "duplicate_class": 5
+   },
+   "common": 974,
+   "eligible": [
+    1245,
+    1001
+   ],
+   "identical_rows": 0,
+   "population": [
+    551,
+    10
+   ],
+   "review": "2015-04-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 221,
+    "H1_no_sic": 30,
+    "H2": 998,
+    "H3": 25,
+    "H4": 8,
+    "H6": 213,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 266,
+    "H1_no_sic": 35,
+    "H2": 409,
+    "H3": 37,
+    "H4": 11,
+    "H6": 261,
+    "H7": 42,
+    "duplicate_class": 5
+   },
+   "common": 990,
+   "eligible": [
+    1259,
+    1016
+   ],
+   "identical_rows": 0,
+   "population": [
+    557,
+    13
+   ],
+   "review": "2015-05-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 230,
+    "H1_no_sic": 30,
+    "H2": 1003,
+    "H3": 22,
+    "H4": 7,
+    "H6": 263,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 272,
+    "H1_no_sic": 34,
+    "H2": 420,
+    "H3": 30,
+    "H4": 10,
+    "H6": 322,
+    "H7": 39,
+    "duplicate_class": 6
+   },
+   "common": 994,
+   "eligible": [
+    1262,
+    1022
+   ],
+   "identical_rows": 1,
+   "population": [
+    516,
+    14
+   ],
+   "review": "2015-06-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 228,
+    "H1_no_sic": 35,
+    "H2": 1004,
+    "H3": 23,
+    "H4": 9,
+    "H6": 250,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 274,
+    "H1_no_sic": 40,
+    "H2": 422,
+    "H3": 32,
+    "H4": 12,
+    "H6": 305,
+    "H7": 34,
+    "duplicate_class": 5
+   },
+   "common": 988,
+   "eligible": [
+    1247,
+    1020
+   ],
+   "identical_rows": 1,
+   "population": [
+    507,
+    12
+   ],
+   "review": "2015-07-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 220,
+    "H1_no_sic": 30,
+    "H2": 975,
+    "H3": 23,
+    "H4": 9,
+    "H6": 346,
+    "duplicate_class": 3
+   },
+   "bits_ref": {
+    "H1_financial": 262,
+    "H1_no_sic": 31,
+    "H2": 411,
+    "H3": 34,
+    "H4": 11,
+    "H6": 417,
+    "H7": 34,
+    "duplicate_class": 5
+   },
+   "common": 956,
+   "eligible": [
+    1205,
+    988
+   ],
+   "identical_rows": 1,
+   "population": [
+    428,
+    6
+   ],
+   "review": "2015-08-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 222,
+    "H1_no_sic": 27,
+    "H2": 945,
+    "H3": 20,
+    "H4": 6,
+    "H6": 480,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 264,
+    "H1_no_sic": 29,
+    "H2": 390,
+    "H3": 30,
+    "H4": 8,
+    "H6": 565,
+    "H7": 31,
+    "duplicate_class": 5
+   },
+   "common": 928,
+   "eligible": [
+    1159,
+    959
+   ],
+   "identical_rows": 1,
+   "population": [
+    333,
+    7
+   ],
+   "review": "2015-09-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 228,
+    "H1_no_sic": 26,
+    "H2": 969,
+    "H3": 19,
+    "H4": 4,
+    "H6": 410,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 270,
+    "H1_no_sic": 28,
+    "H2": 397,
+    "H3": 29,
+    "H4": 6,
+    "H6": 486,
+    "H7": 33,
+    "duplicate_class": 6
+   },
+   "common": 950,
+   "eligible": [
+    1191,
+    982
+   ],
+   "identical_rows": 1,
+   "population": [
+    394,
+    7
+   ],
+   "review": "2015-10-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 228,
+    "H1_no_sic": 27,
+    "H2": 979,
+    "H3": 20,
+    "H4": 6,
+    "H6": 367,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 270,
+    "H1_no_sic": 28,
+    "H2": 411,
+    "H3": 24,
+    "H4": 8,
+    "H6": 437,
+    "H7": 37,
+    "duplicate_class": 6
+   },
+   "common": 960,
+   "eligible": [
+    1209,
+    991
+   ],
+   "identical_rows": 1,
+   "population": [
+    415,
+    8
+   ],
+   "review": "2015-11-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 224,
+    "H1_no_sic": 25,
+    "H2": 960,
+    "H3": 20,
+    "H4": 5,
+    "H6": 464,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 262,
+    "H1_no_sic": 26,
+    "H2": 397,
+    "H3": 23,
+    "H4": 5,
+    "H6": 551,
+    "H7": 35,
+    "duplicate_class": 6
+   },
+   "common": 938,
+   "eligible": [
+    1174,
+    971
+   ],
+   "identical_rows": 1,
+   "population": [
+    334,
+    4
+   ],
+   "review": "2015-12-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 215,
+    "H1_no_sic": 22,
+    "H2": 915,
+    "H3": 18,
+    "H4": 5,
+    "H6": 575,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 251,
+    "H1_no_sic": 24,
+    "H2": 364,
+    "H3": 20,
+    "H4": 5,
+    "H6": 682,
+    "H7": 31,
+    "duplicate_class": 6
+   },
+   "common": 896,
+   "eligible": [
+    1114,
+    925
+   ],
+   "identical_rows": 1,
+   "population": [
+    256,
+    5
+   ],
+   "review": "2016-01-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 213,
+    "H1_no_sic": 24,
+    "H2": 921,
+    "H3": 18,
+    "H4": 6,
+    "H6": 551,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 249,
+    "H1_no_sic": 23,
+    "H2": 323,
+    "H3": 22,
+    "H4": 6,
+    "H6": 654,
+    "H7": 39,
+    "duplicate_class": 6
+   },
+   "common": 903,
+   "eligible": [
+    1111,
+    932
+   ],
+   "identical_rows": 1,
+   "population": [
+    279,
+    8
+   ],
+   "review": "2016-02-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 226,
+    "H1_no_sic": 25,
+    "H2": 962,
+    "H3": 19,
+    "H4": 7,
+    "H6": 356,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 264,
+    "H1_no_sic": 24,
+    "H2": 329,
+    "H3": 23,
+    "H4": 8,
+    "H6": 433,
+    "H7": 40,
+    "duplicate_class": 6
+   },
+   "common": 942,
+   "eligible": [
+    1157,
+    974
+   ],
+   "identical_rows": 0,
+   "population": [
+    437,
+    8
+   ],
+   "review": "2016-03-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 224,
+    "H1_no_sic": 25,
+    "H2": 954,
+    "H3": 17,
+    "H4": 8,
+    "H6": 271,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 263,
+    "H1_no_sic": 24,
+    "H2": 338,
+    "H3": 20,
+    "H4": 9,
+    "H6": 338,
+    "H7": 42,
+    "duplicate_class": 6
+   },
+   "common": 936,
+   "eligible": [
+    1156,
+    965
+   ],
+   "identical_rows": 0,
+   "population": [
+    478,
+    7
+   ],
+   "review": "2016-04-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 227,
+    "H1_no_sic": 26,
+    "H2": 960,
+    "H3": 17,
+    "H4": 8,
+    "H6": 237,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 267,
+    "H1_no_sic": 24,
+    "H2": 343,
+    "H3": 22,
+    "H4": 9,
+    "H6": 281,
+    "H7": 40,
+    "duplicate_class": 5
+   },
+   "common": 939,
+   "eligible": [
+    1159,
+    970
+   ],
+   "identical_rows": 1,
+   "population": [
+    484,
+    4
+   ],
+   "review": "2016-05-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 231,
+    "H1_no_sic": 26,
+    "H2": 962,
+    "H3": 14,
+    "H4": 8,
+    "H6": 263,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 271,
+    "H1_no_sic": 24,
+    "H2": 348,
+    "H3": 16,
+    "H4": 9,
+    "H6": 308,
+    "H7": 38,
+    "duplicate_class": 5
+   },
+   "common": 937,
+   "eligible": [
+    1163,
+    973
+   ],
+   "identical_rows": 1,
+   "population": [
+    482,
+    5
+   ],
+   "review": "2016-06-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 233,
+    "H1_no_sic": 29,
+    "H2": 989,
+    "H3": 12,
+    "H4": 7,
+    "H6": 174,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 275,
+    "H1_no_sic": 30,
+    "H2": 365,
+    "H3": 15,
+    "H4": 8,
+    "H6": 210,
+    "H7": 40,
+    "duplicate_class": 6
+   },
+   "common": 970,
+   "eligible": [
+    1203,
+    999
+   ],
+   "identical_rows": 1,
+   "population": [
+    555,
+    7
+   ],
+   "review": "2016-07-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 233,
+    "H1_no_sic": 28,
+    "H2": 1007,
+    "H3": 14,
+    "H4": 6,
+    "H6": 155,
+    "duplicate_class": 5
+   },
+   "bits_ref": {
+    "H1_financial": 273,
+    "H1_no_sic": 28,
+    "H2": 363,
+    "H3": 17,
+    "H4": 7,
+    "H6": 190,
+    "H7": 43,
+    "duplicate_class": 5
+   },
+   "common": 983,
+   "eligible": [
+    1213,
+    1015
+   ],
+   "identical_rows": 1,
+   "population": [
+    556,
+    6
+   ],
+   "review": "2016-08-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 235,
+    "H1_no_sic": 27,
+    "H2": 1023,
+    "H3": 13,
+    "H4": 5,
+    "H6": 165,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 273,
+    "H1_no_sic": 27,
+    "H2": 366,
+    "H3": 17,
+    "H4": 7,
+    "H6": 199,
+    "H7": 44,
+    "duplicate_class": 5
+   },
+   "common": 995,
+   "eligible": [
+    1215,
+    1031
+   ],
+   "identical_rows": 1,
+   "population": [
+    564,
+    5
+   ],
+   "review": "2016-09-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 233,
+    "H1_no_sic": 30,
+    "H2": 997,
+    "H3": 12,
+    "H4": 6,
+    "H6": 190,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 271,
+    "H1_no_sic": 28,
+    "H2": 354,
+    "H3": 15,
+    "H4": 6,
+    "H6": 221,
+    "H7": 39,
+    "duplicate_class": 5
+   },
+   "common": 964,
+   "eligible": [
+    1175,
+    1005
+   ],
+   "identical_rows": 1,
+   "population": [
+    539,
+    5
+   ],
+   "review": "2016-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 248,
+    "H1_no_sic": 31,
+    "H2": 1044,
+    "H3": 13,
+    "H4": 7,
+    "H6": 132,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 290,
+    "H1_no_sic": 29,
+    "H2": 378,
+    "H3": 16,
+    "H4": 8,
+    "H6": 145,
+    "H7": 43,
+    "duplicate_class": 6
+   },
+   "common": 1021,
+   "eligible": [
+    1243,
+    1052
+   ],
+   "identical_rows": 2,
+   "population": [
+    612,
+    5
+   ],
+   "review": "2016-11-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 249,
+    "H1_no_sic": 32,
+    "H2": 1055,
+    "H3": 14,
+    "H4": 6,
+    "H6": 152,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 292,
+    "H1_no_sic": 29,
+    "H2": 381,
+    "H3": 16,
+    "H4": 7,
+    "H6": 174,
+    "H7": 43,
+    "duplicate_class": 6
+   },
+   "common": 1032,
+   "eligible": [
+    1247,
+    1063
+   ],
+   "identical_rows": 2,
+   "population": [
+    594,
+    3
+   ],
+   "review": "2016-12-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 247,
+    "H1_no_sic": 33,
+    "H2": 1065,
+    "H3": 17,
+    "H4": 6,
+    "H6": 188,
+    "duplicate_class": 7
+   },
+   "bits_ref": {
+    "H1_financial": 287,
+    "H1_no_sic": 31,
+    "H2": 393,
+    "H3": 20,
+    "H4": 7,
+    "H6": 213,
+    "H7": 46,
+    "duplicate_class": 8
+   },
+   "common": 1043,
+   "eligible": [
+    1258,
+    1073
+   ],
+   "identical_rows": 2,
+   "population": [
+    571,
+    2
+   ],
+   "review": "2017-01-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 254,
+    "H1_no_sic": 33,
+    "H2": 1080,
+    "H3": 20,
+    "H4": 6,
+    "H6": 143,
+    "duplicate_class": 7
+   },
+   "bits_ref": {
+    "H1_financial": 296,
+    "H1_no_sic": 31,
+    "H2": 395,
+    "H3": 25,
+    "H4": 7,
+    "H6": 165,
+    "H7": 44,
+    "duplicate_class": 8
+   },
+   "common": 1057,
+   "eligible": [
+    1270,
+    1086
+   ],
+   "identical_rows": 1,
+   "population": [
+    605,
+    3
+   ],
+   "review": "2017-02-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 253,
+    "H1_no_sic": 37,
+    "H2": 1081,
+    "H3": 21,
+    "H4": 5,
+    "H6": 151,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 296,
+    "H1_no_sic": 33,
+    "H2": 385,
+    "H3": 27,
+    "H4": 6,
+    "H6": 187,
+    "H7": 47,
+    "duplicate_class": 7
+   },
+   "common": 1056,
+   "eligible": [
+    1268,
+    1086
+   ],
+   "identical_rows": 1,
+   "population": [
+    608,
+    2
+   ],
+   "review": "2017-03-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 253,
+    "H1_no_sic": 36,
+    "H2": 1081,
+    "H3": 22,
+    "H4": 4,
+    "H6": 153,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 294,
+    "H1_no_sic": 34,
+    "H2": 393,
+    "H3": 27,
+    "H4": 5,
+    "H6": 173,
+    "H7": 47,
+    "duplicate_class": 8
+   },
+   "common": 1057,
+   "eligible": [
+    1260,
+    1086
+   ],
+   "identical_rows": 1,
+   "population": [
+    599,
+    2
+   ],
+   "review": "2017-04-28"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 248,
+    "H1_no_sic": 33,
+    "H2": 1070,
+    "H3": 26,
+    "H4": 4,
+    "H6": 202,
+    "H7": 1,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 288,
+    "H1_no_sic": 29,
+    "H2": 393,
+    "H3": 29,
+    "H4": 5,
+    "H6": 236,
+    "H7": 43,
+    "duplicate_class": 8
+   },
+   "common": 1046,
+   "eligible": [
+    1249,
+    1076
+   ],
+   "identical_rows": 2,
+   "population": [
+    551,
+    2
+   ],
+   "review": "2017-05-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 255,
+    "H1_no_sic": 33,
+    "H2": 1095,
+    "H3": 31,
+    "H4": 4,
+    "H6": 186,
+    "H7": 2,
+    "duplicate_class": 7
+   },
+   "bits_ref": {
+    "H1_financial": 294,
+    "H1_no_sic": 31,
+    "H2": 410,
+    "H3": 34,
+    "H4": 6,
+    "H6": 223,
+    "H7": 46,
+    "duplicate_class": 9
+   },
+   "common": 1075,
+   "eligible": [
+    1276,
+    1103
+   ],
+   "identical_rows": 2,
+   "population": [
+    560,
+    3
+   ],
+   "review": "2017-06-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 256,
+    "H1_no_sic": 35,
+    "H2": 1101,
+    "H3": 31,
+    "H4": 4,
+    "H6": 183,
+    "H7": 1,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 293,
+    "H1_no_sic": 32,
+    "H2": 415,
+    "H3": 33,
+    "H4": 6,
+    "H6": 223,
+    "H7": 43,
+    "duplicate_class": 8
+   },
+   "common": 1078,
+   "eligible": [
+    1274,
+    1108
+   ],
+   "identical_rows": 2,
+   "population": [
+    559,
+    2
+   ],
+   "review": "2017-07-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 255,
+    "H1_no_sic": 32,
+    "H2": 1104,
+    "H3": 34,
+    "H4": 6,
+    "H6": 186,
+    "H7": 1,
+    "duplicate_class": 7
+   },
+   "bits_ref": {
+    "H1_financial": 292,
+    "H1_no_sic": 29,
+    "H2": 409,
+    "H3": 36,
+    "H4": 8,
+    "H6": 232,
+    "H7": 44,
+    "duplicate_class": 9
+   },
+   "common": 1082,
+   "eligible": [
+    1270,
+    1111
+   ],
+   "identical_rows": 2,
+   "population": [
+    548,
+    3
+   ],
+   "review": "2017-08-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 267,
+    "H1_no_sic": 32,
+    "H2": 1146,
+    "H3": 33,
+    "H4": 4,
+    "H6": 210,
+    "H7": 1,
+    "duplicate_class": 7
+   },
+   "bits_ref": {
+    "H1_financial": 305,
+    "H1_no_sic": 27,
+    "H2": 423,
+    "H3": 37,
+    "H4": 6,
+    "H6": 258,
+    "H7": 48,
+    "duplicate_class": 9
+   },
+   "common": 1123,
+   "eligible": [
+    1318,
+    1152
+   ],
+   "identical_rows": 2,
+   "population": [
+    562,
+    2
+   ],
+   "review": "2017-09-29"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 263,
+    "H1_no_sic": 31,
+    "H2": 1135,
+    "H3": 27,
+    "H4": 3,
+    "H6": 207,
+    "H7": 1,
+    "duplicate_class": 6
+   },
+   "bits_ref": {
+    "H1_financial": 297,
+    "H1_no_sic": 30,
+    "H2": 416,
+    "H3": 31,
+    "H4": 5,
+    "H6": 257,
+    "H7": 46,
+    "duplicate_class": 8
+   },
+   "common": 1106,
+   "eligible": [
+    1295,
+    1140
+   ],
+   "identical_rows": 2,
+   "population": [
+    559,
+    2
+   ],
+   "review": "2017-10-31"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 263,
+    "H1_no_sic": 32,
+    "H2": 1157,
+    "H3": 30,
+    "H4": 3,
+    "H6": 192,
+    "H7": 1,
+    "duplicate_class": 8
+   },
+   "bits_ref": {
+    "H1_financial": 298,
+    "H1_no_sic": 31,
+    "H2": 420,
+    "H3": 34,
+    "H4": 5,
+    "H6": 230,
+    "H7": 47,
+    "duplicate_class": 9
+   },
+   "common": 1130,
+   "eligible": [
+    1315,
+    1162
+   ],
+   "identical_rows": 2,
+   "population": [
+    585,
+    2
+   ],
+   "review": "2017-11-30"
+  },
+  {
+   "bits_new": {
+    "H1_financial": 266,
+    "H1_no_sic": 30,
+    "H2": 1164,
+    "H3": 34,
+    "H4": 2,
+    "H6": 172,
+    "H7": 1,
+    "duplicate_class": 8
+   },
+   "bits_ref": {
+    "H1_financial": 299,
+    "H1_no_sic": 28,
+    "H2": 426,
+    "H3": 38,
+    "H4": 3,
+    "H6": 203,
+    "H7": 44,
+    "duplicate_class": 9
+   },
+   "common": 1136,
+   "eligible": [
+    1320,
+    1169
+   ],
+   "identical_rows": 2,
+   "population": [
+    617,
+    2
+   ],
+   "review": "2017-12-29"
+  }
+ ],
+ "population_new": {
+  "max": 14,
+  "median": 5,
+  "min": 0
+ },
+ "ref": "E993-02",
+ "reviews": [
+  84,
+  84
+ ],
+ "store_stats": [
+  {
+   "amendments": 135,
+   "delayed_until_available": 12254,
+   "estimated": 12714,
+   "observed_new": 153871,
+   "quarantine_field_released": 134,
+   "quarantine_released": 20,
+   "quarantined": 637,
+   "restatement_blocked": 306,
+   "sec_timing_hold": 27,
+   "timing_unknown": 608
+  },
+  {
+   "amendments": 155,
+   "delayed_until_available": 4140,
+   "estimated": 4320,
+   "observed_new": 140033,
+   "quarantined": 0,
+   "restatement_blocked": 194,
+   "sec_timing_hold": 20,
+   "timing_unknown": 31538
+  }
+ ],
+ "totals": {
+  "common": 74772,
+  "eligible_new": 76915,
+  "eligible_ref": 93687,
+  "pop_common": 485,
+  "pop_new": 485,
+  "pop_ref": 40351,
+  "same_row": 109,
+  "same_total": 33110
+ }
+}

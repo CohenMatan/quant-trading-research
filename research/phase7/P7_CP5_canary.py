@@ -90,10 +90,21 @@ def main(exp="E994-02"):
                                            "score_tables_sha256", "sids_sha256")},
                runtime={k: st.get(k) for k in ("wall_s", "max_rss_mb", "score_s", "responses_s", "states_s")}
                | dict(canary_s=ck["canary_s"], build_s=st["panel"]["build_s"]))
-    (HERE / "P7_CP5_canary.json").write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
+    name = "P7_CP5_canary.json" if exp == "E994-02" else f"P7_CP5_canary_{exp}.json"
+    if exp != "E994-02":
+        # D182 (option B): the same canary on QuantConnect's default build, compared with the calibration build
+        ref = json.loads((HERE / "P7_CP5_canary.json").read_text())["digests"]
+        res = json.loads((ROOT / "experiments" / exp / "result.json").read_text())
+        out["engine"] = dict(lean_version=res["provenance"].get("lean_version"), reference_build=18131)
+        out["vs_calibration"] = {k: st[k] == ref[k] for k in ref} | dict(
+            panel_equals_pinned=st["panel_sha256"] == p7pred.PANEL_SHA256)
+        out["option_B1_holds"] = bool(out["vs_calibration"]["panel_equals_pinned"])
+    (HERE / name).write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
     for k, v in checks.items():
         print("PASS" if v else "FAIL", k)
     print(out["passed"], "/", out["total"])
+    if "vs_calibration" in out:
+        print("engine", out["engine"], "vs calibration build", out["vs_calibration"])
 
 
 if __name__ == "__main__":
