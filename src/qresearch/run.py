@@ -168,7 +168,8 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     client.sync_files(project, files)
     if cfg.get("params", {}).get("pred_code_sha256"):           # D178: pinned modules checked on the stored copy
         verify_stored_modules(cfg, client.read_file_contents(project))
-    client.pin_lean_version(project, cfg["lean_version_id"])
+    if cfg.get("lean_version_policy") != DEFAULT_BUILD_POLICY:
+        client.pin_lean_version(project, cfg["lean_version_id"])
     state["stage"] = "compile"
     compile_id = client.compile(project)
     state["stage"] = "start_backtest"
@@ -198,7 +199,11 @@ def download(cfg: dict, client: QCClient, handle, bt: dict, runtime: float) -> d
     project = handle.project_id
     out = dict(project_id=project, backtest_id=handle.backtest_id, backtest=bt, runtime_s=runtime,
                lean_version=client.lean_version(bt))
-    if not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
+    if cfg.get("lean_version_policy") == DEFAULT_BUILD_POLICY:
+        # D182: QuantConnect runs its default build below the Trading Firm tier; the build actually used is recorded
+        # (provenance lean_version) and the run's integrity rests on its prepared-input digest, not on the pin
+        pass
+    elif not out["lean_version"].endswith(f".{cfg['lean_version_id']}"):
         out["error"] = f"backtest ran on LEAN {out['lean_version']}, expected build {cfg['lean_version_id']}"
         out["logs"] = []
         return out
@@ -404,6 +409,9 @@ def recover(exp_id: str, backtest_id: str, notes: str = "") -> dict:
     from .report import write_report
     write_report(outdir, cfg, result)
     return result
+
+
+DEFAULT_BUILD_POLICY = "default_build_digest_verified"     # D182 (H022 family only; see experiment.validate)
 
 
 def verify_stored_modules(cfg: dict, stored: dict[str, str]) -> None:

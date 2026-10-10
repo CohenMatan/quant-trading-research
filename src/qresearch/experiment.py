@@ -241,6 +241,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params", {}).get("mode") != "export"):
             raise ConfigError("X993 (P7-CP3) is an infrastructure export on 2011-01-03..2017-12-31 (warm-up "
                               "2008-07-01) with the data-v1 universe")
+    if cfg.get("lean_version_policy") is not None and cfg["strategy_id"] not in ("X994", "S023"):
+        raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023; D182)")
     if cfg["strategy_id"] in ("X994", "S023"):
         # H022 (research/phase7/P7_predictive_spec.md v1 + the D177 wording fix; owner authorisation 2026-10-06, D177):
         # the X993 v1.1 window and data-v1 universe, nothing after 2017-12-31, the frozen spec / module fingerprints;
@@ -259,6 +261,14 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or p.get("pred_code_sha256") != p7pred.CODE_SHA256["src/qresearch/lean/qr_p7_pred.py"]):
             raise ConfigError("H022 runs carry the pinned spec and qr_p7_pred fingerprints (qresearch.p7pred)")
         mode = p.get("mode")
+        # D182 (owner option B, P7-CP5a): after QuantConnect gated engine selection, X994 canaries and the S023 real
+        # evaluation may run on QuantConnect's default build; the real run is then valid only through the host's
+        # panel-digest guard (the prepared panel must equal the pinned PANEL_SHA256 the null was calibrated on)
+        pol = cfg.get("lean_version_policy")
+        if pol is not None and (pol != "default_build_digest_verified" or not (
+                cfg["strategy_id"] == "X994" or (mode == "real" and p.get("panel_sha256")))):
+            raise ConfigError("lean_version_policy 'default_build_digest_verified' is allowed only for X994 canaries "
+                              "and the digest-guarded S023 real evaluation (D182)")
         if cfg["strategy_id"] == "X994":
             if mode != "canary" or kind != "infrastructure":
                 raise ConfigError("X994 runs only the H022 plumbing canary (infrastructure)")
