@@ -6,6 +6,7 @@
 import json
 import sys
 import types
+from collections import deque
 from datetime import date, datetime, timedelta
 
 import numpy as np
@@ -75,7 +76,7 @@ CIK = {"S07": "c7", "S08": "c7"}
 
 
 def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X993_p7_score_mechanics_export/main.py",
-          cls="P7ScoreExport", params=None, end="2017-12-31", mutate=None):
+          cls="P7ScoreExport", params=None, end="2017-12-31", mutate=None, sic_rows=None):
     ai = types.ModuleType("AlgorithmImports")
     ai.Resolution = types.SimpleNamespace(DAILY="daily")
     ai.DataNormalizationMode = types.SimpleNamespace(RAW="raw", SCALED_RAW="scaled", ADJUSTED="adjusted")
@@ -120,6 +121,7 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
 
     sic_history = {f"S{j:02d}": [["2008-01-02", SIC.get(f"S{j:02d}", 3570), CIK.get(f"S{j:02d}", f"c{j}")]]
                    for j in range(M["n"])}
+    sic_history.update(sic_rows or {})
 
     class QRAlgorithm:
         def __init__(self):
@@ -145,8 +147,11 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
 
         def _qr_select(self, fl):
             r = int(np.searchsorted(cal, np.datetime64(self.time.strftime("%Y-%m-%d")).astype(np.int64))) - 1
+            for f in fl:                         # ADV20 history ($10M a day) for every listed security
+                self._qr_dv.setdefault(f.symbol, deque(maxlen=20)).append(1e7)
             self.qr_eligible = [f.symbol for f in fl if M["alive"][r, int(f.symbol.id[1:])]
-                                and not (f.symbol.id in excluded_2010 and self.time.year < 2011)]
+                                and not (f.symbol.id in excluded_2010 and self.time.year < 2011)
+                                and getattr(f, "market_cap", 1.0) > 0]
             self.qr_eligible_info = {s: (3e9, 1e7 + int(s.id[1:]) * (1 if s.id != "S08" else 0) + 7)
                                      for s in self.qr_eligible}
             self.qr_corrected = set()
