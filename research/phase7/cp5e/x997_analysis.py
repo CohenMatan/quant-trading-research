@@ -6,7 +6,8 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[3]
-RUNS = {"E997-01": "identity extended", "E997-02": "identity v2 only"}
+RUNS = {"E997-01": "identity extended", "E997-02": "identity v2 only",
+        "E997-03": "identity extended, v1.1 (security counts; determinism rerun of E997-01)"}
 V1_SURV = {"all": 0.8327, "2011": 0.7448, "2012": 0.783, "2013": 0.781, "2014": 0.7908, "2015": 0.8279,
            "2016": 0.9007, "2017": 0.9567}
 
@@ -86,7 +87,7 @@ def summarise(s):
         identity_mapping=s["identity_mapping"], identity_value_check=s["identity_value_check"],
         totals_candidates=s["totals_candidates"], layers={k: v["stats"] for k, v in s["layers"].items()},
         layer_corr=s["layer_corr"], baseline=s["baseline"], spot=s["slice_spot_check"], wall_s=s["wall_s"],
-        max_rss_mb=s["max_rss_mb"])
+        max_rss_mb=s["max_rss_mb"], target_securities=s.get("target_securities"))
 
 
 def id2(s):
@@ -109,6 +110,17 @@ def main():
     if st["E997-01"] and st["E997-02"]:
         a, b = st["E997-01"], st["E997-02"]
         out["determinism_universe_digests_equal"] = a["digests"]["universe_by_year"] == b["digests"]["universe_by_year"]
+    if st["E997-01"] and st.get("E997-03"):
+        a, c = st["E997-01"], st["E997-03"]
+        out["determinism_E997_01_vs_03"] = dict(
+            universe_equal=a["digests"]["universe_by_year"] == c["digests"]["universe_by_year"],
+            review_scores_equal=sum(a["digests"]["review_scores"][t] == c["digests"]["review_scores"].get(t)
+                                    for t in a["digests"]["review_scores"]),
+            reviews=len(a["digests"]["review_scores"]),
+            aggregates_equal=all(a[k] == c[k] for k in ("per_review", "per_year", "survivorship", "mcap_comparison",
+                                                         "identity_mapping", "sec_split_check"))
+            and {k: v for k, v in a["repair"].items() if k != "repair_s"} ==
+            {k: v for k, v in c["repair"].items() if k != "repair_s"})
     (Path(__file__).parent / "x997_summary.json").write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
     print(json.dumps(out, indent=1, sort_keys=True)[:30000])
 
