@@ -247,8 +247,21 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if (kind != "infrastructure" or cfg["start"] != "2009-06-01" or cfg["end"] > "2017-12-31"
                 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
             raise ConfigError("X995 is the P7-CP5c infrastructure probe on the default build, 2009-06-01 .. <= 2017-12-31")
+    if cfg["strategy_id"] == "X996":
+        # P7-CP5d (owner D186): Score v1 migration feasibility (first-seen ledger M1 / M2); infrastructure only on
+        # QuantConnect's default build (recorded); the X993 window and data-v1 universe filters, ending 2017-12-31 or
+        # truncated at 2013-12-31 (no 2018-2021, no Holdout); no returns
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["start"] != "2011-01-03" or cfg.get("warmup_start") != "2008-07-01"
+                or cfg["end"] not in ("2013-12-31", "2017-12-31") or not u.get("sec_corrections")
+                or float(u.get("min_market_cap", 0)) != 2e9 or float(u.get("min_price", 0)) != 5.0
+                or float(u.get("min_avg_dollar_volume", 0)) != 5e6 or int(u.get("adv_days", 0)) != 20
+                or cfg.get("params", {}).get("mode") not in ("M1", "M2")
+                or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("X996 is the P7-CP5d infrastructure run (mode M1 / M2) on the default build, "
+                              "2011-01-03 .. 2013-12-31 or 2017-12-31 (warm-up 2008-07-01), data-v1 universe filters")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
