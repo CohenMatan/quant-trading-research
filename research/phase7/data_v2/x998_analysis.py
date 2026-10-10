@@ -4,6 +4,7 @@ Inputs are only the aggregate JSON each run published (counts, distributions, SH
 record (result.json: status, LEAN build, orders); no vendor value, no return. Thresholds below were written and
 committed BEFORE any E998 output was read (they restate the pre-registered P7-CP5e criteria MC2-MC7 and fix the
 remaining D190 gates). Output: research/phase7/data_v2/x998_summary.json."""
+import hashlib
 import json
 import sys
 from pathlib import Path
@@ -114,6 +115,7 @@ def summarise(s):
     guard = s["restatement_guard"]
     blocked = sum(v for k, v in guard.items() if k.startswith("blocked|"))
     return dict(
+        digests_sha256=hashlib.sha256(json.dumps(s["digests"], sort_keys=True).encode()).hexdigest(), digests=s["digests"],
         target_check=s["target_check"], checks=s["checks"], repair=s["repair"], pit_audit=s["pit_audit"],
         criteria=dict(MC2_fresh_sec_mcap_pct=pct(fresh, mc2_n), MC3_split_continuous_pct=pct(split.get("continuous", 0), ev),
                       MC3_evaluable=ev, MC4_agreement_away_pct=pct(cm["agree_away"], cm["n_away"]),
