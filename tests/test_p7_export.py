@@ -75,7 +75,7 @@ CIK = {"S07": "c7", "S08": "c7"}
 
 
 def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X993_p7_score_mechanics_export/main.py",
-          cls="P7ScoreExport", params=None):
+          cls="P7ScoreExport", params=None, end="2017-12-31", mutate=None):
     ai = types.ModuleType("AlgorithmImports")
     ai.Resolution = types.SimpleNamespace(DAILY="daily")
     ai.DataNormalizationMode = types.SimpleNamespace(RAW="raw", SCALED_RAW="scaled", ADJUSTED="adjusted")
@@ -91,6 +91,8 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
     hm.EXCHANGES = ("NYS",)
     hm.exchange_of = lambda f, d: "NYS"
     hm.is_us_common = lambda f, d=None: True
+    hm.COMMON_STOCK = "ST00000001"
+    hm.non_common_reason = lambda f, d=None: None
     cal = M["cal"]
     spy = Sym("SPY")
     if gap is not None:                          # a security-life break (re-used id): > 60 missing sessions
@@ -121,10 +123,10 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
 
     class QRAlgorithm:
         def __init__(self):
-            self.qr = {"end": "2017-12-31"}
+            self.qr = {"end": end}
             self.qr_params = {}
             self.qr_sec = types.SimpleNamespace(feed=lambda *a, **k: None, has=lambda sid: False,
-                                                sic_history=sic_history)
+                                                sic_history=sic_history, market_cap=lambda *a: None)
             self.qr_sic = types.SimpleNamespace(sic_on=sic_on)
             self.qr_timing_holds = self.qr_quarantine_releases = self.qr_restatement_blocks = {}
             self.qr_field_releases = {}
@@ -202,6 +204,8 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
         a.time = datetime(d.year, d.month, d.day, 16, 0)
         a.on_data(data)
         nd = d + timedelta(days=1)
+        if nd > date.fromisoformat(end):
+            break
         a.time = datetime(nd.year, nd.month, nd.day, 0, 0)
         fl = []
         for j in range(M["n"]):
@@ -210,6 +214,8 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
             f = _fund(f"S{j:02d}", f"T{j}", nd, 0, f"c{j}")
             f.symbol = syms.setdefault(j, f.symbol)
             f.market_cap = 1e9 if (f"S{j:02d}" in excluded_2010 and nd.year < 2011) else 3e9
+            if mutate is not None:
+                mutate(f, nd)
             fl.append(f)
         a._qr_select(fl)
     return a
