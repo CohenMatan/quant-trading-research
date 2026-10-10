@@ -1,0 +1,348 @@
+{
+ "experiment_id": "E996-03",
+ "harness_messages": [
+  "QRP5D|0|{\"baseline\": {\"cik_reject\": 0, \"life_reject\": 0, \"pit_violations\": 0, \"store_baseline\": 48275}, \"calendar_check\": {\"expected\": 84, \"match\": true, \"reviews\": 84}, \"checks\": {\"censored\": 4743, \"fed\": 41376, \"m2_delayed\": 277, \"m2_not_fed\": 90183, \"m2_revision_unfed\": 4, \"month_ends\": 96, \"no_period_end\": 459115, \"pe_after_seen\": 0, \"pe_regress\": 1813, \"quarantined_seen\": 0, \"reports_new\": 131113, \"revision_from_missing\": 12, \"revision_to_missing\": 1, \"revisions\": 450, \"sec_fed\": 8127, \"selections\": 2394, \"store_sids_max\": 2108, \"unmapped_cik\": 66406, \"unmapped_period\": 18650, \"weekly_scans\": 496}, \"digests\": {\"eligible_by_year\": {\"2008\": \"fa59440f03114255197f0aeece1827261dbd841a76328df5b3da360d6203916e\", \"2009\": \"91938baf4ced2a6828e059d8072e321927d96f6ed11f15995afb67d8194a889a\", \"2010\": \"7dd9012f0fc4a01235926beb5833973ca5c7c8f96a3b63fdb6ba0bd779d62f92\", \"2011\": \"89ce41a056cbb6553175c4725efb0503485269ce27ef389c7a1409b9972ea598\", \"2012\": \"1c2859cf55a435eb8cb805c310608dbb3bda136d1213b5928e938ff0473fd405\", \"2013\": \"52dc8b8473c61d47a1123471abbd7b7f24c643b85bb0512be42e329452367c97\", \"2014\": \"209497e1aafa20ba09b8c3524493bd64e380adb0e6c43e1b156f45eb67db7b99\", \"2015\": \"e0153a913b9b03835583d4336abcf4f2ce712428ec0947372847b13aad8c6aca\", \"2016\": \"bd24a981b9b28ab6ad1c53375d50c2d4cb4a79210b2592ae74ac4968c059721e\", \"2017\": \"e50d90dcafa836b5352196f2827ac72e4506ee8de9bf9cfcab296629300a147b\"}, \"eligible_to_2013\": \"25c570a9dd98ce30b116bd8df9fe7141add31b4cd8dad88fdca0f2d29bbd19c7\", \"ledger_by_year\": {\"2008\": \"c8634ced370644bec48c2a4b056f3c45a3d2395043ee7cdfe21496b625f56cae\", \"2009\": \"468ada85e4a934cadc1ef9da7cd557c6c07b5a0de642e166d504ab8ed0c80b3d\", \"2010\": \"e41d5d5612a50eb1b55e6f138f5e6cb9de925e1e3a030707ccc51a43a77ba06d\", \"2011\": \"8e49723442fc8463df9e23ecfe098025841d6609a04cc7eb8d5cc2049192d9f2\", \"2012\": \"4ab7879a024011419e51df4c1d25063c186d249882bd7909226b05f05993a9d4\", \"2013\": \"efba905ec6002e7d50429c641d5d2342c8501c54bbfa4c218e678eeeeb004fc6\", \"2014\": \"b53030dee4925f947dad34966b39c9e8956a3aa8c65db56169a202593e9620cc\", \"2015\": \"3527e55a27a21085b6b358b9fb53533ddf1356680e91b5f537370c82a562904b\", \"2016\": \"3fbb4aab7fb965b0d92aa46cb4a64b632503c689657f661f7cfe5533e674bacb\", \"2017\": \"1f0c6026b633c2e4de886427aca0d42340f028699582ff660ffbd13828e12fb4\"}, \"ledger_to_2013\": \"ce5d95f3c8cd354c3038b1cb4788627b277e5047f1fc45c4c699a35437c64745\", \"review_scores\": {\"2011-01-31\": \"502a6a4ba8fa2a11cc7e8d19922f38ddd6ee1ad99729649e6e59ec0ac8d4e0d7\", \"2011-02-28\": \"1457ef13fc07e19745a74e2c99175d7870b1fbaa7553c2824f94a2e8271b0d8d\", \"2011-03-31\": \"73d61609426bb63b86c1d63dec56accfbb05718e7f22c0fcff9e9a6a6ef014c1\", \"2011-04-29\": \"275d23cd593933a809c3277d4a1a34998978bbaaa440d6678ac65852affa4cf6\", \"2011-05-31\": \"79aef4a642227445366c0d580332607906e46e7df1539f1d03f272e9321338de\", \"2011-06-30\": \"1e09cff8ce51da0537044872823dc1b83bc00f0f6ac7872976dcc9ea5dae4eee\", \"2011-07-29\": \"764b484a0779bf8100dca002c35a228b0f9cd2375ee980c7cd03f1d40f977f5a\", \"2011-08-31\": \"b527989601120d495810e9a03273d43c6e02c4add631cf7df5d031fdf12818d5\", \"2011-09-30\": \"0e9dae41441e7b897b2c47430bfe191154f4c5934fc84116bd849855592997da\", \"2011-10-31\": \"a3a2396edf7f251c46af75a2a01bae5a2a63b4c65a5ab036738d4eaa8e7ac410\", \"2011-11-30\": \"e163a28e70dd36efb0797449b801d57720eba6bc676242f9175868e75333f0a1\", \"2011-12-30\": \"216bc983f4323da18beade5b69b93f4c8a8d0bcd87615f8d206f54a04786e443\", \"2012-01-31\": \"524fb5c3b5e411511d0d556023c306ae11db740d3a405023e96adb6978eb6439\", \"2012-02-29\": \"df1320f5a0ed5f7298502b86396439030818aa7dbd36a231fd23ea7da6a80ead\", \"2012-03-30\": \"c8b821e51e1c459f00eb18376c6826d5f3f003884c3bb32831c7d18df5b4d5cd\", \"2012-04-30\": \"7ac3775d5e344d6136793d5c3f4e07566dd5e17b313578da91edf04a20c4ba52\", \"2012-05-31\": \"e578fcd4fbe3efc3b5b648b2721384037aaa7c7ba453314a995b18026a0c9731\", \"2012-06-29\": \"4cb0f28b0a842425989bc5b34d4f6f75274bfbd03a1691e551cd5666acafa3c7\", \"2012-07-31\": \"3980dad89f8a9e32c90e3c5facd372c5a4081180093a22ae64476a9f55ba1f22\", \"2012-08-31\": \"62697224bb0dba5affb5d74d5a5d7ff5a474091d4171a387c5028cc056b6a3d2\", \"2012-09-28\": \"74018684e1dbc4542d647a78788134cb86d71246f3505d94943870ab556fcfb9\", \"2012-10-31\": \"36d9d736cb7e7bea6c3715090955fa3ccb6dbc82b2d87d1dc5e9fc99726587a2\", \"2012-11-30\": \"3f5d90c3931c705599cd9fb26cb9f65806e805c91dae52a464719792301ad918\", \"2012-12-31\": \"b0447c5c2eb80cd4919fd37e0ad83857a965a22e05ca3380fd4a581f9c396c07\", \"2013-01-31\": \"687d25323d71bac4e099bf63276ad1e30bf9cf12c8cb4c5c49db79dcfcca0fcd\", \"2013-02-28\": \"bb5237e136aae66006211a26c323aebe93c5c46e802bf18205c256b869e8a541\", \"2013-03-28\": \"055dcaa7ec546be76619fb55a25248195a9da6785e3e3452c2e2cca70f783979\", \"2013-04-30\": \"0c9ba2a3e72eea08e76495a9cad5897833ce1edc1098a77798b7de1ca650348d\", \"2013-05-31\": \"bd4c41a34f4d36b1b68cde6c5fe8693b9a12f22d8acc9adafd35d0cd6a864f0a\", \"2013-06-28\": \"a366a5591b07c2c141dceb9005decc62884da2c8258828a57b52445bd9d6642a\", \"2013-07-31\": \"b477ed418bfa1717bebccb40551a5d5cd752f7b11b0f0fcb9de613b94fc77620\", \"2013-08-30\": \"2444373622e9f0a613ce90a02e6ba4858f8a6fec052892d1929f1b2aa9737c4d\", \"2013-09-30\": \"5c2d434ca753656e7de2a5319cbe293af933ab19791abb2597be230bdee6d774\", \"2013-10-31\": \"1d6afcc977f889afe2942ec2259237a602007e509ca6204ebbe1842d936936b9\", \"2013-11-29\": \"117cc7bd4384edc2952e7b3f0686931d848c2b46d7fe6e3716fb57e772999e42\", \"2013-12-31\": \"f72b471cbb054f3a7ebb624fcf414e0b6de43aab279f0ffe16320c6d6496ae67\", \"2014-01-31\": \"fd249a098cc32161de9ae6d1a5ab7fd0cba91421a1ac6f4d17baa68ea018f6b6\", \"2014-02-28\": \"bc4d700d886847c4f340be632a97344dd6f8476a8ff46ea16f4a6c125d57d163\", \"2014-03-31\": \"2b633685044f3414f82fc20336b5dd32936d969df8ae5068560de11b02ed8104\", \"2014-04-30\": \"2e8b4e40b2fa70c9b5094b40ffc3bd5d2d0857c233b6a9c9b79c2273e7ea400f\", \"2014-05-30\": \"8233e8d2f08cb6b3cc50af1b9b4f3b47e5842e0118252f11f36551219a4de813\", \"2014-06-30\": \"a4080179b2facacbb179948cbca9515be5bcf29a222be26ce183439ebbd36018\", \"2014-07-31\": \"faf0a0f11cc4a89220f96a2ada63ebc3390ebde324d090ae73ad39ee50dcc335\", \"2014-08-29\": \"2fcd6d5ed15de0eb4078c7a6e43ae9a654b6b5e5c5600b0ba520dae5ad2e0a8a\", \"2014-09-30\": \"543fc06cc6dcbbbce1e548890abd74d5e06e3012a7feb53fc96e416a7a1fe53b\", \"2014-10-31\": \"2f267363a6f605f06017ee761edf0111bfdc90c317fe193715268809182e9fc7\", \"2014-11-28\": \"d989f3aea76b999f94d12e61fa0f4b8cba5773bb4637d31d35a488844108704b\", \"2014-12-31\": \"f7ce2ee68437b5dc8fb02ed51b045b96bafb5323efcf7cac88fd34a0b14c2274\", \"2015-01-30\": \"87c568f471705c22647e8c9f01b63c57ece53039804fe14b068e24f89d813064\", \"2015-02-27\": \"230b1e57a9add32587dd2b14f97a0e88fae4989c38a2458ecb001106e57a385c\", \"2015-03-31\": \"f213287dfb38dc690750895de3324bbb64480ece6c37f7057a07a74025cf4ae5\", \"2015-04-30\": \"f4ddda7f61b8b0c62f518244817dc8dab1b303b9faa93d1bbfc404a8ead95d97\", \"2015-05-29\": \"f3afb1400f6ce7f86eb60733487c6919a80eceeb58a602040abfc3d8c044e8a3\", \"2015-06-30\": \"d89373757a36ab3c98423d1a475148964a9f80663bdd81e93aa4a9839fdca7ff\", \"2015-07-31\": \"8356495b50d6a9c6e17273f5a4a3fb312d9901e73d0b6b6ad82749183458b068\", \"2015-08-31\": \"cd3569751f67515da98f16e2924d70a7f05bde01b76bd53dc3573ce6e421917b\", \"2015-09-30\": \"f13976544996d674f46758e91a580689936210b80d58538caa86e1d6758d1d20\", \"2015-10-30\": \"173eb823cca3cf6ed5fadd15795f98b67e54f4245806795577389cb55e778c50\", \"2015-11-30\": \"d7a801efcbf7c8c052c9a790cb0e4a24c8c76d9c18ed484661a86dad85bb7526\", \"2015-12-31\": \"185454bab9cd6ab0f7fd17bf0a1fb622f07905603d3cd319b3b5dcc5514a9fd0\", \"2016-01-29\": \"a4f2edd5f23b24d8ec38cae47f78d845aeeccb66e1f8d42314c571f41552c9f5\", \"2016-02-29\": \"a24307352a039b334a989a93a2f0b0c69bb8861dca002c9b1cd7c97e974b34e7\", \"2016-03-31\": \"78af946757c686370a8ca757a2f7e2640ab5d1cfc1b5ff9d3189fb3e0c25e5c2\", \"2016-04-29\": \"b4f56aa3c0efd2f4d70ae7eb50cd7aabd85bee22d7f987c4fcbc2e25c8b0f7a6\", \"2016-05-31\": \"dcd3f4ea87d1fe274185faa60e5d043fc7525ccaeee7c1052b1eab9efb9a0b80\", \"2016-06-30\": \"f5e6720bc70831b4563ebdc1cedf9c74b964b736608a0beb32645cc3ae2b2b5a\", \"2016-07-29\": \"a35dd7eed86c5cd41d46d47dec7b68b684c139850f138035306afb6b9f9db0fd\", \"2016-08-31\": \"d66e4a1effffb51dac74b25e07751a4cfb1f1f37de56844355b4b431a3e7d13c\", \"2016-09-30\": \"bda5be98eac961ea266007db560e6d2cfc731e98909bcb7128b6c62fcf8b03df\", \"2016-10-31\": \"bab4e326c68a61482289415d88c71549a87637934e17e0d79d86d2c337f56072\", \"2016-11-30\": \"8da213ac70372ad1893e12d39f3db08b3fe47031e3a00d1be374bce5e64d5496\", \"2016-12-30\": \"76498d691aed25c2f48c9faa29626c9ae3e5d6ad59afb659cfd1a2dbdf2e27c8\", \"2017-01-31\": \"a4dea96ccebe509e61de58ec3c235e5d3136969ffe39b4c07d4c49c10e45a0aa\", \"2017-02-28\": \"a4710e49252b7db4e020e9d71eacb8f2dbc3f2bb034b3256e4d83de6c976c33f\", \"2017-03-31\": \"9735e52d24c8fe68edf1ec6ece7a7f60d1c421eee74cd64f2bb4823cb283864f\", \"2017-04-28\": \"35a249eda96682e9d4ddeb90c5dc0b44e93b2f6734c498324eeb0616e6196c0d\", \"2017-05-31\": \"6cedeea2158d4ac020637b7648cb5623515737c2b5256938c8c0a1786cc6b823\", \"2017-06-30\": \"a482650dfcb7a33e4f3afd353f3394d7830f96f0fac60df160e3433dc7393f03\", \"2017-07-31\": \"adeca5addda51c0a0302d12650227830c27b425eceb800365ababe35ae7208e9\", \"2017-08-31\": \"44d5a6e491d60903748d475640d4ad65db28bef5a7c0c2ed3c7a31b6e8c9011e\", \"2017-09-29\": \"1569f05f2518e256836977eb962e7f31330bf23af4f5b5b9b14dfc0a",
+  "QRP5D|1|4f339ad0\", \"2017-10-31\": \"028ec0daf40cf8cab88e90b75ee3d44fc184049df17fab893ae53d9e9efce89c\", \"2017-11-30\": \"feaf7b55e147c00a03ce3fae82fc7daf11955647f195b74478b0950d015879f0\", \"2017-12-29\": \"6d958c24af25a4b7f8eb2f55fd960d21c2b0b9ae6d2d7bc5e9c36c9b51347954\"}}, \"end\": \"2017-12-31\", \"field_order\": [\"revenue_ttm4q\", \"gross_profit_ttm4q\", \"net_income_ttm4q\", \"operating_cash_flow_ttm4q\", \"total_assets\", \"stockholders_equity\", \"revenue_baseline_valid\"], \"layer_corr\": {\"F_S\": 0.0003, \"T_F\": -0.0099, \"T_S\": 0.2279}, \"layers\": {\"F\": {\"hist5\": [2715, 3903, 6684, 5699, 5090, 4050, 2609, 1785, 437, 157, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 45.0, \"mean\": 17.936, \"median\": 17.0, \"min\": 0.0, \"n\": 33129, \"p10\": 6.0, \"p90\": 32.0, \"sd\": 10.047}}, \"S\": {\"hist5\": [6021, 22332, 0, 4776, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 15.0, \"mean\": 7.555, \"median\": 8.0, \"min\": 0.0, \"n\": 33129, \"p10\": 0.0, \"p90\": 15.0, \"sd\": 4.301}}, \"T\": {\"hist5\": [6716, 3039, 2948, 3718, 4178, 4554, 5422, 1940, 614, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 40.0, \"mean\": 17.86, \"median\": 20.0, \"min\": 0.0, \"n\": 33129, \"p10\": 0.0, \"p90\": 33.0, \"sd\": 11.994}}}, \"ledger_reports\": 131113, \"ledger_sids\": 4743, \"max_rss_mb\": 5385.6, \"mcap_split_check\": {\"mcap_jumps_with_price\": 4, \"mcap_pit_continuous\": 166, \"no_window\": 194, \"price_adjusted\": 3, \"price_raw_jump\": 167}, \"mode\": \"M2\", \"panel\": {\"build_s\": 72.7, \"duplicate_bars\": 0, \"last_session\": \"2017-12-29\", \"late_rows\": 0, \"securities\": 1459, \"sessions\": 2769}, \"per_review\": [[\"2011-01-31\", 736, 539, 539, 0, 0, 0, 0, 0, 0, 927, 713, \"STRONG\"], [\"2011-02-28\", 747, 543, 543, 0, 0, 0, 0, 0, 0, 950, 725, \"STRONG\"], [\"2011-03-31\", 751, 547, 546, 1, 1, 0, 0, 0, 0, 952, 727, \"STRONG\"], [\"2011-04-29\", 760, 556, 555, 1, 1, 0, 0, 0, 0, 973, 741, \"STRONG\"], [\"2011-05-31\", 767, 568, 566, 2, 2, 0, 0, 0, 0, 983, 748, \"STRONG\"], [\"2011-06-30\", 762, 565, 562, 3, 3, 0, 0, 0, 0, 959, 739, \"STRONG\"], [\"2011-07-29\", 745, 553, 545, 8, 8, 0, 0, 0, 0, 932, 724, \"NORMAL\"], [\"2011-08-31\", 710, 543, 529, 14, 4, 0, 0, 0, 0, 892, 694, \"RISK_OFF\"], [\"2011-09-30\", 673, 513, 495, 18, 5, 0, 0, 0, 0, 834, 658, \"RISK_OFF\"], [\"2011-10-31\", 711, 545, 525, 20, 10, 1, 1, 0, 0, 893, 691, \"WEAK\"], [\"2011-11-30\", 704, 539, 508, 31, 12, 2, 0, 0, 0, 883, 685, \"WEAK\"], [\"2011-12-30\", 714, 548, 513, 35, 14, 2, 1, 0, 0, 891, 697, \"WEAK\"], [\"2012-01-31\", 735, 560, 520, 40, 33, 3, 3, 0, 0, 915, 716, \"NORMAL\"], [\"2012-02-29\", 755, 575, 458, 116, 96, 4, 3, 1, 0, 944, 737, \"STRONG\"], [\"2012-03-30\", 759, 577, 448, 128, 110, 4, 2, 1, 0, 952, 743, \"STRONG\"], [\"2012-04-30\", 761, 580, 453, 126, 105, 4, 1, 1, 0, 952, 744, \"STRONG\"], [\"2012-05-31\", 738, 560, 430, 128, 83, 3, 1, 0, 0, 910, 721, \"STRONG\"], [\"2012-06-29\", 748, 566, 434, 130, 105, 2, 1, 0, 0, 923, 729, \"STRONG\"], [\"2012-07-31\", 730, 558, 427, 129, 111, 3, 1, 0, 0, 904, 714, \"STRONG\"], [\"2012-08-31\", 746, 566, 419, 145, 115, 3, 2, 0, 0, 920, 730, \"STRONG\"], [\"2012-09-28\", 762, 580, 429, 149, 123, 3, 1, 1, 0, 936, 745, \"STRONG\"], [\"2012-10-31\", 756, 573, 421, 149, 116, 0, 0, 0, 0, 926, 737, \"STRONG\"], [\"2012-11-30\", 767, 583, 414, 167, 113, 2, 0, 0, 0, 941, 746, \"STRONG\"], [\"2012-12-31\", 780, 593, 418, 172, 136, 4, 1, 0, 0, 959, 757, \"STRONG\"], [\"2013-01-31\", 803, 608, 430, 174, 155, 2, 0, 0, 0, 986, 778, \"STRONG\"], [\"2013-02-28\", 807, 611, 291, 316, 277, 3, 1, 0, 0, 999, 783, \"STRONG\"], [\"2013-03-28\", 818, 616, 275, 337, 300, 4, 1, 0, 0, 1033, 797, \"STRONG\"], [\"2013-04-30\", 830, 623, 274, 343, 308, 5, 1, 0, 0, 1035, 809, \"STRONG\"], [\"2013-05-31\", 854, 644, 287, 350, 322, 5, 1, 0, 0, 1063, 833, \"STRONG\"], [\"2013-06-28\", 851, 640, 285, 348, 311, 5, 0, 0, 0, 1058, 830, \"STRONG\"], [\"2013-07-31\", 870, 665, 302, 358, 323, 6, 1, 0, 0, 1086, 848, \"STRONG\"], [\"2013-08-30\", 852, 661, 299, 358, 319, 8, 6, 0, 0, 1064, 832, \"STRONG\"], [\"2013-09-30\", 882, 685, 318, 362, 329, 8, 4, 0, 0, 1104, 858, \"STRONG\"], [\"2013-10-31\", 892, 689, 319, 365, 323, 8, 3, 0, 0, 1117, 871, \"STRONG\"], [\"2013-11-29\", 921, 707, 330, 373, 334, 8, 2, 0, 0, 1147, 901, \"STRONG\"], [\"2013-12-31\", 941, 720, 340, 376, 338, 12, 2, 1, 0, 1168, 912, \"STRONG\"], [\"2014-01-31\", 931, 712, 334, 374, 332, 8, 4, 0, 0, 1149, 898, \"STRONG\"], [\"2014-02-28\", 951, 722, 236, 481, 422, 8, 1, 0, 0, 1189, 924, \"STRONG\"], [\"2014-03-31\", 954, 728, 212, 511, 448, 8, 1, 0, 0, 1192, 928, \"STRONG\"], [\"2014-04-30\", 942, 718, 208, 506, 441, 10, 3, 0, 0, 1167, 919, \"STRONG\"], [\"2014-05-30\", 955, 732, 215, 514, 432, 11, 6, 1, 0, 1186, 932, \"STRONG\"], [\"2014-06-30\", 984, 751, 221, 526, 461, 15, 7, 0, 0, 1227, 955, \"STRONG\"], [\"2014-07-31\", 962, 731, 213, 512, 423, 4, 2, 2, 1, 1186, 932, \"NORMAL\"], [\"2014-08-29\", 974, 737, 209, 521, 416, 10, 4, 0, 0, 1213, 950, \"STRONG\"], [\"2014-09-30\", 948, 718, 197, 513, 385, 6, 2, 0, 0, 1175, 924, \"NORMAL\"], [\"2014-10-31\", 989, 742, 196, 539, 396, 23, 7, 1, 0, 1233, 963, \"STRONG\"], [\"2014-11-28\", 985, 739, 191, 539, 439, 27, 10, 5, 1, 1227, 960, \"STRONG\"], [\"2014-12-31\", 988, 741, 191, 542, 412, 25, 11, 5, 1, 1236, 964, \"STRONG\"], [\"2015-01-30\", 982, 737, 190, 539, 381, 26, 17, 7, 1, 1207, 952, \"STRONG\"], [\"2015-02-27\", 1003, 753, 170, 575, 443, 26, 13, 6, 1, 1250, 980, \"STRONG\"], [\"2015-03-31\", 1023, 766, 176, 583, 433, 30, 15, 9, 3, 1259, 993, \"STRONG\"], [\"2015-04-30\", 1001, 751, 172, 574, 434, 24, 8, 3, 2, 1245, 974, \"STRONG\"], [\"2015-05-29\", 1016, 765, 178, 583, 443, 27, 10, 4, 2, 1259, 990, \"STRONG\"], [\"2015-06-30\", 1022, 762, 175, 582, 417, 14, 7, 2, 2, 1262, 994, \"NORMAL\"], [\"2015-07-31\", 1020, 757, 180, 573, 411, 29, 10, 3, 3, 1247, 988, \"NORMAL\"], [\"2015-08-31\", 988, 738, 179, 555, 355, 9, 4, 1, 1, 1205, 956, \"WEAK\"], [\"2015-09-30\", 959, 710, 167, 539, 276, 8, 2, 1, 0, 1159, 928, \"RISK_OFF\"], [\"2015-10-30\", 982, 728, 173, 553, 319, 18, 4, 2, 1, 1191, 950, \"WEAK\"], [\"2015-11-30\", 991, 736, 178, 554, 332, 17, 6, 1, 1, 1209, 960, \"NORMAL\"], [\"2015-12-31\", 971, 722, 176, 543, 268, 7, 2, 0, 0, 1174, 938, \"WEAK\"], [\"2016-01-29\", 925, 688, 156, 529, 202, 3, 0, 0, 0, 1114, 896, \"RISK_OFF\"], [\"2016-02-29\", 932, 695, 134, 559, 230, 13, 5, 1, 0, 1111, 903, \"RISK_OFF\"], [\"2016-03-31\", 974, 723, 137, 584, 372, 22, 6, 1, 0, 1157, 942, \"WEAK\"], [\"2016-04-29\", 965, 716, 138, 575, 405, 16, 4, 1, 0, 1156, 936, \"NORMAL\"], [\"2016-05-31\", 970, 717, 140, 572, 404, 13, 4, 1, 0, 1159, 939, \"NORMAL\"], [\"2016-06-30\", 973, 716, 139, 572, 400, 20, 10, 3, 0, 1163, 937, \"STRONG\"], [\"2016-07-29\", 999, 737, 148, 584, 461, 23, 9, 2, 1, 1203, 970, \"STRONG\"], [\"2016-08-31\", 1015, 754, 154, 596, 465, 12, 4, 0, 0, 1213, 983, \"STRONG\"], [\"2016-09-30\", 1031, 769, 164, 602, 477, 9, 6, 1, 0, 1215, 995, \"STRONG\"], [\"2016-10-31\", 1005, 742, 152, 587, 457, 17, 8, 4, 2, 1175, 964, \"STRONG\"], [\"2016-11-30\", 1052, 773, 166, 603, 507, 23, 10, 2, 0, 1243, 1021, \"STRONG\"], [\"2016-12-30\", 1063, 782, 165, 613, 499, 11, 5, 0, 0, 1247, 1032, \"STRONG\"], [\"2017-01-31\", 1073, 793, 174, 614, 482, 29, 13, 4, 0, 1258, 1043, \"STRONG\"], [\"2017-02-28\", 1086, 799, 172, 623, 516, 9, 1, 1, 0, 1270, 1057, \"STRONG\"], [\"2017-03-31\", 1086, 796, 165, 629, 519, 18, 5, 1, 0, 1268, 1056, \"STRONG\"], [\"2017-04-28\", 1086, 797, 172, 623, 510, 19, 10, 1, 0, 1260, 1057, \"STRONG\"], [\"2017-05-31\", 1076, 795, 183, 609, 466, 33, 19, 9, 3, 1249, 1046, \"STRONG\"], [\"2017-06-30\", 1103, 815, 195, 617, 476, 16, 10, 2, 0, 1276, 1075, \"STRONG\"], [\"2017-07-31\", 1108, 817, 199, 616, 480, 27, 18, 4, 2, 1274, 1078, \"STRONG\"], [\"2017-08-31\", 1111, 824, 203, 619, 476, 28, 14, 6, 1, 1270, 1082, \"STRONG\"], [\"2017-09-29\", 1152, 853, 207, 644, 482, 21, 5, 0, 0, 1318, 1123, \"STRONG\"], [\"2017-10-31\", 1140, 846, 205, 639, 490, 20, 6, 0, 0, 1295, 1106, \"STRONG\"], [\"2017-11-30\", 1162, 867, 206, 658, 518, 38, 15, 1, 0, 1315, 1130, \"STRONG\"], [\"2017-12-29\", 1169, 873, 212, 659, 542, 19, 4, 0, 0, 1320, 1136, \"STRONG\"]], \"per_review_cols\": [\"review\", \"eligible\", \"nonfin\", \"h2_nonfin\", \"scored\", \"candidates\", \"ge75\", \"ge80\", \"ge85\", \"ge90\", \"old_members\", \"old_still_eligible\", \"regime\"], \"per_year\": {\"2011\": {\"bits\": {\"H1_financial\": 1626, \"H1_no_sic\": 595, \"H2\": 8645, \"H3\": 142, \"H4\": 63, \"H5\": 0, \"H6\": 2002, \"H7\": 5, \"duplicate_class\": 12}, \"candidates\": 60, \"eligible\": 8780, \"field_present\": [1851, 1650, 1898, 1881, 6331, 6331, 203], \"ge75\": 5, \"ge80\": 2, \"ge85\": 0, \"ge90\": 0, \"h2_nonfin\": 6426, \"nonfin\": 6559, \"old_overlap\": 8542, \"old_overlap_h2\": 6289, \"old_overlap_nonfin\": 6422, \"reviews\": 12, \"scored\": 133}, \"2012\": {\"bits\": {\"H1_financial\": 1738, \"H1_no_sic\": 428, \"H2\": 7333, \"H3\": 163, \"H4\": 69, \"H5\": 0, \"H6\": 1584, \"H7\": 30, \"duplicate_class\": 12}, \"candidates\": 1246, \"eligible\": 9037, \"field_present\": [4490, 4125, 4613, 4619, 6680, 6683, 1847], \"ge75\": 35, \"ge80\": 16, \"ge85\": 4, \"ge90\": 0, \"h2_nonfin\": 5271, \"nonfin\": 6871, \"old_overlap\": 8819, \"old_overlap_h2\": 5135, \"old_overlap_nonfin\": 6725, \"reviews\": 12, \"scored\": 1579}, \"2013\": {\"bits\": {\"H1_financial\": 2047, \"H1_no_sic\": 405, \"H2\": 5828, \"H3\": 224, \"H4\": 115, \"H5\": 0, \"H6\": 883, \"H7\": 94, \"duplicate_class\": 14}, \"candidates\": 3639, \"eligibl",
+  "QRP5D|2|e\": 10321, \"field_present\": [6511, 6091, 6794, 6819, 7787, 7788, 4863], \"ge75\": 74, \"ge80\": 22, \"ge85\": 1, \"ge90\": 0, \"h2_nonfin\": 3750, \"nonfin\": 7869, \"old_overlap\": 10052, \"old_overlap_h2\": 3667, \"old_overlap_nonfin\": 7703, \"reviews\": 12, \"scored\": 4060}, \"2014\": {\"bits\": {\"H1_financial\": 2418, \"H1_no_sic\": 374, \"H2\": 4794, \"H3\": 375, \"H4\": 151, \"H5\": 0, \"H6\": 1754, \"H7\": 210, \"duplicate_class\": 29}, \"candidates\": 5007, \"eligible\": 11563, \"field_present\": [7628, 7262, 7843, 7880, 8642, 8642, 6875], \"ge75\": 155, \"ge80\": 58, \"ge85\": 14, \"ge90\": 3, \"h2_nonfin\": 2623, \"nonfin\": 8771, \"old_overlap\": 11249, \"old_overlap_h2\": 2546, \"old_overlap_nonfin\": 8570, \"reviews\": 12, \"scored\": 6078}, \"2015\": {\"bits\": {\"H1_financial\": 2668, \"H1_no_sic\": 365, \"H2\": 4350, \"H3\": 278, \"H4\": 106, \"H5\": 0, \"H6\": 3703, \"H7\": 269, \"duplicate_class\": 48}, \"candidates\": 4512, \"eligible\": 11958, \"field_present\": [7871, 7466, 8161, 8166, 8820, 8820, 7575], \"ge75\": 235, \"ge80\": 98, \"ge85\": 39, \"ge90\": 17, \"h2_nonfin\": 2114, \"nonfin\": 8925, \"old_overlap\": 11603, \"old_overlap_h2\": 2052, \"old_overlap_nonfin\": 8699, \"reviews\": 12, \"scored\": 6753}, \"2016\": {\"bits\": {\"H1_financial\": 2767, \"H1_no_sic\": 325, \"H2\": 3892, \"H3\": 181, \"H4\": 79, \"H5\": 0, \"H6\": 3221, \"H7\": 315, \"duplicate_class\": 68}, \"candidates\": 4879, \"eligible\": 11904, \"field_present\": [7908, 7603, 8109, 8181, 8725, 8723, 7663], \"ge75\": 182, \"ge80\": 71, \"ge85\": 16, \"ge90\": 3, \"h2_nonfin\": 1793, \"nonfin\": 8812, \"old_overlap\": 11518, \"old_overlap_h2\": 1733, \"old_overlap_nonfin\": 8578, \"reviews\": 12, \"scored\": 6976}, \"2017\": {\"bits\": {\"H1_financial\": 3080, \"H1_no_sic\": 397, \"H2\": 4620, \"H3\": 326, \"H4\": 51, \"H5\": 0, \"H6\": 2173, \"H7\": 398, \"duplicate_class\": 81}, \"candidates\": 5957, \"eligible\": 13352, \"field_present\": [8819, 8525, 8721, 9075, 9681, 9678, 8454], \"ge75\": 277, \"ge80\": 120, \"ge85\": 29, \"ge90\": 6, \"h2_nonfin\": 2293, \"nonfin\": 9875, \"old_overlap\": 12989, \"old_overlap_h2\": 2245, \"old_overlap_nonfin\": 9693, \"reviews\": 12, \"scored\": 7550}}, \"score_s\": 40.3, \"slice_spot_check\": {\"checked\": 168, \"mismatch\": 0}, \"store_stats\": {\"amendments\": 130, \"delayed_until_available\": 277, \"estimated\": 0, \"observed_new\": 49673, \"quarantined\": 0, \"timing_unknown\": 0}, \"synthetic_export_check\": {\"label\": \"SYNTHETIC seeded numbers, no market data\", \"mean_ic\": 0.023004, \"n\": 83, \"t\": 4.2684}, \"timing\": {\"K|2009-2012|1\": 2638, \"K|2009-2012|2-5\": 12, \"K|2009-2012|6-30\": 5, \"K|2009-2012|gt90\": 3, \"K|2009-2012|le0\": 67, \"K|2009|1\": 23, \"K|2009|6-30\": 1, \"K|2010|1\": 415, \"K|2010|2-5\": 1, \"K|2010|6-30\": 1, \"K|2010|le0\": 2, \"K|2011|1\": 945, \"K|2011|2-5\": 2, \"K|2011|6-30\": 1, \"K|2011|gt90\": 3, \"K|2011|le0\": 31, \"K|2012|1\": 1255, \"K|2012|2-5\": 9, \"K|2012|6-30\": 2, \"K|2012|le0\": 34, \"K|2013-2017|1\": 7060, \"K|2013-2017|2-5\": 24, \"K|2013-2017|31-90\": 9, \"K|2013-2017|6-30\": 10, \"K|2013-2017|gt90\": 8, \"K|2013-2017|le0\": 28, \"K|2013|1\": 1323, \"K|2013|2-5\": 5, \"K|2013|31-90\": 1, \"K|2013|6-30\": 1, \"K|2013|gt90\": 3, \"K|2013|le0\": 8, \"K|2014|1\": 1397, \"K|2014|2-5\": 3, \"K|2014|31-90\": 2, \"K|2014|6-30\": 2, \"K|2014|gt90\": 3, \"K|2014|le0\": 6, \"K|2015|1\": 1445, \"K|2015|2-5\": 4, \"K|2015|31-90\": 2, \"K|2015|6-30\": 2, \"K|2015|le0\": 7, \"K|2016|1\": 1447, \"K|2016|2-5\": 8, \"K|2016|31-90\": 3, \"K|2016|6-30\": 3, \"K|2016|gt90\": 2, \"K|2016|le0\": 3, \"K|2017|1\": 1448, \"K|2017|2-5\": 4, \"K|2017|31-90\": 1, \"K|2017|6-30\": 2, \"K|2017|le0\": 4, \"K|amendment_only\": 72, \"Q|2009-2012|1\": 9562, \"Q|2009-2012|2-5\": 101, \"Q|2009-2012|31-90\": 2, \"Q|2009-2012|6-30\": 11, \"Q|2009-2012|gt90\": 185, \"Q|2009-2012|le0\": 134, \"Q|2009|1\": 583, \"Q|2009|2-5\": 4, \"Q|2009|6-30\": 1, \"Q|2009|gt90\": 1, \"Q|2009|le0\": 4, \"Q|2010|1\": 1919, \"Q|2010|2-5\": 3, \"Q|2010|31-90\": 1, \"Q|2010|6-30\": 3, \"Q|2010|gt90\": 153, \"Q|2010|le0\": 48, \"Q|2011|1\": 3290, \"Q|2011|2-5\": 7, \"Q|2011|6-30\": 3, \"Q|2011|gt90\": 28, \"Q|2011|le0\": 49, \"Q|2012|1\": 3770, \"Q|2012|2-5\": 87, \"Q|2012|31-90\": 1, \"Q|2012|6-30\": 4, \"Q|2012|gt90\": 3, \"Q|2012|le0\": 33, \"Q|2013-2017|1\": 21309, \"Q|2013-2017|2-5\": 40, \"Q|2013-2017|31-90\": 2, \"Q|2013-2017|6-30\": 45, \"Q|2013-2017|gt90\": 9, \"Q|2013-2017|le0\": 48, \"Q|2013|1\": 4033, \"Q|2013|2-5\": 11, \"Q|2013|6-30\": 7, \"Q|2013|gt90\": 3, \"Q|2013|le0\": 12, \"Q|2014|1\": 4225, \"Q|2014|2-5\": 9, \"Q|2014|6-30\": 7, \"Q|2014|gt90\": 1, \"Q|2014|le0\": 8, \"Q|2015|1\": 4338, \"Q|2015|2-5\": 7, \"Q|2015|6-30\": 11, \"Q|2015|gt90\": 1, \"Q|2015|le0\": 12, \"Q|2016|1\": 4373, \"Q|2016|2-5\": 10, \"Q|2016|31-90\": 1, \"Q|2016|6-30\": 12, \"Q|2016|gt90\": 4, \"Q|2016|le0\": 6, \"Q|2017|1\": 4340, \"Q|2017|2-5\": 3, \"Q|2017|31-90\": 1, \"Q|2017|6-30\": 8, \"Q|2017|le0\": 10, \"Q|amendment_only\": 142, \"early|K|2009-2012|earnings_8k|1\": 11, \"early|K|2009-2012|earnings_8k|2-5\": 5, \"early|K|2009-2012|earnings_8k|6-30\": 43, \"early|K|2009-2012|unexplained|2-5\": 1, \"early|K|2009-2012|unexplained|6-30\": 7, \"early|K|2013-2017|earnings_8k|1\": 3, \"early|K|2013-2017|earnings_8k|2-5\": 5, \"early|K|2013-2017|earnings_8k|6-30\": 11, \"early|K|2013-2017|earnings_8k|gt90\": 1, \"early|K|2013-2017|unexplained|2-5\": 3, \"early|K|2013-2017|unexplained|31-90\": 1, \"early|K|2013-2017|unexplained|6-30\": 4, \"early|Q|2009-2012|earnings_8k|1\": 16, \"early|Q|2009-2012|earnings_8k|2-5\": 18, \"early|Q|2009-2012|earnings_8k|31-90\": 1, \"early|Q|2009-2012|earnings_8k|6-30\": 84, \"early|Q|2009-2012|unexplained|1\": 4, \"early|Q|2009-2012|unexplained|2-5\": 2, \"early|Q|2009-2012|unexplained|6-30\": 9, \"early|Q|2013-2017|earnings_8k|1\": 12, \"early|Q|2013-2017|earnings_8k|2-5\": 15, \"early|Q|2013-2017|earnings_8k|6-30\": 6, \"early|Q|2013-2017|unexplained|1\": 1, \"early|Q|2013-2017|unexplained|2-5\": 5, \"early|Q|2013-2017|unexplained|6-30\": 9}, \"totals_candidates\": {\"max\": 94.0, \"mean\": 47.539, \"median\": 48.0, \"min\": 0.0, \"n\": 25300, \"p10\": 26.0, \"p90\": 68.0, \"sd\": 15.524}, \"totals_hist5_candidates\": [28, 81, 274, 633, 934, 1470, 1802, 2331, 2824, 3121, 3078, 2886, 2133, 1726, 1016, 576, 284, 74, 29, 0, 0], \"totals_hist5_scored\": [97, 309, 891, 1550, 2010, 2729, 2798, 3247, 3435, 3554, 3377, 3034, 2260, 1808, 1059, 582, 286, 74, 29, 0, 0], \"totals_scored\": {\"max\": 94.0, \"mean\": 43.351, \"median\": 43.0, \"min\": 0.0, \"n\": 33129, \"p10\": 21.0, \"p90\": 65.0, \"sd\": 16.866}, \"universe_migration\": {\"2011|both\": 8542, \"2011|new_only|vendor\": 238, \"2011|old_only|mcap_1.5-2B\": 33, \"2011|old_only|mcap_lt_1.5B\": 98, \"2011|old_only|mcap_missing\": 1984, \"2011|old_only|no_fundamentals\": 400, \"2011|old_only|not_common_type\": 12, \"2012|both\": 8819, \"2012|new_only|vendor\": 218, \"2012|old_only|mcap_1.5-2B\": 43, \"2012|old_only|mcap_lt_1.5B\": 101, \"2012|old_only|mcap_missing\": 1829, \"2012|old_only|no_fundamentals\": 378, \"2012|old_only|not_common_type\": 12, \"2013|both\": 10052, \"2013|new_only|vendor\": 269, \"2013|old_only|mcap_1.5-2B\": 65, \"2013|old_only|mcap_lt_1.5B\": 121, \"2013|old_only|mcap_missing\": 2191, \"2013|old_only|no_fundamentals\": 416, \"2013|old_only|not_common_type\": 15, \"2014|both\": 11249, \"2014|new_only|vendor\": 314, \"2014|old_only|mcap_1.5-2B\": 56, \"2014|old_only|mcap_lt_1.5B\": 137, \"2014|old_only|mcap_missing\": 2463, \"2014|old_only|no_fundamentals\": 445, \"2014|old_only|not_common_type\": 30, \"2015|both\": 11603, \"2015|new_only|vendor\": 355, \"2015|old_only|mcap_1.5-2B\": 68, \"2015|old_only|mcap_lt_1.5B\": 149, \"2015|old_only|mcap_missing\": 2478, \"2015|old_only|no_fundamentals\": 339, \"2015|old_only|not_common_type\": 30, \"2016|both\": 11518, \"2016|new_only|vendor\": 386, \"2016|old_only|mcap_1.5-2B\": 57, \"2016|old_only|mcap_lt_1.5B\": 151, \"2016|old_only|mcap_missing\": 2205, \"2016|old_only|no_fundamentals\": 192, \"2016|old_only|not_common_type\": 33, \"2017|both\": 12989, \"2017|new_only|vendor\": 363, \"2017|old_only|mcap_1.5-2B\": 41, \"2017|old_only|mcap_lt_1.5B\": 180, \"2017|old_only|mcap_missing\": 2085, \"2017|old_only|no_fundamentals\": 42, \"2017|old_only|not_common_type\": 36}, \"vendor_file_date\": {\"after_sec\": 285, \"before_period_end\": 9819, \"before_sec\": 201, \"eq_sec\": 31007, \"pe_plus_45\": 117, \"seen_minus_fd|1\": 31338, \"seen_minus_fd|2-5\": 108, \"seen_minus_fd|31-90\": 13, \"seen_minus_fd|6-30\": 28, \"seen_minus_fd|gt90\": 6}, \"vintage\": {\"new_censored|revenue_q|first\": 20, \"new_censored|revenue_q|first_before_sec\": 3, \"new_censored|revenue_q|later_FUTURE\": 1, \"new_censored|revenue_q|neither\": 7, \"new_censored|revenue_q|no_ref\": 12, \"new_censored|revenue_q|restated_pending|first\": 3, \"new_censored|revenue_q|restated_pending|later_FUTURE\": 1, \"new_censored|revenue_q|restated_pending|neither\": 4, \"new_censored|total_assets|first\": 37, \"new_censored|total_assets|later_FUTURE\": 1, \"new_censored|total_assets|neither\": 4, \"new_censored|total_assets|no_ref\": 1, \"new_censored|total_assets|restated_pending|first\": 1, \"new_censored|total_assets|restated_pending|later_FUTURE\": 1, \"new|revenue_q|both\": 10, \"new|revenue_q|first\": 28294, \"new|revenue_q|first_before_sec\": 3039, \"new|revenue_q|later_FUTURE\": 93, \"new|revenue_q|later_public\": 21, \"new|revenue_q|neither\": 2832, \"new|revenue_q|no_ref\": 7013, \"new|revenue_q|restated_pending|both\": 10, \"new|revenue_q|restated_pending|first\": 3360, \"new|revenue_q|restated_pending|first_before_sec\":",
+  "QRP5D|3| 82, \"new|revenue_q|restated_pending|later_FUTURE\": 93, \"new|revenue_q|restated_pending|neither\": 369, \"new|revenue_q|vendor_missing\": 10, \"new|total_assets|both\": 7, \"new|total_assets|first\": 40374, \"new|total_assets|first_before_sec\": 223, \"new|total_assets|later_FUTURE\": 13, \"new|total_assets|later_public\": 3, \"new|total_assets|neither\": 419, \"new|total_assets|no_ref\": 273, \"new|total_assets|restated_pending|both\": 7, \"new|total_assets|restated_pending|first\": 1176, \"new|total_assets|restated_pending|first_before_sec\": 9, \"new|total_assets|restated_pending|later_FUTURE\": 13, \"new|total_assets|restated_pending|neither\": 5, \"revision|revenue_q|first\": 19, \"revision|revenue_q|first_before_sec\": 3, \"revision|revenue_q|later_FUTURE\": 1, \"revision|revenue_q|neither\": 1, \"revision|revenue_q|no_ref\": 1, \"revision|revenue_q|restated_pending|first\": 1, \"revision|revenue_q|restated_pending|later_FUTURE\": 1, \"revision|total_assets|first\": 18, \"revision|total_assets|neither\": 6, \"revision|total_assets|no_ref\": 1, \"revision|total_assets|restated_pending|first\": 1}, \"wall_s\": 559.6}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 1761,
+  "elig_days": 1761,
+  "elig_max": 1169,
+  "elig_mean": 911.3316297558206,
+  "elig_min": 666,
+  "elig_sum": 1604855,
+  "experiment_id": "E996-03",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 399996,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 338,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "warmup_days": 632,
+  "warmup_select_days": 633,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "fd2976e77f7ef0df9c799d33912f39ede4176238baf836e80d3fb8d9ade279b6",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "1761 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2011-01-03..2017-12-29",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 1761 vs algorithm days 1761",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 1761 vs QuantConnect tradeableDates 1761",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "warmup_left_account_untouched",
+   "detail": "first recorded equity 100000.00 vs initial cash 100000.00; 632 warm-up sessions",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2017-12-29",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 1761,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2011-01-03",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-10T14:57:36Z",
+  "build_commit": "ea74ab69300cf1a3559df4869a76199c843d983d",
+  "code_sha256": "54c7b41e4a7c00ae0c1e999e24f76f1431ca883e93258c09f97bc02c32f4f699",
+  "config_sha256": "e69b19aecb484846dbe8dc1f3c63943133c476bf7c98b54e59b1632800a93077",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "p5d_ref.py",
+   "p5d_ref_00.py",
+   "p5d_ref_01.py",
+   "p5d_ref_02.py",
+   "p5d_ref_03.py",
+   "p5d_ref_04.py",
+   "p5d_ref_05.py",
+   "p5d_ref_06.py",
+   "p5d_ref_07.py",
+   "p5d_ref_08.py",
+   "p5d_ref_09.py",
+   "p5d_ref_10.py",
+   "p5d_ref_11.py",
+   "p5d_ref_12.py",
+   "p5d_ref_13.py",
+   "p5d_ref_14.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_p7.py",
+   "qr_p7_export.py",
+   "qr_p7_score.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_sec_data.py",
+   "qr_sec_data_00.py",
+   "qr_sec_data_01.py",
+   "qr_sec_data_02.py",
+   "qr_sec_data_03.py",
+   "qr_sec_data_04.py",
+   "qr_sec_data_05.py",
+   "qr_sec_data_06.py",
+   "qr_sec_data_07.py",
+   "qr_sec_data_08.py",
+   "qr_sec_data_09.py",
+   "qr_sec_data_10.py",
+   "qr_sec_data_11.py",
+   "qr_sec_data_12.py",
+   "qr_sec_data_13.py",
+   "qr_sec_data_14.py",
+   "qr_sec_data_15.py",
+   "qr_sec_data_16.py",
+   "qr_sec_data_17.py",
+   "qr_sec_data_18.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "ea74ab69300cf1a3559df4869a76199c843d983d",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18178",
+  "qc_backtest_id": "ff155f4c3d93f4d05fc38e4bc821834c",
+  "qc_project_id": 37627507,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-10T14:57:17Z",
+  "runtime_s": 578.5544261932373
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.514",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.165",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "QRP5D|0|{\"baseline\": {\"cik_reject\": 0, \"life_reject\": 0, \"pit_violations\": 0, \"store_baseline\": 48275}, \"calendar_check\": {\"expected\": 84, \"match\": true, \"reviews\": 84}, \"checks\": {\"censored\": 4743, \"fed\": 41376, \"m2_delayed\": 277, \"m2_not_fed\": 90183, \"m2_revision_unfed\": 4, \"month_ends\": 96, \"no_period_end\": 459115, \"pe_after_seen\": 0, \"pe_regress\": 1813, \"quarantined_seen\": 0, \"reports_new\": 131113, \"revision_from_missing\": 12, \"revision_to_missing\": 1, \"revisions\": 450, \"sec_fed\": 8127, \"selections\": 2394, \"store_sids_max\": 2108, \"unmapped_cik\": 66406, \"unmapped_period\": 18650, \"weekly_scans\": 496}, \"digests\": {\"eligible_by_year\": {\"2008\": \"fa59440f03114255197f0aeece1827261dbd841a76328df5b3da360d6203916e\", \"2009\": \"91938baf4ced2a6828e059d8072e321927d96f6ed11f15995afb67d8194a889a\", \"2010\": \"7dd9012f0fc4a01235926beb5833973ca5c7c8f96a3b63fdb6ba0bd779d62f92\", \"2011\": \"89ce41a056cbb6553175c4725efb0503485269ce27ef389c7a1409b9972ea598\", \"2012\": \"1c2859cf55a435eb8cb805c310608dbb3bda136d1213b5928e938ff0473fd405\", \"2013\": \"52dc8b8473c61d47a1123471abbd7b7f24c643b85bb0512be42e329452367c97\", \"2014\": \"209497e1aafa20ba09b8c3524493bd64e380adb0e6c43e1b156f45eb67db7b99\", \"2015\": \"e0153a913b9b03835583d4336abcf4f2ce712428ec0947372847b13aad8c6aca\", \"2016\": \"bd24a981b9b28ab6ad1c53375d50c2d4cb4a79210b2592ae74ac4968c059721e\", \"2017\": \"e50d90dcafa836b5352196f2827ac72e4506ee8de9bf9cfcab296629300a147b\"}, \"eligible_to_2013\": \"25c570a9dd98ce30b116bd8df9fe7141add31b4cd8dad88fdca0f2d29bbd19c7\", \"ledger_by_year\": {\"2008\": \"c8634ced370644bec48c2a4b056f3c45a3d2395043ee7cdfe21496b625f56cae\", \"2009\": \"468ada85e4a934cadc1ef9da7cd557c6c07b5a0de642e166d504ab8ed0c80b3d\", \"2010\": \"e41d5d5612a50eb1b55e6f138f5e6cb9de925e1e3a030707ccc51a43a77ba06d\", \"2011\": \"8e49723442fc8463df9e23ecfe098025841d6609a04cc7eb8d5cc2049192d9f2\", \"2012\": \"4ab7879a024011419e51df4c1d25063c186d249882bd7909226b05f05993a9d4\", \"2013\": \"efba905ec6002e7d50429c641d5d2342c8501c54bbfa4c218e678eeeeb004fc6\", \"2014\": \"b53030dee4925f947dad34966b39c9e8956a3aa8c65db56169a202593e9620cc\", \"2015\": \"3527e55a27a21085b6b358b9fb53533ddf1356680e91b5f537370c82a562904b\", \"2016\": \"3fbb4aab7fb965b0d92aa46cb4a64b632503c689657f661f7cfe5533e674bacb\", \"2017\": \"1f0c6026b633c2e4de886427aca0d42340f028699582ff660ffbd13828e12fb4\"}, \"ledger_to_2013\": \"ce5d95f3c8cd354c3038b1cb4788627b277e5047f1fc45c4c699a35437c64745\", \"review_scores\": {\"2011-01-31\": \"502a6a4ba8fa2a11cc7e8d19922f38ddd6ee1ad99729649e6e59ec0ac8d4e0d7\", \"2011-02-28\": \"1457ef13fc07e19745a74e2c99175d7870b1fbaa7553c2824f94a2e8271b0d8d\", \"2011-03-31\": \"73d61609426bb63b86c1d63dec56accfbb05718e7f22c0fcff9e9a6a6ef014c1\", \"2011-04-29\": \"275d23cd593933a809c3277d4a1a34998978bbaaa440d6678ac65852affa4cf6\", \"2011-05-31\": \"79aef4a642227445366c0d580332607906e46e7df1539f1d03f272e9321338de\", \"2011-06-30\": \"1e09cff8ce51da0537044872823dc1b83bc00f0f6ac7872976dcc9ea5dae4eee\", \"2011-07-29\": \"764b484a0779bf8100dca002c35a228b0f9cd2375ee980c7cd03f1d40f977f5a\", \"2011-08-31\": \"b527989601120d495810e9a03273d43c6e02c4add631cf7df5d031fdf12818d5\", \"2011-09-30\": \"0e9dae41441e7b897b2c47430bfe191154f4c5934fc84116bd849855592997da\", \"2011-10-31\": \"a3a2396edf7f251c46af75a2a01bae5a2a63b4c65a5ab036738d4eaa8e7ac410\", \"2011-11-30\": \"e163a28e70dd36efb0797449b801d57720eba6bc676242f9175868e75333f0a1\", \"2011-12-30\": \"216bc983f4323da18beade5b69b93f4c8a8d0bcd87615f8d206f54a04786e443\", \"2012-01-31\": \"524fb5c3b5e411511d0d556023c306ae11db740d3a405023e96adb6978eb6439\", \"2012-02-29\": \"df1320f5a0ed5f7298502b86396439030818aa7dbd36a231fd23ea7da6a80ead\", \"2012-03-30\": \"c8b821e51e1c459f00eb18376c6826d5f3f003884c3bb32831c7d18df5b4d5cd\", \"2012-04-30\": \"7ac3775d5e344d6136793d5c3f4e07566dd5e17b313578da91edf04a20c4ba52\", \"2012-05-31\": \"e578fcd4fbe3efc3b5b648b2721384037aaa7c7ba453314a995b18026a0c9731\", \"2012-06-29\": \"4cb0f28b0a842425989bc5b34d4f6f75274bfbd03a1691e551cd5666acafa3c7\", \"2012-07-31\": \"3980dad89f8a9e32c90e3c5facd372c5a4081180093a22ae64476a9f55ba1f22\", \"2012-08-31\": \"62697224bb0dba5affb5d74d5a5d7ff5a474091d4171a387c5028cc056b6a3d2\", \"2012-09-28\": \"74018684e1dbc4542d647a78788134cb86d71246f3505d94943870ab556fcfb9\", \"2012-10-31\": \"36d9d736cb7e7bea6c3715090955fa3ccb6dbc82b2d87d1dc5e9fc99726587a2\", \"2012-11-30\": \"3f5d90c3931c705599cd9fb26cb9f65806e805c91dae52a464719792301ad918\", \"2012-12-31\": \"b0447c5c2eb80cd4919fd37e0ad83857a965a22e05ca3380fd4a581f9c396c07\", \"2013-01-31\": \"687d25323d71bac4e099bf63276ad1e30bf9cf12c8cb4c5c49db79dcfcca0fcd\", \"2013-02-28\": \"bb5237e136aae66006211a26c323aebe93c5c46e802bf18205c256b869e8a541\", \"2013-03-28\": \"055dcaa7ec546be76619fb55a25248195a9da6785e3e3452c2e2cca70f783979\", \"2013-04-30\": \"0c9ba2a3e72eea08e76495a9cad5897833ce1edc1098a77798b7de1ca650348d\", \"2013-05-31\": \"bd4c41a34f4d36b1b68cde6c5fe8693b9a12f22d8acc9adafd35d0cd6a864f0a\", \"2013-06-28\": \"a366a5591b07c2c141dceb9005decc62884da2c8258828a57b52445bd9d6642a\", \"2013-07-31\": \"b477ed418bfa1717bebccb40551a5d5cd752f7b11b0f0fcb9de613b94fc77620\", \"2013-08-30\": \"2444373622e9f0a613ce90a02e6ba4858f8a6fec052892d1929f1b2aa9737c4d\", \"2013-09-30\": \"5c2d434ca753656e7de2a5319cbe293af933ab19791abb2597be230bdee6d774\", \"2013-10-31\": \"1d6afcc977f889afe2942ec2259237a602007e509ca6204ebbe1842d936936b9\", \"2013-11-29\": \"117cc7bd4384edc2952e7b3f0686931d848c2b46d7fe6e3716fb57e772999e42\", \"2013-12-31\": \"f72b471cbb054f3a7ebb624fcf414e0b6de43aab279f0ffe16320c6d6496ae67\", \"2014-01-31\": \"fd249a098cc32161de9ae6d1a5ab7fd0cba91421a1ac6f4d17baa68ea018f6b6\", \"2014-02-28\": \"bc4d700d886847c4f340be632a97344dd6f8476a8ff46ea16f4a6c125d57d163\", \"2014-03-31\": \"2b633685044f3414f82fc20336b5dd32936d969df8ae5068560de11b02ed8104\", \"2014-04-30\": \"2e8b4e40b2fa70c9b5094b40ffc3bd5d2d0857c233b6a9c9b79c2273e7ea400f\", \"2014-05-30\": \"8233e8d2f08cb6b3cc50af1b9b4f3b47e5842e0118252f11f36551219a4de813\", \"2014-06-30\": \"a4080179b2facacbb179948cbca9515be5bcf29a222be26ce183439ebbd36018\", \"2014-07-31\": \"faf0a0f11cc4a89220f96a2ada63ebc3390ebde324d090ae73ad39ee50dcc335\", \"2014-08-29\": \"2fcd6d5ed15de0eb4078c7a6e43ae9a654b6b5e5c5600b0ba520dae5ad2e0a8a\", \"2014-09-30\": \"543fc06cc6dcbbbce1e548890abd74d5e06e3012a7feb53fc96e416a7a1fe53b\", \"2014-10-31\": \"2f267363a6f605f06017ee761edf0111bfdc90c317fe193715268809182e9fc7\", \"2014-11-28\": \"d989f3aea76b999f94d12e61fa0f4b8cba5773bb4637d31d35a488844108704b\", \"2014-12-31\": \"f7ce2ee68437b5dc8fb02ed51b045b96bafb5323efcf7cac88fd34a0b14c2274\", \"2015-01-30\": \"87c568f471705c22647e8c9f01b63c57ece53039804fe14b068e24f89d813064\", \"2015-02-27\": \"230b1e57a9add32587dd2b14f97a0e88fae4989c38a2458ecb001106e57a385c\", \"2015-03-31\": \"f213287dfb38dc690750895de3324bbb64480ece6c37f7057a07a74025cf4ae5\", \"2015-04-30\": \"f4ddda7f61b8b0c62f518244817dc8dab1b303b9faa93d1bbfc404a8ead95d97\", \"2015-05-29\": \"f3afb1400f6ce7f86eb60733487c6919a80eceeb58a602040abfc3d8c044e8a3\", \"2015-06-30\": \"d89373757a36ab3c98423d1a475148964a9f80663bdd81e93aa4a9839fdca7ff\", \"2015-07-31\": \"8356495b50d6a9c6e17273f5a4a3fb312d9901e73d0b6b6ad82749183458b068\", \"2015-08-31\": \"cd3569751f67515da98f16e2924d70a7f05bde01b76bd53dc3573ce6e421917b\", \"2015-09-30\": \"f13976544996d674f46758e91a580689936210b80d58538caa86e1d6758d1d20\", \"2015-10-30\": \"173eb823cca3cf6ed5fadd15795f98b67e54f4245806795577389cb55e778c50\", \"2015-11-30\": \"d7a801efcbf7c8c052c9a790cb0e4a24c8c76d9c18ed484661a86dad85bb7526\", \"2015-12-31\": \"185454bab9cd6ab0f7fd17bf0a1fb622f07905603d3cd319b3b5dcc5514a9fd0\", \"2016-01-29\": \"a4f2edd5f23b24d8ec38cae47f78d845aeeccb66e1f8d42314c571f41552c9f5\", \"2016-02-29\": \"a24307352a039b334a989a93a2f0b0c69bb8861dca002c9b1cd7c97e974b34e7\", \"2016-03-31\": \"78af946757c686370a8ca757a2f7e2640ab5d1cfc1b5ff9d3189fb3e0c25e5c2\", \"2016-04-29\": \"b4f56aa3c0efd2f4d70ae7eb50cd7aabd85bee22d7f987c4fcbc2e25c8b0f7a6\", \"2016-05-31\": \"dcd3f4ea87d1fe274185faa60e5d043fc7525ccaeee7c1052b1eab9efb9a0b80\", \"2016-06-30\": \"f5e6720bc70831b4563ebdc1cedf9c74b964b736608a0beb32645cc3ae2b2b5a\", \"2016-07-29\": \"a35dd7eed86c5cd41d46d47dec7b68b684c139850f138035306afb6b9f9db0fd\", \"2016-08-31\": \"d66e4a1effffb51dac74b25e07751a4cfb1f1f37de56844355b4b431a3e7d13c\", \"2016-09-30\": \"bda5be98eac961ea266007db560e6d2cfc731e98909bcb7128b6c62fcf8b03df\", \"2016-10-31\": \"bab4e326c68a61482289415d88c71549a87637934e17e0d79d86d2c337f56072\", \"2016-11-30\": \"8da213ac70372ad1893e12d39f3db08b3fe47031e3a00d1be374bce5e64d5496\", \"2016-12-30\": \"76498d691aed25c2f48c9faa29626c9ae3e5d6ad59afb659cfd1a2dbdf2e27c8\", \"2017-01-31\": \"a4dea96ccebe509e61de58ec3c235e5d3136969ffe39b4c07d4c49c10e45a0aa\", \"2017-02-28\": \"a4710e49252b7db4e020e9d71eacb8f2dbc3f2bb034b3256e4d83de6c976c33f\", \"2017-03-31\": \"9735e52d24c8fe68edf1ec6ece7a7f60d1c421eee74cd64f2bb4823cb283864f\", \"2017-04-28\": \"35a249eda96682e9d4ddeb90c5dc0b44e93b2f6734c498324eeb0616e6196c0d\", \"2017-05-31\": \"6cedeea2158d4ac020637b7648cb5623515737c2b5256938c8c0a1786cc6b823\", \"2017-06-30\": \"a482650dfcb7a33e4f3afd353f3394d7830f96f0fac60df160e3433dc7393f03\", \"2017-07-31\": \"adeca5addda51c0a0302d12650227830c27b425eceb800365ababe35ae7208e9\", \"2017-08-31\": \"44d5a6e491d60903748d475640d4ad65db28bef5a7c0c2ed3c7a31b6e8c9011e\", \"2017-09-29\": \"1569f05f2518e256836977eb962e7f31330bf23af4f5b5b9b14dfc0a\nQRP5D|1|4f339ad0\", \"2017-10-31\": \"028ec0daf40cf8cab88e90b75ee3d44fc184049df17fab893ae53d9e9efce89c\", \"2017-11-30\": \"feaf7b55e147c00a03ce3fae82fc7daf11955647f195b74478b0950d015879f0\", \"2017-12-29\": \"6d958c24af25a4b7f8eb2f55fd960d21c2b0b9ae6d2d7bc5e9c36c9b51347954\"}}, \"end\": \"2017-12-31\", \"field_order\": [\"revenue_ttm4q\", \"gross_profit_ttm4q\", \"net_income_ttm4q\", \"operating_cash_flow_ttm4q\", \"total_assets\", \"stockholders_equity\", \"revenue_baseline_valid\"], \"layer_corr\": {\"F_S\": 0.0003, \"T_F\": -0.0099, \"T_S\": 0.2279}, \"layers\": {\"F\": {\"hist5\": [2715, 3903, 6684, 5699, 5090, 4050, 2609, 1785, 437, 157, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 45.0, \"mean\": 17.936, \"median\": 17.0, \"min\": 0.0, \"n\": 33129, \"p10\": 6.0, \"p90\": 32.0, \"sd\": 10.047}}, \"S\": {\"hist5\": [6021, 22332, 0, 4776, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 15.0, \"mean\": 7.555, \"median\": 8.0, \"min\": 0.0, \"n\": 33129, \"p10\": 0.0, \"p90\": 15.0, \"sd\": 4.301}}, \"T\": {\"hist5\": [6716, 3039, 2948, 3718, 4178, 4554, 5422, 1940, 614, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 40.0, \"mean\": 17.86, \"median\": 20.0, \"min\": 0.0, \"n\": 33129, \"p10\": 0.0, \"p90\": 33.0, \"sd\": 11.994}}}, \"ledger_reports\": 131113, \"ledger_sids\": 4743, \"max_rss_mb\": 5385.6, \"mcap_split_check\": {\"mcap_jumps_with_price\": 4, \"mcap_pit_continuous\": 166, \"no_window\": 194, \"price_adjusted\": 3, \"price_raw_jump\": 167}, \"mode\": \"M2\", \"panel\": {\"build_s\": 72.7, \"duplicate_bars\": 0, \"last_session\": \"2017-12-29\", \"late_rows\": 0, \"securities\": 1459, \"sessions\": 2769}, \"per_review\": [[\"2011-01-31\", 736, 539, 539, 0, 0, 0, 0, 0, 0, 927, 713, \"STRONG\"], [\"2011-02-28\", 747, 543, 543, 0, 0, 0, 0, 0, 0, 950, 725, \"STRONG\"], [\"2011-03-31\", 751, 547, 546, 1, 1, 0, 0, 0, 0, 952, 727, \"STRONG\"], [\"2011-04-29\", 760, 556, 555, 1, 1, 0, 0, 0, 0, 973, 741, \"STRONG\"], [\"2011-05-31\", 767, 568, 566, 2, 2, 0, 0, 0, 0, 983, 748, \"STRONG\"], [\"2011-06-30\", 762, 565, 562, 3, 3, 0, 0, 0, 0, 959, 739, \"STRONG\"], [\"2011-07-29\", 745, 553, 545, 8, 8, 0, 0, 0, 0, 932, 724, \"NORMAL\"], [\"2011-08-31\", 710, 543, 529, 14, 4, 0, 0, 0, 0, 892, 694, \"RISK_OFF\"], [\"2011-09-30\", 673, 513, 495, 18, 5, 0, 0, 0, 0, 834, 658, \"RISK_OFF\"], [\"2011-10-31\", 711, 545, 525, 20, 10, 1, 1, 0, 0, 893, 691, \"WEAK\"], [\"2011-11-30\", 704, 539, 508, 31, 12, 2, 0, 0, 0, 883, 685, \"WEAK\"], [\"2011-12-30\", 714, 548, 513, 35, 14, 2, 1, 0, 0, 891, 697, \"WEAK\"], [\"2012-01-31\", 735, 560, 520, 40, 33, 3, 3, 0, 0, 915, 716, \"NORMAL\"], [\"2012-02-29\", 755, 575, 458, 116, 96, 4, 3, 1, 0, 944, 737, \"STRONG\"], [\"2012-03-30\", 759, 577, 448, 128, 110, 4, 2, 1, 0, 952, 743, \"STRONG\"], [\"2012-04-30\", 761, 580, 453, 126, 105, 4, 1, 1, 0, 952, 744, \"STRONG\"], [\"2012-05-31\", 738, 560, 430, 128, 83, 3, 1, 0, 0, 910, 721, \"STRONG\"], [\"2012-06-29\", 748, 566, 434, 130, 105, 2, 1, 0, 0, 923, 729, \"STRONG\"], [\"2012-07-31\", 730, 558, 427, 129, 111, 3, 1, 0, 0, 904, 714, \"STRONG\"], [\"2012-08-31\", 746, 566, 419, 145, 115, 3, 2, 0, 0, 920, 730, \"STRONG\"], [\"2012-09-28\", 762, 580, 429, 149, 123, 3, 1, 1, 0, 936, 745, \"STRONG\"], [\"2012-10-31\", 756, 573, 421, 149, 116, 0, 0, 0, 0, 926, 737, \"STRONG\"], [\"2012-11-30\", 767, 583, 414, 167, 113, 2, 0, 0, 0, 941, 746, \"STRONG\"], [\"2012-12-31\", 780, 593, 418, 172, 136, 4, 1, 0, 0, 959, 757, \"STRONG\"], [\"2013-01-31\", 803, 608, 430, 174, 155, 2, 0, 0, 0, 986, 778, \"STRONG\"], [\"2013-02-28\", 807, 611, 291, 316, 277, 3, 1, 0, 0, 999, 783, \"STRONG\"], [\"2013-03-28\", 818, 616, 275, 337, 300, 4, 1, 0, 0, 1033, 797, \"STRONG\"], [\"2013-04-30\", 830, 623, 274, 343, 308, 5, 1, 0, 0, 1035, 809, \"STRONG\"], [\"2013-05-31\", 854, 644, 287, 350, 322, 5, 1, 0, 0, 1063, 833, \"STRONG\"], [\"2013-06-28\", 851, 640, 285, 348, 311, 5, 0, 0, 0, 1058, 830, \"STRONG\"], [\"2013-07-31\", 870, 665, 302, 358, 323, 6, 1, 0, 0, 1086, 848, \"STRONG\"], [\"2013-08-30\", 852, 661, 299, 358, 319, 8, 6, 0, 0, 1064, 832, \"STRONG\"], [\"2013-09-30\", 882, 685, 318, 362, 329, 8, 4, 0, 0, 1104, 858, \"STRONG\"], [\"2013-10-31\", 892, 689, 319, 365, 323, 8, 3, 0, 0, 1117, 871, \"STRONG\"], [\"2013-11-29\", 921, 707, 330, 373, 334, 8, 2, 0, 0, 1147, 901, \"STRONG\"], [\"2013-12-31\", 941, 720, 340, 376, 338, 12, 2, 1, 0, 1168, 912, \"STRONG\"], [\"2014-01-31\", 931, 712, 334, 374, 332, 8, 4, 0, 0, 1149, 898, \"STRONG\"], [\"2014-02-28\", 951, 722, 236, 481, 422, 8, 1, 0, 0, 1189, 924, \"STRONG\"], [\"2014-03-31\", 954, 728, 212, 511, 448, 8, 1, 0, 0, 1192, 928, \"STRONG\"], [\"2014-04-30\", 942, 718, 208, 506, 441, 10, 3, 0, 0, 1167, 919, \"STRONG\"], [\"2014-05-30\", 955, 732, 215, 514, 432, 11, 6, 1, 0, 1186, 932, \"STRONG\"], [\"2014-06-30\", 984, 751, 221, 526, 461, 15, 7, 0, 0, 1227, 955, \"STRONG\"], [\"2014-07-31\", 962, 731, 213, 512, 423, 4, 2, 2, 1, 1186, 932, \"NORMAL\"], [\"2014-08-29\", 974, 737, 209, 521, 416, 10, 4, 0, 0, 1213, 950, \"STRONG\"], [\"2014-09-30\", 948, 718, 197, 513, 385, 6, 2, 0, 0, 1175, 924, \"NORMAL\"], [\"2014-10-31\", 989, 742, 196, 539, 396, 23, 7, 1, 0, 1233, 963, \"STRONG\"], [\"2014-11-28\", 985, 739, 191, 539, 439, 27, 10, 5, 1, 1227, 960, \"STRONG\"], [\"2014-12-31\", 988, 741, 191, 542, 412, 25, 11, 5, 1, 1236, 964, \"STRONG\"], [\"2015-01-30\", 982, 737, 190, 539, 381, 26, 17, 7, 1, 1207, 952, \"STRONG\"], [\"2015-02-27\", 1003, 753, 170, 575, 443, 26, 13, 6, 1, 1250, 980, \"STRONG\"], [\"2015-03-31\", 1023, 766, 176, 583, 433, 30, 15, 9, 3, 1259, 993, \"STRONG\"], [\"2015-04-30\", 1001, 751, 172, 574, 434, 24, 8, 3, 2, 1245, 974, \"STRONG\"], [\"2015-05-29\", 1016, 765, 178, 583, 443, 27, 10, 4, 2, 1259, 990, \"STRONG\"], [\"2015-06-30\", 1022, 762, 175, 582, 417, 14, 7, 2, 2, 1262, 994, \"NORMAL\"], [\"2015-07-31\", 1020, 757, 180, 573, 411, 29, 10, 3, 3, 1247, 988, \"NORMAL\"], [\"2015-08-31\", 988, 738, 179, 555, 355, 9, 4, 1, 1, 1205, 956, \"WEAK\"], [\"2015-09-30\", 959, 710, 167, 539, 276, 8, 2, 1, 0, 1159, 928, \"RISK_OFF\"], [\"2015-10-30\", 982, 728, 173, 553, 319, 18, 4, 2, 1, 1191, 950, \"WEAK\"], [\"2015-11-30\", 991, 736, 178, 554, 332, 17, 6, 1, 1, 1209, 960, \"NORMAL\"], [\"2015-12-31\", 971, 722, 176, 543, 268, 7, 2, 0, 0, 1174, 938, \"WEAK\"], [\"2016-01-29\", 925, 688, 156, 529, 202, 3, 0, 0, 0, 1114, 896, \"RISK_OFF\"], [\"2016-02-29\", 932, 695, 134, 559, 230, 13, 5, 1, 0, 1111, 903, \"RISK_OFF\"], [\"2016-03-31\", 974, 723, 137, 584, 372, 22, 6, 1, 0, 1157, 942, \"WEAK\"], [\"2016-04-29\", 965, 716, 138, 575, 405, 16, 4, 1, 0, 1156, 936, \"NORMAL\"], [\"2016-05-31\", 970, 717, 140, 572, 404, 13, 4, 1, 0, 1159, 939, \"NORMAL\"], [\"2016-06-30\", 973, 716, 139, 572, 400, 20, 10, 3, 0, 1163, 937, \"STRONG\"], [\"2016-07-29\", 999, 737, 148, 584, 461, 23, 9, 2, 1, 1203, 970, \"STRONG\"], [\"2016-08-31\", 1015, 754, 154, 596, 465, 12, 4, 0, 0, 1213, 983, \"STRONG\"], [\"2016-09-30\", 1031, 769, 164, 602, 477, 9, 6, 1, 0, 1215, 995, \"STRONG\"], [\"2016-10-31\", 1005, 742, 152, 587, 457, 17, 8, 4, 2, 1175, 964, \"STRONG\"], [\"2016-11-30\", 1052, 773, 166, 603, 507, 23, 10, 2, 0, 1243, 1021, \"STRONG\"], [\"2016-12-30\", 1063, 782, 165, 613, 499, 11, 5, 0, 0, 1247, 1032, \"STRONG\"], [\"2017-01-31\", 1073, 793, 174, 614, 482, 29, 13, 4, 0, 1258, 1043, \"STRONG\"], [\"2017-02-28\", 1086, 799, 172, 623, 516, 9, 1, 1, 0, 1270, 1057, \"STRONG\"], [\"2017-03-31\", 1086, 796, 165, 629, 519, 18, 5, 1, 0, 1268, 1056, \"STRONG\"], [\"2017-04-28\", 1086, 797, 172, 623, 510, 19, 10, 1, 0, 1260, 1057, \"STRONG\"], [\"2017-05-31\", 1076, 795, 183, 609, 466, 33, 19, 9, 3, 1249, 1046, \"STRONG\"], [\"2017-06-30\", 1103, 815, 195, 617, 476, 16, 10, 2, 0, 1276, 1075, \"STRONG\"], [\"2017-07-31\", 1108, 817, 199, 616, 480, 27, 18, 4, 2, 1274, 1078, \"STRONG\"], [\"2017-08-31\", 1111, 824, 203, 619, 476, 28, 14, 6, 1, 1270, 1082, \"STRONG\"], [\"2017-09-29\", 1152, 853, 207, 644, 482, 21, 5, 0, 0, 1318, 1123, \"STRONG\"], [\"2017-10-31\", 1140, 846, 205, 639, 490, 20, 6, 0, 0, 1295, 1106, \"STRONG\"], [\"2017-11-30\", 1162, 867, 206, 658, 518, 38, 15, 1, 0, 1315, 1130, \"STRONG\"], [\"2017-12-29\", 1169, 873, 212, 659, 542, 19, 4, 0, 0, 1320, 1136, \"STRONG\"]], \"per_review_cols\": [\"review\", \"eligible\", \"nonfin\", \"h2_nonfin\", \"scored\", \"candidates\", \"ge75\", \"ge80\", \"ge85\", \"ge90\", \"old_members\", \"old_still_eligible\", \"regime\"], \"per_year\": {\"2011\": {\"bits\": {\"H1_financial\": 1626, \"H1_no_sic\": 595, \"H2\": 8645, \"H3\": 142, \"H4\": 63, \"H5\": 0, \"H6\": 2002, \"H7\": 5, \"duplicate_class\": 12}, \"candidates\": 60, \"eligible\": 8780, \"field_present\": [1851, 1650, 1898, 1881, 6331, 6331, 203], \"ge75\": 5, \"ge80\": 2, \"ge85\": 0, \"ge90\": 0, \"h2_nonfin\": 6426, \"nonfin\": 6559, \"old_overlap\": 8542, \"old_overlap_h2\": 6289, \"old_overlap_nonfin\": 6422, \"reviews\": 12, \"scored\": 133}, \"2012\": {\"bits\": {\"H1_financial\": 1738, \"H1_no_sic\": 428, \"H2\": 7333, \"H3\": 163, \"H4\": 69, \"H5\": 0, \"H6\": 1584, \"H7\": 30, \"duplicate_class\": 12}, \"candidates\": 1246, \"eligible\": 9037, \"field_present\": [4490, 4125, 4613, 4619, 6680, 6683, 1847], \"ge75\": 35, \"ge80\": 16, \"ge85\": 4, \"ge90\": 0, \"h2_nonfin\": 5271, \"nonfin\": 6871, \"old_overlap\": 8819, \"old_overlap_h2\": 5135, \"old_overlap_nonfin\": 6725, \"reviews\": 12, \"scored\": 1579}, \"2013\": {\"bits\": {\"H1_financial\": 2047, \"H1_no_sic\": 405, \"H2\": 5828, \"H3\": 224, \"H4\": 115, \"H5\": 0, \"H6\": 883, \"H7\": 94, \"duplicate_class\": 14}, \"candidates\": 3639, \"eligibl\nQRP5D|2|e\": 10321, \"field_present\": [6511, 6091, 6794, 6819, 7787, 7788, 4863], \"ge75\": 74, \"ge80\": 22, \"ge85\": 1, \"ge90\": 0, \"h2_nonfin\": 3750, \"nonfin\": 7869, \"old_overlap\": 10052, \"old_overlap_h2\": 3667, \"old_overlap_nonfin\": 7703, \"reviews\": 12, \"scored\": 4060}, \"2014\": {\"bits\": {\"H1_financial\": 2418, \"H1_no_sic\": 374, \"H2\": 4794, \"H3\": 375, \"H4\": 151, \"H5\": 0, \"H6\": 1754, \"H7\": 210, \"duplicate_class\": 29}, \"candidates\": 5007, \"eligible\": 11563, \"field_present\": [7628, 7262, 7843, 7880, 8642, 8642, 6875], \"ge75\": 155, \"ge80\": 58, \"ge85\": 14, \"ge90\": 3, \"h2_nonfin\": 2623, \"nonfin\": 8771, \"old_overlap\": 11249, \"old_overlap_h2\": 2546, \"old_overlap_nonfin\": 8570, \"reviews\": 12, \"scored\": 6078}, \"2015\": {\"bits\": {\"H1_financial\": 2668, \"H1_no_sic\": 365, \"H2\": 4350, \"H3\": 278, \"H4\": 106, \"H5\": 0, \"H6\": 3703, \"H7\": 269, \"duplicate_class\": 48}, \"candidates\": 4512, \"eligible\": 11958, \"field_present\": [7871, 7466, 8161, 8166, 8820, 8820, 7575], \"ge75\": 235, \"ge80\": 98, \"ge85\": 39, \"ge90\": 17, \"h2_nonfin\": 2114, \"nonfin\": 8925, \"old_overlap\": 11603, \"old_overlap_h2\": 2052, \"old_overlap_nonfin\": 8699, \"reviews\": 12, \"scored\": 6753}, \"2016\": {\"bits\": {\"H1_financial\": 2767, \"H1_no_sic\": 325, \"H2\": 3892, \"H3\": 181, \"H4\": 79, \"H5\": 0, \"H6\": 3221, \"H7\": 315, \"duplicate_class\": 68}, \"candidates\": 4879, \"eligible\": 11904, \"field_present\": [7908, 7603, 8109, 8181, 8725, 8723, 7663], \"ge75\": 182, \"ge80\": 71, \"ge85\": 16, \"ge90\": 3, \"h2_nonfin\": 1793, \"nonfin\": 8812, \"old_overlap\": 11518, \"old_overlap_h2\": 1733, \"old_overlap_nonfin\": 8578, \"reviews\": 12, \"scored\": 6976}, \"2017\": {\"bits\": {\"H1_financial\": 3080, \"H1_no_sic\": 397, \"H2\": 4620, \"H3\": 326, \"H4\": 51, \"H5\": 0, \"H6\": 2173, \"H7\": 398, \"duplicate_class\": 81}, \"candidates\": 5957, \"eligible\": 13352, \"field_present\": [8819, 8525, 8721, 9075, 9681, 9678, 8454], \"ge75\": 277, \"ge80\": 120, \"ge85\": 29, \"ge90\": 6, \"h2_nonfin\": 2293, \"nonfin\": 9875, \"old_overlap\": 12989, \"old_overlap_h2\": 2245, \"old_overlap_nonfin\": 9693, \"reviews\": 12, \"scored\": 7550}}, \"score_s\": 40.3, \"slice_spot_check\": {\"checked\": 168, \"mismatch\": 0}, \"store_stats\": {\"amendments\": 130, \"delayed_until_available\": 277, \"estimated\": 0, \"observed_new\": 49673, \"quarantined\": 0, \"timing_unknown\": 0}, \"synthetic_export_check\": {\"label\": \"SYNTHETIC seeded numbers, no market data\", \"mean_ic\": 0.023004, \"n\": 83, \"t\": 4.2684}, \"timing\": {\"K|2009-2012|1\": 2638, \"K|2009-2012|2-5\": 12, \"K|2009-2012|6-30\": 5, \"K|2009-2012|gt90\": 3, \"K|2009-2012|le0\": 67, \"K|2009|1\": 23, \"K|2009|6-30\": 1, \"K|2010|1\": 415, \"K|2010|2-5\": 1, \"K|2010|6-30\": 1, \"K|2010|le0\": 2, \"K|2011|1\": 945, \"K|2011|2-5\": 2, \"K|2011|6-30\": 1, \"K|2011|gt90\": 3, \"K|2011|le0\": 31, \"K|2012|1\": 1255, \"K|2012|2-5\": 9, \"K|2012|6-30\": 2, \"K|2012|le0\": 34, \"K|2013-2017|1\": 7060, \"K|2013-2017|2-5\": 24, \"K|2013-2017|31-90\": 9, \"K|2013-2017|6-30\": 10, \"K|2013-2017|gt90\": 8, \"K|2013-2017|le0\": 28, \"K|2013|1\": 1323, \"K|2013|2-5\": 5, \"K|2013|31-90\": 1, \"K|2013|6-30\": 1, \"K|2013|gt90\": 3, \"K|2013|le0\": 8, \"K|2014|1\": 1397, \"K|2014|2-5\": 3, \"K|2014|31-90\": 2, \"K|2014|6-30\": 2, \"K|2014|gt90\": 3, \"K|2014|le0\": 6, \"K|2015|1\": 1445, \"K|2015|2-5\": 4, \"K|2015|31-90\": 2, \"K|2015|6-30\": 2, \"K|2015|le0\": 7, \"K|2016|1\": 1447, \"K|2016|2-5\": 8, \"K|2016|31-90\": 3, \"K|2016|6-30\": 3, \"K|2016|gt90\": 2, \"K|2016|le0\": 3, \"K|2017|1\": 1448, \"K|2017|2-5\": 4, \"K|2017|31-90\": 1, \"K|2017|6-30\": 2, \"K|2017|le0\": 4, \"K|amendment_only\": 72, \"Q|2009-2012|1\": 9562, \"Q|2009-2012|2-5\": 101, \"Q|2009-2012|31-90\": 2, \"Q|2009-2012|6-30\": 11, \"Q|2009-2012|gt90\": 185, \"Q|2009-2012|le0\": 134, \"Q|2009|1\": 583, \"Q|2009|2-5\": 4, \"Q|2009|6-30\": 1, \"Q|2009|gt90\": 1, \"Q|2009|le0\": 4, \"Q|2010|1\": 1919, \"Q|2010|2-5\": 3, \"Q|2010|31-90\": 1, \"Q|2010|6-30\": 3, \"Q|2010|gt90\": 153, \"Q|2010|le0\": 48, \"Q|2011|1\": 3290, \"Q|2011|2-5\": 7, \"Q|2011|6-30\": 3, \"Q|2011|gt90\": 28, \"Q|2011|le0\": 49, \"Q|2012|1\": 3770, \"Q|2012|2-5\": 87, \"Q|2012|31-90\": 1, \"Q|2012|6-30\": 4, \"Q|2012|gt90\": 3, \"Q|2012|le0\": 33, \"Q|2013-2017|1\": 21309, \"Q|2013-2017|2-5\": 40, \"Q|2013-2017|31-90\": 2, \"Q|2013-2017|6-30\": 45, \"Q|2013-2017|gt90\": 9, \"Q|2013-2017|le0\": 48, \"Q|2013|1\": 4033, \"Q|2013|2-5\": 11, \"Q|2013|6-30\": 7, \"Q|2013|gt90\": 3, \"Q|2013|le0\": 12, \"Q|2014|1\": 4225, \"Q|2014|2-5\": 9, \"Q|2014|6-30\": 7, \"Q|2014|gt90\": 1, \"Q|2014|le0\": 8, \"Q|2015|1\": 4338, \"Q|2015|2-5\": 7, \"Q|2015|6-30\": 11, \"Q|2015|gt90\": 1, \"Q|2015|le0\": 12, \"Q|2016|1\": 4373, \"Q|2016|2-5\": 10, \"Q|2016|31-90\": 1, \"Q|2016|6-30\": 12, \"Q|2016|gt90\": 4, \"Q|2016|le0\": 6, \"Q|2017|1\": 4340, \"Q|2017|2-5\": 3, \"Q|2017|31-90\": 1, \"Q|2017|6-30\": 8, \"Q|2017|le0\": 10, \"Q|amendment_only\": 142, \"early|K|2009-2012|earnings_8k|1\": 11, \"early|K|2009-2012|earnings_8k|2-5\": 5, \"early|K|2009-2012|earnings_8k|6-30\": 43, \"early|K|2009-2012|unexplained|2-5\": 1, \"early|K|2009-2012|unexplained|6-30\": 7, \"early|K|2013-2017|earnings_8k|1\": 3, \"early|K|2013-2017|earnings_8k|2-5\": 5, \"early|K|2013-2017|earnings_8k|6-30\": 11, \"early|K|2013-2017|earnings_8k|gt90\": 1, \"early|K|2013-2017|unexplained|2-5\": 3, \"early|K|2013-2017|unexplained|31-90\": 1, \"early|K|2013-2017|unexplained|6-30\": 4, \"early|Q|2009-2012|earnings_8k|1\": 16, \"early|Q|2009-2012|earnings_8k|2-5\": 18, \"early|Q|2009-2012|earnings_8k|31-90\": 1, \"early|Q|2009-2012|earnings_8k|6-30\": 84, \"early|Q|2009-2012|unexplained|1\": 4, \"early|Q|2009-2012|unexplained|2-5\": 2, \"early|Q|2009-2012|unexplained|6-30\": 9, \"early|Q|2013-2017|earnings_8k|1\": 12, \"early|Q|2013-2017|earnings_8k|2-5\": 15, \"early|Q|2013-2017|earnings_8k|6-30\": 6, \"early|Q|2013-2017|unexplained|1\": 1, \"early|Q|2013-2017|unexplained|2-5\": 5, \"early|Q|2013-2017|unexplained|6-30\": 9}, \"totals_candidates\": {\"max\": 94.0, \"mean\": 47.539, \"median\": 48.0, \"min\": 0.0, \"n\": 25300, \"p10\": 26.0, \"p90\": 68.0, \"sd\": 15.524}, \"totals_hist5_candidates\": [28, 81, 274, 633, 934, 1470, 1802, 2331, 2824, 3121, 3078, 2886, 2133, 1726, 1016, 576, 284, 74, 29, 0, 0], \"totals_hist5_scored\": [97, 309, 891, 1550, 2010, 2729, 2798, 3247, 3435, 3554, 3377, 3034, 2260, 1808, 1059, 582, 286, 74, 29, 0, 0], \"totals_scored\": {\"max\": 94.0, \"mean\": 43.351, \"median\": 43.0, \"min\": 0.0, \"n\": 33129, \"p10\": 21.0, \"p90\": 65.0, \"sd\": 16.866}, \"universe_migration\": {\"2011|both\": 8542, \"2011|new_only|vendor\": 238, \"2011|old_only|mcap_1.5-2B\": 33, \"2011|old_only|mcap_lt_1.5B\": 98, \"2011|old_only|mcap_missing\": 1984, \"2011|old_only|no_fundamentals\": 400, \"2011|old_only|not_common_type\": 12, \"2012|both\": 8819, \"2012|new_only|vendor\": 218, \"2012|old_only|mcap_1.5-2B\": 43, \"2012|old_only|mcap_lt_1.5B\": 101, \"2012|old_only|mcap_missing\": 1829, \"2012|old_only|no_fundamentals\": 378, \"2012|old_only|not_common_type\": 12, \"2013|both\": 10052, \"2013|new_only|vendor\": 269, \"2013|old_only|mcap_1.5-2B\": 65, \"2013|old_only|mcap_lt_1.5B\": 121, \"2013|old_only|mcap_missing\": 2191, \"2013|old_only|no_fundamentals\": 416, \"2013|old_only|not_common_type\": 15, \"2014|both\": 11249, \"2014|new_only|vendor\": 314, \"2014|old_only|mcap_1.5-2B\": 56, \"2014|old_only|mcap_lt_1.5B\": 137, \"2014|old_only|mcap_missing\": 2463, \"2014|old_only|no_fundamentals\": 445, \"2014|old_only|not_common_type\": 30, \"2015|both\": 11603, \"2015|new_only|vendor\": 355, \"2015|old_only|mcap_1.5-2B\": 68, \"2015|old_only|mcap_lt_1.5B\": 149, \"2015|old_only|mcap_missing\": 2478, \"2015|old_only|no_fundamentals\": 339, \"2015|old_only|not_common_type\": 30, \"2016|both\": 11518, \"2016|new_only|vendor\": 386, \"2016|old_only|mcap_1.5-2B\": 57, \"2016|old_only|mcap_lt_1.5B\": 151, \"2016|old_only|mcap_missing\": 2205, \"2016|old_only|no_fundamentals\": 192, \"2016|old_only|not_common_type\": 33, \"2017|both\": 12989, \"2017|new_only|vendor\": 363, \"2017|old_only|mcap_1.5-2B\": 41, \"2017|old_only|mcap_lt_1.5B\": 180, \"2017|old_only|mcap_missing\": 2085, \"2017|old_only|no_fundamentals\": 42, \"2017|old_only|not_common_type\": 36}, \"vendor_file_date\": {\"after_sec\": 285, \"before_period_end\": 9819, \"before_sec\": 201, \"eq_sec\": 31007, \"pe_plus_45\": 117, \"seen_minus_fd|1\": 31338, \"seen_minus_fd|2-5\": 108, \"seen_minus_fd|31-90\": 13, \"seen_minus_fd|6-30\": 28, \"seen_minus_fd|gt90\": 6}, \"vintage\": {\"new_censored|revenue_q|first\": 20, \"new_censored|revenue_q|first_before_sec\": 3, \"new_censored|revenue_q|later_FUTURE\": 1, \"new_censored|revenue_q|neither\": 7, \"new_censored|revenue_q|no_ref\": 12, \"new_censored|revenue_q|restated_pending|first\": 3, \"new_censored|revenue_q|restated_pending|later_FUTURE\": 1, \"new_censored|revenue_q|restated_pending|neither\": 4, \"new_censored|total_assets|first\": 37, \"new_censored|total_assets|later_FUTURE\": 1, \"new_censored|total_assets|neither\": 4, \"new_censored|total_assets|no_ref\": 1, \"new_censored|total_assets|restated_pending|first\": 1, \"new_censored|total_assets|restated_pending|later_FUTURE\": 1, \"new|revenue_q|both\": 10, \"new|revenue_q|first\": 28294, \"new|revenue_q|first_before_sec\": 3039, \"new|revenue_q|later_FUTURE\": 93, \"new|revenue_q|later_public\": 21, \"new|revenue_q|neither\": 2832, \"new|revenue_q|no_ref\": 7013, \"new|revenue_q|restated_pending|both\": 10, \"new|revenue_q|restated_pending|first\": 3360, \"new|revenue_q|restated_pending|first_before_sec\":\nQRP5D|3| 82, \"new|revenue_q|restated_pending|later_FUTURE\": 93, \"new|revenue_q|restated_pending|neither\": 369, \"new|revenue_q|vendor_missing\": 10, \"new|total_assets|both\": 7, \"new|total_assets|first\": 40374, \"new|total_assets|first_before_sec\": 223, \"new|total_assets|later_FUTURE\": 13, \"new|total_assets|later_public\": 3, \"new|total_assets|neither\": 419, \"new|total_assets|no_ref\": 273, \"new|total_assets|restated_pending|both\": 7, \"new|total_assets|restated_pending|first\": 1176, \"new|total_assets|restated_pending|first_before_sec\": 9, \"new|total_assets|restated_pending|later_FUTURE\": 13, \"new|total_assets|restated_pending|neither\": 5, \"revision|revenue_q|first\": 19, \"revision|revenue_q|first_before_sec\": 3, \"revision|revenue_q|later_FUTURE\": 1, \"revision|revenue_q|neither\": 1, \"revision|revenue_q|no_ref\": 1, \"revision|revenue_q|restated_pending|first\": 1, \"revision|revenue_q|restated_pending|later_FUTURE\": 1, \"revision|total_assets|first\": 18, \"revision|total_assets|neither\": 6, \"revision|total_assets|no_ref\": 1, \"revision|total_assets|restated_pending|first\": 1}, \"wall_s\": 559.6}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 1761, \"elig_days\": 1761, \"elig_max\": 1169, \"elig_mean\": 911.3316297558206, \"elig_min\": 666, \"elig_sum\": 1604855, \"experiment_id\": \"E996-03\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 399996, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 338, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"warmup_days\": 632, \"warmup_select_days\": 633, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.13193579015860157
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}
