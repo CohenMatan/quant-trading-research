@@ -52,7 +52,29 @@ def test_manifest_records_score_reference_runs_and_gates():
     assert m["reference"]["table_sha256"] == ref["table_sha256"]
     assert set(m["runs"]) == set(datafreeze_v2.RUNS)
     assert all(r["status"] == "completed" and r["lean_version"] for r in m["runs"].values())
-    assert m["freeze_gates"]["all"] is True
+    # D192: frozen with an owner-approved gate K exception; the original gate results are preserved, never relabelled
+    g = m["freeze_gates"]
+    assert m["status"] == "FROZEN — OWNER-APPROVED GATE K EXCEPTION"
+    assert g["all"] is False and g["K_identity_sanity_not_material"] is False and g["K_survivorship_bounds"] is False
+    assert sorted(k for k, v in g.items() if v is False and k != "all") == \
+        ["K_identity_sanity_not_material", "K_survivorship_bounds"]          # every other gate passed
+    x = m["gate_k_exception"]
+    assert x["decision"] == "D192" and x["resolution"] == "OWNER-APPROVED EXCEPTION"
+    assert x["gate_k"] == "FAILED under the original pre-registered 3%-per-year identity-incidence criterion."
+    assert "<= 3% every year (unchanged)" in x["criterion_incidence"] and "<= 1.0 point" in x["criterion_tilt"]
+    assert x["residual"]["affected_securities"] == 161 == x["residual"]["identity_reject"] + x["residual"]["no_identity_row"]
+    assert m["candidate_manifest_sha256"] == datafreeze_v2.CANDIDATE_MANIFEST_SHA256
+
+
+@pytest.mark.skipif(not FROZEN, reason="Data v2 not frozen")
+def test_preregistered_thresholds_were_not_changed_by_the_exception():
+    from importlib import util
+    spec = util.spec_from_file_location("x998a", config.REPO_ROOT / "research/phase7/data_v2/x998_analysis.py")
+    a = util.module_from_spec(spec)
+    spec.loader.exec_module(a)
+    assert a.TH["identity_excluded_share_year"] == 0.03 and a.TH["identity_bias_points"] == 1.0
+    s = json.loads((config.REPO_ROOT / "research/phase7/data_v2/x998_summary.json").read_text())
+    assert s["freeze_gates"]["K_identity_sanity_not_material"] is False         # the original result stands
 
 
 @pytest.mark.skipif(FROZEN, reason="frozen: the pinned-manifest tests apply")

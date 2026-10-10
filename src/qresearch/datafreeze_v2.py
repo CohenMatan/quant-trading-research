@@ -20,9 +20,33 @@ from . import config
 
 VERSION = "v2"
 MANIFEST = "research/phase7/data_v2/data_freeze_v2.json"
-MANIFEST_SHA256 = None                     # set when the freeze is committed (only if gates A-P all pass)
-# P7-CP5f (D191): gate K failed (identity sanity check, pre-set 3%-a-year exclusion limit), so the manifest is written as an
-# unpinned CANDIDATE. Freezing needs an owner decision; nothing in it may change meanwhile without a new candidate.
+MANIFEST_SHA256 = "cf833f6fd4b8c4f124e9416b3d0722f61da93b97bdb22b1664aad13f969177fb"   # D192: pinned (P7-CP5g)
+# P7-CP5f (D191): gate K failed (identity sanity check, pre-set 3%-a-year exclusion limit), so the manifest was written as
+# an unpinned CANDIDATE (SHA-256 d09f20fc..., commit 0837ce6).
+# P7-CP5g (D192): the owner accepted the identity residual as an explicit exception to gate K and froze Data v2 exactly as
+# built. The original gate results (x998_summary.json, freeze_gates) are kept unchanged: gate K stays FAILED; the
+# exception is recorded beside it. No input, rule or threshold changed and nothing was rerun.
+CANDIDATE_MANIFEST_SHA256 = "d09f20fcca4290faf664bc07511cce048f4458884c84871c53703d3cf27faddb"
+FROZEN_STATUS = "FROZEN — OWNER-APPROVED GATE K EXCEPTION"
+GATE_K_EXCEPTION = dict(
+    decision="D192",
+    gate_k="FAILED under the original pre-registered 3%-per-year identity-incidence criterion.",
+    resolution="OWNER-APPROVED EXCEPTION",
+    criterion_incidence="affected share of eligible stock-months <= 3% every year (unchanged)",
+    observed_incidence="3.41% (2011), 3.74%, 4.24%, 5.10%, 5.65%, 5.98%, 6.93% (2017): failed every year",
+    criterion_tilt="implied survivorship tilt on the fully scored population <= 1.0 point (unchanged)",
+    observed_tilt="+0.47 points: passed",
+    residual=dict(affected_securities=161, identity_reject=105, no_identity_row=56, affected_eligible_stock_months=4656,
+                  affected_survival=0.8243, retained_fully_scored_survival=0.8748),
+    reason="Although the incidence criterion failed, the measured survivorship impact is +0.47 percentage points, below "
+           "the pre-registered 1.0-point survivorship limit and smaller than the already accepted +0.79-point overall "
+           "Data v2 universe residual. This is an owner judgement made before any H022 real return, real IC, null "
+           "threshold, or real gate result has been observed.",
+    record="Data v2 did not technically pass every original freeze criterion. Gate K failed because the "
+           "identity-affected population exceeded the pre-registered 3%-per-year incidence threshold. The owner "
+           "knowingly accepts this residual without changing the threshold because the measured survivorship effect "
+           "is only +0.47 percentage points, below the 1.0-point materiality bound, every PIT/integrity gate passed, "
+           "and no real H022 result has yet been observed.")
 
 RUNTIME = ("src/qresearch/lean/qr_v2.py", "src/qresearch/lean/qr_harness.py", "src/qresearch/lean/qr_indicators.py",
            "src/qresearch/lean/qr_fundamentals.py", "src/qresearch/lean/qr_industry.py",
@@ -105,9 +129,13 @@ def build() -> dict:
     comp = ref["components"]
     summ = json.loads((config.REPO_ROOT / "research/phase7/data_v2/x998_summary.json").read_text())
     gates = summ.get("freeze_gates") or {}
-    status = "FROZEN" if MANIFEST_SHA256 is not None and gates.get("all") else \
-        "CANDIDATE - NOT FROZEN (failed: " + ", ".join(k for k, v in sorted(gates.items()) if v is False and k != "all") + ")"
-    return {"version": VERSION, "status": status, "files": fs, "combined_sha256": combined, "rules": RULES,
+    failed = sorted(k for k, v in gates.items() if v is False and k != "all")
+    if GATE_K_EXCEPTION is not None and all(k.startswith("K_") for k in failed):
+        status = FROZEN_STATUS                  # D192: only gate K failed, and the owner accepted it as an exception
+    else:
+        status = "CANDIDATE - NOT FROZEN (failed: " + ", ".join(failed) + ")"
+    return {"version": VERSION, "status": status, "gate_k_exception": GATE_K_EXCEPTION,
+            "candidate_manifest_sha256": CANDIDATE_MANIFEST_SHA256, "files": fs, "combined_sha256": combined, "rules": RULES,
             "score_v1": dict(spec_sha256=p7score.SPEC_SHA256, code_sha256=p7score.CODE_SHA256,
                              predictive_spec_sha256=p7pred.SPEC_SHA256),
             "reference": dict(table_sha256=ref["table_sha256"], loader_version=ref["loader_version"],

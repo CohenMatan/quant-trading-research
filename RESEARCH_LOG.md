@@ -1821,3 +1821,30 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 1. accept the identity residual and freeze as built (recommended);
 2. identity feasibility study;
 3. close H022.
+
+## 2026-10-10: P7-CP5g owner acceptance of identity residual — Data Infrastructure v2 FROZEN; STOP (D192, D193)
+
+- **Owner (D192):** Option 1 of P7-CP5f item 56. The identity residual is accepted as an explicit **owner-approved exception to Gate K**:
+  - 161 securities: 105 REJECT + 56 without an identity row;
+  - 3.4% → 6.9% of eligible stock-months a year, so the pre-registered 3% criterion FAILED;
+  - survivorship tilt +0.47 points, so the 1.0-point limit passed.
+
+  Gate K stays recorded as FAILED under the original criterion. Nothing is relabelled, and no threshold, code, data or rule is changed.
+- **Freeze:** the P7-CP5f candidate manifest (d09f20fc…) is finalised without regenerating any input.
+  - Added: status "FROZEN — OWNER-APPROVED GATE K EXCEPTION", the exception record and the candidate hash.
+  - Unchanged: file hashes, rules and the original gate results.
+  - `MANIFEST_SHA256` = cf833f6f… pinned in `qresearch.datafreeze_v2`; tests updated.
+- **CP5f evidence referenced, not recomputed:**
+  - PIT 0; determinism and truncation pass; splits 223/224; compliance pass;
+  - 90,370 stock-months; fully scored 304–728 a month; 80+ 7.07 a month;
+  - synthetic power 50% IC 0.034 / 80% IC 0.049.
+- No QuantConnect run; no E998 rerun. No real return, IC or null; old c_IC stays DATA_V1_ONLY / UNUSED_ON_V2. No 2018–2021; Holdout untouched; nothing purchased.
+
+**Permanent record:** Data v2 did not technically pass every original freeze criterion. Gate K failed because the identity-affected population exceeded the pre-registered 3%-per-year incidence threshold. The owner knowingly accepts this residual without changing the threshold because the measured survivorship effect is only +0.47 percentage points, below the 1.0-point materiality bound, every PIT/integrity gate passed, and no real H022 result has yet been observed.
+
+**STOP:** awaiting the owner on whether to authorise H022 on Data v2:
+1. canary;
+2. 5,000 null worlds;
+3. new c_IC pinned;
+4. owner review;
+5. one real evaluation.
