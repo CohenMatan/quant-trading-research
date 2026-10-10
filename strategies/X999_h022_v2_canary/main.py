@@ -309,6 +309,7 @@ class H022DataV2(X98.DataV2Export):
             self._null(dates)
         else:
             self._real(dates)
+        self.st["pit_audit"] = dict(self.audit)          # X998's Data v2 PIT audit counters (all must be 0)
         self.st["wall_s"] = round(time.perf_counter() - self.t0, 1)
         try:
             import resource

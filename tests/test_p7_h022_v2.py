@@ -147,6 +147,7 @@ def test_canary_passes_and_computes_no_real_statistic(monkeypatch, tmp_path):
     assert gp["identity_dates"] == 0
     assert st["coverage"]["mcap_missing"] == st["coverage"]["mom_missing"] == 0
     assert st["slice_spot_check"]["mismatch"] == 0
+    assert st["pit_audit"] and all(v == 0 for v in st["pit_audit"].values()), st["pit_audit"]
     for k in ("panel_sha256", "score_side_sha256", "response_side_sha256", "availability_sha256", "calendar_sha256"):
         assert len(st[k]) == 64
 
