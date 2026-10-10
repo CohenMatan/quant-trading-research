@@ -288,8 +288,45 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("X998 is the Data v2 infrastructure export (mode export / power) on the default build, "
                               "2011-01-03 .. 2017-12-31 (or 2013-12-31), warm-up 2008-07-01, data-v1 universe filters, "
                               "universe.sec_corrections off")
+    if cfg["strategy_id"] in ("X999", "S024"):
+        # H022 on FROZEN Data Infrastructure v2 (owner D194, P7-CP6): the frozen X998 host (uploaded as qr_x998) with the
+        # unchanged H022 spec / qr_p7_pred; default build (recorded); 2011-01-03 .. 2017-12-31, warm-up 2008-07-01,
+        # universe.sec_corrections off (Data v2 installs its own SEC layer). X999 = the canary only; S024 = the 5,000
+        # null worlds in the five pinned batches + the pre-specified determinism rerun, each against the pinned panel
+        # digest. The real evaluation is NOT authorised: refused until C_IC_V2 is pinned and only as a research run.
+        from . import p7pred_v2
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2017-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H022 / Data v2 runs use 2011-01-03..2017-12-31, warm-up 2008-07-01, the Data v2 universe "
+                              "filters (universe.sec_corrections off) and the default-build policy")
+        if p.get("spec_sha256") != p7pred_v2.SPEC_SHA256 or p.get("pred_code_sha256") != p7pred_v2.PRED_CODE_SHA256:
+            raise ConfigError("H022 / Data v2 runs carry the pinned spec and qr_p7_pred fingerprints")
+        if cfg.get("hypothesis_id") != "H022" or cfg.get("programme") != "P7" or not cfg.get("owner_approval_required"):
+            raise ConfigError("H022 / Data v2 runs belong to H022 / P7 and need owner_approval_required")
+        if cfg["strategy_id"] == "X999":
+            if mode != "canary" or kind != "infrastructure":
+                raise ConfigError("X999 runs only the H022 / Data v2 plumbing canary (infrastructure)")
+        elif mode == "null":
+            seeds = tuple(p.get("seeds", ()))
+            if (kind != "infrastructure" or seeds not in p7pred_v2.NULL_BATCHES + (p7pred_v2.RERUN_SEEDS,)
+                    or p7pred_v2.PANEL_SHA256 is None or p.get("panel_sha256") != p7pred_v2.PANEL_SHA256):
+                raise ConfigError("S024 null runs are infrastructure batches of the pinned seeds against the pinned "
+                                  "Data v2 panel digest (set from the canary)")
+        elif mode == "real":
+            if (kind != "research" or p7pred_v2.C_IC_V2 is None or p.get("c_ic") != p7pred_v2.C_IC_V2
+                    or p.get("null_result_sha256") != p7pred_v2.NULL_RESULT_SHA256
+                    or p.get("panel_sha256") != p7pred_v2.PANEL_SHA256):
+                raise ConfigError("the H022 / Data v2 real evaluation needs the pinned Data-v2 c_IC, null result and "
+                                  "panel digest (and a separate owner authorisation)")
+        else:
+            raise ConfigError("S024 modes: null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
