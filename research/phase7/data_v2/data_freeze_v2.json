@@ -1,4 +1,5 @@
 {
+ "candidate_manifest_sha256": "d09f20fcca4290faf664bc07511cce048f4458884c84871c53703d3cf27faddb",
  "combined_sha256": "46c762c7826c86fe879debd8b49eba44b33674337d1013569e5a36f5612cb37a",
  "files": {
   "research/phase7/P7_predictive_spec.md": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
@@ -68,6 +69,25 @@
   "O_2018_2021_untouched": true,
   "P_holdout_untouched": true,
   "all": false
+ },
+ "gate_k_exception": {
+  "criterion_incidence": "affected share of eligible stock-months <= 3% every year (unchanged)",
+  "criterion_tilt": "implied survivorship tilt on the fully scored population <= 1.0 point (unchanged)",
+  "decision": "D192",
+  "gate_k": "FAILED under the original pre-registered 3%-per-year identity-incidence criterion.",
+  "observed_incidence": "3.41% (2011), 3.74%, 4.24%, 5.10%, 5.65%, 5.98%, 6.93% (2017): failed every year",
+  "observed_tilt": "+0.47 points: passed",
+  "reason": "Although the incidence criterion failed, the measured survivorship impact is +0.47 percentage points, below the pre-registered 1.0-point survivorship limit and smaller than the already accepted +0.79-point overall Data v2 universe residual. This is an owner judgement made before any H022 real return, real IC, null threshold, or real gate result has been observed.",
+  "record": "Data v2 did not technically pass every original freeze criterion. Gate K failed because the identity-affected population exceeded the pre-registered 3%-per-year incidence threshold. The owner knowingly accepts this residual without changing the threshold because the measured survivorship effect is only +0.47 percentage points, below the 1.0-point materiality bound, every PIT/integrity gate passed, and no real H022 result has yet been observed.",
+  "residual": {
+   "affected_eligible_stock_months": 4656,
+   "affected_securities": 161,
+   "affected_survival": 0.8243,
+   "identity_reject": 105,
+   "no_identity_row": 56,
+   "retained_fully_scored_survival": 0.8748
+  },
+  "resolution": "OWNER-APPROVED EXCEPTION"
  },
  "reference": {
   "chars": 941998,
@@ -211,7 +231,7 @@
   "predictive_spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
   "spec_sha256": "7d3ae5df2fb5ecfaf8338e1a1d43f01c7a3060e73e33bf1007560981234eed9b"
  },
- "status": "CANDIDATE - NOT FROZEN (failed: K_identity_sanity_not_material, K_survivorship_bounds)",
+ "status": "FROZEN \u2014 OWNER-APPROVED GATE K EXCEPTION",
  "verification_digests": "a6e82854ae03aece3747aad95b82867ec084c49ea69c91be3543e453fc200d8b",
  "version": "v2"
 }
