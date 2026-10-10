@@ -1738,3 +1738,35 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner — (a) close H022, (b) universe-repair feasibility study only, or (c) dormant.
 
+## 2026-10-10: P7-CP5e universe repair feasibility — GO; STOP (D188, D189)
+
+- **Owner (D188):** option (b) of P7-CP5d. Can the new feed's universe be repaired PIT-safely (SEC market cap where QuantConnect has none)? Can SEC identity be verified before the first XBRL filing so M2 works in 2011–2012? Score v1 and M2 frozen; infrastructure only.
+- **Pre-registered before any repair result (0e63a03):**
+  - frozen target population: 560 securities / 18,915 stock-months;
+  - success criteria MC1–MC9 and ID1–ID5.
+- **Offline, public SEC data only:**
+  - identity evidence from EDGAR submissions: 1,333 SAFE, 474 bounded, 105 REJECT;
+  - target fates: 221 still in the universe at end-2017, 266 acquired, 52 fell below a filter;
+  - SEC share counts fresh for 87% of target stock-months;
+  - 2013-start power study.
+- **QuantConnect (LEAN 18178; all accepted; 0 orders; aggregates only):**
+  - E997-01: repair + identity extension;
+  - E997-02: repair only;
+  - E997-03: exact rerun of E997-01 + security counts.
+- **Market cap:** every pre-registered criterion passes.
+  - 86% of missing-cap target months get a fresh SEC cap;
+  - splits 223/224 continuous;
+  - $2B agreement 98.4% away / 95.7% near;
+  - 68.9% of lost stock-months recovered (371 securities);
+  - survivor share 84.1% vs data v1 83.3% (delivered feed 90.0%).
+- **Identity:** extension-mapped reports match SEC values like v2-mapped ones. Fully scored stocks per month:
+  - 2011: 304–378 (10 without the extension);
+  - 2012: 359–406;
+  - 2013+: 407–734.
+
+  A 2013 start is not forced; it would raise the 50%-power IC from 0.033 to 0.050.
+- **Verdict:** GO — universe can be repaired PIT-safely and Data v2 design can proceed. Proposed Data v2 architecture in the checkpoint; nothing built or frozen.
+- No returns, no H022 statistic, no portfolio, no 2018–2021, Holdout untouched, nothing purchased.
+
+**STOP:** awaiting the owner (approve / amend Data v2; confirm window 2011–2017; authorise the Data v2 build and freeze checkpoint).
+
