@@ -241,8 +241,11 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params", {}).get("mode") != "export"):
             raise ConfigError("X993 (P7-CP3) is an infrastructure export on 2011-01-03..2017-12-31 (warm-up "
                               "2008-07-01) with the data-v1 universe")
-    if cfg.get("lean_version_policy") is not None and cfg["strategy_id"] not in ("X994", "S023"):
-        raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023; D182)")
+    if cfg.get("lean_version_policy") is not None and not (
+            cfg["strategy_id"] in ("X994", "S023") or (cfg["strategy_id"] == "X993" and
+                                                       cfg.get("lean_version_policy") == "default_build_digest_verified")):
+        raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
+                          "export used to diagnose it (D182)")
     if cfg["strategy_id"] in ("X994", "S023"):
         # H022 (research/phase7/P7_predictive_spec.md v1 + the D177 wording fix; owner authorisation 2026-10-06, D177):
         # the X993 v1.1 window and data-v1 universe, nothing after 2017-12-31, the frozen spec / module fingerprints;

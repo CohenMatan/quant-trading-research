@@ -187,7 +187,10 @@ def test_default_build_policy_is_scoped_to_the_h022_family():
     null["lean_version_policy"] = run.DEFAULT_BUILD_POLICY
     with pytest.raises(experiment.ConfigError):            # null batches stay on their calibration build
         experiment.validate(null)
-    other = json.loads((ROOT / "experiments/E993-02/config.json").read_text())
+    x993 = json.loads((ROOT / "experiments/E993-03/config.json").read_text())
+    assert x993["lean_version_policy"] == run.DEFAULT_BUILD_POLICY
+    experiment.validate(x993)                             # the scores-only export used to diagnose option B (D182)
+    other = json.loads((ROOT / "experiments/E021-01/config.json").read_text())
     other["lean_version_policy"] = run.DEFAULT_BUILD_POLICY
     with pytest.raises(experiment.ConfigError):
         experiment.validate(other)
