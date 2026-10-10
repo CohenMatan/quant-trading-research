@@ -114,6 +114,9 @@ def test_repair_comparison_and_survivorship(monkeypatch):
     sv = st["survivorship"]
     assert sv["2013"]["lost"][0] == 2 and sv["2013"]["recovered"][0] == 1 and sv["2013"]["still_lost"][0] == 1
     assert st["target_mcap_missing_status"] == {"repaired": [1, 0]}
+    ts = st["target_securities"]
+    assert ts["targets"] == 2 and ts["recovered_at_least_once"] == 1 and ts["with_mcap_missing_month"] == 1
+    assert ts["never_recovered_by_last_reason"] == {"not_in_feed|in_universe_end_2017": 1}
     rec = st["target_recovery_by_reason"]
     assert rec["mcap_missing"][:2] == [1, 1] and rec["not_in_feed"][1] == 0
     assert st["sec_split_check"].get("continuous", 0) >= 1 and not st["sec_split_check"].get("jumps_with_price")
@@ -183,7 +186,7 @@ def test_identity_extension_rule():
 
 def test_config_rule_and_file_limit():
     from qresearch import experiment, run
-    for e in ("E997-01", "E997-02"):
+    for e in ("E997-01", "E997-02", "E997-03"):
         c = json.loads((ROOT / f"experiments/{e}/config.json").read_text())
         experiment.validate(c)
         files = run.assemble_files(c, None, False)

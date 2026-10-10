@@ -1,0 +1,85 @@
+# E997-02 — X997 v1.0 (infrastructure)
+
+P7-CP5e (owner D188): universe-repair feasibility on QuantConnect's new default dataset -- M2 + shadow SEC market-cap repair, identity-v2 rows only (baseline before identity repair). The frozen Score v1 / X993 v1.1 pipeline with M2 timing; securities without a QuantConnect market cap get the unchanged D111 SEC market cap (cover shares x splits x raw price) in a shadow universe; in-cloud aggregates and SHA-256 digests only (no vendor value, no per-security row). NO orders, NO returns. Default build (recorded).
+
+- **Status:** completed
+- **Split:** AUDIT (2011-01-03 → 2017-12-31)
+- **Commit:** `9746fb4a6038bf44534abd5407126f2d4f0cb326` · **QC backtest:** `a80dc81a78fcb7384b1726cbfbb4a0fb` · **LEAN:** v2.5.0.0.18178 · **run:** 2026-10-10T16:23:20Z · **runtime:** 542s
+- **Parameters:** `{'identity': 'v2'}`
+- **Costs:** `{'slippage_bps': 10, 'commission_model': 'fixed_per_order', 'commission_per_order': 7.0, 'note': 'D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)'}` · **Universe:** `{'min_market_cap': 2000000000.0, 'min_price': 5.0, 'min_avg_dollar_volume': 5000000.0, 'adv_days': 20, 'sec_corrections': True}` · **Portfolio:** `{'max_position_weight': 0.1, 'cash_buffer': 0.02, 'min_position_usd': 4000, 'max_positions': 10, 'buy_funding': 'settled_cash_only', 'gap_reserve': 0.15}`
+
+## Metrics
+
+| Metric | Value |
+|---|---|
+| Period | 2011-01-03 → 2017-12-29 (1761 trading days) |
+| CAGR | 0.00% |
+| Annualised volatility | 0.00% |
+| Sharpe (rf = 0) | n/a |
+| Sortino | n/a |
+| Max drawdown | 0.00% |
+| Longest drawdown (trading days) | 0 |
+| Calmar | n/a |
+| Worst year | 0.00% |
+| Worst month | 0.00% |
+| Closed trades | 0 |
+| Win rate | n/a |
+| Average winner | n/a |
+| Average loser | n/a |
+| Expectancy per trade | n/a |
+| Profit factor | n/a |
+| Average holding (calendar days) | n/a |
+| Average exposure | 0.00% |
+| Turnover (1-way, per year) | 0.00 |
+
+## Relative to benchmarks
+
+| Benchmark | Excess CAGR | Beta | Correlation |
+|---|---|---|---|
+| E900-07 | -13.19% | 0.00 | n/a |
+
+## Calendar-year returns
+
+| Year | Return |
+|---|---|
+| 2011 | 0.00% |
+| 2012 | 0.00% |
+| 2013 | 0.00% |
+| 2014 | 0.00% |
+| 2015 | 0.00% |
+| 2016 | 0.00% |
+| 2017 | 0.00% |
+
+## Integrity checks
+
+| Check | Result | Detail |
+|---|---|---|
+| equity_nonempty | pass | 1761 rows |
+| equity_dates_increasing | pass | strictly increasing dates |
+| equity_within_dates | pass | 2011-01-03..2017-12-29 |
+| equity_no_nan | pass | no missing values |
+| equity_positive | pass | min 100000.00 |
+| equity_complete | pass | chart rows 1761 vs algorithm days 1761 |
+| equity_matches_qc_tradeable_dates | pass | chart rows 1761 vs QuantConnect tradeableDates 1761 |
+| warmup_left_account_untouched | pass | first recorded equity 100000.00 vs initial cash 100000.00; 632 warm-up sessions |
+| no_leverage | pass | min cash/equity 1.000000; 0 closes with negative cash |
+| fills_after_signal_date | pass | 0 violations, 0 LEAN-generated fills |
+| fills_within_dates | pass | fill dates inside the backtest window |
+| harness_timing_selfcheck | pass | violations=0 max_fill_dev=0.0 |
+| harness_no_short | pass | negative_qty=0 |
+| no_invalid_orders | pass | invalid=0 |
+| summary_present | pass | QRSUMMARY log line parsed |
+| orders_download_complete | pass | downloaded 0 orders vs QuantConnect Total Orders 0 |
+| fills_match_harness_count | pass | downloaded fill events 0 vs harness-recorded fills 0 |
+| no_stale_open_orders | pass | 0 orders still open more than 10 days before the end: [] |
+| harness_no_stale_open_orders | pass | harness orders open > 5 sessions at the end: 0 |
+| no_unresolved_stale_holdings | pass | held positions without a real price bar that the fallback could not close: 0 |
+| windows_restored | pass | 0 holdings found without a price window and restored |
+| stale_exits | pass | 0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored |
+| commission_fixed_per_order | pass | no fills downloaded; harness recorded 0 fills |
+
+## Result hashes (SHA-256 of canonical CSV)
+
+- equity_sha256: `fd2976e77f7ef0df9c799d33912f39ede4176238baf836e80d3fb8d9ade279b6`
+- fills_sha256: `78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973`
+- trades_sha256: `7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35`

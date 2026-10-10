@@ -1,0 +1,48 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X997",
+ "strategy_version": "v1.1",
+ "strategy_dir": "strategies/X997_universe_repair",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": true
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P7",
+ "cycle": "P7H022",
+ "experiment_id": "E997-03",
+ "stall_minutes": 240,
+ "params": {
+  "identity": "extended"
+ },
+ "description": "P7-CP5e (owner D188): X997 v1.1 = v1.0 + distinct-security target counts; identity extended, otherwise identical to E997-01 (also an end-to-end determinism check: universe and score digests must equal E997-01). In-cloud aggregates and SHA-256 digests only. NO orders, NO returns. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified"
+}

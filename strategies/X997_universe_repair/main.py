@@ -1,3 +1,5 @@
+# X997 v1.1 (P7-CP5e): adds distinct-security counts of the frozen targets (recovered / still lost by reason; later-
+# disappearing split) to the aggregates; nothing else changes (rules, universe, scores identical to v1.0).
 # X997 v1.0 — P7-CP5e (owner D188) UNIVERSE REPAIR FEASIBILITY (infrastructure; NO orders, NO returns, NO performance;
 # QuantConnect's DEFAULT build, recorded). The X996 M2 pipeline (frozen Score v1 / X993 v1.1; a report is usable from
 # max(first seen in the stream, SEC original periodic filing + 1 day)) with two infrastructure changes under test:
@@ -715,6 +717,7 @@ class UniverseRepair(QRAlgorithm):
         per_review, sdig, yr = [], {}, {}
         tot_c, tot_p, lay = [], [], {"T": [], "F": [], "S": []}
         surv, rec, mc2 = {}, {}, {}
+        sec_rec, sec_lost, sec_mm = set(), {}, set()
         for t in reviews:
             k = rows_k[t]
             elig = self.mon[t]
@@ -798,6 +801,11 @@ class UniverseRepair(QRAlgorithm):
                 z[1] += sum(1 for s in grp if s in self.old_last)
             for s in old - dlv:
                 rs = self.tgt_reason.get((str(t), s), "unknown")
+                sec_lost[s] = rs if s not in uni else sec_lost.get(s, "recovered_at_least_once")
+                if s in uni:
+                    sec_rec.add(s)
+                if rs == "mcap_missing":
+                    sec_mm.add(s)
                 if rs == "mcap_missing":
                     z = mc2.setdefault(self.cstat.get((str(t), s), "not_a_candidate"), [0, 0])
                     z[0] += 1
@@ -807,6 +815,15 @@ class UniverseRepair(QRAlgorithm):
                 z[1] += int(s in uni)
                 z[2] += int(s in uni and s not in self.old_last)
         self.st["slice_spot_check"] = spot
+        never = {s: r for s, r in sec_lost.items() if s not in sec_rec}
+        cnt = {}
+        for s, r in never.items():
+            add(cnt, r + ("|later_disappearing" if s not in self.old_last else "|in_universe_end_2017"))
+        self.st["target_securities"] = dict(
+            targets=len(sec_lost), with_mcap_missing_month=len(sec_mm), recovered_at_least_once=len(sec_rec),
+            recovered_later_disappearing=sum(1 for s in sec_rec if s not in self.old_last),
+            targets_later_disappearing=sum(1 for s in sec_lost if s not in self.old_last),
+            never_recovered_by_last_reason=cnt)
         self.st["score_s"] = round(time.perf_counter() - t1, 1)
         L3 = {k: np.asarray(v, dtype=float) for k, v in lay.items()}
         corr = None
