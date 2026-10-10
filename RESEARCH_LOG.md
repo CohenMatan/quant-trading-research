@@ -1689,3 +1689,22 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - 2018–2021 and the Holdout untouched; nothing purchased.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-10: P7-CP5c new-dataset fundamental-timing probe — PARTIAL / NO-GO; STOP (D184, D185)
+
+- **Owner (D184):** option C step 1 only, an investigation of whether the new QuantConnect dataset has a safe, verifiable point-in-time source for report availability dates.
+- **Pre-registered sample:** the X971 sample (406 companies) + S2 (74; `research/phase7/cp5c/sample_s2.py`), fixed before any probe.
+- **QuantConnect blocked the probe:**
+  - 50-file project limit (E995-01; runner fixed to delete stale files first, E995-03);
+  - E995-04 stopped mid-run ("Deleted by request"; partial output unused);
+  - E995-05 rejected at build: "Data cannot be exported for any purposes, including data probing or validation".
+- **Public LEAN source:** the timing fields still exist (not retired).
+- **Vendor docs:** pre-2013 statements lack filing dates (45-day nominal fallback).
+- **Offline public-SEC evidence:**
+  - 10-K filed more than 45 days after period end in 87.5% of cases;
+  - 12–16% of revenue periods are later re-reported with a different value;
+  - an SEC-only layer passes H2 for 24.3% of non-financial eligible stock-months (2011: 1.3%), vs 74.9% on data v1 and 1.2% on the new vendor data; ≤ 49.3% even with a gross-profit derivation.
+- **Verdict:** NO-GO. No trustworthy PIT timing for the new vendor data; the only trustworthy source (SEC) covers too little for Score v1.
+- No returns, no H022 statistic, no portfolio, no 2018–2021 research, Holdout untouched, nothing purchased.
+
+**STOP:** awaiting the owner.

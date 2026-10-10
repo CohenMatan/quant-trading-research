@@ -241,8 +241,14 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params", {}).get("mode") != "export"):
             raise ConfigError("X993 (P7-CP3) is an infrastructure export on 2011-01-03..2017-12-31 (warm-up "
                               "2008-07-01) with the data-v1 universe")
+    if cfg["strategy_id"] == "X995":
+        # P7-CP5c (owner D184): new-dataset fundamental-timing probe; infrastructure only, QuantConnect's default build
+        # (recorded), 2009-06-01 .. at most 2017-12-31 (no 2018-2021, no Holdout)
+        if (kind != "infrastructure" or cfg["start"] != "2009-06-01" or cfg["end"] > "2017-12-31"
+                or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("X995 is the P7-CP5c infrastructure probe on the default build, 2009-06-01 .. <= 2017-12-31")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
