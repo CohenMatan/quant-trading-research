@@ -1,0 +1,91 @@
+{
+ "fate": {
+  "acquired_or_merged": 266,
+  "alive_end_2017": 52,
+  "in_universe_end_2017": 221,
+  "no_cik": 17,
+  "stopped_unknown": 4
+ },
+ "sec_requests": 0,
+ "share_counts": {
+  "fresh": 16527,
+  "no_cik": 856,
+  "no_cover_count": 927,
+  "stale": 605
+ },
+ "share_counts_by_year": {
+  "2011": {
+   "fresh": 2103,
+   "later_disappearing_fresh": 1383,
+   "later_disappearing_no_cik": 216,
+   "later_disappearing_no_cover_count": 67,
+   "later_disappearing_stale": 20,
+   "no_cik": 281,
+   "no_cover_count": 84,
+   "stale": 59
+  },
+  "2012": {
+   "fresh": 2057,
+   "later_disappearing_fresh": 1283,
+   "later_disappearing_no_cik": 60,
+   "later_disappearing_no_cover_count": 78,
+   "later_disappearing_stale": 26,
+   "no_cik": 125,
+   "no_cover_count": 100,
+   "stale": 81
+  },
+  "2013": {
+   "fresh": 2476,
+   "later_disappearing_fresh": 1516,
+   "later_disappearing_no_cik": 66,
+   "later_disappearing_no_cover_count": 91,
+   "later_disappearing_stale": 14,
+   "no_cik": 121,
+   "no_cover_count": 136,
+   "stale": 75
+  },
+  "2014": {
+   "fresh": 2808,
+   "later_disappearing_fresh": 1647,
+   "later_disappearing_no_cik": 61,
+   "later_disappearing_no_cover_count": 82,
+   "later_disappearing_stale": 15,
+   "no_cik": 100,
+   "no_cover_count": 143,
+   "stale": 80
+  },
+  "2015": {
+   "fresh": 2714,
+   "later_disappearing_fresh": 1377,
+   "later_disappearing_no_cik": 46,
+   "later_disappearing_no_cover_count": 83,
+   "later_disappearing_stale": 17,
+   "no_cik": 105,
+   "no_cover_count": 155,
+   "stale": 90
+  },
+  "2016": {
+   "fresh": 2320,
+   "later_disappearing_fresh": 856,
+   "later_disappearing_no_cik": 25,
+   "later_disappearing_no_cover_count": 56,
+   "later_disappearing_stale": 15,
+   "no_cik": 60,
+   "no_cover_count": 154,
+   "stale": 104
+  },
+  "2017": {
+   "fresh": 2049,
+   "later_disappearing_fresh": 342,
+   "later_disappearing_no_cik": 16,
+   "later_disappearing_no_cover_count": 6,
+   "later_disappearing_stale": 20,
+   "no_cik": 64,
+   "no_cover_count": 155,
+   "stale": 116
+  }
+ },
+ "share_counts_fresh_pct": 87.38,
+ "stock_months": 18915,
+ "targets": 560
+}

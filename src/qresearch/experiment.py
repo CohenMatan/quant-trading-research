@@ -260,8 +260,21 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
             raise ConfigError("X996 is the P7-CP5d infrastructure run (mode M1 / M2) on the default build, "
                               "2011-01-03 .. 2013-12-31 or 2017-12-31 (warm-up 2008-07-01), data-v1 universe filters")
+    if cfg["strategy_id"] == "X997":
+        # P7-CP5e (owner D188): universe-repair feasibility (shadow SEC market cap + earlier SEC identity for M2);
+        # infrastructure only on QuantConnect's default build (recorded); X993 window and data-v1 universe filters,
+        # 2011-01-03 .. 2017-12-31 (warm-up 2008-07-01); no 2018-2021, no Holdout, no returns
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["start"] != "2011-01-03" or cfg.get("warmup_start") != "2008-07-01"
+                or cfg["end"] != "2017-12-31" or not u.get("sec_corrections")
+                or float(u.get("min_market_cap", 0)) != 2e9 or float(u.get("min_price", 0)) != 5.0
+                or float(u.get("min_avg_dollar_volume", 0)) != 5e6 or int(u.get("adv_days", 0)) != 20
+                or cfg.get("params", {}).get("identity") not in ("extended", "v2")
+                or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("X997 is the P7-CP5e infrastructure run (identity extended / v2) on the default build, "
+                              "2011-01-03 .. 2017-12-31 (warm-up 2008-07-01), data-v1 universe filters")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")

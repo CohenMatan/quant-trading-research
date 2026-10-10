@@ -1,0 +1,2058 @@
+{
+ "E997-01": {
+  "baseline": {
+   "cik_reject": 12,
+   "life_reject": 7,
+   "pit_violations": 0,
+   "store_baseline": 69166
+  },
+  "checks": {
+   "cand_no_cik": 4519,
+   "cand_no_shares_table": 1513,
+   "ext_presence_break": 179,
+   "fed": 69201,
+   "m2_delayed": 156,
+   "m2_not_fed": 62358,
+   "m2_revision_unfed": 4,
+   "month_ends": 96,
+   "no_period_end": 459115,
+   "pe_after_seen": 0,
+   "reports_new": 131113,
+   "revisions": 450,
+   "sec_fed": 8127,
+   "selections": 2394,
+   "weekly_scans": 496
+  },
+  "coverage": {
+   "2011": {
+    "candidates_mean": 269.2,
+    "eligible_mean": 872.2,
+    "field_present_pct": [
+     66.42,
+     62.91,
+     67.77,
+     67.87,
+     96.71,
+     96.71,
+     73.7
+    ],
+    "ge80_mean": 5.58,
+    "h2_pct_nonfin": 46.22,
+    "h2_pct_nonfin_repaired": 34.29,
+    "mappable_ext": 314,
+    "mappable_pct": 97.32,
+    "repaired_mean": 140.5,
+    "scored_mean": 355.4
+   },
+   "2012": {
+    "candidates_mean": 306.7,
+    "eligible_mean": 889.3,
+    "field_present_pct": [
+     72.01,
+     67.35,
+     73.81,
+     73.81,
+     97.32,
+     97.35,
+     65.08
+    ],
+    "ge80_mean": 5.0,
+    "h2_pct_nonfin": 42.52,
+    "h2_pct_nonfin_repaired": 33.99,
+    "mappable_ext": 181,
+    "mappable_pct": 97.69,
+    "repaired_mean": 136.2,
+    "scored_mean": 388.1
+   },
+   "2013": {
+    "candidates_mean": 414.3,
+    "eligible_mean": 1024.4,
+    "field_present_pct": [
+     83.88,
+     78.53,
+     87.79,
+     88.06,
+     98.51,
+     98.52,
+     69.83
+    ],
+    "ge80_mean": 3.33,
+    "h2_pct_nonfin": 40.17,
+    "h2_pct_nonfin_repaired": 33.65,
+    "mappable_ext": 112,
+    "mappable_pct": 97.62,
+    "repaired_mean": 164.3,
+    "scored_mean": 465.3
+   },
+   "2014": {
+    "candidates_mean": 514.6,
+    "eligible_mean": 1149.4,
+    "field_present_pct": [
+     87.65,
+     83.71,
+     90.28,
+     90.63,
+     98.35,
+     98.35,
+     80.24
+    ],
+    "ge80_mean": 6.0,
+    "h2_pct_nonfin": 28.16,
+    "h2_pct_nonfin_repaired": 29.83,
+    "mappable_ext": 22,
+    "mappable_pct": 97.45,
+    "repaired_mean": 185.8,
+    "scored_mean": 626.8
+   },
+   "2015": {
+    "candidates_mean": 446.5,
+    "eligible_mean": 1179.5,
+    "field_present_pct": [
+     87.47,
+     83.18,
+     90.77,
+     90.71,
+     98.71,
+     98.71,
+     84.86
+    ],
+    "ge80_mean": 8.75,
+    "h2_pct_nonfin": 23.38,
+    "h2_pct_nonfin_repaired": 30.39,
+    "mappable_ext": 15,
+    "mappable_pct": 97.53,
+    "repaired_mean": 183.0,
+    "scored_mean": 675.2
+   },
+   "2016": {
+    "candidates_mean": 468.2,
+    "eligible_mean": 1153.1,
+    "field_present_pct": [
+     89.58,
+     86.16,
+     91.89,
+     92.48,
+     98.91,
+     98.89,
+     85.82
+    ],
+    "ge80_mean": 7.5,
+    "h2_pct_nonfin": 21.2,
+    "h2_pct_nonfin_repaired": 27.71,
+    "mappable_ext": 5,
+    "mappable_pct": 97.69,
+    "repaired_mean": 161.1,
+    "scored_mean": 673.6
+   },
+   "2017": {
+    "candidates_mean": 558.6,
+    "eligible_mean": 1262.9,
+    "field_present_pct": [
+     89.33,
+     86.18,
+     88.46,
+     91.95,
+     98.28,
+     98.25,
+     85.05
+    ],
+    "ge80_mean": 13.33,
+    "h2_pct_nonfin": 23.76,
+    "h2_pct_nonfin_repaired": 29.12,
+    "mappable_ext": 8,
+    "mappable_pct": 97.43,
+    "repaired_mean": 150.2,
+    "scored_mean": 711.8
+   }
+  },
+  "criteria": {
+   "MC2_fresh_sec_mcap_pct_of_mcap_missing_targets": 85.95,
+   "MC3_evaluable": 224,
+   "MC3_split_continuous_pct": 99.55,
+   "MC4_agreement_away_pct": 98.42,
+   "MC5_abs_rel_median": 0.00032,
+   "MC5_disagreement_near_pct": 4.35,
+   "MC6_recovered_later_disappearing_pct": 66.75,
+   "MC6_recovered_pct": 68.93,
+   "MC7_survivor_share_gap_points": {
+    "2011": 2.7,
+    "2012": 1.76,
+    "2013": 1.64,
+    "2014": 1.32,
+    "2015": 0.8,
+    "2016": -0.27,
+    "2017": -2.02,
+    "all": 0.79
+   }
+  },
+  "ge80_per_review": 7.07,
+  "identity_mapping": {
+   "mapped|ext|2008": 3187,
+   "mapped|ext|2009": 4064,
+   "mapped|ext|2010": 2364,
+   "mapped|ext|2011": 644,
+   "mapped|ext|2012": 87,
+   "mapped|ext|2013": 47,
+   "mapped|ext|2014": 17,
+   "mapped|ext|2015": 8,
+   "mapped|ext|2016": 5,
+   "mapped|ext|2017": 6,
+   "mapped|v2|2009": 640,
+   "mapped|v2|2010": 2647,
+   "mapped|v2|2011": 5767,
+   "mapped|v2|2012": 7474,
+   "mapped|v2|2013": 7727,
+   "mapped|v2|2014": 8175,
+   "mapped|v2|2015": 8597,
+   "mapped|v2|2016": 8816,
+   "mapped|v2|2017": 8897,
+   "unmapped|no_cik|2008": 5865,
+   "unmapped|no_cik|2009": 7466,
+   "unmapped|no_cik|2010": 7065,
+   "unmapped|no_cik|2011": 6031,
+   "unmapped|no_cik|2012": 5125,
+   "unmapped|no_cik|2013": 5320,
+   "unmapped|no_cik|2014": 5640,
+   "unmapped|no_cik|2015": 5843,
+   "unmapped|no_cik|2016": 5802,
+   "unmapped|no_cik|2017": 5956,
+   "unmapped|no_period|2008": 278,
+   "unmapped|no_period|2009": 107,
+   "unmapped|no_period|2010": 101,
+   "unmapped|no_period|2011": 111,
+   "unmapped|no_period|2012": 132,
+   "unmapped|no_period|2013": 190,
+   "unmapped|no_period|2014": 303,
+   "unmapped|no_period|2015": 235,
+   "unmapped|no_period|2016": 153,
+   "unmapped|no_period|2017": 221
+  },
+  "identity_value_check": {
+   "ext|revenue_q|differ": 19,
+   "ext|revenue_q|match": 244,
+   "ext|revenue_q|no_ref": 10166,
+   "ext|total_assets|differ": 7,
+   "ext|total_assets|match": 332,
+   "ext|total_assets|no_ref": 10090,
+   "v2|revenue_q|differ": 964,
+   "v2|revenue_q|match": 10458,
+   "v2|revenue_q|no_ref": 47318,
+   "v2|total_assets|differ": 256,
+   "v2|total_assets|match": 13579,
+   "v2|total_assets|no_ref": 44905
+  },
+  "identity_value_rates": {
+   "ext|revenue_q": {
+    "differ": 19,
+    "match": 244,
+    "match_pct": 92.78,
+    "no_ref": 10166
+   },
+   "ext|total_assets": {
+    "differ": 7,
+    "match": 332,
+    "match_pct": 97.94,
+    "no_ref": 10090
+   },
+   "v2|revenue_q": {
+    "differ": 964,
+    "match": 10458,
+    "match_pct": 91.56,
+    "no_ref": 47318
+   },
+   "v2|total_assets": {
+    "differ": 256,
+    "match": 13579,
+    "match_pct": 98.15,
+    "no_ref": 44905
+   }
+  },
+  "layer_corr": {
+   "F_S": -0.0118,
+   "T_F": -0.0148,
+   "T_S": 0.2267
+  },
+  "layers": {
+   "F": {
+    "max": 45.0,
+    "mean": 17.997,
+    "median": 17.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 5.0,
+    "p90": 32.0,
+    "sd": 10.145
+   },
+   "S": {
+    "max": 15.0,
+    "mean": 7.716,
+    "median": 8.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 0.0,
+    "p90": 15.0,
+    "sd": 4.378
+   },
+   "T": {
+    "max": 40.0,
+    "mean": 17.874,
+    "median": 20.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 0.0,
+    "p90": 33.0,
+    "sd": 11.902
+   }
+  },
+  "max_rss_mb": 5907.1,
+  "mcap_comparison": {
+   "abs_rel_median": 0.00032,
+   "abs_rel_p90": 0.01957,
+   "agree_away": 81504,
+   "agree_near": 5273,
+   "disagree_kind": {
+    "away|sec_above|rel_gt10pct": 1184,
+    "away|sec_below|rel_gt10pct": 121,
+    "near|sec_above|rel_gt10pct": 89,
+    "near|sec_above|rel_le10pct": 53,
+    "near|sec_below|rel_gt10pct": 30,
+    "near|sec_below|rel_le10pct": 68
+   },
+   "n_away": 82809,
+   "n_near": 5513,
+   "no_sec": 3371,
+   "records": 91693,
+   "rel": {
+    "gt10pct": 3944,
+    "le10pct": 1494,
+    "le2pct": 79597,
+    "le5pct": 3287
+   }
+  },
+  "mcap_missing_status": {
+   "below_2B": [
+    57,
+    9
+   ],
+   "no_cik": [
+    757,
+    398
+   ],
+   "no_fresh_shares": [
+    456,
+    183
+   ],
+   "no_shares_table": [
+    927,
+    246
+   ],
+   "repaired": [
+    13038,
+    6331
+   ]
+  },
+  "months_ge80_zero": 1,
+  "population": {
+   "all": {
+    "max": 734,
+    "mean": 556.6,
+    "median": 631,
+    "min": 304,
+    "months": 84
+   },
+   "y2011": {
+    "max": 378,
+    "mean": 355.4,
+    "median": 360,
+    "min": 304,
+    "months": 12
+   },
+   "y2012": {
+    "max": 406,
+    "mean": 388.1,
+    "median": 389,
+    "min": 359,
+    "months": 12
+   },
+   "y2013plus": {
+    "max": 734,
+    "mean": 630.6,
+    "median": 662,
+    "min": 407,
+    "months": 60
+   }
+  },
+  "recovery_by_reason": {
+   "mcap_lt_2B": [
+    1300,
+    0,
+    0
+   ],
+   "mcap_missing": [
+    15235,
+    13038,
+    6331
+   ],
+   "no_fundamentals": [
+    2212,
+    0,
+    0
+   ],
+   "not_common_type": [
+    168,
+    0,
+    0
+   ]
+  },
+  "repair": {
+   "bands": {
+    "1.5-1.8B": 2022,
+    "1.8-2.0B": 1158,
+    "2.0-2.2B": 922,
+    "2.2-2.5B": 1290,
+    "gt2.5B": 11243,
+    "lt1.5B": 6593
+   },
+   "below_2B": 9773,
+   "candidate_stock_months": 24220,
+   "no_fresh_shares": 992,
+   "repair_s": 5.2,
+   "repaired": 13455,
+   "share_age": {
+    "max": 135.0,
+    "mean": 57.313,
+    "median": 60.0,
+    "min": 1.0,
+    "n": 23228,
+    "p10": 20.0,
+    "p90": 93.0,
+    "sd": 29.345
+   },
+   "stale_near": 379
+  },
+  "split": {
+   "ambiguous": 1,
+   "continuous": 223,
+   "no_sec_identity": 34,
+   "no_sec_mcap": 10
+  },
+  "spot": {
+   "checked": 168,
+   "mismatch": 0
+  },
+  "survivorship": {
+   "2011": {
+    "added_not_v1": {
+     "stock_months": 73,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 11069,
+     "survivor_share": 0.7448
+    },
+    "delivered": {
+     "stock_months": 8780,
+     "survivor_share": 0.8535
+    },
+    "lost": {
+     "stock_months": 2527,
+     "survivor_share": 0.3328
+    },
+    "recovered": {
+     "stock_months": 1613,
+     "survivor_share": 0.3621
+    },
+    "repaired_universe": {
+     "stock_months": 10466,
+     "survivor_share": 0.7718
+    },
+    "still_lost": {
+     "stock_months": 914,
+     "survivor_share": 0.2812
+    }
+   },
+   "2012": {
+    "added_not_v1": {
+     "stock_months": 78,
+     "survivor_share": 0.0385
+    },
+    "data_v1": {
+     "stock_months": 11182,
+     "survivor_share": 0.783
+    },
+    "delivered": {
+     "stock_months": 9037,
+     "survivor_share": 0.8752
+    },
+    "lost": {
+     "stock_months": 2363,
+     "survivor_share": 0.3876
+    },
+    "recovered": {
+     "stock_months": 1557,
+     "survivor_share": 0.4059
+    },
+    "repaired_universe": {
+     "stock_months": 10672,
+     "survivor_share": 0.8006
+    },
+    "still_lost": {
+     "stock_months": 806,
+     "survivor_share": 0.3524
+    }
+   },
+   "2013": {
+    "added_not_v1": {
+     "stock_months": 68,
+     "survivor_share": 0.1471
+    },
+    "data_v1": {
+     "stock_months": 12860,
+     "survivor_share": 0.781
+    },
+    "delivered": {
+     "stock_months": 10321,
+     "survivor_share": 0.873
+    },
+    "lost": {
+     "stock_months": 2808,
+     "survivor_share": 0.3992
+    },
+    "recovered": {
+     "stock_months": 1904,
+     "survivor_share": 0.4112
+    },
+    "repaired_universe": {
+     "stock_months": 12293,
+     "survivor_share": 0.7974
+    },
+    "still_lost": {
+     "stock_months": 904,
+     "survivor_share": 0.3739
+    }
+   },
+   "2014": {
+    "added_not_v1": {
+     "stock_months": 59,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 14380,
+     "survivor_share": 0.7908
+    },
+    "delivered": {
+     "stock_months": 11563,
+     "survivor_share": 0.8765
+    },
+    "lost": {
+     "stock_months": 3131,
+     "survivor_share": 0.4235
+    },
+    "recovered": {
+     "stock_months": 2171,
+     "survivor_share": 0.4399
+    },
+    "repaired_universe": {
+     "stock_months": 13793,
+     "survivor_share": 0.804
+    },
+    "still_lost": {
+     "stock_months": 960,
+     "survivor_share": 0.3865
+    }
+   },
+   "2015": {
+    "added_not_v1": {
+     "stock_months": 55,
+     "survivor_share": 0.1636
+    },
+    "data_v1": {
+     "stock_months": 14667,
+     "survivor_share": 0.8279
+    },
+    "delivered": {
+     "stock_months": 11958,
+     "survivor_share": 0.8968
+    },
+    "lost": {
+     "stock_months": 3064,
+     "survivor_share": 0.5029
+    },
+    "recovered": {
+     "stock_months": 2141,
+     "survivor_share": 0.5133
+    },
+    "repaired_universe": {
+     "stock_months": 14154,
+     "survivor_share": 0.8359
+    },
+    "still_lost": {
+     "stock_months": 923,
+     "survivor_share": 0.4789
+    }
+   },
+   "2016": {
+    "added_not_v1": {
+     "stock_months": 33,
+     "survivor_share": 0.0303
+    },
+    "data_v1": {
+     "stock_months": 14156,
+     "survivor_share": 0.9007
+    },
+    "delivered": {
+     "stock_months": 11904,
+     "survivor_share": 0.9416
+    },
+    "lost": {
+     "stock_months": 2638,
+     "survivor_share": 0.6391
+    },
+    "recovered": {
+     "stock_months": 1900,
+     "survivor_share": 0.6395
+    },
+    "repaired_universe": {
+     "stock_months": 13837,
+     "survivor_share": 0.898
+    },
+    "still_lost": {
+     "stock_months": 738,
+     "survivor_share": 0.6382
+    }
+   },
+   "2017": {
+    "added_not_v1": {
+     "stock_months": 51,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 15373,
+     "survivor_share": 0.9567
+    },
+    "delivered": {
+     "stock_months": 13352,
+     "survivor_share": 0.9551
+    },
+    "lost": {
+     "stock_months": 2384,
+     "survivor_share": 0.8389
+    },
+    "recovered": {
+     "stock_months": 1752,
+     "survivor_share": 0.8213
+    },
+    "repaired_universe": {
+     "stock_months": 15155,
+     "survivor_share": 0.9365
+    },
+    "still_lost": {
+     "stock_months": 632,
+     "survivor_share": 0.8877
+    }
+   },
+   "all": {
+    "added_not_v1": {
+     "stock_months": 417,
+     "survivor_share": 0.0552
+    },
+    "data_v1": {
+     "stock_months": 93687,
+     "survivor_share": 0.8327
+    },
+    "delivered": {
+     "stock_months": 76915,
+     "survivor_share": 0.9001
+    },
+    "lost": {
+     "stock_months": 18915,
+     "survivor_share": 0.4986
+    },
+    "recovered": {
+     "stock_months": 13038,
+     "survivor_share": 0.5144
+    },
+    "repaired_universe": {
+     "stock_months": 90370,
+     "survivor_share": 0.8406
+    },
+    "still_lost": {
+     "stock_months": 5877,
+     "survivor_share": 0.4635
+    }
+   }
+  },
+  "target_check": {
+   "securities": 560,
+   "sha256_match": true,
+   "stock_months": 18915
+  },
+  "target_securities": null,
+  "totals_candidates": {
+   "max": 94.0,
+   "mean": 47.655,
+   "median": 48.0,
+   "min": 0.0,
+   "n": 35736,
+   "p10": 27.0,
+   "p90": 68.0,
+   "sd": 15.526
+  },
+  "wall_s": 634.7
+ },
+ "E997-02": {
+  "baseline": {
+   "cik_reject": 12,
+   "life_reject": 0,
+   "pit_violations": 0,
+   "store_baseline": 56198
+  },
+  "checks": {
+   "cand_no_cik": 4519,
+   "cand_no_shares_table": 1513,
+   "ext_presence_break": 0,
+   "fed": 58769,
+   "m2_delayed": 122,
+   "m2_not_fed": 72790,
+   "m2_revision_unfed": 4,
+   "month_ends": 96,
+   "no_period_end": 459115,
+   "pe_after_seen": 0,
+   "reports_new": 131113,
+   "revisions": 450,
+   "sec_fed": 8127,
+   "selections": 2394,
+   "weekly_scans": 496
+  },
+  "coverage": {
+   "2011": {
+    "candidates_mean": 6.2,
+    "eligible_mean": 872.2,
+    "field_present_pct": [
+     28.7,
+     25.98,
+     29.34,
+     29.12,
+     96.67,
+     96.67,
+     2.97
+    ],
+    "ge80_mean": 0.17,
+    "h2_pct_nonfin": 98.01,
+    "h2_pct_nonfin_repaired": 98.5,
+    "mappable_ext": 0,
+    "mappable_pct": 94.31,
+    "repaired_mean": 140.5,
+    "scored_mean": 13.2
+   },
+   "2012": {
+    "candidates_mean": 121.9,
+    "eligible_mean": 889.3,
+    "field_present_pct": [
+     65.98,
+     61.38,
+     67.7,
+     67.57,
+     97.3,
+     97.34,
+     27.26
+    ],
+    "ge80_mean": 1.25,
+    "h2_pct_nonfin": 76.38,
+    "h2_pct_nonfin_repaired": 77.02,
+    "mappable_ext": 0,
+    "mappable_pct": 95.99,
+    "repaired_mean": 136.2,
+    "scored_mean": 159.6
+   },
+   "2013": {
+    "candidates_mean": 367.3,
+    "eligible_mean": 1024.4,
+    "field_present_pct": [
+     82.45,
+     77.18,
+     86.38,
+     86.62,
+     98.42,
+     98.43,
+     61.88
+    ],
+    "ge80_mean": 2.75,
+    "h2_pct_nonfin": 47.23,
+    "h2_pct_nonfin_repaired": 45.36,
+    "mappable_ext": 0,
+    "mappable_pct": 96.71,
+    "repaired_mean": 164.3,
+    "scored_mean": 410.9
+   },
+   "2014": {
+    "candidates_mean": 496.9,
+    "eligible_mean": 1149.4,
+    "field_present_pct": [
+     85.79,
+     81.97,
+     88.43,
+     88.78,
+     98.25,
+     98.25,
+     77.73
+    ],
+    "ge80_mean": 5.58,
+    "h2_pct_nonfin": 30.46,
+    "h2_pct_nonfin_repaired": 33.17,
+    "mappable_ext": 0,
+    "mappable_pct": 97.29,
+    "repaired_mean": 185.8,
+    "scored_mean": 606.8
+   },
+   "2015": {
+    "candidates_mean": 434.8,
+    "eligible_mean": 1179.5,
+    "field_present_pct": [
+     87.26,
+     82.97,
+     90.55,
+     90.5,
+     98.61,
+     98.61,
+     83.07
+    ],
+    "ge80_mean": 8.75,
+    "h2_pct_nonfin": 25.16,
+    "h2_pct_nonfin_repaired": 33.03,
+    "mappable_ext": 0,
+    "mappable_pct": 97.42,
+    "repaired_mean": 183.0,
+    "scored_mean": 659.4
+   },
+   "2016": {
+    "candidates_mean": 466.3,
+    "eligible_mean": 1153.1,
+    "field_present_pct": [
+     89.57,
+     86.15,
+     91.88,
+     92.47,
+     98.89,
+     98.88,
+     85.58
+    ],
+    "ge80_mean": 7.58,
+    "h2_pct_nonfin": 21.44,
+    "h2_pct_nonfin_repaired": 28.58,
+    "mappable_ext": 0,
+    "mappable_pct": 97.65,
+    "repaired_mean": 161.1,
+    "scored_mean": 671.5
+   },
+   "2017": {
+    "candidates_mean": 558.5,
+    "eligible_mean": 1262.9,
+    "field_present_pct": [
+     89.33,
+     86.18,
+     88.46,
+     91.95,
+     98.22,
+     98.2,
+     85.04
+    ],
+    "ge80_mean": 13.33,
+    "h2_pct_nonfin": 23.77,
+    "h2_pct_nonfin_repaired": 29.19,
+    "mappable_ext": 0,
+    "mappable_pct": 97.38,
+    "repaired_mean": 150.2,
+    "scored_mean": 711.8
+   }
+  },
+  "criteria": {
+   "MC2_fresh_sec_mcap_pct_of_mcap_missing_targets": 85.95,
+   "MC3_evaluable": 224,
+   "MC3_split_continuous_pct": 99.55,
+   "MC4_agreement_away_pct": 98.42,
+   "MC5_abs_rel_median": 0.00032,
+   "MC5_disagreement_near_pct": 4.35,
+   "MC6_recovered_later_disappearing_pct": 66.75,
+   "MC6_recovered_pct": 68.93,
+   "MC7_survivor_share_gap_points": {
+    "2011": 2.7,
+    "2012": 1.76,
+    "2013": 1.64,
+    "2014": 1.32,
+    "2015": 0.8,
+    "2016": -0.27,
+    "2017": -2.02,
+    "all": 0.79
+   }
+  },
+  "ge80_per_review": 5.63,
+  "identity_mapping": {
+   "mapped|v2|2009": 640,
+   "mapped|v2|2010": 2647,
+   "mapped|v2|2011": 5767,
+   "mapped|v2|2012": 7474,
+   "mapped|v2|2013": 7727,
+   "mapped|v2|2014": 8175,
+   "mapped|v2|2015": 8597,
+   "mapped|v2|2016": 8816,
+   "mapped|v2|2017": 8897,
+   "unmapped|no_cik|2008": 9330,
+   "unmapped|no_cik|2009": 11623,
+   "unmapped|no_cik|2010": 9498,
+   "unmapped|no_cik|2011": 6696,
+   "unmapped|no_cik|2012": 5218,
+   "unmapped|no_cik|2013": 5375,
+   "unmapped|no_cik|2014": 5660,
+   "unmapped|no_cik|2015": 5851,
+   "unmapped|no_cik|2016": 5808,
+   "unmapped|no_cik|2017": 5962,
+   "unmapped|no_period|2009": 14,
+   "unmapped|no_period|2010": 32,
+   "unmapped|no_period|2011": 90,
+   "unmapped|no_period|2012": 126,
+   "unmapped|no_period|2013": 182,
+   "unmapped|no_period|2014": 300,
+   "unmapped|no_period|2015": 235,
+   "unmapped|no_period|2016": 152,
+   "unmapped|no_period|2017": 221
+  },
+  "identity_value_check": {
+   "v2|revenue_q|differ": 964,
+   "v2|revenue_q|match": 10458,
+   "v2|revenue_q|no_ref": 47318,
+   "v2|total_assets|differ": 256,
+   "v2|total_assets|match": 13579,
+   "v2|total_assets|no_ref": 44905
+  },
+  "layer_corr": {
+   "F_S": -0.0035,
+   "T_F": -0.0275,
+   "T_S": 0.231
+  },
+  "layers": {
+   "F": {
+    "max": 45.0,
+    "mean": 17.95,
+    "median": 17.0,
+    "min": 0.0,
+    "n": 38797,
+    "p10": 5.0,
+    "p90": 32.0,
+    "sd": 10.069
+   },
+   "S": {
+    "max": 15.0,
+    "mean": 7.691,
+    "median": 8.0,
+    "min": 0.0,
+    "n": 38797,
+    "p10": 0.0,
+    "p90": 15.0,
+    "sd": 4.403
+   },
+   "T": {
+    "max": 40.0,
+    "mean": 17.817,
+    "median": 20.0,
+    "min": 0.0,
+    "n": 38797,
+    "p10": 0.0,
+    "p90": 33.0,
+    "sd": 12.014
+   }
+  },
+  "max_rss_mb": 5906.2,
+  "mcap_comparison": {
+   "abs_rel_median": 0.00032,
+   "abs_rel_p90": 0.01957,
+   "agree_away": 81504,
+   "agree_near": 5273,
+   "disagree_kind": {
+    "away|sec_above|rel_gt10pct": 1184,
+    "away|sec_below|rel_gt10pct": 121,
+    "near|sec_above|rel_gt10pct": 89,
+    "near|sec_above|rel_le10pct": 53,
+    "near|sec_below|rel_gt10pct": 30,
+    "near|sec_below|rel_le10pct": 68
+   },
+   "n_away": 82809,
+   "n_near": 5513,
+   "no_sec": 3371,
+   "records": 91693,
+   "rel": {
+    "gt10pct": 3944,
+    "le10pct": 1494,
+    "le2pct": 79597,
+    "le5pct": 3287
+   }
+  },
+  "mcap_missing_status": {
+   "below_2B": [
+    57,
+    9
+   ],
+   "no_cik": [
+    757,
+    398
+   ],
+   "no_fresh_shares": [
+    456,
+    183
+   ],
+   "no_shares_table": [
+    927,
+    246
+   ],
+   "repaired": [
+    13038,
+    6331
+   ]
+  },
+  "months_ge80_zero": 16,
+  "population": {
+   "all": {
+    "max": 734,
+    "mean": 461.9,
+    "median": 615,
+    "min": 0,
+    "months": 84
+   },
+   "y2011": {
+    "max": 41,
+    "mean": 13.2,
+    "median": 10,
+    "min": 0,
+    "months": 12
+   },
+   "y2012": {
+    "max": 210,
+    "mean": 159.6,
+    "median": 157,
+    "min": 46,
+    "months": 12
+   },
+   "y2013plus": {
+    "max": 734,
+    "mean": 612.1,
+    "median": 646,
+    "min": 213,
+    "months": 60
+   }
+  },
+  "recovery_by_reason": {
+   "mcap_lt_2B": [
+    1300,
+    0,
+    0
+   ],
+   "mcap_missing": [
+    15235,
+    13038,
+    6331
+   ],
+   "no_fundamentals": [
+    2212,
+    0,
+    0
+   ],
+   "not_common_type": [
+    168,
+    0,
+    0
+   ]
+  },
+  "repair": {
+   "bands": {
+    "1.5-1.8B": 2022,
+    "1.8-2.0B": 1158,
+    "2.0-2.2B": 922,
+    "2.2-2.5B": 1290,
+    "gt2.5B": 11243,
+    "lt1.5B": 6593
+   },
+   "below_2B": 9773,
+   "candidate_stock_months": 24220,
+   "no_fresh_shares": 992,
+   "repair_s": 4.8,
+   "repaired": 13455,
+   "share_age": {
+    "max": 135.0,
+    "mean": 57.313,
+    "median": 60.0,
+    "min": 1.0,
+    "n": 23228,
+    "p10": 20.0,
+    "p90": 93.0,
+    "sd": 29.345
+   },
+   "stale_near": 379
+  },
+  "split": {
+   "ambiguous": 1,
+   "continuous": 223,
+   "no_sec_identity": 34,
+   "no_sec_mcap": 10
+  },
+  "spot": {
+   "checked": 168,
+   "mismatch": 0
+  },
+  "survivorship": {
+   "2011": {
+    "added_not_v1": {
+     "stock_months": 73,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 11069,
+     "survivor_share": 0.7448
+    },
+    "delivered": {
+     "stock_months": 8780,
+     "survivor_share": 0.8535
+    },
+    "lost": {
+     "stock_months": 2527,
+     "survivor_share": 0.3328
+    },
+    "recovered": {
+     "stock_months": 1613,
+     "survivor_share": 0.3621
+    },
+    "repaired_universe": {
+     "stock_months": 10466,
+     "survivor_share": 0.7718
+    },
+    "still_lost": {
+     "stock_months": 914,
+     "survivor_share": 0.2812
+    }
+   },
+   "2012": {
+    "added_not_v1": {
+     "stock_months": 78,
+     "survivor_share": 0.0385
+    },
+    "data_v1": {
+     "stock_months": 11182,
+     "survivor_share": 0.783
+    },
+    "delivered": {
+     "stock_months": 9037,
+     "survivor_share": 0.8752
+    },
+    "lost": {
+     "stock_months": 2363,
+     "survivor_share": 0.3876
+    },
+    "recovered": {
+     "stock_months": 1557,
+     "survivor_share": 0.4059
+    },
+    "repaired_universe": {
+     "stock_months": 10672,
+     "survivor_share": 0.8006
+    },
+    "still_lost": {
+     "stock_months": 806,
+     "survivor_share": 0.3524
+    }
+   },
+   "2013": {
+    "added_not_v1": {
+     "stock_months": 68,
+     "survivor_share": 0.1471
+    },
+    "data_v1": {
+     "stock_months": 12860,
+     "survivor_share": 0.781
+    },
+    "delivered": {
+     "stock_months": 10321,
+     "survivor_share": 0.873
+    },
+    "lost": {
+     "stock_months": 2808,
+     "survivor_share": 0.3992
+    },
+    "recovered": {
+     "stock_months": 1904,
+     "survivor_share": 0.4112
+    },
+    "repaired_universe": {
+     "stock_months": 12293,
+     "survivor_share": 0.7974
+    },
+    "still_lost": {
+     "stock_months": 904,
+     "survivor_share": 0.3739
+    }
+   },
+   "2014": {
+    "added_not_v1": {
+     "stock_months": 59,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 14380,
+     "survivor_share": 0.7908
+    },
+    "delivered": {
+     "stock_months": 11563,
+     "survivor_share": 0.8765
+    },
+    "lost": {
+     "stock_months": 3131,
+     "survivor_share": 0.4235
+    },
+    "recovered": {
+     "stock_months": 2171,
+     "survivor_share": 0.4399
+    },
+    "repaired_universe": {
+     "stock_months": 13793,
+     "survivor_share": 0.804
+    },
+    "still_lost": {
+     "stock_months": 960,
+     "survivor_share": 0.3865
+    }
+   },
+   "2015": {
+    "added_not_v1": {
+     "stock_months": 55,
+     "survivor_share": 0.1636
+    },
+    "data_v1": {
+     "stock_months": 14667,
+     "survivor_share": 0.8279
+    },
+    "delivered": {
+     "stock_months": 11958,
+     "survivor_share": 0.8968
+    },
+    "lost": {
+     "stock_months": 3064,
+     "survivor_share": 0.5029
+    },
+    "recovered": {
+     "stock_months": 2141,
+     "survivor_share": 0.5133
+    },
+    "repaired_universe": {
+     "stock_months": 14154,
+     "survivor_share": 0.8359
+    },
+    "still_lost": {
+     "stock_months": 923,
+     "survivor_share": 0.4789
+    }
+   },
+   "2016": {
+    "added_not_v1": {
+     "stock_months": 33,
+     "survivor_share": 0.0303
+    },
+    "data_v1": {
+     "stock_months": 14156,
+     "survivor_share": 0.9007
+    },
+    "delivered": {
+     "stock_months": 11904,
+     "survivor_share": 0.9416
+    },
+    "lost": {
+     "stock_months": 2638,
+     "survivor_share": 0.6391
+    },
+    "recovered": {
+     "stock_months": 1900,
+     "survivor_share": 0.6395
+    },
+    "repaired_universe": {
+     "stock_months": 13837,
+     "survivor_share": 0.898
+    },
+    "still_lost": {
+     "stock_months": 738,
+     "survivor_share": 0.6382
+    }
+   },
+   "2017": {
+    "added_not_v1": {
+     "stock_months": 51,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 15373,
+     "survivor_share": 0.9567
+    },
+    "delivered": {
+     "stock_months": 13352,
+     "survivor_share": 0.9551
+    },
+    "lost": {
+     "stock_months": 2384,
+     "survivor_share": 0.8389
+    },
+    "recovered": {
+     "stock_months": 1752,
+     "survivor_share": 0.8213
+    },
+    "repaired_universe": {
+     "stock_months": 15155,
+     "survivor_share": 0.9365
+    },
+    "still_lost": {
+     "stock_months": 632,
+     "survivor_share": 0.8877
+    }
+   },
+   "all": {
+    "added_not_v1": {
+     "stock_months": 417,
+     "survivor_share": 0.0552
+    },
+    "data_v1": {
+     "stock_months": 93687,
+     "survivor_share": 0.8327
+    },
+    "delivered": {
+     "stock_months": 76915,
+     "survivor_share": 0.9001
+    },
+    "lost": {
+     "stock_months": 18915,
+     "survivor_share": 0.4986
+    },
+    "recovered": {
+     "stock_months": 13038,
+     "survivor_share": 0.5144
+    },
+    "repaired_universe": {
+     "stock_months": 90370,
+     "survivor_share": 0.8406
+    },
+    "still_lost": {
+     "stock_months": 5877,
+     "survivor_share": 0.4635
+    }
+   }
+  },
+  "target_check": {
+   "securities": 560,
+   "sha256_match": true,
+   "stock_months": 18915
+  },
+  "target_securities": null,
+  "totals_candidates": {
+   "max": 94.0,
+   "mean": 47.678,
+   "median": 48.0,
+   "min": 0.0,
+   "n": 29423,
+   "p10": 27.0,
+   "p90": 68.0,
+   "sd": 15.426
+  },
+  "wall_s": 528.0
+ },
+ "E997-03": {
+  "baseline": {
+   "cik_reject": 12,
+   "life_reject": 7,
+   "pit_violations": 0,
+   "store_baseline": 69166
+  },
+  "checks": {
+   "cand_no_cik": 4519,
+   "cand_no_shares_table": 1513,
+   "ext_presence_break": 179,
+   "fed": 69201,
+   "m2_delayed": 156,
+   "m2_not_fed": 62358,
+   "m2_revision_unfed": 4,
+   "month_ends": 96,
+   "no_period_end": 459115,
+   "pe_after_seen": 0,
+   "reports_new": 131113,
+   "revisions": 450,
+   "sec_fed": 8127,
+   "selections": 2394,
+   "weekly_scans": 496
+  },
+  "coverage": {
+   "2011": {
+    "candidates_mean": 269.2,
+    "eligible_mean": 872.2,
+    "field_present_pct": [
+     66.42,
+     62.91,
+     67.77,
+     67.87,
+     96.71,
+     96.71,
+     73.7
+    ],
+    "ge80_mean": 5.58,
+    "h2_pct_nonfin": 46.22,
+    "h2_pct_nonfin_repaired": 34.29,
+    "mappable_ext": 314,
+    "mappable_pct": 97.32,
+    "repaired_mean": 140.5,
+    "scored_mean": 355.4
+   },
+   "2012": {
+    "candidates_mean": 306.7,
+    "eligible_mean": 889.3,
+    "field_present_pct": [
+     72.01,
+     67.35,
+     73.81,
+     73.81,
+     97.32,
+     97.35,
+     65.08
+    ],
+    "ge80_mean": 5.0,
+    "h2_pct_nonfin": 42.52,
+    "h2_pct_nonfin_repaired": 33.99,
+    "mappable_ext": 181,
+    "mappable_pct": 97.69,
+    "repaired_mean": 136.2,
+    "scored_mean": 388.1
+   },
+   "2013": {
+    "candidates_mean": 414.3,
+    "eligible_mean": 1024.4,
+    "field_present_pct": [
+     83.88,
+     78.53,
+     87.79,
+     88.06,
+     98.51,
+     98.52,
+     69.83
+    ],
+    "ge80_mean": 3.33,
+    "h2_pct_nonfin": 40.17,
+    "h2_pct_nonfin_repaired": 33.65,
+    "mappable_ext": 112,
+    "mappable_pct": 97.62,
+    "repaired_mean": 164.3,
+    "scored_mean": 465.3
+   },
+   "2014": {
+    "candidates_mean": 514.6,
+    "eligible_mean": 1149.4,
+    "field_present_pct": [
+     87.65,
+     83.71,
+     90.28,
+     90.63,
+     98.35,
+     98.35,
+     80.24
+    ],
+    "ge80_mean": 6.0,
+    "h2_pct_nonfin": 28.16,
+    "h2_pct_nonfin_repaired": 29.83,
+    "mappable_ext": 22,
+    "mappable_pct": 97.45,
+    "repaired_mean": 185.8,
+    "scored_mean": 626.8
+   },
+   "2015": {
+    "candidates_mean": 446.5,
+    "eligible_mean": 1179.5,
+    "field_present_pct": [
+     87.47,
+     83.18,
+     90.77,
+     90.71,
+     98.71,
+     98.71,
+     84.86
+    ],
+    "ge80_mean": 8.75,
+    "h2_pct_nonfin": 23.38,
+    "h2_pct_nonfin_repaired": 30.39,
+    "mappable_ext": 15,
+    "mappable_pct": 97.53,
+    "repaired_mean": 183.0,
+    "scored_mean": 675.2
+   },
+   "2016": {
+    "candidates_mean": 468.2,
+    "eligible_mean": 1153.1,
+    "field_present_pct": [
+     89.58,
+     86.16,
+     91.89,
+     92.48,
+     98.91,
+     98.89,
+     85.82
+    ],
+    "ge80_mean": 7.5,
+    "h2_pct_nonfin": 21.2,
+    "h2_pct_nonfin_repaired": 27.71,
+    "mappable_ext": 5,
+    "mappable_pct": 97.69,
+    "repaired_mean": 161.1,
+    "scored_mean": 673.6
+   },
+   "2017": {
+    "candidates_mean": 558.6,
+    "eligible_mean": 1262.9,
+    "field_present_pct": [
+     89.33,
+     86.18,
+     88.46,
+     91.95,
+     98.28,
+     98.25,
+     85.05
+    ],
+    "ge80_mean": 13.33,
+    "h2_pct_nonfin": 23.76,
+    "h2_pct_nonfin_repaired": 29.12,
+    "mappable_ext": 8,
+    "mappable_pct": 97.43,
+    "repaired_mean": 150.2,
+    "scored_mean": 711.8
+   }
+  },
+  "criteria": {
+   "MC2_fresh_sec_mcap_pct_of_mcap_missing_targets": 85.95,
+   "MC3_evaluable": 224,
+   "MC3_split_continuous_pct": 99.55,
+   "MC4_agreement_away_pct": 98.42,
+   "MC5_abs_rel_median": 0.00032,
+   "MC5_disagreement_near_pct": 4.35,
+   "MC6_recovered_later_disappearing_pct": 66.75,
+   "MC6_recovered_pct": 68.93,
+   "MC7_survivor_share_gap_points": {
+    "2011": 2.7,
+    "2012": 1.76,
+    "2013": 1.64,
+    "2014": 1.32,
+    "2015": 0.8,
+    "2016": -0.27,
+    "2017": -2.02,
+    "all": 0.79
+   }
+  },
+  "ge80_per_review": 7.07,
+  "identity_mapping": {
+   "mapped|ext|2008": 3187,
+   "mapped|ext|2009": 4064,
+   "mapped|ext|2010": 2364,
+   "mapped|ext|2011": 644,
+   "mapped|ext|2012": 87,
+   "mapped|ext|2013": 47,
+   "mapped|ext|2014": 17,
+   "mapped|ext|2015": 8,
+   "mapped|ext|2016": 5,
+   "mapped|ext|2017": 6,
+   "mapped|v2|2009": 640,
+   "mapped|v2|2010": 2647,
+   "mapped|v2|2011": 5767,
+   "mapped|v2|2012": 7474,
+   "mapped|v2|2013": 7727,
+   "mapped|v2|2014": 8175,
+   "mapped|v2|2015": 8597,
+   "mapped|v2|2016": 8816,
+   "mapped|v2|2017": 8897,
+   "unmapped|no_cik|2008": 5865,
+   "unmapped|no_cik|2009": 7466,
+   "unmapped|no_cik|2010": 7065,
+   "unmapped|no_cik|2011": 6031,
+   "unmapped|no_cik|2012": 5125,
+   "unmapped|no_cik|2013": 5320,
+   "unmapped|no_cik|2014": 5640,
+   "unmapped|no_cik|2015": 5843,
+   "unmapped|no_cik|2016": 5802,
+   "unmapped|no_cik|2017": 5956,
+   "unmapped|no_period|2008": 278,
+   "unmapped|no_period|2009": 107,
+   "unmapped|no_period|2010": 101,
+   "unmapped|no_period|2011": 111,
+   "unmapped|no_period|2012": 132,
+   "unmapped|no_period|2013": 190,
+   "unmapped|no_period|2014": 303,
+   "unmapped|no_period|2015": 235,
+   "unmapped|no_period|2016": 153,
+   "unmapped|no_period|2017": 221
+  },
+  "identity_value_check": {
+   "ext|revenue_q|differ": 19,
+   "ext|revenue_q|match": 244,
+   "ext|revenue_q|no_ref": 10166,
+   "ext|total_assets|differ": 7,
+   "ext|total_assets|match": 332,
+   "ext|total_assets|no_ref": 10090,
+   "v2|revenue_q|differ": 964,
+   "v2|revenue_q|match": 10458,
+   "v2|revenue_q|no_ref": 47318,
+   "v2|total_assets|differ": 256,
+   "v2|total_assets|match": 13579,
+   "v2|total_assets|no_ref": 44905
+  },
+  "layer_corr": {
+   "F_S": -0.0118,
+   "T_F": -0.0148,
+   "T_S": 0.2267
+  },
+  "layers": {
+   "F": {
+    "max": 45.0,
+    "mean": 17.997,
+    "median": 17.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 5.0,
+    "p90": 32.0,
+    "sd": 10.145
+   },
+   "S": {
+    "max": 15.0,
+    "mean": 7.716,
+    "median": 8.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 0.0,
+    "p90": 15.0,
+    "sd": 4.378
+   },
+   "T": {
+    "max": 40.0,
+    "mean": 17.874,
+    "median": 20.0,
+    "min": 0.0,
+    "n": 46756,
+    "p10": 0.0,
+    "p90": 33.0,
+    "sd": 11.902
+   }
+  },
+  "max_rss_mb": 5964.3,
+  "mcap_comparison": {
+   "abs_rel_median": 0.00032,
+   "abs_rel_p90": 0.01957,
+   "agree_away": 81504,
+   "agree_near": 5273,
+   "disagree_kind": {
+    "away|sec_above|rel_gt10pct": 1184,
+    "away|sec_below|rel_gt10pct": 121,
+    "near|sec_above|rel_gt10pct": 89,
+    "near|sec_above|rel_le10pct": 53,
+    "near|sec_below|rel_gt10pct": 30,
+    "near|sec_below|rel_le10pct": 68
+   },
+   "n_away": 82809,
+   "n_near": 5513,
+   "no_sec": 3371,
+   "records": 91693,
+   "rel": {
+    "gt10pct": 3944,
+    "le10pct": 1494,
+    "le2pct": 79597,
+    "le5pct": 3287
+   }
+  },
+  "mcap_missing_status": {
+   "below_2B": [
+    57,
+    9
+   ],
+   "no_cik": [
+    757,
+    398
+   ],
+   "no_fresh_shares": [
+    456,
+    183
+   ],
+   "no_shares_table": [
+    927,
+    246
+   ],
+   "repaired": [
+    13038,
+    6331
+   ]
+  },
+  "months_ge80_zero": 1,
+  "population": {
+   "all": {
+    "max": 734,
+    "mean": 556.6,
+    "median": 631,
+    "min": 304,
+    "months": 84
+   },
+   "y2011": {
+    "max": 378,
+    "mean": 355.4,
+    "median": 360,
+    "min": 304,
+    "months": 12
+   },
+   "y2012": {
+    "max": 406,
+    "mean": 388.1,
+    "median": 389,
+    "min": 359,
+    "months": 12
+   },
+   "y2013plus": {
+    "max": 734,
+    "mean": 630.6,
+    "median": 662,
+    "min": 407,
+    "months": 60
+   }
+  },
+  "recovery_by_reason": {
+   "mcap_lt_2B": [
+    1300,
+    0,
+    0
+   ],
+   "mcap_missing": [
+    15235,
+    13038,
+    6331
+   ],
+   "no_fundamentals": [
+    2212,
+    0,
+    0
+   ],
+   "not_common_type": [
+    168,
+    0,
+    0
+   ]
+  },
+  "repair": {
+   "bands": {
+    "1.5-1.8B": 2022,
+    "1.8-2.0B": 1158,
+    "2.0-2.2B": 922,
+    "2.2-2.5B": 1290,
+    "gt2.5B": 11243,
+    "lt1.5B": 6593
+   },
+   "below_2B": 9773,
+   "candidate_stock_months": 24220,
+   "no_fresh_shares": 992,
+   "repair_s": 4.7,
+   "repaired": 13455,
+   "share_age": {
+    "max": 135.0,
+    "mean": 57.313,
+    "median": 60.0,
+    "min": 1.0,
+    "n": 23228,
+    "p10": 20.0,
+    "p90": 93.0,
+    "sd": 29.345
+   },
+   "stale_near": 379
+  },
+  "split": {
+   "ambiguous": 1,
+   "continuous": 223,
+   "no_sec_identity": 34,
+   "no_sec_mcap": 10
+  },
+  "spot": {
+   "checked": 168,
+   "mismatch": 0
+  },
+  "survivorship": {
+   "2011": {
+    "added_not_v1": {
+     "stock_months": 73,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 11069,
+     "survivor_share": 0.7448
+    },
+    "delivered": {
+     "stock_months": 8780,
+     "survivor_share": 0.8535
+    },
+    "lost": {
+     "stock_months": 2527,
+     "survivor_share": 0.3328
+    },
+    "recovered": {
+     "stock_months": 1613,
+     "survivor_share": 0.3621
+    },
+    "repaired_universe": {
+     "stock_months": 10466,
+     "survivor_share": 0.7718
+    },
+    "still_lost": {
+     "stock_months": 914,
+     "survivor_share": 0.2812
+    }
+   },
+   "2012": {
+    "added_not_v1": {
+     "stock_months": 78,
+     "survivor_share": 0.0385
+    },
+    "data_v1": {
+     "stock_months": 11182,
+     "survivor_share": 0.783
+    },
+    "delivered": {
+     "stock_months": 9037,
+     "survivor_share": 0.8752
+    },
+    "lost": {
+     "stock_months": 2363,
+     "survivor_share": 0.3876
+    },
+    "recovered": {
+     "stock_months": 1557,
+     "survivor_share": 0.4059
+    },
+    "repaired_universe": {
+     "stock_months": 10672,
+     "survivor_share": 0.8006
+    },
+    "still_lost": {
+     "stock_months": 806,
+     "survivor_share": 0.3524
+    }
+   },
+   "2013": {
+    "added_not_v1": {
+     "stock_months": 68,
+     "survivor_share": 0.1471
+    },
+    "data_v1": {
+     "stock_months": 12860,
+     "survivor_share": 0.781
+    },
+    "delivered": {
+     "stock_months": 10321,
+     "survivor_share": 0.873
+    },
+    "lost": {
+     "stock_months": 2808,
+     "survivor_share": 0.3992
+    },
+    "recovered": {
+     "stock_months": 1904,
+     "survivor_share": 0.4112
+    },
+    "repaired_universe": {
+     "stock_months": 12293,
+     "survivor_share": 0.7974
+    },
+    "still_lost": {
+     "stock_months": 904,
+     "survivor_share": 0.3739
+    }
+   },
+   "2014": {
+    "added_not_v1": {
+     "stock_months": 59,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 14380,
+     "survivor_share": 0.7908
+    },
+    "delivered": {
+     "stock_months": 11563,
+     "survivor_share": 0.8765
+    },
+    "lost": {
+     "stock_months": 3131,
+     "survivor_share": 0.4235
+    },
+    "recovered": {
+     "stock_months": 2171,
+     "survivor_share": 0.4399
+    },
+    "repaired_universe": {
+     "stock_months": 13793,
+     "survivor_share": 0.804
+    },
+    "still_lost": {
+     "stock_months": 960,
+     "survivor_share": 0.3865
+    }
+   },
+   "2015": {
+    "added_not_v1": {
+     "stock_months": 55,
+     "survivor_share": 0.1636
+    },
+    "data_v1": {
+     "stock_months": 14667,
+     "survivor_share": 0.8279
+    },
+    "delivered": {
+     "stock_months": 11958,
+     "survivor_share": 0.8968
+    },
+    "lost": {
+     "stock_months": 3064,
+     "survivor_share": 0.5029
+    },
+    "recovered": {
+     "stock_months": 2141,
+     "survivor_share": 0.5133
+    },
+    "repaired_universe": {
+     "stock_months": 14154,
+     "survivor_share": 0.8359
+    },
+    "still_lost": {
+     "stock_months": 923,
+     "survivor_share": 0.4789
+    }
+   },
+   "2016": {
+    "added_not_v1": {
+     "stock_months": 33,
+     "survivor_share": 0.0303
+    },
+    "data_v1": {
+     "stock_months": 14156,
+     "survivor_share": 0.9007
+    },
+    "delivered": {
+     "stock_months": 11904,
+     "survivor_share": 0.9416
+    },
+    "lost": {
+     "stock_months": 2638,
+     "survivor_share": 0.6391
+    },
+    "recovered": {
+     "stock_months": 1900,
+     "survivor_share": 0.6395
+    },
+    "repaired_universe": {
+     "stock_months": 13837,
+     "survivor_share": 0.898
+    },
+    "still_lost": {
+     "stock_months": 738,
+     "survivor_share": 0.6382
+    }
+   },
+   "2017": {
+    "added_not_v1": {
+     "stock_months": 51,
+     "survivor_share": 0.0
+    },
+    "data_v1": {
+     "stock_months": 15373,
+     "survivor_share": 0.9567
+    },
+    "delivered": {
+     "stock_months": 13352,
+     "survivor_share": 0.9551
+    },
+    "lost": {
+     "stock_months": 2384,
+     "survivor_share": 0.8389
+    },
+    "recovered": {
+     "stock_months": 1752,
+     "survivor_share": 0.8213
+    },
+    "repaired_universe": {
+     "stock_months": 15155,
+     "survivor_share": 0.9365
+    },
+    "still_lost": {
+     "stock_months": 632,
+     "survivor_share": 0.8877
+    }
+   },
+   "all": {
+    "added_not_v1": {
+     "stock_months": 417,
+     "survivor_share": 0.0552
+    },
+    "data_v1": {
+     "stock_months": 93687,
+     "survivor_share": 0.8327
+    },
+    "delivered": {
+     "stock_months": 76915,
+     "survivor_share": 0.9001
+    },
+    "lost": {
+     "stock_months": 18915,
+     "survivor_share": 0.4986
+    },
+    "recovered": {
+     "stock_months": 13038,
+     "survivor_share": 0.5144
+    },
+    "repaired_universe": {
+     "stock_months": 90370,
+     "survivor_share": 0.8406
+    },
+    "still_lost": {
+     "stock_months": 5877,
+     "survivor_share": 0.4635
+    }
+   }
+  },
+  "target_check": {
+   "securities": 560,
+   "sha256_match": true,
+   "stock_months": 18915
+  },
+  "target_securities": {
+   "never_recovered_by_last_reason": {
+    "mcap_lt_2B|in_universe_end_2017": 56,
+    "mcap_lt_2B|later_disappearing": 18,
+    "mcap_missing|in_universe_end_2017": 22,
+    "mcap_missing|later_disappearing": 22,
+    "no_fundamentals|in_universe_end_2017": 1,
+    "no_fundamentals|later_disappearing": 67,
+    "not_common_type|in_universe_end_2017": 3
+   },
+   "recovered_at_least_once": 371,
+   "recovered_later_disappearing": 232,
+   "targets": 560,
+   "targets_later_disappearing": 339,
+   "with_mcap_missing_month": 415
+  },
+  "totals_candidates": {
+   "max": 94.0,
+   "mean": 47.655,
+   "median": 48.0,
+   "min": 0.0,
+   "n": 35736,
+   "p10": 27.0,
+   "p90": 68.0,
+   "sd": 15.526
+  },
+  "wall_s": 530.1
+ },
+ "determinism_E997_01_vs_03": {
+  "aggregates_equal": true,
+  "review_scores_equal": 84,
+  "reviews": 84,
+  "universe_equal": true
+ },
+ "determinism_universe_digests_equal": true
+}
