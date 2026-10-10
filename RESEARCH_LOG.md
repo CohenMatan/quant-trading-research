@@ -1770,3 +1770,54 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner (approve / amend Data v2; confirm window 2011–2017; authorise the Data v2 build and freeze checkpoint).
 
+
+## 2026-10-10: P7-CP5f Data Infrastructure v2 build and freeze — NOT FROZEN (gate K); STOP (D190, D191)
+
+- **Owner (D190):** build and freeze Data Infrastructure v2, which covers:
+  - the P7-CP5e section-50 architecture;
+  - window 2011-01 → 2017-12;
+  - M2 timing;
+  - SEC market-cap repair;
+  - the verified identity extension;
+  - the restatement guard.
+
+  Infrastructure only; STOP before any H022 null or real evaluation.
+- **Built:**
+  - consolidated reference table `qr_data_v2*.py` (16 files, lzma + base85, loader v2-lzma-b85-1, table SHA-256 107b6b55…);
+  - `qr_v2.py`;
+  - host X998 (data-v1-pinned modules untouched);
+  - `datafreeze_v2` (candidate manifest);
+  - tests.
+
+  33 project files. The 25–28 target is not reachable without dropping rule data.
+- **Gate thresholds fixed before any output:** commit 43e26ec.
+- **QuantConnect runs** (LEAN 18178 default, recorded; compliance accepted; 0 orders; aggregates only):
+  - E998-01: export;
+  - E998-02: independent repeat;
+  - E998-03: truncated at 2013-12-31;
+  - E998-04: export + in-cloud synthetic power study.
+- **Results:**
+  - PIT audit 0 in every run;
+  - determinism: every digest identical;
+  - truncation: all 35 shared months identical (the whole-year 2013 digest differs only because a run ending 2013-12-31 never reaches its December review; analysis corrected);
+  - splits 223/224;
+  - P7-CP5e residuals reproduced exactly (69% recovery, +0.79-point gap, 98.4% agreement);
+  - fully scored stocks a month 304–728;
+  - 80+ 7.07 a month;
+  - mechanics: 46.6 orders a year, 0.79% cost, 69% utilisation, no rule violations;
+  - restatement guard blocked 114 reports (0.16%);
+  - synthetic power essentially unchanged (main: 50% at IC 0.034, 80% at 0.049, false promotion 0.1%, synthetic c_IC 2.53).
+- **Identity sanity check (owner item 7):**
+  - 161 REJECT / no-identity securities, 3.4% → 6.9% of eligible stock-months a year (pre-set limit ≤ 3%: fail);
+  - implied survivorship tilt 0.47 points (limit ≤ 1.0: pass);
+  - survival 82.4% vs 87.5%.
+
+  Material by the pre-set criteria → gate K fails.
+- **Verdict:** NOT FROZEN — Data Infrastructure v2 failed one or more freeze gates. Every other gate (A–J, L–P) passes. Manifest written as an unpinned candidate.
+- Old c_IC 2.390976216956 labelled DATA_V1_ONLY / UNUSED_ON_V2.
+- No real return, IC, H022 gate or portfolio. No 2018–2021; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Options:
+1. accept the identity residual and freeze as built (recommended);
+2. identity feasibility study;
+3. close H022.

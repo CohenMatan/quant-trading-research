@@ -1,0 +1,217 @@
+{
+ "combined_sha256": "46c762c7826c86fe879debd8b49eba44b33674337d1013569e5a36f5612cb37a",
+ "files": {
+  "research/phase7/P7_predictive_spec.md": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+  "research/phase7/P7_score_spec.md": "7d3ae5df2fb5ecfaf8338e1a1d43f01c7a3060e73e33bf1007560981234eed9b",
+  "research/phase7/cp5e/build_x997_ref.py": "3aefa041791537a2a4d0138e65a8d3b390cd970e8c42d93df3c936350cb099c6",
+  "research/phase7/cp5e/identity_extension.json": "9b37bc0b6a6240c7bd47c6bbdcd670a80cae3cac6b4718d4fe051e41f3940d61",
+  "research/phase7/cp5e/identity_extension.py": "442eef258471db6408c6e25e2ecf76f73bf577c3b833797d883febe2b7f0eb99",
+  "research/phase7/cp5e/target_population.json": "cafa1e3074793ea51f44eaedc0ea61606e2d301481ba98bf6033895d68cd73e1",
+  "research/phase7/cp5e/target_population.py": "e28a7d75c3f6fc983a6650b05942f856adf16f966c15a107ef2eaf4911911131",
+  "research/phase7/data_v2/build_data_v2.py": "9e172b7b9d05c6a05b490958ac6a9ce1c5c57ce81888d1aeb21cfdc145d59826",
+  "research/phase7/data_v2/data_v2_reference.json": "23b7995fac26105e8a3fbcc50b61b0a3b178c07c05d1778af6134fa55fb5ed3e",
+  "research/phase7/data_v2/x998_analysis.py": "ab30ac29909602bae0179096647521369d84681ca0d74e5b0fea75abcce02354",
+  "research/phase7/data_v2/x998_summary.json": "9508747859c41e8dac785cdd87e4335c75a87d425079174a7e055e48ba67431e",
+  "src/qresearch/lean/qr_data_v2.py": "2c1d689515d62426750d271c62c15cb818e3b57d974a19deee2cc00141079118",
+  "src/qresearch/lean/qr_data_v2_00.py": "48f30b76e4d967e1ffc412475d90a2c5cef1657ab504f0ac6930a52b2a79cadb",
+  "src/qresearch/lean/qr_data_v2_01.py": "62561042feb1f4da12d1d8b3e5b344a6b97dd64e64054c1f6f2df0d55f391e43",
+  "src/qresearch/lean/qr_data_v2_02.py": "a345e71110de3f6517ea3897ee17758e3b8044e9ef5424b1d8ad0eabc92142b9",
+  "src/qresearch/lean/qr_data_v2_03.py": "c64856f628988fcb905a41a871dcc46af8d8a2f71d05d4c134184327af7c198d",
+  "src/qresearch/lean/qr_data_v2_04.py": "6c71ba66e4a3c70c6f4c76151bc197ec0f201b198306adc0be7614cfc59d178f",
+  "src/qresearch/lean/qr_data_v2_05.py": "e5641efc724dc6789231b577a06db5814dd0321912d5c2abb7ffcd5df6a9bb20",
+  "src/qresearch/lean/qr_data_v2_06.py": "faebfd13a8ca6b65b275088dfa27a4a2c11997166f90d4aa9b6385582075b3e9",
+  "src/qresearch/lean/qr_data_v2_07.py": "333ed68794ef3a35925dfa05e82824395adbc0514b95e3385bc5ab2351657d5f",
+  "src/qresearch/lean/qr_data_v2_08.py": "8f811ee0b0aeb59e87a4d01c9fc6479e59ef1851eedeaea92f2ac4b6b46549c7",
+  "src/qresearch/lean/qr_data_v2_09.py": "65c6991c0c53ab39a585a04e60cb9492d543f3d0b72aa7c84fb8da4112f6c3ff",
+  "src/qresearch/lean/qr_data_v2_10.py": "d353bcd74b49a0e0e0797ff0b8a5edd686269acb724c5b307a03bdc16a00ea3c",
+  "src/qresearch/lean/qr_data_v2_11.py": "fb87c133bcc0b2fdd1bb6a70012109ad1f90329b4fc194ba3960b3845193ef8f",
+  "src/qresearch/lean/qr_data_v2_12.py": "064fcc18860c8accb233feb927c51396988513379876b0eab36c541361e248c7",
+  "src/qresearch/lean/qr_data_v2_13.py": "4870010d944f47da11d765d64a86e0b3a39b9fc2cca8641cd42e9811d619d03f",
+  "src/qresearch/lean/qr_data_v2_14.py": "10be9ea5c0debb7bfa9284a13554a7c7a43c5e94ac72fc949199c2174bae4b8d",
+  "src/qresearch/lean/qr_fundamentals.py": "0774343f24820ce4d847e27299107f2218f1a536184fb6d51db6e8f8c6106907",
+  "src/qresearch/lean/qr_harness.py": "13389004e3cd1b04af487f6b76bfe50da5bf277fc626c6b16992db266dfbf9b7",
+  "src/qresearch/lean/qr_indicators.py": "acd4df3f357595c8f381e98955549804ef436772297109ed2eb361e82f9be989",
+  "src/qresearch/lean/qr_industry.py": "d9020f97660814780d68b98b6145d66e0e27d22571736cac3e15e2b8257a0723",
+  "src/qresearch/lean/qr_p7.py": "86abb2b2e9284f1dfaa89bddb6a57d354d399b3069822be8b8efb80dcb04bb5a",
+  "src/qresearch/lean/qr_p7_export.py": "40e1410ef00a7e1cc610dc823561efe81530264e199c535022cda13c4eef203c",
+  "src/qresearch/lean/qr_p7_mech.py": "838ffce8d9ab5fd37eb9392d4395153b7da46aaa3ce982ec66fae8cafa9bc726",
+  "src/qresearch/lean/qr_p7_pred.py": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "src/qresearch/lean/qr_p7_score.py": "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572",
+  "src/qresearch/lean/qr_sec_corrections.py": "949bcbfee4d497725f2c66b93db61664753d8498cf864134b3dbb4aec2e9a418",
+  "src/qresearch/lean/qr_v2.py": "1bf5b3bcebc4be88187787d52bff030c7b41b4be6e17497e1c5f72783ea446eb",
+  "src/qresearch/lean/qr_xs.py": "bd69bc6ae5e0598eebdb75114cfc0b740469cc545a2a25952174f56cd98b4358",
+  "src/qresearch/lean/qr_xs_diag.py": "37120aec18a94bd0cbc554bca4e3716c9cdbc00e0da91294249ad3feb332ac8b",
+  "src/qresearch/lean/qr_xs_panel.py": "4dd5f6df09d9cad383065aca0f6a0350ed85ca40bfb081102b769d77a3c539b0",
+  "src/qresearch/sec_edgar.py": "2587a3f755d9b1fc1eabb6198292e9a5206684f39c8ada92dbf0c3382e84ed42",
+  "src/qresearch/sec_pit.py": "4848401bb75d9e75d6fbd3c272331f5bde87e9b5eba1e355b34090fc8d22cf18",
+  "src/qresearch/v2pack.py": "d3ad65494a9868a41b679ca01e17c17768560cfd51114efe6708b25c97705a16",
+  "strategies/X998_data_v2_export/main.py": "fbcb0b66139552d8d1f60f126850bf272de0a2854a5cd07bf97f08bfa850774f"
+ },
+ "freeze_gates": {
+  "A_score_v1_hash": "checked by tests/test_p7_score_spec.py and test_p7_pred_spec.py (pinned hashes unchanged)",
+  "B_m2_timing": true,
+  "C_market_cap_repair": true,
+  "D_identity": true,
+  "E_restatement_guard": true,
+  "F_pit_zero": true,
+  "G_splits": true,
+  "H_determinism": true,
+  "I_truncation": true,
+  "J_2011_2012_operational": true,
+  "K_identity_sanity_not_material": false,
+  "K_mc7_survivor_gap_within_bounds": true,
+  "K_residuals_same_range": true,
+  "K_survivorship_bounds": false,
+  "L_compliance": true,
+  "M_export": true,
+  "N_no_real_return": "by construction: X998 computes no forward / portfolio / SPY return (tests/test_data_v2.py)",
+  "O_2018_2021_untouched": true,
+  "P_holdout_untouched": true,
+  "all": false
+ },
+ "reference": {
+  "chars": 941998,
+  "counts": {
+   "extension_rows": 1807,
+   "guard_periods": 8496,
+   "guard_periods_scanned": 90076,
+   "guard_registrants": 1747,
+   "id_none": 56,
+   "id_reject": 105,
+   "idv_registrants": 1531,
+   "registrants_with_filings": 3289,
+   "repaired_securities": 495,
+   "sic_history_securities": 3304
+  },
+  "diagnostics_sha256": "f791716470d4200f5d6f5309578adefe40518f7c98d08c519618f71ec09cc11c",
+  "identity_extension_sha256": "93c60b652f079a4d7b7cc353b73e408b0ffb6bb8292ec82011679887481a5383",
+  "identity_values_sha256": "201e70a2cffe672cdd4aae52201d4c02741b0af87c7a846b04853c28dd723f9c",
+  "loader_version": "v2-lzma-b85-1",
+  "packing": "lzma preset 9|extreme + base85, chunks of 63,000",
+  "project_files": 16,
+  "restatement_guard_sha256": "95d15aed27afb3a91d0a04c188e561777ac7ba847db1b19a80e44882f188b4e8",
+  "sec_filings_and_shares_sha256": "d6df94fe06dc91d8a36f247fee5f2bc067623752678039ab4a2af8ee7ba2ff75",
+  "sec_snapshot": {
+   "identity_extension_json_sha256": "9b37bc0b6a6240c7bd47c6bbdcd670a80cae3cac6b4718d4fe051e41f3940d61",
+   "p5e_ref_sha256": "1ece9c48bb2b7319ae9559fef3ed0836c3959788b8a76af661b92445b2676be4",
+   "qr_sec_data_v1_sha256": "fbdaa68abd6fe94567b264529452b53589200526c4a2b5913efd55d66bb6d86c",
+   "target_population_sha256": "f751460bcfe050132b313a4faa2ae3de27375cc97e5755cbb3a7c4e589925206"
+  },
+  "sec_v1_layer_sha256": "54014632d67c36f851e482442350132ed4d7620abe21040af182c36e2786fae1",
+  "table_sha256": "107b6b5534a83368f3a9620a8d96dc6fec1a14793aa0639a3787240b85346884"
+ },
+ "rules": {
+  "build_policy": "default_build_digest_verified: record the actual LEAN build of every run; digests must reproduce",
+  "calendar": "QuantConnect US equity session calendar; selection stamped the calendar day after the session (P7-CP1)",
+  "compliance": "aggregates and SHA-256 digests only; no vendor value, no return exported",
+  "costs": {
+   "capital": [
+    100000,
+    200000
+   ],
+   "commission_per_order": 7.0,
+   "slippage_bps_per_side": 10
+  },
+  "first_seen_ledger": "weekly revision scan; a report is fed once per (security, period end, usable day)",
+  "freshness": {
+   "max_record_age_days": 200,
+   "ttm": "True TTM (four quarters, P2-CP7)"
+  },
+  "identity": {
+   "excluded": "REJECT (105) and no-identity-row (56) securities have no SEC identity: eligible by market cap, never fed fundamentals (H2)",
+   "rule": "dated SEC identity v2 rows; verified extension rows (SAFE / BOUNDED only) used only while the security's feed presence is continuous since the row start (gap <= 60 days)"
+  },
+  "mechanics": {
+   "K": 10,
+   "buffer": 5,
+   "cash_allowed": true,
+   "entry": 80,
+   "execution": "monthly review at the last session's close, orders at the next open",
+   "exit": 70,
+   "grown_winner_cap": 0.2,
+   "initial_cap": 0.1,
+   "ranking": "total, Fundamental, Technical, ADV20, id",
+   "regime_positions": {
+    "NORMAL": 8,
+    "RISK_OFF": 2,
+    "STRONG": 10,
+    "WEAK": 5
+   },
+   "sector_max_ff12": 3,
+   "weekly": "hard-DQ sell-only"
+  },
+  "old_c_ic": "2.390976216956 = DATA_V1_ONLY / UNUSED_ON_V2 (qresearch.p7pred.C_IC_STATUS)",
+  "restatement_guard": "quarterly revenue and total assets: a report whose value equals a later SEC re-report (> 0.5% from the first-filed value) and not the first-filed value is blocked until that later filing is public + 1 day (P7-CP5d methodology)",
+  "score": "Score v1 exactly as pinned (qresearch.p7score SPEC_SHA256 / CODE_SHA256); H1-H7 unchanged",
+  "timing_m2": "usable = max(first seen in QuantConnect's stream, SEC original periodic filing + 1 day); pre-XBRL filing dates from EDGAR submissions; no FileDate; no +90-day rule",
+  "universe": {
+   "filters": "common stock, primary listing, not financial / REIT by SEC SIC at filing; one class per company; security-life rule qr_p7.LIFE_GAP; corporate-event exclusions (P7-CP1)",
+   "min_market_cap": 2000000000.0,
+   "rule": "QuantConnect market_cap if > 0, else valid SEC market cap, else ineligible",
+   "sec_market_cap": "single unambiguous cover-page share count x raw close of the review session; usable from filing + 1 day; cover date at most 135 days old; no interpolation; no weighted shares; multi-class unresolved; D111 split logic (splits with ex-date <= review day)",
+   "sec_share_max_age_days": 135,
+   "v1_sec_correction_layer": "unchanged, not broadened (495 securities)"
+  },
+  "window": {
+   "decisions": [
+    "2011-01-31",
+    "2017-11-30",
+    83
+   ],
+   "first_session": "2011-01-03",
+   "history_only_warmup_from": "2008-07-01",
+   "last_session": "2017-12-29",
+   "reviews": "last session of each month 2011-01 .. 2017-12 (84)",
+   "sealed": [
+    "2018-01-01 .. 2021-12-31",
+    "2022-01-01 .. 2026-08-31"
+   ],
+   "weekly_checks": "last session of each ISO week"
+  }
+ },
+ "runs": {
+  "E998-01": {
+   "code_sha256": "94878857e1ea55f3a6f32b76a7ad06360ed057aba720263a0baec78bd64ecb5a",
+   "config_sha256": "2e6a9c18c5b6b1195c5ee6757276fe1d222457cf07ed77ba0d0fd849f8d6c8d6",
+   "git_commit": "5c6854fcfb52851e07c4ed2175843a9063357ee7",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "b94e25ccf0a55d54907ed0b77eaa6990",
+   "status": "completed"
+  },
+  "E998-02": {
+   "code_sha256": "2a843d8a7e500b18bf5b3ee560062309b3a45514e2fc427791686407c309a662",
+   "config_sha256": "e2eebdc0f7dd6413236db5967a3c72c1b5058c60c85917ec2056b6fe8eedd644",
+   "git_commit": "d699684c1fba0442fe77e070ca7c9ee200dbe6d1",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "f6a5dcc334518e2cf2ec591a11197d80",
+   "status": "completed"
+  },
+  "E998-03": {
+   "code_sha256": "aebeab5d6aa420999f1b9c21d908929798b48902fa8bc99c6057c2af30fc3a98",
+   "config_sha256": "e832a8cef36f1303e3cdb2debc69c639bf18018fd80a7700de8ef3060abe5b5c",
+   "git_commit": "a1c81d823222d480cddc475906bc5f45982b4b05",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "8146557b40b1f037a6372e6fd55b522d",
+   "status": "completed"
+  },
+  "E998-04": {
+   "code_sha256": "b5c79144c7a448af9671f98fbd6d14af7ea66e0fc1cd02c65e715c15bf2828da",
+   "config_sha256": "6598ff0e83c47f5bf898f321b44d6c7af3c25a1f5b23dac5b26b9dcbd816998b",
+   "git_commit": "4f0a323034176ec626966e87d370fd8787a4415f",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "9d1c1c36bc05fa406cd200c2615762a0",
+   "status": "completed"
+  }
+ },
+ "score_v1": {
+  "code_sha256": {
+   "src/qresearch/lean/qr_p7.py": "86abb2b2e9284f1dfaa89bddb6a57d354d399b3069822be8b8efb80dcb04bb5a",
+   "src/qresearch/lean/qr_p7_score.py": "84b67317023683da5d6f35c640e6b8adcaf42a9b9e106c0ab8183a26edb91572"
+  },
+  "predictive_spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+  "spec_sha256": "7d3ae5df2fb5ecfaf8338e1a1d43f01c7a3060e73e33bf1007560981234eed9b"
+ },
+ "status": "CANDIDATE - NOT FROZEN (failed: K_identity_sanity_not_material, K_survivorship_bounds)",
+ "verification_digests": "a6e82854ae03aece3747aad95b82867ec084c49ea69c91be3543e453fc200d8b",
+ "version": "v2"
+}

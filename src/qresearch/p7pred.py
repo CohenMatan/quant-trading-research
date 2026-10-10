@@ -53,6 +53,9 @@ NULL_RESULT = "research/phase7/P7_CP5_null.json"
 NULL_WORLDS = "research/phase7/P7_CP5_null_worlds.json.gz"
 NULL_RESULT_SHA256 = "c96733d88c9a9f71127cf8a337d45543374a89ea104fd5a62aa53c25d98629b6"
 THRESHOLD_COMMIT = "dbfdcc04913ddf084ed764b38bdf4dffe1024f4d"   # pinned the values above
+# D190: this c_IC was calibrated on data infrastructure v1 (E023-01..05, LEAN 18131 panel). It is preserved as a record
+# only and is NEVER used on Data Infrastructure v2: any H022 evaluation on v2 needs a new, separately approved null.
+C_IC_STATUS = "DATA_V1_ONLY / UNUSED_ON_V2"
 PANEL_SHA256 = "a1e12dbfc05164e94bfd93381b64586a9addf90ca1ec5f635509961d385b5b7a"   # prepared panel
 
 # P7-CP5 (D177 / D178): the execution host S023 v1.1 (X994 = byte copy), pinned before the canary; the null and the
