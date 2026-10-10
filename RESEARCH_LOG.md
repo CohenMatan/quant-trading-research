@@ -1848,3 +1848,31 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 3. new c_IC pinned;
 4. owner review;
 5. one real evaluation.
+
+## 2026-10-10: P7-CP6 H022 / Data v2 canary and null calibration — CALIBRATED; STOP (D194, D195, D196)
+
+- **Owner (D194):** H022 on frozen Data v2, steps 1–3 only: canary, 5,000 null worlds, new c_IC pinned. No real evaluation.
+- **Host S024 v1.0** (X999 = byte copy):
+  - a subclass of the frozen X998 Data v2 host, uploaded byte-identically as `qr_x998.py` (= frozen manifest);
+  - adds market caps, the raw open and the split × dividend multiplier;
+  - H022 population / response / null / real / canary steps verbatim from S023 v1.1;
+  - `qr_p7_pred` unchanged.
+- **Canary E999-02: 25/25.**
+  - Score side identical to frozen E998-01 in all 84 reviews; populations 163–585 a month; regimes identical.
+  - Response timing: 0 violations; 120/120 fresh corporate-action recomputations agree.
+  - Response and score invariance pass.
+  - Null plumbing, Newey-West and the full G1–G4 procedure pass, on synthetic responses only.
+  - PIT audit 0.
+  - E999-01 had the same digests but did not export the PIT counters (24/25).
+- **Panel digest** 09b1de41… pinned before the nulls.
+- **Null runs:**
+  - E024-01..05: 5,000/5,000 worlds, seeds exact, identical panel, LEAN 18178, 0 orders.
+  - E024-06 rerun of seeds 1–25: identical.
+- **New Data-v2 c_IC = 2.3798883324991866**, the 50th largest of 5,000 null t_IC (same rule as Data v1; floor not binding). Pinned in `qresearch.p7pred_v2` and merged (PR #75) before any real run.
+- **Null t_IC:** mean 0.181, SD 0.937, p95 1.724, p99 2.377, max 4.354.
+- **Gate passes:** G1 49, G2 1,231, G3 255, G4 279; all four 5, so false promotion 0.10%. Data v1: c_IC 2.391, false promotion 0.14%.
+- No unpermuted real H022 statistic exists. Old c_IC stays DATA_V1_ONLY. No 2018–2021; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Options:
+- authorise exactly one real H022 evaluation (E024-07, pinned provenance);
+- keep H022 sealed.
