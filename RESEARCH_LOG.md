@@ -1708,3 +1708,33 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - No returns, no H022 statistic, no portfolio, no 2018–2021 research, Holdout untouched, nothing purchased.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-10: P7-CP5d Score v1 migration feasibility — NO-GO; STOP (D186, D187)
+
+- **Owner (D186):** test whether the frozen Score v1 can run on the new feed using the historical stream's first-seen time (M1), optionally gated by the SEC filing date (M2); M3 assessed only. In-cloud validation only; no H022, no returns.
+- **Built:**
+  - SEC reference table (complete populations, fixed before any run, fc49027);
+  - X996 v1.0 first-seen ledger host (frozen X993 v1.1 pipeline; aggregates and SHA-256 digests only);
+  - synthetic host tests.
+- **Runs (LEAN 18178, all accepted by QuantConnect's compliance review, 0 orders):**
+  - E996-01: M1, full window;
+  - E996-02: M1, truncated at 2013-12-31;
+  - E996-03: M2, full window.
+- **PASS:**
+  - truncation invariance (identical ledger, eligibility and 35/35 review score digests to 2013-12-31);
+  - determinism (identical stream in independent runs);
+  - SEC timing (96–99% of 41,312 matched reports first seen the day after the SEC filing, pre-2013 included);
+  - vintage (no backfill: restated periods show the original value in 88% revenue / 98.5% assets; residual 0.26%);
+  - compliance / export.
+- **FAIL — universe PIT safety:**
+  - the new feed lacks market cap for ~18% of data-v1 eligible stock-months (560 securities);
+  - 50% of them are still in the universe at end-2017, vs 92% retained → survivorship bias.
+- **Conflict before 2013:**
+  - M1 makes 277 reports usable before their SEC filing (46 without an earnings release);
+  - M2 removes them but leaves 2011–2012 nearly unscorable.
+- **Coverage M1:** H2 28.5%; 291–677 scored a month (mean 486); 80+ 5.9 a month.
+- **Verdict:** NO-GO — Score v1 cannot be migrated safely on the available QuantConnect infrastructure (requirement 6).
+- No returns, no H022 statistic, no portfolio, no 2018–2021, Holdout untouched, nothing purchased.
+
+**STOP:** awaiting the owner — (a) close H022, (b) universe-repair feasibility study only, or (c) dormant.
+
