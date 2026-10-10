@@ -1,5 +1,5 @@
 {
- "experiment_id": "E995-02",
+ "experiment_id": "E995-04",
  "kind": "infrastructure",
  "hypothesis_id": null,
  "strategy_id": "X995",
@@ -8,7 +8,7 @@
  "split_scheme": "2010",
  "split": "AUDIT",
  "start": "2009-06-01",
- "end": "2013-12-31",
+ "end": "2017-12-31",
  "cash": 100000,
  "universe": {
   "min_market_cap": 2000000000.0,
@@ -38,6 +38,6 @@
  "programme": "P7",
  "cycle": "P7CP5C",
  "params": {},
- "description": "P7-CP5c TRUNCATION / DETERMINISM REPEAT of E995-04 (identical code and inputs, end 2013-12-31): every record observed on or before the truncation date must be identical to E995-04's. Infrastructure; default build, recorded.",
+ "description": "P7-CP5c NEW-DATASET (re-run of E995-01 / E995-03, which failed at upload: 50-file project limit, then stale files left in the project; table trimmed to periods <= 2017-12) FUNDAMENTAL-TIMING PROBE (owner D184; infrastructure, QuantConnect default build, recorded): X971 v1.1 SEC verification on the X971 sample + pre-registered S2 (480 companies), schema scan of every fundamental object (timing-like members, every period window), per-security changes of every candidate timing field, aggregated market-cap check. Dates, identifiers and vendor/SEC value RATIOS only; no orders, no returns; 2009-06 .. 2017-12.",
  "lean_version_policy": "default_build_digest_verified"
 }

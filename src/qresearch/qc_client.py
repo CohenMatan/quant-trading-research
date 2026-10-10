@@ -122,13 +122,14 @@ class QCClient:
     def sync_files(self, project_id: int, files: dict[str, str]) -> None:
         """Make the project contain exactly `files` (name -> content)."""
         existing = set(self.list_files(project_id))
+        # stale files first: researcher projects hold at most 50 files (QuantConnect, 2026-10-10; E995-03)
+        for name in sorted(existing - set(files)):
+            self.call("files/delete", projectId=project_id, name=name)
         for name, content in files.items():
             if name in existing:
                 self.call("files/update", projectId=project_id, name=name, content=content)
             else:
                 self.call("files/create", projectId=project_id, name=name, content=content)
-        for name in existing - set(files):
-            self.call("files/delete", projectId=project_id, name=name)
 
     def pin_lean_version(self, project_id: int, version_id: int) -> None:
         """Pin the project to an explicit LEAN build (API field `versionId`) and verify it stuck. D180: when the project is

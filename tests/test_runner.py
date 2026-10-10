@@ -235,3 +235,20 @@ def test_lean_pin_skips_the_update_when_already_pinned():
     with pytest.raises(QCError):
         C(17999).pin_lean_version(7, 18131)
     assert calls[-1] == "projects/update"
+
+
+def test_sync_files_deletes_stale_files_before_creating():
+    """E995-03: a project left full by a failed upload must be emptied of stale files before new ones are created."""
+    from qresearch.qc_client import QCClient
+    calls = []
+
+    class C(QCClient):
+        def __init__(self):
+            pass
+
+        def call(self, endpoint, **p):
+            calls.append((endpoint, p.get("name")))
+            return {"files": [{"name": "old_a.py"}, {"name": "keep.py"}]} if endpoint == "files/read" else {}
+    C().sync_files(1, {"keep.py": "x", "new.py": "y"})
+    ops = [c for c in calls if c[0] != "files/read"]
+    assert ops[0] == ("files/delete", "old_a.py") and ("files/create", "new.py") in ops and ("files/update", "keep.py") in ops
