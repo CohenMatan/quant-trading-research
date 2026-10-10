@@ -1,0 +1,43 @@
+{
+ "experiment_id": "E995-02",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X995",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X995_timing_probe",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2009-06-01",
+ "end": "2013-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P7",
+ "cycle": "P7CP5C",
+ "params": {},
+ "description": "P7-CP5c TRUNCATION / DETERMINISM REPEAT of E995-01 (identical code and inputs, end 2013-12-31): every record observed on or before the truncation date must be identical to E995-01's. Infrastructure; default build, recorded.",
+ "lean_version_policy": "default_build_digest_verified"
+}
