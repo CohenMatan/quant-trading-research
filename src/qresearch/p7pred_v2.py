@@ -31,9 +31,13 @@ PANEL_SHA256 = "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0
 CANARY_COMMIT = "14ef5b9c7dc207edf7e25066f9ac1496609d581b"
 
 # set after the 5,000 null worlds, committed before any real evaluation (none is authorised)
-C_IC_V2 = None
+# P7-CP6 (D195): from the 5,000 Data-v2 null worlds E024-01..05 (rerun E024-06 identical), the Data-v1 rule unchanged:
+# max(50th largest of 5,000 null t_IC, 2.326); the floor does not bind. Pinned BEFORE any real H022 evaluation (none
+# is authorised); the Data-v1 value 2.390976216956 is DATA_V1_ONLY / UNUSED_ON_V2.
+C_IC_V2 = 2.3798883324991866
 NULL_RESULT = "research/phase7/cp6/P7_CP6_null.json"
-NULL_RESULT_SHA256 = None
+NULL_RESULT_SHA256 = "371c7e22ecea0e887fe6211c01d49f77594e951775749af1d28f7a50014edee8"
+NULL_WORLDS = "research/phase7/cp6/P7_CP6_null_worlds.json.gz"
 
 
 def manifest_ok() -> bool:

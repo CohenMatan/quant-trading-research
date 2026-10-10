@@ -252,5 +252,24 @@ def test_null_configs_cover_exactly_seeds_1_to_5000_against_the_pinned_panel():
     assert seeds == list(p7pred_v2.NULL_SEEDS)
     c = json.loads((ROOT / f"experiments/{p7pred_v2.RERUN}/config.json").read_text())
     experiment.validate(c)
-    assert tuple(c["params"]["seeds"]) == p7pred_v2.RERUN_SEEDS and p7pred_v2.C_IC_V2 is None
+    assert tuple(c["params"]["seeds"]) == p7pred_v2.RERUN_SEEDS
     assert not (ROOT / "experiments/E024-07").exists()                    # no real-evaluation config exists
+
+
+def test_data_v2_c_ic_is_pinned_from_the_5000_null_worlds():
+    """The pinned Data-v2 c_IC is recomputed from the committed per-world null statistics with the frozen rule; the
+    null result file is the pinned one; the Data-v1 value is a different, unused record."""
+    import gzip
+    path = ROOT / p7pred_v2.NULL_RESULT
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == p7pred_v2.NULL_RESULT_SHA256
+    res = json.loads(path.read_text())
+    ws = json.loads(gzip.open(ROOT / p7pred_v2.NULL_WORLDS).read())
+    assert hashlib.sha256((ROOT / p7pred_v2.NULL_WORLDS).read_bytes()).hexdigest() == res["worlds_file_sha256"]
+    assert [w["seed"] for w in ws] == list(p7pred_v2.NULL_SEEDS)
+    assert R.critical_value(ws) == p7pred_v2.C_IC_V2 == res["c_ic"]
+    assert sorted((w["t_ic"] for w in ws), reverse=True)[49] == p7pred_v2.C_IC_V2 > R.CRIT_FLOOR
+    assert p7pred_v2.C_IC_V2 != p7pred.C_IC and p7pred.C_IC_STATUS == "DATA_V1_ONLY / UNUSED_ON_V2"
+    integ = res["integrity"]
+    assert integ["completed"] == 5000 and integ["seeds_exact"] and integ["panel_equals_pinned"]
+    assert integ["rerun_identical"] and integ["zero_orders"] and integ["pit_audit_zero"]
+    assert res["false_promotion"] == R.false_promotion(ws, p7pred_v2.C_IC_V2)
