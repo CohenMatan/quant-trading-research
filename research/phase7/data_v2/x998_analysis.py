@@ -56,6 +56,8 @@ def pct(a, b):
 def strip(s):
     out = {k: v for k, v in s.items() if k not in TIMING}
     out["repair"] = {k: v for k, v in s["repair"].items() if k != "repair_s"}
+    if "panel" in out:                      # panel build time is a timing field (E998-02: 90.7 s vs 86.5 s)
+        out["panel"] = {k: v for k, v in s["panel"].items() if k != "build_s"}
     return out
 
 
@@ -147,7 +149,15 @@ def truncation(a, c):
                 review_eligibility_equal=sum(da["review_eligibility"][t] == dc["review_eligibility"][t] for t in common),
                 ledger_to_2013_equal=da["ledger_to_2013"] == dc["ledger_to_2013"],
                 ledger_years_equal={y: da["ledger_by_year"].get(y) == dc["ledger_by_year"][y] for y in dc["ledger_by_year"]},
-                universe_years_equal={y: da["universe_by_year"].get(y) == dc["universe_by_year"][y] for y in dc["universe_by_year"]},
+                # (fix after E998-03, documented in P7-CP5f: a run ending 2013-12-31 never reaches its December review,
+                # stamped 2014-01-01, so a whole-year digest is comparable only for years whose review sets are equal;
+                # the partial year is covered review by review by review_eligibility / review_scores above)
+                universe_years_equal={y: da["universe_by_year"].get(y) == dc["universe_by_year"][y] for y in dc["universe_by_year"]
+                                      if sorted(t for t in da["review_scores"] if t[:4] == y) ==
+                                      sorted(t for t in dc["review_scores"] if t[:4] == y)},
+                universe_years_partial=sorted(y for y in dc["universe_by_year"]
+                                              if sorted(t for t in da["review_scores"] if t[:4] == y) !=
+                                              sorted(t for t in dc["review_scores"] if t[:4] == y)),
                 per_review_equal=sum(x == y for x, y in zip(a["per_review"], c["per_review"])), per_review_compared=len(c["per_review"]))
 
 
@@ -163,11 +173,15 @@ def gates(out, st, rec):
     g["C_market_cap_repair"] = (c["MC2_fresh_sec_mcap_pct"] >= TH["MC2"] and c["MC4_agreement_away_pct"] >= TH["MC4"]
                                 and c["MC5_disagreement_near_pct"] <= TH["MC5_dis"] and c["MC5_abs_rel_median"] <= TH["MC5_rel"]
                                 and c["MC6_recovered_pct"] >= TH["MC6"] and c["MC6_recovered_later_disappearing_pct"] >= TH["MC6"])
+    # (relabelled after E998-01, documented in P7-CP5f: the owner's gate D is "SEC identity extension implemented
+    # exactly"; the D190 item-7 identity sanity check is a survivorship STOP condition and is evaluated under gate K with
+    # the SAME pre-set criteria)
     ids = s1["identity_sanity"]
-    g["D_identity"] = (all(p["future_identity_row"] == 0 for p in pa.values())
-                       and ids["implied_scored_population_bias_points"] is not None
-                       and abs(ids["implied_scored_population_bias_points"]) <= TH["identity_bias_points"]
-                       and all((v["excluded_share"] or 0) <= TH["identity_excluded_share_year"] for v in ids["by_year"].values()))
+    g["D_identity"] = all(p["future_identity_row"] == 0 for p in pa.values())
+    g["K_identity_sanity_not_material"] = (ids["implied_scored_population_bias_points"] is not None
+                                           and abs(ids["implied_scored_population_bias_points"]) <= TH["identity_bias_points"]
+                                           and all((v["excluded_share"] or 0) <= TH["identity_excluded_share_year"]
+                                                   for v in ids["by_year"].values()))
     g["E_restatement_guard"] = all(p["fed_after_guard_trigger"] == 0 for p in pa.values()) and s1["restatement_guard"]["blocked"] >= 0
     g["F_pit_zero"] = all(all(p[k] == 0 for k in AUDIT_ZERO) for p in pa.values())
     g["G_splits"] = c["MC3_split_continuous_pct"] >= TH["MC3"]
@@ -183,7 +197,10 @@ def gates(out, st, rec):
     g["J_2011_2012_operational"] = (len(p11) == 24 and min(r[isc] for r in p11) >= TH["min_scored_2011_2012"]
                                     and min(r[isc] for r in st["E998-01"]["per_review"]) >= TH["min_scored_any"])
     gap = c["MC7_gap_points"]
-    g["K_survivorship_bounds"] = (abs(gap["all"]) <= TH["MC7_all"] and all(abs(v) <= TH["MC7_year"] for v in gap.values()))
+    g["K_mc7_survivor_gap_within_bounds"] = (abs(gap["all"]) <= TH["MC7_all"] and all(abs(v) <= TH["MC7_year"] for v in gap.values()))
+    g["K_residuals_same_range"] = residuals(s1)["same_range"]
+    g["K_survivorship_bounds"] = (g["K_mc7_survivor_gap_within_bounds"] and g["K_identity_sanity_not_material"]
+                                  and g["K_residuals_same_range"])
     g["L_compliance"] = all(r and r["status"] == "completed" for r in rec.values())
     mech = s1["mechanics"]["rule_checks"]
     g["M_export"] = (all(isinstance(out.get(e), dict) for e in RUNS) and all(v == 0 for k, v in mech.items() if k != "max_holdings_le_K")

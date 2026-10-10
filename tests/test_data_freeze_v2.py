@@ -53,3 +53,12 @@ def test_manifest_records_score_reference_runs_and_gates():
     assert set(m["runs"]) == set(datafreeze_v2.RUNS)
     assert all(r["status"] == "completed" and r["lean_version"] for r in m["runs"].values())
     assert m["freeze_gates"]["all"] is True
+
+
+@pytest.mark.skipif(FROZEN, reason="frozen: the pinned-manifest tests apply")
+def test_candidate_manifest_is_recorded_and_not_pinned():
+    m = json.loads((config.REPO_ROOT / datafreeze_v2.MANIFEST).read_text())
+    assert m["status"].startswith("CANDIDATE - NOT FROZEN") and m["freeze_gates"]["all"] is False
+    assert m["reference"]["table_sha256"] == json.loads(
+        (config.REPO_ROOT / "research/phase7/data_v2/data_v2_reference.json").read_text())["table_sha256"]
+    assert set(m["runs"]) == set(datafreeze_v2.RUNS) and all(r["lean_version"] for r in m["runs"].values())

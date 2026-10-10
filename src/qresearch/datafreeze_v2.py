@@ -21,6 +21,8 @@ from . import config
 VERSION = "v2"
 MANIFEST = "research/phase7/data_v2/data_freeze_v2.json"
 MANIFEST_SHA256 = None                     # set when the freeze is committed (only if gates A-P all pass)
+# P7-CP5f (D191): gate K failed (identity sanity check, pre-set 3%-a-year exclusion limit), so the manifest is written as an
+# unpinned CANDIDATE. Freezing needs an owner decision; nothing in it may change meanwhile without a new candidate.
 
 RUNTIME = ("src/qresearch/lean/qr_v2.py", "src/qresearch/lean/qr_harness.py", "src/qresearch/lean/qr_indicators.py",
            "src/qresearch/lean/qr_fundamentals.py", "src/qresearch/lean/qr_industry.py",
@@ -102,7 +104,10 @@ def build() -> dict:
     ref = json.loads((config.REPO_ROOT / "research/phase7/data_v2/data_v2_reference.json").read_text())
     comp = ref["components"]
     summ = json.loads((config.REPO_ROOT / "research/phase7/data_v2/x998_summary.json").read_text())
-    return {"version": VERSION, "files": fs, "combined_sha256": combined, "rules": RULES,
+    gates = summ.get("freeze_gates") or {}
+    status = "FROZEN" if MANIFEST_SHA256 is not None and gates.get("all") else \
+        "CANDIDATE - NOT FROZEN (failed: " + ", ".join(k for k, v in sorted(gates.items()) if v is False and k != "all") + ")"
+    return {"version": VERSION, "status": status, "files": fs, "combined_sha256": combined, "rules": RULES,
             "score_v1": dict(spec_sha256=p7score.SPEC_SHA256, code_sha256=p7score.CODE_SHA256,
                              predictive_spec_sha256=p7pred.SPEC_SHA256),
             "reference": dict(table_sha256=ref["table_sha256"], loader_version=ref["loader_version"],
