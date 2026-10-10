@@ -19,7 +19,7 @@ HOST = "strategies/S024_h022_data_v2/main.py"           # X999 = byte copy (the 
 CANARY_HOST = "strategies/X999_h022_v2_canary/main.py"
 FROZEN_HOST = "strategies/X998_data_v2_export/main.py"  # uploaded byte-identical as qr_x998.py
 E998_REFERENCE = "E998-01"                              # the frozen Data v2 export the canary's score side must equal
-CANARY = "E999-01"
+CANARY = "E999-02"                                      # 25/25 (E999-01: 24/25, PIT counters not exported)
 NULL_SEEDS = tuple(range(1, 5001))
 NULL_BATCHES = tuple((1 + 1000 * i, 1000 * (i + 1)) for i in range(5))      # E024-01 .. E024-05
 NULL_RUNS = ("E024-01", "E024-02", "E024-03", "E024-04", "E024-05")
@@ -27,8 +27,8 @@ RERUN_SEEDS = (1, 25)                                  # pre-specified determini
 RERUN = "E024-06"
 
 # set after the canary passed (P7-CP6), before any null world: the prepared H022 panel on frozen Data v2
-PANEL_SHA256 = None
-CANARY_COMMIT = None
+PANEL_SHA256 = "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0"   # E999-02 (= E999-01)
+CANARY_COMMIT = "14ef5b9c7dc207edf7e25066f9ac1496609d581b"
 
 # set after the 5,000 null worlds, committed before any real evaluation (none is authorised)
 C_IC_V2 = None

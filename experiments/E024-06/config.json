@@ -1,0 +1,56 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H022",
+ "strategy_id": "S024",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S024_h022_data_v2",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P7",
+ "cycle": "P7H022",
+ "experiment_id": "E024-06",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "null",
+  "seeds": [
+   1,
+   25
+  ],
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+  "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5"
+ },
+ "description": "P7-CP6 (owner D194): H022 / Data v2 independent determinism rerun of the pre-specified seeds 1-25 (frozen identity-tethered within-date permutation of the score side, one stratum, no self-matches; the complete procedure per world: IC series, t_IC, 80+, quintiles, halves, blocks; P7_predictive_spec.md C9) on the frozen Data v2 panel (refused if the prepared panel differs from the pinned canary digest). Per-world null statistics only; no real-assignment statistic. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H022 / Data v2 canary + 5,000 null worlds + new c_IC only (owner 2026-10-10, D194)"
+}

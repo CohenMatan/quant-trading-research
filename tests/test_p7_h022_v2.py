@@ -236,3 +236,21 @@ def test_pins_configs_and_runner_wiring():
     u["universe"]["sec_corrections"] = True
     with pytest.raises(experiment.ConfigError):
         experiment.validate(u)
+
+
+def test_null_configs_cover_exactly_seeds_1_to_5000_against_the_pinned_panel():
+    from qresearch import experiment
+    assert p7pred_v2.PANEL_SHA256 and len(p7pred_v2.PANEL_SHA256) == 64
+    seeds = []
+    for exp, (a, b) in zip(p7pred_v2.NULL_RUNS, p7pred_v2.NULL_BATCHES):
+        c = json.loads((ROOT / f"experiments/{exp}/config.json").read_text())
+        experiment.validate(c)
+        p = c["params"]
+        assert (c["strategy_id"], c["kind"], p["mode"], tuple(p["seeds"])) == ("S024", "infrastructure", "null", (a, b))
+        assert p["panel_sha256"] == p7pred_v2.PANEL_SHA256 and c["owner_approval_required"]
+        seeds += list(range(a, b + 1))
+    assert seeds == list(p7pred_v2.NULL_SEEDS)
+    c = json.loads((ROOT / f"experiments/{p7pred_v2.RERUN}/config.json").read_text())
+    experiment.validate(c)
+    assert tuple(c["params"]["seeds"]) == p7pred_v2.RERUN_SEEDS and p7pred_v2.C_IC_V2 is None
+    assert not (ROOT / "experiments/E024-07").exists()                    # no real-evaluation config exists

@@ -1,0 +1,220 @@
+{
+ "checks": {
+  "1 no real IC / gate / null statistic of real responses computed or exported": true,
+  "10 eligibility sets = frozen E998-01 (all 84 reviews)": true,
+  "11 H022 population per decision = E998-01 candidates (no hard disqualifier)": true,
+  "12 regimes = E998-01": true,
+  "13 sliced technical inputs = full computation": true,
+  "14 response timing (entry after t, exit within window)": true,
+  "15 every response independently recomputed (all horizons)": true,
+  "16 corporate actions: fresh single-security history agrees": true,
+  "17 response future / past / truncation invariance": true,
+  "18 score truncation / future invariance (whole reviews re-scored)": true,
+  "19 determinism (responses recomputed identically)": true,
+  "2 frozen Data v2 manifest + uploaded files = frozen hashes; Score v1 / qr_p7_pred / host = pins": true,
+  "20 null machinery deterministic, exact permutations, no self-match": true,
+  "21 Newey-West implementation = independent computation": true,
+  "22 full G1-G4 null procedure (synthetic responses), never the identity assignment": true,
+  "23 market cap and momentum present for every population row": true,
+  "24 status counts cover every population row": true,
+  "25 PIT audit all zero": true,
+  "3 H022 spec fingerprint = pinned spec": true,
+  "4 Data v2 reference table loaded (hash-checked by its loader)": true,
+  "5 LEAN build recorded; run completed with 0 orders": true,
+  "6 calendar: 84 reviews / weekly checks match the session calendar": true,
+  "7 decisions 2011-01-31 .. 2017-11-30 (83), last response end 2017-12-29": true,
+  "8 no price after 2017-12-29": true,
+  "9 Score v1 tables = frozen E998-01 (all 84 reviews)": true
+ },
+ "coverage_repaired_rows": 5454,
+ "digests": {
+  "availability_sha256": "c247b9875ee26f1d20c96937cc8ce08e275d6eb64ed892f5b5dbf32a38359f28",
+  "calendar_sha256": "0c9deb8e389b096fbcac4c50e43135508c939a30062c42d474c7422fa91717aa",
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+  "response_side_sha256": "a8eb7919bf58b91fbeadf45dd139b914fc5bf954b09d0b80f2b1017a01f722f0",
+  "score_side_sha256": "a0c12645fac7018c66cfc40bc1d17185197eeaad63d502c36165c83db73c32ee",
+  "sids_sha256": "df81a5fd9ddff23e9dc98cde192e4ec6ed9b5dccab552a45315fc796fda6969d"
+ },
+ "event_classes": {
+  "dividend": 7490,
+  "plain": 27149,
+  "split": 121,
+  "truncated": 85
+ },
+ "experiment": "E999-02",
+ "fresh": {
+  "agree_1e6": 120,
+  "agree_1e9": 120,
+  "by_class": {
+   "dividend": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 4.440892098500626e-16
+   },
+   "plain": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 2.220446049250313e-16
+   },
+   "split": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 4.440892098500626e-16
+   },
+   "truncated": {
+    "agree_1e9": 30,
+    "n": 30,
+    "worst_rel": 0.0
+   }
+  },
+  "checked": 120,
+  "examples": [],
+  "status_agree": 120,
+  "worst_rel": 4.440892098500626e-16
+ },
+ "gate_procedure": {
+  "complete": 10,
+  "fields_finite": 10,
+  "gates_evaluated": 10,
+  "identity_dates": 0,
+  "worlds": 10
+ },
+ "hi80": {
+  "mean": 7.096385542168675,
+  "months_without": 1
+ },
+ "invariance": {
+  "checked": 80,
+  "future_changed": 0,
+  "past_changed": 0,
+  "truncation_changed": 0
+ },
+ "lean_version": "v2.5.0.0.18178",
+ "newey_west": {
+  "max_abs_diff": 4.440892098500626e-16,
+  "series": 20
+ },
+ "null_machinery": {
+  "distinct_worlds": 20,
+  "repeat_identical": true,
+  "synthetic_responses": true,
+  "tether": {
+   "dates": 83,
+   "kept": 28496,
+   "not_permutation": 0,
+   "receivers": 34593,
+   "self_matches": 0
+  },
+  "world_s": 0.0556,
+  "world_s_1000": 55.6
+ },
+ "passed": 25,
+ "pit_audit": {
+  "baseline_pit_violations": 0,
+  "baseline_used_despite_reject": 0,
+  "fed_after_guard_trigger": 0,
+  "fed_before_first_seen": 0,
+  "fed_before_sec_filing": 0,
+  "future_identity_row": 0,
+  "record_older_than_200d": 0,
+  "repaired_below_2B": 0,
+  "repaired_with_vendor_cap": 0,
+  "share_filing_not_yet_public": 0,
+  "stale_share_count_used": 0
+ },
+ "population": {
+  "max": 585,
+  "mean": 420.03614457831327,
+  "median": 434,
+  "min": 163
+ },
+ "qc_backtest_id": "cf7c33d55b237ba5fdf6d3b59c5679b9",
+ "runtime": {
+  "build_s": 105.7,
+  "canary_s": 91.2,
+  "max_rss_mb": 5922.6,
+  "null_world_s_1000": 55.6,
+  "responses_s": 2.4,
+  "score_s": 39.4,
+  "states_s": 9.6,
+  "wall_s": 704.8
+ },
+ "score_invariance": {
+  "future_mismatch": 0,
+  "regime_mismatch": 0,
+  "reviews": [
+   "2016-05-31",
+   "2017-01-31",
+   "2017-05-31",
+   "2012-04-30",
+   "2012-08-31",
+   "2011-06-30"
+  ],
+  "rows": 6287,
+  "truncated_mismatch": 0
+ },
+ "status": {
+  "no_bar_after_t": 14,
+  "ok": 34755,
+  "truncated": 90,
+  "unverified_split": 4
+ },
+ "timing": {
+  "entry_not_after_t": 0,
+  "entry_on_or_before_t_day": 0,
+  "exit_outside": 0,
+  "no_bar": 42,
+  "response_end_after_last_session": 0,
+  "rows": 102913,
+  "status_mismatch": 0,
+  "truncated": 558,
+  "unverified": 24,
+  "value_mismatch": 0
+ },
+ "total": 25,
+ "uploaded": {
+  "build_commit": "14ef5b9c7dc207edf7e25066f9ac1496609d581b",
+  "code_sha256": "0224d9aa5ae3275eb679148ed7ed9b5023fcccdf01219d44c5057f9fef2b1b0a",
+  "files": 37,
+  "frozen_files_equal": {
+   "qr_data_v2.py": true,
+   "qr_data_v2_00.py": true,
+   "qr_data_v2_01.py": true,
+   "qr_data_v2_02.py": true,
+   "qr_data_v2_03.py": true,
+   "qr_data_v2_04.py": true,
+   "qr_data_v2_05.py": true,
+   "qr_data_v2_06.py": true,
+   "qr_data_v2_07.py": true,
+   "qr_data_v2_08.py": true,
+   "qr_data_v2_09.py": true,
+   "qr_data_v2_10.py": true,
+   "qr_data_v2_11.py": true,
+   "qr_data_v2_12.py": true,
+   "qr_data_v2_13.py": true,
+   "qr_data_v2_14.py": true,
+   "qr_fundamentals.py": true,
+   "qr_harness.py": true,
+   "qr_indicators.py": true,
+   "qr_industry.py": true,
+   "qr_p7.py": true,
+   "qr_p7_export.py": true,
+   "qr_p7_mech.py": true,
+   "qr_p7_pred.py": true,
+   "qr_p7_score.py": true,
+   "qr_sec_corrections.py": true,
+   "qr_v2.py": true,
+   "qr_x998.py": true,
+   "qr_xs.py": true,
+   "qr_xs_diag.py": true,
+   "qr_xs_panel.py": true
+  },
+  "host_equal": true,
+  "manifest_sha256": "cf833f6fd4b8c4f124e9416b3d0722f61da93b97bdb22b1664aad13f969177fb",
+  "qr_p7_pred_equal": true,
+  "score_v1_files_equal": {
+   "qr_p7.py": true,
+   "qr_p7_score.py": true
+  }
+ }
+}
