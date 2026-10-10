@@ -76,7 +76,7 @@ CIK = {"S07": "c7", "S08": "c7"}
 
 
 def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X993_p7_score_mechanics_export/main.py",
-          cls="P7ScoreExport", params=None, end="2017-12-31", mutate=None, sic_rows=None):
+          cls="P7ScoreExport", params=None, end="2017-12-31", mutate=None, sic_rows=None, sec_off=False):
     ai = types.ModuleType("AlgorithmImports")
     ai.Resolution = types.SimpleNamespace(DAILY="daily")
     ai.DataNormalizationMode = types.SimpleNamespace(RAW="raw", SCALED_RAW="scaled", ADJUSTED="adjusted")
@@ -130,6 +130,8 @@ def _host(monkeypatch, M, excluded_2010=("S10",), gap=None, path="strategies/X99
             self.qr_sec = types.SimpleNamespace(feed=lambda *a, **k: None, has=lambda sid: False,
                                                 sic_history=sic_history, market_cap=lambda *a: None)
             self.qr_sic = types.SimpleNamespace(sic_on=sic_on)
+            if sec_off:                          # universe.sec_corrections off: the host installs its own layer
+                self.qr_sec = self.qr_sic = None
             self.qr_timing_holds = self.qr_quarantine_releases = self.qr_restatement_blocks = {}
             self.qr_field_releases = {}
             self._qr_u = {"min_market_cap": 2e9, "min_price": 5.0, "min_avg_dollar_volume": 5e6, "adv_days": 20}

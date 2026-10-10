@@ -126,7 +126,7 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         rel = "src/qresearch/lean/qr_p7.py"
         files["qr_p7.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         # P7-CP3 (D171): the frozen score v1 (hash-pinned in qresearch.p7score) and its export helpers
-        for n in ("qr_p7_score.py", "qr_p7_export.py", "qr_p7_pred.py"):
+        for n in ("qr_p7_score.py", "qr_p7_export.py", "qr_p7_pred.py", "qr_p7_mech.py"):
             if n[:-3] in files["main.py"]:
                 rel = f"src/qresearch/lean/{n}"
                 files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
@@ -145,6 +145,20 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         files["qr_h021.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_xs_panel.py" not in files:
             raise experiment.ConfigError("H021-A needs qr_xs_panel.py")
+    if "qr_data_v2" in files["main.py"]:
+        # Data Infrastructure v2 (D190): the consolidated packed reference table + the pure v2 layer
+        lean = "src/qresearch/lean"
+        if commit:
+            names = [p for p in gitutil.list_files(commit, lean) if Path(p).name.startswith("qr_data_v2") and p.endswith(".py")]
+            for p in names:
+                files[Path(p).name] = gitutil.show_file(commit, p)
+        else:
+            for p in sorted((config.REPO_ROOT / lean).glob("qr_data_v2*.py")):
+                files[p.name] = p.read_text(encoding="utf-8")
+        rel = f"{lean}/qr_v2.py"
+        files["qr_v2.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_data_v2.py" not in files:
+            raise experiment.ConfigError("Data v2 needs the packed table src/qresearch/lean/qr_data_v2*.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 

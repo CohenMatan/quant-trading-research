@@ -273,8 +273,23 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
             raise ConfigError("X997 is the P7-CP5e infrastructure run (identity extended / v2) on the default build, "
                               "2011-01-03 .. 2017-12-31 (warm-up 2008-07-01), data-v1 universe filters")
+    if cfg["strategy_id"] == "X998":
+        # P7-CP5f (owner D190): Data Infrastructure v2 score / mechanics export; infrastructure only, default build
+        # (recorded); the v2 host installs its own SEC layer (universe.sec_corrections off); 2011-01-03 .. 2017-12-31
+        # (or 2013-12-31 for the truncation test), warm-up 2008-07-01; no 2018-2021, no Holdout, no returns
+        u = cfg["universe"]
+        mode = cfg.get("params", {}).get("mode")
+        if (kind != "infrastructure" or cfg["start"] != "2011-01-03" or cfg.get("warmup_start") != "2008-07-01"
+                or cfg["end"] not in ("2013-12-31", "2017-12-31") or u.get("sec_corrections")
+                or float(u.get("min_market_cap", 0)) != 2e9 or float(u.get("min_price", 0)) != 5.0
+                or float(u.get("min_avg_dollar_volume", 0)) != 5e6 or int(u.get("adv_days", 0)) != 20
+                or mode not in ("export", "power") or (mode == "power" and cfg["end"] != "2017-12-31")
+                or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("X998 is the Data v2 infrastructure export (mode export / power) on the default build, "
+                              "2011-01-03 .. 2017-12-31 (or 2013-12-31), warm-up 2008-07-01, data-v1 universe filters, "
+                              "universe.sec_corrections off")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
