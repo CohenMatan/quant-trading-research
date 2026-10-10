@@ -1,0 +1,342 @@
+{
+ "experiment_id": "E996-02",
+ "harness_messages": [
+  "QRP5D|0|{\"baseline\": {\"cik_reject\": 0, \"life_reject\": 0, \"pit_violations\": 0, \"store_baseline\": 19715}, \"calendar_check\": {\"expected\": 36, \"match\": false, \"reviews\": 35}, \"checks\": {\"censored\": 3876, \"fed\": 72643, \"m2_delayed\": 0, \"m2_not_fed\": 0, \"m2_revision_unfed\": 0, \"month_ends\": 47, \"no_period_end\": 250600, \"pe_after_seen\": 0, \"pe_regress\": 938, \"quarantined_seen\": 0, \"reports_new\": 72439, \"revision_from_missing\": 4, \"revision_to_missing\": 0, \"revisions\": 204, \"sec_fed\": 4148, \"selections\": 1386, \"store_sids_max\": 4238, \"unmapped_cik\": 43912, \"unmapped_period\": 6534, \"weekly_scans\": 288}, \"digests\": {\"eligible_by_year\": {\"2008\": \"fa59440f03114255197f0aeece1827261dbd841a76328df5b3da360d6203916e\", \"2009\": \"91938baf4ced2a6828e059d8072e321927d96f6ed11f15995afb67d8194a889a\", \"2010\": \"7dd9012f0fc4a01235926beb5833973ca5c7c8f96a3b63fdb6ba0bd779d62f92\", \"2011\": \"89ce41a056cbb6553175c4725efb0503485269ce27ef389c7a1409b9972ea598\", \"2012\": \"1c2859cf55a435eb8cb805c310608dbb3bda136d1213b5928e938ff0473fd405\", \"2013\": \"52dc8b8473c61d47a1123471abbd7b7f24c643b85bb0512be42e329452367c97\"}, \"eligible_to_2013\": \"25c570a9dd98ce30b116bd8df9fe7141add31b4cd8dad88fdca0f2d29bbd19c7\", \"ledger_by_year\": {\"2008\": \"c8634ced370644bec48c2a4b056f3c45a3d2395043ee7cdfe21496b625f56cae\", \"2009\": \"468ada85e4a934cadc1ef9da7cd557c6c07b5a0de642e166d504ab8ed0c80b3d\", \"2010\": \"e41d5d5612a50eb1b55e6f138f5e6cb9de925e1e3a030707ccc51a43a77ba06d\", \"2011\": \"8e49723442fc8463df9e23ecfe098025841d6609a04cc7eb8d5cc2049192d9f2\", \"2012\": \"4ab7879a024011419e51df4c1d25063c186d249882bd7909226b05f05993a9d4\", \"2013\": \"efba905ec6002e7d50429c641d5d2342c8501c54bbfa4c218e678eeeeb004fc6\"}, \"ledger_to_2013\": \"ce5d95f3c8cd354c3038b1cb4788627b277e5047f1fc45c4c699a35437c64745\", \"review_scores\": {\"2011-01-31\": \"b47ff1dd5a627a9438d05d4999cba6996c94485bb1cc4c6e90626349f9920af0\", \"2011-02-28\": \"bf1f22861aebf912170ed0e3ac33f42eb6a4d0a23f2b3a89a1538a330eb726eb\", \"2011-03-31\": \"b631a7fc3f71e15d054676cbaaa905e6004839fafd931e0eca870d3895ed0211\", \"2011-04-29\": \"f477fc389305bdba15b9ca81f5513fb96b3196bc3101a4033813c0d119ae381b\", \"2011-05-31\": \"74a7ae370db8236d438421687380e101461bcbe6fc73521eaeb2b99c9ce1a9ec\", \"2011-06-30\": \"30e4570f174ea9682196ec939f290d8d65b6692ea993defd86af2805ee9f659d\", \"2011-07-29\": \"e0d245562e01e0b0dc1cdb7ca24f7d586503977667abe679731c9962087bba15\", \"2011-08-31\": \"f013b72d963ada15d6dd1635020a65558aa9e39f45a50a729bafc98efe4539e4\", \"2011-09-30\": \"da0d346705911238afd236efa585b89ba4377f842feba16ccd0056f61914d94f\", \"2011-10-31\": \"5d8581d57daca0c41f71d402a908f372134b71478b6ee40b002b6291798842ae\", \"2011-11-30\": \"6a3862e1d06c1cbe124eb0e63b67e24e74e9d35dfb7c8bbef483c8121cbb2f7f\", \"2011-12-30\": \"c2bbea27f523e3fd67eba28b86ef04e1be8af1d1d085f6e6951586c9b3d9c885\", \"2012-01-31\": \"831898410bcc6fd7bdc6760c023cd3a34235a150996f24453000ae68a1abd5c9\", \"2012-02-29\": \"f929c011957faec07988020a6328ddcf3520f02cdd9154f6efa6eb2f01068dbf\", \"2012-03-30\": \"41c5973619f7be3abaa815d87e06a578c2c300c41e2f4023db4a68244f11bfd1\", \"2012-04-30\": \"b5871c1b4cd9597e650ec0ecbebc23cf65d5ebdc5f49fe81dffb0dd4dfae33c7\", \"2012-05-31\": \"f90a1e6b6f081d7f6cd4174632199fe0a9d136e6be436349d019cf9914183d1c\", \"2012-06-29\": \"ce853d77397825cc1a55c41c239ecd6e6c1c46c9e10f46e133f7516557dc0cbb\", \"2012-07-31\": \"45557b047a07cb6451308e427266803d45acd0fe3c9b56119438022437a25d58\", \"2012-08-31\": \"7593ad0c75e828e8bc78736c3b3d343f6ae170c80ba7ddda7b105ac247b50a76\", \"2012-09-28\": \"a6ba36d961c4b2b15bf5e81c6995b04c0c696c1d57cd393d9437898a2be8240f\", \"2012-10-31\": \"d1b9035529c25f35c4009cb6cbd071cb644a7c2b30bb53dc92606a1348faeb47\", \"2012-11-30\": \"1beb7095f9b13e1060e4902b16950f325da877d45885cfd5c42251642c79fbe2\", \"2012-12-31\": \"5a5c53c1c22cc3fa487a51ba6fffe354a95caa19762fa32844a08d2912426f84\", \"2013-01-31\": \"c1af19930655d3d7daa7a37dd8fb23c854602de00096964c52858bef8a7960c1\", \"2013-02-28\": \"984904ce9688f9f5b89c5108c13d1424f89cd8313270f76d26a9a0526420ca39\", \"2013-03-28\": \"29d98e731f714106ffde8fe0708093eae7766453d1e1cc89a0f8e7d8d2de924f\", \"2013-04-30\": \"f92154e634bbaf0d96113a81b638afb8bc3a948dcf1e325295ebd58520afda4d\", \"2013-05-31\": \"0f231eb3da1958f8c8ef2de4b86992d19a2e195d0d4497173cecb912ef4dd85f\", \"2013-06-28\": \"5868502641bf91f3e09d7e9a1660a661409472ea9b91fae11a460d093a2d2132\", \"2013-07-31\": \"1066c23a9d7d99fcc17081ee6251cdf0d7ceda95b918a721b102e209b0094992\", \"2013-08-30\": \"05c57966fe84f906589a788ee6517443558fe70373d8375801f9e0e54e8ab308\", \"2013-09-30\": \"7c6e6cea6e68b391a6055b7fe437aef500bd3e4edc79378181e537536482ae6b\", \"2013-10-31\": \"d6cfa7b0ec36fd4b540c363af2adbebf16348fd9df503f2e87fba255f45340d6\", \"2013-11-29\": \"8ec0a91646696e27a80144e4ea5b06bb1d0c3f44bf03bd0fda826f292bcaf6ca\"}}, \"end\": \"2013-12-31\", \"field_order\": [\"revenue_ttm4q\", \"gross_profit_ttm4q\", \"net_income_ttm4q\", \"operating_cash_flow_ttm4q\", \"total_assets\", \"stockholders_equity\", \"revenue_baseline_valid\"], \"layer_corr\": {\"F_S\": -0.0577, \"T_F\": -0.0027, \"T_S\": 0.1856}, \"layers\": {\"F\": {\"hist5\": [1128, 1402, 2426, 1834, 1796, 1529, 916, 773, 168, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 45.0, \"mean\": 17.935, \"median\": 17.0, \"min\": 0.0, \"n\": 12021, \"p10\": 5.0, \"p90\": 32.0, \"sd\": 10.393}}, \"S\": {\"hist5\": [1596, 8986, 0, 1439, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 15.0, \"mean\": 7.776, \"median\": 8.0, \"min\": 0.0, \"n\": 12021, \"p10\": 0.0, \"p90\": 15.0, \"sd\": 3.783}}, \"T\": {\"hist5\": [2019, 1019, 1105, 1544, 1577, 1800, 2147, 643, 167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 40.0, \"mean\": 18.61, \"median\": 20.0, \"min\": 0.0, \"n\": 12021, \"p10\": 0.0, \"p90\": 32.0, \"sd\": 11.468}}}, \"ledger_reports\": 72439, \"ledger_sids\": 3876, \"max_rss_mb\": 4605.5, \"mcap_split_check\": {\"mcap_jumps_with_price\": 2, \"mcap_pit_continuous\": 91, \"no_window\": 128, \"price_adjusted\": 1, \"price_raw_jump\": 92}, \"mode\": \"M1\", \"panel\": {\"build_s\": 46.0, \"duplicate_bars\": 0, \"last_session\": \"2013-12-30\", \"late_rows\": 0, \"securities\": 1048, \"sessions\": 1761}, \"per_review\": [[\"2011-01-31\", 736, 539, 232, 304, 268, 12, 5, 1, 0, 927, 713, \"STRONG\"], [\"2011-02-28\", 747, 543, 224, 317, 286, 7, 4, 0, 0, 950, 725, \"STRONG\"], [\"2011-03-31\", 751, 547, 220, 326, 297, 10, 2, 0, 0, 952, 727, \"STRONG\"], [\"2011-04-29\", 760, 556, 227, 328, 307, 10, 2, 0, 0, 973, 741, \"STRONG\"], [\"2011-05-31\", 767, 568, 239, 329, 301, 9, 1, 0, 0, 983, 748, \"STRONG\"], [\"2011-06-30\", 762, 565, 245, 320, 292, 11, 5, 1, 0, 959, 739, \"STRONG\"], [\"2011-07-29\", 745, 553, 242, 310, 269, 15, 10, 3, 0, 932, 724, \"NORMAL\"], [\"2011-08-31\", 710, 543, 235, 306, 169, 10, 4, 2, 0, 892, 694, \"RISK_OFF\"], [\"2011-09-30\", 673, 513, 220, 291, 134, 8, 4, 2, 2, 834, 658, \"RISK_OFF\"], [\"2011-10-31\", 711, 545, 230, 314, 155, 19, 13, 3, 1, 893, 691, \"WEAK\"], [\"2011-11-30\", 704, 539, 228, 310, 169, 16, 5, 2, 1, 883, 685, \"WEAK\"], [\"2011-12-30\", 714, 548, 237, 309, 175, 13, 5, 2, 1, 891, 697, \"WEAK\"], [\"2012-01-31\", 735, 560, 240, 318, 242, 14, 4, 1, 1, 915, 716, \"NORMAL\"], [\"2012-02-29\", 755, 575, 237, 336, 282, 14, 3, 0, 0, 944, 737, \"STRONG\"], [\"2012-03-30\", 759, 577, 228, 346, 301, 17, 7, 0, 0, 952, 743, \"STRONG\"], [\"2012-04-30\", 761, 580, 232, 345, 293, 10, 6, 0, 0, 952, 744, \"STRONG\"], [\"2012-05-31\", 738, 560, 228, 328, 234, 9, 5, 2, 1, 910, 721, \"STRONG\"], [\"2012-06-29\", 748, 566, 238, 323, 258, 8, 2, 2, 1, 923, 729, \"STRONG\"], [\"2012-07-31\", 730, 558, 233, 321, 272, 7, 2, 1, 0, 904, 714, \"STRONG\"], [\"2012-08-31\", 746, 566, 231, 331, 260, 8, 6, 1, 0, 920, 730, \"STRONG\"], [\"2012-09-28\", 762, 580, 241, 334, 278, 13, 6, 0, 0, 936, 745, \"STRONG\"], [\"2012-10-31\", 756, 573, 237, 330, 261, 8, 5, 0, 0, 926, 737, \"STRONG\"], [\"2012-11-30\", 767, 583, 243, 335, 248, 8, 3, 0, 0, 941, 746, \"STRONG\"], [\"2012-12-31\", 780, 593, 246, 340, 277, 14, 2, 0, 0, 959, 757, \"STRONG\"], [\"2013-01-31\", 803, 608, 252, 348, 312, 7, 1, 0, 0, 986, 778, \"STRONG\"], [\"2013-02-28\", 807, 611, 236, 370, 326, 4, 1, 0, 0, 999, 783, \"STRONG\"], [\"2013-03-28\", 818, 616, 238, 373, 334, 7, 1, 0, 0, 1033, 797, \"STRONG\"], [\"2013-04-30\", 830, 623, 238, 378, 340, 6, 2, 0, 0, 1035, 809, \"STRONG\"], [\"2013-05-31\", 854, 644, 251, 386, 355, 7, 1, 0, 0, 1063, 833, \"STRONG\"], [\"2013-06-28\", 851, 640, 249, 383, 340, 5, 0, 0, 0, 1058, 830, \"STRONG\"], [\"2013-07-31\", 870, 665, 264, 395, 358, 9, 4, 0, 0, 1086, 848, \"STRONG\"], [\"2013-08-30\", 852, 661, 258, 398, 355, 11, 3, 0, 0, 1064, 832, \"STRONG\"], [\"2013-09-30\", 882, 685, 272, 407, 369, 8, 6, 1, 0, 1104, 858, \"STRONG\"], [\"2013-10-31\", 892, 689, 272, 411, 363, 8, 2, 0, 0, 1117, 871, \"STRONG\"], [\"2013-11-29\", 921, 707, 281, 421, 376, 10, 2, 0, 0, 1147, 901, \"STRONG\"]], \"per_review_cols\": [\"review\", \"eligible\", \"nonfin\", \"h2_nonfin\", \"scored\", \"candidates\", \"ge75\", \"ge80\", \"ge85\", \"ge90\", \"old_members\", \"old_still_eligible\", \"regime\"], \"per_year\": {\"2011\": {\"bits\": {\"H1_financial\": 1626, \"H1_no_sic\": 595, \"H2\": 4328, \"H3\": 142, \"H4\": 63, \"H5\": 0, \"H6\": 2002, \"H7\": 124, \"duplicate_class\": 12}, \"candidates\": 2822, \"eligible\": 8780, \"field_present\": [4407, 4150, 4507, 4517, 6368, 6368, 5267], \"ge75\": 140, \"ge80\": 60, \"ge85\": 16, \"ge90\": 5, \"h2_nonfin\": 2779, \"nonfin\": ",
+  "QRP5D|1|6559, \"old_overlap\": 8542, \"old_overlap_h2\": 2741, \"old_overlap_nonfin\": 6422, \"reviews\": 12, \"scored\": 3764}, \"2012\": {\"bits\": {\"H1_financial\": 1738, \"H1_no_sic\": 428, \"H2\": 4387, \"H3\": 163, \"H4\": 69, \"H5\": 0, \"H6\": 1584, \"H7\": 126, \"duplicate_class\": 12}, \"candidates\": 3206, \"eligible\": 9037, \"field_present\": [4963, 4595, 5105, 5113, 6713, 6716, 4591], \"ge75\": 130, \"ge80\": 51, \"ge85\": 7, \"ge90\": 3, \"h2_nonfin\": 2834, \"nonfin\": 6871, \"old_overlap\": 8819, \"old_overlap_h2\": 2781, \"old_overlap_nonfin\": 6725, \"reviews\": 12, \"scored\": 3987}, \"2013\": {\"bits\": {\"H1_financial\": 1855, \"H1_no_sic\": 376, \"H2\": 4505, \"H3\": 194, \"H4\": 108, \"H5\": 0, \"H6\": 771, \"H7\": 114, \"duplicate_class\": 12}, \"candidates\": 3828, \"eligible\": 9380, \"field_present\": [6104, 5704, 6378, 6401, 7100, 7101, 5070], \"ge75\": 82, \"ge80\": 23, \"ge85\": 1, \"ge90\": 0, \"h2_nonfin\": 2811, \"nonfin\": 7149, \"old_overlap\": 9140, \"old_overlap_h2\": 2767, \"old_overlap_nonfin\": 7001, \"reviews\": 11, \"scored\": 4270}}, \"score_s\": 23.4, \"slice_spot_check\": {\"checked\": 70, \"mismatch\": 0}, \"store_stats\": {\"amendments\": 256, \"delayed_until_available\": 0, \"estimated\": 0, \"observed_new\": 76515, \"quarantined\": 0, \"timing_unknown\": 0}, \"synthetic_export_check\": {\"label\": \"SYNTHETIC seeded numbers, no market data\", \"mean_ic\": 0.023004, \"n\": 83, \"t\": 4.2684}, \"timing\": {\"K|2009-2012|1\": 2638, \"K|2009-2012|2-5\": 12, \"K|2009-2012|6-30\": 5, \"K|2009-2012|gt90\": 2, \"K|2009-2012|le0\": 67, \"K|2009|1\": 23, \"K|2009|6-30\": 1, \"K|2010|1\": 415, \"K|2010|2-5\": 1, \"K|2010|6-30\": 1, \"K|2010|le0\": 2, \"K|2011|1\": 945, \"K|2011|2-5\": 2, \"K|2011|6-30\": 1, \"K|2011|gt90\": 2, \"K|2011|le0\": 31, \"K|2012|1\": 1255, \"K|2012|2-5\": 9, \"K|2012|6-30\": 2, \"K|2012|le0\": 34, \"K|2013-2017|1\": 1322, \"K|2013-2017|2-5\": 5, \"K|2013-2017|31-90\": 1, \"K|2013-2017|6-30\": 1, \"K|2013-2017|le0\": 9, \"K|2013|1\": 1322, \"K|2013|2-5\": 5, \"K|2013|31-90\": 1, \"K|2013|6-30\": 1, \"K|2013|le0\": 8, \"K|2014|le0\": 1, \"K|amendment_only\": 70, \"Q|2009-2012|1\": 9562, \"Q|2009-2012|2-5\": 101, \"Q|2009-2012|31-90\": 2, \"Q|2009-2012|6-30\": 11, \"Q|2009-2012|gt90\": 184, \"Q|2009-2012|le0\": 134, \"Q|2009|1\": 583, \"Q|2009|2-5\": 4, \"Q|2009|6-30\": 1, \"Q|2009|le0\": 4, \"Q|2010|1\": 1919, \"Q|2010|2-5\": 3, \"Q|2010|31-90\": 1, \"Q|2010|6-30\": 3, \"Q|2010|gt90\": 153, \"Q|2010|le0\": 48, \"Q|2011|1\": 3290, \"Q|2011|2-5\": 7, \"Q|2011|6-30\": 3, \"Q|2011|gt90\": 28, \"Q|2011|le0\": 49, \"Q|2012|1\": 3770, \"Q|2012|2-5\": 87, \"Q|2012|31-90\": 1, \"Q|2012|6-30\": 4, \"Q|2012|gt90\": 3, \"Q|2012|le0\": 33, \"Q|2013-2017|1\": 4031, \"Q|2013-2017|2-5\": 11, \"Q|2013-2017|6-30\": 7, \"Q|2013-2017|le0\": 12, \"Q|2013|1\": 4031, \"Q|2013|2-5\": 11, \"Q|2013|6-30\": 7, \"Q|2013|le0\": 12, \"Q|amendment_only\": 133, \"early|K|2009-2012|earnings_8k|1\": 11, \"early|K|2009-2012|earnings_8k|2-5\": 5, \"early|K|2009-2012|earnings_8k|6-30\": 43, \"early|K|2009-2012|unexplained|2-5\": 1, \"early|K|2009-2012|unexplained|6-30\": 7, \"early|K|2013-2017|earnings_8k|2-5\": 1, \"early|K|2013-2017|earnings_8k|6-30\": 3, \"early|K|2013-2017|earnings_8k|gt90\": 1, \"early|K|2013-2017|unexplained|2-5\": 3, \"early|K|2013-2017|unexplained|6-30\": 1, \"early|Q|2009-2012|earnings_8k|1\": 16, \"early|Q|2009-2012|earnings_8k|2-5\": 18, \"early|Q|2009-2012|earnings_8k|31-90\": 1, \"early|Q|2009-2012|earnings_8k|6-30\": 84, \"early|Q|2009-2012|unexplained|1\": 4, \"early|Q|2009-2012|unexplained|2-5\": 2, \"early|Q|2009-2012|unexplained|6-30\": 9, \"early|Q|2013-2017|earnings_8k|1\": 2, \"early|Q|2013-2017|earnings_8k|2-5\": 3, \"early|Q|2013-2017|earnings_8k|6-30\": 2, \"early|Q|2013-2017|unexplained|2-5\": 2, \"early|Q|2013-2017|unexplained|6-30\": 3}, \"totals_candidates\": {\"max\": 93.0, \"mean\": 47.302, \"median\": 48.0, \"min\": 0.0, \"n\": 9856, \"p10\": 26.0, \"p90\": 67.0, \"sd\": 15.276}, \"totals_hist5_candidates\": [8, 35, 103, 217, 364, 582, 673, 959, 1223, 1234, 1183, 1103, 765, 648, 407, 218, 110, 16, 8, 0, 0], \"totals_hist5_scored\": [35, 87, 256, 452, 624, 893, 966, 1237, 1447, 1375, 1269, 1145, 792, 667, 419, 220, 113, 16, 8, 0, 0], \"totals_scored\": {\"max\": 93.0, \"mean\": 44.321, \"median\": 45.0, \"min\": 0.0, \"n\": 12021, \"p10\": 22.0, \"p90\": 66.0, \"sd\": 16.272}, \"universe_migration\": {\"2011|both\": 8542, \"2011|new_only|vendor\": 238, \"2011|old_only|mcap_1.5-2B\": 33, \"2011|old_only|mcap_lt_1.5B\": 98, \"2011|old_only|mcap_missing\": 1984, \"2011|old_only|no_fundamentals\": 400, \"2011|old_only|not_common_type\": 12, \"2012|both\": 8819, \"2012|new_only|vendor\": 218, \"2012|old_only|mcap_1.5-2B\": 43, \"2012|old_only|mcap_lt_1.5B\": 101, \"2012|old_only|mcap_missing\": 1829, \"2012|old_only|no_fundamentals\": 378, \"2012|old_only|not_common_type\": 12, \"2013|both\": 9140, \"2013|new_only|vendor\": 240, \"2013|old_only|mcap_1.5-2B\": 60, \"2013|old_only|mcap_lt_1.5B\": 110, \"2013|old_only|mcap_missing\": 1990, \"2013|old_only|no_fundamentals\": 379, \"2013|old_only|not_common_type\": 13}, \"vendor_file_date\": {\"after_sec\": 217, \"before_period_end\": 4059, \"before_sec\": 147, \"eq_sec\": 13694, \"pe_plus_45\": 66, \"seen_minus_fd|1\": 13952, \"seen_minus_fd|2-5\": 96, \"seen_minus_fd|31-90\": 3, \"seen_minus_fd|6-30\": 7}, \"vintage\": {\"new_censored|revenue_q|first\": 6, \"new_censored|revenue_q|first_before_sec\": 2, \"new_censored|revenue_q|neither\": 6, \"new_censored|revenue_q|no_ref\": 4, \"new_censored|revenue_q|restated_pending|first\": 1, \"new_censored|revenue_q|restated_pending|neither\": 4, \"new_censored|total_assets|first\": 16, \"new_censored|total_assets|later_FUTURE\": 1, \"new_censored|total_assets|neither\": 1, \"new_censored|total_assets|restated_pending|later_FUTURE\": 1, \"new|revenue_q|both\": 9, \"new|revenue_q|first\": 12568, \"new|revenue_q|first_before_sec\": 1190, \"new|revenue_q|later_FUTURE\": 38, \"new|revenue_q|later_public\": 16, \"new|revenue_q|neither\": 1185, \"new|revenue_q|no_ref\": 3110, \"new|revenue_q|restated_pending|both\": 9, \"new|revenue_q|restated_pending|first\": 1969, \"new|revenue_q|restated_pending|first_before_sec\": 48, \"new|revenue_q|restated_pending|later_FUTURE\": 38, \"new|revenue_q|restated_pending|neither\": 218, \"new|revenue_q|vendor_missing\": 1, \"new|total_assets|both\": 3, \"new|total_assets|first\": 17487, \"new|total_assets|first_before_sec\": 197, \"new|total_assets|later_FUTURE\": 8, \"new|total_assets|later_public\": 2, \"new|total_assets|neither\": 267, \"new|total_assets|no_ref\": 153, \"new|total_assets|restated_pending|both\": 3, \"new|total_assets|restated_pending|first\": 338, \"new|total_assets|restated_pending|first_before_sec\": 6, \"new|total_assets|restated_pending|later_FUTURE\": 8, \"new|total_assets|restated_pending|neither\": 2, \"revision|revenue_q|first\": 7, \"revision|total_assets|first\": 5, \"revision|total_assets|neither\": 2}, \"wall_s\": 406.3}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 754,
+  "elig_days": 753,
+  "elig_max": 937,
+  "elig_mean": 776.5723771580346,
+  "elig_min": 666,
+  "elig_sum": 584759,
+  "experiment_id": "E996-02",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 399998,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 338,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "warmup_days": 632,
+  "warmup_select_days": 633,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "4a8f271c1728fcfbb9823d2ef62001c1c46972532da0aaaa2b8d76f934962da7",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "754 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2011-01-03..2013-12-31",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 754 vs algorithm days 754",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 754 vs QuantConnect tradeableDates 754",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "warmup_left_account_untouched",
+   "detail": "first recorded equity 100000.00 vs initial cash 100000.00; 632 warm-up sessions",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2013-12-31",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 754,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2011-01-03",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-10T14:49:31Z",
+  "build_commit": "fa8e50f4971be37dbeed98770f1bc47b5061bc3c",
+  "code_sha256": "4cda78873b9277389c24bbfac708e47bcc42894941eb4cd15bf1efac97854e62",
+  "config_sha256": "ebb247ccdc1d17690f9ef900d3f810a2bd973f17d23c0aa71c51a11ea48f9f37",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "p5d_ref.py",
+   "p5d_ref_00.py",
+   "p5d_ref_01.py",
+   "p5d_ref_02.py",
+   "p5d_ref_03.py",
+   "p5d_ref_04.py",
+   "p5d_ref_05.py",
+   "p5d_ref_06.py",
+   "p5d_ref_07.py",
+   "p5d_ref_08.py",
+   "p5d_ref_09.py",
+   "p5d_ref_10.py",
+   "p5d_ref_11.py",
+   "p5d_ref_12.py",
+   "p5d_ref_13.py",
+   "p5d_ref_14.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_p7.py",
+   "qr_p7_export.py",
+   "qr_p7_score.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_sec_data.py",
+   "qr_sec_data_00.py",
+   "qr_sec_data_01.py",
+   "qr_sec_data_02.py",
+   "qr_sec_data_03.py",
+   "qr_sec_data_04.py",
+   "qr_sec_data_05.py",
+   "qr_sec_data_06.py",
+   "qr_sec_data_07.py",
+   "qr_sec_data_08.py",
+   "qr_sec_data_09.py",
+   "qr_sec_data_10.py",
+   "qr_sec_data_11.py",
+   "qr_sec_data_12.py",
+   "qr_sec_data_13.py",
+   "qr_sec_data_14.py",
+   "qr_sec_data_15.py",
+   "qr_sec_data_16.py",
+   "qr_sec_data_17.py",
+   "qr_sec_data_18.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "fa8e50f4971be37dbeed98770f1bc47b5061bc3c",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18178",
+  "qc_backtest_id": "6e84f2fb5bdafd284c2268c4f51402bb",
+  "qc_project_id": 37627507,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-10T14:49:12Z",
+  "runtime_s": 422.04056310653687
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.42",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.199",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "QRP5D|0|{\"baseline\": {\"cik_reject\": 0, \"life_reject\": 0, \"pit_violations\": 0, \"store_baseline\": 19715}, \"calendar_check\": {\"expected\": 36, \"match\": false, \"reviews\": 35}, \"checks\": {\"censored\": 3876, \"fed\": 72643, \"m2_delayed\": 0, \"m2_not_fed\": 0, \"m2_revision_unfed\": 0, \"month_ends\": 47, \"no_period_end\": 250600, \"pe_after_seen\": 0, \"pe_regress\": 938, \"quarantined_seen\": 0, \"reports_new\": 72439, \"revision_from_missing\": 4, \"revision_to_missing\": 0, \"revisions\": 204, \"sec_fed\": 4148, \"selections\": 1386, \"store_sids_max\": 4238, \"unmapped_cik\": 43912, \"unmapped_period\": 6534, \"weekly_scans\": 288}, \"digests\": {\"eligible_by_year\": {\"2008\": \"fa59440f03114255197f0aeece1827261dbd841a76328df5b3da360d6203916e\", \"2009\": \"91938baf4ced2a6828e059d8072e321927d96f6ed11f15995afb67d8194a889a\", \"2010\": \"7dd9012f0fc4a01235926beb5833973ca5c7c8f96a3b63fdb6ba0bd779d62f92\", \"2011\": \"89ce41a056cbb6553175c4725efb0503485269ce27ef389c7a1409b9972ea598\", \"2012\": \"1c2859cf55a435eb8cb805c310608dbb3bda136d1213b5928e938ff0473fd405\", \"2013\": \"52dc8b8473c61d47a1123471abbd7b7f24c643b85bb0512be42e329452367c97\"}, \"eligible_to_2013\": \"25c570a9dd98ce30b116bd8df9fe7141add31b4cd8dad88fdca0f2d29bbd19c7\", \"ledger_by_year\": {\"2008\": \"c8634ced370644bec48c2a4b056f3c45a3d2395043ee7cdfe21496b625f56cae\", \"2009\": \"468ada85e4a934cadc1ef9da7cd557c6c07b5a0de642e166d504ab8ed0c80b3d\", \"2010\": \"e41d5d5612a50eb1b55e6f138f5e6cb9de925e1e3a030707ccc51a43a77ba06d\", \"2011\": \"8e49723442fc8463df9e23ecfe098025841d6609a04cc7eb8d5cc2049192d9f2\", \"2012\": \"4ab7879a024011419e51df4c1d25063c186d249882bd7909226b05f05993a9d4\", \"2013\": \"efba905ec6002e7d50429c641d5d2342c8501c54bbfa4c218e678eeeeb004fc6\"}, \"ledger_to_2013\": \"ce5d95f3c8cd354c3038b1cb4788627b277e5047f1fc45c4c699a35437c64745\", \"review_scores\": {\"2011-01-31\": \"b47ff1dd5a627a9438d05d4999cba6996c94485bb1cc4c6e90626349f9920af0\", \"2011-02-28\": \"bf1f22861aebf912170ed0e3ac33f42eb6a4d0a23f2b3a89a1538a330eb726eb\", \"2011-03-31\": \"b631a7fc3f71e15d054676cbaaa905e6004839fafd931e0eca870d3895ed0211\", \"2011-04-29\": \"f477fc389305bdba15b9ca81f5513fb96b3196bc3101a4033813c0d119ae381b\", \"2011-05-31\": \"74a7ae370db8236d438421687380e101461bcbe6fc73521eaeb2b99c9ce1a9ec\", \"2011-06-30\": \"30e4570f174ea9682196ec939f290d8d65b6692ea993defd86af2805ee9f659d\", \"2011-07-29\": \"e0d245562e01e0b0dc1cdb7ca24f7d586503977667abe679731c9962087bba15\", \"2011-08-31\": \"f013b72d963ada15d6dd1635020a65558aa9e39f45a50a729bafc98efe4539e4\", \"2011-09-30\": \"da0d346705911238afd236efa585b89ba4377f842feba16ccd0056f61914d94f\", \"2011-10-31\": \"5d8581d57daca0c41f71d402a908f372134b71478b6ee40b002b6291798842ae\", \"2011-11-30\": \"6a3862e1d06c1cbe124eb0e63b67e24e74e9d35dfb7c8bbef483c8121cbb2f7f\", \"2011-12-30\": \"c2bbea27f523e3fd67eba28b86ef04e1be8af1d1d085f6e6951586c9b3d9c885\", \"2012-01-31\": \"831898410bcc6fd7bdc6760c023cd3a34235a150996f24453000ae68a1abd5c9\", \"2012-02-29\": \"f929c011957faec07988020a6328ddcf3520f02cdd9154f6efa6eb2f01068dbf\", \"2012-03-30\": \"41c5973619f7be3abaa815d87e06a578c2c300c41e2f4023db4a68244f11bfd1\", \"2012-04-30\": \"b5871c1b4cd9597e650ec0ecbebc23cf65d5ebdc5f49fe81dffb0dd4dfae33c7\", \"2012-05-31\": \"f90a1e6b6f081d7f6cd4174632199fe0a9d136e6be436349d019cf9914183d1c\", \"2012-06-29\": \"ce853d77397825cc1a55c41c239ecd6e6c1c46c9e10f46e133f7516557dc0cbb\", \"2012-07-31\": \"45557b047a07cb6451308e427266803d45acd0fe3c9b56119438022437a25d58\", \"2012-08-31\": \"7593ad0c75e828e8bc78736c3b3d343f6ae170c80ba7ddda7b105ac247b50a76\", \"2012-09-28\": \"a6ba36d961c4b2b15bf5e81c6995b04c0c696c1d57cd393d9437898a2be8240f\", \"2012-10-31\": \"d1b9035529c25f35c4009cb6cbd071cb644a7c2b30bb53dc92606a1348faeb47\", \"2012-11-30\": \"1beb7095f9b13e1060e4902b16950f325da877d45885cfd5c42251642c79fbe2\", \"2012-12-31\": \"5a5c53c1c22cc3fa487a51ba6fffe354a95caa19762fa32844a08d2912426f84\", \"2013-01-31\": \"c1af19930655d3d7daa7a37dd8fb23c854602de00096964c52858bef8a7960c1\", \"2013-02-28\": \"984904ce9688f9f5b89c5108c13d1424f89cd8313270f76d26a9a0526420ca39\", \"2013-03-28\": \"29d98e731f714106ffde8fe0708093eae7766453d1e1cc89a0f8e7d8d2de924f\", \"2013-04-30\": \"f92154e634bbaf0d96113a81b638afb8bc3a948dcf1e325295ebd58520afda4d\", \"2013-05-31\": \"0f231eb3da1958f8c8ef2de4b86992d19a2e195d0d4497173cecb912ef4dd85f\", \"2013-06-28\": \"5868502641bf91f3e09d7e9a1660a661409472ea9b91fae11a460d093a2d2132\", \"2013-07-31\": \"1066c23a9d7d99fcc17081ee6251cdf0d7ceda95b918a721b102e209b0094992\", \"2013-08-30\": \"05c57966fe84f906589a788ee6517443558fe70373d8375801f9e0e54e8ab308\", \"2013-09-30\": \"7c6e6cea6e68b391a6055b7fe437aef500bd3e4edc79378181e537536482ae6b\", \"2013-10-31\": \"d6cfa7b0ec36fd4b540c363af2adbebf16348fd9df503f2e87fba255f45340d6\", \"2013-11-29\": \"8ec0a91646696e27a80144e4ea5b06bb1d0c3f44bf03bd0fda826f292bcaf6ca\"}}, \"end\": \"2013-12-31\", \"field_order\": [\"revenue_ttm4q\", \"gross_profit_ttm4q\", \"net_income_ttm4q\", \"operating_cash_flow_ttm4q\", \"total_assets\", \"stockholders_equity\", \"revenue_baseline_valid\"], \"layer_corr\": {\"F_S\": -0.0577, \"T_F\": -0.0027, \"T_S\": 0.1856}, \"layers\": {\"F\": {\"hist5\": [1128, 1402, 2426, 1834, 1796, 1529, 916, 773, 168, 49, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 45.0, \"mean\": 17.935, \"median\": 17.0, \"min\": 0.0, \"n\": 12021, \"p10\": 5.0, \"p90\": 32.0, \"sd\": 10.393}}, \"S\": {\"hist5\": [1596, 8986, 0, 1439, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 15.0, \"mean\": 7.776, \"median\": 8.0, \"min\": 0.0, \"n\": 12021, \"p10\": 0.0, \"p90\": 15.0, \"sd\": 3.783}}, \"T\": {\"hist5\": [2019, 1019, 1105, 1544, 1577, 1800, 2147, 643, 167, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], \"stats\": {\"max\": 40.0, \"mean\": 18.61, \"median\": 20.0, \"min\": 0.0, \"n\": 12021, \"p10\": 0.0, \"p90\": 32.0, \"sd\": 11.468}}}, \"ledger_reports\": 72439, \"ledger_sids\": 3876, \"max_rss_mb\": 4605.5, \"mcap_split_check\": {\"mcap_jumps_with_price\": 2, \"mcap_pit_continuous\": 91, \"no_window\": 128, \"price_adjusted\": 1, \"price_raw_jump\": 92}, \"mode\": \"M1\", \"panel\": {\"build_s\": 46.0, \"duplicate_bars\": 0, \"last_session\": \"2013-12-30\", \"late_rows\": 0, \"securities\": 1048, \"sessions\": 1761}, \"per_review\": [[\"2011-01-31\", 736, 539, 232, 304, 268, 12, 5, 1, 0, 927, 713, \"STRONG\"], [\"2011-02-28\", 747, 543, 224, 317, 286, 7, 4, 0, 0, 950, 725, \"STRONG\"], [\"2011-03-31\", 751, 547, 220, 326, 297, 10, 2, 0, 0, 952, 727, \"STRONG\"], [\"2011-04-29\", 760, 556, 227, 328, 307, 10, 2, 0, 0, 973, 741, \"STRONG\"], [\"2011-05-31\", 767, 568, 239, 329, 301, 9, 1, 0, 0, 983, 748, \"STRONG\"], [\"2011-06-30\", 762, 565, 245, 320, 292, 11, 5, 1, 0, 959, 739, \"STRONG\"], [\"2011-07-29\", 745, 553, 242, 310, 269, 15, 10, 3, 0, 932, 724, \"NORMAL\"], [\"2011-08-31\", 710, 543, 235, 306, 169, 10, 4, 2, 0, 892, 694, \"RISK_OFF\"], [\"2011-09-30\", 673, 513, 220, 291, 134, 8, 4, 2, 2, 834, 658, \"RISK_OFF\"], [\"2011-10-31\", 711, 545, 230, 314, 155, 19, 13, 3, 1, 893, 691, \"WEAK\"], [\"2011-11-30\", 704, 539, 228, 310, 169, 16, 5, 2, 1, 883, 685, \"WEAK\"], [\"2011-12-30\", 714, 548, 237, 309, 175, 13, 5, 2, 1, 891, 697, \"WEAK\"], [\"2012-01-31\", 735, 560, 240, 318, 242, 14, 4, 1, 1, 915, 716, \"NORMAL\"], [\"2012-02-29\", 755, 575, 237, 336, 282, 14, 3, 0, 0, 944, 737, \"STRONG\"], [\"2012-03-30\", 759, 577, 228, 346, 301, 17, 7, 0, 0, 952, 743, \"STRONG\"], [\"2012-04-30\", 761, 580, 232, 345, 293, 10, 6, 0, 0, 952, 744, \"STRONG\"], [\"2012-05-31\", 738, 560, 228, 328, 234, 9, 5, 2, 1, 910, 721, \"STRONG\"], [\"2012-06-29\", 748, 566, 238, 323, 258, 8, 2, 2, 1, 923, 729, \"STRONG\"], [\"2012-07-31\", 730, 558, 233, 321, 272, 7, 2, 1, 0, 904, 714, \"STRONG\"], [\"2012-08-31\", 746, 566, 231, 331, 260, 8, 6, 1, 0, 920, 730, \"STRONG\"], [\"2012-09-28\", 762, 580, 241, 334, 278, 13, 6, 0, 0, 936, 745, \"STRONG\"], [\"2012-10-31\", 756, 573, 237, 330, 261, 8, 5, 0, 0, 926, 737, \"STRONG\"], [\"2012-11-30\", 767, 583, 243, 335, 248, 8, 3, 0, 0, 941, 746, \"STRONG\"], [\"2012-12-31\", 780, 593, 246, 340, 277, 14, 2, 0, 0, 959, 757, \"STRONG\"], [\"2013-01-31\", 803, 608, 252, 348, 312, 7, 1, 0, 0, 986, 778, \"STRONG\"], [\"2013-02-28\", 807, 611, 236, 370, 326, 4, 1, 0, 0, 999, 783, \"STRONG\"], [\"2013-03-28\", 818, 616, 238, 373, 334, 7, 1, 0, 0, 1033, 797, \"STRONG\"], [\"2013-04-30\", 830, 623, 238, 378, 340, 6, 2, 0, 0, 1035, 809, \"STRONG\"], [\"2013-05-31\", 854, 644, 251, 386, 355, 7, 1, 0, 0, 1063, 833, \"STRONG\"], [\"2013-06-28\", 851, 640, 249, 383, 340, 5, 0, 0, 0, 1058, 830, \"STRONG\"], [\"2013-07-31\", 870, 665, 264, 395, 358, 9, 4, 0, 0, 1086, 848, \"STRONG\"], [\"2013-08-30\", 852, 661, 258, 398, 355, 11, 3, 0, 0, 1064, 832, \"STRONG\"], [\"2013-09-30\", 882, 685, 272, 407, 369, 8, 6, 1, 0, 1104, 858, \"STRONG\"], [\"2013-10-31\", 892, 689, 272, 411, 363, 8, 2, 0, 0, 1117, 871, \"STRONG\"], [\"2013-11-29\", 921, 707, 281, 421, 376, 10, 2, 0, 0, 1147, 901, \"STRONG\"]], \"per_review_cols\": [\"review\", \"eligible\", \"nonfin\", \"h2_nonfin\", \"scored\", \"candidates\", \"ge75\", \"ge80\", \"ge85\", \"ge90\", \"old_members\", \"old_still_eligible\", \"regime\"], \"per_year\": {\"2011\": {\"bits\": {\"H1_financial\": 1626, \"H1_no_sic\": 595, \"H2\": 4328, \"H3\": 142, \"H4\": 63, \"H5\": 0, \"H6\": 2002, \"H7\": 124, \"duplicate_class\": 12}, \"candidates\": 2822, \"eligible\": 8780, \"field_present\": [4407, 4150, 4507, 4517, 6368, 6368, 5267], \"ge75\": 140, \"ge80\": 60, \"ge85\": 16, \"ge90\": 5, \"h2_nonfin\": 2779, \"nonfin\": \nQRP5D|1|6559, \"old_overlap\": 8542, \"old_overlap_h2\": 2741, \"old_overlap_nonfin\": 6422, \"reviews\": 12, \"scored\": 3764}, \"2012\": {\"bits\": {\"H1_financial\": 1738, \"H1_no_sic\": 428, \"H2\": 4387, \"H3\": 163, \"H4\": 69, \"H5\": 0, \"H6\": 1584, \"H7\": 126, \"duplicate_class\": 12}, \"candidates\": 3206, \"eligible\": 9037, \"field_present\": [4963, 4595, 5105, 5113, 6713, 6716, 4591], \"ge75\": 130, \"ge80\": 51, \"ge85\": 7, \"ge90\": 3, \"h2_nonfin\": 2834, \"nonfin\": 6871, \"old_overlap\": 8819, \"old_overlap_h2\": 2781, \"old_overlap_nonfin\": 6725, \"reviews\": 12, \"scored\": 3987}, \"2013\": {\"bits\": {\"H1_financial\": 1855, \"H1_no_sic\": 376, \"H2\": 4505, \"H3\": 194, \"H4\": 108, \"H5\": 0, \"H6\": 771, \"H7\": 114, \"duplicate_class\": 12}, \"candidates\": 3828, \"eligible\": 9380, \"field_present\": [6104, 5704, 6378, 6401, 7100, 7101, 5070], \"ge75\": 82, \"ge80\": 23, \"ge85\": 1, \"ge90\": 0, \"h2_nonfin\": 2811, \"nonfin\": 7149, \"old_overlap\": 9140, \"old_overlap_h2\": 2767, \"old_overlap_nonfin\": 7001, \"reviews\": 11, \"scored\": 4270}}, \"score_s\": 23.4, \"slice_spot_check\": {\"checked\": 70, \"mismatch\": 0}, \"store_stats\": {\"amendments\": 256, \"delayed_until_available\": 0, \"estimated\": 0, \"observed_new\": 76515, \"quarantined\": 0, \"timing_unknown\": 0}, \"synthetic_export_check\": {\"label\": \"SYNTHETIC seeded numbers, no market data\", \"mean_ic\": 0.023004, \"n\": 83, \"t\": 4.2684}, \"timing\": {\"K|2009-2012|1\": 2638, \"K|2009-2012|2-5\": 12, \"K|2009-2012|6-30\": 5, \"K|2009-2012|gt90\": 2, \"K|2009-2012|le0\": 67, \"K|2009|1\": 23, \"K|2009|6-30\": 1, \"K|2010|1\": 415, \"K|2010|2-5\": 1, \"K|2010|6-30\": 1, \"K|2010|le0\": 2, \"K|2011|1\": 945, \"K|2011|2-5\": 2, \"K|2011|6-30\": 1, \"K|2011|gt90\": 2, \"K|2011|le0\": 31, \"K|2012|1\": 1255, \"K|2012|2-5\": 9, \"K|2012|6-30\": 2, \"K|2012|le0\": 34, \"K|2013-2017|1\": 1322, \"K|2013-2017|2-5\": 5, \"K|2013-2017|31-90\": 1, \"K|2013-2017|6-30\": 1, \"K|2013-2017|le0\": 9, \"K|2013|1\": 1322, \"K|2013|2-5\": 5, \"K|2013|31-90\": 1, \"K|2013|6-30\": 1, \"K|2013|le0\": 8, \"K|2014|le0\": 1, \"K|amendment_only\": 70, \"Q|2009-2012|1\": 9562, \"Q|2009-2012|2-5\": 101, \"Q|2009-2012|31-90\": 2, \"Q|2009-2012|6-30\": 11, \"Q|2009-2012|gt90\": 184, \"Q|2009-2012|le0\": 134, \"Q|2009|1\": 583, \"Q|2009|2-5\": 4, \"Q|2009|6-30\": 1, \"Q|2009|le0\": 4, \"Q|2010|1\": 1919, \"Q|2010|2-5\": 3, \"Q|2010|31-90\": 1, \"Q|2010|6-30\": 3, \"Q|2010|gt90\": 153, \"Q|2010|le0\": 48, \"Q|2011|1\": 3290, \"Q|2011|2-5\": 7, \"Q|2011|6-30\": 3, \"Q|2011|gt90\": 28, \"Q|2011|le0\": 49, \"Q|2012|1\": 3770, \"Q|2012|2-5\": 87, \"Q|2012|31-90\": 1, \"Q|2012|6-30\": 4, \"Q|2012|gt90\": 3, \"Q|2012|le0\": 33, \"Q|2013-2017|1\": 4031, \"Q|2013-2017|2-5\": 11, \"Q|2013-2017|6-30\": 7, \"Q|2013-2017|le0\": 12, \"Q|2013|1\": 4031, \"Q|2013|2-5\": 11, \"Q|2013|6-30\": 7, \"Q|2013|le0\": 12, \"Q|amendment_only\": 133, \"early|K|2009-2012|earnings_8k|1\": 11, \"early|K|2009-2012|earnings_8k|2-5\": 5, \"early|K|2009-2012|earnings_8k|6-30\": 43, \"early|K|2009-2012|unexplained|2-5\": 1, \"early|K|2009-2012|unexplained|6-30\": 7, \"early|K|2013-2017|earnings_8k|2-5\": 1, \"early|K|2013-2017|earnings_8k|6-30\": 3, \"early|K|2013-2017|earnings_8k|gt90\": 1, \"early|K|2013-2017|unexplained|2-5\": 3, \"early|K|2013-2017|unexplained|6-30\": 1, \"early|Q|2009-2012|earnings_8k|1\": 16, \"early|Q|2009-2012|earnings_8k|2-5\": 18, \"early|Q|2009-2012|earnings_8k|31-90\": 1, \"early|Q|2009-2012|earnings_8k|6-30\": 84, \"early|Q|2009-2012|unexplained|1\": 4, \"early|Q|2009-2012|unexplained|2-5\": 2, \"early|Q|2009-2012|unexplained|6-30\": 9, \"early|Q|2013-2017|earnings_8k|1\": 2, \"early|Q|2013-2017|earnings_8k|2-5\": 3, \"early|Q|2013-2017|earnings_8k|6-30\": 2, \"early|Q|2013-2017|unexplained|2-5\": 2, \"early|Q|2013-2017|unexplained|6-30\": 3}, \"totals_candidates\": {\"max\": 93.0, \"mean\": 47.302, \"median\": 48.0, \"min\": 0.0, \"n\": 9856, \"p10\": 26.0, \"p90\": 67.0, \"sd\": 15.276}, \"totals_hist5_candidates\": [8, 35, 103, 217, 364, 582, 673, 959, 1223, 1234, 1183, 1103, 765, 648, 407, 218, 110, 16, 8, 0, 0], \"totals_hist5_scored\": [35, 87, 256, 452, 624, 893, 966, 1237, 1447, 1375, 1269, 1145, 792, 667, 419, 220, 113, 16, 8, 0, 0], \"totals_scored\": {\"max\": 93.0, \"mean\": 44.321, \"median\": 45.0, \"min\": 0.0, \"n\": 12021, \"p10\": 22.0, \"p90\": 66.0, \"sd\": 16.272}, \"universe_migration\": {\"2011|both\": 8542, \"2011|new_only|vendor\": 238, \"2011|old_only|mcap_1.5-2B\": 33, \"2011|old_only|mcap_lt_1.5B\": 98, \"2011|old_only|mcap_missing\": 1984, \"2011|old_only|no_fundamentals\": 400, \"2011|old_only|not_common_type\": 12, \"2012|both\": 8819, \"2012|new_only|vendor\": 218, \"2012|old_only|mcap_1.5-2B\": 43, \"2012|old_only|mcap_lt_1.5B\": 101, \"2012|old_only|mcap_missing\": 1829, \"2012|old_only|no_fundamentals\": 378, \"2012|old_only|not_common_type\": 12, \"2013|both\": 9140, \"2013|new_only|vendor\": 240, \"2013|old_only|mcap_1.5-2B\": 60, \"2013|old_only|mcap_lt_1.5B\": 110, \"2013|old_only|mcap_missing\": 1990, \"2013|old_only|no_fundamentals\": 379, \"2013|old_only|not_common_type\": 13}, \"vendor_file_date\": {\"after_sec\": 217, \"before_period_end\": 4059, \"before_sec\": 147, \"eq_sec\": 13694, \"pe_plus_45\": 66, \"seen_minus_fd|1\": 13952, \"seen_minus_fd|2-5\": 96, \"seen_minus_fd|31-90\": 3, \"seen_minus_fd|6-30\": 7}, \"vintage\": {\"new_censored|revenue_q|first\": 6, \"new_censored|revenue_q|first_before_sec\": 2, \"new_censored|revenue_q|neither\": 6, \"new_censored|revenue_q|no_ref\": 4, \"new_censored|revenue_q|restated_pending|first\": 1, \"new_censored|revenue_q|restated_pending|neither\": 4, \"new_censored|total_assets|first\": 16, \"new_censored|total_assets|later_FUTURE\": 1, \"new_censored|total_assets|neither\": 1, \"new_censored|total_assets|restated_pending|later_FUTURE\": 1, \"new|revenue_q|both\": 9, \"new|revenue_q|first\": 12568, \"new|revenue_q|first_before_sec\": 1190, \"new|revenue_q|later_FUTURE\": 38, \"new|revenue_q|later_public\": 16, \"new|revenue_q|neither\": 1185, \"new|revenue_q|no_ref\": 3110, \"new|revenue_q|restated_pending|both\": 9, \"new|revenue_q|restated_pending|first\": 1969, \"new|revenue_q|restated_pending|first_before_sec\": 48, \"new|revenue_q|restated_pending|later_FUTURE\": 38, \"new|revenue_q|restated_pending|neither\": 218, \"new|revenue_q|vendor_missing\": 1, \"new|total_assets|both\": 3, \"new|total_assets|first\": 17487, \"new|total_assets|first_before_sec\": 197, \"new|total_assets|later_FUTURE\": 8, \"new|total_assets|later_public\": 2, \"new|total_assets|neither\": 267, \"new|total_assets|no_ref\": 153, \"new|total_assets|restated_pending|both\": 3, \"new|total_assets|restated_pending|first\": 338, \"new|total_assets|restated_pending|first_before_sec\": 6, \"new|total_assets|restated_pending|later_FUTURE\": 8, \"new|total_assets|restated_pending|neither\": 2, \"revision|revenue_q|first\": 7, \"revision|total_assets|first\": 5, \"revision|total_assets|neither\": 2}, \"wall_s\": 406.3}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 754, \"elig_days\": 753, \"elig_max\": 937, \"elig_mean\": 776.5723771580346, \"elig_min\": 666, \"elig_sum\": 584759, \"experiment_id\": \"E996-02\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 399998, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 338, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"warmup_days\": 632, \"warmup_select_days\": 633, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.15331538793721644
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

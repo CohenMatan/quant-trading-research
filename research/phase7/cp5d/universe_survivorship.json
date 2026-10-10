@@ -1,0 +1,119 @@
+{
+ "by_year": {
+  "2011": {
+   "both": {
+    "stock_reviews": 8542,
+    "survivor_share": 0.8667
+   },
+   "old_only": {
+    "stock_reviews": 2527,
+    "survivor_share": 0.3328
+   },
+   "new_only": {
+    "stock_reviews": 238,
+    "survivor_share": 0.3824
+   }
+  },
+  "2012": {
+   "both": {
+    "stock_reviews": 8819,
+    "survivor_share": 0.8889
+   },
+   "old_only": {
+    "stock_reviews": 2363,
+    "survivor_share": 0.3876
+   },
+   "new_only": {
+    "stock_reviews": 218,
+    "survivor_share": 0.3211
+   }
+  },
+  "2013": {
+   "both": {
+    "stock_reviews": 10052,
+    "survivor_share": 0.8877
+   },
+   "old_only": {
+    "stock_reviews": 2808,
+    "survivor_share": 0.3992
+   },
+   "new_only": {
+    "stock_reviews": 269,
+    "survivor_share": 0.3234
+   }
+  },
+  "2014": {
+   "both": {
+    "stock_reviews": 11249,
+    "survivor_share": 0.893
+   },
+   "old_only": {
+    "stock_reviews": 3131,
+    "survivor_share": 0.4235
+   },
+   "new_only": {
+    "stock_reviews": 314,
+    "survivor_share": 0.2866
+   }
+  },
+  "2015": {
+   "both": {
+    "stock_reviews": 11603,
+    "survivor_share": 0.9137
+   },
+   "old_only": {
+    "stock_reviews": 3064,
+    "survivor_share": 0.5029
+   },
+   "new_only": {
+    "stock_reviews": 355,
+    "survivor_share": 0.3437
+   }
+  },
+  "2016": {
+   "both": {
+    "stock_reviews": 11518,
+    "survivor_share": 0.9606
+   },
+   "old_only": {
+    "stock_reviews": 2638,
+    "survivor_share": 0.6391
+   },
+   "new_only": {
+    "stock_reviews": 386,
+    "survivor_share": 0.3756
+   }
+  },
+  "2017": {
+   "both": {
+    "stock_reviews": 12989,
+    "survivor_share": 0.9784
+   },
+   "old_only": {
+    "stock_reviews": 2384,
+    "survivor_share": 0.8389
+   },
+   "new_only": {
+    "stock_reviews": 363,
+    "survivor_share": 0.124
+   }
+  }
+ },
+ "totals": {
+  "both": {
+   "stock_reviews": 74772,
+   "survivor_share": 0.9172
+  },
+  "old_only": {
+   "stock_reviews": 18915,
+   "survivor_share": 0.4986
+  },
+  "new_only": {
+   "stock_reviews": 2143,
+   "survivor_share": 0.3033
+  }
+ },
+ "old_only_securities": 560,
+ "old_only_securities_in_last_review": 221,
+ "old_securities": 1917
+}
