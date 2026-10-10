@@ -102,7 +102,7 @@ def test_x995_probe_outputs(monkeypatch):
 
 def test_x995_config_rule():
     from qresearch import experiment
-    for e in ("E995-02", "E995-04"):
+    for e in ("E995-02", "E995-05"):
         c = json.loads((ROOT / f"experiments/{e}/config.json").read_text())
         experiment.validate(c)
     bad = copy.deepcopy(c)
@@ -118,6 +118,6 @@ def test_x995_config_rule():
 def test_x995_fits_the_project_file_limit():
     """QuantConnect (2026-10-10): researcher projects hold at most 50 files (E995-01 failed at upload)."""
     from qresearch import run
-    c = json.loads((ROOT / "experiments/E995-04/config.json").read_text())
+    c = json.loads((ROOT / "experiments/E995-05/config.json").read_text())
     files = run.assemble_files(c, None, False)
     assert len(files) <= 50 and all(len(v) <= 64_000 for v in files.values())
