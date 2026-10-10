@@ -159,6 +159,14 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         files["qr_v2.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_data_v2.py" not in files:
             raise experiment.ConfigError("Data v2 needs the packed table src/qresearch/lean/qr_data_v2*.py")
+    if "qr_x998" in files["main.py"]:
+        # H022 on Data v2 (D194): the FROZEN Data v2 host X998, uploaded byte-identical as a module (the H022 host S024 /
+        # X999 subclasses it); its own imports are uploaded by the qr_data_v2 / qr_p7 / qr_xs rules above
+        rel = "strategies/X998_data_v2_export/main.py"
+        files["qr_x998.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        for n in ("qr_v2.py", "qr_data_v2.py", "qr_p7_mech.py", "qr_p7_pred.py", "qr_xs_diag.py"):
+            if n not in files:
+                raise experiment.ConfigError(f"the frozen X998 module needs {n}")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
