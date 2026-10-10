@@ -1671,3 +1671,21 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - 2018–2021 and the Holdout untouched; no portfolio; nothing purchased.
 
 **STOP:** awaiting the owner.
+
+## 2026-10-10: P7-CP5b option B result — default build does not reproduce the frozen data (B2); STOP (D182, D183)
+
+- **Owner (D182):** option B. A diagnostic canary on QuantConnect's default build after the 2026-10-10 dataset switch; B1 → real run with the pinned c_IC, B2 → STOP.
+- **Runner:** `lean_version_policy: "default_build_digest_verified"` (H022 family and the X993 diagnostic only; the build actually used is recorded).
+- **E994-03** (LEAN 18178): canary crashed; no decision date had ≥ 20 population stocks.
+- **E993-03** (frozen X993 export, LEAN 18178) vs E993-02 (18131):
+  - reports with unknown filing timing 608 → 31,538;
+  - usable revenue baselines 78,633 → 2,269;
+  - H2 on 99% of eligible rows;
+  - eligible universe −18%;
+  - H022 population 0–14 a month (was 196–612);
+  - 0 point-in-time violations.
+- **Result: B2.** The frozen data infrastructure v1 is not reproducible on the default dataset. No real H022 statistic exists; c_IC unchanged.
+- **Options** (P7-CP5b): C data v2 starting with a timing probe (recommended, step 1 only), A Trading Firm tier (over ceiling), D close H022.
+- 2018–2021 and the Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner.
