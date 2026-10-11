@@ -167,6 +167,15 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for n in ("qr_v2.py", "qr_data_v2.py", "qr_p7_mech.py", "qr_p7_pred.py", "qr_xs_diag.py"):
             if n not in files:
                 raise experiment.ConfigError(f"the frozen X998 module needs {n}")
+    if "qr_s024" in files["main.py"]:
+        # H023 (D199): the pinned H022 / Data v2 host S024, uploaded byte-identical as a module (the H023 host S025
+        # subclasses it; S024 itself imports the frozen X998 module, uploaded by the rule above) + the grid module
+        rel = "strategies/S024_h022_data_v2/main.py"
+        files["qr_s024.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        rel = "src/qresearch/lean/qr_h023.py"
+        files["qr_h023.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_x998.py" not in files:
+            raise experiment.ConfigError("the S024 module needs the frozen qr_x998.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
