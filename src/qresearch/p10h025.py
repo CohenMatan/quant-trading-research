@@ -65,7 +65,7 @@ EVENT_LEDGER_SHA256 = "23d3a74a24ee1ac9273db5375f99068db239c9ec4cfc212cbea0a7593
 PRIMARY_EVENTS = 605
 
 # set from the null runs, merged before the real evaluation
-RESPONSE_PANEL_SHA256 = None
+RESPONSE_PANEL_SHA256 = "bc4d17c83a55335f623a1d705bf616dca89cda34d182888c0d81145866bb83b7"   # E027-04 (real responses hashed only)
 C_EVENT = None
 C_EVENT_RAW = None
 NULL_RESULT_SHA256 = None
