@@ -174,3 +174,29 @@ def test_runner_uploads_x801_and_h026_modules():
     need = {"qr_x801.py", "qr_h026.py", "qr_h024.py", "qr_h023.py", "qr_p7_pred.py", "qr_data_v21.py", "qr_v2.py"}
     assert need <= set(files) and not any(n.startswith("qr_data_v2_") or n == "qr_data_v2.py" for n in files)
     assert len(files) <= 50 and all(len(v) <= 64000 for v in files.values())
+
+
+def test_result_assessment_on_synthetic_real_output(monkeypatch, tmp_path):
+    """research/phase11/cp1/P11_CP1_result.assess on the fake-market real-mode output: reproduces the host's gates,
+    reports every owner metric, and labels the outcome with one of the three D206 status strings."""
+    from importlib import util
+    _, st0, _ = _run(monkeypatch, tmp_path, "canary")
+    fp = st0["feature_panel_sha256"]
+    _, stn, bn = _run(monkeypatch, tmp_path, "null", feature_panel_sha256=fp, seeds=[1, 3])
+    c = H.critical_value([w[1] for w in bn["QRWN"]["worlds"]])
+    pins = dict(c_wealth=c, feature_panel_sha256=fp, null_result_sha256="n", threshold_commit="t",
+                response_panel_sha256=stn["response_panel_sha256"])
+    _, st, b = _run(monkeypatch, tmp_path, "real", **pins)
+    spec = util.spec_from_file_location("p11res", ROOT / "research/phase11/cp1/P11_CP1_result.py")
+    R = util.module_from_spec(spec)
+    spec.loader.exec_module(R)
+    prov = dict(git_commit="x", lean_version="v", qc_backtest_id="q", code_sha256="c")
+    out = R.assess(st, b["QRWR"], prov, pins)
+    assert out["host_gates_reproduced"] and out["pins_ok"]
+    assert out["status"] in R.STATUS.values() and out["status"] != R.STATUS["blocked"]
+    assert set(out["years"]) == {str(y) for y in H.OUTER_YEARS}
+    assert set(out["coefficient_stability"]["by_feature"]) == set(H.FEATURES)
+    for k in ("wealth", "cagr", "vol", "sharpe", "maxdd", "underwater_share", "underwater_longest"):
+        assert k in out["portfolio"]["h026"]
+    bad = R.assess(st, b["QRWR"], prov, dict(pins, c_wealth=c + 1.0))
+    assert bad["status"] == R.STATUS["blocked"]                    # pins differ from the run -> pipeline invalid
