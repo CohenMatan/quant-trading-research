@@ -347,3 +347,14 @@ def test_thresholds_are_pinned_from_the_5000_null_worlds():
     assert i["completed"] == 5000 and i["seeds_exact"] and i["rerun_identical"] and i["zero_orders"]
     assert i["panel_equals_pinned"] and i["population_equals_pinned"] and i["models_equal_pinned"] and i["pit_audit_zero"]
     assert res["false_promotion"] == float(np.mean([w["cstar"] > p9h024.C_MODEL for w in ws]))
+
+
+def test_p9_cp1_result_is_the_frozen_procedure_outcome():
+    import json
+    from qresearch import p9h024
+    res = json.loads((ROOT / "research/phase9/cp1/P9_CP1_result.json").read_text())
+    assert res["verdict"] == "NO ROBUST H024 FEATURE MODEL" and res["selected"] is None and res["candidate_sha256"] is None
+    assert all(res["recompute"].values()) and res["orders"] == 0
+    assert res["gate_counts"]["D1"] == 0 and res["gate_counts"]["qualified"] == 0 and len(res["models"]) == 415
+    assert res["best_model"]["t_ic"] < p9h024.C_MODEL and res["best_feature"]["t_ic"] < p9h024.C_FEATURE
+    assert p9h024.CANDIDATE is None

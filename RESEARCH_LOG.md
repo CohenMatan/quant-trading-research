@@ -1951,3 +1951,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - **415 models**; the library hash and the population digest (34,831 stock-months) are pinned.
 - **Check 6 (explained):** QuantConnect's data snapshot changed today between 07:58Z and 08:10Z. Score v1 rows outside the analysed population differ for 12 reviews in 2011. The pinned H022 panel and every population used by H022, H023 and H024 reproduce exactly, so no statistic is affected.
 - **Next:** null runs E026-02..07.
+
+## 2026-10-11: P9-CP1 — H024 Feature Redesign and Selection: NO ROBUST H024 FEATURE MODEL; STOP (D203)
+
+- **Null E026-02..06: 5,000 worlds; rerun identical.** c_FEATURE = 3.45 and c_MODEL = 4.37, pinned and merged (PR #82) before the real search.
+- **Real search E026-08, once:**
+  - best model CBOP + CFP + HI52 + REV1M, t 2.48 (null p 0.35);
+  - best feature LOWVOL, t 1.24;
+  - no model passes D1, so none qualifies and nothing is frozen.
+- **Walk-forward:** no strict fold candidate; pseudo-out-of-sample IC −0.001.
+- **Controls:** Score v1 t 0.47; H023 80/10/10 t 0.97.
+- No 2018–2021, Holdout untouched, no portfolio, nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H024 / Phase 9 as No Production Candidate Found.
