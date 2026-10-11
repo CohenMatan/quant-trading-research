@@ -59,16 +59,20 @@ HOST = "strategies/S025_h023_score_v2/main.py"
 PARENT_HOST = p7pred_v2.HOST                           # S024, uploaded byte-identical as qr_s024.py
 
 # set after the canary (before any null world): digest of the per-stock layer subtotals of the prepared panel
-COMPONENTS_SHA256 = None
-CANARY_COMMIT = None
+COMPONENTS_SHA256 = "7652f7fca2c0bd68b9d23ba0a9eea4b2f850b1555ec3874ec9127a48b067509e"   # E025-01 (16/16)
+CANARY_COMMIT = "54deb514b31fe90c4aeb321a3f1bcccf4be74aa5"
 
 # set after the 5,000 optimiser-null worlds, merged before the real search
-C_SEARCH = None
-C_FOLD = None                                          # {2014: c, 2015: c, 2016: c, 2017: c} (diagnostic)
+# P8-CP1 (D199): from the 5,000 optimiser-null worlds E025-02..06 (rerun E025-07 identical; every control column =
+# the H022 / Data v2 null world of the same seed): max(50th largest null max_t_IC across the grid, 2.326); the floor
+# does not bind. Pinned BEFORE the one real development search E025-08.
+C_SEARCH = 2.9225785052912165
+C_FOLD = {2014: 3.486801872690062, 2015: 3.5098267772816225, 2016: 3.5872288855328005,
+          2017: 3.0235170098563535}   # walk-forward fold thresholds (diagnostic)
 NULL_RESULT = "research/phase8/cp1/P8_CP1_null.json"
-NULL_RESULT_SHA256 = None
+NULL_RESULT_SHA256 = "2819cd4c803684e4f19e93d3b97bedf73feab1d105e295227f501dc1ec997190"
 NULL_WORLDS = "research/phase8/cp1/P8_CP1_null_worlds.json.gz"
-THRESHOLD_COMMIT = None
+THRESHOLD_COMMIT = "8b86665dc2624910dfe68b8e8ab89903edf8ada3"   # pinned the values above
 
 # set only if a candidate exists (P8-CP1), before any 2018-2021 access
 CANDIDATE = None

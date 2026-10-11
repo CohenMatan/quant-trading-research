@@ -363,3 +363,25 @@ def test_pins():
     for must in ("TRAINING / DEVELOPMENT", "NO ROBUST SCORE V2 CANDIDATE", "DEVELOPMENT CANDIDATE — NOT YET VALIDATED",
                  "c_IC_VALIDATION", "H023 VALIDATED", "H023 NOT VALIDATED"):
         assert must in text
+
+
+def test_c_search_is_pinned_from_the_5000_optimiser_null_worlds():
+    """c_SEARCH and the fold thresholds are recomputed from the committed per-world records with the frozen rule; the
+    null result file is the pinned one; every integrity check passed."""
+    import gzip
+    import json
+    path = ROOT / p8h023.NULL_RESULT
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == p8h023.NULL_RESULT_SHA256
+    res = json.loads(path.read_text())
+    ws = json.loads(gzip.open(ROOT / p8h023.NULL_WORLDS).read())
+    assert hashlib.sha256((ROOT / p8h023.NULL_WORLDS).read_bytes()).hexdigest() == res["worlds_file_sha256"]
+    assert [w["seed"] for w in ws] == list(p8h023.NULL_SEEDS)
+    mt = [w["max_t"] for w in ws]
+    assert H.critical_value(mt) == p8h023.C_SEARCH == res["c_search"] == sorted(mt, reverse=True)[49] > 2.326
+    for y in H.FOLD_YEARS:
+        assert H.critical_value([w[f"max_t_fold{y}"] for w in ws]) == p8h023.C_FOLD[y] == res["c_fold"][str(y)]
+    integ = res["integrity"]
+    assert integ["completed"] == 5000 and integ["seeds_exact"] and integ["rerun_identical"] and integ["zero_orders"]
+    assert integ["panel_equals_pinned"] and integ["components_equal_pinned"] and integ["pit_audit_zero"]
+    assert integ["control_equals_h022_null"]["all_within_1e9"]
+    assert res["false_promotion"] == float(np.mean([w["cstar"] > p8h023.C_SEARCH for w in ws]))

@@ -1,0 +1,135 @@
+{
+ "checks": {
+  "1 no IC / gate / null statistic of real responses computed or exported": true,
+  "10 rows with subtotals = H022 population stock-months": true,
+  "11 grid of 92, control 40/45/15 at index 42": true,
+  "12 control Score_v2 = 360 x Score v1 total for every row": true,
+  "13 grid statistics = frozen qr_p7_pred procedure (real + 2 null assignments, 5 configurations; synthetic)": true,
+  "14 optimiser-null record: deterministic, distinct worlds, control = H022 null world, finite maxima": true,
+  "15 selection + walk-forward + structure machinery end to end (synthetic)": true,
+  "16 5,000 optimiser-null worlds feasible (projected < 30 min of compute per 1,000)": true,
+  "2 uploaded files: frozen Data v2 manifest; S024 byte-identical as qr_s024; qr_h023 / S025 / qr_p7_pred / spec = pins": true,
+  "3 run completed, 0 orders, LEAN build recorded": true,
+  "4 decisions 2011-01-31 .. 2017-11-30 (83), nothing after 2017-12-29": true,
+  "5 prepared panel = the pinned H022 / Data v2 panel": true,
+  "6 Score v1 and eligibility tables = frozen E998-01 (84 reviews)": true,
+  "7 inherited H022 canary: timing, recomputation, corporate actions, invariance, determinism, null, NW": true,
+  "8 PIT audit all zero": true,
+  "9 layer subtotals sum to the Score v1 total for every population row, within layer maxima": true
+ },
+ "components_check": {
+  "missing_points": 0,
+  "out_of_range": 0,
+  "rows": 34863,
+  "sum_mismatch": 0,
+  "total_mismatch": 0
+ },
+ "components_sha256": "7652f7fca2c0bd68b9d23ba0a9eea4b2f850b1555ec3874ec9127a48b067509e",
+ "experiment": "E025-01",
+ "h023": {
+  "control": [
+   40,
+   45,
+   15
+  ],
+  "control_index": 42,
+  "control_z_mismatch": 0,
+  "dates": 83,
+  "grid": 92,
+  "machinery": {
+   "evaluated": true,
+   "folds": 4,
+   "pseudo_oos_months": 47,
+   "structure_stock_months": 34863,
+   "synthetic_responses": true
+  },
+  "null_record": {
+   "control_equals_h022": true,
+   "distinct": 10,
+   "fields": 15,
+   "finite_max_t": 10,
+   "repeat_identical": true,
+   "world_s": 0.1399,
+   "world_s_1000": 139.9
+  },
+  "vs_h022_procedure": {
+   "compared": 15,
+   "max_abs_diff": 5.551115123125783e-16
+  }
+ },
+ "lean_version": "v2.5.0.0.18178",
+ "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+ "passed": 16,
+ "pit_audit": {
+  "baseline_pit_violations": 0,
+  "baseline_used_despite_reject": 0,
+  "fed_after_guard_trigger": 0,
+  "fed_before_first_seen": 0,
+  "fed_before_sec_filing": 0,
+  "future_identity_row": 0,
+  "record_older_than_200d": 0,
+  "repaired_below_2B": 0,
+  "repaired_with_vendor_cap": 0,
+  "share_filing_not_yet_public": 0,
+  "stale_share_count_used": 0
+ },
+ "qc_backtest_id": "4906bc7e70e38ae93c65810508228de0",
+ "runtime": {
+  "build_s": 89.8,
+  "canary_s": 79.4,
+  "max_rss_mb": 5936.8,
+  "wall_s": 682.4
+ },
+ "runtime_modules": {
+  "qr_h023.py": "03f44c8a9b7791b45a644a6de0b2c67acd873e725af4b05e3727a78e57d6e9e6",
+  "qr_p7_pred.py": "31419851fa744ba996d7bcf279a5aaaf524a11710edcf63140c37782f08e5471",
+  "qr_s024.py": "d44e5a3797089a02a025de0e0e1bc121c79fd1c02ba3000551009190b85eacd9",
+  "qr_x998.py": "95bebf54a7778eee0d48ef49f1e7f6de2bd342ce9dc7ce3bfa3c4c7d6dafc29e"
+ },
+ "total": 16,
+ "uploaded": {
+  "build_commit": "54deb514b31fe90c4aeb321a3f1bcccf4be74aa5",
+  "code_sha256": "2fc8340d4152bb87bd6115d9fd6b452e9cccf338b300a74db8856af9f3d53a9f",
+  "files": 39,
+  "frozen_files_equal": {
+   "qr_data_v2.py": true,
+   "qr_data_v2_00.py": true,
+   "qr_data_v2_01.py": true,
+   "qr_data_v2_02.py": true,
+   "qr_data_v2_03.py": true,
+   "qr_data_v2_04.py": true,
+   "qr_data_v2_05.py": true,
+   "qr_data_v2_06.py": true,
+   "qr_data_v2_07.py": true,
+   "qr_data_v2_08.py": true,
+   "qr_data_v2_09.py": true,
+   "qr_data_v2_10.py": true,
+   "qr_data_v2_11.py": true,
+   "qr_data_v2_12.py": true,
+   "qr_data_v2_13.py": true,
+   "qr_data_v2_14.py": true,
+   "qr_fundamentals.py": true,
+   "qr_harness.py": true,
+   "qr_indicators.py": true,
+   "qr_industry.py": true,
+   "qr_p7.py": true,
+   "qr_p7_export.py": true,
+   "qr_p7_mech.py": true,
+   "qr_p7_pred.py": true,
+   "qr_p7_score.py": true,
+   "qr_sec_corrections.py": true,
+   "qr_v2.py": true,
+   "qr_x998.py": true,
+   "qr_xs.py": true,
+   "qr_xs_diag.py": true,
+   "qr_xs_panel.py": true
+  },
+  "pins": {
+   "main": true,
+   "qr_h023": true,
+   "qr_p7_pred": true,
+   "qr_s024": true,
+   "spec": true
+  }
+ }
+}

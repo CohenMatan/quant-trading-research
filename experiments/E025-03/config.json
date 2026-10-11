@@ -1,0 +1,58 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H023",
+ "strategy_id": "S025",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S025_h023_score_v2",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P8",
+ "cycle": "P8H023",
+ "experiment_id": "E025-03",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "null",
+  "spec_sha256": "34e8e738c1df263fb726f3936b7488dc70da7f84203e20e84683a2dfbb9cf470",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "grid_code_sha256": "60ac2fc67149c0a9b86dd95616b44bd154ca47d51c7fbefd389c9f6db47afce4",
+  "seeds": [
+   1001,
+   2000
+  ],
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+  "components_sha256": "7652f7fca2c0bd68b9d23ba0a9eea4b2f850b1555ec3874ec9127a48b067509e"
+ },
+ "description": "P8-CP1 (owner D199): H023 optimiser-null worlds 1001-2000 of 5,000: per world the frozen identity tether (qr_p7_pred.Tether(seed), the H022 seeds, one permutation per date for the WHOLE 92-configuration grid) and every configuration's complete statistics; records max_t_IC across the grid (full window and walk-forward training prefixes), the control column (= the H022 null world), plateau and D2-D5 summaries (qr_h023.null_record). Refused unless the prepared panel (09b1de41...) and the layer-subtotal digest (7652f7fc..., canary E025-01) equal the pins. No real-assignment statistic. 2011-2017 only. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H023 Score v2 weight search: canary, 5,000 optimiser-null worlds, then ONE real development search (owner 2026-10-11, D199)"
+}
