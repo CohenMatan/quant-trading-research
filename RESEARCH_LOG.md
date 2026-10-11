@@ -1991,3 +1991,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - No 2018–2021, Holdout untouched, no portfolio, nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H025 / Phase 10 as Rejected.
+
+
+## 2026-10-11: Phase 11 — H026 Learned Stock Score Portfolio: REJECTED; STOP (D206–D210)
+
+- **Owner (D206):** H025 / Phase 10 closed. H026 approved: Ridge over the 11 H024 features → Top-15 portfolio → beat SPY on terminal wealth. 2011–2021 is H026 development data; the Holdout stays sealed.
+- **Data v2.1 (D207):** Data v2 extended through 2021-12-31 with the same rules (X801 runs E801-01..04).
+  - Point-in-time audit 0; determinism, future invariance and truncation all pass.
+  - 2011–2017 eligibility matches 84/84 reviews; the H022 population differs by −0.05% (restatement guard).
+  - One own-gate specification error (NEW_YEARS_MAPPING) is kept as FAILED and disclosed.
+- **Canary E028-01 (D208):** 13/13. Coverage ≥ 99.8%; label purge and timing exact; feature panel pinned.
+- **Null (D209):** 5,000 full-pipeline worlds; the rerun of seeds 1–25 is identical. c_WEALTH = 0.2245 was pinned and merged (PR #86) before the real run.
+- **Real run E028-05, once (D210):**
+  - wealth $311,397 vs SPY $262,325 (1.19×), CAGR +2.85 points a year, with lower volatility and drawdown;
+  - **S_WEALTH 0.171 < c_WEALTH 0.225, so D1 fails** (p = 0.020);
+  - **D3 fails:** ahead of SPY in 3 of 7 years, with 2015–2017 negative;
+  - D2, D4 and D5 pass.
+- **Status:** H026 REJECTED — LEARNED SCORE PORTFOLIO DOES NOT ROBUSTLY BEAT SPY. No candidate frozen; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H026 / Phase 11 as REJECTED.
+
