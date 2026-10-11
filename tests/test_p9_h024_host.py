@@ -192,3 +192,20 @@ def test_canary_pins_and_null_configs_cover_seeds_1_to_5000():
     c = json.loads((ROOT / f"experiments/{p9h024.RERUN}/config.json").read_text())
     experiment.validate(c)
     assert tuple(c["params"]["seeds"]) == p9h024.RERUN_SEEDS
+
+
+def test_the_one_real_search_config_carries_exactly_the_pinned_provenance():
+    from qresearch import experiment
+    r = json.loads((ROOT / f"experiments/{p9h024.REAL}/config.json").read_text())
+    experiment.validate(r)
+    p = r["params"]
+    assert (r["strategy_id"], r["kind"], p["mode"], r["hypothesis_id"], r["split"]) == ("S026", "research", "real", "H024", "IS")
+    assert (p["c_model"], p["c_feature"], p["null_result_sha256"], p["threshold_commit"]) == (
+        p9h024.C_MODEL, p9h024.C_FEATURE, p9h024.NULL_RESULT_SHA256, p9h024.THRESHOLD_COMMIT)
+    assert p["c_fold"] == {str(k): v for k, v in p9h024.C_FOLD.items()} and r["end"] == "2017-12-31"
+    for k, v in (("c_model", 2.5), ("threshold_commit", "0" * 40), ("library_sha256", "f" * 64)):
+        bad = copy.deepcopy(r)
+        bad["params"][k] = v
+        with pytest.raises(experiment.ConfigError):
+            experiment.validate(bad)
+    assert sorted(x.name for x in (ROOT / "experiments").glob("E026-*")) == [f"E026-0{i}" for i in range(1, 9)]

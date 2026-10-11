@@ -75,7 +75,7 @@ C_FOLD = {2014: 5.226474685869657, 2015: 5.0028522952177354, 2016: 4.77861197549
 NULL_RESULT = "research/phase9/cp1/P9_CP1_null.json"
 NULL_RESULT_SHA256 = "db1cb1923b9aa0580a9c62fbd1238db8827033128239a7fa7530802404d2fc89"
 NULL_WORLDS = "research/phase9/cp1/P9_CP1_null_worlds.json.gz"
-THRESHOLD_COMMIT = None
+THRESHOLD_COMMIT = "75117b03bac33ff652fde4cc7fcdd8f76d81919c"   # pinned the values above
 
 # set only if a candidate exists (P9-CP1), before any 2018-2021 access
 CANDIDATE = None
