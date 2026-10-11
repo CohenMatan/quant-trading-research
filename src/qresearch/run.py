@@ -179,6 +179,18 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         if "qr_h024" in files["main.py"]:          # H024 (D201): the feature-library module (uses qr_h023's engine)
             rel = "src/qresearch/lean/qr_h024.py"
             files["qr_h024.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_h025" in files["main.py"]:          # H025 (D204): the event-study module + the packed SEC event ledger
+            lean = "src/qresearch/lean"
+            if commit:
+                for p in gitutil.list_files(commit, lean):
+                    if Path(p).name.startswith("qr_h025") and p.endswith(".py"):
+                        files[Path(p).name] = gitutil.show_file(commit, p)
+            else:
+                for p in sorted((config.REPO_ROOT / lean).glob("qr_h025*.py")):
+                    files[p.name] = p.read_text(encoding="utf-8")
+            if "qr_h025.py" not in files or "qr_h025_events.py" not in files:
+                raise experiment.ConfigError("S027 needs src/qresearch/lean/qr_h025.py and the packed SEC event ledger "
+                                             "qr_h025_events*.py")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 
