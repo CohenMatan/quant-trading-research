@@ -1876,3 +1876,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 **STOP:** awaiting the owner. Options:
 - authorise exactly one real H022 evaluation (E024-07, pinned provenance);
 - keep H022 sealed.
+
+## 2026-10-11: P7-CP7 — the one real H022 evaluation on Data v2 (E024-07): NOT QUALIFIED; STOP (D197, D198)
+
+- **Owner (D197, committed before the run):** exactly one real H022 evaluation on frozen Data v2 with the pinned c_IC 2.3798883324991866 and panel digest 09b1de41….
+- **Pre-run gate:** 17/17 pass.
+- **E024-07:** LEAN 18178, 0 orders, panel reproduced exactly, PIT audit 0.
+- **Result: NOT QUALIFIED, all four gates fail.**
+  - G1: mean IC 0.0076, t_IC 0.477 vs c 2.380 (null percentile 63%).
+  - G2: 80+ group −12.6% a year vs the population (floor +3%).
+  - G3: quintile Spearman −0.40, Q5 − Q1 −1.3% a year.
+  - G4: second-half IC −0.0002; largest block 111%.
+- **Non-gating diagnostics all null:** sector-demeaned t 0.87; Fama-MacBeth increment beyond momentum and size t 0.49; 2-month t 0.09; 3-month t −0.23.
+- No rerun, no tuning, no portfolio, no 2018–2021; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H022 as Rejected; Phase 7 No Production Candidate Found.
