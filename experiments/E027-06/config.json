@@ -1,0 +1,60 @@
+{
+ "kind": "research",
+ "hypothesis_id": "H025",
+ "strategy_id": "S027",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S027_h025_insider",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P10",
+ "cycle": "P10H025",
+ "experiment_id": "E027-06",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "real",
+  "spec_sha256": "f250e50ebc0dcfb0c4b0a176e9ad0e5bb3e5a850fdefef65bf9413724fb04768",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "h025_code_sha256": "817231ca33cac481cbd7eb770bc064dd830f40a952ff8b6bfb8c2549aa68876b",
+  "payload_sha256": "92632242eca7706421560002a20b297c79fab87f2c51ba3f7569f8147c0441ee",
+  "calendar_sha256": "53ed9ff45b7c5146205b9163c6d5322ba90ebc8f1980e838219391cdb7746958",
+  "in_host_ledger_sha256": "7adbb0b9d010a7435bf62aa1ca85683061d54a9db448c69d4106ba9228be18fe",
+  "c_event": 2.4667415685289664,
+  "null_result_sha256": "c1d55bcd5fce59fdb57cc7530723d28fe6ee3add7e8bd9d532e185d7420c5e34",
+  "threshold_commit": "49b61b6ce285c5b8b8ef6844c1b1564bbacfc458",
+  "response_panel_sha256": "bc4d17c83a55335f623a1d705bf616dca89cda34d182888c0d81145866bb83b7",
+  "event_ledger_sha256": "23d3a74a24ee1ac9273db5375f99068db239c9ec4cfc212cbea0a759317864c7"
+ },
+ "description": "P10-CP1 (owner D204): the ONE real H025 development evaluation 2011-2017 (S027 real mode) with the pinned c_EVENT, null result, event-ledger and response-panel digests: G1-G5 and the pre-registered diagnostics. Research. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H025 Insider Cluster Buying: no-return audit, canary, 5,000 matched null worlds, then ONE real development evaluation (owner 2026-10-11, D204)"
+}

@@ -70,7 +70,7 @@ RESPONSE_PANEL_SHA256 = "bc4d17c83a55335f623a1d705bf616dca89cda34d182888c0d81145
 C_EVENT = 2.4667415685289664
 C_EVENT_RAW = 2.4667415685289664                      # 50th largest null t (> floor 2.326)
 NULL_RESULT_SHA256 = "c1d55bcd5fce59fdb57cc7530723d28fe6ee3add7e8bd9d532e185d7420c5e34"   # research/phase10/cp1/P10_CP1_null.json
-THRESHOLD_COMMIT = None
+THRESHOLD_COMMIT = "49b61b6ce285c5b8b8ef6844c1b1564bbacfc458"   # the commit that pinned c_EVENT
 
 
 def file_sha256(rel: str) -> str:

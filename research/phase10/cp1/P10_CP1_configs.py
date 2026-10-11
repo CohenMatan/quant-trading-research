@@ -83,6 +83,7 @@ def main(mode):
     elif mode == "real":
         assert P.C_EVENT is not None
         c = base(P.REAL, "real", "research")
+        c["portfolio"].update(min_position_usd=5000, max_positions=15)      # the approved D051 rules (no order is placed)
         c["params"].update(in_host_ledger_sha256=P.IN_HOST_LEDGER_SHA256, c_event=P.C_EVENT,
                            null_result_sha256=P.NULL_RESULT_SHA256, threshold_commit=P.THRESHOLD_COMMIT,
                            response_panel_sha256=P.RESPONSE_PANEL_SHA256, event_ledger_sha256=P.EVENT_LEDGER_SHA256)
