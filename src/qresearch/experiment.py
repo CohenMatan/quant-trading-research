@@ -366,8 +366,51 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                   "result, threshold commit and digests")
         else:
             raise ConfigError("S025 modes: canary, null or real")
+    if cfg["strategy_id"] == "S026":
+        # H024 Feature Redesign and Selection (owner D201, research/phase9/H024_spec.md): the S024 host (uploaded as
+        # qr_s024) on frozen Data v2, 2011-01-03 .. 2017-12-31 only (2011-2017 = H024 development; 2018+ sealed); the
+        # canary and the 5,000 null worlds are infrastructure; the ONE real development search is research and needs
+        # the pinned c_MODEL / c_FEATURE / fold thresholds, null result, library and population digests
+        from . import p9h024
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2017-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H024 runs use 2011-01-03..2017-12-31, warm-up 2008-07-01, the Data v2 universe filters "
+                              "(universe.sec_corrections off) and the default-build policy")
+        if (p.get("spec_sha256") != p9h024.SPEC_SHA256 or p.get("pred_code_sha256") != p9h024.PRED_CODE_SHA256
+                or p.get("feature_code_sha256") != p9h024.CODE_SHA256["src/qresearch/lean/qr_h024.py"]):
+            raise ConfigError("H024 runs carry the pinned H024 spec, qr_p7_pred and qr_h024 fingerprints")
+        if cfg.get("hypothesis_id") != "H024" or cfg.get("programme") != "P9" or not cfg.get("owner_approval_required"):
+            raise ConfigError("H024 runs belong to H024 / P9 and need owner_approval_required")
+        pinned = (p9h024.FEATURES is not None and p.get("features") == list(p9h024.FEATURES)
+                  and p.get("links") == [list(x) for x in p9h024.LINKS]
+                  and p.get("library_sha256") == p9h024.LIBRARY_SHA256
+                  and p.get("population_sha256") == p9h024.POPULATION_SHA256
+                  and p.get("panel_sha256") == p9h024.PANEL_SHA256)
+        if mode == "canary":
+            if kind != "infrastructure":
+                raise ConfigError("the H024 canary is infrastructure")
+        elif mode == "null":
+            if kind != "infrastructure" or tuple(p.get("seeds", ())) not in p9h024.NULL_BATCHES + (p9h024.RERUN_SEEDS,) \
+                    or not pinned:
+                raise ConfigError("H024 null runs are infrastructure batches of the pinned seeds against the pinned "
+                                  "library, population and panel (set from the canary)")
+        elif mode == "real":
+            if (kind != "research" or not pinned or p9h024.C_MODEL is None or p.get("c_model") != p9h024.C_MODEL
+                    or p.get("c_feature") != p9h024.C_FEATURE
+                    or p.get("c_fold") != {str(k): v for k, v in (p9h024.C_FOLD or {}).items()}
+                    or p.get("null_result_sha256") != p9h024.NULL_RESULT_SHA256
+                    or p.get("threshold_commit") != p9h024.THRESHOLD_COMMIT):
+                raise ConfigError("the H024 real development search needs the pinned c_MODEL, c_FEATURE, fold "
+                                  "thresholds, null result, threshold commit, library and population digests")
+        else:
+            raise ConfigError("S026 modes: canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
