@@ -78,8 +78,9 @@ def validate(cfg: dict, unlock_file=None) -> None:
     kind = cfg["kind"]
     if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT", "DEV"):
         raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF, HOLDOUT or DEV)")
-    if split == "DEV" and cfg.get("programme") != "P2":
-        raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094)")
+    if split == "DEV" and cfg.get("programme") not in ("P2", "P11"):
+        raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094) and "
+                          "the H026 development run (programme 'P11', D206)")
     if scheme == config.CURRENT_SCHEME:
         if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
             raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
@@ -471,6 +472,46 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if p.get("mode") != "export" or kind != "infrastructure" or cfg.get("programme") != "P11" \
                 or cfg.get("hypothesis_id") != "H026" or not cfg.get("owner_approval_required"):
             raise ConfigError("X801 runs are Data v2.1 infrastructure exports for H026 / P11 with owner approval")
+    if cfg["strategy_id"] == "S028":
+        # H026 Learned Stock Score Portfolio (owner D206, research/phase11/H026_spec.md): the frozen X801 Data v2.1 host
+        # (uploaded as qr_x801) + qr_h026, 2011-01-03 .. 2021-12-31 (2011-2021 = H026 development; nothing after
+        # 2021-12-31); canary and the 5,000 null worlds are infrastructure; the ONE real development run is research on
+        # the DEV split (programme P11) and needs the pinned c_WEALTH, null result, threshold commit and panel digests
+        from . import p11h026
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2021-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H026 runs use 2011-01-03..2021-12-31, warm-up 2008-07-01, the Data v2 universe filters "
+                              "(universe.sec_corrections off) and the default-build policy")
+        if (p.get("spec_sha256") != p11h026.SPEC_SHA256
+                or p.get("h026_code_sha256") != p11h026.CODE_SHA256["src/qresearch/lean/qr_h026.py"]
+                or p.get("data_v21_manifest_sha256") != p11h026.DATA_V21_MANIFEST_SHA256):
+            raise ConfigError("H026 runs carry the pinned H026 spec, qr_h026 and Data v2.1 manifest fingerprints")
+        if cfg.get("hypothesis_id") != "H026" or cfg.get("programme") != "P11" or not cfg.get("owner_approval_required"):
+            raise ConfigError("H026 runs belong to H026 / P11 and need owner_approval_required")
+        panel = p11h026.FEATURE_PANEL_SHA256 is not None and p.get("feature_panel_sha256") == p11h026.FEATURE_PANEL_SHA256
+        if mode == "canary":
+            if kind != "infrastructure" or split != "AUDIT":
+                raise ConfigError("the H026 canary is infrastructure (AUDIT window)")
+        elif mode == "null":
+            if (kind != "infrastructure" or split != "AUDIT" or not panel
+                    or tuple(p.get("seeds", ())) not in p11h026.NULL_BATCHES + (p11h026.RERUN_SEEDS,)):
+                raise ConfigError("H026 null runs are infrastructure batches of the pinned seeds against the pinned "
+                                  "feature panel (set from the canary)")
+        elif mode == "real":
+            if (kind != "research" or split != "DEV" or not panel or p11h026.C_WEALTH is None
+                    or p.get("c_wealth") != p11h026.C_WEALTH
+                    or p.get("null_result_sha256") != p11h026.NULL_RESULT_SHA256
+                    or p.get("threshold_commit") != p11h026.THRESHOLD_COMMIT
+                    or p.get("response_panel_sha256") != p11h026.RESPONSE_PANEL_SHA256):
+                raise ConfigError("the H026 real development run needs the pinned c_WEALTH, null result, threshold "
+                                  "commit, feature- and response-panel digests")
+        else:
+            raise ConfigError("S028 modes: canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
             cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):

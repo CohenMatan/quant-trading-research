@@ -179,6 +179,13 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for n in ("qr_v2.py", "qr_data_v21.py", "qr_p7_mech.py", "qr_xs_diag.py"):
             if n not in files:
                 raise experiment.ConfigError(f"the X801 module needs {n}")
+    if "qr_h026" in files["main.py"]:
+        # H026 (D206): the learned-score module + the frozen H024 feature module and its H023 engine import
+        for n in ("qr_h026.py", "qr_h024.py", "qr_h023.py"):
+            rel = f"src/qresearch/lean/{n}"
+            files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_x801.py" not in files or "qr_p7_pred.py" not in files:
+            raise experiment.ConfigError("H026 needs the X801 module and qr_p7_pred.py (tether)")
     if "qr_s024" in files["main.py"]:
         # H023 (D199): the pinned H022 / Data v2 host S024, uploaded byte-identical as a module (the H023 host S025
         # subclasses it; S024 itself imports the frozen X998 module, uploaded by the rule above) + the grid module

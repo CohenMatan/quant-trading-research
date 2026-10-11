@@ -263,16 +263,18 @@ class H026Learned(X81.DataV2Export):
                     decisions=len(rv) - 1)
 
     def _w_months(self, reviews, rows_k, pops, raw_by_t):
-        """The H026 decision months 2011-01 .. 2021-11 (spec sections 3-4, 7)."""
+        """The H026 decision months = every review 2011-01-31 .. 2021-11-30 (spec sections 3-4, 7)."""
         O, C, m = self.w_spy
         last_row = int(self.cal.size - 1)
         months, cov = [], {}
-        for i, t in enumerate(reviews[:-1]):
+        for i, t in enumerate(reviews):
             k = rows_k[t]
             e = k + 1
-            nxt_review = reviews[i + 1]
-            end = rows_k[nxt_review]
-            nxt = end + 1 if end + 1 <= last_row else None
+            if i + 1 < len(reviews):                       # held to the next review's close, rebalanced at its next open
+                end = rows_k[reviews[i + 1]]
+                nxt = end + 1
+            else:                                          # the 2021-11-30 decision: held to the 2021-12-31 close
+                end, nxt = last_row, None
             ids_all = sorted(pops[t])
             Xr = raw_by_t[t]
             ok = np.all(np.isfinite(Xr), axis=1)
@@ -337,10 +339,11 @@ class H026Learned(X81.DataV2Export):
         t0 = time.perf_counter()
         reviews = sorted(self.mon)
         rows_k = {t: self._row(t) for t in reviews}
-        if str(reviews[-1]) != W_LAST or str(reviews[0])[:7] != "2011-01":
-            raise Exception(f"S028: reviews {reviews[0]} .. {reviews[-1]} differ from 2011-01 .. 2021-12-31")
+        # a run ending on a month-end never reaches that month's review (CLAUDE.md): the last review is 2021-11-30
+        if str(reviews[-1]) != "2021-11-30" or str(reviews[0])[:7] != "2011-01" or len(reviews) != 131:
+            raise Exception(f"S028: reviews {reviews[0]} .. {reviews[-1]} differ from 2011-01 .. 2021-11 (131)")
         pops, sdig, edig, regimes, tech_cache = self._w_scores(reviews, rows_k)
-        raw_by_t = {t: self._w_features(t, rows_k[t], sorted(pops[t]), tech_cache) for t in reviews[:-1]}
+        raw_by_t = {t: self._w_features(t, rows_k[t], sorted(pops[t]), tech_cache) for t in reviews}
         self.st["scores_s"] = round(time.perf_counter() - t0, 1)
         months, cov = self._w_months(reviews, rows_k, pops, raw_by_t)
         self.st["coverage"] = dict(by_year={y: dict(h022_population=v[0], all_11_valid=v[1],
