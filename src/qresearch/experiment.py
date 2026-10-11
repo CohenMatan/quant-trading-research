@@ -409,8 +409,52 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                   "thresholds, null result, threshold commit, library and population digests")
         else:
             raise ConfigError("S026 modes: canary, null or real")
+    if cfg["strategy_id"] == "S027":
+        # H025 Insider Cluster Buying (owner D204, research/phase10/H025_spec.md): the S024 host (uploaded as qr_s024) on
+        # frozen Data v2 + the frozen SEC event ledger, 2011-01-03 .. 2017-12-31 only (2011-2017 = H025 development;
+        # 2018+ sealed); audit, canary and the 5,000 matched null worlds are infrastructure; the ONE real development
+        # evaluation is research and needs the pinned c_EVENT, null result, ledger and response-panel digests
+        from . import p10h025
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2017-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H025 runs use 2011-01-03..2017-12-31, warm-up 2008-07-01, the Data v2 universe filters "
+                              "(universe.sec_corrections off) and the default-build policy")
+        if (p.get("spec_sha256") != p10h025.SPEC_SHA256 or p.get("pred_code_sha256") != p10h025.PRED_CODE_SHA256
+                or p.get("h025_code_sha256") != p10h025.CODE_SHA256["src/qresearch/lean/qr_h025.py"]
+                or p.get("payload_sha256") != p10h025.PAYLOAD_SHA256
+                or p.get("calendar_sha256") != p10h025.CALENDAR_SHA256):
+            raise ConfigError("H025 runs carry the pinned H025 spec, module, SEC ledger payload and calendar digests")
+        if cfg.get("hypothesis_id") != "H025" or cfg.get("programme") != "P10" or not cfg.get("owner_approval_required"):
+            raise ConfigError("H025 runs belong to H025 / P10 and need owner_approval_required")
+        pinned = p10h025.IN_HOST_LEDGER_SHA256 is not None and p.get("in_host_ledger_sha256") == p10h025.IN_HOST_LEDGER_SHA256
+        if mode == "audit":
+            if kind != "infrastructure":
+                raise ConfigError("the H025 no-return audit is infrastructure")
+        elif mode == "canary":
+            if kind != "infrastructure" or not pinned:
+                raise ConfigError("the H025 canary is infrastructure and needs the pinned in-host ledger digest")
+        elif mode == "null":
+            panel_ok = p10h025.RESPONSE_PANEL_SHA256 is None or p.get("response_panel_sha256") == p10h025.RESPONSE_PANEL_SHA256
+            if kind != "infrastructure" or tuple(p.get("seeds", ())) != p10h025.NULL_SEEDS_RANGE or not pinned \
+                    or p10h025.EVENT_LEDGER_SHA256 is None or not panel_ok:
+                raise ConfigError("H025 null runs are infrastructure: seeds 1..5000 against the pinned ledger digests")
+        elif mode == "real":
+            if (kind != "research" or not pinned or p10h025.C_EVENT is None or p.get("c_event") != p10h025.C_EVENT
+                    or p.get("null_result_sha256") != p10h025.NULL_RESULT_SHA256
+                    or p.get("threshold_commit") != p10h025.THRESHOLD_COMMIT
+                    or p.get("response_panel_sha256") != p10h025.RESPONSE_PANEL_SHA256
+                    or p.get("event_ledger_sha256") != p10h025.EVENT_LEDGER_SHA256):
+                raise ConfigError("the H025 real development evaluation needs the pinned c_EVENT, null result, threshold "
+                                  "commit, event-ledger and response-panel digests")
+        else:
+            raise ConfigError("S027 modes: audit, canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
