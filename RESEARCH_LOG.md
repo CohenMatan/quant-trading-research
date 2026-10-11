@@ -1911,3 +1911,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Pre-registered 2018–2021 validation:** gates V1–V4. Prerequisite: an owner-approved extension of the Data v2 reference layers to 2018–2021.
 - **Verification:** the grid statistics equal the frozen H022 procedure to < 1e-12 for every configuration, in real and null worlds. A null world costs about 0.1 s, so 5,000 worlds are feasible.
 - **Next:** canary E025-01.
+
+## 2026-10-11: P8-CP1 — H023 Score v2 weight optimisation: NO ROBUST SCORE V2 CANDIDATE; STOP (D200)
+
+- **Canary E025-01: 16/16.** The panel equals the pinned H022 panel, the layer subtotals equal Score v1, and the grid equals the frozen procedure.
+- **Optimiser null E025-02..06: 5,000 worlds; rerun E025-07 identical.** Every control column equals the H022 null world of the same seed.
+- **c_SEARCH = 2.9226**, pinned and merged before the real search (PR #79). The full-procedure false-promotion rate is 0.54%.
+- **Real search E025-08 (once): no candidate.**
+  - The best configuration is 80/10/10 with t_IC 0.97 (null p = 0.41).
+  - No configuration passes D1, D3 or D4.
+  - There is no robust plateau: only 7 configurations meet the base conditions, in 4 regions of at most 3.
+  - The control 40/45/15 equals H022 exactly.
+- **Surface:** ranking strength rises with Technical weight and falls with Fundamental weight; Sector weight does not matter. No configuration has monotone quintiles or stable blocks, and 2016 is negative throughout.
+- **Walk-forward:** pseudo-out-of-sample IC 0.001 (t 0.05). The fold selections do not cluster.
+- **Boundary flag:** wT = 80, reported only; no expanded search is recommended.
+- Nothing was frozen; 2018–2021 and the Holdout are untouched; no portfolio; nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H023 / Phase 8 as No Production Candidate Found.

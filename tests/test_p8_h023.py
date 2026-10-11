@@ -385,3 +385,15 @@ def test_c_search_is_pinned_from_the_5000_optimiser_null_worlds():
     assert integ["panel_equals_pinned"] and integ["components_equal_pinned"] and integ["pit_audit_zero"]
     assert integ["control_equals_h022_null"]["all_within_1e9"]
     assert res["false_promotion"] == float(np.mean([w["cstar"] > p8h023.C_SEARCH for w in ws]))
+
+
+def test_p8_cp1_result_is_the_frozen_procedure_outcome():
+    """The one real development search E025-08: offline recomputation identical; no candidate; nothing frozen."""
+    import json
+    res = json.loads((ROOT / "research/phase8/cp1/P8_CP1_result.json").read_text())
+    assert res["verdict"] == "NO ROBUST SCORE V2 CANDIDATE" and res["selected"] is None and res["candidate_sha256"] is None
+    assert all(res["recompute"].values()) and res["orders"] == 0 and res["c_search"] == p8h023.C_SEARCH
+    assert res["surface"]["counts"]["qualified"] == 0 and res["surface"]["plateaus"] == []
+    assert abs(res["control"]["t_ic"] - p8h023.H022_RECORD["t_ic"]) < 1e-12
+    assert res["absolute_best"]["weights"] == [80, 10, 10] and res["absolute_best"]["t_ic"] < p8h023.C_SEARCH
+    assert p8h023.CANDIDATE is None
