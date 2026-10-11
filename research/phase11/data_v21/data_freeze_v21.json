@@ -1,0 +1,306 @@
+{
+ "combined_sha256": "d97d4f3be84dabe0717dd46657d26a7b12444dfbedde3798ff21e4046e697f19",
+ "extends_data_v2_manifest_sha256": "cf833f6fd4b8c4f124e9416b3d0722f61da93b97bdb22b1664aad13f969177fb",
+ "files": {
+  "research/phase11/data_v21/build_data_v21.py": "5499488e97ce1662eb5d545108724afbe884d90f158a9db466375736cc94b214",
+  "research/phase11/data_v21/configs_x801.py": "254d0f5f550ddbde2ee8203149e9198bb3d386e0fa79670f68060f0b63ffbded",
+  "research/phase11/data_v21/data_v21_reference.json": "d466f8132db2ef9edfff14547d734d2b991cb44025cc577afe2d17dc17abf02e",
+  "research/phase11/data_v21/x801_analysis.py": "8f72a69ec41159dfb8e8ddbd8320416a6be8e7aa1db3fb9cb50d4bdb456f413e",
+  "research/phase11/data_v21/x801_summary.json": "56267e0d28dec141395a7914ae5e74aa9fc4875eb7c45442cb6e331353350b6b",
+  "src/qresearch/lean/qr_data_v21.py": "dcd37d530f5d3dc5c6350967d1341859bc6c7aeb4095153e66e8dec40de289aa",
+  "src/qresearch/lean/qr_data_v21_00.py": "c8a3b582eed3672ea1d67bbc71707b778509f1764660e8c6b8053f19bc076fdb",
+  "src/qresearch/lean/qr_data_v21_01.py": "d04d025b9e9d5671f843e6ab5ea4fa33fe808b16347283bfc53ef82280792e41",
+  "src/qresearch/lean/qr_data_v21_02.py": "b10d15a7ff5671c2f4b84b27320d74166f6f2e83b605f4b051e824e6d336e153",
+  "src/qresearch/lean/qr_data_v21_03.py": "5430e5b89eeef9c9fca9652c2937d99865a97405b5ed7395a8306ec5a1068c8f",
+  "src/qresearch/lean/qr_data_v21_04.py": "c8de565933cb76336bf796b933654a79b83f5bab09011aa59a2c64f7bacfe1cb",
+  "src/qresearch/lean/qr_data_v21_05.py": "73cba0d24131d8cb159c6a02183f37622b67fec396369740a177743b47572e94",
+  "src/qresearch/lean/qr_data_v21_06.py": "809712e393de563c6c9f901992035332bd583a008714036848f78a9fa57d2ebc",
+  "src/qresearch/lean/qr_data_v21_07.py": "87b6ff81f08f61ba4ac155449d6a13fa06e8a23cfe819b7182cfc74799eccc72",
+  "src/qresearch/lean/qr_data_v21_08.py": "7335ad1e22bf497eb8bde4d5556f4b472bcdcc549b72d77f3f9a149bc41c34df",
+  "src/qresearch/lean/qr_data_v21_09.py": "18a924cdbc7444c280418fa9f23a6cd16f31373fd3e7f5d7b02a45dc1cd9a980",
+  "src/qresearch/lean/qr_data_v21_10.py": "aa445efe1f29890a3ae1897954980eeedf43fdc29d45feb9bdccf2b11ad04265",
+  "src/qresearch/lean/qr_data_v21_11.py": "d8b1f569549c7d02e349dae2101491ac060a6c80d242d9252bf289687263c7c4",
+  "src/qresearch/lean/qr_data_v21_12.py": "b459009df05214a59d4fe88ce0aed371f3bc58c18975680bad94e98f4c03e3b4",
+  "src/qresearch/lean/qr_data_v21_13.py": "0b37d18b84e438abb2f8da59ab64421eeba0c6dae30cc77eec37e683a434f212",
+  "src/qresearch/lean/qr_data_v21_14.py": "752258a1622b1e58f4a1793c49a7a83ec11698cb66084fd1a3f02c3903f7b1a1",
+  "src/qresearch/lean/qr_data_v21_15.py": "ca010c52d437b69170d08f77899d6b6877d75d2f19155919cec65de62f369fb3",
+  "src/qresearch/lean/qr_data_v21_16.py": "4ed4bf4127ad1360422b22c4a75479614b171eb6d058d1f4a9d452813cea5a0a",
+  "src/qresearch/lean/qr_data_v21_17.py": "1f7e8eb72f23df63049da2d622151be714477ba79de21c7ecc9a2e79d041b87a",
+  "src/qresearch/lean/qr_data_v21_18.py": "3171c993938d2766cb6b5e827aff92a70b60a7ff0ec020d31de7f342b1978840",
+  "src/qresearch/lean/qr_data_v21_19.py": "7c08b011c4926f2981df2712f7b8501ffdabdf715c3f95445058562e1af91702",
+  "src/qresearch/lean/qr_data_v21_20.py": "8e38c4d66155baa5e504eee81bef04806049193eeeea66335048f729a60489e8",
+  "strategies/X801_data_v21_export/main.py": "dc75e9fd7e1d9c4da6ca07b0588e67964f33013421c9a1f4416e7104278f54f1"
+ },
+ "gates": {
+  "DETERMINISM": true,
+  "FUTURE_INVARIANCE": true,
+  "NEW_YEARS_MAPPING": false,
+  "NEW_YEARS_SCORED": true,
+  "PIT": true,
+  "REPRODUCTION_ELIGIBILITY": true,
+  "RUNS_COMPLETED": true,
+  "TRUNCATION": true
+ },
+ "h022_population_2011_2017": {
+  "decisions": 83,
+  "frozen_stock_months": 34863,
+  "relative_change": -0.000459,
+  "v21_stock_months": 34847
+ },
+ "mapping_specification_correction": {
+  "decision": "D207",
+  "e801_01": {
+   "2008": {
+    "as_written": 0.3416,
+    "with_sec_identity": 0.9198
+   },
+   "2009": {
+    "as_written": 0.3832,
+    "with_sec_identity": 0.9778
+   },
+   "2010": {
+    "as_written": 0.4115,
+    "with_sec_identity": 0.9802
+   },
+   "2011": {
+    "as_written": 0.5107,
+    "with_sec_identity": 0.983
+   },
+   "2012": {
+    "as_written": 0.5899,
+    "with_sec_identity": 0.9828
+   },
+   "2013": {
+    "as_written": 0.5852,
+    "with_sec_identity": 0.9761
+   },
+   "2014": {
+    "as_written": 0.5796,
+    "with_sec_identity": 0.9643
+   },
+   "2015": {
+    "as_written": 0.5861,
+    "with_sec_identity": 0.9734
+   },
+   "2016": {
+    "as_written": 0.597,
+    "with_sec_identity": 0.983
+   },
+   "2017": {
+    "as_written": 0.5904,
+    "with_sec_identity": 0.9758
+   },
+   "2018": {
+    "as_written": 0.5835,
+    "with_sec_identity": 0.9694
+   },
+   "2019": {
+    "as_written": 0.5834,
+    "with_sec_identity": 0.9716
+   },
+   "2020": {
+    "as_written": 0.5809,
+    "with_sec_identity": 0.9718
+   },
+   "2021": {
+    "as_written": 0.5213,
+    "with_sec_identity": 0.9482
+   }
+  },
+  "frozen_e998_01": {
+   "2008": {
+    "as_written": 0.3416,
+    "with_sec_identity": 0.9198
+   },
+   "2009": {
+    "as_written": 0.3832,
+    "with_sec_identity": 0.9778
+   },
+   "2010": {
+    "as_written": 0.4115,
+    "with_sec_identity": 0.9802
+   },
+   "2011": {
+    "as_written": 0.5107,
+    "with_sec_identity": 0.983
+   },
+   "2012": {
+    "as_written": 0.5899,
+    "with_sec_identity": 0.9828
+   },
+   "2013": {
+    "as_written": 0.5852,
+    "with_sec_identity": 0.9761
+   },
+   "2014": {
+    "as_written": 0.5796,
+    "with_sec_identity": 0.9643
+   },
+   "2015": {
+    "as_written": 0.5861,
+    "with_sec_identity": 0.9734
+   },
+   "2016": {
+    "as_written": 0.597,
+    "with_sec_identity": 0.983
+   },
+   "2017": {
+    "as_written": 0.5904,
+    "with_sec_identity": 0.9758
+   }
+  },
+  "frozen_years_identical": true,
+  "gate_as_written": "NEW_YEARS_MAPPING FAILED (threshold 0.90 on the as-written share)"
+ },
+ "reference": {
+  "chars": 1274301,
+  "components": {
+   "diag": {
+    "raw_bytes": 89023,
+    "sha256": "f791716470d4200f5d6f5309578adefe40518f7c98d08c519618f71ec09cc11c"
+   },
+   "end": {
+    "raw_bytes": 12,
+    "sha256": "50a2d6c9666a0259d1735ea3f3b19c76cbbd1085d79b8d282a3cc7086667687f"
+   },
+   "epoch": {
+    "raw_bytes": 12,
+    "sha256": "11df588eb9806b3034f85926053564fad5e22bccab51dccd9e8339283e7b1e81"
+   },
+   "ext": {
+    "raw_bytes": 60917,
+    "sha256": "93c60b652f079a4d7b7cc353b73e408b0ffb6bb8292ec82011679887481a5383"
+   },
+   "f": {
+    "raw_bytes": 2684690,
+    "sha256": "2bd903c96aa5d3aed3aa301cb2b9e1ab381eb41aa911c88f2e9e30eccb6c8661"
+   },
+   "guard": {
+    "raw_bytes": 530590,
+    "sha256": "cddfc48a7004a1cf2fb713fb3b14e685a1849fbad14b0855478dab31e8325ce4"
+   },
+   "idv": {
+    "raw_bytes": 228550,
+    "sha256": "26b50641516f00a90c2bc61b365261fbe1d3d996bf5b997c36c8e18515e555e9"
+   },
+   "sec_v1": {
+    "raw_bytes": 1888444,
+    "sha256": "10eb879b22e9b2d70cdb03751627ccfebeea5bbb1c66286b8a7fd11021bda845"
+   },
+   "version": {
+    "raw_bytes": 11,
+    "sha256": "38e524c199e95c4e89fc51392bcca740f073dbc0d251ec82e4ac9f9a7b5ac7d7"
+   }
+  },
+  "counts": {
+   "extension_rows": 1807,
+   "guard_periods": 11529,
+   "guard_periods_scanned": 135361,
+   "guard_registrants": 2172,
+   "id_none": 56,
+   "id_reject": 105,
+   "idv_registrants": 1531,
+   "registrants_with_filings": 3941,
+   "repaired_securities": 495,
+   "sic_history_securities": 3958
+  },
+  "data_v2_filing_rows_prefix": {
+   "differing": 15,
+   "differing_sample": [
+    "1010858",
+    "1073429",
+    "1158863",
+    "1158895",
+    "1296445",
+    "1375365",
+    "1440024",
+    "1459417",
+    "1495932",
+    "1602078",
+    "1633978",
+    "1669779",
+    "1701605",
+    "8947",
+    "940942"
+   ],
+   "identical_prefix": 3274,
+   "registrants": 3289
+  },
+  "end": "2021-12-31",
+  "filings": {
+   "cover_counts": 103209,
+   "filings": 148378,
+   "missing_submissions": 0,
+   "registrants": 3941,
+   "with_filings": 3941
+  },
+  "loader_version": "v2-lzma-b85-1",
+  "parts": 21,
+  "project_files_of_table": 22,
+  "sec_requests": 168,
+  "table_sha256": "07884f7b148a91ffcec05bb8ec6120adb99809dcc8531ec1cc2b83079a9cd68d"
+ },
+ "review_calendar_sha256": "59616e42ae7d6bdc2b66835cbfdabfc97b64b9342b9997384532da1c7eada0f9",
+ "reviews": {
+  "first": "2011-01-31",
+  "last": "2021-11-30",
+  "n": 131
+ },
+ "rules": {
+  "build_policy": "default_build_digest_verified: record the actual LEAN build of every run; digests must reproduce",
+  "change": "cut-off 2017-12-31 -> 2021-12-31 for the SEC reference (filings, cover-page share counts, identity, restatement-guard re-reports, SIC history); the guard therefore also sees 2018-2021 re-reports of earlier periods (later public knowledge applied only from its own public date + 1 day)",
+  "compliance": "aggregates and SHA-256 digests only; no vendor value, no return exported",
+  "extends": "Data v2 (qresearch.datafreeze_v2 MANIFEST_SHA256), every rule unchanged (universe, SEC market-cap repair, M2 timing, identity, restatement guard, share class, corporate actions, life rule, review calendar, price / ADV filters, Score v1 disqualifiers)",
+  "sec_snapshot": "cached SEC JSON snapshots contain later filings; every row is filtered to dates <= 2021-12-31 before use (build_data_v21.py)",
+  "window": {
+   "first_session": "2011-01-03",
+   "history_only_warmup_from": "2008-07-01",
+   "last_session": "2021-12-31",
+   "reviews": "last session of each month 2011-01 .. 2021-11 reached by a run ending 2021-12-31 (131)",
+   "sealed": [
+    "2022-01-01 .. 2026-08-31"
+   ]
+  }
+ },
+ "runs": {
+  "E801-01": {
+   "code_sha256": "48c8dbabf727034078cdfab8dce98bc8dd5bd32d62096564cdd092b0ce4e7f86",
+   "config_sha256": "bbdb416bd52e7ce1a07c69ad7131978360a79b70f4a513ebcb6f1573403b0e97",
+   "git_commit": "b562bbe467490628ab16d588579764bc1a81a282",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "d20a8be509ecfd58c45f96df696fad59",
+   "status": "completed"
+  },
+  "E801-02": {
+   "code_sha256": "83769c5768145a0e780cbea0c71bf0b3d574b9dfe5e34ae8fa79974700d8fee5",
+   "config_sha256": "3c8b5ffdeb982074a805e3fe6101d4a49ceb3bf2c2d6d3777c6031840e5d8e57",
+   "git_commit": "27d0d003b49ae02b22d393e0926f81114527587d",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "ddb4d261c5a5a2c07664208e74002252",
+   "status": "completed"
+  },
+  "E801-03": {
+   "code_sha256": "2c58ebb232c926b63a497cd563bb865c823c688bd8bd08f653d5e32f04822b31",
+   "config_sha256": "6cb4b4489a698f9f534c711dadd3ae45d5e1b89da92bba735056181112bc22f5",
+   "git_commit": "8c1cbf81f41e4dfb13ce4984115c838b6c3bc835",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "06f90f8712dcb98aeb02c3351220a6d6",
+   "status": "completed"
+  },
+  "E801-04": {
+   "code_sha256": "47c68e095210c71013081df1c03e6bf3619c2816b5c157260b7a8cababf43fbb",
+   "config_sha256": "6c58460120ca06ff8b8607b441e582396ab3a04f779730b4b89e2456143b0244",
+   "git_commit": "8dd6cf9e7324373ec571abaafe5f8058ba11febb",
+   "lean_version": "v2.5.0.0.18178",
+   "qc_backtest_id": "9fbfcb4887f72c3782658a884af63417",
+   "status": "completed"
+  }
+ },
+ "status": "FROZEN \u2014 NEW_YEARS_MAPPING FAILED AS WRITTEN (SPECIFICATION ERROR, D207)",
+ "thresholds": {
+  "new_year_mapping_min": 0.9,
+  "new_year_scored_ratio_min": 0.5,
+  "repro_eligibility_share": 0.99
+ },
+ "version": "v2.1"
+}

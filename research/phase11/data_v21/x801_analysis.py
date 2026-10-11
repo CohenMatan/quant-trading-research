@@ -101,6 +101,44 @@ def main():
     out["gates"] = gates
     out["thresholds"] = TH
     out["all_pass"] = all(gates.values())
+    # ---- added AFTER the gate results were seen (D207); the gates and TH above are unchanged ----------------------
+    # (a) NEW_YEARS_MAPPING specification error: the counter's denominator includes vendor reports of companies with
+    #     no SEC identity row ('unmapped|no_cik'); the same counter is ~0.53-0.59 in the frozen Data v2 years. The
+    #     share among reports WITH an SEC identity is reported per year beside it (record only, never a gate).
+    def mapping(idc):
+        m, u, nc = {}, {}, {}
+        for k, v in idc.items():
+            p_ = k.split("|")
+            y = p_[-1]
+            if p_[0] == "mapped":
+                m[y] = m.get(y, 0) + v
+            else:
+                u[y] = u.get(y, 0) + v
+                if p_[1] == "no_cik":
+                    nc[y] = nc.get(y, 0) + v
+        return {y: dict(as_written=round(m[y] / (m[y] + u.get(y, 0)), 4),
+                        with_sec_identity=round(m[y] / (m[y] + u.get(y, 0) - nc.get(y, 0)), 4))
+                for y in sorted(m)}
+    out["mapping_specification_correction"] = dict(
+        decision="D207", gate_as_written="NEW_YEARS_MAPPING FAILED (threshold 0.90 on the as-written share)",
+        e801_01=mapping(full["identity_mapping"]), frozen_e998_01=mapping(v2["identity_mapping"]),
+        frozen_years_identical=all(full["identity_mapping"].get(k) == v for k, v in v2["identity_mapping"].items()))
+    # (b) 2011-2017 analysed-population reproduction (H022 population = 'candidates' per review) vs frozen E998-01
+    col = full["per_review_cols"]
+    a = {r[0]: dict(zip(col, r)) for r in S["E801-03"]["per_review"]}
+    b = {r[0]: dict(zip(col, r)) for r in v2["per_review"]}
+    dec = [d for d in sorted(b) if d < "2017-12-01"]
+    out["h022_population_2011_2017"] = dict(
+        decisions=len(dec), frozen_stock_months=sum(b[d]["candidates"] for d in dec),
+        v21_stock_months=sum(a[d]["candidates"] for d in dec),
+        reviews_differing=[[d, b[d]["candidates"], a[d]["candidates"], b[d]["scored"], a[d]["scored"]]
+                           for d in sorted(b) if a[d] != b[d]],
+        score_digest_differing=rp_s[1], d202_snapshot_reviews=[d for d in rp_s[1] if "2011-02" <= d <= "2012-01-31"])
+    hp = out["h022_population_2011_2017"]
+    hp["relative_change"] = round(hp["v21_stock_months"] / hp["frozen_stock_months"] - 1.0, 6)
+    import hashlib
+    out["review_calendar_sha256"] = hashlib.sha256(json.dumps([r[0] for r in full["per_review"]]).encode()).hexdigest()
+    out["reviews"] = dict(n=len(full["per_review"]), first=full["per_review"][0][0], last=full["per_review"][-1][0])
     (Path(__file__).parent / "x801_summary.json").write_text(json.dumps(out, indent=1, sort_keys=True, default=str) + "\n")
     print(json.dumps(dict(gates=gates, per_period={k: {kk: v.get(kk) for kk in (
         "eligible_per_review", "scored_per_review", "new_reports_mapped_share", "h2_share_nonfin", "from_sec_repair_per_review")}

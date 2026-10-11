@@ -1,0 +1,734 @@
+{
+ "all_pass": false,
+ "determinism_E801_02": {
+  "differing_keys": [],
+  "identical": true
+ },
+ "future_invariance_2011_2017": {
+  "differing": [],
+  "eligibility_equal": 84,
+  "reviews": 84,
+  "scores_equal": 84
+ },
+ "gates": {
+  "DETERMINISM": true,
+  "FUTURE_INVARIANCE": true,
+  "NEW_YEARS_MAPPING": false,
+  "NEW_YEARS_SCORED": true,
+  "PIT": true,
+  "REPRODUCTION_ELIGIBILITY": true,
+  "RUNS_COMPLETED": true,
+  "TRUNCATION": true
+ },
+ "h022_population_2011_2017": {
+  "d202_snapshot_reviews": [
+   "2011-02-28",
+   "2011-03-31",
+   "2011-04-29",
+   "2011-05-31",
+   "2011-06-30",
+   "2011-07-29",
+   "2011-08-31",
+   "2011-09-30",
+   "2011-10-31",
+   "2011-11-30",
+   "2011-12-30",
+   "2012-01-31"
+  ],
+  "decisions": 83,
+  "frozen_stock_months": 34863,
+  "relative_change": -0.000459,
+  "reviews_differing": [
+   [
+    "2016-12-30",
+    572,
+    571,
+    702,
+    701
+   ],
+   [
+    "2017-01-31",
+    549,
+    548,
+    700,
+    699
+   ],
+   [
+    "2017-02-28",
+    582,
+    581,
+    708,
+    707
+   ],
+   [
+    "2017-03-31",
+    585,
+    584,
+    713,
+    712
+   ],
+   [
+    "2017-04-28",
+    578,
+    577,
+    704,
+    703
+   ],
+   [
+    "2017-05-31",
+    529,
+    528,
+    690,
+    689
+   ],
+   [
+    "2017-06-30",
+    534,
+    533,
+    696,
+    695
+   ],
+   [
+    "2017-07-31",
+    538,
+    536,
+    692,
+    690
+   ],
+   [
+    "2017-08-31",
+    528,
+    527,
+    693,
+    691
+   ],
+   [
+    "2017-09-29",
+    539,
+    537,
+    719,
+    716
+   ],
+   [
+    "2017-10-31",
+    540,
+    538,
+    709,
+    706
+   ],
+   [
+    "2017-11-30",
+    568,
+    566,
+    728,
+    725
+   ],
+   [
+    "2017-12-29",
+    595,
+    592,
+    726,
+    722
+   ]
+  ],
+  "score_digest_differing": [
+   "2011-02-28",
+   "2011-03-31",
+   "2011-04-29",
+   "2011-05-31",
+   "2011-06-30",
+   "2011-07-29",
+   "2011-08-31",
+   "2011-09-30",
+   "2011-10-31",
+   "2011-11-30",
+   "2011-12-30",
+   "2012-01-31",
+   "2016-10-31",
+   "2016-11-30",
+   "2016-12-30",
+   "2017-01-31",
+   "2017-02-28",
+   "2017-03-31",
+   "2017-04-28",
+   "2017-05-31",
+   "2017-06-30",
+   "2017-07-31",
+   "2017-08-31",
+   "2017-09-29",
+   "2017-10-31",
+   "2017-11-30",
+   "2017-12-29"
+  ],
+  "v21_stock_months": 34847
+ },
+ "identity_sanity": {
+  "affected_securities": 161,
+  "affected_stock_months": 8670,
+  "affected_survival": 0.8427,
+  "by_year": {
+   "2011": {
+    "affected_eligible": 357,
+    "affected_h2": 357,
+    "affected_scored": 0,
+    "retained_scored": 4236
+   },
+   "2012": {
+    "affected_eligible": 399,
+    "affected_h2": 368,
+    "affected_scored": 31,
+    "retained_scored": 4577
+   },
+   "2013": {
+    "affected_eligible": 521,
+    "affected_h2": 433,
+    "affected_scored": 88,
+    "retained_scored": 5414
+   },
+   "2014": {
+    "affected_eligible": 703,
+    "affected_h2": 553,
+    "affected_scored": 150,
+    "retained_scored": 7256
+   },
+   "2015": {
+    "affected_eligible": 799,
+    "affected_h2": 637,
+    "affected_scored": 162,
+    "retained_scored": 7903
+   },
+   "2016": {
+    "affected_eligible": 827,
+    "affected_h2": 590,
+    "affected_scored": 224,
+    "retained_scored": 7816
+   },
+   "2017": {
+    "affected_eligible": 1050,
+    "affected_h2": 767,
+    "affected_scored": 239,
+    "retained_scored": 8216
+   },
+   "2018": {
+    "affected_eligible": 1075,
+    "affected_h2": 679,
+    "affected_scored": 359,
+    "retained_scored": 8891
+   },
+   "2019": {
+    "affected_eligible": 1028,
+    "affected_h2": 564,
+    "affected_scored": 428,
+    "retained_scored": 8986
+   },
+   "2020": {
+    "affected_eligible": 929,
+    "affected_h2": 428,
+    "affected_scored": 465,
+    "retained_scored": 8951
+   },
+   "2021": {
+    "affected_eligible": 982,
+    "affected_h2": 424,
+    "affected_scored": 507,
+    "retained_scored": 9889
+   }
+  },
+  "retained_fully_scorable_stock_months": 82135,
+  "retained_survival": 0.8516
+ },
+ "mapping_specification_correction": {
+  "decision": "D207",
+  "e801_01": {
+   "2008": {
+    "as_written": 0.3416,
+    "with_sec_identity": 0.9198
+   },
+   "2009": {
+    "as_written": 0.3832,
+    "with_sec_identity": 0.9778
+   },
+   "2010": {
+    "as_written": 0.4115,
+    "with_sec_identity": 0.9802
+   },
+   "2011": {
+    "as_written": 0.5107,
+    "with_sec_identity": 0.983
+   },
+   "2012": {
+    "as_written": 0.5899,
+    "with_sec_identity": 0.9828
+   },
+   "2013": {
+    "as_written": 0.5852,
+    "with_sec_identity": 0.9761
+   },
+   "2014": {
+    "as_written": 0.5796,
+    "with_sec_identity": 0.9643
+   },
+   "2015": {
+    "as_written": 0.5861,
+    "with_sec_identity": 0.9734
+   },
+   "2016": {
+    "as_written": 0.597,
+    "with_sec_identity": 0.983
+   },
+   "2017": {
+    "as_written": 0.5904,
+    "with_sec_identity": 0.9758
+   },
+   "2018": {
+    "as_written": 0.5835,
+    "with_sec_identity": 0.9694
+   },
+   "2019": {
+    "as_written": 0.5834,
+    "with_sec_identity": 0.9716
+   },
+   "2020": {
+    "as_written": 0.5809,
+    "with_sec_identity": 0.9718
+   },
+   "2021": {
+    "as_written": 0.5213,
+    "with_sec_identity": 0.9482
+   }
+  },
+  "frozen_e998_01": {
+   "2008": {
+    "as_written": 0.3416,
+    "with_sec_identity": 0.9198
+   },
+   "2009": {
+    "as_written": 0.3832,
+    "with_sec_identity": 0.9778
+   },
+   "2010": {
+    "as_written": 0.4115,
+    "with_sec_identity": 0.9802
+   },
+   "2011": {
+    "as_written": 0.5107,
+    "with_sec_identity": 0.983
+   },
+   "2012": {
+    "as_written": 0.5899,
+    "with_sec_identity": 0.9828
+   },
+   "2013": {
+    "as_written": 0.5852,
+    "with_sec_identity": 0.9761
+   },
+   "2014": {
+    "as_written": 0.5796,
+    "with_sec_identity": 0.9643
+   },
+   "2015": {
+    "as_written": 0.5861,
+    "with_sec_identity": 0.9734
+   },
+   "2016": {
+    "as_written": 0.597,
+    "with_sec_identity": 0.983
+   },
+   "2017": {
+    "as_written": 0.5904,
+    "with_sec_identity": 0.9758
+   }
+  },
+  "frozen_years_identical": true,
+  "gate_as_written": "NEW_YEARS_MAPPING FAILED (threshold 0.90 on the as-written share)"
+ },
+ "mcap_comparison": {
+  "abs_rel_median": 0.00033,
+  "abs_rel_p90": 0.02476,
+  "agree_away": 147038,
+  "agree_near": 9368,
+  "disagree_kind": {
+   "away|sec_above": 1950,
+   "away|sec_below": 219,
+   "near|sec_above": 247,
+   "near|sec_below": 235
+  },
+  "n_away": 149207,
+  "n_near": 9850,
+  "no_sec": 7254,
+  "records": 166311,
+  "rel": {
+   "gt10pct": 7764,
+   "le10pct": 3431,
+   "le2pct": 141202,
+   "le5pct": 6660
+  }
+ },
+ "per_period": {
+  "2011-2017": {
+   "candidates": 35439,
+   "candidates_per_review": 421.9,
+   "eligible": 90370,
+   "eligible_per_review": 1075.8,
+   "from_qc_cap": 72072,
+   "from_qc_cap_per_review": 858.0,
+   "from_sec_repair": 13455,
+   "from_sec_repair_per_review": 160.2,
+   "from_v1_sec_layer": 4843,
+   "ge75": 1472,
+   "ge80": 594,
+   "ge85": 140,
+   "ge90": 45,
+   "h2_nonfin": 21745,
+   "h2_nonfin_per_review": 258.9,
+   "h2_share_nonfin": 0.3177,
+   "mappable_ext": 657,
+   "mappable_v2": 87481,
+   "new_reports": 97329,
+   "new_reports_mapped_share": 0.5781,
+   "nonfin": 68437,
+   "nonfin_per_review": 814.7,
+   "reviews": 84,
+   "scored": 46312,
+   "scored_per_review": 551.3
+  },
+  "2018": {
+   "candidates": 6330,
+   "candidates_per_review": 527.5,
+   "eligible": 15837,
+   "eligible_per_review": 1319.8,
+   "from_qc_cap": 13938,
+   "from_qc_cap_per_review": 1161.5,
+   "from_sec_repair": 1536,
+   "from_sec_repair_per_review": 128.0,
+   "from_v1_sec_layer": 363,
+   "ge75": 386,
+   "ge80": 168,
+   "ge85": 47,
+   "ge90": 10,
+   "h2_nonfin": 2537,
+   "h2_nonfin_per_review": 211.4,
+   "h2_share_nonfin": 0.2146,
+   "mappable_ext": 0,
+   "mappable_v2": 15447,
+   "new_reports": 15228,
+   "new_reports_mapped_share": 0.5835,
+   "nonfin": 11821,
+   "nonfin_per_review": 985.1,
+   "reviews": 12,
+   "scored": 9239,
+   "scored_per_review": 769.9
+  },
+  "2019": {
+   "candidates": 6371,
+   "candidates_per_review": 530.9,
+   "eligible": 15898,
+   "eligible_per_review": 1324.8,
+   "from_qc_cap": 14532,
+   "from_qc_cap_per_review": 1211.0,
+   "from_sec_repair": 1110,
+   "from_sec_repair_per_review": 92.5,
+   "from_v1_sec_layer": 256,
+   "ge75": 231,
+   "ge80": 96,
+   "ge85": 18,
+   "ge90": 3,
+   "h2_nonfin": 2400,
+   "h2_nonfin_per_review": 200.0,
+   "h2_share_nonfin": 0.2021,
+   "mappable_ext": 0,
+   "mappable_v2": 15488,
+   "new_reports": 15272,
+   "new_reports_mapped_share": 0.5834,
+   "nonfin": 11876,
+   "nonfin_per_review": 989.7,
+   "reviews": 12,
+   "scored": 9402,
+   "scored_per_review": 783.5
+  },
+  "2020": {
+   "candidates": 5736,
+   "candidates_per_review": 478.0,
+   "eligible": 15865,
+   "eligible_per_review": 1322.1,
+   "from_qc_cap": 14822,
+   "from_qc_cap_per_review": 1235.2,
+   "from_sec_repair": 864,
+   "from_sec_repair_per_review": 72.0,
+   "from_v1_sec_layer": 179,
+   "ge75": 431,
+   "ge80": 196,
+   "ge85": 73,
+   "ge90": 20,
+   "h2_nonfin": 2622,
+   "h2_nonfin_per_review": 218.5,
+   "h2_share_nonfin": 0.2163,
+   "mappable_ext": 0,
+   "mappable_v2": 15393,
+   "new_reports": 15568,
+   "new_reports_mapped_share": 0.5809,
+   "nonfin": 12121,
+   "nonfin_per_review": 1010.1,
+   "reviews": 12,
+   "scored": 9398,
+   "scored_per_review": 783.2
+  },
+  "2021": {
+   "candidates": 8446,
+   "candidates_per_review": 767.8,
+   "eligible": 18334,
+   "eligible_per_review": 1666.7,
+   "from_qc_cap": 17396,
+   "from_qc_cap_per_review": 1581.5,
+   "from_sec_repair": 696,
+   "from_sec_repair_per_review": 63.3,
+   "from_v1_sec_layer": 242,
+   "ge75": 131,
+   "ge80": 39,
+   "ge85": 1,
+   "ge90": 0,
+   "h2_nonfin": 3500,
+   "h2_nonfin_per_review": 318.2,
+   "h2_share_nonfin": 0.251,
+   "mappable_ext": 0,
+   "mappable_v2": 17576,
+   "new_reports": 18066,
+   "new_reports_mapped_share": 0.5213,
+   "nonfin": 13943,
+   "nonfin_per_review": 1267.5,
+   "reviews": 11,
+   "scored": 10379,
+   "scored_per_review": 943.5
+  }
+ },
+ "pit_audit": {
+  "E801-01": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0
+  },
+  "E801-02": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0
+  },
+  "E801-03": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0
+  },
+  "E801-04": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0
+  }
+ },
+ "repair": {
+  "bands": {
+   "1.5-1.8B": 2455,
+   "1.8-2.0B": 1422,
+   "2.0-2.2B": 1174,
+   "2.2-2.5B": 1640,
+   "gt2.5B": 14847,
+   "lt1.5B": 8055
+  },
+  "below_2B": 11932,
+  "candidate_stock_months": 31270,
+  "no_fresh_shares": 1677,
+  "repaired": 17661,
+  "repaired_near_2_0_to_2_2B": 1174,
+  "share_age": {
+   "max": 135.0,
+   "mean": 57.228,
+   "median": 60.0,
+   "min": 1.0,
+   "n": 29593,
+   "p10": 21.0,
+   "p90": 93.0,
+   "sd": 29.355
+  },
+  "stale_near": 478
+ },
+ "reproduction_vs_frozen_E998_01": {
+  "eligibility_differing": [],
+  "eligibility_equal": 84,
+  "ledger_by_year_equal": {
+   "2008": true,
+   "2009": true,
+   "2010": false,
+   "2011": false,
+   "2012": false,
+   "2013": true,
+   "2014": false,
+   "2015": false,
+   "2016": true,
+   "2017": false
+  },
+  "reviews": 84,
+  "scores_differing": [
+   "2011-02-28",
+   "2011-03-31",
+   "2011-04-29",
+   "2011-05-31",
+   "2011-06-30",
+   "2011-07-29",
+   "2011-08-31",
+   "2011-09-30",
+   "2011-10-31",
+   "2011-11-30",
+   "2011-12-30",
+   "2012-01-31",
+   "2016-10-31",
+   "2016-11-30",
+   "2016-12-30",
+   "2017-01-31",
+   "2017-02-28",
+   "2017-03-31",
+   "2017-04-28",
+   "2017-05-31",
+   "2017-06-30",
+   "2017-07-31",
+   "2017-08-31",
+   "2017-09-29",
+   "2017-10-31",
+   "2017-11-30",
+   "2017-12-29"
+  ],
+  "scores_equal": 57
+ },
+ "restatement_guard": {
+  "blocked|new|2009": 2,
+  "blocked|new|2010": 4,
+  "blocked|new|2011": 8,
+  "blocked|new|2012": 25,
+  "blocked|new|2013": 25,
+  "blocked|new|2014": 12,
+  "blocked|new|2015": 14,
+  "blocked|new|2016": 28,
+  "blocked|new|2017": 30,
+  "blocked|new|2018": 38,
+  "blocked|new|2019": 22,
+  "blocked|new|2020": 2,
+  "blocked|new|2021": 3,
+  "blocked|revision|2014": 1,
+  "new|revenue_q|later_not_yet_public": 194,
+  "new|revenue_q|later_public": 32,
+  "new|total_assets|later_not_yet_public": 29,
+  "new|total_assets|later_public": 10,
+  "revision|revenue_q|later_not_yet_public": 1
+ },
+ "review_calendar_sha256": "59616e42ae7d6bdc2b66835cbfdabfc97b64b9342b9997384532da1c7eada0f9",
+ "reviews": {
+  "first": "2011-01-31",
+  "last": "2021-11-30",
+  "n": 131
+ },
+ "runs": {
+  "E801-01": {
+   "end": "2021-12-31",
+   "record": {
+    "git_commit": "b562bbe467490628ab16d588579764bc1a81a282",
+    "holdout_unlocked": false,
+    "integrity_ok": true,
+    "lean_version": "v2.5.0.0.18178",
+    "orders": 0,
+    "qc_backtest_id": "d20a8be509ecfd58c45f96df696fad59",
+    "runtime_s": 1021.8429517745972,
+    "status": "completed"
+   },
+   "table": "data_v2.1"
+  },
+  "E801-02": {
+   "end": "2021-12-31",
+   "record": {
+    "git_commit": "27d0d003b49ae02b22d393e0926f81114527587d",
+    "holdout_unlocked": false,
+    "integrity_ok": true,
+    "lean_version": "v2.5.0.0.18178",
+    "orders": 0,
+    "qc_backtest_id": "ddb4d261c5a5a2c07664208e74002252",
+    "runtime_s": 1002.0552885532379,
+    "status": "completed"
+   },
+   "table": "data_v2.1"
+  },
+  "E801-03": {
+   "end": "2017-12-31",
+   "record": {
+    "git_commit": "8c1cbf81f41e4dfb13ce4984115c838b6c3bc835",
+    "holdout_unlocked": false,
+    "integrity_ok": true,
+    "lean_version": "v2.5.0.0.18178",
+    "orders": 0,
+    "qc_backtest_id": "06f90f8712dcb98aeb02c3351220a6d6",
+    "runtime_s": 673.6593585014343,
+    "status": "completed"
+   },
+   "table": "data_v2.1"
+  },
+  "E801-04": {
+   "end": "2013-12-31",
+   "record": {
+    "git_commit": "8dd6cf9e7324373ec571abaafe5f8058ba11febb",
+    "holdout_unlocked": false,
+    "integrity_ok": true,
+    "lean_version": "v2.5.0.0.18178",
+    "orders": 0,
+    "qc_backtest_id": "9fbfcb4887f72c3782658a884af63417",
+    "runtime_s": 321.4738757610321,
+    "status": "completed"
+   },
+   "table": "data_v2.1"
+  }
+ },
+ "sec_split_check": {
+  "ambiguous": 1,
+  "continuous": 352,
+  "no_sec_identity": 53,
+  "no_sec_mcap": 14
+ },
+ "thresholds": {
+  "new_year_mapping_min": 0.9,
+  "new_year_scored_ratio_min": 0.5,
+  "repro_eligibility_share": 0.99
+ },
+ "truncation_2011_2013": {
+  "differing": [],
+  "eligibility_equal": 35,
+  "ledger_to_2013_equal": true,
+  "reviews": 35,
+  "scores_equal": 35
+ }
+}

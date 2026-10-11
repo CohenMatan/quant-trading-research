@@ -18,7 +18,8 @@ from . import config, datafreeze_v2
 
 VERSION = "v2.1"
 MANIFEST = "research/phase11/data_v21/data_freeze_v21.json"
-MANIFEST_SHA256 = None
+MANIFEST_SHA256 = "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf"   # D207 (P11-CP1)
+FROZEN_STATUS = "FROZEN — NEW_YEARS_MAPPING FAILED AS WRITTEN (SPECIFICATION ERROR, D207)"
 
 RUNTIME = ("strategies/X801_data_v21_export/main.py",)
 RUNTIME_GLOBS = ("src/qresearch/lean/qr_data_v21*.py",)
@@ -66,13 +67,21 @@ def build() -> dict:
         pv = r["provenance"]
         runs[e] = dict(git_commit=pv["git_commit"], lean_version=pv["lean_version"], qc_backtest_id=pv["qc_backtest_id"],
                        status=r["status"], code_sha256=pv["code_sha256"], config_sha256=pv["config_sha256"])
-    status = "FROZEN" if summ.get("all_pass") else "NOT FROZEN (failed: " + ", ".join(
-        sorted(k for k, v in summ["gates"].items() if not v)) + ")"
+    failed = sorted(k for k, v in summ["gates"].items() if not v)
+    if not failed:
+        status = "FROZEN"
+    elif failed == ["NEW_YEARS_MAPPING"] and summ.get("mapping_specification_correction", {}).get("decision") == "D207":
+        status = FROZEN_STATUS                  # D207: own-gate specification error, failed result kept and disclosed
+    else:
+        status = "NOT FROZEN (failed: " + ", ".join(failed) + ")"
     return {"version": VERSION, "status": status, "extends_data_v2_manifest_sha256": datafreeze_v2.MANIFEST_SHA256,
             "files": fs, "combined_sha256": combined, "rules": RULES,
             "reference": {k: ref[k] for k in sorted(ref) if k != "file_sha256"},
             "runs": runs, "gates": summ["gates"], "thresholds": summ["thresholds"],
-            "review_calendar_sha256": summ.get("review_calendar_sha256")}
+            "review_calendar_sha256": summ["review_calendar_sha256"], "reviews": summ["reviews"],
+            "mapping_specification_correction": summ["mapping_specification_correction"],
+            "h022_population_2011_2017": {k: summ["h022_population_2011_2017"][k] for k in (
+                "decisions", "frozen_stock_months", "v21_stock_months", "relative_change")}}
 
 
 def write() -> str:

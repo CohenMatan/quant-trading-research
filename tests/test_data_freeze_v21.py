@@ -37,3 +37,16 @@ def test_preregistered_audit_thresholds_unchanged():
     a = util.module_from_spec(spec)
     spec.loader.exec_module(a)
     assert a.TH == dict(repro_eligibility_share=0.99, new_year_mapping_min=0.90, new_year_scored_ratio_min=0.50)
+
+
+@pytest.mark.skipif(not FROZEN, reason="Data v2.1 not frozen yet")
+def test_only_the_specification_error_gate_failed_and_it_stays_failed():
+    m = json.loads((config.REPO_ROOT / datafreeze_v21.MANIFEST).read_text())
+    assert m["status"] == datafreeze_v21.FROZEN_STATUS
+    assert sorted(k for k, v in m["gates"].items() if not v) == ["NEW_YEARS_MAPPING"]      # recorded, never relabelled
+    c = m["mapping_specification_correction"]
+    assert c["decision"] == "D207" and c["frozen_years_identical"] is True
+    assert all(c["e801_01"][y]["with_sec_identity"] >= 0.90 for y in ("2018", "2019", "2020", "2021"))
+    h = m["h022_population_2011_2017"]
+    assert h["decisions"] == 83 and h["frozen_stock_months"] == 34863 and abs(h["relative_change"]) < 0.001
+    assert m["reviews"] == dict(n=131, first="2011-01-31", last="2021-11-30")

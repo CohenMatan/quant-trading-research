@@ -12,13 +12,21 @@ from __future__ import annotations
 
 import hashlib
 
-from . import config
+from . import config, datafreeze_v21
 
 DECISION = "D206"
 HYPOTHESIS = "H026"
 SPEC = "research/phase11/H026_spec.md"
-SPEC_SHA256 = None
-CODE_SHA256 = {}
+SPEC_SHA256 = "3c29288506bacb4be8ba8379e9e831c9779d2ff0c29e2adbefe47ffe709edc89"
+CODE_SHA256 = {
+    "src/qresearch/lean/qr_h026.py": "3b6249d48e338510f64d8eed92461469ad252d0170bf0e88ad00af414693eab6",
+    "strategies/S028_h026_learned_score/main.py": "c49902d9acf960d00ab4c87303f8b7a49f6cb56c7d847fd14cac145bc3db77ed",
+    "strategies/X801_data_v21_export/main.py": "dc75e9fd7e1d9c4da6ca07b0588e67964f33013421c9a1f4416e7104278f54f1",
+    "research/phase11/data_v21/build_data_v21.py": "5499488e97ce1662eb5d545108724afbe884d90f158a9db466375736cc94b214",
+    "src/qresearch/lean/qr_h024.py": "f9b1c87e25ea3b98bda58496fab8eee55b47661116c622de5827362ba865465c",
+    "src/qresearch/lean/qr_p7_pred.py": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+    "research/hypotheses/H026.md": "0ceea9d278c6f7f5170f5681a7687b43afd51bc1f2ddf61931bdbf6bb9e4a112",
+}
 HOST = "strategies/S028_h026_learned_score/main.py"
 DATA_HOST = "strategies/X801_data_v21_export/main.py"
 
@@ -32,7 +40,7 @@ PERIODS = dict(development="2011-01-01 .. 2021-12-31: H026 DEVELOPMENT / MODEL-S
 # Data v2.1 (X801 audit runs; manifest frozen when the integrity gate passes)
 DATA_RUNS = ("E801-01", "E801-02", "E801-03", "E801-04")
 DATA_V21_MANIFEST = "research/phase11/data_v21/data_freeze_v21.json"
-DATA_V21_MANIFEST_SHA256 = None
+DATA_V21_MANIFEST_SHA256 = datafreeze_v21.MANIFEST_SHA256          # D207
 
 # runs
 CANARY = "E028-01"
