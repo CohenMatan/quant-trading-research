@@ -145,20 +145,25 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         files["qr_h021.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_xs_panel.py" not in files:
             raise experiment.ConfigError("H021-A needs qr_xs_panel.py")
-    if "qr_data_v2" in files["main.py"]:
-        # Data Infrastructure v2 (D190): the consolidated packed reference table + the pure v2 layer
+    v21 = "qr_x801" in files["main.py"] or "qr_data_v21" in files["main.py"]
+    if "qr_data_v2" in files["main.py"] or v21:
+        # Data Infrastructure v2 (D190): the consolidated packed reference table + the pure v2 layer; Data v2.1 (D206,
+        # host X801 / module qr_x801) uploads the extended table qr_data_v21* INSTEAD of qr_data_v2*
         lean = "src/qresearch/lean"
+        stem = "qr_data_v21" if v21 else "qr_data_v2"
+        ok = lambda n: n == f"{stem}.py" or (n.startswith(f"{stem}_") and n[len(stem) + 1:-3].isdigit())  # noqa: E731
         if commit:
-            names = [p for p in gitutil.list_files(commit, lean) if Path(p).name.startswith("qr_data_v2") and p.endswith(".py")]
+            names = [p for p in gitutil.list_files(commit, lean) if ok(Path(p).name) and p.endswith(".py")]
             for p in names:
                 files[Path(p).name] = gitutil.show_file(commit, p)
         else:
-            for p in sorted((config.REPO_ROOT / lean).glob("qr_data_v2*.py")):
-                files[p.name] = p.read_text(encoding="utf-8")
+            for p in sorted((config.REPO_ROOT / lean).glob(f"{stem}*.py")):
+                if ok(p.name):
+                    files[p.name] = p.read_text(encoding="utf-8")
         rel = f"{lean}/qr_v2.py"
         files["qr_v2.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
-        if "qr_data_v2.py" not in files:
-            raise experiment.ConfigError("Data v2 needs the packed table src/qresearch/lean/qr_data_v2*.py")
+        if f"{stem}.py" not in files:
+            raise experiment.ConfigError(f"Data v2 needs the packed table src/qresearch/lean/{stem}*.py")
     if "qr_x998" in files["main.py"]:
         # H022 on Data v2 (D194): the FROZEN Data v2 host X998, uploaded byte-identical as a module (the H022 host S024 /
         # X999 subclasses it); its own imports are uploaded by the qr_data_v2 / qr_p7 / qr_xs rules above
@@ -167,6 +172,13 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for n in ("qr_v2.py", "qr_data_v2.py", "qr_p7_mech.py", "qr_p7_pred.py", "qr_xs_diag.py"):
             if n not in files:
                 raise experiment.ConfigError(f"the frozen X998 module needs {n}")
+    if "qr_x801" in files["main.py"]:
+        # Data v2.1 (D206): the X801 host (the frozen X998 extended through 2021), uploaded byte-identical as a module
+        rel = "strategies/X801_data_v21_export/main.py"
+        files["qr_x801.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        for n in ("qr_v2.py", "qr_data_v21.py", "qr_p7_mech.py", "qr_xs_diag.py"):
+            if n not in files:
+                raise experiment.ConfigError(f"the X801 module needs {n}")
     if "qr_s024" in files["main.py"]:
         # H023 (D199): the pinned H022 / Data v2 host S024, uploaded byte-identical as a module (the H023 host S025
         # subclasses it; S024 itself imports the frozen X998 module, uploaded by the rule above) + the grid module

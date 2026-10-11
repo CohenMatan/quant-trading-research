@@ -12,7 +12,7 @@ from .holdout import check_dates
 EXP_ID = re.compile(r"^E\d{3}-\d{2}$")
 # Strategy number ranges keep experiment IDs (E<strategy number>-<run>) unique across prefixes:
 # S000 = pipeline demo, S001–S899 research, B900–B949 benchmarks, X950–X999 infrastructure.
-STRATEGY_ID = re.compile(r"^(S(?!9)\d{3}|B9[0-4]\d|X9[5-9]\d)$")
+STRATEGY_ID = re.compile(r"^(S(?!9)\d{3}|B9[0-4]\d|X9[5-9]\d|X80\d)$")
 HYP_ID = re.compile(r"^H\d{3}$")
 VERSION = re.compile(r"^v\d+\.\d+$")
 REQUIRED = ("experiment_id", "kind", "strategy_id", "strategy_version", "strategy_dir", "split",
@@ -456,8 +456,23 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                   "commit, event-ledger and response-panel digests")
         else:
             raise ConfigError("S027 modes: audit, canary, null or real")
+    if cfg["strategy_id"] == "X801":
+        # Data Infrastructure v2.1 (owner D206): the frozen X998 extended through 2021-12-31 (no 2022+ data); export
+        # audits only (infrastructure): full 2011-2021, the 2011-2017 reproduction window and the 2013 truncation
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        if ((cfg["start"], cfg.get("warmup_start")) != ("2011-01-03", "2008-07-01")
+                or cfg["end"] not in ("2021-12-31", "2017-12-31", "2013-12-31")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("X801 runs use 2011-01-03..2021-12-31 (or the 2017 / 2013 ends), warm-up 2008-07-01, the "
+                              "Data v2 universe filters (universe.sec_corrections off) and the default-build policy")
+        if p.get("mode") != "export" or kind != "infrastructure" or cfg.get("programme") != "P11" \
+                or cfg.get("hypothesis_id") != "H026" or not cfg.get("owner_approval_required"):
+            raise ConfigError("X801 runs are Data v2.1 infrastructure exports for H026 / P11 with owner approval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
