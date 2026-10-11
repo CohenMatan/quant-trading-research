@@ -227,3 +227,22 @@ def test_null_configs_cover_exactly_seeds_1_to_5000_against_the_pinned_digests()
     c = json.loads((ROOT / f"experiments/{p8h023.RERUN}/config.json").read_text())
     experiment.validate(c)
     assert tuple(c["params"]["seeds"]) == p8h023.RERUN_SEEDS
+
+
+def test_the_one_real_search_config_carries_exactly_the_pinned_provenance():
+    from qresearch import experiment
+    r = json.loads((ROOT / f"experiments/{p8h023.REAL}/config.json").read_text())
+    experiment.validate(r)
+    p = r["params"]
+    assert (r["strategy_id"], r["kind"], p["mode"], r["hypothesis_id"]) == ("S025", "research", "real", "H023")
+    assert (p["c_search"], p["null_result_sha256"], p["threshold_commit"], p["panel_sha256"], p["components_sha256"]) == (
+        p8h023.C_SEARCH, p8h023.NULL_RESULT_SHA256, p8h023.THRESHOLD_COMMIT, p8h023.PANEL_SHA256,
+        p8h023.COMPONENTS_SHA256)
+    assert p["c_fold"] == {str(k): v for k, v in p8h023.C_FOLD.items()}
+    assert r["end"] == "2017-12-31" and r["split"] == "IS" and r["owner_approval_required"]
+    for k, v in (("c_search", 2.5), ("threshold_commit", "0" * 40), ("c_fold", {})):
+        bad = copy.deepcopy(r)
+        bad["params"][k] = v
+        with pytest.raises(experiment.ConfigError):
+            experiment.validate(bad)
+    assert sorted(x.name for x in (ROOT / "experiments").glob("E025-*")) == [f"E025-0{i}" for i in range(1, 9)]
