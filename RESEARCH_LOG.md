@@ -2011,3 +2011,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner. Recommendation: close H026 / Phase 11 as REJECTED.
 
+
+## 2026-10-11: P11-CP2 — H026 post-mortem: H026 REMAINS REJECTED; H027 feasibility B; STOP (D211, D212)
+
+- **Owner (D211):** H026's REJECTED result accepted as recorded. A descriptive post-mortem only, from committed artifacts: no rerun, no tuning, no new null worlds, no QuantConnect run, no Holdout.
+- **Where the $49K came from:** market declines.
+  - Log-relative +0.202 over the 24 SPY-down months, −0.030 over the 60 up months.
+  - March 2020 = 64% of S_WEALTH; 2018 + 2020 = 78% of the positive yearly total.
+  - Beta 0.80, down-capture 0.78.
+- **What Ridge learned:** a stable shrunk defensive tilt from 2016 (λ = 100 at the grid boundary).
+  - Low volatility, low book-to-market, high profitability, near the 52-week high.
+  - The same formula lost in 2016, 2019 and 2021 and won in 2017, 2018 and 2020.
+- **Null comparison** (existing worlds, post-hoc only):
+  - wealth at the 98th percentile;
+  - volatility below all 5,000 worlds and MaxDD shallower than 4,999 (a low-volatility tilt the permutation null cannot produce);
+  - 0 of the 99 richer null worlds had as shallow a drawdown.
+- **H027 feasibility: B** (interesting but concentrated; a defensive exposure, with selection skill beyond it unproven). Three concepts listed, none chosen.
+- **Not computed:** security-, sector- and exposure-level items (not exported by E028-05).
+- **Governance:** D207 is still Claude's own judgement, not an owner exception (unresolved).
+
+**STOP:** awaiting the owner — D207 decision; H027 direction or close Phase 11; optional non-trading export run (needs memory work first).
+
