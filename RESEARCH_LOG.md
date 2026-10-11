@@ -1891,3 +1891,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - No rerun, no tuning, no portfolio, no 2018–2021; Holdout untouched; nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H022 as Rejected; Phase 7 No Production Candidate Found.
+
+## 2026-10-11: Phase 8 — H023 Score v2 weight optimisation: pre-registration frozen (D199)
+
+- **Owner (D199):** H022 / Score v1 stays permanently Rejected exactly as tested. H023 is a new hypothesis that re-weights only the three frozen Score v1 layers (Technical /40, Fundamental /45, Sector /15).
+- **2011–2017 is now TRAINING / DEVELOPMENT data for H023.** 2018–2021 is sealed as its first external validation; the Holdout stays locked.
+- **Frozen before any run:**
+  - spec `research/phase8/H023_spec.md`;
+  - hypothesis `research/hypotheses/H023.md`;
+  - grid module `qr_h023`;
+  - host S025 (a subclass of the pinned S024);
+  - pins `qresearch.p8h023`.
+- **The search:**
+  - grid of 92 weightings; control 40/45/15;
+  - 5,000-world optimiser null (whole grid per world), giving c_SEARCH;
+  - filters D1–D5;
+  - robust plateau of ≥ 4 configurations, then the medoid selection rule;
+  - walk-forward diagnostic.
+- **Pre-registered 2018–2021 validation:** gates V1–V4. Prerequisite: an owner-approved extension of the Data v2 reference layers to 2018–2021.
+- **Verification:** the grid statistics equal the frozen H022 procedure to < 1e-12 for every configuration, in real and null worlds. A null world costs about 0.1 s, so 5,000 worlds are feasible.
+- **Next:** canary E025-01.

@@ -325,8 +325,49 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                   "panel digest (and a separate owner authorisation)")
         else:
             raise ConfigError("S024 modes: null or real")
+    if cfg["strategy_id"] == "S025":
+        # H023 Score v2 weight search (owner D199, research/phase8/H023_spec.md): the S024 host (uploaded as qr_s024) on
+        # frozen Data v2, 2011-01-03 .. 2017-12-31 only (2011-2017 = H023 training / development; 2018+ sealed); canary
+        # and the 5,000 optimiser-null worlds (pinned batches + rerun) are infrastructure; the ONE real development
+        # search is research and needs the pinned c_SEARCH, fold thresholds, null result and digests
+        from . import p8h023
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2017-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H023 runs use 2011-01-03..2017-12-31, warm-up 2008-07-01, the Data v2 universe filters "
+                              "(universe.sec_corrections off) and the default-build policy")
+        if (p.get("spec_sha256") != p8h023.SPEC_SHA256 or p.get("pred_code_sha256") != p8h023.PRED_CODE_SHA256
+                or p.get("grid_code_sha256") != p8h023.CODE_SHA256["src/qresearch/lean/qr_h023.py"]):
+            raise ConfigError("H023 runs carry the pinned H023 spec, qr_p7_pred and qr_h023 fingerprints")
+        if cfg.get("hypothesis_id") != "H023" or cfg.get("programme") != "P8" or not cfg.get("owner_approval_required"):
+            raise ConfigError("H023 runs belong to H023 / P8 and need owner_approval_required")
+        if mode == "canary":
+            if kind != "infrastructure":
+                raise ConfigError("the H023 canary is infrastructure")
+        elif mode == "null":
+            seeds = tuple(p.get("seeds", ()))
+            if (kind != "infrastructure" or seeds not in p8h023.NULL_BATCHES + (p8h023.RERUN_SEEDS,)
+                    or p.get("panel_sha256") != p8h023.PANEL_SHA256 or p8h023.COMPONENTS_SHA256 is None
+                    or p.get("components_sha256") != p8h023.COMPONENTS_SHA256):
+                raise ConfigError("H023 null runs are infrastructure batches of the pinned seeds against the pinned "
+                                  "panel and layer-subtotal digests (set from the canary)")
+        elif mode == "real":
+            if (kind != "research" or p8h023.C_SEARCH is None or p.get("c_search") != p8h023.C_SEARCH
+                    or p.get("c_fold") != {str(k): v for k, v in (p8h023.C_FOLD or {}).items()}
+                    or p.get("null_result_sha256") != p8h023.NULL_RESULT_SHA256
+                    or p.get("threshold_commit") != p8h023.THRESHOLD_COMMIT
+                    or p.get("panel_sha256") != p8h023.PANEL_SHA256
+                    or p.get("components_sha256") != p8h023.COMPONENTS_SHA256):
+                raise ConfigError("the H023 real development search needs the pinned c_SEARCH, fold thresholds, null "
+                                  "result, threshold commit and digests")
+        else:
+            raise ConfigError("S025 modes: canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
