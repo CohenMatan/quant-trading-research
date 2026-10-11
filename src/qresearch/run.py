@@ -176,6 +176,9 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         files["qr_h023.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_x998.py" not in files:
             raise experiment.ConfigError("the S024 module needs the frozen qr_x998.py")
+        if "qr_h024" in files["main.py"]:          # H024 (D201): the feature-library module (uses qr_h023's engine)
+            rel = "src/qresearch/lean/qr_h024.py"
+            files["qr_h024.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     files["qr_params.py"] = experiment.lean_params(cfg, unlocked)
     return files
 

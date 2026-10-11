@@ -1,0 +1,52 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H024",
+ "strategy_id": "S026",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S026_h024_features",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P9",
+ "cycle": "P9H024",
+ "experiment_id": "E026-01",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "canary",
+  "spec_sha256": "b28e580332bd350d20d34871c85f3288795e29810638881a0bc8893813cde4a5",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "feature_code_sha256": "f9b1c87e25ea3b98bda58496fab8eee55b47661116c622de5827362ba865465c"
+ },
+ "description": "P9-CP1 (owner D201): H024 canary on frozen Data v2 (S026 canary mode = the S024 / H022 canary, inherited, plus the H024 checks): the raw values of the 11 library features for every H022 population row and their coverage (90% rule); independent full-history recomputation of every feature on a deterministic sample; the live total-assets ledger; the cross-sectional redundancy correlations of the feature VALUES (no response read), the redundancy links / components and the model library generated in-host with its hash and count; the H024 population digest; the feature / model / control columns against the frozen qr_p7_pred procedure on SYNTHETIC responses; null-record determinism and runtime. No IC of real responses, no gate, no null statistic of real responses. 2011-2017 only (H024 development); 2018-2021 and the Holdout sealed. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H024 feature redesign and selection: canary, 5,000 null worlds, then ONE real development search (owner 2026-10-11, D201)"
+}

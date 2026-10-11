@@ -1928,3 +1928,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - Nothing was frozen; 2018–2021 and the Holdout are untouched; no portfolio; nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H023 / Phase 8 as No Production Candidate Found.
+
+## 2026-10-11: Phase 9 — H024 Feature Redesign and Selection: pre-registration frozen (D201)
+
+- **Owner (D201):** H023 closed as NO ROBUST SCORE V2 CANDIDATE; H022 stays rejected. New hypothesis H024: redesign the score's feature composition under a tight pre-registered search. 2011–2017 is development data; 2018–2021 and the Holdout stay sealed.
+- **Inventory:** the eight Score v1 features were read from the frozen code (`research/phase9/P9_feature_inventory.md`).
+- **Library (11 features, chosen without returns):** momentum, low volatility, gross profitability, accruals, book-to-market, asset growth, 1-month reversal, cash profitability, 52-week-high proximity, cash-flow yield, equity/assets.
+  - Revenue growth is excluded because its direction is ambiguous.
+  - Sector breadth and trend state are removed by the 500-model budget rule.
+- **Models:** up to 415, with 2–4 features each, at most one per family, and equal-weighted percentiles.
+- **Procedure:** 5,000 null worlds for feature-level and model-level thresholds; gates D1–D6 and the neighbourhood rule; deterministic selection; walk-forward diagnostic.
+- **Disclosure recorded:** 2018–2021 is not pristine for low volatility (H005 was validated there) or for GP/A, trend and earnings ideas (Phase 2 developed on 2010–2021).
+- **Verification:** the module and host tests pass; every column equals the frozen H022 procedure.
+- **Next:** canary E026-01.
