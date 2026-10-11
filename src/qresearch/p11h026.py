@@ -51,7 +51,7 @@ RERUN_SEEDS = (1, 25)
 REAL = "E028-05"
 
 # set from the canary / null runs, merged before the real run
-FEATURE_PANEL_SHA256 = None
+FEATURE_PANEL_SHA256 = "10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89"   # E028-01 canary (13/13)
 RESPONSE_PANEL_SHA256 = None
 C_WEALTH = None
 NULL_RESULT_SHA256 = None
