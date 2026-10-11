@@ -1,0 +1,73 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H024",
+ "strategy_id": "S026",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S026_h024_features",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P9",
+ "cycle": "P9H024",
+ "experiment_id": "E026-04",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "null",
+  "spec_sha256": "b28e580332bd350d20d34871c85f3288795e29810638881a0bc8893813cde4a5",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "feature_code_sha256": "f9b1c87e25ea3b98bda58496fab8eee55b47661116c622de5827362ba865465c",
+  "seeds": [
+   2001,
+   3000
+  ],
+  "features": [
+   "MOM",
+   "LOWVOL",
+   "GPA",
+   "ACC",
+   "BM",
+   "AG",
+   "REV1M",
+   "CBOP",
+   "HI52",
+   "CFP",
+   "EQA"
+  ],
+  "links": [],
+  "library_sha256": "6af3616f30256226b44f2612fd5e227fd0e56a47445c621b2bfd63edf7d23922",
+  "population_sha256": "791a2d4c8972b2d10465762d8a0a675f159d37b6cfab3ff185b2e6712c3b0bc8",
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0"
+ },
+ "description": "P9-CP1 (owner D201): H024 null worlds 2001-3000 of 5,000: per world the frozen identity tether (qr_p7_pred.Tether(seed), the H022 seeds) re-indexes every stock's complete feature vector with one permutation per date; all 11 features and all 415 models of the pinned library are evaluated (qr_h024.null_record): max feature t_IC (c_FEATURE), max model t_IC (c_MODEL), fold-prefix maxima, the full-procedure summary (cstar). Refused unless the H022 panel (09b1de41...), the H024 population (791a2d4c...) and the library (6af3616f...) equal the pins. No real-assignment statistic. 2011-2017 only. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H024 feature redesign and selection: canary, 5,000 null worlds, then ONE real development search (owner 2026-10-11, D201)"
+}

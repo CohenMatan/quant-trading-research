@@ -1941,3 +1941,13 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Disclosure recorded:** 2018–2021 is not pristine for low volatility (H005 was validated there) or for GP/A, trend and earnings ideas (Phase 2 developed on 2010–2021).
 - **Verification:** the module and host tests pass; every column equals the frozen H022 procedure.
 - **Next:** canary E026-01.
+
+## 2026-10-11: H024 canary E026-01 (D202)
+
+- **Canary: 16/17.**
+  - All 11 features retained: coverage ≥ 99.9%.
+  - 0 recomputation mismatches.
+  - No redundancy links: the largest cross-family median |ρ| is 0.58.
+  - **415 models**; the library hash and the population digest (34,831 stock-months) are pinned.
+- **Check 6 (explained):** QuantConnect's data snapshot changed today between 07:58Z and 08:10Z. Score v1 rows outside the analysed population differ for 12 reviews in 2011. The pinned H022 panel and every population used by H022, H023 and H024 reproduce exactly, so no statistic is affected.
+- **Next:** null runs E026-02..07.

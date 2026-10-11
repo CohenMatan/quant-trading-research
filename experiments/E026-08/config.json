@@ -1,0 +1,79 @@
+{
+ "kind": "research",
+ "hypothesis_id": "H024",
+ "strategy_id": "S026",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S026_h024_features",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P9",
+ "cycle": "P9H024",
+ "experiment_id": "E026-08",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "real",
+  "spec_sha256": "b28e580332bd350d20d34871c85f3288795e29810638881a0bc8893813cde4a5",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5",
+  "feature_code_sha256": "f9b1c87e25ea3b98bda58496fab8eee55b47661116c622de5827362ba865465c",
+  "features": [
+   "MOM",
+   "LOWVOL",
+   "GPA",
+   "ACC",
+   "BM",
+   "AG",
+   "REV1M",
+   "CBOP",
+   "HI52",
+   "CFP",
+   "EQA"
+  ],
+  "links": [],
+  "library_sha256": "6af3616f30256226b44f2612fd5e227fd0e56a47445c621b2bfd63edf7d23922",
+  "population_sha256": "791a2d4c8972b2d10465762d8a0a675f159d37b6cfab3ff185b2e6712c3b0bc8",
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+  "c_model": 4.3672788679087295,
+  "c_feature": 3.4533403374111082,
+  "c_fold": {
+   "2014": 5.226474685869657,
+   "2015": 5.0028522952177354,
+   "2016": 4.778611975498576,
+   "2017": 4.4241903365718285
+  },
+  "null_result_sha256": "db1cb1923b9aa0580a9c62fbd1238db8827033128239a7fa7530802404d2fc89",
+  "threshold_commit": "75117b03bac33ff652fde4cc7fcdd8f76d81919c"
+ },
+ "description": "H024 REAL DEVELOPMENT SEARCH, EXACTLY ONCE (owner D201; research/phase9/H024_spec.md): the 11 frozen features and all 415 equal-weight 2-4 feature models on the 83 monthly decisions 2011-01-31..2017-11-30 (DEVELOPMENT / TRAINING data; one-month demeaned TSR; Spearman IC, Newey-West lag 2), the pinned c_MODEL = 4.3673 and c_FEATURE = 3.4533 (5,000 null worlds E026-02..06), gates D1-D6 + robust neighbourhood, the frozen selection rule, the walk-forward diagnostic with the pinned fold thresholds, feature stability, the Score v1 / H023 80/10/10 controls and the NON-GATING 2- / 3-month diagnostics; monthly matrices exported for offline recomputation (research/phase9/cp1/P9_CP1_result.py, committed before the run). No portfolio, no orders (the portfolio block is the approved d051 one, required by the research-config rule and unused by this non-trading host); refused unless the panel, population and library digests equal the pins. 2018-2021 and the Holdout sealed. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H024 real development search, exactly one run E026-08 (owner 2026-10-11, D201)"
+}
