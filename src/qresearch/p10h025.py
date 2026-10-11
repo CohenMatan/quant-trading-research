@@ -58,9 +58,11 @@ NULL_SEEDS_RANGE = (1, 5000)
 REAL = "E027-06"
 
 # set from the audit runs (after the sample check and the independent rebuild)
-IN_HOST_LEDGER_SHA256 = None
-EVENT_LEDGER = "research/phase10/ledger/h025_event_ledger.csv"
-EVENT_LEDGER_SHA256 = None
+# E027-01 / E027-02 (no response read): identical in-host rows; 605 primary events (sample gate PASS)
+IN_HOST_LEDGER_SHA256 = "7adbb0b9d010a7435bf62aa1ca85683061d54a9db448c69d4106ba9228be18fe"
+EVENT_LEDGER = "research/phase10/ledger/h025_event_ledger.csv.gz"     # SHA-256 of the uncompressed CSV
+EVENT_LEDGER_SHA256 = "23d3a74a24ee1ac9273db5375f99068db239c9ec4cfc212cbea0a759317864c7"
+PRIMARY_EVENTS = 605
 
 # set from the null runs, merged before the real evaluation
 RESPONSE_PANEL_SHA256 = None

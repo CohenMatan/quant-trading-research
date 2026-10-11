@@ -1,0 +1,297 @@
+{
+ "calendar": {
+  "first": "2010-10-01",
+  "last": "2017-12-29",
+  "sessions": 1825,
+  "sha256": "53ed9ff45b7c5146205b9163c6d5322ba90ebc8f1980e838219391cdb7746958"
+ },
+ "counts": {
+  "by_kind_window_status": {
+   "cluster|before_window|NO_REVIEW": 90,
+   "cluster|exit_after_2017|ELIGIBLE": 3,
+   "cluster|exit_after_2017|IDENTITY_UNRESOLVED": 1,
+   "cluster|exit_after_2017|NOT_ELIGIBLE": 40,
+   "cluster|in_window|ELIGIBLE": 603,
+   "cluster|in_window|ELIGIBLE_MULTICLASS": 2,
+   "cluster|in_window|IDENTITY_UNRESOLVED": 29,
+   "cluster|in_window|NOT_ELIGIBLE": 2953,
+   "single|before_window|NO_REVIEW": 234,
+   "single|exit_after_2017|ELIGIBLE": 22,
+   "single|exit_after_2017|IDENTITY_UNRESOLVED": 1,
+   "single|exit_after_2017|NOT_ELIGIBLE": 74,
+   "single|in_window|ELIGIBLE": 2021,
+   "single|in_window|ELIGIBLE_MULTICLASS": 7,
+   "single|in_window|IDENTITY_UNRESOLVED": 46,
+   "single|in_window|NOT_ELIGIBLE": 5562
+  },
+  "multiclass": 2,
+  "primary": 605,
+  "primary_by_year": {
+   "2011": 93,
+   "2012": 59,
+   "2013": 61,
+   "2014": 71,
+   "2015": 103,
+   "2016": 108,
+   "2017": 110
+  },
+  "primary_id_source": {
+   "ext": 2,
+   "v2": 603
+  },
+  "reviews_used": 83,
+  "sample_ok": true,
+  "single_controls": 1605,
+  "unresolved_symbols_at_used_reviews": 2202
+ },
+ "determinism": {
+  "counts_identical": true,
+  "in_host_identical": true,
+  "rows_identical": true
+ },
+ "event_ledger_rows": 11688,
+ "event_ledger_sha256": "23d3a74a24ee1ac9273db5375f99068db239c9ec4cfc212cbea0a759317864c7",
+ "experiments": [
+  "E027-01",
+  "E027-02"
+ ],
+ "feasibility": {
+  "ceo_cfo_events": 284,
+  "cluster_value_buckets": {
+   "100k-250k": 213,
+   "250k-1m": 262,
+   ">1m": 130
+  },
+  "cluster_value_quantiles": {
+   "p05": 121150.0,
+   "p25": 186898.26,
+   "p50": 350460.72,
+   "p75": 804790.0,
+   "p95": 2431003.08
+  },
+  "clusters_in_window_before_universe": 3587,
+  "director_only_events": 204,
+  "identity_exclusions": {
+   "identity_unresolved": 29,
+   "multiclass_mapped": 2,
+   "not_eligible": 2953
+  },
+  "identity_source": {
+   "ext": 2,
+   "v2": 603
+  },
+  "in_window_status": {
+   "ELIGIBLE": 603,
+   "ELIGIBLE_MULTICLASS": 2,
+   "IDENTITY_UNRESOLVED": 29,
+   "NOT_ELIGIBLE": 2953
+  },
+  "insiders_per_event": {
+   "2": 592,
+   "3": 11,
+   "4": 2
+  },
+  "primary_by_year": {
+   "2011": 93,
+   "2012": 59,
+   "2013": 61,
+   "2014": 71,
+   "2015": 103,
+   "2016": 108,
+   "2017": 110
+  },
+  "primary_events": 605,
+  "primary_issuers": 368,
+  "sample_gate": {
+   "events": 605,
+   "passed": true,
+   "years_with_10": 7
+  },
+  "sec": {
+   "all_submissions": 1543377,
+   "brute_force_mismatches": 0,
+   "cluster_value_buckets": {
+    "100k-250k": 1913,
+    "250k-1m": 1283,
+    ">1m": 391
+   },
+   "cluster_value_quantiles": {
+    "p05": 107893.64,
+    "p25": 145724.7,
+    "p50": 231300.0,
+    "p75": 455000.0,
+    "p95": 1879000.0
+   },
+   "clusters_all": 3721,
+   "clusters_by_window": {
+    "before_window": 90,
+    "exit_after_2017": 44,
+    "in_window": 3587
+   },
+   "clusters_in_window": 3587,
+   "clusters_in_window_by_year": {
+    "2011": 618,
+    "2012": 434,
+    "2013": 394,
+    "2014": 558,
+    "2015": 635,
+    "2016": 517,
+    "2017": 431
+   },
+   "clusters_in_window_issuers": 2008,
+   "code_p_lines": 262426,
+   "datasets": 29,
+   "filing_minus_acceptance_days": {
+    "-1": 14,
+    "-14": 1,
+    "-4": 2,
+    "0": 53550
+   },
+   "filings_rows": 53567,
+   "form4_filings_inspected": 1369349,
+   "header_candidates": 53567,
+   "insiders_per_event": {
+    "2": 3338,
+    "3": 225,
+    "4": 24
+   },
+   "line_reasons": {
+    "indirect": 43079,
+    "joint_filing": 48827,
+    "missing_price": 1653,
+    "missing_shares": 18,
+    "not_acquisition": 806,
+    "not_director_officer": 31447,
+    "not_form4": 14202,
+    "ok": 114711,
+    "title_not_common": 7683
+   },
+   "qualifying_filings": 74106,
+   "qualifying_issuers": 6030,
+   "singles_in_window": 7636,
+   "singles_in_window_not_near_cluster": 5655,
+   "timing_status": {
+    "acceptance_outside_filing_date": 17,
+    "ok": 53528,
+    "transaction_date_invalid": 22
+   }
+  },
+  "single_controls": 1605
+ },
+ "in_host_ledger_sha256": "7adbb0b9d010a7435bf62aa1ca85683061d54a9db448c69d4106ba9228be18fe",
+ "pit_audit": {
+  "baseline_pit_violations": 0,
+  "baseline_used_despite_reject": 0,
+  "fed_after_guard_trigger": 0,
+  "fed_before_first_seen": 0,
+  "fed_before_sec_filing": 0,
+  "future_identity_row": 0,
+  "record_older_than_200d": 0,
+  "repaired_below_2B": 0,
+  "repaired_with_vendor_cap": 0,
+  "share_filing_not_yet_public": 0,
+  "stale_share_count_used": 0
+ },
+ "upload": {
+  "E027-01": {
+   "build_commit": "15461f84cf4ebabd493839cc9dcae1c75f8aa434",
+   "code_sha256": "29cc9c7e3e15fe017666fba465ee1890a54a4f34ea204097781f62b7a0d3c411",
+   "files": 47,
+   "frozen_files_equal": {
+    "qr_data_v2.py": true,
+    "qr_data_v2_00.py": true,
+    "qr_data_v2_01.py": true,
+    "qr_data_v2_02.py": true,
+    "qr_data_v2_03.py": true,
+    "qr_data_v2_04.py": true,
+    "qr_data_v2_05.py": true,
+    "qr_data_v2_06.py": true,
+    "qr_data_v2_07.py": true,
+    "qr_data_v2_08.py": true,
+    "qr_data_v2_09.py": true,
+    "qr_data_v2_10.py": true,
+    "qr_data_v2_11.py": true,
+    "qr_data_v2_12.py": true,
+    "qr_data_v2_13.py": true,
+    "qr_data_v2_14.py": true,
+    "qr_fundamentals.py": true,
+    "qr_harness.py": true,
+    "qr_indicators.py": true,
+    "qr_industry.py": true,
+    "qr_p7.py": true,
+    "qr_p7_export.py": true,
+    "qr_p7_mech.py": true,
+    "qr_p7_pred.py": true,
+    "qr_p7_score.py": true,
+    "qr_sec_corrections.py": true,
+    "qr_v2.py": true,
+    "qr_x998.py": true,
+    "qr_xs.py": true,
+    "qr_xs_diag.py": true,
+    "qr_xs_panel.py": true
+   },
+   "max_file_chars": 63052,
+   "ok": true,
+   "pins": {
+    "events_payload": true,
+    "main": true,
+    "qr_h025": true,
+    "qr_p7_pred": true,
+    "qr_s024": true,
+    "spec": true
+   }
+  },
+  "E027-02": {
+   "build_commit": "a3ddf48114536269bd08ed7045aead13d73ff643",
+   "code_sha256": "6d1ca24493911d9a5aaf1b0fddb5590aad31f9c5e34c0982a88c331f0541a198",
+   "files": 47,
+   "frozen_files_equal": {
+    "qr_data_v2.py": true,
+    "qr_data_v2_00.py": true,
+    "qr_data_v2_01.py": true,
+    "qr_data_v2_02.py": true,
+    "qr_data_v2_03.py": true,
+    "qr_data_v2_04.py": true,
+    "qr_data_v2_05.py": true,
+    "qr_data_v2_06.py": true,
+    "qr_data_v2_07.py": true,
+    "qr_data_v2_08.py": true,
+    "qr_data_v2_09.py": true,
+    "qr_data_v2_10.py": true,
+    "qr_data_v2_11.py": true,
+    "qr_data_v2_12.py": true,
+    "qr_data_v2_13.py": true,
+    "qr_data_v2_14.py": true,
+    "qr_fundamentals.py": true,
+    "qr_harness.py": true,
+    "qr_indicators.py": true,
+    "qr_industry.py": true,
+    "qr_p7.py": true,
+    "qr_p7_export.py": true,
+    "qr_p7_mech.py": true,
+    "qr_p7_pred.py": true,
+    "qr_p7_score.py": true,
+    "qr_sec_corrections.py": true,
+    "qr_v2.py": true,
+    "qr_x998.py": true,
+    "qr_xs.py": true,
+    "qr_xs_diag.py": true,
+    "qr_xs_panel.py": true
+   },
+   "max_file_chars": 63052,
+   "ok": true,
+   "pins": {
+    "events_payload": true,
+    "main": true,
+    "qr_h025": true,
+    "qr_p7_pred": true,
+    "qr_s024": true,
+    "spec": true
+   }
+  }
+ },
+ "wall_s": {
+  "E027-01": 591.3,
+  "E027-02": 546.3
+ }
+}

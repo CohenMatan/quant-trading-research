@@ -231,3 +231,19 @@ def test_s027_configs_validate():
         cfg = json.loads((ROOT_ / "experiments" / e / "config.json").read_text())
         experiment.validate(cfg) if hasattr(experiment, "validate") else None
         assert cfg["params"]["mode"] == "audit" and cfg["kind"] == "infrastructure"
+
+
+def test_event_ledger_pin_and_no_return_column():
+    import gzip
+    import json
+    from qresearch import p10h025 as P
+    raw = gzip.decompress((ROOT_ / P.EVENT_LEDGER).read_bytes())
+    assert hashlib.sha256(raw).hexdigest() == P.EVENT_LEDGER_SHA256
+    head = raw.decode().split("\n", 1)[0].lower()
+    for bad in ("return", "tsr", "excess", "price_after", "spy"):
+        assert bad not in head
+    a = json.loads((ROOT_ / "research/phase10/cp1/P10_CP1_audit.json").read_text())
+    assert a["determinism"] == dict(in_host_identical=True, rows_identical=True, counts_identical=True)
+    assert a["in_host_ledger_sha256"] == P.IN_HOST_LEDGER_SHA256 and a["event_ledger_sha256"] == P.EVENT_LEDGER_SHA256
+    assert a["feasibility"]["primary_events"] == P.PRIMARY_EVENTS and a["feasibility"]["sample_gate"]["passed"]
+    assert all(v["ok"] for v in a["upload"].values())

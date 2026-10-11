@@ -1,7 +1,7 @@
 """P10-CP1 (owner D204): the H025 no-return feasibility audit, offline. Reads the two audit runs (S027 audit mode,
 E027-01 / E027-02), checks the uploaded files against the pins, joins the in-host part of the event ledger (review,
 security id, eligibility / identity status, FF12, market-cap quintile) with the SEC ledger, writes the frozen event
-ledger research/phase10/ledger/h025_event_ledger.csv (NO return column) and research/phase10/cp1/P10_CP1_audit.json
+ledger research/phase10/ledger/h025_event_ledger.csv.gz (NO return column; EVENT_LEDGER_SHA256 = SHA-256 of the CSV) and research/phase10/cp1/P10_CP1_audit.json
 (feasibility counts, the sample gate, determinism, the digests to pin).
 
     PYTHONPATH=src python research/phase10/cp1/P10_CP1_audit.py
@@ -109,7 +109,7 @@ def main(exps=P.AUDIT):
     for r in out:
         w.writerow(r)
     data = s.getvalue().encode()
-    (ROOT / P.EVENT_LEDGER).write_bytes(data)
+    (ROOT / P.EVENT_LEDGER).write_bytes(gzip.compress(data, mtime=0))     # hash = the uncompressed CSV
     cl = [r for r in out if r["kind"] == "cluster"]
     inw = [r for r in cl if r["window_status"] == "in_window"]
     prim = [r for r in cl if r["primary_event"]]
