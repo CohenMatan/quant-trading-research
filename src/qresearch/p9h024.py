@@ -66,11 +66,14 @@ POPULATION_SHA256 = "791a2d4c8972b2d10465762d8a0a675f159d37b6cfab3ff185b2e6712c3
 CANARY_COMMIT = "86c0cf3786eabdab199fec92a21ddc906baf8bec"
 
 # set after the 5,000 null worlds, merged before the real search
-C_FEATURE = None
-C_MODEL = None
-C_FOLD = None
+# P9-CP1 (D201): from the 5,000 null worlds E026-02..06 (rerun E026-07 identical; panel / population / library =
+# pins in every batch): max(50th largest null maximum, 2.326); no floor binds. Pinned BEFORE the real search E026-08.
+C_FEATURE = 3.4533403374111082
+C_MODEL = 4.3672788679087295
+C_FOLD = {2014: 5.226474685869657, 2015: 5.0028522952177354, 2016: 4.778611975498576,
+          2017: 4.4241903365718285}   # walk-forward (diagnostic)
 NULL_RESULT = "research/phase9/cp1/P9_CP1_null.json"
-NULL_RESULT_SHA256 = None
+NULL_RESULT_SHA256 = "db1cb1923b9aa0580a9c62fbd1238db8827033128239a7fa7530802404d2fc89"
 NULL_WORLDS = "research/phase9/cp1/P9_CP1_null_worlds.json.gz"
 THRESHOLD_COMMIT = None
 

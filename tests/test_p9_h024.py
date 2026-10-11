@@ -327,3 +327,23 @@ def test_pins_and_constants():
     for must in ("DEVELOPMENT / TRAINING", "NO ROBUST H024 FEATURE MODEL", "c_IC_VALIDATION", "H024 VALIDATED",
                  "Prior exposure of the validation period", "Machine learning"):
         assert must in text
+
+
+def test_thresholds_are_pinned_from_the_5000_null_worlds():
+    import gzip
+    import json
+    from qresearch import p9h024
+    path = ROOT / p9h024.NULL_RESULT
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == p9h024.NULL_RESULT_SHA256
+    res = json.loads(path.read_text())
+    ws = json.loads(gzip.open(ROOT / p9h024.NULL_WORLDS).read())
+    assert hashlib.sha256((ROOT / p9h024.NULL_WORLDS).read_bytes()).hexdigest() == res["worlds_file_sha256"]
+    assert [w["seed"] for w in ws] == list(p9h024.NULL_SEEDS)
+    assert K.critical_value([w["max_t_feature"] for w in ws]) == p9h024.C_FEATURE == res["c_feature"] > 2.326
+    assert K.critical_value([w["max_t_model"] for w in ws]) == p9h024.C_MODEL == res["c_model"] > 2.326
+    for y in K.FOLD_YEARS:
+        assert K.critical_value([w[f"max_t_model_fold{y}"] for w in ws]) == p9h024.C_FOLD[y] == res["c_fold"][str(y)]
+    i = res["integrity"]
+    assert i["completed"] == 5000 and i["seeds_exact"] and i["rerun_identical"] and i["zero_orders"]
+    assert i["panel_equals_pinned"] and i["population_equals_pinned"] and i["models_equal_pinned"] and i["pit_audit_zero"]
+    assert res["false_promotion"] == float(np.mean([w["cstar"] > p9h024.C_MODEL for w in ws]))
