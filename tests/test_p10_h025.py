@@ -247,3 +247,18 @@ def test_event_ledger_pin_and_no_return_column():
     assert a["in_host_ledger_sha256"] == P.IN_HOST_LEDGER_SHA256 and a["event_ledger_sha256"] == P.EVENT_LEDGER_SHA256
     assert a["feasibility"]["primary_events"] == P.PRIMARY_EVENTS and a["feasibility"]["sample_gate"]["passed"]
     assert all(v["ok"] for v in a["upload"].values())
+
+
+def test_c_event_is_pinned_from_the_5000_null_worlds():
+    import gzip
+    import json
+    from qresearch import p10h025 as P
+    body = (ROOT_ / "research/phase10/cp1/P10_CP1_null.json").read_bytes()
+    assert hashlib.sha256(body).hexdigest() == P.NULL_RESULT_SHA256
+    a = json.loads(body)
+    assert a["passed"] and all(a["checks"].values())
+    W = json.loads(gzip.decompress((ROOT_ / "research/phase10/cp1/P10_CP1_null_worlds.json.gz").read_bytes()))["worlds"]
+    assert [w[0] for w in W] == list(range(1, 5001))
+    c, raw = H.critical_value([w[1] for w in W])
+    assert c == P.C_EVENT == a["c_event"] and raw == P.C_EVENT_RAW
+    assert a["response_panel_sha256"] == P.RESPONSE_PANEL_SHA256

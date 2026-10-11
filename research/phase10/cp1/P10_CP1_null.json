@@ -1,0 +1,173 @@
+{
+ "c_event": 2.4667415685289664,
+ "c_event_raw": 2.4667415685289664,
+ "checks": {
+  "all_finite": true,
+  "in_host_ledger_pinned": true,
+  "panel_identical": true,
+  "pit_audit_zero": true,
+  "rerun_identical": true,
+  "seeds_1_to_5000": true,
+  "uploads_ok": true
+ },
+ "event_ledger_sha256": "23d3a74a24ee1ac9273db5375f99068db239c9ec4cfc212cbea0a759317864c7",
+ "experiments": [
+  "E027-04",
+  "E027-05"
+ ],
+ "floor": 2.326,
+ "in_host_ledger_sha256": "7adbb0b9d010a7435bf62aa1ca85683061d54a9db448c69d4106ba9228be18fe",
+ "null": {
+  "blob_chars": 289136,
+  "blob_sha256": "40364b2101af8fb4652fcc84e76e0a17aea7d312df4f7945b8bc3b925f3720a2",
+  "evaluable": 605,
+  "months": 77,
+  "nonfinite": 0,
+  "not_evaluable": 0,
+  "seeds": [
+   1,
+   5000
+  ],
+  "world_s": 2.2,
+  "worlds": 5000
+ },
+ "order_statistic": "50th largest of 5,000 (qr_xs.critical_value)",
+ "passed": true,
+ "q_panel": {
+  "controls": 1605,
+  "levels": {
+   "L1": 604,
+   "L2": 1
+  },
+  "pool_size": {
+   "empty": 0,
+   "median": 22.0,
+   "min": 1
+  },
+  "primary": 605,
+  "windows": 1024
+ },
+ "random_event_control": {
+  "mean_of_means": 0.00300470865074816,
+  "mean_of_medians": 0.001494953603499263,
+  "mean_win_rate": 0.5117487603305785,
+  "p05_mean": -0.0015290220362084556,
+  "p95_mean": 0.007843230612058352,
+  "share_worlds_mean_ge_2pct": 0.0
+ },
+ "response_panel_sha256": "bc4d17c83a55335f623a1d705bf616dca89cda34d182888c0d81145866bb83b7",
+ "t_distribution": {
+  "max": 3.5924379364944588,
+  "mean": 0.43237055796904134,
+  "min": -3.409250289178046,
+  "p50": 0.44270170308948853,
+  "p90": 1.576361640631275,
+  "p95": 1.8947714753103049,
+  "p99": 2.4562003031386728,
+  "sd": 0.8992221515525037,
+  "share_above_floor": 0.015
+ },
+ "upload": {
+  "E027-04": {
+   "build_commit": "7a20dbf2e46985ca32edc334b5c57a2d53e3c792",
+   "code_sha256": "97c3d2536650c9f71593449497b6e8ee4110f825b39b41d8791619af1ccb9300",
+   "files": 47,
+   "frozen_files_equal": {
+    "qr_data_v2.py": true,
+    "qr_data_v2_00.py": true,
+    "qr_data_v2_01.py": true,
+    "qr_data_v2_02.py": true,
+    "qr_data_v2_03.py": true,
+    "qr_data_v2_04.py": true,
+    "qr_data_v2_05.py": true,
+    "qr_data_v2_06.py": true,
+    "qr_data_v2_07.py": true,
+    "qr_data_v2_08.py": true,
+    "qr_data_v2_09.py": true,
+    "qr_data_v2_10.py": true,
+    "qr_data_v2_11.py": true,
+    "qr_data_v2_12.py": true,
+    "qr_data_v2_13.py": true,
+    "qr_data_v2_14.py": true,
+    "qr_fundamentals.py": true,
+    "qr_harness.py": true,
+    "qr_indicators.py": true,
+    "qr_industry.py": true,
+    "qr_p7.py": true,
+    "qr_p7_export.py": true,
+    "qr_p7_mech.py": true,
+    "qr_p7_pred.py": true,
+    "qr_p7_score.py": true,
+    "qr_sec_corrections.py": true,
+    "qr_v2.py": true,
+    "qr_x998.py": true,
+    "qr_xs.py": true,
+    "qr_xs_diag.py": true,
+    "qr_xs_panel.py": true
+   },
+   "max_file_chars": 63052,
+   "ok": true,
+   "pins": {
+    "events_payload": true,
+    "main": true,
+    "qr_h025": true,
+    "qr_p7_pred": true,
+    "qr_s024": true,
+    "spec": true
+   }
+  },
+  "E027-05": {
+   "build_commit": "9e65f826333e38077b98f7b374589b0f36aac5d5",
+   "code_sha256": "222612497659a29044cfad1c65b0465f58bef6311c523cfad6a5030ed1fc2a2d",
+   "files": 47,
+   "frozen_files_equal": {
+    "qr_data_v2.py": true,
+    "qr_data_v2_00.py": true,
+    "qr_data_v2_01.py": true,
+    "qr_data_v2_02.py": true,
+    "qr_data_v2_03.py": true,
+    "qr_data_v2_04.py": true,
+    "qr_data_v2_05.py": true,
+    "qr_data_v2_06.py": true,
+    "qr_data_v2_07.py": true,
+    "qr_data_v2_08.py": true,
+    "qr_data_v2_09.py": true,
+    "qr_data_v2_10.py": true,
+    "qr_data_v2_11.py": true,
+    "qr_data_v2_12.py": true,
+    "qr_data_v2_13.py": true,
+    "qr_data_v2_14.py": true,
+    "qr_fundamentals.py": true,
+    "qr_harness.py": true,
+    "qr_indicators.py": true,
+    "qr_industry.py": true,
+    "qr_p7.py": true,
+    "qr_p7_export.py": true,
+    "qr_p7_mech.py": true,
+    "qr_p7_pred.py": true,
+    "qr_p7_score.py": true,
+    "qr_sec_corrections.py": true,
+    "qr_v2.py": true,
+    "qr_x998.py": true,
+    "qr_xs.py": true,
+    "qr_xs_diag.py": true,
+    "qr_xs_panel.py": true
+   },
+   "max_file_chars": 63052,
+   "ok": true,
+   "pins": {
+    "events_payload": true,
+    "main": true,
+    "qr_h025": true,
+    "qr_p7_pred": true,
+    "qr_s024": true,
+    "spec": true
+   }
+  }
+ },
+ "wall_s": {
+  "E027-04": 636.6,
+  "E027-05": 646.4
+ },
+ "worlds_sha256": "bc125d9b23c9ecefcfbc121ed80ad41ee2f6fff721a39989380ef00cfd903339"
+}

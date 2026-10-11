@@ -66,9 +66,10 @@ PRIMARY_EVENTS = 605
 
 # set from the null runs, merged before the real evaluation
 RESPONSE_PANEL_SHA256 = "bc4d17c83a55335f623a1d705bf616dca89cda34d182888c0d81145866bb83b7"   # E027-04 (real responses hashed only)
-C_EVENT = None
-C_EVENT_RAW = None
-NULL_RESULT_SHA256 = None
+# E027-04 + identical rerun E027-05 (5,000 matched null worlds; real responses hashed only)
+C_EVENT = 2.4667415685289664
+C_EVENT_RAW = 2.4667415685289664                      # 50th largest null t (> floor 2.326)
+NULL_RESULT_SHA256 = "c1d55bcd5fce59fdb57cc7530723d28fe6ee3add7e8bd9d532e185d7420c5e34"   # research/phase10/cp1/P10_CP1_null.json
 THRESHOLD_COMMIT = None
 
 
