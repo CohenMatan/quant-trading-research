@@ -209,3 +209,21 @@ def test_configs_and_runner_wiring():
                        panel_sha256=p8h023.PANEL_SHA256, components_sha256=p8h023.COMPONENTS_SHA256)
     with pytest.raises(experiment.ConfigError):                           # never an unpinned c_SEARCH
         experiment.validate(r)
+
+
+def test_null_configs_cover_exactly_seeds_1_to_5000_against_the_pinned_digests():
+    from qresearch import experiment
+    assert p8h023.COMPONENTS_SHA256 and len(p8h023.COMPONENTS_SHA256) == 64
+    seeds = []
+    for exp, (a, b) in zip(p8h023.NULL_RUNS, p8h023.NULL_BATCHES):
+        c = json.loads((ROOT / f"experiments/{exp}/config.json").read_text())
+        experiment.validate(c)
+        p = c["params"]
+        assert (c["strategy_id"], c["kind"], p["mode"], tuple(p["seeds"])) == ("S025", "infrastructure", "null", (a, b))
+        assert p["panel_sha256"] == p8h023.PANEL_SHA256 and p["components_sha256"] == p8h023.COMPONENTS_SHA256
+        assert c["owner_approval_required"] and c["end"] == "2017-12-31"
+        seeds += list(range(a, b + 1))
+    assert seeds == list(p8h023.NULL_SEEDS)
+    c = json.loads((ROOT / f"experiments/{p8h023.RERUN}/config.json").read_text())
+    experiment.validate(c)
+    assert tuple(c["params"]["seeds"]) == p8h023.RERUN_SEEDS

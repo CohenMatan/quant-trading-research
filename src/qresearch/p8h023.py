@@ -59,8 +59,8 @@ HOST = "strategies/S025_h023_score_v2/main.py"
 PARENT_HOST = p7pred_v2.HOST                           # S024, uploaded byte-identical as qr_s024.py
 
 # set after the canary (before any null world): digest of the per-stock layer subtotals of the prepared panel
-COMPONENTS_SHA256 = None
-CANARY_COMMIT = None
+COMPONENTS_SHA256 = "7652f7fca2c0bd68b9d23ba0a9eea4b2f850b1555ec3874ec9127a48b067509e"   # E025-01 (16/16)
+CANARY_COMMIT = "54deb514b31fe90c4aeb321a3f1bcccf4be74aa5"
 
 # set after the 5,000 optimiser-null worlds, merged before the real search
 C_SEARCH = None
