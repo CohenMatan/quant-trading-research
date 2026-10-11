@@ -79,3 +79,8 @@ def file_sha256(rel: str) -> str:
 
 def ledger_manifest() -> dict:
     return json.loads((config.REPO_ROOT / LEDGER_MANIFEST).read_text())
+
+# E027-06 (the ONE real development evaluation; D205): t_EVENT -0.93, mean +0.07%, G1 / G2 / G4 FAIL ->
+# H025 REJECTED — NO ROBUST INSIDER-CLUSTER EDGE. Nothing is frozen as a candidate.
+RESULT = "research/phase10/cp1/P10_CP1_result.json"
+CANDIDATE = None

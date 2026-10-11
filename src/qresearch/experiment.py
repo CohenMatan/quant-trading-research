@@ -439,7 +439,10 @@ def validate(cfg: dict, unlock_file=None) -> None:
             if kind != "infrastructure" or not pinned:
                 raise ConfigError("the H025 canary is infrastructure and needs the pinned in-host ledger digest")
         elif mode == "null":
-            panel_ok = p10h025.RESPONSE_PANEL_SHA256 is None or p.get("response_panel_sha256") == p10h025.RESPONSE_PANEL_SHA256
+            # the first null run (E027-04) SETS the response-panel digest; every later null run must carry the pin
+            panel_ok = (p.get("response_panel_sha256") is None and cfg["experiment_id"] == p10h025.NULL_RUNS[0]) \
+                or (p10h025.RESPONSE_PANEL_SHA256 is not None
+                    and p.get("response_panel_sha256") == p10h025.RESPONSE_PANEL_SHA256)
             if kind != "infrastructure" or tuple(p.get("seeds", ())) != p10h025.NULL_SEEDS_RANGE or not pinned \
                     or p10h025.EVENT_LEDGER_SHA256 is None or not panel_ok:
                 raise ConfigError("H025 null runs are infrastructure: seeds 1..5000 against the pinned ledger digests")

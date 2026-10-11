@@ -262,3 +262,14 @@ def test_c_event_is_pinned_from_the_5000_null_worlds():
     c, raw = H.critical_value([w[1] for w in W])
     assert c == P.C_EVENT == a["c_event"] and raw == P.C_EVENT_RAW
     assert a["response_panel_sha256"] == P.RESPONSE_PANEL_SHA256
+
+
+def test_real_result_recomputes_and_is_rejected():
+    import json
+    from qresearch import p10h025 as P
+    a = json.loads((ROOT_ / "research/phase10/cp1/P10_CP1_result.json").read_text())
+    assert a["upload"]["ok"] and all(a["pins"].values()) and a["host_equals_offline"]
+    assert a["c_event"] == P.C_EVENT and a["summary"]["n"] == P.PRIMARY_EVENTS
+    assert a["gates"] == H.gates(a["summary"], P.C_EVENT)
+    assert not a["gates"]["all"] and a["verdict"] == "H025 REJECTED — NO ROBUST INSIDER-CLUSTER EDGE"
+    assert P.CANDIDATE is None

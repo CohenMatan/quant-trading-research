@@ -1964,3 +1964,30 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - No 2018–2021, Holdout untouched, no portfolio, nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H024 / Phase 9 as No Production Candidate Found.
+
+
+## 2026-10-11: Phase 10 — H025 Insider Cluster Buying pre-registered and built (D204)
+
+- **Owner (D204):** H024 / Phase 9 closed; H025 approved. Event study on SEC Form 4 filings, not a score.
+- **Definition (frozen before any count):**
+  - Who: ≥ 2 distinct directors or officers.
+  - What: open-market purchases (code P) of common stock, direct ownership; each ≥ $25K, together ≥ $100K.
+  - When: inside 10 calendar days of SEC acceptance time; online trigger; 20-session issuer cooldown.
+  - Universe and identity: frozen Data v2 universe, verified identity.
+  - Trade window: next-open entry, 20-session hold.
+  - Statistic: monthly excess vs SPY, Newey-West lag 2; 5,000 matched null worlds.
+- **SEC ledger:** 29 quarterly SEC data sets + 53,567 EDGAR acceptance timestamps, 0 missing; 3,587 pre-universe clusters; brute-force rebuild identical.
+
+## 2026-10-11: P10-CP1 — H025 REJECTED — NO ROBUST INSIDER-CLUSTER EDGE; STOP (D205)
+
+- **Audit (E027-01/02, identical):** 605 events in the ≥ $2B universe, 59–110 a year → sample gate PASS. Ledger hash pinned.
+- **Canary (E027-03):** 17/17.
+- **Null (E027-04/05, identical):** c_EVENT = 2.47, pinned and merged (PR #84) before the real run.
+- **Real (E027-06, once):**
+  - t −0.93; mean excess +0.07% per 20 sessions; median +0.02%; win 50.4%.
+  - 2011–14 −0.69%; 2015–17 +0.75%.
+  - G1, G2 and G4 fail; null p 0.93.
+- **Controls:** matched random stocks +0.30%; single-insider purchases +0.38%. No diagnostic is robust.
+- No 2018–2021, Holdout untouched, no portfolio, nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H025 / Phase 10 as Rejected.
