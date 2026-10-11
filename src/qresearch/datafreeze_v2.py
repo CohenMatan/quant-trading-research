@@ -15,6 +15,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 
 from . import config
 
@@ -103,7 +104,8 @@ def files() -> list[str]:
     root = config.REPO_ROOT
     out = list(RUNTIME) + list(OFFLINE) + list(EVIDENCE)
     for g in RUNTIME_GLOBS:
-        out += sorted(str(p.relative_to(root)) for p in root.glob(g))
+        # exact stems only: qr_data_v2.py / qr_data_v2_NN.py (the Data v2.1 table qr_data_v21*.py is not part of v2)
+        out += sorted(str(p.relative_to(root)) for p in root.glob(g) if re.fullmatch(r"qr_data_v2(_\d\d)?\.py", p.name))
     return sorted(out)
 
 

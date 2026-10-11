@@ -1,0 +1,112 @@
+{
+ "chars": 1274301,
+ "components": {
+  "diag": {
+   "raw_bytes": 89023,
+   "sha256": "f791716470d4200f5d6f5309578adefe40518f7c98d08c519618f71ec09cc11c"
+  },
+  "end": {
+   "raw_bytes": 12,
+   "sha256": "50a2d6c9666a0259d1735ea3f3b19c76cbbd1085d79b8d282a3cc7086667687f"
+  },
+  "epoch": {
+   "raw_bytes": 12,
+   "sha256": "11df588eb9806b3034f85926053564fad5e22bccab51dccd9e8339283e7b1e81"
+  },
+  "ext": {
+   "raw_bytes": 60917,
+   "sha256": "93c60b652f079a4d7b7cc353b73e408b0ffb6bb8292ec82011679887481a5383"
+  },
+  "f": {
+   "raw_bytes": 2684690,
+   "sha256": "2bd903c96aa5d3aed3aa301cb2b9e1ab381eb41aa911c88f2e9e30eccb6c8661"
+  },
+  "guard": {
+   "raw_bytes": 530590,
+   "sha256": "cddfc48a7004a1cf2fb713fb3b14e685a1849fbad14b0855478dab31e8325ce4"
+  },
+  "idv": {
+   "raw_bytes": 228550,
+   "sha256": "26b50641516f00a90c2bc61b365261fbe1d3d996bf5b997c36c8e18515e555e9"
+  },
+  "sec_v1": {
+   "raw_bytes": 1888444,
+   "sha256": "10eb879b22e9b2d70cdb03751627ccfebeea5bbb1c66286b8a7fd11021bda845"
+  },
+  "version": {
+   "raw_bytes": 11,
+   "sha256": "38e524c199e95c4e89fc51392bcca740f073dbc0d251ec82e4ac9f9a7b5ac7d7"
+  }
+ },
+ "counts": {
+  "extension_rows": 1807,
+  "guard_periods": 11529,
+  "guard_periods_scanned": 135361,
+  "guard_registrants": 2172,
+  "id_none": 56,
+  "id_reject": 105,
+  "idv_registrants": 1531,
+  "registrants_with_filings": 3941,
+  "repaired_securities": 495,
+  "sic_history_securities": 3958
+ },
+ "data_v2_filing_rows_prefix": {
+  "differing": 15,
+  "differing_sample": [
+   "1010858",
+   "1073429",
+   "1158863",
+   "1158895",
+   "1296445",
+   "1375365",
+   "1440024",
+   "1459417",
+   "1495932",
+   "1602078",
+   "1633978",
+   "1669779",
+   "1701605",
+   "8947",
+   "940942"
+  ],
+  "identical_prefix": 3274,
+  "registrants": 3289
+ },
+ "end": "2021-12-31",
+ "file_sha256": {
+  "qr_data_v21.py": "dcd37d530f5d3dc5c6350967d1341859bc6c7aeb4095153e66e8dec40de289aa",
+  "qr_data_v21_00.py": "c8a3b582eed3672ea1d67bbc71707b778509f1764660e8c6b8053f19bc076fdb",
+  "qr_data_v21_01.py": "d04d025b9e9d5671f843e6ab5ea4fa33fe808b16347283bfc53ef82280792e41",
+  "qr_data_v21_02.py": "b10d15a7ff5671c2f4b84b27320d74166f6f2e83b605f4b051e824e6d336e153",
+  "qr_data_v21_03.py": "5430e5b89eeef9c9fca9652c2937d99865a97405b5ed7395a8306ec5a1068c8f",
+  "qr_data_v21_04.py": "c8de565933cb76336bf796b933654a79b83f5bab09011aa59a2c64f7bacfe1cb",
+  "qr_data_v21_05.py": "73cba0d24131d8cb159c6a02183f37622b67fec396369740a177743b47572e94",
+  "qr_data_v21_06.py": "809712e393de563c6c9f901992035332bd583a008714036848f78a9fa57d2ebc",
+  "qr_data_v21_07.py": "87b6ff81f08f61ba4ac155449d6a13fa06e8a23cfe819b7182cfc74799eccc72",
+  "qr_data_v21_08.py": "7335ad1e22bf497eb8bde4d5556f4b472bcdcc549b72d77f3f9a149bc41c34df",
+  "qr_data_v21_09.py": "18a924cdbc7444c280418fa9f23a6cd16f31373fd3e7f5d7b02a45dc1cd9a980",
+  "qr_data_v21_10.py": "aa445efe1f29890a3ae1897954980eeedf43fdc29d45feb9bdccf2b11ad04265",
+  "qr_data_v21_11.py": "d8b1f569549c7d02e349dae2101491ac060a6c80d242d9252bf289687263c7c4",
+  "qr_data_v21_12.py": "b459009df05214a59d4fe88ce0aed371f3bc58c18975680bad94e98f4c03e3b4",
+  "qr_data_v21_13.py": "0b37d18b84e438abb2f8da59ab64421eeba0c6dae30cc77eec37e683a434f212",
+  "qr_data_v21_14.py": "752258a1622b1e58f4a1793c49a7a83ec11698cb66084fd1a3f02c3903f7b1a1",
+  "qr_data_v21_15.py": "ca010c52d437b69170d08f77899d6b6877d75d2f19155919cec65de62f369fb3",
+  "qr_data_v21_16.py": "4ed4bf4127ad1360422b22c4a75479614b171eb6d058d1f4a9d452813cea5a0a",
+  "qr_data_v21_17.py": "1f7e8eb72f23df63049da2d622151be714477ba79de21c7ecc9a2e79d041b87a",
+  "qr_data_v21_18.py": "3171c993938d2766cb6b5e827aff92a70b60a7ff0ec020d31de7f342b1978840",
+  "qr_data_v21_19.py": "7c08b011c4926f2981df2712f7b8501ffdabdf715c3f95445058562e1af91702",
+  "qr_data_v21_20.py": "8e38c4d66155baa5e504eee81bef04806049193eeeea66335048f729a60489e8"
+ },
+ "filings": {
+  "cover_counts": 103209,
+  "filings": 148378,
+  "missing_submissions": 0,
+  "registrants": 3941,
+  "with_filings": 3941
+ },
+ "loader_version": "v2-lzma-b85-1",
+ "parts": 21,
+ "project_files_of_table": 22,
+ "sec_requests": 168,
+ "table_sha256": "07884f7b148a91ffcec05bb8ec6120adb99809dcc8531ec1cc2b83079a9cd68d"
+}
