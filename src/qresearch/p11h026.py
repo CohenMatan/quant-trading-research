@@ -55,7 +55,7 @@ FEATURE_PANEL_SHA256 = "10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524
 RESPONSE_PANEL_SHA256 = "e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b"   # E028-02/03/04 (real labels hashed only)
 C_WEALTH = 0.22454658263960384                       # 50th largest of 5,000 null S_WEALTH (E028-02 + E028-03; rerun E028-04 identical)
 NULL_RESULT_SHA256 = "3706b60525a0b98b6ad6f7dba2f115b3b712e982b8f7699e81c7334cfdc65b85"   # research/phase11/cp1/P11_CP1_null.json
-THRESHOLD_COMMIT = None
+THRESHOLD_COMMIT = "8024d90fcc3fcf9182b0177cb11efeb36de5b932"   # the commit that pinned c_WEALTH (D209)
 
 RESULT = "research/phase11/cp1/P11_CP1_result.json"
 CANDIDATE = None
