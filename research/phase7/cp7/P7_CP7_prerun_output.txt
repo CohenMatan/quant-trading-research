@@ -1,0 +1,18 @@
+PASS frozen Data v2 manifest hash matches
+PASS every frozen Data v2 file matches the manifest
+PASS Score v1 hashes match (spec + code)
+PASS H022 spec hash matches
+PASS qr_p7_pred hash matches
+PASS null-method files match
+PASS pinned c_IC matches (Data v2, not Data v1)
+PASS pinned null result matches
+PASS pinned panel digest matches (= canary)
+PASS threshold commit contains the pin
+PASS canary passed 25/25 with PIT audit 0 and no timing violation
+PASS 83 decision dates (canary)
+PASS end date on or before 2017-12-31 (no 2018+ data)
+PASS config validates (research, real, pinned provenance)
+PASS working tree clean
+PASS owner approval D197 committed
+PASS no earlier E024-07 output exists
+PRE-RUN GATE: PASS
