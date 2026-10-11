@@ -197,14 +197,11 @@ def test_host_structure_and_names():
     assert "2018" not in code and "2019" not in code and "202" not in code.replace("2026", "")
 
 
-def test_runner_uploads_h025_modules(tmp_path):
+def test_runner_uploads_h025_modules():
     from qresearch import run
-    cfg = json.loads((ROOT / "experiments" / "E027-01" / "config.json").read_text()) \
-        if (ROOT / "experiments" / "E027-01" / "config.json").exists() else None
-    if cfg is None:
+    path = ROOT / "experiments" / "E027-01" / "config.json"
+    if not path.exists():
         pytest.skip("E027-01 config not written yet")
-    files = run.collect_files(cfg, None, False) if hasattr(run, "collect_files") else None
-    if files is None:
-        pytest.skip("runner exposes no collect_files")
-    assert "qr_h025.py" in files and "qr_h025_events.py" in files and "qr_s024.py" in files
+    files = run.assemble_files(json.loads(path.read_text()), None, False)
+    assert {"qr_h025.py", "qr_h025_events.py", "qr_s024.py", "qr_x998.py", "qr_data_v2.py"} <= set(files)
     assert len(files) <= 50 and all(len(v) <= 64000 for v in files.values())
