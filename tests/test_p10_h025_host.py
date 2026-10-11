@@ -16,6 +16,7 @@ import pandas as pd
 import pytest
 
 import qr_h025 as H
+import qr_p7_export as E
 from conftest import ROOT
 from qresearch import p10h025, p7pred_v2
 from test_p7_export import _host
@@ -105,7 +106,7 @@ def _run(monkeypatch, tmp_path, mode, **params):
         a.qr_on_end()
         out = json.loads(_chunks(a.msgs, "QRP7V"))
         blob = _chunks(a.msgs, "QRH")
-        _CACHE[key] = (a, out, json.loads(L.zlib.decompress(L.base64.b64decode(blob)).decode()) if blob else None)
+        _CACHE[key] = (a, out, json.loads(E.unpack(blob)) if blob else None)
     return _CACHE[key]
 
 

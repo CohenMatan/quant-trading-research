@@ -18,13 +18,13 @@ from . import config, p7pred_v2
 DECISION = "D204"
 HYPOTHESIS = "H025"
 SPEC = "research/phase10/H025_spec.md"
-SPEC_SHA256 = None
+SPEC_SHA256 = "f250e50ebc0dcfb0c4b0a176e9ad0e5bb3e5a850fdefef65bf9413724fb04768"
 CODE_SHA256 = {
-    "src/qresearch/h025_form4.py": None,
-    "research/phase10/h025_ledger.py": None,
-    "src/qresearch/lean/qr_h025.py": None,
-    "strategies/S027_h025_insider/main.py": None,
-    "research/hypotheses/H025.md": None,
+    "src/qresearch/h025_form4.py": "f8a75e78f26dacaf7899b5bbac2e8a4893bc7da103e40c49b4cfdc67bc088187",
+    "research/phase10/h025_ledger.py": "c62d4689068d578b06bf5122ac68d14425f63f7290827ed63152cb68b01c13a5",
+    "src/qresearch/lean/qr_h025.py": "817231ca33cac481cbd7eb770bc064dd830f40a952ff8b6bfb8c2549aa68876b",
+    "strategies/S027_h025_insider/main.py": "70bcf0389709a0c9a49d48a4da304d0bdd4ca5cc49e7339b4f03beeb7d9bb394",
+    "research/hypotheses/H025.md": "f3b3fcb259f336247a5e446bf13d5176a87bf3b3c6d96880343022be2b72b7ce",
 }
 DATA_FREEZE_MANIFEST_SHA256 = p7pred_v2.DATA_FREEZE_MANIFEST_SHA256
 PRED_CODE_SHA256 = p7pred_v2.PRED_CODE_SHA256           # qr_p7_pred (response conventions; S024 parameter)
@@ -45,7 +45,9 @@ RULES = dict(form="4", code="P", acquired="A", ownership="D", roles=("Director",
 
 # SEC ledger (offline build; research/phase10/ledger/h025_sec_ledger.json)
 LEDGER_MANIFEST = "research/phase10/ledger/h025_sec_ledger.json"
-PAYLOAD_SHA256 = None
+PAYLOAD_SHA256 = "92632242eca7706421560002a20b297c79fab87f2c51ba3f7569f8147c0441ee"
+SEC_LEDGER_CSV_SHA256 = "b757666098122f79bcccb95b2d63b41e6cc246e9e34201f12d0f92c0f3987e7c"
+SEC_FILINGS_CSV_SHA256 = "6d9cd97f10788db3be07903e7f011155bf356ab89da90ef265ee63a119e30f88"
 CALENDAR_SHA256 = "53ed9ff45b7c5146205b9163c6d5322ba90ebc8f1980e838219391cdb7746958"   # LEAN sessions 2010-10-01..2017-12-29
 
 # runs

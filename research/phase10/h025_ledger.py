@@ -9,7 +9,7 @@ Outputs (committed; they contain public SEC facts only):
     research/phase10/ledger/h025_sec_ledger.csv.gz     one row per triggered cluster / single-insider control event
     research/phase10/ledger/h025_sec_filings.csv.gz    every qualifying filing used (timing status, values)
     research/phase10/ledger/h025_sec_ledger.json       manifest: rules, input hashes, counts, SHA-256 of the payload
-    src/qresearch/lean/qr_h025_events.py (+ _NN parts) packed payload QuantConnect loads (zlib + base64)
+    src/qresearch/lean/qr_h025_events.py (+ _NN parts) packed payload QuantConnect loads (lzma + base85)
 """
 from __future__ import annotations
 
@@ -20,8 +20,8 @@ import gzip
 import hashlib
 import io
 import json
+import lzma
 import sys
-import zlib
 from collections import Counter, defaultdict
 from datetime import date, timedelta
 from pathlib import Path
@@ -40,7 +40,7 @@ WINDOW_FROM = date(2011, 2, 1)                               # first review 2011
 HOLD = 20
 SPAN_DAYS = 17                                               # header prefilter: 10-day window + 7-day lag slack
 MAX_LAG_DAYS = 7                                             # acceptance date >= filing date - 7 (verified)
-CHUNK = 60000
+CHUNK = 63000
 FIELDS = ("event_id", "kind", "issuer_cik", "symbol_as_filed", "trigger_et", "trigger_date", "entry_session",
           "exit_session", "window_status", "n_insiders", "insider_ciks", "insider_names", "insider_roles",
           "insider_values", "cluster_value", "ceo_cfo", "director_only", "n_qualifying_filings", "n_purchase_lines",
@@ -187,20 +187,22 @@ def lean_payload(rows):
 
 
 def pack(payload: bytes):
-    b = base64.b64encode(zlib.compress(payload, 9)).decode()
+    """lzma (preset 9 extreme) + base85 over qr_h025_events_NN.py (the Data v2 packing, qresearch.v2pack; base85 has no
+    quote or backslash) plus qr_h025_events.py, whose payload() reassembles the CSV and verifies its SHA-256."""
+    b = base64.b85encode(lzma.compress(payload, preset=9 | lzma.PRESET_EXTREME)).decode()
     parts = [b[i:i + CHUNK] for i in range(0, len(b), CHUNK)]
     files = {}
     head = ["# H025 SEC event ledger (owner D204; research/phase10/h025_ledger.py). Public SEC Form 4 facts only.",
             "# Generated file: do not edit. PAYLOAD_SHA256 = SHA-256 of the decoded CSV payload.", "import base64",
-            "import hashlib", "import zlib", f"PAYLOAD_SHA256 = '{_sha(payload)}'", f"N_PARTS = {len(parts)}", "",
+            "import hashlib", "import lzma", f"PAYLOAD_SHA256 = '{_sha(payload)}'", f"N_PARTS = {len(parts)}", "",
             "", "def payload():", "    import importlib",
             "    b = ''.join(importlib.import_module('qr_h025_events_%02d' % i).DATA for i in range(N_PARTS))",
-            "    raw = zlib.decompress(base64.b64decode(b))",
+            "    raw = lzma.decompress(base64.b85decode(b))",
             "    if hashlib.sha256(raw).hexdigest() != PAYLOAD_SHA256:",
             "        raise Exception('H025 event ledger payload hash mismatch')", "    return raw.decode()", ""]
     files["qr_h025_events.py"] = "\n".join(head)
     for i, p in enumerate(parts):
-        files[f"qr_h025_events_{i:02d}.py"] = f"DATA = '{p}'\n"
+        files[f"qr_h025_events_{i:02d}.py"] = f'DATA = "{p}"\n'
     return files
 
 
@@ -288,6 +290,8 @@ def main():
     (OUT / "h025_sec_ledger.csv.gz").write_bytes(gzip.compress(ledger, mtime=0))
     (OUT / "h025_sec_filings.csv.gz").write_bytes(gzip.compress(fil, mtime=0))
     (OUT / "h025_sec_ledger.json").write_text(json.dumps(man, indent=1, sort_keys=True) + "\n")
+    for old in LEAN.glob("qr_h025_events*.py"):
+        old.unlink()
     for name, text in pack(payload).items():
         (LEAN / name).write_text(text)
     print(json.dumps(feas, indent=1))

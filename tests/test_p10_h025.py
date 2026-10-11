@@ -1,5 +1,6 @@
 """H025 in-host logic (src/qresearch/lean/qr_h025.py): identity, review choice, responses, statistic, matched null,
 c_EVENT and gates. Synthetic inputs only."""
+import hashlib
 import math
 import sys
 from pathlib import Path
@@ -7,7 +8,8 @@ from pathlib import Path
 import numpy as np
 import pytest
 
-sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src" / "qresearch" / "lean"))
+ROOT_ = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_ / "src" / "qresearch" / "lean"))
 import qr_h025 as H  # noqa: E402
 import qr_p7_pred as R  # noqa: E402
 import qr_xs as X  # noqa: E402
@@ -202,3 +204,30 @@ def test_read_ledger_types():
             "2,120000.00,1,0,2,2.5,0\n")
     r = H.read_ledger(text)[0]
     assert r["issuer_cik"] == "100" and r["cluster_value"] == 120000.0 and r["median_delay_days"] == 2.5
+
+
+def test_pins_match_files_and_ledger_manifest():
+    from qresearch import p10h025 as P
+    assert P.file_sha256(P.SPEC) == P.SPEC_SHA256
+    for rel, h in P.CODE_SHA256.items():
+        assert P.file_sha256(rel) == h, rel
+    man = P.ledger_manifest()
+    assert man["lean_payload_sha256"] == P.PAYLOAD_SHA256 and man["sec_ledger_csv_sha256"] == P.SEC_LEDGER_CSV_SHA256
+    assert man["feasibility"]["brute_force_mismatches"] == 0
+    import qr_h025_events as EV
+    assert EV.PAYLOAD_SHA256 == P.PAYLOAD_SHA256
+    import gzip
+    assert hashlib.sha256(gzip.decompress((ROOT_ / "research/phase10/ledger/h025_sec_ledger.csv.gz").read_bytes())
+                          ).hexdigest() == P.SEC_LEDGER_CSV_SHA256
+    rows = H.read_ledger(EV.payload())
+    assert all(r["entry_session"] <= "2017-12-29" for r in rows)
+    assert all(r["exit_session"] <= "2017-12-29" for r in rows if r["window_status"] == "in_window")
+
+
+def test_s027_configs_validate():
+    import json
+    from qresearch import experiment
+    for e in ("E027-01", "E027-02"):
+        cfg = json.loads((ROOT_ / "experiments" / e / "config.json").read_text())
+        experiment.validate(cfg) if hasattr(experiment, "validate") else None
+        assert cfg["params"]["mode"] == "audit" and cfg["kind"] == "infrastructure"
