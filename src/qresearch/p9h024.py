@@ -56,12 +56,14 @@ HOST = "strategies/S026_h024_features/main.py"
 PARENT_HOST = p7pred_v2.HOST                           # S024, uploaded byte-identical as qr_s024.py
 
 # set from the canary E026-01 (feature values only; no response), before any null world
-FEATURES = None                                        # retained library after the 90% coverage rule
-LINKS = None                                           # redundancy links (median |rho| >= 0.80, different families)
-LIBRARY_SHA256 = None
-MODEL_COUNT = None
-POPULATION_SHA256 = None
-CANARY_COMMIT = None
+# E026-01 (16/17; check 6 = the D202 vendor snapshot change outside the population): every feature >= 90% covered
+# (HI52 99.92%, all others 100%); largest median |rho| between different families 0.58 -> no redundancy link
+FEATURES = ('MOM', 'LOWVOL', 'GPA', 'ACC', 'BM', 'AG', 'REV1M', 'CBOP', 'HI52', 'CFP', 'EQA')
+LINKS = ()                                             # redundancy links (median |rho| >= 0.80, different families)
+LIBRARY_SHA256 = "6af3616f30256226b44f2612fd5e227fd0e56a47445c621b2bfd63edf7d23922"
+MODEL_COUNT = 415                                      # 52 two-, 138 three-, 225 four-feature models
+POPULATION_SHA256 = "791a2d4c8972b2d10465762d8a0a675f159d37b6cfab3ff185b2e6712c3b0bc8"   # 34831 stock-months
+CANARY_COMMIT = "86c0cf3786eabdab199fec92a21ddc906baf8bec"
 
 # set after the 5,000 null worlds, merged before the real search
 C_FEATURE = None

@@ -170,3 +170,25 @@ def test_configs_and_runner_wiring():
                        threshold_commit="x")
     with pytest.raises(experiment.ConfigError):
         experiment.validate(r)
+
+
+def test_canary_pins_and_null_configs_cover_seeds_1_to_5000():
+    from qresearch import experiment
+    can = json.loads((ROOT / "research/phase9/cp1/P9_CP1_canary_E026-01.json").read_text())
+    assert can["pins"]["features"] == list(p9h024.FEATURES) and can["pins"]["links"] == [list(x) for x in p9h024.LINKS]
+    assert can["pins"]["library_sha256"] == p9h024.LIBRARY_SHA256 and can["pins"]["models"] == p9h024.MODEL_COUNT == 415
+    assert can["pins"]["population_sha256"] == p9h024.POPULATION_SHA256
+    lib = K.Library(K.model_library(p9h024.FEATURES, K.FAMILY, [tuple(x) for x in p9h024.LINKS]), p9h024.FEATURES)
+    assert lib.sha == p9h024.LIBRARY_SHA256
+    seeds = []
+    for exp, (a, b) in zip(p9h024.NULL_RUNS, p9h024.NULL_BATCHES):
+        c = json.loads((ROOT / f"experiments/{exp}/config.json").read_text())
+        experiment.validate(c)
+        p = c["params"]
+        assert (c["strategy_id"], c["kind"], p["mode"], tuple(p["seeds"])) == ("S026", "infrastructure", "null", (a, b))
+        assert p["population_sha256"] == p9h024.POPULATION_SHA256 and p["library_sha256"] == p9h024.LIBRARY_SHA256
+        seeds += list(range(a, b + 1))
+    assert seeds == list(p9h024.NULL_SEEDS)
+    c = json.loads((ROOT / f"experiments/{p9h024.RERUN}/config.json").read_text())
+    experiment.validate(c)
+    assert tuple(c["params"]["seeds"]) == p9h024.RERUN_SEEDS
