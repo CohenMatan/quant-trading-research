@@ -1,0 +1,177 @@
+{
+ "canary": {
+  "corporate_actions": {
+   "by_class": {
+    "dividend": {
+     "agree_1e9": 25,
+     "available": 152337,
+     "n": 25,
+     "status_agree": 25,
+     "worst_rel": 4.440892098500626e-16
+    },
+    "plain": {
+     "agree_1e9": 25,
+     "available": 471969,
+     "n": 25,
+     "status_agree": 25,
+     "worst_rel": 2.220446049250313e-16
+    },
+    "split": {
+     "agree_1e9": 24,
+     "available": 1531,
+     "n": 24,
+     "status_agree": 24,
+     "worst_rel": 2.220446049250313e-16
+    },
+    "truncated": {
+     "agree_1e9": 25,
+     "available": 2460,
+     "n": 25,
+     "status_agree": 14,
+     "worst_rel": 0.0
+    }
+   },
+   "examples": [],
+   "frozen_fn_mismatch": 0
+  },
+  "gates_on_real_data": false,
+  "ledger": {
+   "cik_mismatch": 0,
+   "cooldown_violations": 0,
+   "entry_mismatch": 0,
+   "events": 11688,
+   "exit_mismatch": 0,
+   "mapped": 2658,
+   "review_not_before_trigger": 0,
+   "review_not_latest": 0,
+   "sid_not_eligible": 0
+  },
+  "real_responses_computed": false,
+  "spy_total_return": {
+   "checked": 25,
+   "worst_rel": 4.440892098500626e-16
+  },
+  "synthetic_statistics": {
+   "c_synthetic": [
+    2.438552427748217,
+    2.438552427748217
+   ],
+   "empty_pools": 0,
+   "events": 605,
+   "months": 77,
+   "planted": {
+    "0.0": {
+     "gates": {
+      "G1": false,
+      "G2": false,
+      "G3": false,
+      "G4": false,
+      "G5": true,
+      "all": false
+     },
+     "mean": -0.0009468751947762263,
+     "t": 0.36708946693247724
+    },
+    "0.04": {
+     "gates": {
+      "G1": true,
+      "G2": true,
+      "G3": true,
+      "G4": true,
+      "G5": true,
+      "all": true
+     },
+     "mean": 0.03940765468382672,
+     "t": 8.555486394485712
+    }
+   },
+   "pool_size_median": 22.0,
+   "repeat_identical": true,
+   "world_s": 0.0003,
+   "world_s_5000": 1.5
+  },
+  "synthetic_timing": {
+   "excess": 0.0,
+   "ok": true,
+   "spy": 0.10000000000000009,
+   "stock": 0.10000000000000009
+  }
+ },
+ "checks": {
+  "10_response_fn_equals_frozen_qr_p7_pred": true,
+  "11_corporate_action_values_fresh_history": true,
+  "12_corporate_action_status_labels": true,
+  "13_next_open_timing_synthetic": true,
+  "14_planted_effect_detected_zero_rejected": true,
+  "15_null_machinery_deterministic_no_empty_pool": true,
+  "16_no_real_response_computed": true,
+  "17_pit_audit_zero": true,
+  "1_upload_matches_pins": true,
+  "2_in_host_ledger_equals_pin": true,
+  "3_calendar_equals_pin": true,
+  "4_sec_timing_entry_strictly_after_acceptance": true,
+  "5_20_session_exit": true,
+  "6_cooldown": true,
+  "7_review_strictly_before_trigger_and_latest": true,
+  "8_identity_cik_and_eligibility": true,
+  "9_spy_total_return_fresh_history": true
+ },
+ "experiment": "E027-03",
+ "note_truncated_labels": {
+  "explanation": "'no_bar' (qr_h025.tsr) vs 'no_bar_after_t' (S024 fresh path) for securities without any bar in the window; both 0.0; such responses are NaN / not evaluable in H025",
+  "n": 25,
+  "status_agree": 14,
+  "values_agree": 25
+ },
+ "passed": 17,
+ "total": 17,
+ "upload": {
+  "build_commit": "dd42328f38a2ae5c92f63e5b239bac8976ff64ed",
+  "code_sha256": "da2d1cdd87628d351b5be838ed85f4ddc1b42406c0fe0fe0f7ec8a43a9eea255",
+  "files": 47,
+  "frozen_files_equal": {
+   "qr_data_v2.py": true,
+   "qr_data_v2_00.py": true,
+   "qr_data_v2_01.py": true,
+   "qr_data_v2_02.py": true,
+   "qr_data_v2_03.py": true,
+   "qr_data_v2_04.py": true,
+   "qr_data_v2_05.py": true,
+   "qr_data_v2_06.py": true,
+   "qr_data_v2_07.py": true,
+   "qr_data_v2_08.py": true,
+   "qr_data_v2_09.py": true,
+   "qr_data_v2_10.py": true,
+   "qr_data_v2_11.py": true,
+   "qr_data_v2_12.py": true,
+   "qr_data_v2_13.py": true,
+   "qr_data_v2_14.py": true,
+   "qr_fundamentals.py": true,
+   "qr_harness.py": true,
+   "qr_indicators.py": true,
+   "qr_industry.py": true,
+   "qr_p7.py": true,
+   "qr_p7_export.py": true,
+   "qr_p7_mech.py": true,
+   "qr_p7_pred.py": true,
+   "qr_p7_score.py": true,
+   "qr_sec_corrections.py": true,
+   "qr_v2.py": true,
+   "qr_x998.py": true,
+   "qr_xs.py": true,
+   "qr_xs_diag.py": true,
+   "qr_xs_panel.py": true
+  },
+  "max_file_chars": 63052,
+  "ok": true,
+  "pins": {
+   "events_payload": true,
+   "main": true,
+   "qr_h025": true,
+   "qr_p7_pred": true,
+   "qr_s024": true,
+   "spec": true
+  }
+ },
+ "wall_s": 522.9
+}

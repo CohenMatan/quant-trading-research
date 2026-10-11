@@ -73,10 +73,11 @@ def main(mode):
     elif mode == "null":
         assert P.IN_HOST_LEDGER_SHA256 and P.EVENT_LEDGER_SHA256
         for i, exp in enumerate(P.NULL_RUNS):
+            if i > 0 and not P.RESPONSE_PANEL_SHA256:
+                continue                         # the rerun is written once E027-04's panel digest is pinned
             c = base(exp, "null", "infrastructure")
             c["params"].update(in_host_ledger_sha256=P.IN_HOST_LEDGER_SHA256, seeds=list(P.NULL_SEEDS_RANGE))
             if i > 0:
-                assert P.RESPONSE_PANEL_SHA256
                 c["params"]["response_panel_sha256"] = P.RESPONSE_PANEL_SHA256
             write(c)
     elif mode == "real":
