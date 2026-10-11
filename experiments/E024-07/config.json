@@ -1,0 +1,55 @@
+{
+ "kind": "research",
+ "hypothesis_id": "H022",
+ "strategy_id": "S024",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S024_h022_data_v2",
+ "split_scheme": "2010",
+ "split": "IS",
+ "start": "2011-01-03",
+ "end": "2017-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P7",
+ "cycle": "P7H022",
+ "experiment_id": "E024-07",
+ "stall_minutes": 240,
+ "params": {
+  "mode": "real",
+  "c_ic": 2.3798883324991866,
+  "threshold_commit": "cc2b0d8a26f97ba666e2d0455e9c2b64e5bef84d",
+  "null_result_sha256": "371c7e22ecea0e887fe6211c01d49f77594e951775749af1d28f7a50014edee8",
+  "panel_sha256": "09b1de410810c2dc4c972975541e78c0eaeee19d6934836a4fe9d88ed37eeaf0",
+  "spec_sha256": "2c99f9623065a0d9576f35ea208733c47ce5ec3bbfe2f587ab2a9451b0061f58",
+  "pred_code_sha256": "bc6fd8e83e7c105e50bbd05fabb23c61ac5229216af6599320962195d83f8da5"
+ },
+ "description": "H022 REAL EVALUATION ON FROZEN DATA v2, EXACTLY ONCE (owner D197): the frozen Conviction Score v1 on the 83 monthly decisions 2011-01-31..2017-11-30 (one-month total-shareholder-return responses, next-session open -> next review close, demeaned by the population), judged with the pinned Data-v2 c_IC = 2.3798883324991866 (5,000 Data-v2 null worlds E024-01..05; gates G1-G4, all required); then the pre-registered NON-GATING diagnostics (sector-demeaned IC, regime IC, Fama-MacBeth incremental with 12-1 momentum and log market cap, 2- and 3-month horizons, IC by year). No portfolio, no orders (the portfolio block is the approved d051 one, required by the research-config rule and unused by this non-trading host); the host refuses unless the prepared panel equals the pinned digest 09b1de41... Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H022 / Data v2 real evaluation, exactly one run E024-07 (owner 2026-10-11, D197)"
+}

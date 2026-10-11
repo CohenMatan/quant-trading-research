@@ -253,7 +253,15 @@ def test_null_configs_cover_exactly_seeds_1_to_5000_against_the_pinned_panel():
     c = json.loads((ROOT / f"experiments/{p7pred_v2.RERUN}/config.json").read_text())
     experiment.validate(c)
     assert tuple(c["params"]["seeds"]) == p7pred_v2.RERUN_SEEDS
-    assert not (ROOT / "experiments/E024-07").exists()                    # no real-evaluation config exists
+    # D197: the ONE real evaluation E024-07 carries exactly the pinned Data-v2 provenance (never the Data-v1 c_IC)
+    r = json.loads((ROOT / "experiments/E024-07/config.json").read_text())
+    experiment.validate(r)
+    p = r["params"]
+    assert (r["strategy_id"], r["kind"], p["mode"]) == ("S024", "research", "real") and r["owner_approval_required"]
+    assert (p["c_ic"], p["null_result_sha256"], p["panel_sha256"]) == (
+        p7pred_v2.C_IC_V2, p7pred_v2.NULL_RESULT_SHA256, p7pred_v2.PANEL_SHA256)
+    assert p["c_ic"] != p7pred.C_IC and p["threshold_commit"].startswith("cc2b0d8")
+    assert sorted(x.name for x in (ROOT / "experiments").glob("E024-*")) == [f"E024-0{i}" for i in range(1, 8)]
 
 
 def test_data_v2_c_ic_is_pinned_from_the_5000_null_worlds():
