@@ -237,7 +237,7 @@ class H026Learned(X81.DataV2Export):
         population digest (finite one-review response and all 11 features valid)."""
         rv = [t for t in reviews if t <= W_H022_END]
         hp, hpop = hashlib.sha256(), hashlib.sha256()
-        npop = 0
+        npop, per = 0, []
         for i, t in enumerate(rv[:-1]):
             k = rows_k[t]
             ids = sorted(pops[t])
@@ -259,8 +259,10 @@ class H026Learned(X81.DataV2Export):
             keep = [s for s, o in zip(ids, okp) if o]
             npop += len(keep)
             hpop.update(json.dumps([str(t), keep], separators=(",", ":")).encode())
+            # per decision (counts only): H022 population, evaluable one-review responses, H024 population
+            per.append([str(t), len(ids), int(np.isfinite(ys[1]).sum()), len(keep)])
         return dict(h022_panel_sha256=hp.hexdigest(), h024_population_sha256=hpop.hexdigest(), h024_population_rows=npop,
-                    decisions=len(rv) - 1)
+                    decisions=len(rv) - 1, per_decision=per)
 
     def _w_months(self, reviews, rows_k, pops, raw_by_t):
         """The H026 decision months = every review 2011-01-31 .. 2021-11-30 (spec sections 3-4, 7)."""

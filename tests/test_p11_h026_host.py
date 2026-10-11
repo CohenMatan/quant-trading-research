@@ -140,7 +140,9 @@ def test_canary_on_synthetic_market(monkeypatch, tmp_path):
     assert syn["planted"]["repeat_identical"] and syn["zero"]["repeat_identical"]
     assert st["pit_audit"] and all(v == 0 for v in st["pit_audit"].values())
     rep = st["reproduction"]
-    assert rep["decisions"] == 83
+    assert rep["decisions"] == 83 and len(rep["per_decision"]) == 83
+    assert all(a >= b >= c >= 0 for _d, a, b, c in rep["per_decision"])
+    assert sum(r[3] for r in rep["per_decision"]) == rep["h024_population_rows"]
 
 
 def test_null_and_real_modes(monkeypatch, tmp_path):
