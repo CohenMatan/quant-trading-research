@@ -88,3 +88,10 @@ def test_committed_output_consistent():
            "OBJECTIVE-ALIGNED" if W == 0 and o["pattern"]["best_supported"] != "C" else "PARTIALLY OBJECTIVE-ALIGNED")
     assert o["objective_alignment"] == exp
     assert o["rolling_10y"] == "NOT AVAILABLE FROM REAL DEVELOPMENT HISTORY"
+
+
+@pytest.mark.skipif(not OUT.exists(), reason="result not yet computed")
+def test_reproducible_from_committed_artifacts(tmp_path, monkeypatch):
+    monkeypatch.setattr(M, "HERE", tmp_path)
+    M.main()
+    assert json.loads((tmp_path / "P13_CP4_alignment.json").read_text()) == json.loads(OUT.read_text())

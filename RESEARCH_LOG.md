@@ -2123,3 +2123,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Status:** SYNTHETIC ROBUSTNESS RESULT — H028 IS HIGHLY SENSITIVE TO PATH / REGIME COMPOSITION (pre-registered rule). FORMAL STATUS: H028 REJECTED. Seeds 1–100 reproduced exactly.
 
 **STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line.
+
+## 2026-10-12: P13-CP4 — H028 30-year objective alignment: PARTIALLY OBJECTIVE-ALIGNED; H028 REJECTED; STOP (D225, D226)
+
+- **Owner (D225):** compare H028's observed behaviour with the clarified 30-year objective (keep up in rising markets, lose less in falling markets, compound to more wealth than SPY). Descriptive only; H028 stays REJECTED; the objective applies prospectively from H029.
+- **Method:** rules committed before any statistic (006f417). Inputs are the committed 2015–2021 panel and the P13-CP3 outputs. The P13-CP3 primary worlds were regenerated with an identical digest, only for patience statistics in winning paths.
+- **Rising markets:** up-capture 0.97 (near-full), but 0.87 in SPY's strongest months; H028 beat SPY in half of the up months.
+- **Falling markets:** down-capture 0.69, and 0.65 in falls of 5% or more.
+- **Where the edge comes from:** down months supplied 127% of the relative log-wealth and up months −27%; March 2020 alone supplied 49%.
+- **Without 2018 and 2020:** −1.4 points a year vs SPY; up / down capture 0.90 / 0.81.
+- **Rolling windows ahead of SPY:** 12-month 58%, 36-month 92%, 60-month 100%, but every 60-month window contains 2018.
+- **Synthetic:** H028 beats SPY in 98.7% of 30-year paths. Winning paths typically have a 5-year losing streak and 7.5 years below a previous relative high. Without 2018 and 2020: 9.3%.
+- **Dimensions:** A ACCEPTABLE, B STRONG, C STRONG, D ACCEPTABLE, E WEAK, F WEAK → **PARTIALLY OBJECTIVE-ALIGNED** (pattern C: edge from the 2018 and 2020 episodes).
+- **Missing capability:** regime-independent relative return and temporal consistency.
+- **Prospective standard for H029 onward:** recorded (D226).
+
+**STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line, or authorise a design-only H029 pre-registration under the new standard.
