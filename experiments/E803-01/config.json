@@ -1,0 +1,54 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H029",
+ "strategy_id": "X803",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X803_data_v3_audit",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2021-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order (no order is ever placed by X803)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P14",
+ "cycle": "P14DATAV3",
+ "experiment_id": "E803-01",
+ "stall_minutes": 300,
+ "params": {
+  "mode": "audit",
+  "spec_sha256": "b4b8aa9b1c212e98bdf1aea7ed3ed577be21d9d1c195fa06ff54764452ab73d0",
+  "v3_code_sha256": "40bcf98d3aa62f625faa5c1f97a18c08d5a0d0d40bd9afcf300f5bf67fdcaccd",
+  "guard_sha256": "d4e1065baec3786d29d30397cf21fc7f8d298b52455e8b1f156b377bd680996a",
+  "val_sha256": "2dbec426034970661526b7ab6e9774df0231022caf79e3c36ef8eccba9aed97b",
+  "data_v21_manifest_sha256": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf"
+ },
+ "description": "P14-CP2 (owner D229): Data v3 audit (X803 audit mode) on frozen Data v2.1 + the guard-v3 table: guard-v3 provenance / blocks of every fed vendor version, the H029 v3 view, the six H029 signals live at each of the 131 reviews 2011-01 .. 2021-11 (U_H029 coverage, >= 5 of 6), stratified SEC validation (rank materiality), F7 split comparability, PIT checks, v2.1 differences, per-review panel digests. NO return, IC, wealth or feature-return statistic. Infrastructure. Default build.",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "Data v3 targeted PIT / restatement hardening audit (aggregates only, no returns; owner 2026-10-12, D229)"
+}
