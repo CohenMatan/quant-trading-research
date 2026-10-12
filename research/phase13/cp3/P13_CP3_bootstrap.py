@@ -83,6 +83,11 @@ SLIP, COMM = 0.001, 7.0
 PCT_DIST = (50, 75, 90, 95, 99)
 
 
+def _plain(x):
+    """JSON serialisation of numpy scalars (serialisation only)."""
+    return x.item() if hasattr(x, "item") else str(x)
+
+
 class NotReconstructible(Exception):
     pass
 
@@ -305,9 +310,9 @@ def main():
                result="SYNTHETIC ROBUSTNESS RESULT — " + wording, formal_status="H028 REJECTED",
                reproducibility_all_identical=all(v["repro_seeds_1_100_identical"] for v in res.values()))
     path = HERE / "P13_CP3_bootstrap.json"
-    path.write_text(json.dumps(out, indent=1, sort_keys=True) + "\n")
+    path.write_text(json.dumps(out, indent=1, sort_keys=True, default=_plain) + "\n")
     print(json.dumps(dict(audit=aud, result=out["result"], rule=out["rule"],
-                          reproducible=out["reproducibility_all_identical"]), indent=1))
+                          reproducible=out["reproducibility_all_identical"]), indent=1, default=_plain))
     print("sha256", hashlib.sha256(path.read_bytes()).hexdigest())
 
 
