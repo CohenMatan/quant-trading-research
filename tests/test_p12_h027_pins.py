@@ -40,3 +40,16 @@ def test_canary_config_validates_and_real_refused_until_pinned():
         bad = dict(cfg, kind="research", split="DEV", experiment_id=P.REAL, params=dict(cfg["params"], mode="real"))
         with pytest.raises(experiment.ConfigError):
             experiment.validate(bad)
+
+
+def test_threshold_pinned_from_the_committed_null():
+    if P.C_WEALTH_CONDITIONAL is None:
+        return
+    import hashlib
+    path = config.REPO_ROOT / P.NULL_RESULT
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == P.NULL_RESULT_SHA256
+    nr = json.loads(path.read_text())
+    assert nr["c_wealth_conditional"] == P.C_WEALTH_CONDITIONAL and nr["worlds"] == G.R_NULL and nr["all_checks"]
+    assert nr["adequacy"]["adequate"] is True and P.ADEQUATE is True
+    assert nr["status"] == "ADEQUATE — c_WEALTH_CONDITIONAL MAY BE PINNED"
+    assert nr["checks"]["rerun_1_25_rows_identical"] and nr["checks"]["rerun_1_25_coefficients_identical"]

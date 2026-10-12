@@ -50,10 +50,11 @@ RERUN_SEEDS = (1, 25)
 REAL = "E029-05"
 
 # set from the null runs, merged before the real run
-C_WEALTH_CONDITIONAL = None
-NULL_RESULT_SHA256 = None
+C_WEALTH_CONDITIONAL = 0.05770235251912147         # 50th largest S_WEALTH of 5,000 (E029-02 / E029-03)
+NULL_RESULT_SHA256 = "613aa1e29a496016e56c19647af605f89d93c2630b46df96c77091dc2a0ee553"   # P12_CP1_null.json
 THRESHOLD_COMMIT = None
-ADEQUATE = None
+ADEQUATE = True                                     # pre-registered adequacy audit (spec section 5) passed
+NULL_RESULT = "research/phase12/cp1/P12_CP1_null.json"
 
 RESULT = "research/phase12/cp1/P12_CP1_result.json"
 CANDIDATE = None
