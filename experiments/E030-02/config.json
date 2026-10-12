@@ -1,0 +1,69 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H028",
+ "strategy_id": "S030",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S030_h028_fixed_shrinkage",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2021-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P13",
+ "cycle": "P13H028",
+ "experiment_id": "E030-02",
+ "stall_minutes": 300,
+ "params": {
+  "mode": "null",
+  "spec_sha256": "39b205c2b50172b8d7f89a013e08423e5cec8cfd632b574c0b90cc8aba6b7d18",
+  "h028_code_sha256": "f92eb5f6e6cadb23c6542052d4149ddc35c787649992a4f7795adf4ca1b3f0be",
+  "data_v21_manifest_sha256": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf",
+  "h026_feature_panel_sha256": "10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89",
+  "h026_response_panel_sha256": "e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b",
+  "h027_real_wealth": 311396.7708031718,
+  "h027_real_s_wealth": 0.17148195882657039,
+  "h027_lambda_schedule": [
+   0.01,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "seeds": [
+   1,
+   2500
+  ]
+ },
+ "description": "P13-CP1 (owner D217): H028 lambda-100 LOWVOL-conditional null worlds (S030 null mode): LOWVOL stays with its stock, the ten other features move together from a persistent tether donor; the complete fixed-lambda pipeline reruns per world. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H028 Fixed Strong Shrinkage Learned Stock Score: canary, 5,000 lambda-100 LOWVOL-conditional null worlds + seeds 1-25 rerun, then ONE real development run (owner 2026-10-12, D217)"
+}
