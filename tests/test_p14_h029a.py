@@ -235,3 +235,26 @@ def test_avg_rank_matches_reference():
     for _ in range(20):
         x = rng.integers(0, 15, 120).astype(float)
         assert np.allclose(Z.avg_rank(x), rankdata(x))
+
+
+AUDIT = ROOT / "research/phase14/cp1/P14_CP1_audit.json"
+
+
+@pytest.mark.skipif(not AUDIT.exists(), reason="audit not yet computed")
+def test_committed_audit_reproducible_and_rule_consistent(tmp_path, monkeypatch):
+    import json
+    sys.path.insert(0, str(ROOT / "research/phase14/cp1"))
+    import P14_CP1_analysis as A
+    monkeypatch.setattr(A, "HERE", tmp_path)
+    A.main()
+    got = json.loads((tmp_path / "P14_CP1_audit.json").read_text())
+    ref = json.loads(AUDIT.read_text())
+    assert got == ref
+    g = ref["gate"]
+    ab = [k for k, v in ref["classification"].items() if v["cls"] in ("A", "B")]
+    assert g["families"] == ab and g["condition_1"] == (len(ab) >= 5)
+    assert g["condition_2"] == (max(r["median"] for r in g["combined_rules"].values()) >= 0.70)
+    assert g["result"].endswith("PASS") == (g["condition_1"] and g["condition_2"])
+    assert ref["pit"] == dict(record_after_today=0, universe_rows_without_live_values=0)
+    assert ref["run"]["f7"]["filing_after_today"] == 0
+    assert all(v == 0 for v in ref["run"]["pit_audit"].values())
