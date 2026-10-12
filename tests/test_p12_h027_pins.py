@@ -65,3 +65,18 @@ def test_real_config_carries_the_pins():
     assert pr["c_wealth_conditional"] == P.C_WEALTH_CONDITIONAL and pr["null_result_sha256"] == P.NULL_RESULT_SHA256
     assert pr["threshold_commit"] == P.THRESHOLD_COMMIT and pr["mode"] == "real"
     assert pr["h026_real_wealth"] == P.H026_REAL_WEALTH and pr["h026_real_s_wealth"] == P.H026_REAL_S_WEALTH
+
+
+def test_committed_result_is_consistent_and_rejected():
+    p = config.REPO_ROOT / P.RESULT
+    if not p.exists():
+        return
+    r = json.loads(p.read_text())
+    g = r["gates"]
+    assert all(r["pins"].values()) and all(r["reproduction"].values()) and r["host_gates_reproduced"]
+    assert g["all"] == all(g[k] for k in ("A1", "A2", "A3", "A4", "A5", "A6"))
+    assert g["A4"] is False and g["all"] is False
+    assert r["status"] == "H027 REJECTED — NO ROBUST STOCK-SELECTION EDGE BEYOND LOWVOL EXPOSURE"
+    assert r["final_model"] is None and r["final_score_status"] is None and P.CANDIDATE is None
+    assert g["S_WEALTH"] == P.H026_REAL_S_WEALTH and r["portfolio"]["h027"]["wealth"] == P.H026_REAL_WEALTH
+    assert g["c_wealth_conditional"] == P.C_WEALTH_CONDITIONAL and g["null_worlds"] == G.R_NULL
