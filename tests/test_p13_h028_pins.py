@@ -73,3 +73,16 @@ def test_threshold_pinned_from_the_committed_null():
     assert nr["status"] == "ADEQUATE — c_WEALTH_H028 MAY BE PINNED"
     assert nr["checks"]["rerun_1_25_rows_identical"] and nr["checks"]["rerun_1_25_coefficients_identical"]
     assert nr["checks"]["lambda_100_every_world"]
+
+
+def test_real_config_carries_the_pins():
+    p = config.EXPERIMENTS_DIR / P.REAL / "config.json"
+    if P.THRESHOLD_COMMIT is None or not p.exists():
+        return
+    cfg = json.loads(p.read_text())
+    experiment.validate(cfg)
+    pr = cfg["params"]
+    assert pr["c_wealth_h028"] == P.C_WEALTH_H028 and pr["null_result_sha256"] == P.NULL_RESULT_SHA256
+    assert pr["threshold_commit"] == P.THRESHOLD_COMMIT and pr["mode"] == "real"
+    assert pr["tolerance"] == P.TOLERANCE and pr["tolerance_sha256"] == P.TOLERANCE_SHA256
+    assert pr["h027_lambda_schedule"] == P.H027_LAMBDA_SCHEDULE and cfg["kind"] == "research" and cfg["split"] == "DEV"
