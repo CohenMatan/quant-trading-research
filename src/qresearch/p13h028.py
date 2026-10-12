@@ -63,10 +63,10 @@ TOLERANCE = {
     "2021": dict(ret=0.00268444125519518, turnover=0.025),
 }
 TOLERANCE_SHA256 = "a754d355ae96b77d9a5c2d0c8a5a80ecda8e2ac24b5075c25f25645a7c0c0128"
-C_WEALTH_H028 = None
-NULL_RESULT_SHA256 = None
+C_WEALTH_H028 = 0.056125732120069                  # 50th largest S_WEALTH of 5,000 (E030-02 / E030-03), lambda = 100
+NULL_RESULT_SHA256 = "f5c1401ba7faa4d37f86662ff409d028df7870343b61e06ff30b25d614be4ffe"   # P13_CP1_null.json
 THRESHOLD_COMMIT = None
-ADEQUATE = None
+ADEQUATE = True                                     # adequacy step 1 (spec section 5) passed; step 2 in the real assessment
 NULL_RESULT = "research/phase13/cp1/P13_CP1_null.json"
 
 RESULT = "research/phase13/cp1/P13_CP1_result.json"

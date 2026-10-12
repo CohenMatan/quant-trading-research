@@ -59,3 +59,17 @@ def test_tolerance_pinned_from_the_committed_canary():
     c = json.loads((config.REPO_ROOT / f"research/phase13/cp1/P13_CP1_canary_{P.CANARY}.json").read_text())
     assert c["passed"] == c["total"] and c["tolerance_table"] == P.TOLERANCE
     assert F.tol_sha(P.TOLERANCE) == P.TOLERANCE_SHA256 == c["tolerance_sha256"]
+
+
+def test_threshold_pinned_from_the_committed_null():
+    if P.C_WEALTH_H028 is None:
+        return
+    import hashlib
+    path = config.REPO_ROOT / P.NULL_RESULT
+    assert hashlib.sha256(path.read_bytes()).hexdigest() == P.NULL_RESULT_SHA256
+    nr = json.loads(path.read_text())
+    assert nr["c_wealth_h028"] == P.C_WEALTH_H028 and nr["worlds"] == 5000 and nr["all_checks"]
+    assert nr["adequacy"]["adequate"] is True and P.ADEQUATE is True
+    assert nr["status"] == "ADEQUATE — c_WEALTH_H028 MAY BE PINNED"
+    assert nr["checks"]["rerun_1_25_rows_identical"] and nr["checks"]["rerun_1_25_coefficients_identical"]
+    assert nr["checks"]["lambda_100_every_world"]
