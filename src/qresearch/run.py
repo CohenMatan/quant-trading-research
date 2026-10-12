@@ -194,6 +194,29 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_x801.py" not in files or "qr_p7_pred.py" not in files:
             raise experiment.ConfigError("H029-A needs the X801 module and qr_p7_pred.py (H024 imports)")
+    if "qr_v3" in files["main.py"]:
+        # Data v3 (D229): the guard-v3 / v3-view / H029-signal module, the frozen H029-A constructions it imports, the
+        # packed guard-v3 table qr_data_v3_NN (no loader file) and, only for the audit host that names it, the packed
+        # SEC validation reference qr_v3val_NN; the X801 module and its imports are uploaded by the rules above
+        lean = "src/qresearch/lean"
+        for n in ("qr_v3.py", "qr_h029a.py"):
+            rel = f"{lean}/{n}"
+            files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        stems = ["qr_data_v3"] + (["qr_v3val"] if "qr_v3val" in files["main.py"] else [])
+        for stem in stems:
+            ok = lambda n, st=stem: n.startswith(f"{st}_") and n[len(st) + 1:-3].isdigit()  # noqa: E731
+            if commit:
+                for p in gitutil.list_files(commit, lean):
+                    if ok(Path(p).name) and p.endswith(".py"):
+                        files[Path(p).name] = gitutil.show_file(commit, p)
+            else:
+                for p in sorted((config.REPO_ROOT / lean).glob(f"{stem}_*.py")):
+                    if ok(p.name):
+                        files[p.name] = p.read_text(encoding="utf-8")
+            if f"{stem}_00.py" not in files:
+                raise experiment.ConfigError(f"Data v3 needs the packed table src/qresearch/lean/{stem}_NN.py")
+        if "qr_x801.py" not in files:
+            raise experiment.ConfigError("Data v3 hosts subclass the X801 module (name qr_x801 in the host header)")
     if "qr_s029" in files["main.py"]:
         # H028 (D217): the pinned H027 host S029, uploaded byte-identical as a module (the H028 host S030 subclasses it)
         # + the H028 module; S029's own imports (qr_s028, qr_h027, ...) are uploaded by the rules below / above
