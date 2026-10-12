@@ -53,8 +53,16 @@ RERUN_SEEDS = (1, 25)
 REAL = "E030-05"
 
 # set from the canary (tolerance) and the null runs (threshold), merged before the real run
-TOLERANCE = None
-TOLERANCE_SHA256 = None
+# spec 6.2: max(1.5 x the largest |difference| over canary calibration pairs 1-100, floor); pinned from E030-01
+TOLERANCE = {
+    "2016": dict(ret=0.009007340054033253, turnover=0.18431948944490628),
+    "2017": dict(ret=0.004244822721305108, turnover=0.07091525372131358),
+    "2018": dict(ret=0.0038521977289630582, turnover=0.025),
+    "2019": dict(ret=0.0030989247820020216, turnover=0.025),
+    "2020": dict(ret=0.0032547503506195063, turnover=0.025),
+    "2021": dict(ret=0.00268444125519518, turnover=0.025),
+}
+TOLERANCE_SHA256 = "a754d355ae96b77d9a5c2d0c8a5a80ecda8e2ac24b5075c25f25645a7c0c0128"
 C_WEALTH_H028 = None
 NULL_RESULT_SHA256 = None
 THRESHOLD_COMMIT = None
