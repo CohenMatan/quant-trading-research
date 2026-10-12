@@ -2059,3 +2059,30 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Status:** H027 REJECTED — NO ROBUST STOCK-SELECTION EDGE BEYOND LOWVOL EXPOSURE. Development evidence only; nothing frozen; Holdout untouched; nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H027 / Phase 12 as REJECTED.
+
+
+## 2026-10-12: Phase 13 — H028 Fixed Strong Shrinkage Learned Stock Score: REJECTED; STOP (D217–D220)
+
+- **Owner (D217):** H027 closed as REJECTED. H028 approved as explicitly post-hoc development research: the frozen H027 architecture with λ = 100 fixed for every Ridge fit (no λ selection or search). It is the final λ-specific experiment for this architecture.
+- **Infrastructure:**
+  - Host S030 is a subclass of the pinned S029, plus `qr_h028`, which has three parts:
+    - the fixed-λ world;
+    - an exact replica of the portfolio simulation;
+    - the 2016–2021 equality analysis.
+  - 50 project files (the limit); peak memory 7.7–7.8 GB.
+- **Canary E030-01 (D218): 18/18.**
+  - λ = 100 in all 7 fits, with no inner selection.
+  - The real H027 is reproduced bit for bit through the fixed path.
+  - The H027 null rows 1–25 match the committed run.
+  - The 2016–2021 tolerance was calibrated on 100 null pairs, all exact, and pinned before any null world.
+  - Synthetic A does not beat the null; B does.
+- **Null (D219):** 5,000 λ-100 conditional worlds; the rerun of seeds 1–25 is exact.
+  - Adequacy step 1: ADEQUATE.
+  - c_WEALTH_H028 = 0.0561, pinned and merged (PR #91) before the real run.
+- **Real run E030-05 (D220):**
+  - H027 is reproduced exactly; 2016–2021 is identical in coefficients, scores and holdings, with return differences within tolerance; adequacy step 2 passes.
+  - B1 PASS (S 0.224, p 0.0004); B2, B3, B5 and B6 PASS (wealth $328,295 = 1.25× SPY).
+  - **B4 FAIL:** behind LV15 over 2015–2017 (−0.006). λ = 100 improved 2015 vs LV15 from −0.171 to −0.126, and 2016 (−0.052) was already λ = 100.
+- **Status:** H028 REJECTED — FIXED STRONG SHRINKAGE DOES NOT ROBUSTLY SOLVE THE TEMPORAL-STABILITY PROBLEM. Development evidence only; nothing frozen; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H028 / Phase 13 as REJECTED; no H029 without explicit instruction.

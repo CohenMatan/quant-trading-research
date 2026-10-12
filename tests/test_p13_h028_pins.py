@@ -86,3 +86,21 @@ def test_real_config_carries_the_pins():
     assert pr["threshold_commit"] == P.THRESHOLD_COMMIT and pr["mode"] == "real"
     assert pr["tolerance"] == P.TOLERANCE and pr["tolerance_sha256"] == P.TOLERANCE_SHA256
     assert pr["h027_lambda_schedule"] == P.H027_LAMBDA_SCHEDULE and cfg["kind"] == "research" and cfg["split"] == "DEV"
+
+
+def test_committed_result_is_consistent_and_rejected():
+    p = config.REPO_ROOT / P.RESULT
+    if not p.exists():
+        return
+    r = json.loads(p.read_text())
+    g = r["gates"]
+    assert all(r["pins"].values()) and all(r["reproduction_h027"].values()) and r["host_gates_reproduced"]
+    assert r["equality"]["exact"]["exact_ok"] and r["equality"]["tolerance_check"]["ok"]
+    assert r["adequacy_step2"]["adequate"] is True
+    assert g["all"] == all(g[k] for k in ("B1", "B2", "B3", "B4", "B5", "B6"))
+    assert g["B4"] is False and g["all"] is False and g["B4_detail"]["L_2015_2017"] < 0
+    assert r["status"] == "H028 REJECTED — FIXED STRONG SHRINKAGE DOES NOT ROBUSTLY SOLVE THE TEMPORAL-STABILITY PROBLEM"
+    assert r["final_model"] is None and r["final_score_status"] is None and P.CANDIDATE is None
+    assert r["comparison"]["S_WEALTH"]["h027"] == P.H027_REAL_S_WEALTH
+    assert g["c_wealth_h028"] == P.C_WEALTH_H028 and g["null_worlds"] == 5000
+    assert all(v["lam"] == 100.0 for v in r["coefficients"].values())
