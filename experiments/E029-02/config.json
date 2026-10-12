@@ -1,0 +1,58 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H027",
+ "strategy_id": "S029",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S029_h027_exposure_controlled",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2021-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 4000,
+  "max_positions": 10,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "P12",
+ "cycle": "P12H027",
+ "experiment_id": "E029-02",
+ "stall_minutes": 300,
+ "params": {
+  "mode": "null",
+  "spec_sha256": "b7f01afee22041a24b5bea58a9833427f2db5769cf52fad9f78b41f9fb5ad42f",
+  "h027_code_sha256": "c6f9103199dd07167af729211dbdd862bf402618949e49a098adf2ef9e066a26",
+  "data_v21_manifest_sha256": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf",
+  "h026_feature_panel_sha256": "10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89",
+  "h026_response_panel_sha256": "e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b",
+  "seeds": [
+   1,
+   2500
+  ]
+ },
+ "description": "P12-CP1 (owner D213): H027 LOWVOL-conditional null worlds (S029 null mode): LOWVOL stays with its stock, the ten other features move together from a persistent tether donor; the complete pipeline reruns per world; the real assignment only hashed. Infrastructure. Default build (recorded).",
+ "lean_version_policy": "default_build_digest_verified",
+ "owner_approval_required": "H027 Exposure-Controlled Learned Stock Score: memory work + canary, 5,000 LOWVOL-conditional null worlds + seeds 1-25 rerun, then ONE real development run (owner 2026-10-12, D213)"
+}
