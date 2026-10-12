@@ -514,6 +514,49 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if (kind != "infrastructure" or split != "AUDIT" or cfg.get("hypothesis_id") != "H029"
                 or cfg.get("programme") != "P14" or not cfg.get("owner_approval_required")):
             raise ConfigError("Data v3 runs are infrastructure audits (AUDIT window) for H029 / P14 with owner approval")
+    if cfg["strategy_id"] == "S031":
+        # H029 / H030 (owner D229, research/phase14/H029_H030_spec.md): the standalone S031 host on the frozen X801 Data
+        # v2.1 host + Data v3 + the frozen H028 path; 2011-01-03 .. 2021-12-31 (evaluation 2015-2021; nothing after
+        # 2021-12-31); canary and the null worlds are infrastructure; the ONE real development run is research (DEV)
+        # and needs the pinned c_UP_H029, c_INCREMENTAL_H030, null result and threshold commit
+        from . import p14datav3, p14h029
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("mode")
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2021-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H029 / H030 runs use 2011-01-03..2021-12-31, warm-up 2008-07-01, the Data v2 universe "
+                              "filters (universe.sec_corrections off) and the default-build policy")
+        w28, wlv, coef = p14h029.h028_inputs()
+        if (not p14h029.SPEC_SHA256 or p.get("spec_sha256") != p14h029.SPEC_SHA256
+                or p.get("h029_code_sha256") != p14h029.CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+                or p.get("data_v3_manifest_sha256") != p14h029.DATA_V3_MANIFEST_SHA256
+                or p.get("guard_sha256") != p14datav3.GUARD_SHA256
+                or p.get("h029_panel_digests_sha256") != p14h029.h029_panel_digests_sha256()
+                or p.get("h026_feature_panel_sha256") != p14h029.H026_FEATURE_PANEL_SHA256
+                or p.get("h026_response_panel_sha256") != p14h029.H026_RESPONSE_PANEL_SHA256
+                or p.get("h028_real_wealth") != w28 or p.get("lv15_real_wealth") != wlv
+                or p.get("h028_coefficients") != coef):
+            raise ConfigError("H029 / H030 runs carry the pinned spec, qr_h029, Data v3, H026 panel and frozen H028 / "
+                              "LV15 fingerprints")
+        if cfg.get("hypothesis_id") != "H029" or cfg.get("programme") != "P14" or not cfg.get("owner_approval_required"):
+            raise ConfigError("S031 runs belong to H029 / P14 and need owner_approval_required")
+        if mode in ("canary", "null"):
+            if kind != "infrastructure":
+                raise ConfigError("S031 canary / null runs are infrastructure")
+            if mode == "null" and tuple(p.get("seeds", ())) not in [tuple(v) for v in p14h029.NULL_SEEDS.values()]:
+                raise ConfigError("S031 null batches are the pinned seed ranges")
+        elif mode == "real":
+            if (kind != "research" or split != "DEV" or p14h029.C_UP_H029 is None
+                    or p.get("c_up_h029") != p14h029.C_UP_H029
+                    or p.get("c_incremental_h030") != p14h029.C_INCREMENTAL_H030
+                    or p.get("null_result_sha256") != p14h029.NULL_RESULT_SHA256
+                    or p.get("threshold_commit") != p14h029.THRESHOLD_COMMIT):
+                raise ConfigError("the ONE real H029 / H030 run is research (DEV) with the pinned thresholds")
+        else:
+            raise ConfigError("S031 modes: canary, null, real")
     if cfg["strategy_id"] == "S028":
         # H026 Learned Stock Score Portfolio (owner D206, research/phase11/H026_spec.md): the frozen X801 Data v2.1 host
         # (uploaded as qr_x801) + qr_h026, 2011-01-03 .. 2021-12-31 (2011-2021 = H026 development; nothing after
@@ -643,7 +686,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S030 modes: canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
