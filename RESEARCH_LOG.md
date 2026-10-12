@@ -2107,3 +2107,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Status:** POST-MORTEM C — 2015 AND 2016 FAILED FOR MATERIALLY DIFFERENT REASONS. H028 REMAINS REJECTED; Holdout sealed.
 
 **STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line.
+
+
+## 2026-10-12: P13-CP3 — H028 long-horizon synthetic path robustness: HIGHLY SENSITIVE TO PATH / REGIME COMPOSITION; STOP (D223, D224)
+
+- **Owner (D223):** a descriptive bootstrap of the 84 observed 2015–2021 paired monthly returns (H028, LV15, SPY). H028 stays REJECTED; no QuantConnect run; no Holdout.
+- **Method:** fixed and committed before any aggregate. The terminal liquidation is excluded by construction (month-end marks are pre-liquidation).
+- **Primary (complete-year blocks, 10,000 × 30 years):**
+  - H028 > SPY in 78 / 89 / 97 / 99% of paths at 5 / 10 / 20 / 30 years; > LV15 in 88 / 95 / 99 / 99.8%.
+  - Typical path: a 5-year losing streak against SPY, a −21% relative drawdown, and 7.6 years below a previous relative high.
+- **12- and 24-month blocks:** more favourable.
+- **Leave-one-year-out:** 2018 (82%) and 2020 (88%) matter most.
+- **Without 2018 and 2020:** H028 beats SPY in only 9% of 30-year paths, but LV15 in 94%.
+- **7-year resampling interval of the observed edge:** vs SPY −2.4% to +9.3% a year; vs LV15 −2.2% to +13.2%.
+- **Status:** SYNTHETIC ROBUSTNESS RESULT — H028 IS HIGHLY SENSITIVE TO PATH / REGIME COMPOSITION (pre-registered rule). FORMAL STATUS: H028 REJECTED. Seeds 1–100 reproduced exactly.
+
+**STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line.
