@@ -186,6 +186,14 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_x801.py" not in files or "qr_p7_pred.py" not in files:
             raise experiment.ConfigError("H026 needs the X801 module and qr_p7_pred.py (tether)")
+    if "qr_h029a" in files["main.py"]:
+        # H029-A (D227): the data-feasibility audit module + the frozen H024 feature module and its H023 import (the
+        # input-overlap correlations only); the X801 module and its imports are uploaded by the rules above
+        for n in ("qr_h029a.py", "qr_h024.py", "qr_h023.py"):
+            rel = f"src/qresearch/lean/{n}"
+            files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_x801.py" not in files or "qr_p7_pred.py" not in files:
+            raise experiment.ConfigError("H029-A needs the X801 module and qr_p7_pred.py (H024 imports)")
     if "qr_s029" in files["main.py"]:
         # H028 (D217): the pinned H027 host S029, uploaded byte-identical as a module (the H028 host S030 subclasses it)
         # + the H028 module; S029's own imports (qr_s028, qr_h027, ...) are uploaded by the rules below / above
