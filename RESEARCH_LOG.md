@@ -2139,3 +2139,22 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Prospective standard for H029 onward:** recorded (D226).
 
 **STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line, or authorise a design-only H029 pre-registration under the new standard.
+
+## 2026-10-12: P14-CP1 — H029 Business Improvement data-feasibility audit: PASS (data quality only); STOP (D227, D228)
+
+- **Owner (D227):** audit whether frozen Data v2.1 supports eight Business Improvement families (F1–F8). No returns or performance of any kind; H028 frozen; Holdout sealed.
+- **Method:**
+  - specification pre-registered before any data (d2b6b54); analysis committed before results (5cd5ef3);
+  - ONE infrastructure run, E802-01 (X802 = frozen X801 + qr_h029a; 0 orders; aggregates only);
+  - universes identical to E028-01 (131/131); all PIT checks 0.
+- **Classes:**
+  - **B:** F1 (same-quarter YoY acceleration, 85.8%), F2 (73.8%), F4 (OCF/assets, 80.9%), F5 (ROA change, 78.7%), F7 (SEC share-count issuance, 83.7%), F8 (asset turnover, 76.8%);
+  - **C:** F3 (operating income not approved; 37 months < 50%) and F6 (total debt not approved; zero = missing; no cash field).
+- **Why no A:** coverage 13–20 points lower in 2011–2014; gross profit / OCF / NI are not field-guarded against restatements.
+- **Gate:** 6 of 8 A/B; combined score coverage 81.6% (≥ 3 of 6) / 80.1% (≥ 4) / 75.7% (≥ 5); all 6 required = 64.6% → **H029 DATA FEASIBILITY — PASS**.
+- **Signal properties:**
+  - the six are largely non-redundant (max ρ 0.39) and distinct from H028's features (max 0.47, F8 vs asset growth; LOWVOL ≈ 0, F7 +0.18);
+  - staleness median 50 days; quarterly signals.
+- This is a data-quality result only. No evidence on H029 profitability.
+
+**STOP:** awaiting the owner's decisions for H029-B (families, forms, missing-data rule, universe, 2011–2014 handling, outlier rules, host).

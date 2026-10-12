@@ -472,6 +472,26 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if p.get("mode") != "export" or kind != "infrastructure" or cfg.get("programme") != "P11" \
                 or cfg.get("hypothesis_id") != "H026" or not cfg.get("owner_approval_required"):
             raise ConfigError("X801 runs are Data v2.1 infrastructure exports for H026 / P11 with owner approval")
+    if cfg["strategy_id"] == "X802":
+        # H029-A Business Improvement data-feasibility audit (owner D227, research/phase14/H029A_audit_spec.md): the
+        # frozen X801 Data v2.1 host + qr_h029a; aggregates only (coverage, staleness, distributions, input-to-input
+        # correlations); NO returns; 2011-01-03 .. 2021-12-31 (nothing after 2021-12-31); infrastructure, AUDIT window
+        from . import p14h029a
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2021-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("H029-A audit runs use 2011-01-03..2021-12-31, warm-up 2008-07-01, the Data v2 universe "
+                              "filters (universe.sec_corrections off) and the default-build policy")
+        if (p.get("mode") != "audit" or p.get("spec_sha256") != p14h029a.SPEC_SHA256
+                or p.get("h029a_code_sha256") != p14h029a.CODE_SHA256.get("src/qresearch/lean/qr_h029a.py")
+                or p.get("data_v21_manifest_sha256") != p14h029a.DATA_V21_MANIFEST_SHA256):
+            raise ConfigError("H029-A audit runs carry the pinned audit spec, qr_h029a and Data v2.1 manifest fingerprints")
+        if (kind != "infrastructure" or split != "AUDIT" or cfg.get("hypothesis_id") != "H029"
+                or cfg.get("programme") != "P14" or not cfg.get("owner_approval_required")):
+            raise ConfigError("H029-A runs are infrastructure audits (AUDIT window) for H029 / P14 with owner approval")
     if cfg["strategy_id"] == "S028":
         # H026 Learned Stock Score Portfolio (owner D206, research/phase11/H026_spec.md): the frozen X801 Data v2.1 host
         # (uploaded as qr_x801) + qr_h026, 2011-01-03 .. 2021-12-31 (2011-2021 = H026 development; nothing after
@@ -601,7 +621,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S030 modes: canary, null or real")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
