@@ -186,6 +186,15 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
             files[n] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
         if "qr_x801.py" not in files or "qr_p7_pred.py" not in files:
             raise experiment.ConfigError("H026 needs the X801 module and qr_p7_pred.py (tether)")
+    if "qr_s028" in files["main.py"]:
+        # H027 (D213): the pinned H026 host S028, uploaded byte-identical as a module (the H027 host S029 subclasses it)
+        # + the H027 module; S028's own imports (qr_x801, qr_h026, ...) are uploaded by the rules above
+        rel = "strategies/S028_h026_learned_score/main.py"
+        files["qr_s028.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        rel = "src/qresearch/lean/qr_h027.py"
+        files["qr_h027.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_x801.py" not in files or "qr_h026.py" not in files:
+            raise experiment.ConfigError("the S028 module needs qr_x801.py and qr_h026.py")
     if "qr_s024" in files["main.py"]:
         # H023 (D199): the pinned H022 / Data v2 host S024, uploaded byte-identical as a module (the H023 host S025
         # subclasses it; S024 itself imports the frozen X998 module, uploaded by the rule above) + the grid module

@@ -1,0 +1,17 @@
+{
+ "decision": "D213",
+ "date": "2026-10-12",
+ "subject": "Data Infrastructure v2.1 (manifest research/phase11/data_v21/data_freeze_v21.json, D207)",
+ "resolution": "OWNER-APPROVED EXCEPTION",
+ "record_unchanged": "NEW_YEARS_MAPPING failed AS WRITTEN.",
+ "owner_text": "OWNER-APPROVED EXCEPTION:\nThe failed criterion used an incorrect denominator.\nNo underlying data row was changed by the issue.\nThe SEC-identity denominator gives approximately\n0.95–0.97 mapping coverage in 2018–2021.",
+ "preserved": [
+  "D207",
+  "original failed gate (NEW_YEARS_MAPPING = false, threshold 0.90)",
+  "corrected-denominator analysis (mapping_specification_correction in the manifest)",
+  "-0.046% 2011-2017 H022 population difference (34,847 vs 34,863)"
+ ],
+ "manifest_sha256": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf",
+ "manifest_changed": false,
+ "data_v21_rebuilt": false
+}

@@ -50,3 +50,13 @@ def test_only_the_specification_error_gate_failed_and_it_stays_failed():
     h = m["h022_population_2011_2017"]
     assert h["decisions"] == 83 and h["frozen_stock_months"] == 34863 and abs(h["relative_change"]) < 0.001
     assert m["reviews"] == dict(n=131, first="2011-01-31", last="2021-11-30")
+
+
+def test_owner_exception_d213_recorded_without_rewriting_the_manifest():
+    rec = json.loads((config.REPO_ROOT / datafreeze_v21.OWNER_EXCEPTION_RECORD).read_text())
+    assert rec["decision"] == "D213" and rec["resolution"] == "OWNER-APPROVED EXCEPTION"
+    assert rec["record_unchanged"] == "NEW_YEARS_MAPPING failed AS WRITTEN."
+    assert rec["manifest_sha256"] == datafreeze_v21.MANIFEST_SHA256 == datafreeze_v21.manifest_sha()
+    assert rec["manifest_changed"] is False and rec["data_v21_rebuilt"] is False
+    m = json.loads((config.REPO_ROOT / datafreeze_v21.MANIFEST).read_text())
+    assert m["gates"]["NEW_YEARS_MAPPING"] is False                      # the original result stands

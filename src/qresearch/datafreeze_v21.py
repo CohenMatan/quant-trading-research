@@ -20,6 +20,11 @@ VERSION = "v2.1"
 MANIFEST = "research/phase11/data_v21/data_freeze_v21.json"
 MANIFEST_SHA256 = "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf"   # D207 (P11-CP1)
 FROZEN_STATUS = "FROZEN — NEW_YEARS_MAPPING FAILED AS WRITTEN (SPECIFICATION ERROR, D207)"
+# D213 (owner, 2026-10-12): the freeze is an OWNER-APPROVED EXCEPTION for the NEW_YEARS_MAPPING specification error.
+# The manifest is NOT rewritten (its pinned hash and status stay as frozen under D207; the failed gate stays failed);
+# the exception is recorded beside it in OWNER_EXCEPTION_RECORD.
+OWNER_EXCEPTION_RECORD = "research/phase11/data_v21/owner_exception_D213.json"
+OWNER_EXCEPTION = "OWNER-APPROVED EXCEPTION (D213): NEW_YEARS_MAPPING failed AS WRITTEN; incorrect denominator; no data row changed"
 
 RUNTIME = ("strategies/X801_data_v21_export/main.py",)
 RUNTIME_GLOBS = ("src/qresearch/lean/qr_data_v21*.py",)
