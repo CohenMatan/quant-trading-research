@@ -2158,3 +2158,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - This is a data-quality result only. No evidence on H029 profitability.
 
 **STOP:** awaiting the owner's decisions for H029-B (families, forms, missing-data rule, universe, 2011–2014 handling, outlier rules, host).
+
+## 2026-10-12: P14-CP2 — Fundamental PIT Data v3 hardening: DATA V3 PASS; Data v3 frozen; continuing to H029 / H030 pre-registration (D229, D230)
+
+**Owner (D229):** a new immutable Data v3 layer for H029 only; Data v2.1 and H028 are untouched.
+- **Method:**
+  - spec pre-registered before any build (a43d706);
+  - the guard-v3 table and the SEC validation reference were built offline from public SEC data (a second rebuild was byte-identical);
+  - the analysis was committed before the run (c5b3b21);
+  - ONE audit run, E803-01 (X803 = frozen X801 + qr_v3; 0 orders; aggregates only; LEAN 18179, the new default build; universes = E802-01, 131/131).
+- **Guard v3:**
+  - 45,450 restated SEC values (> 1.5%) of quarterly revenue, gross profit, net income, OCF and total assets;
+  - 1,018 of 116,639 fed vendor versions (0.9%) carried a not-yet-public restated value and are excluded from the H029 v3 view (their periods are removed; nothing imputed).
+- **SEC validation** (275 stratified registrants), share of percentile moves > 0.20:
+  - F1 3.5%, F2 1.9%, F4 1.5%, F5 0.2%, F8 1.7%;
+  - composite 4.8% (2011–2014: 6.5%);
+  - all ≤ 5% → PASS.
+- **F7 split test:** disagreement 6.4% in split windows vs 2.7% without (limit +5 points) → PASS.
+- **Coverage:** ≥ 5 of 6 median 76.1% (2015–2021: 77.6%). Families 74–86%.
+- **PIT checks:** all 0.
+- **Outcome:** all six families usable → **DATA V3 PASS**. Manifest `data_freeze_v3.json` (601d0062…) pinned.
+- **Next (owner run order, no stop):** H029 / H030 pre-registration. The H029 host must first reproduce H026's panels and H028's committed result on the current QuantConnect build.
