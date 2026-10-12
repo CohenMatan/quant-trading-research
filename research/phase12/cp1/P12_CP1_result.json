@@ -1,0 +1,320 @@
+{
+ "development_evidence_only": true,
+ "diagnostics": {
+  "capital_200k": {
+   "S_WEALTH": 0.19350898274088674,
+   "cagr": 0.18002783731369165,
+   "maxdd": -0.2608558840008923,
+   "spy": 524676.2761604529,
+   "spy_cagr": 0.14783200996757273,
+   "vol": 0.16387373859507895,
+   "wealth": 636694.8117349037
+  },
+  "lowvol_factor_regression": {
+   "alpha": 0.0021657524468273724,
+   "alpha_annualised": 0.02598902936192847,
+   "factor_mean": -0.00028869229918317374,
+   "gamma": 0.5119840977743951,
+   "n": 84,
+   "r2": 0.227655494302601,
+   "t_alpha": 0.8985572703084358
+  },
+  "march_2020": {
+   "log_relative_vs_lv15": 0.01885295521981236,
+   "log_relative_vs_spy": 0.1105179816831637,
+   "note": "included as recorded; nothing removed or winsorised",
+   "returns": {
+    "2020-02": {
+     "h027": -0.08729181623575699,
+     "lv15": -0.05891677434695364,
+     "spy": -0.07916576010940879
+    },
+    "2020-03": {
+     "h027": -0.02259047437826478,
+     "lv15": -0.04084491662101852,
+     "spy": -0.12485660845398328
+    },
+    "2020-04": {
+     "h027": 0.0986391652318166,
+     "lv15": 0.06100599202400758,
+     "spy": 0.12698351115421924
+    }
+   },
+   "share_of_S_WEALTH": 0.6444875160012425,
+   "share_of_S_vs_lv15": 0.05437338009285369
+  },
+  "regime": {
+   "NORMAL": {
+    "mean_monthly_relative": 0.0035229707872745457,
+    "months": 14
+   },
+   "RISK_OFF": {
+    "mean_monthly_relative": -0.012171105245467278,
+    "months": 6
+   },
+   "STRONG": {
+    "mean_monthly_relative": 0.002617460584304763,
+    "months": 54
+   },
+   "WEAK": {
+    "mean_monthly_relative": 0.015020320373237372,
+    "months": 10
+   }
+  },
+  "sector_neutral": {
+   "mean_monthly": 0.0029908125318580934,
+   "months": 84,
+   "t": 1.0502790979352705
+  },
+  "top10": {
+   "S_WEALTH": -0.05424485837522672,
+   "cagr": 0.13895761366609327,
+   "maxdd": -0.239367200570203,
+   "spy": 262325.455801514,
+   "spy_cagr": 0.14782407724053725,
+   "vol": 0.16814561681059195,
+   "wealth": 248474.7106158103
+  },
+  "top20": {
+   "S_WEALTH": 0.08249470895553106,
+   "cagr": 0.1614405332054003,
+   "maxdd": -0.28389616031646125,
+   "spy": 262325.455801514,
+   "spy_cagr": 0.14782407724053725,
+   "vol": 0.16224120693239985,
+   "wealth": 284883.58967401093
+  }
+ },
+ "experiment": "E029-05",
+ "final_model": null,
+ "final_score_status": null,
+ "gates": {
+  "A1": true,
+  "A2": true,
+  "A2_detail": {
+   "S_vs_lv15": 0.3467313451475166,
+   "cagr_h027": 0.17630979402579228,
+   "cagr_lv15": 0.11942512135384331,
+   "wealth_h027": 311396.7708031718,
+   "wealth_lv15": 220156.03484878788
+  },
+  "A3": true,
+  "A3_detail": {
+   "excess_cagr": 0.028485716785255022,
+   "wealth_ratio": 1.1870627265345806
+  },
+  "A3_note": "A CARRIED-FORWARD ECONOMIC REQUIREMENT, NOT NEW INDEPENDENT EVIDENCE",
+  "A4": false,
+  "A4_detail": {
+   "L_2015_2017": -0.057932294574849386,
+   "L_2018_2021": 0.4045341983830151,
+   "L_vs_lv15": {
+    "2015": -0.17074856663499643,
+    "2016": -0.058970227080082316,
+    "2017": 0.17178649914022937,
+    "2018": 0.06895911716826553,
+    "2019": 0.06929825873753187,
+    "2020": 0.18282851051773524,
+    "2021": 0.08344831195948245
+   },
+   "years_beating_lv15": 5
+  },
+  "A5": true,
+  "A5_detail": {
+   "maxdd_ratio": 0.7745595955310768,
+   "vol_ratio": 0.9269632751991069
+  },
+  "A6": true,
+  "A6_detail": {
+   "h027": 295027.9494874473,
+   "lv15": 205499.79837473566,
+   "spy": 261801.31398344514
+  },
+  "S_WEALTH": 0.17148195882657039,
+  "all": false,
+  "c_wealth_conditional": 0.05770235251912147,
+  "null_at_or_above": 2,
+  "null_worlds": 5000,
+  "p_empirical": 0.0005998800239952009
+ },
+ "host_gates_reproduced": true,
+ "pins": {
+  "adequate": true,
+  "c": true,
+  "equivalence": true,
+  "feature_panel": true,
+  "null_result": true,
+  "pit_audit_zero": true,
+  "response_panel": true,
+  "threshold_commit": true
+ },
+ "pit_audit": {
+  "baseline_pit_violations": 0,
+  "baseline_used_despite_reject": 0,
+  "fed_after_guard_trigger": 0,
+  "fed_before_first_seen": 0,
+  "fed_before_sec_filing": 0,
+  "future_identity_row": 0,
+  "record_older_than_200d": 0,
+  "repaired_below_2B": 0,
+  "repaired_with_vendor_cap": 0,
+  "share_filing_not_yet_public": 0,
+  "stale_share_count_used": 0
+ },
+ "portfolio": {
+  "h027": {
+   "cagr": 0.17630979402579228,
+   "maxdd": -0.26115171280531513,
+   "sharpe": 1.0746415563200922,
+   "underwater_longest": 410,
+   "underwater_share": 0.8535754824063564,
+   "vol": 0.16392095895448963,
+   "wealth": 311396.7708031718,
+   "years": 6.995208761122519
+  },
+  "lv15": {
+   "cagr": 0.11942512135384331,
+   "maxdd": -0.16477881687607687,
+   "sharpe": 1.085644229141487,
+   "underwater_longest": 154,
+   "underwater_share": 0.8615209988649262,
+   "vol": 0.10974231624311362,
+   "wealth": 220156.03484878788,
+   "years": 6.995208761122519
+  },
+  "lv15_trades": {
+   "cash_share": null,
+   "commissions": 7133.0,
+   "holdings": null,
+   "slippage": 9937.170831233569,
+   "trades": 1019,
+   "turnover": null
+  },
+  "lv15_vs_spy": {
+   "S": -0.17524938632094614,
+   "excess_cagr": -0.028398955886693944
+  },
+  "spy": {
+   "cagr": 0.14782407724053725,
+   "maxdd": -0.3371615487201556,
+   "sharpe": 0.8699246178872205,
+   "underwater_longest": 187,
+   "underwater_share": 0.8325766174801362,
+   "vol": 0.17683651913748175,
+   "wealth": 262325.455801514,
+   "years": 6.995208761122519
+  },
+  "trades": {
+   "buys": 407,
+   "cash_share": null,
+   "commissions": 5663.0,
+   "holdings": null,
+   "sells": 402,
+   "slippage": 7829.8805410203295,
+   "trades": 809,
+   "turnover": null
+  }
+ },
+ "provenance": {
+  "code_sha256": "5bf1a7a812bcb89031584efa1a2317ccfa9231e06e52dd385a06f5af106cd964",
+  "git_commit": "1fb0f2f6c31eaeb406799ee5c581c99697dcec8f",
+  "lean_version": "v2.5.0.0.18178",
+  "qc_backtest_id": "8ae14926d4dede46f6f8586a9c253e08"
+ },
+ "real_in_null_risk": {
+  "beta": {
+   "null_median": 0.7050799194132586,
+   "null_share_at_least_as_defensive": 0.964,
+   "real": 0.7950372028988913
+  },
+  "down_capture": {
+   "null_median": 0.6777925214100862,
+   "null_share_at_least_as_defensive": 0.8758,
+   "real": 0.7755116820803101
+  },
+  "maxdd": {
+   "null_median": -0.28956763136195984,
+   "null_share_at_least_as_defensive": 0.2,
+   "real": -0.26115171280531513
+  },
+  "vol": {
+   "null_median": 0.1492112633899357,
+   "null_share_at_least_as_defensive": 0.987,
+   "real": 0.16392095895448963
+  }
+ },
+ "reproduction": {
+  "coefficients": true,
+  "host_wealth_and_s": true,
+  "lambdas": true,
+  "risk_equals_adequacy_reference": true,
+  "spy_wealth": true,
+  "wealth": true,
+  "yearly_returns": true
+ },
+ "risk": {
+  "h027": {
+   "beta": 0.7950372028988913,
+   "corr": 0.8177016028666143,
+   "down_capture": 0.7755116820803101,
+   "months": 84,
+   "up_capture": 0.9859278271606718
+  },
+  "lv15": {
+   "beta": 0.5260202842136676,
+   "corr": 0.7870330112479607,
+   "down_capture": 0.4132080969682522,
+   "months": 84,
+   "up_capture": 0.6192009147461336
+  }
+ },
+ "runtime": {
+  "max_rss_mb": 7750.7,
+  "wall_s": 1072.2
+ },
+ "status": "H027 REJECTED \u2014 NO ROBUST STOCK-SELECTION EDGE BEYOND LOWVOL EXPOSURE",
+ "years": {
+  "2015": {
+   "h027": -0.07722421347254482,
+   "lam": 0.01,
+   "lv15": 0.09458968316653404,
+   "spy": 0.007312053996116452
+  },
+  "2016": {
+   "h027": 0.054225366544176534,
+   "lam": 100.0,
+   "lv15": 0.11826287254369605,
+   "spy": 0.11992273251960417
+  },
+  "2017": {
+   "h027": 0.31818740964703496,
+   "lam": 100.0,
+   "lv15": 0.11012333224225945,
+   "spy": 0.21709181216547724
+  },
+  "2018": {
+   "h027": 0.11593401221535493,
+   "lam": 100.0,
+   "lv15": 0.041573568413807216,
+   "spy": -0.045623483950293364
+  },
+  "2019": {
+   "h027": 0.27850283566746525,
+   "lam": 100.0,
+   "lv15": 0.19290495969215016,
+   "spy": 0.3121982061658237
+  },
+  "2020": {
+   "h027": 0.34325565694378923,
+   "lam": 100.0,
+   "lv15": 0.11881238422257923,
+   "spy": 0.18335474196096513
+  },
+  "2021": {
+   "h027": 0.26878878710578324,
+   "lam": 100.0,
+   "lv15": 0.16720782525322253,
+   "spy": 0.29055632996963787
+  }
+ }
+}

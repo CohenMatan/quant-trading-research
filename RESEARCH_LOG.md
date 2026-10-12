@@ -2032,3 +2032,30 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
 **STOP:** awaiting the owner — D207 decision; H027 direction or close Phase 11; optional non-trading export run (needs memory work first).
 
+
+
+## 2026-10-12: Phase 12 — H027 Exposure-Controlled Learned Stock Score: REJECTED; STOP (D213–D216)
+
+- **Owner (D213):**
+  - Data v2.1 frozen as an OWNER-APPROVED EXCEPTION; NEW_YEARS_MAPPING still failed as written; the manifest is unchanged.
+  - H026 permanently rejected; no H026 export run.
+  - H027 approved: the frozen H026 procedure, tested against a LOWVOL-conditional null and the LV15_CONTROL, with gates A1–A6.
+- **Infrastructure:**
+  - Host S029 (a subclass of the pinned S028) with memory reduction.
+  - Peak memory 7.7–7.8 GB vs H026's 7.9–8.2 GB; the owner's 6.5 GB target was not met.
+- **Canary E029-01 (D214): 17/17.**
+  - Exact equivalence with H026: panels equal the pins; H026 null worlds 1–25 equal E028-04.
+  - LOWVOL never moves and the other ten features move as one donor vector.
+  - LV15 picks are verified.
+  - Synthetic A (LOWVOL only) does not beat the null; B (LOWVOL + GPA) beats it in every replicate.
+- **Null (D215):** 5,000 conditional worlds; the rerun of seeds 1–25 is exact (coefficients included).
+  - Adequacy: ADEQUATE. Worlds at least as defensive: volatility 98.7%, MaxDD 20%, beta 96.4%, down-capture 87.6%.
+  - c_WEALTH_CONDITIONAL = 0.0577, pinned and merged (PR #89) before the real run.
+- **Real run E029-05 (D216):** H026 reproduced exactly.
+  - A1 PASS (S 0.171, p 0.0006); A2, A3, A5 and A6 PASS.
+  - **A4 FAIL:** behind LV15 over 2015–2017 (−0.058), although ahead in 5 of 7 years and +0.405 over 2018–2021.
+  - LV15 itself lost to SPY (−2.8 points a year).
+  - LOWVOL-factor alpha t = 0.90; sector-neutral t = 1.05.
+- **Status:** H027 REJECTED — NO ROBUST STOCK-SELECTION EDGE BEYOND LOWVOL EXPOSURE. Development evidence only; nothing frozen; Holdout untouched; nothing purchased.
+
+**STOP:** awaiting the owner. Recommendation: close H027 / Phase 12 as REJECTED.
