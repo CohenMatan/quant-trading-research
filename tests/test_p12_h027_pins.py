@@ -53,3 +53,15 @@ def test_threshold_pinned_from_the_committed_null():
     assert nr["adequacy"]["adequate"] is True and P.ADEQUATE is True
     assert nr["status"] == "ADEQUATE — c_WEALTH_CONDITIONAL MAY BE PINNED"
     assert nr["checks"]["rerun_1_25_rows_identical"] and nr["checks"]["rerun_1_25_coefficients_identical"]
+
+
+def test_real_config_carries_the_pins():
+    p = config.EXPERIMENTS_DIR / P.REAL / "config.json"
+    if P.THRESHOLD_COMMIT is None or not p.exists():
+        return
+    cfg = json.loads(p.read_text())
+    experiment.validate(cfg)
+    pr = cfg["params"]
+    assert pr["c_wealth_conditional"] == P.C_WEALTH_CONDITIONAL and pr["null_result_sha256"] == P.NULL_RESULT_SHA256
+    assert pr["threshold_commit"] == P.THRESHOLD_COMMIT and pr["mode"] == "real"
+    assert pr["h026_real_wealth"] == P.H026_REAL_WEALTH and pr["h026_real_s_wealth"] == P.H026_REAL_S_WEALTH
