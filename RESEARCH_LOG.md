@@ -2086,3 +2086,24 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Status:** H028 REJECTED — FIXED STRONG SHRINKAGE DOES NOT ROBUSTLY SOLVE THE TEMPORAL-STABILITY PROBLEM. Development evidence only; nothing frozen; Holdout untouched; nothing purchased.
 
 **STOP:** awaiting the owner. Recommendation: close H028 / Phase 13 as REJECTED; no H029 without explicit instruction.
+
+
+## 2026-10-12: P13-CP2 — H028 2015–2016 descriptive post-mortem: POST-MORTEM C; STOP (D221, D222)
+
+- **Owner (D221):** descriptive post-mortem only, from committed artifacts. H028 stays REJECTED; no H029; no QuantConnect run; no Holdout.
+- **2015 (broad shortfall):**
+  - H028 −3.5% vs LV15 +9.5%; behind in 10 of 12 months, in both rising and falling months.
+  - LV15 had better up-capture *and* down-capture.
+  - Low-volatility stocks broadly outperformed that year.
+  - λ = 100 recovered only about a quarter of H027's 2015 gap (−0.171 → −0.126): downside improved, upside participation did not.
+- **2016 (down-month shortfall; λ already 100):**
+  - H028 +6.2% vs LV15 +11.8%; level with LV15 in the 8 up months.
+  - All of the gap came in the 4 down months (October 2016 = 58%); down-capture 0.90 vs 0.07.
+  - Not a low-volatility rally: the lowest-volatility quintile lagged in 2016.
+- **Costs:** at most about 7–15% of the gaps.
+- **2016 vs 2017:** the same model (cosine 0.91) lost with down months and won with none.
+- **Not available:** holdings, feature, sector and stock-level items, because the hosts export aggregates only.
+- **Clarification:** P13-CP1's "reproduced H027 exactly" applies to the in-run H027 recomputation. The H028 2016–2021 coefficients, scores and holdings matched H027, with small, documented path differences in returns.
+- **Status:** POST-MORTEM C — 2015 AND 2016 FAILED FOR MATERIALLY DIFFERENT REASONS. H028 REMAINS REJECTED; Holdout sealed.
+
+**STOP:** awaiting the owner. Recommendation: close Phase 13 and the learned-score line.
