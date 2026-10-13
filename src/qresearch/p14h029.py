@@ -43,6 +43,11 @@ ORIGINAL_RUNS = dict(canary="E031-01", null=("E031-02", "E031-03"), rerun="E031-
 ORIGINAL_NULL_RESULT = "research/phase14/cp3/P14_CP3_null.json"
 ORIGINAL_NULL_RESULT_SHA256 = "982f6d74eec3563110a3b8c6c9a8c69c959d849d60a3ae5e62a24a77064a165c"
 INVALID_THRESHOLDS = (0.2695877034430064, 0.005896238744820351)        # (c_UP, c_INC) of the inadequate null
+ORIGINAL_CODE_SHA256 = {                                               # the code the original runs used (7bdbcf7)
+    "src/qresearch/lean/qr_h029.py": "2ec9820c939d6445a9a516a6ff86af880c1aa2ac1ceac42effbbf1efcc3c0d5e",
+    "strategies/S031_h029_h030/main.py": "44e41148ac787604615f7c37ca79116819f1f2e4c2b09150be1151dfd40d3640",
+}
+ORIGINAL_NULL_SEEDS = {"E031-02": (1, 2500), "E031-03": (2501, 5000), "E031-04": (1, 25)}
 # Amendment 1 (sector-stratified null) run ids
 CANARY, NULL_RUNS, RERUN, REAL = "E031-06", ("E031-07", "E031-08"), "E031-09", "E031-10"
 NULL_SEEDS = {"E031-07": (1, 2500), "E031-08": (2501, 5000), "E031-09": (1, 25)}
@@ -51,6 +56,12 @@ C_UP_H029 = None
 C_INCREMENTAL_H030 = None
 NULL_RESULT_SHA256 = None
 THRESHOLD_COMMIT = None
+
+
+def original_run_ids() -> tuple:
+    """The committed original-null records (validated as history only; the runner refuses re-running an id)."""
+    o = ORIGINAL_RUNS
+    return (o["canary"], *o["null"], o["rerun"])
 
 
 def sha256_file(rel: str) -> str:

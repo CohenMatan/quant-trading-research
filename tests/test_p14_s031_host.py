@@ -126,3 +126,22 @@ def test_amendment1_config_carries_the_amendment_pin():
     c["params"]["amendment1_sha256"] = "0" * 64
     with pytest.raises(experiment.ConfigError):
         experiment.validate(c)
+
+
+def test_original_null_configs_validate_as_history_only():
+    """E031-01..04 (P14-CP3a) stay valid records against the ORIGINAL code pins; the original pins never validate a
+    new run, a new run id never validates with the original code, and no record id can be a real run."""
+    for e in P.original_run_ids():
+        c = json.loads((ROOT / "experiments" / e / "config.json").read_text())
+        experiment.validate(c)
+        assert c["params"]["h029_code_sha256"] == P.ORIGINAL_CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+        assert (ROOT / "experiments" / e / "result.json").exists() or (ROOT / "experiments" / e).exists()
+    c = _cfg("null", P.NULL_SEEDS[P.NULL_RUNS[0]])
+    c["params"]["h029_code_sha256"] = P.ORIGINAL_CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(c)
+    c = json.loads((ROOT / "experiments" / P.ORIGINAL_RUNS["canary"] / "config.json").read_text())
+    c["params"].update(mode="real")
+    c.update(kind="research", split="DEV")
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(c)
