@@ -145,3 +145,15 @@ def test_original_null_configs_validate_as_history_only():
     c.update(kind="research", split="DEV")
     with pytest.raises(experiment.ConfigError):
         experiment.validate(c)
+
+
+def test_sector_null_blocked_no_thresholds_no_real_run():
+    """P14-CP3b (D234): the sector-stratified null is inadequate -> no threshold exists, none is pinned, and no real
+    run config exists or validates."""
+    d = json.loads((ROOT / P.SECTOR_NULL_RESULT).read_text())
+    assert hashlib.sha256((ROOT / P.SECTOR_NULL_RESULT).read_bytes()).hexdigest() == P.SECTOR_NULL_RESULT_SHA256
+    assert d["verdict"] == P.SECTOR_NULL_VERDICT and d["adequacy"]["ok"] is False
+    assert not d["adequacy"]["turn29"]["ok"] and d["rerun_seeds_1_25_identical"] and d["worlds"] == 5000
+    assert "c_up_h029" not in d and "c_incremental_h030" not in d
+    assert P.C_UP_H029 is None and P.C_INCREMENTAL_H030 is None and P.THRESHOLD_COMMIT is None
+    assert not (ROOT / "experiments" / P.REAL).exists()

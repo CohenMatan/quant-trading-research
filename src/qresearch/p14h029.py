@@ -51,6 +51,11 @@ ORIGINAL_NULL_SEEDS = {"E031-02": (1, 2500), "E031-03": (2501, 5000), "E031-04":
 # Amendment 1 (sector-stratified null) run ids
 CANARY, NULL_RUNS, RERUN, REAL = "E031-06", ("E031-07", "E031-08"), "E031-09", "E031-10"
 NULL_SEEDS = {"E031-07": (1, 2500), "E031-08": (2501, 5000), "E031-09": (1, 25)}
+# the sector-stratified null result (P14-CP3b, D234): INADEQUATE (H029 name turnover below all 5,000 worlds) ->
+# H029/H030 BLOCKED; no threshold computed or pinned; no real run
+SECTOR_NULL_RESULT = "research/phase14/cp3/P14_CP3b_null.json"
+SECTOR_NULL_RESULT_SHA256 = "7a48b1e5816611985526b0753cc4ca7db690451e0fd2a38f5f3d3bce3b294121"
+SECTOR_NULL_VERDICT = "H029/H030 BLOCKED — SECTOR-STRATIFIED NULL ALSO INADEQUATE"
 # pinned after the sector-stratified null passes adequacy, before the real run; None until then
 C_UP_H029 = None
 C_INCREMENTAL_H030 = None

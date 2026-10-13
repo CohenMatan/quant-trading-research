@@ -2198,3 +2198,13 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Status:** an owner-approved pre-performance methodological amendment following a pre-registered adequacy failure. Significance under this null = within-sector / conditional stock selection; sector-allocation alpha is not tested.
 - **Committed before any run:** S031 v1.1 (canary sector checks: constructibility, same-sector donors, recipient sector / returns / eligibility / H028 unchanged; a within-sector synthetic B) and new run ids E031-06 (canary), E031-07 / 08 (null), E031-09 (rerun), E031-10 (real, only after pinned thresholds).
 - **Records:** P14-CP3a and its runs E031-01..04 stay the permanent record; 0.2696 / 0.0059 are permanently invalid.
+
+## 2026-10-13: P14-CP3b — sector-stratified null ALSO INADEQUATE → H029 / H030 BLOCKED (D234)
+
+- **Canary E031-06:** PASS 23/23 (same-sector donors, no self-matches, recipients unchanged; synthetic A null, within-sector synthetic B p = 1/51).
+- **Null:** 5,000 sector-stratified worlds (E031-07 / 08); seeds 1–25 rerun (E031-09) identical.
+- **Adequacy (unchanged rule):**
+  - sector concentration is now matched by construction;
+  - H029's real Top-15 turns over fewer names (0.357 a month) than every one of the 5,000 sector-null worlds (minimum 0.362) → **H029/H030 BLOCKED — SECTOR-STRATIFIED NULL ALSO INADEQUATE**.
+- **Not done:** no thresholds computed or pinned; no real run; no H029 / H030 performance exists. No third null designed.
+- **Recommendation to the owner:** close H029 / H030 as not evaluable. Holdout sealed.
