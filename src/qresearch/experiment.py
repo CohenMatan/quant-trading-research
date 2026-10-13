@@ -515,7 +515,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("programme") != "P14" or not cfg.get("owner_approval_required")):
             raise ConfigError("Data v3 runs are infrastructure audits (AUDIT window) for H029 / P14 with owner approval")
     if cfg["strategy_id"] == "S031":
-        # H029 / H030 (owner D229, research/phase14/H029_H030_spec.md): the standalone S031 host on the frozen X801 Data
+        # H029 / H030 (owner D229, research/phase14/H029_H030_spec.md; Amendment 1 sector-stratified null, owner D233,
+        # new run ids E031-06..10): the standalone S031 host on the frozen X801 Data
         # v2.1 host + Data v3 + the frozen H028 path; 2011-01-03 .. 2021-12-31 (evaluation 2015-2021; nothing after
         # 2021-12-31); canary and the null worlds are infrastructure; the ONE real development run is research (DEV)
         # and needs the pinned c_UP_H029, c_INCREMENTAL_H030, null result and threshold commit
@@ -531,6 +532,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
                               "filters (universe.sec_corrections off) and the default-build policy")
         w28, wlv, coef = p14h029.h028_inputs()
         if (not p14h029.SPEC_SHA256 or p.get("spec_sha256") != p14h029.SPEC_SHA256
+                or not p14h029.AMENDMENT1_SHA256 or p.get("amendment1_sha256") != p14h029.AMENDMENT1_SHA256
+                or p.get("h028_result_sha256") != p14h029.H028_RESULT_SHA256
                 or p.get("h029_code_sha256") != p14h029.CODE_SHA256["src/qresearch/lean/qr_h029.py"]
                 or p.get("data_v3_manifest_sha256") != p14h029.DATA_V3_MANIFEST_SHA256
                 or p.get("guard_sha256") != p14datav3.GUARD_SHA256

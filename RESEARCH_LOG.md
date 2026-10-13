@@ -2190,3 +2190,11 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - all other measures pass.
 - **Not done:** thresholds not pinned; no real run; no H029 / H030 performance computed.
 - **Owner options:** sector-stratified tether (recommended), exception, or close. Holdout sealed.
+
+## 2026-10-13: P14-CP3b — H029 / H030 sector-stratified null amendment (D233)
+
+- **Owner decision (D233):** approved option 1 of P14-CP3a, before any real H029 / H030 performance existed.
+- **Amendment 1** (`research/phase14/H029_H030_amendment1_sector_null.md`): the donor of a six-signal vector must come from the recipient's FF12 sector at the review. Nothing else changes (H029, H030, H028, Data v3, gates, costs, mechanics, adequacy rule).
+- **Status:** an owner-approved pre-performance methodological amendment following a pre-registered adequacy failure. Significance under this null = within-sector / conditional stock selection; sector-allocation alpha is not tested.
+- **Committed before any run:** S031 v1.1 (canary sector checks: constructibility, same-sector donors, recipient sector / returns / eligibility / H028 unchanged; a within-sector synthetic B) and new run ids E031-06 (canary), E031-07 / 08 (null), E031-09 (rerun), E031-10 (real, only after pinned thresholds).
+- **Records:** P14-CP3a and its runs E031-01..04 stay the permanent record; 0.2696 / 0.0059 are permanently invalid.

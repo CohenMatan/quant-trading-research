@@ -1,4 +1,4 @@
-# S031 v1.0 — H029 STANDALONE BUSINESS IMPROVEMENT SCORE + H030 FIXED 50/50 COMBINATION WITH FROZEN H028 (owner D229;
+# S031 v1.1 — H029 STANDALONE BUSINESS IMPROVEMENT SCORE + H030 FIXED 50/50 COMBINATION WITH FROZEN H028 (owner D229;
 # research/phase14/H029_H030_spec.md, pinned by qresearch.p14h029). NO orders (portfolios are simulated in-host);
 # nothing after 2021-12-31 is requested; 2015-2021 = development evidence; the Holdout 2022-01-01 .. 2026-08-31 stays
 # sealed. A STANDALONE subclass of the frozen Data v2.1 host X801 only (uploaded byte-identical as qr_x801; no
@@ -12,7 +12,9 @@
 #   - the H028 component: lambda-100 fits (qr_h029.fixed_fits = the frozen H028 module arithmetic), checked against the
 #     committed coefficients and the committed H028 terminal wealth;
 #   - modes: canary (spec 13; NO real H029 / H030 portfolio result), null (worlds params.seeds; real assignment only
-#     used for the score-only selection structure), real (the ONE run with the pinned thresholds).
+#     used for the score-only selection structure), real (the ONE run with the pinned thresholds);
+#   - v1.1 (Amendment 1, owner D233, research/phase14/H029_H030_amendment1_sector_null.md): the null tether is
+#     stratified by FF12 sector (qr_h029); the canary adds the sector checks. Nothing else changed.
 # New attribute / method names carry the prefix y_ / _y_ (X801 / X998 / S028 / S029 names keep their meanings; D194).
 # Modules uploaded by the runner (named here because its upload rules read this file): qr_x801, qr_v3, qr_data_v3,
 # qr_h029, qr_h026, qr_h024, qr_h023, qr_p7, qr_p7_score, qr_p7_export, qr_p7_pred, qr_p7_mech, qr_xs, qr_xs_diag,
@@ -616,29 +618,55 @@ class H029H030(X81.DataV2Export):
             mech["blend_mismatch"] += int(not np.array_equal(b30, man30))
         mech["min_valid_signals"] = int(min(int(np.isfinite(V29[i]).sum(1).min()) for i in range(len(V29)) if len(V29[i])))
         ck["mechanics"] = mech
-        # 2. null preserves H028 and eligibility; complete donor vectors; no self-match
-        nc = dict(seeds=[1, 2], h028_changed=0, eligibility_changed=0, not_donor_vector=0, self_match=0, persist_kept=0,
-                  persist_possible=0)
-        for sd in (1, 2):
-            before = [s.copy() for s in su["sc28j"]]
-            Vp = Q.tether_vectors(m29, V29, sd)
-            dn = Q.donors(m29, sd)
-            prev = None
-            for m, Vr, Pp, d in zip(m29, V29, Vp, dn):
-                pos = {s: i for i, s in enumerate(m["ids"])}
-                nc["eligibility_changed"] += int(sorted(d) != m["ids"] or not np.all(np.isfinite(V.h029_score(Pp)[0])))
-                for s, src in d.items():
-                    nc["self_match"] += int(s == src and len(m["ids"]) > 1)
-                    nc["not_donor_vector"] += int(not np.array_equal(Pp[pos[s]], Vr[pos[src]], equal_nan=True))
-                if prev is not None:
-                    for s in m["ids"]:
-                        if s in prev and prev[s] in pos:
-                            nc["persist_possible"] += 1
-                            nc["persist_kept"] += int(d[s] == prev[s])
-                prev = d
-            Q.world(*self._y_args(m29, V29, su), seed=sd)
-            nc["h028_changed"] += sum(int(not np.array_equal(a, b)) for a, b in zip(su["sc28j"], before))
+        # 2. null (Amendment 1, owner D233): sector-stratified tether -- constructible (every FF12 sector of every
+        #    review holds >= 2 H029-eligible stocks), donor sector == recipient sector, recipient sector / returns /
+        #    eligibility / H028 unchanged, complete donor vectors, no self-match, persistent partners
+        sizes = [np.unique(np.asarray(m["sector"]), return_counts=True)[1] for m in m29 if len(m["ids"])]
+        nc = dict(seeds=[1, 2], min_sector_size=int(min(int(z.min()) for z in sizes)),
+                  singleton_sector_reviews=sum(int((z == 1).any()) for z in sizes), constructible=True,
+                  not_constructible=None, h028_changed=0, eligibility_changed=0, not_donor_vector=0, self_match=0,
+                  donor_other_sector=0, recipient_sector_changed=0, recipient_data_changed=0, persist_kept=0,
+                  persist_possible=0, mapped=0)
+        keys = ("ids", "sector", "open_ok", "r_oo", "alive_next", "r_oc", "alive_end", "daily")
+        snap = lambda ms: [_sha([(m[k].tolist() if hasattr(m[k], "tolist") else m[k]) for k in keys if k in m])
+                           for m in ms]
+        sec0 = [np.asarray(m["sector"]).copy() for m in m29]
+        d29, d30 = snap(m29), snap(su["m30"])
+        try:
+            for sd in (1, 2):
+                before = [s.copy() for s in su["sc28j"]]
+                Vp = Q.tether_vectors(m29, V29, sd)
+                dn = Q.donors(m29, sd)
+                prev = None
+                for m, Vr, Pp, d in zip(m29, V29, Vp, dn):
+                    pos = {s: i for i, s in enumerate(m["ids"])}
+                    sec = np.asarray(m["sector"])
+                    nc["eligibility_changed"] += int(sorted(d) != m["ids"] or not np.all(np.isfinite(V.h029_score(Pp)[0])))
+                    for s, src in d.items():
+                        nc["mapped"] += 1
+                        nc["self_match"] += int(s == src)
+                        nc["donor_other_sector"] += int(sec[pos[s]] != sec[pos[src]])
+                        nc["not_donor_vector"] += int(not np.array_equal(Pp[pos[s]], Vr[pos[src]], equal_nan=True))
+                    if prev is not None:
+                        for s in m["ids"]:
+                            if s in prev and prev[s] in pos and sec[pos[s]] == sec[pos[prev[s]]]:
+                                nc["persist_possible"] += 1
+                                nc["persist_kept"] += int(d[s] == prev[s])
+                    prev = d
+                Q.world(*self._y_args(m29, V29, su), seed=sd)
+                nc["h028_changed"] += sum(int(not np.array_equal(a, b)) for a, b in zip(su["sc28j"], before))
+        except Q.NullNotConstructible as e:
+            nc["constructible"], nc["not_constructible"] = False, str(e)
+        nc["recipient_sector_changed"] = sum(int(not np.array_equal(a, np.asarray(m["sector"])))
+                                             for a, m in zip(sec0, m29))
+        nc["recipient_data_changed"] = (sum(int(a != b) for a, b in zip(d29, snap(m29))) +
+                                        sum(int(a != b) for a, b in zip(d30, snap(su["m30"]))))
+        nc["mechanics_constants"] = dict(K=H.K, SECTOR_CAP=H.SECTOR_CAP, CAPITAL=H.CAPITAL, COMMISSION=H.COMMISSION,
+                                         SLIPPAGE=H.SLIPPAGE, STRESS_SLIPPAGE=H.STRESS_SLIPPAGE, LAMBDA=Q.LAMBDA)
         ck["null_checks"] = nc
+        if not nc["constructible"]:
+            self.st["canary"] = ck                       # STOP -- SECTOR-STRATIFIED NULL NOT CONSTRUCTIBLE
+            return
         # 3. determinism of one world
         a = Q.world(*self._y_args(m29, V29, su), seed=3)
         b = Q.world(*self._y_args(m29, V29, su), seed=3)

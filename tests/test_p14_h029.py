@@ -40,6 +40,7 @@ def _setup(seed=3, frac=0.8, miss=True):
         keep = np.sort(rng.choice(n, int(frac * n), replace=False))
         ids = [m["ids"][i] for i in keep]
         mm = Q.sub_month(m, keep, ids)
+        mm["sector"] = np.array([int(s[1:]) % 6 for s in ids], dtype=np.int64)   # stable synthetic FF12 labels, >= 2 per sector
         V = rng.normal(size=(len(ids), 6))
         if miss:
             V[rng.random(len(ids)) < 0.3, rng.integers(0, 6)] = np.nan       # <= 1 missing per row
@@ -108,7 +109,8 @@ def test_tether_moves_whole_vectors_keeps_eligibility_and_never_touches_h028():
             pos = {s: i for i, s in enumerate(m["ids"])}
             assert P.shape == V.shape and sorted(d) == m["ids"]                 # same eligible set
             for s, src in d.items():
-                assert s != src or len(m["ids"]) == 1                            # no self-match
+                assert s != src                                                  # no self-match
+                assert m["sector"][pos[s]] == m["sector"][pos[src]]              # Amendment 1: same FF12 sector
                 assert np.array_equal(P[pos[s]], V[pos[src]], equal_nan=True)  # complete donor vector
             if prev is not None:
                 kept = [s for s in m["ids"] if s in prev and prev[s] in pos and d[s] == prev[s]]
@@ -118,6 +120,29 @@ def test_tether_moves_whole_vectors_keeps_eligibility_and_never_touches_h028():
         Q.world(S["m29"], S["m30"], S["V29"], S["sc28j"], S["j29"], S["w28"], S["spy"], S["days"], seed=seed)
         assert all(np.array_equal(a, b) for a, b in zip(S["sc28j"], sc28_before))
     assert Q.tether_vectors(S["m29"], S["V29"], None)[0] is S["V29"][0]
+
+
+def test_sector_null_not_constructible_stops_without_fallback():
+    S = _setup()
+    m = dict(S["m29"][0])
+    sec = np.asarray(m["sector"]).copy()
+    sec[0] = 99                                                          # a sector with a single eligible stock
+    m["sector"] = sec
+    with pytest.raises(Q.NullNotConstructible):
+        Q.tether_vectors([m], [S["V29"][0]], 1)
+
+
+def test_sector_null_keeps_sector_composition_of_targets():
+    """Within-sector reassignment keeps every sector's multiset of scores -> the score-only sector structure of the
+    candidates is preserved month by month (what the single-stratum null broke, P14-CP3a)."""
+    S = _setup()
+    Vp = Q.tether_vectors(S["m29"], S["V29"], 3)
+    for m, V, P in zip(S["m29"], S["V29"], Vp):
+        sec = np.asarray(m["sector"])
+        for g in np.unique(sec):
+            a = np.sort(np.nan_to_num(V[sec == g], nan=-9.0), axis=0)
+            b = np.sort(np.nan_to_num(P[sec == g], nan=-9.0), axis=0)
+            assert np.array_equal(a, b)
 
 
 def test_world_deterministic_and_row_layout():
