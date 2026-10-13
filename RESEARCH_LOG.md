@@ -2179,3 +2179,14 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **PIT checks:** all 0.
 - **Outcome:** all six families usable → **DATA V3 PASS**. Manifest `data_freeze_v3.json` (601d0062…) pinned.
 - **Next (owner run order, no stop):** H029 / H030 pre-registration. The H029 host must first reproduce H026's panels and H028's committed result on the current QuantConnect build.
+
+## 2026-10-13: P14-CP3a — H029 / H030: STOP — NULL INADEQUATE before any threshold or real result (D231, D232)
+
+- **Pre-registration:** H029 / H030 frozen before any value (7bdbcf7). Standalone host S031, with the frozen S028 / S029 methods verbatim.
+- **Canary E031-01:** PASS 17/17. Frozen H028 ($328,294.908) and LV15 reproduced exactly on LEAN 18179. Synthetic A / B behave as designed.
+- **Null:** 5,000 worlds (E031-02 / 03), all finite. Seeds 1–25 rerun (E031-04) identical.
+- **Adequacy (pre-registered, score-only):**
+  - H029's real Top-15 selections are more sector-concentrated (HHI 0.163) than the null allows (99.5th percentile 0.160; reached by only 2 of 5,000 worlds) → **STOP — H029/H030 NULL INADEQUATE**;
+  - all other measures pass.
+- **Not done:** thresholds not pinned; no real run; no H029 / H030 performance computed.
+- **Owner options:** sector-stratified tether (recommended), exception, or close. Holdout sealed.
