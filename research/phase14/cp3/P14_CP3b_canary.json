@@ -1,0 +1,301 @@
+{
+ "amendment": "research/phase14/H029_H030_amendment1_sector_null.md",
+ "checks": {
+  "1_data_v3_panel_digests": true,
+  "1_pit_audit_zero": true,
+  "1_v3_view_future_records_zero": true,
+  "2_no_real_result": true,
+  "3_h029_score_unchanged_six_signals_min_valid_ge_5": true,
+  "4_h026_feature_panel": true,
+  "4_h026_response_panel": true,
+  "4_h028_coefficients_and_wealth_and_lv15": true,
+  "5_h030_blend_exact_50_50": true,
+  "6_entries_after_review_joint_subset": true,
+  "7_complete_six_signal_vector_moves": true,
+  "7_costs_and_mechanics_unchanged": true,
+  "7_donor_sector_equals_recipient_sector": true,
+  "7_no_self_matches": true,
+  "7_persistent_donor_mapping": true,
+  "7_recipient_eligible_sets_unchanged": true,
+  "7_recipient_h028_unchanged": true,
+  "7_recipient_returns_unchanged": true,
+  "7_recipient_sector_unchanged": true,
+  "7_sector_null_constructible": true,
+  "7_world_deterministic": true,
+  "8_synthetic_A_noise_within_sectors": true,
+  "9_synthetic_B_planted_within_sector": true
+ },
+ "details": {
+  "equivalence": {
+   "feature_panel": true,
+   "h029_panel": true,
+   "response_panel": true
+  },
+  "estimated_5000_world_minutes": 17.3,
+  "h028_reproduction": {
+   "coef_max_abs_diff": 0.0,
+   "expected_h028": 328294.90847351257,
+   "expected_lv15": 220156.03484878788,
+   "h028_wealth": 328294.90847351257,
+   "lv15_wealth": 220156.03484878788,
+   "ok": true
+  },
+  "h029_months": [
+   650,
+   641,
+   699,
+   703,
+   693,
+   703,
+   705,
+   685,
+   665,
+   641,
+   658,
+   660,
+   641,
+   616,
+   643,
+   670,
+   663,
+   665,
+   665,
+   680,
+   694,
+   697,
+   672,
+   703,
+   705,
+   706,
+   740,
+   741,
+   730,
+   721,
+   729,
+   719,
+   716,
+   741,
+   730,
+   742,
+   740,
+   740,
+   767,
+   768,
+   769,
+   782,
+   789,
+   778,
+   802,
+   792,
+   748,
+   752,
+   716,
+   744,
+   796,
+   794,
+   800,
+   761,
+   794,
+   789,
+   770,
+   780,
+   783,
+   796,
+   805,
+   795,
+   786,
+   700,
+   751,
+   768,
+   783,
+   783,
+   812,
+   790,
+   797,
+   852,
+   870,
+   882,
+   949,
+   982,
+   970,
+   971,
+   1001,
+   964,
+   969,
+   967,
+   963,
+   953
+  ],
+  "max_rss_mb": 7844.3,
+  "mechanics": {
+   "blend_mismatch": 0,
+   "entry_not_after_review": 0,
+   "joint_not_subset": 0,
+   "min_valid_signals": 5,
+   "months": 84,
+   "score_mismatch": 0
+  },
+  "memory": [
+   [
+    "on_end_start",
+    635.5,
+    {
+     "VmHWM": 5909.8,
+     "VmRSS": 5909.8,
+     "ru_maxrss_mb": 5905.6
+    }
+   ],
+   [
+    "after_h029_panels",
+    651.8,
+    {
+     "VmHWM": 5919.0,
+     "VmRSS": 5780.5,
+     "ru_maxrss_mb": 5919.0
+    }
+   ],
+   [
+    "after_x801_build_hl_freed",
+    803.7,
+    {
+     "VmHWM": 7331.1,
+     "VmRSS": 6694.8,
+     "ru_maxrss_mb": 7331.1
+    }
+   ],
+   [
+    "after_build",
+    942.7,
+    {
+     "VmHWM": 7844.3,
+     "VmRSS": 7107.7,
+     "ru_maxrss_mb": 7844.3
+    }
+   ],
+   [
+    "after_months_panel_freed",
+    1030.9,
+    {
+     "VmHWM": 7844.3,
+     "VmRSS": 6786.0,
+     "ru_maxrss_mb": 7844.3
+    }
+   ],
+   [
+    "after_setup",
+    1031.0,
+    {
+     "VmHWM": 7844.3,
+     "VmRSS": 6796.8,
+     "ru_maxrss_mb": 7844.3
+    }
+   ],
+   [
+    "end",
+    1100.4,
+    {
+     "VmHWM": 7844.3,
+     "VmRSS": 6826.0,
+     "ru_maxrss_mb": 7844.3
+    }
+   ]
+  ],
+  "null_checks": {
+   "constructible": true,
+   "donor_other_sector": 0,
+   "eligibility_changed": 0,
+   "h028_changed": 0,
+   "mapped": 128490,
+   "mechanics_constants": {
+    "CAPITAL": 100000.0,
+    "COMMISSION": 7.0,
+    "K": 15,
+    "LAMBDA": 100.0,
+    "SECTOR_CAP": 3,
+    "SLIPPAGE": 0.001,
+    "STRESS_SLIPPAGE": 0.002
+   },
+   "min_sector_size": 12,
+   "not_constructible": null,
+   "not_donor_vector": 0,
+   "persist_kept": 120472,
+   "persist_possible": 120654,
+   "recipient_data_changed": 0,
+   "recipient_sector_changed": 0,
+   "seeds": [
+    1,
+    2
+   ],
+   "self_match": 0,
+   "singleton_sector_reviews": 0
+  },
+  "synthetic": {
+   "A": [
+    {
+     "p_inc": 0.5882352941176471,
+     "p_up": 0.8235294117647058,
+     "s_inc": -0.5208532947015817,
+     "s_up": -0.4182288002049175,
+     "seed": 7101
+    },
+    {
+     "p_inc": 0.49019607843137253,
+     "p_up": 0.2549019607843137,
+     "s_inc": -0.4131165470901997,
+     "s_up": -0.13168121875411934,
+     "seed": 7102
+    },
+    {
+     "p_inc": 0.7647058823529411,
+     "p_up": 0.5882352941176471,
+     "s_inc": -0.5690344042071961,
+     "s_up": -0.34937028485171767,
+     "seed": 7103
+    },
+    {
+     "p_inc": 0.39215686274509803,
+     "p_up": 0.39215686274509803,
+     "s_inc": -0.44520798566935604,
+     "s_up": -0.04169497344329531,
+     "seed": 7104
+    },
+    {
+     "p_inc": 0.45098039215686275,
+     "p_up": 0.0392156862745098,
+     "s_inc": -0.45419744729059436,
+     "s_up": 0.01385377392915614,
+     "seed": 7105
+    }
+   ],
+   "A_pass": true,
+   "B": {
+    "null_max": 0.21090536206347169,
+    "p_inc": 0.0196078431372549,
+    "p_up": 0.0196078431372549,
+    "s_inc": 3.7542064016141192,
+    "s_up": 12.103203419640383
+   },
+   "B_pass": true,
+   "world_s": 0.208
+  },
+  "v3": {
+   "blocked": 1018,
+   "fed": 116639,
+   "fed_no_match": 122,
+   "overlay": {
+    "changed": 15705,
+    "newer_replacement": 0,
+    "removed": 38450,
+    "replaced": 0,
+    "views": 169913
+   },
+   "overlay_blocked": 1018,
+   "view_future_records": 0
+  },
+  "wall_s": 1100.4
+ },
+ "experiment": "E031-06",
+ "passed": 23,
+ "result": "CANARY PASS",
+ "total": 23
+}
