@@ -91,3 +91,18 @@ def test_stored_result_consistent():
     for scen, (p, w) in A.SIZES.items():
         for rg in A.REGIMES:
             assert len(body["results"][scen][rg]) == p and all(r["worlds"] == w for r in body["results"][scen][rg])
+
+
+ADD = ROOT / "research/phase13/cp5/P13_CP5_addendum.json"
+
+
+@pytest.mark.skipif(not ADD.exists(), reason="addendum not generated")
+def test_addendum_is_labelled_exploratory_and_complete():
+    a = json.loads(ADD.read_text())
+    assert a["note"].startswith("EXPLORATORY") and a["worlds"] == 100
+    for rg in A.REGIMES:
+        for scen in ("S1_no_churn", "S2_realistic_churn", "S3_double_churn"):
+            for p in (1, 2, 3):
+                r = a["runs"][f"{rg}|{scen}|{p}"]
+                assert "conditional" in r
+                assert ("cap15" in r and "all_eleven_moved" in r) == (scen == "S2_realistic_churn")

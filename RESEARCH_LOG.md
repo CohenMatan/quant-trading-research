@@ -2247,3 +2247,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Also:** even Null #2 fails the turnover rule in no-signal panels, so these adequacy failures say nothing about H029.
 - **Not done:** no QuantConnect run, no pin, no worlds, no thresholds, no returns; Holdout sealed.
 - **Recommendation to the owner:** close H029 / H030 as NOT EVALUABLE.
+
+## 2026-10-13: P13-CP5 — H028 conditional-null structural audit → FAIL / structurally suspect (D238)
+
+- **Scope:** audit of the already-rejected H028 only. Synthetic panels, frozen code unchanged, committed structural fields only. No QuantConnect run, no real H028 performance, no new null; Holdout sealed; H029 / H030 untouched.
+- **Mechanism:** the H028 null uses the same pointer tether as H029 Null #2, for the ten non-LOWVOL features (YES). On the real population about 17.6% of recipient-months re-pair every review (about 84 of 475 stocks), 3.3 times H029's rate.
+- **Synthetic audit** (pre-registered; Amendment 1 before results): no-signal panels calibrated to the real population; frozen null + λ = 100 pipeline; S2 5 × 200 worlds per regime, S1 / S3 / S4 / S5 3 × 100.
+  - Score-rank persistence fails the rule: real above the null band in 3 of 5 moderate seeds → **B, structurally suspect**. The first wording (both regimes) would have given C.
+  - With coefficients fixed: null turnover +0.02 to +0.08 names a month at realistic churn, 0 without churn, +0.05 to +0.11 at double churn.
+  - LOWVOL anchoring helps only about 20% on rank instability; the sector cap is not material; refitting masks the effect rather than amplifying it.
+  - Extra null cost is about 0.5–2.5% of final wealth.
+- **Committed artifacts:** null turnover / trades / costs NOT AVAILABLE. Null coefficients for seeds 1–25 are stable (cosine 0.96).
+- **Consequence:** H028 remains REJECTED; its p ≈ 0.0004 is no longer reliable evidence of stock-selection alpha. No corrected p-value, no replacement null.
+- **Status:** STOPPED awaiting the owner (recommendation: close Phase 13 / the learned-score line).
