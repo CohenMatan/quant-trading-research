@@ -2220,3 +2220,17 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Plain English:** the real H029 replaces 5.36 names a month vs the null median of 5.60, about 3 names a year.
 - **Not available:** the month-level and per-stock items (only aggregates were exported).
 - **Status:** no bug. H029 / H030 remain BLOCKED; awaiting the owner (close, or a design-only third-null review).
+
+## 2026-10-13: P14-CP5 — third-null design review (design only) → one preferred design (D236)
+
+- **Scope:** design only. No code, no QuantConnect run, no null world, no returns; Holdout sealed. H029 / H030 remain BLOCKED.
+- **Core result:** any null in which each stock *points to* another company's current vector every month (Null #2) must hand vectors to new owners whenever stocks enter or leave the universe. That is the CP4 artifact. Avoiding it offline would require knowing future exits, which are largely price-driven.
+- **Candidates:** A, B1, C, D and E rejected.
+- **Recommended: B2, the Event-Copy Relay.**
+  - A stock's six-signal vector is rewritten only at its own events (filing update, entry, sector change), using a same-sector, same-review vector chosen by rank-coupling.
+  - Between events the copy is held, so other stocks' churn cannot move it.
+- **Proposed adequacy:**
+  - existing gates plus continuing-name persistence gates P1 and P2;
+  - a pre-registered, score-only rule deciding whether total H029 turnover stays a gate (exits and entries are partly price-driven);
+  - an anti-fork rule (no Null #4).
+- **Status:** awaiting the six owner approvals in P14-CP5 item 44.
