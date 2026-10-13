@@ -12,6 +12,7 @@ from __future__ import annotations
 
 import argparse
 import hashlib
+import re
 import json
 import sys
 import time
@@ -217,6 +218,14 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
                 raise experiment.ConfigError(f"Data v3 needs the packed table src/qresearch/lean/{stem}_NN.py")
         if "qr_x801.py" not in files:
             raise experiment.ConfigError("Data v3 hosts subclass the X801 module (name qr_x801 in the host header)")
+    if re.search(r"\bqr_h029\b", files["main.py"]):
+        # H029 / H030 (D229): the portfolio / statistics module of the standalone host S031 (the Data v3 and H026 rules
+        # above upload qr_v3, qr_h029a, qr_data_v3_NN, qr_h026, qr_h024, qr_h023, qr_p7_pred and the X801 module)
+        rel = "src/qresearch/lean/qr_h029.py"
+        files["qr_h029.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        for n in ("qr_v3.py", "qr_h026.py", "qr_p7_pred.py", "qr_x801.py"):
+            if n not in files:
+                raise experiment.ConfigError(f"qr_h029 needs {n} (name its module in the host header)")
     if "qr_s029" in files["main.py"]:
         # H028 (D217): the pinned H027 host S029, uploaded byte-identical as a module (the H028 host S030 subclasses it)
         # + the H028 module; S029's own imports (qr_s028, qr_h027, ...) are uploaded by the rules below / above
