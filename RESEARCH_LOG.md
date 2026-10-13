@@ -2234,3 +2234,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - a pre-registered, score-only rule deciding whether total H029 turnover stays a gate (exits and entries are partly price-driven);
   - an anti-fork rule (no Null #4).
 - **Status:** awaiting the six owner approvals in P14-CP5 item 44.
+
+## 2026-10-13: P14-CP6a — Null #3 (B2) synthetic feasibility → STOP before any real-data world (D237)
+
+- **Owner approval (D237):** B2 approved with amendments (cross-sectional gates S1–S4; fallback ≤ 5% with reporting; q rule for G-TURN-29; P1 / P2; anti-fork rule).
+- **Built:** Amendment 2 written (now marked DRAFT — NOT FROZEN); Null #3 implemented offline in `qr_h029n3` with guarantee tests (all pass).
+- **Synthetic feasibility study** (no market data, no returns):
+  - The panels are calibrated to the H029 universe; the frozen Null #2 reproduces its real gap of +0.016.
+  - **B2 as approved changes 0.10–0.15 more names a month than a no-signal real selection.** A continuation refinement is also far off.
+  - In every realistic panel, the real value lies below every null world.
+- **Why:** rank coupling cascades under churn; off-cycle events become full replacements; continuing paths still change owner.
+- **Also:** even Null #2 fails the turnover rule in no-signal panels, so these adequacy failures say nothing about H029.
+- **Not done:** no QuantConnect run, no pin, no worlds, no thresholds, no returns; Holdout sealed.
+- **Recommendation to the owner:** close H029 / H030 as NOT EVALUABLE.
