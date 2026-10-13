@@ -1,0 +1,604 @@
+{
+ "note": "P14-CP6a (owner D237): pre-implementation SYNTHETIC feasibility check of Null #3 (B2 Event-Copy Relay) before any\nreal-data Null #3 world -> P14_CP6a_synthetic_feasibility.json.",
+ "panel_seeds": [
+  9,
+  10,
+  11
+ ],
+ "results": {
+  "no_churn_control|panel10": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.010638297872340385,
+     "null_max": 0.8184397163120567,
+     "null_median": 0.8092198581560284,
+     "null_min": 0.8070921985815603,
+     "real": 0.8198581560283688,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.010638297872340413,
+     "null_max": 0.19290780141843972,
+     "null_median": 0.19078014184397163,
+     "null_min": 0.1815602836879433,
+     "real": 0.18014184397163122,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.010638297872340385,
+     "null_max": 0.8198581560283688,
+     "null_median": 0.8092198581560284,
+     "null_min": 0.8070921985815603,
+     "real": 0.8198581560283688,
+     "real_above_all": false,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.010638297872340413,
+     "null_max": 0.19290780141843972,
+     "null_median": 0.19078014184397163,
+     "null_min": 0.18014184397163122,
+     "real": 0.18014184397163122,
+     "real_above_all": false,
+     "real_below_all": false
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": 0.0007092198581560849,
+     "null_max": 0.8212765957446808,
+     "null_median": 0.8205673758865248,
+     "null_min": 0.8198581560283688,
+     "real": 0.8198581560283688,
+     "real_above_all": false,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": -0.0007092198581560571,
+     "null_max": 0.18014184397163122,
+     "null_median": 0.17943262411347516,
+     "null_min": 0.17872340425531913,
+     "real": 0.18014184397163122,
+     "real_above_all": false,
+     "real_below_all": false
+    }
+   }
+  },
+  "no_churn_control|panel11": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.007092198581560183,
+     "null_max": 0.8085106382978723,
+     "null_median": 0.8042553191489362,
+     "null_min": 0.8014184397163121,
+     "real": 0.8113475177304964,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.007092198581560266,
+     "null_max": 0.19858156028368787,
+     "null_median": 0.19574468085106378,
+     "null_min": 0.19148936170212763,
+     "real": 0.1886524822695035,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.006382978723404098,
+     "null_max": 0.8113475177304964,
+     "null_median": 0.8049645390070923,
+     "null_min": 0.8014184397163121,
+     "real": 0.8113475177304964,
+     "real_above_all": false,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.006382978723404237,
+     "null_max": 0.19858156028368787,
+     "null_median": 0.19503546099290775,
+     "null_min": 0.1886524822695035,
+     "real": 0.1886524822695035,
+     "real_above_all": false,
+     "real_below_all": false
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": 0.0021276595744680327,
+     "null_max": 0.8141843971631205,
+     "null_median": 0.8134751773049644,
+     "null_min": 0.8113475177304964,
+     "real": 0.8113475177304964,
+     "real_above_all": false,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": -0.0021276595744680604,
+     "null_max": 0.1886524822695035,
+     "null_median": 0.18652482269503545,
+     "null_min": 0.18581560283687942,
+     "real": 0.1886524822695035,
+     "real_above_all": false,
+     "real_below_all": false
+    }
+   }
+  },
+  "no_churn_control|panel9": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.007092198581560294,
+     "null_max": 0.8,
+     "null_median": 0.7957446808510639,
+     "null_min": 0.7872340425531915,
+     "real": 0.8028368794326242,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.007092198581560294,
+     "null_max": 0.21276595744680848,
+     "null_median": 0.20425531914893616,
+     "null_min": 0.2,
+     "real": 0.19716312056737587,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.008510638297872353,
+     "null_max": 0.7971631205673759,
+     "null_median": 0.7943262411347518,
+     "null_min": 0.7858156028368795,
+     "real": 0.8028368794326242,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.008510638297872353,
+     "null_max": 0.21418439716312057,
+     "null_median": 0.20567375886524822,
+     "null_min": 0.2028368794326241,
+     "real": 0.19716312056737587,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": 0.0,
+     "null_max": 0.8028368794326242,
+     "null_median": 0.8028368794326242,
+     "null_min": 0.8014184397163121,
+     "real": 0.8028368794326242,
+     "real_above_all": false,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.0,
+     "null_max": 0.19858156028368792,
+     "null_median": 0.19716312056737587,
+     "null_min": 0.19716312056737587,
+     "real": 0.19716312056737587,
+     "real_above_all": false,
+     "real_below_all": false
+    }
+   }
+  },
+  "realistic_offcycle_missing|panel10": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.14636559651010517,
+     "null_max": 0.5930735930735931,
+     "null_median": 0.5732875826806463,
+     "null_min": 0.5678832116788322,
+     "real": 0.7196531791907514,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.14609929078014178,
+     "null_max": 0.4482269503546098,
+     "null_median": 0.4397163120567375,
+     "null_min": 0.4170212765957445,
+     "real": 0.2936170212765957,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.11387171740365942,
+     "null_max": 0.6298984034833092,
+     "null_median": 0.605781461787092,
+     "null_min": 0.5860058309037901,
+     "real": 0.7196531791907514,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.1127659574468084,
+     "null_max": 0.4297872340425531,
+     "null_median": 0.4063829787234041,
+     "null_min": 0.3843971631205673,
+     "real": 0.2936170212765957,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.013727893670675728,
+     "null_max": 0.7101449275362319,
+     "null_median": 0.7059252855200757,
+     "null_min": 0.6989869753979739,
+     "real": 0.7196531791907514,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.012765957446808474,
+     "null_max": 0.31489361702127655,
+     "null_median": 0.3063829787234042,
+     "null_min": 0.300709219858156,
+     "real": 0.2936170212765957,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  },
+  "realistic_offcycle_missing|panel11": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.147017288490513,
+     "null_max": 0.6095100864553314,
+     "null_median": 0.5997076023391813,
+     "null_min": 0.5739385065885798,
+     "real": 0.7467248908296943,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.14751773049645367,
+     "null_max": 0.44397163120567357,
+     "null_median": 0.4198581560283686,
+     "null_min": 0.3999999999999998,
+     "real": 0.27234042553191495,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.1359364209139493,
+     "null_max": 0.6380813953488372,
+     "null_median": 0.610788469915745,
+     "null_min": 0.6066763425253991,
+     "real": 0.7467248908296943,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.13120567375886505,
+     "null_max": 0.40709219858156026,
+     "null_median": 0.40354609929078,
+     "null_min": 0.37730496453900697,
+     "real": 0.27234042553191495,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.018862774964227946,
+     "null_max": 0.7305475504322767,
+     "null_median": 0.7278621158654663,
+     "null_min": 0.7206946454413893,
+     "real": 0.7467248908296943,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.01702127659574465,
+     "null_max": 0.29787234042553196,
+     "null_median": 0.2893617021276596,
+     "null_min": 0.2794326241134752,
+     "real": 0.27234042553191495,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  },
+  "realistic_offcycle_missing|panel9": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.14002422624556832,
+     "null_max": 0.6145985401459854,
+     "null_median": 0.5968178790175895,
+     "null_min": 0.5643994211287988,
+     "real": 0.7368421052631579,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.12978723404255305,
+     "null_max": 0.44680851063829763,
+     "null_median": 0.4148936170212765,
+     "null_min": 0.402836879432624,
+     "real": 0.2851063829787234,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.11987570550200444,
+     "null_max": 0.636231884057971,
+     "null_median": 0.6169663997611534,
+     "null_min": 0.5962643678160919,
+     "real": 0.7368421052631579,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.10709219858156016,
+     "null_max": 0.41134751773049627,
+     "null_median": 0.3921985815602836,
+     "null_min": 0.37730496453900697,
+     "real": 0.2851063829787234,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.0216290442287711,
+     "null_max": 0.7215743440233237,
+     "null_median": 0.7152130610343868,
+     "null_min": 0.7112068965517241,
+     "real": 0.7368421052631579,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.0120567375886525,
+     "null_max": 0.3021276595744681,
+     "null_median": 0.2971631205673759,
+     "null_min": 0.29645390070921984,
+     "real": 0.2851063829787234,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  },
+  "realistic|panel10": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.12946999727343278,
+     "null_max": 0.6802325581395349,
+     "null_median": 0.6705300027265673,
+     "null_min": 0.6575144508670521,
+     "real": 0.8,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.126241134751773,
+     "null_max": 0.35744680851063826,
+     "null_median": 0.3432624113475177,
+     "null_min": 0.3361702127659575,
+     "real": 0.21702127659574472,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.060838240821952216,
+     "null_max": 0.7578796561604585,
+     "null_median": 0.7391617591780478,
+     "null_min": 0.7319587628865979,
+     "real": 0.8,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.0581560283687943,
+     "null_max": 0.29503546099290795,
+     "null_median": 0.275177304964539,
+     "null_min": 0.249645390070922,
+     "real": 0.21702127659574472,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.01717112825040401,
+     "null_max": 0.7863372093023255,
+     "null_median": 0.782828871749596,
+     "null_min": 0.7745664739884393,
+     "real": 0.8,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.013475177304964503,
+     "null_max": 0.2397163120567376,
+     "null_median": 0.23049645390070922,
+     "null_min": 0.22695035460992907,
+     "real": 0.21702127659574472,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  },
+  "realistic|panel11": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.10835646880076533,
+     "null_max": 0.7167883211678832,
+     "null_median": 0.6980481891322768,
+     "null_min": 0.6811594202898551,
+     "real": 0.8064046579330422,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.10141843971631201,
+     "null_max": 0.3333333333333333,
+     "null_median": 0.31560283687943264,
+     "null_min": 0.3035460992907802,
+     "real": 0.21418439716312063,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.04775443525404255,
+     "null_max": 0.7739130434782608,
+     "null_median": 0.7586502226789996,
+     "null_min": 0.746031746031746,
+     "real": 0.8064046579330422,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.041134751773049566,
+     "null_max": 0.26666666666666666,
+     "null_median": 0.2553191489361702,
+     "null_min": 0.24113475177304966,
+     "real": 0.21418439716312063,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.02198914241115446,
+     "null_max": 0.7884892086330936,
+     "null_median": 0.7844155155218877,
+     "null_min": 0.7774566473988439,
+     "real": 0.8064046579330422,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.01914893617021271,
+     "null_max": 0.23971631205673766,
+     "null_median": 0.23333333333333334,
+     "null_min": 0.2212765957446809,
+     "real": 0.21418439716312063,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  },
+  "realistic|panel9": {
+   "b2_approved_rank_coupling": {
+    "p2_survival": {
+     "gap_to_median": -0.11750830268801205,
+     "null_max": 0.7076023391812866,
+     "null_median": 0.6985500914725719,
+     "null_min": 0.6841339155749636,
+     "real": 0.8160583941605839,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.1106382978723405,
+     "null_max": 0.33333333333333337,
+     "null_median": 0.3177304964539007,
+     "null_min": 0.31063829787234043,
+     "real": 0.20709219858156022,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "b2_continuation_refinement": {
+    "p2_survival": {
+     "gap_to_median": -0.036195820897723774,
+     "null_max": 0.7875722543352601,
+     "null_median": 0.7798625732628601,
+     "null_min": 0.7655571635311144,
+     "real": 0.8160583941605839,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.024822695035461056,
+     "null_max": 0.24964539007092204,
+     "null_median": 0.23191489361702128,
+     "null_min": 0.22695035460992907,
+     "real": 0.20709219858156022,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   },
+   "null2_sector_tether": {
+    "p2_survival": {
+     "gap_to_median": -0.026014770593446368,
+     "null_max": 0.7959183673469388,
+     "null_median": 0.7900436235671375,
+     "null_min": 0.7884892086330936,
+     "real": 0.8160583941605839,
+     "real_above_all": true,
+     "real_below_all": false
+    },
+    "turnover": {
+     "gap_to_median": 0.016312056737588676,
+     "null_max": 0.2269503546099291,
+     "null_median": 0.2234042553191489,
+     "null_min": 0.2212765957446808,
+     "real": 0.20709219858156022,
+     "real_above_all": false,
+     "real_below_all": true
+    }
+   }
+  }
+ },
+ "settings": {
+  "no_churn_control": {
+   "entries": 0,
+   "exits": 0,
+   "miss": false,
+   "n0": 765,
+   "sector_moves": 0,
+   "sectors": 11
+  },
+  "realistic": {
+   "entries": 21,
+   "exits": 18,
+   "miss": false,
+   "n0": 765,
+   "sector_moves": 1,
+   "sectors": 11
+  },
+  "realistic_offcycle_missing": {
+   "entries": 21,
+   "exits": 18,
+   "miss": true,
+   "n0": 765,
+   "sector_moves": 1,
+   "sectors": 11
+  }
+ },
+ "worlds": [
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8
+ ]
+}
