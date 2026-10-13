@@ -1,0 +1,420 @@
+{
+ "checkpoint": "P14-CP4",
+ "decision": "D235",
+ "feature_update_cadence": {
+  "features": {
+   "F1": {
+    "form": "F1Q",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 168.0,
+     "p50": 50.0,
+     "p75": 66.0,
+     "p90": 88.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.3319081953894587,
+    "share_unchanged": 0.6680918046105413,
+    "value_runs": 30184
+   },
+   "F2": {
+    "form": "F2",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 166.0,
+     "p50": 49.0,
+     "p75": 66.0,
+     "p90": 87.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.3302617699479855,
+    "share_unchanged": 0.6697382300520145,
+    "value_runs": 25081
+   },
+   "F4": {
+    "form": "F4B",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 166.0,
+     "p50": 49.0,
+     "p75": 66.0,
+     "p90": 87.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.33267527594782076,
+    "share_unchanged": 0.6673247240521792,
+    "value_runs": 28180
+   },
+   "F5": {
+    "form": "F5A",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 166.0,
+     "p50": 49.0,
+     "p75": 66.0,
+     "p90": 87.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.3320997532839901,
+    "share_unchanged": 0.6679002467160099,
+    "value_runs": 27542
+   },
+   "F7": {
+    "form": "F7",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 133.0,
+     "p50": 50.0,
+     "p75": 66.0,
+     "p90": 87.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.3172336448598131,
+    "share_unchanged": 0.6827663551401869,
+    "value_runs": 27197
+   },
+   "F8": {
+    "form": "F8",
+    "months_between_changes": {
+     "p25": 3.0,
+     "p50": 3.0,
+     "p75": 3.0
+    },
+    "report_age_days": {
+     "max": 166.0,
+     "p50": 50.0,
+     "p75": 66.0,
+     "p90": 87.0,
+     "p95": 92.0
+    },
+    "share_of_stock_months_changed": 0.33149970715573573,
+    "share_unchanged": 0.6685002928442643,
+    "value_runs": 26575
+   }
+  },
+  "source": "P14_CP1_audit.json (E802-01, Data v2.1 view, 131 reviews 2011-2021, H029-A audit universe)"
+ },
+ "holdout_accessed": false,
+ "new_null": false,
+ "quantconnect_runs": 0,
+ "reproduction": {
+  "hhi29": {
+   "original_null": {
+    "max": 0.16349206349206355,
+    "mean": 0.1522475555555556,
+    "min": 0.1413756613756614,
+    "p0.5": 0.14444444444444446,
+    "p5": 0.14730158730158735,
+    "p50": 0.1522751322751323,
+    "p95": 0.1571428571428572,
+    "p99.5": 0.15989470899470906,
+    "sd": 0.00298562215359008
+   },
+   "real": 0.162962962962963,
+   "real_pct_original": 99.96000000000001,
+   "real_pct_sector": 51.1,
+   "sector_null": {
+    "max": 0.16306878306878309,
+    "mean": 0.16295790476190483,
+    "min": 0.16275132275132279,
+    "p0.5": 0.16275132275132279,
+    "p5": 0.162962962962963,
+    "p50": 0.162962962962963,
+    "p95": 0.162962962962963,
+    "p99.5": 0.162962962962963,
+    "sd": 3.424651675696594e-05
+   },
+   "sector_worlds_at_or_below_real": 4981
+  },
+  "hhi30": {
+   "original_null": {
+    "max": 0.17121693121693124,
+    "mean": 0.1629931428571429,
+    "min": 0.15333333333333338,
+    "p0.5": 0.15650793650793654,
+    "p5": 0.158941798941799,
+    "p50": 0.16306878306878309,
+    "p95": 0.16688359788359794,
+    "p99.5": 0.16899523809523814,
+    "sd": 0.002437519174109011
+   },
+   "real": 0.16740740740740745,
+   "real_pct_original": 96.72,
+   "real_pct_sector": 60.75,
+   "sector_null": {
+    "max": 0.17513227513227517,
+    "mean": 0.16685352380952387,
+    "min": 0.15957671957671962,
+    "p0.5": 0.16169312169312175,
+    "p5": 0.16359788359788363,
+    "p50": 0.1668783068783069,
+    "p95": 0.17005820105820113,
+    "p99.5": 0.171957671957672,
+    "sd": 0.0019831545947643324
+   },
+   "sector_worlds_at_or_below_real": 3080
+  },
+  "plain_english": {
+   "extra_names_over_83_transitions_vs_median": 20.000000000000043,
+   "extra_names_per_rebalance_vs_median": 0.24096385542168725,
+   "extra_names_per_rebalance_vs_min": 0.07228915662650659,
+   "extra_names_per_year_vs_median": 2.8915662650602467,
+   "extra_names_per_year_vs_min": 0.8674698795180791,
+   "names_entering_per_rebalance": {
+    "real": 5.361445783132529,
+    "sector_null_median": 5.602409638554216,
+    "sector_null_min": 5.433734939759036
+   },
+   "transitions": 83
+  },
+  "turn29": {
+   "original_null": {
+    "max": 0.38473895582329315,
+    "mean": 0.3588374297188755,
+    "min": 0.3357429718875502,
+    "p0.5": 0.3421686746987952,
+    "p5": 0.3477911646586345,
+    "p50": 0.3582329317269076,
+    "p95": 0.370281124497992,
+    "p99.5": 0.3767108433734941,
+    "sd": 0.006903714612172791
+   },
+   "real": 0.35742971887550196,
+   "real_pct_original": 41.91,
+   "real_pct_sector": 0.0,
+   "sector_null": {
+    "max": 0.3879518072289156,
+    "mean": 0.3733866666666667,
+    "min": 0.36224899598393573,
+    "p0.5": 0.3654618473895582,
+    "p5": 0.36787148594377506,
+    "p50": 0.37349397590361444,
+    "p95": 0.3791164658634538,
+    "p99.5": 0.38313253012048193,
+    "sd": 0.0036110464399931306
+   },
+   "sector_worlds_at_or_below_real": 0
+  },
+  "turn30": {
+   "original_null": {
+    "max": 0.43935742971887554,
+    "mean": 0.3925598393574297,
+    "min": 0.34216867469879514,
+    "p0.5": 0.35582329317269074,
+    "p5": 0.3686746987951807,
+    "p50": 0.3927710843373493,
+    "p95": 0.4160642570281125,
+    "p99.5": 0.4281124497991968,
+    "sd": 0.014476578634216407
+   },
+   "real": 0.3598393574297189,
+   "real_pct_original": 1.33,
+   "real_pct_sector": 0.68,
+   "sector_null": {
+    "max": 0.44337349397590364,
+    "mean": 0.39468273092369477,
+    "min": 0.34538152610441764,
+    "p0.5": 0.35903614457831323,
+    "p5": 0.37188755020080316,
+    "p50": 0.39437751004016075,
+    "p95": 0.4176706827309237,
+    "p99.5": 0.42972690763052235,
+    "sd": 0.013786448928963912
+   },
+   "sector_worlds_at_or_below_real": 35
+  }
+ },
+ "returns_read": false,
+ "sector_null_hhi_note": "sector-null H029 HHI spread comes only from score ties (frozen pick breaks ties by recipient id) and recipient open_ok; with tie-free scores the null HHI equals the real",
+ "structural_only": true,
+ "synthetic": {
+  "churn_estimate_grid": [
+   {
+    "entries": 11,
+    "estimate": 0.00878321628997587,
+    "exits": 9,
+    "gap_median": 0.008433734939759074,
+    "null_turn_median": 0.22690763052208834,
+    "null_turn_min": 0.22088353413654618,
+    "quarterly_persistence": 0.9,
+    "real_below_all_20_worlds": true,
+    "real_turn": 0.21847389558232927
+   },
+   {
+    "entries": 22,
+    "estimate": 0.01595248132134017,
+    "exits": 18,
+    "gap_median": 0.014457831325301235,
+    "null_turn_median": 0.2369477911646586,
+    "null_turn_min": 0.2329317269076305,
+    "quarterly_persistence": 0.9,
+    "real_below_all_20_worlds": true,
+    "real_turn": 0.22248995983935738
+   },
+   {
+    "entries": 40,
+    "estimate": 0.029543988812632014,
+    "exits": 36,
+    "gap_median": 0.0313253012048193,
+    "null_turn_median": 0.31004016064257023,
+    "null_turn_min": 0.3036144578313253,
+    "quarterly_persistence": 0.9,
+    "real_below_all_20_worlds": true,
+    "real_turn": 0.27871485943775093
+   },
+   {
+    "entries": 22,
+    "estimate": 0.01350718699736154,
+    "exits": 18,
+    "gap_median": 0.00963855421686749,
+    "null_turn_median": 0.3485943775100402,
+    "null_turn_min": 0.3461847389558233,
+    "quarterly_persistence": 0.7,
+    "real_below_all_20_worlds": true,
+    "real_turn": 0.3389558232931727
+   },
+   {
+    "entries": 22,
+    "estimate": 0.017655755298732183,
+    "exits": 18,
+    "gap_median": 0.01807228915662648,
+    "null_turn_median": 0.15943775100401603,
+    "null_turn_min": 0.15100401606425704,
+    "quarterly_persistence": 0.97,
+    "real_below_all_20_worlds": true,
+    "real_turn": 0.14136546184738955
+   }
+  ],
+  "decomposition_seeds_1_3": [
+   {
+    "by_donor_type": {
+     "donor_freed_recipient_exited": 24,
+     "donor_new_entrant": -1,
+     "other_re_formed": 0
+    },
+    "exact_identity_holds": true,
+    "total_extra_entries": 23
+   },
+   {
+    "by_donor_type": {
+     "donor_freed_recipient_exited": 20,
+     "donor_new_entrant": 0,
+     "other_re_formed": 1
+    },
+    "exact_identity_holds": true,
+    "total_extra_entries": 21
+   },
+   {
+    "by_donor_type": {
+     "donor_freed_recipient_exited": 20,
+     "donor_new_entrant": 0,
+     "other_re_formed": 1
+    },
+    "exact_identity_holds": true,
+    "total_extra_entries": 21
+   }
+  ],
+  "h030_style_blend": {
+   "h029": {
+    "gap_in_null_sd": 3.9079049943469975,
+    "null_median": 0.2578313253012048,
+    "null_sd": 0.0039051727712886564,
+    "real": 0.24257028112449794,
+    "real_pct": 0.0
+   },
+   "h030": {
+    "gap_in_null_sd": 0.6357950736040876,
+    "null_median": 0.3269076305220884,
+    "null_sd": 0.017686484822751338,
+    "real": 0.3156626506024096,
+    "real_pct": 30.0
+   }
+  },
+  "note": "SYNTHETIC panels (no market data, no returns) through the frozen qr_h029 / qr_h026 code",
+  "relabelling_identity": {
+   "churn_18_22_sector_clustered": {
+    "hhi_identical_all_worlds": true,
+    "null_turn_max": 0.25301204819277107,
+    "null_turn_min": 0.2449799196787148,
+    "real_hhi": 0.18761904761904763,
+    "real_turn": 0.2345381526104417,
+    "turn_identical_all_worlds": false
+   },
+   "no_churn_sector_clustered_cap_binding": {
+    "hhi_identical_all_worlds": true,
+    "null_turn_max": 0.21285140562248994,
+    "null_turn_min": 0.21285140562248994,
+    "real_hhi": 0.18888888888888888,
+    "real_turn": 0.21285140562248994,
+    "turn_identical_all_worlds": true
+   },
+   "no_churn_unclustered": {
+    "hhi_identical_all_worlds": true,
+    "null_turn_max": 0.19919678714859435,
+    "null_turn_min": 0.19919678714859435,
+    "real_hhi": 0.13873015873015876,
+    "real_turn": 0.19919678714859435,
+    "turn_identical_all_worlds": true
+   }
+  }
+ },
+ "tether_accounting": {
+  "canary_persistence_metric": {
+   "kept": 120472,
+   "note": "'possible' = previous donor still eligible AND same sector (amendment A5); re-formations forced by eligibility churn are outside its denominator",
+   "possible": 120654,
+   "share": 0.99849155436206
+  },
+  "eligible_per_review": {
+   "first": 650.0,
+   "last": 953.0,
+   "max": 1001.0,
+   "mean": 764.8214285714286,
+   "min": 616.0
+  },
+  "estimate": {
+   "extra_turnover": 0.014705579562276371,
+   "f": 17.86144578313253,
+   "formula": "mean_t f (p - 15/n_t) / n_t, f = disrupted old pairs per review (lower bound), p = 1 - real turnover (lower bound)",
+   "observed_gap_vs_sector_median": 0.016064257028112483,
+   "p": 0.642570281124498,
+   "share_of_gap": 0.9154223277517022
+  },
+  "per_review": {
+   "broken_possible_splices": 1.0963855421686748,
+   "disrupted_old_pairs_lower_bound": 17.86144578313253,
+   "net_universe_growth": 3.6506024096385543,
+   "re_formed_by_eligibility_or_sector": 39.373493975903614,
+   "re_formed_total": 40.46987951807229
+  },
+  "per_seed": {
+   "broken_possible": 91.0,
+   "kept": 60236.0,
+   "possible_pairs": 60327.0,
+   "re_formed_not_possible": 3268.0,
+   "recipients_after_first_review": 63595.0
+  },
+  "share_of_recipients_re_formed_per_review": 0.052818617815866026
+ },
+ "thresholds": null
+}
