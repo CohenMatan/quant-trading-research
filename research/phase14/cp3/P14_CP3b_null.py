@@ -38,7 +38,7 @@ def blob(exp):
 
 def dist(rows, field, real=None):
     x = np.asarray([r[Q.NULL_FIELDS.index(field)] for r in rows], float)
-    d = {q: float(np.percentile(x, q)) for q in (0.5, 5, 50, 95, 99.5)}
+    d = {f"p{q:g}": float(np.percentile(x, q)) for q in (0.5, 5, 50, 95, 99.5)}
     d.update(mean=float(x.mean()), sd=float(x.std(ddof=1)))
     if real is not None:
         d["real_percentile"] = float(100.0 * np.mean(x < real) + 50.0 * np.mean(x == real))
