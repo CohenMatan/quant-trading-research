@@ -373,13 +373,17 @@ def criterion(res):
     all_pass = all(out["per_regime"][rg][k]["passes"] and out["per_regime"][rg][k]["directional_failure"] is None
                    for rg in REGIMES for k in METRICS)
     both = [k for k in METRICS if all(out["per_regime"][rg][k]["directional_failure"] for rg in REGIMES)]
-    if strong or both:
+    # AMENDMENT 1 (committed before any audit result was read): owner section 19 literally -- a same-direction failure
+    # in >= 3 of 5 main panel seeds makes the null structurally suspect; it is applied in EACH regime (the first
+    # commit required it in both regimes, which would have weakened the owner's rule)
+    either = [(rg, k) for rg in REGIMES for k in METRICS if out["per_regime"][rg][k]["directional_failure"]]
+    if strong or either:
         cls = "B"
     elif all_pass:
         cls = "A"
     else:
         cls = "C"
-    out.update(directional_failure_in_both_regimes=both, classification=cls, label={
+    out.update(directional_failure_in_both_regimes=both, directional_failures=either, classification=cls, label={
         "A": "H028 NULL STRUCTURAL AUDIT — PASS / HISTORICAL CONDITIONAL-NULL EVIDENCE REMAINS STRUCTURALLY SUPPORTED",
         "B": "H028 NULL STRUCTURAL AUDIT — FAIL / HISTORICAL CONDITIONAL-NULL SIGNIFICANCE IS STRUCTURALLY SUSPECT",
         "C": "H028 NULL STRUCTURAL AUDIT — INCONCLUSIVE"}[cls])
@@ -390,7 +394,8 @@ RULE = """Per regime (moderate, strong) and metric (name turnover, total trading
 score-rank autocorrelation): the synthetic real value is compared with the null [0.5%, 99.5%] band of its own panel.
 A metric PASSES in a regime if inside in >= 4 of 5 panel seeds; a DIRECTIONAL FAILURE is the same side outside in
 >= 3 of 5 seeds. STRONG FAIL: real turnover (or real cost) below EVERY null world in >= 9 of the 10 realistic panels.
-Classification: B (structurally suspect) if a strong fail, or a directional failure of the same metric in BOTH regimes;
+Classification (Amendment 1, committed before any result was read): B (structurally suspect) if a strong fail, or a
+directional failure of any criterion metric in EITHER regime (owner section 19 applied to each regime's 5 seeds);
 A (structurally supported) if every metric passes in both regimes with no directional failure; C (inconclusive)
 otherwise. In every case H028 remains REJECTED, no corrected p-value is computed and no replacement null is proposed."""
 
@@ -417,5 +422,19 @@ def main():
     log(f"done: {crit['label']}; sha256 {hashlib.sha256(txt.encode()).hexdigest()[:16]}")
 
 
+def reclassify():
+    """Recompute the criterion from the stored results with the amended rule (the run that produced the results
+    imported the first-committed rule; both are kept in the JSON)."""
+    path = HERE / "P13_CP5_audit.json"
+    body = json.loads(path.read_text())
+    if "criterion_first_commit" not in body:
+        body["criterion_first_commit"] = body["criterion"]
+    body["criterion"] = criterion(body["results"])
+    body["rule"] = RULE
+    txt = json.dumps(body, indent=1, sort_keys=True, default=float)
+    path.write_text(txt + "\n")
+    print(body["criterion"]["label"], hashlib.sha256(txt.encode()).hexdigest()[:16])
+
+
 if __name__ == "__main__":
-    main()
+    reclassify() if "--reclassify" in sys.argv else main()
