@@ -7,8 +7,11 @@
 #   * H029 score: qr_v3.h029_score (equal-weight mean of centred percentiles, >= 5 of 6); no model of any kind;
 #   * H030 score: blend() -- 0.50 x centred(H028) + 0.50 x centred(H029) over the joint universe; constant weights,
 #     no weight parameter anywhere;
-#   * null: the six-signal vectors move whole through the persistent identity tether (qr_p7_pred.Tether) among the
-#     H029-eligible stocks of each evaluation month; H028, returns, sectors and eligibility stay with the recipient;
+#   * null (Amendment 1, owner D233, research/phase14/H029_H030_amendment1_sector_null.md): the six-signal vectors move
+#     whole through the persistent identity tether STRATIFIED BY THE RECIPIENT'S FF12 SECTOR at the review (the frozen
+#     H020 ChartTether with strata, via qr_p7_pred) among the H029-eligible stocks of each evaluation month; a donor is
+#     always another stock of the same sector (a self-match = STOP, never a cross-sector fallback); H028, returns,
+#     sectors and eligibility stay with the recipient. The original single-stratum null (P14-CP3a) was inadequate;
 #   * statistics: calendar month-end marks (qr_h027.risk convention, copied in risk()), S_UP, captures, year
 #     contributions, gates N1-N5 / C1-C7, adequacy.
 import math
@@ -94,23 +97,39 @@ def sub_month(m, ix, ids):
     return out
 
 
+class NullNotConstructible(Exception):
+    """STOP — SECTOR-STRATIFIED NULL NOT CONSTRUCTIBLE (owner D233 section 12)."""
+
+
+def _sector_step(T, m):
+    """One month of the sector-stratified tether: donor ids for m["ids"] (same FF12 sector, no self-match)."""
+    ids = m["ids"]
+    strata = [int(x) for x in np.asarray(m["sector"]).tolist()]
+    src = T.step(ids, strata)
+    for i, j in zip(ids, src):
+        if i == j:
+            raise NullNotConstructible(f"STOP — SECTOR-STRATIFIED NULL NOT CONSTRUCTIBLE ({m.get('day')}: {i})")
+    return src
+
+
 def tether_vectors(m29, Vs, seed):
-    """Null world `seed`: each recipient's complete six-signal vector replaced by its persistent tether donor's
-    (qr_p7_pred.Tether, one stratum, no self-matching) over the evaluation months in date order; seed None = real."""
+    """Null world `seed` (Amendment 1): each recipient's complete six-signal vector replaced by its persistent tether
+    donor's -- a donor from the recipient's own FF12 sector at the review (qr_h020_stats.ChartTether with the sector
+    strata; persistent partners; no self-match) -- over the evaluation months in date order; seed None = real."""
     if seed is None:
         return list(Vs)
-    T = R.Tether(seed)
+    T = R.H.ChartTether(seed)
     out = []
     for m, V in zip(m29, Vs):
         pos = {s: i for i, s in enumerate(m["ids"])}
-        src = np.array([pos[s] for s in T.step(m["ids"])], dtype=np.int64)
+        src = np.array([pos[s] for s in _sector_step(T, m)], dtype=np.int64)
         out.append(V[src] if src.size else V)
     return out
 
 
 def donors(m29, seed):
-    T = R.Tether(seed)
-    return [dict(zip(m["ids"], T.step(m["ids"]))) for m in m29]
+    T = R.H.ChartTether(seed)
+    return [dict(zip(m["ids"], _sector_step(T, m))) for m in m29]
 
 
 # ----------------------------------------------------------------------------------------------- statistics
@@ -291,7 +310,9 @@ def adequacy(rows, real_struct):
 # ----------------------------------------------------------------------------------------------- synthetic (canary only)
 def synthetic_vectors(m29, kind, seed):
     """Six identical columns (so qr_v3.h029_score returns the centred percentile of the one synthetic value):
-    'A' = i.i.d. N(0, 1) noise; 'B' = r_oo x 1[SPY month up] + N(0, SYNTH_B_NOISE^2) (deliberate look-ahead)."""
+    'A' = i.i.d. N(0, 1) noise (pure noise within sectors); 'B' = a planted WITHIN-SECTOR upside predictor:
+    (r_oo - its FF12-sector mean in the month) x 1[SPY month up] + N(0, SYNTH_B_NOISE^2) (deliberate look-ahead,
+    canary only; Amendment 1)."""
     rng = np.random.default_rng(seed)
     out = []
     for m in m29:
@@ -300,6 +321,12 @@ def synthetic_vectors(m29, kind, seed):
             z = rng.normal(0.0, 1.0, n)
         else:
             up = 1.0 if m["spy_oo"] > 0 else 0.0
-            z = np.nan_to_num(np.asarray(m["r_oo"], float)) * up + rng.normal(0.0, SYNTH_B_NOISE, n)
+            r = np.nan_to_num(np.asarray(m["r_oo"], float))
+            sec = np.asarray(m["sector"]).astype(np.int64)
+            dm = r.copy()
+            for g in np.unique(sec):
+                k = sec == g
+                dm[k] = r[k] - r[k].mean()
+            z = dm * up + rng.normal(0.0, SYNTH_B_NOISE, n)
         out.append(np.repeat(z[:, None], 6, axis=1))
     return out

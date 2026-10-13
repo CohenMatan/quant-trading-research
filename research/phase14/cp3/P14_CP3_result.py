@@ -1,5 +1,6 @@
-"""P14-CP3 (owner D229): offline evaluation of the ONE real H029 / H030 run E031-05 -> P14_CP3_result.json.
-Committed before E031-05 ran (spec sections 7, 10, 11). Recomputes every gate from the exported daily paths and the
+"""P14-CP3 (owner D229; Amendment 1, owner D233): offline evaluation of the ONE real H029 / H030 run E031-10 (P.REAL)
+-> P14_CP3_result.json, against the SECTOR-STRATIFIED null rows (P14_CP3b_null_rows.json). Committed before the real
+run (spec sections 7, 10, 11). Recomputes every gate from the exported daily paths and the
 committed null rows (exact empirical p), checks it against the host, and computes the pre-registered descriptive
 metrics. No rule, threshold or definition changes after the result.
 
@@ -61,7 +62,7 @@ def bucket(r, rs, mask):
 
 def main():
     st, o = load()
-    null = json.loads((HERE / "P14_CP3_null_rows.json").read_text())["worlds"]
+    null = json.loads((HERE / "P14_CP3b_null_rows.json").read_text())["worlds"]       # Amendment 1: sector null
     days = np.asarray(o["days"], float)
     spy_d = np.asarray(o["daily"]["spy"], float)
     rs, labels = Q.monthly(spy_d, days)

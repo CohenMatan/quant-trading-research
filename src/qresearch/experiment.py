@@ -515,7 +515,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("programme") != "P14" or not cfg.get("owner_approval_required")):
             raise ConfigError("Data v3 runs are infrastructure audits (AUDIT window) for H029 / P14 with owner approval")
     if cfg["strategy_id"] == "S031":
-        # H029 / H030 (owner D229, research/phase14/H029_H030_spec.md): the standalone S031 host on the frozen X801 Data
+        # H029 / H030 (owner D229, research/phase14/H029_H030_spec.md; Amendment 1 sector-stratified null, owner D233,
+        # new run ids E031-06..10): the standalone S031 host on the frozen X801 Data
         # v2.1 host + Data v3 + the frozen H028 path; 2011-01-03 .. 2021-12-31 (evaluation 2015-2021; nothing after
         # 2021-12-31); canary and the null worlds are infrastructure; the ONE real development run is research (DEV)
         # and needs the pinned c_UP_H029, c_INCREMENTAL_H030, null result and threshold commit
@@ -530,8 +531,13 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("H029 / H030 runs use 2011-01-03..2021-12-31, warm-up 2008-07-01, the Data v2 universe "
                               "filters (universe.sec_corrections off) and the default-build policy")
         w28, wlv, coef = p14h029.h028_inputs()
+        record = cfg["experiment_id"] in p14h029.original_run_ids()   # original null (P14-CP3a): history only
+        code_pins = p14h029.ORIGINAL_CODE_SHA256 if record else p14h029.CODE_SHA256
         if (not p14h029.SPEC_SHA256 or p.get("spec_sha256") != p14h029.SPEC_SHA256
-                or p.get("h029_code_sha256") != p14h029.CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+                or (not record and (not p14h029.AMENDMENT1_SHA256
+                                    or p.get("amendment1_sha256") != p14h029.AMENDMENT1_SHA256
+                                    or p.get("h028_result_sha256") != p14h029.H028_RESULT_SHA256))
+                or p.get("h029_code_sha256") != code_pins["src/qresearch/lean/qr_h029.py"]
                 or p.get("data_v3_manifest_sha256") != p14h029.DATA_V3_MANIFEST_SHA256
                 or p.get("guard_sha256") != p14datav3.GUARD_SHA256
                 or p.get("h029_panel_digests_sha256") != p14h029.h029_panel_digests_sha256()
@@ -546,10 +552,12 @@ def validate(cfg: dict, unlock_file=None) -> None:
         if mode in ("canary", "null"):
             if kind != "infrastructure":
                 raise ConfigError("S031 canary / null runs are infrastructure")
-            if mode == "null" and tuple(p.get("seeds", ())) not in [tuple(v) for v in p14h029.NULL_SEEDS.values()]:
+            seeds = p14h029.ORIGINAL_NULL_SEEDS if record else p14h029.NULL_SEEDS
+            if mode == "null" and tuple(p.get("seeds", ())) != tuple(seeds.get(cfg["experiment_id"], ())):
                 raise ConfigError("S031 null batches are the pinned seed ranges")
         elif mode == "real":
-            if (kind != "research" or split != "DEV" or p14h029.C_UP_H029 is None
+            if (record or cfg["experiment_id"] != p14h029.REAL or kind != "research" or split != "DEV"
+                    or p14h029.C_UP_H029 is None
                     or p.get("c_up_h029") != p14h029.C_UP_H029
                     or p.get("c_incremental_h030") != p14h029.C_INCREMENTAL_H030
                     or p.get("null_result_sha256") != p14h029.NULL_RESULT_SHA256

@@ -61,19 +61,19 @@ def test_standalone_no_orders_no_2022():
 
 
 def _cfg(mode="canary", seeds=None):
-    exp = {"canary": P.CANARY, "null": "E031-02"}[mode]
+    exp = {"canary": P.CANARY, "null": P.NULL_RUNS[0]}[mode]
     return json.loads(json.dumps(C.config(exp, mode, seeds)))
 
 
 def test_config_rule():
     experiment.validate(_cfg())
-    experiment.validate(_cfg("null", P.NULL_SEEDS["E031-02"]))
+    experiment.validate(_cfg("null", P.NULL_SEEDS[P.NULL_RUNS[0]]))
     for mutate in (lambda c: c.update(end="2022-06-30"), lambda c: c["params"].update(spec_sha256="0" * 64),
                    lambda c: c["params"].update(h028_real_wealth=1.0), lambda c: c["params"].update(seeds=[1, 9]),
                    lambda c: c["params"].update(h029_panel_digests_sha256="0" * 64),
                    lambda c: c.update(kind="research"), lambda c: c.pop("owner_approval_required"),
                    lambda c: c["universe"].update(sec_corrections=True)):
-        c = _cfg("null", P.NULL_SEEDS["E031-02"])
+        c = _cfg("null", P.NULL_SEEDS[P.NULL_RUNS[0]])
         mutate(c)
         with pytest.raises((experiment.ConfigError, HoldoutLockedError)):
             experiment.validate(c)
@@ -95,3 +95,65 @@ def test_upload_set_fits_the_project_limit():
     assert files["qr_x801.py"] == (ROOT / P.DATA_HOST).read_text()
     assert len(files) <= 50, len(files)
     assert max(len(t) for t in files.values()) <= 64_000
+
+
+def test_amendment1_sector_null_pins_and_records():
+    """Amendment 1 (owner D233): own pin; the original spec stays byte-identical; the original null runs and result
+    stay the record and are never reused; the new run ids are distinct; the inadequate null's thresholds are never
+    the pinned ones; the frozen H028 result is pinned."""
+    assert hashlib.sha256((ROOT / P.AMENDMENT1).read_bytes()).hexdigest() == P.AMENDMENT1_SHA256
+    assert hashlib.sha256((ROOT / P.ORIGINAL_NULL_RESULT).read_bytes()).hexdigest() == P.ORIGINAL_NULL_RESULT_SHA256
+    assert hashlib.sha256((ROOT / P.H028_RESULT).read_bytes()).hexdigest() == P.H028_RESULT_SHA256
+    old = json.loads((ROOT / P.ORIGINAL_NULL_RESULT).read_text())
+    assert (old["c_up_h029"], old["c_incremental_h030"]) == P.INVALID_THRESHOLDS
+    assert old["verdict"] == "STOP — H029/H030 NULL INADEQUATE"
+    new = {P.CANARY, P.RERUN, P.REAL, *P.NULL_RUNS}
+    orig = {P.ORIGINAL_RUNS["canary"], P.ORIGINAL_RUNS["rerun"], P.ORIGINAL_RUNS["real_never_run"],
+            *P.ORIGINAL_RUNS["null"]}
+    assert len(new) == 5 and not new & orig
+    assert set(P.NULL_SEEDS) == {*P.NULL_RUNS, P.RERUN}
+    assert not (ROOT / "experiments" / P.ORIGINAL_RUNS["real_never_run"]).exists()
+    if P.C_UP_H029 is not None:
+        assert (P.C_UP_H029, P.C_INCREMENTAL_H030) != P.INVALID_THRESHOLDS
+        assert P.C_UP_H029 not in P.INVALID_THRESHOLDS and P.C_INCREMENTAL_H030 not in P.INVALID_THRESHOLDS
+    host = (ROOT / P.HOST).read_text()
+    assert "S031 v1.1" in host and "donor_other_sector" in host and "Q.NullNotConstructible" in host
+
+
+def test_amendment1_config_carries_the_amendment_pin():
+    c = _cfg()
+    assert c["params"]["amendment1_sha256"] == P.AMENDMENT1_SHA256 and c["strategy_version"] == "v1.1"
+    c["params"]["amendment1_sha256"] = "0" * 64
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(c)
+
+
+def test_original_null_configs_validate_as_history_only():
+    """E031-01..04 (P14-CP3a) stay valid records against the ORIGINAL code pins; the original pins never validate a
+    new run, a new run id never validates with the original code, and no record id can be a real run."""
+    for e in P.original_run_ids():
+        c = json.loads((ROOT / "experiments" / e / "config.json").read_text())
+        experiment.validate(c)
+        assert c["params"]["h029_code_sha256"] == P.ORIGINAL_CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+        assert (ROOT / "experiments" / e / "result.json").exists() or (ROOT / "experiments" / e).exists()
+    c = _cfg("null", P.NULL_SEEDS[P.NULL_RUNS[0]])
+    c["params"]["h029_code_sha256"] = P.ORIGINAL_CODE_SHA256["src/qresearch/lean/qr_h029.py"]
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(c)
+    c = json.loads((ROOT / "experiments" / P.ORIGINAL_RUNS["canary"] / "config.json").read_text())
+    c["params"].update(mode="real")
+    c.update(kind="research", split="DEV")
+    with pytest.raises(experiment.ConfigError):
+        experiment.validate(c)
+
+
+def test_sector_null_blocked_no_thresholds_no_real_run():
+    """P14-CP3b (D234): the sector-stratified null is inadequate -> no threshold exists, none is pinned, and no real
+    run config exists or validates."""
+    d = json.loads((ROOT / P.SECTOR_NULL_RESULT).read_text())
+    assert hashlib.sha256((ROOT / P.SECTOR_NULL_RESULT).read_bytes()).hexdigest() == P.SECTOR_NULL_RESULT_SHA256
+    assert d["verdict"] == P.SECTOR_NULL_VERDICT and d["adequacy"]["ok"] is False
+    assert not d["adequacy"]["turn29"]["ok"] and d["rerun_seeds_1_25_identical"] and d["worlds"] == 5000
+    assert "c_up_h029" not in d and "c_incremental_h030" not in d
+    assert P.C_UP_H029 is None and P.C_INCREMENTAL_H030 is None and P.THRESHOLD_COMMIT is None
+    assert not (ROOT / "experiments" / P.REAL).exists()
