@@ -1,0 +1,352 @@
+{
+ "experiment_id": "E031-06",
+ "harness_messages": [
+  "QRY|0|{\"baseline\": {\"cik_reject\": 35, \"life_reject\": 7, \"store_baseline\": 122748}, \"canary\": {\"estimated_5000_world_minutes\": 17.3, \"mechanics\": {\"blend_mismatch\": 0, \"entry_not_after_review\": 0, \"joint_not_subset\": 0, \"min_valid_signals\": 5, \"months\": 84, \"score_mismatch\": 0}, \"null_checks\": {\"constructible\": true, \"donor_other_sector\": 0, \"eligibility_changed\": 0, \"h028_changed\": 0, \"mapped\": 128490, \"mechanics_constants\": {\"CAPITAL\": 100000.0, \"COMMISSION\": 7.0, \"K\": 15, \"LAMBDA\": 100.0, \"SECTOR_CAP\": 3, \"SLIPPAGE\": 0.001, \"STRESS_SLIPPAGE\": 0.002}, \"min_sector_size\": 12, \"not_constructible\": null, \"not_donor_vector\": 0, \"persist_kept\": 120472, \"persist_possible\": 120654, \"recipient_data_changed\": 0, \"recipient_sector_changed\": 0, \"seeds\": [1, 2], \"self_match\": 0, \"singleton_sector_reviews\": 0}, \"real_h029_h030_result_computed\": false, \"synthetic\": {\"A\": [{\"p_inc\": 0.5882352941176471, \"p_up\": 0.8235294117647058, \"s_inc\": -0.5208532947015817, \"s_up\": -0.4182288002049175, \"seed\": 7101}, {\"p_inc\": 0.49019607843137253, \"p_up\": 0.2549019607843137, \"s_inc\": -0.4131165470901997, \"s_up\": -0.13168121875411934, \"seed\": 7102}, {\"p_inc\": 0.7647058823529411, \"p_up\": 0.5882352941176471, \"s_inc\": -0.5690344042071961, \"s_up\": -0.34937028485171767, \"seed\": 7103}, {\"p_inc\": 0.39215686274509803, \"p_up\": 0.39215686274509803, \"s_inc\": -0.44520798566935604, \"s_up\": -0.04169497344329531, \"seed\": 7104}, {\"p_inc\": 0.45098039215686275, \"p_up\": 0.0392156862745098, \"s_inc\": -0.45419744729059436, \"s_up\": 0.01385377392915614, \"seed\": 7105}], \"A_pass\": true, \"B\": {\"null_max\": 0.21090536206347169, \"p_inc\": 0.0196078431372549, \"p_up\": 0.0196078431372549, \"s_inc\": 3.7542064016141192, \"s_up\": 12.103203419640383}, \"B_pass\": true, \"world_s\": 0.208}, \"world_repeat_identical\": true}, \"checks\": {\"cand_no_cik\": 6011, \"cand_no_shares_table\": 2149, \"fed\": 105289, \"guard_blocked\": 214, \"m2_delayed\": 220, \"m2_not_fed\": 90487, \"m2_revision_unfed\": 5, \"month_ends\": 143, \"no_period_end\": 735915, \"pe_after_seen\": 0, \"presence_break\": 136, \"reports_new\": 195247, \"revisions\": 748, \"sec_fed\": 11033, \"selections\": 3401, \"weekly\": 511}, \"data_v21_digests\": {\"review_eligibility\": {\"2011-01-31\": \"006cc962739bcc256940ea878b30da229b9b0a0b94545e0190fbee797518e06e\", \"2011-02-28\": \"a2322f1518048a6a4e5717b3538bfa352f0f62a89a4185d2e40385af6f20f92f\", \"2011-03-31\": \"a25260fc17dd2f7deab27323ea78ba3e3c0feb29d86fffedab3c62ff5facdee6\", \"2011-04-29\": \"6e01d5a0cd245692a8c74906de4a3d0d482d583cafcb0c20c1d49bf470bd11c2\", \"2011-05-31\": \"222d16c9033514b5842b664a6f956b65dddfe125a46faa68d4d4d84424342aa7\", \"2011-06-30\": \"eabddfa43f30fd933780521e3b0495b3644ac05aeddec40c616bfbcf159cea32\", \"2011-07-29\": \"8958ddff1766a2dbac965780d867fa632653ace8d3783626cf03415a4b479cb5\", \"2011-08-31\": \"bbecbf799f18e66f11a2458d3e164af71ab25a506633390a17e5a3d626e13002\", \"2011-09-30\": \"359908ec31a576590d0fd24fc540352c2dba23679c68fd51a1e00c9d194f75f5\", \"2011-10-31\": \"ee1a2a457d3fd34b3334ed7035a6625d7e54c5080d705167d507e2fcb5f57287\", \"2011-11-30\": \"22764b89e3c587d6f8d8e6cacd8a1e9f80bd1222a15ef88d7cb0df966f5fc5fe\", \"2011-12-30\": \"60485232496da127c40d86c174885031b053267d4c7da71ea71d3ca529fa7997\", \"2012-01-31\": \"68cf29cabbd9c29d2b3b78aa8870a8f06d81524043710083a15218285fb460ba\", \"2012-02-29\": \"7921a5200b4e11f97d4925f89f399abebf404cabaf2876a273f82865f4b7e4b0\", \"2012-03-30\": \"ef4a6f35a8416ab9a53710eb64f4a53eb10303430e06ea8478027195367266d9\", \"2012-04-30\": \"979bf1c12592af5b5bcb21ea1a05dd9337112a6aface0460d725ba871eba817e\", \"2012-05-31\": \"8bc9c2f132426daa8916b40a1c6f56aed1ac1fd51e5dae85faee335ea6d0bae2\", \"2012-06-29\": \"cb834a16c28f12d400f2aa4257ca1c969f7817e2f36505b214e01abdf03267b3\", \"2012-07-31\": \"7ff57f666a395d90ecf9aec15578b748ad3df6cab41e23a9c79e49182d83d5be\", \"2012-08-31\": \"6fcafd8a123ea2001b73a13df5c88aa67884330e90e959a297c01132e68c02dd\", \"2012-09-28\": \"5c025be1a4e7c68e3f8def55c61539a37cc06a8d50fc0632329879610bf4f639\", \"2012-10-31\": \"379bd21ffda8add441875fc4193598f6a8ef80fb12f47d2dace959e75c89e68d\", \"2012-11-30\": \"4fb341d03aa914734417edd0376287443407c850daf0dc067df887174b5fc8f2\", \"2012-12-31\": \"ff36cad90c9b3411782f00f70b7a44142887809539ec394e1fd4fc881e42c271\", \"2013-01-31\": \"4dd55c1914c3ee06b1eacb980aa868e1db41a7ecc096c52701fed0a2eb1d141e\", \"2013-02-28\": \"b81cae89c2f033f79e899674a0cd1e1ec84773f987862a8a5bc2cd2729cb627f\", \"2013-03-28\": \"e72ccb55a50b94d371e0c3da9e58ed32172c1f2970848db09837c4bdfd8d8e6a\", \"2013-04-30\": \"68c080aef831cbb8df4fda4d2cac5ca8f45f224451ab40262689fc5a8eac1397\", \"2013-05-31\": \"ac06436bd17b716f37901e35a6d7465aeeb3cbfe7f55be53714f8f453e3b821a\", \"2013-06-28\": \"90a1a40b51eb7d2a2909c2d97ccded0b2ca3a6d0df933eb9feb33866841cf2b0\", \"2013-07-31\": \"74f16f31f018dd1eaf838ed4b4118e10b241bf6d7e6e803cf49c18c0bc32bd63\", \"2013-08-30\": \"dc7fd93b3b2e9da290bce499114730286505920fe7696e4edd268868eb2a29b2\", \"2013-09-30\": \"bd6fe686a520829f92b4a37b7ab7e9ff3ff5505f56533e03ba23c70d8da23079\", \"2013-10-31\": \"3ef9dcce877b000e1faff1b748b3568758401a8c5119eecbc2f4d8f74f3990c2\", \"2013-11-29\": \"f1d73e716bc275f3ee366fadff0e126ac00eec574b21f69ca1fbec996c57d4d8\", \"2013-12-31\": \"13dd33c73880aa589234bd330ca1c08b48e668f0374751de1f68d0a31cb55548\", \"2014-01-31\": \"34bdbf629864259786c140ea36482617c00ba78289f1b689f7dc173dcac5d782\", \"2014-02-28\": \"fb77b309ffc2e709f5b0de7b4efb28babcd9d218dfa75d3c54ab8f751f9232d3\", \"2014-03-31\": \"89babf7fcd098d24727d589e14d2288342efddce6e8b4ca926aeb0879b938184\", \"2014-04-30\": \"e782a2a2d3d2045444825dbf434f839481b8055bb27ad17b50a5286e43418ed3\", \"2014-05-30\": \"bb3995faf99b21ec2e6703251a440feec757be1064ea95f47f02581f91b4ae1e\", \"2014-06-30\": \"29baea5df82572e16c26b650396d9efda5d7a1915a2c9f0bc692f4e0751fe349\", \"2014-07-31\": \"012edb645f8236685dbe177252419742629703701667bd0035ab9d4e434872a1\", \"2014-08-29\": \"373297d9d5212522df8625cdf66cf05e320288e74997bd9d4e37a32e049d649d\", \"2014-09-30\": \"d10235dbe764377fdf68dce774cc3c6e530a8d95c2a407fa056626d57c47048f\", \"2014-10-31\": \"3a62642d0b68cba3db5ca40983c5b1cce4e7752dd1d061bcd339585a3e1cb207\", \"2014-11-28\": \"d2ca79387cae7318c89df6e3bf7d021d572ed17ccaf59567d7009d404039c8b1\", \"2014-12-31\": \"9e417e139348db6b8a06e50819cce49538e7711c107705a91476b72f85cc9324\", \"2015-01-30\": \"e4114e2d5caf7ee4615240cdcaa679b0a9b99c7848da6e46b3da56c912847d17\", \"2015-02-27\": \"b26e5215cd672168b933594e90d699bb06c8ec4e9447fe82720a90182ee3a6cd\", \"2015-03-31\": \"e6215aeb4fc6df20a329095bd3c47d83ee4c49afd34f658673ed0038090c2eef\", \"2015-04-30\": \"5d7b2ef61460a933bcd464397237936193288556d9d82b808788d081ea2d6eda\", \"2015-05-29\": \"49e86fb62b8be8992d899cfed3eeac79b662b1a7e5edf4d4e28439702ec55bd3\", \"2015-06-30\": \"2a8acbb0ca22dc0d8bbe8af69ada8599cf325df2200e60def99af635515fd4db\", \"2015-07-31\": \"219a56865a0fc93d5a5240898151a3400450c6eb26cf55b636a02ea47203650d\", \"2015-08-31\": \"70677f46cf58011a3f6c59221eeb030f4477025dad3bc169ea1230adfc65214d\", \"2015-09-30\": \"e3f3d63fb0ef4075a3db55135d0b0f869ad4a60f6576569055cd24a9afd9b6cc\", \"2015-10-30\": \"082760aa6789f86b1f8ee48f896a78e3bbb852f0bfd351519b53f1cb4cf88e67\", \"2015-11-30\": \"f895ca9bbbd645c61fbf1d9d18a805118864e9f2aba057155d727834067aa2b9\", \"2015-12-31\": \"c77d99d2140540118e688493cc083d639d176f2c3d5e3d9cf99304f37d6c49e5\", \"2016-01-29\": \"7e5efc27b980c3e25833195ff515c3d6b9a4d09477562ff082a3fd331b3597a7\", \"2016-02-29\": \"3fd6b0734c638b48a36e7b376fb4789a5a60e68a9272686f1798383c96289298\", \"2016-03-31\": \"35b8a1798892001d1ea03c57366a540d0403effa0f22c97f243d8f3e6a640d57\", \"2016-04-29\": \"dfd477d0c558e18fbffb9d25471aabb8cbfd2196a86115dac9b5d6f13045b753\", \"2016-05-31\": \"74b72f85e070276b79d1604d556ec860f956a60b77a52203967be0d5a8983202\", \"2016-06-30\": \"7748405cb8f5af7f91fe55b56e891888740dcab77ce6d7ecdf12affa097998af\", \"2016-07-29\": \"10d64a57626b7bb8f34a71ab95ad8b8ab677ced7249e218a1d04bbf4e658ffad\", \"2016-08-31\": \"7a80e941e21ba1c59ba4193b225a09e78adeb78be9ad1b65a401d4c895040b4a\", \"2016-09-30\": \"b43411b28b57cef9425ec3ae97264af3fbe061f3d1afa5597a14e65ab7c45c3d\", \"2016-10-31\": \"90a92203bc4c90bbada133ed539be1bce3de4ce285d3d90bb19bf15353f58f44\", \"2016-11-30\": \"a46c6fd083bedc39da33fab427c1fb23b149d4d0f2f68f3ed62f0e6148a0872c\", \"2016-12-30\": \"e2ddbf026dd7d4c46f6acec6f0349674a8568067f1ea44912d18b4c032a614af\", \"2017-01-31\": \"03f8b2e980e163099b0884234e85b4ed27e8eb3634e103b20a095a8a5e6b9c56\", \"2017-02-28\": \"999be85ddae35dd11de0c0155a6ecea441e95d142076e24f86277de6f42bc824\", \"2017-03-31\": \"a68b08f6bf37506aee6cd185fd84e6a96addf0b568b43d5426af2254d1b626f5\", \"2017-04-28\": \"fad0440b2d59b10f8bcc1ecfad10ec57acd40bcb50d19409ccbdec2f2c77a3c5\", \"2017-05-31\": \"0e43d2695763ede8e31ac9c4843e36a8c3a38a56e9cade617bcc670f8c382eb2\", \"2017-06-30\": \"caeae860efb604c688ebcbbab06148b448b7606bd64061ab69e7e4b2299d36fe\", \"2017-07-31\": \"81e421fc15adf22f60dc1d6f30bb09ad01dde0079ba4c89170fce4a995cc46f0\", \"2017-08-31\": \"ec85e919a7a8650c985b41b5d9c98cb6264af12f92ff9a8facbaf0313be1dec5\", \"2017-09-29\": \"1a5edefbd13ac4bdd0d55979c3d0500ccec3b936d69d90ddffbb22c90a0cbbde\", \"2017-10-31\": \"5ff6e3c3f7e9e095a045158928c60ee7eb8038b033aaf11512f6d896bbe672fb\", \"2017-11-30\": \"dfb267272a350847c71a10742d072370c62667b34907ce4865f653fe13ac91f2\", \"2017-12-29\": \"b960e476418f602d4",
+  "QRY|1|50634049a8d2befbc7766f461bd8f25ceaaf5903597cc06\", \"2018-01-31\": \"ca0309527800f9e75e902df11bc9ed271ba8a741188ccb3d490e36b1efaad068\", \"2018-02-28\": \"1a112b02ba26f612b81d26f8b917a40505dcecc1e38b8e6deb754134d615ef1b\", \"2018-03-29\": \"374dd8965a725bbd79c6b54c1ee1f8df49b8d56fb978ba51e40de95b9f3f87ba\", \"2018-04-30\": \"4a66af1944d232951cd1a30078e31d985877bea288abec155d5aca5f18cea09d\", \"2018-05-31\": \"16fbc034223df03a30cb7fb1bc55683b2c3af0af566d221f69f47e4319156f0d\", \"2018-06-29\": \"35210a182d5585403f9cde8091570af48cf1970ec2edbf788b45146561278166\", \"2018-07-31\": \"a9a1674b70524f5c63df91a2c998136900efe7e9889ea49aee868f1eb9244ee0\", \"2018-08-31\": \"3f629d84fdc49c0e9e65ff7bcf3c74262b7f2a1ed6d01d59f8c38af481f931ca\", \"2018-09-28\": \"93d0fdfca0c4c014953f04d61d5f133ef84875fc2d31d8d3560e546487f23089\", \"2018-10-31\": \"d4940292f41e1099e7110e07fee3c486a2762d12318adcb2641ec83c783796c7\", \"2018-11-30\": \"d7729fe8f39d33385cbbdc51dd0337c4eab6ce15ea0244872281676d386249c0\", \"2018-12-31\": \"bd67e2af7328db28cbf3af567bb144e869792bde4e9dcc56df21189f65fad420\", \"2019-01-31\": \"4f67c60c72f4a714702df24e15ff2ad8acc72450b4e6962d4349992f51cd7f6b\", \"2019-02-28\": \"6828d57c9c793640ce8e9da86a7ad0a3ba904d0b11ec314cd93b578260edfa04\", \"2019-03-29\": \"fc7f7c6eb6125d282184aa223ea564760dfc5185544b3b79f1e6fdfe483e7ea5\", \"2019-04-30\": \"a793ae2a558b4701beefeb9432e92e4047a1b83972e3f3e92ea432fa7d539a87\", \"2019-05-31\": \"a70163e9298d9370d175d97517f642bbc9e664d3f365d2a9c72ade22b64ea444\", \"2019-06-28\": \"b67e1fbc325ec88240962f3a6f90818ac9e54d19ed5cb765198cd8345a26dd4d\", \"2019-07-31\": \"81cba8af00771c92506cbdbb54b52314d46298b3c69f734ce156a299cd3c7006\", \"2019-08-30\": \"d298f1dde7fdb162e4f8bf92bb255298eaacdda07c4963bb0022152c34a9fd6c\", \"2019-09-30\": \"6164cbc9f658a16a2743df00de9822fed3d49d3ab0e860bc3f47aa0aec3c4afb\", \"2019-10-31\": \"af961ae7bd268c3b4ce73357892226c8e0e6235d7b3958724d284c84aec24ad2\", \"2019-11-29\": \"0cfda5ed34c50af4420b5403470abe14227f2190bd761777b3e47acb07b22b7f\", \"2019-12-31\": \"f993ff4d26bff810d036e8cc92266ea58caa20229043c8ac05d8a0db25bd1468\", \"2020-01-31\": \"4b242ac63c3c252f43ae8326627314c893dc9c862ca6f1a345c04e501d4f059f\", \"2020-02-28\": \"659ce226534c73341681d792bb7e072c9b5aebb8a08769ebaed31facddcd38e9\", \"2020-03-31\": \"8ba5971d9b0e6b9d81759456a26e5a96186a79ed5d620d0a26ebc67cbae3c146\", \"2020-04-30\": \"1baf863fd8f21653a69d885065afd31dc362f55a19f9c26cab5994af15231c87\", \"2020-05-29\": \"47e36a51f748efa030c8ba45ecde2124fa8b3a159e95f52941189f6abf9ffcef\", \"2020-06-30\": \"b7d15412affef7527ea3ef82bb4bb0efe4f9ca8753217e0c0a3ec4ceb1635363\", \"2020-07-31\": \"4182b1c4f7a64b792042ac3e2ca2e3b308ff2d5bbdf114a9d67cb5c431398a7c\", \"2020-08-31\": \"9814122bff0cadfb81703a2291caddacc1f9fd35b95150329a4ec9513f12843c\", \"2020-09-30\": \"e22f2419a30e27e86a79e7b626d4fd3fe01fe7d55f5df52510b7969f910c852c\", \"2020-10-30\": \"0270f8076e5df2f47c12f5d7e6071158bb7af08620540436cd17c2278e5d35bd\", \"2020-11-30\": \"8442280966d5a1191a6115bc716e6d06628b46601c2300367125206bbe807c10\", \"2020-12-31\": \"4acb6aaf8b64d7891552d3da4eb0a85816b11b0e5ce6ab733f7993164f076117\", \"2021-01-29\": \"3f14d5cf2e113312099db2ca040b936cf32642560a2ebce2af0a9122b8305f3d\", \"2021-02-26\": \"cdb071430fa0ac448cf9d6a8f0126d7a852a2374caf7e0b5885b6f60ac678889\", \"2021-03-31\": \"3db14c01ecd1cc7131dc9fb444ba3c91cf81a4bf601a8b649849dd02c20ee88e\", \"2021-04-30\": \"67a4bc8ce575084128e7d918cc1c89c7b402cd6b467ad39ab1b003cb9cd86469\", \"2021-05-28\": \"a94ee317b86854ab0b753694428ce2587744f3ca2ce6fa59d469ddfcbd608eb8\", \"2021-06-30\": \"931fe6cccfab09f519910cc84d87b1fb0a31e366c200e2f8fdce07a993e18c17\", \"2021-07-30\": \"b48d35b4b293a3b015469f90aad624672f8a2613fc47ee482663b1254b7a5cbe\", \"2021-08-31\": \"c998ecf7ed24f864e8072bb702f13be09f4d023a5031f1e33edfdd32171196e0\", \"2021-09-30\": \"bdb163952c0c9ab2c990c8387152179363d763e93d37021ecf9971abcab7484c\", \"2021-10-29\": \"f76f8cd6b49c56680207a97bf241ae15af959a1a3c18de49af77c0de319993c4\", \"2021-11-30\": \"6b36c04589e054dac3e6508929919afa2f344f16a5ce0c90b35e33f05ad0b002\"}}, \"equivalence\": {\"feature_panel\": true, \"h029_panel\": true, \"response_panel\": true}, \"feature_panel_sha256\": \"10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89\", \"h028_reproduction\": {\"coef_max_abs_diff\": 0.0, \"expected_h028\": 328294.90847351257, \"expected_lv15\": 220156.03484878788, \"h028_wealth\": 328294.90847351257, \"lv15_wealth\": 220156.03484878788, \"ok\": true}, \"h029_months\": {\"eligible\": [650, 641, 699, 703, 693, 703, 705, 685, 665, 641, 658, 660, 641, 616, 643, 670, 663, 665, 665, 680, 694, 697, 672, 703, 705, 706, 740, 741, 730, 721, 729, 719, 716, 741, 730, 742, 740, 740, 767, 768, 769, 782, 789, 778, 802, 792, 748, 752, 716, 744, 796, 794, 800, 761, 794, 789, 770, 780, 783, 796, 805, 795, 786, 700, 751, 768, 783, 783, 812, 790, 797, 852, 870, 882, 949, 982, 970, 971, 1001, 964, 969, 967, 963, 953], \"months\": 84, \"scored_without_panel_column\": 0}, \"h029_panel_digests_sha256\": \"5145232485a4de3c1782b7f754ea886eceb65464e4f66b0a62d0919576bc601e\", \"h029_panel_equal\": true, \"hypothesis\": \"H029 / H030\", \"max_rss_mb\": 7844.3, \"mcap_comparison\": {\"abs_rel_median\": 0.00033, \"abs_rel_p90\": 0.02476, \"agree_away\": 147038, \"agree_near\": 9368, \"disagree_kind\": {\"away|sec_above\": 1950, \"away|sec_below\": 219, \"near|sec_above\": 247, \"near|sec_below\": 235}, \"n_away\": 149207, \"n_near\": 9850, \"no_sec\": 7254, \"records\": 166311, \"rel\": {\"gt10pct\": 7764, \"le10pct\": 3431, \"le2pct\": 141202, \"le5pct\": 6660}}, \"memory\": [[\"on_end_start\", 635.5, {\"VmHWM\": 5909.8, \"VmRSS\": 5909.8, \"ru_maxrss_mb\": 5905.6}], [\"after_h029_panels\", 651.8, {\"VmHWM\": 5919.0, \"VmRSS\": 5780.5, \"ru_maxrss_mb\": 5919.0}], [\"after_x801_build_hl_freed\", 803.7, {\"VmHWM\": 7331.1, \"VmRSS\": 6694.8, \"ru_maxrss_mb\": 7331.1}], [\"after_build\", 942.7, {\"VmHWM\": 7844.3, \"VmRSS\": 7107.7, \"ru_maxrss_mb\": 7844.3}], [\"after_months_panel_freed\", 1030.9, {\"VmHWM\": 7844.3, \"VmRSS\": 6786.0, \"ru_maxrss_mb\": 7844.3}], [\"after_setup\", 1031.0, {\"VmHWM\": 7844.3, \"VmRSS\": 6796.8, \"ru_maxrss_mb\": 7844.3}], [\"end\", 1100.4, {\"VmHWM\": 7844.3, \"VmRSS\": 6826.0, \"ru_maxrss_mb\": 7844.3}]], \"mode\": \"canary\", \"panel\": {\"build_s\": 137.2, \"late_rows\": 0, \"securities\": 2609, \"sessions\": 3776}, \"pit_audit\": {\"baseline_pit_violations\": 0, \"baseline_used_despite_reject\": 0, \"fed_after_guard_trigger\": 0, \"fed_before_first_seen\": 0, \"fed_before_sec_filing\": 0, \"future_identity_row\": 0, \"record_older_than_200d\": 0, \"repaired_below_2B\": 0, \"repaired_with_vendor_cap\": 0, \"share_filing_not_yet_public\": 0, \"stale_share_count_used\": 0}, \"repair\": {\"bands\": {\"1.5-1.8B\": 2455, \"1.8-2.0B\": 1422, \"2.0-2.2B\": 1174, \"2.2-2.5B\": 1640, \"gt2.5B\": 14847, \"lt1.5B\": 8055}, \"below_2B\": 11932, \"candidate_stock_months\": 31270, \"no_fresh_shares\": 1677, \"repaired\": 17661, \"repaired_near_2_0_to_2_2B\": 1174, \"share_age\": {\"max\": 135.0, \"mean\": 57.228, \"median\": 60.0, \"min\": 1.0, \"n\": 29593, \"p10\": 21.0, \"p90\": 93.0, \"sd\": 29.355}, \"stale_near\": 478}, \"response_panel_sha256\": \"e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b\", \"spec_sha256\": \"51121154b3efaf770ce8c82879dc56fc36a1f6b7891e2920cf67c72dba0f345a\", \"store_stats\": {\"amendments\": 241, \"delayed_until_available\": 220, \"estimated\": 0, \"observed_new\": 116639, \"quarantined\": 0, \"timing_unknown\": 0}, \"table_end\": \"2021-12-31\", \"table_version\": \"data_v2.1\", \"v3\": {\"blocked\": 1018, \"fed\": 116639, \"fed_no_match\": 122, \"overlay\": {\"changed\": 15705, \"newer_replacement\": 0, \"removed\": 38450, \"replaced\": 0, \"views\": 169913}, \"overlay_blocked\": 1018, \"view_future_records\": 0}, \"w_spy\": {\"dividends\": 60, \"missing_rows_from_2010\": 0}, \"wall_s\": 1100.4}"
+ ],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 2769,
+  "elig_days": 2768,
+  "elig_max": 1680,
+  "elig_mean": 1057.688583815029,
+  "elig_min": 666,
+  "elig_sum": 2927682,
+  "experiment_id": "E031-06",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 399998,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 338,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "warmup_days": 632,
+  "warmup_select_days": 633,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "181cd94e5e887eff9a05c10246c2e57ef3f74d4686d0536f79a8a777787cb70a",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "2769 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2011-01-03..2021-12-31",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 2769 vs algorithm days 2769",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 2769 vs QuantConnect tradeableDates 2769",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "warmup_left_account_untouched",
+   "detail": "first recorded equity 100000.00 vs initial cash 100000.00; 632 warm-up sessions",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2021-12-31",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 2769,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2011-01-03",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0,
+   "2018": 0.0,
+   "2019": 0.0,
+   "2020": 0.0,
+   "2021": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-13T05:30:06Z",
+  "build_commit": "b8a4e7630f16a18e4ea12ec597fc5f598f510b5e",
+  "code_sha256": "bb1ef1e2317500e723de4b127ca214d79fe2be40379a48686a0bb94f25253670",
+  "config_sha256": "9ed67623d842e80801a7c61f01002d74e3d12c4bd0844392600c1594e2677e3b",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_data_v21.py",
+   "qr_data_v21_00.py",
+   "qr_data_v21_01.py",
+   "qr_data_v21_02.py",
+   "qr_data_v21_03.py",
+   "qr_data_v21_04.py",
+   "qr_data_v21_05.py",
+   "qr_data_v21_06.py",
+   "qr_data_v21_07.py",
+   "qr_data_v21_08.py",
+   "qr_data_v21_09.py",
+   "qr_data_v21_10.py",
+   "qr_data_v21_11.py",
+   "qr_data_v21_12.py",
+   "qr_data_v21_13.py",
+   "qr_data_v21_14.py",
+   "qr_data_v21_15.py",
+   "qr_data_v21_16.py",
+   "qr_data_v21_17.py",
+   "qr_data_v21_18.py",
+   "qr_data_v21_19.py",
+   "qr_data_v21_20.py",
+   "qr_data_v3_00.py",
+   "qr_data_v3_01.py",
+   "qr_data_v3_02.py",
+   "qr_data_v3_03.py",
+   "qr_fundamentals.py",
+   "qr_h020_stats.py",
+   "qr_h023.py",
+   "qr_h024.py",
+   "qr_h026.py",
+   "qr_h029.py",
+   "qr_h029a.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_p7.py",
+   "qr_p7_export.py",
+   "qr_p7_mech.py",
+   "qr_p7_pred.py",
+   "qr_p7_score.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_v2.py",
+   "qr_v3.py",
+   "qr_x801.py",
+   "qr_xs.py",
+   "qr_xs_diag.py",
+   "qr_xs_panel.py"
+  ],
+  "git_commit": "b8a4e7630f16a18e4ea12ec597fc5f598f510b5e",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18179",
+  "owner_approved": "D233",
+  "qc_backtest_id": "479a38de2996b3ba02461eb60fdd57c4",
+  "qc_project_id": 37740726,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-13T05:29:50Z",
+  "runtime_s": 1115.662043094635
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.593",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.167",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "QRY|0|{\"baseline\": {\"cik_reject\": 35, \"life_reject\": 7, \"store_baseline\": 122748}, \"canary\": {\"estimated_5000_world_minutes\": 17.3, \"mechanics\": {\"blend_mismatch\": 0, \"entry_not_after_review\": 0, \"joint_not_subset\": 0, \"min_valid_signals\": 5, \"months\": 84, \"score_mismatch\": 0}, \"null_checks\": {\"constructible\": true, \"donor_other_sector\": 0, \"eligibility_changed\": 0, \"h028_changed\": 0, \"mapped\": 128490, \"mechanics_constants\": {\"CAPITAL\": 100000.0, \"COMMISSION\": 7.0, \"K\": 15, \"LAMBDA\": 100.0, \"SECTOR_CAP\": 3, \"SLIPPAGE\": 0.001, \"STRESS_SLIPPAGE\": 0.002}, \"min_sector_size\": 12, \"not_constructible\": null, \"not_donor_vector\": 0, \"persist_kept\": 120472, \"persist_possible\": 120654, \"recipient_data_changed\": 0, \"recipient_sector_changed\": 0, \"seeds\": [1, 2], \"self_match\": 0, \"singleton_sector_reviews\": 0}, \"real_h029_h030_result_computed\": false, \"synthetic\": {\"A\": [{\"p_inc\": 0.5882352941176471, \"p_up\": 0.8235294117647058, \"s_inc\": -0.5208532947015817, \"s_up\": -0.4182288002049175, \"seed\": 7101}, {\"p_inc\": 0.49019607843137253, \"p_up\": 0.2549019607843137, \"s_inc\": -0.4131165470901997, \"s_up\": -0.13168121875411934, \"seed\": 7102}, {\"p_inc\": 0.7647058823529411, \"p_up\": 0.5882352941176471, \"s_inc\": -0.5690344042071961, \"s_up\": -0.34937028485171767, \"seed\": 7103}, {\"p_inc\": 0.39215686274509803, \"p_up\": 0.39215686274509803, \"s_inc\": -0.44520798566935604, \"s_up\": -0.04169497344329531, \"seed\": 7104}, {\"p_inc\": 0.45098039215686275, \"p_up\": 0.0392156862745098, \"s_inc\": -0.45419744729059436, \"s_up\": 0.01385377392915614, \"seed\": 7105}], \"A_pass\": true, \"B\": {\"null_max\": 0.21090536206347169, \"p_inc\": 0.0196078431372549, \"p_up\": 0.0196078431372549, \"s_inc\": 3.7542064016141192, \"s_up\": 12.103203419640383}, \"B_pass\": true, \"world_s\": 0.208}, \"world_repeat_identical\": true}, \"checks\": {\"cand_no_cik\": 6011, \"cand_no_shares_table\": 2149, \"fed\": 105289, \"guard_blocked\": 214, \"m2_delayed\": 220, \"m2_not_fed\": 90487, \"m2_revision_unfed\": 5, \"month_ends\": 143, \"no_period_end\": 735915, \"pe_after_seen\": 0, \"presence_break\": 136, \"reports_new\": 195247, \"revisions\": 748, \"sec_fed\": 11033, \"selections\": 3401, \"weekly\": 511}, \"data_v21_digests\": {\"review_eligibility\": {\"2011-01-31\": \"006cc962739bcc256940ea878b30da229b9b0a0b94545e0190fbee797518e06e\", \"2011-02-28\": \"a2322f1518048a6a4e5717b3538bfa352f0f62a89a4185d2e40385af6f20f92f\", \"2011-03-31\": \"a25260fc17dd2f7deab27323ea78ba3e3c0feb29d86fffedab3c62ff5facdee6\", \"2011-04-29\": \"6e01d5a0cd245692a8c74906de4a3d0d482d583cafcb0c20c1d49bf470bd11c2\", \"2011-05-31\": \"222d16c9033514b5842b664a6f956b65dddfe125a46faa68d4d4d84424342aa7\", \"2011-06-30\": \"eabddfa43f30fd933780521e3b0495b3644ac05aeddec40c616bfbcf159cea32\", \"2011-07-29\": \"8958ddff1766a2dbac965780d867fa632653ace8d3783626cf03415a4b479cb5\", \"2011-08-31\": \"bbecbf799f18e66f11a2458d3e164af71ab25a506633390a17e5a3d626e13002\", \"2011-09-30\": \"359908ec31a576590d0fd24fc540352c2dba23679c68fd51a1e00c9d194f75f5\", \"2011-10-31\": \"ee1a2a457d3fd34b3334ed7035a6625d7e54c5080d705167d507e2fcb5f57287\", \"2011-11-30\": \"22764b89e3c587d6f8d8e6cacd8a1e9f80bd1222a15ef88d7cb0df966f5fc5fe\", \"2011-12-30\": \"60485232496da127c40d86c174885031b053267d4c7da71ea71d3ca529fa7997\", \"2012-01-31\": \"68cf29cabbd9c29d2b3b78aa8870a8f06d81524043710083a15218285fb460ba\", \"2012-02-29\": \"7921a5200b4e11f97d4925f89f399abebf404cabaf2876a273f82865f4b7e4b0\", \"2012-03-30\": \"ef4a6f35a8416ab9a53710eb64f4a53eb10303430e06ea8478027195367266d9\", \"2012-04-30\": \"979bf1c12592af5b5bcb21ea1a05dd9337112a6aface0460d725ba871eba817e\", \"2012-05-31\": \"8bc9c2f132426daa8916b40a1c6f56aed1ac1fd51e5dae85faee335ea6d0bae2\", \"2012-06-29\": \"cb834a16c28f12d400f2aa4257ca1c969f7817e2f36505b214e01abdf03267b3\", \"2012-07-31\": \"7ff57f666a395d90ecf9aec15578b748ad3df6cab41e23a9c79e49182d83d5be\", \"2012-08-31\": \"6fcafd8a123ea2001b73a13df5c88aa67884330e90e959a297c01132e68c02dd\", \"2012-09-28\": \"5c025be1a4e7c68e3f8def55c61539a37cc06a8d50fc0632329879610bf4f639\", \"2012-10-31\": \"379bd21ffda8add441875fc4193598f6a8ef80fb12f47d2dace959e75c89e68d\", \"2012-11-30\": \"4fb341d03aa914734417edd0376287443407c850daf0dc067df887174b5fc8f2\", \"2012-12-31\": \"ff36cad90c9b3411782f00f70b7a44142887809539ec394e1fd4fc881e42c271\", \"2013-01-31\": \"4dd55c1914c3ee06b1eacb980aa868e1db41a7ecc096c52701fed0a2eb1d141e\", \"2013-02-28\": \"b81cae89c2f033f79e899674a0cd1e1ec84773f987862a8a5bc2cd2729cb627f\", \"2013-03-28\": \"e72ccb55a50b94d371e0c3da9e58ed32172c1f2970848db09837c4bdfd8d8e6a\", \"2013-04-30\": \"68c080aef831cbb8df4fda4d2cac5ca8f45f224451ab40262689fc5a8eac1397\", \"2013-05-31\": \"ac06436bd17b716f37901e35a6d7465aeeb3cbfe7f55be53714f8f453e3b821a\", \"2013-06-28\": \"90a1a40b51eb7d2a2909c2d97ccded0b2ca3a6d0df933eb9feb33866841cf2b0\", \"2013-07-31\": \"74f16f31f018dd1eaf838ed4b4118e10b241bf6d7e6e803cf49c18c0bc32bd63\", \"2013-08-30\": \"dc7fd93b3b2e9da290bce499114730286505920fe7696e4edd268868eb2a29b2\", \"2013-09-30\": \"bd6fe686a520829f92b4a37b7ab7e9ff3ff5505f56533e03ba23c70d8da23079\", \"2013-10-31\": \"3ef9dcce877b000e1faff1b748b3568758401a8c5119eecbc2f4d8f74f3990c2\", \"2013-11-29\": \"f1d73e716bc275f3ee366fadff0e126ac00eec574b21f69ca1fbec996c57d4d8\", \"2013-12-31\": \"13dd33c73880aa589234bd330ca1c08b48e668f0374751de1f68d0a31cb55548\", \"2014-01-31\": \"34bdbf629864259786c140ea36482617c00ba78289f1b689f7dc173dcac5d782\", \"2014-02-28\": \"fb77b309ffc2e709f5b0de7b4efb28babcd9d218dfa75d3c54ab8f751f9232d3\", \"2014-03-31\": \"89babf7fcd098d24727d589e14d2288342efddce6e8b4ca926aeb0879b938184\", \"2014-04-30\": \"e782a2a2d3d2045444825dbf434f839481b8055bb27ad17b50a5286e43418ed3\", \"2014-05-30\": \"bb3995faf99b21ec2e6703251a440feec757be1064ea95f47f02581f91b4ae1e\", \"2014-06-30\": \"29baea5df82572e16c26b650396d9efda5d7a1915a2c9f0bc692f4e0751fe349\", \"2014-07-31\": \"012edb645f8236685dbe177252419742629703701667bd0035ab9d4e434872a1\", \"2014-08-29\": \"373297d9d5212522df8625cdf66cf05e320288e74997bd9d4e37a32e049d649d\", \"2014-09-30\": \"d10235dbe764377fdf68dce774cc3c6e530a8d95c2a407fa056626d57c47048f\", \"2014-10-31\": \"3a62642d0b68cba3db5ca40983c5b1cce4e7752dd1d061bcd339585a3e1cb207\", \"2014-11-28\": \"d2ca79387cae7318c89df6e3bf7d021d572ed17ccaf59567d7009d404039c8b1\", \"2014-12-31\": \"9e417e139348db6b8a06e50819cce49538e7711c107705a91476b72f85cc9324\", \"2015-01-30\": \"e4114e2d5caf7ee4615240cdcaa679b0a9b99c7848da6e46b3da56c912847d17\", \"2015-02-27\": \"b26e5215cd672168b933594e90d699bb06c8ec4e9447fe82720a90182ee3a6cd\", \"2015-03-31\": \"e6215aeb4fc6df20a329095bd3c47d83ee4c49afd34f658673ed0038090c2eef\", \"2015-04-30\": \"5d7b2ef61460a933bcd464397237936193288556d9d82b808788d081ea2d6eda\", \"2015-05-29\": \"49e86fb62b8be8992d899cfed3eeac79b662b1a7e5edf4d4e28439702ec55bd3\", \"2015-06-30\": \"2a8acbb0ca22dc0d8bbe8af69ada8599cf325df2200e60def99af635515fd4db\", \"2015-07-31\": \"219a56865a0fc93d5a5240898151a3400450c6eb26cf55b636a02ea47203650d\", \"2015-08-31\": \"70677f46cf58011a3f6c59221eeb030f4477025dad3bc169ea1230adfc65214d\", \"2015-09-30\": \"e3f3d63fb0ef4075a3db55135d0b0f869ad4a60f6576569055cd24a9afd9b6cc\", \"2015-10-30\": \"082760aa6789f86b1f8ee48f896a78e3bbb852f0bfd351519b53f1cb4cf88e67\", \"2015-11-30\": \"f895ca9bbbd645c61fbf1d9d18a805118864e9f2aba057155d727834067aa2b9\", \"2015-12-31\": \"c77d99d2140540118e688493cc083d639d176f2c3d5e3d9cf99304f37d6c49e5\", \"2016-01-29\": \"7e5efc27b980c3e25833195ff515c3d6b9a4d09477562ff082a3fd331b3597a7\", \"2016-02-29\": \"3fd6b0734c638b48a36e7b376fb4789a5a60e68a9272686f1798383c96289298\", \"2016-03-31\": \"35b8a1798892001d1ea03c57366a540d0403effa0f22c97f243d8f3e6a640d57\", \"2016-04-29\": \"dfd477d0c558e18fbffb9d25471aabb8cbfd2196a86115dac9b5d6f13045b753\", \"2016-05-31\": \"74b72f85e070276b79d1604d556ec860f956a60b77a52203967be0d5a8983202\", \"2016-06-30\": \"7748405cb8f5af7f91fe55b56e891888740dcab77ce6d7ecdf12affa097998af\", \"2016-07-29\": \"10d64a57626b7bb8f34a71ab95ad8b8ab677ced7249e218a1d04bbf4e658ffad\", \"2016-08-31\": \"7a80e941e21ba1c59ba4193b225a09e78adeb78be9ad1b65a401d4c895040b4a\", \"2016-09-30\": \"b43411b28b57cef9425ec3ae97264af3fbe061f3d1afa5597a14e65ab7c45c3d\", \"2016-10-31\": \"90a92203bc4c90bbada133ed539be1bce3de4ce285d3d90bb19bf15353f58f44\", \"2016-11-30\": \"a46c6fd083bedc39da33fab427c1fb23b149d4d0f2f68f3ed62f0e6148a0872c\", \"2016-12-30\": \"e2ddbf026dd7d4c46f6acec6f0349674a8568067f1ea44912d18b4c032a614af\", \"2017-01-31\": \"03f8b2e980e163099b0884234e85b4ed27e8eb3634e103b20a095a8a5e6b9c56\", \"2017-02-28\": \"999be85ddae35dd11de0c0155a6ecea441e95d142076e24f86277de6f42bc824\", \"2017-03-31\": \"a68b08f6bf37506aee6cd185fd84e6a96addf0b568b43d5426af2254d1b626f5\", \"2017-04-28\": \"fad0440b2d59b10f8bcc1ecfad10ec57acd40bcb50d19409ccbdec2f2c77a3c5\", \"2017-05-31\": \"0e43d2695763ede8e31ac9c4843e36a8c3a38a56e9cade617bcc670f8c382eb2\", \"2017-06-30\": \"caeae860efb604c688ebcbbab06148b448b7606bd64061ab69e7e4b2299d36fe\", \"2017-07-31\": \"81e421fc15adf22f60dc1d6f30bb09ad01dde0079ba4c89170fce4a995cc46f0\", \"2017-08-31\": \"ec85e919a7a8650c985b41b5d9c98cb6264af12f92ff9a8facbaf0313be1dec5\", \"2017-09-29\": \"1a5edefbd13ac4bdd0d55979c3d0500ccec3b936d69d90ddffbb22c90a0cbbde\", \"2017-10-31\": \"5ff6e3c3f7e9e095a045158928c60ee7eb8038b033aaf11512f6d896bbe672fb\", \"2017-11-30\": \"dfb267272a350847c71a10742d072370c62667b34907ce4865f653fe13ac91f2\", \"2017-12-29\": \"b960e476418f602d4\nQRY|1|50634049a8d2befbc7766f461bd8f25ceaaf5903597cc06\", \"2018-01-31\": \"ca0309527800f9e75e902df11bc9ed271ba8a741188ccb3d490e36b1efaad068\", \"2018-02-28\": \"1a112b02ba26f612b81d26f8b917a40505dcecc1e38b8e6deb754134d615ef1b\", \"2018-03-29\": \"374dd8965a725bbd79c6b54c1ee1f8df49b8d56fb978ba51e40de95b9f3f87ba\", \"2018-04-30\": \"4a66af1944d232951cd1a30078e31d985877bea288abec155d5aca5f18cea09d\", \"2018-05-31\": \"16fbc034223df03a30cb7fb1bc55683b2c3af0af566d221f69f47e4319156f0d\", \"2018-06-29\": \"35210a182d5585403f9cde8091570af48cf1970ec2edbf788b45146561278166\", \"2018-07-31\": \"a9a1674b70524f5c63df91a2c998136900efe7e9889ea49aee868f1eb9244ee0\", \"2018-08-31\": \"3f629d84fdc49c0e9e65ff7bcf3c74262b7f2a1ed6d01d59f8c38af481f931ca\", \"2018-09-28\": \"93d0fdfca0c4c014953f04d61d5f133ef84875fc2d31d8d3560e546487f23089\", \"2018-10-31\": \"d4940292f41e1099e7110e07fee3c486a2762d12318adcb2641ec83c783796c7\", \"2018-11-30\": \"d7729fe8f39d33385cbbdc51dd0337c4eab6ce15ea0244872281676d386249c0\", \"2018-12-31\": \"bd67e2af7328db28cbf3af567bb144e869792bde4e9dcc56df21189f65fad420\", \"2019-01-31\": \"4f67c60c72f4a714702df24e15ff2ad8acc72450b4e6962d4349992f51cd7f6b\", \"2019-02-28\": \"6828d57c9c793640ce8e9da86a7ad0a3ba904d0b11ec314cd93b578260edfa04\", \"2019-03-29\": \"fc7f7c6eb6125d282184aa223ea564760dfc5185544b3b79f1e6fdfe483e7ea5\", \"2019-04-30\": \"a793ae2a558b4701beefeb9432e92e4047a1b83972e3f3e92ea432fa7d539a87\", \"2019-05-31\": \"a70163e9298d9370d175d97517f642bbc9e664d3f365d2a9c72ade22b64ea444\", \"2019-06-28\": \"b67e1fbc325ec88240962f3a6f90818ac9e54d19ed5cb765198cd8345a26dd4d\", \"2019-07-31\": \"81cba8af00771c92506cbdbb54b52314d46298b3c69f734ce156a299cd3c7006\", \"2019-08-30\": \"d298f1dde7fdb162e4f8bf92bb255298eaacdda07c4963bb0022152c34a9fd6c\", \"2019-09-30\": \"6164cbc9f658a16a2743df00de9822fed3d49d3ab0e860bc3f47aa0aec3c4afb\", \"2019-10-31\": \"af961ae7bd268c3b4ce73357892226c8e0e6235d7b3958724d284c84aec24ad2\", \"2019-11-29\": \"0cfda5ed34c50af4420b5403470abe14227f2190bd761777b3e47acb07b22b7f\", \"2019-12-31\": \"f993ff4d26bff810d036e8cc92266ea58caa20229043c8ac05d8a0db25bd1468\", \"2020-01-31\": \"4b242ac63c3c252f43ae8326627314c893dc9c862ca6f1a345c04e501d4f059f\", \"2020-02-28\": \"659ce226534c73341681d792bb7e072c9b5aebb8a08769ebaed31facddcd38e9\", \"2020-03-31\": \"8ba5971d9b0e6b9d81759456a26e5a96186a79ed5d620d0a26ebc67cbae3c146\", \"2020-04-30\": \"1baf863fd8f21653a69d885065afd31dc362f55a19f9c26cab5994af15231c87\", \"2020-05-29\": \"47e36a51f748efa030c8ba45ecde2124fa8b3a159e95f52941189f6abf9ffcef\", \"2020-06-30\": \"b7d15412affef7527ea3ef82bb4bb0efe4f9ca8753217e0c0a3ec4ceb1635363\", \"2020-07-31\": \"4182b1c4f7a64b792042ac3e2ca2e3b308ff2d5bbdf114a9d67cb5c431398a7c\", \"2020-08-31\": \"9814122bff0cadfb81703a2291caddacc1f9fd35b95150329a4ec9513f12843c\", \"2020-09-30\": \"e22f2419a30e27e86a79e7b626d4fd3fe01fe7d55f5df52510b7969f910c852c\", \"2020-10-30\": \"0270f8076e5df2f47c12f5d7e6071158bb7af08620540436cd17c2278e5d35bd\", \"2020-11-30\": \"8442280966d5a1191a6115bc716e6d06628b46601c2300367125206bbe807c10\", \"2020-12-31\": \"4acb6aaf8b64d7891552d3da4eb0a85816b11b0e5ce6ab733f7993164f076117\", \"2021-01-29\": \"3f14d5cf2e113312099db2ca040b936cf32642560a2ebce2af0a9122b8305f3d\", \"2021-02-26\": \"cdb071430fa0ac448cf9d6a8f0126d7a852a2374caf7e0b5885b6f60ac678889\", \"2021-03-31\": \"3db14c01ecd1cc7131dc9fb444ba3c91cf81a4bf601a8b649849dd02c20ee88e\", \"2021-04-30\": \"67a4bc8ce575084128e7d918cc1c89c7b402cd6b467ad39ab1b003cb9cd86469\", \"2021-05-28\": \"a94ee317b86854ab0b753694428ce2587744f3ca2ce6fa59d469ddfcbd608eb8\", \"2021-06-30\": \"931fe6cccfab09f519910cc84d87b1fb0a31e366c200e2f8fdce07a993e18c17\", \"2021-07-30\": \"b48d35b4b293a3b015469f90aad624672f8a2613fc47ee482663b1254b7a5cbe\", \"2021-08-31\": \"c998ecf7ed24f864e8072bb702f13be09f4d023a5031f1e33edfdd32171196e0\", \"2021-09-30\": \"bdb163952c0c9ab2c990c8387152179363d763e93d37021ecf9971abcab7484c\", \"2021-10-29\": \"f76f8cd6b49c56680207a97bf241ae15af959a1a3c18de49af77c0de319993c4\", \"2021-11-30\": \"6b36c04589e054dac3e6508929919afa2f344f16a5ce0c90b35e33f05ad0b002\"}}, \"equivalence\": {\"feature_panel\": true, \"h029_panel\": true, \"response_panel\": true}, \"feature_panel_sha256\": \"10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89\", \"h028_reproduction\": {\"coef_max_abs_diff\": 0.0, \"expected_h028\": 328294.90847351257, \"expected_lv15\": 220156.03484878788, \"h028_wealth\": 328294.90847351257, \"lv15_wealth\": 220156.03484878788, \"ok\": true}, \"h029_months\": {\"eligible\": [650, 641, 699, 703, 693, 703, 705, 685, 665, 641, 658, 660, 641, 616, 643, 670, 663, 665, 665, 680, 694, 697, 672, 703, 705, 706, 740, 741, 730, 721, 729, 719, 716, 741, 730, 742, 740, 740, 767, 768, 769, 782, 789, 778, 802, 792, 748, 752, 716, 744, 796, 794, 800, 761, 794, 789, 770, 780, 783, 796, 805, 795, 786, 700, 751, 768, 783, 783, 812, 790, 797, 852, 870, 882, 949, 982, 970, 971, 1001, 964, 969, 967, 963, 953], \"months\": 84, \"scored_without_panel_column\": 0}, \"h029_panel_digests_sha256\": \"5145232485a4de3c1782b7f754ea886eceb65464e4f66b0a62d0919576bc601e\", \"h029_panel_equal\": true, \"hypothesis\": \"H029 / H030\", \"max_rss_mb\": 7844.3, \"mcap_comparison\": {\"abs_rel_median\": 0.00033, \"abs_rel_p90\": 0.02476, \"agree_away\": 147038, \"agree_near\": 9368, \"disagree_kind\": {\"away|sec_above\": 1950, \"away|sec_below\": 219, \"near|sec_above\": 247, \"near|sec_below\": 235}, \"n_away\": 149207, \"n_near\": 9850, \"no_sec\": 7254, \"records\": 166311, \"rel\": {\"gt10pct\": 7764, \"le10pct\": 3431, \"le2pct\": 141202, \"le5pct\": 6660}}, \"memory\": [[\"on_end_start\", 635.5, {\"VmHWM\": 5909.8, \"VmRSS\": 5909.8, \"ru_maxrss_mb\": 5905.6}], [\"after_h029_panels\", 651.8, {\"VmHWM\": 5919.0, \"VmRSS\": 5780.5, \"ru_maxrss_mb\": 5919.0}], [\"after_x801_build_hl_freed\", 803.7, {\"VmHWM\": 7331.1, \"VmRSS\": 6694.8, \"ru_maxrss_mb\": 7331.1}], [\"after_build\", 942.7, {\"VmHWM\": 7844.3, \"VmRSS\": 7107.7, \"ru_maxrss_mb\": 7844.3}], [\"after_months_panel_freed\", 1030.9, {\"VmHWM\": 7844.3, \"VmRSS\": 6786.0, \"ru_maxrss_mb\": 7844.3}], [\"after_setup\", 1031.0, {\"VmHWM\": 7844.3, \"VmRSS\": 6796.8, \"ru_maxrss_mb\": 7844.3}], [\"end\", 1100.4, {\"VmHWM\": 7844.3, \"VmRSS\": 6826.0, \"ru_maxrss_mb\": 7844.3}]], \"mode\": \"canary\", \"panel\": {\"build_s\": 137.2, \"late_rows\": 0, \"securities\": 2609, \"sessions\": 3776}, \"pit_audit\": {\"baseline_pit_violations\": 0, \"baseline_used_despite_reject\": 0, \"fed_after_guard_trigger\": 0, \"fed_before_first_seen\": 0, \"fed_before_sec_filing\": 0, \"future_identity_row\": 0, \"record_older_than_200d\": 0, \"repaired_below_2B\": 0, \"repaired_with_vendor_cap\": 0, \"share_filing_not_yet_public\": 0, \"stale_share_count_used\": 0}, \"repair\": {\"bands\": {\"1.5-1.8B\": 2455, \"1.8-2.0B\": 1422, \"2.0-2.2B\": 1174, \"2.2-2.5B\": 1640, \"gt2.5B\": 14847, \"lt1.5B\": 8055}, \"below_2B\": 11932, \"candidate_stock_months\": 31270, \"no_fresh_shares\": 1677, \"repaired\": 17661, \"repaired_near_2_0_to_2_2B\": 1174, \"share_age\": {\"max\": 135.0, \"mean\": 57.228, \"median\": 60.0, \"min\": 1.0, \"n\": 29593, \"p10\": 21.0, \"p90\": 93.0, \"sd\": 29.355}, \"stale_near\": 478}, \"response_panel_sha256\": \"e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b\", \"spec_sha256\": \"51121154b3efaf770ce8c82879dc56fc36a1f6b7891e2920cf67c72dba0f345a\", \"store_stats\": {\"amendments\": 241, \"delayed_until_available\": 220, \"estimated\": 0, \"observed_new\": 116639, \"quarantined\": 0, \"timing_unknown\": 0}, \"table_end\": \"2021-12-31\", \"table_version\": \"data_v2.1\", \"v3\": {\"blocked\": 1018, \"fed\": 116639, \"fed_no_match\": 122, \"overlay\": {\"changed\": 15705, \"newer_replacement\": 0, \"removed\": 38450, \"replaced\": 0, \"views\": 169913}, \"overlay_blocked\": 1018, \"view_future_records\": 0}, \"w_spy\": {\"dividends\": 60, \"missing_rows_from_2010\": 0}, \"wall_s\": 1100.4}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 2769, \"elig_days\": 2768, \"elig_max\": 1680, \"elig_mean\": 1057.688583815029, \"elig_min\": 666, \"elig_sum\": 2927682, \"experiment_id\": \"E031-06\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 399998, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 338, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"warmup_days\": 632, \"warmup_select_days\": 633, \"windows_restored\": 0}"
+ },
+ "relative": {
+  "E900-07": {
+   "beta": 0.0,
+   "correlation": NaN,
+   "excess_cagr": -0.1460793945390062
+  }
+ },
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}
