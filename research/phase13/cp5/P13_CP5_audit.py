@@ -76,7 +76,10 @@ SIZES = {"S2_realistic_churn": (5, 200)}            # (panel seeds 1..P, null wo
 SIZES.update({s: (3, 100) for s in SCENARIOS if s != MAIN})
 DIAG_WORLDS = 100                                   # diagnostics on the five main panels per regime
 METRICS = ("name_turnover", "total_cost", "top15_survival", "rank_autocorr")   # the four criterion metrics
-WORSE = dict(name_turnover="above", total_cost="above", top15_survival="below", rank_autocorr="below")
+# side of the band where the REAL value lies when the NULL is structurally worse (more turnover / cost, less survival /
+# persistence). Corrected after the run: the first commit had the sides inverted, which mislabelled the direction text
+# only; the classification counts a same-side failure in either direction and is unaffected (P13-CP5 section 35).
+WORSE = dict(name_turnover="below", total_cost="below", top15_survival="above", rank_autocorr="above")
 BAND = (0.005, 0.995)
 PASS_SEEDS, FAIL_SEEDS, STRONG_PANELS = 4, 3, 9     # >= 4 of 5 inside; same-direction failure >= 3 of 5; strong fail
 #   in >= 9 of the 10 realistic panels (5 seeds x 2 regimes): real below EVERY null world (turnover or cost)

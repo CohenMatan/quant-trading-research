@@ -1,0 +1,127 @@
+{
+ "checkpoint": "P13-CP5",
+ "decision": "D238",
+ "donor_remapping_real": {
+  "broken_while_possible": 0,
+  "entries_per_review_est": 43.99155011655012,
+  "exits_per_review_est": 40.143706293706295,
+  "mean_population": 475.48091603053433,
+  "net_growth_per_review": 3.8478438228438225,
+  "note": "re-formed = recipient new to the population (entry / re-entry) or previous donor absent; the committed canary does not separate the two causes; entries / exits are estimated from re-formed = entries + donor exits and the net growth of the population",
+  "possible_continuations": 153249,
+  "recipient_rows": 186864,
+  "recipient_rows_after_first_review_est": 186061.75,
+  "reform_share_est": 0.17635408674808228,
+  "reformed_per_review_est": 84.13525641025642,
+  "reformed_rows_est": 32812.75,
+  "retained": 153249,
+  "self_matches": 0,
+  "source": "E029-01 canary (frozen qr_h027.conditional_permuted on the real H026 population, tether seeds 1-3, 131 reviews each); population counts from the E030-01 canary coverage"
+ },
+ "holdout_accessed": false,
+ "null_coefficients_seeds": 25,
+ "null_coefficients_seeds_1_25": {
+  "coef_cos_consecutive": {
+   "max": 0.976461965107971,
+   "median": 0.9641393059448947,
+   "min": 0.9413716531725691
+  },
+  "coef_l2": {
+   "max": 0.008993016390690991,
+   "median": 0.007552685956312055,
+   "min": 0.006600357997302054
+  },
+  "lowvol_l1_share": {
+   "max": 0.4061757549624949,
+   "median": 0.31169286887172554,
+   "min": 0.23304317578789127
+  },
+  "lowvol_sign_negative_years": {
+   "max": 7.0,
+   "median": 7.0,
+   "min": 7.0
+  }
+ },
+ "null_fields_committed": [
+  "seed",
+  "S_WEALTH",
+  "wealth",
+  "excess_cagr",
+  "maxdd",
+  "vol",
+  "beta",
+  "up_capture",
+  "down_capture",
+  "years_beating",
+  "ret_2015",
+  "ret_2016",
+  "ret_2017",
+  "ret_2018",
+  "ret_2019",
+  "ret_2020",
+  "ret_2021",
+  "lam_2015",
+  "lam_2016",
+  "lam_2017",
+  "lam_2018",
+  "lam_2019",
+  "lam_2020",
+  "lam_2021",
+  "coef_sha"
+ ],
+ "null_return_columns_read": false,
+ "null_risk_distributions_committed": {
+  "beta": {
+   "q01": 0.5934033565398862,
+   "q50": 0.7009937622507678,
+   "q99": 0.8196205939982684
+  },
+  "down_capture": {
+   "q01": 0.4806930701032164,
+   "q50": 0.6734794314205577,
+   "q99": 0.8658749681304445
+  },
+  "maxdd": {
+   "q01": -0.36457551575718167,
+   "q50": -0.2886466869341881,
+   "q99": -0.2108009174549196
+  },
+  "up_capture": {
+   "q01": 0.586360814898262,
+   "q50": 0.7128509446263958,
+   "q99": 0.8507693613748283
+  },
+  "vol": {
+   "q01": 0.13364888003551992,
+   "q50": 0.148680964808089,
+   "q99": 0.16374393311584037
+  }
+ },
+ "null_turnover_trade_cost_fields": [],
+ "null_turnover_trades_costs": "NOT AVAILABLE FROM COMMITTED ARTIFACTS",
+ "quantconnect_runs": 0,
+ "real_h028_risk_committed": {
+  "beta": 0.7641331949379224,
+  "down_capture": 0.6850446170955543,
+  "maxdd": -0.26112249860351333,
+  "vol": 0.16234936498058153
+ },
+ "real_h028_structural": {
+  "coefficients": {
+   "coef_cos_consecutive": 0.9047385444296339,
+   "coef_l2": 0.012539222499960909,
+   "lowvol_l1_share": 0.15459541679947697,
+   "lowvol_sign_negative_years": 7
+  },
+  "commissions_from_trades": 5789.0,
+  "trades": {
+   "h027": 809,
+   "h028": 827
+  },
+  "value_turnover_monthly_mean": {
+   "h027": 0.6187202063999306,
+   "h028": 0.6322527676582802
+  }
+ },
+ "structural_only": true
+}
