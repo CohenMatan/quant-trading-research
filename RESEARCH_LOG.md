@@ -2208,3 +2208,15 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - H029's real Top-15 turns over fewer names (0.357 a month) than every one of the 5,000 sector-null worlds (minimum 0.362) → **H029/H030 BLOCKED — SECTOR-STRATIFIED NULL ALSO INADEQUATE**.
 - **Not done:** no thresholds computed or pinned; no real run; no H029 / H030 performance exists. No third null designed.
 - **Recommendation to the owner:** close H029 / H030 as not evaluable. Holdout sealed.
+
+## 2026-10-13: P14-CP4 — H029 structural turnover post-mortem → TURNOVER POST-MORTEM B (D235)
+
+- **Scope:** structural only. Committed artifacts only; no return read, no QuantConnect run, Holdout sealed.
+- **Finding:** the sector null is an exact relabelling of the real selection (proved, and verified with the frozen code on synthetic panels). Its turnover can differ from the real turnover only where a donor pair is re-formed.
+- **Re-pairing rate:**
+  - 5.3% of stocks get a new donor every month, almost all because the eligible universe changes;
+  - P14-CP3b's 99.85% "persistence" counted only pairs whose donor was still eligible.
+- **Size:** re-pairing alone predicts about 92% of the 0.016 turnover gap. The sector cap is ruled out. H029's own quarterly persistence is natural, and the null carries it except at re-pairings.
+- **Plain English:** the real H029 replaces 5.36 names a month vs the null median of 5.60, about 3 names a year.
+- **Not available:** the month-level and per-stock items (only aggregates were exported).
+- **Status:** no bug. H029 / H030 remain BLOCKED; awaiting the owner (close, or a design-only third-null review).
