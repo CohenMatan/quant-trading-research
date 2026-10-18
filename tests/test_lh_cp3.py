@@ -260,3 +260,39 @@ def test_parse_sgml_header_format():
     assert HS.parse_header(late, "0000320193-09-000001")["status"] == "discarded:filed_after_cutoff"
     chg = raw.replace(b"<DATE-OF-FILING-DATE-CHANGE>20090722", b"<DATE-OF-FILING-DATE-CHANGE>20230101")
     assert "fiscal_year_end" not in HS.parse_header(chg, "0000320193-09-000001")["fields"]
+
+
+def test_outputs_consistent_and_cutoff_safe():
+    import json
+    sys.path.insert(0, str(ROOT / "research/longhorizon/cp2"))
+    import lh_cp2_safe as SAFE
+    fin = json.loads((CP3 / "LH_CP3_final.json").read_text())
+    hb = json.loads((CP3 / "LH_CP3_heldback.json").read_text())
+    log = json.loads((CP3 / "LH_CP3_request_log.json").read_text())
+    for name in ("LH_CP3_part_a.json", "LH_CP3_development.json", "LH_CP3_heldback.json", "LH_CP3_final.json",
+                 "LH_CP3_manifest.json", "LH_CP3_headers.json"):
+        SAFE.assert_no_post_cutoff(json.loads((CP3 / name).read_text()))
+    assert fin["classification"] == "B - PARTIAL RECOVERY"
+    assert fin["criteria_status"] == {"V1": "pass", "V2": "pass", "V3": "insufficient", "V4": "pass", "V5": "pass"}
+    assert hb["rules_sha256"] == fin["rules_sha256"] == RULES_SHA256 and hb["split"] == "heldback"
+    assert log["requests"] == 120 <= log["budget"] == 150 and log["stopped"] is None
+    assert all(r["status"] == 200 for r in log["log"])
+    assert fin["returns_computed"] is False and fin["quantconnect_run"] is False and fin["holdout_accessed"] is False
+    pa = json.loads((CP3 / "LH_CP3_part_a.json").read_text())
+    assert pa["network_requests"] == 0 and pa["p2_reproduction"]["identical_to_stage_c"] is True
+    blob = "".join((CP3 / n).read_text() for n in ("LH_CP3_request_log.json", "LH_CP3_headers.json"))
+    assert "@" not in blob                                     # no contact address in the committed network records
+
+
+def test_earlier_results_unchanged_and_checkpoint_complete():
+    import json
+    import re
+    sc = json.loads((ROOT / "research/longhorizon/stage_c/LH_StageC_audit.json").read_text())
+    cp2 = json.loads((ROOT / "research/longhorizon/cp2/LH_CP2_investigation.json").read_text())
+    assert "NOT FEASIBLE" in json.dumps(sc["judgements"])
+    assert cp2["classification"]["classification"] == "C - INSUFFICIENT EVIDENCE"
+    cp = (ROOT / "docs/checkpoints/LH_CP3_missing_fiscal_labels_recovery_validation.md").read_text()
+    nums = [int(m) for m in re.findall(r"^## (\d+)\. ", cp, re.M)]
+    assert nums == list(range(1, 27))
+    assert "B — PARTIAL RECOVERY" in cp and "STOPPED" in cp
+    assert "| D244 |" in (ROOT / "DECISIONS.md").read_text()
