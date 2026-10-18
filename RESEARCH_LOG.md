@@ -2334,3 +2334,25 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Frozen classification:** C — INSUFFICIENT EVIDENCE.
 - **Proposed rule P** (period / label / transition based, no codes): a proposal only, coverage not computed.
 - **Status:** STOPPED awaiting the owner (LH-CP2 §19).
+
+## 2026-10-18: LH-CP3 — missing fiscal labels recovery & validation (D244) → B — PARTIAL RECOVERY
+
+- **Scope:** SEC accounting-period metadata ≤ 2021-12-31 only; protocol frozen first (SHA-256 38d790e5…); rules frozen unchanged after development (9a72c5c8…); EDGAR header sample manifest committed before any request (ce09012e…). No returns, signals, QuantConnect, Stage B or Holdout. Stage C (C) and LH-CP2 (C) unchanged.
+- **Part A (local):** of 3,796 unknown registrant-periods in the Stage C chains, 444 (11.7%) recovered and verified from local submissions; 3,288 are genuinely non-XBRL. Label-unknown C1-complete stock-months 13.36% → 11.43%.
+- **Reconstruction R*:** form-sequence brackets (M-SEQ) and later XBRL comparatives (M-CMP) must agree.
+- **Held-back validation** (1,911 registrants, 97,082 hidden-label trials, run once):
+  - precision 99.95%, error upper bound 0.069% (V1 pass);
+  - registrants with an error 1.93% vs 2.0% (V2 pass, narrow);
+  - all 27 disagreements fall on mislabelled truth filings (Addendum 1, non-gating);
+  - first-year XBRL tags no worse (V4 pass).
+- **EDGAR headers:** 120 requests, all HTTP 200, no block; 1 of 94 usable genuine pre-XBRL filings disagrees with the header-implied quarter (V5 pass). Headers prove period, form and fiscal-year-end code, never the quarter label. A parser format defect was fixed and the headers re-parsed from cache with 0 extra requests.
+- **Not testable:** whether genuine fiscal changes hidden in pre-XBRL stretches are caught (V3 insufficient: 10 held-back registrants, minimum 20).
+- **Coverage:**
+  - strictly verified histories meet the 70% floor in every year 2015–2021 (C1 / C2 / C6), not 2013–2014;
+  - adding validated reconstructions lifts C1 above the floor every year, but C2 / C6 stay at 68.7% / 68.5% in 2013;
+  - recovery reduces the bias of verified-only (entrants, leavers, 2013) but leaves young firms and energy behind.
+- **Rule P:** its boundary tolerance would accept genuine re-basings (11 of 148 boundary cases); P-assume would accept 134 truly invalid held-back histories. It stays a proposal.
+- **Frozen classification:** B — PARTIAL RECOVERY (resolution 88.4%; V3 insufficient).
+- **Recommendation:** option 3, restrict to 2015–2021 verified histories (still needs an owner decision on Stage C).
+- **Status:** STOPPED awaiting the owner (LH-CP3 §24).
+

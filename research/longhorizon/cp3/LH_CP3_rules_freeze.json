@@ -1,0 +1,9 @@
+{
+ "addendum1_sha256": "4fbd4da78f910ffe309a76e528e850a5ce6810af830549dce41eed569b592915",
+ "decision": "D244",
+ "development_json_sha256": "5fa7375a5bb565aed710a235f3866911cec4af2450faf1a47a3511f0a0522b0a",
+ "kind": "LH-CP3 frozen reconstruction rules (protocol 4; frozen after development, before the held-back evaluation)",
+ "lh_cp3_rules_sha256": "9a72c5c8c1aeff02f6e24f42c007539fe68bf7726e08ff78db4201f3c36b2bfe",
+ "note": "No rule change: the 35 unique development disagreements are truth-label tagging problems (addendum 1).",
+ "rule_changes_during_development": []
+}

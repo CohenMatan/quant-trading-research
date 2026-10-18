@@ -1,0 +1,707 @@
+{
+ "criteria": {
+  "V1": {
+   "n_registrants": 1462,
+   "status": "pass",
+   "threshold": 0.005,
+   "value": 0.00115
+  },
+  "V2": {
+   "n_registrants": 1462,
+   "status": "fail",
+   "threshold": 0.02,
+   "value": 0.02773
+  },
+  "V3": {
+   "false_valid_registrants": 1,
+   "registrants": 15,
+   "status": "insufficient",
+   "threshold": 0.1,
+   "value": 0.2794
+  },
+  "V4": {
+   "bound": 0.00634,
+   "first4_n": 5430,
+   "first4_rate": 0.00092,
+   "first4_upper95_cluster": 0.00165,
+   "later_n": 49868,
+   "later_rate": 0.00134,
+   "registrants": 1939,
+   "status": "pass"
+  },
+  "V5_benchmark": {
+   "disagree": 253,
+   "disagreement_rate": 0.00441,
+   "unusable": 2401,
+   "usable": 57385
+  }
+ },
+ "cut_off": "2021-12-31",
+ "decision": "D244",
+ "dev_error_examples": [
+  {
+   "cik": "49826",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 3
+  },
+  {
+   "cik": "60519",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "72741",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2014-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "72741",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2014-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "72741",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2014-09-30",
+   "seq": 3,
+   "truth": 4
+  },
+  {
+   "cik": "72741",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2014-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "72741",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2014-09-30",
+   "seq": 3,
+   "truth": 4
+  },
+  {
+   "cik": "72741",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2014-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "314808",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 2
+  },
+  {
+   "cik": "788329",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2018-03-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "788329",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2018-03-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "844965",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2018-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "844965",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2018-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "844965",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "852772",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-24",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "874501",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 3
+  },
+  {
+   "cik": "1000697",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2016-10-01",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1000697",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2016-10-01",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1021635",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2014-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "1021635",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2014-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "1030469",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2015-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "1030469",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2015-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "1030469",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2015-09-30",
+   "seq": 3,
+   "truth": 4
+  },
+  {
+   "cik": "1030469",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2015-09-30",
+   "seq": 3,
+   "truth": 4
+  },
+  {
+   "cik": "1031203",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "1037540",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2013-09-30",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1037540",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2013-09-30",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1038357",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "1041061",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2018-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "1062822",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "1102993",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 3
+  },
+  {
+   "cik": "1169445",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "1237831",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 3
+  },
+  {
+   "cik": "1283699",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 4
+  },
+  {
+   "cik": "1283699",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2020-03-31",
+   "seq": 1,
+   "truth": 4
+  },
+  {
+   "cik": "1334978",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2014-09-30",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1334978",
+   "cmp": 3,
+   "form": "10-Q",
+   "lab": 3,
+   "period_end": "2014-09-30",
+   "seq": 3,
+   "truth": 2
+  },
+  {
+   "cik": "1378992",
+   "cmp": 1,
+   "form": "10-Q",
+   "lab": 1,
+   "period_end": "2016-12-31",
+   "seq": 1,
+   "truth": 3
+  },
+  {
+   "cik": "1392972",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2020-06-30",
+   "seq": 2,
+   "truth": 1
+  },
+  {
+   "cik": "1408100",
+   "cmp": 2,
+   "form": "10-Q",
+   "lab": 2,
+   "period_end": "2018-06-30",
+   "seq": 2,
+   "truth": 1
+  }
+ ],
+ "histories": 15307,
+ "history_l2l3_true_vs_reconstructed": {
+  "invalid->invalid": 136,
+  "invalid->unknown": 65,
+  "invalid->valid": 89,
+  "valid->unknown": 89,
+  "valid->valid": 14928
+ },
+ "history_true_vs_reconstructed": {
+  "invalid->invalid": 79,
+  "invalid->unknown": 203,
+  "invalid->valid": 8,
+  "valid->unknown": 12403,
+  "valid->valid": 2614
+ },
+ "holdout_accessed": false,
+ "kind": "LH-CP3 hidden-label validation - dev registrants (aggregates; metadata only; no returns)",
+ "methods": {
+  "M-CMP": {
+   "abstained": 42916,
+   "attempted": 103841,
+   "correct": 60805,
+   "error_rate": 0.002,
+   "error_rate_upper95_cluster": 0.00252,
+   "incorrect": 120,
+   "precision": 0.998,
+   "recall": 0.5856,
+   "registrant_error_share_upper95_cp": 0.04309,
+   "registrants_with_accepted": 1462,
+   "registrants_with_error": 50
+  },
+  "M-SEQ": {
+   "abstained": 246,
+   "attempted": 103841,
+   "correct": 103504,
+   "error_rate": 0.0009,
+   "error_rate_upper95_cluster": 0.00125,
+   "incorrect": 91,
+   "precision": 0.9991,
+   "recall": 0.9968,
+   "registrant_error_share_upper95_cp": 0.03005,
+   "registrants_with_accepted": 1463,
+   "registrants_with_error": 33
+  },
+  "R*_L2": {
+   "abstained": 43063,
+   "attempted": 103841,
+   "correct": 60727,
+   "error_rate": 0.0008,
+   "error_rate_upper95_cluster": 0.00115,
+   "incorrect": 51,
+   "precision": 0.9992,
+   "recall": 0.5848,
+   "registrant_error_share_upper95_cp": 0.02773,
+   "registrants_with_accepted": 1462,
+   "registrants_with_error": 30
+  },
+  "R*_L2_or_L3": {
+   "abstained": 221,
+   "attempted": 103841,
+   "correct": 103522,
+   "error_rate": 0.0009,
+   "error_rate_upper95_cluster": 0.00134,
+   "incorrect": 98,
+   "precision": 0.9991,
+   "recall": 0.9969,
+   "registrant_error_share_upper95_cp": 0.03159,
+   "registrants_with_accepted": 1463,
+   "registrants_with_error": 35
+  }
+ },
+ "network_requests": 0,
+ "protocol_sha256": "38d790e5efee56a256418372a9efc528827e2fcf148bbbb43eb27f0d797d75cb",
+ "quantconnect_run": false,
+ "registrants": 2029,
+ "returns_computed": false,
+ "rule_p_on_pseudo_histories": {
+  "true:invalid|P-strict:invalid|P-assume:invalid": 77,
+  "true:invalid|P-strict:unknown|P-assume:valid": 182,
+  "true:invalid|P-strict:valid|P-assume:valid": 31,
+  "true:valid|P-strict:unknown|P-assume:valid": 12403,
+  "true:valid|P-strict:valid|P-assume:valid": 2614
+ },
+ "rules_sha256": "9a72c5c8c1aeff02f6e24f42c007539fe68bf7726e08ff78db4201f3c36b2bfe",
+ "split": "dev",
+ "strata": {
+  "fiscal_transition_registrant": {
+   "False": {
+    "abstained": 40718,
+    "accepted": 57575,
+    "error_rate": 0.0006,
+    "incorrect": 32
+   },
+   "True": {
+    "abstained": 2345,
+    "accepted": 3203,
+    "error_rate": 0.0059,
+    "incorrect": 19
+   }
+  },
+  "form": {
+   "10-K": {
+    "abstained": 8470,
+    "accepted": 15263,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "10-Q": {
+    "abstained": 34593,
+    "accepted": 45515,
+    "error_rate": 0.0011,
+    "incorrect": 51
+   }
+  },
+  "hidden_depth": {
+   "1-4": {
+    "abstained": 104,
+    "accepted": 10716,
+    "error_rate": 0.0007,
+    "incorrect": 7
+   },
+   "5-8": {
+    "abstained": 17502,
+    "accepted": 30011,
+    "error_rate": 0.0008,
+    "incorrect": 23
+   },
+   "9-12": {
+    "abstained": 25457,
+    "accepted": 20051,
+    "error_rate": 0.001,
+    "incorrect": 21
+   }
+  },
+  "period_year": {
+   "2010": {
+    "abstained": 434,
+    "error_rate": null
+   },
+   "2011": {
+    "abstained": 1914,
+    "accepted": 769,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2012": {
+    "abstained": 4226,
+    "accepted": 3090,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2013": {
+    "abstained": 5428,
+    "accepted": 6632,
+    "error_rate": 0.0003,
+    "incorrect": 2
+   },
+   "2014": {
+    "abstained": 5627,
+    "accepted": 8103,
+    "error_rate": 0.0015,
+    "incorrect": 12
+   },
+   "2015": {
+    "abstained": 5797,
+    "accepted": 8347,
+    "error_rate": 0.0005,
+    "incorrect": 4
+   },
+   "2016": {
+    "abstained": 6069,
+    "accepted": 8523,
+    "error_rate": 0.0004,
+    "incorrect": 3
+   },
+   "2017": {
+    "abstained": 5968,
+    "accepted": 8784,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2018": {
+    "abstained": 5775,
+    "accepted": 8653,
+    "error_rate": 0.0015,
+    "incorrect": 13
+   },
+   "2019": {
+    "abstained": 1801,
+    "accepted": 6175,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2020": {
+    "abstained": 24,
+    "accepted": 1702,
+    "error_rate": 0.01,
+    "incorrect": 17
+   }
+  },
+  "pseudo_start_year": {
+   "2012": {
+    "abstained": 830,
+    "accepted": 1378,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2013": {
+    "abstained": 2805,
+    "accepted": 4378,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2014": {
+    "abstained": 5243,
+    "accepted": 8110,
+    "error_rate": 0.0007,
+    "incorrect": 6
+   },
+   "2015": {
+    "abstained": 5626,
+    "accepted": 8331,
+    "error_rate": 0.0012,
+    "incorrect": 10
+   },
+   "2016": {
+    "abstained": 5678,
+    "accepted": 8454,
+    "error_rate": 0.0002,
+    "incorrect": 2
+   },
+   "2017": {
+    "abstained": 6016,
+    "accepted": 8648,
+    "error_rate": 0.0003,
+    "incorrect": 3
+   },
+   "2018": {
+    "abstained": 5990,
+    "accepted": 8764,
+    "error_rate": 0.0015,
+    "incorrect": 13
+   },
+   "2019": {
+    "abstained": 5912,
+    "accepted": 8461,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2020": {
+    "abstained": 4963,
+    "accepted": 4254,
+    "error_rate": 0.004,
+    "incorrect": 17
+   }
+  },
+  "universe_status": {
+   "entrant": {
+    "abstained": 16007,
+    "accepted": 22226,
+    "error_rate": 0.0007,
+    "incorrect": 16
+   },
+   "leaver": {
+    "abstained": 3043,
+    "accepted": 4309,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "not_in_universe": {
+    "abstained": 11420,
+    "accepted": 15832,
+    "error_rate": 0.0011,
+    "incorrect": 18
+   },
+   "stayer": {
+    "abstained": 12593,
+    "accepted": 18411,
+    "error_rate": 0.0009,
+    "incorrect": 17
+   }
+  },
+  "w5253": {
+   "False": {
+    "abstained": 33945,
+    "accepted": 47848,
+    "error_rate": 0.0008,
+    "incorrect": 40
+   },
+   "True": {
+    "abstained": 9118,
+    "accepted": 12930,
+    "error_rate": 0.0009,
+    "incorrect": 11
+   }
+  }
+ },
+ "tiers": {
+  "L2": 60778,
+  "L3": 42842,
+  "conflict": 61,
+  "none": 160
+ },
+ "trials": 103841
+}

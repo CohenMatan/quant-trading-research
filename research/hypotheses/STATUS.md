@@ -53,3 +53,5 @@
 **Update (D242, 2026-10-18):** Stage C OF-A data / PIT feasibility audit: frozen result **C — NOT FEASIBLE** (mis-specified chain criterion disclosed; `docs/checkpoints/LH_CP1_stage_c_ofa_data_pit_feasibility_audit.md`). Still no active hypothesis.
 
 **Update (D243, 2026-10-18):** LH-CP2 fiscal-calendar anomaly investigation: frozen result **C — INSUFFICIENT EVIDENCE** (`docs/checkpoints/LH_CP2_fiscal_calendar_anomaly_resolution.md`); Stage C unchanged (C). Still no active hypothesis.
+
+**Update (D244, 2026-10-18):** LH-CP3 missing fiscal labels recovery & validation (metadata only; 120 EDGAR header requests): frozen result **B — PARTIAL RECOVERY** (`docs/checkpoints/LH_CP3_missing_fiscal_labels_recovery_validation.md`); Stage C (C) and LH-CP2 (C) unchanged. Still no active hypothesis.

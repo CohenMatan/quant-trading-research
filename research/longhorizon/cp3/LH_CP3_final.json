@@ -1,0 +1,1602 @@
+{
+ "classification": "B - PARTIAL RECOVERY",
+ "composition": {
+  "A": {
+   "age:5-15y": {
+    "included_share": 0.8859,
+    "n": 20786
+   },
+   "age:<5y": {
+    "included_share": 0.8474,
+    "n": 2628
+   },
+   "age:>=15y": {
+    "included_share": 0.9238,
+    "n": 65333
+   },
+   "all": {
+    "included_share": 0.9126,
+    "n": 88747
+   },
+   "depth:20-39": {
+    "included_share": 0.9693,
+    "n": 43856
+   },
+   "depth:<20": {
+    "included_share": 0.8453,
+    "n": 39894
+   },
+   "depth:>=40": {
+    "included_share": 0.9528,
+    "n": 4997
+   },
+   "entrant": {
+    "included_share": 0.8125,
+    "n": 4223
+   },
+   "ff12:BusEq": {
+    "included_share": 0.9077,
+    "n": 17378
+   },
+   "ff12:Chems": {
+    "included_share": 0.9451,
+    "n": 3842
+   },
+   "ff12:Durbl": {
+    "included_share": 0.934,
+    "n": 2805
+   },
+   "ff12:Enrgy": {
+    "included_share": 0.8442,
+    "n": 4492
+   },
+   "ff12:Hlth": {
+    "included_share": 0.9213,
+    "n": 10144
+   },
+   "ff12:Manuf": {
+    "included_share": 0.9239,
+    "n": 10427
+   },
+   "ff12:NoDur": {
+    "included_share": 0.8971,
+    "n": 5735
+   },
+   "ff12:Other": {
+    "included_share": 0.9252,
+    "n": 15409
+   },
+   "ff12:Shops": {
+    "included_share": 0.9127,
+    "n": 10122
+   },
+   "ff12:Telcm": {
+    "included_share": 0.8854,
+    "n": 2653
+   },
+   "ff12:Utils": {
+    "included_share": 0.9075,
+    "n": 5740
+   },
+   "leaver": {
+    "included_share": 0.8488,
+    "n": 15637
+   },
+   "not_entrant": {
+    "included_share": 0.9176,
+    "n": 84524
+   },
+   "size:T1_small": {
+    "included_share": 0.8923,
+    "n": 29589
+   },
+   "size:T2": {
+    "included_share": 0.9141,
+    "n": 29523
+   },
+   "size:T3_large": {
+    "included_share": 0.9317,
+    "n": 29548
+   },
+   "size:unknown": {
+    "included_share": 0.8621,
+    "n": 87
+   },
+   "stayer": {
+    "included_share": 0.9263,
+    "n": 73110
+   },
+   "year:2013": {
+    "included_share": 0.5251,
+    "n": 8212
+   },
+   "year:2014": {
+    "included_share": 0.8585,
+    "n": 9337
+   },
+   "year:2015": {
+    "included_share": 0.9509,
+    "n": 9353
+   },
+   "year:2016": {
+    "included_share": 0.9656,
+    "n": 9176
+   },
+   "year:2017": {
+    "included_share": 0.9703,
+    "n": 9931
+   },
+   "year:2018": {
+    "included_share": 0.9724,
+    "n": 10384
+   },
+   "year:2019": {
+    "included_share": 0.9759,
+    "n": 10452
+   },
+   "year:2020": {
+    "included_share": 0.9649,
+    "n": 10420
+   },
+   "year:2021": {
+    "included_share": 0.9515,
+    "n": 11482
+   }
+  },
+  "B": {
+   "age:5-15y": {
+    "included_share": 0.9613,
+    "n": 20786
+   },
+   "age:<5y": {
+    "included_share": 0.9277,
+    "n": 2628
+   },
+   "age:>=15y": {
+    "included_share": 0.9696,
+    "n": 65333
+   },
+   "all": {
+    "included_share": 0.9664,
+    "n": 88747
+   },
+   "depth:20-39": {
+    "included_share": 0.9735,
+    "n": 43856
+   },
+   "depth:<20": {
+    "included_share": 0.9599,
+    "n": 39894
+   },
+   "depth:>=40": {
+    "included_share": 0.9562,
+    "n": 4997
+   },
+   "entrant": {
+    "included_share": 0.9595,
+    "n": 4223
+   },
+   "ff12:BusEq": {
+    "included_share": 0.9612,
+    "n": 17378
+   },
+   "ff12:Chems": {
+    "included_share": 0.9932,
+    "n": 3842
+   },
+   "ff12:Durbl": {
+    "included_share": 0.9939,
+    "n": 2805
+   },
+   "ff12:Enrgy": {
+    "included_share": 0.9187,
+    "n": 4492
+   },
+   "ff12:Hlth": {
+    "included_share": 0.9711,
+    "n": 10144
+   },
+   "ff12:Manuf": {
+    "included_share": 0.9775,
+    "n": 10427
+   },
+   "ff12:NoDur": {
+    "included_share": 0.9524,
+    "n": 5735
+   },
+   "ff12:Other": {
+    "included_share": 0.9741,
+    "n": 15409
+   },
+   "ff12:Shops": {
+    "included_share": 0.9729,
+    "n": 10122
+   },
+   "ff12:Telcm": {
+    "included_share": 0.9382,
+    "n": 2653
+   },
+   "ff12:Utils": {
+    "included_share": 0.9544,
+    "n": 5740
+   },
+   "leaver": {
+    "included_share": 0.9623,
+    "n": 15637
+   },
+   "not_entrant": {
+    "included_share": 0.9667,
+    "n": 84524
+   },
+   "size:T1_small": {
+    "included_share": 0.9725,
+    "n": 29589
+   },
+   "size:T2": {
+    "included_share": 0.9654,
+    "n": 29523
+   },
+   "size:T3_large": {
+    "included_share": 0.9613,
+    "n": 29548
+   },
+   "size:unknown": {
+    "included_share": 0.9655,
+    "n": 87
+   },
+   "stayer": {
+    "included_share": 0.9673,
+    "n": 73110
+   },
+   "year:2013": {
+    "included_share": 0.9317,
+    "n": 8212
+   },
+   "year:2014": {
+    "included_share": 0.9618,
+    "n": 9337
+   },
+   "year:2015": {
+    "included_share": 0.9684,
+    "n": 9353
+   },
+   "year:2016": {
+    "included_share": 0.9712,
+    "n": 9176
+   },
+   "year:2017": {
+    "included_share": 0.9756,
+    "n": 9931
+   },
+   "year:2018": {
+    "included_share": 0.9793,
+    "n": 10384
+   },
+   "year:2019": {
+    "included_share": 0.9794,
+    "n": 10452
+   },
+   "year:2020": {
+    "included_share": 0.9679,
+    "n": 10420
+   },
+   "year:2021": {
+    "included_share": 0.9567,
+    "n": 11482
+   }
+  },
+  "C": {
+   "age:5-15y": {
+    "included_share": 0.9784,
+    "n": 20786
+   },
+   "age:<5y": {
+    "included_share": 0.9498,
+    "n": 2628
+   },
+   "age:>=15y": {
+    "included_share": 0.9844,
+    "n": 65333
+   },
+   "all": {
+    "included_share": 0.982,
+    "n": 88747
+   },
+   "depth:20-39": {
+    "included_share": 0.9855,
+    "n": 43856
+   },
+   "depth:<20": {
+    "included_share": 0.9803,
+    "n": 39894
+   },
+   "depth:>=40": {
+    "included_share": 0.9644,
+    "n": 4997
+   },
+   "entrant": {
+    "included_share": 0.9863,
+    "n": 4223
+   },
+   "ff12:BusEq": {
+    "included_share": 0.9796,
+    "n": 17378
+   },
+   "ff12:Chems": {
+    "included_share": 0.9982,
+    "n": 3842
+   },
+   "ff12:Durbl": {
+    "included_share": 0.9968,
+    "n": 2805
+   },
+   "ff12:Enrgy": {
+    "included_share": 0.9802,
+    "n": 4492
+   },
+   "ff12:Hlth": {
+    "included_share": 0.987,
+    "n": 10144
+   },
+   "ff12:Manuf": {
+    "included_share": 0.9799,
+    "n": 10427
+   },
+   "ff12:NoDur": {
+    "included_share": 0.9775,
+    "n": 5735
+   },
+   "ff12:Other": {
+    "included_share": 0.9801,
+    "n": 15409
+   },
+   "ff12:Shops": {
+    "included_share": 0.9918,
+    "n": 10122
+   },
+   "ff12:Telcm": {
+    "included_share": 0.9695,
+    "n": 2653
+   },
+   "ff12:Utils": {
+    "included_share": 0.9659,
+    "n": 5740
+   },
+   "leaver": {
+    "included_share": 0.9815,
+    "n": 15637
+   },
+   "not_entrant": {
+    "included_share": 0.9818,
+    "n": 84524
+   },
+   "size:T1_small": {
+    "included_share": 0.9862,
+    "n": 29589
+   },
+   "size:T2": {
+    "included_share": 0.9791,
+    "n": 29523
+   },
+   "size:T3_large": {
+    "included_share": 0.9808,
+    "n": 29548
+   },
+   "size:unknown": {
+    "included_share": 0.9655,
+    "n": 87
+   },
+   "stayer": {
+    "included_share": 0.9821,
+    "n": 73110
+   },
+   "year:2013": {
+    "included_share": 0.9774,
+    "n": 8212
+   },
+   "year:2014": {
+    "included_share": 0.9844,
+    "n": 9337
+   },
+   "year:2015": {
+    "included_share": 0.9855,
+    "n": 9353
+   },
+   "year:2016": {
+    "included_share": 0.9891,
+    "n": 9176
+   },
+   "year:2017": {
+    "included_share": 0.9879,
+    "n": 9931
+   },
+   "year:2018": {
+    "included_share": 0.9902,
+    "n": 10384
+   },
+   "year:2019": {
+    "included_share": 0.9887,
+    "n": 10452
+   },
+   "year:2020": {
+    "included_share": 0.9751,
+    "n": 10420
+   },
+   "year:2021": {
+    "included_share": 0.9626,
+    "n": 11482
+   }
+  },
+  "all_c1_complete": {
+   "age:5-15y": {
+    "included_share": 1.0,
+    "n": 20786
+   },
+   "age:<5y": {
+    "included_share": 1.0,
+    "n": 2628
+   },
+   "age:>=15y": {
+    "included_share": 1.0,
+    "n": 65333
+   },
+   "all": {
+    "included_share": 1.0,
+    "n": 88747
+   },
+   "depth:20-39": {
+    "included_share": 1.0,
+    "n": 43856
+   },
+   "depth:<20": {
+    "included_share": 1.0,
+    "n": 39894
+   },
+   "depth:>=40": {
+    "included_share": 1.0,
+    "n": 4997
+   },
+   "entrant": {
+    "included_share": 1.0,
+    "n": 4223
+   },
+   "ff12:BusEq": {
+    "included_share": 1.0,
+    "n": 17378
+   },
+   "ff12:Chems": {
+    "included_share": 1.0,
+    "n": 3842
+   },
+   "ff12:Durbl": {
+    "included_share": 1.0,
+    "n": 2805
+   },
+   "ff12:Enrgy": {
+    "included_share": 1.0,
+    "n": 4492
+   },
+   "ff12:Hlth": {
+    "included_share": 1.0,
+    "n": 10144
+   },
+   "ff12:Manuf": {
+    "included_share": 1.0,
+    "n": 10427
+   },
+   "ff12:NoDur": {
+    "included_share": 1.0,
+    "n": 5735
+   },
+   "ff12:Other": {
+    "included_share": 1.0,
+    "n": 15409
+   },
+   "ff12:Shops": {
+    "included_share": 1.0,
+    "n": 10122
+   },
+   "ff12:Telcm": {
+    "included_share": 1.0,
+    "n": 2653
+   },
+   "ff12:Utils": {
+    "included_share": 1.0,
+    "n": 5740
+   },
+   "leaver": {
+    "included_share": 1.0,
+    "n": 15637
+   },
+   "not_entrant": {
+    "included_share": 1.0,
+    "n": 84524
+   },
+   "size:T1_small": {
+    "included_share": 1.0,
+    "n": 29589
+   },
+   "size:T2": {
+    "included_share": 1.0,
+    "n": 29523
+   },
+   "size:T3_large": {
+    "included_share": 1.0,
+    "n": 29548
+   },
+   "size:unknown": {
+    "included_share": 1.0,
+    "n": 87
+   },
+   "stayer": {
+    "included_share": 1.0,
+    "n": 73110
+   },
+   "year:2013": {
+    "included_share": 1.0,
+    "n": 8212
+   },
+   "year:2014": {
+    "included_share": 1.0,
+    "n": 9337
+   },
+   "year:2015": {
+    "included_share": 1.0,
+    "n": 9353
+   },
+   "year:2016": {
+    "included_share": 1.0,
+    "n": 9176
+   },
+   "year:2017": {
+    "included_share": 1.0,
+    "n": 9931
+   },
+   "year:2018": {
+    "included_share": 1.0,
+    "n": 10384
+   },
+   "year:2019": {
+    "included_share": 1.0,
+    "n": 10452
+   },
+   "year:2020": {
+    "included_share": 1.0,
+    "n": 10420
+   },
+   "year:2021": {
+    "included_share": 1.0,
+    "n": 11482
+   }
+  }
+ },
+ "criteria": {
+  "V1": {
+   "n_registrants": 1379,
+   "status": "pass",
+   "threshold": 0.005,
+   "value": 0.00069
+  },
+  "V2": {
+   "n_registrants": 1379,
+   "status": "pass",
+   "threshold": 0.02,
+   "value": 0.01929
+  },
+  "V3": {
+   "false_valid_registrants": 0,
+   "registrants": 10,
+   "status": "insufficient",
+   "threshold": 0.1,
+   "value": 0.25887
+  },
+  "V4": {
+   "bound": 0.00615,
+   "first4_n": 5164,
+   "first4_rate": 0.00058,
+   "first4_upper95_cluster": 0.00117,
+   "later_n": 46907,
+   "later_rate": 0.00115,
+   "registrants": 1836,
+   "status": "pass"
+  },
+  "V5": {
+   "benchmark_rate": 0.00377,
+   "by_stratum": {
+    "base:10-K:2010": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    },
+    "base:10-K:<=2009": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    },
+    "base:10-K:>=2011": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    },
+    "base:10-Q:2010": {
+     "disagree_L2": 1,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 9
+    },
+    "base:10-Q:<=2009": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    },
+    "base:10-Q:>=2011": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 8
+    },
+    "conflict_or_none": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 0
+    },
+    "entrant": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 9
+    },
+    "leaver": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    },
+    "single_source": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 0
+    },
+    "transition_registrant": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 8
+    },
+    "w5253": {
+     "disagree_L2": 0,
+     "n": 10,
+     "ok": 10,
+     "usable_L2": 10
+    }
+   },
+   "disagree": 1,
+   "disagreement_rate": 0.01064,
+   "disagreement_upper95_cp": 0.04947,
+   "form_matches": {
+    "True": 120
+   },
+   "fye_present": {
+    "False": 2,
+    "True": 118
+   },
+   "fye_withheld": {
+    "False": 120
+   },
+   "h_fye_outcome": {
+    "1": 27,
+    "2": 19,
+    "3": 29,
+    "4": 35,
+    "None": 7,
+    "inconsistent": 3
+   },
+   "period_matches_submissions": {
+    "True": 120
+   },
+   "retrieval": {
+    "ok": 120
+   },
+   "status": "pass",
+   "threshold": 0.05377,
+   "usable": 94,
+   "vs_cmp": {
+    "False": 1,
+    "None": 23,
+    "True": 96
+   },
+   "vs_seq": {
+    "False": 1,
+    "None": 20,
+    "True": 99
+   }
+  },
+  "V5_benchmark": {
+   "disagree": 205,
+   "disagreement_rate": 0.00377,
+   "unusable": 1756,
+   "usable": 54380
+  }
+ },
+ "criteria_status": {
+  "V1": "pass",
+  "V2": "pass",
+  "V3": "insufficient",
+  "V4": "pass",
+  "V5": "pass"
+ },
+ "cut_off": "2021-12-31",
+ "decision": "D244",
+ "history_classes_c1_stock_months": {
+  "conditional_B": 8801,
+  "conditional_C": 2212,
+  "invalid_reconstructed": 30,
+  "unknown": 119,
+  "unknown_conflict": 5,
+  "verified_invalid": 1658,
+  "verified_valid": 82011
+ },
+ "holdout_accessed": false,
+ "kind": "LH-CP3 final evaluation (aggregates; metadata only; no returns)",
+ "lh_cp2_unknown_c1_stock_months": 12669,
+ "lh_cp2_unknown_classes": {
+  "conditional_B": 8801,
+  "conditional_C": 1342,
+  "invalid_reconstructed": 30,
+  "unknown": 119,
+  "unknown_conflict": 5,
+  "verified_invalid": 641,
+  "verified_valid": 1731
+ },
+ "manifest_sha256": "ce09012e6618af7c398a71727dcf2b38ffd3d7d37dcef40e42af84c2c62c2b18",
+ "network_requests_this_script": 0,
+ "protocol_sha256": "38d790e5efee56a256418372a9efc528827e2fcf148bbbb43eb27f0d797d75cb",
+ "quantconnect_run": false,
+ "r_star_admitted_to_scenario_B": true,
+ "resolution_share": 0.8843,
+ "returns_computed": false,
+ "rule_p_review_boundary": {
+  "boundary_newest:genuine_rebasing": 3,
+  "boundary_newest:other": 12,
+  "boundary_newest:reverting_mistag": 51,
+  "boundary_newest:undetermined": 36,
+  "boundary_newest:windows": 102,
+  "boundary_oldest:genuine_rebasing": 8,
+  "boundary_oldest:other": 3,
+  "boundary_oldest:reverting_mistag": 21,
+  "boundary_oldest:undetermined": 14,
+  "boundary_oldest:windows": 46,
+  "interior:reverting_by_construction": 439,
+  "interior:windows": 439
+ },
+ "rules_sha256": "9a72c5c8c1aeff02f6e24f42c007539fe68bf7726e08ff78db4201f3c36b2bfe",
+ "scenarios": {
+  "A": {
+   "C1": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 0,
+      "share": 0.0
+     },
+     "2012": {
+      "den": 9125,
+      "num": 1017,
+      "share": 0.1115
+     },
+     "2013": {
+      "den": 10430,
+      "num": 4312,
+      "share": 0.4134
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8016,
+      "share": 0.6989
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8894,
+      "share": 0.7733
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8860,
+      "share": 0.812
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9636,
+      "share": 0.8137
+     },
+     "2018": {
+      "den": 12349,
+      "num": 10097,
+      "share": 0.8176
+     },
+     "2019": {
+      "den": 12297,
+      "num": 10200,
+      "share": 0.8295
+     },
+     "2020": {
+      "den": 12536,
+      "num": 10054,
+      "share": 0.802
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10925,
+      "share": 0.7481
+     }
+    },
+    "floor_70_all_years": false,
+    "min_share": 0.4134,
+    "min_year": 2013,
+    "years_below_70": [
+     2013,
+     2014
+    ]
+   },
+   "C2": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 0,
+      "share": 0.0
+     },
+     "2012": {
+      "den": 9125,
+      "num": 959,
+      "share": 0.1051
+     },
+     "2013": {
+      "den": 10430,
+      "num": 4067,
+      "share": 0.3899
+     },
+     "2014": {
+      "den": 11469,
+      "num": 7544,
+      "share": 0.6578
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8376,
+      "share": 0.7283
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8345,
+      "share": 0.7648
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9041,
+      "share": 0.7635
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9469,
+      "share": 0.7668
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9650,
+      "share": 0.7847
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9733,
+      "share": 0.7764
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10696,
+      "share": 0.7325
+     }
+    },
+    "floor_70_all_years": false,
+    "min_share": 0.3899,
+    "min_year": 2013,
+    "years_below_70": [
+     2013,
+     2014
+    ]
+   },
+   "C6": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 0,
+      "share": 0.0
+     },
+     "2012": {
+      "den": 9125,
+      "num": 954,
+      "share": 0.1045
+     },
+     "2013": {
+      "den": 10430,
+      "num": 4055,
+      "share": 0.3888
+     },
+     "2014": {
+      "den": 11469,
+      "num": 7532,
+      "share": 0.6567
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8364,
+      "share": 0.7272
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8341,
+      "share": 0.7645
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9041,
+      "share": 0.7635
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9469,
+      "share": 0.7668
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9650,
+      "share": 0.7847
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9733,
+      "share": 0.7764
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10696,
+      "share": 0.7325
+     }
+    },
+    "floor_70_all_years": false,
+    "min_share": 0.3888,
+    "min_year": 2013,
+    "years_below_70": [
+     2013,
+     2014
+    ]
+   }
+  },
+  "B": {
+   "C1": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 1006,
+      "share": 0.1104
+     },
+     "2012": {
+      "den": 9125,
+      "num": 4041,
+      "share": 0.4428
+     },
+     "2013": {
+      "den": 10430,
+      "num": 7651,
+      "share": 0.7336
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8980,
+      "share": 0.783
+     },
+     "2015": {
+      "den": 11501,
+      "num": 9057,
+      "share": 0.7875
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8912,
+      "share": 0.8168
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9689,
+      "share": 0.8182
+     },
+     "2018": {
+      "den": 12349,
+      "num": 10169,
+      "share": 0.8235
+     },
+     "2019": {
+      "den": 12297,
+      "num": 10237,
+      "share": 0.8325
+     },
+     "2020": {
+      "den": 12536,
+      "num": 10085,
+      "share": 0.8045
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10985,
+      "share": 0.7522
+     }
+    },
+    "floor_70_all_years": true,
+    "min_share": 0.7336,
+    "min_year": 2013,
+    "years_below_70": []
+   },
+   "C2": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 952,
+      "share": 0.1045
+     },
+     "2012": {
+      "den": 9125,
+      "num": 3813,
+      "share": 0.4179
+     },
+     "2013": {
+      "den": 10430,
+      "num": 7164,
+      "share": 0.6869
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8414,
+      "share": 0.7336
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8515,
+      "share": 0.7404
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8385,
+      "share": 0.7685
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9086,
+      "share": 0.7673
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9534,
+      "share": 0.772
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9679,
+      "share": 0.7871
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9764,
+      "share": 0.7789
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10756,
+      "share": 0.7366
+     }
+    },
+    "floor_70_all_years": false,
+    "min_share": 0.6869,
+    "min_year": 2013,
+    "years_below_70": [
+     2013
+    ]
+   },
+   "C6": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 942,
+      "share": 0.1034
+     },
+     "2012": {
+      "den": 9125,
+      "num": 3794,
+      "share": 0.4158
+     },
+     "2013": {
+      "den": 10430,
+      "num": 7149,
+      "share": 0.6854
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8402,
+      "share": 0.7326
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8503,
+      "share": 0.7393
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8381,
+      "share": 0.7681
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9086,
+      "share": 0.7673
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9534,
+      "share": 0.772
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9679,
+      "share": 0.7871
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9764,
+      "share": 0.7789
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10756,
+      "share": 0.7366
+     }
+    },
+    "floor_70_all_years": false,
+    "min_share": 0.6854,
+    "min_year": 2013,
+    "years_below_70": [
+     2013
+    ]
+   }
+  },
+  "C": {
+   "C1": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 1294,
+      "share": 0.142
+     },
+     "2012": {
+      "den": 9125,
+      "num": 4579,
+      "share": 0.5018
+     },
+     "2013": {
+      "den": 10430,
+      "num": 8026,
+      "share": 0.7695
+     },
+     "2014": {
+      "den": 11469,
+      "num": 9191,
+      "share": 0.8014
+     },
+     "2015": {
+      "den": 11501,
+      "num": 9217,
+      "share": 0.8014
+     },
+     "2016": {
+      "den": 10911,
+      "num": 9076,
+      "share": 0.8318
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9811,
+      "share": 0.8285
+     },
+     "2018": {
+      "den": 12349,
+      "num": 10282,
+      "share": 0.8326
+     },
+     "2019": {
+      "den": 12297,
+      "num": 10334,
+      "share": 0.8404
+     },
+     "2020": {
+      "den": 12536,
+      "num": 10161,
+      "share": 0.8105
+     },
+     "2021": {
+      "den": 14603,
+      "num": 11053,
+      "share": 0.7569
+     }
+    },
+    "floor_70_all_years": true,
+    "min_share": 0.7569,
+    "min_year": 2021,
+    "years_below_70": []
+   },
+   "C2": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 1203,
+      "share": 0.1321
+     },
+     "2012": {
+      "den": 9125,
+      "num": 4267,
+      "share": 0.4676
+     },
+     "2013": {
+      "den": 10430,
+      "num": 7492,
+      "share": 0.7183
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8592,
+      "share": 0.7491
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8648,
+      "share": 0.7519
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8512,
+      "share": 0.7801
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9177,
+      "share": 0.775
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9623,
+      "share": 0.7793
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9752,
+      "share": 0.793
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9832,
+      "share": 0.7843
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10824,
+      "share": 0.7412
+     }
+    },
+    "floor_70_all_years": true,
+    "min_share": 0.7183,
+    "min_year": 2013,
+    "years_below_70": []
+   },
+   "C6": {
+    "by_year": {
+     "2011": {
+      "den": 9110,
+      "num": 1190,
+      "share": 0.1306
+     },
+     "2012": {
+      "den": 9125,
+      "num": 4248,
+      "share": 0.4655
+     },
+     "2013": {
+      "den": 10430,
+      "num": 7477,
+      "share": 0.7169
+     },
+     "2014": {
+      "den": 11469,
+      "num": 8569,
+      "share": 0.7471
+     },
+     "2015": {
+      "den": 11501,
+      "num": 8635,
+      "share": 0.7508
+     },
+     "2016": {
+      "den": 10911,
+      "num": 8508,
+      "share": 0.7798
+     },
+     "2017": {
+      "den": 11842,
+      "num": 9177,
+      "share": 0.775
+     },
+     "2018": {
+      "den": 12349,
+      "num": 9623,
+      "share": 0.7793
+     },
+     "2019": {
+      "den": 12297,
+      "num": 9752,
+      "share": 0.793
+     },
+     "2020": {
+      "den": 12536,
+      "num": 9832,
+      "share": 0.7843
+     },
+     "2021": {
+      "den": 14603,
+      "num": 10824,
+      "share": 0.7412
+     }
+    },
+    "floor_70_all_years": true,
+    "min_share": 0.7169,
+    "min_year": 2013,
+    "years_below_70": []
+   }
+  },
+  "D": {
+   "C1": {
+    "by_year": {
+     "2011": 0.1495,
+     "2012": 0.518,
+     "2013": 0.7873,
+     "2014": 0.8141,
+     "2015": 0.8132,
+     "2016": 0.841,
+     "2017": 0.8386,
+     "2018": 0.8409,
+     "2019": 0.85,
+     "2020": 0.8312,
+     "2021": 0.7863
+    }
+   },
+   "C2": {
+    "by_year": {
+     "2011": 0.1397,
+     "2012": 0.4849,
+     "2013": 0.7353,
+     "2014": 0.7607,
+     "2015": 0.7638,
+     "2016": 0.7893,
+     "2017": 0.7846,
+     "2018": 0.787,
+     "2019": 0.8023,
+     "2020": 0.805,
+     "2021": 0.7703
+    }
+   },
+   "C6": {
+    "by_year": {
+     "2011": 0.1381,
+     "2012": 0.4818,
+     "2013": 0.7338,
+     "2014": 0.7587,
+     "2015": 0.7626,
+     "2016": 0.7889,
+     "2017": 0.7846,
+     "2018": 0.787,
+     "2019": 0.8023,
+     "2020": 0.805,
+     "2021": 0.7703
+    }
+   }
+  }
+ },
+ "selection_bias": {
+  "age:5-15y": {
+   "recovered": 3036,
+   "recovered_share": 0.8762,
+   "unrecovered": 429
+  },
+  "age:<5y": {
+   "recovered": 356,
+   "recovered_share": 0.7722,
+   "unrecovered": 105
+  },
+  "age:>=15y": {
+   "recovered": 7811,
+   "recovered_share": 0.8934,
+   "unrecovered": 932
+  },
+  "all": {
+   "recovered": 11203,
+   "recovered_share": 0.8843,
+   "unrecovered": 1466
+  },
+  "depth:20-39": {
+   "recovered": 1068,
+   "recovered_share": 0.9191,
+   "unrecovered": 94
+  },
+  "depth:<20": {
+   "recovered": 10090,
+   "recovered_share": 0.8803,
+   "unrecovered": 1372
+  },
+  "depth:>=40": {
+   "recovered": 45,
+   "recovered_share": 1.0,
+   "unrecovered": 0
+  },
+  "entrant": {
+   "recovered": 735,
+   "recovered_share": 0.8576,
+   "unrecovered": 122
+  },
+  "ff12:BusEq": {
+   "recovered": 1710,
+   "recovered_share": 0.8529,
+   "unrecovered": 295
+  },
+  "ff12:Chems": {
+   "recovered": 437,
+   "recovered_share": 0.92,
+   "unrecovered": 38
+  },
+  "ff12:Durbl": {
+   "recovered": 289,
+   "recovered_share": 0.8975,
+   "unrecovered": 33
+  },
+  "ff12:Enrgy": {
+   "recovered": 665,
+   "recovered_share": 0.7531,
+   "unrecovered": 218
+  },
+  "ff12:Hlth": {
+   "recovered": 1070,
+   "recovered_share": 0.8909,
+   "unrecovered": 131
+  },
+  "ff12:Manuf": {
+   "recovered": 1138,
+   "recovered_share": 0.9245,
+   "unrecovered": 93
+  },
+  "ff12:NoDur": {
+   "recovered": 622,
+   "recovered_share": 0.8088,
+   "unrecovered": 147
+  },
+  "ff12:Other": {
+   "recovered": 1756,
+   "recovered_share": 0.9199,
+   "unrecovered": 153
+  },
+  "ff12:Shops": {
+   "recovered": 1143,
+   "recovered_share": 0.8786,
+   "unrecovered": 158
+  },
+  "ff12:Telcm": {
+   "recovered": 336,
+   "recovered_share": 0.8727,
+   "unrecovered": 49
+  },
+  "ff12:Utils": {
+   "recovered": 2037,
+   "recovered_share": 0.931,
+   "unrecovered": 151
+  },
+  "leaver": {
+   "recovered": 3292,
+   "recovered_share": 0.876,
+   "unrecovered": 466
+  },
+  "not_entrant": {
+   "recovered": 10468,
+   "recovered_share": 0.8862,
+   "unrecovered": 1344
+  },
+  "size:T1_small": {
+   "recovered": 4239,
+   "recovered_share": 0.8855,
+   "unrecovered": 548
+  },
+  "size:T2": {
+   "recovered": 3289,
+   "recovered_share": 0.8699,
+   "unrecovered": 492
+  },
+  "size:T3_large": {
+   "recovered": 3663,
+   "recovered_share": 0.898,
+   "unrecovered": 416
+  },
+  "size:unknown": {
+   "recovered": 12,
+   "recovered_share": 0.5455,
+   "unrecovered": 10
+  },
+  "stayer": {
+   "recovered": 7911,
+   "recovered_share": 0.8878,
+   "unrecovered": 1000
+  },
+  "year:2011": {
+   "recovered": 1045,
+   "recovered_share": 0.7673,
+   "unrecovered": 317
+  },
+  "year:2012": {
+   "recovered": 3168,
+   "recovered_share": 0.8539,
+   "unrecovered": 542
+  },
+  "year:2013": {
+   "recovered": 3612,
+   "recovered_share": 0.9172,
+   "unrecovered": 326
+  },
+  "year:2014": {
+   "recovered": 1345,
+   "recovered_share": 0.9263,
+   "unrecovered": 107
+  },
+  "year:2015": {
+   "recovered": 604,
+   "recovered_share": 0.9321,
+   "unrecovered": 44
+  },
+  "year:2016": {
+   "recovered": 406,
+   "recovered_share": 0.8865,
+   "unrecovered": 52
+  },
+  "year:2017": {
+   "recovered": 309,
+   "recovered_share": 0.9224,
+   "unrecovered": 26
+  },
+  "year:2018": {
+   "recovered": 307,
+   "recovered_share": 0.9564,
+   "unrecovered": 14
+  },
+  "year:2019": {
+   "recovered": 191,
+   "recovered_share": 0.9052,
+   "unrecovered": 20
+  },
+  "year:2020": {
+   "recovered": 100,
+   "recovered_share": 0.9346,
+   "unrecovered": 7
+  },
+  "year:2021": {
+   "recovered": 116,
+   "recovered_share": 0.9134,
+   "unrecovered": 11
+  }
+ },
+ "surprise_values_computed": false
+}
