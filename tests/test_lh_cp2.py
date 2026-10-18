@@ -160,3 +160,10 @@ def test_proposed_rule_unknown_strict_vs_assume():
     out, flags = RP.proposed_validity(pre_xbrl, variant="assume")
     assert out == "valid" and "labels_assumed" in flags
     assert RP.proposed_validity([None] * 13, variant="assume")[0] == "unknown"
+
+
+def test_checkpoint_has_20_items_and_is_recorded():
+    cp = (ROOT / "docs/checkpoints/LH_CP2_fiscal_calendar_anomaly_resolution.md").read_text()
+    assert all(f"## {n}." in cp for n in range(1, 21))
+    assert "C — INSUFFICIENT EVIDENCE" in cp and PROTOCOL_SHA256 in cp
+    assert "| D243 |" in (ROOT / "DECISIONS.md").read_text()

@@ -51,3 +51,5 @@
 **Update (D241, 2026-10-18):** a long-horizon defensive-reference + offensive-companion programme is approved for DESIGN ONLY (`docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md`; ledger `research/longhorizon/SELECTION_LEDGER.md`). No hypothesis is active; OF-A is a candidate family, not a hypothesis.
 
 **Update (D242, 2026-10-18):** Stage C OF-A data / PIT feasibility audit: frozen result **C — NOT FEASIBLE** (mis-specified chain criterion disclosed; `docs/checkpoints/LH_CP1_stage_c_ofa_data_pit_feasibility_audit.md`). Still no active hypothesis.
+
+**Update (D243, 2026-10-18):** LH-CP2 fiscal-calendar anomaly investigation: frozen result **C — INSUFFICIENT EVIDENCE** (`docs/checkpoints/LH_CP2_fiscal_calendar_anomaly_resolution.md`); Stage C unchanged (C). Still no active hypothesis.

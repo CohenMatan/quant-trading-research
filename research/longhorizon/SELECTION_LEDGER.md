@@ -18,3 +18,4 @@ Stage F ≤ 1 combination with one weight policy, Stage G ≤ 1 Holdout candidat
 | # | Date | Decision | Stage | Item | Motivation label | Pre-registered in | Outcome |
 |---|---|---|---|---|---|---|---|
 | 1 | 2026-10-18 | D242 | C (data audit) | OF-A candidate families C1–C6: input coverage, timing and PIT feasibility only (no returns, no surprise values, no selection) | literature (family); C4 H029-related | `research/longhorizon/stage_c/LH_StageC_protocol.md` (ff97789b…) | Frozen classification C — NOT FEASIBLE (chain criterion mis-specified, disclosed); no candidate selected; awaiting owner |
+| 2 | 2026-10-18 | D243 | C (data audit, follow-up) | Fiscal-calendar anomaly investigation of the Stage C chain criterion (metadata only; no candidate, no values combined) | — | `research/longhorizon/cp2/LH_CP2_protocol.md` (f7cbac94…) | C — INSUFFICIENT EVIDENCE; rule P proposed (not applied); Stage C unchanged; awaiting owner |
