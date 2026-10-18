@@ -57,3 +57,5 @@
 **Update (D244, 2026-10-18):** LH-CP3 missing fiscal labels recovery & validation (metadata only; 120 EDGAR header requests): frozen result **B — PARTIAL RECOVERY** (`docs/checkpoints/LH_CP3_missing_fiscal_labels_recovery_validation.md`); Stage C (C) and LH-CP2 (C) unchanged. Still no active hypothesis.
 
 **Update (D245, 2026-10-18):** LH-CP3 accepted (B). Narrow prospective Stage C exception (2015–2021, verified L0 / L1 labels, rule V; `research/longhorizon/STAGE_C_EXCEPTION_D245.json`). LH-CP4 analytical feasibility: **B — UNDERPOWERED FOR MODEST EFFECTS** (`docs/checkpoints/LH_CP4_ofa_statistical_feasibility_research_horizon.md`). Still no active hypothesis.
+
+**Update (D246, 2026-10-18):** research priority = offensive complement to H028 (design only; `docs/checkpoints/OC_CP1_h028_offensive_complement_candidate_selection_test_design.md`). Preferred complement OC-1 = SPY; proposed account-level system test SYS-1 not run. No new hypothesis registered. Still no active hypothesis.

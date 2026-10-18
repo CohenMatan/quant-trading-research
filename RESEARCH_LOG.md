@@ -2376,3 +2376,22 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Recommendation:** no Stage B now unless a large-effect objective is pre-declared; monthly decisions as the baseline, event-time / daily review as the timing to evaluate later.
 - **Status:** STOPPED awaiting the owner (LH-CP4 §22).
 
+## 2026-10-18: OC-CP1 — H028 offensive complement: existing-data candidate selection and test design (D246)
+
+- **Scope:** design only; committed evidence only; no new returns, backtests, nulls, curves, models, purchases or Holdout; no new active hypothesis.
+- **H028 weakness map** (verified):
+  - low beta (0.76) / LOWVOL tilt, with a modest upside shortfall (up-capture 0.97; 0.87 in strong months);
+  - the serious problems are an unvalidated edge, episode dependence (2018 / 2020), Top-K fragility and turnover, none of which an offensive sleeve can fix.
+- **Hypothesis audit:**
+  - momentum / trend / leadership and quality-growth families are exhausted or duplicative in this universe and period;
+  - H017 rejected;
+  - H029 / H030 NOT EVALUABLE (the only untested mechanism, data- and power-limited).
+- **Selection:**
+  - preferred OC-1 = SPY (market-exposure completion);
+  - backup OC-B = H029 frozen F1–F8 signal test (conditional; Stage B; verified 2015–2021; underpowered).
+- **Proposed test SYS-1** (not run):
+  - account-level 2015–2021 system test: H028 + SPY 50/50 versus SPY, versus 90/10 SPY + cash (beta-matched) and versus transparent defensive + SPY;
+  - gates P-1..P-5; no significance claim; falsification-oriented.
+- **Recommendation:** proceed with SYS-1 only; stop the stock-selection offensive search on existing data.
+- **Status:** STOPPED awaiting the owner (OC-CP1 §23).
+
