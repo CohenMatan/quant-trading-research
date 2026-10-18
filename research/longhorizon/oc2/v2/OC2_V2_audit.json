@@ -1,0 +1,119 @@
+{
+ "A_defects": {
+  "N13": {
+   "months_where_cross_section_shrinks": 10,
+   "months_with_nan_response": 11,
+   "root_cause": "returns were generated only for live slots; when the cross-section shrinks, stocks leave `alive` and their next-month returns are NaN, so any 3-month response spanning a shrink month is NaN and the whole slope series becomes NaN"
+  },
+  "N7": {
+   "idio_sd": 0.001,
+   "note": "systematic variance exceeds the fixed total, so the idiosyncratic sd hit the 1e-6 floor (0.1% a month instead of about 5%); the world was nearly noise-free",
+   "systematic_var": 0.005882,
+   "total_var": 0.0042250000000000005
+  },
+  "classifier": "the v1 driver applied only the adequacy part of protocol 6.1 (four worlds) and not 'any failed or incomplete scenario -> D'; v2 computes the classification with one function tested against the written rule"
+ },
+ "B_C_population_bias": {
+  "N2L latent growth +1%": {
+   "rank": {
+    "annual_top_quintile": 0.0027802656386509885,
+    "b": 0.0005792220080522892
+   },
+   "rcs": {
+    "annual_top_quintile": 0.0023122327002799876,
+    "b": 0.00048171514589166406
+   }
+  },
+  "N2L latent growth +3%": {
+   "rank": {
+    "annual_top_quintile": 0.007457748455601669,
+    "b": 0.0015536975949170145
+   },
+   "rcs": {
+    "annual_top_quintile": 0.006936413599108857,
+    "b": 0.0014450861664810119
+   }
+  },
+  "N2L latent growth +3% (oracle control)": {
+   "rank": {
+    "annual_top_quintile": 0.0009949465894083037,
+    "b": 0.00020728053946006324
+   },
+   "rcs": {
+    "annual_top_quintile": 1.2424684981347043e-07,
+    "b": 2.588476037780634e-08
+   }
+  },
+  "N2L latent growth +5%": {
+   "rank": {
+    "annual_top_quintile": 0.012135231272552347,
+    "b": 0.002528173181781739
+   },
+   "rcs": {
+    "annual_top_quintile": 0.011560594497937749,
+    "b": 0.002408457187070364
+   }
+  },
+  "N4 normal-linear premia": {
+   "rank": {
+    "annual_top_quintile": 0.0004415242301756566,
+    "b": 9.198421461992846e-05
+   },
+   "rcs": {
+    "annual_top_quintile": 1.4225086553424627e-07,
+    "b": 2.963559698630131e-08
+   }
+  },
+  "N4q tail (decile) premia": {
+   "rank": {
+    "annual_top_quintile": 0.0010051737633850093,
+    "b": 0.00020941120070521027
+   },
+   "rcs": {
+    "annual_top_quintile": -9.78976326832388e-06,
+    "b": -2.0395340142341416e-06
+   }
+  },
+  "N4r rank-linear premia": {
+   "rank": {
+    "annual_top_quintile": 9.476962596972584e-07,
+    "b": 1.9743672077026216e-07
+   },
+   "rcs": {
+    "annual_top_quintile": 6.458494218986979e-06,
+    "b": 1.3455196289556206e-06
+   }
+  },
+  "N5a reliability 0.8": {
+   "rank": {
+    "annual_top_quintile": 0.002456885362836328,
+    "b": 0.0005118511172575684
+   },
+   "rcs": {
+    "annual_top_quintile": 0.0021587504723803545,
+    "b": 0.0004497396817459072
+   }
+  },
+  "N5b reliability 0.6": {
+   "rank": {
+    "annual_top_quintile": 0.00412397536572045,
+    "b": 0.0008591615345250937
+   },
+   "rcs": {
+    "annual_top_quintile": 0.0039325931770484365,
+    "b": 0.0008192902452184242
+   }
+  }
+ },
+ "D_quiet_market": {
+  "explanation": "v1 slope noise was essentially cross-sectional sampling noise (order 1/sqrt(N); the v1 'implied' figure divides by the TOTAL return sd, so it sits slightly below that scale). Control-factor shocks would add about 0.045 to a univariate IC through the signal's 0.05-0.18 correlations, but the multivariate FM absorbs them in the control coefficients; sector shocks are absorbed by the sector dummies. v1 had NO time-varying payoff on the signal itself, which is what makes a real IC vary month to month (LH-CP4's 0.06-0.12 range). The quiet market is therefore a missing DGP component, not an SE scaling problem: cross-sectional dispersion (6.5%/month) was realistic, IC dispersion and its serial correlation were not (no signal payoff), premium variability existed only in N6 / N9, and residual noise was realistic except in N7 (defect)",
+  "factor_shock_ic_sd_if_uncontrolled": 0.0452,
+  "sampling_scale_mean_1_over_sqrt_n_minus_k": 0.0378,
+  "signal_payoff_component": 0.0,
+  "v1_implied_ic_sd": 0.0315
+ },
+ "decision": "D249",
+ "kind": "OC-2 v2 failure-mode audit (v1 code reproduction + population algebra; no returns simulated)",
+ "v1_classification": "D \u2014 INSUFFICIENT EVIDENCE",
+ "v1_driver_outcome": "C \u2014 METHOD NOT VALIDATED"
+}
