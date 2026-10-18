@@ -38,7 +38,7 @@
 | H025 | Insider cluster buying | 10 | REJECTED and CLOSED | D205, D206 |
 | H026 | Learned score portfolio | 11 | REJECTED (permanent) | D210, D211, D213 |
 | H027 | Exposure-controlled learned score | 12 | REJECTED and CLOSED. Its conditional-null p 0.0006 shares the D238 mechanism and should be read with the same caution | D216, D217 |
-| H028 | Fixed strong shrinkage (λ = 100) | 13 | REJECTED (B4 failed). Conditional-null p ≈ 0.0004 structurally suspect (D238); repaired-null attempt **B — METHOD NOT VALIDATED** (D239); **Phase 13 CLOSED** | D220, D238, D239, D240 |
+| H028 | Fixed strong shrinkage (λ = 100) | 13 | REJECTED (B4 failed). Conditional-null p ≈ 0.0004 structurally suspect (D238); repaired-null attempt **B — METHOD NOT VALIDATED** (D239); **Phase 13 CLOSED**. Descriptive designation (D241): **Frozen Defensive Research Reference** — not a status change, never a production component | D220, D238, D239, D240, D241 |
 | H029 | Standalone business-improvement score | 14 | Historical: BLOCKED (two nulls inadequate; Null #3 failed synthetic feasibility). **Final: NOT EVALUABLE — NO VALID REAL-DATA EVALUATION** (never REJECTED on performance); **Phase 14 CLOSED** | D232, D234, D237, D240 |
 | H030 | Fixed 50/50 blend of frozen H028 and H029 | 14 | Same as H029: historical BLOCKED; **final NOT EVALUABLE**; Phase 14 CLOSED | D232, D234, D237, D240 |
 
@@ -47,3 +47,5 @@
 - No active hypothesis and no active experiment.
 - Holdout 2022-01-01 → 2026-08-31 sealed and never accessed.
 - Any further research needs a new owner approval.
+
+**Update (D241, 2026-10-18):** a long-horizon defensive-reference + offensive-companion programme is approved for DESIGN ONLY (`docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md`; ledger `research/longhorizon/SELECTION_LEDGER.md`). No hypothesis is active; OF-A is a candidate family, not a hypothesis.

@@ -29,3 +29,13 @@ def test_closure_documents_exist():
               "docs/owner/2026-10-18_close_phases_13_14_roadmap.md"):
         assert (ROOT / p).exists(), p
     assert not (ROOT / "HOLDOUT_UNLOCK.md").exists()
+
+
+def test_d241_design_documents_and_h028_designation():
+    assert "REJECTED" in _row("H028") and "Frozen Defensive Research Reference" in _row("H028")
+    for p in ("docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md",
+              "docs/owner/2026-10-18_h028_defensive_reference_offensive_companion.md",
+              "research/longhorizon/SELECTION_LEDGER.md"):
+        assert (ROOT / p).exists(), p
+    rm2 = (ROOT / "docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md").read_text()
+    assert all(f"## {n}." in rm2 for n in range(1, 26))
