@@ -1,0 +1,1091 @@
+{
+ "budget": 150,
+ "decision": "D244",
+ "kind": "LH-CP3 EDGAR header request log (no credentials, no contact address)",
+ "log": [
+  {
+   "accession": "0000950123-09-065759",
+   "bytes": 982,
+   "filed": "2009-11-24",
+   "n": 1,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:17Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/825542/000095012309065759/0000950123-09-065759.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-236896",
+   "bytes": 848,
+   "filed": "2009-11-18",
+   "n": 2,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:17Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/230498/000119312509236896/0001193125-09-236896.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-09-010874",
+   "bytes": 865,
+   "filed": "2009-12-22",
+   "n": 3,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:18Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/737758/000104746909010874/0001047469-09-010874.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-09-010313",
+   "bytes": 860,
+   "filed": "2009-11-19",
+   "n": 4,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:19Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1368458/000104746909010313/0001047469-09-010313.hdr.sgml"
+  },
+  {
+   "accession": "0001206774-09-002169",
+   "bytes": 783,
+   "filed": "2009-11-20",
+   "n": 5,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:19Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/85704/000120677409002169/0001206774-09-002169.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-09-010452",
+   "bytes": 679,
+   "filed": "2009-11-27",
+   "n": 6,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:20Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/868857/000104746909010452/0001047469-09-010452.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-241477",
+   "bytes": 908,
+   "filed": "2009-11-24",
+   "n": 7,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:20Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1260221/000119312509241477/0001193125-09-241477.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-258001",
+   "bytes": 1012,
+   "filed": "2009-12-22",
+   "n": 8,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:21Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/33619/000119312509258001/0001193125-09-258001.hdr.sgml"
+  },
+  {
+   "accession": "0000100493-09-000067",
+   "bytes": 795,
+   "filed": "2009-11-23",
+   "n": 9,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:22Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/100493/000010049309000067/0000100493-09-000067.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-066226",
+   "bytes": 808,
+   "filed": "2009-11-25",
+   "n": 10,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:22Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/70145/000095012309066226/0000950123-09-066226.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-028033",
+   "bytes": 868,
+   "filed": "2010-03-25",
+   "n": 11,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:23Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1397187/000095012310028033/0000950123-10-028033.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-018033",
+   "bytes": 774,
+   "filed": "2010-02-26",
+   "n": 12,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:23Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/906163/000095012310018033/0000950123-10-018033.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-054852",
+   "bytes": 745,
+   "filed": "2010-06-01",
+   "n": 13,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:24Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/743988/000095012310054852/0000950123-10-054852.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-171815",
+   "bytes": 949,
+   "filed": "2010-07-30",
+   "n": 14,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:25Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/108516/000119312510171815/0001193125-10-171815.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-038917",
+   "bytes": 763,
+   "filed": "2010-02-24",
+   "n": 15,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:25Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/895655/000119312510038917/0001193125-10-038917.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-019117",
+   "bytes": 667,
+   "filed": "2010-03-01",
+   "n": 16,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:26Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/832101/000095012310019117/0000950123-10-019117.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-015780",
+   "bytes": 771,
+   "filed": "2010-02-23",
+   "n": 17,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:26Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1012140/000095012310015780/0000950123-10-015780.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-037350",
+   "bytes": 816,
+   "filed": "2010-02-23",
+   "n": 18,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:27Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/798949/000119312510037350/0001193125-10-037350.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-10-005511",
+   "bytes": 770,
+   "filed": "2010-05-24",
+   "n": 19,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:28Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/866121/000104746910005511/0001047469-10-005511.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-044915",
+   "bytes": 957,
+   "filed": "2010-03-01",
+   "n": 20,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:28Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/814453/000119312510044915/0001193125-10-044915.hdr.sgml"
+  },
+  {
+   "accession": "0001140361-12-011855",
+   "bytes": 878,
+   "filed": "2012-02-29",
+   "n": 21,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:29Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/816159/000114036112011855/0001140361-12-011855.hdr.sgml"
+  },
+  {
+   "accession": "0001445305-11-000263",
+   "bytes": 809,
+   "filed": "2011-02-15",
+   "n": 22,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:29Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1051470/000144530511000263/0001445305-11-000263.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-11-001399",
+   "bytes": 700,
+   "filed": "2011-02-25",
+   "n": 23,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:30Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1292556/000104746911001399/0001047469-11-001399.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-11-018593",
+   "bytes": 841,
+   "filed": "2011-02-25",
+   "n": 24,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:31Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/912750/000095012311018593/0000950123-11-018593.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-047632",
+   "bytes": 819,
+   "filed": "2011-02-25",
+   "n": 25,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:31Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1428669/000119312511047632/0001193125-11-047632.hdr.sgml"
+  },
+  {
+   "accession": "0000077877-11-000011",
+   "bytes": 923,
+   "filed": "2011-02-24",
+   "n": 26,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:32Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/77877/000007787711000011/0000077877-11-000011.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-11-016511",
+   "bytes": 778,
+   "filed": "2011-02-22",
+   "n": 27,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:32Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1434588/000095012311016511/0000950123-11-016511.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-054945",
+   "bytes": 795,
+   "filed": "2011-03-03",
+   "n": 28,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:33Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1040426/000119312511054945/0001193125-11-054945.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-11-021861",
+   "bytes": 803,
+   "filed": "2011-03-04",
+   "n": 29,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:34Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1172480/000095012311021861/0000950123-11-021861.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-055131",
+   "bytes": 729,
+   "filed": "2011-03-03",
+   "n": 30,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:34Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1093557/000119312511055131/0001193125-11-055131.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-069556",
+   "bytes": 868,
+   "filed": "2009-12-09",
+   "n": 31,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:35Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1397187/000095012309069556/0000950123-09-069556.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-061153",
+   "bytes": 986,
+   "filed": "2009-11-12",
+   "n": 32,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:35Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/8818/000095012309061153/0000950123-09-061153.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-229233",
+   "bytes": 922,
+   "filed": "2009-11-09",
+   "n": 33,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:36Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/918646/000119312509229233/0001193125-09-229233.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-227732",
+   "bytes": 780,
+   "filed": "2009-11-06",
+   "n": 34,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:37Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/352915/000119312509227732/0001193125-09-227732.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-09-061010",
+   "bytes": 769,
+   "filed": "2009-10-29",
+   "n": 35,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:37Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1082554/000110465909061010/0001104659-09-061010.hdr.sgml"
+  },
+  {
+   "accession": "0000098246-09-000191",
+   "bytes": 748,
+   "filed": "2009-12-02",
+   "n": 36,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:38Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/98246/000009824609000191/0000098246-09-000191.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-246724",
+   "bytes": 772,
+   "filed": "2009-12-03",
+   "n": 37,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:38Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/28917/000119312509246724/0001193125-09-246724.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-09-063692",
+   "bytes": 779,
+   "filed": "2009-11-09",
+   "n": 38,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:39Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/61986/000110465909063692/0001104659-09-063692.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-218895",
+   "bytes": 782,
+   "filed": "2009-10-30",
+   "n": 39,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:40Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1357326/000119312509218895/0001193125-09-218895.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-058458",
+   "bytes": 867,
+   "filed": "2009-11-05",
+   "n": 40,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:40Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/78128/000095012309058458/0000950123-09-058458.hdr.sgml"
+  },
+  {
+   "accession": "0000029534-10-000026",
+   "bytes": 966,
+   "filed": "2010-08-31",
+   "n": 41,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:41Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/29534/000002953410000026/0000029534-10-000026.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-026849",
+   "bytes": 770,
+   "filed": "2010-05-07",
+   "n": 42,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:41Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/874015/000110465910026849/0001104659-10-026849.hdr.sgml"
+  },
+  {
+   "accession": "0001040593-10-000036",
+   "bytes": 811,
+   "filed": "2010-11-09",
+   "n": 43,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:42Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1040593/000104059310000036/0001040593-10-000036.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-108406",
+   "bytes": 920,
+   "filed": "2010-05-05",
+   "n": 44,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:43Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1014507/000119312510108406/0001193125-10-108406.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-101402",
+   "bytes": 1078,
+   "filed": "2010-04-30",
+   "n": 45,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:43Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/75252/000119312510101402/0001193125-10-101402.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-055897",
+   "bytes": 975,
+   "filed": "2010-11-04",
+   "n": 46,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:44Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/744218/000110465910055897/0001104659-10-055897.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-064754",
+   "bytes": 795,
+   "filed": "2010-07-12",
+   "n": 47,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:44Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/914024/000095012310064754/0000950123-10-064754.hdr.sgml"
+  },
+  {
+   "accession": "0001424454-10-000014",
+   "bytes": 951,
+   "filed": "2010-05-06",
+   "n": 48,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:45Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1424454/000142445410000014/0001424454-10-000014.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-057280",
+   "bytes": 757,
+   "filed": "2010-06-10",
+   "n": 49,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:46Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/936395/000095012310057280/0000950123-10-057280.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-073773",
+   "bytes": 871,
+   "filed": "2010-08-06",
+   "n": 50,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:46Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/7431/000095012310073773/0000950123-10-073773.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-112082",
+   "bytes": 924,
+   "filed": "2011-04-27",
+   "n": 51,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:47Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/891288/000119312511112082/0001193125-11-112082.hdr.sgml"
+  },
+  {
+   "accession": "0000897101-11-001030",
+   "bytes": 766,
+   "filed": "2011-06-08",
+   "n": 52,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:47Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/102741/000089710111001030/0000897101-11-001030.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-136093",
+   "bytes": 997,
+   "filed": "2011-05-11",
+   "n": 53,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:48Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1396814/000119312511136093/0001193125-11-136093.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-11-026190",
+   "bytes": 974,
+   "filed": "2011-05-05",
+   "n": 54,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:49Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/744218/000110465911026190/0001104659-11-026190.hdr.sgml"
+  },
+  {
+   "accession": "0001157523-11-003000",
+   "bytes": 781,
+   "filed": "2011-05-10",
+   "n": 55,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:49Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/3116/000115752311003000/0001157523-11-003000.hdr.sgml"
+  },
+  {
+   "accession": "0001343719-11-000003",
+   "bytes": 961,
+   "filed": "2011-02-04",
+   "n": 56,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:50Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1343719/000134371911000003/0001343719-11-000003.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-12-330715",
+   "bytes": 893,
+   "filed": "2012-08-02",
+   "n": 57,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:51Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1524471/000119312512330715/0001193125-12-330715.hdr.sgml"
+  },
+  {
+   "accession": "0000078239-11-000054",
+   "bytes": 868,
+   "filed": "2011-09-08",
+   "n": 58,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:51Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/78239/000007823911000054/0000078239-11-000054.hdr.sgml"
+  },
+  {
+   "accession": "0001047469-11-004427",
+   "bytes": 844,
+   "filed": "2011-05-03",
+   "n": 59,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:52Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1471261/000104746911004427/0001047469-11-004427.hdr.sgml"
+  },
+  {
+   "accession": "0001136261-11-000271",
+   "bytes": 768,
+   "filed": "2011-05-03",
+   "n": 60,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:52Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/890465/000113626111000271/0001136261-11-000271.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-104004",
+   "bytes": 796,
+   "filed": "2010-11-12",
+   "n": 61,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:53Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1305294/000095012310104004/0000950123-10-104004.hdr.sgml"
+  },
+  {
+   "accession": "0000018926-10-000004",
+   "bytes": 1028,
+   "filed": "2010-03-01",
+   "n": 62,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:54Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/18926/000001892610000004/0000018926-10-000004.hdr.sgml"
+  },
+  {
+   "accession": "0001389170-11-000008",
+   "bytes": 981,
+   "filed": "2011-05-06",
+   "n": 63,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:54Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1389170/000138917011000008/0001389170-11-000008.hdr.sgml"
+  },
+  {
+   "accession": "0000004457-13-000016",
+   "bytes": 860,
+   "filed": "2013-06-05",
+   "n": 64,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:55Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/4457/000000445713000016/0000004457-13-000016.hdr.sgml"
+  },
+  {
+   "accession": "0001144204-10-025476",
+   "bytes": 935,
+   "filed": "2010-05-10",
+   "n": 65,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:56Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1091862/000114420410025476/0001144204-10-025476.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-163970",
+   "bytes": 1108,
+   "filed": "2010-07-22",
+   "n": 66,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:56Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/350698/000119312510163970/0001193125-10-163970.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-113007",
+   "bytes": 764,
+   "filed": "2010-05-07",
+   "n": 67,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:57Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1469372/000119312510113007/0001193125-10-113007.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-12-102934",
+   "bytes": 886,
+   "filed": "2012-03-08",
+   "n": 68,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:58Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/891024/000119312512102934/0001193125-12-102934.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-252094",
+   "bytes": 833,
+   "filed": "2010-11-08",
+   "n": 69,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:58Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1486957/000119312510252094/0001193125-10-252094.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-045420",
+   "bytes": 770,
+   "filed": "2010-05-06",
+   "n": 70,
+   "status": 200,
+   "time_utc": "2026-10-18T13:49:59Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1168195/000095012310045420/0000950123-10-045420.hdr.sgml"
+  },
+  {
+   "accession": "0001358071-13-000008",
+   "bytes": 770,
+   "filed": "2013-05-02",
+   "n": 71,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:00Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1358071/000135807113000008/0001358071-13-000008.hdr.sgml"
+  },
+  {
+   "accession": "0000046080-09-000086",
+   "bytes": 1097,
+   "filed": "2009-10-30",
+   "n": 72,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:00Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/46080/000004608009000086/0000046080-09-000086.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-093456",
+   "bytes": 888,
+   "filed": "2010-04-26",
+   "n": 73,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:01Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1477294/000119312510093456/0001193125-10-093456.hdr.sgml"
+  },
+  {
+   "accession": "0001453090-13-000016",
+   "bytes": 786,
+   "filed": "2013-05-03",
+   "n": 74,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:01Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1453090/000145309013000016/0001453090-13-000016.hdr.sgml"
+  },
+  {
+   "accession": "0000102379-14-000044",
+   "bytes": 1007,
+   "filed": "2014-08-12",
+   "n": 75,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:02Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/102379/000010237914000044/0000102379-14-000044.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-12-312659",
+   "bytes": 883,
+   "filed": "2012-07-25",
+   "n": 76,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:03Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/315852/000119312512312659/0001193125-12-312659.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-11-056439",
+   "bytes": 765,
+   "filed": "2011-03-04",
+   "n": 77,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:04Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1469372/000119312511056439/0001193125-11-056439.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-112947",
+   "bytes": 765,
+   "filed": "2010-05-07",
+   "n": 78,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:05Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/802481/000119312510112947/0001193125-10-112947.hdr.sgml"
+  },
+  {
+   "accession": "0000895930-14-000017",
+   "bytes": 801,
+   "filed": "2014-05-01",
+   "n": 79,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:05Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/895930/000089593014000017/0000895930-14-000017.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-021449",
+   "bytes": 765,
+   "filed": "2010-02-04",
+   "n": 80,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:06Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/802481/000119312510021449/0001193125-10-021449.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-116246",
+   "bytes": 783,
+   "filed": "2010-05-11",
+   "n": 81,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:06Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/313927/000119312510116246/0001193125-10-116246.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-056607",
+   "bytes": 767,
+   "filed": "2010-06-08",
+   "n": 82,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:07Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1018840/000095012310056607/0000950123-10-056607.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-041872",
+   "bytes": 818,
+   "filed": "2010-08-04",
+   "n": 83,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:08Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1062449/000110465910041872/0001104659-10-041872.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-038703",
+   "bytes": 907,
+   "filed": "2010-04-27",
+   "n": 84,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:08Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/77360/000095012310038703/0000950123-10-038703.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-049112",
+   "bytes": 980,
+   "filed": "2010-05-13",
+   "n": 85,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:09Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/825542/000095012310049112/0000950123-10-049112.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-100966",
+   "bytes": 807,
+   "filed": "2010-11-04",
+   "n": 86,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:10Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/949870/000095012310100966/0000950123-10-100966.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-132125",
+   "bytes": 1011,
+   "filed": "2010-06-03",
+   "n": 87,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:10Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/33619/000119312510132125/0001193125-10-132125.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-047952",
+   "bytes": 770,
+   "filed": "2010-03-04",
+   "n": 88,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:11Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1441634/000119312510047952/0001193125-10-047952.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-025829",
+   "bytes": 1013,
+   "filed": "2010-05-05",
+   "n": 89,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:11Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1137789/000110465910025829/0001104659-10-025829.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-223823",
+   "bytes": 1052,
+   "filed": "2010-10-05",
+   "n": 90,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:12Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/278130/000119312510223823/0001193125-10-223823.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-019905",
+   "bytes": 747,
+   "filed": "2010-02-03",
+   "n": 91,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:13Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/899923/000119312510019905/0001193125-10-019905.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-037748",
+   "bytes": 768,
+   "filed": "2010-02-23",
+   "n": 92,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:13Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/899866/000119312510037748/0001193125-10-037748.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-09-064417",
+   "bytes": 770,
+   "filed": "2009-11-12",
+   "n": 93,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:14Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/866121/000110465909064417/0001104659-09-064417.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-227625",
+   "bytes": 886,
+   "filed": "2010-10-12",
+   "n": 94,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:14Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1285785/000119312510227625/0001193125-10-227625.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-11-076702",
+   "bytes": 1094,
+   "filed": "2011-08-12",
+   "n": 95,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:15Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/109177/000095012311076702/0000950123-11-076702.hdr.sgml"
+  },
+  {
+   "accession": "0000102379-10-000027",
+   "bytes": 1003,
+   "filed": "2010-05-12",
+   "n": 96,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:16Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/102379/000010237910000027/0000102379-10-000027.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-023292",
+   "bytes": 769,
+   "filed": "2010-03-11",
+   "n": 97,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:16Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/78460/000095012310023292/0000950123-10-023292.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-069642",
+   "bytes": 858,
+   "filed": "2010-07-29",
+   "n": 98,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:17Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1418135/000095012310069642/0000950123-10-069642.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-222173",
+   "bytes": 916,
+   "filed": "2009-11-03",
+   "n": 99,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:17Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/789460/000119312509222173/0001193125-09-222173.hdr.sgml"
+  },
+  {
+   "accession": "0001140361-11-015896",
+   "bytes": 878,
+   "filed": "2011-03-11",
+   "n": 100,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:18Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/816159/000114036111015896/0001140361-11-015896.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-249901",
+   "bytes": 767,
+   "filed": "2010-11-05",
+   "n": 101,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:19Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/878560/000119312510249901/0001193125-10-249901.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-234459",
+   "bytes": 891,
+   "filed": "2010-10-22",
+   "n": 102,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:19Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1024732/000119312510234459/0001193125-10-234459.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-073407",
+   "bytes": 770,
+   "filed": "2010-08-05",
+   "n": 103,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:20Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1168195/000095012310073407/0000950123-10-073407.hdr.sgml"
+  },
+  {
+   "accession": "0000945841-10-000036",
+   "bytes": 897,
+   "filed": "2010-03-01",
+   "n": 104,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:20Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/945841/000094584110000036/0000945841-10-000036.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-042395",
+   "bytes": 766,
+   "filed": "2010-02-26",
+   "n": 105,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:21Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1097149/000119312510042395/0001193125-10-042395.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-10-071771",
+   "bytes": 735,
+   "filed": "2010-08-03",
+   "n": 106,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:22Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1208208/000095012310071771/0000950123-10-071771.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-026442",
+   "bytes": 899,
+   "filed": "2010-05-06",
+   "n": 107,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:22Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/887596/000110465910026442/0001104659-10-026442.hdr.sgml"
+  },
+  {
+   "accession": "0001437749-10-003740",
+   "bytes": 833,
+   "filed": "2010-11-05",
+   "n": 108,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:23Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1401667/000143774910003740/0001437749-10-003740.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-12-088507",
+   "bytes": 844,
+   "filed": "2012-02-29",
+   "n": 109,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:23Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1489136/000119312512088507/0001193125-12-088507.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-11-064697",
+   "bytes": 808,
+   "filed": "2011-07-08",
+   "n": 110,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:24Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/923120/000095012311064697/0000950123-11-064697.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-248918",
+   "bytes": 888,
+   "filed": "2010-11-05",
+   "n": 111,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:25Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1376610/000119312510248918/0001193125-10-248918.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-059097",
+   "bytes": 874,
+   "filed": "2009-11-06",
+   "n": 112,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:25Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/886835/000095012309059097/0000950123-09-059097.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-227538",
+   "bytes": 878,
+   "filed": "2009-11-06",
+   "n": 113,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:26Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1057758/000119312509227538/0001193125-09-227538.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-09-223458",
+   "bytes": 760,
+   "filed": "2009-11-04",
+   "n": 114,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:26Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/73756/000119312509223458/0001193125-09-223458.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-020875",
+   "bytes": 769,
+   "filed": "2010-02-03",
+   "n": 115,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:27Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/17843/000119312510020875/0001193125-10-020875.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-166150",
+   "bytes": 762,
+   "filed": "2010-07-27",
+   "n": 116,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:28Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/9892/000119312510166150/0001193125-10-166150.hdr.sgml"
+  },
+  {
+   "accession": "0001104659-10-025137",
+   "bytes": 765,
+   "filed": "2010-05-04",
+   "n": 117,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:28Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1168696/000110465910025137/0001104659-10-025137.hdr.sgml"
+  },
+  {
+   "accession": "0000064279-10-000042",
+   "bytes": 1079,
+   "filed": "2010-11-09",
+   "n": 118,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:29Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/64279/000006427910000042/0000064279-10-000042.hdr.sgml"
+  },
+  {
+   "accession": "0001193125-10-112003",
+   "bytes": 1047,
+   "filed": "2010-05-07",
+   "n": 119,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:29Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1323854/000119312510112003/0001193125-10-112003.hdr.sgml"
+  },
+  {
+   "accession": "0000950123-09-055622",
+   "bytes": 764,
+   "filed": "2009-10-30",
+   "n": 120,
+   "status": 200,
+   "time_utc": "2026-10-18T13:50:30Z",
+   "url": "https://www.sec.gov/Archives/edgar/data/1131096/000095012309055622/0000950123-09-055622.hdr.sgml"
+  }
+ ],
+ "manifest_sha256": "ce09012e6618af7c398a71727dcf2b38ffd3d7d37dcef40e42af84c2c62c2b18",
+ "min_interval_s": 0.6,
+ "requests": 120,
+ "stopped": null
+}

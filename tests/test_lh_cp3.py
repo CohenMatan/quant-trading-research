@@ -243,3 +243,20 @@ def test_manifest_pinned_and_cutoff_safe():
         HS.header_url(a["cik"], a["accession"], rows)          # every manifest row passes the URL guard
     from collections import Counter
     assert max(Counter(a["cik"] for a in m["accessions"]).values()) <= 2
+
+
+def test_parse_sgml_header_format():
+    raw = (b"<SEC-HEADER>\n<ACCEPTANCE-DATETIME>20090722163013\n<ACCESSION-NUMBER>0000320193-09-000001\n<TYPE>10-Q\n"
+           b"<PUBLIC-DOCUMENT-COUNT>8\n<PERIOD>20090627\n<FILING-DATE>20090722\n<DATE-OF-FILING-DATE-CHANGE>20090722\n"
+           b"<FILER>\n<COMPANY-DATA>\n<CONFORMED-NAME>X\n<CIK>0000320193\n<FISCAL-YEAR-END>0926\n</COMPANY-DATA>\n"
+           b"<FILING-VALUES>\n<FORM-TYPE>10-Q\n</FILING-VALUES>\n<FORMER-COMPANY>\n<DATE-CHANGED>19970808\n"
+           b"</FORMER-COMPANY>\n</FILER>\n</SEC-HEADER>\nBODY 2024-01-01")
+    ph = HS.parse_header(raw, "0000320193-09-000001")
+    assert ph["status"] == "ok"
+    f = ph["fields"]
+    assert (f["period"], f["fiscal_year_end"], f["form_type"], f["acceptance"]) == ("20090627", "0926", "10-Q", "20090722163013")
+    assert f["former_name_change_dates"] == ["19970808"]
+    late = raw.replace(b"<FILING-DATE>20090722", b"<FILING-DATE>20220103")
+    assert HS.parse_header(late, "0000320193-09-000001")["status"] == "discarded:filed_after_cutoff"
+    chg = raw.replace(b"<DATE-OF-FILING-DATE-CHANGE>20090722", b"<DATE-OF-FILING-DATE-CHANGE>20230101")
+    assert "fiscal_year_end" not in HS.parse_header(chg, "0000320193-09-000001")["fields"]

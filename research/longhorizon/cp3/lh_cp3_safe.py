@@ -50,9 +50,24 @@ def truncate_header(raw: bytes) -> bytes:
     return raw[:cut]
 
 
+# .hdr.sgml files use SGML tags (<FILING-DATE>20090722); the .txt submission header uses "FILED AS OF DATE:" lines
+SGML = {"FILED AS OF DATE": "FILING-DATE", "ACCESSION NUMBER": "ACCESSION-NUMBER", "CONFORMED SUBMISSION TYPE": "TYPE",
+        "CONFORMED PERIOD OF REPORT": "PERIOD", "DATE AS OF CHANGE": "DATE-OF-FILING-DATE-CHANGE",
+        "CENTRAL INDEX KEY": "CIK", "FISCAL YEAR END": "FISCAL-YEAR-END", "FORM TYPE": "FORM-TYPE",
+        "DATE OF NAME CHANGE": "DATE-CHANGED"}
+
+
 def _field(text, name):
     m = re.search(rf"^\s*{re.escape(name)}:\s*(.+?)\s*$", text, re.M)
+    if m:
+        return m.group(1)
+    m = re.search(rf"^\s*<{re.escape(SGML.get(name, name))}>\s*(.+?)\s*$", text, re.M)
     return m.group(1) if m else None
+
+
+def _all(text, name):
+    return re.findall(rf"{re.escape(name)}:\s*(\d{{8}})", text) + \
+        re.findall(rf"<{re.escape(SGML.get(name, name))}>\s*(\d{{8}})", text)
 
 
 def parse_header(raw: bytes, accession: str) -> dict:
@@ -78,7 +93,7 @@ def parse_header(raw: bytes, accession: str) -> dict:
         f["cik"] = _field(text, "CENTRAL INDEX KEY")
         f["fiscal_year_end"] = _field(text, "FISCAL YEAR END")
         f["form_type"] = _field(text, "FORM TYPE")
-        f["former_name_change_dates"] = sorted(d for d in re.findall(r"DATE OF NAME CHANGE:\s*(\d{8})", text)
+        f["former_name_change_dates"] = sorted(d for d in _all(text, "DATE OF NAME CHANGE")
                                                if d <= CUT_COMPACT)
     return dict(status="ok", fields=f)
 

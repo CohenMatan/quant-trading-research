@@ -1,0 +1,387 @@
+{
+ "addendum1_truth_audited_non_gating": {
+  "M-CMP": {
+   "abstained": 40278,
+   "attempted": 97036,
+   "correct": 56703,
+   "error_rate": 0.001,
+   "error_rate_upper95_cluster": 0.00134,
+   "incorrect": 55,
+   "precision": 0.999,
+   "recall": 0.5844,
+   "registrant_error_share_upper95_cp": 0.02773,
+   "registrants_with_accepted": 1379,
+   "registrants_with_error": 28
+  },
+  "M-SEQ": {
+   "abstained": 233,
+   "attempted": 97036,
+   "correct": 96803,
+   "error_rate": 0.0,
+   "error_rate_upper95_cluster": 0.0,
+   "incorrect": 0,
+   "precision": 1.0,
+   "recall": 0.9976,
+   "registrant_error_share_upper95_cp": 0.00217,
+   "registrants_with_accepted": 1380,
+   "registrants_with_error": 0
+  },
+  "R*_L2": {
+   "abstained": 40405,
+   "attempted": 97036,
+   "correct": 56631,
+   "error_rate": 0.0,
+   "error_rate_upper95_cluster": 0.0,
+   "incorrect": 0,
+   "precision": 1.0,
+   "recall": 0.5836,
+   "registrant_error_share_upper95_cp": 0.00217,
+   "registrants_with_accepted": 1379,
+   "registrants_with_error": 0
+  },
+  "truth_suspect_trials": 46
+ },
+ "criteria": {
+  "V1": {
+   "n_registrants": 1379,
+   "status": "pass",
+   "threshold": 0.005,
+   "value": 0.00069
+  },
+  "V2": {
+   "n_registrants": 1379,
+   "status": "pass",
+   "threshold": 0.02,
+   "value": 0.01929
+  },
+  "V3": {
+   "false_valid_registrants": 0,
+   "registrants": 10,
+   "status": "insufficient",
+   "threshold": 0.1,
+   "value": 0.25887
+  },
+  "V4": {
+   "bound": 0.00615,
+   "first4_n": 5164,
+   "first4_rate": 0.00058,
+   "first4_upper95_cluster": 0.00117,
+   "later_n": 46907,
+   "later_rate": 0.00115,
+   "registrants": 1836,
+   "status": "pass"
+  },
+  "V5_benchmark": {
+   "disagree": 205,
+   "disagreement_rate": 0.00377,
+   "unusable": 1756,
+   "usable": 54380
+  }
+ },
+ "cut_off": "2021-12-31",
+ "decision": "D244",
+ "histories": 14260,
+ "history_l2l3_true_vs_reconstructed": {
+  "invalid->invalid": 100,
+  "invalid->unknown": 52,
+  "invalid->valid": 54,
+  "valid->unknown": 85,
+  "valid->valid": 13969
+ },
+ "history_true_vs_reconstructed": {
+  "invalid->invalid": 46,
+  "invalid->unknown": 154,
+  "invalid->valid": 6,
+  "valid->unknown": 11718,
+  "valid->valid": 2336
+ },
+ "holdout_accessed": false,
+ "kind": "LH-CP3 hidden-label validation - heldback registrants (aggregates; metadata only; no returns)",
+ "methods": {
+  "M-CMP": {
+   "abstained": 40297,
+   "attempted": 97082,
+   "correct": 56703,
+   "error_rate": 0.0014,
+   "error_rate_upper95_cluster": 0.00195,
+   "incorrect": 82,
+   "precision": 0.9986,
+   "recall": 0.5841,
+   "registrant_error_share_upper95_cp": 0.02939,
+   "registrants_with_accepted": 1379,
+   "registrants_with_error": 30
+  },
+  "M-SEQ": {
+   "abstained": 233,
+   "attempted": 97082,
+   "correct": 96803,
+   "error_rate": 0.0005,
+   "error_rate_upper95_cluster": 0.00067,
+   "incorrect": 46,
+   "precision": 0.9995,
+   "recall": 0.9971,
+   "registrant_error_share_upper95_cp": 0.02437,
+   "registrants_with_accepted": 1380,
+   "registrants_with_error": 24
+  },
+  "R*_L2": {
+   "abstained": 40424,
+   "attempted": 97082,
+   "correct": 56631,
+   "error_rate": 0.0005,
+   "error_rate_upper95_cluster": 0.00069,
+   "incorrect": 27,
+   "precision": 0.9995,
+   "recall": 0.5833,
+   "registrant_error_share_upper95_cp": 0.01929,
+   "registrants_with_accepted": 1379,
+   "registrants_with_error": 18
+  },
+  "R*_L2_or_L3": {
+   "abstained": 202,
+   "attempted": 97082,
+   "correct": 96827,
+   "error_rate": 0.0005,
+   "error_rate_upper95_cluster": 0.00076,
+   "incorrect": 53,
+   "precision": 0.9995,
+   "recall": 0.9974,
+   "registrant_error_share_upper95_cp": 0.02605,
+   "registrants_with_accepted": 1380,
+   "registrants_with_error": 26
+  }
+ },
+ "network_requests": 0,
+ "protocol_sha256": "38d790e5efee56a256418372a9efc528827e2fcf148bbbb43eb27f0d797d75cb",
+ "quantconnect_run": false,
+ "registrants": 1911,
+ "returns_computed": false,
+ "rule_p_on_pseudo_histories": {
+  "true:invalid|P-strict:invalid|P-assume:invalid": 53,
+  "true:invalid|P-strict:unknown|P-assume:valid": 134,
+  "true:invalid|P-strict:valid|P-assume:valid": 19,
+  "true:valid|P-strict:unknown|P-assume:valid": 11718,
+  "true:valid|P-strict:valid|P-assume:valid": 2336
+ },
+ "rules_sha256": "9a72c5c8c1aeff02f6e24f42c007539fe68bf7726e08ff78db4201f3c36b2bfe",
+ "split": "heldback",
+ "strata": {
+  "fiscal_transition_registrant": {
+   "False": {
+    "abstained": 38625,
+    "accepted": 54253,
+    "error_rate": 0.0004,
+    "incorrect": 21
+   },
+   "True": {
+    "abstained": 1799,
+    "accepted": 2405,
+    "error_rate": 0.0025,
+    "incorrect": 6
+   }
+  },
+  "form": {
+   "10-K": {
+    "abstained": 7965,
+    "accepted": 14205,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "10-Q": {
+    "abstained": 32459,
+    "accepted": 42453,
+    "error_rate": 0.0006,
+    "incorrect": 27
+   }
+  },
+  "hidden_depth": {
+   "1-4": {
+    "abstained": 80,
+    "accepted": 9515,
+    "error_rate": 0.0003,
+    "incorrect": 3
+   },
+   "5-8": {
+    "abstained": 15863,
+    "accepted": 27823,
+    "error_rate": 0.0004,
+    "incorrect": 10
+   },
+   "9-12": {
+    "abstained": 24481,
+    "accepted": 19320,
+    "error_rate": 0.0007,
+    "incorrect": 14
+   }
+  },
+  "period_year": {
+   "2010": {
+    "abstained": 450,
+    "error_rate": null
+   },
+   "2011": {
+    "abstained": 1852,
+    "accepted": 705,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2012": {
+    "abstained": 3967,
+    "accepted": 2946,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2013": {
+    "abstained": 4993,
+    "accepted": 6178,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2014": {
+    "abstained": 5173,
+    "accepted": 7536,
+    "error_rate": 0.0007,
+    "incorrect": 5
+   },
+   "2015": {
+    "abstained": 5349,
+    "accepted": 7661,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2016": {
+    "abstained": 5651,
+    "accepted": 7836,
+    "error_rate": 0.0003,
+    "incorrect": 2
+   },
+   "2017": {
+    "abstained": 5681,
+    "accepted": 8100,
+    "error_rate": 0.0002,
+    "incorrect": 2
+   },
+   "2018": {
+    "abstained": 5595,
+    "accepted": 8159,
+    "error_rate": 0.0007,
+    "incorrect": 6
+   },
+   "2019": {
+    "abstained": 1692,
+    "accepted": 5922,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2020": {
+    "abstained": 21,
+    "accepted": 1615,
+    "error_rate": 0.0074,
+    "incorrect": 12
+   }
+  },
+  "pseudo_start_year": {
+   "2012": {
+    "abstained": 874,
+    "accepted": 1330,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2013": {
+    "abstained": 2620,
+    "accepted": 4085,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2014": {
+    "abstained": 4934,
+    "accepted": 7609,
+    "error_rate": 0.0003,
+    "incorrect": 2
+   },
+   "2015": {
+    "abstained": 5116,
+    "accepted": 7655,
+    "error_rate": 0.0004,
+    "incorrect": 3
+   },
+   "2016": {
+    "abstained": 5265,
+    "accepted": 7750,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "2017": {
+    "abstained": 5555,
+    "accepted": 7954,
+    "error_rate": 0.0005,
+    "incorrect": 4
+   },
+   "2018": {
+    "abstained": 5625,
+    "accepted": 8123,
+    "error_rate": 0.0002,
+    "incorrect": 2
+   },
+   "2019": {
+    "abstained": 5678,
+    "accepted": 8084,
+    "error_rate": 0.0005,
+    "incorrect": 4
+   },
+   "2020": {
+    "abstained": 4757,
+    "accepted": 4068,
+    "error_rate": 0.0029,
+    "incorrect": 12
+   }
+  },
+  "universe_status": {
+   "entrant": {
+    "abstained": 15580,
+    "accepted": 21574,
+    "error_rate": 0.0005,
+    "incorrect": 11
+   },
+   "leaver": {
+    "abstained": 2718,
+    "accepted": 3814,
+    "error_rate": 0.0,
+    "incorrect": 0
+   },
+   "not_in_universe": {
+    "abstained": 10626,
+    "accepted": 14682,
+    "error_rate": 0.0005,
+    "incorrect": 8
+   },
+   "stayer": {
+    "abstained": 11500,
+    "accepted": 16588,
+    "error_rate": 0.0005,
+    "incorrect": 8
+   }
+  },
+  "w5253": {
+   "False": {
+    "abstained": 32320,
+    "accepted": 45259,
+    "error_rate": 0.0005,
+    "incorrect": 23
+   },
+   "True": {
+    "abstained": 8104,
+    "accepted": 11399,
+    "error_rate": 0.0004,
+    "incorrect": 4
+   }
+  }
+ },
+ "tiers": {
+  "L2": 56658,
+  "L3": 40222,
+  "conflict": 48,
+  "none": 154
+ },
+ "trials": 97082
+}

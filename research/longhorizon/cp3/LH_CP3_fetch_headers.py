@@ -37,7 +37,30 @@ class Blocked(Exception):
     pass
 
 
+def reparse():
+    """Re-parse the cached headers only (no network; the request log is left untouched)."""
+    man = json.loads(MANIFEST.read_text())
+    headers = {}
+    for a in man["accessions"]:
+        cp = CACHE / f"{a['accession']}.hdr.gz"
+        if not cp.exists():
+            headers[a["accession"]] = dict(status="not_retrieved")
+            continue
+        ph = HS.parse_header(gzip.decompress(cp.read_bytes()), a["accession"])
+        headers[a["accession"]] = dict(status=ph["status"], source="cache", **ph["fields"])
+    HEADERS.write_text(json.dumps(dict(kind="LH-CP3 extracted EDGAR header fields (metadata only)", decision="D244",
+                                       manifest_sha256=hashlib.sha256(MANIFEST.read_bytes()).hexdigest(),
+                                       parsed_from="cache (reparse; 0 requests)", headers=headers),
+                                  indent=1, sort_keys=True) + "\n")
+    print({s: sum(1 for h in headers.values() if h["status"] == s) for s in {h["status"] for h in headers.values()}})
+
+
 def main():
+    import sys
+    if "--reparse" in sys.argv:
+        return reparse()
+    if LOG.exists():
+        raise SystemExit("STOP: a request log already exists (the network portion ran); use --reparse")
     from qresearch.sec_edgar import contact_user_agent
     ua = contact_user_agent()
     if "@" not in ua:
