@@ -226,3 +226,20 @@ def test_rules_frozen_and_addendum_pinned():
     assert hashlib.sha256((CP3 / "lh_cp3_rules.py").read_bytes()).hexdigest() == RULES_SHA256 == fr["lh_cp3_rules_sha256"]
     assert hashlib.sha256((CP3 / "LH_CP3_addendum1_truth_audit.md").read_bytes()).hexdigest() == ADDENDUM1_SHA256
     assert fr["rule_changes_during_development"] == []
+
+
+MANIFEST_SHA256 = "ce09012e6618af7c398a71727dcf2b38ffd3d7d37dcef40e42af84c2c62c2b18"
+
+
+def test_manifest_pinned_and_cutoff_safe():
+    import json
+    p = CP3 / "LH_CP3_manifest.json"
+    assert hashlib.sha256(p.read_bytes()).hexdigest() == MANIFEST_SHA256
+    m = json.loads(p.read_text())
+    assert m["n"] == len(m["accessions"]) <= 150
+    rows = {a["accession"]: a for a in m["accessions"]}
+    for a in m["accessions"]:
+        assert a["filed"] <= "2021-12-31" and a["form"] in ("10-Q", "10-K", "10-K405")
+        HS.header_url(a["cik"], a["accession"], rows)          # every manifest row passes the URL guard
+    from collections import Counter
+    assert max(Counter(a["cik"] for a in m["accessions"]).values()) <= 2
