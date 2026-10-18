@@ -126,3 +126,37 @@ def test_investigation_output_safe_and_reproducing():
     assert d["returns_computed"] is False and d["holdout_accessed"] is False
     assert d["p1_reproduction"]["identical_to_committed"] and d["p2_reproduction"]["identical_to_stage_c"]
     SAFE.assert_no_post_cutoff(d)
+
+
+sys.path.insert(0, str(ROOT / "research/longhorizon/cp2"))
+import lh_cp2_rule_proposal as RP  # noqa: E402
+
+REG = [2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2]                     # calendar-quarter or 52/53-week filer, q0 = Q2
+
+
+def test_proposed_rule_regular_and_52_53_week_valid():
+    assert RP.proposed_validity(REG) == ("valid", ())
+
+
+def test_proposed_rule_isolated_mis_tag_is_valid_flagged():
+    mis = [2, 2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3]                 # q0 tagged Q2 although its cycle position is Q3
+    out, flags = RP.proposed_validity(mis)
+    assert out == "valid" and "isolated_tag_error" in flags
+
+
+def test_proposed_rule_fiscal_change_invalid():
+    rebased = [3, 2, 1, 4, 2, 1, 4, 3, 2, 1, 4, 3, 2]             # labels re-based for 4 periods: fiscal year moved
+    assert RP.proposed_validity(rebased)[0] == "invalid"
+
+
+def test_proposed_rule_transition_and_mapping_invalid():
+    assert RP.proposed_validity(REG, transition=True) == ("invalid", ("transition_form",))
+    assert RP.proposed_validity(REG, mapping_fail=True) == ("invalid", ("mapping",))
+
+
+def test_proposed_rule_unknown_strict_vs_assume():
+    pre_xbrl = REG[:8] + [None] * 5                              # oldest five quarters filed before XBRL
+    assert RP.proposed_validity(pre_xbrl)[0] == "unknown"
+    out, flags = RP.proposed_validity(pre_xbrl, variant="assume")
+    assert out == "valid" and "labels_assumed" in flags
+    assert RP.proposed_validity([None] * 13, variant="assume")[0] == "unknown"
