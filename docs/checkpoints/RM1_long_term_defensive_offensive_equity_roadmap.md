@@ -1,6 +1,8 @@
 # Long-Term Defensive and Offensive Equity Research Roadmap — 30-Year Objective
 
 **Owner decision D240, 2026-10-18. DESIGN ONLY.**
+
+> **Update (D241, 2026-10-18):** extended by `docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md` (H028 as a descriptive defensive reference + an offensive companion; staged roadmap A–H). The owner did not choose one of the section-22 options below; RM2 section 25 states the next decision. Nothing below is withdrawn.
 - Nothing here is approved for execution.
 - No hypothesis, backtest, null, synthetic run, data purchase or Holdout access is implied.
 

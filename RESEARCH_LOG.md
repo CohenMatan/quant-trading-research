@@ -2293,3 +2293,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Nothing run:** no backtest, null, synthetic experiment or QuantConnect run; nothing purchased; Holdout sealed; no frozen artifact changed.
 - **Recommendation:** next, if any, is a synthetic-only inference-validity study for a signal-first OF-A design (alternative: desk-only pre-2010 data feasibility, needs a D124 revisit; stopping defensible).
 - **Status:** STOPPED awaiting the owner.
+
+## 2026-10-18: H028 Defensive Reference + Offensive Companion — long-horizon architecture design (D241)
+
+- **Owner decision D241** (verbatim in `docs/owner/2026-10-18_h028_defensive_reference_offensive_companion.md`): DESIGN ONLY. H028 = "Frozen Defensive Research Reference" (descriptive; **still REJECTED**).
+- **Checkpoint:** `docs/checkpoints/RM2_h028_defensive_reference_offensive_companion_design.md` (25 items).
+- **Main findings:**
+  - H028's development profile verified (E030-05), plus two fragility facts: Top-10 / Top-20 give S 0.095 / 0.062 vs 0.224; turnover about 7.5× a year.
+  - Defensive value splits into a cheap profile (D-1, available from ETFs) and asymmetric capture beyond it (D-2), which only independent data could support; the Holdout can contradict but not confirm a modest D-2.
+  - OF-A (accounting surprise) is distinct from H017 / H016 / H022–H028, but its acceleration form overlaps H029 F1, and the combination question repeats H030's; prior is low in large caps (Martineau 2022).
+  - Recommended architecture to investigate first: C (offensive alone, signal-first) with E (defensive ETF + offensive) as the wrapper; H028 stays a reference comparator only.
+- **Created:** selection ledger `research/longhorizon/SELECTION_LEDGER.md` (no entries).
+- **Nothing run:** no backtest, synthetic experiment, null, QuantConnect run, H028 recalculation or purchase; Holdout sealed.
+- **Status:** STOPPED awaiting the owner (recommended next: Stage B synthetic validation of the signal-inference method).
