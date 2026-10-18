@@ -114,3 +114,21 @@ def test_feasibility_is_a_development_fixture():
     d = json.loads(FEAS.read_text())
     assert d["kind"].startswith("DEVELOPMENT FIXTURE") and d["synthetic_only"] and not d["rejection_rates_computed"]
     assert min(d["seeds"]) >= 900001
+
+
+R3J = ROOT / "research/phase13/cp6/P13_CP6_r3_diagnostic.json"
+
+
+@pytest.mark.skipif(not FEAS.exists(), reason="feasibility study not generated")
+def test_feasibility_records_the_size_sensitivity_and_all_methods():
+    d = json.loads(FEAS.read_text())
+    assert {"n475_P1", "n950_P1", "n1900_P1"} <= set(d["universe_size_sensitivity"])
+    for proc in ("P1", "P1L", "P2", "P3"):
+        assert {"M1", "M2", "M3", "M4"} <= set(d["results"][proc])
+
+
+@pytest.mark.skipif(not R3J.exists(), reason="R3 diagnostic not generated")
+def test_r3_diagnostic_is_synthetic_and_secondary():
+    d = json.loads(R3J.read_text())
+    assert d["synthetic_only"] and "not R1 validation" in d["kind"] and d["n_panels"] == 200
+    assert all(r["R3b_1pct"]["n"] == 200 for r in d["results"].values())

@@ -2260,3 +2260,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Committed artifacts:** null turnover / trades / costs NOT AVAILABLE. Null coefficients for seeds 1–25 are stable (cosine 0.96).
 - **Consequence:** H028 remains REJECTED; its p ≈ 0.0004 is no longer reliable evidence of stock-selection alpha. No corrected p-value, no replacement null.
 - **Status:** STOPPED awaiting the owner (recommendation: close Phase 13 / the learned-score line).
+
+## 2026-10-18: P13-CP6 — H028 repaired null, synthetic validation only → B, R1 not feasible (D239)
+
+- **Scope:** synthetic panels and offline code only. No real-data run, no QuantConnect run, no H028 holdings or returns; Holdout untouched; H028 unchanged.
+- **Built:**
+  - a synthetic generator (`qresearch.r1synth`);
+  - an H028-style portfolio, matching methods M1–M4, twin worlds in Mode A (controlled cost schedule) and Mode B (investable), and R3 (`qresearch.r1twin`);
+  - tests: exact self-match identity in both modes, accounting, truncation, matching rules.
+- **Feasibility gate failed** (development fixture):
+  - an H028-like Top-15 sits in the joint tail of LOWVOL, growth and profitability, so matched twins are always less extreme;
+  - no method reaches |SMD| < 0.10 with credible coverage;
+  - a 4× larger universe raises coverage but not balance;
+  - so **R1 is not feasible at the current universe size**, and the problem is structural for concentrated portfolios.
+- **Final synthetic validation not run:** no method could be frozen.
+- **R3 synthetic diagnostic:** 14% false rejections at nominal 1% when growth and profitability are priced; power 29% against a strong signal. Not a substitute.
+- **Classification:** **B — METHOD NOT VALIDATED.** H028 remains REJECTED.
+- **Status:** STOPPED awaiting the owner (recommendation: close the H028 null-repair line).
