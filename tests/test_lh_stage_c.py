@@ -112,3 +112,10 @@ def test_output_is_aggregate_non_return_and_holdout_safe():
     assert d["pit"]["violations"] == 0
     text = OUT.read_text()
     assert "2022-" not in text and "2023-" not in text and "2026-" not in text
+
+
+def test_checkpoint_has_28_items_and_is_recorded():
+    cp = (ROOT / "docs/checkpoints/LH_CP1_stage_c_ofa_data_pit_feasibility_audit.md").read_text()
+    assert all(f"## {n}." in cp for n in range(1, 29))
+    assert "C — NOT FEASIBLE" in cp and PROTOCOL_SHA256 in cp
+    assert "| D242 |" in (ROOT / "DECISIONS.md").read_text()
