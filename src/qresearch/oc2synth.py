@@ -197,7 +197,7 @@ class Panel:
             ex = live[rng.random(len(live)) < EXIT_RATE * w.churn]
             self._new(ex)
         # growth of the cross-section
-        tt = max(t, 0)
+        tt = min(max(t, 0), T - 1)       # Addendum 1: overlapping-horizon tail months reuse the last size
         need = int(round(self.N[tt] * self.pool_scale)) - int(self.alive.sum())
         if need > 0:
             free = np.flatnonzero(~self.alive)[:need]

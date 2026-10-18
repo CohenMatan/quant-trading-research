@@ -167,3 +167,16 @@ That real-data test is the OC-CP2 §10 universe-wide Fama–MacBeth test of the 
 - `OC2_S2_results.json` (summaries);
 - per-replication synthetic rows in `data/oc2_stage2_parts/` (not committed; reproducible from the seeds);
 - the checkpoint `docs/checkpoints/OC_CP4_oc2_stage2_synthetic_calibration.md`.
+
+## Addendum 1 — technical defect fix (2026-10-18, after the gating scenarios; no substantive change)
+
+- **Defect:** the diagnostic N13 (3-month overlapping response) needs two extra months of returns after the last review. `Panel.step` then indexed the cross-section size at t = 118, which is out of range, and the run stopped (IndexError) at N13.
+- **What had already completed on the original code** (module `adde2d4cbafebd3390f8ece545f587f4a7637ce73097fe1ac4e1901169bcba77`, protocol `447b486066abffe9a948d668033a4a92a427029f4b0b19ff6c5956e2acdab345`):
+  - every gating scenario (N0i … N12, N5a; 4,000 replications each);
+  - N5b and N2L (1,000 each).
+- **Fix:** one line. The cross-section size for t ≥ 118 reuses the last review's size: `tt = min(max(t, 0), T - 1)`.
+- **What the fix can affect:** it changes nothing for any world with horizon 1, because t < 118 always there. That covers every gating, N5, N2L and power world. Only N13 is affected.
+- **What is unchanged:**
+  - the completed scenario results are reused from their cached per-replication rows, not re-run;
+  - no scenario, parameter, seed, threshold, method or outcome rule changes.
+- **New frozen code:** `oc2synth.py` SHA-256: `fc7018164413692408c5cd1907c98eb65ca6b50f1c0ffb0572fee545f4e9c8e4` (supersedes the line above for the remaining runs); `OC2_S2_run.py` unchanged.
