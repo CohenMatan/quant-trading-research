@@ -1,0 +1,13 @@
+{
+ "status": "DRAFT \u2014 NOT FROZEN (owner decision on protocol section 9 pending)",
+ "decision": "D249",
+ "files": {
+  "research/longhorizon/oc2/v2/OC2_V2_protocol.md": "4f7624ddfc9860309b8e6fd081077d71557a7b09604a5a681c656a54325ed4a2",
+  "src/qresearch/oc2synth_v2.py": "684847a9a67f8da3627147d92e1fa1e26029ff032e3b51ac81f5c0e494296567",
+  "src/qresearch/oc2synth.py": "fc7018164413692408c5cd1907c98eb65ca6b50f1c0ffb0572fee545f4e9c8e4",
+  "research/longhorizon/oc2/v2/OC2_V2_scenarios.py": "179d8ed9d4acff165c20b32504c9bcfb06280fcb5d4f6a09dddbfd5446d569e2",
+  "research/longhorizon/oc2/v2/OC2_V2_run.py": "f9a533d96e276634b06a2d69ea133b898fd07fcfb749a18c550f220d9bd775f3",
+  "research/longhorizon/oc2/v2/OC2_V2_engineering.py": "00014a30e151bf8b25b3a15f1bd4944f85f2842167fa1397b1e1c25f69e4bc71",
+  "research/longhorizon/oc2/v2/OC2_V2_audit.py": "9058ac8604828e39fd4c4cd16453eded511e32bee62ee14325fb6eaa1fcedb1d"
+ }
+}

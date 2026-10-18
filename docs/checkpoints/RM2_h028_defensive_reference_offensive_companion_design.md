@@ -654,3 +654,5 @@ Choose one:
 **Update (D248, 2026-10-18): OC-2 integrity and calibration.** `docs/checkpoints/OC_CP3_oc2_stage1_data_integrity.md` (Stage 1 PASS) and `docs/checkpoints/OC_CP4_oc2_stage2_synthetic_calibration.md` (Stage 2 D — INSUFFICIENT EVIDENCE; the method as specified is not validated).
 - **Lesson for any signal-level test:** with several priced characteristics correlated with the signal, rank-linear controls and noisy controls bias the Fama–MacBeth slope upwards. A valid design needs flexible controls and an explicit leakage tolerance.
 - **Lesson for synthetic calibration:** synthetic power is only credible if the generated payoff dependence reaches realistic IC volatility.
+
+**Update (D249, 2026-10-18): OC-2 synthetic calibration v2.** `docs/checkpoints/OC_CP5a_oc2_synthetic_calibration_v2_prerun_stop.md`: repaired method built; STOPPED before the confirmatory run for an owner decision on the noisy-control / latent-factor (identification) worlds. No v2 classification; v1 remains D.

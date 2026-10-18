@@ -2422,3 +2422,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - diagnostic N13 failed (NaN).
   - **D — INSUFFICIENT EVIDENCE** (protocol §6.1); the method as specified is not validated.
 - **Status:** STOPPED awaiting the owner (OC-CP4 §10: stop OC-2 → SPY, or one Stage B-OC2 v2 revision).
+
+## 2026-10-18: OC-CP5a — OC-2 synthetic calibration v2, pre-run STOP (D249)
+
+- **Scope:** one controlled methodological repair attempt; synthetic only (no real F5 / return / Fama–MacBeth, QuantConnect, backtest, portfolio, purchase or Holdout). v1 artifacts and classification D preserved unchanged.
+- **Failure-mode audit** (`research/longhorizon/oc2/v2/OC2_V2_audit.json`; frozen-v1 reproduction + population algebra, no returns):
+  - functional defects: N7 noise-free world (systematic variance above the total), N13 NaN (returns generated only for live slots), driver ≠ protocol;
+  - nonlinear leakage from linear-rank controls (+0.04–0.10 %/yr population bias) — removed by restricted cubic splines;
+  - identification: measurement error (+0.22 / +0.39 %/yr) and latent factor (≈ +0.23 %/yr per +1% latent premium) — not removable by any observed-control method (oracle removes it);
+  - quiet market = missing signal-payoff component, not an SE scaling problem.
+- **v2 method and generator** (`qresearch.oc2synth_v2`): spline controls, NW lag 7 by a stated lag rule, fixed-b critical values; AR(1) signal payoff at IC sd 0.06 / 0.09 / 0.12 (verified 0.061 / 0.090 / 0.118); variance-budget guard; id-tracked returns (N13 finite at 39–1,019 stocks); 39 null worlds + oracle + 16 power cells; locked driver; engineering record on DEV seeds (no rejection rate or power simulated).
+- **Pre-run STOP:** the strict size criterion cannot coherently address the identification family (analytic projection: N5a 5% rejection 7.5–11%, N2L 17–39% in every regime). Options: 1 strict (projected C), 2 identification gate on full-rule false promotion ≤ 2% with a scoped claim (recommended if OC-2 continues), 3 stop → SPY.
+- Protocol `research/longhorizon/oc2/v2/OC2_V2_protocol.md` DRAFT — NOT FROZEN; checkpoint `docs/checkpoints/OC_CP5a_oc2_synthetic_calibration_v2_prerun_stop.md`.
+- **Status:** STOPPED awaiting the owner (OC-CP5a §25). No v2 classification; v1 stays D.
