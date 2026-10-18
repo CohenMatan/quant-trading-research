@@ -109,6 +109,7 @@ def evaluate(split, limit=None):
                 break
         # ---- V4: first four labelled filings vs later (oldest -> newest over the full sequence)
         seq = [truth[p] for p in per]
+        iso_truth = {per[i] for i in R.isolated_off_cycle(seq)}          # addendum 1 (non-gating truth audit)
         labelled_idx = [i for i, x in enumerate(seq) if x is not None]
         first4 = set(labelled_idx[:4])
         off = set(R.isolated_off_cycle(seq))
@@ -177,7 +178,9 @@ def evaluate(split, limit=None):
                         continue
                     lab, tier, s, c = rec[k]
                     r = reg.sub_row(p)
+                    form_bad = (r is not None) and ((r[1] == "10-Q" and tl[k] == 4) or (r[1] in R.K_FORMS and tl[k] != 4))
                     trials.append(dict(cik=cik, p=p, S=S, D=D, truth=tl[k], lab=lab, tier=tier, seq=s, cmp=c,
+                                       truth_suspect=bool(form_bad or p in iso_truth),
                                        form=r[1] if r else None, year=V3.dd(p).year, sy=V3.dd(S).year, nh=nh,
                                        w5253=w5253, trans=trans_reg or gen_reg, status=status))
             j += 1
@@ -211,6 +214,14 @@ def summarise(res):
                     registrants_with_accepted=len(by_reg), registrants_with_error=regs_err,
                     registrant_error_share_upper95_cp=R.fmt(R.cp_upper(regs_err, len(by_reg)), 5))
 
+    # addendum 1: non-gating truth-audited view (trials whose TRUE label is form-inconsistent or isolated off-cycle
+    # in the registrant's own L0/L1 sequence are set aside; defined from the truth labels only)
+    all_trials = trials
+    trials = [tr for tr in all_trials if not tr["truth_suspect"]]
+    audited = {"R*_L2": method_stats(lambda tr: tr["lab"] if tr["tier"] == "L2" else None),
+               "M-SEQ": method_stats(lambda tr: tr["seq"]), "M-CMP": method_stats(lambda tr: tr["cmp"])}
+    audited["truth_suspect_trials"] = len(all_trials) - len(trials)
+    trials = all_trials
     meth = {"R*_L2": method_stats(lambda tr: tr["lab"] if tr["tier"] == "L2" else None),
             "R*_L2_or_L3": method_stats(lambda tr: tr["lab"] if tr["tier"] in ("L2", "L3") else None),
             "M-SEQ": method_stats(lambda tr: tr["seq"]),
@@ -266,6 +277,7 @@ def summarise(res):
         V5_benchmark=dict(usable=bench["usable"], disagree=bench["disagree"], unusable=bench["unusable"],
                           disagreement_rate=R.fmt(R.rate(bench["disagree"], bench["usable"]), 5)))
     return dict(registrants=res["regs"], trials=len(trials), histories=len(hist), tiers=dict(tiers), methods=meth,
+                addendum1_truth_audited_non_gating=audited,
                 strata=st, history_true_vs_reconstructed={f"{a}->{b}": v for (a, b), v in sorted(hc.items())},
                 history_l2l3_true_vs_reconstructed={f"{a}->{b}": v for (a, b), v in sorted(Counter((h['true'], h['rec3']) for h in hist).items())},
                 rule_p_on_pseudo_histories={f"true:{a}|P-strict:{b}|P-assume:{c}": v for (a, b, c), v in sorted(rp.items())},

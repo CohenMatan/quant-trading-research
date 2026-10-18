@@ -214,3 +214,15 @@ def test_reg_metadata_cutoff_and_no_network():
     assert all(p <= cut and fd <= cut for p, _f, fd, _a, _x in reg.sub)
     assert all(e <= cut for v in reg.usd.values() for e, _d in v)
     assert c.fetched == 0
+
+
+RULES_SHA256 = "9a72c5c8c1aeff02f6e24f42c007539fe68bf7726e08ff78db4201f3c36b2bfe"
+ADDENDUM1_SHA256 = "4fbd4da78f910ffe309a76e528e850a5ce6810af830549dce41eed569b592915"
+
+
+def test_rules_frozen_and_addendum_pinned():
+    import json
+    fr = json.loads((CP3 / "LH_CP3_rules_freeze.json").read_text())
+    assert hashlib.sha256((CP3 / "lh_cp3_rules.py").read_bytes()).hexdigest() == RULES_SHA256 == fr["lh_cp3_rules_sha256"]
+    assert hashlib.sha256((CP3 / "LH_CP3_addendum1_truth_audit.md").read_bytes()).hexdigest() == ADDENDUM1_SHA256
+    assert fr["rule_changes_during_development"] == []
