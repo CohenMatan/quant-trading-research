@@ -102,22 +102,28 @@ def test_nw_se_lag0_is_iid():
 
 
 def test_classifier_precedence():
-    for comp, adq, size, ident, p in itertools.product([True, False], [True, False], [True, False], [True, False],
-                                                        [0.5, 0.9]):
-        o = V.classify(comp, adq, size, ident, p)
+    for comp, adq, size, ident, pt, pr in itertools.product([True, False], [True, False], [True, False],
+                                                             [True, False], [0.5, 0.9], [0.5, 0.9]):
+        o = V.classify(comp, adq, size, ident, pt, pr)
         if not comp or not adq:
             assert o.startswith("D")
         elif not size or not ident:
             assert o.startswith("C")
-        else:
-            assert o.startswith("A" if p >= 0.80 else "B")
+        else:                                   # A only if BOTH test power and complete-rule power reach 0.80
+            assert o.startswith("A" if (pt >= 0.80 and pr >= 0.80) else "B")
 
 
 def test_scenarios_cover_owner_list():
     assert sorted(S.NULLS) == list(range(1, 15))
     names = [w.name for w in S.all_nulls()] + [S.ORACLE.name] + [w.name for w in S.POWER]
     assert len(names) == len(set(names))
-    assert set(S.IDENT) <= {w.name for w in S.all_nulls()}
+    assert set(S.IDENT) <= {w.name for w in S.all_nulls()} and set(S.SEVERE) <= set(S.IDENT)
+    plan = R.plan()
+    assert len(plan) == 60 and sum(1 for *_, r in plan if r == "gate") == 30
+    ident = sorted(w.name for w, _n, r in plan if r == "ident")
+    assert ident == sorted(["N5a", "N5b", "N2L1", "N2L", "N2L5"] + [f"{b}@{r}" for b in ("N5a", "N5b", "N2L", "N2L5")
+                                                                     for r in (0.06, 0.12)])
+    assert all(n >= 1000 for _w, n, _r in plan)
     assert all(w.planted == 0 for w in S.all_nulls()) and all(w.planted > 0 for w in S.POWER)
     assert {w.name for w in S.POWER} >= {f"P{e}-{r}" for e in (2, 3, 4, 5) for r in (0.06, 0.09, 0.12)}
     assert R.POWER_CELL in {w.name for w in S.POWER}
@@ -125,18 +131,33 @@ def test_scenarios_cover_owner_list():
 
 def test_decide_rule():
     good = dict(n=4000, failures=0, failure_share=0.0, **{"rej_0.05": 0.05, "rej_0.01": 0.01,
-                "rej_0.05_completed": 0.05, "rej_0.01_completed": 0.01}, full_rule=0.0, pic_sd=0.09,
-                fresh_by_phase=list(R.STAGE1_FRESH), mean_n=float(np.mean(V.O.n_by_month())) * 0.95,
+                "rej_0.05_completed": 0.05, "rej_0.01_completed": 0.01}, full_rule=0.0, full_rule_completed=0.0,
+                pic_sd=0.09, fresh_by_phase=list(R.STAGE1_FRESH), mean_n=float(np.mean(V.O.n_by_month())) * 0.95,
                 corr=[V.O.RHO_F5[c] for c in V.O.CONTROLS])
-    res = {"N0": dict(good), "N4": dict(good), "N5a": dict(good, **{"rej_0.05": 0.09}), "N2L": dict(good),
-           R.POWER_CELL: dict(good, **{"rej_0.01": 0.85})}
-    roles = {"N0": "gate", "N4": "gate", "N5a": "ident", "N2L": "ident", R.POWER_CELL: "power"}
-    assert R.decide(res, roles, 1)["outcome"].startswith("C")
-    assert R.decide(res, roles, 2)["outcome"].startswith("A")
-    res["N2L"]["full_rule"] = 0.03
-    assert R.decide(res, roles, 2)["outcome"].startswith("C")
+    res = {"N0": dict(good), "N4": dict(good), "N5a": dict(good, **{"rej_0.05": 0.09}), "N2L5@0.12": dict(good),
+           R.POWER_CELL: dict(good, **{"rej_0.01": 0.85, "full_rule": 0.85})}
+    roles = {"N0": "gate", "N4": "gate", "N5a": "ident", "N2L5@0.12": "ident", R.POWER_CELL: "power"}
+    assert R.decide(res, roles)["outcome"].startswith("A")          # Tier 2 is judged on full-rule false approval
+    res[R.POWER_CELL]["full_rule"] = 0.5
+    assert R.decide(res, roles)["outcome"].startswith("B")          # test power alone never gives A
+    res["N2L5@0.12"]["full_rule"] = 0.03
+    d = R.decide(res, roles)
+    assert d["outcome"].startswith("C") and d["severe_failures"] == ["N2L5@0.12"]
     res["N0"]["failure_share"] = 0.02
-    assert R.decide(res, roles, 2)["outcome"].startswith("D")
+    assert R.decide(res, roles)["outcome"].startswith("D")
+
+
+def test_mde_interpolation():
+    assert R.mde({0.02: 0.2, 0.03: 0.4, 0.04: 0.6, 0.05: 0.9}, 0.5) == pytest.approx(0.035)
+    assert R.mde({0.02: 0.2, 0.03: 0.4, 0.04: 0.6, 0.05: 0.7}, 0.8) is None
+    assert R.mde({0.02: 0.9, 0.03: 0.95, 0.04: 1, 0.05: 1}, 0.8) == "<= 0.02"
+
+
+def test_full_rule_conditions():
+    o = dict(t=3.0, tq_annual=0.031, half1=1e-3, half2=1e-3, g4=True)
+    assert V.full_rule(o, V.CV[0.01])
+    for k, v in (("t", 2.5), ("tq_annual", 0.029), ("half1", -1e-3), ("half2", -1e-3), ("g4", False)):
+        assert not V.full_rule(dict(o, **{k: v}), V.CV[0.01])
 
 
 def test_driver_locked_until_frozen():
@@ -169,10 +190,18 @@ def test_engineering_record():
     assert all(v["failed"] == 0 for v in d["N13"].values())
 
 
-def test_draft_hashes_record():
-    fp = V2 / "OC2_V2_draft_hashes.json"
+def test_draft_hashes_record_is_historical():
+    d = json.loads((V2 / "OC2_V2_draft_hashes.json").read_text())
+    assert d["status"].startswith("DRAFT") and d["decision"] == "D249"
+
+
+def test_frozen_record():
+    fp = V2 / "FROZEN.json"
     if not fp.exists():
         return
-    d = json.loads(fp.read_text())
-    for rel, h in d["files"].items():
-        assert hashlib.sha256((ROOT / rel).read_bytes()).hexdigest() == h, rel
+    f = json.loads(fp.read_text())
+    assert f["owner_decision"] == "D250" and f["ident_treatment"] == 2
+    assert hashlib.sha256((V2 / "OC2_V2_protocol.md").read_bytes()).hexdigest() == f["protocol_sha256"]
+    for p in R.CODE:
+        assert hashlib.sha256(p.read_bytes()).hexdigest() == f["code_sha256"][p.name], p.name
+    assert R.frozen_or_refuse() == f

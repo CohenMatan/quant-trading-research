@@ -38,10 +38,14 @@ NULLS = {
          replace(N4, name="N14s", n_scale=0.25)],                   # new: quarter-size cross-section
     14: [replace(N4, name="N15", irregular=True)],                  # new: irregular filing timing
 }
-# identification family: no observed-control estimator can remove these by construction (audit section C)
+# identification family (Tier 2, owner D250): no observed-control estimator can remove these by construction (audit
+# section C); each world, at every regime run, is gated by complete-decision-rule false approval <= 2%
 IDENT = ("N5a", "N5b", "N2L1", "N2L", "N2L5")
+SEVERE = ("N5b", "N2L5")
 CENTRAL = 0.09
-REGIME_SET = ("N0", "N4", "N4q", "N12", "N14", "N5a", "N2L")             # also run at IC sd 0.06 and 0.12
+# also run at IC sd 0.06 and 0.12; N5b / N2L5 added at the freeze (owner D250 section 3: the severe-confounding
+# robustness gate applies in every regime, including the high-IC regime of the 4.4% N2L5 projection)
+REGIME_SET = ("N0", "N4", "N4q", "N12", "N14", "N5a", "N2L", "N5b", "N2L5")
 ORACLE = replace(N4, name="N2L-oracle", latent=0.03, oracle=True)    # non-gating diagnostic
 
 EFFECTS = (0.02, 0.03, 0.04, 0.05)
