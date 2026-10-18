@@ -1,0 +1,227 @@
+{
+ "all_registrant_chains": {
+  "all": 93256,
+  "unknown_after_l1": 23854,
+  "unknown_l0": 24867,
+  "unknown_share_after_l1": 0.2558,
+  "unknown_share_l0": 0.2667
+ },
+ "cut_off": "2021-12-31",
+ "decision": "D244",
+ "examples": {
+  "Invalid": {
+   "cik": "72741",
+   "data_v21_original_filing": "2011-02-25",
+   "lh_cp2_reason": "pre_xbrl",
+   "period_end": "2010-12-31",
+   "recovered_label": null,
+   "submissions_row": {
+    "accession": "0000072741-11-000025",
+    "filed": "2011-02-25",
+    "form": "10-K",
+    "isXBRL": 1
+   }
+  },
+  "Unknown-noAccession": {
+   "cik": "1639691",
+   "data_v21_original_filing": "2016-03-04",
+   "lh_cp2_reason": "no_index_row",
+   "period_end": "2015-12-31",
+   "recovered_label": null,
+   "submissions_row": null
+  },
+  "Unknown-noFacts": {
+   "cik": "350563",
+   "data_v21_original_filing": "2010-08-06",
+   "lh_cp2_reason": "pre_xbrl",
+   "period_end": "2010-06-30",
+   "recovered_label": null,
+   "submissions_row": {
+    "accession": "0001193125-10-180561",
+    "filed": "2010-08-06",
+    "form": "10-Q",
+    "isXBRL": 1
+   }
+  },
+  "Unknown-nonXBRL": {
+   "cik": "789019",
+   "data_v21_original_filing": "2009-04-23",
+   "lh_cp2_reason": "pre_xbrl",
+   "period_end": "2009-03-31",
+   "recovered_label": null,
+   "submissions_row": {
+    "accession": "0001193125-09-085779",
+    "filed": "2009-04-23",
+    "form": "10-Q",
+    "isXBRL": 0
+   }
+  },
+  "Verified": {
+   "cik": "751652",
+   "data_v21_original_filing": "2015-08-06",
+   "lh_cp2_reason": "no_index_row",
+   "period_end": "2015-06-30",
+   "recovered_label": 2,
+   "submissions_row": {
+    "accession": "0000751652-15-000151",
+    "filed": "2015-08-06",
+    "form": "10-Q",
+    "isXBRL": 1
+   }
+  }
+ },
+ "holdout_accessed": false,
+ "kind": "LH-CP3 Part A - local submissions recovery (aggregates + metadata-only examples; no returns)",
+ "network_requests": 0,
+ "p2_c1_basis": {
+  "by_year": {
+   "2011": {
+    "c1_complete": 1362,
+    "unknown_after_l1": 1362,
+    "unknown_cp2": 1362
+   },
+   "2012": {
+    "c1_complete": 4727,
+    "unknown_after_l1": 3670,
+    "unknown_cp2": 3710
+   },
+   "2013": {
+    "c1_complete": 8212,
+    "unknown_after_l1": 3798,
+    "unknown_cp2": 3938
+   },
+   "2014": {
+    "c1_complete": 9337,
+    "unknown_after_l1": 1148,
+    "unknown_cp2": 1452
+   },
+   "2015": {
+    "c1_complete": 9353,
+    "unknown_after_l1": 256,
+    "unknown_cp2": 648
+   },
+   "2016": {
+    "c1_complete": 9176,
+    "unknown_after_l1": 132,
+    "unknown_cp2": 458
+   },
+   "2017": {
+    "c1_complete": 9931,
+    "unknown_after_l1": 98,
+    "unknown_cp2": 335
+   },
+   "2018": {
+    "c1_complete": 10384,
+    "unknown_after_l1": 117,
+    "unknown_cp2": 321
+   },
+   "2019": {
+    "c1_complete": 10452,
+    "unknown_after_l1": 81,
+    "unknown_cp2": 211
+   },
+   "2020": {
+    "c1_complete": 10420,
+    "unknown_after_l1": 67,
+    "unknown_cp2": 107
+   },
+   "2021": {
+    "c1_complete": 11482,
+    "unknown_after_l1": 110,
+    "unknown_cp2": 127
+   }
+  },
+  "label_status_after_l1": {
+   "stock_months": {
+    "broken": 965,
+    "consistent": 83032,
+    "unknown": 10839
+   },
+   "unique": {
+    "broken": 351,
+    "consistent": 28975,
+    "unknown": 3762
+   }
+  },
+  "label_status_lh_cp2": {
+   "stock_months": {
+    "broken": 938,
+    "consistent": 81229,
+    "unknown": 12669
+   },
+   "unique": {
+    "broken": 342,
+    "consistent": 28366,
+    "unknown": 4380
+   }
+  },
+  "rule_v_after_l1": {
+   "stock_months": {
+    "invalid": 1658,
+    "unknown": 10294,
+    "valid": 82884
+   },
+   "unique": {
+    "invalid": 593,
+    "unknown": 3569,
+    "valid": 28926
+   }
+  },
+  "stock_months": 94836,
+  "unique_chains": 33088,
+  "unknown_share_after_l1": 0.1143,
+  "unknown_share_lh_cp2": 0.1336
+ },
+ "p2_reproduction": {
+  "denominators": {
+   "2011": 9110,
+   "2012": 9125,
+   "2013": 10430,
+   "2014": 11469,
+   "2015": 11501,
+   "2016": 10911,
+   "2017": 11842,
+   "2018": 12349,
+   "2019": 12297,
+   "2020": 12536,
+   "2021": 14603
+  },
+  "identical_to_stage_c": true
+ },
+ "periods_unique": {
+  "by_lh_cp2_reason": {
+   "no_fp": {
+    "Unknown-noFacts": 11,
+    "Verified": 2
+   },
+   "no_index_row": {
+    "Invalid": 5,
+    "Unknown-noAccession": 16,
+    "Unknown-noFacts": 2,
+    "Unknown-nonXBRL": 147,
+    "Verified": 151
+   },
+   "pre_xbrl": {
+    "Invalid": 17,
+    "Unknown-noAccession": 1,
+    "Unknown-noFacts": 12,
+    "Unknown-nonXBRL": 3141,
+    "Verified": 291
+   }
+  },
+  "counts": {
+   "Invalid": 22,
+   "L0_known": 51061,
+   "L0_unknown": 3796,
+   "Unknown-noAccession": 17,
+   "Unknown-noFacts": 25,
+   "Unknown-nonXBRL": 3288,
+   "Verified": 444
+  },
+  "recovery_rate_verified": 0.117
+ },
+ "protocol_sha256": "38d790e5efee56a256418372a9efc528827e2fcf148bbbb43eb27f0d797d75cb",
+ "quantconnect_run": false,
+ "returns_computed": false,
+ "surprise_values_computed": false
+}
