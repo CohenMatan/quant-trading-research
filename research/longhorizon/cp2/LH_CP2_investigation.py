@@ -176,7 +176,9 @@ def main():
     xb_by_cik = defaultdict(list)
     names = {}
     for r in xb:
-        p = r["period"]
+        p = r.get("period") or ""
+        if len(p) != 8:                          # no period: unusable (the committed fye_at skips these too)
+            continue
         try:
             pdn = V3.dn(f"{p[:4]}-{p[4:6]}-{p[6:8]}")
         except ValueError:
