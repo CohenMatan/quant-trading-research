@@ -328,3 +328,11 @@ Choose one:
 3. **Stop the research programme.**
 
 **Nothing begins without that decision.** The Holdout stays sealed.
+
+---
+
+**Update (D246, 2026-10-18): research priority changed to an offensive complement for H028.** Candidate selection and test design: `docs/checkpoints/OC_CP1_h028_offensive_complement_candidate_selection_test_design.md`.
+- **Preferred complement:** SPY (market-exposure completion).
+- **Stock-selection offensive search on existing data:** recommended to STOP. Momentum and quality-growth families are exhausted; fundamental improvement (OC-B) is a conditional backup only.
+- **Proposed single test:** SYS-1, an account-level 2015–2021 system test against beta-matched and transparent controls. It is not run and is awaiting owner approval.
+- **Not superseded:** the OF-A path (Stages A–H) stays as recorded. Its next step remains subject to D245 / LH-CP4.
