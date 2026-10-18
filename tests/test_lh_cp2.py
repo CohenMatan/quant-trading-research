@@ -62,3 +62,67 @@ def test_protocol_hash_pinned():
 def test_stage_c_protocol_unchanged():
     p = ROOT / "research/longhorizon/stage_c/LH_StageC_protocol.md"
     assert hashlib.sha256(p.read_bytes()).hexdigest().startswith("ff97789b02007599")
+
+
+_spec = importlib.util.spec_from_file_location("lh_cp2_inv", ROOT / "research/longhorizon/cp2/LH_CP2_investigation.py")
+INV = importlib.util.module_from_spec(_spec)
+_spec.loader.exec_module(INV)
+
+
+def test_code_groups_match_committed_bands():
+    assert INV.code_group(["1231", "1231", "1231"]) == "EQUAL"
+    assert INV.code_group(["0926", "0927", "0925"]) == "S7"            # 52/53-week drift
+    assert INV.code_group(["0131", "0102", "0131"]) == "S31"
+    assert INV.code_group(["1231", "0930", "1231"]) == "QA"            # ~3 months
+    assert INV.code_group(["1231", "0630", "1231"]) == "QA"            # ~6 months
+    assert INV.code_group(["1231", "0531", "1231"]) == "OTHER"
+    assert INV.code_group(["1231", None, "1231"]) == "NOCODE"
+
+
+# Illustrative label histories, newest first (q0 .. q12); 4 = FY
+CAL = [2, 1, 4, 3, 2, 1, 4, 3, 2, 1, 4, 3, 2]                     # regular calendar-quarter filer, q0 = Q2
+
+
+def test_label_status_regular_and_52_53_week():
+    assert INV.label_status(CAL) == "consistent"                   # a 52/53-week filer has the same labels
+
+
+def test_label_status_fiscal_year_change_is_broken():
+    shifted = [3, 2, 1, 4, 2, 1, 4, 3, 2, 1, 4, 3, 2]              # fiscal year moved: labels re-based mid-chain
+    assert INV.label_status(shifted) == "broken"
+
+
+def test_label_status_unknown():
+    assert INV.label_status(CAL[:6] + [None] + CAL[7:]) == "unknown"
+
+
+def test_categories_first_match():
+    assert INV.categorize("OTHER", True, False, False, "consistent") == "F"
+    assert INV.categorize("OTHER", False, True, False, "consistent") == "D"
+    assert INV.categorize("OTHER", False, False, True, "consistent") == "E"
+    assert INV.categorize("OTHER", False, False, False, "broken") == "B"
+    assert INV.categorize("OTHER", False, False, False, "unknown") == "G"
+    assert INV.categorize("S7", False, False, False, "consistent") == "A"
+    assert INV.categorize("OTHER", False, False, False, "consistent") == "C"
+    assert INV.categorize("QA", False, False, False, "consistent") == "C"
+
+
+def test_rule_v_outcomes():
+    assert INV.rule_v("consistent", False, False) == "valid"
+    assert INV.rule_v("broken", False, False) == "invalid"
+    assert INV.rule_v("consistent", True, False) == "invalid"       # transition form inside the history
+    assert INV.rule_v("consistent", False, True) == "invalid"       # quarter mapped to the wrong filing
+    assert INV.rule_v("unknown", False, False) == "unknown"         # excluded (conservative)
+
+
+OUT2 = ROOT / "research/longhorizon/cp2/LH_CP2_investigation.json"
+
+
+@pytest.mark.skipif(not OUT2.exists(), reason="LH-CP2 investigation not generated")
+def test_investigation_output_safe_and_reproducing():
+    import json
+    d = json.loads(OUT2.read_text())
+    assert d["protocol_sha256"] == PROTOCOL_SHA256 and d["network_requests"] == 0
+    assert d["returns_computed"] is False and d["holdout_accessed"] is False
+    assert d["p1_reproduction"]["identical_to_committed"] and d["p2_reproduction"]["identical_to_stage_c"]
+    SAFE.assert_no_post_cutoff(d)
