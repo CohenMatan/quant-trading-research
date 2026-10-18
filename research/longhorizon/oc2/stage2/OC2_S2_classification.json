@@ -1,0 +1,240 @@
+{
+ "adequacy_misses": {},
+ "decision": "D248",
+ "diagnostics": {
+  "N0": {
+   "implied_sd_ic": 0.0317,
+   "mean_t": 0.009,
+   "nan_rows": 0,
+   "rej_1": 0.0097,
+   "rej_5": 0.0555,
+   "ret_sd": 0.0641,
+   "sd_t": 1.043,
+   "tq_annual_mean": 0.00014
+  },
+  "N0i": {
+   "implied_sd_ic": 0.0392,
+   "mean_t": -0.003,
+   "nan_rows": 0,
+   "rej_1": 0.013,
+   "rej_5": 0.0537,
+   "ret_sd": 0.0649,
+   "sd_t": 1.027,
+   "tq_annual_mean": 2e-05
+  },
+  "N1": {
+   "implied_sd_ic": 0.0316,
+   "mean_t": -0.019,
+   "nan_rows": 0,
+   "rej_1": 0.0095,
+   "rej_5": 0.0515,
+   "ret_sd": 0.0642,
+   "sd_t": 1.034,
+   "tq_annual_mean": -9e-05
+  },
+  "N11": {
+   "implied_sd_ic": 0.0311,
+   "mean_t": 0.171,
+   "nan_rows": 0,
+   "rej_1": 0.017,
+   "rej_5": 0.0737,
+   "ret_sd": 0.0632,
+   "sd_t": 1.04,
+   "tq_annual_mean": 0.00054
+  },
+  "N12": {
+   "implied_sd_ic": 0.0318,
+   "mean_t": 0.161,
+   "nan_rows": 0,
+   "rej_1": 0.015,
+   "rej_5": 0.0755,
+   "ret_sd": 0.0636,
+   "sd_t": 1.036,
+   "tq_annual_mean": 0.00041
+  },
+  "N13": {
+   "implied_sd_ic": NaN,
+   "mean_t": NaN,
+   "nan_rows": 1000,
+   "rej_1": 0.0,
+   "rej_5": 0.0,
+   "ret_sd": 0.0644,
+   "sd_t": NaN,
+   "tq_annual_mean": NaN
+  },
+  "N2": {
+   "implied_sd_ic": 0.0316,
+   "mean_t": -0.022,
+   "nan_rows": 0,
+   "rej_1": 0.0138,
+   "rej_5": 0.0587,
+   "ret_sd": 0.0641,
+   "sd_t": 1.063,
+   "tq_annual_mean": 4e-05
+  },
+  "N2L": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 2.352,
+   "nan_rows": 0,
+   "rej_1": 0.477,
+   "rej_5": 0.732,
+   "ret_sd": 0.0643,
+   "sd_t": 1.104,
+   "tq_annual_mean": 0.00702
+  },
+  "N3": {
+   "implied_sd_ic": 0.0316,
+   "mean_t": 0.035,
+   "nan_rows": 0,
+   "rej_1": 0.014,
+   "rej_5": 0.0498,
+   "ret_sd": 0.0642,
+   "sd_t": 1.041,
+   "tq_annual_mean": 0.00014
+  },
+  "N4": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 0.18,
+   "nan_rows": 0,
+   "rej_1": 0.0192,
+   "rej_5": 0.0755,
+   "ret_sd": 0.0643,
+   "sd_t": 1.046,
+   "tq_annual_mean": 0.00053
+  },
+  "N5a": {
+   "implied_sd_ic": 0.0341,
+   "mean_t": 0.718,
+   "nan_rows": 0,
+   "rej_1": 0.064,
+   "rej_5": 0.1915,
+   "ret_sd": 0.0643,
+   "sd_t": 1.073,
+   "tq_annual_mean": 0.00235
+  },
+  "N5b": {
+   "implied_sd_ic": 0.0384,
+   "mean_t": 1.03,
+   "nan_rows": 0,
+   "rej_1": 0.096,
+   "rej_5": 0.256,
+   "ret_sd": 0.0643,
+   "sd_t": 1.026,
+   "tq_annual_mean": 0.00389
+  },
+  "N6": {
+   "implied_sd_ic": 0.0312,
+   "mean_t": 0.154,
+   "nan_rows": 0,
+   "rej_1": 0.0185,
+   "rej_5": 0.0722,
+   "ret_sd": 0.0651,
+   "sd_t": 1.05,
+   "tq_annual_mean": 0.00045
+  },
+  "N7": {
+   "implied_sd_ic": 0.0078,
+   "mean_t": 0.528,
+   "nan_rows": 0,
+   "rej_1": 0.041,
+   "rej_5": 0.1353,
+   "ret_sd": 0.0735,
+   "sd_t": 1.035,
+   "tq_annual_mean": 0.00045
+  },
+  "N8a": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 0.166,
+   "nan_rows": 0,
+   "rej_1": 0.0158,
+   "rej_5": 0.0688,
+   "ret_sd": 0.0643,
+   "sd_t": 1.035,
+   "tq_annual_mean": 0.00058
+  },
+  "N8b": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 0.161,
+   "nan_rows": 0,
+   "rej_1": 0.018,
+   "rej_5": 0.0755,
+   "ret_sd": 0.0644,
+   "sd_t": 1.038,
+   "tq_annual_mean": 0.00048
+  },
+  "N9": {
+   "implied_sd_ic": 0.0412,
+   "mean_t": 0.13,
+   "nan_rows": 0,
+   "rej_1": 0.0295,
+   "rej_5": 0.096,
+   "ret_sd": 0.0644,
+   "sd_t": 1.171,
+   "tq_annual_mean": 0.00059
+  },
+  "PM1": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 3.367,
+   "nan_rows": 0,
+   "rej_1": 0.827,
+   "rej_5": 0.945,
+   "ret_sd": 0.0644,
+   "sd_t": 1.106,
+   "tq_annual_mean": 0.01004
+  },
+  "PM3": {
+   "implied_sd_ic": 0.0315,
+   "mean_t": 9.728,
+   "nan_rows": 0,
+   "rej_1": 1.0,
+   "rej_5": 1.0,
+   "ret_sd": 0.0644,
+   "sd_t": 1.531,
+   "tq_annual_mean": 0.02909
+  },
+  "PP2": {
+   "implied_sd_ic": 0.0078,
+   "mean_t": 22.988,
+   "nan_rows": 0,
+   "rej_1": 1.0,
+   "rej_5": 1.0,
+   "ret_sd": 0.0735,
+   "sd_t": 3.117,
+   "tq_annual_mean": 0.01955
+  },
+  "PP3": {
+   "implied_sd_ic": 0.0078,
+   "mean_t": 33.847,
+   "nan_rows": 0,
+   "rej_1": 1.0,
+   "rej_5": 1.0,
+   "ret_sd": 0.0736,
+   "sd_t": 4.522,
+   "tq_annual_mean": 0.02911
+  }
+ },
+ "driver_outcome": "C \u2014 METHOD NOT VALIDATED",
+ "failed_scenarios": [
+  "N13"
+ ],
+ "kind": "OC-2 Stage 2 protocol-correct classification + post-hoc diagnostics (synthetic only)",
+ "notes": [
+  "protocol 6.1 (frozen text): any failed or incomplete scenario -> D; the driver did not implement this clause; the protocol governs",
+  "N13 failed: every replication has NaN statistics (overlapping 3-month responses reach stocks that left the sample when the cross-section shrinks); diagnostic scenario",
+  "N7 parameterisation defect: systematic variance exceeds the 6.5% total, so the idiosyncratic sd collapsed to the floor (implied sd_IC far below N4)",
+  "power worlds: implied sd_IC ~ the sampling floor (about 0.03) vs the 0.06-0.12 range assumed in LH-CP4; synthetic power is therefore not credible"
+ ],
+ "outcome": "D \u2014 INSUFFICIENT EVIDENCE",
+ "results_protocol_sha256": "bcb872adc50d0479c69895253edb66252d4299061a4edff6dc54bfbffa6bc233",
+ "size_failures": [
+  "N4",
+  "N6",
+  "N7",
+  "N8a",
+  "N8b",
+  "N9",
+  "N11",
+  "N12",
+  "N5a"
+ ]
+}

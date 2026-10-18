@@ -650,3 +650,7 @@ Choose one:
 - **Correction to OC-CP1:** business improvement was set aside on an imported 2015–2021 window; Data v3 signals need no fiscal labels, so the PIT-safe window is 2012-02 → 2021-11.
 - **Proposed:** OC-2 (ΔROA, Data v3 F5) as the single earnings-improvement signal test, replacing OF-A's surprise definitions if approved; Stage B-OC2 synthetic calibration first.
 - **Unchanged:** SYS-1 (not run), the D245 exception for OF-A, every formal status, the Holdout seal.
+
+**Update (D248, 2026-10-18): OC-2 integrity and calibration.** `docs/checkpoints/OC_CP3_oc2_stage1_data_integrity.md` (Stage 1 PASS) and `docs/checkpoints/OC_CP4_oc2_stage2_synthetic_calibration.md` (Stage 2 D — INSUFFICIENT EVIDENCE; the method as specified is not validated).
+- **Lesson for any signal-level test:** with several priced characteristics correlated with the signal, rank-linear controls and noisy controls bias the Fama–MacBeth slope upwards. A valid design needs flexible controls and an explicit leakage tolerance.
+- **Lesson for synthetic calibration:** synthetic power is only credible if the generated payoff dependence reaches realistic IC volatility.

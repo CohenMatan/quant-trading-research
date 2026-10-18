@@ -1,0 +1,1001 @@
+{
+ "amendment_only_period_share": {
+  "2011": 0.0125,
+  "2012": 0.0142,
+  "2013": 0.0072,
+  "2014": 0.0033,
+  "2015": 0.0028,
+  "2016": 0.0034,
+  "2017": 0.0041,
+  "2018": 0.0053,
+  "2019": 0.0048,
+  "2020": 0.0027,
+  "2021": 0.0017
+ },
+ "cache_missing": {},
+ "classification": "PASS \u2014 PIT-SAFE AND SUFFICIENT",
+ "committed_evidence": {
+  "F5_validation": {
+   "availability": {
+    "both": 9664,
+    "neither": 956,
+    "sec_only": 2088,
+    "vendor_only": 265
+   },
+   "by_period": {
+    "2011-2014": {
+     "max": 0.9228675136116152,
+     "median": 0.000990099009900991,
+     "n": 2270,
+     "p90": 0.0022176385253606795,
+     "p99": 0.0625275181723779,
+     "share_gt_0_20": 0.004405286343612335
+    },
+    "2015-2017": {
+     "max": 0.9657342657342658,
+     "median": 0.0006868131868131844,
+     "n": 2826,
+     "p90": 0.003382949932341006,
+     "p99": 0.031147279817386395,
+     "share_gt_0_20": 0.0024769992922859165
+    },
+    "2018-2021": {
+     "max": 0.29248768472906406,
+     "median": 0.0006127450980392135,
+     "n": 4513,
+     "p90": 0.003026634382566562,
+     "p99": 0.06719982205927579,
+     "share_gt_0_20": 0.0006647462884998893
+    }
+   },
+   "by_sector": {
+    "BusEq": {
+     "max": 0.11280487804878048,
+     "median": 0.0006729475100942794,
+     "n": 913,
+     "p90": 0.0034525952230383826,
+     "p99": 0.08785770252676106,
+     "share_gt_0_20": 0.0
+    },
+    "Chems": {
+     "max": 0.26113861386138615,
+     "median": 0.0006784260515604323,
+     "n": 775,
+     "p90": 0.0017949846394435432,
+     "p99": 0.06695129827336241,
+     "share_gt_0_20": 0.003870967741935484
+    },
+    "Durbl": {
+     "max": 0.1621454993834772,
+     "median": 0.0006711409395973034,
+     "n": 993,
+     "p90": 0.0014663642949503473,
+     "p99": 0.07797513730585272,
+     "share_gt_0_20": 0.0
+    },
+    "Enrgy": {
+     "max": 0.06912144702842371,
+     "median": 0.0006849366480514152,
+     "n": 876,
+     "p90": 0.0013297872340425343,
+     "p99": 0.018119984087449886,
+     "share_gt_0_20": 0.0
+    },
+    "Hlth": {
+     "max": 0.9657342657342658,
+     "median": 0.0006784260515603491,
+     "n": 802,
+     "p90": 0.0073177638973663155,
+     "p99": 0.16074396750624886,
+     "share_gt_0_20": 0.008728179551122194
+    },
+    "Manuf": {
+     "max": 0.12316910785619173,
+     "median": 0.0006756756756757243,
+     "n": 958,
+     "p90": 0.004763566795763125,
+     "p99": 0.05324025010546539,
+     "share_gt_0_20": 0.0
+    },
+    "NoDur": {
+     "max": 0.04782082324455203,
+     "median": 0.0006802721088435271,
+     "n": 823,
+     "p90": 0.005800488633069692,
+     "p99": 0.029404400111105657,
+     "share_gt_0_20": 0.0
+    },
+    "Other": {
+     "max": 0.11440677966101698,
+     "median": 0.0006657789613848386,
+     "n": 1076,
+     "p90": 0.0013262599469496539,
+     "p99": 0.06719370907885819,
+     "share_gt_0_20": 0.0
+    },
+    "Shops": {
+     "max": 0.2751479289940828,
+     "median": 0.0006765899864682456,
+     "n": 1037,
+     "p90": 0.0019410008144059353,
+     "p99": 0.056667532355105514,
+     "share_gt_0_20": 0.003857280617164899
+    },
+    "Telcm": {
+     "max": 0.9228675136116152,
+     "median": 0.0006702412868633267,
+     "n": 667,
+     "p90": 0.007784715500813939,
+     "p99": 0.05974105704157279,
+     "share_gt_0_20": 0.008995502248875561
+    },
+    "Utils": {
+     "max": 0.05503978779840846,
+     "median": 0.0007012622720897477,
+     "n": 689,
+     "p90": 0.003991649209606244,
+     "p99": 0.02827785930082006,
+     "share_gt_0_20": 0.0
+    }
+   },
+   "passes": true,
+   "pooled": {
+    "n": 9609,
+    "share_gt_0_20": 0.002081382037673015
+   },
+   "sectors_with_100": 11,
+   "status": "PASS",
+   "sufficient": true
+  },
+  "NI0_match_share": 0.9399,
+  "TA0_match_share": 0.9986,
+  "anchor": {
+   "agree": 12436,
+   "both_missing": 104,
+   "vendor_missing": 266,
+   "vendor_older": 167
+  },
+  "anchor_agreement": 0.9586,
+  "data_v3_F5_coverage": {
+   "by_period": {
+    "2011-2014": 0.6280575539568345,
+    "2015-2017": 0.8170926795339941,
+    "2018-2021": 0.8055555555555556
+   },
+   "median": 0.7863340563991323,
+   "median_2015_2021": 0.8081587651598677,
+   "min": 0.5030487804878049
+  },
+  "guard_blocked_net_income_by_year": {
+   "2009": 14,
+   "2010": 35,
+   "2011": 59,
+   "2012": 43,
+   "2013": 31,
+   "2014": 26,
+   "2015": 29,
+   "2016": 34,
+   "2017": 30,
+   "2018": 42,
+   "2019": 41,
+   "2020": 41,
+   "2021": 19
+  },
+  "guard_net_income": {
+   "blocked_future": 444,
+   "no_restatement": 107103,
+   "restated_known": 206,
+   "unmatched": 8501
+  },
+  "guard_total_assets": {
+   "no_restatement": 114948,
+   "restated_known": 52,
+   "unmatched": 1377
+  },
+  "p14_cp1_F5A": {
+   "breadth": {
+    "eligible_median": 934.0,
+    "valid_median": 753.0,
+    "valid_min": 360,
+    "valid_p5": 401.0
+   },
+   "level": "USABLE"
+  },
+  "p14_cp2_pit": {
+   "baseline_pit_violations": 0,
+   "baseline_used_despite_reject": 0,
+   "f7_filing_not_public": 0,
+   "fed_after_guard_trigger": 0,
+   "fed_before_first_seen": 0,
+   "fed_before_sec_filing": 0,
+   "future_identity_row": 0,
+   "guard_entries_after_2021": 0,
+   "overlay_newer_replacement": 0,
+   "record_older_than_200d": 0,
+   "repaired_below_2B": 0,
+   "repaired_with_vendor_cap": 0,
+   "share_filing_not_yet_public": 0,
+   "stale_share_count_used": 0,
+   "vendor_anchor_ahead_of_sec": 0,
+   "view_future_records": 0
+  },
+  "pit_all_zero": true
+ },
+ "decision": "D248",
+ "gates": {
+  "G-AGR": "PASS",
+  "G-COV": "PASS",
+  "G-DEF": "PASS",
+  "G-PIT": "PASS",
+  "G-RISK": "PASS",
+  "G-VER": "PASS",
+  "G-WIN": "PASS"
+ },
+ "inputs_sha256": {
+  "experiments/E981-01/result.json": "75e4e2031e9107d73bd29d426900b021adaeead3170f5befdb34bdfd1a9f22d3",
+  "research/phase11/data_v21/data_freeze_v21.json": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf",
+  "research/phase14/cp1/P14_CP1_audit.json": "71bea69b539bc706eebd582f38073183ec04d3e5d18aed9ee5626ab8dc040c21",
+  "research/phase14/cp2/P14_CP2_audit.json": "d37552aa7ece6241c3b63fc89e7dd905aa0423914d60f583db11ce0a42eee6b4",
+  "research/phase14/data_v3/DATA_V3_spec.md": "b4b8aa9b1c212e98bdf1aea7ed3ed577be21d9d1c195fa06ff54764452ab73d0",
+  "research/phase14/data_v3/data_freeze_v3.json": "601d00623e97696bd81f5a18e4b604482eba2da67acf31b8085f2e455a2fefcb",
+  "src/qresearch/data_v3.py": "6495dc021d692ef0aff1c99019ff6930ee39d8dca29cf01c3fe309a702b2fd87",
+  "src/qresearch/lean/qr_fundamentals.py": "0774343f24820ce4d847e27299107f2218f1a536184fb6d51db6e8f8c6106907",
+  "src/qresearch/lean/qr_h029a.py": "3cff1e0361fdae6b6724d4f73866f45a9c7ead4f37dbf9a4b216d4f5e1d24961",
+  "src/qresearch/lean/qr_v3.py": "40bcf98d3aa62f625faa5c1f97a18c08d5a0d0d40bd9afcf300f5bf67fdcaccd"
+ },
+ "kind": "OC-2 Stage 1 data / PIT / fiscal-period integrity audit (aggregates only; no values, no returns)",
+ "pit_violations": 0,
+ "population": {
+  "all": 159717,
+  "audit": 120993,
+  "financial": 33544,
+  "no_identity": 4172,
+  "no_sic": 1008
+ },
+ "primary_2012_complete_stock_months": 7231,
+ "protocol_sha256": "91da6f278d916ee25cc04d1d7fea8d428f67e34b214384b842ec043316fb836e",
+ "script_sha256": "8ced630a6b28d3046e5f50a401d041483a5adc69ed2caca8736fd3b86bd361d3",
+ "stage2_population": {
+  "anchor_refresh_share": {
+   "by_calendar_month": {
+    "1": 0.0831,
+    "10": 0.3571,
+    "11": 0.5536,
+    "12": 0.0815,
+    "2": 0.7474,
+    "3": 0.1579,
+    "4": 0.297,
+    "5": 0.6213,
+    "6": 0.0821,
+    "7": 0.3348,
+    "8": 0.5841,
+    "9": 0.0738
+   },
+   "mean": 0.3318
+  },
+  "complete_per_review": {
+   "by_year": {
+    "2012": 657.4,
+    "2013": 755.0,
+    "2014": 832.6,
+    "2015": 840.5,
+    "2016": 813.6,
+    "2017": 880.6,
+    "2018": 914.2,
+    "2019": 916.4,
+    "2020": 920.1,
+    "2021": 1127.1
+   },
+   "max": 1172,
+   "mean": 865.3,
+   "min": 641
+  },
+  "entry_share": 0.0286,
+  "exit_share": 0.0242,
+  "ff12_mean_per_review": {
+   "2012": {
+    "BusEq": 119.6,
+    "Chems": 28.5,
+    "Durbl": 21.2,
+    "Enrgy": 47.6,
+    "Hlth": 68.5,
+    "Manuf": 84.4,
+    "NoDur": 44.4,
+    "Other": 99.5,
+    "Shops": 82.0,
+    "Telcm": 25.7,
+    "Utils": 35.9
+   },
+   "2013": {
+    "BusEq": 135.2,
+    "Chems": 33.8,
+    "Durbl": 24.2,
+    "Enrgy": 49.8,
+    "Hlth": 74.8,
+    "Manuf": 95.9,
+    "NoDur": 48.2,
+    "Other": 119.9,
+    "Shops": 97.2,
+    "Telcm": 29.5,
+    "Utils": 46.6
+   },
+   "2014": {
+    "BusEq": 156.2,
+    "Chems": 35.9,
+    "Durbl": 27.0,
+    "Enrgy": 54.4,
+    "Hlth": 79.8,
+    "Manuf": 101.8,
+    "NoDur": 51.7,
+    "Other": 130.8,
+    "Shops": 106.4,
+    "Telcm": 28.9,
+    "Utils": 59.8
+   },
+   "2015": {
+    "BusEq": 157.5,
+    "Chems": 34.4,
+    "Durbl": 26.2,
+    "Enrgy": 51.5,
+    "Hlth": 89.7,
+    "Manuf": 95.9,
+    "NoDur": 58.1,
+    "Other": 133.2,
+    "Shops": 106.9,
+    "Telcm": 27.5,
+    "Utils": 59.6
+   },
+   "2016": {
+    "BusEq": 157.9,
+    "Chems": 35.1,
+    "Durbl": 25.4,
+    "Enrgy": 50.8,
+    "Hlth": 81.6,
+    "Manuf": 89.0,
+    "NoDur": 57.8,
+    "Other": 135.3,
+    "Shops": 98.0,
+    "Telcm": 24.8,
+    "Utils": 57.9
+   },
+   "2017": {
+    "BusEq": 169.8,
+    "Chems": 36.7,
+    "Durbl": 28.7,
+    "Enrgy": 53.6,
+    "Hlth": 97.1,
+    "Manuf": 97.4,
+    "NoDur": 57.3,
+    "Other": 157.0,
+    "Shops": 98.8,
+    "Telcm": 28.2,
+    "Utils": 56.1
+   },
+   "2018": {
+    "BusEq": 177.3,
+    "Chems": 36.8,
+    "Durbl": 28.4,
+    "Enrgy": 52.5,
+    "Hlth": 112.4,
+    "Manuf": 104.2,
+    "NoDur": 57.2,
+    "Other": 166.7,
+    "Shops": 94.8,
+    "Telcm": 28.6,
+    "Utils": 55.2
+   },
+   "2019": {
+    "BusEq": 190.9,
+    "Chems": 40.2,
+    "Durbl": 27.3,
+    "Enrgy": 39.2,
+    "Hlth": 111.6,
+    "Manuf": 105.1,
+    "NoDur": 55.2,
+    "Other": 168.0,
+    "Shops": 93.8,
+    "Telcm": 27.5,
+    "Utils": 57.5
+   },
+   "2020": {
+    "BusEq": 208.6,
+    "Chems": 37.6,
+    "Durbl": 26.9,
+    "Enrgy": 27.4,
+    "Hlth": 120.9,
+    "Manuf": 104.8,
+    "NoDur": 54.8,
+    "Other": 164.0,
+    "Shops": 94.8,
+    "Telcm": 24.0,
+    "Utils": 56.3
+   },
+   "2021": {
+    "BusEq": 251.5,
+    "Chems": 49.2,
+    "Durbl": 34.8,
+    "Enrgy": 34.1,
+    "Hlth": 156.5,
+    "Manuf": 131.6,
+    "NoDur": 66.2,
+    "Other": 197.9,
+    "Shops": 120.1,
+    "Telcm": 26.2,
+    "Utils": 59.1
+   }
+  },
+  "first": "2012-02-29",
+  "last": "2021-11-30",
+  "reviews": 118
+ },
+ "thresholds": {
+  "agr": 0.9,
+  "cov_fail": 0.5,
+  "cov_pass": 0.6,
+  "risk_fail": 0.05,
+  "risk_pass": 0.02,
+  "ver_pass": 0.7
+ },
+ "universe_counts": {
+  "2011": {
+   "data_v21_mean": 872.2,
+   "e981_mean": 922.1
+  },
+  "2012": {
+   "data_v21_mean": 889.3,
+   "e981_mean": 931.7
+  },
+  "2013": {
+   "data_v21_mean": 1024.4,
+   "e981_mean": 1071.7
+  },
+  "2014": {
+   "data_v21_mean": 1149.4,
+   "e981_mean": 1197.8
+  },
+  "2015": {
+   "data_v21_mean": 1179.5,
+   "e981_mean": 1223.5
+  },
+  "2016": {
+   "data_v21_mean": 1153.1,
+   "e981_mean": 1179.2
+  },
+  "2017": {
+   "data_v21_mean": 1262.9,
+   "e981_mean": 1282.1
+  },
+  "2018": {
+   "data_v21_mean": 1319.8,
+   "e981_mean": 1332.0
+  },
+  "2019": {
+   "data_v21_mean": 1324.8,
+   "e981_mean": 1326.6
+  },
+  "2020": {
+   "data_v21_mean": 1322.1,
+   "e981_mean": 1319.4
+  },
+  "2021": {
+   "data_v21_mean": 1666.7,
+   "e981_mean": 1662.2
+  }
+ },
+ "window_length_days": {
+  "L0": {
+   "357": 3,
+   "359": 3,
+   "361": 8,
+   "362": 21,
+   "363": 48,
+   "364": 18520,
+   "365": 63010,
+   "366": 23729,
+   "367": 53,
+   "368": 77,
+   "369": 53,
+   "370": 11,
+   "371": 4172,
+   "372": 7
+  },
+  "L4": {
+   "357": 3,
+   "359": 3,
+   "360": 3,
+   "361": 11,
+   "362": 15,
+   "363": 62,
+   "364": 18867,
+   "365": 63376,
+   "366": 22354,
+   "367": 58,
+   "368": 50,
+   "369": 31,
+   "370": 19,
+   "371": 3670,
+   "372": 7,
+   "376": 3
+  }
+ },
+ "window_rule": {
+  "all_reviews": 131,
+  "first_review": "2012-02",
+  "min_from_start": 0.613,
+  "reviews": 118,
+  "source": "P14_CP1_audit.json coverage.F5A.monthly (non-return aggregate)",
+  "yearly_mean": {
+   "2011": 0.563,
+   "2012": 0.616,
+   "2013": 0.66,
+   "2014": 0.778,
+   "2015": 0.817,
+   "2016": 0.836,
+   "2017": 0.789,
+   "2018": 0.787,
+   "2019": 0.82,
+   "2020": 0.809,
+   "2021": 0.762
+  }
+ },
+ "years": {
+  "2011": {
+   "audit_stock_months": 8299,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.3412,
+    "COMPARABLE_VERIFIED": 0.6572,
+    "FY_CHANGE_WINDOW_VALID": 0.0016
+   },
+   "complete_share": 0.9171,
+   "duration_methods": {
+    "direct": 0.7694,
+    "none": 0.0924,
+    "ytd4": 0.1383
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0099,
+    "W53_mismatch": 0.0656,
+    "annual_break": 0.0016,
+    "derived_q4_in_span": 0.5587,
+    "fy_change_verified": 0.0016,
+    "fye_code_change": 0.0791,
+    "id_change": 0.0,
+    "id_unknown": 0.0331,
+    "transition_form": 0.0016,
+    "verified": 0.6588
+   },
+   "identified_share": 0.911,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9171,
+    "gap_long": 0.0172,
+    "gap_short": 0.0478,
+    "no_fresh_anchor": 0.0014,
+    "short_history": 0.0164
+   },
+   "no_identity_or_sic": 811,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.6588
+  },
+  "2012": {
+   "audit_stock_months": 7899,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.03,
+    "COMPARABLE_VERIFIED": 0.9668,
+    "FY_CHANGE_WINDOW_VALID": 0.0029,
+    "NON_COMPARABLE_RISK": 0.0003
+   },
+   "complete_share": 0.9154,
+   "duration_methods": {
+    "direct": 0.9361,
+    "none": 0.009,
+    "ytd4": 0.0549
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0003,
+    "L4_unmeasured": 0.0073,
+    "W53_mismatch": 0.0528,
+    "annual_break": 0.0014,
+    "derived_q4_in_span": 0.2261,
+    "fy_change_unverified": 0.0007,
+    "fy_change_verified": 0.0022,
+    "fye_code_change": 0.0951,
+    "id_change": 0.0,
+    "id_unknown": 0.0064,
+    "transition_form": 0.0029,
+    "verified": 0.969
+   },
+   "identified_share": 0.9431,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9154,
+    "gap_long": 0.0203,
+    "gap_short": 0.027,
+    "no_fresh_anchor": 0.0027,
+    "short_history": 0.0347
+   },
+   "no_identity_or_sic": 477,
+   "non_comparable_risk": 0.0003,
+   "verified_share": 0.969
+  },
+  "2013": {
+   "audit_stock_months": 9946,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0092,
+    "COMPARABLE_VERIFIED": 0.9872,
+    "FY_CHANGE_WINDOW_VALID": 0.0035,
+    "NON_COMPARABLE_RISK": 0.0001
+   },
+   "complete_share": 0.9109,
+   "duration_methods": {
+    "direct": 0.946,
+    "none": 0.0039,
+    "ytd": 0.0002,
+    "ytd4": 0.05
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0001,
+    "L4_unmeasured": 0.0099,
+    "W53_mismatch": 0.0801,
+    "annual_break": 0.0025,
+    "derived_q4_in_span": 0.2079,
+    "fy_change_verified": 0.0035,
+    "fye_code_change": 0.0993,
+    "id_change": 0.0,
+    "id_unknown": 0.0031,
+    "transition_form": 0.0035,
+    "verified": 0.9907
+   },
+   "identified_share": 0.9536,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9109,
+    "gap_long": 0.0208,
+    "gap_short": 0.0208,
+    "no_fresh_anchor": 0.0033,
+    "short_history": 0.0441
+   },
+   "no_identity_or_sic": 484,
+   "non_comparable_risk": 0.0001,
+   "verified_share": 0.9907
+  },
+  "2014": {
+   "audit_stock_months": 11037,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0082,
+    "COMPARABLE_VERIFIED": 0.9867,
+    "FY_CHANGE_WINDOW_VALID": 0.0051
+   },
+   "complete_share": 0.9052,
+   "duration_methods": {
+    "direct": 0.9485,
+    "none": 0.0034,
+    "ytd": 0.0003,
+    "ytd4": 0.0478
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0134,
+    "W53_mismatch": 0.0699,
+    "annual_break": 0.0031,
+    "derived_q4_in_span": 0.1996,
+    "fy_change_unverified": 0.0006,
+    "fy_change_verified": 0.0045,
+    "fye_code_change": 0.0926,
+    "id_change": 0.0,
+    "id_unknown": 0.0017,
+    "transition_form": 0.0051,
+    "verified": 0.9912
+   },
+   "identified_share": 0.9623,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9052,
+    "gap_long": 0.0218,
+    "gap_short": 0.016,
+    "no_fresh_anchor": 0.0048,
+    "short_history": 0.0521
+   },
+   "no_identity_or_sic": 432,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.9912
+  },
+  "2015": {
+   "audit_stock_months": 11082,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0047,
+    "COMPARABLE_VERIFIED": 0.991,
+    "FY_CHANGE_WINDOW_VALID": 0.0044
+   },
+   "complete_share": 0.9101,
+   "duration_methods": {
+    "direct": 0.9518,
+    "none": 0.0008,
+    "ytd": 0.0,
+    "ytd4": 0.0474
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0142,
+    "W53_mismatch": 0.0695,
+    "annual_break": 0.0014,
+    "derived_q4_in_span": 0.1951,
+    "fy_change_unverified": 0.0011,
+    "fy_change_verified": 0.0033,
+    "fye_code_change": 0.0919,
+    "id_change": 0.0,
+    "id_unknown": 0.004,
+    "transition_form": 0.0044,
+    "verified": 0.9942
+   },
+   "identified_share": 0.9636,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9101,
+    "gap_long": 0.017,
+    "gap_short": 0.0131,
+    "no_fresh_anchor": 0.0074,
+    "short_history": 0.0524
+   },
+   "no_identity_or_sic": 419,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.9942
+  },
+  "2016": {
+   "audit_stock_months": 10600,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.003,
+    "COMPARABLE_VERIFIED": 0.995,
+    "FY_CHANGE_WINDOW_VALID": 0.002
+   },
+   "complete_share": 0.921,
+   "duration_methods": {
+    "direct": 0.9511,
+    "none": 0.0002,
+    "ytd": 0.0003,
+    "ytd4": 0.0484
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0097,
+    "W53_mismatch": 0.104,
+    "annual_break": 0.0007,
+    "derived_q4_in_span": 0.1977,
+    "fy_change_unverified": 0.0002,
+    "fy_change_verified": 0.0018,
+    "fye_code_change": 0.091,
+    "id_change": 0.0,
+    "id_unknown": 0.0012,
+    "transition_form": 0.002,
+    "verified": 0.9968
+   },
+   "identified_share": 0.9715,
+   "late_filed_chain": 0.0007,
+   "missing_reasons": {
+    "complete": 0.921,
+    "gap_long": 0.0142,
+    "gap_short": 0.0134,
+    "no_fresh_anchor": 0.012,
+    "short_history": 0.0394
+   },
+   "no_identity_or_sic": 311,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.9968
+  },
+  "2017": {
+   "audit_stock_months": 11474,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0026,
+    "COMPARABLE_VERIFIED": 0.9943,
+    "FY_CHANGE_WINDOW_VALID": 0.0031
+   },
+   "complete_share": 0.921,
+   "duration_methods": {
+    "direct": 0.954,
+    "none": 0.0004,
+    "ytd": 0.0006,
+    "ytd4": 0.045
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0099,
+    "W53_mismatch": 0.0881,
+    "annual_break": 0.0004,
+    "derived_q4_in_span": 0.1872,
+    "fy_change_verified": 0.0031,
+    "fye_code_change": 0.0894,
+    "id_change": 0.0,
+    "id_unknown": 0.0024,
+    "transition_form": 0.0028,
+    "verified": 0.9974
+   },
+   "identified_share": 0.9689,
+   "late_filed_chain": 0.0009,
+   "missing_reasons": {
+    "complete": 0.921,
+    "gap_long": 0.0141,
+    "gap_short": 0.0119,
+    "no_fresh_anchor": 0.0123,
+    "short_history": 0.0407
+   },
+   "no_identity_or_sic": 368,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.9974
+  },
+  "2018": {
+   "audit_stock_months": 11956,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0026,
+    "COMPARABLE_VERIFIED": 0.9927,
+    "FY_CHANGE_WINDOW_VALID": 0.0045,
+    "NON_COMPARABLE_RISK": 0.0003
+   },
+   "complete_share": 0.9175,
+   "duration_methods": {
+    "direct": 0.9518,
+    "none": 0.0014,
+    "ytd": 0.0007,
+    "ytd4": 0.0461
+   },
+   "flags": {
+    "L0_irregular": 0.0003,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0099,
+    "W53_mismatch": 0.0679,
+    "annual_break": 0.0019,
+    "derived_q4_in_span": 0.1933,
+    "fy_change_verified": 0.0045,
+    "fye_code_change": 0.0758,
+    "id_change": 0.0,
+    "id_unknown": 0.0027,
+    "transition_form": 0.0039,
+    "verified": 0.9972
+   },
+   "identified_share": 0.9682,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9175,
+    "gap_long": 0.014,
+    "gap_short": 0.0089,
+    "no_fresh_anchor": 0.0134,
+    "short_history": 0.0463
+   },
+   "no_identity_or_sic": 393,
+   "non_comparable_risk": 0.0003,
+   "verified_share": 0.9972
+  },
+  "2019": {
+   "audit_stock_months": 11925,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0031,
+    "COMPARABLE_VERIFIED": 0.9938,
+    "FY_CHANGE_WINDOW_VALID": 0.0028,
+    "NON_COMPARABLE_RISK": 0.0003
+   },
+   "complete_share": 0.9222,
+   "duration_methods": {
+    "direct": 0.9502,
+    "none": 0.0019,
+    "ytd": 0.0004,
+    "ytd4": 0.0475
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0003,
+    "L4_unmeasured": 0.007,
+    "W53_mismatch": 0.0439,
+    "annual_break": 0.0011,
+    "derived_q4_in_span": 0.1966,
+    "fy_change_verified": 0.0028,
+    "fye_code_change": 0.1456,
+    "id_change": 0.0,
+    "id_unknown": 0.0033,
+    "transition_form": 0.0027,
+    "verified": 0.9969
+   },
+   "identified_share": 0.9697,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9222,
+    "gap_long": 0.0138,
+    "gap_short": 0.0059,
+    "no_fresh_anchor": 0.0107,
+    "short_history": 0.0474
+   },
+   "no_identity_or_sic": 372,
+   "non_comparable_risk": 0.0003,
+   "verified_share": 0.9966
+  },
+  "2020": {
+   "audit_stock_months": 12114,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0026,
+    "COMPARABLE_VERIFIED": 0.9951,
+    "FY_CHANGE_WINDOW_VALID": 0.0023
+   },
+   "complete_share": 0.9114,
+   "duration_methods": {
+    "direct": 0.9516,
+    "none": 0.0016,
+    "ytd": 0.0002,
+    "ytd4": 0.0466
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0124,
+    "W53_mismatch": 0.0449,
+    "annual_break": 0.0015,
+    "derived_q4_in_span": 0.1933,
+    "fy_change_verified": 0.0023,
+    "fye_code_change": 0.1664,
+    "id_change": 0.0,
+    "id_unknown": 0.0107,
+    "transition_form": 0.0023,
+    "verified": 0.9974
+   },
+   "identified_share": 0.9663,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.9114,
+    "gap_long": 0.0092,
+    "gap_short": 0.0035,
+    "no_fresh_anchor": 0.0092,
+    "short_history": 0.0667
+   },
+   "no_identity_or_sic": 422,
+   "non_comparable_risk": 0.0,
+   "verified_share": 0.9974
+  },
+  "2021": {
+   "audit_stock_months": 13957,
+   "classes": {
+    "COMPARABLE_UNVERIFIED": 0.0052,
+    "COMPARABLE_VERIFIED": 0.9921,
+    "FY_CHANGE_WINDOW_VALID": 0.0024,
+    "NON_COMPARABLE_RISK": 0.0002
+   },
+   "complete_share": 0.8883,
+   "duration_methods": {
+    "direct": 0.9239,
+    "none": 0.0021,
+    "ytd": 0.0001,
+    "ytd4": 0.0739
+   },
+   "flags": {
+    "L0_irregular": 0.0,
+    "L4_irregular": 0.0,
+    "L4_unmeasured": 0.0133,
+    "W53_mismatch": 0.0993,
+    "annual_break": 0.0021,
+    "derived_q4_in_span": 0.4025,
+    "fy_change_verified": 0.0024,
+    "fye_code_change": 0.1547,
+    "id_change": 0.0002,
+    "id_unknown": 0.0126,
+    "transition_form": 0.0024,
+    "verified": 0.9948
+   },
+   "identified_share": 0.9558,
+   "late_filed_chain": 0.0,
+   "missing_reasons": {
+    "complete": 0.8883,
+    "gap_long": 0.0078,
+    "gap_short": 0.0016,
+    "no_fresh_anchor": 0.0068,
+    "short_history": 0.0954
+   },
+   "no_identity_or_sic": 646,
+   "non_comparable_risk": 0.0002,
+   "verified_share": 0.9945
+  }
+ }
+}

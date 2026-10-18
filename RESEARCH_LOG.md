@@ -2407,3 +2407,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Power** (`research/longhorizon/oc_cp2/OC_CP2_power.json`): main 80% MDE 3.2% naive / 4.3% realistic a year; power at +3% 45–74%; +2% undetectable.
 - **Backup:** none (justified STOP → SPY). Combination feasibility: two stock sleeves infeasible at $100K under D044.
 - **Status:** STOPPED awaiting the owner (OC-CP2 §14).
+
+## 2026-10-18: OC-CP3 / OC-CP4 — OC-2 data integrity and synthetic inference calibration (D248)
+
+- **Scope:** Stage 1 offline metadata-only PIT / fiscal-period audit; Stage 2 synthetic-only calibration. No real signal, return, QuantConnect run, purchase or Holdout.
+- **Stage 1** (protocol frozen in 819a7a1; `docs/checkpoints/OC_CP3_oc2_stage1_data_integrity.md`): F5 compares adjacent twelve-month windows, so fiscal labels are not needed.
+  - non-comparable risk ≤ 0.03%; FY-change / transition windows 0.2–0.5% (still valid);
+  - SEC-verified quarter durations ≥ 96.9%; PIT violations 0; vendor–SEC agreement 94–99.9%;
+  - window 2012-02 → 2021-11 (118 reviews); vendor-side cross-section 447 → 1,019 a review.
+  - **PASS — PIT-SAFE AND SUFFICIENT.**
+- **Stage 2** (protocol frozen in f4dca7e; Addendum 1 crash fix 9da492d; `docs/checkpoints/OC_CP4_oc2_stage2_synthetic_calibration.md`):
+  - 9 of 14 gating nulls fail the size criteria through a mean shift of t (control functional-form and measurement-error leakage); standard errors themselves are calibrated (sd t ≈ 1.04);
+  - synthetic power is not credible (implied IC sd ≈ 0.03);
+  - diagnostic N13 failed (NaN).
+  - **D — INSUFFICIENT EVIDENCE** (protocol §6.1); the method as specified is not validated.
+- **Status:** STOPPED awaiting the owner (OC-CP4 §10: stop OC-2 → SPY, or one Stage B-OC2 v2 revision).
