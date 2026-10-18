@@ -42,3 +42,17 @@ def test_committed_result_consistent():
            "A — METHOD VALIDATED WITH USEFUL POWER" if p3 >= R.POWER_TARGET else
            "B — METHOD CALIBRATED BUT UNDERPOWERED")
     assert d["outcome"] == exp
+
+
+def test_protocol_correct_classification():
+    """Protocol 6.1 (frozen text): any failed scenario -> D, with precedence over C; the driver omitted that clause."""
+    cp = ROOT / "research/longhorizon/oc2/stage2/OC2_S2_classification.json"
+    if not cp.exists():
+        return
+    c = json.loads(cp.read_text())
+    d = json.loads(OUT.read_text())
+    failed = [n for n, s in d["scenarios"].items() if s["mean_t"] != s["mean_t"]]   # NaN
+    assert sorted(failed) == c["failed_scenarios"]
+    assert c["outcome"] == ("D — INSUFFICIENT EVIDENCE" if failed or any(d["adequacy"].values()) else
+                            "C — METHOD NOT VALIDATED" if d["failed_size"] else d["outcome"])
+    assert c["driver_outcome"] == d["outcome"]
