@@ -2277,3 +2277,19 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **R3 synthetic diagnostic:** 14% false rejections at nominal 1% when growth and profitability are priced; power 29% against a strong signal. Not a substitute.
 - **Classification:** **B — METHOD NOT VALIDATED.** H028 remains REJECTED.
 - **Status:** STOPPED awaiting the owner (recommendation: close the H028 null-repair line).
+
+## 2026-10-18: Phases 13–14 closed; research cycle complete — No Production Candidate Found; long-term roadmap (design only) (D240)
+
+- **Owner decision D240** (verbatim in `docs/owner/2026-10-18_close_phases_13_14_roadmap.md`): closure approved, roadmap design approved, **no approval for further research**.
+- **Closures:**
+  - P13-CP6 accepted (B — METHOD NOT VALIDATED); H028 null-repair workstream closed; **H028 REJECTED** (unchanged).
+  - **PHASE 13 — CLOSED — NO QUALIFIED PRODUCTION CANDIDATE.**
+  - **PHASE 14 — CLOSED — H029/H030 NOT EVALUABLE** (historical BLOCKED; never REJECTED; no performance ever computed; no third null; Data v3 kept).
+  - **Research cycle completed — No Production Candidate Found.**
+- **Documents:**
+  - closure checkpoint `docs/checkpoints/RC1_research_cycle_closure_phases_13_14.md`;
+  - roadmap `docs/checkpoints/RM1_long_term_defensive_offensive_equity_roadmap.md` (design only);
+  - status index `research/hypotheses/STATUS.md`; outcome notes in `H029.md` / `H030.md`.
+- **Nothing run:** no backtest, null, synthetic experiment or QuantConnect run; nothing purchased; Holdout sealed; no frozen artifact changed.
+- **Recommendation:** next, if any, is a synthetic-only inference-validity study for a signal-first OF-A design (alternative: desk-only pre-2010 data feasibility, needs a D124 revisit; stopping defensible).
+- **Status:** STOPPED awaiting the owner.
