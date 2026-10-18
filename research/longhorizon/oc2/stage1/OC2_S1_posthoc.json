@@ -1,0 +1,96 @@
+{
+ "decision": "D248",
+ "identity_cik_change_within_730d": {
+  "2012": 0.0,
+  "2013": 0.0,
+  "2014": 0.0,
+  "2015": 0.0,
+  "2016": 0.0,
+  "2017": 0.0,
+  "2018": 0.0,
+  "2019": 0.0,
+  "2020": 0.0,
+  "2021": 0.0
+ },
+ "identity_population": {
+  "2012": 7899,
+  "2013": 9946,
+  "2014": 11037,
+  "2015": 11082,
+  "2016": 10600,
+  "2017": 11474,
+  "2018": 11956,
+  "2019": 11925,
+  "2020": 12114,
+  "2021": 13957
+ },
+ "kind": "OC-2 Stage 1 post-hoc NON-GATING diagnostics (metadata / committed aggregates only)",
+ "vendor_side_valid_per_review": {
+  "by_year": {
+   "2012": {
+    "max": 461,
+    "mean": 446.5,
+    "min": 429
+   },
+   "2013": {
+    "max": 588,
+    "mean": 542.9,
+    "min": 468
+   },
+   "2014": {
+    "max": 742,
+    "mean": 709.8,
+    "min": 579
+   },
+   "2015": {
+    "max": 788,
+    "mean": 751.2,
+    "min": 710
+   },
+   "2016": {
+    "max": 768,
+    "mean": 740.6,
+    "min": 687
+   },
+   "2017": {
+    "max": 782,
+    "mean": 765.8,
+    "min": 746
+   },
+   "2018": {
+    "max": 841,
+    "mean": 800.9,
+    "min": 750
+   },
+   "2019": {
+    "max": 870,
+    "mean": 839.3,
+    "min": 784
+   },
+   "2020": {
+    "max": 934,
+    "mean": 847.1,
+    "min": 747
+   },
+   "2021": {
+    "max": 1059,
+    "mean": 1018.6,
+    "min": 947
+   }
+  },
+  "max": 1059,
+  "min": 429,
+  "note": "P14-CP1 F5-A coverage (Data v2.1 store, before guard v3) x P14-CP1 nf_eligible",
+  "overall_mean": 746.5
+ },
+ "vendor_vs_sec_F5_availability": {
+  "counts": {
+   "both": 9664,
+   "neither": 956,
+   "sec_only": 2088,
+   "vendor_only": 265
+  },
+  "sec_missing_given_vendor_valid": 0.0267,
+  "vendor_missing_given_sec_valid": 0.1777
+ }
+}
