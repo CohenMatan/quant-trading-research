@@ -1,0 +1,99 @@
+{
+ "chains": {
+  "all": 93256,
+  "label_unknown": 24867
+ },
+ "cut_off": "2021-12-31",
+ "kind": "POST-HOC DIAGNOSTIC - not used for the frozen LH-CP2 classification (metadata only)",
+ "network_requests": 0,
+ "pre_xbrl_only_share_of_unknown": 0.7716,
+ "unknown_reasons": {
+  "no_fp": 56,
+  "no_fp+no_index_row": 50,
+  "no_fp+no_index_row+pre_xbrl": 37,
+  "no_fp+pre_xbrl": 110,
+  "no_index_row": 3183,
+  "no_index_row+pre_xbrl": 2244,
+  "pre_xbrl_only": 19187
+ },
+ "unknown_reasons_by_anchor_year": {
+  "2011": {
+   "no_fp+no_index_row+pre_xbrl": 15,
+   "no_fp+pre_xbrl": 56,
+   "no_index_row+pre_xbrl": 575,
+   "pre_xbrl_only": 7117
+  },
+  "2012": {
+   "no_fp": 13,
+   "no_fp+no_index_row": 3,
+   "no_fp+no_index_row+pre_xbrl": 14,
+   "no_fp+pre_xbrl": 37,
+   "no_index_row": 216,
+   "no_index_row+pre_xbrl": 796,
+   "pre_xbrl_only": 6462
+  },
+  "2013": {
+   "no_fp": 10,
+   "no_fp+no_index_row": 7,
+   "no_fp+no_index_row+pre_xbrl": 6,
+   "no_fp+pre_xbrl": 14,
+   "no_index_row": 447,
+   "no_index_row+pre_xbrl": 632,
+   "pre_xbrl_only": 4251
+  },
+  "2014": {
+   "no_fp": 3,
+   "no_fp+no_index_row": 12,
+   "no_fp+no_index_row+pre_xbrl": 2,
+   "no_fp+pre_xbrl": 3,
+   "no_index_row": 657,
+   "no_index_row+pre_xbrl": 200,
+   "pre_xbrl_only": 1047
+  },
+  "2015": {
+   "no_fp": 5,
+   "no_fp+no_index_row": 14,
+   "no_index_row": 502,
+   "no_index_row+pre_xbrl": 28,
+   "pre_xbrl_only": 132
+  },
+  "2016": {
+   "no_fp": 6,
+   "no_fp+no_index_row": 2,
+   "no_index_row": 339,
+   "no_index_row+pre_xbrl": 10,
+   "pre_xbrl_only": 77
+  },
+  "2017": {
+   "no_fp": 5,
+   "no_fp+no_index_row": 4,
+   "no_index_row": 327,
+   "pre_xbrl_only": 44
+  },
+  "2018": {
+   "no_fp": 2,
+   "no_fp+no_index_row": 4,
+   "no_index_row": 263,
+   "no_index_row+pre_xbrl": 1,
+   "pre_xbrl_only": 17
+  },
+  "2019": {
+   "no_fp": 1,
+   "no_fp+no_index_row": 4,
+   "no_index_row": 194,
+   "pre_xbrl_only": 16
+  },
+  "2020": {
+   "no_fp": 3,
+   "no_index_row": 133,
+   "no_index_row+pre_xbrl": 2,
+   "pre_xbrl_only": 20
+  },
+  "2021": {
+   "no_fp": 8,
+   "no_index_row": 105,
+   "pre_xbrl_only": 4
+  }
+ },
+ "unknown_share": 0.2667
+}

@@ -2319,3 +2319,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Missingness not random:** leavers 64% and newcomers 37% vs 78–79% (C1).
 - **Classification:** frozen result **C — NOT FEASIBLE**, driven by the fiscal-year-end label criterion (8–15% FAIL), which a post-hoc metadata diagnostic shows is mostly 52/53-week drift (criterion mis-specified). A residual 1.3% of chains is unexplained. Without that criterion: A; on the whole evidence: closer to B. Not reclassified.
 - **Status:** STOPPED awaiting the owner (LH-CP1 §26).
+
+## 2026-10-18: LH-CP2 — fiscal-calendar anomaly resolution (D243) → C — INSUFFICIENT EVIDENCE
+
+- **Scope:** offline SEC metadata only, cut-off ≤ 2021-12-31 enforced inside the loaders and tested; protocol frozen first (SHA-256 f7cbac94…); no returns, signals, QuantConnect or Holdout. Stage C stays C — NOT FEASIBLE.
+- **Reproduction:**
+  - committed diagnostic bit-identical (unexplained 'other' shifts 890 / 69,182 unique chains = 1.29%);
+  - Stage C coverage reproduced exactly;
+  - the 1.3% is not on the Stage C gate's denominator (unique chains of all registrants vs repeated eligible stock-months, 14.4% changed).
+- **The 1.3%:** 91% are SEC fiscal-year-end metadata inconsistencies with fully consistent fiscal-quarter labels (valid comparisons); about 2% label breaks; 6.5% unresolved. Fiscal labels themselves carry tagging errors.
+- **Coverage effects:**
+  - excluding demonstrably invalid histories keeps C1 / C2 / C6 ≥ 72% every year;
+  - excluding histories with unknown labels (13.4%; mostly pre-XBRL quarters, some missing index rows) drops 2013–2014 below the floor and deepens the bias against leavers, entrants, young firms and utilities.
+- **Frozen classification:** C — INSUFFICIENT EVIDENCE.
+- **Proposed rule P** (period / label / transition based, no codes): a proposal only, coverage not computed.
+- **Status:** STOPPED awaiting the owner (LH-CP2 §19).
