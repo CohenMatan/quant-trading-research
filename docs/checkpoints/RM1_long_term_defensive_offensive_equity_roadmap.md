@@ -336,3 +336,8 @@ Choose one:
 - **Stock-selection offensive search on existing data:** recommended to STOP. Momentum and quality-growth families are exhausted; fundamental improvement (OC-B) is a conditional backup only.
 - **Proposed single test:** SYS-1, an account-level 2015–2021 system test against beta-matched and transparent controls. It is not run and is awaiting owner approval.
 - **Not superseded:** the OF-A path (Stages A–H) stays as recorded. Its next step remains subject to D245 / LH-CP4.
+
+**Update (D247, 2026-10-18): candidate discovery before SYS-1.** `docs/checkpoints/OC_CP2_independent_offensive_stock_selection_candidate_review.md`.
+- **Correction to OC-CP1:** business improvement was set aside on an imported 2015–2021 window; Data v3 signals need no fiscal labels, so the PIT-safe window is 2012-02 → 2021-11.
+- **Proposed:** OC-2 (ΔROA, Data v3 F5) as the single earnings-improvement signal test, replacing OF-A's surprise definitions if approved; Stage B-OC2 synthetic calibration first.
+- **Unchanged:** SYS-1 (not run), the D245 exception for OF-A, every formal status, the Holdout seal.

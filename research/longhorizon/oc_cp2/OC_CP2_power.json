@@ -1,0 +1,965 @@
+{
+ "assumptions": {
+  "fresh_share": 0.337,
+  "note": "ranges, not estimates; same conventions as LH-CP4 (crit() is two-sided)",
+  "rho": [
+   0.1,
+   0.2
+  ],
+  "sigma_cs": 0.065,
+  "sigma_ic": {
+   "main": 0.09,
+   "optimistic": 0.06,
+   "pessimistic": 0.12
+  },
+  "structure_factor": 1.336
+ },
+ "costs": {
+  "$100K | K 15 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0062,
+   "position": 6667
+  },
+  "$100K | K 15 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.0103,
+   "position": 6667
+  },
+  "$100K | K 15 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0143,
+   "position": 6667
+  },
+  "$100K | K 20 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0072,
+   "position": 5000
+  },
+  "$100K | K 20 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.012,
+   "position": 5000
+  },
+  "$100K | K 20 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0168,
+   "position": 5000
+  },
+  "$100K | K 25 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0083,
+   "position": 4000
+  },
+  "$100K | K 25 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.0138,
+   "position": 4000
+  },
+  "$100K | K 25 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0192,
+   "position": 4000
+  },
+  "$200K | K 15 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0046,
+   "position": 13333
+  },
+  "$200K | K 15 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.0076,
+   "position": 13333
+  },
+  "$200K | K 15 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0107,
+   "position": 13333
+  },
+  "$200K | K 20 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0051,
+   "position": 10000
+  },
+  "$200K | K 20 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.0085,
+   "position": 10000
+  },
+  "$200K | K 20 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0119,
+   "position": 10000
+  },
+  "$200K | K 25 | one-way turnover 1.5/yr": {
+   "annual_cost": 0.0056,
+   "position": 8000
+  },
+  "$200K | K 25 | one-way turnover 2.5/yr": {
+   "annual_cost": 0.0094,
+   "position": 8000
+  },
+  "$200K | K 25 | one-way turnover 3.5/yr": {
+   "annual_cost": 0.0131,
+   "position": 8000
+  }
+ },
+ "decision": "D247",
+ "kind": "OC-CP2 analytical power tables (assumption-driven; no data, no returns, no simulation)",
+ "mde_80": {
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0294,
+   "top_quintile_80_naive": 0.0321,
+   "top_quintile_80_structure": 0.0429
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0259,
+   "top_quintile_80_naive": 0.0283,
+   "top_quintile_80_structure": 0.0378
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0327,
+   "top_quintile_80_naive": 0.0357,
+   "top_quintile_80_structure": 0.0477
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0288,
+   "top_quintile_80_naive": 0.0314,
+   "top_quintile_80_structure": 0.042
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0196,
+   "top_quintile_80_naive": 0.0214,
+   "top_quintile_80_structure": 0.0286
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0173,
+   "top_quintile_80_naive": 0.0189,
+   "top_quintile_80_structure": 0.0252
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0218,
+   "top_quintile_80_naive": 0.0238,
+   "top_quintile_80_structure": 0.0318
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0192,
+   "top_quintile_80_naive": 0.021,
+   "top_quintile_80_structure": 0.028
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0392,
+   "top_quintile_80_naive": 0.0428,
+   "top_quintile_80_structure": 0.0572
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 96.5,
+   "mde_ic_80": 0.0346,
+   "top_quintile_80_naive": 0.0377,
+   "top_quintile_80_structure": 0.0504
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0436,
+   "top_quintile_80_naive": 0.0476,
+   "top_quintile_80_structure": 0.0636
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 78.7,
+   "mde_ic_80": 0.0384,
+   "top_quintile_80_naive": 0.0419,
+   "top_quintile_80_structure": 0.056
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0279,
+   "top_quintile_80_naive": 0.0304,
+   "top_quintile_80_structure": 0.0407
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0246,
+   "top_quintile_80_naive": 0.0268,
+   "top_quintile_80_structure": 0.0359
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.031,
+   "top_quintile_80_naive": 0.0338,
+   "top_quintile_80_structure": 0.0452
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.0273,
+   "top_quintile_80_naive": 0.0298,
+   "top_quintile_80_structure": 0.0398
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0186,
+   "top_quintile_80_naive": 0.0203,
+   "top_quintile_80_structure": 0.0271
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0164,
+   "top_quintile_80_naive": 0.0179,
+   "top_quintile_80_structure": 0.0239
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.0206,
+   "top_quintile_80_naive": 0.0225,
+   "top_quintile_80_structure": 0.0301
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.0182,
+   "top_quintile_80_naive": 0.0199,
+   "top_quintile_80_structure": 0.0265
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0372,
+   "top_quintile_80_naive": 0.0406,
+   "top_quintile_80_structure": 0.0542
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 107.2,
+   "mde_ic_80": 0.0328,
+   "top_quintile_80_naive": 0.0358,
+   "top_quintile_80_structure": 0.0478
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.0413,
+   "top_quintile_80_naive": 0.0451,
+   "top_quintile_80_structure": 0.0602
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 87.3,
+   "mde_ic_80": 0.0364,
+   "top_quintile_80_naive": 0.0397,
+   "top_quintile_80_structure": 0.0531
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.0353,
+   "top_quintile_80_naive": 0.0385,
+   "top_quintile_80_structure": 0.0515
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.0311,
+   "top_quintile_80_naive": 0.0339,
+   "top_quintile_80_structure": 0.0453
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.0393,
+   "top_quintile_80_naive": 0.0429,
+   "top_quintile_80_structure": 0.0573
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.0345,
+   "top_quintile_80_naive": 0.0377,
+   "top_quintile_80_structure": 0.0504
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.0235,
+   "top_quintile_80_naive": 0.0257,
+   "top_quintile_80_structure": 0.0343
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.0207,
+   "top_quintile_80_naive": 0.0226,
+   "top_quintile_80_structure": 0.0302
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.0262,
+   "top_quintile_80_naive": 0.0286,
+   "top_quintile_80_structure": 0.0382
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.023,
+   "top_quintile_80_naive": 0.0251,
+   "top_quintile_80_structure": 0.0336
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.047,
+   "top_quintile_80_naive": 0.0514,
+   "top_quintile_80_structure": 0.0686
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 67.9,
+   "mde_ic_80": 0.0414,
+   "top_quintile_80_naive": 0.0452,
+   "top_quintile_80_structure": 0.0604
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.0524,
+   "top_quintile_80_naive": 0.0572,
+   "top_quintile_80_structure": 0.0764
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "T_eff": 55.3,
+   "mde_ic_80": 0.046,
+   "top_quintile_80_naive": 0.0502,
+   "top_quintile_80_structure": 0.0671
+  }
+ },
+ "portfolio_t": {
+  "years 7 | e 1.0% | TE 4%": 0.66,
+  "years 7 | e 1.0% | TE 6%": 0.44,
+  "years 7 | e 1.0% | TE 8%": 0.33,
+  "years 7 | e 2.0% | TE 4%": 1.32,
+  "years 7 | e 2.0% | TE 6%": 0.88,
+  "years 7 | e 2.0% | TE 8%": 0.66,
+  "years 7 | e 3.0% | TE 4%": 1.98,
+  "years 7 | e 3.0% | TE 6%": 1.32,
+  "years 7 | e 3.0% | TE 8%": 0.99,
+  "years 9.8 | e 1.0% | TE 4%": 0.78,
+  "years 9.8 | e 1.0% | TE 6%": 0.52,
+  "years 9.8 | e 1.0% | TE 8%": 0.39,
+  "years 9.8 | e 2.0% | TE 4%": 1.57,
+  "years 9.8 | e 2.0% | TE 6%": 1.04,
+  "years 9.8 | e 2.0% | TE 8%": 0.78,
+  "years 9.8 | e 3.0% | TE 4%": 2.35,
+  "years 9.8 | e 3.0% | TE 6%": 1.57,
+  "years 9.8 | e 3.0% | TE 8%": 1.17
+ },
+ "power": {
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.047,
+    "naive": 0.358,
+    "structure": 0.193
+   },
+   "3%": {
+    "fresh_only": 0.089,
+    "naive": 0.736,
+    "structure": 0.452
+   },
+   "4%": {
+    "fresh_only": 0.156,
+    "naive": 0.947,
+    "structure": 0.734
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.096,
+    "naive": 0.506,
+    "structure": 0.313
+   },
+   "3%": {
+    "fresh_only": 0.166,
+    "naive": 0.844,
+    "structure": 0.602
+   },
+   "4%": {
+    "fresh_only": 0.263,
+    "naive": 0.977,
+    "structure": 0.842
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.041,
+    "naive": 0.285,
+    "structure": 0.154
+   },
+   "3%": {
+    "fresh_only": 0.074,
+    "naive": 0.63,
+    "structure": 0.364
+   },
+   "4%": {
+    "fresh_only": 0.125,
+    "naive": 0.89,
+    "structure": 0.628
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.085,
+    "naive": 0.427,
+    "structure": 0.262
+   },
+   "3%": {
+    "fresh_only": 0.142,
+    "naive": 0.762,
+    "structure": 0.514
+   },
+   "4%": {
+    "fresh_only": 0.221,
+    "naive": 0.945,
+    "structure": 0.761
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.089,
+    "naive": 0.736,
+    "structure": 0.452
+   },
+   "3%": {
+    "fresh_only": 0.199,
+    "naive": 0.982,
+    "structure": 0.841
+   },
+   "4%": {
+    "fresh_only": 0.366,
+    "naive": 1.0,
+    "structure": 0.982
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.166,
+    "naive": 0.844,
+    "structure": 0.602
+   },
+   "3%": {
+    "fresh_only": 0.32,
+    "naive": 0.993,
+    "structure": 0.915
+   },
+   "4%": {
+    "fresh_only": 0.515,
+    "naive": 1.0,
+    "structure": 0.993
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.074,
+    "naive": 0.63,
+    "structure": 0.364
+   },
+   "3%": {
+    "fresh_only": 0.159,
+    "naive": 0.952,
+    "structure": 0.746
+   },
+   "4%": {
+    "fresh_only": 0.292,
+    "naive": 0.998,
+    "structure": 0.951
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.142,
+    "naive": 0.762,
+    "structure": 0.514
+   },
+   "3%": {
+    "fresh_only": 0.268,
+    "naive": 0.979,
+    "structure": 0.851
+   },
+   "4%": {
+    "fresh_only": 0.434,
+    "naive": 1.0,
+    "structure": 0.979
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.033,
+    "naive": 0.194,
+    "structure": 0.108
+   },
+   "3%": {
+    "fresh_only": 0.056,
+    "naive": 0.454,
+    "structure": 0.248
+   },
+   "4%": {
+    "fresh_only": 0.089,
+    "naive": 0.736,
+    "structure": 0.452
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.071,
+    "naive": 0.314,
+    "structure": 0.195
+   },
+   "3%": {
+    "fresh_only": 0.111,
+    "naive": 0.604,
+    "structure": 0.382
+   },
+   "4%": {
+    "fresh_only": 0.166,
+    "naive": 0.844,
+    "structure": 0.602
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.029,
+    "naive": 0.155,
+    "structure": 0.089
+   },
+   "3%": {
+    "fresh_only": 0.047,
+    "naive": 0.366,
+    "structure": 0.198
+   },
+   "4%": {
+    "fresh_only": 0.074,
+    "naive": 0.63,
+    "structure": 0.364
+   }
+  },
+  "main 2012-02 -> 2021-11 (118) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.064,
+    "naive": 0.263,
+    "structure": 0.166
+   },
+   "3%": {
+    "fresh_only": 0.098,
+    "naive": 0.516,
+    "structure": 0.32
+   },
+   "4%": {
+    "fresh_only": 0.142,
+    "naive": 0.762,
+    "structure": 0.514
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.051,
+    "naive": 0.4,
+    "structure": 0.217
+   },
+   "3%": {
+    "fresh_only": 0.099,
+    "naive": 0.787,
+    "structure": 0.502
+   },
+   "4%": {
+    "fresh_only": 0.174,
+    "naive": 0.967,
+    "structure": 0.785
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.103,
+    "naive": 0.549,
+    "structure": 0.343
+   },
+   "3%": {
+    "fresh_only": 0.181,
+    "naive": 0.879,
+    "structure": 0.649
+   },
+   "4%": {
+    "fresh_only": 0.288,
+    "naive": 0.986,
+    "structure": 0.878
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.044,
+    "naive": 0.32,
+    "structure": 0.173
+   },
+   "3%": {
+    "fresh_only": 0.081,
+    "naive": 0.685,
+    "structure": 0.407
+   },
+   "4%": {
+    "fresh_only": 0.14,
+    "naive": 0.922,
+    "structure": 0.683
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.091,
+    "naive": 0.466,
+    "structure": 0.287
+   },
+   "3%": {
+    "fresh_only": 0.154,
+    "naive": 0.805,
+    "structure": 0.559
+   },
+   "4%": {
+    "fresh_only": 0.241,
+    "naive": 0.964,
+    "structure": 0.804
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.099,
+    "naive": 0.787,
+    "structure": 0.502
+   },
+   "3%": {
+    "fresh_only": 0.223,
+    "naive": 0.99,
+    "structure": 0.881
+   },
+   "4%": {
+    "fresh_only": 0.409,
+    "naive": 1.0,
+    "structure": 0.99
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.181,
+    "naive": 0.879,
+    "structure": 0.649
+   },
+   "3%": {
+    "fresh_only": 0.351,
+    "naive": 0.997,
+    "structure": 0.94
+   },
+   "4%": {
+    "fresh_only": 0.559,
+    "naive": 1.0,
+    "structure": 0.996
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.081,
+    "naive": 0.685,
+    "structure": 0.407
+   },
+   "3%": {
+    "fresh_only": 0.178,
+    "naive": 0.97,
+    "structure": 0.796
+   },
+   "4%": {
+    "fresh_only": 0.328,
+    "naive": 0.999,
+    "structure": 0.97
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.154,
+    "naive": 0.805,
+    "structure": 0.559
+   },
+   "3%": {
+    "fresh_only": 0.293,
+    "naive": 0.988,
+    "structure": 0.886
+   },
+   "4%": {
+    "fresh_only": 0.474,
+    "naive": 1.0,
+    "structure": 0.988
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.035,
+    "naive": 0.218,
+    "structure": 0.12
+   },
+   "3%": {
+    "fresh_only": 0.06,
+    "naive": 0.503,
+    "structure": 0.279
+   },
+   "4%": {
+    "fresh_only": 0.099,
+    "naive": 0.787,
+    "structure": 0.502
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.075,
+    "naive": 0.344,
+    "structure": 0.213
+   },
+   "3%": {
+    "fresh_only": 0.12,
+    "naive": 0.651,
+    "structure": 0.418
+   },
+   "4%": {
+    "fresh_only": 0.181,
+    "naive": 0.879,
+    "structure": 0.649
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.031,
+    "naive": 0.174,
+    "structure": 0.098
+   },
+   "3%": {
+    "fresh_only": 0.051,
+    "naive": 0.409,
+    "structure": 0.222
+   },
+   "4%": {
+    "fresh_only": 0.081,
+    "naive": 0.685,
+    "structure": 0.407
+   }
+  },
+  "reference 2011-01 -> 2021-11 (131) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.068,
+    "naive": 0.288,
+    "structure": 0.18
+   },
+   "3%": {
+    "fresh_only": 0.104,
+    "naive": 0.56,
+    "structure": 0.35
+   },
+   "4%": {
+    "fresh_only": 0.154,
+    "naive": 0.805,
+    "structure": 0.559
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.037,
+    "naive": 0.241,
+    "structure": 0.132
+   },
+   "3%": {
+    "fresh_only": 0.065,
+    "naive": 0.552,
+    "structure": 0.309
+   },
+   "4%": {
+    "fresh_only": 0.107,
+    "naive": 0.832,
+    "structure": 0.551
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.079,
+    "naive": 0.375,
+    "structure": 0.231
+   },
+   "3%": {
+    "fresh_only": 0.127,
+    "naive": 0.698,
+    "structure": 0.455
+   },
+   "4%": {
+    "fresh_only": 0.195,
+    "naive": 0.911,
+    "structure": 0.696
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.032,
+    "naive": 0.191,
+    "structure": 0.106
+   },
+   "3%": {
+    "fresh_only": 0.054,
+    "naive": 0.45,
+    "structure": 0.244
+   },
+   "4%": {
+    "fresh_only": 0.087,
+    "naive": 0.735,
+    "structure": 0.448
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic main 0.09 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.07,
+    "naive": 0.313,
+    "structure": 0.194
+   },
+   "3%": {
+    "fresh_only": 0.11,
+    "naive": 0.605,
+    "structure": 0.381
+   },
+   "4%": {
+    "fresh_only": 0.165,
+    "naive": 0.845,
+    "structure": 0.603
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.065,
+    "naive": 0.552,
+    "structure": 0.309
+   },
+   "3%": {
+    "fresh_only": 0.135,
+    "naive": 0.915,
+    "structure": 0.67
+   },
+   "4%": {
+    "fresh_only": 0.247,
+    "naive": 0.995,
+    "structure": 0.914
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.127,
+    "naive": 0.698,
+    "structure": 0.455
+   },
+   "3%": {
+    "fresh_only": 0.236,
+    "naive": 0.96,
+    "structure": 0.795
+   },
+   "4%": {
+    "fresh_only": 0.382,
+    "naive": 0.998,
+    "structure": 0.959
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.054,
+    "naive": 0.45,
+    "structure": 0.244
+   },
+   "3%": {
+    "fresh_only": 0.109,
+    "naive": 0.841,
+    "structure": 0.56
+   },
+   "4%": {
+    "fresh_only": 0.195,
+    "naive": 0.982,
+    "structure": 0.84
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic optimistic 0.06 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.11,
+    "naive": 0.605,
+    "structure": 0.381
+   },
+   "3%": {
+    "fresh_only": 0.198,
+    "naive": 0.917,
+    "structure": 0.706
+   },
+   "4%": {
+    "fresh_only": 0.319,
+    "naive": 0.993,
+    "structure": 0.916
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.027,
+    "naive": 0.132,
+    "structure": 0.077
+   },
+   "3%": {
+    "fresh_only": 0.043,
+    "naive": 0.311,
+    "structure": 0.168
+   },
+   "4%": {
+    "fresh_only": 0.065,
+    "naive": 0.552,
+    "structure": 0.309
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.1 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.06,
+    "naive": 0.232,
+    "structure": 0.148
+   },
+   "3%": {
+    "fresh_only": 0.089,
+    "naive": 0.457,
+    "structure": 0.281
+   },
+   "4%": {
+    "fresh_only": 0.127,
+    "naive": 0.698,
+    "structure": 0.455
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 2% (one-sided 1%)": {
+   "2%": {
+    "fresh_only": 0.024,
+    "naive": 0.106,
+    "structure": 0.064
+   },
+   "3%": {
+    "fresh_only": 0.037,
+    "naive": 0.245,
+    "structure": 0.133
+   },
+   "4%": {
+    "fresh_only": 0.054,
+    "naive": 0.45,
+    "structure": 0.244
+   }
+  },
+  "sub-window 2015-01 -> 2021-11 (83) | sigma_ic pessimistic 0.12 | rho 0.2 | two-sided 5% (one-sided 2.5%)": {
+   "2%": {
+    "fresh_only": 0.055,
+    "naive": 0.194,
+    "structure": 0.127
+   },
+   "3%": {
+    "fresh_only": 0.079,
+    "naive": 0.382,
+    "structure": 0.234
+   },
+   "4%": {
+    "fresh_only": 0.11,
+    "naive": 0.605,
+    "structure": 0.381
+   }
+  }
+ },
+ "window": {
+  "all_reviews": 131,
+  "first_review": "2012-02",
+  "min_from_start": 0.613,
+  "reviews": 118,
+  "source": "P14_CP1_audit.json coverage.F5A.monthly (non-return aggregate)",
+  "yearly_mean": {
+   "2011": 0.563,
+   "2012": 0.616,
+   "2013": 0.66,
+   "2014": 0.778,
+   "2015": 0.817,
+   "2016": 0.836,
+   "2017": 0.789,
+   "2018": 0.787,
+   "2019": 0.82,
+   "2020": 0.809,
+   "2021": 0.762
+  }
+ }
+}
