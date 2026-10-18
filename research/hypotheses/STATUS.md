@@ -55,3 +55,5 @@
 **Update (D243, 2026-10-18):** LH-CP2 fiscal-calendar anomaly investigation: frozen result **C — INSUFFICIENT EVIDENCE** (`docs/checkpoints/LH_CP2_fiscal_calendar_anomaly_resolution.md`); Stage C unchanged (C). Still no active hypothesis.
 
 **Update (D244, 2026-10-18):** LH-CP3 missing fiscal labels recovery & validation (metadata only; 120 EDGAR header requests): frozen result **B — PARTIAL RECOVERY** (`docs/checkpoints/LH_CP3_missing_fiscal_labels_recovery_validation.md`); Stage C (C) and LH-CP2 (C) unchanged. Still no active hypothesis.
+
+**Update (D245, 2026-10-18):** LH-CP3 accepted (B). Narrow prospective Stage C exception (2015–2021, verified L0 / L1 labels, rule V; `research/longhorizon/STAGE_C_EXCEPTION_D245.json`). LH-CP4 analytical feasibility: **B — UNDERPOWERED FOR MODEST EFFECTS** (`docs/checkpoints/LH_CP4_ofa_statistical_feasibility_research_horizon.md`). Still no active hypothesis.

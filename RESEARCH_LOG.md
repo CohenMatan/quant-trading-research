@@ -2356,3 +2356,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Recommendation:** option 3, restrict to 2015–2021 verified histories (still needs an owner decision on Stage C).
 - **Status:** STOPPED awaiting the owner (LH-CP3 §24).
 
+## 2026-10-18: LH-CP4 — OF-A statistical feasibility and research-horizon assessment (D245) → B — UNDERPOWERED FOR MODEST EFFECTS
+
+- **Owner decisions:**
+  - LH-CP3 accepted as B;
+  - a narrow, prospective Stage C exception: 2015–2021, verified L0 / L1 labels only, rule V (record `research/longhorizon/STAGE_C_EXCEPTION_D245.json`);
+  - an analytical-only power assessment.
+- **Earlier results unchanged:** LH-CP1 (C), LH-CP2 (C) and LH-CP3 (B).
+- **Population** (metadata only; equals LH-CP3 Scenario A 2015–2021):
+  - 83 monthly reviews, about 830 C1 stocks a month, coverage ≥ 72.7% every year, 1,500 securities;
+  - signals refresh in 34% of stock-months, mostly in four earnings seasons (about 28 information bursts).
+- **Power** (equations on labelled assumptions; no returns, no simulation):
+  - main-case 80% MDE IC 0.031–0.041, about 2.6–7.4% a year top-quintile excess under a normal-theory conversion;
+  - the illustrative +3% a year effect has 80% power only under favourable assumptions and about 10–46% under dependence, a 1% threshold, two hypotheses and a realistic-structure factor;
+  - effects of +5% a year or more are usually detectable;
+  - 3-month or earnings-season designs raise MDEs by about 75–80%.
+- **Economics:** costs 0.4–2.5% a year for 15–30-name books at $100K; a full quintile is uneconomic; portfolio-level evidence over 7 years is weak (t 0.88 for 2% at 6% TE).
+- **Classification:** B — UNDERPOWERED FOR MODEST EFFECTS.
+- **Recommendation:** no Stage B now unless a large-effect objective is pre-declared; monthly decisions as the baseline, event-time / daily review as the timing to evaluate later.
+- **Status:** STOPPED awaiting the owner (LH-CP4 §22).
+

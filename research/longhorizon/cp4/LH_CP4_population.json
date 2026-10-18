@@ -1,0 +1,204 @@
+{
+ "C1_by_year": {
+  "2015": {
+   "den": 11501,
+   "num": 8894,
+   "share": 0.7733
+  },
+  "2016": {
+   "den": 10911,
+   "num": 8860,
+   "share": 0.812
+  },
+  "2017": {
+   "den": 11842,
+   "num": 9636,
+   "share": 0.8137
+  },
+  "2018": {
+   "den": 12349,
+   "num": 10097,
+   "share": 0.8176
+  },
+  "2019": {
+   "den": 12297,
+   "num": 10200,
+   "share": 0.8295
+  },
+  "2020": {
+   "den": 12536,
+   "num": 10054,
+   "share": 0.802
+  },
+  "2021": {
+   "den": 14603,
+   "num": 10925,
+   "share": 0.7481
+  }
+ },
+ "C1_min_share": 0.7481,
+ "C1_per_month": {
+  "max": 1028,
+  "mean": 827.3,
+  "median": 824,
+  "min": 686
+ },
+ "C2_by_year": {
+  "2015": {
+   "den": 11501,
+   "num": 8376,
+   "share": 0.7283
+  },
+  "2016": {
+   "den": 10911,
+   "num": 8345,
+   "share": 0.7648
+  },
+  "2017": {
+   "den": 11842,
+   "num": 9041,
+   "share": 0.7635
+  },
+  "2018": {
+   "den": 12349,
+   "num": 9469,
+   "share": 0.7668
+  },
+  "2019": {
+   "den": 12297,
+   "num": 9650,
+   "share": 0.7847
+  },
+  "2020": {
+   "den": 12536,
+   "num": 9733,
+   "share": 0.7764
+  },
+  "2021": {
+   "den": 14603,
+   "num": 10696,
+   "share": 0.7325
+  }
+ },
+ "C2_min_share": 0.7283,
+ "C2_per_month": {
+  "max": 1004,
+  "mean": 786.9,
+  "median": 782,
+  "min": 648
+ },
+ "C6_by_year": {
+  "2015": {
+   "den": 11501,
+   "num": 8364,
+   "share": 0.7272
+  },
+  "2016": {
+   "den": 10911,
+   "num": 8341,
+   "share": 0.7645
+  },
+  "2017": {
+   "den": 11842,
+   "num": 9041,
+   "share": 0.7635
+  },
+  "2018": {
+   "den": 12349,
+   "num": 9469,
+   "share": 0.7668
+  },
+  "2019": {
+   "den": 12297,
+   "num": 9650,
+   "share": 0.7847
+  },
+  "2020": {
+   "den": 12536,
+   "num": 9733,
+   "share": 0.7764
+  },
+  "2021": {
+   "den": 14603,
+   "num": 10696,
+   "share": 0.7325
+  }
+ },
+ "C6_min_share": 0.7272,
+ "C6_per_month": {
+  "max": 1004,
+  "mean": 786.7,
+  "median": 782,
+  "min": 647
+ },
+ "cache_sha256": "e67ed82a218fbb883c5573663529b6abf223441df6142366d9f0223a27baceb6",
+ "composition_c1": {
+  "all": {
+   "approved_c1": 68666,
+   "approved_share": 0.9644,
+   "c1_complete": 71198
+  },
+  "entrant": {
+   "approved_c1": 2919,
+   "approved_share": 0.9496,
+   "c1_complete": 3074
+  },
+  "leaver": {
+   "approved_c1": 9933,
+   "approved_share": 0.9611,
+   "c1_complete": 10335
+  }
+ },
+ "decision": "D245",
+ "distinct_quarters_per_security_c1": {
+  "mean": 16.5,
+  "median": 16
+ },
+ "distinct_registrants_c1": 1488,
+ "distinct_securities_c1": 1500,
+ "eligible_per_month_by_year": {
+  "2015": 958.4,
+  "2016": 909.2,
+  "2017": 986.8,
+  "2018": 1029.1,
+  "2019": 1024.8,
+  "2020": 1044.7,
+  "2021": 1327.5
+ },
+ "first_review": "2015-01-30",
+ "kind": "LH-CP4 approved-population aggregates (metadata only; no returns)",
+ "last_review": "2021-11-30",
+ "new_quarter_share_all_c1": 0.337,
+ "new_quarter_share_by_calendar_month_c1": {
+  "1": 0.083,
+  "10": 0.363,
+  "11": 0.549,
+  "12": 0.078,
+  "2": 0.753,
+  "3": 0.16,
+  "4": 0.309,
+  "5": 0.611,
+  "6": 0.078,
+  "7": 0.342,
+  "8": 0.58,
+  "9": 0.072
+ },
+ "returns_computed": false,
+ "review_months": 83,
+ "sector_hhi_mean_c1": 0.1253,
+ "signal_values_computed": false,
+ "source": "data/lh_cp3/p2.pkl (LH-CP3 Part A Stage C P2 rebuild; reproduces LH_StageC_audit.json exactly)",
+ "stocks_per_ff12_sector_mean_c1": {
+  "BusEq": 163.4,
+  "Chems": 36.2,
+  "Durbl": 27.1,
+  "Enrgy": 37.0,
+  "Hlth": 98.1,
+  "Manuf": 96.2,
+  "NoDur": 52.3,
+  "Other": 147.4,
+  "Shops": 93.4,
+  "Telcm": 23.0,
+  "Utils": 53.2
+ }
+}

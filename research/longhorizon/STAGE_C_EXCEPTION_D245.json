@@ -1,0 +1,16 @@
+{
+ "decision": "D245",
+ "date": "2026-10-18",
+ "kind": "Owner-approved narrow, prospective Stage C exception (a restriction of the usable research population; not a retrospective change to any earlier result)",
+ "authorises": "future DESIGN CONSIDERATION of the verified 2015-2021 population only",
+ "does_not_authorise": ["Stage B", "Stage D", "real signal computation", "rankings", "backtests", "returns", "Holdout access", "data purchase"],
+ "decision_years": [2015, 2016, 2017, 2018, 2019, 2020, 2021],
+ "fiscal_label_sources_allowed": ["L0", "L1"],
+ "fiscal_label_sources_excluded": ["L2", "L3"],
+ "period_validation_rule": "LH-CP2 rule V (labels known and consistent: cycle + same-quarter pairs; no transition form; no mapping failure)",
+ "excluded": ["P-assume", "rule P", "unknown fiscal-period histories", "invalid fiscal-period histories", "identity-flagged histories", "post-2021 filings or information"],
+ "every_required_quarter_must_validate": true,
+ "preserved": ["SEC identity rules", "PIT availability rules (filed <= D - 1)", "all historical data-integrity restrictions"],
+ "implementation": "research/longhorizon/cp4/lh_cp4_power.py::approved (equals LH-CP3 Scenario A restricted to 2015-2021)",
+ "historical_results_unchanged": {"LH-CP1 Stage C": "C - NOT FEASIBLE", "LH-CP2": "C - INSUFFICIENT EVIDENCE", "LH-CP3": "B - PARTIAL RECOVERY"}
+}
