@@ -2395,3 +2395,15 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Recommendation:** proceed with SYS-1 only; stop the stock-selection offensive search on existing data.
 - **Status:** STOPPED awaiting the owner (OC-CP1 §23).
 
+## 2026-10-18: OC-CP2 — Independent offensive stock-selection candidate review (D247)
+
+- **Scope:** candidate discovery and design only; committed non-return aggregates, literature and analytical equations; SYS-1 not run; no backtest, returns, real-stock signals, synthetic experiments, purchases or Holdout; no new active hypothesis.
+- **Re-examination of OC-CP1:**
+  - price leadership: exhausted (H019 valid signal-level null; H002–H011, H014, H018, H021-A, H024);
+  - profitability / growth levels: exhausted (H016, H022, H024);
+  - business improvement: overstated — H029 failed on null methodology only, and Data v3 signals use no fiscal labels, so D245's 2015–2021 window does not apply (window 2012-02 → 2021-11, 118 reviews).
+- **Preferred candidate:** OC-2 = profitability improvement ΔROA (Data v3 F5), chosen on literature, data quality (best vendor-vs-SEC agreement) and distinctness (max |ρ| 0.18 with H024 / H028 features).
+- **Test (proposed, not run):** universe-wide monthly Fama–MacBeth with controls; one-sided 1%; SE method fixed by a frozen Stage B-OC2 synthetic calibration; gates G1–G4.
+- **Power** (`research/longhorizon/oc_cp2/OC_CP2_power.json`): main 80% MDE 3.2% naive / 4.3% realistic a year; power at +3% 45–74%; +2% undetectable.
+- **Backup:** none (justified STOP → SPY). Combination feasibility: two stock sleeves infeasible at $100K under D044.
+- **Status:** STOPPED awaiting the owner (OC-CP2 §14).

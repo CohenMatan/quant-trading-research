@@ -59,3 +59,5 @@
 **Update (D245, 2026-10-18):** LH-CP3 accepted (B). Narrow prospective Stage C exception (2015–2021, verified L0 / L1 labels, rule V; `research/longhorizon/STAGE_C_EXCEPTION_D245.json`). LH-CP4 analytical feasibility: **B — UNDERPOWERED FOR MODEST EFFECTS** (`docs/checkpoints/LH_CP4_ofa_statistical_feasibility_research_horizon.md`). Still no active hypothesis.
 
 **Update (D246, 2026-10-18):** research priority = offensive complement to H028 (design only; `docs/checkpoints/OC_CP1_h028_offensive_complement_candidate_selection_test_design.md`). Preferred complement OC-1 = SPY; proposed account-level system test SYS-1 not run. No new hypothesis registered. Still no active hypothesis.
+
+**Update (D247, 2026-10-18):** independent offensive stock-selection candidate review (design only; `docs/checkpoints/OC_CP2_independent_offensive_stock_selection_candidate_review.md`). Proposed candidate OC-2 (profitability improvement ΔROA, Data v3 F5, single-signal test) — NOT registered as a hypothesis, not built, not run; it would receive the next hypothesis ID only on owner approval. H029 / H030 remain NOT EVALUABLE. Still no active hypothesis.
