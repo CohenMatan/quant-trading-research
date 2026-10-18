@@ -2306,3 +2306,16 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Created:** selection ledger `research/longhorizon/SELECTION_LEDGER.md` (no entries).
 - **Nothing run:** no backtest, synthetic experiment, null, QuantConnect run, H028 recalculation or purchase; Holdout sealed.
 - **Status:** STOPPED awaiting the owner (recommended next: Stage B synthetic validation of the signal-inference method).
+
+## 2026-10-18: Long-horizon Stage C — OF-A data and PIT feasibility audit (D242) → C as written (chain rule mis-specified)
+
+- **Scope:** non-return offline audit; protocol frozen first (SHA-256 ff97789b…, commit df6e7fe); cache-only SEC data filed ≤ 2021-12-31; E981-01 point-in-time eligible universe; no QuantConnect run, no returns, no surprise values.
+- **Coverage (non-financial eligible stock-months, 2013–2021):** C1 SUE-NI 79–85%, C2 SUE-REV 74–81%, C6 73–81%, C3 / C4 83–92%, C5 43–47% (gross profit untagged for about half). 13-quarter histories barely exist in 2011–2012 (14–52%).
+- **Timing (42,620 quarter events):**
+  - an Item 2.02 earnings release definitely preceded the 10-Q / 10-K in 85.8%; release → filing median 1 day;
+  - release values are never numeric XBRL (0 / 41,369);
+  - monthly reviews add a median 14 sessions, giving 18 sessions from release to the first monthly trade (daily decisions: 1).
+- **Integrity:** PIT 0 violations; Q4 derived from FY − 9M in about 6%; recasts known before D in 21–24% of 13-quarter chains, later restatements 11–14% (guard v3 covers the fields).
+- **Missingness not random:** leavers 64% and newcomers 37% vs 78–79% (C1).
+- **Classification:** frozen result **C — NOT FEASIBLE**, driven by the fiscal-year-end label criterion (8–15% FAIL), which a post-hoc metadata diagnostic shows is mostly 52/53-week drift (criterion mis-specified). A residual 1.3% of chains is unexplained. Without that criterion: A; on the whole evidence: closer to B. Not reclassified.
+- **Status:** STOPPED awaiting the owner (LH-CP1 §26).

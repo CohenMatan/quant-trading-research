@@ -1,0 +1,35 @@
+{
+ "chain13_over31d_shift_shape": {
+  "other": 890,
+  "~3m": 354,
+  "~6m": 324
+ },
+ "chain13_shares": {
+  "changed": 0.1043,
+  "changed_8-31d": 0.0081,
+  "changed_<=7d": 0.0735,
+  "changed_>31d": 0.0227
+ },
+ "chain5_shares": {
+  "changed": 0.0566,
+  "changed_8-31d": 0.0035,
+  "changed_<=7d": 0.0435,
+  "changed_>31d": 0.0097
+ },
+ "chains_over_filing_table_periods_2011_2021": {
+  "chain13:changed": 7213,
+  "chain13:changed_8-31d": 560,
+  "chain13:changed_<=7d": 5085,
+  "chain13:changed_>31d": 1568,
+  "chain13:codes_missing": 24074,
+  "chain13:with_codes": 69182,
+  "chain5:changed": 5414,
+  "chain5:changed_8-31d": 334,
+  "chain5:changed_<=7d": 4157,
+  "chain5:changed_>31d": 923,
+  "chain5:codes_missing": 10147,
+  "chain5:with_codes": 95581
+ },
+ "kind": "POST-HOC DIAGNOSTIC - not used for the frozen Stage C classification (metadata only)",
+ "note": "changed_<=7d = fiscal-year-end code drift typical of 52/53-week fiscal years; >31d = a different fiscal-year-end month on a contiguous chain"
+}
