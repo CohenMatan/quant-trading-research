@@ -2496,3 +2496,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - The owner accepted QuantConnect's latest terms of service. The API was verified accessible (no running backtest).
 - The $1,000 ETF minimum trade, already part of the frozen protocol, is now owner-approved for SYS-1 only.
 - Nothing in the frozen experiment changed. Next: canary E032-01 exactly as frozen.
+
+## 2026-10-19: SYS-1 canary E032-01 refused at upload — compressed / encoded project files no longer allowed (STOP)
+
+- **What happened:** E032-01 (commit 62b623b) failed at the upload stage. QuantConnect refused `qr_p7_export.py` because it imports `zlib`; its Terms of Service now forbid compressed, encoded or embedded-binary project files.
+- **Scope:** the whole frozen chain is affected.
+  - The Data v2.1 reference table is packed (21 files, 1.27M characters).
+  - Unpacked it is about 5.48M characters, more than the 3.2M a 50-file project can hold.
+- **Not done:** no backtest was created, no result exists, and E032-02 was not run. No retry was used, since an identical retry would be refused the same way.
+- **Checkpoint:** `docs/checkpoints/SYS1_CP0_e032_01_upload_refused.md`. Options:
+  - A — plain-text rebuild (does not fit as it stands);
+  - B — reference table in QuantConnect's Object Store (availability and cost unknown);
+  - C — stop SYS-1 as NOT RUN — PLATFORM BLOCKED.
+
+  Recommendation: a no-run feasibility study of A and B first.
+- **Status:** STOPPED awaiting the owner. H028 remains REJECTED; the Holdout stays sealed.
