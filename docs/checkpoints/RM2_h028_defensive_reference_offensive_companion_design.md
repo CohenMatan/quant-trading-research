@@ -656,3 +656,5 @@ Choose one:
 - **Lesson for synthetic calibration:** synthetic power is only credible if the generated payoff dependence reaches realistic IC volatility.
 
 **Update (D249, 2026-10-18): OC-2 synthetic calibration v2.** `docs/checkpoints/OC_CP5a_oc2_synthetic_calibration_v2_prerun_stop.md`: repaired method built; STOPPED before the confirmatory run for an owner decision on the noisy-control / latent-factor (identification) worlds. No v2 classification; v1 remains D.
+
+**Update (D250, 2026-10-18): OC-2 synthetic calibration v2 result.** `docs/checkpoints/OC_CP5_oc2_synthetic_calibration_v2.md`: **C — NOT VALIDATED** (severe hidden-factor confounding: complete-rule false approval 4.40% > 2% at IC sd 0.12; complete-rule power at +3% 43.5%). Recommendation: close OC-2 on current data and methods; SPY (OC-1) remains the offensive baseline.
