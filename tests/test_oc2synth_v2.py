@@ -205,3 +205,20 @@ def test_frozen_record():
     for p in R.CODE:
         assert hashlib.sha256(p.read_bytes()).hexdigest() == f["code_sha256"][p.name], p.name
     assert R.frozen_or_refuse() == f
+
+
+def test_committed_result_matches_frozen_rule():
+    fp = V2 / "OC2_V2_results.json"
+    if not fp.exists():
+        return
+    d = json.loads(fp.read_text())
+    f = json.loads((V2 / "FROZEN.json").read_text())
+    assert d["protocol_sha256"] == f["protocol_sha256"] and d["code_sha256"] == f["code_sha256"]
+    assert d["owner_decision"] == "D250" and d["ident_treatment"] == 2
+    plan = {w.name: (n, r) for w, n, r in R.plan()}
+    assert set(d["scenarios"]) == set(plan) and len(plan) == 60
+    for name, s in d["scenarios"].items():
+        assert s["n"] == plan[name][0] and d["roles"][name] == plan[name][1]
+    rec = R.decide(d["scenarios"], d["roles"])
+    assert json.loads(json.dumps(rec)) == d["decision_record"]
+    assert d["decision_record"]["outcome"] == "C — NOT VALIDATED"
