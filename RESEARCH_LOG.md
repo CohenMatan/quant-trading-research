@@ -2525,3 +2525,20 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Recommendation:** conclusion 3, request explicit platform clarification; four questions are listed. If supportive → prepare the Object Store migration (separate freeze, output amendment, canary). Otherwise close SYS-1 as PLATFORM BLOCKED.
 - **Checkpoint:** `docs/checkpoints/SYS1_CP1_platform_recovery_feasibility.md`.
 - **Status:** STOPPED awaiting the owner.
+
+## 2026-10-19: SYS1-CP2 — Object Store migration assessment; exact H028 reproduction not achievable (D257 / D258; STOP)
+
+- **QuantConnect Support (recorded D257):**
+  - SEC data may be stored as plain JSON in the Object Store;
+  - QuantConnect identifiers and universe membership must be generated inside the cloud, not reused;
+  - Platform Data stays in the cloud;
+  - results go through the official export.
+- **Finding:** the frozen identity table (3,958 security ids → dated CIK / SIC) was assembled offline from earlier QuantConnect exports, mostly on build 18131 and the old dataset. 88% of its securities depend on vendor CIK or QuantConnect-derived evidence.
+  - It cannot be reused.
+  - Cloud regeneration cannot use the same inputs: the build is gated and the old dataset is retired 2026-10-31.
+  - So the pinned H026 panel digests and the E030-05 result cannot be expected to reproduce.
+- **Migratable:** the SEC-only components.
+- **Inventory:** compressed modules and packed result blocks identified.
+- **Options:** A close SYS-1 as PLATFORM BLOCKED (recommended); B one identity-regeneration feasibility canary (C0 / C1 exact only); C a new cloud-native successor (new research decision).
+- **Not done:** no upload, run, legacy change or purchase. Holdout sealed.
+- **Status:** STOPPED awaiting the owner.

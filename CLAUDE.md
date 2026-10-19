@@ -47,6 +47,9 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - B Object Store: technically feasible (S-MICRO 50 MB active, $0); compliance UNCERTAIN (QuantConnect-derived keys; the result-export channel and content, since Terms v1.5 count reconstructing derivatives as Platform Data).
   - A plain text: infeasible and BLOCKED.
   - Recommendation: request platform clarification.
+  - **D257 / D258 / SYS1-CP2** (`docs/checkpoints/SYS1_CP2_object_store_migration_assessment.md`): Support clarified that SEC JSON is allowed in the Object Store, but QuantConnect identifiers and membership must be generated in-cloud, not reused.
+  - The frozen identity table (88% vendor-CIK / QuantConnect-derived, built on build 18131 and the old dataset) therefore cannot be reused or regenerated identically. **Exact H028 reproduction is not achievable.**
+  - Options: A close SYS-1 as PLATFORM BLOCKED (recommended) / B identity-regeneration feasibility canary / C new successor test.
   - STOPPED awaiting the owner. No upload, no run, nothing deleted.
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
@@ -81,6 +84,7 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - Morningstar `company_id` is blank for many later-delisted companies and its sector codes are current-status (P7-CP1).
   - Subscribing VIX / custom data changes QuantConnect's tradeable-date count and trips the runner's equity-dates integrity check (D166).
   - ObjectStore export is blocked.
+  - QuantConnect Support (2026-10-19, D257): SEC EDGAR data may be uploaded as plain JSON to the Object Store; QuantConnect security identifiers and universe membership must be generated inside cloud backtests, never reused from earlier extractions; results only via the official export.
   - From 2026-10-19 (new terms of service) QuantConnect refuses to save any project file that imports a compression or encoding package (zlib, lzma, base64…) or embeds binary blobs: 'all project files must be saved as readable plain-text source' (E032-01, D254). Every packed reference table (Data v2 / v2.1 / v3, H017 / H025 ledgers, SEC table) and the packed result blocks of `qr_p7_export` are affected.
   - Since about 22:00 UTC on 2026-10-06, QuantConnect refuses engine (LEAN build) selection below its Trading Firm tier, and runs backtests on its default build even when a project still reports a pin (E023-07 ran on 18166). The runner's post-run engine check catches this; pin verification alone is not enough (D180/D181).
   - From 2026-10-10 the default build (18178, new Morningstar dataset) leaves most fundamental reports without a usable file date (timing unknown 608 → 31,538 in the X993 export): data infrastructure v1 does not reproduce on it (D183). Runs that cannot pin use `lean_version_policy: "default_build_digest_verified"` (H022 family / X993 / X995 / X996 / X997 diagnostics only, D182).
