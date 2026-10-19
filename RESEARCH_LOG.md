@@ -2511,3 +2511,17 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 
   Recommendation: a no-run feasibility study of A and B first.
 - **Status:** STOPPED awaiting the owner. H028 remains REJECTED; the Holdout stays sealed.
+
+## 2026-10-19: SYS1-CP1 — platform recovery feasibility, Options A and B (D255; read-only)
+
+- **Scope:** read-only, documentation-only. Nothing uploaded, moved, deleted, run or exported. QuantConnect was read only (plan metadata, Object Store listing, project names).
+- **Option B (Object Store):**
+  - technically feasible: the S-MICRO tier (50 MB, 1,000 files, $0) is active, with 8 bytes used;
+  - the table is about 5.5 MB of plain JSON, built from public SEC data;
+  - exact H028 reproduction is checkable to the cent.
+  - **Compliance UNCERTAIN:** the re-upload of QuantConnect-derived identifier keys / membership lists, and the result-export channel and content, are unsettled. Terms v1.5 count derivatives that reconstruct or approximate original values as Platform Data. The frozen SYS-1 output includes SPY / ETF daily paths, sent as compressed chunks.
+- **Option A (plain-text files):** NO (5.48M characters needed vs about 1.41M available) and BLOCKED (splitting data across files to get around limits).
+- **Legacy projects:** 91 projects. 35 of 83 recorded last uploads carry packed modules. Some locally committed exports (benchmark daily paths, per-stock score tables) may fall under v1.5.
+- **Recommendation:** conclusion 3, request explicit platform clarification; four questions are listed. If supportive → prepare the Object Store migration (separate freeze, output amendment, canary). Otherwise close SYS-1 as PLATFORM BLOCKED.
+- **Checkpoint:** `docs/checkpoints/SYS1_CP1_platform_recovery_feasibility.md`.
+- **Status:** STOPPED awaiting the owner.
