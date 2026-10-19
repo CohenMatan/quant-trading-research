@@ -2465,3 +2465,28 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Disclosed:** the main wealth comparison is largely predictable from the known components.
 - Checkpoint `docs/checkpoints/OC_CP6_oc2_closure_corrected_sys1_design.md`; protocol `research/longhorizon/sys1/SYS1_protocol_PROPOSED.md`.
 - **Status:** STOPPED awaiting owner decisions OD-1 to OD-7.
+
+## 2026-10-19: SYS-1 controlled development experiment approved and frozen (D252)
+
+- **Owner approval:** OD-1 to OD-7 (ETF exception, $200K for SYS-1 only, E1 idealised execution, SPLV gating / USMV diagnostic, 50% equity basis for new stock tickets with SPY absorbing residual cash, FS-1..FS-6 with three permitted classifications, one canary + one evaluation + at most two infrastructure retries).
+- **Pre-freeze clarifications resolved** in the frozen protocol `research/longhorizon/sys1/SYS1_protocol.md` (pinned in `qresearch.sys1`):
+  - exact standalone H028 reproduction plus quantified combined-account differences;
+  - a deterministic cash ledger with no borrowing;
+  - prospective BM-X betas, clamped to [0, 1];
+  - total-return accounting with no double counting;
+  - the known-history interpretation.
+
+  No strategy, benchmark, historical rule or gate changed.
+- **Built:**
+  - engine `qr_sys1`, which reproduces `qr_h026.simulate` and `spy_simulate` bit for bit;
+  - host S032 (subclass of the pinned S030; 49 project files);
+  - offline rules `SYS1_canary.py` / `SYS1_eval.py`, committed before any run;
+  - tests on synthetic data: engine, host on the fake QuantConnect environment, STOP conditions, offline rules, pins.
+- **Next:** canary E032-01. E032-02 runs only if every mandatory check passes. H028 remains REJECTED; the Holdout stays sealed.
+
+## 2026-10-19: SYS-1 canary E032-01 not started — QuantConnect terms of service (D252)
+
+- **What happened:** the runner's pre-start check (`backtests/list`) was refused by QuantConnect: "You must accept the latest terms of service to continue using QuantConnect API."
+- **Effect:** nothing was uploaded, compiled or run. No backtest exists, no result exists, and nothing was recorded in `experiments/INDEX.csv`. No infrastructure retry was used (E032-03 / E032-04 are untouched). The frozen protocol, code and config (c0b53e4) are unchanged.
+- **Needed:** the owner must accept QuantConnect's latest terms of service in their QuantConnect account. That is a legal agreement only the account holder can accept.
+- **Status:** STOPPED awaiting the owner. After acceptance, E032-01 runs exactly as frozen.

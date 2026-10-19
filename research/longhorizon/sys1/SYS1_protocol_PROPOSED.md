@@ -1,5 +1,7 @@
 # SYS-1 (corrected) — defensive sleeve + SPY, single-account implementation test — PROTOCOL (PROPOSED — NOT APPROVED, NOT FROZEN)
 
+> **SUPERSEDED (D252, 2026-10-19):** the owner approved OD-1..OD-7; the finalised, frozen protocol is `SYS1_protocol.md` (this draft is kept unchanged below as the D251 record).
+
 **Owner decision:** D251 (`docs/owner/2026-10-19_oc2_closure_sys1_redesign.md`). Design only.
 
 **Status: PROPOSED.** Nothing in this file is authorised to run.
