@@ -73,3 +73,5 @@
 **Update (D252–D258, 2026-10-19):** SYS-1 (H028 sleeve + SPY account test; not a hypothesis) was never run. E032-01 was refused at upload under QuantConnect's new source-file rule (D254). Exact H028 reproduction is not achievable under QuantConnect Support's guidance (SYS1-CP2, D258). The decision on SYS1-CP2 is still with the owner. Still no active hypothesis.
 
 **Update (D259 / D260, 2026-10-19):** Research Reset (planning only; `docs/checkpoints/RR1_research_reset_qc_migration_impact_roadmap.md`). No status in this index changes. All results stand as historical evidence and none can be reproduced exactly on the current platform. Still no active hypothesis.
+
+**Update (D261 / D262, 2026-10-19):** **SYS-1 closed: NOT RUN — PLATFORM BLOCKED — NO STRATEGY VERDICT** (owner D261). H028 remains REJECTED. Programme direction: QuantConnect-only, price-first. The RR2 proposal is awaiting the owner. No hypothesis registered. Still no active hypothesis.

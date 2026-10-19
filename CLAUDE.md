@@ -60,6 +60,20 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - simplifications;
   - roadmap: **Option 3 recommended** (licensed point-in-time data + local engine, after a desk-only verification; needs D123 / D001 revisited); fallback Option 1 or stop.
   Nothing is activated. STOPPED awaiting the owner (RR1 §9).
+- **RR1 decided (D261, 2026-10-19):**
+  - **Option 1 — QuantConnect-only, price-first** is the programme direction.
+  - Option 3 deferred; D123 (no purchase) and D001 (QuantConnect first) stay in force.
+  - RR1 §6 simplification principles approved.
+  - **SYS-1 CLOSED: NOT RUN — PLATFORM BLOCKED — NO STRATEGY VERDICT**; H028 REJECTED.
+  - Do not relax the PIT ≥ $2B rule or use a survivorship-biased universe without approval.
+  - 2010–2021 is never independent validation.
+- **RR2 (D262):** programme proposal `docs/checkpoints/RR2_qc_price_first_research_programme_proposal.md` (PROPOSED):
+  - universe blocker + baseline run;
+  - harness + signal plug-ins + in-host scalar evaluation;
+  - tranche 1 of ≤ 3 hypotheses;
+  - Promising screen P1–P6 vs confirmation under the unchanged Amendment 3;
+  - stopping rules.
+  Nothing implemented or run. STOPPED awaiting the owner (RR2 §10).
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
