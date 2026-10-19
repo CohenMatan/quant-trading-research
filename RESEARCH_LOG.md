@@ -2483,3 +2483,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - offline rules `SYS1_canary.py` / `SYS1_eval.py`, committed before any run;
   - tests on synthetic data: engine, host on the fake QuantConnect environment, STOP conditions, offline rules, pins.
 - **Next:** canary E032-01. E032-02 runs only if every mandatory check passes. H028 remains REJECTED; the Holdout stays sealed.
+
+## 2026-10-19: SYS-1 canary E032-01 not started — QuantConnect terms of service (D252)
+
+- **What happened:** the runner's pre-start check (`backtests/list`) was refused by QuantConnect: "You must accept the latest terms of service to continue using QuantConnect API."
+- **Effect:** nothing was uploaded, compiled or run. No backtest exists, no result exists, and nothing was recorded in `experiments/INDEX.csv`. No infrastructure retry was used (E032-03 / E032-04 are untouched). The frozen protocol, code and config (c0b53e4) are unchanged.
+- **Needed:** the owner must accept QuantConnect's latest terms of service in their QuantConnect account. That is a legal agreement only the account holder can accept.
+- **Status:** STOPPED awaiting the owner. After acceptance, E032-01 runs exactly as frozen.
