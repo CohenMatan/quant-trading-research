@@ -2490,3 +2490,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Effect:** nothing was uploaded, compiled or run. No backtest exists, no result exists, and nothing was recorded in `experiments/INDEX.csv`. No infrastructure retry was used (E032-03 / E032-04 are untouched). The frozen protocol, code and config (c0b53e4) are unchanged.
 - **Needed:** the owner must accept QuantConnect's latest terms of service in their QuantConnect account. That is a legal agreement only the account holder can accept.
 - **Status:** STOPPED awaiting the owner. After acceptance, E032-01 runs exactly as frozen.
+
+## 2026-10-19: QuantConnect access restored; $1,000 ETF minimum trade owner-approved (D253)
+
+- The owner accepted QuantConnect's latest terms of service. The API was verified accessible (no running backtest).
+- The $1,000 ETF minimum trade, already part of the frozen protocol, is now owner-approved for SYS-1 only.
+- Nothing in the frozen experiment changed. Next: canary E032-01 exactly as frozen.
