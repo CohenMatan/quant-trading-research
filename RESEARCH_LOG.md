@@ -2450,3 +2450,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - **Result: C — NOT VALIDATED** (otherwise B).
 - **Recommendation:** close OC-2 on current data and methods; SPY remains the offensive baseline. Checkpoint `docs/checkpoints/OC_CP5_oc2_synthetic_calibration_v2.md`.
 - **Status:** STOPPED awaiting the owner.
+
+## 2026-10-19: OC-CP6 — OC-2 closure and corrected SYS-1 design (D251)
+
+- **Scope:** documentation, feasibility and design only. No backtest, QuantConnect run, return analysis or simulation.
+- **OC-2: CLOSED — STATISTICAL METHOD NOT VALIDATED UNDER CURRENT RESEARCH CONSTRAINTS.** Stage 1 PASS, v1 D, v2 C preserved. OC-2 was never tested on real returns, and its economic hypothesis was not disproven. SPY is now the preferred simple offensive baseline.
+- **Constraint audit:**
+  - The 15-position limit counts every holding, ETFs included.
+  - The 10% cap applies to every holding, relative to the account.
+  - The $5,000 minimum applies to every new position.
+  - Frozen H028 used its own shadow-book mechanics, not the D051 execution model.
+- **Feasibility:** the original 50 / 50 H028 + SPY is **infeasible** at $100K and at $200K under the rules as written.
+- **Corrected SYS-1:** proposed, not frozen. It needs an ETF rule (not counted among the 15 positions, exempt from the 10% cap) and $200K capital, which gives the H028 sleeve its exact frozen $100K basis. Arms: SPY, LV15 + SPY, SPLV + SPY, ex-ante beta-matched SPY + cash controls; falsification screens only.
+- **Disclosed:** the main wealth comparison is largely predictable from the known components.
+- Checkpoint `docs/checkpoints/OC_CP6_oc2_closure_corrected_sys1_design.md`; protocol `research/longhorizon/sys1/SYS1_protocol_PROPOSED.md`.
+- **Status:** STOPPED awaiting owner decisions OD-1 to OD-7.
