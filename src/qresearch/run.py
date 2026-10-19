@@ -226,6 +226,15 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
         for n in ("qr_v3.py", "qr_h026.py", "qr_p7_pred.py", "qr_x801.py"):
             if n not in files:
                 raise experiment.ConfigError(f"qr_h029 needs {n} (name its module in the host header)")
+    if "qr_s030" in files["main.py"]:
+        # SYS-1 (D252): the pinned H028 host S030, uploaded byte-identical as a module (the SYS-1 host S032 subclasses
+        # it) + the SYS-1 account engine; S030's own imports are uploaded by the qr_s029 / qr_s028 rules below
+        rel = "strategies/S030_h028_fixed_shrinkage/main.py"
+        files["qr_s030.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        rel = "src/qresearch/lean/qr_sys1.py"
+        files["qr_sys1.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+        if "qr_s029" not in files["main.py"]:
+            raise experiment.ConfigError("the S030 module needs the qr_s029 rule (name it in the host header)")
     if "qr_s029" in files["main.py"]:
         # H028 (D217): the pinned H027 host S029, uploaded byte-identical as a module (the H028 host S030 subclasses it)
         # + the H028 module; S029's own imports (qr_s028, qr_h027, ...) are uploaded by the rules below / above

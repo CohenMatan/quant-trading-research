@@ -78,9 +78,10 @@ def validate(cfg: dict, unlock_file=None) -> None:
     kind = cfg["kind"]
     if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT", "DEV"):
         raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF, HOLDOUT or DEV)")
-    if split == "DEV" and cfg.get("programme") not in ("P2", "P11", "P12", "P13"):
-        raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094) and "
-                          "the H026 / H027 / H028 development runs (programmes 'P11' / 'P12' / 'P13', D206 / D213 / D217)")
+    if split == "DEV" and cfg.get("programme") not in ("P2", "P11", "P12", "P13", "LH"):
+        raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094), "
+                          "the H026 / H027 / H028 development runs (programmes 'P11' / 'P12' / 'P13', D206 / D213 / D217) "
+                          "and the SYS-1 evaluation (programme 'LH', D252)")
     if scheme == config.CURRENT_SCHEME:
         if kind in ("research", "benchmark") and start < config.OFFICIAL_START:
             raise ConfigError(f"{kind} experiments cannot start before {config.OFFICIAL_START} (D033)")
@@ -693,8 +694,43 @@ def validate(cfg: dict, unlock_file=None) -> None:
                                   "commit, tolerance table and an ADEQUATE conditional null")
         else:
             raise ConfigError("S030 modes: canary, null or real")
+    if cfg["strategy_id"] == "S032":
+        # SYS-1 single-account development experiment (owner D252, research/longhorizon/sys1/SYS1_protocol.md): the
+        # pinned H028 host S030 (uploaded as qr_s030, run in its real-mode initialisation for the panel equivalence
+        # gate) + qr_sys1; one canary (infrastructure, AUDIT), then ONE evaluation (research, DEV, programme LH) only
+        # with the committed canary-result digest; at most two infrastructure retries with identical settings
+        from . import p13h028, sys1
+        p = cfg.get("params", {})
+        u = cfg["universe"]
+        mode = p.get("sys1_mode")
+        eid = cfg["experiment_id"]
+        if ((cfg["start"], cfg["end"], cfg.get("warmup_start")) != ("2011-01-03", "2021-12-31", "2008-07-01")
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"):
+            raise ConfigError("SYS-1 runs use the frozen H028 window, warm-up, universe filters and default-build policy")
+        if sys1.PROTOCOL_SHA256 is None or None in sys1.CODE_SHA256.values() or p != sys1.run_params(mode):
+            raise ConfigError("SYS-1 runs carry exactly the E030-05 real-mode parameters and the pinned SYS-1 protocol, "
+                              "engine and frozen references (qresearch.sys1.run_params)")
+        if (p.get("c_wealth_h028") != p13h028.C_WEALTH_H028 or p.get("tolerance") != p13h028.TOLERANCE
+                or p.get("spec_sha256") != p13h028.SPEC_SHA256):
+            raise ConfigError("SYS-1 runs carry the pinned H028 parameters unchanged")
+        if cfg.get("hypothesis_id") != "H028" or cfg.get("programme") != sys1.PROGRAMME \
+                or cfg.get("cycle") != sys1.CYCLE or not cfg.get("owner_approval_required"):
+            raise ConfigError("SYS-1 runs use the frozen H028 sleeve (hypothesis_id H028, REJECTED), programme LH, "
+                              "cycle SYS1 and need owner_approval_required")
+        if mode == "canary":
+            if kind != "infrastructure" or split != "AUDIT" or eid not in (sys1.CANARY,) + sys1.RETRIES:
+                raise ConfigError("the SYS-1 canary is infrastructure (AUDIT window), E032-01 or a documented retry")
+        elif mode == "eval":
+            if (kind != "research" or split != "DEV" or eid not in (sys1.EVAL,) + sys1.RETRIES
+                    or sys1.CANARY_RESULT_SHA256 is None):
+                raise ConfigError("the ONE SYS-1 evaluation is research (DEV), E032-02 or a documented retry, only "
+                                  "after the canary result digest is pinned")
+        else:
+            raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")

@@ -1,0 +1,109 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": "H028",
+ "strategy_id": "S032",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S032_sys1_account",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2011-01-03",
+ "end": "2021-12-31",
+ "warmup_start": "2008-07-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20,
+  "sec_corrections": false
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (applied inside the engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18131,
+ "execution_model": "d051",
+ "benchmarks": [
+  "E900-07"
+ ],
+ "programme": "LH",
+ "cycle": "SYS1",
+ "experiment_id": "E032-01",
+ "stall_minutes": 300,
+ "lean_version_policy": "default_build_digest_verified",
+ "params": {
+  "mode": "real",
+  "spec_sha256": "39b205c2b50172b8d7f89a013e08423e5cec8cfd632b574c0b90cc8aba6b7d18",
+  "h028_code_sha256": "f92eb5f6e6cadb23c6542052d4149ddc35c787649992a4f7795adf4ca1b3f0be",
+  "data_v21_manifest_sha256": "ef0a7a66f5ff1e746447cccdab3d812059192d474c6778ad307b946f4974a7bf",
+  "h026_feature_panel_sha256": "10a54163c61e18662e33159f67f5dc2f6b25a1501901fbbc118d2524890d4f89",
+  "h026_response_panel_sha256": "e1503f9ccbe60cfb535f46fcdced64714c03a56683dece03f0334fffd714120b",
+  "h027_real_wealth": 311396.7708031718,
+  "h027_real_s_wealth": 0.17148195882657039,
+  "h027_lambda_schedule": [
+   0.01,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0,
+   100.0
+  ],
+  "c_wealth_h028": 0.056125732120069,
+  "null_result_sha256": "f5c1401ba7faa4d37f86662ff409d028df7870343b61e06ff30b25d614be4ffe",
+  "threshold_commit": "76f172e13ba0985650a7389208d8edc17fb026af",
+  "tolerance": {
+   "2016": {
+    "ret": 0.009007340054033253,
+    "turnover": 0.18431948944490628
+   },
+   "2017": {
+    "ret": 0.004244822721305108,
+    "turnover": 0.07091525372131358
+   },
+   "2018": {
+    "ret": 0.0038521977289630582,
+    "turnover": 0.025
+   },
+   "2019": {
+    "ret": 0.0030989247820020216,
+    "turnover": 0.025
+   },
+   "2020": {
+    "ret": 0.0032547503506195063,
+    "turnover": 0.025
+   },
+   "2021": {
+    "ret": 0.00268444125519518,
+    "turnover": 0.025
+   }
+  },
+  "tolerance_sha256": "a754d355ae96b77d9a5c2d0c8a5a80ecda8e2ac24b5075c25f25645a7c0c0128",
+  "sys1_mode": "canary",
+  "sys1_protocol_sha256": "2a16618fdba23ab96a653704a29d1bbf0ea90b8cb6a132758a6a54336be05639",
+  "sys1_code_sha256": "ce27484afb48cf5fc50aa55ff7e19a575cbd668e222d42a75a466bf5009a5576",
+  "frozen_h028": {
+   "wealth": 328294.90847351257,
+   "commissions": 5789.0,
+   "buys": 416,
+   "sells": 411,
+   "slippage": 8330.209577810972
+  },
+  "frozen_spy_wealth": 262325.455801514,
+  "frozen_spy_wealth_200k": 524676.2761604529,
+  "frozen_lv15_wealth": 220156.03484878788
+ },
+ "description": "SYS-1 canary (owner D252; research/longhorizon/sys1/SYS1_protocol.md section 11): S032 canary mode = the frozen H028 / SPY / LV15 reproduction (C1-C3), SPLV / USMV data (C4), account rules on seeded random scores and zero-return worlds (C5), costs by hand (C6), beta truncation (C7); NO SYS-1 arm result. H028 remains REJECTED. Infrastructure. Default build.",
+ "owner_approval_required": "SYS-1 Controlled Development Experiment: one canary E032-01, then one evaluation E032-02 only if every mandatory canary check passes; at most two documented infrastructure retries (owner 2026-10-19, D252)",
+ "note_capital": "QuantConnect cash = the frozen E030-05 $100,000 (no orders); SYS-1 capital $200,000 is simulated in-host (owner OD-2)"
+}
