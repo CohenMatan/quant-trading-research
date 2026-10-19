@@ -2574,3 +2574,21 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Not done:** nothing run, bought or activated. Holdout sealed.
 - **Checkpoint:** `docs/checkpoints/RR1_research_reset_qc_migration_impact_roadmap.md`.
 - **Status:** STOPPED awaiting the owner.
+
+## 2026-10-19: RR1 decisions recorded; SYS-1 closed; RR2 programme proposal (D261 / D262; documentation only; STOP)
+
+- **Owner (D261):**
+  - RR1 accepted;
+  - **Option 1, QuantConnect-only price-first research** selected;
+  - Option 3 deferred, with D123 / D001 kept in force;
+  - RR1 §6 simplification principles approved;
+  - **SYS-1 closed as NOT RUN — PLATFORM BLOCKED — NO STRATEGY VERDICT**; H028 remains REJECTED;
+  - Support questions deferred.
+- **RR2 proposal** (`docs/checkpoints/RR2_qc_price_first_research_programme_proposal.md`):
+  - **Universe blocker:** the ≥ $2B PIT universe on current data is survivorship-biased as delivered (about 18% of stock-months missing market cap, D187). Proposed answer: one aggregate-only baseline run that measures the gap, tests an in-cloud share-count × adjusted-price cap and checks pre-2010 coverage. The SEC repair is the fallback.
+  - **Engine:** the existing plain-text harness plus signal plug-ins, with in-host scalar evaluation.
+  - **Tranche 1:** at most 3 hypotheses. Candidate categories: K1 dividend-event drift, K2 market-state exposure control, K3 long-horizon reversal, K4 equal-weight structure.
+  - **Screening and confirmation:** a "Promising" screen on the exposed 2010–2021 window. Confirmation uses the unchanged Amendment 3 gates on 1999–2009 (if available and approved) or the Holdout.
+  - **Stopping rules:** stop when none of the 3 is Promising, on any platform blocker, and no rescue variants.
+- **Not done:** nothing run, bought or implemented. Holdout sealed.
+- **Status:** STOPPED awaiting the owner (RR2 §10).
