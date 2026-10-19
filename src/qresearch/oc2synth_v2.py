@@ -416,16 +416,19 @@ def calibrate_payoff(targets=(0.06, 0.09, 0.12), reps=12, g_test=0.006):
 
 
 def full_rule(o, cv1, g2_floor=0.03):
+    """The complete research decision rule: G1 (NW7 t > fixed-b 1% value) and G2 (top-quintile effect >= +3%/yr) and
+    G3 (positive mean slope in both halves) and G4 (no calendar year > 50% of the slope sum)."""
     return bool(o["t"] > cv1 and o["tq_annual"] >= g2_floor and o["half1"] > 0 and o["half2"] > 0 and o["g4"])
 
 
-def classify(required_complete, adequacy_ok, size_ok, ident_ok, power_3pct, power_target=0.80):
-    """Protocol 7 precedence: D (missing / failed required evidence or inadequate framework) > C (any gating
-    reliability failure) > A (power >= target) > B."""
+def classify(required_complete, adequacy_ok, size_ok, ident_ok, power_test, power_rule, power_target=0.80):
+    """Frozen precedence (protocol 8, owner D250): D (missing / failed required evidence or inadequate generator) >
+    C (any Tier 1 size failure or any Tier 2 complete-rule false-approval failure) > A (statistical-test power AND
+    complete-decision-rule power at +3%, central regime, both >= target) > B."""
     if not required_complete or not adequacy_ok:
         return "D — INSUFFICIENT EVIDENCE"
     if not size_ok or not ident_ok:
         return "C — NOT VALIDATED"
-    if power_3pct >= power_target:
+    if power_test >= power_target and power_rule >= power_target:
         return "A — CALIBRATED AND SUFFICIENTLY POWERED"
     return "B — CALIBRATED BUT UNDERPOWERED"

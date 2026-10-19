@@ -2435,3 +2435,18 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Pre-run STOP:** the strict size criterion cannot coherently address the identification family (analytic projection: N5a 5% rejection 7.5–11%, N2L 17–39% in every regime). Options: 1 strict (projected C), 2 identification gate on full-rule false promotion ≤ 2% with a scoped claim (recommended if OC-2 continues), 3 stop → SPY.
 - Protocol `research/longhorizon/oc2/v2/OC2_V2_protocol.md` DRAFT — NOT FROZEN; checkpoint `docs/checkpoints/OC_CP5a_oc2_synthetic_calibration_v2_prerun_stop.md`.
 - **Status:** STOPPED awaiting the owner (OC-CP5a §25). No v2 classification; v1 stays D.
+
+## 2026-10-18/19: OC-CP5 — OC-2 synthetic calibration v2, confirmatory result (D250)
+
+- **Owner decision D250:** Option 2 with safeguards.
+  - Tier 1: 30 ordinary null worlds under the strict size gates.
+  - Tier 2: 13 confounded worlds (noisy controls / hidden factor, including the severe N5b / N2L5 at all three noise regimes) gated by complete-decision-rule false approval ≤ 2%.
+  - Two power types (test vs complete rule); classification A needs both ≥ 0.80.
+- **Freeze:** protocol frozen and committed before the run (3adf5b4; `FROZEN.json`); 60 worlds; 153,000 replications.
+- **One run** (fb49fb8; 0 failures):
+  - **Tier 1:** 30 / 30 pass (bias gone; spline controls and fixed-b NW7 work).
+  - **Tier 2:** 12 / 13 pass. **N2L5 at IC sd 0.12 fails** (hidden +5% factor, high-noise market): 4.40% false approval (CI 3.59–5.39%). N2L at 0.12 sits exactly at the 2.00% limit.
+  - **Power** at +3% central: test 84.6%, complete rule 43.5% (complete-rule MDE80 ≈ 4% a year).
+  - **Result: C — NOT VALIDATED** (otherwise B).
+- **Recommendation:** close OC-2 on current data and methods; SPY remains the offensive baseline. Checkpoint `docs/checkpoints/OC_CP5_oc2_synthetic_calibration_v2.md`.
+- **Status:** STOPPED awaiting the owner.

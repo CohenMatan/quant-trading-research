@@ -1,6 +1,7 @@
-"""OC-2 synthetic calibration v2 (owner D249): the ONE confirmatory evaluation driver. LOCKED: it refuses to run
-until the v2 protocol is FROZEN (its status line and SHA-256 recorded in FROZEN.json, with the owner's choice of
-the identification-family treatment, protocol section 9). FINAL seeds only. Synthetic only; no real data path.
+"""OC-2 synthetic calibration v2 (owner D249 / D250): the ONE confirmatory evaluation driver. LOCKED: it refuses to
+run unless FROZEN.json records the frozen protocol's SHA-256, the code SHA-256 values and the owner's identification
+treatment (D250: option 2 with severe-confounding gates, protocol section 9). FINAL seeds only. Synthetic only; no
+real data path.
 
     OMP_NUM_THREADS=1 PYTHONPATH=src python research/longhorizon/oc2/v2/OC2_V2_run.py
 """
@@ -33,9 +34,9 @@ CODE = [ROOT / "src/qresearch/oc2synth_v2.py", ROOT / "src/qresearch/oc2synth.py
 N_GATE, N_REGIME, N_DIAG, N_POW = 4000, 2000, 1000, 1000
 SIZE_1, SIZE_5 = 0.020, (0.035, 0.065)
 FAIL_MAX = 0.01                          # computational-failure share above which a scenario is incomplete (-> D)
-IDENT_FP_MAX = 0.020                     # option 2 only: full-rule false promotion bound in the gated ident worlds
-IDENT_GATED_OPT2 = ("N5a", "N2L")        # option 2: gated by full-rule false promotion (all regimes run)
+IDENT_FP_MAX = 0.020                     # Tier 2: complete-rule false approval bound, every identification world
 POWER_TARGET, POWER_CELL = 0.80, "P3-0.09"
+G2_SENSITIVITY = (0.02, 0.025, 0.035, 0.04)   # report-only full-rule floors (owner D250 section 4; never optimised)
 ADEQ = dict(pic_rel=0.15, fresh_abs=0.05, corr_abs=0.03, n_rel=0.03)
 STAGE1_FRESH = (0.625, 0.097, 0.270)
 
@@ -53,8 +54,8 @@ def frozen_or_refuse():
     for p in CODE:
         if f["code_sha256"].get(p.name) != sha(p):
             raise SystemExit(f"REFUSED: {p.name} differs from FROZEN.json")
-    if f.get("ident_treatment") not in (1, 2):
-        raise SystemExit("REFUSED: no owner-approved identification-family treatment")
+    if f.get("ident_treatment") != 2 or f.get("owner_decision") != "D250":
+        raise SystemExit("REFUSED: no owner-approved identification-family treatment (D250 option 2)")
     return f
 
 
@@ -65,7 +66,7 @@ def plan():
         base = w.name.split("@")[0]
         n = N_GATE if "@" not in w.name else N_REGIME
         out.append((w, n, "ident" if base in S.IDENT else "gate"))
-    out.append((S.ORACLE, N_DIAG, "diag"))
+    out.append((S.ORACLE, N_DIAG, "diag"))                      # non-gating oracle diagnostic
     out += [(w, N_POW, "power") for w in S.POWER]
     return out
 
@@ -106,12 +107,16 @@ def summarise(w, rows, cv=V.CV):
     slope = np.array([r["mean_slope"] for r in ok])
     se = np.array([r["se_nw7"] for r in ok])
     fr = np.array([V.full_rule(r, cv[0.01]) for r in ok])
+    no_g2 = np.array([V.full_rule(r, cv[0.01], g2_floor=-math.inf) for r in ok])
+    sens = {str(g): float(sum(V.full_rule(r, cv[0.01], g2_floor=g) for r in ok) / n) for g in G2_SENSITIVITY}
     rho = np.array([r["rho1"] for r in ok])
     s.update(mean_t=float(t.mean()), sd_t=float(t.std()), bias_mean_slope=float(slope.mean()),
              sd_mean_slope=float(slope.std()), mean_se=float(se.mean()),
              se_ratio=float(se.mean() / slope.std()) if slope.std() > 0 else math.nan,
              tq_annual_mean=float(np.mean([r["tq_annual"] for r in ok])),
-             full_rule=float(fr.sum() / n), full_rule_ci95=wilson(int(fr.sum()), n),
+             full_rule=float(fr.sum() / n), full_rule_completed=float(fr.mean()),
+             full_rule_ci95=wilson(int(fr.sum()), n), rule_without_g2=float(no_g2.sum() / n),
+             full_rule_g2_sensitivity=sens,
              pic_sd=float(np.mean([r["pic_sd"] for r in ok])), ic_sd=float(np.mean([r["ic_sd"] for r in ok])),
              rho1=float(rho.mean()), T_eff=float(np.mean(V.T * (1 - rho) / (1 + rho))),
              mean_n=float(np.mean([r["mean_n"] for r in ok])), min_n=int(min(r["min_n"] for r in ok)),
@@ -146,19 +151,50 @@ def adequacy(res):
     return miss
 
 
-def decide(res, roles, ident_treatment):
+def ident_ok(s):
+    return s.get("full_rule", 1) <= IDENT_FP_MAX and s.get("full_rule_completed", 1) <= IDENT_FP_MAX
+
+
+def mde(curve, level):
+    """Smallest effect with power >= level by linear interpolation over the planted effects; None if never reached."""
+    pts = sorted(curve.items())
+    if pts[0][1] >= level:
+        return f"<= {pts[0][0]}"
+    for (e0, p0), (e1, p1) in zip(pts, pts[1:]):
+        if p0 < level <= p1:
+            return e0 + (level - p0) * (e1 - e0) / (p1 - p0)
+    return None
+
+
+def power_tables(res):
+    out = {}
+    for r in (0.06, 0.09, 0.12):
+        cells = {e: res.get(f"P{int(round(e * 100))}-{r}") for e in S.EFFECTS}
+        if not all(cells.values()):
+            continue
+        test = {e: c.get("rej_0.01", 0.0) for e, c in cells.items()}
+        rule = {e: c.get("full_rule", 0.0) for e, c in cells.items()}
+        out[str(r)] = dict(power_test=test, power_rule=rule, power_test_5pct={e: c.get("rej_0.05", 0.0)
+                                                                              for e, c in cells.items()},
+                           mde50_test=mde(test, 0.5), mde80_test=mde(test, 0.8),
+                           mde50_rule=mde(rule, 0.5), mde80_rule=mde(rule, 0.8))
+    return out
+
+
+def decide(res, roles):
     incomplete = sorted(n for n, s in res.items() if s["failure_share"] > FAIL_MAX or "rej_0.05" not in s)
     miss = adequacy(res)
     gate_fail = sorted(n for n, s in res.items() if roles[n] == "gate" and not size_ok(s))
-    if ident_treatment == 1:                       # strict: N5a (all regimes) under the size gates
-        ident_fail = sorted(n for n, s in res.items() if n.split("@")[0] == "N5a" and not size_ok(s))
-    else:                                          # option 2: bounded full-rule false promotion
-        ident_fail = sorted(n for n, s in res.items() if n.split("@")[0] in IDENT_GATED_OPT2
-                            and s.get("full_rule", 1) > IDENT_FP_MAX)
-    p3 = res.get(POWER_CELL, {}).get("rej_0.01", 0.0)
-    outcome = V.classify(not incomplete, not miss, not gate_fail, not ident_fail, p3, POWER_TARGET)
-    return dict(outcome=outcome, incomplete=incomplete, adequacy_misses=miss, size_failures=gate_fail,
-                ident_failures=ident_fail, power_3pct_central=p3)
+    ident_fail = sorted(n for n, s in res.items() if roles[n] == "ident" and not ident_ok(s))
+    severe_fail = sorted(n for n in ident_fail if n.split("@")[0] in S.SEVERE)
+    p3 = res.get(POWER_CELL, {})
+    pt, pr = p3.get("rej_0.01", 0.0), p3.get("full_rule", 0.0)
+    outcome = V.classify(not incomplete, not miss, not gate_fail, not ident_fail, pt, pr, POWER_TARGET)
+    return dict(outcome=outcome, incomplete=incomplete, adequacy_misses=miss, tier1_size_failures=gate_fail,
+                tier2_failures=ident_fail, severe_failures=severe_fail, power_test_3pct_central=pt,
+                power_rule_3pct_central=pr,
+                n_worlds=len(res), n_tier1=sum(1 for v in roles.values() if v == "gate"),
+                n_tier2=sum(1 for v in roles.values() if v == "ident"))
 
 
 def main():
@@ -183,8 +219,9 @@ def main():
             print(w.name, role, round(time.time() - t0), flush=True)
     out = dict(kind="OC-2 synthetic calibration v2 — confirmatory evaluation (synthetic only)", decision="D249",
                protocol_sha256=sha(PROTOCOL), code_sha256={p.name: sha(p) for p in CODE},
-               ident_treatment=f["ident_treatment"], roles=roles, scenarios=res, cv=V.CV,
-               decision_record=decide(res, roles, f["ident_treatment"]), seconds=round(time.time() - t0))
+               ident_treatment=f["ident_treatment"], owner_decision=f["owner_decision"], roles=roles,
+               scenarios=res, cv=V.CV, power=power_tables(res), decision_record=decide(res, roles),
+               seconds=round(time.time() - t0))
     OUT.write_text(json.dumps(out, indent=1, sort_keys=True, default=float) + "\n")
     print(json.dumps(out["decision_record"], indent=1, default=float))
 
