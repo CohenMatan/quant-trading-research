@@ -51,6 +51,15 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - The frozen identity table (88% vendor-CIK / QuantConnect-derived, built on build 18131 and the old dataset) therefore cannot be reused or regenerated identically. **Exact H028 reproduction is not achievable.**
   - Options: A close SYS-1 as PLATFORM BLOCKED (recommended) / B identity-regeneration feasibility canary / C new successor test.
   - STOPPED awaiting the owner. No upload, no run, nothing deleted.
+- **RESEARCH RESET (D259 / D260, 2026-10-19) — planning only:** all strategy research is paused. Checkpoint `docs/checkpoints/RR1_research_reset_qc_migration_impact_roadmap.md` covers:
+  - the QuantConnect change inventory: documented vs observed vs our own evidence; price data never compared, so that is open;
+  - the period-by-period data matrix;
+  - impact: conclusions stand, the frozen chain is not reproducible;
+  - approaches A–D;
+  - a PROPOSED validation architecture (1999–2009 confirmatory under licensed data; Holdout sealed);
+  - simplifications;
+  - roadmap: **Option 3 recommended** (licensed point-in-time data + local engine, after a desk-only verification; needs D123 / D001 revisited); fallback Option 1 or stop.
+  Nothing is activated. STOPPED awaiting the owner (RR1 §9).
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
@@ -86,6 +95,7 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - ObjectStore export is blocked.
   - QuantConnect Support (2026-10-19, D257): SEC EDGAR data may be uploaded as plain JSON to the Object Store; QuantConnect security identifiers and universe membership must be generated inside cloud backtests, never reused from earlier extractions; results only via the official export.
   - From 2026-10-19 (new terms of service) QuantConnect refuses to save any project file that imports a compression or encoding package (zlib, lzma, base64…) or embeds binary blobs: 'all project files must be saved as readable plain-text source' (E032-01, D254). Every packed reference table (Data v2 / v2.1 / v3, H017 / H025 ledgers, SEC table) and the packed result blocks of `qr_p7_export` are affected.
+  - LEAN builds as of 2026-10-19 (read-only `lean/versions/read`): `master` 18194, plus a `morningstar-legacy` branch 18184 until the old dataset retires on 2026-10-31. The Migration Atlas page (`cdn.quantconnect.com`) is refused by this environment's proxy (RR1).
   - Since about 22:00 UTC on 2026-10-06, QuantConnect refuses engine (LEAN build) selection below its Trading Firm tier, and runs backtests on its default build even when a project still reports a pin (E023-07 ran on 18166). The runner's post-run engine check catches this; pin verification alone is not enough (D180/D181).
   - From 2026-10-10 the default build (18178, new Morningstar dataset) leaves most fundamental reports without a usable file date (timing unknown 608 → 31,538 in the X993 export): data infrastructure v1 does not reproduce on it (D183). Runs that cannot pin use `lean_version_policy: "default_build_digest_verified"` (H022 family / X993 / X995 / X996 / X997 diagnostics only, D182).
   - From 2026-10-10 QuantConnect's build runs a compliance review: code that exports data for probing or validation (e.g. per-report vendor/SEC ratios, timing fields) is REJECTED at compile ('Data cannot be exported for any purposes, including data probing or validation'; E995-05) and can be stopped mid-run ('Deleted by request'; E995-04). Never try to work around it; validate data offline with public sources only (D185).

@@ -2542,3 +2542,35 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Options:** A close SYS-1 as PLATFORM BLOCKED (recommended); B one identity-regeneration feasibility canary (C0 / C1 exact only); C a new cloud-native successor (new research decision).
 - **Not done:** no upload, run, legacy change or purchase. Holdout sealed.
 - **Status:** STOPPED awaiting the owner.
+
+## 2026-10-19: RR1 — Research Reset: QuantConnect migration impact and updated roadmap (D259 / D260; planning only; STOP)
+
+- **Owner direction (D259):** pause strategy research; planning review only. Recorded verbatim before the investigation.
+- **Sources:**
+  - official QuantConnect documentation;
+  - committed repository evidence;
+  - one read-only LEAN version-list call: `master` is 18194 (2026-10-19), and a `morningstar-legacy` branch 18184 exists.
+  - The Migration Atlas could not be read: the proxy refuses `cdn.quantconnect.com`.
+- **Documented changes:**
+  - fundamental history rebuilt from 1998;
+  - about one third of common values differ;
+  - sign convention changes;
+  - 1,251 retired properties;
+  - ratios dated by filing;
+  - pre-2013 statements lack filing dates (nominal 45 days);
+  - old dataset retired 2026-10-31;
+  - Terms v1.5 §2.6;
+  - engine selection gated to the Trading Firm tier;
+  - Object Store contents count as Platform Data.
+
+  No price or Security Master change is documented.
+- **Our own evidence:**
+  - the September beta (18131) and the October default (18178) are different data;
+  - market cap is missing for about 18% of stock-months on the current data;
+  - exact reproduction held from 10-10 to 10-13;
+  - price data was never compared across datasets, so that question is open.
+- **Impact:** all conclusions stand as historical evidence. The frozen chain is not reproducible. SEC-only components and the pure libraries can be reused. 2010–2021 is exhausted as a confirmation window.
+- **Recommendation:** Option 3 (licensed point-in-time data and a local engine), gated by a desk-only verification and an owner decision on D123 / D001. The fallback is Option 1 (QuantConnect, price-first), or stopping.
+- **Not done:** nothing run, bought or activated. Holdout sealed.
+- **Checkpoint:** `docs/checkpoints/RR1_research_reset_qc_migration_impact_roadmap.md`.
+- **Status:** STOPPED awaiting the owner.
