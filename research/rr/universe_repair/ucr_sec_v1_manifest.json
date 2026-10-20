@@ -1,0 +1,20 @@
+{
+ "characters": 7383442,
+ "file": "data/sec_derived/ucr_sec_v1.json",
+ "meta": {
+  "counts": {
+   "filings": 126255,
+   "filings_not_common": 5527,
+   "filings_with_single_shares": 113936,
+   "float_unit_dropped": 825,
+   "no_plausible_float_ge_0.5B": 588,
+   "registrants": 3858
+  },
+  "decision": "D269",
+  "name": "ucr_sec_v1",
+  "population_min_float": 500000000.0,
+  "source": "public SEC EDGAR (XBRL RSS index, companyfacts); same cache as SCA-1, point-in-time per-filing layout"
+ },
+ "object_store_key": "rr/ucr_sec_v1.json",
+ "sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82"
+}

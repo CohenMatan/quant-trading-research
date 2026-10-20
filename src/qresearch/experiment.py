@@ -730,7 +730,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
@@ -751,6 +751,26 @@ def validate(cfg: dict, unlock_file=None) -> None:
                               "build, programme RR, owner approval D263")
         if rr_ub.PROTOCOL_SHA256 is None or cfg.get("params") != rr_ub.run_params():
             raise ConfigError("X804 runs carry the pinned UB-1 protocol and code fingerprints (qresearch.rr_ub)")
+    if cfg["strategy_id"] == "X806":
+        # UCR-1 narrow SEC-based universe repair + re-audit (owner D269, research/rr/universe_repair/UCR_protocol.md):
+        # ONE aggregate-only infrastructure run on the default build (E806-01; E806-02 only as the documented retry),
+        # 2009-05-01 .. 2021-12-31 without warm-up, the approved filters without the SEC layer, the pinned protocol /
+        # code / both SEC objects
+        from . import rr_ucr
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["split"] != "AUDIT" or (cfg["start"], cfg["end"]) != ("2009-05-01", "2021-12-31")
+                or cfg.get("warmup_start") or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"
+                or cfg["experiment_id"] not in (rr_ucr.RUN, rr_ucr.RETRY) or cfg.get("programme") != rr_ucr.PROGRAMME
+                or rr_ucr.DECISION not in str(cfg.get("owner_approval_required") or "")):
+            raise ConfigError("X806 is the ONE UCR-1 infrastructure run (E806-01, retry E806-02): AUDIT 2009-05-01 .. "
+                              "2021-12-31, no warm-up, >= $2B / >= $5 / ADV20 >= $5M without the SEC layer, default "
+                              "build, programme RR, owner approval D269")
+        if (rr_ucr.PROTOCOL_SHA256 is None or rr_ucr.UCR_REFERENCE_SHA256 is None
+                or cfg.get("params") != rr_ucr.run_params()):
+            raise ConfigError("X806 runs carry the pinned UCR-1 protocol, code and SEC-object fingerprints "
+                              "(qresearch.rr_ucr)")
     if cfg["strategy_id"] == "X805":
         # SCA-1 SEC classification audit (owner D267, research/rr/sec_classification/SCA_protocol.md): ONE aggregate-only
         # infrastructure run on the default build (E805-01; E805-02 only as the documented retry), 2009-11-02 ..

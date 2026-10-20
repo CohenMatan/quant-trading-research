@@ -1,0 +1,3363 @@
+{
+ "run": "E806-01",
+ "meta": {
+  "collect_s": 188.7,
+  "experiment_id": "E806-01",
+  "original": {
+   "audit_points": 143,
+   "checks": {
+    "ambiguous": 2182,
+    "fp_multi": 18883,
+    "rows": 1075939
+   },
+   "digest_monthly_E": "5b73a07b7cbc9c81bd8155a1727b0339d7a68c73483377cfcffa591398734d54",
+   "first_point": "2010-01",
+   "last_point": "2021-11",
+   "protocol": "SCA-1",
+   "registrants": 3999,
+   "sec_reference_sha256": null,
+   "securities_seen": 16766
+  },
+  "protocol": "UCR-1",
+  "repaired": {
+   "audit_points": 143,
+   "checks": {
+    "ambiguous": 2182,
+    "fp_multi": 18902,
+    "rows": 1075939
+   },
+   "digest_monthly_E": "d26891c348d98a986c5c7d5a9a73f6832e2a0884b388ab92bdb009190aaf9e5a",
+   "first_point": "2010-01",
+   "last_point": "2021-11",
+   "protocol": "SCA-1",
+   "registrants": 3999,
+   "sec_reference_sha256": null,
+   "securities_seen": 16766
+  },
+  "sca_reference_sha256": "67bc9260f3c5bed6ac723a0ed4b177dee9f9be5814f482200438687b0984a747",
+  "summarize_s": 2.6,
+  "ucr_reference_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82"
+ },
+ "evaluation": {
+  "windows": {
+   "W1": {
+    "outcome": "INCONCLUSIVE",
+    "years": {
+     "2010": "INCONCLUSIVE",
+     "2011": "INCONCLUSIVE",
+     "2012": "INCONCLUSIVE",
+     "2013": "INCONCLUSIVE",
+     "2014": "INCONCLUSIVE",
+     "2015": "INCONCLUSIVE",
+     "2016": "INCONCLUSIVE",
+     "2017": "INCONCLUSIVE",
+     "2018": "INCONCLUSIVE",
+     "2019": "INCONCLUSIVE",
+     "2020": "INCONCLUSIVE",
+     "2021": "INCONCLUSIVE"
+    }
+   },
+   "W1a": {
+    "outcome": "INCONCLUSIVE",
+    "years": {
+     "2011": "INCONCLUSIVE",
+     "2012": "INCONCLUSIVE",
+     "2013": "INCONCLUSIVE",
+     "2014": "INCONCLUSIVE",
+     "2015": "INCONCLUSIVE",
+     "2016": "INCONCLUSIVE",
+     "2017": "INCONCLUSIVE",
+     "2018": "INCONCLUSIVE",
+     "2019": "INCONCLUSIVE",
+     "2020": "INCONCLUSIVE",
+     "2021": "INCONCLUSIVE"
+    }
+   },
+   "W1b": {
+    "outcome": "INCONCLUSIVE",
+    "years": {
+     "2016": "INCONCLUSIVE",
+     "2017": "INCONCLUSIVE",
+     "2018": "INCONCLUSIVE",
+     "2019": "INCONCLUSIVE",
+     "2020": "INCONCLUSIVE",
+     "2021": "INCONCLUSIVE"
+    }
+   }
+  },
+  "years": {
+   "2010": {
+    "E_original": 9158,
+    "E_repaired": 9782,
+    "repaired": 624,
+    "repaired_securities": 82,
+    "C_original": 337,
+    "C_remaining": 22,
+    "P_remaining": 283,
+    "U_remaining": 48,
+    "gap_C": 0.002244,
+    "gap_CP": 0.030237,
+    "gap_max": 0.03483,
+    "validation": {
+     "n": 5147,
+     "agree_2B": 0.999029
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold",
+     "instrument: SEC reach of E < 80%"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": null
+   },
+   "2011": {
+    "E_original": 10183,
+    "E_repaired": 11327,
+    "repaired": 1144,
+    "repaired_securities": 128,
+    "C_original": 590,
+    "C_remaining": 47,
+    "P_remaining": 274,
+    "U_remaining": 107,
+    "gap_C": 0.004132,
+    "gap_CP": 0.027558,
+    "gap_max": 0.03641,
+    "validation": {
+     "n": 10200,
+     "agree_2B": 0.998333
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 11069,
+     "repaired_short_pct": -0.0233
+    }
+   },
+   "2012": {
+    "E_original": 10451,
+    "E_repaired": 11468,
+    "repaired": 1017,
+    "repaired_securities": 114,
+    "C_original": 675,
+    "C_remaining": 82,
+    "P_remaining": 229,
+    "U_remaining": 221,
+    "gap_C": 0.0071,
+    "gap_CP": 0.026403,
+    "gap_max": 0.044333,
+    "validation": {
+     "n": 12164,
+     "agree_2B": 0.999178
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 11182,
+     "repaired_short_pct": -0.0256
+    }
+   },
+   "2013": {
+    "E_original": 12158,
+    "E_repaired": 13255,
+    "repaired": 1097,
+    "repaired_securities": 114,
+    "C_original": 542,
+    "C_remaining": 69,
+    "P_remaining": 213,
+    "U_remaining": 162,
+    "gap_C": 0.005179,
+    "gap_CP": 0.020832,
+    "gap_max": 0.032411,
+    "validation": {
+     "n": 13271,
+     "agree_2B": 0.997664
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 12860,
+     "repaired_short_pct": -0.0307
+    }
+   },
+   "2014": {
+    "E_original": 13676,
+    "E_repaired": 14777,
+    "repaired": 1101,
+    "repaired_securities": 114,
+    "C_original": 577,
+    "C_remaining": 85,
+    "P_remaining": 254,
+    "U_remaining": 220,
+    "gap_C": 0.005719,
+    "gap_CP": 0.022427,
+    "gap_max": 0.03645,
+    "validation": {
+     "n": 15161,
+     "agree_2B": 0.996834
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 14380,
+     "repaired_short_pct": -0.0276
+    }
+   },
+   "2015": {
+    "E_original": 14140,
+    "E_repaired": 15016,
+    "repaired": 876,
+    "repaired_securities": 100,
+    "C_original": 540,
+    "C_remaining": 105,
+    "P_remaining": 283,
+    "U_remaining": 283,
+    "gap_C": 0.006944,
+    "gap_CP": 0.025188,
+    "gap_max": 0.042774,
+    "validation": {
+     "n": 15809,
+     "agree_2B": 0.99728
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 14667,
+     "repaired_short_pct": -0.0238
+    }
+   },
+   "2016": {
+    "E_original": 13924,
+    "E_repaired": 14522,
+    "repaired": 598,
+    "repaired_securities": 73,
+    "C_original": 417,
+    "C_remaining": 115,
+    "P_remaining": 221,
+    "U_remaining": 327,
+    "gap_C": 0.007857,
+    "gap_CP": 0.022614,
+    "gap_max": 0.043662,
+    "validation": {
+     "n": 15958,
+     "agree_2B": 0.996679
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 14156,
+     "repaired_short_pct": -0.0259
+    }
+   },
+   "2017": {
+    "E_original": 15124,
+    "E_repaired": 15641,
+    "repaired": 517,
+    "repaired_securities": 62,
+    "C_original": 349,
+    "C_remaining": 120,
+    "P_remaining": 214,
+    "U_remaining": 342,
+    "gap_C": 0.007614,
+    "gap_CP": 0.020908,
+    "gap_max": 0.041429,
+    "validation": {
+     "n": 16178,
+     "agree_2B": 0.997651
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v1",
+     "count": 15373,
+     "repaired_short_pct": -0.0174
+    }
+   },
+   "2018": {
+    "E_original": 15856,
+    "E_repaired": 16313,
+    "repaired": 457,
+    "repaired_securities": 55,
+    "C_original": 341,
+    "C_remaining": 96,
+    "P_remaining": 259,
+    "U_remaining": 378,
+    "gap_C": 0.00585,
+    "gap_CP": 0.021298,
+    "gap_max": 0.043001,
+    "validation": {
+     "n": 16816,
+     "agree_2B": 0.99774
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v2.1",
+     "count": 15837,
+     "repaired_short_pct": -0.0301
+    }
+   },
+   "2019": {
+    "E_original": 15855,
+    "E_repaired": 16173,
+    "repaired": 318,
+    "repaired_securities": 42,
+    "C_original": 264,
+    "C_remaining": 87,
+    "P_remaining": 204,
+    "U_remaining": 390,
+    "gap_C": 0.005351,
+    "gap_CP": 0.017675,
+    "gap_max": 0.040406,
+    "validation": {
+     "n": 16429,
+     "agree_2B": 0.997565
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v2.1",
+     "count": 15898,
+     "repaired_short_pct": -0.0173
+    }
+   },
+   "2020": {
+    "E_original": 15785,
+    "E_repaired": 16000,
+    "repaired": 215,
+    "repaired_securities": 28,
+    "C_original": 199,
+    "C_remaining": 81,
+    "P_remaining": 161,
+    "U_remaining": 401,
+    "gap_C": 0.005037,
+    "gap_CP": 0.0149,
+    "gap_max": 0.038635,
+    "validation": {
+     "n": 15887,
+     "agree_2B": 0.998238
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v2.1",
+     "count": 15865,
+     "repaired_short_pct": -0.0085
+    }
+   },
+   "2021": {
+    "E_original": 18202,
+    "E_repaired": 18429,
+    "repaired": 227,
+    "repaired_securities": 30,
+    "C_original": 140,
+    "C_remaining": 80,
+    "P_remaining": 165,
+    "U_remaining": 429,
+    "gap_C": 0.004322,
+    "gap_CP": 0.01312,
+    "gap_max": 0.035282,
+    "validation": {
+     "n": 15830,
+     "agree_2B": 0.998989
+    },
+    "verdict": "INCONCLUSIVE",
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship not assessable (censoring)"
+    ],
+    "snapshot_vs_E805_02": 0,
+    "reference": {
+     "source": "data_v2.1",
+     "count": 18334,
+     "repaired_short_pct": -0.0052
+    }
+   }
+  },
+  "in_run_agrees": true,
+  "mismatches": []
+ },
+ "raw_years": {
+  "2010": {
+   "original": {
+    "E": 9158,
+    "E_matched": 7266,
+    "confirmed": 337,
+    "counts": {
+     "confirmed_B": 18,
+     "confirmed_M": 39,
+     "confirmed_N": 280,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 8,
+     "legit_illiquid_strong": 16,
+     "legit_illiquid_weak": 77,
+     "legit_other_exchange_strong": 15,
+     "legit_other_exchange_weak": 45,
+     "matched_not_sec_eligible_A_lt": 2283,
+     "matched_not_sec_eligible_B": 55,
+     "matched_not_sec_eligible_I": 1076,
+     "matched_not_sec_eligible_M": 80,
+     "matched_not_sec_eligible_N": 659,
+     "matched_not_sec_eligible_X": 84,
+     "possible_B": 50,
+     "possible_M": 63,
+     "possible_N": 481,
+     "qc_A_lt": 6250,
+     "qc_B": 1834,
+     "qc_E": 9158,
+     "qc_I": 54055,
+     "qc_M": 329,
+     "qc_N": 7935,
+     "qc_X": 302,
+     "unresolved": 46,
+     "unresolved_weak": 87
+    },
+    "gap_C": 0.035492,
+    "gap_CP": 0.092099,
+    "gap_max": 0.09622,
+    "instrument": {
+     "E_cover": 0.793405,
+     "agree_ge2b": 5799,
+     "agree_n": 5826,
+     "agree_share": 0.995366,
+     "e_matched_fp": 8,
+     "e_matched_ticker": 7285,
+     "ratio_within2x": 5756,
+     "ratio_within5": 5570,
+     "within2x_share": 0.987985,
+     "within5_share": 0.956059
+    },
+    "months": 12,
+    "possible": 592,
+    "securities": {
+     "confirmed": 59,
+     "possible": 123,
+     "unresolved_registrants": 11
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -7.5e-05,
+       0.005651
+      ],
+      "d": 0.069191,
+      "n_inc": 9158,
+      "n_unr": 337,
+      "point": 0.002456
+     },
+     "b_CP": {
+      "ci_b": [
+       0.003363,
+       0.014358
+      ],
+      "d": 0.093138,
+      "n_inc": 9158,
+      "n_unr": 929,
+      "point": 0.008578
+     },
+     "b_U_sec": {
+      "ci_b": [
+       4e-05,
+       0.002286
+      ],
+      "d": 0.159727,
+      "n_inc": 7293,
+      "n_unr": 46,
+      "point": 0.001001
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 46,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 4661,
+    "ambiguous_qc_ticker": 18,
+    "cap_below_2B": 126,
+    "contested_prefix": 36,
+    "float_missing_or_below_0.5B": 302,
+    "identity_band_fail": 20,
+    "illiquid": 753,
+    "no_fresh_shares": 64,
+    "no_qc_ticker": 184,
+    "other_exchange": 91,
+    "registrant_not_common_pit": 247,
+    "repaired": 624,
+    "repaired_M": 78,
+    "repaired_N": 546,
+    "split_since_cover": 3,
+    "validation_agree_2B": 5142,
+    "validation_n": 5147,
+    "validation_no_float": 1742,
+    "validation_no_shares": 265,
+    "validation_split": 25,
+    "validation_within_2x": 5124,
+    "validation_within_5pct": 4984,
+    "vendor_cap_below_2B": 542,
+    "vendor_non_common": 84
+   },
+   "repaired": {
+    "E": 9782,
+    "E_matched": 7890,
+    "confirmed": 22,
+    "counts": {
+     "confirmed_B": 18,
+     "confirmed_M": 0,
+     "confirmed_N": 4,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 8,
+     "legit_illiquid_strong": 16,
+     "legit_illiquid_weak": 77,
+     "legit_other_exchange_strong": 15,
+     "legit_other_exchange_weak": 45,
+     "matched_not_sec_eligible_A_lt": 2283,
+     "matched_not_sec_eligible_B": 55,
+     "matched_not_sec_eligible_I": 1076,
+     "matched_not_sec_eligible_M": 80,
+     "matched_not_sec_eligible_N": 654,
+     "matched_not_sec_eligible_X": 84,
+     "possible_B": 50,
+     "possible_M": 24,
+     "possible_N": 211,
+     "qc_A_lt": 6250,
+     "qc_B": 1834,
+     "qc_E": 9782,
+     "qc_I": 54055,
+     "qc_M": 251,
+     "qc_N": 7389,
+     "qc_X": 302,
+     "unresolved": 48,
+     "unresolved_weak": 93
+    },
+    "gap_C": 0.002244,
+    "gap_CP": 0.030237,
+    "gap_max": 0.03483,
+    "instrument": {
+     "E_cover": 0.806584,
+     "agree_ge2b": 6423,
+     "agree_n": 6450,
+     "agree_share": 0.995814,
+     "e_matched_fp": 0,
+     "e_matched_ticker": 7914,
+     "ratio_within2x": 6380,
+     "ratio_within5": 6194,
+     "within2x_share": 0.989147,
+     "within5_share": 0.96031
+    },
+    "months": 12,
+    "possible": 283,
+    "securities": {
+     "confirmed": 6,
+     "possible": 73,
+     "unresolved_registrants": 11
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000242,
+       -2.1e-05
+      ],
+      "d": -0.05091,
+      "n_inc": 9782,
+      "n_unr": 22,
+      "point": -0.000114
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.000534,
+       0.003552
+      ],
+      "d": 0.040893,
+      "n_inc": 9782,
+      "n_unr": 305,
+      "point": 0.001236
+     },
+     "b_U_sec": {
+      "ci_b": [
+       -2.8e-05,
+       0.002046
+      ],
+      "d": 0.142011,
+      "n_inc": 7914,
+      "n_unr": 48,
+      "point": 0.000856
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 48,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.002751,
+      0.012613
+     ],
+     "d": 0.115085,
+     "n_inc": 9158,
+     "n_unr": 624,
+     "point": 0.007341
+    },
+    "horizon": 24,
+    "repaired_securities": 82,
+    "repaired_stock_months": 624
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold",
+     "instrument: SEC reach of E < 80%"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.999029,
+     "n": 5147
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2011": {
+   "original": {
+    "E": 10183,
+    "E_matched": 9513,
+    "confirmed": 590,
+    "counts": {
+     "confirmed_B": 41,
+     "confirmed_M": 61,
+     "confirmed_N": 488,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 28,
+     "legit_illiquid_strong": 44,
+     "legit_illiquid_weak": 151,
+     "legit_other_exchange_strong": 41,
+     "legit_other_exchange_weak": 106,
+     "matched_not_sec_eligible_A_lt": 4970,
+     "matched_not_sec_eligible_B": 89,
+     "matched_not_sec_eligible_I": 7485,
+     "matched_not_sec_eligible_M": 155,
+     "matched_not_sec_eligible_N": 1025,
+     "matched_not_sec_eligible_X": 123,
+     "possible_B": 81,
+     "possible_M": 98,
+     "possible_N": 694,
+     "qc_A_lt": 6296,
+     "qc_B": 2023,
+     "qc_E": 10183,
+     "qc_I": 53355,
+     "qc_M": 387,
+     "qc_N": 8480,
+     "qc_X": 346,
+     "unresolved": 104,
+     "unresolved_weak": 862
+    },
+    "gap_C": 0.054767,
+    "gap_CP": 0.125623,
+    "gap_max": 0.133362,
+    "instrument": {
+     "E_cover": 0.934204,
+     "agree_ge2b": 8582,
+     "agree_n": 8645,
+     "agree_share": 0.992713,
+     "e_matched_fp": 24,
+     "e_matched_ticker": 9549,
+     "ratio_within2x": 8488,
+     "ratio_within5": 8285,
+     "within2x_share": 0.981839,
+     "within5_share": 0.958357
+    },
+    "months": 12,
+    "possible": 873,
+    "securities": {
+     "confirmed": 92,
+     "possible": 154,
+     "unresolved_registrants": 31
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.002284,
+       0.01078
+      ],
+      "d": 0.116702,
+      "n_inc": 10183,
+      "n_unr": 590,
+      "point": 0.006391
+     },
+     "b_CP": {
+      "ci_b": [
+       0.007695,
+       0.022665
+      ],
+      "d": 0.120059,
+      "n_inc": 10183,
+      "n_unr": 1463,
+      "point": 0.015082
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.001045,
+       0.00419
+      ],
+      "d": 0.233301,
+      "n_inc": 9573,
+      "n_unr": 104,
+      "point": 0.002507
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 104,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%",
+      "confirmed survivorship bias point > threshold"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 7749,
+    "ambiguous_qc_ticker": 31,
+    "cap_below_2B": 482,
+    "contested_prefix": 34,
+    "float_missing_or_below_0.5B": 449,
+    "identity_band_fail": 12,
+    "illiquid": 4800,
+    "no_fresh_shares": 152,
+    "no_qc_ticker": 1072,
+    "other_exchange": 240,
+    "registrant_not_common_pit": 820,
+    "repaired": 1144,
+    "repaired_M": 140,
+    "repaired_N": 1004,
+    "split_since_cover": 5,
+    "validation_agree_2B": 10183,
+    "validation_n": 10200,
+    "validation_no_float": 2060,
+    "validation_no_shares": 784,
+    "validation_split": 104,
+    "validation_within_2x": 10177,
+    "validation_within_5pct": 9945,
+    "vendor_cap_below_2B": 2582,
+    "vendor_non_common": 189
+   },
+   "repaired": {
+    "E": 11327,
+    "E_matched": 10656,
+    "confirmed": 47,
+    "counts": {
+     "confirmed_B": 41,
+     "confirmed_M": 0,
+     "confirmed_N": 6,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 28,
+     "legit_illiquid_strong": 44,
+     "legit_illiquid_weak": 151,
+     "legit_other_exchange_strong": 41,
+     "legit_other_exchange_weak": 106,
+     "matched_not_sec_eligible_A_lt": 4970,
+     "matched_not_sec_eligible_B": 89,
+     "matched_not_sec_eligible_I": 7485,
+     "matched_not_sec_eligible_M": 155,
+     "matched_not_sec_eligible_N": 1023,
+     "matched_not_sec_eligible_X": 123,
+     "possible_B": 81,
+     "possible_M": 19,
+     "possible_N": 174,
+     "qc_A_lt": 6296,
+     "qc_B": 2023,
+     "qc_E": 11327,
+     "qc_I": 53355,
+     "qc_M": 247,
+     "qc_N": 7476,
+     "qc_X": 346,
+     "unresolved": 107,
+     "unresolved_weak": 863
+    },
+    "gap_C": 0.004132,
+    "gap_CP": 0.027558,
+    "gap_max": 0.03641,
+    "instrument": {
+     "E_cover": 0.940761,
+     "agree_ge2b": 9724,
+     "agree_n": 9787,
+     "agree_share": 0.993563,
+     "e_matched_fp": 20,
+     "e_matched_ticker": 10693,
+     "ratio_within2x": 9630,
+     "ratio_within5": 9427,
+     "within2x_share": 0.983958,
+     "within5_share": 0.963217
+    },
+    "months": 12,
+    "possible": 274,
+    "securities": {
+     "confirmed": 9,
+     "possible": 77,
+     "unresolved_registrants": 31
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000361,
+       0.000604
+      ],
+      "d": 0.006798,
+      "n_inc": 11327,
+      "n_unr": 47,
+      "point": 2.8e-05
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.000749,
+       0.002357
+      ],
+      "d": 0.023965,
+      "n_inc": 11327,
+      "n_unr": 321,
+      "point": 0.00066
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000748,
+       0.00374
+      ],
+      "d": 0.214555,
+      "n_inc": 10713,
+      "n_unr": 107,
+      "point": 0.002122
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 107,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.007333,
+      0.021647
+     ],
+     "d": 0.142695,
+     "n_inc": 10183,
+     "n_unr": 1144,
+     "point": 0.014412
+    },
+    "horizon": 24,
+    "repaired_securities": 128,
+    "repaired_stock_months": 1144
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.998333,
+     "n": 10200
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2012": {
+   "original": {
+    "E": 10451,
+    "E_matched": 9863,
+    "confirmed": 675,
+    "counts": {
+     "confirmed_B": 78,
+     "confirmed_M": 83,
+     "confirmed_N": 514,
+     "disagree_vendor_below_2B_strong": 3,
+     "disagree_vendor_below_2B_weak": 39,
+     "legit_illiquid_strong": 44,
+     "legit_illiquid_weak": 234,
+     "legit_other_exchange_strong": 94,
+     "legit_other_exchange_weak": 64,
+     "matched_not_sec_eligible_A_lt": 5283,
+     "matched_not_sec_eligible_B": 94,
+     "matched_not_sec_eligible_I": 11090,
+     "matched_not_sec_eligible_M": 174,
+     "matched_not_sec_eligible_N": 1020,
+     "matched_not_sec_eligible_X": 153,
+     "possible_B": 52,
+     "possible_M": 67,
+     "possible_N": 534,
+     "qc_A_lt": 5635,
+     "qc_B": 2053,
+     "qc_E": 10451,
+     "qc_I": 54986,
+     "qc_M": 347,
+     "qc_N": 7523,
+     "qc_X": 368,
+     "unresolved": 221,
+     "unresolved_weak": 2028
+    },
+    "gap_C": 0.060669,
+    "gap_CP": 0.112743,
+    "gap_max": 0.129083,
+    "instrument": {
+     "E_cover": 0.943737,
+     "agree_ge2b": 8991,
+     "agree_n": 9037,
+     "agree_share": 0.99491,
+     "e_matched_fp": 77,
+     "e_matched_ticker": 9913,
+     "ratio_within2x": 8953,
+     "ratio_within5": 8778,
+     "within2x_share": 0.990705,
+     "within5_share": 0.97134
+    },
+    "months": 12,
+    "possible": 653,
+    "securities": {
+     "confirmed": 95,
+     "possible": 136,
+     "unresolved_registrants": 44
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.002371,
+       0.010749
+      ],
+      "d": 0.103051,
+      "n_inc": 10451,
+      "n_unr": 675,
+      "point": 0.006252
+     },
+     "b_CP": {
+      "ci_b": [
+       0.006553,
+       0.019617
+      ],
+      "d": 0.109753,
+      "n_inc": 10451,
+      "n_unr": 1328,
+      "point": 0.012374
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.00244,
+       0.007804
+      ],
+      "d": 0.224606,
+      "n_inc": 9990,
+      "n_unr": 221,
+      "point": 0.004861
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 221,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%",
+      "confirmed survivorship bias point > threshold"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 8619,
+    "ambiguous_qc_ticker": 55,
+    "cap_below_2B": 824,
+    "contested_prefix": 92,
+    "float_missing_or_below_0.5B": 290,
+    "identity_band_fail": 43,
+    "illiquid": 10413,
+    "no_fresh_shares": 183,
+    "no_qc_ticker": 2320,
+    "other_exchange": 309,
+    "registrant_not_common_pit": 1376,
+    "repaired": 1017,
+    "repaired_M": 140,
+    "repaired_N": 877,
+    "split_since_cover": 5,
+    "validation_agree_2B": 12154,
+    "validation_n": 12164,
+    "validation_no_float": 1362,
+    "validation_no_shares": 956,
+    "validation_split": 53,
+    "validation_within_2x": 12151,
+    "validation_within_5pct": 11953,
+    "vendor_cap_below_2B": 3833,
+    "vendor_non_common": 221
+   },
+   "repaired": {
+    "E": 11468,
+    "E_matched": 10880,
+    "confirmed": 82,
+    "counts": {
+     "confirmed_B": 78,
+     "confirmed_M": 0,
+     "confirmed_N": 4,
+     "disagree_vendor_below_2B_strong": 3,
+     "disagree_vendor_below_2B_weak": 39,
+     "legit_illiquid_strong": 44,
+     "legit_illiquid_weak": 234,
+     "legit_other_exchange_strong": 94,
+     "legit_other_exchange_weak": 64,
+     "matched_not_sec_eligible_A_lt": 5283,
+     "matched_not_sec_eligible_B": 94,
+     "matched_not_sec_eligible_I": 11090,
+     "matched_not_sec_eligible_M": 174,
+     "matched_not_sec_eligible_N": 1020,
+     "matched_not_sec_eligible_X": 153,
+     "possible_B": 52,
+     "possible_M": 10,
+     "possible_N": 167,
+     "qc_A_lt": 5635,
+     "qc_B": 2053,
+     "qc_E": 11468,
+     "qc_I": 54986,
+     "qc_M": 207,
+     "qc_N": 6646,
+     "qc_X": 368,
+     "unresolved": 221,
+     "unresolved_weak": 2028
+    },
+    "gap_C": 0.0071,
+    "gap_CP": 0.026403,
+    "gap_max": 0.044333,
+    "instrument": {
+     "E_cover": 0.948727,
+     "agree_ge2b": 10008,
+     "agree_n": 10054,
+     "agree_share": 0.995425,
+     "e_matched_fp": 77,
+     "e_matched_ticker": 10930,
+     "ratio_within2x": 9970,
+     "ratio_within5": 9795,
+     "within2x_share": 0.991645,
+     "within5_share": 0.974239
+    },
+    "months": 12,
+    "possible": 229,
+    "securities": {
+     "confirmed": 11,
+     "possible": 53,
+     "unresolved_registrants": 44
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000498,
+       -0.00013
+      ],
+      "d": -0.039763,
+      "n_inc": 11468,
+      "n_unr": 82,
+      "point": -0.000282
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.000461,
+       0.003811
+      ],
+      "d": 0.053485,
+      "n_inc": 11468,
+      "n_unr": 311,
+      "point": 0.001412
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002067,
+       0.006564
+      ],
+      "d": 0.213384,
+      "n_inc": 11007,
+      "n_unr": 221,
+      "point": 0.0042
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 221,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.004561,
+      0.017376
+     ],
+     "d": 0.123608,
+     "n_inc": 10451,
+     "n_unr": 1017,
+     "point": 0.010962
+    },
+    "horizon": 24,
+    "repaired_securities": 114,
+    "repaired_stock_months": 1017
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.999178,
+     "n": 12164
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2013": {
+   "original": {
+    "E": 12158,
+    "E_matched": 11574,
+    "confirmed": 542,
+    "counts": {
+     "confirmed_B": 68,
+     "confirmed_M": 57,
+     "confirmed_N": 417,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 26,
+     "legit_illiquid_strong": 36,
+     "legit_illiquid_weak": 213,
+     "legit_other_exchange_strong": 70,
+     "legit_other_exchange_weak": 116,
+     "matched_not_sec_eligible_A_lt": 5564,
+     "matched_not_sec_eligible_B": 91,
+     "matched_not_sec_eligible_I": 9787,
+     "matched_not_sec_eligible_M": 153,
+     "matched_not_sec_eligible_N": 1021,
+     "matched_not_sec_eligible_X": 213,
+     "possible_B": 69,
+     "possible_M": 133,
+     "possible_N": 635,
+     "qc_A_lt": 5900,
+     "qc_B": 2276,
+     "qc_E": 12158,
+     "qc_I": 53079,
+     "qc_M": 340,
+     "qc_N": 8237,
+     "qc_X": 440,
+     "unresolved": 162,
+     "unresolved_weak": 2203
+    },
+    "gap_C": 0.042677,
+    "gap_CP": 0.101869,
+    "gap_max": 0.11249,
+    "instrument": {
+     "E_cover": 0.951966,
+     "agree_ge2b": 10499,
+     "agree_n": 10559,
+     "agree_share": 0.994318,
+     "e_matched_fp": 81,
+     "e_matched_ticker": 11632,
+     "ratio_within2x": 10488,
+     "ratio_within5": 10332,
+     "within2x_share": 0.993276,
+     "within5_share": 0.978502
+    },
+    "months": 12,
+    "possible": 837,
+    "securities": {
+     "confirmed": 85,
+     "possible": 146,
+     "unresolved_registrants": 35
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.000469,
+       0.00659
+      ],
+      "d": 0.07913,
+      "n_inc": 12158,
+      "n_unr": 542,
+      "point": 0.003377
+     },
+     "b_CP": {
+      "ci_b": [
+       0.005492,
+       0.018009
+      ],
+      "d": 0.113664,
+      "n_inc": 12158,
+      "n_unr": 1379,
+      "point": 0.011579
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000548,
+       0.003934
+      ],
+      "d": 0.152735,
+      "n_inc": 11713,
+      "n_unr": 162,
+      "point": 0.002084
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 162,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 9902,
+    "ambiguous_qc_ticker": 47,
+    "cap_below_2B": 732,
+    "contested_prefix": 180,
+    "float_missing_or_below_0.5B": 347,
+    "identity_band_fail": 20,
+    "illiquid": 8939,
+    "multi_class_ticker": 36,
+    "no_fresh_shares": 163,
+    "no_qc_ticker": 2616,
+    "other_exchange": 383,
+    "registrant_not_common_pit": 1560,
+    "repaired": 1097,
+    "repaired_M": 155,
+    "repaired_N": 942,
+    "split_since_cover": 11,
+    "validation_agree_2B": 13240,
+    "validation_n": 13271,
+    "validation_no_float": 2104,
+    "validation_no_shares": 1133,
+    "validation_split": 73,
+    "validation_within_2x": 13259,
+    "validation_within_5pct": 13064,
+    "vendor_cap_below_2B": 3456,
+    "vendor_non_common": 219
+   },
+   "repaired": {
+    "E": 13255,
+    "E_matched": 12671,
+    "confirmed": 69,
+    "counts": {
+     "confirmed_B": 68,
+     "confirmed_M": 0,
+     "confirmed_N": 1,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 26,
+     "legit_illiquid_strong": 36,
+     "legit_illiquid_weak": 213,
+     "legit_other_exchange_strong": 70,
+     "legit_other_exchange_weak": 116,
+     "matched_not_sec_eligible_A_lt": 5564,
+     "matched_not_sec_eligible_B": 91,
+     "matched_not_sec_eligible_I": 9787,
+     "matched_not_sec_eligible_M": 153,
+     "matched_not_sec_eligible_N": 1021,
+     "matched_not_sec_eligible_X": 213,
+     "possible_B": 69,
+     "possible_M": 35,
+     "possible_N": 109,
+     "qc_A_lt": 5900,
+     "qc_B": 2276,
+     "qc_E": 13255,
+     "qc_I": 53079,
+     "qc_M": 185,
+     "qc_N": 7295,
+     "qc_X": 440,
+     "unresolved": 162,
+     "unresolved_weak": 2203
+    },
+    "gap_C": 0.005179,
+    "gap_CP": 0.020832,
+    "gap_max": 0.032411,
+    "instrument": {
+     "E_cover": 0.955941,
+     "agree_ge2b": 11596,
+     "agree_n": 11656,
+     "agree_share": 0.994852,
+     "e_matched_fp": 81,
+     "e_matched_ticker": 12729,
+     "ratio_within2x": 11585,
+     "ratio_within5": 11429,
+     "within2x_share": 0.993909,
+     "within5_share": 0.980525
+    },
+    "months": 12,
+    "possible": 213,
+    "securities": {
+     "confirmed": 12,
+     "possible": 44,
+     "unresolved_registrants": 35
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000362,
+       0.000196
+      ],
+      "d": -0.021712,
+      "n_inc": 13255,
+      "n_unr": 69,
+      "point": -0.000112
+     },
+     "b_CP": {
+      "ci_b": [
+       -2.1e-05,
+       0.003998
+      ],
+      "d": 0.080508,
+      "n_inc": 13255,
+      "n_unr": 282,
+      "point": 0.001677
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000337,
+       0.003498
+      ],
+      "d": 0.139691,
+      "n_inc": 12810,
+      "n_unr": 162,
+      "point": 0.001745
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 162,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.005128,
+      0.015808
+     ],
+     "d": 0.119641,
+     "n_inc": 12158,
+     "n_unr": 1097,
+     "point": 0.009902
+    },
+    "horizon": 24,
+    "repaired_securities": 114,
+    "repaired_stock_months": 1097
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.997664,
+     "n": 13271
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2014": {
+   "original": {
+    "E": 13676,
+    "E_matched": 12977,
+    "confirmed": 577,
+    "counts": {
+     "confirmed_B": 80,
+     "confirmed_M": 64,
+     "confirmed_N": 433,
+     "disagree_vendor_below_2B_strong": 7,
+     "disagree_vendor_below_2B_weak": 34,
+     "legit_illiquid_strong": 28,
+     "legit_illiquid_weak": 137,
+     "legit_other_exchange_strong": 102,
+     "legit_other_exchange_weak": 107,
+     "matched_not_sec_eligible_A_lt": 6077,
+     "matched_not_sec_eligible_B": 91,
+     "matched_not_sec_eligible_I": 9200,
+     "matched_not_sec_eligible_M": 169,
+     "matched_not_sec_eligible_N": 911,
+     "matched_not_sec_eligible_X": 260,
+     "possible_B": 83,
+     "possible_M": 124,
+     "possible_N": 658,
+     "qc_A_lt": 6623,
+     "qc_B": 2426,
+     "qc_E": 13676,
+     "qc_I": 53752,
+     "qc_M": 367,
+     "qc_N": 8681,
+     "qc_X": 518,
+     "unresolved": 220,
+     "unresolved_weak": 2143
+    },
+    "gap_C": 0.040483,
+    "gap_CP": 0.095263,
+    "gap_max": 0.108242,
+    "instrument": {
+     "E_cover": 0.948889,
+     "agree_ge2b": 11931,
+     "agree_n": 11986,
+     "agree_share": 0.995411,
+     "e_matched_fp": 85,
+     "e_matched_ticker": 13024,
+     "ratio_within2x": 11916,
+     "ratio_within5": 11699,
+     "within2x_share": 0.99416,
+     "within5_share": 0.976055
+    },
+    "months": 12,
+    "possible": 863,
+    "securities": {
+     "confirmed": 90,
+     "possible": 143,
+     "unresolved_registrants": 45
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.003311,
+       0.010945
+      ],
+      "d": 0.167984,
+      "n_inc": 13676,
+      "n_unr": 577,
+      "point": 0.0068
+     },
+     "b_CP": {
+      "ci_b": [
+       0.009139,
+       0.023069
+      ],
+      "d": 0.164565,
+      "n_inc": 13676,
+      "n_unr": 1440,
+      "point": 0.015677
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000735,
+       0.005362
+      ],
+      "d": 0.169858,
+      "n_inc": 13109,
+      "n_unr": 220,
+      "point": 0.002804
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 220,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%",
+      "confirmed survivorship bias point > threshold"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 11355,
+    "ambiguous_qc_ticker": 54,
+    "cap_below_2B": 647,
+    "contested_prefix": 224,
+    "float_missing_or_below_0.5B": 365,
+    "identity_band_fail": 4,
+    "illiquid": 8206,
+    "multi_class_ticker": 36,
+    "no_fresh_shares": 171,
+    "no_qc_ticker": 2641,
+    "other_exchange": 436,
+    "registrant_not_common_pit": 1659,
+    "repaired": 1101,
+    "repaired_M": 175,
+    "repaired_N": 926,
+    "split_since_cover": 16,
+    "validation_agree_2B": 15113,
+    "validation_n": 15161,
+    "validation_no_float": 2149,
+    "validation_no_shares": 1272,
+    "validation_split": 65,
+    "validation_within_2x": 15134,
+    "validation_within_5pct": 14903,
+    "vendor_cap_below_2B": 3908,
+    "vendor_non_common": 227
+   },
+   "repaired": {
+    "E": 14777,
+    "E_matched": 14078,
+    "confirmed": 85,
+    "counts": {
+     "confirmed_B": 80,
+     "confirmed_M": 0,
+     "confirmed_N": 5,
+     "disagree_vendor_below_2B_strong": 7,
+     "disagree_vendor_below_2B_weak": 34,
+     "legit_illiquid_strong": 28,
+     "legit_illiquid_weak": 137,
+     "legit_other_exchange_strong": 102,
+     "legit_other_exchange_weak": 107,
+     "matched_not_sec_eligible_A_lt": 6077,
+     "matched_not_sec_eligible_B": 91,
+     "matched_not_sec_eligible_I": 9200,
+     "matched_not_sec_eligible_M": 161,
+     "matched_not_sec_eligible_N": 900,
+     "matched_not_sec_eligible_X": 260,
+     "possible_B": 83,
+     "possible_M": 13,
+     "possible_N": 160,
+     "qc_A_lt": 6623,
+     "qc_B": 2426,
+     "qc_E": 14777,
+     "qc_I": 53752,
+     "qc_M": 192,
+     "qc_N": 7755,
+     "qc_X": 518,
+     "unresolved": 220,
+     "unresolved_weak": 2143
+    },
+    "gap_C": 0.005719,
+    "gap_CP": 0.022427,
+    "gap_max": 0.03645,
+    "instrument": {
+     "E_cover": 0.952697,
+     "agree_ge2b": 13032,
+     "agree_n": 13087,
+     "agree_share": 0.995797,
+     "e_matched_fp": 85,
+     "e_matched_ticker": 14144,
+     "ratio_within2x": 13017,
+     "ratio_within5": 12800,
+     "within2x_share": 0.994651,
+     "within5_share": 0.97807
+    },
+    "months": 12,
+    "possible": 254,
+    "securities": {
+     "confirmed": 15,
+     "possible": 50,
+     "unresolved_registrants": 45
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000614,
+       0.00087
+      ],
+      "d": -0.007777,
+      "n_inc": 14777,
+      "n_unr": 85,
+      "point": -4.4e-05
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.001604,
+       0.001775
+      ],
+      "d": -0.007569,
+      "n_inc": 14777,
+      "n_unr": 339,
+      "point": -0.00017
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000432,
+       0.004421
+      ],
+      "d": 0.152124,
+      "n_inc": 14229,
+      "n_unr": 220,
+      "point": 0.002316
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 220,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.009241,
+      0.022664
+     ],
+     "d": 0.212686,
+     "n_inc": 13676,
+     "n_unr": 1101,
+     "point": 0.015847
+    },
+    "horizon": 24,
+    "repaired_securities": 114,
+    "repaired_stock_months": 1101
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.996834,
+     "n": 15161
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2015": {
+   "original": {
+    "E": 14140,
+    "E_matched": 13326,
+    "confirmed": 540,
+    "counts": {
+     "confirmed_B": 85,
+     "confirmed_M": 47,
+     "confirmed_N": 408,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 56,
+     "legit_illiquid_strong": 30,
+     "legit_illiquid_weak": 129,
+     "legit_other_exchange_strong": 101,
+     "legit_other_exchange_weak": 125,
+     "matched_not_sec_eligible_A_lt": 6420,
+     "matched_not_sec_eligible_B": 102,
+     "matched_not_sec_eligible_I": 9488,
+     "matched_not_sec_eligible_M": 185,
+     "matched_not_sec_eligible_N": 689,
+     "matched_not_sec_eligible_X": 252,
+     "possible_B": 78,
+     "possible_M": 111,
+     "possible_N": 525,
+     "qc_A_lt": 7012,
+     "qc_B": 2337,
+     "qc_E": 14140,
+     "qc_I": 55654,
+     "qc_M": 381,
+     "qc_N": 8753,
+     "qc_X": 539,
+     "unresolved": 282,
+     "unresolved_weak": 2080
+    },
+    "gap_C": 0.036785,
+    "gap_CP": 0.081401,
+    "gap_max": 0.097927,
+    "instrument": {
+     "E_cover": 0.942433,
+     "agree_ge2b": 12267,
+     "agree_n": 12327,
+     "agree_share": 0.995133,
+     "e_matched_fp": 64,
+     "e_matched_ticker": 13402,
+     "ratio_within2x": 12243,
+     "ratio_within5": 12025,
+     "within2x_share": 0.993186,
+     "within5_share": 0.975501
+    },
+    "months": 12,
+    "possible": 713,
+    "securities": {
+     "confirmed": 90,
+     "possible": 132,
+     "unresolved_registrants": 62
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.004355,
+       0.011591
+      ],
+      "d": 0.210799,
+      "n_inc": 14140,
+      "n_unr": 540,
+      "point": 0.007754
+     },
+     "b_CP": {
+      "ci_b": [
+       0.006024,
+       0.018392
+      ],
+      "d": 0.148024,
+      "n_inc": 14140,
+      "n_unr": 1253,
+      "point": 0.012049
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.001859,
+       0.006496
+      ],
+      "d": 0.186814,
+      "n_inc": 13466,
+      "n_unr": 282,
+      "point": 0.003832
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 282,
+    "verdict": {
+     "reasons": [
+      "confirmed gap > 3%",
+      "confirmed survivorship bias point > threshold"
+     ],
+     "verdict": "FAIL"
+    }
+   },
+   "repair": {
+    "already_eligible": 11750,
+    "ambiguous_qc_ticker": 89,
+    "cap_below_2B": 587,
+    "contested_prefix": 230,
+    "float_missing_or_below_0.5B": 225,
+    "identity_band_fail": 56,
+    "illiquid": 8388,
+    "multi_class_ticker": 35,
+    "no_fresh_shares": 150,
+    "no_qc_ticker": 2789,
+    "other_exchange": 454,
+    "registrant_not_common_pit": 1673,
+    "repaired": 876,
+    "repaired_M": 136,
+    "repaired_N": 740,
+    "split_since_cover": 7,
+    "validation_agree_2B": 15766,
+    "validation_n": 15809,
+    "validation_no_float": 1846,
+    "validation_no_shares": 1393,
+    "validation_split": 67,
+    "validation_within_2x": 15785,
+    "validation_within_5pct": 15541,
+    "vendor_cap_below_2B": 4441,
+    "vendor_non_common": 250
+   },
+   "repaired": {
+    "E": 15016,
+    "E_matched": 14191,
+    "confirmed": 105,
+    "counts": {
+     "confirmed_B": 85,
+     "confirmed_M": 0,
+     "confirmed_N": 20,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 56,
+     "legit_illiquid_strong": 30,
+     "legit_illiquid_weak": 129,
+     "legit_other_exchange_strong": 101,
+     "legit_other_exchange_weak": 125,
+     "matched_not_sec_eligible_A_lt": 6420,
+     "matched_not_sec_eligible_B": 102,
+     "matched_not_sec_eligible_I": 9488,
+     "matched_not_sec_eligible_M": 185,
+     "matched_not_sec_eligible_N": 685,
+     "matched_not_sec_eligible_X": 252,
+     "possible_B": 78,
+     "possible_M": 22,
+     "possible_N": 184,
+     "qc_A_lt": 7012,
+     "qc_B": 2337,
+     "qc_E": 15016,
+     "qc_I": 55654,
+     "qc_M": 245,
+     "qc_N": 8013,
+     "qc_X": 539,
+     "unresolved": 283,
+     "unresolved_weak": 2083
+    },
+    "gap_C": 0.006944,
+    "gap_CP": 0.025188,
+    "gap_max": 0.042774,
+    "instrument": {
+     "E_cover": 0.945059,
+     "agree_ge2b": 13132,
+     "agree_n": 13192,
+     "agree_share": 0.995452,
+     "e_matched_fp": 60,
+     "e_matched_ticker": 14271,
+     "ratio_within2x": 13108,
+     "ratio_within5": 12890,
+     "within2x_share": 0.993633,
+     "within5_share": 0.977107
+    },
+    "months": 12,
+    "possible": 283,
+    "securities": {
+     "confirmed": 18,
+     "possible": 61,
+     "unresolved_registrants": 62
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000713,
+       0.000915
+      ],
+      "d": -0.001792,
+      "n_inc": 15016,
+      "n_unr": 105,
+      "point": -1.2e-05
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.001207,
+       0.003114
+      ],
+      "d": 0.028473,
+      "n_inc": 15016,
+      "n_unr": 388,
+      "point": 0.000717
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.001376,
+       0.005774
+      ],
+      "d": 0.174369,
+      "n_inc": 14331,
+      "n_unr": 283,
+      "point": 0.003377
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 283,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.00581,
+      0.017519
+     ],
+     "d": 0.193169,
+     "n_inc": 14140,
+     "n_unr": 876,
+     "point": 0.011269
+    },
+    "horizon": 24,
+    "repaired_securities": 100,
+    "repaired_stock_months": 876
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.99728,
+     "n": 15809
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2016": {
+   "original": {
+    "E": 13924,
+    "E_matched": 13212,
+    "confirmed": 417,
+    "counts": {
+     "confirmed_B": 95,
+     "confirmed_M": 39,
+     "confirmed_N": 283,
+     "disagree_vendor_below_2B_strong": 5,
+     "disagree_vendor_below_2B_weak": 57,
+     "legit_illiquid_strong": 24,
+     "legit_illiquid_weak": 137,
+     "legit_other_exchange_strong": 99,
+     "legit_other_exchange_weak": 115,
+     "matched_not_sec_eligible_A_lt": 6252,
+     "matched_not_sec_eligible_B": 94,
+     "matched_not_sec_eligible_I": 9746,
+     "matched_not_sec_eligible_M": 140,
+     "matched_not_sec_eligible_N": 620,
+     "matched_not_sec_eligible_X": 232,
+     "possible_B": 95,
+     "possible_M": 60,
+     "possible_N": 344,
+     "qc_A_lt": 6827,
+     "qc_B": 2288,
+     "qc_E": 13924,
+     "qc_I": 58069,
+     "qc_M": 242,
+     "qc_N": 8259,
+     "qc_X": 503,
+     "unresolved": 325,
+     "unresolved_weak": 2132
+    },
+    "gap_C": 0.029077,
+    "gap_CP": 0.061725,
+    "gap_max": 0.081833,
+    "instrument": {
+     "E_cover": 0.948865,
+     "agree_ge2b": 12125,
+     "agree_n": 12200,
+     "agree_share": 0.993852,
+     "e_matched_fp": 60,
+     "e_matched_ticker": 13292,
+     "ratio_within2x": 12114,
+     "ratio_within5": 11944,
+     "within2x_share": 0.992951,
+     "within5_share": 0.979016
+    },
+    "months": 12,
+    "possible": 499,
+    "securities": {
+     "confirmed": 70,
+     "possible": 103,
+     "unresolved_registrants": 75
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.0007,
+       0.006003
+      ],
+      "d": 0.110938,
+      "n_inc": 13924,
+      "n_unr": 417,
+      "point": 0.003226
+     },
+     "b_CP": {
+      "ci_b": [
+       0.00322,
+       0.012778
+      ],
+      "d": 0.120824,
+      "n_inc": 13924,
+      "n_unr": 916,
+      "point": 0.007458
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002688,
+       0.007881
+      ],
+      "d": 0.219079,
+      "n_inc": 13352,
+      "n_unr": 325,
+      "point": 0.005206
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 325,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 11736,
+    "ambiguous_qc_ticker": 122,
+    "cap_below_2B": 542,
+    "contested_prefix": 301,
+    "float_missing_or_below_0.5B": 126,
+    "identity_band_fail": 31,
+    "illiquid": 8626,
+    "multi_class_ticker": 24,
+    "no_fresh_shares": 147,
+    "no_qc_ticker": 2924,
+    "other_exchange": 438,
+    "registrant_not_common_pit": 1632,
+    "repaired": 598,
+    "repaired_M": 94,
+    "repaired_N": 504,
+    "split_since_cover": 10,
+    "validation_agree_2B": 15905,
+    "validation_n": 15958,
+    "validation_no_float": 1210,
+    "validation_no_shares": 1520,
+    "validation_split": 40,
+    "validation_within_2x": 15942,
+    "validation_within_5pct": 15705,
+    "vendor_cap_below_2B": 4734,
+    "vendor_non_common": 281
+   },
+   "repaired": {
+    "E": 14522,
+    "E_matched": 13794,
+    "confirmed": 115,
+    "counts": {
+     "confirmed_B": 95,
+     "confirmed_M": 0,
+     "confirmed_N": 20,
+     "disagree_vendor_below_2B_strong": 5,
+     "disagree_vendor_below_2B_weak": 57,
+     "legit_illiquid_strong": 24,
+     "legit_illiquid_weak": 137,
+     "legit_other_exchange_strong": 99,
+     "legit_other_exchange_weak": 115,
+     "matched_not_sec_eligible_A_lt": 6252,
+     "matched_not_sec_eligible_B": 94,
+     "matched_not_sec_eligible_I": 9746,
+     "matched_not_sec_eligible_M": 134,
+     "matched_not_sec_eligible_N": 616,
+     "matched_not_sec_eligible_X": 232,
+     "possible_B": 95,
+     "possible_M": 5,
+     "possible_N": 121,
+     "qc_A_lt": 6827,
+     "qc_B": 2288,
+     "qc_E": 14522,
+     "qc_I": 58069,
+     "qc_M": 148,
+     "qc_N": 7755,
+     "qc_X": 503,
+     "unresolved": 327,
+     "unresolved_weak": 2132
+    },
+    "gap_C": 0.007857,
+    "gap_CP": 0.022614,
+    "gap_max": 0.043662,
+    "instrument": {
+     "E_cover": 0.949869,
+     "agree_ge2b": 12705,
+     "agree_n": 12781,
+     "agree_share": 0.994054,
+     "e_matched_fp": 58,
+     "e_matched_ticker": 13882,
+     "ratio_within2x": 12694,
+     "ratio_within5": 12524,
+     "within2x_share": 0.993193,
+     "within5_share": 0.979892
+    },
+    "months": 12,
+    "possible": 221,
+    "securities": {
+     "confirmed": 19,
+     "possible": 48,
+     "unresolved_registrants": 75
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000544,
+       0.001454
+      ],
+      "d": 0.03647,
+      "n_inc": 14522,
+      "n_unr": 115,
+      "point": 0.000287
+     },
+     "b_CP": {
+      "ci_b": [
+       -9.3e-05,
+       0.005158
+      ],
+      "d": 0.096046,
+      "n_inc": 14522,
+      "n_unr": 336,
+      "point": 0.002172
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002533,
+       0.007452
+      ],
+      "d": 0.213539,
+      "n_inc": 13940,
+      "n_unr": 327,
+      "point": 0.004894
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 327,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.00155,
+      0.009285
+     ],
+     "d": 0.127681,
+     "n_inc": 13924,
+     "n_unr": 598,
+     "point": 0.005258
+    },
+    "horizon": 24,
+    "repaired_securities": 73,
+    "repaired_stock_months": 598
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.996679,
+     "n": 15958
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2017": {
+   "original": {
+    "E": 15124,
+    "E_matched": 14252,
+    "confirmed": 349,
+    "counts": {
+     "confirmed_B": 103,
+     "confirmed_M": 21,
+     "confirmed_N": 225,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 28,
+     "legit_illiquid_strong": 16,
+     "legit_illiquid_weak": 175,
+     "legit_other_exchange_strong": 100,
+     "legit_other_exchange_weak": 140,
+     "matched_not_sec_eligible_A_lt": 5877,
+     "matched_not_sec_eligible_B": 81,
+     "matched_not_sec_eligible_I": 8730,
+     "matched_not_sec_eligible_M": 126,
+     "matched_not_sec_eligible_N": 626,
+     "matched_not_sec_eligible_X": 193,
+     "possible_B": 82,
+     "possible_M": 44,
+     "possible_N": 361,
+     "qc_A_lt": 6579,
+     "qc_B": 2449,
+     "qc_E": 15124,
+     "qc_I": 57645,
+     "qc_M": 212,
+     "qc_N": 8335,
+     "qc_X": 503,
+     "unresolved": 342,
+     "unresolved_weak": 1896
+    },
+    "gap_C": 0.022555,
+    "gap_CP": 0.052381,
+    "gap_max": 0.072261,
+    "instrument": {
+     "E_cover": 0.942343,
+     "agree_ge2b": 13023,
+     "agree_n": 13104,
+     "agree_share": 0.993819,
+     "e_matched_fp": 55,
+     "e_matched_ticker": 14342,
+     "ratio_within2x": 13002,
+     "ratio_within5": 12669,
+     "within2x_share": 0.992216,
+     "within5_share": 0.966804
+    },
+    "months": 12,
+    "possible": 487,
+    "securities": {
+     "confirmed": 54,
+     "possible": 95,
+     "unresolved_registrants": 71
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.000105,
+       0.004788
+      ],
+      "d": 0.097534,
+      "n_inc": 15124,
+      "n_unr": 349,
+      "point": 0.0022
+     },
+     "b_CP": {
+      "ci_b": [
+       0.001434,
+       0.009479
+      ],
+      "d": 0.095694,
+      "n_inc": 15124,
+      "n_unr": 836,
+      "point": 0.005013
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002915,
+       0.008355
+      ],
+      "d": 0.236252,
+      "n_inc": 14397,
+      "n_unr": 342,
+      "point": 0.005482
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 342,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 12498,
+    "ambiguous_qc_ticker": 161,
+    "cap_below_2B": 377,
+    "contested_prefix": 324,
+    "float_missing_or_below_0.5B": 325,
+    "identity_band_fail": 9,
+    "illiquid": 7514,
+    "multi_class_ticker": 35,
+    "no_fresh_shares": 144,
+    "no_qc_ticker": 2746,
+    "other_exchange": 424,
+    "registrant_not_common_pit": 1597,
+    "repaired": 517,
+    "repaired_M": 65,
+    "repaired_N": 452,
+    "split_since_cover": 5,
+    "validation_agree_2B": 16140,
+    "validation_n": 16178,
+    "validation_no_float": 1808,
+    "validation_no_shares": 1671,
+    "validation_split": 53,
+    "validation_within_2x": 16170,
+    "validation_within_5pct": 15764,
+    "vendor_cap_below_2B": 3833,
+    "vendor_non_common": 267
+   },
+   "repaired": {
+    "E": 15641,
+    "E_matched": 14754,
+    "confirmed": 120,
+    "counts": {
+     "confirmed_B": 103,
+     "confirmed_M": 0,
+     "confirmed_N": 17,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 28,
+     "legit_illiquid_strong": 16,
+     "legit_illiquid_weak": 175,
+     "legit_other_exchange_strong": 100,
+     "legit_other_exchange_weak": 140,
+     "matched_not_sec_eligible_A_lt": 5877,
+     "matched_not_sec_eligible_B": 81,
+     "matched_not_sec_eligible_I": 8730,
+     "matched_not_sec_eligible_M": 126,
+     "matched_not_sec_eligible_N": 626,
+     "matched_not_sec_eligible_X": 193,
+     "possible_B": 82,
+     "possible_M": 0,
+     "possible_N": 132,
+     "qc_A_lt": 6579,
+     "qc_B": 2449,
+     "qc_E": 15641,
+     "qc_I": 57645,
+     "qc_M": 147,
+     "qc_N": 7883,
+     "qc_X": 503,
+     "unresolved": 342,
+     "unresolved_weak": 1896
+    },
+    "gap_C": 0.007614,
+    "gap_CP": 0.020908,
+    "gap_max": 0.041429,
+    "instrument": {
+     "E_cover": 0.94329,
+     "agree_ge2b": 13525,
+     "agree_n": 13606,
+     "agree_share": 0.994047,
+     "e_matched_fp": 55,
+     "e_matched_ticker": 14844,
+     "ratio_within2x": 13504,
+     "ratio_within5": 13171,
+     "within2x_share": 0.992503,
+     "within5_share": 0.968029
+    },
+    "months": 12,
+    "possible": 214,
+    "securities": {
+     "confirmed": 20,
+     "possible": 44,
+     "unresolved_registrants": 71
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000639,
+       0.001334
+      ],
+      "d": 0.01243,
+      "n_inc": 15641,
+      "n_unr": 120,
+      "point": 9.5e-05
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.001425,
+       0.001669
+      ],
+      "d": -0.008029,
+      "n_inc": 15641,
+      "n_unr": 334,
+      "point": -0.000168
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002705,
+       0.007947
+      ],
+      "d": 0.232793,
+      "n_inc": 14899,
+      "n_unr": 342,
+      "point": 0.005224
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 342,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.001493,
+      0.009195
+     ],
+     "d": 0.154713,
+     "n_inc": 15124,
+     "n_unr": 517,
+     "point": 0.005114
+    },
+    "horizon": 24,
+    "repaired_securities": 62,
+    "repaired_stock_months": 517
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.997651,
+     "n": 16178
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2018": {
+   "original": {
+    "E": 15856,
+    "E_matched": 14836,
+    "confirmed": 341,
+    "counts": {
+     "confirmed_B": 86,
+     "confirmed_M": 14,
+     "confirmed_N": 241,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 10,
+     "legit_illiquid_strong": 36,
+     "legit_illiquid_weak": 136,
+     "legit_other_exchange_strong": 120,
+     "legit_other_exchange_weak": 113,
+     "matched_not_sec_eligible_A_lt": 6059,
+     "matched_not_sec_eligible_B": 60,
+     "matched_not_sec_eligible_I": 8056,
+     "matched_not_sec_eligible_M": 92,
+     "matched_not_sec_eligible_N": 561,
+     "matched_not_sec_eligible_X": 284,
+     "possible_B": 132,
+     "possible_M": 31,
+     "possible_N": 292,
+     "qc_A_lt": 6771,
+     "qc_B": 2505,
+     "qc_E": 15856,
+     "qc_I": 58955,
+     "qc_M": 177,
+     "qc_N": 9470,
+     "qc_X": 625,
+     "unresolved": 378,
+     "unresolved_weak": 1897
+    },
+    "gap_C": 0.021053,
+    "gap_CP": 0.047802,
+    "gap_max": 0.068937,
+    "instrument": {
+     "E_cover": 0.935671,
+     "agree_ge2b": 13444,
+     "agree_n": 13516,
+     "agree_share": 0.994673,
+     "e_matched_fp": 45,
+     "e_matched_ticker": 14909,
+     "ratio_within2x": 13443,
+     "ratio_within5": 13098,
+     "within2x_share": 0.994599,
+     "within5_share": 0.969074
+    },
+    "months": 12,
+    "possible": 455,
+    "securities": {
+     "confirmed": 52,
+     "possible": 90,
+     "unresolved_registrants": 74
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.001355,
+       0.006066
+      ],
+      "d": 0.161478,
+      "n_inc": 15856,
+      "n_unr": 341,
+      "point": 0.0034
+     },
+     "b_CP": {
+      "ci_b": [
+       0.003434,
+       0.011309
+      ],
+      "d": 0.151335,
+      "n_inc": 15856,
+      "n_unr": 796,
+      "point": 0.007234
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002439,
+       0.007574
+      ],
+      "d": 0.191451,
+      "n_inc": 14954,
+      "n_unr": 378,
+      "point": 0.00472
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 378,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 12954,
+    "ambiguous_qc_ticker": 202,
+    "cap_below_2B": 387,
+    "contested_prefix": 301,
+    "float_missing_or_below_0.5B": 221,
+    "identity_band_fail": 13,
+    "illiquid": 6739,
+    "multi_class_ticker": 36,
+    "no_fresh_shares": 132,
+    "no_qc_ticker": 2542,
+    "other_exchange": 498,
+    "registrant_not_common_pit": 1565,
+    "repaired": 457,
+    "repaired_M": 45,
+    "repaired_N": 412,
+    "split_since_cover": 6,
+    "validation_agree_2B": 16778,
+    "validation_n": 16816,
+    "validation_no_float": 1643,
+    "validation_no_shares": 1907,
+    "validation_split": 42,
+    "validation_within_2x": 16812,
+    "validation_within_5pct": 16385,
+    "vendor_cap_below_2B": 4010,
+    "vendor_non_common": 272
+   },
+   "repaired": {
+    "E": 16313,
+    "E_matched": 15278,
+    "confirmed": 96,
+    "counts": {
+     "confirmed_B": 86,
+     "confirmed_M": 0,
+     "confirmed_N": 10,
+     "disagree_vendor_below_2B_strong": 1,
+     "disagree_vendor_below_2B_weak": 10,
+     "legit_illiquid_strong": 36,
+     "legit_illiquid_weak": 136,
+     "legit_other_exchange_strong": 120,
+     "legit_other_exchange_weak": 113,
+     "matched_not_sec_eligible_A_lt": 6059,
+     "matched_not_sec_eligible_B": 60,
+     "matched_not_sec_eligible_I": 8056,
+     "matched_not_sec_eligible_M": 92,
+     "matched_not_sec_eligible_N": 560,
+     "matched_not_sec_eligible_X": 284,
+     "possible_B": 132,
+     "possible_M": 0,
+     "possible_N": 127,
+     "qc_A_lt": 6771,
+     "qc_B": 2505,
+     "qc_E": 16313,
+     "qc_I": 58955,
+     "qc_M": 132,
+     "qc_N": 9058,
+     "qc_X": 625,
+     "unresolved": 378,
+     "unresolved_weak": 1897
+    },
+    "gap_C": 0.00585,
+    "gap_CP": 0.021298,
+    "gap_max": 0.043001,
+    "instrument": {
+     "E_cover": 0.936554,
+     "agree_ge2b": 13885,
+     "agree_n": 13957,
+     "agree_share": 0.994841,
+     "e_matched_fp": 45,
+     "e_matched_ticker": 15351,
+     "ratio_within2x": 13884,
+     "ratio_within5": 13539,
+     "within2x_share": 0.99477,
+     "within5_share": 0.970051
+    },
+    "months": 12,
+    "possible": 259,
+    "securities": {
+     "confirmed": 14,
+     "possible": 48,
+     "unresolved_registrants": 74
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000351,
+       0.001265
+      ],
+      "d": 0.060757,
+      "n_inc": 16313,
+      "n_unr": 96,
+      "point": 0.000355
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.000184,
+       0.003679
+      ],
+      "d": 0.073785,
+      "n_inc": 16313,
+      "n_unr": 355,
+      "point": 0.001571
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.002163,
+       0.00692
+      ],
+      "d": 0.187682,
+      "n_inc": 15396,
+      "n_unr": 378,
+      "point": 0.004498
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 378,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.002368,
+      0.009813
+     ],
+     "d": 0.206307,
+     "n_inc": 15856,
+     "n_unr": 457,
+     "point": 0.00578
+    },
+    "horizon": 24,
+    "repaired_securities": 55,
+    "repaired_stock_months": 457
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.99774,
+     "n": 16816
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2019": {
+   "original": {
+    "E": 15855,
+    "E_matched": 14787,
+    "confirmed": 264,
+    "counts": {
+     "confirmed_B": 81,
+     "confirmed_M": 13,
+     "confirmed_N": 170,
+     "disagree_vendor_below_2B_strong": 3,
+     "disagree_vendor_below_2B_weak": 45,
+     "legit_illiquid_strong": 24,
+     "legit_illiquid_weak": 130,
+     "legit_other_exchange_strong": 91,
+     "legit_other_exchange_weak": 106,
+     "matched_not_sec_eligible_A_lt": 5660,
+     "matched_not_sec_eligible_B": 47,
+     "matched_not_sec_eligible_I": 8613,
+     "matched_not_sec_eligible_M": 84,
+     "matched_not_sec_eligible_N": 461,
+     "matched_not_sec_eligible_X": 290,
+     "possible_B": 135,
+     "possible_M": 17,
+     "possible_N": 179,
+     "qc_A_lt": 6293,
+     "qc_B": 2364,
+     "qc_E": 15855,
+     "qc_I": 62795,
+     "qc_M": 123,
+     "qc_N": 8942,
+     "qc_X": 561,
+     "unresolved": 390,
+     "unresolved_weak": 1882
+    },
+    "gap_C": 0.016378,
+    "gap_CP": 0.03617,
+    "gap_max": 0.058492,
+    "instrument": {
+     "E_cover": 0.93264,
+     "agree_ge2b": 13364,
+     "agree_n": 13406,
+     "agree_share": 0.996867,
+     "e_matched_fp": 52,
+     "e_matched_ticker": 14836,
+     "ratio_within2x": 13356,
+     "ratio_within5": 13003,
+     "within2x_share": 0.99627,
+     "within5_share": 0.969939
+    },
+    "months": 12,
+    "possible": 331,
+    "securities": {
+     "confirmed": 44,
+     "possible": 71,
+     "unresolved_registrants": 77
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.001266,
+       0.00636
+      ],
+      "d": 0.205023,
+      "n_inc": 14477,
+      "n_unr": 259,
+      "point": 0.003603
+     },
+     "b_CP": {
+      "ci_b": [
+       0.002165,
+       0.009762
+      ],
+      "d": 0.155973,
+      "n_inc": 14477,
+      "n_unr": 554,
+      "point": 0.005749
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.001605,
+       0.007459
+      ],
+      "d": 0.128859,
+      "n_inc": 8667,
+      "n_unr": 303,
+      "point": 0.004353
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 390,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 12803,
+    "ambiguous_qc_ticker": 224,
+    "cap_below_2B": 373,
+    "contested_prefix": 323,
+    "float_missing_or_below_0.5B": 86,
+    "identity_band_fail": 6,
+    "illiquid": 7113,
+    "multi_class_ticker": 36,
+    "no_fresh_shares": 118,
+    "no_qc_ticker": 2551,
+    "other_exchange": 480,
+    "registrant_not_common_pit": 1412,
+    "repaired": 318,
+    "repaired_M": 25,
+    "repaired_N": 293,
+    "split_since_cover": 4,
+    "validation_agree_2B": 16389,
+    "validation_n": 16429,
+    "validation_no_float": 1311,
+    "validation_no_shares": 2024,
+    "validation_split": 35,
+    "validation_within_2x": 16424,
+    "validation_within_5pct": 15981,
+    "vendor_cap_below_2B": 4074,
+    "vendor_non_common": 270
+   },
+   "repaired": {
+    "E": 16173,
+    "E_matched": 15091,
+    "confirmed": 87,
+    "counts": {
+     "confirmed_B": 81,
+     "confirmed_M": 3,
+     "confirmed_N": 3,
+     "disagree_vendor_below_2B_strong": 3,
+     "disagree_vendor_below_2B_weak": 45,
+     "legit_illiquid_strong": 24,
+     "legit_illiquid_weak": 130,
+     "legit_other_exchange_strong": 91,
+     "legit_other_exchange_weak": 106,
+     "matched_not_sec_eligible_A_lt": 5660,
+     "matched_not_sec_eligible_B": 47,
+     "matched_not_sec_eligible_I": 8613,
+     "matched_not_sec_eligible_M": 84,
+     "matched_not_sec_eligible_N": 461,
+     "matched_not_sec_eligible_X": 290,
+     "possible_B": 135,
+     "possible_M": 2,
+     "possible_N": 67,
+     "qc_A_lt": 6293,
+     "qc_B": 2364,
+     "qc_E": 16173,
+     "qc_I": 62795,
+     "qc_M": 98,
+     "qc_N": 8649,
+     "qc_X": 561,
+     "unresolved": 390,
+     "unresolved_weak": 1882
+    },
+    "gap_C": 0.005351,
+    "gap_CP": 0.017675,
+    "gap_max": 0.040406,
+    "instrument": {
+     "E_cover": 0.933098,
+     "agree_ge2b": 13668,
+     "agree_n": 13710,
+     "agree_share": 0.996937,
+     "e_matched_fp": 52,
+     "e_matched_ticker": 15140,
+     "ratio_within2x": 13660,
+     "ratio_within5": 13307,
+     "within2x_share": 0.996353,
+     "within5_share": 0.970605
+    },
+    "months": 12,
+    "possible": 204,
+    "securities": {
+     "confirmed": 16,
+     "possible": 37,
+     "unresolved_registrants": 77
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000404,
+       0.001259
+      ],
+      "d": 0.038389,
+      "n_inc": 14771,
+      "n_unr": 86,
+      "point": 0.000222
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.00071,
+       0.002865
+      ],
+      "d": 0.04793,
+      "n_inc": 14771,
+      "n_unr": 273,
+      "point": 0.00087
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.001702,
+       0.006976
+      ],
+      "d": 0.123497,
+      "n_inc": 8855,
+      "n_unr": 303,
+      "point": 0.004086
+     },
+     "horizon": 24,
+     "threshold": 0.005
+    },
+    "unresolved": 390,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.001961,
+      0.008517
+     ],
+     "d": 0.242714,
+     "n_inc": 14477,
+     "n_unr": 294,
+     "point": 0.004831
+    },
+    "horizon": 24,
+    "repaired_securities": 42,
+    "repaired_stock_months": 318
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.997565,
+     "n": 16429
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2020": {
+   "original": {
+    "E": 15785,
+    "E_matched": 14503,
+    "confirmed": 199,
+    "counts": {
+     "confirmed_B": 81,
+     "confirmed_M": 12,
+     "confirmed_N": 106,
+     "disagree_vendor_below_2B_strong": 4,
+     "disagree_vendor_below_2B_weak": 59,
+     "legit_illiquid_strong": 8,
+     "legit_illiquid_weak": 99,
+     "legit_other_exchange_strong": 70,
+     "legit_other_exchange_weak": 110,
+     "matched_not_sec_eligible_A_lt": 6295,
+     "matched_not_sec_eligible_B": 40,
+     "matched_not_sec_eligible_I": 8163,
+     "matched_not_sec_eligible_M": 77,
+     "matched_not_sec_eligible_N": 346,
+     "matched_not_sec_eligible_X": 333,
+     "possible_B": 123,
+     "possible_M": 7,
+     "possible_N": 126,
+     "qc_A_lt": 7305,
+     "qc_B": 2489,
+     "qc_E": 15785,
+     "qc_I": 64208,
+     "qc_M": 215,
+     "qc_N": 10161,
+     "qc_X": 720,
+     "unresolved": 401,
+     "unresolved_weak": 1995
+    },
+    "gap_C": 0.01245,
+    "gap_CP": 0.028017,
+    "gap_max": 0.051439,
+    "instrument": {
+     "E_cover": 0.918784,
+     "agree_ge2b": 13006,
+     "agree_n": 13052,
+     "agree_share": 0.996476,
+     "e_matched_fp": 14,
+     "e_matched_ticker": 14530,
+     "ratio_within2x": 12993,
+     "ratio_within5": 12632,
+     "within2x_share": 0.99548,
+     "within5_share": 0.967821
+    },
+    "months": 12,
+    "possible": 256,
+    "securities": {
+     "confirmed": 33,
+     "possible": 57,
+     "unresolved_registrants": 78
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       0.000191,
+       0.003324
+      ],
+      "d": 0.120553,
+      "n_inc": 14273,
+      "n_unr": 195,
+      "point": 0.001625
+     },
+     "b_CP": {
+      "ci_b": [
+       0.000345,
+       0.004714
+      ],
+      "d": 0.079749,
+      "n_inc": 14273,
+      "n_unr": 417,
+      "point": 0.002264
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000139,
+       0.003763
+      ],
+      "d": 0.049066,
+      "n_inc": 8174,
+      "n_unr": 321,
+      "point": 0.001854
+     },
+     "horizon": 12,
+     "threshold": 0.0025
+    },
+    "unresolved": 401,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 12449,
+    "ambiguous_qc_ticker": 320,
+    "cap_below_2B": 298,
+    "contested_prefix": 217,
+    "float_missing_or_below_0.5B": 82,
+    "identity_band_fail": 2,
+    "illiquid": 6620,
+    "multi_class_ticker": 36,
+    "no_fresh_shares": 70,
+    "no_qc_ticker": 2589,
+    "other_exchange": 476,
+    "registrant_not_common_pit": 1276,
+    "repaired": 215,
+    "repaired_M": 18,
+    "repaired_N": 197,
+    "split_since_cover": 2,
+    "validation_agree_2B": 15859,
+    "validation_n": 15887,
+    "validation_no_float": 1485,
+    "validation_no_shares": 2072,
+    "validation_split": 39,
+    "validation_within_2x": 15868,
+    "validation_within_5pct": 15466,
+    "vendor_cap_below_2B": 4350,
+    "vendor_non_common": 276
+   },
+   "repaired": {
+    "E": 16000,
+    "E_matched": 14716,
+    "confirmed": 81,
+    "counts": {
+     "confirmed_B": 81,
+     "confirmed_M": 0,
+     "confirmed_N": 0,
+     "disagree_vendor_below_2B_strong": 4,
+     "disagree_vendor_below_2B_weak": 59,
+     "legit_illiquid_strong": 8,
+     "legit_illiquid_weak": 99,
+     "legit_other_exchange_strong": 70,
+     "legit_other_exchange_weak": 110,
+     "matched_not_sec_eligible_A_lt": 6295,
+     "matched_not_sec_eligible_B": 40,
+     "matched_not_sec_eligible_I": 8163,
+     "matched_not_sec_eligible_M": 77,
+     "matched_not_sec_eligible_N": 343,
+     "matched_not_sec_eligible_X": 333,
+     "possible_B": 123,
+     "possible_M": 1,
+     "possible_N": 37,
+     "qc_A_lt": 7305,
+     "qc_B": 2489,
+     "qc_E": 16000,
+     "qc_I": 64208,
+     "qc_M": 197,
+     "qc_N": 9964,
+     "qc_X": 720,
+     "unresolved": 401,
+     "unresolved_weak": 1995
+    },
+    "gap_C": 0.005037,
+    "gap_CP": 0.0149,
+    "gap_max": 0.038635,
+    "instrument": {
+     "E_cover": 0.91975,
+     "agree_ge2b": 13219,
+     "agree_n": 13265,
+     "agree_share": 0.996532,
+     "e_matched_fp": 14,
+     "e_matched_ticker": 14746,
+     "ratio_within2x": 13206,
+     "ratio_within5": 12845,
+     "within2x_share": 0.995552,
+     "within5_share": 0.968338
+    },
+    "months": 12,
+    "possible": 161,
+    "securities": {
+     "confirmed": 14,
+     "possible": 32,
+     "unresolved_registrants": 78
+    },
+    "survivorship": {
+     "b_C": {
+      "ci_b": [
+       -0.000238,
+       0.000501
+      ],
+      "d": 0.00709,
+      "n_inc": 14469,
+      "n_unr": 80,
+      "point": 3.9e-05
+     },
+     "b_CP": {
+      "ci_b": [
+       -0.000487,
+       0.00069
+      ],
+      "d": 0.00098,
+      "n_inc": 14469,
+      "n_unr": 223,
+      "point": 1.5e-05
+     },
+     "b_U_sec": {
+      "ci_b": [
+       0.000139,
+       0.003753
+      ],
+      "d": 0.046036,
+      "n_inc": 8295,
+      "n_unr": 321,
+      "point": 0.001715
+     },
+     "horizon": 12,
+     "threshold": 0.0025
+    },
+    "unresolved": 401,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "b_R": {
+     "ci_b": [
+      0.000411,
+      0.004476
+     ],
+     "d": 0.165712,
+     "n_inc": 14273,
+     "n_unr": 196,
+     "point": 0.002245
+    },
+    "horizon": 12,
+    "repaired_securities": 28,
+    "repaired_stock_months": 215
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship upper bound (confirmed + possible + unresolved) > threshold"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.998238,
+     "n": 15887
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  },
+  "2021": {
+   "original": {
+    "E": 18202,
+    "E_matched": 16265,
+    "confirmed": 140,
+    "counts": {
+     "confirmed_B": 80,
+     "confirmed_M": 0,
+     "confirmed_N": 60,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 12,
+     "legit_illiquid_strong": 3,
+     "legit_illiquid_weak": 155,
+     "legit_other_exchange_strong": 91,
+     "legit_other_exchange_weak": 200,
+     "matched_not_sec_eligible_A_lt": 4992,
+     "matched_not_sec_eligible_B": 46,
+     "matched_not_sec_eligible_I": 5789,
+     "matched_not_sec_eligible_M": 58,
+     "matched_not_sec_eligible_N": 239,
+     "matched_not_sec_eligible_X": 326,
+     "possible_B": 108,
+     "possible_M": 6,
+     "possible_N": 213,
+     "qc_A_lt": 6839,
+     "qc_B": 2565,
+     "qc_E": 18202,
+     "qc_I": 63595,
+     "qc_M": 368,
+     "qc_N": 10585,
+     "qc_X": 1066,
+     "unresolved": 429,
+     "unresolved_weak": 1764
+    },
+    "gap_C": 0.007633,
+    "gap_CP": 0.025015,
+    "gap_max": 0.046916,
+    "instrument": {
+     "E_cover": 0.893583,
+     "agree_ge2b": 14314,
+     "agree_n": 14361,
+     "agree_share": 0.996727,
+     "e_matched_fp": 15,
+     "e_matched_ticker": 16321,
+     "ratio_within2x": 14290,
+     "ratio_within5": 13887,
+     "within2x_share": 0.995056,
+     "within5_share": 0.966994
+    },
+    "months": 11,
+    "possible": 327,
+    "securities": {
+     "confirmed": 22,
+     "possible": 58,
+     "unresolved_registrants": 83
+    },
+    "survivorship": {
+     "horizon": null
+    },
+    "unresolved": 429,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship not assessable (censoring)"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repair": {
+    "already_eligible": 13440,
+    "ambiguous_qc_ticker": 378,
+    "cap_below_2B": 153,
+    "contested_prefix": 171,
+    "float_missing_or_below_0.5B": 78,
+    "illiquid": 4792,
+    "multi_class_ticker": 33,
+    "no_fresh_shares": 76,
+    "no_qc_ticker": 2178,
+    "other_exchange": 535,
+    "registrant_not_common_pit": 1200,
+    "repaired": 227,
+    "repaired_M": 2,
+    "repaired_N": 225,
+    "split_since_cover": 3,
+    "validation_agree_2B": 15814,
+    "validation_n": 15830,
+    "validation_no_float": 1517,
+    "validation_no_shares": 1977,
+    "validation_split": 52,
+    "validation_within_2x": 15819,
+    "validation_within_5pct": 15460,
+    "vendor_cap_below_2B": 2610,
+    "vendor_non_common": 268
+   },
+   "repaired": {
+    "E": 18429,
+    "E_matched": 16487,
+    "confirmed": 80,
+    "counts": {
+     "confirmed_B": 80,
+     "confirmed_M": 0,
+     "confirmed_N": 0,
+     "disagree_vendor_below_2B_strong": 0,
+     "disagree_vendor_below_2B_weak": 12,
+     "legit_illiquid_strong": 3,
+     "legit_illiquid_weak": 155,
+     "legit_other_exchange_strong": 91,
+     "legit_other_exchange_weak": 200,
+     "matched_not_sec_eligible_A_lt": 4992,
+     "matched_not_sec_eligible_B": 46,
+     "matched_not_sec_eligible_I": 5789,
+     "matched_not_sec_eligible_M": 58,
+     "matched_not_sec_eligible_N": 239,
+     "matched_not_sec_eligible_X": 326,
+     "possible_B": 108,
+     "possible_M": 4,
+     "possible_N": 53,
+     "qc_A_lt": 6839,
+     "qc_B": 2565,
+     "qc_E": 18429,
+     "qc_I": 63595,
+     "qc_M": 366,
+     "qc_N": 10360,
+     "qc_X": 1066,
+     "unresolved": 429,
+     "unresolved_weak": 1764
+    },
+    "gap_C": 0.004322,
+    "gap_CP": 0.01312,
+    "gap_max": 0.035282,
+    "instrument": {
+     "E_cover": 0.894623,
+     "agree_ge2b": 14536,
+     "agree_n": 14583,
+     "agree_share": 0.996777,
+     "e_matched_fp": 15,
+     "e_matched_ticker": 16543,
+     "ratio_within2x": 14512,
+     "ratio_within5": 14109,
+     "within2x_share": 0.995131,
+     "within5_share": 0.967496
+    },
+    "months": 11,
+    "possible": 165,
+    "securities": {
+     "confirmed": 12,
+     "possible": 33,
+     "unresolved_registrants": 83
+    },
+    "survivorship": {
+     "horizon": null
+    },
+    "unresolved": 429,
+    "verdict": {
+     "reasons": [
+      "gap with possible + unresolved > 3%",
+      "survivorship not assessable (censoring)"
+     ],
+     "verdict": "INCONCLUSIVE"
+    }
+   },
+   "repaired_exits": {
+    "horizon": null,
+    "repaired_securities": 30,
+    "repaired_stock_months": 227
+   },
+   "verdict": {
+    "reasons": [
+     "gap with possible + unresolved > 3%",
+     "survivorship not assessable (censoring)"
+    ],
+    "repair_validation": {
+     "agree_2B": 0.998989,
+     "n": 15830
+    },
+    "verdict": "INCONCLUSIVE"
+   }
+  }
+ }
+}

@@ -2633,3 +2633,11 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Outcome:** W1 2010–2021 **FAIL** — 2010–2015 confirmed-missing ≥ $2B US common stocks 3.5–6.1% of stock-months, mostly no-fundamentals names that later disappear (exit +7..+21 points; bias up to 0.78 points). 2016–2021 **INCONCLUSIVE** (confirmed ≤ 2.9%, but possible + unresolved up to 8.2%). Instrument agreement 99.3–99.7%.
 - **Also:** screen / confirmation protocol v2 (ready to freeze); H031 spec drafted but not presented (universe not passed).
 - **Status:** STOPPED awaiting the owner (UR-2: A scoped SEC-cap inclusion + re-audit recommended / B 2016–2021 with exception / C pause / D accept).
+
+## 2026-10-20: RR6 — UR-2 strictly point-in-time SEC universe repair + re-audit (E806-01) (D269 / D270 / D271; STOP)
+
+- **Owner (D269):** UR-2 option A: one narrow strictly-PIT SEC-based repair and one re-audit, ≤ 1 retry, aggregates only; hard stop on FAIL / INCONCLUSIVE.
+- **Frozen before upload or run (a539555):** protocol UCR-1, X806, `qr_ucr`, PIT SEC builder, eval rule, pins; new per-filing PIT SEC object (`rr/ucr_sec_v1.json`, same public SEC cache; D270); float-age rule 650 days fixed before the freeze (returns-blind check).
+- **E806-01:** completed first time (default build 18198; snapshot identical to E805-02; 0 orders).
+- **Outcome:** 8,191 stock-months repaired (caps 99.78% agree with vendor caps); confirmed gap 3.5–6.1% → 0.2–0.8%, confirmed bias → ~0; but **W1 INCONCLUSIVE** in every year (possible + unresolved keep Gap_max at 3.2–4.4% and the survivorship upper bound at 0.56–1.26 points). Repaired counts 1.7–3.1% above Data v1 (not independently explained).
+- **Status:** STOPPED awaiting the owner (D269 §4: no further repair; programme protocol not frozen; H031 DRAFT).
