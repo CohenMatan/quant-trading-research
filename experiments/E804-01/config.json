@@ -1,0 +1,49 @@
+{
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X804",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X804_universe_baseline",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "1999-01-04",
+ "end": "2021-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (no order is placed in this run)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18194,
+ "execution_model": "d051",
+ "benchmarks": [],
+ "programme": "RR",
+ "cycle": "UB",
+ "experiment_id": "E804-01",
+ "stall_minutes": 240,
+ "params": {
+  "ub_protocol_sha256": "d5ce14e251cb910b463e05c8d5a611f00ee981eec5a586cb73de65d1fb7137ef",
+  "ub_code_sha256": {
+   "main.py": "feeaf55afa563faf11200b571500216ae06b471f8aaa437def44edbe727e76b6",
+   "qr_ub.py": "dbb8eb671c153941d90a9aa023b305eadcf36cd9d4c8e8435a0632af024661ed"
+  }
+ },
+ "description": "UB-1 universe baseline audit (owner D263; research/rr/universe_baseline/UB_protocol.md): X804 on QuantConnect's default build, 1999-01-04 .. 2021-12-31, month-end audit points 1999-02 .. 2021-11. U-A (vendor market cap) and U-B (shares x raw price x split factor) coverage, survivorship (later exits, censored), U-B validity tests and pre-2010 coverage. Aggregates only, 0 orders, no returns, no identifiers. Infrastructure.",
+ "owner_approval_required": "RR2 Controlled Approval and Universe Baseline: ONE aggregate-only QuantConnect infrastructure run, at most one retry for a documented infrastructure failure (owner 2026-10-20, D263)",
+ "lean_version_policy": "default_build_digest_verified"
+}
