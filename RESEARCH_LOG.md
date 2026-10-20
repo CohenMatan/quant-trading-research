@@ -2612,3 +2612,15 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Data change measured:** 2011–2017 eligible stock-months are 88,773, against 76,915 on 18178 and 93,687 in Data v1.
 - **Not done:** no strategy, no SEC fallback, no D033 / D035 amendment. Holdout sealed.
 - **Status:** STOPPED awaiting the owner (RR3 §6).
+
+## 2026-10-20: RR4 — RR3 review: universe risk, screen proposal, K1 / K2 feasibility (D265 / D266; offline; STOP)
+
+- **Owner (D265):** RR3 W1 PASS-A accepted for the measured population only; W0 FAIL; U-B retired; the no-fundamentals / unclassified population not accepted as harmless; offline design of the screen, K1 and K2; no runs.
+- **Universe risk (offline, committed aggregates):**
+  - E804 is 5.2% short of Data v1 in 2011–2017 (2.8–8.6% a year); RR3 measured about a third of that.
+  - The known no-fundamentals group on 18178 (68 securities, 67 later disappearing) would put 2011–2015 above the 3% gate if still missing; from 2016 the bound is ≤ 2%.
+  - Not resolvable offline; a narrow in-cloud SEC classification check is feasible (not implemented). Owner decision UR-1.
+- **Screen:** P1–P6 unchanged; new D2 stage (Amendment 3 evidence test on development data, Holm across the tranche); Holdout once; forward reviews to +36 months. Proposed, not frozen.
+- **K1:** conditionally feasible (ex-date signal, filters, ≈ 89+ events a year, 126-session hold). **K2:** not feasible as broad-market under current rules; recommend dropping.
+- **Not done:** no run, upload, hypothesis, purchase or Holdout access.
+- **Status:** STOPPED awaiting the owner (RR4 §6).
