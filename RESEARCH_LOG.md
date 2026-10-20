@@ -2624,3 +2624,12 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **K1:** conditionally feasible (ex-date signal, filters, ≈ 89+ events a year, 126-session hold). **K2:** not feasible as broad-market under current rules; recommend dropping.
 - **Not done:** no run, upload, hypothesis, purchase or Holdout access.
 - **Status:** STOPPED awaiting the owner (RR4 §6).
+
+## 2026-10-20: RR5 — UR-1 SEC classification audit SCA-1 (E805-02) (D267 / D268; STOP)
+
+- **Owner (D267):** UR-1 option A (narrow free SEC classification check: one aggregate run + ≤ 1 retry, no repair); D1 / D2 with clarifications (one Holdout candidate for the whole programme; exposed-data caveat; run budget); K1 conditional GO (H031 preparation; canary after the universe is accepted); K2 dropped.
+- **Frozen before any upload or run (c350dfc):** protocol, X805, `qr_sca`, SEC builder, eval rule, pins, SEC object SHA. Public SEC JSON uploaded once to the Object Store.
+- **E805-01:** infrastructure failure (object not yet visible 29 s after upload). **E805-02:** the single retry, completed (155 s, 0 orders, compliance-accepted, aggregates only).
+- **Outcome:** W1 2010–2021 **FAIL** — 2010–2015 confirmed-missing ≥ $2B US common stocks 3.5–6.1% of stock-months, mostly no-fundamentals names that later disappear (exit +7..+21 points; bias up to 0.78 points). 2016–2021 **INCONCLUSIVE** (confirmed ≤ 2.9%, but possible + unresolved up to 8.2%). Instrument agreement 99.3–99.7%.
+- **Also:** screen / confirmation protocol v2 (ready to freeze); H031 spec drafted but not presented (universe not passed).
+- **Status:** STOPPED awaiting the owner (UR-2: A scoped SEC-cap inclusion + re-audit recommended / B 2016–2021 with exception / C pause / D accept).
