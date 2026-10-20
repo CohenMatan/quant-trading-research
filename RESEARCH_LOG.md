@@ -2592,3 +2592,23 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
   - **Stopping rules:** stop when none of the 3 is Promising, on any platform blocker, and no rescue variants.
 - **Not done:** nothing run, bought or implemented. Holdout sealed.
 - **Status:** STOPPED awaiting the owner (RR2 §10).
+
+## 2026-10-20: RR3 — Universe Baseline Audit UB-1 (E804-01) (D263 / D264; STOP)
+
+- **Owner (D263):**
+  - RR2 architecture approved in principle;
+  - ONE aggregate-only infrastructure run authorised;
+  - in-cloud SPY-relative metrics approved;
+  - K1 / K2 preferred but not registered.
+- **Before the run:** the protocol, host X804, `qr_ub`, `UB_eval`, pins and config were frozen in 0f11c81. A runner upload guard (plain text, at most 50 files, at most 64k characters) was added.
+- **E804-01:** LEAN 18194, 257 s, 0 orders, 274 month-end points 1999-02 … 2021-11, aggregates only. Accepted by QuantConnect's compliance review.
+- **Outcome:**
+  - **W1 2010–2021 = PASS-A.** The vendor market cap alone suffices: gap ≤ 2.2% a year, survivorship bias upper bound ≤ 0.34 points; 2021 not assessable.
+  - **W0 1999–2009 = FAIL.** Vendor caps cover only survivors before late 2009; the U-B rebuild is invalid (vendor agreement 82–86%; share counts lead the vendor's cap in 21% of changes).
+- **Limits:**
+  - names without any fundamentals object cannot be classified;
+  - names with blank classification fields are counted as non-common;
+  - the few excluded names do exit more often.
+- **Data change measured:** 2011–2017 eligible stock-months are 88,773, against 76,915 on 18178 and 93,687 in Data v1.
+- **Not done:** no strategy, no SEC fallback, no D033 / D035 amendment. Holdout sealed.
+- **Status:** STOPPED awaiting the owner (RR3 §6).
