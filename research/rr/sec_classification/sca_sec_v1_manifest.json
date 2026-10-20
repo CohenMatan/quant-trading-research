@@ -1,0 +1,28 @@
+{
+ "characters": 4785471,
+ "file": "data/sec_derived/sca_sec_v1.json",
+ "meta": {
+  "counts": {
+   "cover_ambiguous": 107,
+   "excluded_blank_check": 3,
+   "excluded_investment_vehicle": 3,
+   "excluded_no_companyfacts": 1,
+   "excluded_non_common": 364,
+   "float_unit_dropped_assets": 15,
+   "float_unit_dropped_per_share": 654,
+   "registrants": 3999,
+   "screened": 4370,
+   "with_float_ge_2B": 2142,
+   "with_shares": 3711,
+   "with_ticker": 3994
+  },
+  "decision": "D267",
+  "index_rows": 293065,
+  "name": "sca_sec_v1",
+  "screen_min_float": 500000000.0,
+  "source": "public SEC EDGAR (XBRL RSS index, companyfacts, frames)",
+  "ticker_pad_days": 100
+ },
+ "object_store_key": "rr/sca_sec_v1.json",
+ "sha256": "67bc9260f3c5bed6ac723a0ed4b177dee9f9be5814f482200438687b0984a747"
+}

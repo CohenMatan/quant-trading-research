@@ -106,6 +106,24 @@ class QCClient:
     def organization(self) -> dict:
         return self.call("organizations/read", organizationId=self.organization_id())["organization"]
 
+    # ------------------------------------------------------------------ object store
+    def object_set(self, key: str, data: bytes) -> None:
+        """Upload one object to the organisation's Object Store (API object/set, multipart form). Used only for public
+        SEC reference data approved by the owner (SCA-1, D267; QuantConnect Support guidance, D257)."""
+        auth, headers = auth_headers(self._user, self._token)
+        try:
+            resp = self._http.post(f"{BASE_URL}/object/set", auth=auth, headers=headers, timeout=300,
+                                   data={"organizationId": self.organization_id(), "key": key},
+                                   files={"objectData": (key.rsplit("/", 1)[-1], data, "application/json")})
+            resp.raise_for_status()
+            out = resp.json()
+        except requests.HTTPError as exc:
+            raise QCError(self._scrub(f"object/set: HTTP {exc.response.status_code}")) from None
+        except (requests.ConnectionError, requests.Timeout) as exc:
+            raise QCError(self._scrub(f"object/set: {type(exc).__name__}")) from None
+        if not out.get("success", False):
+            raise QCError(self._scrub(f"object/set failed: {out.get('errors') or out}"))
+
     # ------------------------------------------------------------------ projects & files
     def find_or_create_project(self, name: str) -> int:
         for p in self.call("projects/read").get("projects", []):
