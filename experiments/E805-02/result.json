@@ -1,0 +1,295 @@
+{
+ "experiment_id": "E805-02",
+ "harness_messages": [],
+ "harness_summary": {
+  "buys_scaled": 0,
+  "cancelled_harness_buys": 0,
+  "cancelled_harness_sells": 0,
+  "cancelled_on_symbol_change": 0,
+  "cancelled_sells_delisting": 0,
+  "cancelled_stale": 0,
+  "days": 3063,
+  "elig_days": 0,
+  "elig_max": 0,
+  "elig_mean": 0,
+  "elig_min": null,
+  "elig_sum": 0,
+  "experiment_id": "E805-02",
+  "fills": 0,
+  "forced_fee_debits": 0,
+  "forced_fills": 0,
+  "held_delistings": 0,
+  "held_splits": 0,
+  "invalid": 0,
+  "log_budget_left": 986,
+  "max_fill_dev": 0.0,
+  "max_gross": 0.0,
+  "max_subscribed": 1,
+  "min_cash_frac": 1.0,
+  "negative_qty": 0,
+  "open_positions_at_end": 0,
+  "orders": 0,
+  "resubmitted_sells": 0,
+  "stale_exits": 0,
+  "stale_open_orders": 0,
+  "stale_unresolved": 0,
+  "timing_violations": 0,
+  "windows_restored": 0
+ },
+ "hashes": {
+  "equity_sha256": "529b170b31ff0d052f0dfbe2d2723d8dca2c866f5c5873614c2e079fd6235379",
+  "fills_sha256": "78a0962b9b70b6901d01d783a235cdae962b1dffa5be70026c022bbbddabc973",
+  "trades_sha256": "7099cb2261e2e834b28abe20af9c8e05779781d921eadddafc5db983545e4c35"
+ },
+ "integrity": [
+  {
+   "check": "equity_nonempty",
+   "detail": "3063 rows",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_dates_increasing",
+   "detail": "strictly increasing dates",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_within_dates",
+   "detail": "2009-11-02..2021-12-31",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_no_nan",
+   "detail": "no missing values",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_positive",
+   "detail": "min 100000.00",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_complete",
+   "detail": "chart rows 3063 vs algorithm days 3063",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "equity_matches_qc_tradeable_dates",
+   "detail": "chart rows 3063 vs QuantConnect tradeableDates 3063",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_leverage",
+   "detail": "min cash/equity 1.000000; 0 closes with negative cash",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_after_signal_date",
+   "detail": "0 violations, 0 LEAN-generated fills",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_within_dates",
+   "detail": "fill dates inside the backtest window",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_timing_selfcheck",
+   "detail": "violations=0 max_fill_dev=0.0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_short",
+   "detail": "negative_qty=0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_invalid_orders",
+   "detail": "invalid=0",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "summary_present",
+   "detail": "QRSUMMARY log line parsed",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "orders_download_complete",
+   "detail": "downloaded 0 orders vs QuantConnect Total Orders 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "fills_match_harness_count",
+   "detail": "downloaded fill events 0 vs harness-recorded fills 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_stale_open_orders",
+   "detail": "0 orders still open more than 10 days before the end: []",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "harness_no_stale_open_orders",
+   "detail": "harness orders open > 5 sessions at the end: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "no_unresolved_stale_holdings",
+   "detail": "held positions without a real price bar that the fallback could not close: 0",
+   "level": "fail",
+   "ok": true
+  },
+  {
+   "check": "windows_restored",
+   "detail": "0 holdings found without a price window and restored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "stale_exits",
+   "detail": "0 holdings taken out at their last real close after > 10 sessions without data (D059 fallback): 0 mirrored",
+   "level": "warn",
+   "ok": true
+  },
+  {
+   "check": "commission_fixed_per_order",
+   "detail": "no fills downloaded; harness recorded 0 fills",
+   "level": "fail",
+   "ok": true
+  }
+ ],
+ "metrics": {
+  "ann_return": 0.0,
+  "ann_volatility": 0.0,
+  "avg_holding_days": NaN,
+  "avg_loss": NaN,
+  "avg_win": NaN,
+  "best_year": 0.0,
+  "cagr": 0.0,
+  "calmar": NaN,
+  "end": "2021-12-31",
+  "expectancy": NaN,
+  "exposure_days_frac": 0.0,
+  "exposure_mean": 0.0,
+  "final_equity": 100000.0,
+  "kurtosis": 3.0,
+  "max_drawdown": 0.0,
+  "max_drawdown_duration_days": 0,
+  "min_cash_frac": 1.0,
+  "n_days": 3063,
+  "n_open_trades": 0,
+  "n_trades": 0,
+  "pct_positive_years": 0.0,
+  "profit_factor": NaN,
+  "sharpe": NaN,
+  "skew": 0.0,
+  "sortino": NaN,
+  "start": "2009-11-02",
+  "total_return": 0.0,
+  "turnover": 0.0,
+  "win_rate": NaN,
+  "worst_month": 0.0,
+  "worst_year": 0.0,
+  "yearly_returns": {
+   "2009": 0.0,
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 0.0,
+   "2018": 0.0,
+   "2019": 0.0,
+   "2020": 0.0,
+   "2021": 0.0
+  }
+ },
+ "provenance": {
+  "backtest_started_utc": "2026-10-20T10:42:55Z",
+  "build_commit": "bd0c83d8c441dd2d95becb7144fa345a1bad083b",
+  "code_sha256": "24b8f998307640e2251ab75981407256470e0c1d64d19d72bdc6faadb8c652bb",
+  "config_sha256": "0b41f6572c839a36eed5913bff6f487cdbf4a9da927af85b3a6f16b53d8d84ea",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sca.py",
+   "qr_sec_corrections.py"
+  ],
+  "git_commit": "bd0c83d8c441dd2d95becb7144fa345a1bad083b",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18194",
+  "owner_approved": "D267",
+  "qc_backtest_id": "53453716678265853dbccb043caded39",
+  "qc_project_id": 38158387,
+  "result_channel": "summary_statistics",
+  "run_utc": "2026-10-20T10:42:42Z",
+  "runtime_s": 155.00536012649536
+ },
+ "qc_statistics": {
+  "Alpha": "0",
+  "Annual Standard Deviation": "0",
+  "Annual Variance": "0",
+  "Average Loss": "0%",
+  "Average Win": "0%",
+  "Beta": "0",
+  "Compounding Annual Return": "0%",
+  "Drawdown": "0%",
+  "Drawdown Recovery": "0",
+  "End Equity": "100000",
+  "Estimated Strategy Capacity": "$0",
+  "Expectancy": "0",
+  "Information Ratio": "-0.822",
+  "Loss Rate": "0%",
+  "Lowest Capacity Asset": "",
+  "Net Profit": "0%",
+  "Portfolio Turnover": "0%",
+  "Probabilistic Sharpe Ratio": "0%",
+  "Profit-Loss Ratio": "0",
+  "Sharpe Ratio": "0",
+  "Sortino Ratio": "0",
+  "Start Equity": "100000",
+  "Total Fees": "$0.00",
+  "Total Orders": "0",
+  "Tracking Error": "0.141",
+  "Treynor Ratio": "0",
+  "Win Rate": "0%",
+  "qr_msgs_00": "SCA|meta|{\"audit_points\":143,\"checks\":{\"ambiguous\":2182,\"fp_multi\":18883,\"rows\":1075939},\"collect_s\":141.3,\"digest_monthly_E\":\"5b73a07b7cbc9c81bd8155a1727b0339d7a68c73483377cfcffa591398734d54\",\"experiment_id\":\"E805-02\",\"first_point\":\"2010-01\",\"last_point\":\"2021-11\",\"protocol\":\"SCA-1\",\"registrants\":3999,\"sec_reference_sha256\":\"67bc9260f3c5bed6ac723a0ed4b177dee9f9be5814f482200438687b0984a747\",\"securities_seen\":16524,\"summarize_s\":1.5}\nSCA|year|2010|{\"E\":9158,\"E_matched\":7266,\"confirmed\":337,\"counts\":{\"confirmed_B\":18,\"confirmed_M\":39,\"confirmed_N\":280,\"disagree_vendor_below_2B_strong\":0,\"disagree_vendor_below_2B_weak\":8,\"legit_illiquid_strong\":16,\"legit_illiquid_weak\":77,\"legit_other_exchange_strong\":15,\"legit_other_exchange_weak\":45,\"matched_not_sec_eligible_A_lt\":2283,\"matched_not_sec_eligible_B\":55,\"matched_not_sec_eligible_I\":1076,\"matched_not_sec_eligible_M\":80,\"matched_not_sec_eligible_N\":659,\"matched_not_sec_eligible_X\":84,\"possible_B\":50,\"possible_M\":63,\"possible_N\":481,\"qc_A_lt\":6250,\"qc_B\":1834,\"qc_E\":9158,\"qc_I\":54055,\"qc_M\":329,\"qc_N\":7935,\"qc_X\":302,\"unresolved\":46,\"unresolved_weak\":87},\"gap_C\":0.035492,\"gap_CP\":0.092099,\"gap_max\":0.09622,\"instrument\":{\"E_cover\":0.793405,\"agree_ge2b\":5799,\"agree_n\":5826,\"agree_share\":0.995366,\"e_matched_fp\":8,\"e_matched_ticker\":7285,\"ratio_within2x\":5756,\"ratio_within5\":5570,\"within2x_share\":0.987985,\"within5_share\":0.956059},\"months\":12,\"possible\":592,\"securities\":{\"confirmed\":59,\"possible\":123,\"unresolved_registrants\":11},\"survivorship\":{\"b_C\":{\"ci_b\":[-2e-05,0.005568],\"d\":0.069191,\"n_inc\":9158,\"n_unr\":337,\"point\":0.002456},\"b_CP\":{\"ci_b\":[0.002803,0.015082],\"d\":0.093138,\"n_inc\":9158,\"n_unr\":929,\"point\":0.008578},\"b_U_sec\":{\"ci_b\":[4e-05,0.002286],\"d\":0.159727,\"n_inc\":7293,\"n_unr\":46,\"point\":0.001001},\"horizon\":24,\"threshold\":0.005},\"unresolved\":46,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\"],\"verdict\":\"FAIL\"}}\nSCA|year|2011|{\"E\":10183,\"E_matched\":9513,\"confirmed\":590,\"counts\":{\"confirmed_B\":41,\"confirmed_M\":61,\"confirmed_N\":488,\"disagree_vendor_below_2B_strong\":1,\"disagree_vendor_below_2B_weak\":28,\"legit_illiquid_strong\":44,\"legit_illiquid_weak\":151,\"legit_other_exchange_strong\":41,\"legit_other_exchange_weak\":106,\"matched_not_sec_eligible_A_lt\":4970,\"matched_not_sec_eligible_B\":89,\"matched_not_sec_eligible_I\":7485,\"matched_not_sec_eligible_M\":155,\"matched_not_sec_eligible_N\":1025,\"matched_not_sec_eligible_X\":123,\"possible_B\":81,\"possible_M\":98,\"possible_N\":694,\"qc_A_lt\":6296,\"qc_B\":2023,\"qc_E\":10183,\"qc_I\":53355,\"qc_M\":387,\"qc_N\":8480,\"qc_X\":346,\"unresolved\":104,\"unresolved_weak\":862},\"gap_C\":0.054767,\"gap_CP\":0.125623,\"gap_max\":0.133362,\"instrument\":{\"E_cover\":0.934204,\"agree_ge2b\":8582,\"agree_n\":8645,\"agree_share\":0.992713,\"e_matched_fp\":24,\"e_matched_ticker\":9549,\"ratio_within2x\":8488,\"ratio_within5\":8285,\"within2x_share\":0.981839,\"within5_share\":0.958357},\"months\":12,\"possible\":873,\"securities\":{\"confirmed\":92,\"possible\":154,\"unresolved_registrants\":31},\"survivorship\":{\"b_C\":{\"ci_b\":[0.002814,0.011171],\"d\":0.116702,\"n_inc\":10183,\"n_unr\":590,\"point\":0.006391},\"b_CP\":{\"ci_b\":[0.008106,0.022997],\"d\":0.120059,\"n_inc\":10183,\"n_unr\":1463,\"point\":0.015082},\"b_U_sec\":{\"ci_b\":[0.001045,0.00419],\"d\":0.233301,\"n_inc\":9573,\"n_unr\":104,\"point\":0.002507},\"horizon\":24,\"threshold\":0.005},\"unresolved\":104,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\",\"confirmed survivorship bias point > threshold\"],\"verdict\":\"FAIL\"}}\nSCA|year|2012|{\"E\":10451,\"E_matched\":9863,\"confirmed\":675,\"counts\":{\"confirmed_B\":78,\"confirmed_M\":83,\"confirmed_N\":514,\"disagree_vendor_below_2B_strong\":3,\"disagree_vendor_below_2B_weak\":39,\"legit_illiquid_strong\":44,\"legit_illiquid_weak\":234,\"legit_other_exchange_strong\":94,\"legit_other_exchange_weak\":64,\"matched_not_sec_eligible_A_lt\":5283,\"matched_not_sec_eligible_B\":94,\"matched_not_sec_eligible_I\":11090,\"matched_not_sec_eligible_M\":174,\"matched_not_sec_eligible_N\":1020,\"matched_not_sec_eligible_X\":153,\"possible_B\":52,\"possible_M\":67,\"possible_N\":534,\"qc_A_lt\":5635,\"qc_B\":2053,\"qc_E\":10451,\"qc_I\":54986,\"qc_M\":347,\"qc_N\":7523,\"qc_X\":368,\"unresolved\":221,\"unresolved_weak\":2028},\"gap_C\":0.060669,\"gap_CP\":0.112743,\"gap_max\":0.129083,\"instrument\":{\"E_cover\":0.943737,\"agree_ge2b\":8991,\"agree_n\":9037,\"agree_share\":0.99491,\"e_matched_fp\":77,\"e_matched_ticker\":9913,\"ratio_within2x\":8953,\"ratio_within5\":8778,\"within2x_share\":0.990705,\"within5_share\":0.97134},\"months\":12,\"possible\":653,\"securities\":{\"confirmed\":95,\"possible\":136,\"unresolved_registrants\":44},\"survivorship\":{\"b_C\":{\"ci_b\":[0.002316,0.010824],\"d\":0.103051,\"n_inc\":10451,\"n_unr\":675,\"point\":0.006252},\"b_CP\":{\"ci_b\":[0.006508,0.019262],\"d\":0.109753,\"n_inc\":10451,\"n_unr\":1328,\"point\":0.012374},\"b_U_sec\":{\"ci_b\":[0.00244,0.007804],\"d\":0.224606,\"n_inc\":9990,\"n_unr\":221,\"point\":0.004861},\"horizon\":24,\"threshold\":0.005},\"unresolved\":221,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\",\"confirmed survivorship bias point > threshold\"],\"verdict\":\"FAIL\"}}\nSCA|year|2013|{\"E\":12158,\"E_matched\":11574,\"confirmed\":542,\"counts\":{\"confirmed_B\":68,\"confirmed_M\":57,\"confirmed_N\":417,\"disagree_vendor_below_2B_strong\":1,\"disagree_vendor_below_2B_weak\":26,\"legit_illiquid_strong\":36,\"legit_illiquid_weak\":213,\"legit_other_exchange_strong\":70,\"legit_other_exchange_weak\":116,\"matched_not_sec_eligible_A_lt\":5564,\"matched_not_sec_eligible_B\":91,\"matched_not_sec_eligible_I\":9787,\"matched_not_sec_eligible_M\":153,\"matched_not_sec_eligible_N\":1021,\"matched_not_sec_eligible_X\":213,\"possible_B\":69,\"possible_M\":133,\"possible_N\":635,\"qc_A_lt\":5900,\"qc_B\":2276,\"qc_E\":12158,\"qc_I\":53079,\"qc_M\":340,\"qc_N\":8237,\"qc_X\":440,\"unresolved\":162,\"unresolved_weak\":2203},\"gap_C\":0.042677,\"gap_CP\":0.101869,\"gap_max\":0.11249,\"instrument\":{\"E_cover\":0.951966,\"agree_ge2b\":10499,\"agree_n\":10559,\"agree_share\":0.994318,\"e_matched_fp\":81,\"e_matched_ticker\":11632,\"ratio_within2x\":10488,\"ratio_within5\":10332,\"within2x_share\":0.993276,\"within5_share\":0.978502},\"months\":12,\"possible\":837,\"securities\":{\"confirmed\":85,\"possible\":146,\"unresolved_registrants\":35},\"survivorship\":{\"b_C\":{\"ci_b\":[0.000704,0.006659],\"d\":0.07913,\"n_inc\":12158,\"n_unr\":542,\"point\":0.003377},\"b_CP\":{\"ci_b\":[0.005817,0.017594],\"d\":0.113664,\"n_inc\":12158,\"n_unr\":1379,\"point\":0.011579},\"b_U_sec\":{\"ci_b\":[0.000548,0.003934],\"d\":0.152735,\"n_inc\":11713,\"n_unr\":162,\"point\":0.002084},\"horizon\":24,\"threshold\":0.005},\"unresolved\":162,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\"],\"verdict\":\"FAIL\"}}\nSCA|year|2014|{\"E\":13676,\"E_matched\":12977,\"confirmed\":577,\"counts\":{\"confirmed_B\":80,\"confirmed_M\":64,\"confirmed_N\":433,\"disagree_vendor_below_2B_strong\":7,\"disagree_vendor_below_2B_weak\":34,\"legit_illiquid_strong\":28,\"legit_illiquid_weak\":137,\"legit_other_exchange_strong\":102,\"legit_other_exchange_weak\":107,\"matched_not_sec_eligible_A_lt\":6077,\"matched_not_sec_eligible_B\":91,\"matched_not_sec_eligible_I\":9200,\"matched_not_sec_eligible_M\":169,\"matched_not_sec_eligible_N\":911,\"matched_not_sec_eligible_X\":260,\"possible_B\":83,\"possible_M\":124,\"possible_N\":658,\"qc_A_lt\":6623,\"qc_B\":2426,\"qc_E\":13676,\"qc_I\":53752,\"qc_M\":367,\"qc_N\":8681,\"qc_X\":518,\"unresolved\":220,\"unresolved_weak\":2143},\"gap_C\":0.040483,\"gap_CP\":0.095263,\"gap_max\":0.108242,\"instrument\":{\"E_cover\":0.948889,\"agree_ge2b\":11931,\"agree_n\":11986,\"agree_share\":0.995411,\"e_matched_fp\":85,\"e_matched_ticker\":13024,\"ratio_within2x\":11916,\"ratio_within5\":11699,\"within2x_share\":0.99416,\"within5_share\":0.976055},\"months\":12,\"possible\":863,\"securities\":{\"confirmed\":90,\"possible\":143,\"unresolved_registrants\":45},\"survivorship\":{\"b_C\":{\"ci_b\":[0.003456,0.010556],\"d\":0.167984,\"n_inc\":13676,\"n_unr\":577,\"point\":0.0068},\"b_CP\":{\"ci_b\":[0.009096,0.02277],\"d\":0.164565,\"n_inc\":13676,\"n_unr\":1440,\"point\":0.015677},\"b_U_sec\":{\"ci_b\":[0.000735,0.005362],\"d\":0.169858,\"n_inc\":13109,\"n_unr\":220,\"point\":0.002804},\"horizon\":24,\"threshold\":0.005},\"unresolved\":220,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\",\"confirmed survivorship bias point > threshold\"],\"verdict\":\"FAIL\"}}\nSCA|year|2015|{\"E\":14140,\"E_matched\":13326,\"confirmed\":540,\"counts\":{\"confirmed_B\":85,\"confirmed_M\":47,\"confirmed_N\":408,\"disagree_vendor_below_2B_strong\":0,\"disagree_vendor_below_2B_weak\":56,\"legit_illiquid_strong\":30,\"legit_illiquid_weak\":129,\"legit_other_exchange_strong\":101,\"legit_other_exchange_weak\":125,\"matched_not_sec_eligible_A_lt\":6420,\"matched_not_sec_eligible_B\":102,\"matched_not_sec_eligible_I\":9488,\"matched_not_sec_eligible_M\":185,\"matched_not_sec_eligible_N\":689,\"matched_not_sec_eligible_X\":252,\"possible_B\":78,\"possible_M\":111,\"possible_N\":525,\"qc_A_lt\":7012,\"qc_B\":2337,\"qc_E\":14140,\"qc_I\":55654,\"qc_M\":381,\"qc_N\":8753,\"qc_X\":539,\"unresolved\":282,\"unresolved_weak\":2080},\"gap_C\":0.036785,\"gap_CP\":0.081401,\"gap_max\":0.097927,\"instrument\":{\"E_cover\":0.942433,\"agree_ge2b\":12267,\"agree_n\":12327,\"agree_share\":0.995133,\"e_matched_fp\":64,\"e_matched_ticker\":13402,\"ratio_within2x\":12243,\"ratio_within5\":12025,\"within2x_share\":0.993186,\"within5_share\":0.975501},\"months\":12,\"possible\":713,\"securities\":{\"confirmed\":90,\"possible\":132,\"unresolved_registrants\":62},\"survivorship\":{\"b_C\":{\"ci_b\":[0.0043,0.01202],\"d\":0.210799,\"n_inc\":14140,\"n_unr\":540,\"point\":0.007754},\"b_CP\":{\"ci_b\":[0.006183,0.018453],\"d\":0.148024,\"n_inc\":14140,\"n_unr\":1253,\"point\":0.012049},\"b_U_sec\":{\"ci_b\":[0.001859,0.006496],\"d\":0.186814,\"n_inc\":13466,\"n_unr\":282,\"point\":0.003832},\"horizon\":24,\"threshold\":0.005},\"unresolved\":282,\"verdict\":{\"reasons\":[\"confirmed gap > 3%\",\"confirmed survivorship bias point > threshold\"],\"verdict\":\"FAIL\"}}\nSCA|year|2016|{\"E\":13924,\"E_matched\":13212,\"confirmed\":417,\"counts\":{\"confirmed_B\":95,\"confirmed_M\":39,\"confirmed_N\":283,\"disagree_vendor_below_2B_strong\":5,\"disagree_vendor_below_2B_weak\":57,\"legit_illiquid_strong\":24,\"legit_illiquid_weak\":137,\"legit_other_exchange_strong\":99,\"legit_other_exchange_weak\":115,\"matched_not_sec_eligible_A_lt\":6252,\"matched_not_sec_eligible_B\":94,\"matched_not_sec_eligible_I\":9746,\"matched_not_sec_eligible_M\":140,\"matched_not_sec_eligible_N\":620,\"matched_not_sec_eligible_X\":232,\"possible_B\":95,\"possible_M\":60,\"possible_N\":344,\"qc_A_lt\":6827,\"qc_B\":2288,\"qc_E\":13924,\"qc_I\":58069,\"qc_M\":242,\"qc_N\":8259,\"qc_X\":503,\"unresolved\":325,\"unresolved_weak\":2132},\"gap_C\":0.029077,\"gap_CP\":0.061725,\"gap_max\":0.081833,\"instrument\":{\"E_cover\":0.948865,\"agree_ge2b\":12125,\"agree_n\":12200,\"agree_share\":0.993852,\"e_matched_fp\":60,\"e_matched_ticker\":13292,\"ratio_within2x\":12114,\"ratio_within5\":11944,\"within2x_share\":0.992951,\"within5_share\":0.979016},\"months\":12,\"possible\":499,\"securities\":{\"confirmed\":70,\"possible\":103,\"unresolved_registrants\":75},\"survivorship\":{\"b_C\":{\"ci_b\":[0.000851,0.006036],\"d\":0.110938,\"n_inc\":13924,\"n_unr\":417,\"point\":0.003226},\"b_CP\":{\"ci_b\":[0.002853,0.012314],\"d\":0.120824,\"n_inc\":13924,\"n_unr\":916,\"point\":0.007458},\"b_U_sec\":{\"ci_b\":[0.002688,0.007881],\"d\":0.219079,\"n_inc\":13352,\"n_unr\":325,\"point\":0.005206},\"horizon\":24,\"threshold\":0.005},\"unresolved\":325,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship upper bound (confirmed + possible + unresolved) > threshold\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|year|2017|{\"E\":15124,\"E_matched\":14252,\"confirmed\":349,\"counts\":{\"confirmed_B\":103,\"confirmed_M\":21,\"confirmed_N\":225,\"disagree_vendor_below_2B_strong\":1,\"disagree_vendor_below_2B_weak\":28,\"legit_illiquid_strong\":16,\"legit_illiquid_weak\":175,\"legit_other_exchange_strong\":100,\"legit_other_exchange_weak\":140,\"matched_not_sec_eligible_A_lt\":5877,\"matched_not_sec_eligible_B\":81,\"matched_not_sec_eligible_I\":8730,\"matched_not_sec_eligible_M\":126,\"matched_not_sec_eligible_N\":626,\"matched_not_sec_eligible_X\":193,\"possible_B\":82,\"possible_M\":44,\"possible_N\":361,\"qc_A_lt\":6579,\"qc_B\":2449,\"qc_E\":15124,\"qc_I\":57645,\"qc_M\":212,\"qc_N\":8335,\"qc_X\":503,\"unresolved\":342,\"unresolved_weak\":1896},\"gap_C\":0.022555,\"gap_CP\":0.052381,\"gap_max\":0.072261,\"instrument\":{\"E_cover\":0.942343,\"agree_ge2b\":13023,\"agree_n\":13104,\"agree_share\":0.993819,\"e_matched_fp\":55,\"e_matched_ticker\":14342,\"ratio_within2x\":13002,\"ratio_within5\":12669,\"within2x_share\":0.992216,\"within5_share\":0.966804},\"months\":12,\"possible\":487,\"securities\":{\"confirmed\":54,\"possible\":95,\"unresolved_registrants\":71},\"survivorship\":{\"b_C\":{\"ci_b\":[-2e-05,0.004798],\"d\":0.097534,\"n_inc\":15124,\"n_unr\":349,\"point\":0.0022},\"b_CP\":{\"ci_b\":[0.001489,0.009096],\"d\":0.095694,\"n_inc\":15124,\"n_unr\":836,\"point\":0.005013},\"b_U_sec\":{\"ci_b\":[0.002915,0.008355],\"d\":0.236252,\"n_inc\":14397,\"n_unr\":342,\"point\":0.005482},\"horizon\":24,\"threshold\":0.005},\"unresolved\":342,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship upper bound (confirmed + possible + unresolved) > threshold\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|year|2018|{\"E\":15856,\"E_matched\":14836,\"confirmed\":341,\"counts\":{\"confirmed_B\":86,\"confirmed_M\":14,\"confirmed_N\":241,\"disagree_vendor_below_2B_strong\":1,\"disagree_vendor_below_2B_weak\":10,\"legit_illiquid_strong\":36,\"legit_illiquid_weak\":136,\"legit_other_exchange_strong\":120,\"legit_other_exchange_weak\":113,\"matched_not_sec_eligible_A_lt\":6059,\"matched_not_sec_eligible_B\":60,\"matched_not_sec_eligible_I\":8056,\"matched_not_sec_eligible_M\":92,\"matched_not_sec_eligible_N\":561,\"matched_not_sec_eligible_X\":284,\"possible_B\":132,\"possible_M\":31,\"possible_N\":292,\"qc_A_lt\":6771,\"qc_B\":2505,\"qc_E\":15856,\"qc_I\":58955,\"qc_M\":177,\"qc_N\":9470,\"qc_X\":625,\"unresolved\":378,\"unresolved_weak\":1897},\"gap_C\":0.021053,\"gap_CP\":0.047802,\"gap_max\":0.068937,\"instrument\":{\"E_cover\":0.935671,\"agree_ge2b\":13444,\"agree_n\":13516,\"agree_share\":0.994673,\"e_matched_fp\":45,\"e_matched_ticker\":14909,\"ratio_within2x\":13443,\"ratio_within5\":13098,\"within2x_share\":0.994599,\"within5_share\":0.969074},\"months\":12,\"possible\":455,\"securities\":{\"confirmed\":52,\"possible\":90,\"unresolved_registrants\":74},\"survivorship\":{\"b_C\":{\"ci_b\":[0.001032,0.00617],\"d\":0.161478,\"n_inc\":15856,\"n_unr\":341,\"point\":0.0034},\"b_CP\":{\"ci_b\":[0.003309,0.011959],\"d\":0.151335,\"n_inc\":15856,\"n_unr\":796,\"point\":0.007234},\"b_U_sec\":{\"ci_b\":[0.002439,0.007574],\"d\":0.191451,\"n_inc\":14954,\"n_unr\":378,\"point\":0.00472},\"horizon\":24,\"threshold\":0.005},\"unresolved\":378,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship upper bound (confirmed + possible + unresolved) > threshold\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|year|2019|{\"E\":15855,\"E_matched\":14787,\"confirmed\":264,\"counts\":{\"confirmed_B\":81,\"confirmed_M\":13,\"confirmed_N\":170,\"disagree_vendor_below_2B_strong\":3,\"disagree_vendor_below_2B_weak\":45,\"legit_illiquid_strong\":24,\"legit_illiquid_weak\":130,\"legit_other_exchange_strong\":91,\"legit_other_exchange_weak\":106,\"matched_not_sec_eligible_A_lt\":5660,\"matched_not_sec_eligible_B\":47,\"matched_not_sec_eligible_I\":8613,\"matched_not_sec_eligible_M\":84,\"matched_not_sec_eligible_N\":461,\"matched_not_sec_eligible_X\":290,\"possible_B\":135,\"possible_M\":17,\"possible_N\":179,\"qc_A_lt\":6293,\"qc_B\":2364,\"qc_E\":15855,\"qc_I\":62795,\"qc_M\":123,\"qc_N\":8942,\"qc_X\":561,\"unresolved\":390,\"unresolved_weak\":1882},\"gap_C\":0.016378,\"gap_CP\":0.03617,\"gap_max\":0.058492,\"instrument\":{\"E_cover\":0.93264,\"agree_ge2b\":13364,\"agree_n\":13406,\"agree_share\":0.996867,\"e_matched_fp\":52,\"e_matched_ticker\":14836,\"ratio_within2x\":13356,\"ratio_within5\":13003,\"within2x_share\":0.99627,\"within5_share\":0.969939},\"months\":12,\"possible\":331,\"securities\":{\"confirmed\":44,\"possible\":71,\"unresolved_registrants\":77},\"survivorship\":{\"b_C\":{\"ci_b\":[0.001292,0.006257],\"d\":0.205023,\"n_inc\":14477,\"n_unr\":259,\"point\":0.003603},\"b_CP\":{\"ci_b\":[0.002321,0.009851],\"d\":0.155973,\"n_inc\":14477,\"n_unr\":554,\"point\":0.005749},\"b_U_sec\":{\"ci_b\":[0.001605,0.007459],\"d\":0.128859,\"n_inc\":8667,\"n_unr\":303,\"point\":0.004353},\"horizon\":24,\"threshold\":0.005},\"unresolved\":390,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship upper bound (confirmed + possible + unresolved) > threshold\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|year|2020|{\"E\":15785,\"E_matched\":14503,\"confirmed\":199,\"counts\":{\"confirmed_B\":81,\"confirmed_M\":12,\"confirmed_N\":106,\"disagree_vendor_below_2B_strong\":4,\"disagree_vendor_below_2B_weak\":59,\"legit_illiquid_strong\":8,\"legit_illiquid_weak\":99,\"legit_other_exchange_strong\":70,\"legit_other_exchange_weak\":110,\"matched_not_sec_eligible_A_lt\":6295,\"matched_not_sec_eligible_B\":40,\"matched_not_sec_eligible_I\":8163,\"matched_not_sec_eligible_M\":77,\"matched_not_sec_eligible_N\":346,\"matched_not_sec_eligible_X\":333,\"possible_B\":123,\"possible_M\":7,\"possible_N\":126,\"qc_A_lt\":7305,\"qc_B\":2489,\"qc_E\":15785,\"qc_I\":64208,\"qc_M\":215,\"qc_N\":10161,\"qc_X\":720,\"unresolved\":401,\"unresolved_weak\":1995},\"gap_C\":0.01245,\"gap_CP\":0.028017,\"gap_max\":0.051439,\"instrument\":{\"E_cover\":0.918784,\"agree_ge2b\":13006,\"agree_n\":13052,\"agree_share\":0.996476,\"e_matched_fp\":14,\"e_matched_ticker\":14530,\"ratio_within2x\":12993,\"ratio_within5\":12632,\"within2x_share\":0.99548,\"within5_share\":0.967821},\"months\":12,\"possible\":256,\"securities\":{\"confirmed\":33,\"possible\":57,\"unresolved_registrants\":78},\"survivorship\":{\"b_C\":{\"ci_b\":[0.000259,0.003385],\"d\":0.120553,\"n_inc\":14273,\"n_unr\":195,\"point\":0.001625},\"b_CP\":{\"ci_b\":[0.000348,0.004571],\"d\":0.079749,\"n_inc\":14273,\"n_unr\":417,\"point\":0.002264},\"b_U_sec\":{\"ci_b\":[0.000139,0.003763],\"d\":0.049066,\"n_inc\":8174,\"n_unr\":321,\"point\":0.001854},\"horizon\":12,\"threshold\":0.0025},\"unresolved\":401,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship upper bound (confirmed + possible + unresolved) > threshold\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|year|2021|{\"E\":18202,\"E_matched\":16265,\"confirmed\":140,\"counts\":{\"confirmed_B\":80,\"confirmed_M\":0,\"confirmed_N\":60,\"disagree_vendor_below_2B_strong\":0,\"disagree_vendor_below_2B_weak\":12,\"legit_illiquid_strong\":3,\"legit_illiquid_weak\":155,\"legit_other_exchange_strong\":91,\"legit_other_exchange_weak\":200,\"matched_not_sec_eligible_A_lt\":4992,\"matched_not_sec_eligible_B\":46,\"matched_not_sec_eligible_I\":5789,\"matched_not_sec_eligible_M\":58,\"matched_not_sec_eligible_N\":239,\"matched_not_sec_eligible_X\":326,\"possible_B\":108,\"possible_M\":6,\"possible_N\":213,\"qc_A_lt\":6839,\"qc_B\":2565,\"qc_E\":18202,\"qc_I\":63595,\"qc_M\":368,\"qc_N\":10585,\"qc_X\":1066,\"unresolved\":429,\"unresolved_weak\":1764},\"gap_C\":0.007633,\"gap_CP\":0.025015,\"gap_max\":0.046916,\"instrument\":{\"E_cover\":0.893583,\"agree_ge2b\":14314,\"agree_n\":14361,\"agree_share\":0.996727,\"e_matched_fp\":15,\"e_matched_ticker\":16321,\"ratio_within2x\":14290,\"ratio_within5\":13887,\"within2x_share\":0.995056,\"within5_share\":0.966994},\"months\":11,\"possible\":327,\"securities\":{\"confirmed\":22,\"possible\":58,\"unresolved_registrants\":83},\"survivorship\":{\"horizon\":null},\"unresolved\":429,\"verdict\":{\"reasons\":[\"gap with possible + unresolved > 3%\",\"survivorship not assessable (censoring)\"],\"verdict\":\"INCONCLUSIVE\"}}\nSCA|windows|{\"W1\":{\"outcome\":\"FAIL\",\"years\":{\"2010\":\"FAIL\",\"2011\":\"FAIL\",\"2012\":\"FAIL\",\"2013\":\"FAIL\",\"2014\":\"FAIL\",\"2015\":\"FAIL\",\"2016\":\"INCONCLUSIVE\",\"2017\":\"INCONCLUSIVE\",\"2018\":\"INCONCLUSIVE\",\"2019\":\"INCONCLUSIVE\",\"2020\":\"INCONCLUSIVE\",\"2021\":\"INCONCLUSIVE\"}},\"W1a\":{\"outcome\":\"FAIL\",\"years\":{\"2011\":\"FAIL\",\"2012\":\"FAIL\",\"2013\":\"FAIL\",\"2014\":\"FAIL\",\"2015\":\"FAIL\",\"2016\":\"INCONCLUSIVE\",\"2017\":\"INCONCLUSIVE\",\"2018\":\"INCONCLUSIVE\",\"2019\":\"INCONCLUSIVE\",\"2020\":\"INCONCLUSIVE\",\"2021\":\"INCONCLUSIVE\"}},\"W1b\":{\"outcome\":\"INCONCLUSIVE\",\"years\":{\"2016\":\"INCONCLUSIVE\",\"2017\":\"INCONCLUSIVE\",\"2018\":\"INCONCLUSIVE\",\"2019\":\"INCONCLUSIVE\",\"2020\":\"INCONCLUSIVE\",\"2021\":\"INCONCLUSIVE\"}}}",
+  "qr_msgs_n": "1",
+  "qr_summary": "{\"buys_scaled\": 0, \"cancelled_harness_buys\": 0, \"cancelled_harness_sells\": 0, \"cancelled_on_symbol_change\": 0, \"cancelled_sells_delisting\": 0, \"cancelled_stale\": 0, \"days\": 3063, \"elig_days\": 0, \"elig_max\": 0, \"elig_mean\": 0, \"elig_min\": null, \"elig_sum\": 0, \"experiment_id\": \"E805-02\", \"fills\": 0, \"forced_fee_debits\": 0, \"forced_fills\": 0, \"held_delistings\": 0, \"held_splits\": 0, \"invalid\": 0, \"log_budget_left\": 986, \"max_fill_dev\": 0.0, \"max_gross\": 0.0, \"max_subscribed\": 1, \"min_cash_frac\": 1.0, \"negative_qty\": 0, \"open_positions_at_end\": 0, \"orders\": 0, \"resubmitted_sells\": 0, \"stale_exits\": 0, \"stale_open_orders\": 0, \"stale_unresolved\": 0, \"timing_violations\": 0, \"windows_restored\": 0}"
+ },
+ "relative": {},
+ "segments": {},
+ "status": "completed",
+ "trade_distribution": {
+  "psr_0": NaN
+ }
+}

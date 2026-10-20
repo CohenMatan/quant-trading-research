@@ -1,0 +1,37 @@
+{
+ "error": "2009-11-02 00:00:00 During the algorithm initialization, the following exception has occurred: X805: the SEC reference object is not in the Object Store\n  at qr_initialize\n    raise Exception(&quot;X805: the SEC reference object is not in the Object Store&quot;)\n in main.py: line 42\n  at initialize\n    self.qr_initialize()\n in qr_harness.py: line 368\n X805: the SEC reference object is not in the Object Store\nX805: the SEC reference object is not in the Object Store\n  at qr_initialize\n    raise Exception(\"X805: the SEC reference object is not in the Object Store\")\n in main.py: line 42\n  at initialize\n    self.qr_initialize()\n in qr_harness.py: line 368\n X805: the SEC reference object is not in the Object Store",
+ "experiment_id": "E805-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-10-20T10:10:40Z",
+  "build_commit": "c350dfc23ad6117919a2e21ac5ebd69984d05970",
+  "code_sha256": "b82d966f8069b424e8663e695756ac1e7cdd8b6cfdb0b7a05ae10dac2fe7bf6b",
+  "config_sha256": "c1a3dad9c1403cbd3e58f08e759920fc3de6b9dde99c7b5dbfc8a56c94913107",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_params.py",
+   "qr_sca.py",
+   "qr_sec_corrections.py"
+  ],
+  "git_commit": "c350dfc23ad6117919a2e21ac5ebd69984d05970",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18194",
+  "owner_approved": "D267",
+  "qc_backtest_id": "506cd29bc07f6bcddcb226524f627f31",
+  "qc_project_id": 38158387,
+  "result_channel": "",
+  "run_utc": "2026-10-20T10:10:19Z",
+  "runtime_s": 26.224515438079834
+ },
+ "status": "failed"
+}
