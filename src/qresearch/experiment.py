@@ -730,10 +730,27 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
+    if cfg["strategy_id"] == "X804":
+        # UB-1 universe baseline audit (owner D263, research/rr/universe_baseline/UB_protocol.md): ONE aggregate-only
+        # infrastructure run on the default build (E804-01; E804-02 only as the documented retry), 1999-01-04 ..
+        # 2021-12-31 without warm-up, the approved universe filters without the SEC layer, the pinned protocol / code
+        from . import rr_ub
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["split"] != "AUDIT" or (cfg["start"], cfg["end"]) != ("1999-01-04", "2021-12-31")
+                or cfg.get("warmup_start") or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"
+                or cfg["experiment_id"] not in (rr_ub.RUN, rr_ub.RETRY) or cfg.get("programme") != rr_ub.PROGRAMME
+                or rr_ub.DECISION not in str(cfg.get("owner_approval_required") or "")):
+            raise ConfigError("X804 is the ONE UB-1 infrastructure run (E804-01, retry E804-02): AUDIT 1999-01-04 .. "
+                              "2021-12-31, no warm-up, >= $2B / >= $5 / ADV20 >= $5M without the SEC layer, default "
+                              "build, programme RR, owner approval D263")
+        if rr_ub.PROTOCOL_SHA256 is None or cfg.get("params") != rr_ub.run_params():
+            raise ConfigError("X804 runs carry the pinned UB-1 protocol and code fingerprints (qresearch.rr_ub)")
     if cfg["strategy_id"] in ("X994", "S023"):
         # H022 (research/phase7/P7_predictive_spec.md v1 + the D177 wording fix; owner authorisation 2026-10-06, D177):
         # the X993 v1.1 window and data-v1 universe, nothing after 2017-12-31, the frozen spec / module fingerprints;

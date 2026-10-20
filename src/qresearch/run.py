@@ -74,6 +74,9 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
                 files[p.name] = p.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
+    if "qr_ub" in files["main.py"]:   # UB-1 universe baseline statistics (owner D263), plain text
+        rel = "src/qresearch/lean/qr_ub.py"
+        files["qr_ub.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     if "qr_h016" in files["main.py"]:   # D116: H016 decision logic, only for strategies that import it (S016, X980)
         src = "src/qresearch/lean/qr_h016.py"
         files["qr_h016.py"] = gitutil.show_file(commit, src) if commit else (config.REPO_ROOT / src).read_text(
@@ -281,6 +284,28 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
     return files
 
 
+# D254 / RR1 §6: QuantConnect refuses project files that import compression / encoding packages or embed binary blobs
+# ('all project files must be saved as readable plain-text source'), and researcher projects hold at most 50 files of
+# 64,000 characters. The runner refuses such an upload itself, before anything reaches QuantConnect.
+UPLOAD_BANNED = re.compile(r"^[ \t]*(?:import|from)[ \t]+(zlib|lzma|base64|bz2|gzip|binascii|pickle|marshal|zipfile|tarfile)\b",
+                           re.M)
+UPLOAD_MAX_FILES, UPLOAD_MAX_CHARS = 50, 64000
+
+
+def check_upload(files: dict[str, str]) -> None:
+    problems = []
+    if len(files) > UPLOAD_MAX_FILES:
+        problems.append(f"{len(files)} files > {UPLOAD_MAX_FILES}")
+    for name, content in sorted(files.items()):
+        if len(content) > UPLOAD_MAX_CHARS:
+            problems.append(f"{name}: {len(content)} characters > {UPLOAD_MAX_CHARS}")
+        m = UPLOAD_BANNED.search(content)
+        if m:
+            problems.append(f"{name} imports {m.group(1)}")
+    if problems:
+        raise experiment.ConfigError("upload guard (plain-text project files, D254): " + "; ".join(problems))
+
+
 def code_hash(files: dict[str, str]) -> str:
     h = hashlib.sha256()
     for name in sorted(files):
@@ -295,6 +320,7 @@ def execute(cfg: dict, files: dict[str, str], client: QCClient, state: dict | No
     part-way still records which QuantConnect backtest it was (E003-06 incident)."""
     state = {} if state is None else state
     state["stage"] = "upload"
+    check_upload(files)
     project = client.find_or_create_project(f"qr-{cfg['strategy_id']}")
     state["project_id"] = project
     client.sync_files(project, files)
