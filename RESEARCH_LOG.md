@@ -2648,3 +2648,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **RR7:** Path A feasible only as explicitly exploratory (EDP-1: two-universe pass, P1–P6 unchanged, +1.0 pt/yr margin, both halves, no search, stop rule; a PASS only justifies paying for independent validation). H031 moderately exposed (initiations most). Path B needs several scope amendments, has its own selection biases and no credible route to beating SPY (drawdown tool only).
 - **Recommendation:** Path A exploratory with H031 only; next step = freeze EDP-1 + H031, one host from existing parts, ONE event canary, STOP. D270 disclosed (new SEC object needs ratification; 650-day rule).
 - **Status:** STOPPED awaiting the owner (RR7 §6).
+
+## 2026-10-20: OS-CP1 — Offensive Score Research: candidate selection and first experiment design (D274 / D275; design only; STOP)
+
+- **Owner (D274):** new direction — offensive stock-selection score (characteristics → score → Top N), offensive component first; H028 stays REJECTED; DESIGN ONLY.
+- **OS-CP1:** lessons (past SPY-beating results were defensive exposure or one episode; searches / learned weights used up the power; familiar factors exhausted); three mechanisms compared; **recommended OS-1 = Net Share Repurchase Score** (fixed rule from SEC cover-page share counts already in the Object Store; Top 15 monthly, buffer 2N); no learned score; honest caveat that no bull-specific alpha exists and OS-1 may prove value-like; exploratory gates O1–O9 with beta-matched controls and a vendor-universe shadow; canary C-OS1 without returns; ≈ 2 sessions, 3 runs, $0.
+- **Status:** STOPPED awaiting the owner (OS-CP1 §10: D270 ratification, EDP-1, OS-1, gates, run authorisation). Nothing registered, run or uploaded; H031 DRAFT; Holdout sealed.
