@@ -81,6 +81,11 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - **Limits:** names without any fundamentals object are unclassifiable; blank-field names are counted as non-common.
   - **Monthly-count digest d0c2f430…:** re-check it after any build or dataset change.
   - **No strategy experiment is authorised.** STOPPED awaiting the owner (RR3 §6).
+- **D265 / RR4 (D266, 2026-10-20) — offline only:** `docs/checkpoints/RR4_rr3_review_universe_risk_screen_k1_k2.md`.
+  - RR3 accepted for the measured population only; U-B retired; no independent historical period.
+  - **Universe blind spot NOT resolved:** E804 is 5.2% short of Data v1 in 2011–2017; the unrepairable no-fundamentals group (67 of 68 later disappearing) would put 2011–2015 above the 3% gate if still missing; ≤ 2% from 2016. Owner decision **UR-1** (A in-cloud SEC classification check, recommended / B develop from 2016 / C accept / D U-C).
+  - Screen / confirmation PROPOSED, not frozen (`research/rr/programme/RR_screen_confirmation_PROPOSED.md`): P1–P6 + new D2 (Amendment 3 on development data, Holm) + Holdout once + forward to +36 months.
+  - K1 conditionally feasible; K2 not feasible as broad-market under current rules (recommend drop). No hypothesis registered. STOPPED awaiting the owner (RR4 §6).
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**

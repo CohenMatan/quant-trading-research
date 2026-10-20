@@ -1,0 +1,279 @@
+{
+ "by_year": {
+  "2010": {
+   "E804_E": 9081,
+   "E804_E_exit_rate": 0.044048,
+   "E804_M": 294,
+   "E804_Nx": 7913,
+   "E804_UA": 200,
+   "E804_gap_A": 0.0215,
+   "horizon": 24
+  },
+  "2011": {
+   "E804_E": 10112,
+   "E804_E_exit_rate": 0.042919,
+   "E804_M": 276,
+   "E804_Nx": 8456,
+   "E804_UA": 186,
+   "E804_gap_A": 0.0181,
+   "data_v1": 11069,
+   "data_v2x": {
+    "eligible": 10466,
+    "from_qc_cap": 7834,
+    "from_sec_repair": 1686,
+    "from_v1_sec_layer": 947
+   },
+   "gap_S1": 0.0548,
+   "gsurv_breakeven_excess_exit": 0.131,
+   "horizon": 24,
+   "nofund_18178": 400,
+   "not_measured_by_RR3": 681,
+   "not_measured_pct": 0.0615,
+   "shortfall_v1": 957,
+   "shortfall_v1_pct": 0.0865,
+   "shortfall_v2x": 354,
+   "shortfall_v2x_pct": 0.0338
+  },
+  "2012": {
+   "E804_E": 10379,
+   "E804_E_exit_rate": 0.029001,
+   "E804_M": 256,
+   "E804_Nx": 7499,
+   "E804_UA": 184,
+   "E804_gap_A": 0.0174,
+   "data_v1": 11182,
+   "data_v2x": {
+    "eligible": 10672,
+    "from_qc_cap": 8246,
+    "from_sec_repair": 1634,
+    "from_v1_sec_layer": 791
+   },
+   "gap_S1": 0.0514,
+   "gsurv_breakeven_excess_exit": 0.142,
+   "horizon": 24,
+   "nofund_18178": 378,
+   "not_measured_by_RR3": 547,
+   "not_measured_pct": 0.0489,
+   "shortfall_v1": 803,
+   "shortfall_v1_pct": 0.0718,
+   "shortfall_v2x": 293,
+   "shortfall_v2x_pct": 0.0275
+  },
+  "2013": {
+   "E804_E": 12062,
+   "E804_E_exit_rate": 0.041038,
+   "E804_M": 256,
+   "E804_Nx": 8213,
+   "E804_UA": 182,
+   "E804_gap_A": 0.0149,
+   "data_v1": 12860,
+   "data_v2x": {
+    "eligible": 12293,
+    "from_qc_cap": 9514,
+    "from_sec_repair": 1972,
+    "from_v1_sec_layer": 808
+   },
+   "gap_S1": 0.0472,
+   "gsurv_breakeven_excess_exit": 0.15,
+   "horizon": 24,
+   "nofund_18178": 416,
+   "not_measured_by_RR3": 542,
+   "not_measured_pct": 0.0421,
+   "shortfall_v1": 798,
+   "shortfall_v1_pct": 0.0621,
+   "shortfall_v2x": 231,
+   "shortfall_v2x_pct": 0.0188
+  },
+  "2014": {
+   "E804_E": 13570,
+   "E804_E_exit_rate": 0.062196,
+   "E804_M": 261,
+   "E804_Nx": 8652,
+   "E804_UA": 176,
+   "E804_gap_A": 0.0128,
+   "data_v1": 14380,
+   "data_v2x": {
+    "eligible": 13793,
+    "from_qc_cap": 10754,
+    "from_sec_repair": 2230,
+    "from_v1_sec_layer": 809
+   },
+   "gap_S1": 0.0438,
+   "gsurv_breakeven_excess_exit": 0.157,
+   "horizon": 24,
+   "nofund_18178": 445,
+   "not_measured_by_RR3": 549,
+   "not_measured_pct": 0.0382,
+   "shortfall_v1": 810,
+   "shortfall_v1_pct": 0.0563,
+   "shortfall_v2x": 223,
+   "shortfall_v2x_pct": 0.0162
+  },
+  "2015": {
+   "E804_E": 13991,
+   "E804_E_exit_rate": 0.075692,
+   "E804_M": 290,
+   "E804_Nx": 8716,
+   "E804_UA": 170,
+   "E804_gap_A": 0.012,
+   "data_v1": 14667,
+   "data_v2x": {
+    "eligible": 14154,
+    "from_qc_cap": 11296,
+    "from_sec_repair": 2196,
+    "from_v1_sec_layer": 662
+   },
+   "gap_S1": 0.0351,
+   "gsurv_breakeven_excess_exit": 0.211,
+   "horizon": 24,
+   "nofund_18178": 339,
+   "not_measured_by_RR3": 386,
+   "not_measured_pct": 0.0263,
+   "shortfall_v1": 676,
+   "shortfall_v1_pct": 0.0461,
+   "shortfall_v2x": 163,
+   "shortfall_v2x_pct": 0.0115
+  },
+  "2016": {
+   "E804_E": 13721,
+   "E804_E_exit_rate": 0.071934,
+   "E804_M": 174,
+   "E804_Nx": 8222,
+   "E804_UA": 92,
+   "E804_gap_A": 0.0067,
+   "data_v1": 14156,
+   "data_v2x": {
+    "eligible": 13837,
+    "from_qc_cap": 11492,
+    "from_sec_repair": 1933,
+    "from_v1_sec_layer": 412
+   },
+   "gap_S1": 0.0203,
+   "gsurv_breakeven_excess_exit": 0.362,
+   "horizon": 24,
+   "nofund_18178": 192,
+   "not_measured_by_RR3": 261,
+   "not_measured_pct": 0.0184,
+   "shortfall_v1": 435,
+   "shortfall_v1_pct": 0.0307,
+   "shortfall_v2x": 116,
+   "shortfall_v2x_pct": 0.0084
+  },
+  "2017": {
+   "E804_E": 14938,
+   "E804_E_exit_rate": 0.067211,
+   "E804_M": 169,
+   "E804_Nx": 8300,
+   "E804_UA": 89,
+   "E804_gap_A": 0.0059,
+   "data_v1": 15373,
+   "data_v2x": {
+    "eligible": 15155,
+    "from_qc_cap": 12938,
+    "from_sec_repair": 1802,
+    "from_v1_sec_layer": 414
+   },
+   "gap_S1": 0.0087,
+   "gsurv_breakeven_excess_exit": 1.783,
+   "horizon": 24,
+   "nofund_18178": 42,
+   "not_measured_by_RR3": 266,
+   "not_measured_pct": 0.0173,
+   "shortfall_v1": 435,
+   "shortfall_v1_pct": 0.0283,
+   "shortfall_v2x": 217,
+   "shortfall_v2x_pct": 0.0143
+  },
+  "2018": {
+   "E804_E": 15635,
+   "E804_E_exit_rate": 0.058459,
+   "E804_M": 170,
+   "E804_Nx": 9429,
+   "E804_UA": 76,
+   "E804_gap_A": 0.0048,
+   "data_v2x": {
+    "eligible": 15837,
+    "from_qc_cap": 13938,
+    "from_sec_repair": 1536,
+    "from_v1_sec_layer": 363
+   },
+   "horizon": 24,
+   "shortfall_v2x": 202,
+   "shortfall_v2x_pct": 0.0128
+  },
+  "2019": {
+   "E804_E": 15626,
+   "E804_E_exit_rate": 0.049271,
+   "E804_M": 123,
+   "E804_Nx": 8904,
+   "E804_UA": 55,
+   "E804_gap_A": 0.0035,
+   "data_v2x": {
+    "eligible": 15898,
+    "from_qc_cap": 14532,
+    "from_sec_repair": 1110,
+    "from_v1_sec_layer": 256
+   },
+   "horizon": 24,
+   "shortfall_v2x": 272,
+   "shortfall_v2x_pct": 0.0171
+  },
+  "2020": {
+   "E804_E": 15547,
+   "E804_E_exit_rate": 0.028531,
+   "E804_M": 212,
+   "E804_Nx": 10122,
+   "E804_UA": 88,
+   "E804_gap_A": 0.0056,
+   "data_v2x": {
+    "eligible": 15865,
+    "from_qc_cap": 14822,
+    "from_sec_repair": 864,
+    "from_v1_sec_layer": 179
+   },
+   "horizon": 12,
+   "shortfall_v2x": 318,
+   "shortfall_v2x_pct": 0.02
+  },
+  "2021": {
+   "E804_E": 17910,
+   "E804_E_exit_rate": null,
+   "E804_M": 366,
+   "E804_Nx": 10552,
+   "E804_UA": 120,
+   "E804_gap_A": 0.0067,
+   "data_v2x": {
+    "eligible": 18334,
+    "from_qc_cap": 17396,
+    "from_sec_repair": 696,
+    "from_v1_sec_layer": 242
+   },
+   "horizon": null,
+   "shortfall_v2x": 424,
+   "shortfall_v2x_pct": 0.0231
+  }
+ },
+ "inputs": [
+  "research/rr/universe_baseline/E804-01_ub_lines.txt",
+  "research/phase7/cp5d/x996_summary.json",
+  "research/phase7/cp5e/x997_summary.json",
+  "research/phase7/data_v2/x998_summary.json",
+  "research/phase11/data_v21/x801_summary.json"
+ ],
+ "nofund_group_18178": {
+  "recovered_by_v2_repair": 0,
+  "securities_never_recovered": {
+   "in_universe_end_2017": 1,
+   "later_disappearing": 67
+  },
+  "stock_months": 2212
+ },
+ "totals_2011_2017": {
+  "E804_E": 88773,
+  "E804_M": 1682,
+  "data_v1": 93687,
+  "nofund_18178": 2212,
+  "not_measured_by_RR3": 3232,
+  "shortfall_v1": 4914
+ }
+}
