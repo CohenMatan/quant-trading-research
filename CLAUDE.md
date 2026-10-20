@@ -89,6 +89,10 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
 - **D267 / RR5 (D268, 2026-10-20):** UR-1 option A run: SEC classification audit SCA-1 (`docs/checkpoints/RR5_ur1_sec_classification_audit_E805.md`; protocol `research/rr/sec_classification/SCA_protocol.md`, pinned in `qresearch.rr_sca`; E805-01 infra failure, E805-02 retry completed).
   - **W1 2010–2021 FAIL:** confirmed missing ≥ $2B names 3.5–6.1% a year in 2010–2015 (mostly no-fundamentals names that later disappear; bias up to 0.78 points). **2016–2021 INCONCLUSIVE.** The vendor universe is NOT credible for K1 without an owner decision (UR-2: A scoped SEC-cap inclusion + re-audit, recommended / B 2016–2021 with exception / C pause / D accept).
   - D267: the Holdout is for at most ONE candidate across the whole programme; D1 / D2 are exposed-data results only. Screen protocol v2 ready to freeze (`research/rr/programme/RR_screen_confirmation_PROPOSED.md`). K2 dropped. H031 drafted (`research/rr/h031/H031_spec_DRAFT.md`), not registered. STOPPED awaiting the owner (RR5 §8).
+- **D269 / RR6 (D270 / D271, 2026-10-20):** UR-2 option A: ONE strictly point-in-time SEC universe repair + re-audit UCR-1 (`docs/checkpoints/RR6_ur2_pit_sec_universe_repair_reaudit_E806.md`; protocol `research/rr/universe_repair/UCR_protocol.md`, pinned in `qresearch.rr_ucr`; new per-filing PIT SEC object `rr/ucr_sec_v1.json`, D270).
+  - E806-01 (build 18198, snapshot identical to E805-02): 8,191 stock-months repaired, caps 99.78% agree with vendor caps; confirmed gap → 0.2–0.8%, confirmed bias → ~0.
+  - **W1 2010–2021 INCONCLUSIVE (every year):** possible + unresolved keep Gap_max 3.2–4.4% and the survivorship upper bound 0.56–1.26 points (limit 0.50). Repaired counts 1.7–3.1% above Data v1 (not independently explained).
+  - **Hard stop (D269 §4):** no further repair, window shortening, relaxation or accepted bias. RR screen v2 NOT frozen; H031 stays DRAFT; no canary or strategy run. STOPPED awaiting the owner.
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
