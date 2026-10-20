@@ -96,6 +96,8 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
 - **D272 / RR7 (D273, 2026-10-20) — design only:** owner accepted RR6 as INCONCLUSIVE — HARD STOP (no reclassification, relaxation or further identity repair). RR7 (`docs/checkpoints/RR7_research_path_design_review.md`) compares Path A (exploratory stock discovery on the SEC-repaired universe under a proposed protocol EDP-1) with Path B (ETFs: scope amendments needed, no credible route to beating SPY).
   - **Recommendation:** Path A exploratory, H031 only; next step = freeze EDP-1 + H031, one host from existing parts, ONE event canary, STOP. Needs owner ratification of the D270 SEC object.
   - Nothing run, built or uploaded; H031 DRAFT; no canary or strategy run. STOPPED awaiting the owner (RR7 §6).
+- **D274 / OS-CP1 (D275, 2026-10-20) — design only:** owner redirected research to an **offensive stock-selection score** (characteristics → score → Top N; offensive component first; H028 stays REJECTED). OS-CP1 (`docs/checkpoints/OS_CP1_offensive_score_candidate_selection_first_experiment_design.md`) recommends **OS-1 = Net Share Repurchase Score** (SEC cover-page share counts from `rr/ucr_sec_v1.json`, ~12-month split-adjusted change, Top 15 monthly, buffer 2N; no learned score); M2 attention rejected (cost), M3 earnings surprise not now (reopens closed lines). Exploratory gates O1–O9, canary C-OS1 (no returns).
+  - Nothing registered, run or uploaded; RR7 decisions (D270 ratification, EDP-1) still needed; H031 DRAFT; Holdout sealed. STOPPED awaiting the owner (OS-CP1 §10).
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
