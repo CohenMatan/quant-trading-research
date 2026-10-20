@@ -93,6 +93,9 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - E806-01 (build 18198, snapshot identical to E805-02): 8,191 stock-months repaired, caps 99.78% agree with vendor caps; confirmed gap → 0.2–0.8%, confirmed bias → ~0.
   - **W1 2010–2021 INCONCLUSIVE (every year):** possible + unresolved keep Gap_max 3.2–4.4% and the survivorship upper bound 0.56–1.26 points (limit 0.50). Repaired counts 1.7–3.1% above Data v1 (not independently explained).
   - **Hard stop (D269 §4):** no further repair, window shortening, relaxation or accepted bias. RR screen v2 NOT frozen; H031 stays DRAFT; no canary or strategy run. STOPPED awaiting the owner.
+- **D272 / RR7 (D273, 2026-10-20) — design only:** owner accepted RR6 as INCONCLUSIVE — HARD STOP (no reclassification, relaxation or further identity repair). RR7 (`docs/checkpoints/RR7_research_path_design_review.md`) compares Path A (exploratory stock discovery on the SEC-repaired universe under a proposed protocol EDP-1) with Path B (ETFs: scope amendments needed, no credible route to beating SPY).
+  - **Recommendation:** Path A exploratory, H031 only; next step = freeze EDP-1 + H031, one host from existing parts, ONE event canary, STOP. Needs owner ratification of the D270 SEC object.
+  - Nothing run, built or uploaded; H031 DRAFT; no canary or strategy run. STOPPED awaiting the owner (RR7 §6).
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**

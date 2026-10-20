@@ -2641,3 +2641,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **E806-01:** completed first time (default build 18198; snapshot identical to E805-02; 0 orders).
 - **Outcome:** 8,191 stock-months repaired (caps 99.78% agree with vendor caps); confirmed gap 3.5–6.1% → 0.2–0.8%, confirmed bias → ~0; but **W1 INCONCLUSIVE** in every year (possible + unresolved keep Gap_max at 3.2–4.4% and the survivorship upper bound at 0.56–1.26 points). Repaired counts 1.7–3.1% above Data v1 (not independently explained).
 - **Status:** STOPPED awaiting the owner (D269 §4: no further repair; programme protocol not frozen; H031 DRAFT).
+
+## 2026-10-20: RR7 — research path design review (D272 / D273; design only; STOP)
+
+- **Owner (D272):** RR6 accepted as INCONCLUSIVE — HARD STOP; no reclassification or further repair; H031 DRAFT; design review of Path A (exploratory stock discovery on the SEC-repaired universe) vs Path B (ETFs); no purchases, runs, uploads or implementation.
+- **RR7:** Path A feasible only as explicitly exploratory (EDP-1: two-universe pass, P1–P6 unchanged, +1.0 pt/yr margin, both halves, no search, stop rule; a PASS only justifies paying for independent validation). H031 moderately exposed (initiations most). Path B needs several scope amendments, has its own selection biases and no credible route to beating SPY (drawdown tool only).
+- **Recommendation:** Path A exploratory with H031 only; next step = freeze EDP-1 + H031, one host from existing parts, ONE event canary, STOP. D270 disclosed (new SEC object needs ratification; 650-day rule).
+- **Status:** STOPPED awaiting the owner (RR7 §6).
