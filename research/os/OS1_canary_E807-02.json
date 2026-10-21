@@ -1,0 +1,1544 @@
+{
+ "run": "E807-02",
+ "meta": {
+  "b1_distinct_names_by_year": {
+   "2012": 21,
+   "2013": 39,
+   "2014": 36,
+   "2015": 36,
+   "2016": 37,
+   "2017": 35,
+   "2018": 33,
+   "2019": 36,
+   "2020": 42,
+   "2021": 33
+  },
+  "beta_attempted": 1234,
+  "beta_matched": 1234,
+  "checks": {
+   "annual_filing_on_or_after_t": 0,
+   "identity_duplicates": 0,
+   "nsi_filing_on_or_after_t": 0,
+   "pit_violations_ext": 0,
+   "repaired_rows": 8191,
+   "repaired_without_identity": 0
+  },
+  "collect_s": 254.5,
+  "determinism": true,
+  "digests_online": {
+   "B0": "cad38dc313cedb2f94e6845cda02414d46c011ab82d3ffb8743db36ae8652fa8",
+   "B1": "fb334611b0ef959f3635d7c38c2a88d6ddd63142a6f20a3162bcf144aa8b5337",
+   "B2_20261121": "6e34a55e448e3b1c94a133ba07271d655e186e21165cab67b55e8b36cf2533a0",
+   "B2_20261122": "c54dc7bb4552ba8a9e967b2c89726903603ed3850e59772e79882a7d68fb7283",
+   "B2_20261123": "2c301d6c818f7f485f978d03c1f4cb03c46d50384c7d742dc35ca1aa9375c601",
+   "B2_20261124": "e6f356dc1351725f8273a5ff1f687b04a217ad016ddd0cbc16c2317b970aca16",
+   "B2_20261125": "333c3f86c5ea7854f016cdbba2a5605bb6ed3f05055f44c3cba12a77b7e215c3",
+   "BETA_20261141": "648f8e56ab176567261dc6eedb8a3084a22e62195b5eb2c8de129b06de84006d",
+   "BETA_20261142": "667d7c501819b5b6c08e074820a045db9130ed1f6e6c334f35cd016dfc0b5bb4",
+   "BETA_20261143": "378270366474f2aea4c508c5ccc3fa8c776ffcfd748e54ce5356045721da7fae",
+   "BETA_20261144": "6c44512d6a88aa562456349cb10767b8b3db4fdd2e8f0114bac7f5ff9858ed36",
+   "BETA_20261145": "86627320e5e42fab9e096180d811ec4439e5f74051e0622986f75742d5d34b0b",
+   "MOM": "9131f603ef748514051fed456b1ca1abaf066cd69f3a72aaa13a93e31d003386",
+   "RND_20261131": "a44d729d22c8a64e03294eadc3b9dff999d6f9a96180826c493195e3a6115a1d",
+   "RND_20261132": "74c371ed4017c8a655e115e1b390d7baf548ba768417e27e86dab46a0643a10e",
+   "RND_20261133": "dc0278d19d24fa81c7594e0bb484c22002460dcdbffc0b912c906c374a9f9893",
+   "RND_20261134": "3e04f4536f89b87ddf6245e35b7b8ca3988c1d41400ebaecf5a350beac08f3a5",
+   "RND_20261135": "4fbcd26af498f1c60fd43c20fc84e849de3edb7ab114fd625d9505aee2e5ce29",
+   "VB1": "0d54598134beabbc9503dfb26e4a62e27a286b4b71eec74ecec93306b6014696"
+  },
+  "digests_recomputed": {
+   "B0": "cad38dc313cedb2f94e6845cda02414d46c011ab82d3ffb8743db36ae8652fa8",
+   "B1": "fb334611b0ef959f3635d7c38c2a88d6ddd63142a6f20a3162bcf144aa8b5337",
+   "B2_20261121": "6e34a55e448e3b1c94a133ba07271d655e186e21165cab67b55e8b36cf2533a0",
+   "B2_20261122": "c54dc7bb4552ba8a9e967b2c89726903603ed3850e59772e79882a7d68fb7283",
+   "B2_20261123": "2c301d6c818f7f485f978d03c1f4cb03c46d50384c7d742dc35ca1aa9375c601",
+   "B2_20261124": "e6f356dc1351725f8273a5ff1f687b04a217ad016ddd0cbc16c2317b970aca16",
+   "B2_20261125": "333c3f86c5ea7854f016cdbba2a5605bb6ed3f05055f44c3cba12a77b7e215c3",
+   "BETA_20261141": "648f8e56ab176567261dc6eedb8a3084a22e62195b5eb2c8de129b06de84006d",
+   "BETA_20261142": "667d7c501819b5b6c08e074820a045db9130ed1f6e6c334f35cd016dfc0b5bb4",
+   "BETA_20261143": "378270366474f2aea4c508c5ccc3fa8c776ffcfd748e54ce5356045721da7fae",
+   "BETA_20261144": "6c44512d6a88aa562456349cb10767b8b3db4fdd2e8f0114bac7f5ff9858ed36",
+   "BETA_20261145": "86627320e5e42fab9e096180d811ec4439e5f74051e0622986f75742d5d34b0b",
+   "MOM": "9131f603ef748514051fed456b1ca1abaf066cd69f3a72aaa13a93e31d003386",
+   "RND_20261131": "a44d729d22c8a64e03294eadc3b9dff999d6f9a96180826c493195e3a6115a1d",
+   "RND_20261132": "74c371ed4017c8a655e115e1b390d7baf548ba768417e27e86dab46a0643a10e",
+   "RND_20261133": "dc0278d19d24fa81c7594e0bb484c22002460dcdbffc0b912c906c374a9f9893",
+   "RND_20261134": "3e04f4536f89b87ddf6245e35b7b8ca3988c1d41400ebaecf5a350beac08f3a5",
+   "RND_20261135": "4fbcd26af498f1c60fd43c20fc84e849de3edb7ab114fd625d9505aee2e5ce29",
+   "VB1": "0d54598134beabbc9503dfb26e4a62e27a286b4b71eec74ecec93306b6014696"
+  },
+  "experiment_id": "E807-02",
+  "final_stream_day": "2021-12-31",
+  "os1_reference_sha256": "32bb0a666503e333ed20001074da687a12c557f28c85fa4b090b8b1983645b17",
+  "protocol": "H032 C-OS1",
+  "reviews": 143,
+  "start": "2012-07-31",
+  "start_index": 30,
+  "summarize_s": 0.5,
+  "ucr_reference_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82"
+ },
+ "evaluation": {
+  "outcome": "PASS",
+  "failed": [],
+  "gates": {
+   "C1": {
+    "passed": true,
+    "detail": {
+     "nsi_filing_on_or_after_t": 0,
+     "annual_filing_on_or_after_t": 0,
+     "pit_violations_ext": 0
+    }
+   },
+   "C2": {
+    "passed": true,
+    "detail": {
+     "identity_duplicates": 0,
+     "repaired_without_identity": 0,
+     "repaired_rows": 8191
+    }
+   },
+   "C3": {
+    "passed": true,
+    "detail": {
+     "2012": {
+      "ocf": 0.8705556738343624,
+      "rev": 0.8188205237385565
+     },
+     "2013": {
+      "ocf": 0.8800848630200167,
+      "rev": 0.8299972327276082
+     },
+     "2014": {
+      "ocf": 0.9010464629552114,
+      "rev": 0.8380912515696944
+     },
+     "2015": {
+      "ocf": 0.9034749034749034,
+      "rev": 0.840104079234514
+     },
+     "2016": {
+      "ocf": 0.9083735203857957,
+      "rev": 0.8463831652783866
+     },
+     "2017": {
+      "ocf": 0.8908378885534797,
+      "rev": 0.8336460797911398
+     },
+     "2018": {
+      "ocf": 0.886752801992528,
+      "rev": 0.8307129514321295
+     },
+     "2019": {
+      "ocf": 0.8882606988614056,
+      "rev": 0.8647820965842167
+     },
+     "2020": {
+      "ocf": 0.8774498411960647,
+      "rev": 0.8560694089394996
+     },
+     "2021": {
+      "ocf": 0.8116297573266145,
+      "rev": 0.7962471820713434
+     }
+    }
+   },
+   "C4": {
+    "passed": true,
+    "detail": {
+     "sp_pairs": 92538,
+     "sp_known": 92404,
+     "sp_unknown": 134,
+     "sp_bound": 1113,
+     "sp_bound_split": 190,
+     "sp_adjusted": 1909,
+     "sp_adjusted_in_bound": 1719,
+     "unknown_share": 0.0014480537725042686,
+     "bound_share": 0.014101121163585991,
+     "split_adjusted_in_bound": 0.9004714510214772
+    }
+   },
+   "C5": {
+    "passed": true,
+    "detail": {
+     "start": "2012-07-31",
+     "in_run_start_index": 30,
+     "start_index": 30,
+     "below_65": [],
+     "min_after_start": 0.667621776504298
+    }
+   },
+   "C6": {
+    "passed": true,
+    "status": "PASS",
+    "detail": {
+     "exit_den": 6248,
+     "exit_cov": 4555,
+     "stay_den": 82394,
+     "stay_cov": 61053,
+     "exit_restored_den": 944,
+     "exit_restored_cov": 802,
+     "gap": 0.011955130833992578,
+     "censored_reviews": 23,
+     "censored_from": "2020-01-31",
+     "censored_to": "2021-11-30"
+    }
+   },
+   "C7": {
+    "passed": true,
+    "status": "PASS",
+    "detail": {
+     "den_vendor": 112337,
+     "cov_vendor": 81939,
+     "den_restored": 4296,
+     "cov_restored": 3571,
+     "gap": -0.10183486998559421
+    }
+   },
+   "C8": {
+    "passed": true,
+    "detail": {
+     "full_share": {
+      "B1": 1.0,
+      "VB1": 1.0,
+      "B0": 1.0,
+      "B2_20261121": 1.0,
+      "B2_20261122": 1.0,
+      "B2_20261123": 1.0,
+      "B2_20261124": 1.0,
+      "B2_20261125": 1.0,
+      "RND_20261131": 1.0,
+      "RND_20261132": 1.0,
+      "RND_20261133": 1.0,
+      "RND_20261134": 1.0,
+      "RND_20261135": 1.0,
+      "MOM": 1.0
+     },
+     "beta_match_rate": 1.0,
+     "beta_attempted": 1234,
+     "beta_matched": 1234
+    }
+   },
+   "C9": {
+    "passed": true,
+    "detail": {
+     "books": 19
+    }
+   },
+   "C10": {
+    "passed": true,
+    "detail": {
+     "subperiod_A_reviews": 42,
+     "subperiod_B_reviews": 71
+    }
+   }
+  },
+  "reported": {
+   "start": "2012-07-31",
+   "years": {
+    "2010": {
+     "eligible_mean": 815.2,
+     "financial_removed_share": 0.1283991003884686,
+     "fin_unknown_share": 0.36840253342716395,
+     "joint_coverage": 0.15294393619516772,
+     "joint_coverage_known_non_financial": 0.24215413184772516,
+     "identity_share": 0.679922306276835,
+     "pass_share": 0.05043396669012432,
+     "nsi_coverage": 0.16772226131832044,
+     "vendor_universe_coverage": 0.1446099912357581,
+     "vendor_coverage": 0.1446099912357581,
+     "restored_coverage": 0.2764378478664193,
+     "restored_den": 539,
+     "exit24_coverage": 0.12393162393162394,
+     "stay24_coverage": 0.1546289401836684,
+     "exit24_den": 468,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 914,
+      "Chems": 235,
+      "Durbl": 152,
+      "Enrgy": 545,
+      "Hlth": 496,
+      "Manuf": 726,
+      "NoDur": 373,
+      "Other": 763,
+      "Shops": 679,
+      "Telcm": 193,
+      "Unclassified": 3141,
+      "Utils": 309
+     },
+     "ff12_pass": {
+      "BusEq": 99,
+      "Chems": 7,
+      "Enrgy": 10,
+      "Hlth": 116,
+      "Manuf": 27,
+      "NoDur": 22,
+      "Other": 40,
+      "Shops": 83,
+      "Telcm": 16,
+      "Utils": 10
+     },
+     "ff12_b1": {},
+     "ff12_fin_removed": {
+      "Money": 1256
+     },
+     "os_quantiles": [
+      -0.219272,
+      -0.037841,
+      -0.011794,
+      -0.001218,
+      0.025252,
+      0.05526,
+      0.143599
+     ],
+     "growth_quantiles": [
+      -0.534484,
+      -0.307065,
+      -0.170983,
+      -0.053533,
+      0.029259,
+      0.104096,
+      0.517035
+     ],
+     "nsi_reasons": {
+      "None": 1430,
+      "bound": 39,
+      "cover_after_decision": 7,
+      "no_fresh_shares": 197,
+      "no_identity": 3131,
+      "no_prior_count": 3708,
+      "split_unknown": 14
+     },
+     "ocf_reasons": {
+      "None": 3280,
+      "no_annual_report": 2064,
+      "no_identity": 3131,
+      "no_ocf": 40,
+      "period_not_before_filing": 11
+     },
+     "rev_reasons": {
+      "None": 3081,
+      "no_annual_report": 2064,
+      "no_current_revenue": 239,
+      "no_identity": 3131,
+      "period_not_before_filing": 11
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 18,
+      "contested_prefix": 18
+     },
+     "b1_entries": 0,
+     "b1_distinct": null
+    },
+    "2011": {
+     "eligible_mean": 943.9,
+     "financial_removed_share": 0.1760395515140814,
+     "fin_unknown_share": 0.10671809707489553,
+     "joint_coverage": 0.4674809814636237,
+     "joint_coverage_known_non_financial": 0.5233297349166367,
+     "identity_share": 0.9120685088726053,
+     "pass_share": 0.38358512804028716,
+     "nsi_coverage": 0.5182685095896282,
+     "vendor_universe_coverage": 0.4657976560631428,
+     "vendor_coverage": 0.4657976560631428,
+     "restored_coverage": 0.4819773429454171,
+     "restored_den": 971,
+     "exit24_coverage": 0.34513274336283184,
+     "stay24_coverage": 0.47536496350364965,
+     "exit24_den": 565,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 1531,
+      "Chems": 381,
+      "Durbl": 285,
+      "Enrgy": 717,
+      "Hlth": 757,
+      "Manuf": 1160,
+      "NoDur": 557,
+      "Other": 1227,
+      "Shops": 1082,
+      "Telcm": 274,
+      "Unclassified": 996,
+      "Utils": 366
+     },
+     "ff12_pass": {
+      "BusEq": 706,
+      "Chems": 199,
+      "Durbl": 102,
+      "Enrgy": 277,
+      "Hlth": 402,
+      "Manuf": 516,
+      "NoDur": 232,
+      "Other": 423,
+      "Shops": 555,
+      "Telcm": 84,
+      "Utils": 84
+     },
+     "ff12_b1": {},
+     "ff12_fin_removed": {
+      "Money": 1994
+     },
+     "os_quantiles": [
+      -0.154892,
+      -0.02708,
+      -0.010255,
+      0.000982,
+      0.032902,
+      0.064905,
+      0.132175
+     ],
+     "growth_quantiles": [
+      -0.273629,
+      -0.032632,
+      0.024169,
+      0.091344,
+      0.2023,
+      0.352712,
+      0.957382
+     ],
+     "nsi_reasons": {
+      "None": 4837,
+      "bound": 116,
+      "bound_split": 4,
+      "cover_after_decision": 5,
+      "no_fresh_shares": 516,
+      "no_identity": 996,
+      "no_prior_count": 2855,
+      "split_unknown": 4
+     },
+     "ocf_reasons": {
+      "None": 7079,
+      "no_annual_report": 1031,
+      "no_identity": 996,
+      "no_ocf": 64,
+      "period_not_before_filing": 25,
+      "stale": 138
+     },
+     "rev_reasons": {
+      "None": 6590,
+      "no_annual_report": 1031,
+      "no_current_revenue": 553,
+      "no_identity": 996,
+      "period_not_before_filing": 25,
+      "stale": 138
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 31,
+      "contested_prefix": 17
+     },
+     "b1_entries": 0,
+     "b1_distinct": null
+    },
+    "2012": {
+     "eligible_mean": 955.7,
+     "financial_removed_share": 0.18119986048133938,
+     "fin_unknown_share": 0.08306709265175719,
+     "joint_coverage": 0.7038338658146965,
+     "joint_coverage_known_non_financial": 0.767595818815331,
+     "identity_share": 0.9319846529473317,
+     "pass_share": 0.6345047923322684,
+     "nsi_coverage": 0.7663471778487753,
+     "vendor_universe_coverage": 0.6976580796252927,
+     "vendor_coverage": 0.6976580796252927,
+     "restored_coverage": 0.7658823529411765,
+     "restored_den": 850,
+     "exit24_coverage": 0.7932816537467701,
+     "stay24_coverage": 0.6999888925913584,
+     "exit24_den": 387,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 1592,
+      "Chems": 374,
+      "Durbl": 286,
+      "Enrgy": 690,
+      "Hlth": 835,
+      "Manuf": 1155,
+      "NoDur": 573,
+      "Other": 1288,
+      "Shops": 1178,
+      "Telcm": 312,
+      "Unclassified": 780,
+      "Utils": 327
+     },
+     "ff12_pass": {
+      "BusEq": 1113,
+      "Chems": 300,
+      "Durbl": 193,
+      "Enrgy": 365,
+      "Hlth": 608,
+      "Manuf": 946,
+      "NoDur": 419,
+      "Other": 863,
+      "Shops": 861,
+      "Telcm": 145,
+      "Utils": 145
+     },
+     "ff12_b1": {
+      "BusEq": 9,
+      "Chems": 5,
+      "Enrgy": 3,
+      "Hlth": 18,
+      "Manuf": 1,
+      "NoDur": 3,
+      "Other": 16,
+      "Shops": 29,
+      "Telcm": 6
+     },
+     "ff12_fin_removed": {
+      "Money": 2078
+     },
+     "os_quantiles": [
+      -0.173115,
+      -0.023572,
+      -0.008307,
+      0.005232,
+      0.034959,
+      0.072082,
+      0.171353
+     ],
+     "growth_quantiles": [
+      -0.125824,
+      0.008107,
+      0.056308,
+      0.116101,
+      0.215254,
+      0.325266,
+      0.82222
+     ],
+     "nsi_reasons": {
+      "None": 7196,
+      "bound": 137,
+      "bound_split": 37,
+      "cover_after_decision": 5,
+      "no_fresh_shares": 607,
+      "no_identity": 780,
+      "no_prior_count": 617,
+      "split_unknown": 11
+     },
+     "ocf_reasons": {
+      "None": 8118,
+      "no_annual_report": 255,
+      "no_identity": 780,
+      "no_ocf": 146,
+      "period_not_before_filing": 13,
+      "stale": 78
+     },
+     "rev_reasons": {
+      "None": 7655,
+      "no_annual_report": 255,
+      "no_current_revenue": 578,
+      "no_identity": 780,
+      "no_same_filing_comparative": 31,
+      "period_not_before_filing": 13,
+      "stale": 78
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 55,
+      "contested_prefix": 44
+     },
+     "b1_entries": 21,
+     "b1_distinct": 21
+    },
+    "2013": {
+     "eligible_mean": 1104.6,
+     "financial_removed_share": 0.18211995473406262,
+     "fin_unknown_share": 0.07905174799372752,
+     "joint_coverage": 0.7389539710358823,
+     "joint_coverage_known_non_financial": 0.8023838141025641,
+     "identity_share": 0.9353451527725387,
+     "pass_share": 0.567290840328383,
+     "nsi_coverage": 0.7984503274605663,
+     "vendor_universe_coverage": 0.7309353963629056,
+     "vendor_coverage": 0.7309353963629056,
+     "restored_coverage": 0.8288288288288288,
+     "restored_den": 888,
+     "exit24_coverage": 0.8006535947712419,
+     "stay24_coverage": 0.7352624890018574,
+     "exit24_den": 612,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 1796,
+      "Chems": 436,
+      "Durbl": 324,
+      "Enrgy": 766,
+      "Hlth": 943,
+      "Manuf": 1321,
+      "NoDur": 648,
+      "Other": 1531,
+      "Shops": 1379,
+      "Telcm": 345,
+      "Unclassified": 857,
+      "Utils": 495
+     },
+     "ff12_pass": {
+      "BusEq": 1153,
+      "Chems": 271,
+      "Durbl": 180,
+      "Enrgy": 384,
+      "Hlth": 593,
+      "Manuf": 934,
+      "NoDur": 404,
+      "Other": 950,
+      "Shops": 1041,
+      "Telcm": 179,
+      "Utils": 61
+     },
+     "ff12_b1": {
+      "BusEq": 27,
+      "Chems": 8,
+      "Durbl": 20,
+      "Enrgy": 4,
+      "Hlth": 6,
+      "Manuf": 27,
+      "NoDur": 7,
+      "Other": 19,
+      "Shops": 50,
+      "Telcm": 12
+     },
+     "ff12_fin_removed": {
+      "Money": 2414
+     },
+     "os_quantiles": [
+      -0.189117,
+      -0.032168,
+      -0.010969,
+      -0.000391,
+      0.024921,
+      0.057858,
+      0.138437
+     ],
+     "growth_quantiles": [
+      -0.176824,
+      -0.044645,
+      0.009628,
+      0.070001,
+      0.152808,
+      0.270732,
+      1.224271
+     ],
+     "nsi_reasons": {
+      "None": 8656,
+      "bound": 100,
+      "bound_split": 5,
+      "cover_after_decision": 3,
+      "no_fresh_shares": 756,
+      "no_identity": 857,
+      "no_prior_count": 445,
+      "split_unknown": 19
+     },
+     "ocf_reasons": {
+      "None": 9541,
+      "no_annual_report": 263,
+      "no_identity": 857,
+      "no_ocf": 129,
+      "period_not_before_filing": 2,
+      "stale": 49
+     },
+     "rev_reasons": {
+      "None": 8998,
+      "no_annual_report": 263,
+      "no_current_revenue": 647,
+      "no_identity": 857,
+      "no_same_filing_comparative": 25,
+      "period_not_before_filing": 2,
+      "stale": 49
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 47,
+      "contested_prefix": 73,
+      "multi_class_ticker": 36
+     },
+     "b1_entries": 25,
+     "b1_distinct": 39
+    },
+    "2014": {
+     "eligible_mean": 1231.4,
+     "financial_removed_share": 0.1916491845435474,
+     "fin_unknown_share": 0.0695688572624529,
+     "joint_coverage": 0.737965676015069,
+     "joint_coverage_known_non_financial": 0.7931437826165197,
+     "identity_share": 0.9437639575015226,
+     "pass_share": 0.5666806195060695,
+     "nsi_coverage": 0.8056927584763499,
+     "vendor_universe_coverage": 0.7301615961000271,
+     "vendor_coverage": 0.7301615961000271,
+     "restored_coverage": 0.8375576036866359,
+     "restored_den": 868,
+     "exit24_coverage": 0.8114169215086646,
+     "stay24_coverage": 0.7313936519518424,
+     "exit24_den": 981,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2045,
+      "Chems": 484,
+      "Durbl": 340,
+      "Enrgy": 799,
+      "Hlth": 1047,
+      "Manuf": 1391,
+      "NoDur": 707,
+      "Other": 1715,
+      "Shops": 1500,
+      "Telcm": 365,
+      "Unclassified": 831,
+      "Utils": 721
+     },
+     "ff12_pass": {
+      "BusEq": 1303,
+      "Chems": 334,
+      "Durbl": 252,
+      "Enrgy": 379,
+      "Hlth": 581,
+      "Manuf": 922,
+      "NoDur": 420,
+      "Other": 1087,
+      "Shops": 1059,
+      "Telcm": 156,
+      "Utils": 276
+     },
+     "ff12_b1": {
+      "BusEq": 38,
+      "Chems": 7,
+      "Durbl": 12,
+      "Enrgy": 19,
+      "Hlth": 10,
+      "Manuf": 21,
+      "NoDur": 8,
+      "Other": 39,
+      "Shops": 14,
+      "Telcm": 10,
+      "Utils": 2
+     },
+     "ff12_fin_removed": {
+      "Money": 2832
+     },
+     "os_quantiles": [
+      -0.222738,
+      -0.036745,
+      -0.011098,
+      0.000737,
+      0.027485,
+      0.05643,
+      0.128733
+     ],
+     "growth_quantiles": [
+      -0.192576,
+      -0.035045,
+      0.009877,
+      0.061315,
+      0.131238,
+      0.26056,
+      0.935447
+     ],
+     "nsi_reasons": {
+      "None": 9624,
+      "bound": 64,
+      "bound_split": 6,
+      "cover_after_decision": 1,
+      "no_fresh_shares": 843,
+      "no_identity": 831,
+      "no_prior_count": 569,
+      "split_unknown": 7
+     },
+     "ocf_reasons": {
+      "None": 10763,
+      "no_annual_report": 213,
+      "no_identity": 831,
+      "no_ocf": 103,
+      "period_not_before_filing": 22,
+      "stale": 13
+     },
+     "rev_reasons": {
+      "None": 10011,
+      "no_annual_report": 213,
+      "no_current_revenue": 737,
+      "no_identity": 831,
+      "no_same_filing_comparative": 30,
+      "period_not_before_filing": 22,
+      "prior_not_positive": 88,
+      "stale": 13
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 54,
+      "contested_prefix": 80,
+      "multi_class_ticker": 36
+     },
+     "b1_entries": 21,
+     "b1_distinct": 36
+    },
+    "2015": {
+     "eligible_mean": 1251.3,
+     "financial_removed_share": 0.2065796483750666,
+     "fin_unknown_share": 0.0757092496222931,
+     "joint_coverage": 0.7474399865704213,
+     "joint_coverage_known_non_financial": 0.8086632764257174,
+     "identity_share": 0.940463505594033,
+     "pass_share": 0.5984555984555985,
+     "nsi_coverage": 0.814420010072184,
+     "vendor_universe_coverage": 0.740839322154201,
+     "vendor_coverage": 0.740839322154201,
+     "restored_coverage": 0.8631415241057543,
+     "restored_den": 643,
+     "exit24_coverage": 0.7606837606837606,
+     "stay24_coverage": 0.7461559709050732,
+     "exit24_den": 1053,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2078,
+      "Chems": 464,
+      "Durbl": 316,
+      "Enrgy": 694,
+      "Hlth": 1193,
+      "Manuf": 1269,
+      "NoDur": 738,
+      "Other": 1738,
+      "Shops": 1469,
+      "Telcm": 341,
+      "Unclassified": 902,
+      "Utils": 712
+     },
+     "ff12_pass": {
+      "BusEq": 1501,
+      "Chems": 271,
+      "Durbl": 248,
+      "Enrgy": 362,
+      "Hlth": 621,
+      "Manuf": 888,
+      "NoDur": 432,
+      "Other": 1177,
+      "Shops": 1070,
+      "Telcm": 150,
+      "Utils": 410
+     },
+     "ff12_b1": {
+      "BusEq": 43,
+      "Chems": 6,
+      "Durbl": 20,
+      "Enrgy": 5,
+      "Hlth": 6,
+      "Manuf": 20,
+      "NoDur": 2,
+      "Other": 29,
+      "Shops": 37,
+      "Utils": 12
+     },
+     "ff12_fin_removed": {
+      "Money": 3102
+     },
+     "os_quantiles": [
+      -0.297172,
+      -0.043996,
+      -0.009823,
+      0.002701,
+      0.029546,
+      0.058078,
+      0.132264
+     ],
+     "growth_quantiles": [
+      -0.212785,
+      -0.029732,
+      0.019645,
+      0.067738,
+      0.146563,
+      0.299026,
+      1.221925
+     ],
+     "nsi_reasons": {
+      "None": 9703,
+      "bound": 129,
+      "bound_split": 18,
+      "no_fresh_shares": 843,
+      "no_identity": 894,
+      "no_prior_count": 313,
+      "split_unknown": 14
+     },
+     "ocf_reasons": {
+      "None": 10772,
+      "no_annual_report": 137,
+      "no_identity": 894,
+      "no_ocf": 72,
+      "period_not_before_filing": 22,
+      "stale": 17
+     },
+     "rev_reasons": {
+      "None": 10017,
+      "no_annual_report": 137,
+      "no_current_revenue": 667,
+      "no_identity": 894,
+      "no_same_filing_comparative": 42,
+      "period_not_before_filing": 22,
+      "prior_not_positive": 118,
+      "stale": 17
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 89,
+      "contested_prefix": 99,
+      "multi_class_ticker": 35
+     },
+     "b1_entries": 22,
+     "b1_distinct": 36
+    },
+    "2016": {
+     "eligible_mean": 1210.2,
+     "financial_removed_share": 0.21463985676904007,
+     "fin_unknown_share": 0.07338886453309952,
+     "joint_coverage": 0.7490574309513371,
+     "joint_coverage_known_non_financial": 0.8083838001514004,
+     "identity_share": 0.9423633108387275,
+     "pass_share": 0.44366505918456817,
+     "nsi_coverage": 0.8149057430951337,
+     "vendor_universe_coverage": 0.744882176326085,
+     "vendor_coverage": 0.744882176326085,
+     "restored_coverage": 0.8599033816425121,
+     "restored_den": 414,
+     "exit24_coverage": 0.7020833333333333,
+     "stay24_coverage": 0.7533748204882719,
+     "exit24_den": 960,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2065,
+      "Chems": 451,
+      "Durbl": 312,
+      "Enrgy": 690,
+      "Hlth": 1066,
+      "Manuf": 1206,
+      "NoDur": 736,
+      "Other": 1708,
+      "Shops": 1348,
+      "Telcm": 316,
+      "Unclassified": 837,
+      "Utils": 670
+     },
+     "ff12_pass": {
+      "BusEq": 1200,
+      "Chems": 107,
+      "Durbl": 156,
+      "Enrgy": 81,
+      "Hlth": 556,
+      "Manuf": 438,
+      "NoDur": 357,
+      "Other": 994,
+      "Shops": 865,
+      "Telcm": 144,
+      "Utils": 162
+     },
+     "ff12_b1": {
+      "BusEq": 35,
+      "Durbl": 13,
+      "Manuf": 6,
+      "NoDur": 15,
+      "Other": 32,
+      "Shops": 77,
+      "Telcm": 1,
+      "Utils": 1
+     },
+     "ff12_fin_removed": {
+      "Money": 3117
+     },
+     "os_quantiles": [
+      -0.273343,
+      -0.039051,
+      -0.007369,
+      0.008341,
+      0.033104,
+      0.064613,
+      0.168405
+     ],
+     "growth_quantiles": [
+      -0.45949,
+      -0.141288,
+      -0.045731,
+      0.02776,
+      0.105636,
+      0.234527,
+      1.136923
+     ],
+     "nsi_reasons": {
+      "None": 9294,
+      "bound": 85,
+      "bound_split": 56,
+      "no_fresh_shares": 849,
+      "no_identity": 837,
+      "no_prior_count": 272,
+      "split_unknown": 12
+     },
+     "ocf_reasons": {
+      "None": 10360,
+      "no_annual_report": 94,
+      "no_identity": 837,
+      "no_ocf": 82,
+      "period_not_before_filing": 9,
+      "stale": 23
+     },
+     "rev_reasons": {
+      "None": 9653,
+      "no_annual_report": 94,
+      "no_current_revenue": 639,
+      "no_identity": 837,
+      "no_same_filing_comparative": 31,
+      "period_not_before_filing": 9,
+      "prior_not_positive": 119,
+      "stale": 23
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 122,
+      "contested_prefix": 128,
+      "multi_class_ticker": 24
+     },
+     "b1_entries": 24,
+     "b1_distinct": 37
+    },
+    "2017": {
+     "eligible_mean": 1303.4,
+     "financial_removed_share": 0.21635445304008696,
+     "fin_unknown_share": 0.08435995757526311,
+     "joint_coverage": 0.7362323570204781,
+     "joint_coverage_known_non_financial": 0.8040630847367014,
+     "identity_share": 0.9338916949044179,
+     "pass_share": 0.4838867585869299,
+     "nsi_coverage": 0.7953822305621278,
+     "vendor_universe_coverage": 0.7347760442878711,
+     "vendor_coverage": 0.7347760442878711,
+     "restored_coverage": 0.7880597014925373,
+     "restored_den": 335,
+     "exit24_coverage": 0.6774193548387096,
+     "stay24_coverage": 0.7408874801901744,
+     "exit24_den": 899,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2220,
+      "Chems": 484,
+      "Durbl": 335,
+      "Enrgy": 733,
+      "Hlth": 1228,
+      "Manuf": 1263,
+      "NoDur": 714,
+      "Other": 1965,
+      "Shops": 1333,
+      "Telcm": 294,
+      "Unclassified": 1034,
+      "Utils": 654
+     },
+     "ff12_pass": {
+      "BusEq": 1477,
+      "Chems": 166,
+      "Durbl": 175,
+      "Enrgy": 48,
+      "Hlth": 690,
+      "Manuf": 577,
+      "NoDur": 359,
+      "Other": 1206,
+      "Shops": 873,
+      "Telcm": 133,
+      "Utils": 227
+     },
+     "ff12_b1": {
+      "BusEq": 34,
+      "Durbl": 1,
+      "Hlth": 5,
+      "Manuf": 12,
+      "NoDur": 5,
+      "Other": 56,
+      "Shops": 67
+     },
+     "ff12_fin_removed": {
+      "Money": 3384
+     },
+     "os_quantiles": [
+      -0.282362,
+      -0.042861,
+      -0.010947,
+      -1.4e-05,
+      0.020934,
+      0.045122,
+      0.120847
+     ],
+     "growth_quantiles": [
+      -0.45569,
+      -0.095309,
+      -0.0183,
+      0.038313,
+      0.121571,
+      0.278079,
+      1.519867
+     ],
+     "nsi_reasons": {
+      "None": 9749,
+      "bound": 139,
+      "bound_split": 17,
+      "no_fresh_shares": 960,
+      "no_identity": 1034,
+      "no_prior_count": 340,
+      "split_unknown": 18
+     },
+     "ocf_reasons": {
+      "None": 10919,
+      "no_annual_report": 180,
+      "no_identity": 1034,
+      "no_ocf": 47,
+      "period_not_before_filing": 19,
+      "stale": 58
+     },
+     "rev_reasons": {
+      "None": 10218,
+      "no_annual_report": 180,
+      "no_current_revenue": 614,
+      "no_identity": 1034,
+      "no_same_filing_comparative": 63,
+      "period_not_before_filing": 19,
+      "prior_not_positive": 71,
+      "stale": 58
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 161,
+      "contested_prefix": 125,
+      "multi_class_ticker": 35
+     },
+     "b1_entries": 25,
+     "b1_distinct": 35
+    },
+    "2018": {
+     "eligible_mean": 1359.4,
+     "financial_removed_share": 0.21240728253540123,
+     "fin_unknown_share": 0.0911425902864259,
+     "joint_coverage": 0.7324097135740971,
+     "joint_coverage_known_non_financial": 0.8058576689218121,
+     "identity_share": 0.9282167596395513,
+     "pass_share": 0.6091998754669987,
+     "nsi_coverage": 0.7884495641344956,
+     "vendor_universe_coverage": 0.732568332138019,
+     "vendor_coverage": 0.732568332138019,
+     "restored_coverage": 0.725752508361204,
+     "restored_den": 299,
+     "exit24_coverage": 0.6378698224852071,
+     "stay24_coverage": 0.7390652336915771,
+     "exit24_den": 845,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2351,
+      "Chems": 493,
+      "Durbl": 337,
+      "Enrgy": 732,
+      "Hlth": 1443,
+      "Manuf": 1331,
+      "NoDur": 685,
+      "Other": 2061,
+      "Shops": 1283,
+      "Telcm": 308,
+      "Unclassified": 1171,
+      "Utils": 653
+     },
+     "ff12_pass": {
+      "BusEq": 1656,
+      "Chems": 398,
+      "Durbl": 222,
+      "Enrgy": 392,
+      "Hlth": 794,
+      "Manuf": 1071,
+      "NoDur": 371,
+      "Other": 1517,
+      "Shops": 935,
+      "Telcm": 128,
+      "Utils": 343
+     },
+     "ff12_b1": {
+      "BusEq": 29,
+      "Chems": 11,
+      "Durbl": 17,
+      "Enrgy": 11,
+      "Hlth": 3,
+      "Manuf": 11,
+      "Other": 50,
+      "Shops": 48
+     },
+     "ff12_fin_removed": {
+      "Money": 3465
+     },
+     "os_quantiles": [
+      -0.206352,
+      -0.03777,
+      -0.010552,
+      -1.3e-05,
+      0.020798,
+      0.046092,
+      0.122146
+     ],
+     "growth_quantiles": [
+      -0.240452,
+      -0.009627,
+      0.032279,
+      0.078497,
+      0.175198,
+      0.36443,
+      4.11327
+     ],
+     "nsi_reasons": {
+      "None": 10130,
+      "bound": 104,
+      "bound_split": 21,
+      "no_fresh_shares": 1120,
+      "no_identity": 1171,
+      "no_prior_count": 287,
+      "split_unknown": 15
+     },
+     "ocf_reasons": {
+      "None": 11393,
+      "no_annual_report": 185,
+      "no_identity": 1171,
+      "no_ocf": 35,
+      "period_not_before_filing": 39,
+      "stale": 25
+     },
+     "rev_reasons": {
+      "None": 10673,
+      "no_annual_report": 185,
+      "no_current_revenue": 634,
+      "no_identity": 1171,
+      "no_same_filing_comparative": 55,
+      "period_not_before_filing": 39,
+      "prior_not_positive": 66,
+      "stale": 25
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 202,
+      "contested_prefix": 101,
+      "multi_class_ticker": 36
+     },
+     "b1_entries": 18,
+     "b1_distinct": 33
+    },
+    "2019": {
+     "eligible_mean": 1347.8,
+     "financial_removed_share": 0.2125765164162493,
+     "fin_unknown_share": 0.09218688653317629,
+     "joint_coverage": 0.7452689438555163,
+     "joint_coverage_known_non_financial": 0.820949744831762,
+     "identity_share": 0.9274098806653064,
+     "pass_share": 0.6449941107184923,
+     "nsi_coverage": 0.7722811150372988,
+     "vendor_universe_coverage": 0.7439228500836853,
+     "vendor_coverage": 0.7439228500836853,
+     "restored_coverage": 0.8351063829787234,
+     "restored_den": 188,
+     "exit24_coverage": 0.6915629322268326,
+     "stay24_coverage": 0.7485014985014985,
+     "exit24_den": 723,
+     "censored": false,
+     "ff12_den": {
+      "BusEq": 2536,
+      "Chems": 493,
+      "Durbl": 314,
+      "Enrgy": 496,
+      "Hlth": 1452,
+      "Manuf": 1306,
+      "NoDur": 667,
+      "Other": 2064,
+      "Shops": 1263,
+      "Telcm": 298,
+      "Unclassified": 1174,
+      "Utils": 672
+     },
+     "ff12_pass": {
+      "BusEq": 1718,
+      "Chems": 433,
+      "Durbl": 252,
+      "Enrgy": 390,
+      "Hlth": 841,
+      "Manuf": 1094,
+      "NoDur": 346,
+      "Other": 1529,
+      "Shops": 1001,
+      "Telcm": 165,
+      "Utils": 445
+     },
+     "ff12_b1": {
+      "BusEq": 51,
+      "Chems": 9,
+      "Durbl": 8,
+      "Enrgy": 15,
+      "Hlth": 9,
+      "Manuf": 15,
+      "Other": 24,
+      "Shops": 39,
+      "Utils": 10
+     },
+     "ff12_fin_removed": {
+      "Money": 3438
+     },
+     "os_quantiles": [
+      -0.245346,
+      -0.049125,
+      -0.009638,
+      0.001202,
+      0.029316,
+      0.057866,
+      0.144322
+     ],
+     "growth_quantiles": [
+      -0.207421,
+      0.001283,
+      0.042446,
+      0.091396,
+      0.17943,
+      0.327586,
+      1.351721
+     ],
+     "nsi_reasons": {
+      "None": 9835,
+      "bound": 111,
+      "bound_split": 12,
+      "cover_after_decision": 4,
+      "no_fresh_shares": 1188,
+      "no_identity": 1174,
+      "no_prior_count": 406,
+      "split_unknown": 5
+     },
+     "ocf_reasons": {
+      "None": 11312,
+      "no_annual_report": 178,
+      "no_identity": 1174,
+      "no_ocf": 57,
+      "period_not_before_filing": 3,
+      "stale": 11
+     },
+     "rev_reasons": {
+      "None": 11013,
+      "no_annual_report": 178,
+      "no_current_revenue": 199,
+      "no_identity": 1174,
+      "no_same_filing_comparative": 118,
+      "period_not_before_filing": 3,
+      "prior_not_positive": 39,
+      "stale": 11
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 224,
+      "contested_prefix": 104,
+      "multi_class_ticker": 36
+     },
+     "b1_entries": 21,
+     "b1_distinct": 36
+    },
+    "2020": {
+     "eligible_mean": 1333.3,
+     "financial_removed_share": 0.1931875,
+     "fin_unknown_share": 0.1094585173135022,
+     "joint_coverage": 0.7416531102331707,
+     "joint_coverage_known_non_financial": 0.8328114126652749,
+     "identity_share": 0.9116875,
+     "pass_share": 0.510806414129677,
+     "nsi_coverage": 0.7610194437989,
+     "vendor_universe_coverage": 0.7396232314547018,
+     "vendor_coverage": 0.7396232314547018,
+     "restored_coverage": 0.9655172413793104,
+     "restored_den": 116,
+     "exit24_coverage": null,
+     "stay24_coverage": null,
+     "exit24_den": 0,
+     "censored": true,
+     "ff12_den": {
+      "BusEq": 2692,
+      "Chems": 435,
+      "Durbl": 299,
+      "Enrgy": 338,
+      "Hlth": 1668,
+      "Manuf": 1252,
+      "NoDur": 664,
+      "Other": 2000,
+      "Shops": 1264,
+      "Telcm": 241,
+      "Unclassified": 1413,
+      "Utils": 643
+     },
+     "ff12_pass": {
+      "BusEq": 1545,
+      "Chems": 234,
+      "Durbl": 146,
+      "Enrgy": 148,
+      "Hlth": 856,
+      "Manuf": 736,
+      "NoDur": 350,
+      "Other": 1360,
+      "Shops": 815,
+      "Telcm": 142,
+      "Utils": 262
+     },
+     "ff12_b1": {
+      "BusEq": 21,
+      "Chems": 4,
+      "Durbl": 5,
+      "Enrgy": 5,
+      "Hlth": 13,
+      "Manuf": 29,
+      "NoDur": 3,
+      "Other": 60,
+      "Shops": 21,
+      "Telcm": 10,
+      "Utils": 9
+     },
+     "ff12_fin_removed": {
+      "Money": 3091
+     },
+     "os_quantiles": [
+      -0.247738,
+      -0.063016,
+      -0.013142,
+      -0.001283,
+      0.015635,
+      0.038472,
+      0.125976
+     ],
+     "growth_quantiles": [
+      -0.300809,
+      -0.059611,
+      -0.001733,
+      0.05364,
+      0.133035,
+      0.302532,
+      1.365152
+     ],
+     "nsi_reasons": {
+      "None": 9824,
+      "bound": 126,
+      "bound_split": 7,
+      "cover_after_decision": 3,
+      "no_fresh_shares": 1182,
+      "no_identity": 1413,
+      "no_prior_count": 343,
+      "split_unknown": 11
+     },
+     "ocf_reasons": {
+      "None": 11327,
+      "no_annual_report": 161,
+      "no_identity": 1413,
+      "no_ocf": 4,
+      "stale": 4
+     },
+     "rev_reasons": {
+      "None": 11051,
+      "no_annual_report": 161,
+      "no_current_revenue": 169,
+      "no_identity": 1413,
+      "no_same_filing_comparative": 76,
+      "prior_not_positive": 35,
+      "stale": 4
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 320,
+      "contested_prefix": 83,
+      "multi_class_ticker": 36
+     },
+     "b1_entries": 30,
+     "b1_distinct": 42
+    },
+    "2021": {
+     "eligible_mean": 1675.4,
+     "financial_removed_share": 0.18161593141244778,
+     "fin_unknown_share": 0.1806789550457499,
+     "joint_coverage": 0.6847898156743137,
+     "joint_coverage_known_non_financial": 0.8358015699603464,
+     "identity_share": 0.8521352216615118,
+     "pass_share": 0.34047208593024797,
+     "nsi_coverage": 0.6991115236706007,
+     "vendor_universe_coverage": 0.6827881463643053,
+     "vendor_coverage": 0.6827881463643053,
+     "restored_coverage": 0.9097744360902256,
+     "restored_den": 133,
+     "exit24_coverage": null,
+     "stay24_coverage": null,
+     "exit24_den": 0,
+     "censored": true,
+     "ff12_den": {
+      "BusEq": 2856,
+      "Chems": 499,
+      "Durbl": 338,
+      "Enrgy": 379,
+      "Hlth": 1812,
+      "Manuf": 1387,
+      "NoDur": 679,
+      "Other": 2163,
+      "Shops": 1399,
+      "Telcm": 240,
+      "Unclassified": 2725,
+      "Utils": 605
+     },
+     "ff12_pass": {
+      "BusEq": 1474,
+      "Chems": 150,
+      "Durbl": 121,
+      "Enrgy": 41,
+      "Hlth": 736,
+      "Manuf": 461,
+      "NoDur": 311,
+      "Other": 902,
+      "Shops": 668,
+      "Telcm": 115,
+      "Utils": 156
+     },
+     "ff12_b1": {
+      "BusEq": 35,
+      "Durbl": 7,
+      "Hlth": 16,
+      "Manuf": 18,
+      "NoDur": 10,
+      "Other": 23,
+      "Shops": 31,
+      "Telcm": 25
+     },
+     "ff12_fin_removed": {
+      "Money": 3347
+     },
+     "os_quantiles": [
+      -0.249561,
+      -0.083754,
+      -0.018728,
+      -0.003985,
+      0.005983,
+      0.02755,
+      0.134475
+     ],
+     "growth_quantiles": [
+      -0.731333,
+      -0.186033,
+      -0.073251,
+      0.017917,
+      0.120636,
+      0.30556,
+      5.533124
+     ],
+     "nsi_reasons": {
+      "None": 10544,
+      "bound": 191,
+      "bound_split": 33,
+      "no_fresh_shares": 1287,
+      "no_identity": 2725,
+      "no_prior_count": 274,
+      "split_unknown": 28
+     },
+     "ocf_reasons": {
+      "None": 12241,
+      "no_annual_report": 61,
+      "no_identity": 2725,
+      "no_ocf": 54,
+      "stale": 1
+     },
+     "rev_reasons": {
+      "None": 12009,
+      "no_annual_report": 61,
+      "no_current_revenue": 194,
+      "no_identity": 2725,
+      "no_same_filing_comparative": 65,
+      "prior_not_positive": 27,
+      "stale": 1
+     },
+     "identity": {
+      "ambiguous_qc_ticker": 378,
+      "contested_prefix": 45,
+      "multi_class_ticker": 33
+     },
+     "b1_entries": 18,
+     "b1_distinct": 33
+    }
+   }
+  }
+ }
+}
