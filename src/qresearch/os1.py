@@ -18,7 +18,7 @@ BUILDER = "research/os/build_os1_sec.py"
 VERIFY = "research/os/os1_verify_comparatives.py"
 EVAL_RULES = "research/os/OS1_eval.py"
 CODE_SHA256 = {
-    HOST: "594688322074e4253d64b0e44bf98c2d3d80d6fc48ecfb8d3843375c8a9ace18",
+    HOST: "877e265430bd90014cf2b60e4c3f2df7670fe55c88b89ff298ea3944f62fa7a2",
     MODULE: "07d6b03c92ad3b4741fcb32e3e3029bcfbbcc0fba091f3ca45f3de8c6dc9592a",
     BUILDER: "d088c6bacf01a4b89d67b9e775070c9ca75f40fdb066aa907a9481f30edd7e58",
     VERIFY: "f859e9c73147c4f0d1abb4e973ca1b2345ffc4c8f6daae1ea8933c99e7b8eba9",

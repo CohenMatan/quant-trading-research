@@ -189,7 +189,8 @@ class OS1Canary(QRAlgorithm):
             except Exception:
                 ap = float("nan")
             if ap == ap and ap > 0:
-                self.px[self._row(key), col] = ap
+                r = self._row(key)                   # may grow (replace) self.px: index only after the call
+                self.px[r, col] = ap
             if not audit:
                 continue
             px = float(f.price)

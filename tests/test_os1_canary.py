@@ -105,6 +105,7 @@ def _fake_host(monkeypatch, until=date(2012, 12, 31)):
     mod = load_module(ROOT / "strategies/X807_os1_canary/main.py", "x807_test")
     a = mod.OS1Canary()
     a.qr_initialize()
+    a.px, a.mpx = a.px[:8].copy(), a.mpx[:8].copy()        # force the price matrices to grow (E807-01 defect)
     rng = np.random.default_rng(3)
     lvl = {c: 40.0 for c in range(1, 31)}
     spy = 100.0
@@ -233,9 +234,13 @@ def test_pins_and_config():
     assert man["sha256"] == P.OS1_REFERENCE_SHA256 and man["object_store_key"] == P.OS1_OBJECT_KEY
     assert man["meta"]["parent_sha256"] == rr_ucr.UCR_REFERENCE_SHA256 == P.UCR_REFERENCE_SHA256
     import OS1_configs as C
-    cfg = json.loads((ROOT / "experiments" / P.RUN / "config.json").read_text())
+    # E807-01 failed at start-up on a host plumbing defect (D280); the current configuration is the retry E807-02
+    cfg = json.loads((ROOT / "experiments" / P.RETRY / "config.json").read_text())
     experiment.validate(cfg)
-    assert cfg == C.build(P.RUN)
+    assert cfg == C.build(P.RETRY)
+    old = json.loads((ROOT / "experiments" / P.RUN / "config.json").read_text())
+    assert old["params"]["h032_spec_sha256"] == P.SPEC_SHA256 and \
+        old["params"]["os1_reference_sha256"] == P.OS1_REFERENCE_SHA256
     from qresearch.holdout import HoldoutLockedError
     for bad in (dict(cfg, experiment_id="E807-03"), dict(cfg, end="2022-06-30"),
                 dict(cfg, params=dict(cfg["params"], os1_reference_sha256="x")),
