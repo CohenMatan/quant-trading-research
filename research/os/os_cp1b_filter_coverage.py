@@ -14,6 +14,7 @@ Inputs at t, from filings filed strictly before t (values as first filed, qresea
          quarter filed at most 200 days before t; prior TTM = the four quarters before those.
          REVG = TTM revenue / prior TTM revenue - 1; FCF = TTM (operating cash flow - capex), capex tag
          PaymentsToAcquirePropertyPlantAndEquipment (sec_pit); OCF and NI TTM reported for comparison.
+  ALT  : the alternative pair, TTM operating cash flow > 0 and REVG > 0 (no capex tag needed).
   FY   : fallback definitions from the latest completed fiscal years (10-K totals) instead of rolling quarters.
 Groups: SIC of the latest filing known at t (financial sub-groups, utilities, other), FF12 for non-financials, and
 'later disappearing' (no periodic filing after 2021-06-30 in the filing index; descriptive label only).
@@ -197,6 +198,10 @@ def main():
                 c["cov_" + kk] += int(bool(v))
             joint = nsi and revg is not None and fcf is not None
             joint_fy = nsi and fy_revg is not None and fy_fcf is not None
+            joint_alt = nsi and revg is not None and ocf is not None          # alternative pair: OCF > 0, REVG > 0
+            c["cov_joint_alt"] += int(joint_alt)
+            if joint_alt:
+                c["pass_alt_given_joint"] += int(ocf > 0 and revg > 0)
             c["cov_joint_ttm"] += int(joint)
             c["cov_joint_fy"] += int(joint_fy)
             c["cov_joint_ttm_or_fy"] += int(nsi and (revg is not None or fy_revg is not None)
@@ -218,6 +223,9 @@ def main():
                 s["joint"] += int(joint)
                 if joint:
                     s["pass_both"] += int(fcf > 0 and revg > 0)
+                s["joint_alt"] += int(joint_alt)
+                if joint_alt:
+                    s["pass_alt"] += int(ocf > 0 and revg > 0)
         if i % 500 == 0:
             print(i, len(ref.ciks), flush=True)
     out = dict(meta=dict(study="OS-CP1b", decision="D276", population="ucr_sec_v1 registrants, alive, common, PIT float",
