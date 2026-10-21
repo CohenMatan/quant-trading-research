@@ -2654,3 +2654,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D274):** new direction — offensive stock-selection score (characteristics → score → Top N), offensive component first; H028 stays REJECTED; DESIGN ONLY.
 - **OS-CP1:** lessons (past SPY-beating results were defensive exposure or one episode; searches / learned weights used up the power; familiar factors exhausted); three mechanisms compared; **recommended OS-1 = Net Share Repurchase Score** (fixed rule from SEC cover-page share counts already in the Object Store; Top 15 monthly, buffer 2N); no learned score; honest caveat that no bull-specific alpha exists and OS-1 may prove value-like; exploratory gates O1–O9 with beta-matched controls and a vendor-universe shadow; canary C-OS1 without returns; ≈ 2 sessions, 3 runs, $0.
 - **Status:** STOPPED awaiting the owner (OS-CP1 §10: D270 ratification, EDP-1, OS-1, gates, run authorisation). Nothing registered, run or uploaded; H031 DRAFT; Holdout sealed.
+
+## 2026-10-21: OS-CP1 Revision 1 — quality filters for OS-1 (D276 / D277; design only; STOP)
+
+- **Owner (D276):** evaluate TTM free cash flow > 0 and TTM revenue growth > 0 as filters before the net-share-reduction rank; design only.
+- **Offline SEC coverage study** (counts only; no returns, no QuantConnect, no upload): TTM free cash flow is not reliable (capex tag gaps; 52–74% coverage, energy / telecom holes); fiscal-year operating cash flow (~99%) and fiscal-year revenue growth (~91%) are; joint coverage with NSI 78–81% from 2013 (70% in 2012); leavers 5.5 points less covered than survivors.
+- **Recommendation:** exclude financials / REITs; F-OCF (FY OCF > 0) + F-REV (FY revenue growth vs same-10-K comparative > 0); NSI rank unchanged; coverage gates G-COV1–3; decomposition books B0 / B2 with O5 extended. Caveat: revenue-growth screen may remove part of the classic buyback premium.
+- **Status:** STOPPED awaiting the owner (OS-CP1 §11.10). H032 not registered; nothing uploaded or run.
