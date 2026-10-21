@@ -1,0 +1,50 @@
+{
+ "characters": 2578688,
+ "file": "data/sec_derived/os1_sec_v1.json",
+ "meta": {
+  "counts": {
+   "annual_rows": 29844,
+   "annual_with_ocf": 29206,
+   "annual_with_rev_and_prior": 24755,
+   "ocf_ambiguous": 1,
+   "registrants": 3858,
+   "rev_no_same_filing_comparative": 5089,
+   "sic_missing": 20
+  },
+  "decision": "D278",
+  "name": "os1_sec_v1",
+  "parent": "ucr_sec_v1",
+  "parent_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82",
+  "rules": {
+   "annual_forms": [
+    "10-K",
+    "10-KT"
+   ],
+   "duration_days": [
+    350,
+    380
+   ],
+   "end_tolerance_days": 7,
+   "ocf_tags": [
+    "NetCashProvidedByUsedInOperatingActivities",
+    "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+   ],
+   "prior_end_days_before": [
+    355,
+    375
+   ],
+   "revenue_tags": [
+    "Revenues",
+    "RevenueFromContractWithCustomerExcludingAssessedTax",
+    "SalesRevenueNet",
+    "RevenueFromContractWithCustomerIncludingAssessedTax",
+    "SalesRevenueGoodsNet",
+    "SalesRevenueServicesNet",
+    "RevenuesNetOfInterestExpense"
+   ]
+  },
+  "source": "public SEC EDGAR (XBRL RSS index, companyfacts); same cache as UCR-1; H032 additions only"
+ },
+ "object_store_key": "rr/os1_sec_v1.json",
+ "sha256": "32bb0a666503e333ed20001074da687a12c557f28c85fa4b090b8b1983645b17"
+}

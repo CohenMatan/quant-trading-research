@@ -1,0 +1,350 @@
+{
+ "A1": true,
+ "A2": true,
+ "criterion": {
+  "A1": "pooled 2013-2021 joint >= consecutive-filing joint - 5.0 points",
+  "A2": "every year 2013-2021 joint >= 70.0%"
+ },
+ "decision": "D278",
+ "pit_period_not_before_filing": 353,
+ "pooled_2013_2021": {
+  "consecutive_filing_joint": 79.42,
+  "same_filing_joint": 81.42
+ },
+ "study": "OS1 same-filing comparative verification",
+ "verdict": "ADEQUATE",
+ "years": {
+  "float_0.5_2B": {
+   "2010": {
+    "joint": 5.9,
+    "n": 1288,
+    "nsi": 6.29,
+    "ocf": 20.57,
+    "rev": 19.18,
+    "why": {
+     "no_annual_report": 1023,
+     "no_current_revenue": 18
+    }
+   },
+   "2011": {
+    "joint": 31.02,
+    "n": 4958,
+    "nsi": 33.76,
+    "ocf": 81.0,
+    "rev": 75.37,
+    "why": {
+     "no_annual_report": 921,
+     "no_current_revenue": 298,
+     "period_not_before_filing": 2
+    }
+   },
+   "2012": {
+    "joint": 58.8,
+    "n": 7669,
+    "nsi": 65.42,
+    "ocf": 91.43,
+    "rev": 85.8,
+    "why": {
+     "no_annual_report": 471,
+     "no_current_revenue": 438,
+     "no_same_filing_comparative": 57,
+     "period_not_before_filing": 54,
+     "prior_not_positive": 14,
+     "stale": 55
+    }
+   },
+   "2013": {
+    "joint": 78.66,
+    "n": 7778,
+    "nsi": 86.15,
+    "ocf": 97.6,
+    "rev": 90.95,
+    "why": {
+     "no_annual_report": 85,
+     "no_current_revenue": 484,
+     "no_same_filing_comparative": 44,
+     "period_not_before_filing": 18,
+     "prior_not_positive": 17,
+     "stale": 56
+    }
+   },
+   "2014": {
+    "joint": 78.42,
+    "n": 8168,
+    "nsi": 86.08,
+    "ocf": 98.68,
+    "rev": 90.98,
+    "why": {
+     "no_annual_report": 4,
+     "no_current_revenue": 604,
+     "no_same_filing_comparative": 56,
+     "period_not_before_filing": 10,
+     "prior_not_positive": 36,
+     "stale": 27
+    }
+   },
+   "2015": {
+    "joint": 80.23,
+    "n": 8437,
+    "nsi": 86.95,
+    "ocf": 98.77,
+    "rev": 91.89,
+    "why": {
+     "no_current_revenue": 548,
+     "no_same_filing_comparative": 48,
+     "period_not_before_filing": 21,
+     "prior_not_positive": 57,
+     "stale": 10
+    }
+   },
+   "2016": {
+    "joint": 79.17,
+    "n": 8267,
+    "nsi": 87.03,
+    "ocf": 98.29,
+    "rev": 91.16,
+    "why": {
+     "no_current_revenue": 589,
+     "no_same_filing_comparative": 48,
+     "period_not_before_filing": 17,
+     "prior_not_positive": 67,
+     "stale": 10
+    }
+   },
+   "2017": {
+    "joint": 77.86,
+    "n": 7760,
+    "nsi": 85.41,
+    "ocf": 98.97,
+    "rev": 91.95,
+    "why": {
+     "no_current_revenue": 488,
+     "no_same_filing_comparative": 69,
+     "period_not_before_filing": 2,
+     "prior_not_positive": 41,
+     "stale": 25
+    }
+   },
+   "2018": {
+    "joint": 76.57,
+    "n": 7717,
+    "nsi": 85.01,
+    "ocf": 98.78,
+    "rev": 90.8,
+    "why": {
+     "no_current_revenue": 584,
+     "no_same_filing_comparative": 62,
+     "prior_not_positive": 55,
+     "stale": 9
+    }
+   },
+   "2019": {
+    "joint": 78.37,
+    "n": 7884,
+    "nsi": 84.08,
+    "ocf": 99.05,
+    "rev": 93.53,
+    "why": {
+     "no_current_revenue": 358,
+     "no_same_filing_comparative": 63,
+     "prior_not_positive": 89
+    }
+   },
+   "2020": {
+    "joint": 77.65,
+    "n": 7410,
+    "nsi": 83.01,
+    "ocf": 99.33,
+    "rev": 93.62,
+    "why": {
+     "no_current_revenue": 283,
+     "no_same_filing_comparative": 76,
+     "prior_not_positive": 106,
+     "stale": 8
+    }
+   },
+   "2021": {
+    "joint": 74.69,
+    "n": 6827,
+    "nsi": 80.68,
+    "ocf": 99.21,
+    "rev": 91.34,
+    "why": {
+     "no_current_revenue": 454,
+     "no_same_filing_comparative": 67,
+     "prior_not_positive": 68,
+     "stale": 2
+    }
+   }
+  },
+  "float_ge_2B": {
+   "2010": {
+    "joint": 30.73,
+    "n": 4312,
+    "nsi": 33.77,
+    "ocf": 78.08,
+    "rev": 73.08,
+    "why": {
+     "no_annual_report": 895,
+     "no_current_revenue": 255,
+     "period_not_before_filing": 11
+    }
+   },
+   "2011": {
+    "joint": 61.25,
+    "n": 6723,
+    "nsi": 67.56,
+    "ocf": 92.98,
+    "rev": 87.49,
+    "why": {
+     "no_annual_report": 274,
+     "no_current_revenue": 402,
+     "period_not_before_filing": 34,
+     "stale": 131
+    }
+   },
+   "2012": {
+    "joint": 77.12,
+    "n": 8334,
+    "nsi": 84.26,
+    "ocf": 96.88,
+    "rev": 91.11,
+    "why": {
+     "no_annual_report": 65,
+     "no_current_revenue": 567,
+     "no_same_filing_comparative": 20,
+     "period_not_before_filing": 15,
+     "prior_not_positive": 9,
+     "stale": 65
+    }
+   },
+   "2013": {
+    "joint": 80.07,
+    "n": 8295,
+    "nsi": 86.38,
+    "ocf": 98.08,
+    "rev": 92.63,
+    "why": {
+     "no_annual_report": 13,
+     "no_current_revenue": 564,
+     "no_same_filing_comparative": 25,
+     "period_not_before_filing": 1,
+     "prior_not_positive": 2,
+     "stale": 6
+    }
+   },
+   "2014": {
+    "joint": 79.68,
+    "n": 9435,
+    "nsi": 85.66,
+    "ocf": 98.56,
+    "rev": 92.58,
+    "why": {
+     "no_annual_report": 13,
+     "no_current_revenue": 543,
+     "no_same_filing_comparative": 24,
+     "period_not_before_filing": 29,
+     "prior_not_positive": 89,
+     "stale": 2
+    }
+   },
+   "2015": {
+    "joint": 80.05,
+    "n": 10635,
+    "nsi": 87.32,
+    "ocf": 98.95,
+    "rev": 92.3,
+    "why": {
+     "no_annual_report": 1,
+     "no_current_revenue": 623,
+     "no_same_filing_comparative": 41,
+     "period_not_before_filing": 40,
+     "prior_not_positive": 109,
+     "stale": 5
+    }
+   },
+   "2016": {
+    "joint": 79.08,
+    "n": 10946,
+    "nsi": 87.25,
+    "ocf": 98.69,
+    "rev": 90.81,
+    "why": {
+     "no_current_revenue": 818,
+     "no_same_filing_comparative": 37,
+     "period_not_before_filing": 16,
+     "prior_not_positive": 118,
+     "stale": 17
+    }
+   },
+   "2017": {
+    "joint": 80.74,
+    "n": 10067,
+    "nsi": 87.26,
+    "ocf": 98.95,
+    "rev": 92.51,
+    "why": {
+     "no_current_revenue": 586,
+     "no_same_filing_comparative": 43,
+     "period_not_before_filing": 29,
+     "prior_not_positive": 68,
+     "stale": 28
+    }
+   },
+   "2018": {
+    "joint": 80.97,
+    "n": 10901,
+    "nsi": 87.0,
+    "ocf": 98.66,
+    "rev": 92.3,
+    "why": {
+     "no_current_revenue": 664,
+     "no_same_filing_comparative": 47,
+     "period_not_before_filing": 49,
+     "prior_not_positive": 42,
+     "stale": 37
+    }
+   },
+   "2019": {
+    "joint": 83.33,
+    "n": 11615,
+    "nsi": 87.06,
+    "ocf": 99.0,
+    "rev": 95.84,
+    "why": {
+     "no_current_revenue": 289,
+     "no_same_filing_comparative": 136,
+     "period_not_before_filing": 5,
+     "prior_not_positive": 37,
+     "stale": 16
+    }
+   },
+   "2020": {
+    "joint": 84.44,
+    "n": 11499,
+    "nsi": 86.65,
+    "ocf": 99.53,
+    "rev": 97.46,
+    "why": {
+     "no_current_revenue": 162,
+     "no_same_filing_comparative": 111,
+     "prior_not_positive": 14,
+     "stale": 5
+    }
+   },
+   "2021": {
+    "joint": 83.6,
+    "n": 10474,
+    "nsi": 85.91,
+    "ocf": 99.26,
+    "rev": 97.32,
+    "why": {
+     "no_current_revenue": 201,
+     "no_same_filing_comparative": 56,
+     "prior_not_positive": 20,
+     "stale": 4
+    }
+   }
+  }
+ }
+}
