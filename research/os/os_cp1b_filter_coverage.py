@@ -15,6 +15,7 @@ Inputs at t, from filings filed strictly before t (values as first filed, qresea
          REVG = TTM revenue / prior TTM revenue - 1; FCF = TTM (operating cash flow - capex), capex tag
          PaymentsToAcquirePropertyPlantAndEquipment (sec_pit); OCF and NI TTM reported for comparison.
   ALT  : the alternative pair, TTM operating cash flow > 0 and REVG > 0 (no capex tag needed).
+  FY-ALT: the same pair from the latest two completed fiscal years (10-K totals).
   FY   : fallback definitions from the latest completed fiscal years (10-K totals) instead of rolling quarters.
 Groups: SIC of the latest filing known at t (financial sub-groups, utilities, other), FF12 for non-financials, and
 'later disappearing' (no periodic filing after 2021-06-30 in the filing index; descriptive label only).
@@ -200,6 +201,16 @@ def main():
             joint_fy = nsi and fy_revg is not None and fy_fcf is not None
             joint_alt = nsi and revg is not None and ocf is not None          # alternative pair: OCF > 0, REVG > 0
             c["cov_joint_alt"] += int(joint_alt)
+            fy_ocf_ok = fy_ocf is not None
+            c["cov_fy_ocf"] += int(fy_ocf_ok)
+            joint_fy_alt = nsi and fy_revg is not None and fy_ocf_ok        # fiscal-year version of the pair
+            c["cov_joint_fy_alt"] += int(joint_fy_alt)
+            if joint_fy_alt:
+                c["pass_fy_alt_given_joint"] += int(fy_ocf > 0 and fy_revg > 0)
+            if fy_ocf_ok:
+                c["pass_fy_ocf"] += int(fy_ocf > 0)
+            if fy_revg is not None:
+                c["pass_fy_revg"] += int(fy_revg > 0)
             if joint_alt:
                 c["pass_alt_given_joint"] += int(ocf > 0 and revg > 0)
             c["cov_joint_ttm"] += int(joint)
@@ -224,6 +235,9 @@ def main():
                 if joint:
                     s["pass_both"] += int(fcf > 0 and revg > 0)
                 s["joint_alt"] += int(joint_alt)
+                s["joint_fy_alt"] += int(joint_fy_alt)
+                if joint_fy_alt:
+                    s["pass_fy_alt"] += int(fy_ocf > 0 and fy_revg > 0)
                 if joint_alt:
                     s["pass_alt"] += int(ocf > 0 and revg > 0)
         if i % 500 == 0:
