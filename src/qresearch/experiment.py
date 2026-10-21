@@ -730,7 +730,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806", "X807") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
@@ -771,6 +771,23 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params") != rr_ucr.run_params()):
             raise ConfigError("X806 runs carry the pinned UCR-1 protocol, code and SEC-object fingerprints "
                               "(qresearch.rr_ucr)")
+    if cfg["strategy_id"] == "X807":
+        # H032 / OS-1 revised canary C-OS1 (owner D278, research/os/H032_spec.md): ONE aggregate-only infrastructure run
+        # on the default build (E807-01; E807-02 only as the documented retry), 2009-05-01 .. 2021-12-31 without
+        # warm-up, the approved filters without the SEC layer, the pinned spec / code / both SEC objects
+        from . import os1
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["split"] != "AUDIT" or (cfg["start"], cfg["end"]) != ("2009-05-01", "2021-12-31")
+                or cfg.get("warmup_start") or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"
+                or cfg["experiment_id"] not in (os1.RUN, os1.RETRY) or cfg.get("programme") != os1.PROGRAMME
+                or cfg.get("hypothesis_id") != "H032" or os1.DECISION not in str(cfg.get("owner_approval_required") or "")):
+            raise ConfigError("X807 is the ONE H032 canary C-OS1 (E807-01, retry E807-02): AUDIT 2009-05-01 .. "
+                              "2021-12-31, no warm-up, >= $2B / >= $5 / ADV20 >= $5M without the SEC layer, default "
+                              "build, programme OS, hypothesis H032, owner approval D278")
+        if (os1.SPEC_SHA256 is None or os1.OS1_REFERENCE_SHA256 is None or cfg.get("params") != os1.run_params()):
+            raise ConfigError("X807 runs carry the pinned H032 spec, code and SEC-object fingerprints (qresearch.os1)")
     if cfg["strategy_id"] == "X805":
         # SCA-1 SEC classification audit (owner D267, research/rr/sec_classification/SCA_protocol.md): ONE aggregate-only
         # infrastructure run on the default build (E805-01; E805-02 only as the documented retry), 2009-11-02 ..

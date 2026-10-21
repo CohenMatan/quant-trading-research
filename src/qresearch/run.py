@@ -74,6 +74,9 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
                 files[p.name] = p.read_text(encoding="utf-8")
     if "main.py" not in files:
         raise experiment.ConfigError(f"{sdir} has no main.py")
+    if "qr_os1" in files["main.py"]:  # H032 / OS-1 revised logic (owner D278), plain text
+        rel = "src/qresearch/lean/qr_os1.py"
+        files["qr_os1.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     if "qr_ucr" in files["main.py"]:  # UCR-1 point-in-time SEC universe repair (owner D269), plain text
         rel = "src/qresearch/lean/qr_ucr.py"
         files["qr_ucr.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")

@@ -2661,3 +2661,15 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Offline SEC coverage study** (counts only; no returns, no QuantConnect, no upload): TTM free cash flow is not reliable (capex tag gaps; 52–74% coverage, energy / telecom holes); fiscal-year operating cash flow (~99%) and fiscal-year revenue growth (~91%) are; joint coverage with NSI 78–81% from 2013 (70% in 2012); leavers 5.5 points less covered than survivors.
 - **Recommendation:** exclude financials / REITs; F-OCF (FY OCF > 0) + F-REV (FY revenue growth vs same-10-K comparative > 0); NSI rank unchanged; coverage gates G-COV1–3; decomposition books B0 / B2 with O5 extended. Caveat: revenue-growth screen may remove part of the classic buyback premium.
 - **Status:** STOPPED awaiting the owner (OS-CP1 §11.10). H032 not registered; nothing uploaded or run.
+
+## 2026-10-21: H032 registered and frozen; canary C-OS1 prepared (D278 / D279)
+
+- **Owner (D278):** approved the revised OS-1 (filters → net share reduction → Top 15), fiscal-year definitions subject to verification, the SIC 6000–6799 exclusion for H032, G-COV1–3, B0 / B2 controls, one extended SEC object; then freeze and ONLY the aggregate-only canary.
+- **Verification before the freeze:** extension object built from the existing public SEC cache (original UCR-1 object untouched); the same-filing prior-year revenue comparative is ADEQUATE under a criterion committed first (81.4% joint coverage vs 79.4% for consecutive filings; ≥ 79% every year 2013–2021).
+- **Frozen:** `research/os/H032_spec.md` (spec + canary gates C1–C10 + the R1 / R2 evaluation protocol, not authorised), `research/hypotheses/H032.md`, `qr_os1`, host X807, `OS1_eval.py`, config E807-01; all pinned in `qresearch.os1`. No return computed.
+
+## 2026-10-21: H032 canary C-OS1 — PASS (E807-02; D280 / D281; STOP)
+
+- **E807-01** failed on its first simulated day (host plumbing defect: matrix enlarged inside an index expression); one-line fix with a regression test (D280). **E807-02** (the one retry) completed: 0 orders, 143 reviews, aggregates only.
+- **All ten frozen gates pass** (OS-CP2): no point-in-time or identity violations; same-filing annual inputs 81–91%; splits handled (bound exclusions 1.4%; split-adjusted in bound 90.05%, thin); mechanical start **2012-07-31**, coverage ≥ 66.8% after it (thin, 2021); leavers and restored names not under-covered; every book constructible and deterministic; subperiod A 42 reviews.
+- **No return computed.** R1 / R2 need owner approval (OS-CP2 §6). STOPPED.

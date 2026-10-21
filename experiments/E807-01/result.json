@@ -1,0 +1,38 @@
+{
+ "error": "2009-05-02 00:00:00 Runtime Error: index 4096 is out of bounds for axis 0 with size 4096\n  at _qr_select\n    self.px[self._row(key), col] = ap\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n in main.py: line 192\n\nindex 4096 is out of bounds for axis 0 with size 4096\n  at _qr_select\n    self.px[self._row(key), col] = ap\n    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^\n in main.py: line 192\n",
+ "experiment_id": "E807-01",
+ "log_tail": [],
+ "provenance": {
+  "backtest_started_utc": "2026-10-21T15:05:44Z",
+  "build_commit": "f05a1de8513c2a26e7d4ff416cf488ac09659321",
+  "code_sha256": "20a0bd2ae2650ce73c6bf8b0fcd667954bafc0cf0e8ca11a5bacc0e5a4b59d56",
+  "config_sha256": "01170ef8b43de7a94744927f6d740c3369e320bc712a88c1441e9368b8091e6d",
+  "datasets": [
+   "QC US Equities (AlgoSeek) daily",
+   "QC US Equity Security Master",
+   "Morningstar US Fundamentals (QC)"
+  ],
+  "failure_stage": "download_results",
+  "files": [
+   "main.py",
+   "qr_fundamentals.py",
+   "qr_harness.py",
+   "qr_indicators.py",
+   "qr_industry.py",
+   "qr_os1.py",
+   "qr_params.py",
+   "qr_sec_corrections.py",
+   "qr_ucr.py"
+  ],
+  "git_commit": "f05a1de8513c2a26e7d4ff416cf488ac09659321",
+  "holdout_unlocked": false,
+  "lean_version": "v2.5.0.0.18200",
+  "owner_approved": "D278",
+  "qc_backtest_id": "2576195208f86b348522f7fc5bcdab7e",
+  "qc_project_id": 38232367,
+  "result_channel": "",
+  "run_utc": "2026-10-21T15:05:21Z",
+  "runtime_s": 16.294525384902954
+ },
+ "status": "failed"
+}
