@@ -815,7 +815,8 @@ def validate(cfg: dict, unlock_file=None) -> None:
             raise ConfigError("X807 is the ONE H032 canary C-OS1 (E807-01, retry E807-02): AUDIT 2009-05-01 .. "
                               "2021-12-31, no warm-up, >= $2B / >= $5 / ADV20 >= $5M without the SEC layer, default "
                               "build, programme OS, hypothesis H032, owner approval D278")
-        if (os1.SPEC_SHA256 is None or os1.OS1_REFERENCE_SHA256 is None or cfg.get("params") != os1.run_params()):
+        if (os1.SPEC_SHA256 is None or os1.OS1_REFERENCE_SHA256 is None
+                or cfg.get("params") != os1.run_params(cfg["experiment_id"])):
             raise ConfigError("X807 runs carry the pinned H032 spec, code and SEC-object fingerprints (qresearch.os1)")
     if cfg["strategy_id"] == "X805":
         # SCA-1 SEC classification audit (owner D267, research/rr/sec_classification/SCA_protocol.md): ONE aggregate-only

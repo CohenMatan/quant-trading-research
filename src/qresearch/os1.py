@@ -31,6 +31,7 @@ OS1_OBJECT_KEY = "rr/os1_sec_v1.json"
 UCR_REFERENCE_SHA256 = rr_ucr.UCR_REFERENCE_SHA256
 UCR_OBJECT_KEY = rr_ucr.UCR_OBJECT_KEY
 RUN = "E807-01"
+HOST_SHA256_E807_01 = "594688322074e4253d64b0e44bf98c2d3d80d6fc48ecfb8d3843375c8a9ace18"   # E807-01 ran the host before the D280 plumbing fix (history)
 RETRY = "E807-02"
 PROGRAMME = "OS"
 CYCLE = "H032"
@@ -40,7 +41,15 @@ def file_sha256(rel: str) -> str:
     return hashlib.sha256((config.REPO_ROOT / rel).read_bytes()).hexdigest()
 
 
-def run_params() -> dict:
+def run_params(eid: str | None = None) -> dict:
+    """The pinned run parameters; E807-01 keeps the host fingerprint it actually ran with (D280)."""
+    p = _run_params()
+    if eid == RUN:
+        p["h032_code_sha256"] = dict(p["h032_code_sha256"], **{"main.py": HOST_SHA256_E807_01})
+    return p
+
+
+def _run_params() -> dict:
     return dict(h032_spec_sha256=SPEC_SHA256,
                 h032_code_sha256={k.split("/")[-1]: v for k, v in CODE_SHA256.items()
                                   if k in (HOST, MODULE, rr_ucr.MODULE)},
