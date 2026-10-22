@@ -2706,3 +2706,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Finding:** conventional large-cap signals showed near-zero power under calibrated nulls; power limits mean modest edges were never confirmable; concentration and the mega-cap decade added headwinds; 2010–2021 is spent.
 - **Directions:** D1 broader-universe premia (credible, not independently testable by us); D2 spin-off forced-selling satellite (distinct, independently testable on 1998–2009 SEC events + forward; moderate prior).
 - **Recommendation:** D2 Stage 0 desk review only, with kill criteria; or pause with SPY as baseline. Checkpoint `docs/checkpoints/LW_CP1_long_term_wealth_research_reset.md`. STOPPED.
+
+## 2026-10-22: Spin-off Stage 0 desk review — NO-GO and PAUSE (D290 / D291; STOP)
+
+- **Owner (D290):** Stage 0 only (literature + data feasibility; no census, retrieval, runs or returns).
+- **Finding:** spin-off outperformance is benchmark-dependent and mixed after 2000; the main spin-off ETF roughly matched the S&P 500 over its first decade before fees; the forced-selling mechanism is not supported by the direct test; no complete verifiable 1998–2009 event list from existing files and no ground truth without purchased data; the window overlaps published samples; small, noisy whole-account effect at $100K.
+- **Recommendation:** NO-GO and PAUSE offensive discovery; SPY baseline. Checkpoint `docs/checkpoints/SO_CP0_spinoff_stage0_desk_review.md`. STOPPED.
