@@ -2673,3 +2673,17 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **E807-01** failed on its first simulated day (host plumbing defect: matrix enlarged inside an index expression); one-line fix with a regression test (D280). **E807-02** (the one retry) completed: 0 orders, 143 reviews, aggregates only.
 - **All ten frozen gates pass** (OS-CP2): no point-in-time or identity violations; same-filing annual inputs 81–91%; splits handled (bound exclusions 1.4%; split-adjusted in bound 90.05%, thin); mechanical start **2012-07-31**, coverage ≥ 66.8% after it (thin, 2021); leavers and restored names not under-covered; every book constructible and deterministic; subperiod A 42 reviews.
 - **No return computed.** R1 / R2 need owner approval (OS-CP2 §6). STOPPED.
+
+## 2026-10-22: H032 R1 / R2 host built and frozen (D282 / D283)
+
+- **Owner (D282):** OS-CP2 accepted; trading host, R1 (10 bps) and conditional R2 (20 bps) authorised, with the fidelity pre-gate.
+- **Built:** S033 (subclass of the pinned canary host X807: the review code is the canary's), the trading layer `qr_os1_trade`, a byte-identical copy of the LEAN-verified shadow engine (`qr_os1_books`), the frozen implementation / evaluation protocol `research/os/H032_R_protocol.md` and evaluation rule `OS1_R_eval.py`, config E033-01; all pinned in `qresearch.os1r`.
+- **Disclosed implementation choice:** decisions at the first harness close after each review, executed at the following open (one-session lag, all books equally).
+- **Offline end-to-end test** on a fake broker with the real harness: LEAN B1 and its shadow replay identical through splits, dividends, a delisting, a stale exit and cash scaling. No return computed yet.
+
+## 2026-10-22: H032 R1 — NOT PROMISING (E033-01; D284; STOP)
+
+- **Run:** E033-01 (LEAN 18201, 349 s), first and only R1 attempt. Technically valid: I1–I5 pass, 113 / 113 reviews identical to the canary, shadow fidelity exact (0.000 terminal and monthly).
+- **Result:** $286,598 vs SPY $414,278 (CAGR 11.84% vs 16.31%); beta 1.17, down-capture 1.21, max DD −44.0%; behind EW and most random / beta-matched books; ahead only in 2012–2015.
+- **Verdict:** O1–O7 and O9 all FAIL → H032 NOT PROMISING (EXPLORATORY); R2 not run. B0 / MOM / controls stay diagnostics.
+- **Checkpoint:** `docs/checkpoints/OS_CP3_h032_r1_performance_E033.md`. STOPPED awaiting the owner (recommendation: close H032 as REJECTED).

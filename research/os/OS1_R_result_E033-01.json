@@ -1,0 +1,809 @@
+{
+ "run": "E033-01",
+ "validity": {
+  "I1": {
+   "passed": true,
+   "status": "completed",
+   "failed": []
+  },
+  "I2": {
+   "passed": true,
+   "first_review_traded": "2012-07-31",
+   "first_close": "2012-07-31"
+  },
+  "I3": {
+   "passed": true,
+   "detail": {
+    "identity_duplicates": 0,
+    "repaired_without_identity": 0,
+    "nsi_filing_on_or_after_t": 0,
+    "annual_filing_on_or_after_t": 0,
+    "pit_violations_ext": 0
+   }
+  },
+  "I4": {
+   "passed": true,
+   "detail": {
+    "timing_violations": 0,
+    "invalid": 0,
+    "negative_qty": 0,
+    "stale_open_orders": 0,
+    "lean_missing_symbol": 0
+   }
+  },
+  "I5": {
+   "passed": true,
+   "reviews": 113,
+   "differing": [],
+   "n_differing": 0,
+   "worst_relative": 0.0
+  },
+  "F": {
+   "passed": true,
+   "terminal_relative": 0.0,
+   "terminal_lean": 286597.83,
+   "terminal_shadow": 286597.83,
+   "max_month_abs": 0.0,
+   "max_month_at": "2012-08",
+   "mean_month_abs": 0.0,
+   "months": 113
+  }
+ },
+ "valid": true,
+ "gates": {
+  "O1": {
+   "passed": false,
+   "wealth_lean": 286597.83,
+   "wealth_spy": 414278.222,
+   "cagr_lean": 0.1184096749172292,
+   "cagr_spy": 0.16307692487557368,
+   "excess": -0.04466724995834448
+  },
+  "O2": {
+   "passed": false,
+   "g": -0.03916127169925312,
+   "se": 0.03223904289375092,
+   "ratio": -1.2147157044430736
+  },
+  "O3": {
+   "passed": false,
+   "up": 0.9645864488515329,
+   "down": 1.2104960501332285,
+   "spread": -0.2459096012816956,
+   "up_compounded": 0.8846237348399724,
+   "down_compounded": 1.1262266094649622,
+   "up_months": 82,
+   "down_months": 31
+  },
+  "O4": {
+   "passed": false,
+   "alpha_monthly": -0.004928102627265784,
+   "alpha_annual": -0.05756038362228888,
+   "beta": 1.1707968837770475,
+   "t_alpha": -1.574911384396356,
+   "t_beta": 11.341041775930272
+  },
+  "O5": {
+   "passed": false,
+   "cagr_ew": 0.14236556527353605,
+   "beaten": {
+    "B2": 3,
+    "RND": 1,
+    "BETA": 1
+   },
+   "cagr_controls": {
+    "B0": 0.14964468859248736,
+    "B1": 0.1184096749172292,
+    "B2_20261121": 0.1360949039319017,
+    "B2_20261122": 0.13799076456606252,
+    "B2_20261123": 0.10044832824811079,
+    "B2_20261124": 0.09292832562769648,
+    "B2_20261125": 0.1132178180655734,
+    "BETA_20261141": 0.12547631293681705,
+    "BETA_20261142": 0.16083233819888498,
+    "BETA_20261143": 0.11882400065427356,
+    "BETA_20261144": 0.16368173924772544,
+    "BETA_20261145": 0.1164681918529138,
+    "MOM": 0.19547676131353398,
+    "RND_20261131": 0.13197175065916822,
+    "RND_20261132": 0.13413631709194496,
+    "RND_20261133": 0.12724568450149643,
+    "RND_20261134": 0.12119521590324434,
+    "RND_20261135": 0.09591591053607806,
+    "VB1": 0.12007641674188418
+   }
+  },
+  "O6": {
+   "passed": false,
+   "A": {
+    "vs_spy": 0.032044768347687436,
+    "vs_ew": 0.007593675103222175,
+    "from_": "2012-07-31",
+    "to": "2015-12-31"
+   },
+   "B": {
+    "vs_spy": -0.40050260643867597,
+    "vs_ew": -0.20699690683169303,
+    "from_": "2015-12-31",
+    "to": "2021-12-31"
+   }
+  },
+  "O7": {
+   "passed": false,
+   "total": -0.36845783809098864,
+   "blocks": {
+    "2012-2013": 0.15963960220631723,
+    "2014-2015": -0.12759483385862713,
+    "2016-2017": -0.11256169415594436,
+    "2018-2019": -0.08315249291048221,
+    "2020-2021": -0.20478841937225223
+   },
+   "shares": {
+    "2012-2013": null,
+    "2014-2015": null,
+    "2016-2017": null,
+    "2018-2019": null,
+    "2020-2021": null
+   }
+  },
+  "O9": {
+   "passed": false,
+   "wealth_vb1": 290641.67,
+   "cagr_vb1": 0.12007641674188418,
+   "cagr_ew_vendor": 0.1473577654105136
+  }
+ },
+ "report": {
+  "table": {
+   "LEAN": {
+    "wealth": 286597.83,
+    "cagr": 0.1184096749172292,
+    "excess_vs_spy": -0.04466724995834448,
+    "max_dd": -0.4398205824825667,
+    "vol": 0.18559951709544556,
+    "sharpe": 0.696614165142296
+   },
+   "B1": {
+    "wealth": 286597.83,
+    "cagr": 0.1184096749172292,
+    "excess_vs_spy": -0.04466724995834448,
+    "max_dd": -0.4398205824825667,
+    "vol": 0.18559951709544556,
+    "sharpe": 0.696614165142296
+   },
+   "VB1": {
+    "wealth": 290641.67,
+    "cagr": 0.12007641674188418,
+    "excess_vs_spy": -0.0430005081336895,
+    "max_dd": -0.43766358512609016,
+    "vol": 0.18528372092002943,
+    "sharpe": 0.7055085078492982
+   },
+   "B0": {
+    "wealth": 371387.19,
+    "cagr": 0.14964468859248736,
+    "excess_vs_spy": -0.013432236283086318,
+    "max_dd": -0.41993553261379357,
+    "vol": 0.19523828610307017,
+    "sharpe": 0.8124706741767527
+   },
+   "MOM": {
+    "wealth": 536492.49,
+    "cagr": 0.19547676131353398,
+    "excess_vs_spy": 0.032399836437960294,
+    "max_dd": -0.44198350380085594,
+    "vol": 0.30980226199410976,
+    "sharpe": 0.7320889628665804
+   },
+   "B2_20261121": {
+    "wealth": 332185.85,
+    "cagr": 0.1360949039319017,
+    "excess_vs_spy": -0.02698202094367197,
+    "max_dd": -0.4244303536314803,
+    "vol": 0.1805045425278968,
+    "sharpe": 0.7980487571023425
+   },
+   "B2_20261122": {
+    "wealth": 337438.19,
+    "cagr": 0.13799076456606252,
+    "excess_vs_spy": -0.025086160309511163,
+    "max_dd": -0.42870385524251353,
+    "vol": 0.1853708297043736,
+    "sharpe": 0.7910759350933199
+   },
+   "B2_20261123": {
+    "wealth": 246103.43,
+    "cagr": 0.10044832824811079,
+    "excess_vs_spy": -0.0626285966274629,
+    "max_dd": -0.41905816846099586,
+    "vol": 0.17121874449360963,
+    "sharpe": 0.6452432708088671
+   },
+   "B2_20261124": {
+    "wealth": 230727.16,
+    "cagr": 0.09292832562769648,
+    "excess_vs_spy": -0.0701485992478772,
+    "max_dd": -0.32367223441331006,
+    "vol": 0.16441506586730154,
+    "sharpe": 0.6229187105757898
+   },
+   "B2_20261125": {
+    "wealth": 274321.63,
+    "cagr": 0.1132178180655734,
+    "excess_vs_spy": -0.049859106810000275,
+    "max_dd": -0.34186939313356834,
+    "vol": 0.1668332848518596,
+    "sharpe": 0.727084097070851
+   },
+   "RND_20261131": {
+    "wealth": 321014.41,
+    "cagr": 0.13197175065916822,
+    "excess_vs_spy": -0.031105174216405462,
+    "max_dd": -0.32505577509093464,
+    "vol": 0.1701144385995032,
+    "sharpe": 0.81440708902154
+   },
+   "RND_20261132": {
+    "wealth": 326836.58,
+    "cagr": 0.13413631709194496,
+    "excess_vs_spy": -0.028940607783628725,
+    "max_dd": -0.3845444475820229,
+    "vol": 0.1757618538433107,
+    "sharpe": 0.8047982646178612
+   },
+   "RND_20261133": {
+    "wealth": 308623.36,
+    "cagr": 0.12724568450149643,
+    "excess_vs_spy": -0.035831240374077256,
+    "max_dd": -0.33307435549579245,
+    "vol": 0.1771800687170608,
+    "sharpe": 0.7652452009984014
+   },
+   "RND_20261134": {
+    "wealth": 293384.62,
+    "cagr": 0.12119521590324434,
+    "excess_vs_spy": -0.041881708972329346,
+    "max_dd": -0.4087554423668136,
+    "vol": 0.18441285539431587,
+    "sharpe": 0.7134057565937455
+   },
+   "RND_20261135": {
+    "wealth": 236729.97,
+    "cagr": 0.09591591053607806,
+    "excess_vs_spy": -0.06716101433949562,
+    "max_dd": -0.4351467467461625,
+    "vol": 0.1893779948501017,
+    "sharpe": 0.5791193861708531
+   },
+   "BETA_20261141": {
+    "wealth": 304095.47,
+    "cagr": 0.12547631293681705,
+    "excess_vs_spy": -0.037600611938756634,
+    "max_dd": -0.3881431238029449,
+    "vol": 0.1747710255196163,
+    "sharpe": 0.7642253816714264
+   },
+   "BETA_20261142": {
+    "wealth": 406816.66,
+    "cagr": 0.16083233819888498,
+    "excess_vs_spy": -0.002244586676688698,
+    "max_dd": -0.33259915146792896,
+    "vol": 0.17060465313187567,
+    "sharpe": 0.9600339244306783
+   },
+   "BETA_20261143": {
+    "wealth": 287598.34,
+    "cagr": 0.11882400065427356,
+    "excess_vs_spy": -0.044252924221300116,
+    "max_dd": -0.4157713617074684,
+    "vol": 0.17592664748780218,
+    "sharpe": 0.7270313366734621
+   },
+   "BETA_20261144": {
+    "wealth": 416309.58,
+    "cagr": 0.16368173924772544,
+    "excess_vs_spy": 0.0006048143721517629,
+    "max_dd": -0.3663624443468625,
+    "vol": 0.181712998488467,
+    "sharpe": 0.9257434613659817
+   },
+   "BETA_20261145": {
+    "wealth": 281950.87,
+    "cagr": 0.1164681918529138,
+    "excess_vs_spy": -0.04660873302265989,
+    "max_dd": -0.4085748477824669,
+    "vol": 0.17761004936871796,
+    "sharpe": 0.7096923405949191
+   },
+   "SPY": {
+    "wealth": 414278.222,
+    "cagr": 0.16307692487557368,
+    "excess_vs_spy": 0.0,
+    "max_dd": -0.3369866150617965,
+    "vol": 0.16286862364934568,
+    "sharpe": 1.0096617787530158
+   }
+  },
+  "regimes": {
+   "strong_up": {
+    "months": 32,
+    "mean_excess": 0.0038170058212592325
+   },
+   "bull_state": {
+    "months": 95,
+    "mean_excess": -0.004593911365358128
+   },
+   "not_bull": {
+    "months": 18,
+    "mean_excess": 0.00763960737360913
+   }
+  },
+  "diagnostics": {
+   "B0": {
+    "corr_monthly_excess_with_lean": 0.5717938802826469
+   },
+   "MOM": {
+    "corr_monthly_excess_with_lean": 0.03823166428615095
+   },
+   "VB1": {
+    "corr_monthly_excess_with_lean": 0.965730928038272
+   }
+  },
+  "shadow_costs": {
+   "B1": {
+    "commission": 3045.0,
+    "slippage": 4840.280000000001,
+    "notional": 4928188.510000001
+   },
+   "VB1": {
+    "commission": 2933.0,
+    "slippage": 4702.599999999999,
+    "notional": 4757193.32
+   },
+   "B0": {
+    "commission": 2737.0,
+    "slippage": 4844.600000000001,
+    "notional": 4903807.690000001
+   },
+   "MOM": {
+    "commission": 5257.0,
+    "slippage": 10564.610000000002,
+    "notional": 10957183.450000003
+   },
+   "B2_20261121": {
+    "commission": 3213.0,
+    "slippage": 5673.350000000001,
+    "notional": 5734718.080000002
+   },
+   "B2_20261122": {
+    "commission": 3241.0,
+    "slippage": 5374.08,
+    "notional": 5442487.05
+   },
+   "B2_20261123": {
+    "commission": 3297.0,
+    "slippage": 4618.75,
+    "notional": 4684596.43
+   },
+   "B2_20261124": {
+    "commission": 3325.0,
+    "slippage": 4172.6399999999985,
+    "notional": 4247081.9399999995
+   },
+   "B2_20261125": {
+    "commission": 3171.0,
+    "slippage": 4706.79,
+    "notional": 4750901.300000004
+   },
+   "RND_20261131": {
+    "commission": 3129.0,
+    "slippage": 5576.259999999999,
+    "notional": 5608284.019999999
+   },
+   "RND_20261132": {
+    "commission": 3143.0,
+    "slippage": 5350.080000000002,
+    "notional": 5405113.889999998
+   },
+   "RND_20261133": {
+    "commission": 3255.0,
+    "slippage": 4679.579999999999,
+    "notional": 4766720.9799999995
+   },
+   "RND_20261134": {
+    "commission": 3213.0,
+    "slippage": 5108.9,
+    "notional": 5201641.099999998
+   },
+   "RND_20261135": {
+    "commission": 3185.0,
+    "slippage": 4146.75,
+    "notional": 4187419.229999999
+   },
+   "BETA_20261141": {
+    "commission": 3353.0,
+    "slippage": 5441.959999999999,
+    "notional": 5472848.579999999
+   },
+   "BETA_20261142": {
+    "commission": 3409.0,
+    "slippage": 6228.109999999998,
+    "notional": 6336697.12
+   },
+   "BETA_20261143": {
+    "commission": 3465.0,
+    "slippage": 4818.099999999999,
+    "notional": 4922808.750000001
+   },
+   "BETA_20261144": {
+    "commission": 3269.0,
+    "slippage": 6539.15,
+    "notional": 6605620.179999999
+   },
+   "BETA_20261145": {
+    "commission": 3185.0,
+    "slippage": 5285.8200000000015,
+    "notional": 5317609.300000001
+   }
+  },
+  "lean_costs": {
+   "fills": 435,
+   "fees": 3045.0,
+   "notional": 4928381.73795,
+   "slippage_est": 4923.45827967033
+  },
+  "positions": {
+   "mean": 14.858347386172007,
+   "max": 15
+  },
+  "max_position_weight": 0.11967,
+  "years": {
+   "2010": {
+    "b1_entries": 0,
+    "ff12_b1": {}
+   },
+   "2011": {
+    "b1_entries": 0,
+    "ff12_b1": {}
+   },
+   "2012": {
+    "b1_entries": 21,
+    "ff12_b1": {
+     "BusEq": 9,
+     "Chems": 5,
+     "Enrgy": 3,
+     "Hlth": 18,
+     "Manuf": 1,
+     "NoDur": 3,
+     "Other": 16,
+     "Shops": 29,
+     "Telcm": 6
+    }
+   },
+   "2013": {
+    "b1_entries": 25,
+    "ff12_b1": {
+     "BusEq": 27,
+     "Chems": 8,
+     "Durbl": 20,
+     "Enrgy": 4,
+     "Hlth": 6,
+     "Manuf": 27,
+     "NoDur": 7,
+     "Other": 19,
+     "Shops": 50,
+     "Telcm": 12
+    }
+   },
+   "2014": {
+    "b1_entries": 21,
+    "ff12_b1": {
+     "BusEq": 38,
+     "Chems": 7,
+     "Durbl": 12,
+     "Enrgy": 19,
+     "Hlth": 10,
+     "Manuf": 21,
+     "NoDur": 8,
+     "Other": 39,
+     "Shops": 14,
+     "Telcm": 10,
+     "Utils": 2
+    }
+   },
+   "2015": {
+    "b1_entries": 22,
+    "ff12_b1": {
+     "BusEq": 43,
+     "Chems": 6,
+     "Durbl": 20,
+     "Enrgy": 5,
+     "Hlth": 6,
+     "Manuf": 20,
+     "NoDur": 2,
+     "Other": 29,
+     "Shops": 37,
+     "Utils": 12
+    }
+   },
+   "2016": {
+    "b1_entries": 24,
+    "ff12_b1": {
+     "BusEq": 35,
+     "Durbl": 13,
+     "Manuf": 6,
+     "NoDur": 15,
+     "Other": 32,
+     "Shops": 77,
+     "Telcm": 1,
+     "Utils": 1
+    }
+   },
+   "2017": {
+    "b1_entries": 25,
+    "ff12_b1": {
+     "BusEq": 34,
+     "Durbl": 1,
+     "Hlth": 5,
+     "Manuf": 12,
+     "NoDur": 5,
+     "Other": 56,
+     "Shops": 67
+    }
+   },
+   "2018": {
+    "b1_entries": 18,
+    "ff12_b1": {
+     "BusEq": 29,
+     "Chems": 11,
+     "Durbl": 17,
+     "Enrgy": 11,
+     "Hlth": 3,
+     "Manuf": 11,
+     "Other": 50,
+     "Shops": 48
+    }
+   },
+   "2019": {
+    "b1_entries": 21,
+    "ff12_b1": {
+     "BusEq": 51,
+     "Chems": 9,
+     "Durbl": 8,
+     "Enrgy": 15,
+     "Hlth": 9,
+     "Manuf": 15,
+     "Other": 24,
+     "Shops": 39,
+     "Utils": 10
+    }
+   },
+   "2020": {
+    "b1_entries": 30,
+    "ff12_b1": {
+     "BusEq": 21,
+     "Chems": 4,
+     "Durbl": 5,
+     "Enrgy": 5,
+     "Hlth": 13,
+     "Manuf": 29,
+     "NoDur": 3,
+     "Other": 60,
+     "Shops": 21,
+     "Telcm": 10,
+     "Utils": 9
+    }
+   },
+   "2021": {
+    "b1_entries": 18,
+    "ff12_b1": {
+     "BusEq": 35,
+     "Durbl": 7,
+     "Hlth": 16,
+     "Manuf": 18,
+     "NoDur": 10,
+     "Other": 23,
+     "Shops": 31,
+     "Telcm": 25
+    }
+   }
+  },
+  "pnl_b1_shadow": {
+   "n_restored": 44,
+   "n_vendor": 661,
+   "restored": -1977.7293999999756,
+   "unknown": 0.0,
+   "vendor": 188575.56042135364
+  },
+  "engine": {
+   "cancelled_buys": 0,
+   "dividends": 6554,
+   "entries": 4630,
+   "exits": 4225,
+   "forced_delist": 116,
+   "forced_stale": 4,
+   "scaled": 621,
+   "skipped_cap": 0,
+   "skipped_min": 2,
+   "split_adjust": 60
+  },
+  "host_stats": {
+   "beta_attempted": 1234,
+   "beta_matched": 1234,
+   "closes": 2372,
+   "decisions": 113,
+   "ew_missing_end": 37,
+   "first_target_diff": null,
+   "lean_entries": 243,
+   "lean_exits": 203,
+   "lean_missing_symbol": 0,
+   "lean_orders": 428,
+   "lean_vs_shadow_target_diff": 0
+  },
+  "lean_version": "v2.5.0.0.18201",
+  "harness": {
+   "buys_scaled": 30,
+   "cancelled_harness_buys": 0,
+   "cancelled_harness_sells": 0,
+   "cancelled_on_symbol_change": 0,
+   "cancelled_sells_delisting": 0,
+   "cancelled_stale": 0,
+   "days": 2372,
+   "elig_days": 0,
+   "elig_max": 0,
+   "elig_mean": 0,
+   "elig_min": null,
+   "elig_sum": 0,
+   "experiment_id": "E033-01",
+   "fills": 435,
+   "forced_fee_debits": 7,
+   "forced_fills": 7,
+   "held_delistings": 0,
+   "held_splits": 6,
+   "invalid": 0,
+   "log_budget_left": 4957,
+   "max_fill_dev": 3.0818751887864673e-16,
+   "max_gross": 0.9729351611098113,
+   "max_subscribed": 335,
+   "min_cash_frac": 0.027064838890188736,
+   "negative_qty": 0,
+   "open_positions_at_end": 15,
+   "orders": 428,
+   "resubmitted_sells": 0,
+   "skipped_max_positions": 0,
+   "skipped_min_position": 0,
+   "stale_exits": 0,
+   "stale_open_orders": 0,
+   "stale_unresolved": 0,
+   "timing_violations": 0,
+   "warmup_days": 819,
+   "windows_restored": 0
+  },
+  "restored_in_targets": [
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   1,
+   1,
+   0,
+   0,
+   0,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   3,
+   3,
+   3,
+   3,
+   3,
+   2,
+   2,
+   2,
+   3,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   1,
+   1,
+   1,
+   1,
+   1,
+   1,
+   2,
+   2,
+   2,
+   2,
+   2,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "r1_failed": [
+  "O1",
+  "O2",
+  "O3",
+  "O4",
+  "O5",
+  "O6",
+  "O7",
+  "O9"
+ ],
+ "outcome": "H032 NOT PROMISING (R1 fails O1, O2, O3, O4, O5, O6, O7, O9); R2 not run"
+}

@@ -77,3 +77,5 @@
 **Update (D261 / D262, 2026-10-19):** **SYS-1 closed: NOT RUN — PLATFORM BLOCKED — NO STRATEGY VERDICT** (owner D261). H028 remains REJECTED. Programme direction: QuantConnect-only, price-first. The RR2 proposal is awaiting the owner. No hypothesis registered. Still no active hypothesis.
 
 **Update (D278–D281, 2026-10-21):** **H032 — Cash-Generating, Growing Net Share Reducers (OS-1 revised)** registered and FROZEN (`research/hypotheses/H032.md`, `research/os/H032_spec.md`). Canary C-OS1 PASS (E807-02; OS-CP2). No strategy return computed; R1 / R2 not authorised; EXPLORATORY only. H031 remains DRAFT and parked.
+
+**Update (D282–D284, 2026-10-22):** **H032** R1 E033-01 run (technically valid, fidelity exact) → **NOT PROMISING** (all R1 gates O1–O7, O9 fail; CAGR 11.84% vs SPY 16.31%); R2 not run; preserved exactly as tested; owner closure pending (recommended: REJECTED). EXPLORATORY; Holdout sealed. H031 remains DRAFT and parked.

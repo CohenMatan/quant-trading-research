@@ -1,0 +1,60 @@
+{
+ "kind": "research",
+ "hypothesis_id": "H032",
+ "strategy_id": "S033",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/S033_h032_os1",
+ "split_scheme": "2010",
+ "split": "DEV",
+ "start": "2012-07-31",
+ "end": "2021-12-31",
+ "warmup_start": "2009-05-01",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate (harness and shadow engine)"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18200,
+ "execution_model": "d051",
+ "benchmarks": [],
+ "programme": "OS",
+ "cycle": "H032",
+ "experiment_id": "E033-01",
+ "stall_minutes": 300,
+ "params": {
+  "h032_spec_sha256": "979af2e3944cfc75af617d959ed2e4354fe9f79e7cf48f6d608627cbc8db66aa",
+  "h032_r_protocol_sha256": "dbe40049f3be7b0b562e95901050ffacde614f64945af2e97bf0b58b7c8d05fe",
+  "h032_r_code_sha256": {
+   "main.py": "7c654a335c4c13e3c668f2504ebc5a7b0b073fc7f3faf0943e5d8d80d3f38728",
+   "qr_os1.py": "07d6b03c92ad3b4741fcb32e3e3029bcfbbcc0fba091f3ca45f3de8c6dc9592a",
+   "qr_os1_books.py": "788a4d410f3e8a98b56fe869ab2c84c69d5c91e14017fc12ecb46902bb5aa8a4",
+   "qr_os1_trade.py": "e1c1a898045363964065b8bbf4e44a9e0e3c5257f3a9f166c7662f554145c967",
+   "qr_ucr.py": "77135cd38a1edfa8e6b295cf00255c34adb36780328bdd135cc3309e4a85e9d5",
+   "qr_x807.py": "877e265430bd90014cf2b60e4c3f2df7670fe55c88b89ff298ea3944f62fa7a2"
+  },
+  "start_review": "2012-07-31",
+  "ucr_object_key": "rr/ucr_sec_v1.json",
+  "ucr_reference_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82",
+  "os1_object_key": "rr/os1_sec_v1.json",
+  "os1_reference_sha256": "32bb0a666503e333ed20001074da687a12c557f28c85fa4b090b8b1983645b17"
+ },
+ "description": "H032 R1 (owner D282; research/os/H032_spec.md section 9 and research/os/H032_R_protocol.md): S033 on QuantConnect's default build; B1 traded in LEAN, controls and a shadow replay of B1 in the shadow engine; official start 2012-07-31 (frozen start review), history-only warm-up from 2009-05-01; $100,000, 10 bps slippage per side, $7 per order. EXPLORATORY.",
+ "owner_approval_required": "OS-CP2 approval: minimum H032 trading host, R1 (2012-07-31 start, $100,000, 10 bps, $7) under the frozen O1-O9 framework with the fidelity pre-gate; R2 at 20 bps only if R1 is valid and passes every gate evaluable without R2; at most one documented infrastructure retry per run; no Holdout (owner 2026-10-22, D282)",
+ "lean_version_policy": "default_build_digest_verified"
+}

@@ -77,6 +77,13 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
     if "qr_os1" in files["main.py"]:  # H032 / OS-1 revised logic (owner D278), plain text
         rel = "src/qresearch/lean/qr_os1.py"
         files["qr_os1.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+    for mod in ("qr_os1_books", "qr_os1_trade"):   # H032 R1 / R2 trading layer + shadow engine copy (owner D282)
+        if mod in files["main.py"]:
+            rel = f"src/qresearch/lean/{mod}.py"
+            files[f"{mod}.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+    if "qr_x807" in files["main.py"]:   # S033 subclasses the pinned C-OS1 canary host X807, uploaded byte-identical
+        rel = "strategies/X807_os1_canary/main.py"
+        files["qr_x807.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     if "qr_ucr" in files["main.py"]:  # UCR-1 point-in-time SEC universe repair (owner D269), plain text
         rel = "src/qresearch/lean/qr_ucr.py"
         files["qr_ucr.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
