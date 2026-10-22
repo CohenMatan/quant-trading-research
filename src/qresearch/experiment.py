@@ -78,7 +78,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
     kind = cfg["kind"]
     if kind == "research" and split not in ("IS", "VAL", "WF", "HOLDOUT", "DEV"):
         raise ConfigError("research experiments must run on a single split segment (IS, VAL, WF, HOLDOUT or DEV)")
-    if split == "DEV" and cfg.get("programme") not in ("P2", "P11", "P12", "P13", "LH"):
+    if split == "DEV" and cfg.get("programme") not in ("P2", "P11", "P12", "P13", "LH", "OS"):
         raise ConfigError("the DEV split (2010-2021 development) belongs to Phase 2 configs (programme 'P2', D094), "
                           "the H026 / H027 / H028 development runs (programmes 'P11' / 'P12' / 'P13', D206 / D213 / D217) "
                           "and the SYS-1 evaluation (programme 'LH', D252)")
@@ -730,7 +730,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806", "X807") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806", "X807", "S033") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
@@ -771,6 +771,35 @@ def validate(cfg: dict, unlock_file=None) -> None:
                 or cfg.get("params") != rr_ucr.run_params()):
             raise ConfigError("X806 runs carry the pinned UCR-1 protocol, code and SEC-object fingerprints "
                               "(qresearch.rr_ucr)")
+    if cfg["strategy_id"] == "S033":
+        # H032 R1 / R2 (owner D282, research/os/H032_R_protocol.md): research / DEV, official start = the frozen start
+        # review 2012-07-31, history-only warm-up from 2009-05-01 (the canary's stream), the approved filters without
+        # the SEC layer, default build; R1 = E033-01 (retry E033-02) at 10 bps, R2 = E033-03 (retry E033-04) at 20 bps;
+        # the pinned protocol, code and SEC objects
+        from . import os1r
+        u, c, pf = cfg["universe"], cfg["costs"], cfg["portfolio"]
+        eid = cfg["experiment_id"]
+        if (kind != "research" or cfg["split"] != "DEV" or cfg.get("hypothesis_id") != "H032"
+                or (cfg["start"], cfg["end"], cfg.get("warmup_start")) != (os1r.START_REVIEW, "2021-12-31", os1r.WARMUP_FROM)
+                or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"
+                or eid not in os1r.SLIPPAGE_BPS or float(c.get("slippage_bps", -1)) != 10
+                or float(c.get("slippage_stress_multiple", 1)) * 10 != os1r.SLIPPAGE_BPS[eid]
+                or float(c.get("commission_per_order", 0)) != 7.0
+                or float(cfg.get("cash", 0)) != 100000
+                or (float(pf.get("max_position_weight", 0)), float(pf.get("cash_buffer", 0)),
+                    float(pf.get("min_position_usd", 0)), int(pf.get("max_positions", 0)), pf.get("buy_funding"),
+                    float(pf.get("gap_reserve", 0))) != (0.1, 0.02, 5000.0, 15, "settled_cash_only", 0.15)
+                or cfg.get("programme") != os1r.PROGRAMME
+                or os1r.DECISION not in str(cfg.get("owner_approval_required") or "")):
+            raise ConfigError("S033 runs H032 R1 (E033-01, retry E033-02, 10 bps) or R2 (E033-03, retry E033-04, "
+                              "20 bps): research DEV 2012-07-31 .. 2021-12-31, warm-up from 2009-05-01, $100,000, $7, "
+                              "the approved filters without the SEC layer and portfolio rules, default build, programme "
+                              "OS, owner approval D282")
+        if os1r.PROTOCOL_SHA256 is None or cfg.get("params") != os1r.run_params():
+            raise ConfigError("S033 runs carry the pinned H032 R protocol, code and SEC-object fingerprints "
+                              "(qresearch.os1r)")
     if cfg["strategy_id"] == "X807":
         # H032 / OS-1 revised canary C-OS1 (owner D278, research/os/H032_spec.md): ONE aggregate-only infrastructure run
         # on the default build (E807-01; E807-02 only as the documented retry), 2009-05-01 .. 2021-12-31 without
