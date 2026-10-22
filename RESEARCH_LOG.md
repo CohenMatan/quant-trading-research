@@ -2699,3 +2699,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D286):** design-only review of standalone Top-15 vs SPY core + offensive satellite; no hypotheses, runs, calculations, purchases or constraint changes.
 - **Finding:** the standalone book carries ≈ 0.5–1.5 pts/yr structural cost plus large regime-dependent tracking error; an SPY core bounds costs and shortfall but scales edge and noise equally, so it does not make an edge testable. Neither architecture supplies a source of return; independent evidence available cannot confirm plausible large-cap edges.
 - **Recommendation:** PAUSE offensive strategy discovery; SPY remains the offensive baseline; Architecture 2 only if resumed under stated conditions. Checkpoint `docs/checkpoints/SA_CP1_post_h032_architecture_review.md`. STOPPED.
+
+## 2026-10-22: Long-Term Wealth Research Reset — LW-CP1 (D288 / D289; STOP)
+
+- **Owner (D288):** reset around 20–30-year terminal wealth vs SPY; review constraints, prior evidence and at most three distinct directions; design only.
+- **Finding:** conventional large-cap signals showed near-zero power under calibrated nulls; power limits mean modest edges were never confirmable; concentration and the mega-cap decade added headwinds; 2010–2021 is spent.
+- **Directions:** D1 broader-universe premia (credible, not independently testable by us); D2 spin-off forced-selling satellite (distinct, independently testable on 1998–2009 SEC events + forward; moderate prior).
+- **Recommendation:** D2 Stage 0 desk review only, with kill criteria; or pause with SPY as baseline. Checkpoint `docs/checkpoints/LW_CP1_long_term_wealth_research_reset.md`. STOPPED.
