@@ -41,6 +41,8 @@
 | H028 | Fixed strong shrinkage (λ = 100) | 13 | REJECTED (B4 failed). Conditional-null p ≈ 0.0004 structurally suspect (D238); repaired-null attempt **B — METHOD NOT VALIDATED** (D239); **Phase 13 CLOSED**. Descriptive designation (D241): **Frozen Defensive Research Reference** — not a status change, never a production component | D220, D238, D239, D240, D241 |
 | H029 | Standalone business-improvement score | 14 | Historical: BLOCKED (two nulls inadequate; Null #3 failed synthetic feasibility). **Final: NOT EVALUABLE — NO VALID REAL-DATA EVALUATION** (never REJECTED on performance); **Phase 14 CLOSED** | D232, D234, D237, D240 |
 | H030 | Fixed 50/50 blend of frozen H028 and H029 | 14 | Same as H029: historical BLOCKED; **final NOT EVALUABLE**; Phase 14 CLOSED | D232, D234, D237, D240 |
+| H031 | RR programme candidate (`research/rr/h031/H031_spec_DRAFT.md`) | RR | DRAFT, never registered; parked | D268, D273 |
+| H032 | Cash-generating, growing net share reducers (OS-1 revised) | OS | **REJECTED — NOT PROMISING** (R1 E033-01 failed O1–O7, O9; R2 not executed); CLOSED | D278, D284, D285 |
 
 **Programme state (D240):**
 - Research cycle completed: **No Production Candidate Found**.
@@ -79,3 +81,5 @@
 **Update (D278–D281, 2026-10-21):** **H032 — Cash-Generating, Growing Net Share Reducers (OS-1 revised)** registered and FROZEN (`research/hypotheses/H032.md`, `research/os/H032_spec.md`). Canary C-OS1 PASS (E807-02; OS-CP2). No strategy return computed; R1 / R2 not authorised; EXPLORATORY only. H031 remains DRAFT and parked.
 
 **Update (D282–D284, 2026-10-22):** **H032** R1 E033-01 run (technically valid, fidelity exact) → **NOT PROMISING** (all R1 gates O1–O7, O9 fail; CAGR 11.84% vs SPY 16.31%); R2 not run; preserved exactly as tested; owner closure pending (recommended: REJECTED). EXPLORATORY; Holdout sealed. H031 remains DRAFT and parked.
+
+**Update (D285, 2026-10-22):** **H032 CLOSED — REJECTED — NOT PROMISING** by the owner (R1 E033-01; R2 not executed; closure record `docs/checkpoints/OS_CP4_h032_closure.md`). Never rerun or rescued; B0 / MOM / controls are not candidates. H031 parked; H028 REJECTED; Holdout sealed.

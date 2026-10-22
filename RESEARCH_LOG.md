@@ -2687,3 +2687,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Result:** $286,598 vs SPY $414,278 (CAGR 11.84% vs 16.31%); beta 1.17, down-capture 1.21, max DD −44.0%; behind EW and most random / beta-matched books; ahead only in 2012–2015.
 - **Verdict:** O1–O7 and O9 all FAIL → H032 NOT PROMISING (EXPLORATORY); R2 not run. B0 / MOM / controls stay diagnostics.
 - **Checkpoint:** `docs/checkpoints/OS_CP3_h032_r1_performance_E033.md`. STOPPED awaiting the owner (recommendation: close H032 as REJECTED).
+
+## 2026-10-22: H032 CLOSED — REJECTED — NOT PROMISING (D285; STOP)
+
+- **Owner (D285):** R1 accepted; H032 rejected; R2 not executed; B0 / MOM / controls never promoted; next direction to be chosen separately on economic grounds.
+- **Closure record:** `docs/checkpoints/OS_CP4_h032_closure.md` (committed evidence only): pool vs SPY −2.1 pts/yr, concentration ≈ −1.5, filters lowered returns, ranking added little, higher beta / down-capture, retail clustering; execution / costs / data / universe repair ruled out.
+- **Status:** H031 parked; H028 REJECTED; RR6 INCONCLUSIVE; Holdout sealed. Nothing started. STOPPED.

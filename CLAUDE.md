@@ -106,7 +106,8 @@ See `RESEARCH_LOG.md` (latest entry) and `docs/checkpoints/`.
   - No return computed. R1 / R2 need owner approval and the trading host. STOPPED awaiting the owner (OS-CP2 §6). EXPLORATORY; RR6 INCONCLUSIVE; H031 parked.
 - **D282 / D283 / OS-CP3 (D284, 2026-10-22):** owner approved the H032 trading host + R1 (R2 conditional). S033 (subclass of pinned X807), `qr_os1_trade`, engine copy `qr_os1_books`, frozen protocol `research/os/H032_R_protocol.md` + `OS1_R_eval.py` (pinned in `qresearch.os1r`).
   - **E033-01 R1** (LEAN 18201): valid (I1–I5 pass; shadow fidelity exact). **H032 NOT PROMISING:** $286,598 vs SPY $414,278 (11.84% vs 16.31% CAGR), β 1.17, down-capture 1.21; all R1 gates O1–O7 / O9 FAIL (`docs/checkpoints/OS_CP3_h032_r1_performance_E033.md`).
-  - No R2, rerun or variant; B0 / MOM / controls never promoted; EXPLORATORY; H031 parked. STOPPED awaiting the owner (recommendation: close H032 as REJECTED).
+  - No R2, rerun or variant; B0 / MOM / controls never promoted; EXPLORATORY; H031 parked.
+- **D285 (2026-10-22): H032 CLOSED — REJECTED — NOT PROMISING** (owner; `docs/checkpoints/OS_CP4_h032_closure.md`): R2 not executed; nothing rescued or promoted (B0 / MOM / controls). Implication recorded: ≈ 3–4 pts/yr hurdle for equal-weight Top-N selection vs SPY in 2012–2021; 2010–2021 spent for selection. **Next research direction = a separate, economically motivated owner decision.** No backtest, hypothesis, parameter change, infrastructure, purchase or data repair. STOPPED awaiting the owner.
 - Holdout 2022-01-01 → 2026-08-31 sealed; no data purchase (D124).
 
 - **CP1 was APPROVED by the owner on 2026-09-27.**
