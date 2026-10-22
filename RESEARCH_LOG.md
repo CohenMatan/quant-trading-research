@@ -2693,3 +2693,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D285):** R1 accepted; H032 rejected; R2 not executed; B0 / MOM / controls never promoted; next direction to be chosen separately on economic grounds.
 - **Closure record:** `docs/checkpoints/OS_CP4_h032_closure.md` (committed evidence only): pool vs SPY −2.1 pts/yr, concentration ≈ −1.5, filters lowered returns, ranking added little, higher beta / down-capture, retail clustering; execution / costs / data / universe repair ruled out.
 - **Status:** H031 parked; H028 REJECTED; RR6 INCONCLUSIVE; Holdout sealed. Nothing started. STOPPED.
+
+## 2026-10-22: Post-H032 strategic architecture review — SA-CP1 (D286 / D287; STOP)
+
+- **Owner (D286):** design-only review of standalone Top-15 vs SPY core + offensive satellite; no hypotheses, runs, calculations, purchases or constraint changes.
+- **Finding:** the standalone book carries ≈ 0.5–1.5 pts/yr structural cost plus large regime-dependent tracking error; an SPY core bounds costs and shortfall but scales edge and noise equally, so it does not make an edge testable. Neither architecture supplies a source of return; independent evidence available cannot confirm plausible large-cap edges.
+- **Recommendation:** PAUSE offensive strategy discovery; SPY remains the offensive baseline; Architecture 2 only if resumed under stated conditions. Checkpoint `docs/checkpoints/SA_CP1_post_h032_architecture_review.md`. STOPPED.
