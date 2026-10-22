@@ -2680,3 +2680,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Built:** S033 (subclass of the pinned canary host X807: the review code is the canary's), the trading layer `qr_os1_trade`, a byte-identical copy of the LEAN-verified shadow engine (`qr_os1_books`), the frozen implementation / evaluation protocol `research/os/H032_R_protocol.md` and evaluation rule `OS1_R_eval.py`, config E033-01; all pinned in `qresearch.os1r`.
 - **Disclosed implementation choice:** decisions at the first harness close after each review, executed at the following open (one-session lag, all books equally).
 - **Offline end-to-end test** on a fake broker with the real harness: LEAN B1 and its shadow replay identical through splits, dividends, a delisting, a stale exit and cash scaling. No return computed yet.
+
+## 2026-10-22: H032 R1 — NOT PROMISING (E033-01; D284; STOP)
+
+- **Run:** E033-01 (LEAN 18201, 349 s), first and only R1 attempt. Technically valid: I1–I5 pass, 113 / 113 reviews identical to the canary, shadow fidelity exact (0.000 terminal and monthly).
+- **Result:** $286,598 vs SPY $414,278 (CAGR 11.84% vs 16.31%); beta 1.17, down-capture 1.21, max DD −44.0%; behind EW and most random / beta-matched books; ahead only in 2012–2015.
+- **Verdict:** O1–O7 and O9 all FAIL → H032 NOT PROMISING (EXPLORATORY); R2 not run. B0 / MOM / controls stay diagnostics.
+- **Checkpoint:** `docs/checkpoints/OS_CP3_h032_r1_performance_E033.md`. STOPPED awaiting the owner (recommendation: close H032 as REJECTED).
