@@ -2719,3 +2719,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Audit:** all tested technical entries rejected / no signal; exits always time-capped except none; uncapped holds, structure exits, risk-budget sizing, SPY idle capital, after-tax and pre-2010 never run. H018 null: fake winners beat SPY in every no-edge world.
 - **Blockers:** historical chart viewing by Claude blocked by licence / D151; independent evidence requires a price / volume-defined 1999–2009 universe audit.
 - **Recommendation:** TP-1 (open-ended trend participation) as the single direction only if Phase 1b passes; otherwise stop. Checkpoint `docs/checkpoints/TT_CP1_technical_trading_phase1_audit_architecture.md`. STOPPED.
+
+## 2026-10-23: Historical chart source feasibility (TT-CP1b; D294 / D295; STOP)
+
+- **Owner (D294):** keep the hybrid approach; find independent historical chart / OHLCV sources that may legally be sent to Claude before any TP-1 or Phase 1b approval; desk research only.
+- **Finding:** only WIKI Prices (Nasdaq Data Link, stated public domain; 1962 → 2018-03, ~3,199 tickers, composition unverified, no market cap) clears the licence test; TradingView, EODHD, Massive, Tiingo, Norgate, Yahoo, Stooq and QuantConnect do not (personal / display-only, no redistribution, no AI permission found). Vendor sites blocked from this environment; terms from search excerpts (disclosed).
+- **Decision:** CONDITIONAL GO for exploratory blind chart discovery on WIKI 2010–2017 only (time-window partition protects 1999–2009, Holdout and forward), subject to owner decisions C1–C4 and a pre-approved composition gate; otherwise quantitative-only (Q) or pause (P). Checkpoint `docs/checkpoints/TT_CP1b_historical_chart_source_feasibility.md`. Nothing downloaded, rendered, bought or run. STOPPED.

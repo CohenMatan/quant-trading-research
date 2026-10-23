@@ -38,7 +38,9 @@ def test_power_artifact_reproducible(tmp_path):
 def test_records_and_no_new_active_hypothesis():
     assert "| D247 |" in (ROOT / "DECISIONS.md").read_text()
     st = (ROOT / "research/hypotheses/STATUS.md").read_text()
-    assert "| H031 |" not in st and "Still no active hypothesis" in st.split("D247")[-1]
+    # H031 was later drafted but never registered (D268); H032 was registered and closed (D285)
+    assert all("never registered" in ln for ln in st.splitlines() if ln.startswith("| H031 |"))
+    assert "Still no active hypothesis" in st.split("D247")[-1]
     assert "| 6 | 2026-10-18 | D247 |" in (ROOT / "research/longhorizon/SELECTION_LEDGER.md").read_text()
     assert (ROOT / "docs/owner/2026-10-18_independent_offensive_stock_selection.md").exists()
     assert not (ROOT / "research/hypotheses/H031.md").exists()
