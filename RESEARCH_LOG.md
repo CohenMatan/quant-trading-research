@@ -2712,3 +2712,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D290):** Stage 0 only (literature + data feasibility; no census, retrieval, runs or returns).
 - **Finding:** spin-off outperformance is benchmark-dependent and mixed after 2000; the main spin-off ETF roughly matched the S&P 500 over its first decade before fees; the forced-selling mechanism is not supported by the direct test; no complete verifiable 1998–2009 event list from existing files and no ground truth without purchased data; the window overlaps published samples; small, noisy whole-account effect at $100K.
 - **Recommendation:** NO-GO and PAUSE offensive discovery; SPY baseline. Checkpoint `docs/checkpoints/SO_CP0_spinoff_stage0_desk_review.md`. STOPPED.
+
+## 2026-10-23: Technical trading Phase 1 — audit and architecture (TT-CP1; D292 / D293; STOP)
+
+- **Owner (D292):** refocus on price / volume technical trading for 20–30-year after-tax terminal wealth vs SPY; Phase 1 audit and design only.
+- **Audit:** all tested technical entries rejected / no signal; exits always time-capped except none; uncapped holds, structure exits, risk-budget sizing, SPY idle capital, after-tax and pre-2010 never run. H018 null: fake winners beat SPY in every no-edge world.
+- **Blockers:** historical chart viewing by Claude blocked by licence / D151; independent evidence requires a price / volume-defined 1999–2009 universe audit.
+- **Recommendation:** TP-1 (open-ended trend participation) as the single direction only if Phase 1b passes; otherwise stop. Checkpoint `docs/checkpoints/TT_CP1_technical_trading_phase1_audit_architecture.md`. STOPPED.
