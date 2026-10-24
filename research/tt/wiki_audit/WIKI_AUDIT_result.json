@@ -1,0 +1,661 @@
+{
+ "protocol_sha256": "39a926b87bcd7a4cc978c2aeeead7f842013672ad28682f5e39da41fdf5d3f28",
+ "file_sha256": "ca7fb174c7948db85638917d25ff65d438e27d5cb23675da784c54db01e3d003",
+ "window": [
+  "2010-01-04",
+  "2017-12-29"
+ ],
+ "inventory": {
+  "tickers_by_year": {
+   "2010": 2709,
+   "2011": 2804,
+   "2012": 2923,
+   "2013": 3083,
+   "2014": 3163,
+   "2015": 3073,
+   "2016": 2883,
+   "2017": 2681
+  },
+  "rows_by_year": {
+   "2010": 667900,
+   "2011": 694884,
+   "2012": 716567,
+   "2013": 755324,
+   "2014": 783202,
+   "2015": 746725,
+   "2016": 695773,
+   "2017": 638379
+  },
+  "tickers_total": 3196,
+  "rows_total": 5698754,
+  "rows_any_nan_share": 9.703875619126567e-05
+ },
+ "calendar": {
+  "sessions_by_year": {
+   "2010": 252,
+   "2011": 252,
+   "2012": 250,
+   "2013": 252,
+   "2014": 252,
+   "2015": 252,
+   "2016": 252,
+   "2017": 250
+  },
+  "diff_vs_nyse": {
+   "2010": 0,
+   "2011": 0,
+   "2012": 0,
+   "2013": 0,
+   "2014": 0,
+   "2015": 0,
+   "2016": 0,
+   "2017": -1
+  },
+  "ok": true
+ },
+ "integrity": {
+  "ticker_sessions": 2108608,
+  "missing_share": 0.0005465074006012482,
+  "spike_share": 4.742465171335782e-07,
+  "invalid_ohlc_share": 3.651698181928552e-05,
+  "ratio_changes": 24526,
+  "ratio_changes_explained_share": 0.8274891951398516,
+  "events_without_ratio_change": 6,
+  "dividend_events": 20066,
+  "dividend_factor_agree_share": 0.9890361806040068,
+  "split_events": 235,
+  "spike_share_by_year": {
+   "2010": 0.0,
+   "2011": 0.0,
+   "2012": 0.0,
+   "2013": 0.0,
+   "2014": 0.0,
+   "2015": 0.0,
+   "2016": 0.0,
+   "2017": 4.139398379839474e-06
+  }
+ },
+ "liquidity_terciles": {
+  "2010": {
+   "n_tickers": 2709,
+   "cut_1_3": 1782202.3333333333,
+   "cut_2_3": 14735630.833333332
+  },
+  "2011": {
+   "n_tickers": 2804,
+   "cut_1_3": 2110204.333333333,
+   "cut_2_3": 17068815.666666664
+  },
+  "2012": {
+   "n_tickers": 2923,
+   "cut_1_3": 1874743.5,
+   "cut_2_3": 15716786.000000002
+  },
+  "2013": {
+   "n_tickers": 3083,
+   "cut_1_3": 2469007.9999999995,
+   "cut_2_3": 17534472.333333332
+  },
+  "2014": {
+   "n_tickers": 3163,
+   "cut_1_3": 3442587.5,
+   "cut_2_3": 21130881.32
+  },
+  "2015": {
+   "n_tickers": 3073,
+   "cut_1_3": 3499721.67,
+   "cut_2_3": 24078822.52
+  },
+  "2016": {
+   "n_tickers": 2883,
+   "cut_1_3": 3427433.8316666665,
+   "cut_2_3": 25337849.996666666
+  },
+  "2017": {
+   "n_tickers": 2681,
+   "cut_1_3": 4238567.35,
+   "cut_2_3": 28933101.163333334
+  }
+ },
+ "composition": {
+  "overall": {
+   "n": 74280,
+   "registrants": 1614,
+   "classes": {
+    "MATCHED": 57479,
+    "MISSING-PARTIAL": 74,
+    "MISSING-OUT-OF-LIFE": 427,
+    "AMBIGUOUS": 10471,
+    "UNRESOLVED-IDENTITY": 5829
+   },
+   "strict": 0.9007976931153913,
+   "resolved": 0.9913590893411521
+  },
+  "by_year": {
+   "2010": {
+    "n": 2133,
+    "registrants": 250,
+    "classes": {
+     "MATCHED": 1587,
+     "AMBIGUOUS": 356,
+     "MISSING-OUT-OF-LIFE": 19,
+     "UNRESOLVED-IDENTITY": 171
+    },
+    "strict": 0.8930782217220034,
+    "resolved": 0.9881693648816936
+   },
+   "2011": {
+    "n": 4782,
+    "registrants": 501,
+    "classes": {
+     "MATCHED": 3706,
+     "AMBIGUOUS": 604,
+     "MISSING-OUT-OF-LIFE": 22,
+     "UNRESOLVED-IDENTITY": 445,
+     "MISSING-PARTIAL": 5
+    },
+    "strict": 0.8870272857826711,
+    "resolved": 0.9927672113581569
+   },
+   "2012": {
+    "n": 8716,
+    "registrants": 841,
+    "classes": {
+     "MATCHED": 6897,
+     "AMBIGUOUS": 1045,
+     "MISSING-OUT-OF-LIFE": 37,
+     "UNRESOLVED-IDENTITY": 736,
+     "MISSING-PARTIAL": 1
+    },
+    "strict": 0.8991005084082909,
+    "resolved": 0.9945205479452055
+   },
+   "2013": {
+    "n": 9485,
+    "registrants": 929,
+    "classes": {
+     "MATCHED": 7732,
+     "AMBIGUOUS": 1167,
+     "MISSING-OUT-OF-LIFE": 29,
+     "UNRESOLVED-IDENTITY": 553,
+     "MISSING-PARTIAL": 4
+    },
+    "strict": 0.9295503726857418,
+    "resolved": 0.9957501609787508
+   },
+   "2014": {
+    "n": 10883,
+    "registrants": 1018,
+    "classes": {
+     "MATCHED": 8756,
+     "AMBIGUOUS": 1585,
+     "MISSING-OUT-OF-LIFE": 25,
+     "MISSING-PARTIAL": 4,
+     "UNRESOLVED-IDENTITY": 513
+    },
+    "strict": 0.9417078941707894,
+    "resolved": 0.9966989186112692
+   },
+   "2015": {
+    "n": 12457,
+    "registrants": 1159,
+    "classes": {
+     "MATCHED": 9688,
+     "AMBIGUOUS": 1941,
+     "MISSING-PARTIAL": 16,
+     "MISSING-OUT-OF-LIFE": 63,
+     "UNRESOLVED-IDENTITY": 749
+    },
+    "strict": 0.9212628375808292,
+    "resolved": 0.9919115388553291
+   },
+   "2016": {
+    "n": 13246,
+    "registrants": 1246,
+    "classes": {
+     "MATCHED": 9946,
+     "AMBIGUOUS": 1906,
+     "MISSING-OUT-OF-LIFE": 59,
+     "UNRESOLVED-IDENTITY": 1318,
+     "MISSING-PARTIAL": 17
+    },
+    "strict": 0.8770723104056437,
+    "resolved": 0.9924166832967471
+   },
+   "2017": {
+    "n": 12578,
+    "registrants": 1233,
+    "classes": {
+     "MATCHED": 9167,
+     "MISSING-PARTIAL": 27,
+     "MISSING-OUT-OF-LIFE": 173,
+     "AMBIGUOUS": 1867,
+     "UNRESOLVED-IDENTITY": 1344
+    },
+    "strict": 0.8558491270656334,
+    "resolved": 0.9786484466744956
+   }
+  },
+  "leavers": {
+   "n": 4540,
+   "registrants": 275,
+   "classes": {
+    "AMBIGUOUS": 1051,
+    "MATCHED": 2510,
+    "MISSING-PARTIAL": 18,
+    "MISSING-OUT-OF-LIFE": 26,
+    "UNRESOLVED-IDENTITY": 935
+   },
+   "strict": 0.7194038406420178,
+   "resolved": 0.9827721221613156
+  },
+  "non_leavers": {
+   "n": 65753,
+   "registrants": 1315,
+   "classes": {
+    "MATCHED": 52296,
+    "MISSING-PARTIAL": 56,
+    "MISSING-OUT-OF-LIFE": 401,
+    "AMBIGUOUS": 8447,
+    "UNRESOLVED-IDENTITY": 4553
+   },
+   "strict": 0.912574599518375,
+   "resolved": 0.9913369855742802
+  },
+  "leavers_by_exit_type": {
+   "DELISTED-OTHER": {
+    "n": 70,
+    "registrants": 5,
+    "classes": {
+     "AMBIGUOUS": 52,
+     "UNRESOLVED-IDENTITY": 18
+    },
+    "strict": 0.0,
+    "resolved": null
+   },
+   "ACQUIRED": {
+    "n": 4335,
+    "registrants": 254,
+    "classes": {
+     "MATCHED": 2498,
+     "MISSING-PARTIAL": 18,
+     "MISSING-OUT-OF-LIFE": 26,
+     "AMBIGUOUS": 961,
+     "UNRESOLVED-IDENTITY": 832
+    },
+    "strict": 0.7403675163011263,
+    "resolved": 0.982690794649882
+   },
+   "FAILED": {
+    "n": 31,
+    "registrants": 6,
+    "classes": {
+     "MATCHED": 12,
+     "UNRESOLVED-IDENTITY": 19
+    },
+    "strict": 0.3870967741935484,
+    "resolved": 1.0
+   },
+   "UNKNOWN": {
+    "n": 104,
+    "registrants": 10,
+    "classes": {
+     "AMBIGUOUS": 38,
+     "UNRESOLVED-IDENTITY": 66
+    },
+    "strict": 0.0,
+    "resolved": null
+   }
+  },
+  "strata": {
+   "2010|size1": {
+    "n": 716,
+    "registrants": 94,
+    "classes": {
+     "MATCHED": 499,
+     "AMBIGUOUS": 104,
+     "UNRESOLVED-IDENTITY": 113
+    },
+    "strict": 0.815359477124183,
+    "resolved": 1.0
+   },
+   "2010|size2": {
+    "n": 711,
+    "registrants": 93,
+    "classes": {
+     "AMBIGUOUS": 150,
+     "MATCHED": 537,
+     "UNRESOLVED-IDENTITY": 24
+    },
+    "strict": 0.9572192513368984,
+    "resolved": 1.0
+   },
+   "2010|size3": {
+    "n": 706,
+    "registrants": 86,
+    "classes": {
+     "MATCHED": 551,
+     "AMBIGUOUS": 102,
+     "MISSING-OUT-OF-LIFE": 19,
+     "UNRESOLVED-IDENTITY": 34
+    },
+    "strict": 0.9122516556291391,
+    "resolved": 0.9666666666666667
+   },
+   "2011|size1": {
+    "n": 1598,
+    "registrants": 233,
+    "classes": {
+     "MATCHED": 1177,
+     "AMBIGUOUS": 150,
+     "UNRESOLVED-IDENTITY": 271
+    },
+    "strict": 0.8128453038674033,
+    "resolved": 1.0
+   },
+   "2011|size2": {
+    "n": 1594,
+    "registrants": 226,
+    "classes": {
+     "MATCHED": 1223,
+     "AMBIGUOUS": 234,
+     "UNRESOLVED-IDENTITY": 127,
+     "MISSING-OUT-OF-LIFE": 10
+    },
+    "strict": 0.899264705882353,
+    "resolved": 0.991889699918897
+   },
+   "2011|size3": {
+    "n": 1590,
+    "registrants": 170,
+    "classes": {
+     "AMBIGUOUS": 220,
+     "MATCHED": 1306,
+     "MISSING-OUT-OF-LIFE": 12,
+     "UNRESOLVED-IDENTITY": 47,
+     "MISSING-PARTIAL": 5
+    },
+    "strict": 0.9532846715328467,
+    "resolved": 0.9871504157218443
+   },
+   "2012|size1": {
+    "n": 2910,
+    "registrants": 335,
+    "classes": {
+     "MATCHED": 2347,
+     "AMBIGUOUS": 268,
+     "UNRESOLVED-IDENTITY": 284,
+     "MISSING-PARTIAL": 1,
+     "MISSING-OUT-OF-LIFE": 10
+    },
+    "strict": 0.8883421650264951,
+    "resolved": 0.9953350296861747
+   },
+   "2012|size2": {
+    "n": 2904,
+    "registrants": 324,
+    "classes": {
+     "MATCHED": 2223,
+     "AMBIGUOUS": 396,
+     "UNRESOLVED-IDENTITY": 270,
+     "MISSING-OUT-OF-LIFE": 15
+    },
+    "strict": 0.8863636363636364,
+    "resolved": 0.9932975871313673
+   },
+   "2012|size3": {
+    "n": 2902,
+    "registrants": 299,
+    "classes": {
+     "MATCHED": 2327,
+     "AMBIGUOUS": 381,
+     "MISSING-OUT-OF-LIFE": 12,
+     "UNRESOLVED-IDENTITY": 182
+    },
+    "strict": 0.9230464101547006,
+    "resolved": 0.9948696023941855
+   },
+   "2013|size1": {
+    "n": 3166,
+    "registrants": 378,
+    "classes": {
+     "MATCHED": 2701,
+     "AMBIGUOUS": 268,
+     "MISSING-OUT-OF-LIFE": 14,
+     "UNRESOLVED-IDENTITY": 181,
+     "MISSING-PARTIAL": 2
+    },
+    "strict": 0.9320220841959972,
+    "resolved": 0.9941111520058888
+   },
+   "2013|size2": {
+    "n": 3161,
+    "registrants": 358,
+    "classes": {
+     "MATCHED": 2440,
+     "AMBIGUOUS": 464,
+     "UNRESOLVED-IDENTITY": 254,
+     "MISSING-OUT-OF-LIFE": 3
+    },
+    "strict": 0.9047089358546533,
+    "resolved": 0.9987720016373312
+   },
+   "2013|size3": {
+    "n": 3158,
+    "registrants": 328,
+    "classes": {
+     "MATCHED": 2591,
+     "AMBIGUOUS": 435,
+     "MISSING-OUT-OF-LIFE": 12,
+     "UNRESOLVED-IDENTITY": 118,
+     "MISSING-PARTIAL": 2
+    },
+    "strict": 0.9515240543518179,
+    "resolved": 0.9946257197696737
+   },
+   "2014|size1": {
+    "n": 3630,
+    "registrants": 429,
+    "classes": {
+     "MATCHED": 2969,
+     "AMBIGUOUS": 478,
+     "MISSING-PARTIAL": 1,
+     "MISSING-OUT-OF-LIFE": 6,
+     "UNRESOLVED-IDENTITY": 176
+    },
+    "strict": 0.9419416243654822,
+    "resolved": 0.9976478494623656
+   },
+   "2014|size2": {
+    "n": 3629,
+    "registrants": 389,
+    "classes": {
+     "MATCHED": 2907,
+     "AMBIGUOUS": 488,
+     "UNRESOLVED-IDENTITY": 224,
+     "MISSING-OUT-OF-LIFE": 10
+    },
+    "strict": 0.9255014326647565,
+    "resolved": 0.9965718203633871
+   },
+   "2014|size3": {
+    "n": 3624,
+    "registrants": 355,
+    "classes": {
+     "MATCHED": 2880,
+     "AMBIGUOUS": 619,
+     "MISSING-OUT-OF-LIFE": 9,
+     "MISSING-PARTIAL": 3,
+     "UNRESOLVED-IDENTITY": 113
+    },
+    "strict": 0.9584026622296173,
+    "resolved": 0.995850622406639
+   },
+   "2015|size1": {
+    "n": 4158,
+    "registrants": 482,
+    "classes": {
+     "MATCHED": 3221,
+     "MISSING-PARTIAL": 7,
+     "AMBIGUOUS": 609,
+     "MISSING-OUT-OF-LIFE": 15,
+     "UNRESOLVED-IDENTITY": 306
+    },
+    "strict": 0.9075795998872922,
+    "resolved": 0.9932161578785076
+   },
+   "2015|size2": {
+    "n": 4151,
+    "registrants": 444,
+    "classes": {
+     "MATCHED": 3278,
+     "AMBIGUOUS": 575,
+     "MISSING-OUT-OF-LIFE": 37,
+     "UNRESOLVED-IDENTITY": 255,
+     "MISSING-PARTIAL": 6
+    },
+    "strict": 0.9166666666666666,
+    "resolved": 0.9870520927431496
+   },
+   "2015|size3": {
+    "n": 4148,
+    "registrants": 397,
+    "classes": {
+     "MATCHED": 3189,
+     "AMBIGUOUS": 757,
+     "MISSING-PARTIAL": 3,
+     "MISSING-OUT-OF-LIFE": 11,
+     "UNRESOLVED-IDENTITY": 188
+    },
+    "strict": 0.9404305514597464,
+    "resolved": 0.9956290977208867
+   },
+   "2016|size1": {
+    "n": 4419,
+    "registrants": 519,
+    "classes": {
+     "MATCHED": 3314,
+     "UNRESOLVED-IDENTITY": 538,
+     "MISSING-OUT-OF-LIFE": 18,
+     "AMBIGUOUS": 543,
+     "MISSING-PARTIAL": 6
+    },
+    "strict": 0.8550051599587203,
+    "resolved": 0.9928100659077291
+   },
+   "2016|size2": {
+    "n": 4416,
+    "registrants": 485,
+    "classes": {
+     "MATCHED": 3312,
+     "AMBIGUOUS": 549,
+     "UNRESOLVED-IDENTITY": 530,
+     "MISSING-PARTIAL": 6,
+     "MISSING-OUT-OF-LIFE": 19
+    },
+    "strict": 0.8564778898370831,
+    "resolved": 0.9925082409349716
+   },
+   "2016|size3": {
+    "n": 4411,
+    "registrants": 426,
+    "classes": {
+     "MATCHED": 3320,
+     "AMBIGUOUS": 814,
+     "MISSING-OUT-OF-LIFE": 22,
+     "UNRESOLVED-IDENTITY": 250,
+     "MISSING-PARTIAL": 5
+    },
+    "strict": 0.922991381706978,
+    "resolved": 0.9919330743949806
+   },
+   "2017|size1": {
+    "n": 4197,
+    "registrants": 522,
+    "classes": {
+     "MATCHED": 2989,
+     "MISSING-PARTIAL": 12,
+     "MISSING-OUT-OF-LIFE": 96,
+     "UNRESOLVED-IDENTITY": 545,
+     "AMBIGUOUS": 555
+    },
+    "strict": 0.8207029104887424,
+    "resolved": 0.9651275427833387
+   },
+   "2017|size2": {
+    "n": 4193,
+    "registrants": 475,
+    "classes": {
+     "MATCHED": 3013,
+     "MISSING-PARTIAL": 8,
+     "MISSING-OUT-OF-LIFE": 62,
+     "AMBIGUOUS": 558,
+     "UNRESOLVED-IDENTITY": 552
+    },
+    "strict": 0.8288858321870701,
+    "resolved": 0.9772948426856958
+   },
+   "2017|size3": {
+    "n": 4188,
+    "registrants": 426,
+    "classes": {
+     "MATCHED": 3165,
+     "MISSING-PARTIAL": 7,
+     "AMBIGUOUS": 754,
+     "MISSING-OUT-OF-LIFE": 15,
+     "UNRESOLVED-IDENTITY": 247
+    },
+    "strict": 0.9216656959813628,
+    "resolved": 0.9930969563853154
+   },
+   "category|financial_reit": {
+    "n": 16470,
+    "registrants": 346,
+    "classes": {
+     "MATCHED": 12206,
+     "MISSING-OUT-OF-LIFE": 85,
+     "MISSING-PARTIAL": 16,
+     "AMBIGUOUS": 2447,
+     "UNRESOLVED-IDENTITY": 1716
+    },
+    "strict": 0.8704271553875775,
+    "resolved": 0.9917932883724709
+   },
+   "category|foreign_style_name": {
+    "n": 4328,
+    "registrants": 97,
+    "classes": {
+     "MATCHED": 2703,
+     "MISSING-PARTIAL": 9,
+     "MISSING-OUT-OF-LIFE": 40,
+     "AMBIGUOUS": 810,
+     "UNRESOLVED-IDENTITY": 766
+    },
+    "strict": 0.7683342808413871,
+    "resolved": 0.9821947674418605
+   }
+  }
+ },
+ "split_check": {
+  "events_in_window": 235,
+  "tested": 100,
+  "agree": 88,
+  "agree_share": 0.88
+ },
+ "chart_ready": {
+  "registrant_months": 55580,
+  "registrants": 1117
+ },
+ "gates": {
+  "A1": "PASS",
+  "A2": "INCONCLUSIVE",
+  "A3": "PASS",
+  "A4": "FAIL",
+  "A5": "FAIL",
+  "A6": "FAIL",
+  "A7": "PASS",
+  "overall": "INSUFFICIENT",
+  "_a7_cells_min": 138,
+  "_a7_leaver_registrants": 134
+ }
+}

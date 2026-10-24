@@ -1,0 +1,44 @@
+{
+ "status": "POST-HOC DIAGNOSTICS \u2014 do not alter the frozen A1-A7 result",
+ "ambiguous_breakdown": {
+  "r2_multi_cik_concurrent_cofiler": 7532,
+  "prefix_missing_or_shared_in_month": 219,
+  "r2_multi_cik_sequential_reuse": 2720
+ },
+ "unexplained_ratio_changes_matched_tickers": {
+  "unexplained": 4230,
+  "magnitude_bins": {
+   "1e-4..1e-3": 3990,
+   "1e-3..1e-2": 231,
+   ">1e-2": 9
+  },
+  "within_1_session_of_event": 118,
+  "tickers_affected": 21,
+  "by_year": {
+   "2010": 1189,
+   "2011": 1028,
+   "2012": 1016,
+   "2013": 709,
+   "2014": 280,
+   "2015": 0,
+   "2016": 0,
+   "2017": 8
+  }
+ },
+ "non_matched_2017": {
+  "MISSING-PARTIAL|older": 27,
+  "MISSING-OUT-OF-LIFE|older": 169,
+  "AMBIGUOUS|older": 1814,
+  "UNRESOLVED-IDENTITY|older": 1257,
+  "UNRESOLVED-IDENTITY|first_filed_2016+": 87,
+  "AMBIGUOUS|first_filed_2016+": 53,
+  "MISSING-OUT-OF-LIFE|first_filed_2016+": 4
+ },
+ "leaver_exit_timing": {
+  "confirmed_exit": {
+   "wiki_ends_within_+-3m_of_exit": 134,
+   "wiki_ends_>3m_before_exit": 6,
+   "wiki_continues_>3m_after_exit": 5
+  }
+ }
+}

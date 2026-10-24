@@ -1,0 +1,11 @@
+{
+ "source": "https://data.nasdaq.com/databases/WIKIP",
+ "route": "https://data.nasdaq.com/api/v3/datatables/WIKI/PRICES.json?qopts.export=true (API key not recorded)",
+ "acquired_utc": "2026-10-24T15:34:42Z",
+ "data_snapshot_time": "2026-02-03 04:33:38 UTC",
+ "file": "data/wiki/WIKI_PRICES_989367082a7cf822fd35dbe3c8f4969b.csv",
+ "format": "CSV (from the bulk-export zip)",
+ "bytes": 1797003576,
+ "row_count": 15389314,
+ "sha256": "ca7fb174c7948db85638917d25ff65d438e27d5cb23675da784c54db01e3d003"
+}
