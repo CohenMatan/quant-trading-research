@@ -100,6 +100,12 @@
 - no 1999–2009 data, no Holdout, no purchase, no new infrastructure;
 - H006 stays REJECTED.
 
+**Tests:**
+- New files `tests/test_h006x.py` and `tests/test_h006x_pins.py`.
+- Two existing items were adjusted. Disclosed here because D296 restricted test changes before WIKI access; that condition no longer applies.
+  - **Registry tests.** Three tests pin the historical pre-C02 / pre-C03 trial counts: `tests/test_registry.py` (1) and `tests/test_c03_stats.py` (2). The new research runs E006-04 / 05 must be excluded from those historical counts like every later programme. Their exclusion lists gain `H006X` / `TT`, exactly as H032 was added. **No pinned count changed** (19 / 15 / 1; 37 / 0 / 26 / 1; 40 / 73).
+  - **Signal-equivalence canary.** `strategies/X961_signal_equivalence/sig006.py` is re-copied from the new S006 `signals.py`, as `tests/test_signal_equivalence_canary.py` requires. The canary's calls are unchanged in behaviour (time stop 60, no carry; tested).
+
 **Experiments added:** E900-08, E006-04, E006-05 (3 runs; 0 retries).
 
 **STOPPED for owner review.**

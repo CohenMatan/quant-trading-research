@@ -27,13 +27,33 @@ def breakout_strength(highs, lows, closes, volumes, n, vol_mult, use_volume=True
     return (c[-1] - prior_high) / a
 
 
-def exit_signal(highs, lows, closes, sessions_held, k, time_stop):
-    """Chandelier stop: close_T < highest close since entry - k x ATR20; or the time stop."""
+def peak_since_entry(closes, sessions_held, carried=None):
+    """Highest close since entry (entry day included). Within the kept window (sessions_held + 1 <= len(closes))
+    it is read from the window. Beyond it (D304: no time stop) it is carried: max(carried, close_T), where `carried`
+    is the previous close's peak in today's price units; without one, the whole window (the original behaviour)."""
+    c = list(closes)
+    if sessions_held + 1 <= len(c):
+        return max(c[-(sessions_held + 1):])
+    return max(carried, c[-1]) if carried is not None else max(c)
+
+
+def carried_peak(stored, closes, last_bar, window_full):
+    """The previous close's highest-close-since-entry in today's price units. `stored` = (peak / close at storage,
+    date of that bar) or None. One bar appended since storage -> closes[-2] is that close; none -> closes[-1].
+    Only past a full window (otherwise None: the original whole-window behaviour)."""
+    if stored is None or not window_full:
+        return None
+    ratio, when = stored
+    return ratio * (closes[-1] if when == last_bar else closes[-2])
+
+
+def exit_signal(highs, lows, closes, sessions_held, k, time_stop, carried=None):
+    """Chandelier stop: close_T < highest close since entry - k x ATR20; or the time stop (None = no time stop,
+    D304 Experiment B)."""
     if sessions_held is None:
         return False
-    if sessions_held >= time_stop:
+    if time_stop is not None and sessions_held >= time_stop:
         return True
     c = list(closes)
-    since = c[-(sessions_held + 1):] if sessions_held + 1 <= len(c) else c
     a = atr(highs, lows, c, 20)
-    return a is not None and c[-1] < max(since) - k * a
+    return a is not None and c[-1] < peak_since_entry(c, sessions_held, carried) - k * a
