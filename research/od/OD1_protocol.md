@@ -39,7 +39,7 @@ For observation (i, k) and horizon h:
 
 **Reported:**
 - pooled and per-year distributions;
-- concentration: the share of the cross-section's summed EX contributed by its top 1 / 5 / 10% of observations;
+- concentration: the share of the cross-section's summed TR (one dollar per stock) contributed by its top 1 / 5 / 10% of observations (median over reviews), and the share of stocks with TR > 0;
 - gain path for W at h = 12: share of the log gain from the best month; months up out of 12;
 - `left` rates by group.
 
@@ -79,7 +79,7 @@ All features are computed at review t from data dated ≤ t only, before any lab
 | T26 BASE | 1 if HI52 ≥ 0.95 and RANGECOMP ≤ 0.6 | consolidation near high |
 | T27 SIZE | log point-in-time market cap (vendor, or SEC-repaired) | size (control) |
 | T28 ACCUM63 | count of days in the last 63 with r > 0 and v > 2 × mean(v[−63:]) | accumulation-like events |
-| T29 TRENDAGE | consecutive sessions, up to 252, with c > SMA200 (SMA over the trailing 200) | trend maturity |
+| T29 TRENDAGE | consecutive sessions, up to 200, with c > its trailing 50-session mean (the 253-session window cannot hold a 252-session SMA200 history) | trend maturity |
 | T30 EXT50 | c[−1] / mean(c[−50:]) − 1 | distance from MA50 (extension) |
 
 A technical feature is missing when its window has more than 10% missing sessions.
@@ -115,9 +115,9 @@ Non-financial registrants only (SIC outside 6000–6799).
 
 ## 4. Aggregates (Stage B–F)
 
-**Decile tables.** For every feature (binary features: two groups; F16 / F17 / T23: their integer values), each review k, cross-sectional deciles among valid observations, every horizon and every period. For each group:
+**Decile tables.** Group statistics are exported as compact lists in the fixed order `qr_od1.STAT_KEYS`, and `OD1_eval` unpacks them. For every feature (binary features: two groups; F16 / F17 / T23: their integer values), each review k, cross-sectional deciles among valid observations, every horizon and every period. For each group:
 - n;
-- mean / median / 10th / 90th percentile of EX;
+- mean and median EX;
 - trimmed mean EX (top 1% of the group's observations removed);
 - mean TR, SR and BA;
 - P(EX > 0), P(W), P(L), P(S);

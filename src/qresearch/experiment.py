@@ -730,7 +730,7 @@ def validate(cfg: dict, unlock_file=None) -> None:
         else:
             raise ConfigError("S032 modes (params.sys1_mode): canary or eval")
     if cfg.get("lean_version_policy") is not None and not (
-            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806", "X807", "S033", "S006", "B900") or (cfg["strategy_id"] == "X993" and
+            cfg["strategy_id"] in ("X994", "S023", "X995", "X996", "X997", "X998", "X999", "S024", "S025", "S026", "S027", "X801", "S028", "S029", "S030", "X802", "X803", "S031", "S032", "X804", "X805", "X806", "X807", "S033", "S006", "B900", "X808") or (cfg["strategy_id"] == "X993" and
                                                        cfg.get("lean_version_policy") == "default_build_digest_verified")):
         raise ConfigError("lean_version_policy is allowed only for the H022 family (X994 / S023) and the X993 score "
                           "export used to diagnose it (D182)")
@@ -830,6 +830,24 @@ def validate(cfg: dict, unlock_file=None) -> None:
                               "D304")
         if h006x.SPEC_SHA256 is None or cfg.get("params") != h006x.run_params(eid):
             raise ConfigError("H006X runs carry the pinned spec and S006 code fingerprints (qresearch.h006x)")
+    if cfg["strategy_id"] == "X808":
+        # OD-1 outcome-driven discovery study (owner D308, research/od/OD1_protocol.md): ONE aggregate-only
+        # infrastructure run on the default build (E808-01; E808-02 only as the documented retry), 2010-01-04 ..
+        # 2021-12-31 without warm-up (no market datum before 2010), the approved filters without the SEC layer, the
+        # pinned protocol / code / three SEC objects
+        from . import od1
+        u = cfg["universe"]
+        if (kind != "infrastructure" or cfg["split"] != "AUDIT" or (cfg["start"], cfg["end"]) != ("2010-01-04", "2021-12-31")
+                or cfg.get("warmup_start") or u.get("sec_corrections") or float(u.get("min_market_cap", 0)) != 2e9
+                or float(u.get("min_price", 0)) != 5.0 or float(u.get("min_avg_dollar_volume", 0)) != 5e6
+                or int(u.get("adv_days", 0)) != 20 or cfg.get("lean_version_policy") != "default_build_digest_verified"
+                or cfg["experiment_id"] not in (od1.RUN, od1.RETRY) or cfg.get("programme") != od1.PROGRAMME
+                or od1.DECISION not in str(cfg.get("owner_approval_required") or "")):
+            raise ConfigError("X808 is the ONE OD-1 outcome study run (E808-01, retry E808-02): AUDIT 2010-01-04 .. "
+                              "2021-12-31, no warm-up, >= $2B / >= $5 / ADV20 >= $5M without the SEC layer, default "
+                              "build, programme OD, owner approval D308")
+        if od1.PROTOCOL_SHA256 is None or cfg.get("params") != od1.run_params():
+            raise ConfigError("X808 runs carry the pinned OD-1 protocol, code and SEC-object fingerprints (qresearch.od1)")
     if cfg["strategy_id"] == "X807":
         # H032 / OS-1 revised canary C-OS1 (owner D278, research/os/H032_spec.md): ONE aggregate-only infrastructure run
         # on the default build (E807-01; E807-02 only as the documented retry), 2009-05-01 .. 2021-12-31 without

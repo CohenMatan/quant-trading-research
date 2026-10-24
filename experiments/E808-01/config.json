@@ -1,0 +1,57 @@
+{
+ "experiment_id": "E808-01",
+ "kind": "infrastructure",
+ "hypothesis_id": null,
+ "strategy_id": "X808",
+ "strategy_version": "v1.0",
+ "strategy_dir": "strategies/X808_od1_outcomes",
+ "split_scheme": "2010",
+ "split": "AUDIT",
+ "start": "2010-01-04",
+ "end": "2021-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; no order is placed in this run"
+ },
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "lean_version_id": 18203,
+ "execution_model": "d051",
+ "benchmarks": [],
+ "programme": "OD",
+ "cycle": "OD1",
+ "stall_minutes": 300,
+ "params": {
+  "od1_protocol_sha256": "cc6b1d2cdff3b0aeaa6d3fe59d40e1a8595b841edcadcf93b5a567f3595f8bc6",
+  "od1_code_sha256": {
+   "main.py": "f7778bacafde1672dc4766695b44615c766cda3727967554c6dc238843880311",
+   "qr_od1.py": "679aee8f51c4b340d519e48c8b57ac586a9bf5616e002f01f2cf62f6167eed82",
+   "qr_os1.py": "07d6b03c92ad3b4741fcb32e3e3029bcfbbcc0fba091f3ca45f3de8c6dc9592a",
+   "qr_ucr.py": "77135cd38a1edfa8e6b295cf00255c34adb36780328bdd135cc3309e4a85e9d5"
+  },
+  "ucr_object_key": "rr/ucr_sec_v1.json",
+  "ucr_reference_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82",
+  "os1_object_key": "rr/os1_sec_v1.json",
+  "os1_reference_sha256": "32bb0a666503e333ed20001074da687a12c557f28c85fa4b090b8b1983645b17",
+  "od1_object_key": "rr/od1_sec_v1.json",
+  "od1_reference_sha256": "8bafcedea8a3b0f377f2b8642d9988ebd353e644e0e4964e95e3403b9dfa3d4d"
+ },
+ "owner_approval_required": "D308 owner direction 2026-10-24: outcome-driven discovery on the exposed 2010-2021 development data (narrow exception to FA-CP1), exploratory only; no 1999-2009, Holdout sealed, no purchases; aggregates only",
+ "lean_version_policy": "default_build_digest_verified",
+ "description": "OD-1 outcome-driven discovery study (owner D308; research/od/OD1_protocol.md): X808 on QuantConnect's default build, 2010-01-04 .. 2021-12-31 without warm-up; UCR-1 repaired universe, month-end reviews 2011-01 .. 2021-11; technical features from the Fundamental stream, as-filed SEC fundamentals (rr/od1_sec_v1.json); forward outcomes 3/6/12/24 months never past 2021-11; aggregates only, 0 orders. EXPLORATORY."
+}
