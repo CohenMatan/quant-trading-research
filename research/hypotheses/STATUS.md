@@ -83,3 +83,5 @@
 **Update (D282–D284, 2026-10-22):** **H032** R1 E033-01 run (technically valid, fidelity exact) → **NOT PROMISING** (all R1 gates O1–O7, O9 fail; CAGR 11.84% vs SPY 16.31%); R2 not run; preserved exactly as tested; owner closure pending (recommended: REJECTED). EXPLORATORY; Holdout sealed. H031 remains DRAFT and parked.
 
 **Update (D285, 2026-10-22):** **H032 CLOSED — REJECTED — NOT PROMISING** by the owner (R1 E033-01; R2 not executed; closure record `docs/checkpoints/OS_CP4_h032_closure.md`). Never rerun or rescued; B0 / MOM / controls are not candidates. H031 parked; H028 REJECTED; Holdout sealed.
+
+**Update (D308–D310, 2026-10-24):** OD-1 outcome-driven discovery (exploratory, not a hypothesis; owner exception to FA-CP1): E808-01 + WIKI study; **NO CANDIDATE** — 0 / 47 features and 0 / 6 grids pass the frozen rule G1–G6, no strategy built, blinded visual test: visual information not present (`docs/checkpoints/OD_CP1_outcome_driven_discovery.md`). All earlier statuses unchanged. Still no active hypothesis; Holdout sealed.

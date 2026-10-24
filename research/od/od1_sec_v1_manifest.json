@@ -1,0 +1,124 @@
+{
+ "characters": 15239797,
+ "file": "data/sec_derived/od1_sec_v1.json",
+ "meta": {
+  "counts": {
+   "K_eq": 28716,
+   "K_eq_py": 28455,
+   "K_gp": 16847,
+   "K_gp_py": 16678,
+   "K_ni": 29251,
+   "K_ni_py": 29024,
+   "K_ocf": 29177,
+   "K_rev": 25011,
+   "K_rev_py": 24727,
+   "K_ta": 29451,
+   "K_ta_py": 29170,
+   "Q_eq": 89363,
+   "Q_gp": 51825,
+   "Q_gp_py": 51388,
+   "Q_ni": 91321,
+   "Q_ni_py": 90731,
+   "Q_rev": 77827,
+   "Q_rev_py": 77071,
+   "Q_ta": 91762,
+   "gp_from_cost": 22532,
+   "registrants": 3856,
+   "registrants_without_rows": 2,
+   "rows_K": 29814,
+   "rows_Q": 92793
+  },
+  "decision": "D308",
+  "fields": [
+   "filed",
+   "kind",
+   "period_end",
+   "rev",
+   "rev_py",
+   "ni",
+   "ni_py",
+   "gp",
+   "gp_py",
+   "ocf",
+   "ta",
+   "ta_py",
+   "eq",
+   "eq_py"
+  ],
+  "name": "od1_sec_v1",
+  "parent": "ucr_sec_v1",
+  "parent_sha256": "ba3ab515f6fad602f8638279927c4b5b3c417577851f7748891ff23be52a4a82",
+  "rules": {
+   "duration_days": {
+    "K": [
+     350,
+     380
+    ],
+    "Q": [
+     80,
+     100
+    ]
+   },
+   "end_tolerance_days": 7,
+   "filed": [
+    "2010-01-01",
+    "2021-12-31"
+   ],
+   "forms": {
+    "10-K": "K",
+    "10-KT": "K",
+    "10-Q": "Q",
+    "10-QT": "Q"
+   },
+   "prior_end_days_before": [
+    355,
+    375
+   ],
+   "tags": {
+    "capex": [
+     "PaymentsToAcquirePropertyPlantAndEquipment"
+    ],
+    "cost_of_revenue": [
+     "CostOfRevenue",
+     "CostOfGoodsAndServicesSold",
+     "CostOfGoodsSold",
+     "CostOfServices"
+    ],
+    "gross_profit": [
+     "GrossProfit"
+    ],
+    "net_income": [
+     "NetIncomeLoss",
+     "NetIncomeLossAvailableToCommonStockholdersBasic",
+     "ProfitLoss"
+    ],
+    "operating_cash_flow": [
+     "NetCashProvidedByUsedInOperatingActivities",
+     "NetCashProvidedByUsedInOperatingActivitiesContinuingOperations"
+    ],
+    "operating_income": [
+     "OperatingIncomeLoss"
+    ],
+    "revenue": [
+     "Revenues",
+     "RevenueFromContractWithCustomerExcludingAssessedTax",
+     "SalesRevenueNet",
+     "RevenueFromContractWithCustomerIncludingAssessedTax",
+     "SalesRevenueGoodsNet",
+     "SalesRevenueServicesNet",
+     "RevenuesNetOfInterestExpense"
+    ],
+    "stockholders_equity": [
+     "StockholdersEquity",
+     "StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest"
+    ],
+    "total_assets": [
+     "Assets"
+    ]
+   }
+  },
+  "source": "public SEC EDGAR (XBRL RSS index, companyfacts); same cache as UCR-1 / H032"
+ },
+ "object_store_key": "rr/od1_sec_v1.json",
+ "sha256": "8bafcedea8a3b0f377f2b8642d9988ebd353e644e0e4964e95e3403b9dfa3d4d"
+}

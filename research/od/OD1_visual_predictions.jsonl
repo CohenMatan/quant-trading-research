@@ -1,0 +1,120 @@
+{"chart_id": "V001", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS", "V_RECOVERY"]}
+{"chart_id": "V002", "prediction": "NEU", "tags": ["PULLBACK", "CHOPPY", "VOL_SPIKE"]}
+{"chart_id": "V003", "prediction": "UND", "tags": ["DOWNTREND", "NEAR_LOW", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V004", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "BREAKOUT"]}
+{"chart_id": "V005", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "V_RECOVERY"]}
+{"chart_id": "V006", "prediction": "NEU", "tags": ["PULLBACK", "GAP_DOWN"]}
+{"chart_id": "V007", "prediction": "NEU", "tags": ["GAP_DOWN", "V_RECOVERY", "BELOW_MAS"]}
+{"chart_id": "V008", "prediction": "NEU", "tags": ["CHOPPY", "BELOW_MAS"]}
+{"chart_id": "V009", "prediction": "UND", "tags": ["DOWNTREND", "NEAR_LOW", "BELOW_MAS"]}
+{"chart_id": "V010", "prediction": "OUT", "tags": ["UPTREND", "PULLBACK"]}
+{"chart_id": "V011", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK"]}
+{"chart_id": "V012", "prediction": "OUT", "tags": ["NEAR_HIGH", "V_RECOVERY", "HIGH_VOL", "ABOVE_MAS"]}
+{"chart_id": "V013", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS"]}
+{"chart_id": "V014", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V015", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "BREAKOUT", "TIGHT", "GAP_UP"]}
+{"chart_id": "V016", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V017", "prediction": "NEU", "tags": ["UPTREND", "CHOPPY", "V_RECOVERY"]}
+{"chart_id": "V018", "prediction": "OUT", "tags": ["UPTREND", "GAP_UP", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V019", "prediction": "OUT", "tags": ["BREAKOUT", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V020", "prediction": "NEU", "tags": ["SIDEWAYS", "CHOPPY", "BELOW_MAS"]}
+{"chart_id": "V021", "prediction": "UND", "tags": ["GAP_DOWN", "BELOW_MAS", "VOL_SPIKE"]}
+{"chart_id": "V022", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V023", "prediction": "OUT", "tags": ["BREAKOUT", "BASE", "NEAR_HIGH", "EXTENDED"]}
+{"chart_id": "V024", "prediction": "OUT", "tags": ["UPTREND", "GAP_UP", "NEAR_HIGH", "BREAKOUT"]}
+{"chart_id": "V025", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V026", "prediction": "NEU", "tags": ["V_RECOVERY", "ABOVE_MAS", "GAP_DOWN"]}
+{"chart_id": "V027", "prediction": "NEU", "tags": ["SIDEWAYS", "CHOPPY"]}
+{"chart_id": "V028", "prediction": "UND", "tags": ["DOWNTREND", "NEAR_LOW", "BELOW_MAS"]}
+{"chart_id": "V029", "prediction": "OUT", "tags": ["V_RECOVERY", "NEAR_HIGH", "GAP_UP", "ABOVE_MAS"]}
+{"chart_id": "V030", "prediction": "NEU", "tags": ["CHOPPY", "PULLBACK", "HIGH_VOL", "VOL_SPIKE"]}
+{"chart_id": "V031", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "TIGHT"]}
+{"chart_id": "V032", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "VOL_SPIKE"]}
+{"chart_id": "V033", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "GAP_UP", "ABOVE_MAS"]}
+{"chart_id": "V034", "prediction": "OUT", "tags": ["UPTREND", "BREAKOUT", "NEAR_HIGH", "GAP_UP"]}
+{"chart_id": "V035", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "BREAKOUT"]}
+{"chart_id": "V036", "prediction": "NEU", "tags": ["V_RECOVERY", "ABOVE_MAS", "NEAR_HIGH"]}
+{"chart_id": "V037", "prediction": "OUT", "tags": ["V_RECOVERY", "NEAR_HIGH", "ABOVE_MAS", "HIGH_VOL"]}
+{"chart_id": "V038", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK"]}
+{"chart_id": "V039", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "TIGHT"]}
+{"chart_id": "V040", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK", "BREAKDOWN"]}
+{"chart_id": "V041", "prediction": "NEU", "tags": ["SIDEWAYS", "CHOPPY", "HIGH_VOL"]}
+{"chart_id": "V042", "prediction": "UND", "tags": ["CHOPPY", "BELOW_MAS", "HIGH_VOL", "GAP_DOWN"]}
+{"chart_id": "V043", "prediction": "NEU", "tags": ["DOWNTREND", "V_RECOVERY", "GAP_DOWN"]}
+{"chart_id": "V044", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS", "NEAR_LOW"]}
+{"chart_id": "V045", "prediction": "NEU", "tags": ["DOWNTREND", "GAP_UP", "VOL_SPIKE", "CHOPPY"]}
+{"chart_id": "V046", "prediction": "NEU", "tags": ["UPTREND", "SIDEWAYS", "TIGHT"]}
+{"chart_id": "V047", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V048", "prediction": "NEU", "tags": ["CHOPPY", "PULLBACK", "HIGH_VOL"]}
+{"chart_id": "V049", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "BREAKOUT", "GAP_UP"]}
+{"chart_id": "V050", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "TIGHT", "ABOVE_MAS"]}
+{"chart_id": "V051", "prediction": "NEU", "tags": ["V_RECOVERY", "GAP_UP", "GAP_DOWN"]}
+{"chart_id": "V052", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "CHOPPY"]}
+{"chart_id": "V053", "prediction": "OUT", "tags": ["UPTREND", "BREAKOUT", "GAP_UP", "NEAR_HIGH"]}
+{"chart_id": "V054", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V055", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK"]}
+{"chart_id": "V056", "prediction": "NEU", "tags": ["UPTREND", "GAP_DOWN", "SIDEWAYS"]}
+{"chart_id": "V057", "prediction": "UND", "tags": ["BREAKDOWN", "NEAR_LOW", "GAP_DOWN", "BELOW_MAS"]}
+{"chart_id": "V058", "prediction": "NEU", "tags": ["SIDEWAYS", "ABOVE_MAS"]}
+{"chart_id": "V059", "prediction": "UND", "tags": ["BREAKDOWN", "GAP_DOWN", "BELOW_MAS"]}
+{"chart_id": "V060", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK", "VOL_SPIKE", "GAP_DOWN"]}
+{"chart_id": "V061", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "V_RECOVERY"]}
+{"chart_id": "V062", "prediction": "OUT", "tags": ["BREAKOUT", "NEAR_HIGH", "ABOVE_MAS", "GAP_UP"]}
+{"chart_id": "V063", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V064", "prediction": "NEU", "tags": ["V_RECOVERY", "GAP_UP", "CHOPPY"]}
+{"chart_id": "V065", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V066", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "BREAKOUT"]}
+{"chart_id": "V067", "prediction": "OUT", "tags": ["V_RECOVERY", "UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V068", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "HIGH_VOL"]}
+{"chart_id": "V069", "prediction": "NEU", "tags": ["V_RECOVERY", "CHOPPY", "GAP_DOWN"]}
+{"chart_id": "V070", "prediction": "NEU", "tags": ["DOWNTREND", "BASE", "V_RECOVERY"]}
+{"chart_id": "V071", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK", "GAP_UP"]}
+{"chart_id": "V072", "prediction": "UND", "tags": ["BREAKDOWN", "GAP_DOWN", "BELOW_MAS"]}
+{"chart_id": "V073", "prediction": "NEU", "tags": ["V_RECOVERY", "PULLBACK", "GAP_UP"]}
+{"chart_id": "V074", "prediction": "OUT", "tags": ["V_RECOVERY", "BREAKOUT", "GAP_UP", "NEAR_HIGH"]}
+{"chart_id": "V075", "prediction": "OUT", "tags": ["V_RECOVERY", "NEAR_HIGH", "ABOVE_MAS", "GAP_UP"]}
+{"chart_id": "V076", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "NEAR_LOW"]}
+{"chart_id": "V077", "prediction": "OUT", "tags": ["BREAKOUT", "NEAR_HIGH", "V_RECOVERY", "HIGH_VOL"]}
+{"chart_id": "V078", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V079", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK"]}
+{"chart_id": "V080", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS"]}
+{"chart_id": "V081", "prediction": "NEU", "tags": ["UPTREND", "SIDEWAYS", "TIGHT", "ABOVE_MAS"]}
+{"chart_id": "V082", "prediction": "NEU", "tags": ["CHOPPY", "GAP_DOWN", "V_RECOVERY"]}
+{"chart_id": "V083", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS"]}
+{"chart_id": "V084", "prediction": "NEU", "tags": ["SIDEWAYS", "CHOPPY", "PULLBACK"]}
+{"chart_id": "V085", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V086", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "V_RECOVERY"]}
+{"chart_id": "V087", "prediction": "OUT", "tags": ["UPTREND", "BREAKOUT", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V088", "prediction": "NEU", "tags": ["CHOPPY", "GAP_DOWN", "BELOW_MAS"]}
+{"chart_id": "V089", "prediction": "NEU", "tags": ["V_RECOVERY", "ABOVE_MAS", "GAP_UP"]}
+{"chart_id": "V090", "prediction": "NEU", "tags": ["GAP_DOWN", "V_RECOVERY", "CHOPPY"]}
+{"chart_id": "V091", "prediction": "OUT", "tags": ["V_RECOVERY", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V092", "prediction": "NEU", "tags": ["UPTREND", "GAP_DOWN", "PULLBACK", "VOL_SPIKE"]}
+{"chart_id": "V093", "prediction": "NEU", "tags": ["V_RECOVERY", "GAP_DOWN", "BELOW_MAS"]}
+{"chart_id": "V094", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "TIGHT"]}
+{"chart_id": "V095", "prediction": "NEU", "tags": ["PULLBACK", "EXTENDED"]}
+{"chart_id": "V096", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "GAP_UP"]}
+{"chart_id": "V097", "prediction": "NEU", "tags": ["CHOPPY", "BELOW_MAS", "V_RECOVERY", "HIGH_VOL"]}
+{"chart_id": "V098", "prediction": "OUT", "tags": ["V_RECOVERY", "BREAKOUT", "ABOVE_MAS"]}
+{"chart_id": "V099", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS", "TIGHT"]}
+{"chart_id": "V100", "prediction": "UND", "tags": ["DOWNTREND", "BREAKDOWN", "BELOW_MAS", "NEAR_LOW"]}
+{"chart_id": "V101", "prediction": "NEU", "tags": ["BREAKOUT", "EXTENDED", "PULLBACK"]}
+{"chart_id": "V102", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V103", "prediction": "NEU", "tags": ["V_RECOVERY", "CHOPPY", "HIGH_VOL", "ABOVE_MAS"]}
+{"chart_id": "V104", "prediction": "OUT", "tags": ["UPTREND", "GAP_UP", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V105", "prediction": "NEU", "tags": ["SIDEWAYS", "PULLBACK"]}
+{"chart_id": "V106", "prediction": "NEU", "tags": ["GAP_DOWN", "SIDEWAYS", "BELOW_MAS"]}
+{"chart_id": "V107", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS", "CHOPPY", "HIGH_VOL"]}
+{"chart_id": "V108", "prediction": "NEU", "tags": ["BREAKDOWN", "V_RECOVERY", "GAP_DOWN", "HIGH_VOL"]}
+{"chart_id": "V109", "prediction": "OUT", "tags": ["V_RECOVERY", "UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V110", "prediction": "NEU", "tags": ["V_RECOVERY", "PULLBACK", "ABOVE_MAS"]}
+{"chart_id": "V111", "prediction": "NEU", "tags": ["DOWNTREND", "V_RECOVERY", "CHOPPY"]}
+{"chart_id": "V112", "prediction": "UND", "tags": ["BREAKDOWN", "BELOW_MAS", "GAP_DOWN"]}
+{"chart_id": "V113", "prediction": "NEU", "tags": ["GAP_UP", "CHOPPY", "ABOVE_MAS", "HIGH_VOL"]}
+{"chart_id": "V114", "prediction": "UND", "tags": ["DOWNTREND", "BELOW_MAS", "SIDEWAYS"]}
+{"chart_id": "V115", "prediction": "OUT", "tags": ["V_RECOVERY", "BREAKOUT", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V116", "prediction": "OUT", "tags": ["UPTREND", "GAP_UP", "BREAKOUT", "VOL_SPIKE", "NEAR_HIGH"]}
+{"chart_id": "V117", "prediction": "NEU", "tags": ["GAP_DOWN", "V_RECOVERY", "VOL_SPIKE"]}
+{"chart_id": "V118", "prediction": "NEU", "tags": ["UPTREND", "PULLBACK", "CHOPPY"]}
+{"chart_id": "V119", "prediction": "OUT", "tags": ["UPTREND", "BREAKOUT", "NEAR_HIGH", "ABOVE_MAS"]}
+{"chart_id": "V120", "prediction": "OUT", "tags": ["UPTREND", "NEAR_HIGH", "ABOVE_MAS"]}

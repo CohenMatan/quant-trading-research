@@ -87,6 +87,9 @@ def assemble_files(cfg: dict, commit: str | None, unlocked: bool) -> dict[str, s
     if "qr_ucr" in files["main.py"]:  # UCR-1 point-in-time SEC universe repair (owner D269), plain text
         rel = "src/qresearch/lean/qr_ucr.py"
         files["qr_ucr.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
+    if "qr_od1" in files["main.py"]:  # OD-1 outcome-driven discovery study (owner D308), plain text
+        rel = "src/qresearch/lean/qr_od1.py"
+        files["qr_od1.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
     if "qr_sca" in files["main.py"]:  # SCA-1 SEC classification audit (owner D267), plain text
         rel = "src/qresearch/lean/qr_sca.py"
         files["qr_sca.py"] = gitutil.show_file(commit, rel) if commit else (config.REPO_ROOT / rel).read_text(encoding="utf-8")
