@@ -2750,3 +2750,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D302):** exploratory pattern discovery on a restricted WIKI subset; chart images to Claude unless an explicit prohibition is found (none found); 2011–2016; about 300 outcome-blind charts.
 - **Done:** dataset SHA verified; sampler and observation protocol committed before the draw and before viewing; 299 blinded charts rendered and all 299 viewed (pilot 24, then 275); no outcomes computed.
 - **Finding:** recurring behaviours are past-return leaders (B1, 67% top-tercile 12-month return), pullbacks, gap-and-hold, V recoveries and breakdowns. All are already tested and rejected (H002/H003/H004/H010/H014/H017–H020). **No credible new hypothesis; none recommended.** Checkpoint `docs/checkpoints/TT_CP2_chart_discovery_findings.md`. STOPPED.
+
+## 2026-10-24: H006 exit-policy comparison — TT-CP3 (D304 / D305; STOP)
+
+- **Owner (D304):** one comparison on the fixed H006 reference: Control A (60-session time stop) vs Experiment B (no time stop), everything else identical; feasibility and scope flags first; no grid or tuning.
+- **Feasibility / flags (frozen spec, pinned before any run):** existing S006 + harness on QuantConnect's default build; Flag 1 uncapped holding period (B only); Flag 2 vendor ≥ $2B universe with RR5's measured gap; fidelity fix so the chandelier uses the true highest close since entry beyond the 260-bar window (A unchanged, tested).
+- **Runs (LEAN 18203, no retry):** E900-08 SPY $511,757 (= E900-07), E006-04 A $401,344 (12.29%), E006-05 B $424,456 (12.82%).
+- **Answer:** removing the time limit is NOT MEANINGFUL (B / A 1.058 < 1.10; paired t 0.12); neither beats SPY; not robust → **close**. The trailing stop, not the cap, ends most trades (median hold 33 sessions in both); A's result is half one GME trade. Checkpoint `docs/checkpoints/TT_CP3_h006_exit_policy_comparison.md`. STOPPED.
