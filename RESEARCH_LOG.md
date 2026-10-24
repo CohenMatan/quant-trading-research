@@ -2744,3 +2744,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Frozen audit:** **INSUFFICIENT** — A1 PASS, A2 INCONCLUSIVE, A3 PASS, A4 FAIL (identity ambiguity 14.1%), A5 FAIL (adjustment consistency 82.7%), A6 FAIL (2017 decay 5.8 points), A7 PASS (ample chart-ready names). Resolved coverage 99.1%.
 - **Post-hoc diagnostics (no gate changed):** ambiguity mostly SEC co-filer artefacts; adjustment defects in 21 tickers, mostly tiny; 2017 has some genuine gaps. 265 confirmed exits (mostly acquisitions) + 10 stopped-filing-only; 92% of matched confirmed exits end in WIKI near the SEC exit; failures effectively absent.
 - **Owner decision:** stop the WIKI route, or a documented exception for exploratory sampling with restrictions; licensing still unresolved. Checkpoint `docs/checkpoints/TT_CP1c_R1_wiki_audit_results.md`. STOPPED.
+
+## 2026-10-24: Restricted WIKI sample and AI chart discovery — TT-CP2 (D302 / D303; STOP)
+
+- **Owner (D302):** exploratory pattern discovery on a restricted WIKI subset; chart images to Claude unless an explicit prohibition is found (none found); 2011–2016; about 300 outcome-blind charts.
+- **Done:** dataset SHA verified; sampler and observation protocol committed before the draw and before viewing; 299 blinded charts rendered and all 299 viewed (pilot 24, then 275); no outcomes computed.
+- **Finding:** recurring behaviours are past-return leaders (B1, 67% top-tercile 12-month return), pullbacks, gap-and-hold, V recoveries and breakdowns. All are already tested and rejected (H002/H003/H004/H010/H014/H017–H020). **No credible new hypothesis; none recommended.** Checkpoint `docs/checkpoints/TT_CP2_chart_discovery_findings.md`. STOPPED.

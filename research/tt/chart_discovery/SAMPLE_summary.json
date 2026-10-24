@@ -1,0 +1,379 @@
+{
+ "decision": "D302",
+ "seed": 20261024,
+ "target": 300,
+ "sampled": 299,
+ "frame_registrant_months_2011_2016": 59569,
+ "eligible_candidates": 43690,
+ "eligible_registrants": 1049,
+ "exclusions": {
+  "window_defect": 2019,
+  "identity:AMBIGUOUS": 8248,
+  "adjustment_defect_ticker": 863,
+  "identity:MISSING-PARTIAL": 47,
+  "identity:MISSING-OUT-OF-LIFE": 235,
+  "history_<252_bars": 153,
+  "identity:UNRESOLVED-IDENTITY": 4314
+ },
+ "adjustment_defect_tickers": 58,
+ "by_year": {
+  "2011": 23,
+  "2012": 44,
+  "2013": 48,
+  "2014": 55,
+  "2015": 63,
+  "2016": 66
+ },
+ "by_size_tercile": {
+  "1": 99,
+  "2": 101,
+  "3": 99
+ },
+ "by_exit_group": {
+  "ACQUIRED": 20,
+  "CONTINUING": 279
+ },
+ "by_trailing_return_tercile": {
+  "1": 95,
+  "2": 105,
+  "3": 99
+ },
+ "target_by_exit_group": {
+  "CONTINUING": 279,
+  "DELISTED-OTHER": 0,
+  "ACQUIRED": 21,
+  "FAILED": 0,
+  "STOPPED-FILING-ONLY": 0
+ },
+ "unfilled_cells": {
+  "2011|1|ACQUIRED": {
+   "target": 1,
+   "filled": 0,
+   "candidates": 0
+  }
+ },
+ "cells": {
+  "2011|1|ACQUIRED": {
+   "target": 1,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2011|2|ACQUIRED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2011|3|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|2|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|2|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|3|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|3|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|3|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2013|2|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2013|2|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2013|3|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2013|3|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2013|3|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2014|1|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2014|3|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2014|3|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2015|1|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2015|1|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2015|2|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2015|3|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2015|3|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2016|1|DELISTED-OTHER": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2016|1|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2016|2|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2016|3|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2016|3|STOPPED-FILING-ONLY": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 0
+  },
+  "2012|2|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 1
+  },
+  "2013|2|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 2
+  },
+  "2011|3|ACQUIRED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 4
+  },
+  "2014|1|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 4
+  },
+  "2013|1|FAILED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 5
+  },
+  "2012|2|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 12
+  },
+  "2012|3|ACQUIRED": {
+   "target": 0,
+   "filled": 0,
+   "candidates": 12
+  },
+  "2012|1|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 27
+  },
+  "2013|3|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 32
+  },
+  "2016|3|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 92
+  },
+  "2013|2|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 102
+  },
+  "2014|3|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 118
+  },
+  "2013|1|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 132
+  },
+  "2015|3|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 147
+  },
+  "2016|2|ACQUIRED": {
+   "target": 1,
+   "filled": 1,
+   "candidates": 147
+  },
+  "2015|2|ACQUIRED": {
+   "target": 2,
+   "filled": 2,
+   "candidates": 182
+  },
+  "2014|2|ACQUIRED": {
+   "target": 2,
+   "filled": 2,
+   "candidates": 192
+  },
+  "2014|1|ACQUIRED": {
+   "target": 2,
+   "filled": 2,
+   "candidates": 263
+  },
+  "2016|1|ACQUIRED": {
+   "target": 2,
+   "filled": 2,
+   "candidates": 317
+  },
+  "2015|1|ACQUIRED": {
+   "target": 3,
+   "filled": 3,
+   "candidates": 370
+  },
+  "2011|1|CONTINUING": {
+   "target": 7,
+   "filled": 7,
+   "candidates": 1086
+  },
+  "2011|2|CONTINUING": {
+   "target": 8,
+   "filled": 8,
+   "candidates": 1125
+  },
+  "2011|3|CONTINUING": {
+   "target": 8,
+   "filled": 8,
+   "candidates": 1231
+  },
+  "2012|2|CONTINUING": {
+   "target": 14,
+   "filled": 14,
+   "candidates": 1990
+  },
+  "2012|1|CONTINUING": {
+   "target": 14,
+   "filled": 14,
+   "candidates": 2188
+  },
+  "2012|3|CONTINUING": {
+   "target": 14,
+   "filled": 14,
+   "candidates": 2191
+  },
+  "2013|2|CONTINUING": {
+   "target": 15,
+   "filled": 15,
+   "candidates": 2206
+  },
+  "2013|3|CONTINUING": {
+   "target": 15,
+   "filled": 15,
+   "candidates": 2362
+  },
+  "2013|1|CONTINUING": {
+   "target": 15,
+   "filled": 15,
+   "candidates": 2363
+  },
+  "2014|1|CONTINUING": {
+   "target": 16,
+   "filled": 16,
+   "candidates": 2467
+  },
+  "2014|2|CONTINUING": {
+   "target": 17,
+   "filled": 17,
+   "candidates": 2531
+  },
+  "2014|3|CONTINUING": {
+   "target": 17,
+   "filled": 17,
+   "candidates": 2546
+  },
+  "2015|1|CONTINUING": {
+   "target": 18,
+   "filled": 18,
+   "candidates": 2621
+  },
+  "2015|3|CONTINUING": {
+   "target": 20,
+   "filled": 20,
+   "candidates": 2842
+  },
+  "2016|1|CONTINUING": {
+   "target": 20,
+   "filled": 20,
+   "candidates": 2855
+  },
+  "2015|2|CONTINUING": {
+   "target": 19,
+   "filled": 19,
+   "candidates": 2898
+  },
+  "2016|2|CONTINUING": {
+   "target": 21,
+   "filled": 21,
+   "candidates": 2996
+  },
+  "2016|3|CONTINUING": {
+   "target": 21,
+   "filled": 21,
+   "candidates": 3031
+  }
+ },
+ "mapping_sha256": "c3858785674d79fe86216d6e8ea70397cf0194a4f251b2cf177e97258c8b076a",
+ "note": "Counts only. The chart id -> company/date mapping stays local (data/chart_discovery, git-ignored)."
+}
