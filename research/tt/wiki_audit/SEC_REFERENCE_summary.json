@@ -1,0 +1,56 @@
+{
+ "frame": "R1 public float >= $2B (10-K, PIT by filing date) x R2 XBRL index; exclusions per protocol 2.3",
+ "registrant_months": 74280,
+ "registrants": 1614,
+ "by_year": {
+  "2010": {
+   "registrant_months": 2133,
+   "registrants": 250,
+   "leaver_months": 63
+  },
+  "2011": {
+   "registrant_months": 4782,
+   "registrants": 501,
+   "leaver_months": 174
+  },
+  "2012": {
+   "registrant_months": 8716,
+   "registrants": 841,
+   "leaver_months": 411
+  },
+  "2013": {
+   "registrant_months": 9485,
+   "registrants": 929,
+   "leaver_months": 588
+  },
+  "2014": {
+   "registrant_months": 10883,
+   "registrants": 1018,
+   "leaver_months": 907
+  },
+  "2015": {
+   "registrant_months": 12457,
+   "registrants": 1159,
+   "leaver_months": 1209
+  },
+  "2016": {
+   "registrant_months": 13246,
+   "registrants": 1246,
+   "leaver_months": 913
+  },
+  "2017": {
+   "registrant_months": 12578,
+   "registrants": 1233,
+   "leaver_months": 275
+  }
+ },
+ "leaver_registrants_by_exit_type": {
+  "DELISTED-OTHER": 6,
+  "ACQUIRED": 265,
+  "FAILED": 14,
+  "UNKNOWN": 14
+ },
+ "financial_reit_registrant_months": 16470,
+ "foreign_style_name_registrant_months": 4328,
+ "prefix_missing_or_shared_registrant_months": 219
+}

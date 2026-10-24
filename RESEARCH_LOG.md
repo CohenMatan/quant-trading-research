@@ -2731,3 +2731,9 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D296):** no data access or chart analysis yet; settle licensing (incl. Nasdaq Data Link terms update of 2026-11-01), redesign the composition audit, audit PR #137's test changes; time-window partition approved in principle.
 - **Findings:** public-domain data vs platform contract → sending charts to Claude ambiguous; written Nasdaq confirmation required (draft email in the addendum); 2026 free-key access unverified. Audit redesigned on independent SEC references (public-float frames, XBRL tickers, exit filings) with gates A1–A6 and sampling from the reference frame. Test review: 3 stale filters (not weakened), 1 changed weaker expectation (disclosed); full suite on a7a38f3 1,463 passed / 3 skipped / 0 failed.
 - **Recommendation:** send the email; approve audit thresholds before measuring; no access or chart analysis yet. Checkpoint `docs/checkpoints/TT_CP1b_addendum1_wiki_licensing_composition_audit.md`. Nothing downloaded, rendered or changed. STOPPED.
+
+## 2026-10-24: WIKI Prices acquisition and audit — TT-CP1c (D298 / D299; STOP)
+
+- **Owner (D298):** acquire WIKI/PRICES legitimately at no cost and run a real 2010–2017 data-quality / composition audit; decide sufficiency for ~300 representative charts.
+- **Result: INCONCLUSIVE / ACCESS BLOCKED.** data.nasdaq.com and www.kaggle.com refused by the environment's network policy; no credentials; nothing downloaded, no substitute data.
+- **Built (no market data):** frozen protocol (gates A1–A7, set before any data), SEC reference frame (1,614 registrants; 299 leavers, mostly acquired), audit engine, acquisition script, 11 new tests. Next: owner allows data.nasdaq.com (+ export host) and adds `NASDAQ_DATA_LINK_API_KEY`; new session runs the audit. Checkpoint `docs/checkpoints/TT_CP1c_wiki_acquisition_quality_audit.md`. STOPPED.
