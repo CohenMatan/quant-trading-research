@@ -1,0 +1,18 @@
+{
+ "decision": "D308",
+ "run": "E808-01",
+ "3": {
+  "reviews": 72,
+  "corr": 0.99261,
+  "mean_abs_diff": 0.0059389,
+  "mean_diff": 0.001429
+ },
+ "12": {
+  "reviews": 72,
+  "corr": 0.99327,
+  "mean_abs_diff": 0.0096094,
+  "mean_diff": 0.0059172
+ },
+ "review_dates_checked": false,
+ "label": "CONSISTENT"
+}
