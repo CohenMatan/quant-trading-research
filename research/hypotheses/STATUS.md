@@ -21,7 +21,7 @@
 | H003 | 52-week high | 1 (C01) | REJECTED (C01 screen) | D060 |
 | H004 | Pullbacks in momentum leaders | 1 (C01) | REJECTED (C01 screen) | D060 |
 | H005 | Low-volatility anomaly | 1 (C01) | REJECTED: S005 v1.2 failed Validation 2018–2021 (E005-28); never re-validated on 2018–2021 | D056, D060 |
-| H006–H011 | Breakout, squeeze, residual momentum, volume, gap, seasonality | 1 (C02) | REJECTED; C02 complete: No Production Candidate Found | D076, D078 |
+| H006–H011 | Breakout, squeeze, residual momentum, volume, gap, seasonality | 1 (C02) | REJECTED; C02 complete: No Production Candidate Found. H006 exit-policy comparison (H006X, exploratory): removing the 60-session time stop NOT MEANINGFUL, neither version beats SPY → close (TT-CP3) | D076, D078, D305 |
 | H012 | Volatility-managed exposure | 1 (C03) | REMOVED before any backtest (not evaluable with sufficient power; not a failed hypothesis) | D087 |
 | H013 | Lottery-stock avoidance | 1 (C03) | REJECTED; C03 closed | CP3i, D090 |
 | H014 | Trend + pullback + recovery | 2 | REJECTED and CLOSED | D100, D101 |

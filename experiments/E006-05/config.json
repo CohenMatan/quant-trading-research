@@ -1,0 +1,57 @@
+{
+ "experiment_id": "E006-05",
+ "split_scheme": "2010",
+ "start": "2010-01-04",
+ "end": "2021-12-31",
+ "cash": 100000,
+ "universe": {
+  "min_market_cap": 2000000000.0,
+  "min_price": 5.0,
+  "min_avg_dollar_volume": 5000000.0,
+  "adv_days": 20
+ },
+ "costs": {
+  "slippage_bps": 10,
+  "commission_model": "fixed_per_order",
+  "commission_per_order": 7.0,
+  "note": "D039: $7 per executed buy or sell order; slippage separate"
+ },
+ "lean_version_id": 18201,
+ "execution_model": "d051",
+ "programme": "TT",
+ "cycle": "H006X",
+ "params": {
+  "n": 55,
+  "vol_mult": 1.5,
+  "use_volume": true,
+  "k": 3.0,
+  "slots": 10,
+  "time_stop": null,
+  "h006x_spec_sha256": "ae016962e71686aacc383b4da7336fe166ecc9c14b68eb17bbcba5192d42fb5e",
+  "h006x_code_sha256": {
+   "main.py": "da3e810179df7288892a2b8210c85471b3659beed89cac5aaa2be7d5f6efd65e",
+   "signals.py": "91ada940e221f3aa558e29223ccd92f4cbb83f3c16935e21cf86f96487c46a0f"
+  }
+ },
+ "owner_approval_required": "D304 owner direction 2026-10-24: one H006 exit-policy comparison, Control A (60-session time stop) vs Experiment B (no time stop), identical otherwise; no grid, no tuning; no 1999-2009, no Holdout; EXPLORATORY (research/tt/h006_exit/H006X_spec.md flags 1-2)",
+ "lean_version_policy": "default_build_digest_verified",
+ "stall_minutes": 120,
+ "kind": "research",
+ "hypothesis_id": "H006",
+ "strategy_id": "S006",
+ "strategy_version": "v1.3",
+ "strategy_dir": "strategies/S006_breakout",
+ "split": "DEV",
+ "portfolio": {
+  "max_position_weight": 0.1,
+  "cash_buffer": 0.02,
+  "min_position_usd": 5000,
+  "max_positions": 15,
+  "buy_funding": "settled_cash_only",
+  "gap_reserve": 0.15
+ },
+ "benchmarks": [
+  "E900-08"
+ ],
+ "description": "H006X Experiment B (D304): H006 v1.0 entry, ranking, chandelier K 3.0 and 10 slots WITHOUT the 60-session time stop on QuantConnect's default build, DEV 2010-01-04 .. 2021-12-31. EXPLORATORY; H006 stays REJECTED."
+}
