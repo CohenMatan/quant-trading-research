@@ -2737,3 +2737,10 @@ The conditional robustness runs were therefore not made (§9), and G4 fails.
 - **Owner (D298):** acquire WIKI/PRICES legitimately at no cost and run a real 2010–2017 data-quality / composition audit; decide sufficiency for ~300 representative charts.
 - **Result: INCONCLUSIVE / ACCESS BLOCKED.** data.nasdaq.com and www.kaggle.com refused by the environment's network policy; no credentials; nothing downloaded, no substitute data.
 - **Built (no market data):** frozen protocol (gates A1–A7, set before any data), SEC reference frame (1,614 registrants; 299 leavers, mostly acquired), audit engine, acquisition script, 11 new tests. Next: owner allows data.nasdaq.com (+ export host) and adds `NASDAQ_DATA_LINK_API_KEY`; new session runs the audit. Checkpoint `docs/checkpoints/TT_CP1c_wiki_acquisition_quality_audit.md`. STOPPED.
+
+## 2026-10-24: WIKI Prices audit on the downloaded data — TT-CP1c R1 (D300 / D301; STOP)
+
+- **Download:** official Nasdaq Data Link bulk export, free account, no cost: 15,389,314 rows, SHA-256 ca7fb174…; stored outside Git.
+- **Frozen audit:** **INSUFFICIENT** — A1 PASS, A2 INCONCLUSIVE, A3 PASS, A4 FAIL (identity ambiguity 14.1%), A5 FAIL (adjustment consistency 82.7%), A6 FAIL (2017 decay 5.8 points), A7 PASS (ample chart-ready names). Resolved coverage 99.1%.
+- **Post-hoc diagnostics (no gate changed):** ambiguity mostly SEC co-filer artefacts; adjustment defects in 21 tickers, mostly tiny; 2017 has some genuine gaps. 265 confirmed exits (mostly acquisitions) + 10 stopped-filing-only; 92% of matched confirmed exits end in WIKI near the SEC exit; failures effectively absent.
+- **Owner decision:** stop the WIKI route, or a documented exception for exploratory sampling with restrictions; licensing still unresolved. Checkpoint `docs/checkpoints/TT_CP1c_R1_wiki_audit_results.md`. STOPPED.
