@@ -100,7 +100,7 @@
 - no 1999–2009 data, no Holdout, no purchase, no new infrastructure;
 - H006 stays REJECTED.
 
-**Tests:**
+**Tests:** full suite 1,492 passed, 3 skipped.
 - New files `tests/test_h006x.py` and `tests/test_h006x_pins.py`.
 - Two existing items were adjusted. Disclosed here because D296 restricted test changes before WIKI access; that condition no longer applies.
   - **Registry tests.** Three tests pin the historical pre-C02 / pre-C03 trial counts: `tests/test_registry.py` (1) and `tests/test_c03_stats.py` (2). The new research runs E006-04 / 05 must be excluded from those historical counts like every later programme. Their exclusion lists gain `H006X` / `TT`, exactly as H032 was added. **No pinned count changed** (19 / 15 / 1; 37 / 0 / 26 / 1; 40 / 73).
